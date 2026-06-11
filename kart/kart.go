@@ -1,0 +1,467 @@
+// Package kart 是提取资产（kmdata JSON）的运行时：
+// 图集切片绘制、骨架（rig）变换合成、AnimationClip 采样（Hermite 插值 +
+// 阶跃 sprite 换帧 + FlipX 浮点曲线）。
+//
+// 坐标约定：游戏逻辑使用 Unity 单位空间（y 向上），由 proj 仿射投影到屏幕。
+package kart
+
+import (
+	"bytes"
+	"encoding/json"
+	"fmt"
+	"image"
+	_ "image/png"
+	"io"
+	"math"
+	"os"
+	"path/filepath"
+	"strings"
+
+	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/hajimehoshi/ebiten/v2/audio/vorbis"
+	"github.com/hajimehoshi/ebiten/v2/audio/wav"
+
+	"hsdemo/kmdata"
+)
+
+// ---------- 仿射 ----------
+
+// Aff 是 2D 仿射变换：p' = (A*x + C*y + Tx, B*x + D*y + Ty)。
+type Aff struct{ A, B, C, D, Tx, Ty float64 }
+
+func Identity() Aff { return Aff{A: 1, D: 1} }
+
+// Mul 返回 m ∘ n（先施加 n，再施加 m）。
+func (m Aff) Mul(n Aff) Aff {
+	return Aff{
+		A: m.A*n.A + m.C*n.B, B: m.B*n.A + m.D*n.B,
+		C: m.A*n.C + m.C*n.D, D: m.B*n.C + m.D*n.D,
+		Tx: m.A*n.Tx + m.C*n.Ty + m.Tx, Ty: m.B*n.Tx + m.D*n.Ty + m.Ty,
+	}
+}
+
+func Translate(x, y float64) Aff { return Aff{A: 1, D: 1, Tx: x, Ty: y} }
+func Scale(x, y float64) Aff     { return Aff{A: x, D: y} }
+func Rotate(r float64) Aff {
+	s, c := math.Sin(r), math.Cos(r)
+	return Aff{A: c, B: s, C: -s, D: c}
+}
+
+// TRS 组合 平移*旋转*缩放（骨架节点的局部变换）。
+func TRS(x, y, rot, sx, sy float64) Aff {
+	s, c := math.Sin(rot), math.Cos(rot)
+	return Aff{A: c * sx, B: s * sx, C: -s * sy, D: c * sy, Tx: x, Ty: y}
+}
+
+func (m Aff) GeoM() ebiten.GeoM {
+	var g ebiten.GeoM
+	g.SetElement(0, 0, m.A)
+	g.SetElement(0, 1, m.C)
+	g.SetElement(0, 2, m.Tx)
+	g.SetElement(1, 0, m.B)
+	g.SetElement(1, 1, m.D)
+	g.SetElement(1, 2, m.Ty)
+	return g
+}
+
+// ---------- 资产 ----------
+
+type Assets struct {
+	Sheet   kmdata.Sheet
+	Atlas   *ebiten.Image   // 单图集（legacy karateman 格式）
+	Atlases []*ebiten.Image // 多图集（scene 格式）
+	Rig     kmdata.Rig      // karateman: rig.json；scene 游戏: scene.json
+	Roles   kmdata.Roles    // scene 游戏: 脚本字段 → 节点 path
+	Extra   kmdata.Extra    // scene 游戏: 扩展序列化数据（可选）
+	Stage   kmdata.Stage
+	Anims   map[string]*kmdata.Anim
+	// Sounds: 文件主名（无扩展名）→ 解码后的 16-bit LE 立体声裸 PCM
+	Sounds map[string][]byte
+
+	subs map[string]*ebiten.Image
+}
+
+// Load 读取提取器输出目录；音效解码到 audioRate 采样率。
+// 自动识别两种布局：karateman（rig.json + stage.json + 单图集）
+// 与 scene 游戏（scene.json + roles.json + 多图集）。
+func Load(dir string, audioRate int) (*Assets, error) {
+	a := &Assets{
+		Anims:  map[string]*kmdata.Anim{},
+		Sounds: map[string][]byte{},
+		subs:   map[string]*ebiten.Image{},
+	}
+	if err := readJSON(filepath.Join(dir, "sprites.json"), &a.Sheet); err != nil {
+		return nil, err
+	}
+	if err := readJSON(filepath.Join(dir, "anims.json"), &a.Anims); err != nil {
+		return nil, err
+	}
+	if _, err := os.Stat(filepath.Join(dir, "scene.json")); err == nil {
+		// scene 布局
+		if err := readJSON(filepath.Join(dir, "scene.json"), &a.Rig); err != nil {
+			return nil, err
+		}
+		if err := readJSON(filepath.Join(dir, "roles.json"), &a.Roles); err != nil {
+			return nil, err
+		}
+		if _, err := os.Stat(filepath.Join(dir, "extra.json")); err == nil {
+			if err := readJSON(filepath.Join(dir, "extra.json"), &a.Extra); err != nil {
+				return nil, err
+			}
+		}
+		for _, name := range a.Sheet.Atlases {
+			img, err := loadPNG(filepath.Join(dir, name))
+			if err != nil {
+				return nil, err
+			}
+			a.Atlases = append(a.Atlases, img)
+		}
+	} else {
+		// karateman 布局
+		if err := readJSON(filepath.Join(dir, "rig.json"), &a.Rig); err != nil {
+			return nil, err
+		}
+		if err := readJSON(filepath.Join(dir, "stage.json"), &a.Stage); err != nil {
+			return nil, err
+		}
+		img, err := loadPNG(filepath.Join(dir, a.Sheet.Atlas))
+		if err != nil {
+			return nil, err
+		}
+		a.Atlas = img
+	}
+
+	sounds, err := filepath.Glob(filepath.Join(dir, "sounds", "*"))
+	if err != nil {
+		return nil, err
+	}
+	for _, p := range sounds {
+		raw, err := os.ReadFile(p)
+		if err != nil {
+			return nil, err
+		}
+		pcm, err := decodePCM(raw, filepath.Ext(p), audioRate)
+		if err != nil {
+			return nil, fmt.Errorf("decode %s: %w", p, err)
+		}
+		base := strings.TrimSuffix(filepath.Base(p), filepath.Ext(p))
+		a.Sounds[base] = pcm
+	}
+	return a, nil
+}
+
+func loadPNG(p string) (*ebiten.Image, error) {
+	raw, err := os.ReadFile(p)
+	if err != nil {
+		return nil, err
+	}
+	img, _, err := image.Decode(bytes.NewReader(raw))
+	if err != nil {
+		return nil, fmt.Errorf("decode %s: %w", p, err)
+	}
+	return ebiten.NewImageFromImage(img), nil
+}
+
+func readJSON(p string, v any) error {
+	b, err := os.ReadFile(p)
+	if err != nil {
+		return fmt.Errorf("%s: %w（先运行 go run ./cmd/extract）", p, err)
+	}
+	return json.Unmarshal(b, v)
+}
+
+func decodePCM(raw []byte, ext string, rate int) ([]byte, error) {
+	br := bytes.NewReader(raw)
+	var (
+		s   io.Reader
+		err error
+	)
+	switch strings.ToLower(ext) {
+	case ".ogg":
+		s, err = vorbis.DecodeWithSampleRate(rate, br)
+	case ".wav":
+		s, err = wav.DecodeWithSampleRate(rate, br)
+	default:
+		return nil, fmt.Errorf("unsupported sound ext %q", ext)
+	}
+	if err != nil {
+		return nil, err
+	}
+	return io.ReadAll(s)
+}
+
+// Sub 返回切片的图集子图（带缓存）。
+func (a *Assets) Sub(name string) *ebiten.Image {
+	if img, ok := a.subs[name]; ok {
+		return img
+	}
+	sp, ok := a.Sheet.Sprites[name]
+	if !ok {
+		return nil
+	}
+	atlas := a.Atlas
+	if len(a.Atlases) > 0 {
+		if sp.Atlas < 0 || sp.Atlas >= len(a.Atlases) {
+			return nil
+		}
+		atlas = a.Atlases[sp.Atlas]
+	}
+	img := atlas.SubImage(image.Rect(sp.X, sp.Y, sp.X+sp.W, sp.Y+sp.H)).(*ebiten.Image)
+	a.subs[name] = img
+	return img
+}
+
+func (a *Assets) ppuOf(sp kmdata.SpriteInfo) float64 {
+	if sp.PPU > 0 {
+		return sp.PPU
+	}
+	return a.Sheet.PPU
+}
+
+// DrawSprite 在单位空间变换 world 下绘制切片，proj 为单位空间→屏幕投影。
+func (a *Assets) DrawSprite(dst *ebiten.Image, name string, world, proj Aff, flipX bool, alpha float32) {
+	a.DrawSpriteTint(dst, name, world, proj, flipX, [4]float64{1, 1, 1, float64(alpha)})
+}
+
+// DrawSpriteTint 同 DrawSprite，但带 RGBA 调色（SpriteRenderer m_Color 语义）。
+func (a *Assets) DrawSpriteTint(dst *ebiten.Image, name string, world, proj Aff, flipX bool, tint [4]float64) {
+	img := a.Sub(name)
+	if img == nil {
+		return
+	}
+	sp := a.Sheet.Sprites[name]
+	ppu := a.ppuOf(sp)
+	f := 1.0
+	if flipX {
+		f = -1
+	}
+	// 像素空间 → 单位空间：枢轴移到原点（注意 Unity 枢轴 y 从底边算），再缩放并翻转 y
+	local := Scale(f/ppu, -1/ppu).
+		Mul(Translate(-sp.PivotX*float64(sp.W), -(1-sp.PivotY)*float64(sp.H)))
+	op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
+	op.GeoM = proj.Mul(world).Mul(local).GeoM()
+	op.ColorScale.Scale(float32(tint[0]), float32(tint[1]), float32(tint[2]), float32(tint[3]))
+	dst.DrawImage(img, op)
+}
+
+// ---------- 曲线采样 ----------
+
+// evalKeys 对 Hermite 关键帧曲线求值；|斜率| ≥ StepSlope 视为阶跃。
+func evalKeys(keys []kmdata.Key, t float64) float64 {
+	if len(keys) == 0 {
+		return 0
+	}
+	if t <= keys[0].T {
+		return keys[0].V
+	}
+	last := keys[len(keys)-1]
+	if t >= last.T {
+		return last.V
+	}
+	i := 0
+	for i+1 < len(keys) && keys[i+1].T <= t {
+		i++
+	}
+	k0, k1 := keys[i], keys[i+1]
+	if math.Abs(k0.O) >= kmdata.StepSlope || math.Abs(k1.I) >= kmdata.StepSlope {
+		return k0.V
+	}
+	h := k1.T - k0.T
+	if h <= 0 {
+		return k0.V
+	}
+	s := (t - k0.T) / h
+	s2, s3 := s*s, s*s*s
+	return (2*s3-3*s2+1)*k0.V + (s3-2*s2+s)*h*k0.O + (-2*s3+3*s2)*k1.V + (s3-s2)*h*k1.I
+}
+
+func sampleSwap(keys []kmdata.SwapKey, t float64) (string, bool) {
+	if len(keys) == 0 {
+		return "", false
+	}
+	cur := keys[0].Name
+	for _, k := range keys[1:] {
+		if k.T > t {
+			break
+		}
+		cur = k.Name
+	}
+	return cur, true
+}
+
+// ---------- 骨架实例 ----------
+
+type nodeState struct {
+	pos    [2]float64
+	rot    float64
+	scale  [2]float64
+	sprite string
+	flipX  bool
+}
+
+// RigInst 是一个可播放动画的骨架实例。根节点的 prefab 位移被清零，
+// 摆放位置完全由 Draw 的 proj 决定。
+type RigInst struct {
+	as     *Assets
+	byPath map[string]int
+	state  []nodeState
+	world  []Aff
+
+	anim  *kmdata.Anim
+	start float64
+}
+
+func NewRig(as *Assets) *RigInst {
+	r := &RigInst{
+		as:     as,
+		byPath: map[string]int{},
+		state:  make([]nodeState, len(as.Rig.Nodes)),
+		world:  make([]Aff, len(as.Rig.Nodes)),
+	}
+	for i, n := range as.Rig.Nodes {
+		r.byPath[n.Path] = i
+	}
+	r.reset()
+	return r
+}
+
+func (r *RigInst) reset() {
+	for i, n := range r.as.Rig.Nodes {
+		st := nodeState{pos: n.Pos, rot: n.RotZ, scale: n.Scale, sprite: n.Sprite, flipX: n.FlipX}
+		if n.Parent < 0 {
+			st.pos = [2]float64{0, 0} // 摆放交给 proj
+		}
+		r.state[i] = st
+	}
+}
+
+// Play 从歌曲时间 t 起播放动画。
+func (r *RigInst) Play(name string, t float64) {
+	if a, ok := r.as.Anims[name]; ok {
+		r.anim, r.start = a, t
+	}
+}
+
+// Playing 报告当前动画在时刻 t 是否仍在播放（循环动画恒为 true）。
+func (r *RigInst) Playing(t float64) bool {
+	return r.anim != nil && (r.anim.Loop || t-r.start < r.anim.Duration)
+}
+
+// Sample 按歌曲时间 t 采样动画并更新世界变换。
+func (r *RigInst) Sample(t float64) {
+	r.reset()
+	if r.anim != nil {
+		at := t - r.start
+		if r.anim.Loop && r.anim.Duration > 0 {
+			at = math.Mod(at, r.anim.Duration)
+		} else if at > r.anim.Duration {
+			at = r.anim.Duration // 非循环动画保持末帧（下个 Bop 会接管）
+		}
+		r.apply(at)
+	}
+	for i, n := range r.as.Rig.Nodes {
+		st := &r.state[i]
+		local := TRS(st.pos[0], st.pos[1], st.rot, st.scale[0], st.scale[1])
+		if n.Parent < 0 {
+			r.world[i] = local
+		} else {
+			r.world[i] = r.world[n.Parent].Mul(local)
+		}
+	}
+}
+
+func (r *RigInst) apply(at float64) {
+	a := r.anim
+	for path, c := range a.Pos {
+		if i, ok := r.byPath[path]; ok {
+			if len(c.X) > 0 {
+				r.state[i].pos[0] = evalKeys(c.X, at)
+			}
+			if len(c.Y) > 0 {
+				r.state[i].pos[1] = evalKeys(c.Y, at)
+			}
+		}
+	}
+	for path, keys := range a.Euler {
+		if i, ok := r.byPath[path]; ok && len(keys) > 0 {
+			r.state[i].rot = evalKeys(keys, at) * math.Pi / 180
+		}
+	}
+	for path, c := range a.Scale {
+		if i, ok := r.byPath[path]; ok {
+			if len(c.X) > 0 {
+				r.state[i].scale[0] = evalKeys(c.X, at)
+			}
+			if len(c.Y) > 0 {
+				r.state[i].scale[1] = evalKeys(c.Y, at)
+			}
+		}
+	}
+	for path, keys := range a.Sprites {
+		if i, ok := r.byPath[path]; ok {
+			if name, ok := sampleSwap(keys, at); ok {
+				r.state[i].sprite = name // 空名 = 该帧隐藏
+			}
+		}
+	}
+	for path, attrs := range a.Floats {
+		i, ok := r.byPath[path]
+		if !ok {
+			continue
+		}
+		if keys, ok := attrs["m_FlipX"]; ok && len(keys) > 0 {
+			r.state[i].flipX = evalKeys(keys, at) > 0.5
+		}
+	}
+}
+
+// Draw 按 sortingOrder 绘制（需先 Sample）。
+func (r *RigInst) Draw(dst *ebiten.Image, proj Aff) {
+	type item struct{ idx, order int }
+	items := make([]item, 0, len(r.state))
+	for i, n := range r.as.Rig.Nodes {
+		if n.Hidden || r.state[i].sprite == "" {
+			continue
+		}
+		items = append(items, item{i, n.Order})
+	}
+	// 稳定插入排序（节点数 18，开销可忽略）
+	for i := 1; i < len(items); i++ {
+		for j := i; j > 0 && items[j-1].order > items[j].order; j-- {
+			items[j-1], items[j] = items[j], items[j-1]
+		}
+	}
+	for _, it := range items {
+		r.as.DrawSprite(dst, r.state[it.idx].sprite, r.world[it.idx], proj, r.state[it.idx].flipX, 1)
+	}
+}
+
+// BBox 返回默认姿态的单位空间包围盒（minX, minY, maxX, maxY）。
+func (r *RigInst) BBox() (float64, float64, float64, float64) {
+	saveAnim := r.anim
+	r.anim = nil
+	r.Sample(0)
+	r.anim = saveAnim
+
+	minX, minY := math.Inf(1), math.Inf(1)
+	maxX, maxY := math.Inf(-1), math.Inf(-1)
+	for i, n := range r.as.Rig.Nodes {
+		st := r.state[i]
+		sp, ok := r.as.Sheet.Sprites[st.sprite]
+		if !ok || n.Hidden {
+			continue
+		}
+		w, h := float64(sp.W)/r.as.Sheet.PPU, float64(sp.H)/r.as.Sheet.PPU
+		for _, c := range [][2]float64{
+			{-sp.PivotX * w, -sp.PivotY * h}, {(1 - sp.PivotX) * w, -sp.PivotY * h},
+			{-sp.PivotX * w, (1 - sp.PivotY) * h}, {(1 - sp.PivotX) * w, (1 - sp.PivotY) * h},
+		} {
+			m := r.world[i]
+			x := m.A*c[0] + m.C*c[1] + m.Tx
+			y := m.B*c[0] + m.D*c[1] + m.Ty
+			minX, maxX = math.Min(minX, x), math.Max(maxX, x)
+			minY, maxY = math.Min(minY, y), math.Max(maxY, y)
+		}
+	}
+	return minX, minY, maxX, maxY
+}

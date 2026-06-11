@@ -1,0 +1,11 @@
+# 提取的游戏资产（任天堂素材，不入库；用 cmd/extract 从本地 Heaven Studio 工程重新生成）
+assets/
+
+# 生成物
+demo.riq
+hsdemo
+*.exe
+
+# 编辑器/系统
+.DS_Store
+extract
