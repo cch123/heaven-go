@@ -286,6 +286,47 @@ func (idx *prefabIndex) worldZ(tfID int64) float64 {
 	return z
 }
 
+// quatRotate 用四元数 (x,y,z,w) 旋转向量：v' = v + 2*q.xyz×(q.xyz×v + w*v)。
+func quatRotate(qx, qy, qz, qw float64, v [3]float64) [3]float64 {
+	cx := qy*v[2] - qz*v[1] + qw*v[0]
+	cy := qz*v[0] - qx*v[2] + qw*v[1]
+	cz := qx*v[1] - qy*v[0] + qw*v[2]
+	return [3]float64{
+		v[0] + 2*(qy*cz-qz*cy),
+		v[1] + 2*(qz*cx-qx*cz),
+		v[2] + 2*(qx*cy-qy*cx),
+	}
+}
+
+// transformPoint3D 等价 Unity Transform.TransformPoint：完整三维
+// 缩放→旋转→平移沿 m_Father 链合成（曲线 Point 的父链带三维旋转，
+// 2D 仿射 + z 直加会让 z 混入 x/y 的分量丢失）。
+func (idx *prefabIndex) transformPoint3D(tfID int64, local [3]float64) [3]float64 {
+	v := local
+	for tfID != 0 {
+		tf := idx.tfByID[tfID]
+		if tf == nil {
+			break
+		}
+		v = [3]float64{
+			v[0] * uy.F(uy.Get(tf, "m_LocalScale", "x")),
+			v[1] * uy.F(uy.Get(tf, "m_LocalScale", "y")),
+			v[2] * uy.F(uy.Get(tf, "m_LocalScale", "z")),
+		}
+		v = quatRotate(
+			uy.F(uy.Get(tf, "m_LocalRotation", "x")), uy.F(uy.Get(tf, "m_LocalRotation", "y")),
+			uy.F(uy.Get(tf, "m_LocalRotation", "z")), uy.F(uy.Get(tf, "m_LocalRotation", "w")),
+			v)
+		v = [3]float64{
+			v[0] + uy.F(uy.Get(tf, "m_LocalPosition", "x")),
+			v[1] + uy.F(uy.Get(tf, "m_LocalPosition", "y")),
+			v[2] + uy.F(uy.Get(tf, "m_LocalPosition", "z")),
+		}
+		tfID = uy.I(uy.Get(tf, "m_Father", "fileID"))
+	}
+	return v
+}
+
 func exportRigAndStage(tables map[string]*spriteTable) *kmdata.Rig {
 	ctrlMeta, err := os.ReadFile(gamePath("Sprites", "anime", "karateman", "KarateMan.controller.meta"))
 	must(err)

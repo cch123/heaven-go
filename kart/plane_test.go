@@ -17,10 +17,13 @@ func TestPlaneTrajectoryTable(t *testing.T) {
 		ps := CamDist / (CamDist + p[2])
 		fmt.Printf("  flyPos=%5.3f 投影=(%7.2f,%7.2f) 缩放=%.2f\n", ft, p[0]*ps, p[1]*ps, ps)
 	}
-	// 判定时刻（dodgeBeats=2 / flyBeats=4 → progress 0.5×0.95=0.475）应抵达男孩附近 x≈5.4
+	// 判定时刻（progress 0.5×0.95=0.475）：原版飞机仍在画面中央偏左、
+	// 保持距离（z≈2.5、缩放 0.8），按键后才加速掠过镜头——
+	// 对照 python 全量转写参考值 (1.73, 0.21)
 	p := EvalBezier(c, 0.475)
 	ps := CamDist / (CamDist + p[2])
-	if x := p[0] * ps; x < 3.5 || x > 8.5 {
-		t.Errorf("判定时刻飞机投影 x=%.2f，未在男孩附近", x)
+	x := p[0] * ps
+	if x < 0.5 || x > 3.5 || ps > 1.0 {
+		t.Errorf("判定时刻飞机投影 x=%.2f 缩放=%.2f，应在画面中央且未贴近镜头", x, ps)
 	}
 }

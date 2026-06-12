@@ -387,18 +387,20 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 					break
 				}
 			}
-			m := idx.worldAff(tfID)
-			pz := idx.worldZ(tfID)
-			lx, ly := m.apply(
+			lhl := [3]float64{
 				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "x")),
-				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "y")))
-			lz := pz + uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "z"))
-			rx, ry := m.apply(
+				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "y")),
+				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "z")),
+			}
+			rhl := [3]float64{
 				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "x")),
-				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "y")))
-			rz := pz + uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "z"))
+				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "y")),
+				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "z")),
+			}
 			curve.Points = append(curve.Points, kmdata.CurvePoint{
-				P: [3]float64{m.tx, m.ty, pz}, LH: [3]float64{lx, ly, lz}, RH: [3]float64{rx, ry, rz},
+				P:  idx.transformPoint3D(tfID, [3]float64{}),
+				LH: idx.transformPoint3D(tfID, lhl),
+				RH: idx.transformPoint3D(tfID, rhl),
 			})
 		}
 		extra.Curves[f] = curve
