@@ -46,14 +46,17 @@ type tmplNode struct {
 }
 
 type tossObj struct {
-	startBeat float64
-	flyBeats  float64
-	curve     []kmdata.CurvePoint
-	nodes     []tmplNode
-	typ       int
-	flyType   int
-	missed    bool
-	rot       float64
+	startBeat  float64
+	flyBeats   float64
+	dodgeBeats float64
+	curve      kmdata.Curve
+	nodes      []tmplNode
+	typ        int
+	flyType    int
+	missed     bool
+	rot        float64
+	lastPos    [3]float64 // 上一帧世界位置（飞机朝向用帧差，原版同式）
+	hasLast    bool
 
 	falling bool // phone 被躲开后自由落体
 	fallPos [3]float64
@@ -156,7 +159,7 @@ func (m *Module) scheduleToss(b float64, typ int, variant bool) {
 		ctx.Play(girl, "Girl/"+throwAnim, b, 1)
 		m.girlBopGate = b + 0.75
 		obj = &tossObj{
-			startBeat: b, flyBeats: flyBeats, curve: curve,
+			startBeat: b, flyBeats: flyBeats, dodgeBeats: dodgeBeats, curve: curve,
 			nodes: m.buildTmpl(tmplPath), typ: typ,
 			flyType: int(nums["flyType"]), gravity: nums["gravity"],
 			rot: rand.Float64() * 2 * math.Pi,
@@ -201,7 +204,7 @@ func (m *Module) scheduleToss(b float64, typ int, variant bool) {
 	})
 }
 
-func (m *Module) tossCurve(typ int) []kmdata.CurvePoint {
+func (m *Module) tossCurve(typ int) kmdata.Curve {
 	ex := &m.ctx.Assets.Extra
 	switch typ {
 	case typPlane:
@@ -217,16 +220,21 @@ func (m *Module) tossCurve(typ int) []kmdata.CurvePoint {
 func (m *Module) objMiss(o *tossObj) {
 	ex := &m.ctx.Assets.Extra
 	o.missed = true
-	beat := m.ctx.Beat()
 	switch o.typ {
 	case typPlane:
-		o.startBeat = beat
+		// 原版 DoObjMiss：startBeat += dodgeBeats（以判定拍为新起点）
+		o.startBeat += o.dodgeBeats
 		o.curve = ex.Curves["planeMissCurve"]
 		o.flyBeats = 4
+		// 朝向重置为 miss 曲线起始方向（GetPoint(0)→GetPoint(1e-6)）
+		p0 := kart.EvalBezier(o.curve, 0)
+		p1 := kart.EvalBezier(o.curve, 1e-6)
+		o.rot = math.Atan2(p1[1]-p0[1], p1[0]-p0[0])
+		o.lastPos, o.hasLast = p1, true
 	case typShock:
 		o.flyBeats = 0 // 立即销毁
 	default:
-		o.startBeat = beat
+		o.startBeat += o.dodgeBeats
 		o.curve = ex.Curves["ballMissCurve"]
 		o.flyBeats = 1.25
 	}
@@ -445,18 +453,22 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 				flyPos *= 0.95
 			}
 			pos = kart.EvalBezier(o.curve, flyPos)
-			// 旋转（朝向用投影后坐标，与观感一致）
+			// 旋转：原版 MobTrickObj.Update 用世界系"上一帧位置差"求朝向
+			//（transform.eulerAngles 是世界角，透视不改变绕 z 的精灵旋转）
 			switch o.flyType {
 			case 1: // 朝向运动方向（纸飞机）
-				next := kart.EvalBezier(o.curve, math.Min(flyPos+0.01, 1))
-				ps0 := persp(pos[2])
-				ps1 := persp(next[2])
-				o.rot = math.Atan2(next[1]*ps1-pos[1]*ps0, next[0]*ps1-pos[0]*ps0)
+				if o.hasLast {
+					dx, dy := pos[0]-o.lastPos[0], pos[1]-o.lastPos[1]
+					if dx*dx+dy*dy > 1e-12 {
+						o.rot = math.Atan2(dy, dx)
+					}
+				}
 			case 2: // 不旋转（闪电）
 				o.rot = 0
 			default: // 自转 360°/s
 				o.rot += (1.0 / float64(ebiten.TPS())) * 2 * math.Pi
 			}
+			o.lastPos, o.hasLast = pos, true
 		}
 		// 透视：对象沿曲线从背景（女孩 z=16）飞向前景（男孩 z=0），近大远小
 		ps := persp(pos[2])

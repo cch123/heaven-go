@@ -339,7 +339,7 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 	extra := &kmdata.Extra{
 		RefArrays: map[string][]string{},
 		Strings:   map[string][]string{},
-		Curves:    map[string][]kmdata.CurvePoint{},
+		Curves:    map[string]kmdata.Curve{},
 		ObjNums:   map[string]map[string]float64{},
 		ObjStrs:   map[string]map[string]string{},
 		Sequences: map[string][]kmdata.SeqClip{},
@@ -372,6 +372,7 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 		if kps == nil {
 			kps = uy.L(curveDoc.content["KeyPoints"])
 		}
+		curve := kmdata.Curve{Sampling: int(uy.I(curveDoc.content["sampling"]))}
 		for _, kv := range kps {
 			pid := uy.I(uy.Get(uy.M(kv), "fileID"))
 			pd := dt.byID[pid]
@@ -396,10 +397,11 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "x")),
 				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "y")))
 			rz := pz + uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "z"))
-			extra.Curves[f] = append(extra.Curves[f], kmdata.CurvePoint{
+			curve.Points = append(curve.Points, kmdata.CurvePoint{
 				P: [3]float64{m.tx, m.ty, pz}, LH: [3]float64{lx, ly, lz}, RH: [3]float64{rx, ry, rz},
 			})
 		}
+		extra.Curves[f] = curve
 	}
 
 	// 对象模板组件（按字段特征识别）

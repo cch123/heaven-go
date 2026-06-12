@@ -79,6 +79,13 @@ type CurvePoint struct {
 	RH [3]float64 `json:"rh"`
 }
 
+// Curve 是一条完整曲线：Sampling 为序列化的采样密度，
+// 弧长估算的每段子采样数 = Sampling/(len(Points)-1) + 1（原版同式）。
+type Curve struct {
+	Sampling int          `json:"sampling"`
+	Points   []CurvePoint `json:"points"`
+}
+
 // SeqClip 是音效序列（SoundSequence）中的一个片段。
 type SeqClip struct {
 	Clip   string  `json:"clip"` // 音效文件主名（已剥离 game/ 前缀）
@@ -91,7 +98,7 @@ type SeqClip struct {
 type Extra struct {
 	RefArrays map[string][]string           `json:"refArrays,omitempty"` // 字段 → 节点 path 列表
 	Strings   map[string][]string           `json:"strings,omitempty"`   // 字段 → 字符串列表
-	Curves    map[string][]CurvePoint       `json:"curves,omitempty"`    // 字段 → 曲线关键点
+	Curves    map[string]Curve              `json:"curves,omitempty"`    // 字段 → 曲线
 	ObjNums   map[string]map[string]float64 `json:"objNums,omitempty"`   // 模板 path → 数值字段
 	ObjStrs   map[string]map[string]string  `json:"objStrs,omitempty"`   // 模板 path → 字符串字段
 	Sequences map[string][]SeqClip          `json:"sequences,omitempty"` // 音效序列名 → 片段
