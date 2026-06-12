@@ -624,6 +624,32 @@ func extractCommon() {
 		copyOne(name)
 	}
 	fmt.Printf("common sounds: %d copied -> %s\n", n, outSounds)
+
+	// vfx/filter 的 AmplifyColor LUT（Resources/Filters/*.png，55 张）
+	lutDir := filepath.Join(*outDir, "filters")
+	must(os.MkdirAll(lutDir, 0o755))
+	luts, err := os.ReadDir(filepath.Join(*hsRoot, "Assets", "Resources", "Filters"))
+	must(err)
+	ln := 0
+	for _, e := range luts {
+		if e.IsDir() || strings.HasSuffix(e.Name(), ".meta") {
+			continue
+		}
+		b, err := os.ReadFile(filepath.Join(*hsRoot, "Assets", "Resources", "Filters", e.Name()))
+		must(err)
+		must(os.WriteFile(filepath.Join(lutDir, e.Name()), b, 0o644))
+		ln++
+	}
+	fmt.Printf("filter LUTs: %d copied\n", ln)
+
+	// vfx/display textbox 的框体贴图 + 字体（KurokaneStd，近似原版样式）
+	tb, err := os.ReadFile(filepath.Join(*hsRoot, "Assets", "Resources", "Sprites", "UI", "Common", "Textbox", "textboxSDF.png"))
+	must(err)
+	must(os.WriteFile(filepath.Join(*outDir, "textbox.png"), tb, 0o644))
+	fnt, err := os.ReadFile(filepath.Join(*hsRoot, "Assets", "Resources", "Fonts", "kurokane", "FOT-KurokaneStd_Megamix_Modified-EB.otf"))
+	must(err)
+	must(os.WriteFile(filepath.Join(*outDir, "textbox_font.otf"), fnt, 0o644))
+	fmt.Println("textbox assets copied")
 }
 
 // ---------- sounds ----------

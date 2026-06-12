@@ -35,6 +35,7 @@ type recorder struct {
 	next    int
 	out     string
 	done    bool
+	quit    bool // 抓完所有拍位立即退出（视觉快迭代，不等 RESULT）
 }
 
 func (r *recorder) Update() error { return r.app.Update() }
@@ -53,6 +54,9 @@ func (r *recorder) Draw(screen *ebiten.Image) {
 			log.Printf("captured %s (beat %.2f)", path, beat)
 		}
 		r.next++
+		if r.quit && r.next >= len(r.targets) {
+			os.Exit(0)
+		}
 	}
 	if r.app.Finished() && !r.done {
 		r.done = true
@@ -74,6 +78,7 @@ func main() {
 	assetsRoot := flag.String("assets", "assets", "提取资产根目录")
 	beats := flag.String("beats", "", "抓帧拍位（逗号分隔）")
 	out := flag.String("out", "/tmp/verify", "输出 PNG 前缀")
+	quit := flag.Bool("quit", false, "抓完所有拍位后立即退出")
 	flag.Parse()
 
 	engine.Register("rhythmSomen", somen.New)
@@ -107,7 +112,7 @@ func main() {
 	ebiten.SetWindowSize(engine.ScreenW, engine.ScreenH)
 	ebiten.SetWindowTitle("Heaven Go — verify")
 	ebiten.SetTPS(240)
-	if err := ebiten.RunGame(&recorder{app: app, targets: targets, out: *out}); err != nil &&
+	if err := ebiten.RunGame(&recorder{app: app, targets: targets, out: *out, quit: *quit}); err != nil &&
 		err != ebiten.Termination {
 		log.Fatal(err)
 	}

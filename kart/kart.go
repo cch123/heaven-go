@@ -171,11 +171,15 @@ func Load(dir string, audioRate int) (*Assets, error) {
 		return nil, err
 	}
 	for _, p := range sounds {
+		ext := strings.ToLower(filepath.Ext(p))
+		if ext != ".ogg" && ext != ".wav" {
+			continue // .DS_Store 等杂物
+		}
 		raw, err := os.ReadFile(p)
 		if err != nil {
 			return nil, err
 		}
-		pcm, err := decodePCM(raw, filepath.Ext(p), audioRate)
+		pcm, err := decodePCM(raw, ext, audioRate)
 		if err != nil {
 			return nil, fmt.Errorf("decode %s: %w", p, err)
 		}

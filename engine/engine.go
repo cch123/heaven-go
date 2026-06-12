@@ -122,7 +122,9 @@ type App struct {
 	// miss/nearMiss 等），缺目录时为空 map（相关事件静默跳过）
 	commonSounds map[string][]byte
 
-	fx postFX // ppe/* 屏幕后处理
+	fx  postFX    // ppe/* 屏幕后处理
+	flt filterFX  // vfx/filter（LUT 滤镜）
+	tbx textboxFX // vfx/display textbox
 
 	pressedNow  bool // 本逻辑帧是否有按下（模块轮询用，如 totemClimb HoldCo）
 	releasedNow bool // 本逻辑帧是否有抬起
@@ -224,6 +226,8 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	a.flashes = nil
 	a.camEvts = nil
 	a.fx.reset()
+	a.flt.reset()
+	a.tbx.reset()
 	a.unported = nil
 	a.starBeat, a.endBeat = -1, 0
 	a.resetRunState()
@@ -288,6 +292,10 @@ func (a *App) loadRiq(r *riq.Riq) error {
 			})
 		case e.Game() == "countIn":
 			a.scheduleCountIn(e.Datamodel, e.Beat, e.Length, e.Data)
+		case e.Datamodel == "vfx/filter":
+			a.flt.add(e)
+		case e.Datamodel == "vfx/display textbox":
+			a.tbx.add(e)
 		case e.Game() == "ppe":
 			a.fx.add(e)
 		case e.Game() == "gameManager" || e.Game() == "vfx" || e.Game() == "global":
@@ -648,6 +656,8 @@ func (a *App) Draw(screen *ebiten.Image) {
 		} else {
 			a.active.Draw(screen, t, beat)
 		}
+		a.flt.Apply(screen, a.assetsRoot, beat)
+		a.tbx.Draw(screen, a.assetsRoot, beat)
 	}
 
 	a.drawFlash(screen, beat)
