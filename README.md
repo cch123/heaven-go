@@ -89,6 +89,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
   用），未移植——bop 的不悦表现走 `bossAnnoyed ? BossMiss : Bop` 分支，与原版一致。
 - countIn 计数音实现 Normal/Alt/Cowbell 音色；GBA/DS 变体音色目录未提取（出现时
   回退 Normal 并打日志）。
+- ppe 后处理（engine/postfx.go）：colorGrading/vignette/cabb/lensD/pixelQuad 按
+  PPv2 / X-PostProcessing 公式逐式复刻；bloom 用 1/4 分辨率两轮高斯近似 PPv2 的
+  mip 金字塔；grain 用 hash 噪声近似烘焙噪声纹理；anamorphicRatio、technicolor
+  未实现（全部官方关卡未使用）；flash/HUD 不参与后处理（对应编辑器叠层）。
 - totemClimb 柱子网格按"可见窗口直算"替代 Unity 的 12×3 环形回收（视觉等价）；
   原版 pillar (2) 不带下延段的细节按统一模板绘制（重叠区域同贴图，视觉等价）。
 - totemClimb 高跳保持期的提前松手惩罚（UnHold + ScoreMiss + 重按回握）按

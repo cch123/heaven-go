@@ -119,6 +119,8 @@ type App struct {
 	// miss/nearMiss 等），缺目录时为空 map（相关事件静默跳过）
 	commonSounds map[string][]byte
 
+	fx postFX // ppe/* 屏幕后处理
+
 	pressedNow  bool // 本逻辑帧是否有按下（模块轮询用，如 totemClimb HoldCo）
 	releasedNow bool // 本逻辑帧是否有抬起
 
@@ -218,6 +220,7 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	a.inputs = nil
 	a.flashes = nil
 	a.camEvts = nil
+	a.fx.reset()
 	a.unported = nil
 	a.starBeat, a.endBeat = -1, 0
 	a.resetRunState()
@@ -232,8 +235,8 @@ func (a *App) loadRiq(r *riq.Riq) error {
 			continue
 		}
 		switch e.Game() {
-		case "gameManager", "vfx", "countIn", "global":
-			continue
+		case "gameManager", "vfx", "countIn", "global", "ppe":
+			continue // ppe（屏幕后处理）由引擎处理，不占模块位
 		}
 		used[e.Game()] = true
 	}
@@ -282,6 +285,8 @@ func (a *App) loadRiq(r *riq.Riq) error {
 			})
 		case e.Game() == "countIn":
 			a.scheduleCountIn(e.Datamodel, e.Beat, e.Length, e.Data)
+		case e.Game() == "ppe":
+			a.fx.add(e)
 		case e.Game() == "gameManager" || e.Game() == "vfx" || e.Game() == "global":
 			// 其余全局事件暂不支持
 		default:
@@ -299,6 +304,12 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	}
 	sortActions(a.actions)
 	sort.Slice(a.inputs, func(i, j int) bool { return a.inputs[i].Beat < a.inputs[j].Beat })
+	a.fx.sortAll()
+	if a.fx.active() {
+		if err := a.fx.ensure(); err != nil {
+			return fmt.Errorf("ppe shader 编译失败: %w", err)
+		}
+	}
 
 	// 初始活动游戏
 	if len(a.switches) > 0 {
@@ -599,7 +610,14 @@ func (a *App) Draw(screen *ebiten.Image) {
 	}
 
 	if a.active != nil {
-		a.active.Draw(screen, t, beat)
+		if a.fx.active() {
+			// ppe：游戏画面渲到离屏帧，经后处理链上屏（flash/HUD 不参与，
+			// 对应 HS 的编辑器叠层不过 PostProcessLayer）
+			a.active.Draw(a.fx.Target(), t, beat)
+			a.fx.Apply(screen, beat, t)
+		} else {
+			a.active.Draw(screen, t, beat)
+		}
 	}
 
 	a.drawFlash(screen, beat)
