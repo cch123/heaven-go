@@ -119,6 +119,9 @@ type App struct {
 	tdArrow, tdTarget float64
 	tdHits            []timingHit
 
+	// LatencyMS：输入延迟校准（毫秒，正值 = 按键时间戳前移），'['/']' 热键 ±5ms
+	LatencyMS float64
+
 	faceBig, faceMid, faceSmall *text.GoTextFace
 }
 
@@ -393,8 +396,21 @@ func (a *App) updatePlay() {
 	dt := 1.0 / float64(ebiten.TPS())
 	a.tdArrow += (a.tdTarget - a.tdArrow) * math.Min(4*dt, 1)
 
+	// 音量时间轴（riq__VolumeChange，含渐变）
+	a.player.SetVolume(a.bm.VolumeAt(beat))
+
+	// 延迟校准热键
+	if inpututil.IsKeyJustPressed(ebiten.KeyLeftBracket) {
+		a.LatencyMS -= 5
+		a.setMsg(fmt.Sprintf("latency %+.0fms", a.LatencyMS))
+	}
+	if inpututil.IsKeyJustPressed(ebiten.KeyRightBracket) {
+		a.LatencyMS += 5
+		a.setMsg(fmt.Sprintf("latency %+.0fms", a.LatencyMS))
+	}
+
 	if pressed() && a.inputOn {
-		a.judgePress(t, beat)
+		a.judgePress(t-a.LatencyMS/1000, beat)
 	}
 
 	// 超窗 miss
@@ -542,6 +558,9 @@ func (a *App) Draw(screen *ebiten.Image) {
 		}
 		if a.starGot {
 			a.text(screen, "* SKILL STAR", a.faceSmall, ScreenW-130, 20, color.RGBA{255, 230, 90, 255}, false)
+		}
+		if sec := a.bm.SectionAt(beat); sec != "" {
+			a.text(screen, "- "+sec+" -", a.faceSmall, ScreenW-130, 40, color.RGBA{210, 210, 225, 200}, false)
 		}
 		if a.endBeat > 0 {
 			prog := math.Min(beat/a.endBeat, 1)

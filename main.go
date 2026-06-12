@@ -604,6 +604,7 @@ func detectGame(bm *riq.Beatmap) string {
 func main() {
 	path := flag.String("riq", "", ".riq 谱面路径（留空则进入标题屏等待拖放）")
 	assetsRoot := flag.String("assets", "assets", "提取资产根目录")
+	latency := flag.Float64("latency", 0, "输入延迟校准（毫秒，可在游戏内用 [ ] 微调）")
 	flag.Parse()
 
 	// 已移植的游戏模块
@@ -632,6 +633,7 @@ func main() {
 		fmt.Fprintf(os.Stderr, "%v\n", err)
 		os.Exit(1)
 	}
+	app.LatencyMS = *latency
 
 	ebiten.SetWindowSize(screenW, screenH)
 	ebiten.SetWindowTitle("Heaven Go")

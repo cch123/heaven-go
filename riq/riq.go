@@ -79,6 +79,16 @@ func (e *Entity) Float(key string, def float64) float64 {
 	return def
 }
 
+// Str 取动态参数字符串。
+func (e *Entity) Str(key, def string) string {
+	if v, ok := e.Data[key]; ok {
+		if s, ok := v.(string); ok {
+			return s
+		}
+	}
+	return def
+}
+
 // TempoChange 是 tempo map 的一个节点：自 Beat 起以 BPM 推进。
 type TempoChange struct {
 	Beat float64
@@ -93,6 +103,58 @@ type Beatmap struct {
 	Entities   []Entity      // 仅游戏事件（tempo/volume/section 已剥离）
 	Tempos     []TempoChange // 升序且保证首节点 Beat <= 0
 	Properties map[string]any
+	Volumes    []VolumeChange  // 升序；空 = 恒定 1.0
+	Sections   []SectionMarker // 升序
+}
+
+// VolumeChange 是音量节点：自 Beat 起经 Length 拍线性渐变到 Volume（0~1）。
+type VolumeChange struct {
+	Beat   float64
+	Volume float64
+	Length float64
+}
+
+// SectionMarker 是关卡分段标记。
+type SectionMarker struct {
+	Beat float64
+	Name string
+}
+
+// VolumeAt 返回某拍处的音乐音量（0~1），节点间取该拍所属渐变段的插值。
+func (b *Beatmap) VolumeAt(beat float64) float64 {
+	vol := 1.0
+	for i := range b.Volumes {
+		v := &b.Volumes[i]
+		if beat < v.Beat {
+			break
+		}
+		if v.Length > 0 && beat < v.Beat+v.Length {
+			u := (beat - v.Beat) / v.Length
+			return vol + (v.Volume-vol)*u
+		}
+		vol = v.Volume
+	}
+	return vol
+}
+
+// SectionAt 返回某拍所属分段名（无则空串）。
+func (b *Beatmap) SectionAt(beat float64) string {
+	name := ""
+	for i := range b.Sections {
+		if b.Sections[i].Beat > beat {
+			break
+		}
+		name = b.Sections[i].Name
+	}
+	return name
+}
+
+// normVolume 把 HS 编辑器的百分比音量（0~100）归一到 0~1。
+func normVolume(v float64) float64 {
+	if v > 1.5 {
+		return v / 100
+	}
+	return v
 }
 
 // Prop 取关卡元数据字符串（如 remixtitle / remixauthor）。
@@ -121,6 +183,8 @@ func (b *Beatmap) normalizeTempos() {
 		b.Tempos = []TempoChange{{Beat: 0, BPM: 120}}
 	}
 	sort.Slice(b.Tempos, func(i, j int) bool { return b.Tempos[i].Beat < b.Tempos[j].Beat })
+	sort.Slice(b.Volumes, func(i, j int) bool { return b.Volumes[i].Beat < b.Volumes[j].Beat })
+	sort.Slice(b.Sections, func(i, j int) bool { return b.Sections[i].Beat < b.Sections[j].Beat })
 	if b.Tempos[0].Beat > 0 {
 		b.Tempos = append([]TempoChange{{Beat: 0, BPM: b.Tempos[0].BPM}}, b.Tempos...)
 	}
@@ -285,8 +349,16 @@ func loadV2(files map[string][]byte, chartName string) (*Riq, error) {
 		switch e.Type {
 		case "riq__TempoChange":
 			bm.Tempos = append(bm.Tempos, TempoChange{Beat: e.Beat, BPM: e.Float("tempo", 120)})
-		case "riq__VolumeChange", "riq__SectionMarker":
-			// demo 不消费音量/分段标记
+		case "riq__VolumeChange":
+			bm.Volumes = append(bm.Volumes, VolumeChange{
+				Beat: e.Beat, Volume: normVolume(e.Float("volume", 1)), Length: e.Length,
+			})
+		case "riq__SectionMarker":
+			name := e.Str("sectionName", "")
+			if name == "" {
+				name = e.Str("name", "")
+			}
+			bm.Sections = append(bm.Sections, SectionMarker{Beat: e.Beat, Name: name})
 		default:
 			bm.Entities = append(bm.Entities, e)
 		}
@@ -342,11 +414,13 @@ func findV2Audio(files map[string][]byte, songName string) (string, []byte, erro
 // ---------- v1 ----------
 
 type v1Chart struct {
-	RiqVersion   string         `json:"riqVersion"`
-	Offset       float64        `json:"offset"`
-	Properties   map[string]any `json:"properties"`
-	Entities     []v1Entity     `json:"entities"`
-	TempoChanges []v1Entity     `json:"tempoChanges"`
+	RiqVersion      string         `json:"riqVersion"`
+	Offset          float64        `json:"offset"`
+	Properties      map[string]any `json:"properties"`
+	Entities        []v1Entity     `json:"entities"`
+	TempoChanges    []v1Entity     `json:"tempoChanges"`
+	VolumeChanges   []v1Entity     `json:"volumeChanges"`
+	BeatmapSections []v1Entity     `json:"beatmapSections"`
 }
 
 type v1Entity struct {
@@ -377,6 +451,20 @@ func loadV1(files map[string][]byte) (*Riq, error) {
 	for _, raw := range c.TempoChanges {
 		e := Entity{Data: raw.DynamicData}
 		bm.Tempos = append(bm.Tempos, TempoChange{Beat: raw.Beat, BPM: e.Float("tempo", 120)})
+	}
+	for _, raw := range c.VolumeChanges {
+		e := Entity{Data: raw.DynamicData}
+		bm.Volumes = append(bm.Volumes, VolumeChange{
+			Beat: raw.Beat, Volume: normVolume(e.Float("volume", 1)), Length: raw.Length,
+		})
+	}
+	for _, raw := range c.BeatmapSections {
+		e := Entity{Data: raw.DynamicData}
+		name := e.Str("sectionName", "")
+		if name == "" {
+			name = e.Str("name", "")
+		}
+		bm.Sections = append(bm.Sections, SectionMarker{Beat: raw.Beat, Name: name})
 	}
 	bm.normalizeTempos()
 	sort.SliceStable(bm.Entities, func(i, j int) bool { return bm.Entities[i].Beat < bm.Entities[j].Beat })

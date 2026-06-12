@@ -185,7 +185,7 @@ func (m *Module) scheduleToss(b float64, typ int, variant bool) {
 		// just：躲开
 		phone := typ == typPhone
 		m.playerDodge(beat, phone, phone)
-		ctx.SoundVol(strs["justSound"], 0.8)
+		ctx.SoundPitch(strs["justSound"], 0.8, 0.85+rand.Float64()*0.3)
 		ctx.SoundAt(obj.startBeat+obj.flyBeats, strs["missSound"], 0.4)
 		if phone {
 			obj.falling = true

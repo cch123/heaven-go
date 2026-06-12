@@ -195,6 +195,34 @@ func decodePCM(raw []byte, ext string, rate int) ([]byte, error) {
 	return io.ReadAll(s)
 }
 
+// ResamplePCM 对 16-bit LE 立体声 PCM 做线性插值重采样实现变调：
+// pitch > 1 音高升高（时长缩短）。用于一次性音效（MultiSound 的
+// pitch 参数、原版 SoundByte 的随机变调）。
+func ResamplePCM(pcm []byte, pitch float64) []byte {
+	if pitch == 1 || len(pcm) < 8 {
+		return pcm
+	}
+	frames := len(pcm) / 4
+	outFrames := int(float64(frames) / pitch)
+	out := make([]byte, outFrames*4)
+	for i := 0; i < outFrames; i++ {
+		srcPos := float64(i) * pitch
+		j := int(srcPos)
+		frac := srcPos - float64(j)
+		if j >= frames-1 {
+			j, frac = frames-2, 1
+		}
+		for ch := 0; ch < 2; ch++ {
+			a := int16(uint16(pcm[j*4+ch*2]) | uint16(pcm[j*4+ch*2+1])<<8)
+			b := int16(uint16(pcm[(j+1)*4+ch*2]) | uint16(pcm[(j+1)*4+ch*2+1])<<8)
+			v := int16(float64(a) + (float64(b)-float64(a))*frac)
+			out[i*4+ch*2] = byte(v)
+			out[i*4+ch*2+1] = byte(uint16(v) >> 8)
+		}
+	}
+	return out
+}
+
 // Sub 返回切片的图集子图（带缓存）。
 func (a *Assets) Sub(name string) *ebiten.Image {
 	if img, ok := a.subs[name]; ok {

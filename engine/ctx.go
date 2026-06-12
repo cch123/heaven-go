@@ -52,6 +52,17 @@ func (c *Ctx) SoundVol(name string, vol float64) {
 	p.Play()
 }
 
+// SoundPitch 以指定音量与音高播放音效（SoundByte pitch 语义）。
+func (c *Ctx) SoundPitch(name string, vol, pitch float64) {
+	pcm, ok := c.Assets.Sounds[name]
+	if !ok {
+		return
+	}
+	p := audioCtx.NewPlayerFromBytes(kart.ResamplePCM(pcm, pitch))
+	p.SetVolume(vol)
+	p.Play()
+}
+
 // SoundAt 在指定拍播放音效（MultiSound 等价物）。
 func (c *Ctx) SoundAt(beat float64, name string, vol float64) {
 	c.At(beat, func() { c.SoundVol(name, vol) })
