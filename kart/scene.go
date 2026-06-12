@@ -329,6 +329,11 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		st := &s.state[i]
 		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color}
 		if s.as.Rig.Nodes[i].DrawMode != 0 {
+			// sliced/tiled：m_Size 是权威尺寸——动画把它压到 0 即等于隐藏
+			//（原版光束收束就是 size.y→0），不能退化成"按原始尺寸绘制"
+			if st.size[0] <= 0 || st.size[1] <= 0 {
+				continue
+			}
 			opts.Stretch = st.size
 		}
 		world := s.world[i]

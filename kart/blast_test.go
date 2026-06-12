@@ -23,7 +23,8 @@ func TestBlastGirlVisibility(t *testing.T) {
 			}
 			st := &s.state[i]
 			mark := ""
-			if s.actives[i] && st.renderOn && st.sprite != "" && st.color[3] > 0 {
+			sizeCollapsed := n.DrawMode != 0 && (st.size[0] <= 0 || st.size[1] <= 0)
+			if s.actives[i] && st.renderOn && st.sprite != "" && st.color[3] > 0 && !sizeCollapsed {
 				if _, ok := as.Sheet.Sprites[st.sprite]; ok {
 					visible++
 					mark = "可见"
@@ -37,6 +38,13 @@ func TestBlastGirlVisibility(t *testing.T) {
 			}
 		}
 		fmt.Printf("  可见节点数=%d\n", visible)
+		// 收束后（m_Size.y→0）光束必须消失，不能以原始尺寸残留
+		if clipT >= 0.5 {
+			ei := s.byPath["girl/head/effect2"]
+			if st := &s.state[ei]; !(st.size[0] <= 0 || st.size[1] <= 0) {
+				t.Errorf("clipT=%.2fs 光束 size=%v 未收束", clipT, st.size)
+			}
+		}
 		if visible < 4 {
 			t.Errorf("clipT=%.2fs 女孩子树可见节点仅 %d（应 >=4：发射期间她换爆发造型但不消失）", clipT, visible)
 		}
