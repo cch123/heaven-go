@@ -57,6 +57,9 @@ type Node struct {
 	FlipY    bool       `json:"flipY,omitempty"`
 	DrawMode int        `json:"drawMode,omitempty"` // 0=simple 1=sliced 2=tiled
 	Size     [2]float64 `json:"size,omitempty"`     // drawMode != 0 时的渲染尺寸（unit）
+	// SortGroup 非空表示该节点挂有 Unity SortingGroup（[layer, order]）：
+	// 整个子树作为单一排序单元参与全局排序，子树内部再按各自 order 排。
+	SortGroup []int `json:"sortGroup,omitempty"`
 }
 
 // Rig 是一棵节点树（KarateMan 的单骨架与整游戏场景共用此结构）。

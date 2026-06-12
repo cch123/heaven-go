@@ -92,7 +92,11 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 }
 
 func (m *Module) OnSwitch(beat float64) {
+	// 各 Animator 的 controller 默认状态（girl/Player 的 NoPose 把角色摆进
+	// 坐姿——prefab 原始摆位是悬浮在课桌上方的）
 	m.ctx.Play(m.ctx.Role("warnAnim"), "WarnBubble/NoPose", beat, 0.5)
+	m.ctx.Play(m.ctx.Role("girlAnim"), "Girl/NoPose", beat, 0.5)
+	m.ctx.Play(m.ctx.Role("playerAnim"), "Player/NoPose", beat, 0.5)
 }
 
 // ---------- 事件 ----------

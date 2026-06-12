@@ -137,6 +137,7 @@ func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
 		goName: map[int64]string{}, tfByGO: map[int64]map[string]any{},
 		tfByID: map[int64]map[string]any{}, tfOwner: map[int64]int64{},
 		rendByGO: map[int64]map[string]any{}, goActive: map[int64]bool{},
+		groupByGO: map[int64][]int{},
 	}
 	dt := &docTable{byID: map[int64]*docRef{}}
 	for i := range docs {
@@ -155,6 +156,9 @@ func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
 		case 212: // SpriteRenderer
 			gid := uy.I(uy.Get(c, "m_GameObject", "fileID"))
 			idx.rendByGO[gid] = c
+		case 210: // SortingGroup
+			gid := uy.I(uy.Get(c, "m_GameObject", "fileID"))
+			idx.groupByGO[gid] = []int{int(uy.I(c["m_SortingLayer"])), int(uy.I(c["m_SortingOrder"]))}
 		}
 	}
 	return idx, dt
@@ -203,6 +207,7 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) map[int64]str
 			},
 			Inactive: !idx.goActive[gid],
 		}
+		n.SortGroup = idx.groupByGO[gid]
 		if r := idx.rendByGO[gid]; r != nil {
 			n.Sprite = resolveSprite(tables,
 				uy.S(uy.Get(r, "m_Sprite", "guid")), uy.I(uy.Get(r, "m_Sprite", "fileID")))

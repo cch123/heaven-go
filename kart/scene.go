@@ -19,16 +19,17 @@ import (
 )
 
 type sceneNodeState struct {
-	pos    [2]float64
-	rot    float64
-	scale  [2]float64
-	sprite string
-	flipX  bool
-	flipY  bool
-	active bool
-	color  [4]float64
-	size   [2]float64 // drawMode != 0 时生效
-	order  int        // sortingOrder（可被动画驱动）
+	pos      [2]float64
+	rot      float64
+	scale    [2]float64
+	sprite   string
+	flipX    bool
+	flipY    bool
+	active   bool // GameObject m_IsActive（沿层级传播）
+	renderOn bool // SpriteRenderer m_Enabled（仅本节点，不传播）
+	color    [4]float64
+	size     [2]float64 // drawMode != 0 时生效
+	order    int        // sortingOrder（可被动画驱动）
 }
 
 // scenePlayer 是绑定到某个子树根的剪辑播放器。
@@ -49,6 +50,7 @@ type SceneInst struct {
 	world   []Aff
 	worldZ  []float64 // 节点深度（透视投影：s = CamDist/(CamDist+z)）
 	actives []bool    // activeInHierarchy
+	groupOf []int     // 节点归属的 SortingGroup 节点下标（-1 = 无）
 	players map[string]*scenePlayer
 
 	drawOrder []int // 预排序的可绘制节点（layer, order, dfs）
@@ -67,6 +69,18 @@ func NewScene(as *Assets) *SceneInst {
 	for i, n := range as.Rig.Nodes {
 		if _, dup := s.byPath[n.Path]; !dup { // 重名路径取首个（Unity 同语义）
 			s.byPath[n.Path] = i
+		}
+	}
+	// SortingGroup：每个节点的归属组 = 最近的挂组祖先（含自身），-1 = 无
+	s.groupOf = make([]int, len(as.Rig.Nodes))
+	for i, n := range as.Rig.Nodes {
+		switch {
+		case len(n.SortGroup) == 2:
+			s.groupOf[i] = i
+		case n.Parent >= 0:
+			s.groupOf[i] = s.groupOf[n.Parent]
+		default:
+			s.groupOf[i] = -1
 		}
 	}
 	type item struct{ idx, layer, order int }
@@ -123,7 +137,8 @@ func (s *SceneInst) Sample(beat float64) {
 		s.state[i] = sceneNodeState{
 			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
 			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
-			active: !n.Inactive, color: c, size: n.Size, order: n.Order,
+			active: !n.Inactive, renderOn: !n.Hidden,
+			color: c, size: n.Size, order: n.Order,
 		}
 	}
 	for _, p := range s.players {
@@ -229,8 +244,10 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				s.state[i].size[1] = v
 			case attr == "m_SortingOrder":
 				s.state[i].order = int(v)
-			case attr == "m_IsActive" || attr == "m_Enabled":
+			case attr == "m_IsActive":
 				s.state[i].active = v > 0.5
+			case attr == "m_Enabled":
+				s.state[i].renderOn = v > 0.5
 			case strings.HasPrefix(attr, "m_Color."):
 				switch attr[len("m_Color."):] {
 				case "r":
@@ -258,29 +275,54 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 	type item struct {
 		idx, layer, order int
 		z                 float64
+		gIdx              int // 排序单元（SortingGroup 根或自身）
+		gLayer, gOrder    int
+		gZ                float64
 	}
 	items := make([]item, 0, len(s.state))
 	for i := range s.state {
-		if !s.actives[i] || s.as.Rig.Nodes[i].Hidden {
+		st := &s.state[i]
+		if !s.actives[i] || !st.renderOn {
 			continue
 		}
-		st := &s.state[i]
 		if st.sprite == "" || st.color[3] <= 0 {
 			continue
 		}
-		items = append(items, item{i, s.as.Rig.Nodes[i].Layer, st.order, s.worldZ[i]})
+		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.worldZ[i]}
+		if g := s.groupOf[i]; g >= 0 {
+			sg := s.as.Rig.Nodes[g].SortGroup
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.worldZ[g]
+		} else {
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = i, it.layer, it.order, it.z
+		}
+		items = append(items, it)
 	}
 	sort.SliceStable(items, func(a, b int) bool {
-		if items[a].layer != items[b].layer {
-			return items[a].layer < items[b].layer
+		x, y := &items[a], &items[b]
+		// 组级（Unity SortingGroup：子树作为单一单元参与全局排序）
+		if x.gLayer != y.gLayer {
+			return x.gLayer < y.gLayer
 		}
-		if items[a].order != items[b].order {
-			return items[a].order < items[b].order
+		if x.gOrder != y.gOrder {
+			return x.gOrder < y.gOrder
 		}
-		if items[a].z != items[b].z { // 同层同序：远者先画
-			return items[a].z > items[b].z
+		if x.gZ != y.gZ {
+			return x.gZ > y.gZ // 远者先画
 		}
-		return items[a].idx < items[b].idx
+		if x.gIdx != y.gIdx {
+			return x.gIdx < y.gIdx
+		}
+		// 组内
+		if x.layer != y.layer {
+			return x.layer < y.layer
+		}
+		if x.order != y.order {
+			return x.order < y.order
+		}
+		if x.z != y.z {
+			return x.z > y.z
+		}
+		return x.idx < y.idx
 	})
 	for _, it := range items {
 		i := it.idx

@@ -225,12 +225,13 @@ func exportAtlas(tables map[string]*spriteTable) *kmdata.Sheet {
 // ---------- rig (prefab 子树) ----------
 
 type prefabIndex struct {
-	goName   map[int64]string         // GameObject fileID → 名字
-	goActive map[int64]bool           // GameObject fileID → m_IsActive
-	tfByGO   map[int64]map[string]any // GameObject fileID → Transform 内容
-	tfByID   map[int64]map[string]any // Transform fileID → 内容
-	tfOwner  map[int64]int64          // Transform fileID → GameObject fileID
-	rendByGO map[int64]map[string]any // GameObject fileID → SpriteRenderer 内容
+	goName    map[int64]string         // GameObject fileID → 名字
+	goActive  map[int64]bool           // GameObject fileID → m_IsActive
+	tfByGO    map[int64]map[string]any // GameObject fileID → Transform 内容
+	tfByID    map[int64]map[string]any // Transform fileID → 内容
+	tfOwner   map[int64]int64          // Transform fileID → GameObject fileID
+	rendByGO  map[int64]map[string]any // GameObject fileID → SpriteRenderer 内容
+	groupByGO map[int64][]int          // GameObject fileID → SortingGroup [layer, order]
 }
 
 // xAff 是提取器内部的 2D 仿射（与 kart.Aff 同布局）。
@@ -302,6 +303,7 @@ func exportRigAndStage(tables map[string]*spriteTable) *kmdata.Rig {
 		goName: map[int64]string{}, tfByGO: map[int64]map[string]any{},
 		tfByID: map[int64]map[string]any{}, tfOwner: map[int64]int64{},
 		rendByGO: map[int64]map[string]any{}, goActive: map[int64]bool{},
+		groupByGO: map[int64][]int{},
 	}
 	var rootGO int64
 	goTF := map[int64]int64{}       // GameObject fileID → Transform fileID
