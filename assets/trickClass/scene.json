@@ -1,0 +1,1635 @@
+{
+ "nodes": [
+  {
+   "name": "trickClass",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95,
+    0.95
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bg",
+   "path": "bg",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.455,
+    0.455
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "desks",
+   "path": "bg/desks",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mobTrick_bgDesk1 (1)",
+   "path": "bg/desks/mobTrick_bgDesk1 (1)",
+   "parent": 2,
+   "pos": [
+    -2.64,
+    -10.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_bg00_3",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.14,
+    2.57
+   ]
+  },
+  {
+   "name": "mobTrick_bgDesk2 (1)",
+   "path": "bg/desks/mobTrick_bgDesk2 (1)",
+   "parent": 2,
+   "pos": [
+    -13.25,
+    -17.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8,
+    1.8
+   ],
+   "sprite": "mobTrick_bg00_2",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    14.41,
+    2.99
+   ]
+  },
+  {
+   "name": "mobTrick_bgDesk3 (1)",
+   "path": "bg/desks/mobTrick_bgDesk3 (1)",
+   "parent": 2,
+   "pos": [
+    -17.83,
+    -18.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.4,
+    2.4
+   ],
+   "sprite": "mobTrick_bg00_1",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.38,
+    2.68
+   ]
+  },
+  {
+   "name": "mobTrick_bg00_0",
+   "path": "bg/mobTrick_bg00_0",
+   "parent": 1,
+   "pos": [
+    0.19,
+    -4.14
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.4200003,
+    3.4200003
+   ],
+   "sprite": "mobTrick_bg00_0",
+   "order": -15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    58.379997,
+    36.58866
+   ]
+  },
+  {
+   "name": "objWarn",
+   "path": "objWarn",
+   "parent": 0,
+   "pos": [
+    -6.45,
+    3.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.15,
+    1.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "warnBubble",
+   "path": "objWarn/warnBubble",
+   "parent": 7,
+   "pos": [
+    -0.024,
+    0.009
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "mobTrick_parts01_16",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.497253,
+    8.89193
+   ]
+  },
+  {
+   "name": "warnObj",
+   "path": "objWarn/warnBubble/warnObj",
+   "parent": 8,
+   "pos": [
+    -0.159,
+    0.078
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "mobTrick_parts01_17",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.0620136,
+    4.8016415
+   ]
+  },
+  {
+   "name": "girl",
+   "path": "girl",
+   "parent": 0,
+   "pos": [
+    -7.8,
+    -4.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body",
+   "path": "girl/body",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_parts01_9",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.85,
+    0.74
+   ]
+  },
+  {
+   "name": "head",
+   "path": "girl/head",
+   "parent": 10,
+   "pos": [
+    0.172,
+    2.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_parts01_8",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9277592,
+    2.995896
+   ]
+  },
+  {
+   "name": "hairR",
+   "path": "girl/head/hairR",
+   "parent": 12,
+   "pos": [
+    -1.45,
+    -1.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_parts01_10",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1218517,
+    1.2585499
+   ]
+  },
+  {
+   "name": "hairL",
+   "path": "girl/head/hairL",
+   "parent": 12,
+   "pos": [
+    1.45,
+    -1.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_parts01_10",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1218517,
+    1.2585499
+   ]
+  },
+  {
+   "name": "smearL",
+   "path": "girl/head/smearL",
+   "parent": 12,
+   "pos": [
+    3.17,
+    1.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8879944,
+    5.444597
+   ]
+  },
+  {
+   "name": "smearR",
+   "path": "girl/head/smearR",
+   "parent": 12,
+   "pos": [
+    4.23,
+    1.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8879944,
+    5.444597
+   ]
+  },
+  {
+   "name": "effect1",
+   "path": "girl/head/effect1",
+   "parent": 12,
+   "pos": [
+    4.23,
+    1.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8879944,
+    5.444597
+   ]
+  },
+  {
+   "name": "effect2",
+   "path": "girl/head/effect2",
+   "parent": 12,
+   "pos": [
+    4.23,
+    1.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 1,
+   "size": [
+    1.8879944,
+    5.444597
+   ]
+  },
+  {
+   "name": "effect3",
+   "path": "girl/head/effect3",
+   "parent": 12,
+   "pos": [
+    4.23,
+    1.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8879944,
+    5.444597
+   ]
+  },
+  {
+   "name": "player",
+   "path": "player",
+   "parent": 0,
+   "pos": [
+    5.67,
+    -2.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.455,
+    0.455
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body",
+   "path": "player/body",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_parts01_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    2.65
+   ]
+  },
+  {
+   "name": "armR",
+   "path": "player/body/armR",
+   "parent": 21,
+   "pos": [
+    -2,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_parts01_5",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.7486265,
+    5.7045145
+   ]
+  },
+  {
+   "name": "armL",
+   "path": "player/body/armL",
+   "parent": 21,
+   "pos": [
+    2.35,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_parts01_6",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.3108306,
+    5.9507527
+   ]
+  },
+  {
+   "name": "handL",
+   "path": "player/body/armL/handL",
+   "parent": 23,
+   "pos": [
+    0.98,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.6280531,
+    1.1217511
+   ]
+  },
+  {
+   "name": "head",
+   "path": "player/head",
+   "parent": 20,
+   "pos": [
+    0,
+    6.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mobTrick_parts01_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.34,
+    3.67
+   ]
+  },
+  {
+   "name": "effect1",
+   "path": "player/effect1",
+   "parent": 20,
+   "pos": [
+    -3.99,
+    8.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8046293,
+    3.0232558
+   ]
+  },
+  {
+   "name": "effect2",
+   "path": "player/effect2",
+   "parent": 20,
+   "pos": [
+    -3.99,
+    8.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8046293,
+    3.0232558
+   ]
+  },
+  {
+   "name": "effect3",
+   "path": "player/effect3",
+   "parent": 20,
+   "pos": [
+    -3.99,
+    8.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8046293,
+    3.0232558
+   ]
+  },
+  {
+   "name": "objCurves",
+   "path": "objCurves",
+   "parent": 0,
+   "pos": [
+    -2.1,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.25,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objBall",
+   "path": "objCurves/objBall",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objBallToss",
+   "path": "objCurves/objBall/objBallToss",
+   "parent": 30,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "objCurves/objBall/objBallToss/Point 0",
+   "parent": 31,
+   "pos": [
+    -3.1106741,
+    -0.49201435
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "objCurves/objBall/objBallToss/Point 1",
+   "parent": 31,
+   "pos": [
+    11.98,
+    -6.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objBallMiss",
+   "path": "objCurves/objBall/objBallMiss",
+   "parent": 30,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "objCurves/objBall/objBallMiss/Point 0",
+   "parent": 34,
+   "pos": [
+    4.45,
+    1.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "objCurves/objBall/objBallMiss/Point 1",
+   "parent": 34,
+   "pos": [
+    -0.86,
+    -11.69
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objPlane",
+   "path": "objCurves/objPlane",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objPlaneToss",
+   "path": "objCurves/objPlane/objPlaneToss",
+   "parent": 37,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "objCurves/objPlane/objPlaneToss/Point 0",
+   "parent": 38,
+   "pos": [
+    -3.1106741,
+    -0.49201435
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "objCurves/objPlane/objPlaneToss/Point 1",
+   "parent": 38,
+   "pos": [
+    1.2985466,
+    0.24284542
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "objCurves/objPlane/objPlaneToss/Point 2",
+   "parent": 38,
+   "pos": [
+    1.3992692,
+    2.7532198
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95693785,
+    1.0526316
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 3",
+   "path": "objCurves/objPlane/objPlaneToss/Point 3",
+   "parent": 38,
+   "pos": [
+    -1.05,
+    2.3652556
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 4",
+   "path": "objCurves/objPlane/objPlaneToss/Point 4",
+   "parent": 38,
+   "pos": [
+    1.189,
+    -0.048113704
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 5",
+   "path": "objCurves/objPlane/objPlaneToss/Point 5",
+   "parent": 38,
+   "pos": [
+    7.355391,
+    3.5441406
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 6",
+   "path": "objCurves/objPlane/objPlaneToss/Point 6",
+   "parent": 38,
+   "pos": [
+    -10.13,
+    -7.1124625
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objPlaneMiss",
+   "path": "objCurves/objPlane/objPlaneMiss",
+   "parent": 37,
+   "pos": [
+    0.5,
+    0.073
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "objCurves/objPlane/objPlaneMiss/Point 0",
+   "parent": 46,
+   "pos": [
+    4.45,
+    1.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "objCurves/objPlane/objPlaneMiss/Point 1",
+   "parent": 46,
+   "pos": [
+    5.956936,
+    4.9981914
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "objCurves/objPlane/objPlaneMiss/Point 2",
+   "parent": 46,
+   "pos": [
+    1.82,
+    6.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 3",
+   "path": "objCurves/objPlane/objPlaneMiss/Point 3",
+   "parent": 46,
+   "pos": [
+    -2.32,
+    -1.9286046
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 4",
+   "path": "objCurves/objPlane/objPlaneMiss/Point 4",
+   "parent": 46,
+   "pos": [
+    -11.55,
+    -6.008895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objShock",
+   "path": "objCurves/objShock",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objShockToss",
+   "path": "objCurves/objShock/objShockToss",
+   "parent": 52,
+   "pos": [
+    -1.43,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "objCurves/objShock/objShockToss/Point 0",
+   "parent": 53,
+   "pos": [
+    -1.6806741,
+    -0.49201435
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "objCurves/objShock/objShockToss/Point 1",
+   "parent": 53,
+   "pos": [
+    13.9,
+    5.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objHolder",
+   "path": "objHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "objBall",
+   "path": "objHolder/objBall",
+   "parent": 56,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "mobTrick_parts01_17",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.4438066,
+    6.183311
+   ]
+  },
+  {
+   "name": "objPlane",
+   "path": "objHolder/objPlane",
+   "parent": 56,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "mobTrick_parts01_18",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.67255,
+    4.1586866
+   ]
+  },
+  {
+   "name": "objChair",
+   "path": "objHolder/objChair",
+   "parent": 56,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "mobTrick_parts00_0",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.4438066,
+    6.183311
+   ]
+  },
+  {
+   "name": "objShock",
+   "path": "objHolder/objShock",
+   "parent": 56,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "mobTrick_parts00_17",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    6.4438066,
+    6.183311
+   ]
+  },
+  {
+   "name": "objPhone",
+   "path": "objHolder/objPhone",
+   "parent": 56,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "mobTrick_parts00_1",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.4438066,
+    6.183311
+   ]
+  },
+  {
+   "name": "objNx",
+   "path": "objHolder/objNx",
+   "parent": 56,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "mobTrick_parts00_2",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.4438066,
+    6.183311
+   ]
+  },
+  {
+   "name": "cameraRef",
+   "path": "cameraRef",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0526316,
+    1.0526316
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

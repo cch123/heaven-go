@@ -1,0 +1,11 @@
+{
+ "CloseCrane": "CloseArm",
+ "EffectExclam": "SomenMan/Exclam",
+ "EffectHit": "SomenMan/Hit Effect",
+ "EffectShock": "SomenMan/Shock",
+ "EffectSweat": "Sweat",
+ "FarCrane": "FarArm",
+ "FrontArm": "FrontArm",
+ "SomenPlayer": "SomenMan",
+ "backArm": "BackArm"
+}

@@ -137,15 +137,15 @@ func scanSpriteMetas(root string) map[string]*spriteTable {
 			h := uy.F(rect["height"])
 			x := uy.F(uy.Get(rect, "x"))
 			y := uy.F(uy.Get(rect, "y"))
-			px, py := 0.5, 0.5
-			if int(uy.I(sp["alignment"])) == 9 { // 9 = 自定义枢轴
-				px = uy.F(uy.Get(sp, "pivot", "x"))
-				py = uy.F(uy.Get(sp, "pivot", "y"))
-			}
+			px, py := alignmentPivot(int(uy.I(sp["alignment"])), sp)
 			t.sheet[name] = kmdata.SpriteInfo{
 				X: int(math.Round(x)), Y: t.texH - int(math.Round(y+h)), // Unity 原点左下 → 图像左上
 				W: int(math.Round(w)), H: int(math.Round(h)),
 				PivotX: px, PivotY: py,
+				Border: [4]float64{
+					uy.F(uy.Get(sp, "border", "x")), uy.F(uy.Get(sp, "border", "y")),
+					uy.F(uy.Get(sp, "border", "z")), uy.F(uy.Get(sp, "border", "w")),
+				},
 			}
 		}
 		out[guid] = t
@@ -153,6 +153,32 @@ func scanSpriteMetas(root string) map[string]*spriteTable {
 	}))
 	fmt.Printf("scanned %d sprite metas\n", len(out))
 	return out
+}
+
+// alignmentPivot 把 Unity SpriteAlignment 枚举换算为归一化枢轴。
+func alignmentPivot(alignment int, sp map[string]any) (float64, float64) {
+	switch alignment {
+	case 0: // Center
+		return 0.5, 0.5
+	case 1: // TopLeft
+		return 0, 1
+	case 2: // TopCenter
+		return 0.5, 1
+	case 3: // TopRight
+		return 1, 1
+	case 4: // LeftCenter
+		return 0, 0.5
+	case 5: // RightCenter
+		return 1, 0.5
+	case 6: // BottomLeft
+		return 0, 0
+	case 7: // BottomCenter
+		return 0.5, 0
+	case 8: // BottomRight
+		return 1, 0
+	default: // 9 = Custom
+		return uy.F(uy.Get(sp, "pivot", "x")), uy.F(uy.Get(sp, "pivot", "y"))
+	}
 }
 
 func pngConfig(p string) (image.Config, error) {

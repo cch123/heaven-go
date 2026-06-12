@@ -1,0 +1,936 @@
+{
+ "nodes": [
+  {
+   "name": "rhythmSomen",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FrontArm",
+   "path": "FrontArm",
+   "parent": 0,
+   "pos": [
+    -7.8186,
+    -6.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6774433,
+    0.6774433
+   ],
+   "sprite": "arm1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "noodlediag",
+   "path": "FrontArm/noodlediag",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "noodlediag",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.15,
+    0.76
+   ]
+  },
+  {
+   "name": "woosh",
+   "path": "FrontArm/woosh",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "woosh",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.95,
+    2.72
+   ]
+  },
+  {
+   "name": "noodleslurp",
+   "path": "FrontArm/noodleslurp",
+   "parent": 1,
+   "pos": [
+    1.1580418,
+    3.579221
+   ],
+   "rotZ": -0.057141902581719896,
+   "scale": [
+    1.4761381,
+    1.4761381
+   ],
+   "sprite": "noodleslurp",
+   "order": -15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.39,
+    0.9
+   ]
+  },
+  {
+   "name": "Sweat",
+   "path": "Sweat",
+   "parent": 0,
+   "pos": [
+    -8.759369,
+    -3.6036887
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6584353,
+    0.6584353
+   ],
+   "sprite": "sweat",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "SomenMan",
+   "path": "SomenMan",
+   "parent": 0,
+   "pos": [
+    0.60263187,
+    -6.37613
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "SomenMan/Head",
+   "parent": 6,
+   "pos": [
+    -8.9663315,
+    2.75443
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.69274694,
+    0.69274694
+   ],
+   "sprite": "head",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "SomenMan/Body",
+   "parent": 6,
+   "pos": [
+    -9.192632,
+    -1.5538697
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67219937,
+    0.67219937
+   ],
+   "sprite": "body",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Hit Effect",
+   "path": "SomenMan/Hit Effect",
+   "parent": 6,
+   "pos": [
+    -4.594,
+    -2.1227
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7296611,
+    0.7296611
+   ],
+   "sprite": "hit",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Exclam",
+   "path": "SomenMan/Exclam",
+   "parent": 6,
+   "pos": [
+    -6.09,
+    3.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7296611,
+    0.7296611
+   ],
+   "sprite": "exclam",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Shock",
+   "path": "SomenMan/Shock",
+   "parent": 6,
+   "pos": [
+    -7.264,
+    4.2655
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.69996256,
+    0.69996256
+   ],
+   "sprite": "shock",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "TestFUnnyArm",
+   "path": "SomenMan/TestFUnnyArm",
+   "parent": 6,
+   "pos": [
+    -8.421232,
+    -0.54387
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6774433,
+    0.6774433
+   ],
+   "sprite": "arm1",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    0.74509805,
+    0.10208259,
+    0.10208259,
+    0.74509805
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Shoot",
+   "path": "Shoot",
+   "parent": 0,
+   "pos": [
+    0.60263187,
+    -6.37613
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BambooBase",
+   "path": "Shoot/BambooBase",
+   "parent": 13,
+   "pos": [
+    2.9373682,
+    0.8661299
+   ],
+   "rotZ": 0.2617993138268839,
+   "scale": [
+    0.6960463,
+    0.6960463
+   ],
+   "sprite": "bamboobody",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BambooLeg",
+   "path": "Shoot/BambooLeg",
+   "parent": 13,
+   "pos": [
+    4.96,
+    -1.0969
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.69013214,
+    0.76877815
+   ],
+   "sprite": "bambooleg",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BambooLeg",
+   "path": "Shoot/BambooLeg",
+   "parent": 13,
+   "pos": [
+    -0.41,
+    -1.8394
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.5017261,
+    0.76877815
+   ],
+   "sprite": "bambooleg",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Flow",
+   "path": "Shoot/Flow",
+   "parent": 13,
+   "pos": [
+    -4.533,
+    -2.4321
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7084513,
+    0.7084513
+   ],
+   "sprite": "water1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BGContainer",
+   "path": "BGContainer",
+   "parent": 0,
+   "pos": [
+    0.6665858,
+    -4.8539343
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BGClassic",
+   "path": "BGContainer/BGClassic",
+   "parent": 18,
+   "pos": [
+    -0.6665858,
+    -0.38606548
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.78,
+    2.78
+   ],
+   "order": -51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BGContainer/BG",
+   "parent": 18,
+   "pos": [
+    -0.7748,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7871768,
+    0.7871768
+   ],
+   "sprite": "bg",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BGColor",
+   "path": "BGContainer/BG/BGColor",
+   "parent": 20,
+   "pos": [
+    0.11916,
+    0.4474218
+   ],
+   "rotZ": 0,
+   "scale": [
+    52.210056,
+    29.469723
+   ],
+   "order": -50,
+   "color": [
+    0.7607843,
+    0.8784314,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "FarArm",
+   "path": "FarArm",
+   "parent": 0,
+   "pos": [
+    7.8124533,
+    3.102626
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArmBase",
+   "path": "FarArm/ArmBase",
+   "parent": 22,
+   "pos": [
+    -0.5609999,
+    1.937
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.69975936,
+    0.69975936
+   ],
+   "sprite": "cranebody",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightClaw",
+   "path": "FarArm/RightClaw",
+   "parent": 22,
+   "pos": [
+    -0.446,
+    -0.868
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    0.6711707,
+    0.6711707
+   ],
+   "sprite": "cranehand",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftClaw",
+   "path": "FarArm/LeftClaw",
+   "parent": 22,
+   "pos": [
+    -0.6619999,
+    -0.86800003
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    -0.6711707,
+    0.6711707
+   ],
+   "sprite": "cranehand",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "NoodleBall",
+   "path": "FarArm/NoodleBall",
+   "parent": 22,
+   "pos": [
+    -0.544,
+    -1.4054
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.81003344,
+    0.81003344
+   ],
+   "sprite": "noodle",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    0.68
+   ]
+  },
+  {
+   "name": "CloseArm",
+   "path": "CloseArm",
+   "parent": 0,
+   "pos": [
+    2.43,
+    2.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArmBase",
+   "path": "CloseArm/ArmBase",
+   "parent": 27,
+   "pos": [
+    -0.5609999,
+    1.937
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.69975936,
+    0.69975936
+   ],
+   "sprite": "cranebody",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightClaw",
+   "path": "CloseArm/RightClaw",
+   "parent": 27,
+   "pos": [
+    -0.446,
+    -0.868
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    0.6711707,
+    0.6711707
+   ],
+   "sprite": "cranehand",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftClaw",
+   "path": "CloseArm/LeftClaw",
+   "parent": 27,
+   "pos": [
+    -0.6619999,
+    -0.86800003
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    -0.6711707,
+    0.6711707
+   ],
+   "sprite": "cranehand",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "NoodleBall",
+   "path": "CloseArm/NoodleBall",
+   "parent": 27,
+   "pos": [
+    -0.544,
+    -1.4054
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.81003344,
+    0.81003344
+   ],
+   "sprite": "noodle",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    0.68
+   ]
+  },
+  {
+   "name": "SplashEffect",
+   "path": "SplashEffect",
+   "parent": 0,
+   "pos": [
+    -4.016,
+    -8.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BackArm",
+   "path": "BackArm",
+   "parent": 0,
+   "pos": [
+    -7.348,
+    -7.153
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6791434,
+    0.6791434
+   ],
+   "sprite": "bowlarm",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Noodle",
+   "path": "Noodle",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "noodlediag",
+   "path": "noodlediag",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "noodlediag",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.15,
+    0.76
+   ]
+  }
+ ]
+}

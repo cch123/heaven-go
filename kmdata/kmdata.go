@@ -24,9 +24,10 @@ type SwapKey struct {
 // SpriteInfo 是图集中一个切片，X/Y 为图集内左上角像素坐标。
 type SpriteInfo struct {
 	X, Y, W, H     int
-	PivotX, PivotY float64 // 归一化枢轴（Unity 约定：Y 向上）
-	Atlas          int     `json:"atlas,omitempty"` // 多图集时的索引（Sheet.Atlases）
-	PPU            float64 `json:"ppu,omitempty"`   // 单切片 PPU；0 表示用 Sheet.PPU
+	PivotX, PivotY float64    // 归一化枢轴（Unity 约定：Y 向上）
+	Atlas          int        `json:"atlas,omitempty"`  // 多图集时的索引（Sheet.Atlases）
+	PPU            float64    `json:"ppu,omitempty"`    // 单切片 PPU；0 表示用 Sheet.PPU
+	Border         [4]float64 `json:"border,omitempty"` // 九宫格边距 px：左/下/右/上（Unity x/y/z/w）
 }
 
 // Sheet 是切片表。单图集时用 Atlas/PPU；多图集时用 Atlases + 切片级字段。

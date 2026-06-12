@@ -256,7 +256,9 @@ type SpriteOpts struct {
 	Stretch      [2]float64 // 非零时拉伸到该尺寸（unit，对应 SpriteRenderer sliced/tiled 的 m_Size）
 }
 
-// DrawSpriteOpts 按选项绘制切片（sliced/tiled 的 m_Size 以整体拉伸近似）。
+// DrawSpriteOpts 按选项绘制切片。Stretch 非零时按 SpriteRenderer
+// sliced 语义渲染：有 border 的切片走九宫格（端帽保持原始像素尺寸，
+// 仅拉伸中段），无 border 则整体拉伸。
 func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff, o SpriteOpts) {
 	img := a.Sub(name)
 	if img == nil {
@@ -271,22 +273,66 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 	if o.FlipY {
 		fy = -1
 	}
-	sx, sy := fx/ppu, fy/ppu
-	if o.Stretch[0] != 0 && o.Stretch[1] != 0 {
-		nw, nh := float64(sp.W)/ppu, float64(sp.H)/ppu
-		if nw > 0 && nh > 0 {
-			sx *= o.Stretch[0] / nw
-			sy *= o.Stretch[1] / nh
-		}
-	}
 	tint := o.Tint
 	if tint == [4]float64{} {
 		tint = [4]float64{1, 1, 1, 1}
 	}
-	local := Scale(sx, -sy).
-		Mul(Translate(-sp.PivotX*float64(sp.W), -(1-sp.PivotY)*float64(sp.H)))
+
+	stretch := o.Stretch[0] != 0 && o.Stretch[1] != 0
+	if !stretch {
+		local := Scale(fx/ppu, -fy/ppu).
+			Mul(Translate(-sp.PivotX*float64(sp.W), -(1-sp.PivotY)*float64(sp.H)))
+		drawTinted(dst, img, proj.Mul(world).Mul(local), tint)
+		return
+	}
+
+	// 目标矩形（像素），枢轴按矩形比例锚定（Unity sliced 语义）
+	tw, th := math.Abs(o.Stretch[0])*ppu, math.Abs(o.Stretch[1])*ppu
+	base := Scale(fx/ppu, -fy/ppu).
+		Mul(Translate(-sp.PivotX*tw, -(1-sp.PivotY)*th))
+
+	bl, bb, br, bt := sp.Border[0], sp.Border[1], sp.Border[2], sp.Border[3]
+	if bl+bb+br+bt == 0 { // 无 border：整体拉伸
+		local := base.Mul(Scale(tw/float64(sp.W), th/float64(sp.H)))
+		drawTinted(dst, img, proj.Mul(world).Mul(local), tint)
+		return
+	}
+	// 端帽超过目标尺寸时按比例压缩（Unity 同语义）
+	if s := tw / (bl + br); bl+br > 0 && s < 1 {
+		bl, br = bl*s, br*s
+	}
+	if s := th / (bt + bb); bt+bb > 0 && s < 1 {
+		bt, bb = bt*s, bb*s
+	}
+
+	W, H := float64(sp.W), float64(sp.H)
+	sxs := [4]float64{0, sp.Border[0], W - sp.Border[2], W} // 源（左→右）
+	sys := [4]float64{0, sp.Border[3], H - sp.Border[1], H} // 源（上→下：上边距 w、下边距 y）
+	txs := [4]float64{0, bl, tw - br, tw}
+	tys := [4]float64{0, bt, th - bb, th}
+
+	for ix := 0; ix < 3; ix++ {
+		for iy := 0; iy < 3; iy++ {
+			sw, sh := sxs[ix+1]-sxs[ix], sys[iy+1]-sys[iy]
+			dw, dh := txs[ix+1]-txs[ix], tys[iy+1]-tys[iy]
+			if sw <= 0 || sh <= 0 || dw <= 0 || dh <= 0 {
+				continue
+			}
+			sub := img.SubImage(image.Rect(
+				sp.X+int(sxs[ix]), sp.Y+int(sys[iy]),
+				sp.X+int(sxs[ix+1]), sp.Y+int(sys[iy+1]),
+			)).(*ebiten.Image)
+			local := base.
+				Mul(Translate(txs[ix], tys[iy])).
+				Mul(Scale(dw/sw, dh/sh))
+			drawTinted(dst, sub, proj.Mul(world).Mul(local), tint)
+		}
+	}
+}
+
+func drawTinted(dst, img *ebiten.Image, m Aff, tint [4]float64) {
 	op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
-	op.GeoM = proj.Mul(world).Mul(local).GeoM()
+	op.GeoM = m.GeoM()
 	op.ColorScale.Scale(float32(tint[0]), float32(tint[1]), float32(tint[2]), float32(tint[3]))
 	dst.DrawImage(img, op)
 }

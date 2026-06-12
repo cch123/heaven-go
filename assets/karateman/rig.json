@@ -1,0 +1,282 @@
+{
+ "nodes": [
+  {
+   "name": "KarateMan",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    -2.9,
+    -1.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.64,
+    0.64
+   ],
+   "order": 0
+  },
+  {
+   "name": "Head",
+   "path": "Head",
+   "parent": 0,
+   "pos": [
+    0.05,
+    2.959
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "karateman_head_0",
+   "order": 6
+  },
+  {
+   "name": "HeadAttatch",
+   "path": "Head/HeadAttatch",
+   "parent": 1,
+   "pos": [
+    0,
+    1.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "Wig",
+   "path": "Head/Wig",
+   "parent": 1,
+   "pos": [
+    0,
+    0.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "karateman_wig_0",
+   "order": 6
+  },
+  {
+   "name": "Body",
+   "path": "Body",
+   "parent": 0,
+   "pos": [
+    -0.074,
+    -0.032
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "karateman_torso_1",
+   "order": 5
+  },
+  {
+   "name": "LeftArm",
+   "path": "LeftArm",
+   "parent": 0,
+   "pos": [
+    1.564,
+    0.969
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "karateman_arm_5",
+   "order": 4
+  },
+  {
+   "name": "LeftArmAttatch",
+   "path": "LeftArm/LeftArmAttatch",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "LeftArmAttatchNoMap",
+   "path": "LeftArm/LeftArmAttatchNoMap",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "RightArm",
+   "path": "RightArm",
+   "parent": 0,
+   "pos": [
+    1.539,
+    0.971
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "RightArmAttatch",
+   "path": "RightArm/RightArmAttatch",
+   "parent": 8,
+   "pos": [
+    0.02499998,
+    -0.002000034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "LeftLeg",
+   "path": "LeftLeg",
+   "parent": 0,
+   "pos": [
+    1.013,
+    -2.589
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "karateman_legleft",
+   "order": 2
+  },
+  {
+   "name": "LeftLegAttatch",
+   "path": "LeftLeg/LeftLegAttatch",
+   "parent": 10,
+   "pos": [
+    0.551,
+    3.558
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "RightLeg",
+   "path": "RightLeg",
+   "parent": 0,
+   "pos": [
+    -0.842,
+    -3.032
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "karateman_legright",
+   "order": 3
+  },
+  {
+   "name": "LeftLegAttatch",
+   "path": "RightLeg/LeftLegAttatch",
+   "parent": 12,
+   "pos": [
+    2.436,
+    4.001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "ManShadowL",
+   "path": "ManShadowL",
+   "parent": 0,
+   "pos": [
+    1.024,
+    -4.592
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "karateman_object_shadow",
+   "order": 0
+  },
+  {
+   "name": "ManShadowM",
+   "path": "ManShadowM",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "ManShadowM2",
+   "path": "ManShadowM2",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0
+  },
+  {
+   "name": "ManShadowR",
+   "path": "ManShadowR",
+   "parent": 0,
+   "pos": [
+    -1.108,
+    -4.968
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "karateman_object_shadow",
+   "order": 0
+  }
+ ]
+}

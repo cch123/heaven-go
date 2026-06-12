@@ -1,0 +1,670 @@
+{
+ "atlas": "atlas.png",
+ "ppu": 71.95853,
+ "sprites": {
+  "karateman_alien": {
+   "X": 3476,
+   "Y": 2727,
+   "W": 276,
+   "H": 256,
+   "PivotX": 0.5005042,
+   "PivotY": 0.48580885
+  },
+  "karateman_altpunch_0": {
+   "X": 4,
+   "Y": 1062,
+   "W": 664,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_altpunch_1": {
+   "X": 676,
+   "Y": 1062,
+   "W": 536,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_altpunch_2": {
+   "X": 1219,
+   "Y": 1062,
+   "W": 472,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_altpunch_3": {
+   "X": 1699,
+   "Y": 1062,
+   "W": 440,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_0": {
+   "X": 2595,
+   "Y": 6,
+   "W": 376,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_1": {
+   "X": 4,
+   "Y": 294,
+   "W": 440,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_1_part00": {
+   "X": 2513,
+   "Y": 2156,
+   "W": 336,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_1_part01": {
+   "X": 2897,
+   "Y": 2173,
+   "W": 165,
+   "H": 135,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_2": {
+   "X": 452,
+   "Y": 294,
+   "W": 408,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_3": {
+   "X": 868,
+   "Y": 294,
+   "W": 344,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_4": {
+   "X": 1219,
+   "Y": 294,
+   "W": 312,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_5": {
+   "X": 1539,
+   "Y": 294,
+   "W": 312,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_6": {
+   "X": 1857,
+   "Y": 294,
+   "W": 474,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_7": {
+   "X": 2339,
+   "Y": 294,
+   "W": 440,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_8": {
+   "X": 2786,
+   "Y": 294,
+   "W": 408,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_arm_9": {
+   "X": 2690,
+   "Y": 581,
+   "W": 216,
+   "H": 281,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_ball": {
+   "X": 292,
+   "Y": 2693,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_barrel": {
+   "X": 868,
+   "Y": 2917,
+   "W": 280,
+   "H": 376,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_barrelfx_0": {
+   "X": 1827,
+   "Y": 3109,
+   "W": 184,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_barrelfx_1": {
+   "X": 2019,
+   "Y": 3109,
+   "W": 184,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_barrelfx_2": {
+   "X": 2211,
+   "Y": 3109,
+   "W": 184,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_barrelfx_3": {
+   "X": 2403,
+   "Y": 3109,
+   "W": 280,
+   "H": 184,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_barrelfx_4": {
+   "X": 2403,
+   "Y": 3300,
+   "W": 280,
+   "H": 184,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_bomb": {
+   "X": 580,
+   "Y": 2981,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_bulb": {
+   "X": 4,
+   "Y": 2981,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_combo_crouch_toIdle_leg": {
+   "X": 2688,
+   "Y": 1606,
+   "W": 401,
+   "H": 409,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_combo_crouchpunch_0": {
+   "X": 548,
+   "Y": 2149,
+   "W": 472,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_combo_crouchpunch_1": {
+   "X": 1027,
+   "Y": 2149,
+   "W": 536,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_combo_kick_0": {
+   "X": 4,
+   "Y": 1604,
+   "W": 696,
+   "H": 537,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_combo_kick_1": {
+   "X": 708,
+   "Y": 1604,
+   "W": 760,
+   "H": 537,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_combo_miss_0": {
+   "X": 1475,
+   "Y": 1605,
+   "W": 664,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_combo_miss_1": {
+   "X": 2147,
+   "Y": 1605,
+   "W": 536,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_combo_miss_2": {
+   "X": 4,
+   "Y": 2149,
+   "W": 536,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_cookingpot": {
+   "X": 3500,
+   "Y": 2476,
+   "W": 294,
+   "H": 155,
+   "PivotX": 0.48875457,
+   "PivotY": 0.6137561
+  },
+  "karateman_cookingpot_lid": {
+   "X": 3518,
+   "Y": 2224,
+   "W": 257,
+   "H": 121,
+   "PivotX": 0.4871356,
+   "PivotY": 0.34517047
+  },
+  "karateman_fastfx_0": {
+   "X": 1571,
+   "Y": 2373,
+   "W": 472,
+   "H": 216,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_fastfx_1": {
+   "X": 2690,
+   "Y": 3460,
+   "W": 856,
+   "H": 568,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_fastfx_2": {
+   "X": 1571,
+   "Y": 2220,
+   "W": 738,
+   "H": 142,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_fastfx_3": {
+   "X": 2467,
+   "Y": 870,
+   "W": 440,
+   "H": 664,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_fire": {
+   "X": 3367,
+   "Y": 9,
+   "W": 239,
+   "H": 240,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_hand": {
+   "X": 2467,
+   "Y": 582,
+   "W": 216,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_0": {
+   "X": 4,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_1": {
+   "X": 292,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_2": {
+   "X": 580,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_3": {
+   "X": 868,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_4": {
+   "X": 1155,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_5": {
+   "X": 1443,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_6": {
+   "X": 1731,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_7": {
+   "X": 2019,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_head_8": {
+   "X": 2307,
+   "Y": 6,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_hiteffect_0": {
+   "X": 1443,
+   "Y": 3109,
+   "W": 376,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick2": {
+   "X": 772,
+   "Y": 3783,
+   "W": 440,
+   "H": 309,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_": {
+   "X": 772,
+   "Y": 3332,
+   "W": 440,
+   "H": 451,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_0": {
+   "X": 4,
+   "Y": 3300,
+   "W": 760,
+   "H": 792,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_1": {
+   "X": 772,
+   "Y": 3332,
+   "W": 440,
+   "H": 760,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_2": {
+   "X": 1859,
+   "Y": 3492,
+   "W": 376,
+   "H": 440,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_3": {
+   "X": 2243,
+   "Y": 3492,
+   "W": 440,
+   "H": 440,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_leg_0": {
+   "X": 3330,
+   "Y": 3014,
+   "W": 472,
+   "H": 279,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_leg_1": {
+   "X": 2946,
+   "Y": 3013,
+   "W": 376,
+   "H": 440,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_leg_2": {
+   "X": 2690,
+   "Y": 2981,
+   "W": 248,
+   "H": 472,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_prepare_0": {
+   "X": 3426,
+   "Y": 1318,
+   "W": 664,
+   "H": 536,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_prepare_1": {
+   "X": 1529,
+   "Y": 3492,
+   "W": 290,
+   "H": 440,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_kick_prepare_2": {
+   "X": 1239,
+   "Y": 3492,
+   "W": 290,
+   "H": 440,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_leftleg_crouch": {
+   "X": 963,
+   "Y": 582,
+   "W": 376,
+   "H": 472,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_legleft": {
+   "X": 292,
+   "Y": 582,
+   "W": 344,
+   "H": 472,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_legright": {
+   "X": 4,
+   "Y": 582,
+   "W": 280,
+   "H": 472,
+   "PivotX": 0.4994876,
+   "PivotY": 0.52430433
+  },
+  "karateman_main_0": {
+   "X": 3416,
+   "Y": 532,
+   "W": 300,
+   "H": 614,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_main_1": {
+   "X": 2955,
+   "Y": 582,
+   "W": 387,
+   "H": 532,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_object_shadow": {
+   "X": 1155,
+   "Y": 3109,
+   "W": 280,
+   "H": 216,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_pot": {
+   "X": 4,
+   "Y": 2693,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_rainy_0": {
+   "X": 3904,
+   "Y": 152,
+   "W": 145,
+   "H": 282,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_rainy_1": {
+   "X": 3838,
+   "Y": 522,
+   "W": 212,
+   "H": 328,
+   "PivotX": 0.5,
+   "PivotY": 0.1
+  },
+  "karateman_rainy_2": {
+   "X": 3780,
+   "Y": 876,
+   "W": 290,
+   "H": 203,
+   "PivotX": 0.5,
+   "PivotY": 0.36
+  },
+  "karateman_rainy_3": {
+   "X": 3718,
+   "Y": 1098,
+   "W": 360,
+   "H": 201,
+   "PivotX": 0.5,
+   "PivotY": 0.48
+  },
+  "karateman_rightleg_crouch": {
+   "X": 644,
+   "Y": 582,
+   "W": 312,
+   "H": 472,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_rock": {
+   "X": 292,
+   "Y": 2981,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_shadow": {
+   "X": 2115,
+   "Y": 582,
+   "W": 344,
+   "H": 472,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_snow": {
+   "X": 3620,
+   "Y": 8,
+   "W": 244,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_tacobell": {
+   "X": 3494,
+   "Y": 1885,
+   "W": 280,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_torso_0": {
+   "X": 1347,
+   "Y": 582,
+   "W": 376,
+   "H": 472,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_torso_1": {
+   "X": 1731,
+   "Y": 582,
+   "W": 376,
+   "H": 472,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  },
+  "karateman_torso_2": {
+   "X": 2914,
+   "Y": 582,
+   "W": 440,
+   "H": 983,
+   "PivotX": 0.5,
+   "PivotY": 0.5
+  }
+ }
+}

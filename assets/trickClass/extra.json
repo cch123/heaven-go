@@ -1,0 +1,440 @@
+{
+ "refArrays": {
+  "objPrefab": [
+   "objHolder/objBall",
+   "objHolder/objChair",
+   "objHolder/objShock",
+   "objHolder/objPhone",
+   "objHolder/objPlane"
+  ],
+  "objPrefabVariant": [
+   "objHolder/objBall",
+   "objHolder/objChair",
+   "objHolder/objShock",
+   "objHolder/objNx",
+   "objHolder/objPlane"
+  ]
+ },
+ "strings": {
+  "objThrowAnim": [
+   "Throw",
+   "ThrowAlt",
+   "ThrowAlt",
+   "Throw",
+   "Throw"
+  ],
+  "objWarnAnim": [
+   "WarnBall",
+   "WarnChair",
+   "WarnShock",
+   "WarnPhone",
+   "WarnPlane"
+  ],
+  "objWarnAnimVariant": [
+   "WarnBall",
+   "WarnChair",
+   "WarnShock",
+   "WarnNx",
+   "WarnPlane"
+  ]
+ },
+ "curves": {
+  "ballMissCurve": [
+   {
+    "p": [
+     3.2893749999999997,
+     0.8169999999999998
+    ],
+    "lh": [
+     7.69658661875,
+     0.24484283499999981
+    ],
+    "rh": [
+     -1.1178366187500002,
+     1.3891571649999999
+    ]
+   },
+   {
+    "p": [
+     -3.01625,
+     -11.865499999999999
+    ],
+    "lh": [
+     -2.9618934664375,
+     -7.135735284999999
+    ],
+    "rh": [
+     -3.0706065335624997,
+     -16.595264715
+    ]
+   }
+  ],
+  "ballTossCurve": [
+   {
+    "p": [
+     -5.68892549375,
+     -1.2274136325
+    ],
+    "lh": [
+     -10.8558692125,
+     -5.2372546675
+    ],
+    "rh": [
+     -0.5219817750000004,
+     2.7824274024999998
+    ]
+   },
+   {
+    "p": [
+     12.231250000000001,
+     -6.858999999999999
+    ],
+    "lh": [
+     7.268281375000001,
+     2.103685699999999
+    ],
+    "rh": [
+     17.194218625,
+     -15.821685699999996
+    ]
+   }
+  ],
+  "planeMissCurve": [
+   {
+    "p": [
+     3.883125,
+     0.8863499999999997
+    ],
+    "lh": [
+     2.37005726875,
+     -0.6364939200000002
+    ],
+    "rh": [
+     5.39619273125,
+     2.40919392
+    ]
+   },
+   {
+    "p": [
+     5.6726115,
+     4.05763183
+    ],
+    "lh": [
+     5.5688523575,
+     2.33851487
+    ],
+    "rh": [
+     5.776370642500001,
+     5.77674879
+    ]
+   },
+   {
+    "p": [
+     0.7600000000000002,
+     5.2943500000000006
+    ],
+    "lh": [
+     2.351665625,
+     6.176547930000001
+    ],
+    "rh": [
+     -0.8316656249999996,
+     4.41215207
+    ]
+   },
+   {
+    "p": [
+     -4.15625,
+     -2.52282437
+    ],
+    "lh": [
+     -1.7479394375,
+     -1.02643776
+    ],
+    "rh": [
+     -6.5645605625000005,
+     -4.0192109799999995
+    ]
+   },
+   {
+    "p": [
+     -15.116874999999999,
+     -6.399100249999999
+    ],
+    "lh": [
+     -12.394508687499998,
+     -6.227520122999999
+    ],
+    "rh": [
+     -17.8392413125,
+     -6.5706803769999995
+    ]
+   }
+  ],
+  "planeTossCurve": [
+   {
+    "p": [
+     -5.68892549375,
+     -1.2274136325
+    ],
+    "lh": [
+     -8.45238761875,
+     -1.037834986
+    ],
+    "rh": [
+     -2.9254633687500005,
+     -1.416992279
+    ]
+   },
+   {
+    "p": [
+     -0.45297591249999997,
+     -0.529296851
+    ],
+    "lh": [
+     -1.70955433125,
+     -1.441406196
+    ],
+    "rh": [
+     0.8036025062500001,
+     0.38281249399999995
+    ]
+   },
+   {
+    "p": [
+     -0.33336782500000006,
+     1.85555881
+    ],
+    "lh": [
+     0.2842212987957099,
+     1.2997401988836281
+    ],
+    "rh": [
+     -0.95095694879571,
+     2.411377421116372
+    ]
+   },
+   {
+    "p": [
+     -3.241875,
+     1.4869928199999998
+    ],
+    "lh": [
+     -2.38691984,
+     2.451524685
+    ],
+    "rh": [
+     -4.09683016,
+     0.5224609549999999
+    ]
+   },
+   {
+    "p": [
+     -0.5830625,
+     -0.8057080188000001
+    ],
+    "lh": [
+     -2.76787000625,
+     -1.3365850238
+    ],
+    "rh": [
+     1.6017450062499998,
+     -0.2748310138000002
+    ]
+   },
+   {
+    "p": [
+     6.7395268125,
+     2.60693357
+    ],
+    "lh": [
+     6.870809378750001,
+     2.7143321871999997
+    ],
+    "rh": [
+     6.60824424625,
+     2.4995349528
+    ]
+   },
+   {
+    "p": [
+     -14.024375000000001,
+     -7.516839375
+    ],
+    "lh": [
+     -4.674783037500001,
+     -6.4084473
+    ],
+    "rh": [
+     -23.3739669625,
+     -8.62523145
+    ]
+   }
+  ],
+  "shockTossCurve": [
+   {
+    "p": [
+     -5.688925493749999,
+     -1.2274136325
+    ],
+    "lh": [
+     -9.40144141875,
+     -1.560295979
+    ],
+    "rh": [
+     -1.9764095687499994,
+     -0.8945312860000001
+    ]
+   },
+   {
+    "p": [
+     12.813125,
+     4.0375
+    ],
+    "lh": [
+     8.353448562499999,
+     2.6576522649999994
+    ],
+    "rh": [
+     17.2728014375,
+     5.417347735
+    ]
+   }
+  ]
+ },
+ "objNums": {
+  "objHolder/objBall": {
+   "dodgeBeats": 1,
+   "flyBeats": 2,
+   "flyType": 0,
+   "gravity": 0,
+   "hitLayer": 0,
+   "type": 0
+  },
+  "objHolder/objChair": {
+   "dodgeBeats": 1,
+   "flyBeats": 2,
+   "flyType": 0,
+   "gravity": 0,
+   "hitLayer": 0,
+   "type": 1
+  },
+  "objHolder/objNx": {
+   "dodgeBeats": 1,
+   "flyBeats": 2,
+   "flyType": 0,
+   "gravity": 36,
+   "hitLayer": -1,
+   "type": 3
+  },
+  "objHolder/objPhone": {
+   "dodgeBeats": 1,
+   "flyBeats": 2,
+   "flyType": 0,
+   "gravity": 36,
+   "hitLayer": -1,
+   "type": 3
+  },
+  "objHolder/objPlane": {
+   "dodgeBeats": 2,
+   "flyBeats": 4,
+   "flyType": 1,
+   "gravity": 0,
+   "hitLayer": 0,
+   "type": 4
+  },
+  "objHolder/objShock": {
+   "dodgeBeats": 1,
+   "flyBeats": 2,
+   "flyType": 2,
+   "gravity": 0,
+   "hitLayer": 0,
+   "type": 2
+  }
+ },
+ "objStrs": {
+  "objHolder/objBall": {
+   "justSound": "player_dodge_success",
+   "missSound": "ball_impact"
+  },
+  "objHolder/objChair": {
+   "justSound": "player_dodge_success",
+   "missSound": "chair_impact"
+  },
+  "objHolder/objNx": {
+   "justSound": "player_dodge_success_alt",
+   "missSound": "chair_impact"
+  },
+  "objHolder/objPhone": {
+   "justSound": "player_dodge_success_alt",
+   "missSound": "chair_impact"
+  },
+  "objHolder/objPlane": {
+   "justSound": "player_dodge_success",
+   "missSound": "ball_impact"
+  },
+  "objHolder/objShock": {
+   "justSound": "player_dodge_success",
+   "missSound": "shock_impact"
+  }
+ },
+ "sequences": {
+  "ballThrow": [
+   {
+    "clip": "girl_toss_ball",
+    "beat": 0,
+    "volume": 1
+   }
+  ],
+  "chairThrow": [
+   {
+    "clip": "girl_toss_chair",
+    "beat": 0,
+    "volume": 1
+   }
+  ],
+  "girlCharge": [
+   {
+    "clip": "girl_charge_0",
+    "beat": 0,
+    "volume": 1
+   },
+   {
+    "clip": "girl_charge_1",
+    "beat": 0.75,
+    "volume": 1
+   },
+   {
+    "clip": "girl_charge_1",
+    "beat": 1.5,
+    "volume": 1
+   },
+   {
+    "clip": "girl_charge_2",
+    "beat": 2,
+    "volume": 1
+   }
+  ],
+  "phoneThrow": [
+   {
+    "clip": "girl_toss_phone",
+    "beat": 0,
+    "volume": 1
+   }
+  ],
+  "planeThrow": [
+   {
+    "clip": "girl_toss_plane",
+    "beat": 0,
+    "volume": 1
+   }
+  ],
+  "shockThrow": [
+   {
+    "clip": "girl_toss_shock",
+    "beat": 0,
+    "volume": 1
+   }
+  ]
+ }
+}

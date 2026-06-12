@@ -1,0 +1,545 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "mobTrick_bg00_0": {
+   "X": 0,
+   "Y": 129,
+   "W": 8206,
+   "H": 5086,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 145.84201
+  },
+  "mobTrick_bg00_1": {
+   "X": 1137,
+   "Y": 6214,
+   "W": 4870,
+   "H": 1031,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 145.84201
+  },
+  "mobTrick_bg00_2": {
+   "X": 643,
+   "Y": 7957,
+   "W": 5983,
+   "H": 1259,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 145.84201
+  },
+  "mobTrick_bg00_3": {
+   "X": 774,
+   "Y": 9737,
+   "W": 7339,
+   "H": 760,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 145.84201
+  },
+  "mobTrick_parts00_0": {
+   "X": 7105,
+   "Y": 2613,
+   "W": 305,
+   "H": 442,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_1": {
+   "X": 6378,
+   "Y": 2744,
+   "W": 343,
+   "H": 310,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_10": {
+   "X": 7732,
+   "Y": 383,
+   "W": 655,
+   "H": 700,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_11": {
+   "X": 2739,
+   "Y": 1457,
+   "W": 555,
+   "H": 945,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_12": {
+   "X": 3524,
+   "Y": 1995,
+   "W": 314,
+   "H": 411,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_13": {
+   "X": 3574,
+   "Y": 1538,
+   "W": 205,
+   "H": 221,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_14": {
+   "X": 4052,
+   "Y": 1516,
+   "W": 258,
+   "H": 251,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_15": {
+   "X": 4052,
+   "Y": 1962,
+   "W": 321,
+   "H": 339,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_16": {
+   "X": 4547,
+   "Y": 1496,
+   "W": 684,
+   "H": 762,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_17": {
+   "X": 5349,
+   "Y": 1646,
+   "W": 386,
+   "H": 157,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_18": {
+   "X": 5364,
+   "Y": 2018,
+   "W": 397,
+   "H": 167,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_19": {
+   "X": 5931,
+   "Y": 1621,
+   "W": 199,
+   "H": 352,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_2": {
+   "X": 8297,
+   "Y": 2724,
+   "W": 358,
+   "H": 338,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_20": {
+   "X": 3662,
+   "Y": 3226,
+   "W": 184,
+   "H": 141,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_21": {
+   "X": 3504,
+   "Y": 3663,
+   "W": 159,
+   "H": 118,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_22": {
+   "X": 3708,
+   "Y": 3809,
+   "W": 39,
+   "H": 39,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_23": {
+   "X": 3708,
+   "Y": 3707,
+   "W": 39,
+   "H": 40,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_24": {
+   "X": 3784,
+   "Y": 3702,
+   "W": 47,
+   "H": 48,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_25": {
+   "X": 3870,
+   "Y": 3698,
+   "W": 57,
+   "H": 57,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_26": {
+   "X": 3784,
+   "Y": 3805,
+   "W": 47,
+   "H": 48,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_27": {
+   "X": 3870,
+   "Y": 3801,
+   "W": 57,
+   "H": 56,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_28": {
+   "X": 3026,
+   "Y": 3635,
+   "W": 309,
+   "H": 265,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_29": {
+   "X": 3988,
+   "Y": 3712,
+   "W": 48,
+   "H": 25,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_3": {
+   "X": 2400,
+   "Y": 3096,
+   "W": 237,
+   "H": 300,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_30": {
+   "X": 7770,
+   "Y": 2653,
+   "W": 275,
+   "H": 401,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_4": {
+   "X": 2780,
+   "Y": 3079,
+   "W": 225,
+   "H": 317,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_5": {
+   "X": 3197,
+   "Y": 3131,
+   "W": 310,
+   "H": 265,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_6": {
+   "X": 3965,
+   "Y": 2960,
+   "W": 138,
+   "H": 398,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_7": {
+   "X": 4019,
+   "Y": 383,
+   "W": 656,
+   "H": 700,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_8": {
+   "X": 5279,
+   "Y": 383,
+   "W": 655,
+   "H": 700,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts00_9": {
+   "X": 6525,
+   "Y": 383,
+   "W": 655,
+   "H": 700,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_0": {
+   "X": 445,
+   "Y": 383,
+   "W": 655,
+   "H": 700,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_1": {
+   "X": 1626,
+   "Y": 401,
+   "W": 657,
+   "H": 657,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_10": {
+   "X": 2354,
+   "Y": 3810,
+   "W": 82,
+   "H": 92,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_11": {
+   "X": 1264,
+   "Y": 3051,
+   "W": 239,
+   "H": 322,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_12": {
+   "X": 1245,
+   "Y": 3649,
+   "W": 259,
+   "H": 314,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_13": {
+   "X": 1831,
+   "Y": 3673,
+   "W": 200,
+   "H": 272,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_14": {
+   "X": 2690,
+   "Y": 3774,
+   "W": 138,
+   "H": 150,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_15": {
+   "X": 1889,
+   "Y": 3189,
+   "W": 119,
+   "H": 82,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_16": {
+   "X": 6468,
+   "Y": 1483,
+   "W": 548,
+   "H": 650,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_17": {
+   "X": 4568,
+   "Y": 2734,
+   "W": 370,
+   "H": 351,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_18": {
+   "X": 7322,
+   "Y": 1630,
+   "W": 607,
+   "H": 205,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_2": {
+   "X": 2884,
+   "Y": 447,
+   "W": 597,
+   "H": 573,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_3": {
+   "X": 632,
+   "Y": 1455,
+   "W": 347,
+   "H": 442,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_4": {
+   "X": 1854,
+   "Y": 1411,
+   "W": 437,
+   "H": 494,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_5": {
+   "X": 479,
+   "Y": 2207,
+   "W": 274,
+   "H": 417,
+   "PivotX": 0.4452555,
+   "PivotY": 0.4940048,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_6": {
+   "X": 767,
+   "Y": 2211,
+   "W": 242,
+   "H": 435,
+   "PivotX": 0.58677685,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_7": {
+   "X": 1804,
+   "Y": 2207,
+   "W": 542,
+   "H": 394,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_8": {
+   "X": 618,
+   "Y": 3098,
+   "W": 214,
+   "H": 219,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  },
+  "mobTrick_parts01_9": {
+   "X": 643,
+   "Y": 3699,
+   "W": 171,
+   "H": 145,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 73.1
+  }
+ }
+}
