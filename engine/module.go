@@ -44,6 +44,12 @@ type Module interface {
 	Draw(screen *ebiten.Image, t, beat float64)
 }
 
+// ActionWhiffer 是可区分动作通道空击的模块（双键游戏如 blueBear）。
+// 实现它的模块不再收到 Whiff 调用（含主键空击）。
+type ActionWhiffer interface {
+	WhiffAction(beat float64, action int)
+}
+
 // factory 注册表
 var registry = map[string]func() Module{}
 

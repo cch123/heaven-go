@@ -1,0 +1,547 @@
+{
+ "BackgroundScene": {
+  "default": "BackgroundIdle",
+  "states": {
+   "BackgroundIdle": {
+    "clip": "Animations/BackgroundIdle",
+    "speed": 1
+   }
+  }
+ },
+ "BagHolder": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Bags/Idle",
+    "speed": 1
+   },
+   "Squashing": {
+    "clip": "Bags/Squashing",
+    "speed": 1
+   }
+  }
+ },
+ "CakeBag": {
+  "default": "CakeIdle",
+  "states": {
+   "CakeIdle": {
+    "clip": "Bags/CakeIdle",
+    "speed": 1
+   },
+   "CakeSquash": {
+    "clip": "Bags/CakeSquash",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CakeIdle",
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Crumbs": {
+  "default": "NoCrumbs",
+  "states": {
+   "NoCrumbs": {
+    "clip": "Animations/NoCrumbs",
+    "speed": 1
+   }
+  }
+ },
+ "DonutBag": {
+  "default": "DonutIdle",
+  "states": {
+   "DonutIdle": {
+    "clip": "Bags/DonutIdle",
+    "speed": 1
+   },
+   "DonutSquash": {
+    "clip": "Bags/DonutSquash",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "DonutIdle",
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "HeadAndBody": {
+  "default": "Idle",
+  "params": {
+   "ShouldOpenMouth": false
+  },
+  "states": {
+   "BiteL": {
+    "clip": "HeadAndBody/BiteL",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 0,
+      "duration": 0
+     },
+     {
+      "dst": "Open",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   },
+   "BiteR": {
+    "clip": "HeadAndBody/BiteR",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 0,
+      "duration": 0
+     },
+     {
+      "dst": "Open",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   },
+   "CryBiteL": {
+    "clip": "HeadAndBody/CryBiteL",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CryIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "CryOpen",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "CryBiteR": {
+    "clip": "HeadAndBody/CryBiteR",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CryIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "CryOpen",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "CryIdle": {
+    "clip": "HeadAndBody/CryIdle",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CryOpen",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "CryOpen": {
+    "clip": "HeadAndBody/CryOpen",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CryIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "EyesClosed": {
+    "clip": "HeadAndBody/EyesClosed",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Open",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "HeadAndBody/Idle",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Open",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   },
+   "LongBiteL": {
+    "clip": "HeadAndBody/LongBiteL",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "Open",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "LongBiteR": {
+    "clip": "HeadAndBody/LongBiteR",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "Open",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "LongCryBiteL": {
+    "clip": "HeadAndBody/LongCryBiteL",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CryIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "CryOpen",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "LongCryBiteR": {
+    "clip": "HeadAndBody/LongCryBiteR",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CryOpen",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "CryIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 0.5,
+      "duration": 0.25
+     }
+    ]
+   },
+   "Open": {
+    "clip": "HeadAndBody/Open",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "ShouldOpenMouth"
+       }
+      ],
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   },
+   "OpenEyes": {
+    "clip": "HeadAndBody/OpenEyes",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Sad": {
+    "clip": "HeadAndBody/Sad",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CryIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Sigh": {
+    "clip": "HeadAndBody/Sigh",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Smile": {
+    "clip": "HeadAndBody/Smile",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "SmileIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "SmileIdle": {
+    "clip": "HeadAndBody/SmileIdle",
+    "speed": 1
+   },
+   "StopSmile": {
+    "clip": "HeadAndBody/StopSmile",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Story": {
+  "default": "NoStory",
+  "states": {
+   "Breakup": {
+    "clip": "Animations/Breakup",
+    "speed": 1
+   },
+   "BreakupExit": {
+    "clip": "Animations/BreakupExit",
+    "speed": 1
+   },
+   "Flashback0": {
+    "clip": "Animations/Flashback0",
+    "speed": 1
+   },
+   "Flashback0Exit": {
+    "clip": "Animations/Flashback0Exit",
+    "speed": 1
+   },
+   "Flashback1": {
+    "clip": "Animations/Flashback1",
+    "speed": 1
+   },
+   "Flashback1Exit": {
+    "clip": "Animations/Flashback1Exit",
+    "speed": 1
+   },
+   "Flashback2": {
+    "clip": "Animations/Flashback2",
+    "speed": 1
+   },
+   "Flashback2Exit": {
+    "clip": "Animations/Flashback2Exit",
+    "speed": 1
+   },
+   "Flashback3": {
+    "clip": "Animations/Flashback3",
+    "speed": 1
+   },
+   "Flashback3Exit": {
+    "clip": "Animations/Flashback3Exit",
+    "speed": 1
+   },
+   "NoStory": {
+    "clip": "Animations/NoStory",
+    "speed": 1
+   }
+  }
+ },
+ "ThoughtBubble": {
+  "default": "ThoughtBubbleIdle",
+  "states": {
+   "ThoughtBubbleIdle": {
+    "clip": "Animations/ThoughtBubbleIdle",
+    "speed": 1
+   }
+  }
+ },
+ "ThoughtBubble 1": {
+  "default": "ThoughtBubbleIdle",
+  "states": {
+   "ThoughtBubbleIdle": {
+    "clip": "Animations/ThoughtBubbleIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Wind": {
+  "default": "NoWind",
+  "states": {
+   "NoWind": {
+    "clip": "Animations/NoWind",
+    "speed": 1
+   },
+   "Wind": {
+    "clip": "Animations/Wind",
+    "speed": 1
+   }
+  }
+ },
+ "donutCrumb_0": {
+  "default": "Crumb0Idle",
+  "states": {
+   "Crumb0Idle": {
+    "clip": "Animations/Crumb0Idle",
+    "speed": 1
+   }
+  }
+ },
+ "donutCrumb_1": {
+  "default": "Crumb1Idle",
+  "states": {
+   "Crumb1Idle": {
+    "clip": "Animations/Crumb1Idle",
+    "speed": 1
+   }
+  }
+ }
+}

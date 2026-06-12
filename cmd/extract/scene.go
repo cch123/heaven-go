@@ -99,6 +99,20 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "saw", markers: []string{"landOutTrans", "deathParticle"}, atPath: "Game/Guys/SawHolder"},
 		},
 	},
+	"blueBear": {
+		dir:    "BlueBear",
+		prefab: "blueBear.prefab",
+		roleFields: []string{
+			"headAndBodyAnim", "bagsAnim", "donutBagAnim", "cakeBagAnim", "windAnim",
+			"leftCrumb", "rightCrumb", "_storyAnim", "donutBase", "cakeBase",
+			"crumbsBase", "foodHolder", "crumbsHolder", "individualBagHolder",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"_treatCurves", "donutGradient"}},
+		},
+	},
 	"meatGrinder": {
 		dir:    "MeatGrinder",
 		prefab: "meatGrinder.prefab",
@@ -741,6 +755,17 @@ func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spri
 					if av, ok := tv[axis]; ok {
 						c.Nums[k+"."+axis] = uy.F(av)
 					}
+				}
+			} else if _, hasKey0 := tv["key0"]; hasKey0 {
+				// Unity Gradient：key0..7 颜色 + ctime0..7（0..65535 归一化时刻）
+				nkeys := int(uy.F(tv["m_NumColorKeys"]))
+				for ki := 0; ki < nkeys && ki < 8; ki++ {
+					kv := uy.M(tv[fmt.Sprintf("key%d", ki)])
+					item := kmdata.ComponentItem{Nums: map[string]float64{
+						"r": uy.F(kv["r"]), "g": uy.F(kv["g"]), "b": uy.F(kv["b"]), "a": uy.F(kv["a"]),
+						"t": uy.F(tv[fmt.Sprintf("ctime%d", ki)]) / 65535,
+					}}
+					c.Lists[k] = append(c.Lists[k], item)
 				}
 			}
 		case []any:

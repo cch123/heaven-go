@@ -1,0 +1,12 @@
+{
+ "BackgroundScene": "BackgroundScene",
+ "Bear/HeadAndBody": "HeadAndBody",
+ "Bear/HeadAndBody/BagHolder2/BagHolder": "BagHolder",
+ "Bear/HeadAndBody/BagHolder2/BagHolder/Bags_Individual/CakeBag": "CakeBag",
+ "Bear/HeadAndBody/BagHolder2/BagHolder/Bags_Individual/DonutBag": "DonutBag",
+ "Bear/HeadAndBody/Head/FaceCrumbs/Left": "donutCrumb_0",
+ "Bear/HeadAndBody/Head/FaceCrumbs/Right": "donutCrumb_1",
+ "Story": "Story",
+ "ThoughtBubble": "ThoughtBubble",
+ "Wind": "Wind"
+}

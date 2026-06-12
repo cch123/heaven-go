@@ -218,6 +218,31 @@ func (s *SceneInst) PlayNormalized(rootPath, clip string, t float64) {
 	}
 }
 
+// PlayFrozen 按状态名冻结在归一化时间 normT（DoScaledAnimationAsync(name, 0) 语义）。
+func (s *SceneInst) PlayFrozen(rootPath, stateName string, normT float64) {
+	m, ok := s.machines[rootPath]
+	if !ok {
+		return
+	}
+	st, ok := m.ctrl.States[stateName]
+	if !ok || st.Clip == "" {
+		return
+	}
+	anim, ok := s.as.Anims[st.Clip]
+	if !ok {
+		return
+	}
+	idx, ok := s.byPath[rootPath]
+	if !ok {
+		return
+	}
+	m.state, m.lastT = stateName, 0
+	s.players[rootPath] = &scenePlayer{
+		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: st.Clip,
+		normalized: true, normT: normT,
+	}
+}
+
 // ---------- AnimatorController 状态机 ----------
 
 // PlayState 按状态名播放（DoScaledAnimationAsync 语义）：状态映射到剪辑，

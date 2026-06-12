@@ -19,6 +19,7 @@ import (
 	"hsdemo/engine"
 
 	// 已移植模块（与主程序保持同步）
+	"hsdemo/games/bluebear"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/seesaw"
 	"hsdemo/games/somen"
@@ -78,6 +79,7 @@ func main() {
 	engine.Register("meatGrinder", meatgrinder.New)
 	engine.Register("totemClimb", totemclimb.New)
 	engine.Register("seeSaw", seesaw.New)
+	engine.Register("blueBear", bluebear.New)
 
 	app, err := engine.New(*assetsRoot, *path)
 	if err != nil {

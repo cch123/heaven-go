@@ -1,0 +1,16 @@
+{
+ "_storyAnim": "Story",
+ "bagsAnim": "Bear/HeadAndBody/BagHolder2/BagHolder",
+ "cakeBagAnim": "Bear/HeadAndBody/BagHolder2/BagHolder/Bags_Individual/CakeBag",
+ "cakeBase": "Prefabs/Cake",
+ "crumbsBase": "Prefabs/Crumbs",
+ "crumbsHolder": "CrumbsHolder",
+ "donutBagAnim": "Bear/HeadAndBody/BagHolder2/BagHolder/Bags_Individual/DonutBag",
+ "donutBase": "Prefabs/Donut",
+ "foodHolder": "FoodHolder",
+ "headAndBodyAnim": "Bear/HeadAndBody",
+ "individualBagHolder": "Bear/HeadAndBody/BagHolder2/BagHolder/Bags_Individual",
+ "leftCrumb": "Bear/HeadAndBody/Head/FaceCrumbs/Left",
+ "rightCrumb": "Bear/HeadAndBody/Head/FaceCrumbs/Right",
+ "windAnim": "Wind"
+}

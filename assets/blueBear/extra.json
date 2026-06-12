@@ -1,0 +1,149 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "refs": {
+    "_storyAnim": "Story",
+    "bagsAnim": "Bear/HeadAndBody/BagHolder2/BagHolder",
+    "cakeBagAnim": "Bear/HeadAndBody/BagHolder2/BagHolder/Bags_Individual/CakeBag",
+    "cakeBase": "Prefabs/Cake",
+    "crumbsBase": "Prefabs/Crumbs",
+    "crumbsHolder": "CrumbsHolder",
+    "donutBagAnim": "Bear/HeadAndBody/BagHolder2/BagHolder/Bags_Individual/DonutBag",
+    "donutBase": "Prefabs/Donut",
+    "foodHolder": "FoodHolder",
+    "headAndBodyAnim": "Bear/HeadAndBody",
+    "individualBagHolder": "Bear/HeadAndBody/BagHolder2/BagHolder/Bags_Individual",
+    "leftCrumb": "Bear/HeadAndBody/Head/FaceCrumbs/Left",
+    "rightCrumb": "Bear/HeadAndBody/Head/FaceCrumbs/Right",
+    "windAnim": "Wind"
+   },
+   "lists": {
+    "_treatCurves": [
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "Donut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 5,
+          "pos.x": 1.496,
+          "pos.y": -4.014,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 4.9,
+          "pos.y": 0.62,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "Cake"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 3,
+          "height": 18,
+          "pos.x": -1.498,
+          "pos.y": -4.01,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -4.63,
+          "pos.y": 0.63,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     }
+    ],
+    "cakeGradient": [
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.7372549,
+       "g": 0.9254902,
+       "r": 0.9843137,
+       "t": 0
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.7372549,
+       "g": 0.9254902,
+       "r": 0.9843137,
+       "t": 0.5000076295109483
+      }
+     },
+     {
+      "nums": {
+       "a": 0,
+       "b": 1,
+       "g": 1,
+       "r": 1,
+       "t": 1
+      }
+     }
+    ],
+    "donutGradient": [
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.23921569,
+       "g": 0.69411767,
+       "r": 0.92941177,
+       "t": 0
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.23921569,
+       "g": 0.69411767,
+       "r": 0.92941177,
+       "t": 0.5000076295109483
+      }
+     },
+     {
+      "nums": {
+       "a": 0,
+       "b": 0.15294118,
+       "g": 0.47058824,
+       "r": 0.6313726,
+       "t": 1
+      }
+     }
+    ]
+   }
+  }
+ }
+}

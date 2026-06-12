@@ -91,13 +91,18 @@ func (c *Ctx) SoundAt(beat float64, name string, vol float64) {
 // ScheduleInput 注册一次输入判定（HS Minigame.ScheduleInput 等价物）。
 // onHit 的 state：just 窗归一化偏移，|state|<=1 = just，1<|state|<=2 = NG，负 = 早。
 func (c *Ctx) ScheduleInput(beat float64, onHit func(state float64, j Judgment), onMiss func()) {
-	c.App.scheduleInput(beat, false, onHit, onMiss)
+	c.App.scheduleInput(beat, false, 0, onHit, onMiss)
+}
+
+// ScheduleInputAction 注册指定动作通道的按下判定（0=主键，1=副键）。
+func (c *Ctx) ScheduleInputAction(beat float64, action int, onHit func(state float64, j Judgment), onMiss func()) {
+	c.App.scheduleInput(beat, false, action, onHit, onMiss)
 }
 
 // ScheduleInputRelease 注册一次"抬起"判定（InputAction_FlickRelease，
 // totemClimb 高跳甩出等）。空抬不触发 Whiff。
 func (c *Ctx) ScheduleInputRelease(beat float64, onHit func(state float64, j Judgment), onMiss func()) {
-	c.App.scheduleInput(beat, true, onHit, onMiss)
+	c.App.scheduleInput(beat, true, 0, onHit, onMiss)
 }
 
 // PressedNow / ReleasedNow 报告本逻辑帧是否有按下/抬起（HoldCo 式轮询用）。
