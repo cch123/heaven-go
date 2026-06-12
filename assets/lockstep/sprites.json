@@ -1,0 +1,308 @@
+{
+ "atlases": [
+  "atlas0.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "locksteptiled_0": {
+   "X": 2,
+   "Y": 2,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_1": {
+   "X": 933,
+   "Y": 2,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_10": {
+   "X": 2,
+   "Y": 1998,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_11": {
+   "X": 933,
+   "Y": 1998,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_12": {
+   "X": 1864,
+   "Y": 1998,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_13": {
+   "X": 2795,
+   "Y": 1998,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_14": {
+   "X": 3726,
+   "Y": 1998,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_15": {
+   "X": 2,
+   "Y": 2996,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_16": {
+   "X": 933,
+   "Y": 2996,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_17": {
+   "X": 1864,
+   "Y": 2996,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_18": {
+   "X": 2795,
+   "Y": 2996,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_19": {
+   "X": 3726,
+   "Y": 2996,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_2": {
+   "X": 1864,
+   "Y": 2,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_3": {
+   "X": 2795,
+   "Y": 2,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_4": {
+   "X": 3726,
+   "Y": 2,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_5": {
+   "X": 2,
+   "Y": 1000,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_6": {
+   "X": 933,
+   "Y": 1000,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_7": {
+   "X": 1864,
+   "Y": 1000,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_8": {
+   "X": 2795,
+   "Y": 1000,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "locksteptiled_9": {
+   "X": 3726,
+   "Y": 1000,
+   "W": 929,
+   "H": 996,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

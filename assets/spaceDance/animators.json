@@ -1,0 +1,13 @@
+{
+ "dancersContainer/dancer1Container/dancer": "dancer",
+ "dancersContainer/dancer2Container/dancer": "dancer",
+ "dancersContainer/dancer3Container/dancer": "dancer",
+ "dancersContainer/grampsContainer/Gramps Reference": "gramps",
+ "dancersContainer/grampsContainer/Gramps Reference Punch": "gramps",
+ "dancersContainer/grampsContainer/Gramps Reference Sit": "gramps",
+ "dancersContainer/grampsContainer/gramps": "gramps",
+ "playerContainer/Hit": "Hit",
+ "playerContainer/dancer": "dancer",
+ "playerContainer/dancer reference": "dancer",
+ "shootingStar": "shootingStar"
+}

@@ -1,0 +1,530 @@
+{
+ "Animations/BachIdle": {
+  "duration": 1,
+  "loop": true
+ },
+ "Animations/BachOff": {
+  "duration": 0.21666667,
+  "loop": false,
+  "sprites": {
+   "OnbeatPortrait": [
+    {
+     "t": 0,
+     "name": ""
+    }
+   ]
+  },
+  "floats": {
+   "OnbeatPortrait": {
+    "m_IsActive": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 1e+30,
+      "o": 1e+30
+     },
+     {
+      "t": 0.21666667,
+      "v": 0,
+      "i": 1e+30,
+      "o": 1e+30
+     }
+    ]
+   }
+  }
+ },
+ "Animations/BachOn": {
+  "duration": 0.21666667,
+  "loop": false,
+  "sprites": {
+   "OnbeatPortrait": [
+    {
+     "t": 0,
+     "name": ""
+    }
+   ]
+  },
+  "floats": {
+   "OnbeatPortrait": {
+    "m_IsActive": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 1e+30,
+      "o": 1e+30
+     },
+     {
+      "t": 0.21666667,
+      "v": 0,
+      "i": 1e+30,
+      "o": 1e+30
+     }
+    ]
+   }
+  }
+ },
+ "Animations/Bop": {
+  "duration": 0.25,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_10"
+    },
+    {
+     "t": 0.041666668,
+     "name": "locksteptiled_11"
+    },
+    {
+     "t": 0.125,
+     "name": "locksteptiled_12"
+    },
+    {
+     "t": 0.20833333,
+     "name": "locksteptiled_13"
+    }
+   ]
+  }
+ },
+ "Animations/BopIdle": {
+  "duration": 1,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_13"
+    }
+   ]
+  }
+ },
+ "Animations/BopReset": {
+  "duration": 0.5833333,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_10"
+    },
+    {
+     "t": 0.083333336,
+     "name": "locksteptiled_11"
+    },
+    {
+     "t": 0.16666667,
+     "name": "locksteptiled_12"
+    },
+    {
+     "t": 0.25,
+     "name": "locksteptiled_13"
+    },
+    {
+     "t": 0.33333334,
+     "name": "locksteptiled_12"
+    },
+    {
+     "t": 0.41666666,
+     "name": "locksteptiled_11"
+    },
+    {
+     "t": 0.5,
+     "name": "locksteptiled_10"
+    }
+   ]
+  }
+ },
+ "Animations/Idle": {
+  "duration": 0.016666668,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_0"
+    }
+   ]
+  }
+ },
+ "Animations/OffbeatMarch": {
+  "duration": 0.21666667,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_7"
+    },
+    {
+     "t": 0.033333335,
+     "name": "locksteptiled_8"
+    },
+    {
+     "t": 0.18333334,
+     "name": "locksteptiled_6"
+    },
+    {
+     "t": 0.2,
+     "name": "locksteptiled_5"
+    }
+   ]
+  }
+ },
+ "Animations/OffbeatMiss": {
+  "duration": 0.1,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_9"
+    },
+    {
+     "t": 0.083333336,
+     "name": "locksteptiled_14"
+    }
+   ]
+  }
+ },
+ "Animations/OffbeatMissRest": {
+  "duration": 0.016666668,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_14"
+    }
+   ]
+  }
+ },
+ "Animations/OnbeatMarch": {
+  "duration": 0.21666667,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_3"
+    },
+    {
+     "t": 0.033333335,
+     "name": "locksteptiled_4"
+    },
+    {
+     "t": 0.18333334,
+     "name": "locksteptiled_2"
+    },
+    {
+     "t": 0.2,
+     "name": "locksteptiled_1"
+    }
+   ]
+  }
+ },
+ "Animations/OnbeatMiss": {
+  "duration": 0.083333336,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_15"
+    },
+    {
+     "t": 0.06666667,
+     "name": "locksteptiled_16"
+    }
+   ]
+  }
+ },
+ "Animations/OnbeatMissRest": {
+  "duration": 0.016666668,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_16"
+    }
+   ]
+  }
+ },
+ "Animations/stepswitcher": {
+  "duration": 1,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": ""
+    }
+   ]
+  }
+ },
+ "BachIdle": {
+  "duration": 1,
+  "loop": true
+ },
+ "BachOff": {
+  "duration": 0.21666667,
+  "loop": false,
+  "sprites": {
+   "OnbeatPortrait": [
+    {
+     "t": 0,
+     "name": ""
+    }
+   ]
+  },
+  "floats": {
+   "OnbeatPortrait": {
+    "m_IsActive": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 1e+30,
+      "o": 1e+30
+     },
+     {
+      "t": 0.21666667,
+      "v": 0,
+      "i": 1e+30,
+      "o": 1e+30
+     }
+    ]
+   }
+  }
+ },
+ "BachOn": {
+  "duration": 0.21666667,
+  "loop": false,
+  "sprites": {
+   "OnbeatPortrait": [
+    {
+     "t": 0,
+     "name": ""
+    }
+   ]
+  },
+  "floats": {
+   "OnbeatPortrait": {
+    "m_IsActive": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 1e+30,
+      "o": 1e+30
+     },
+     {
+      "t": 0.21666667,
+      "v": 0,
+      "i": 1e+30,
+      "o": 1e+30
+     }
+    ]
+   }
+  }
+ },
+ "Bop": {
+  "duration": 0.25,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_10"
+    },
+    {
+     "t": 0.041666668,
+     "name": "locksteptiled_11"
+    },
+    {
+     "t": 0.125,
+     "name": "locksteptiled_12"
+    },
+    {
+     "t": 0.20833333,
+     "name": "locksteptiled_13"
+    }
+   ]
+  }
+ },
+ "BopIdle": {
+  "duration": 1,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_13"
+    }
+   ]
+  }
+ },
+ "BopReset": {
+  "duration": 0.5833333,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_10"
+    },
+    {
+     "t": 0.083333336,
+     "name": "locksteptiled_11"
+    },
+    {
+     "t": 0.16666667,
+     "name": "locksteptiled_12"
+    },
+    {
+     "t": 0.25,
+     "name": "locksteptiled_13"
+    },
+    {
+     "t": 0.33333334,
+     "name": "locksteptiled_12"
+    },
+    {
+     "t": 0.41666666,
+     "name": "locksteptiled_11"
+    },
+    {
+     "t": 0.5,
+     "name": "locksteptiled_10"
+    }
+   ]
+  }
+ },
+ "Idle": {
+  "duration": 0.016666668,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_0"
+    }
+   ]
+  }
+ },
+ "OffbeatMarch": {
+  "duration": 0.21666667,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_7"
+    },
+    {
+     "t": 0.033333335,
+     "name": "locksteptiled_8"
+    },
+    {
+     "t": 0.18333334,
+     "name": "locksteptiled_6"
+    },
+    {
+     "t": 0.2,
+     "name": "locksteptiled_5"
+    }
+   ]
+  }
+ },
+ "OffbeatMiss": {
+  "duration": 0.1,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_9"
+    },
+    {
+     "t": 0.083333336,
+     "name": "locksteptiled_14"
+    }
+   ]
+  }
+ },
+ "OffbeatMissRest": {
+  "duration": 0.016666668,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_14"
+    }
+   ]
+  }
+ },
+ "OnbeatMarch": {
+  "duration": 0.21666667,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_3"
+    },
+    {
+     "t": 0.033333335,
+     "name": "locksteptiled_4"
+    },
+    {
+     "t": 0.18333334,
+     "name": "locksteptiled_2"
+    },
+    {
+     "t": 0.2,
+     "name": "locksteptiled_1"
+    }
+   ]
+  }
+ },
+ "OnbeatMiss": {
+  "duration": 0.083333336,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_15"
+    },
+    {
+     "t": 0.06666667,
+     "name": "locksteptiled_16"
+    }
+   ]
+  }
+ },
+ "OnbeatMissRest": {
+  "duration": 0.016666668,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "locksteptiled_16"
+    }
+   ]
+  }
+ },
+ "stepswitcher": {
+  "duration": 1,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": ""
+    }
+   ]
+  }
+ }
+}

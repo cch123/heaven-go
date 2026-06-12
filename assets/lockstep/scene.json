@@ -1,0 +1,1185 @@
+{
+ "nodes": [
+  {
+   "name": "lockstep",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    800,
+    800
+   ],
+   "order": -1000,
+   "color": [
+    0.94117653,
+    0.20000002,
+    0.5529412,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "stepswitcherP",
+   "path": "stepswitcherP",
+   "parent": 0,
+   "pos": [
+    0,
+    0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.8,
+    6.2
+   ],
+   "mapped": true,
+   "mat": "PlayerMaterial"
+  },
+  {
+   "name": "stepswitchers",
+   "path": "stepswitchers",
+   "parent": 0,
+   "pos": [
+    6.39,
+    3.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "==== Master Steppers ====",
+   "path": "stepswitchers/==== Master Steppers ====",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OverPlayer",
+   "path": "stepswitchers/OverPlayer",
+   "parent": 3,
+   "pos": [
+    -6.375,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ]
+  },
+  {
+   "name": "TrioR",
+   "path": "stepswitchers/TrioR",
+   "parent": 3,
+   "pos": [
+    -3.825,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ]
+  },
+  {
+   "name": "TrioL",
+   "path": "stepswitchers/TrioL",
+   "parent": 3,
+   "pos": [
+    -8.925,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ]
+  },
+  {
+   "name": "==== Slave Steppers ====",
+   "path": "stepswitchers/==== Slave Steppers ====",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "R0",
+   "path": "stepswitchers/R0",
+   "parent": 3,
+   "pos": [
+    -2.55,
+    6.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R0",
+   "path": "stepswitchers/R0",
+   "parent": 3,
+   "pos": [
+    -5.1,
+    6.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R0",
+   "path": "stepswitchers/R0",
+   "parent": 3,
+   "pos": [
+    -7.65,
+    6.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R0",
+   "path": "stepswitchers/R0",
+   "parent": 3,
+   "pos": [
+    -10.2,
+    6.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R1",
+   "path": "stepswitchers/R1",
+   "parent": 3,
+   "pos": [
+    -1.275,
+    3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R1",
+   "path": "stepswitchers/R1",
+   "parent": 3,
+   "pos": [
+    -3.825,
+    3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R1",
+   "path": "stepswitchers/R1",
+   "parent": 3,
+   "pos": [
+    -6.375,
+    3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R1",
+   "path": "stepswitchers/R1",
+   "parent": 3,
+   "pos": [
+    -8.925,
+    3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R1",
+   "path": "stepswitchers/R1",
+   "parent": 3,
+   "pos": [
+    -11.475,
+    3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R2",
+   "path": "stepswitchers/R2",
+   "parent": 3,
+   "pos": [
+    -2.55,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R2",
+   "path": "stepswitchers/R2",
+   "parent": 3,
+   "pos": [
+    -5.1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R2",
+   "path": "stepswitchers/R2",
+   "parent": 3,
+   "pos": [
+    -7.65,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R2",
+   "path": "stepswitchers/R2",
+   "parent": 3,
+   "pos": [
+    -10.2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R3",
+   "path": "stepswitchers/R3",
+   "parent": 3,
+   "pos": [
+    -1.275,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R3",
+   "path": "stepswitchers/R3",
+   "parent": 3,
+   "pos": [
+    -3.825,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R3",
+   "path": "stepswitchers/R3",
+   "parent": 3,
+   "pos": [
+    -6.375,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R3",
+   "path": "stepswitchers/R3",
+   "parent": 3,
+   "pos": [
+    -8.925,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R3",
+   "path": "stepswitchers/R3",
+   "parent": 3,
+   "pos": [
+    -11.475,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R4",
+   "path": "stepswitchers/R4",
+   "parent": 3,
+   "pos": [
+    -2.55,
+    -6.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R4",
+   "path": "stepswitchers/R4",
+   "parent": 3,
+   "pos": [
+    -5.1,
+    -6.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R4",
+   "path": "stepswitchers/R4",
+   "parent": 3,
+   "pos": [
+    -7.65,
+    -6.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "R4",
+   "path": "stepswitchers/R4",
+   "parent": 3,
+   "pos": [
+    -10.2,
+    -6.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "locksteptiled_0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    100,
+    5.5
+   ],
+   "mapped": true,
+   "mat": "StepperMaterial"
+  },
+  {
+   "name": "==== Cameras ====",
+   "path": "stepswitchers/==== Cameras ====",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "StepperCameraNear1",
+   "path": "stepswitchers/StepperCameraNear1",
+   "parent": 3,
+   "pos": [
+    -6.39,
+    0
+   ],
+   "z": -10,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "StepperCameraNear2",
+   "path": "stepswitchers/StepperCameraNear2",
+   "parent": 3,
+   "pos": [
+    -6.39,
+    6.96
+   ],
+   "z": -10,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "StepperCameraDV",
+   "path": "stepswitchers/StepperCameraDV",
+   "parent": 3,
+   "pos": [
+    -6.39,
+    0
+   ],
+   "z": -10,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NearTop",
+   "path": "NearTop",
+   "parent": 0,
+   "pos": [
+    0,
+    3.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    7.65,
+    13.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NearBottom",
+   "path": "NearBottom",
+   "parent": 0,
+   "pos": [
+    0,
+    -3.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    7.65,
+    13.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "DVTop",
+   "path": "DVTop",
+   "parent": 0,
+   "pos": [
+    6.39,
+    900.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    979.2,
+    1779.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DVBottom",
+   "path": "DVBottom",
+   "parent": 0,
+   "pos": [
+    6.39,
+    -899.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    979.2,
+    1779.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DVLeft",
+   "path": "DVLeft",
+   "parent": 0,
+   "pos": [
+    -493.425,
+    3.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    979.2,
+    1779.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DVRight",
+   "path": "DVRight",
+   "parent": 0,
+   "pos": [
+    493.425,
+    3.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    979.2,
+    1779.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bach",
+   "path": "Bach",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.45,
+    3.45
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OnbeatPortrait",
+   "path": "Bach/OnbeatPortrait",
+   "parent": 41,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.6,
+    21.6
+   ]
+  }
+ ]
+}

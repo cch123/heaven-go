@@ -1,0 +1,54 @@
+{
+ "refArrays": {
+  "slaveSteppers": [
+   "stepswitchers/R0",
+   "stepswitchers/R0",
+   "stepswitchers/R0",
+   "stepswitchers/R0",
+   "stepswitchers/R1",
+   "stepswitchers/R1",
+   "stepswitchers/R1",
+   "stepswitchers/R1",
+   "stepswitchers/R1",
+   "stepswitchers/R2",
+   "stepswitchers/R2",
+   "stepswitchers/R2",
+   "stepswitchers/R2",
+   "stepswitchers/R3",
+   "stepswitchers/R3",
+   "stepswitchers/R3",
+   "stepswitchers/R3",
+   "stepswitchers/R3",
+   "stepswitchers/R4",
+   "stepswitchers/R4",
+   "stepswitchers/R4",
+   "stepswitchers/R4"
+  ]
+ },
+ "refArrayIdx": {
+  "slaveSteppers": [
+   9,
+   10,
+   11,
+   12,
+   17,
+   16,
+   14,
+   15,
+   13,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   29,
+   27,
+   28,
+   30
+  ]
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "bach": "Bach",
+ "background": "BG",
+ "masterStepperAnim": "stepswitchers/OverPlayer",
+ "masterStepperSprite": "stepswitchers/OverPlayer",
+ "stepswitcherLeft": "stepswitchers/TrioL",
+ "stepswitcherPlayer": "stepswitcherP",
+ "stepswitcherRight": "stepswitchers/TrioR"
+}

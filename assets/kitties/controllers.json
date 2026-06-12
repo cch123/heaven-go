@@ -1,0 +1,242 @@
+{
+ "Fish": {
+  "default": "DangleFish",
+  "states": {
+   "CaughtFail": {
+    "clip": "Animations/CaughtFail",
+    "speed": 1
+   },
+   "CaughtSuccess": {
+    "clip": "Animations/CaughtSuccess",
+    "speed": 1
+   },
+   "DangleFish": {
+    "clip": "Animations/DangleFish",
+    "speed": 1
+   }
+  }
+ },
+ "Kitty": {
+  "default": "Idle",
+  "states": {
+   "Clap1": {
+    "clip": "Animations/Clap1",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Clap2": {
+    "clip": "Animations/Clap2",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ClapNewIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ClapFail": {
+    "clip": "Animations/ClapFail",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ClapFailIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ClapFailIdle": {
+    "clip": "Animations/ClapFailIdle",
+    "speed": 1
+   },
+   "ClapMiss": {
+    "clip": "Animations/ClapMiss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ClapMissIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ClapMissIdle": {
+    "clip": "Animations/ClapMissIdle",
+    "speed": 1
+   },
+   "ClapNewIdle": {
+    "clip": "Animations/ClapNewIdle",
+    "speed": 1
+   },
+   "FaceClap": {
+    "clip": "Animations/FaceClap",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FaceNewIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "FaceClapFail": {
+    "clip": "Animations/FaceClapFail",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FaceFailNewIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "FaceFailNewIdle": {
+    "clip": "Animations/FaceFailNewIdle",
+    "speed": 1
+   },
+   "FaceIdle": {
+    "clip": "Animations/FaceIdle",
+    "speed": 1
+   },
+   "FaceNewIdle": {
+    "clip": "Animations/FaceNewIdle",
+    "speed": 1
+   },
+   "FacePopIn": {
+    "clip": "Animations/FacePopIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FaceIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "FishDangle": {
+    "clip": "Animations/FishDangle",
+    "speed": 1
+   },
+   "FishNotice": {
+    "clip": "Animations/FishNotice",
+    "speed": 1
+   },
+   "FishNotice2": {
+    "clip": "Animations/FishNotice2",
+    "speed": 1
+   },
+   "FishNotice3": {
+    "clip": "Animations/FishNotice3",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "MiceClap1": {
+    "clip": "Animations/MiceClap1",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MiceIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MiceClap2": {
+    "clip": "Animations/MiceClap2",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MiceIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MiceIdle": {
+    "clip": "Animations/MiceIdle",
+    "speed": 1
+   },
+   "MicePopIn": {
+    "clip": "Animations/MicePopIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MiceIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "PopIn": {
+    "clip": "Animations/PopIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "RollEnd": {
+    "clip": "Animations/RollEnd",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "RollNewIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "RollFail": {
+    "clip": "Animations/RollFail",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "RollFailIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "RollFailIdle": {
+    "clip": "Animations/RollFailIdle",
+    "speed": 1
+   },
+   "RollNewIdle": {
+    "clip": "Animations/RollNewIdle",
+    "speed": 1
+   },
+   "RollStart": {
+    "clip": "Animations/RollStart",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "RollStartIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "RollStartIdle": {
+    "clip": "Animations/RollStartIdle",
+    "speed": 1
+   },
+   "Rolling": {
+    "clip": "Animations/Rolling",
+    "speed": 1
+   }
+  }
+ }
+}

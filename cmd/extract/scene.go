@@ -114,6 +114,40 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"_treatCurves", "donutGradient"}},
 		},
 	},
+	"spaceDance": {
+		dir:    "SpaceDance",
+		prefab: "spaceDance.prefab",
+		roleFields: []string{
+			"bg", "shootingStarAnim", "DancerP", "Dancer1", "Dancer2", "Dancer3",
+			"Gramps", "Hit", "Player",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+	},
+	"kitties": {
+		dir:    "Kitties",
+		prefab: "kitties.prefab",
+		roleFields: []string{
+			"player", "Fish", "background",
+		},
+		refArrayFields:  []string{"kitties", "Cats"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "playerScript", markers: []string{"Player", "fish"}},
+		},
+	},
+	"lockstep": {
+		dir:    "Lockstep",
+		prefab: "lockstep.prefab",
+		roleFields: []string{
+			"stepswitcherPlayer", "stepswitcherLeft", "stepswitcherRight", "bach",
+			"masterStepperAnim", "masterStepperSprite", "background",
+		},
+		refArrayFields:  []string{"slaveSteppers"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav", "nearMiss.ogg"},
+	},
 	"marchingOrders": {
 		dir:    "MarchingOrders",
 		prefab: "marchingOrders.prefab",

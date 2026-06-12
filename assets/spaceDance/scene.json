@@ -1,0 +1,1118 @@
+{
+ "nodes": [
+  {
+   "name": "spaceDance",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Reference",
+   "path": "Reference",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4,
+    4
+   ],
+   "order": -3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Reference (1)",
+   "path": "Reference (1)",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.93,
+    1.93
+   ],
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5882353
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "playerContainer",
+   "path": "playerContainer",
+   "parent": 0,
+   "pos": [
+    4.84,
+    -0.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dancer",
+   "path": "playerContainer/dancer",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.03,
+    1.03
+   ],
+   "sprite": "spacedancers_2",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.32,
+    8.36
+   ],
+   "mapped": true,
+   "mat": "DancerMat"
+  },
+  {
+   "name": "dancer reference",
+   "path": "playerContainer/dancer reference",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.03,
+    1.03
+   ],
+   "sprite": "spacedancers_2",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.62352943
+   ],
+   "size": [
+    3.32,
+    8.36
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "playerContainer/Hit",
+   "parent": 3,
+   "pos": [
+    0.15,
+    -0.162
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "spacedance_eff-4x_foolhardy_Remacri_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "dancersContainer",
+   "path": "dancersContainer",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dancer3Container",
+   "path": "dancersContainer/dancer3Container",
+   "parent": 7,
+   "pos": [
+    2.36,
+    -0.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dancer",
+   "path": "dancersContainer/dancer3Container/dancer",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.03,
+    1.03
+   ],
+   "sprite": "spacedancers_2",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.32,
+    8.36
+   ],
+   "mapped": true,
+   "mat": "DancerMat"
+  },
+  {
+   "name": "dancer2Container",
+   "path": "dancersContainer/dancer2Container",
+   "parent": 7,
+   "pos": [
+    -0.12,
+    -0.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dancer",
+   "path": "dancersContainer/dancer2Container/dancer",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.03,
+    1.03
+   ],
+   "sprite": "spacedancers_2",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.32,
+    8.36
+   ],
+   "mapped": true,
+   "mat": "DancerMat"
+  },
+  {
+   "name": "dancer1Container",
+   "path": "dancersContainer/dancer1Container",
+   "parent": 7,
+   "pos": [
+    -2.6,
+    -0.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dancer",
+   "path": "dancersContainer/dancer1Container/dancer",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.03,
+    1.03
+   ],
+   "sprite": "spacedancers_2",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.32,
+    8.36
+   ],
+   "mapped": true,
+   "mat": "DancerMat"
+  },
+  {
+   "name": "grampsContainer",
+   "path": "dancersContainer/grampsContainer",
+   "parent": 7,
+   "pos": [
+    -5.96,
+    -1.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "gramps",
+   "path": "dancersContainer/grampsContainer/gramps",
+   "parent": 14,
+   "pos": [
+    0.0047,
+    -0.0165
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67,
+    0.67
+   ],
+   "sprite": "spacegramps_2",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "GrampsMat"
+  },
+  {
+   "name": "Gramps Reference",
+   "path": "dancersContainer/grampsContainer/Gramps Reference",
+   "parent": 14,
+   "pos": [
+    0.0047,
+    -0.0165
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67,
+    0.67
+   ],
+   "sprite": "spacegramps_2",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Gramps Reference Sit",
+   "path": "dancersContainer/grampsContainer/Gramps Reference Sit",
+   "parent": 14,
+   "pos": [
+    0.0047,
+    -0.238
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67,
+    0.67
+   ],
+   "sprite": "spacegramps_10",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Gramps Reference Punch",
+   "path": "dancersContainer/grampsContainer/Gramps Reference Punch",
+   "parent": 14,
+   "pos": [
+    0.0525,
+    -0.144
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67,
+    0.67
+   ],
+   "sprite": "spacegramps_25",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG Color",
+   "path": "BG/BG Color",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    300,
+    300
+   ],
+   "order": -5,
+   "color": [
+    0,
+    0.16078432,
+    0.8392157,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BgStars0",
+   "path": "BG/BgStars0",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BGStarsUS2",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.4,
+    14.96
+   ]
+  },
+  {
+   "name": "BgStars1",
+   "path": "BG/BgStars1",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BGStarsUS1",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.4,
+    14.96
+   ]
+  },
+  {
+   "name": "BgStars2",
+   "path": "BG/BgStars2",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 6,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BGStarsUS2",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.4,
+    14.96
+   ]
+  },
+  {
+   "name": "Canvas",
+   "path": "BG/Canvas",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars0",
+   "path": "BG/Canvas/Stars0",
+   "parent": 24,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.09,
+    0.09
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars1",
+   "path": "BG/Canvas/Stars1",
+   "parent": 24,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.09,
+    0.09
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars2",
+   "path": "BG/Canvas/Stars2",
+   "parent": 24,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 6,
+   "rotZ": 0,
+   "scale": [
+    0.09,
+    0.09
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shootingStar",
+   "path": "shootingStar",
+   "parent": 0,
+   "pos": [
+    0.38043794,
+    -0.18024182
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "1",
+   "path": "shootingStar/1",
+   "parent": 28,
+   "pos": [
+    8.02,
+    4.2799997
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.88
+   ]
+  },
+  {
+   "name": "2",
+   "path": "shootingStar/2",
+   "parent": 28,
+   "pos": [
+    6.62,
+    3.98
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    1.06
+   ]
+  },
+  {
+   "name": "3",
+   "path": "shootingStar/3",
+   "parent": 28,
+   "pos": [
+    5.2200003,
+    3.6799998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    1.06
+   ]
+  },
+  {
+   "name": "4",
+   "path": "shootingStar/4",
+   "parent": 28,
+   "pos": [
+    3.8200002,
+    3.3799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    1.06
+   ]
+  },
+  {
+   "name": "5",
+   "path": "shootingStar/5",
+   "parent": 28,
+   "pos": [
+    2.42,
+    3.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    1.06
+   ]
+  },
+  {
+   "name": "6",
+   "path": "shootingStar/6",
+   "parent": 28,
+   "pos": [
+    1.0200001,
+    2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.88
+   ]
+  },
+  {
+   "name": "7",
+   "path": "shootingStar/7",
+   "parent": 28,
+   "pos": [
+    -0.37999994,
+    2.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.88
+   ]
+  },
+  {
+   "name": "8",
+   "path": "shootingStar/8",
+   "parent": 28,
+   "pos": [
+    -1.78,
+    2.1799998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.88
+   ]
+  },
+  {
+   "name": "9",
+   "path": "shootingStar/9",
+   "parent": 28,
+   "pos": [
+    -3.1799998,
+    1.8799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.88
+   ]
+  },
+  {
+   "name": "10",
+   "path": "shootingStar/10",
+   "parent": 28,
+   "pos": [
+    -4.58,
+    1.5799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.88
+   ]
+  },
+  {
+   "name": "11",
+   "path": "shootingStar/11",
+   "parent": 28,
+   "pos": [
+    -5.98,
+    1.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.88
+   ]
+  },
+  {
+   "name": "12",
+   "path": "shootingStar/12",
+   "parent": 28,
+   "pos": [
+    -7.38,
+    0.9799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    1.06
+   ]
+  },
+  {
+   "name": "13",
+   "path": "shootingStar/13",
+   "parent": 28,
+   "pos": [
+    -8.78,
+    0.67999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0.7028302,
+    0.93529636,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    1.06
+   ]
+  },
+  {
+   "name": "seal",
+   "path": "seal",
+   "parent": 0,
+   "pos": [
+    19377,
+    -11766.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    14910.259,
+    14910.259
+   ],
+   "sprite": "seal",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.77,
+    1.75
+   ]
+  }
+ ]
+}

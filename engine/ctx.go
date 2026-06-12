@@ -3,6 +3,7 @@ package engine
 
 import (
 	"bytes"
+	"math"
 	"path/filepath"
 
 	"github.com/hajimehoshi/ebiten/v2/audio"
@@ -165,9 +166,28 @@ func (c *Ctx) GameAt(beat float64) string {
 	return id
 }
 
+// NextSwitchBeat 返回 beat 之后下一次 switchGame/end 的拍（无则 +Inf；
+// Lockstep.QueueSwitches 的 nextGameSwitchBeat 语义）。
+func (c *Ctx) NextSwitchBeat(beat float64) float64 {
+	next := math.Inf(1)
+	for _, sw := range c.App.switches {
+		if sw.beat > beat {
+			next = sw.beat
+			break
+		}
+	}
+	if c.App.endBeat > beat && c.App.endBeat < next {
+		next = c.App.endBeat
+	}
+	return next
+}
+
 // SoundLoop 循环播放音效，返回停止函数（HS looping SoundByte + KillLoop，
 // totemClimb 的 charge_start 等）。
-func (c *Ctx) SoundLoop(name string) func() {
+func (c *Ctx) SoundLoop(name string) func() { return c.SoundLoopVol(name, 1) }
+
+// SoundLoopVol 带音量的循环播放（kitties spinnya 0.85 等）。
+func (c *Ctx) SoundLoopVol(name string, vol float64) func() {
 	pcm, ok := c.Assets.Sounds[name]
 	if !ok {
 		return func() {}
@@ -177,6 +197,7 @@ func (c *Ctx) SoundLoop(name string) func() {
 	if err != nil {
 		return func() {}
 	}
+	p.SetVolume(vol)
 	p.Play()
 	return func() { p.Pause() }
 }

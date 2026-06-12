@@ -1,0 +1,106 @@
+{
+ "Bach": {
+  "default": "BachIdle",
+  "states": {
+   "BachIdle": {
+    "clip": "Animations/BachIdle",
+    "speed": 1
+   },
+   "BachOff": {
+    "clip": "Animations/BachOff",
+    "speed": 1
+   },
+   "BachOn": {
+    "clip": "Animations/BachOn",
+    "speed": 1
+   }
+  }
+ },
+ "stepswitcher": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BopIdle",
+      "exitTime": 0.96437055,
+      "duration": 0
+     }
+    ]
+   },
+   "BopIdle": {
+    "clip": "Animations/BopIdle",
+    "speed": 1
+   },
+   "BopReset": {
+    "clip": "Animations/BopReset",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0.1
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "OffbeatMarch": {
+    "clip": "Animations/OnbeatMarch",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "OffbeatMiss": {
+    "clip": "Animations/OffbeatMiss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "OffbeatMissRest",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "OffbeatMissRest": {
+    "clip": "Animations/OffbeatMissRest",
+    "speed": 1
+   },
+   "OnbeatMarch": {
+    "clip": "Animations/OffbeatMarch",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "OnbeatMiss": {
+    "clip": "Animations/OnbeatMiss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "OnbeatMissRest",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "OnbeatMissRest": {
+    "clip": "Animations/OnbeatMissRest",
+    "speed": 1
+   }
+  }
+ }
+}

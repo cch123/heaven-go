@@ -1,0 +1,39 @@
+{
+ "refArrays": {
+  "Cats": [
+   "Kitty1",
+   "Kitty2",
+   "KittyPlayer"
+  ],
+  "kitties": [
+   "Kitty1",
+   "Kitty2",
+   "KittyPlayer"
+  ]
+ },
+ "refArrayIdx": {
+  "Cats": [
+   2,
+   23,
+   44
+  ],
+  "kitties": [
+   2,
+   23,
+   44
+  ]
+ },
+ "components": {
+  "playerScript": {
+   "path": "KittyPlayer",
+   "nums": {
+    "canClap": 0
+   },
+   "refs": {
+    "Player": "KittyPlayer",
+    "anim": "KittyPlayer",
+    "fish": "Fish"
+   }
+  }
+ }
+}

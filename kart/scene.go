@@ -73,6 +73,7 @@ type SceneInst struct {
 	mirrorOver map[int]bool       // 节点下标 → localScale.x 取负（transform.localScale=(-1,1,1)）
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
+	zOver      map[int]float64    // 节点下标 → 世界 z 覆盖（kitties 斜列生成等，根节点语义）
 
 	queued []ExtraSprite // 本帧注入的动态绘制项
 
@@ -146,6 +147,7 @@ func NewScene(as *Assets) *SceneInst {
 		mirrorOver: map[int]bool{},
 		colorOver:  map[int][4]float64{},
 		posOver:    map[int][2]float64{},
+		zOver:      map[int]float64{},
 	}
 	for path, ctrlName := range as.Animators {
 		if ctrl, ok := as.Controllers[ctrlName]; ok {
@@ -426,10 +428,27 @@ func (s *SceneInst) ClearPosOver(path string) {
 	}
 }
 
+// SetZOver 覆盖节点的深度 z（transform.position.z 直写语义；
+// 仅根节点向（worldZ 不再叠加父链））。
+func (s *SceneInst) SetZOver(path string, z float64) {
+	if i, ok := s.byPath[path]; ok {
+		s.zOver[i] = z
+	}
+}
+
 // Index 返回 path 的节点下标（重名 path 取首个，Unity 同语义）。
 func (s *SceneInst) Index(path string) (int, bool) {
 	i, ok := s.byPath[path]
 	return i, ok
+}
+
+// NodeSprite 返回节点当前的切片名与翻转（需先 Sample；
+// lockstep 人群平铺等"主驱动、从复制切片"的 master/slave 模式用）。
+func (s *SceneInst) NodeSprite(path string) (sprite string, flipX, flipY bool) {
+	if i, ok := s.byPath[path]; ok {
+		return s.state[i].sprite, s.state[i].flipX, s.state[i].flipY
+	}
+	return "", false, false
 }
 
 // ExtraSprite 是模块注入的动态绘制项（模板实例/手写粒子），
@@ -509,6 +528,9 @@ func (s *SceneInst) Sample(beat float64) {
 			s.world[i] = s.world[n.Parent].Mul(local)
 			s.worldZ[i] = s.worldZ[n.Parent] + n.PosZ
 			s.actives[i] = st.active && s.actives[n.Parent]
+		}
+		if z, ok := s.zOver[i]; ok {
+			s.worldZ[i] = z
 		}
 	}
 }

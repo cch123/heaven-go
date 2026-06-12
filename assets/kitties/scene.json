@@ -1,0 +1,2180 @@
+{
+ "nodes": [
+  {
+   "name": "kitties",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 4,
+   "rotZ": 0,
+   "scale": [
+    64.5,
+    40
+   ],
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Kitty1",
+   "path": "Kitty1",
+   "parent": 0,
+   "pos": [
+    -6.61,
+    2.5
+   ],
+   "z": 6,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Kitty",
+   "path": "Kitty1/Kitty",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesIdle_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.551111,
+    5.851429
+   ]
+  },
+  {
+   "name": "Effects",
+   "path": "Kitty1/Effects",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "clapFX",
+   "path": "Kitty1/Effects/clapFX",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesClapFX",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    1.61
+   ]
+  },
+  {
+   "name": "RedFX",
+   "path": "Kitty1/Effects/RedFX",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.10021695147406531,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesRedFX",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.61
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Kitty1/Effects/Star",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star1",
+   "path": "Kitty1/Effects/Star1",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_1",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star2",
+   "path": "Kitty1/Effects/Star2",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 6.04434249524178,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_2",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "FailFXBig",
+   "path": "Kitty1/Effects/FailFXBig",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFailFX_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    1.58
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Kitty1/Effects/Star (1)",
+   "parent": 4,
+   "pos": [
+    -5.11,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star2 (1)",
+   "path": "Kitty1/Effects/Star2 (1)",
+   "parent": 4,
+   "pos": [
+    -5.11,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_2",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "FaceLines",
+   "path": "Kitty1/Effects/FaceLines",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -1,
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FaceLines",
+   "path": "Kitty1/Effects/FaceLines/FaceLines",
+   "parent": 13,
+   "pos": [
+    1.9,
+    -1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (1)",
+   "path": "Kitty1/Effects/FaceLines/FaceLines (1)",
+   "parent": 13,
+   "pos": [
+    1.1,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (2)",
+   "path": "Kitty1/Effects/FaceLines/FaceLines (2)",
+   "parent": 13,
+   "pos": [
+    -0.1,
+    -2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (3)",
+   "path": "Kitty1/Effects/FaceLines/FaceLines (3)",
+   "parent": 13,
+   "pos": [
+    -0.75,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (4)",
+   "path": "Kitty1/Effects/FaceLines/FaceLines (4)",
+   "parent": 13,
+   "pos": [
+    -1.1,
+    -2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FailFXSmall",
+   "path": "Kitty1/Effects/FailFXSmall",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFailFX_1",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    1.14
+   ]
+  },
+  {
+   "name": "Hands",
+   "path": "Kitty1/Hands",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "Kitty1/Hands/LeftHand",
+   "parent": 20,
+   "pos": [
+    0.02,
+    0.91
+   ],
+   "rotZ": -6.256275663665054,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHand",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.23,
+    3.38
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "Kitty1/Hands/RightHand",
+   "parent": 20,
+   "pos": [
+    0.27,
+    0.9400001
+   ],
+   "rotZ": -0.030220097488257634,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHand",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.23,
+    3.38
+   ]
+  },
+  {
+   "name": "Kitty2",
+   "path": "Kitty2",
+   "parent": 0,
+   "pos": [
+    0.32,
+    0.5
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Kitty",
+   "path": "Kitty2/Kitty",
+   "parent": 23,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesIdle_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.551111,
+    5.851429
+   ]
+  },
+  {
+   "name": "Effects",
+   "path": "Kitty2/Effects",
+   "parent": 23,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "clapFX",
+   "path": "Kitty2/Effects/clapFX",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesClapFX",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    1.61
+   ]
+  },
+  {
+   "name": "RedFX",
+   "path": "Kitty2/Effects/RedFX",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.10021695147406531,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesRedFX",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.61
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Kitty2/Effects/Star",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star1",
+   "path": "Kitty2/Effects/Star1",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_1",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star2",
+   "path": "Kitty2/Effects/Star2",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_2",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "FailFXBig",
+   "path": "Kitty2/Effects/FailFXBig",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFailFX_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    1.58
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Kitty2/Effects/Star (1)",
+   "parent": 25,
+   "pos": [
+    -5.11,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star2 (1)",
+   "path": "Kitty2/Effects/Star2 (1)",
+   "parent": 25,
+   "pos": [
+    -5.11,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_2",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "FaceLines",
+   "path": "Kitty2/Effects/FaceLines",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -1,
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FaceLines",
+   "path": "Kitty2/Effects/FaceLines/FaceLines",
+   "parent": 34,
+   "pos": [
+    1.9,
+    -1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (1)",
+   "path": "Kitty2/Effects/FaceLines/FaceLines (1)",
+   "parent": 34,
+   "pos": [
+    1.1,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (2)",
+   "path": "Kitty2/Effects/FaceLines/FaceLines (2)",
+   "parent": 34,
+   "pos": [
+    -0.1,
+    -2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (3)",
+   "path": "Kitty2/Effects/FaceLines/FaceLines (3)",
+   "parent": 34,
+   "pos": [
+    -0.75,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (4)",
+   "path": "Kitty2/Effects/FaceLines/FaceLines (4)",
+   "parent": 34,
+   "pos": [
+    -1.1,
+    -2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FailFXSmall",
+   "path": "Kitty2/Effects/FailFXSmall",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFailFX_1",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    1.14
+   ]
+  },
+  {
+   "name": "Hands",
+   "path": "Kitty2/Hands",
+   "parent": 23,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "Kitty2/Hands/LeftHand",
+   "parent": 41,
+   "pos": [
+    -0.19999981,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHand",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.23,
+    3.38
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "Kitty2/Hands/RightHand",
+   "parent": 41,
+   "pos": [
+    0.099999905,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHand",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.23,
+    3.38
+   ]
+  },
+  {
+   "name": "KittyPlayer",
+   "path": "KittyPlayer",
+   "parent": 0,
+   "pos": [
+    4.25,
+    -1
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Kitty",
+   "path": "KittyPlayer/Kitty",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesIdle_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.551111,
+    5.851429
+   ]
+  },
+  {
+   "name": "Effects",
+   "path": "KittyPlayer/Effects",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "clapFX",
+   "path": "KittyPlayer/Effects/clapFX",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesClapFX",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    1.61
+   ]
+  },
+  {
+   "name": "RedFX",
+   "path": "KittyPlayer/Effects/RedFX",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.10021695147406531,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesRedFX",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.61
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "KittyPlayer/Effects/Star",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star1",
+   "path": "KittyPlayer/Effects/Star1",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_1",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star2",
+   "path": "KittyPlayer/Effects/Star2",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_2",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "FailFXBig",
+   "path": "KittyPlayer/Effects/FailFXBig",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFailFX_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    1.58
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "KittyPlayer/Effects/Star (1)",
+   "parent": 46,
+   "pos": [
+    -5.11,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "Star2 (1)",
+   "path": "KittyPlayer/Effects/Star2 (1)",
+   "parent": 46,
+   "pos": [
+    -5.11,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesStar_2",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.92
+   ]
+  },
+  {
+   "name": "FaceLines",
+   "path": "KittyPlayer/Effects/FaceLines",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -1,
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FaceLines",
+   "path": "KittyPlayer/Effects/FaceLines/FaceLines",
+   "parent": 55,
+   "pos": [
+    1.9,
+    -1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (1)",
+   "path": "KittyPlayer/Effects/FaceLines/FaceLines (1)",
+   "parent": 55,
+   "pos": [
+    1.1,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (2)",
+   "path": "KittyPlayer/Effects/FaceLines/FaceLines (2)",
+   "parent": 55,
+   "pos": [
+    -0.1,
+    -2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (3)",
+   "path": "KittyPlayer/Effects/FaceLines/FaceLines (3)",
+   "parent": 55,
+   "pos": [
+    -0.75,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FaceLines (4)",
+   "path": "KittyPlayer/Effects/FaceLines/FaceLines (4)",
+   "parent": 55,
+   "pos": [
+    -1.1,
+    -2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesPopInLine",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    5.64
+   ]
+  },
+  {
+   "name": "FailFXSmall",
+   "path": "KittyPlayer/Effects/FailFXSmall",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFailFX_1",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    1.14
+   ]
+  },
+  {
+   "name": "Hands",
+   "path": "KittyPlayer/Hands",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "KittyPlayer/Hands/LeftHand",
+   "parent": 62,
+   "pos": [
+    -0.19999981,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHand",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.23,
+    3.38
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "KittyPlayer/Hands/RightHand",
+   "parent": 62,
+   "pos": [
+    0.099999905,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHand",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.23,
+    3.38
+   ]
+  },
+  {
+   "name": "Fish",
+   "path": "Fish",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FishHolder",
+   "path": "Fish/FishHolder",
+   "parent": 65,
+   "pos": [
+    0,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFishHolder",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.26,
+    5.94
+   ]
+  },
+  {
+   "name": "FishBody",
+   "path": "Fish/FishBody",
+   "parent": 65,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFish",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.66,
+    1.89
+   ]
+  },
+  {
+   "name": "FishLine",
+   "path": "Fish/FishLine",
+   "parent": 65,
+   "pos": [
+    -0.1,
+    3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFishLineStraight",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.26,
+    5.94
+   ]
+  },
+  {
+   "name": "Hearts",
+   "path": "Fish/Hearts",
+   "parent": 65,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Heart (1)",
+   "path": "Fish/Hearts/Heart (1)",
+   "parent": 69,
+   "pos": [
+    -4.25,
+    1.44
+   ],
+   "rotZ": 1.775697903533696,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHeart_0",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.3764706
+   ],
+   "size": [
+    1.82,
+    1.85
+   ]
+  },
+  {
+   "name": "Heart (2)",
+   "path": "Fish/Hearts/Heart (2)",
+   "parent": 69,
+   "pos": [
+    -2.76,
+    -1.24
+   ],
+   "rotZ": -3.5183043852448823,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHeart_0",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.3764706
+   ],
+   "size": [
+    1.82,
+    1.85
+   ]
+  },
+  {
+   "name": "Heart (3)",
+   "path": "Fish/Hearts/Heart (3)",
+   "parent": 69,
+   "pos": [
+    -2.83,
+    3.85
+   ],
+   "rotZ": 1.1700511020326643,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHeart_0",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.3764706
+   ],
+   "size": [
+    1.82,
+    1.85
+   ]
+  },
+  {
+   "name": "Heart (4)",
+   "path": "Fish/Hearts/Heart (4)",
+   "parent": 69,
+   "pos": [
+    2.34,
+    3.37
+   ],
+   "rotZ": -0.5994333298038834,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHeart_0",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.3764706
+   ],
+   "size": [
+    1.82,
+    1.85
+   ]
+  },
+  {
+   "name": "Heart (5)",
+   "path": "Fish/Hearts/Heart (5)",
+   "parent": 69,
+   "pos": [
+    3.13,
+    -0.08999964
+   ],
+   "rotZ": -1.7441773584201818,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesHeart_0",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.3764706
+   ],
+   "size": [
+    1.82,
+    1.85
+   ]
+  },
+  {
+   "name": "ActionLines",
+   "path": "Fish/ActionLines",
+   "parent": 65,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesActionLines",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6313726
+   ],
+   "size": [
+    0.7,
+    7.59
+   ]
+  },
+  {
+   "name": "KittiesFish",
+   "path": "Fish/KittiesFish",
+   "parent": 65,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Kitty1",
+   "path": "Fish/KittiesFish/Kitty1",
+   "parent": 76,
+   "pos": [
+    -4.4623065,
+    -2.831834
+   ],
+   "rotZ": -0.722426654487899,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Kitty2",
+   "path": "Fish/KittiesFish/Kitty2",
+   "parent": 76,
+   "pos": [
+    0.67769367,
+    -5.081834
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Kitty3",
+   "path": "Fish/KittiesFish/Kitty3",
+   "parent": 76,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ExclamationPoint",
+   "path": "Fish/ExclamationPoint",
+   "parent": 65,
+   "pos": [
+    -1.5348978,
+    1.068711
+   ],
+   "z": -2.583691,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kittiesFishSurprise",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.52,
+    4.32
+   ]
+  }
+ ]
+}

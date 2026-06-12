@@ -1,0 +1,163 @@
+{
+ "Hit": {
+  "default": "HitNothing",
+  "states": {
+   "HitNothing": {
+    "clip": "Animations/HitNothing",
+    "speed": 1
+   },
+   "HitPunch": {
+    "clip": "Animations/HitPunch",
+    "speed": 1
+   },
+   "HitSit": {
+    "clip": "Animations/HitSit",
+    "speed": 1
+   },
+   "HitTurn": {
+    "clip": "Animations/HitTurn",
+    "speed": 1
+   }
+  }
+ },
+ "dancer": {
+  "default": "Stand",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1
+   },
+   "Ouch": {
+    "clip": "Animations/Ouch",
+    "speed": 1
+   },
+   "PunchDo": {
+    "clip": "Animations/PunchDo",
+    "speed": 1
+   },
+   "PunchStartInner": {
+    "clip": "Animations/PunchStartInner",
+    "speed": 1
+   },
+   "PunchStartOuter": {
+    "clip": "Animations/PunchStartOuter",
+    "speed": 1
+   },
+   "SitDownDo": {
+    "clip": "Animations/SitDownDo",
+    "speed": 1
+   },
+   "SitDownStart": {
+    "clip": "Animations/SitDownStart",
+    "speed": 1
+   },
+   "Stand": {
+    "clip": "Animations/Stand",
+    "speed": 1
+   },
+   "TurnRightDo": {
+    "clip": "Animations/TurnRightDo",
+    "speed": 1
+   },
+   "TurnRightStart": {
+    "clip": "Animations/TurnRightStart",
+    "speed": 1
+   },
+   "testright": {
+    "clip": "Animations/testright",
+    "speed": 1
+   }
+  }
+ },
+ "gramps": {
+  "default": "GrampsStand",
+  "states": {
+   "GrampsBop": {
+    "clip": "Animations/GrampsBop",
+    "speed": 1
+   },
+   "GrampsMiss": {
+    "clip": "Animations/GrampsMiss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "GrampsStand",
+      "exitTime": 7,
+      "duration": 0
+     }
+    ]
+   },
+   "GrampsOhFuck": {
+    "clip": "Animations/GrampsOhFuck",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "GrampsStand",
+      "exitTime": 7,
+      "duration": 0
+     }
+    ]
+   },
+   "GrampsPunchDo": {
+    "clip": "Animations/GrampsPunchDo",
+    "speed": 1
+   },
+   "GrampsPunchStartEven": {
+    "clip": "Animations/GrampsPunchStartEven",
+    "speed": 1
+   },
+   "GrampsPunchStartOdd": {
+    "clip": "Animations/GrampsPunchStartOdd",
+    "speed": 1
+   },
+   "GrampsSitDownDo": {
+    "clip": "Animations/GrampsSitDownDo",
+    "speed": 1
+   },
+   "GrampsSitDownStart": {
+    "clip": "Animations/GrampsSitDownStart",
+    "speed": 1
+   },
+   "GrampsSniff": {
+    "clip": "Animations/GrampsSniff",
+    "speed": 1
+   },
+   "GrampsStand": {
+    "clip": "Animations/GrampsStand",
+    "speed": 1
+   },
+   "GrampsTalk": {
+    "clip": "Animations/GrampsTalk",
+    "speed": 1
+   },
+   "GrampsTurnRightDo": {
+    "clip": "Animations/GrampsTurnRightDo",
+    "speed": 1
+   },
+   "GrampsTurnRightStart": {
+    "clip": "Animations/GrampsTurnRightStart",
+    "speed": 1
+   }
+  }
+ },
+ "shootingStar": {
+  "default": "StarNothing",
+  "states": {
+   "ShootingStar": {
+    "clip": "Animations/ShootingStar",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "StarNothing",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "StarNothing": {
+    "clip": "Animations/StarNothing",
+    "speed": 1
+   }
+  }
+ }
+}

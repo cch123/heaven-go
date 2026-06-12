@@ -38,6 +38,7 @@ import (
 	"hsdemo/conductor"
 	"hsdemo/engine"
 	"hsdemo/games/bluebear"
+	"hsdemo/games/lockstep"
 	"hsdemo/games/marchingorders"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/munchymonk"
@@ -622,6 +623,7 @@ func main() {
 	engine.Register("seeSaw", seesaw.New)
 	engine.Register("blueBear", bluebear.New)
 	engine.Register("marchingOrders", marchingorders.New)
+	engine.Register("lockstep", lockstep.New)
 	engine.Register("munchyMonk", munchymonk.New)
 
 	// karateman 仍走早期 demo 路径（未迁移到 engine）

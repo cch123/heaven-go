@@ -1,0 +1,11 @@
+{
+ "Dancer1": "dancersContainer/dancer1Container/dancer",
+ "Dancer2": "dancersContainer/dancer2Container/dancer",
+ "Dancer3": "dancersContainer/dancer3Container/dancer",
+ "DancerP": "playerContainer/dancer",
+ "Gramps": "dancersContainer/grampsContainer/gramps",
+ "Hit": "playerContainer/Hit",
+ "Player": "BG",
+ "bg": "BG/BG Color",
+ "shootingStarAnim": "shootingStar"
+}

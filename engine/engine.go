@@ -90,6 +90,15 @@ type gameSwitch struct {
 	id   string
 }
 
+// viewScaleEvt 是 vfx/scale view 事件（StaticCamera：整张游戏画布的缩放，
+// 画布外露出 letterbox 黑场）。
+type viewScaleEvt struct {
+	beat, length float64
+	x, y         float64
+	ease         int
+	axis         int // 0=All 1=X 2=Y
+}
+
 type timingHit struct {
 	y      float64
 	rating Judgment
@@ -125,6 +134,9 @@ type App struct {
 	fx  postFX    // ppe/* 屏幕后处理
 	flt filterFX  // vfx/filter（LUT 滤镜）
 	tbx textboxFX // vfx/display textbox
+
+	viewScales []viewScaleEvt // vfx/scale view（画布缩放）
+	viewBuf    *ebiten.Image  // 缩放生效时的离屏画布
 
 	pressedNow  bool // 本逻辑帧是否有按下（模块轮询用，如 totemClimb HoldCo）
 	releasedNow bool // 本逻辑帧是否有抬起
@@ -225,6 +237,7 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	a.inputs = nil
 	a.flashes = nil
 	a.camEvts = nil
+	a.viewScales = nil
 	a.fx.reset()
 	a.flt.reset()
 	a.tbx.reset()
@@ -263,6 +276,7 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	}
 	sort.Strings(a.unported)
 	sort.Slice(a.switches, func(i, j int) bool { return a.switches[i].beat < a.switches[j].beat })
+	sort.Slice(a.flashes, func(i, j int) bool { return a.flashes[i].beat < a.flashes[j].beat })
 
 	// 分发实体
 	for i := range a.bm.Entities {
@@ -282,6 +296,13 @@ func (a *App) loadRiq(r *riq.Riq) error {
 			a.flashes = append(a.flashes, flashEvt{
 				beat: e.Beat, length: e.Length,
 				c0: colorParam(e, "colorA"), c1: colorParam(e, "colorB"),
+			})
+		case e.Datamodel == "vfx/scale view":
+			a.viewScales = append(a.viewScales, viewScaleEvt{
+				beat: e.Beat, length: e.Length,
+				x: e.Float("valA", 1), y: e.Float("valB", 1),
+				ease: int(e.Float("ease", 0)),
+				axis: int(e.Float("axis", 0)),
 			})
 		case e.Datamodel == "vfx/move camera" || e.Datamodel == "gameManager/move camera":
 			a.camEvts = append(a.camEvts, camEvt{
@@ -647,20 +668,41 @@ func (a *App) Draw(screen *ebiten.Image) {
 		t, beat = a.cond.Time(), a.cond.Beat()
 	}
 
+	// vfx/scale view：缩放生效时游戏画布整体渲到离屏帧再贴回
+	//（StaticCamera 语义：画布外露出 letterbox 黑场；HUD 不参与缩放）。
+	vsx, vsy := a.viewScaleAt(beat)
+	canvas := screen
+	if vsx != 1 || vsy != 1 {
+		if a.viewBuf == nil {
+			a.viewBuf = ebiten.NewImage(ScreenW, ScreenH)
+		}
+		a.viewBuf.Fill(color.RGBA{16, 16, 20, 255})
+		canvas = a.viewBuf
+	}
+
 	if a.active != nil {
 		if a.fx.active() {
 			// ppe：游戏画面渲到离屏帧，经后处理链上屏（flash/HUD 不参与，
 			// 对应 HS 的编辑器叠层不过 PostProcessLayer）
 			a.active.Draw(a.fx.Target(), t, beat)
-			a.fx.Apply(screen, beat, t)
+			a.fx.Apply(canvas, beat, t)
 		} else {
-			a.active.Draw(screen, t, beat)
+			a.active.Draw(canvas, t, beat)
 		}
-		a.flt.Apply(screen, a.assetsRoot, beat)
-		a.tbx.Draw(screen, a.assetsRoot, beat)
+		a.flt.Apply(canvas, a.assetsRoot, beat)
+		a.tbx.Draw(canvas, a.assetsRoot, beat)
 	}
 
-	a.drawFlash(screen, beat)
+	a.drawFlash(canvas, beat)
+
+	if canvas != screen {
+		screen.Fill(color.RGBA{0, 0, 0, 255}) // letterbox 黑场
+		op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
+		op.GeoM.Translate(-ScreenW/2, -ScreenH/2)
+		op.GeoM.Scale(vsx, vsy)
+		op.GeoM.Translate(ScreenW/2, ScreenH/2)
+		screen.DrawImage(a.viewBuf, op)
+	}
 
 	white := color.RGBA{245, 245, 250, 255}
 	dim := color.RGBA{200, 200, 210, 200}
@@ -739,21 +781,62 @@ func (a *App) drawResult(screen *ebiten.Image, white color.RGBA) {
 	a.text(screen, "R — restart    Esc — quit    (可拖入其他 .riq)", a.faceMid, ScreenW/2, 340, white, true)
 }
 
+// viewScaleAt 折叠 vfx/scale view 事件得到画布缩放（StaticCamera.UpdateScale：
+// 进行中的事件从上一事件终值缓动到自身目标）。
+func (a *App) viewScaleAt(beat float64) (float64, float64) {
+	sx, sy := 1.0, 1.0
+	lx, ly := 1.0, 1.0
+	for _, e := range a.viewScales {
+		if beat < e.beat {
+			continue
+		}
+		prog := 1.0
+		if e.length > 0 {
+			prog = math.Min((beat-e.beat)/e.length, 1)
+		}
+		switch e.axis {
+		case 1:
+			sx = Ease(e.ease, lx, e.x, prog)
+		case 2:
+			sy = Ease(e.ease, ly, e.y, prog)
+		default:
+			sx = Ease(e.ease, lx, e.x, prog)
+			sy = Ease(e.ease, ly, e.y, prog)
+		}
+		if prog >= 1 {
+			switch e.axis {
+			case 1:
+				lx = e.x
+			case 2:
+				ly = e.y
+			default:
+				lx, ly = e.x, e.y
+			}
+		}
+	}
+	return sx, sy
+}
+
+// drawFlash：vfx/flash 是单一覆盖层（HS Fade 语义）——按拍序折叠，
+// 最后一个已开始的事件决定当前颜色（事件结束后停在其终色），
+// 不能把多个事件叠画（先前事件的不透明终色会永久压住画面）。
 func (a *App) drawFlash(screen *ebiten.Image, beat float64) {
+	var c [4]float64
+	hit := false
 	for _, f := range a.flashes {
 		if beat < f.beat || f.length <= 0 {
 			continue
 		}
 		u := math.Min((beat-f.beat)/f.length, 1)
-		c := [4]float64{}
 		for i := range c {
 			c[i] = f.c0[i] + (f.c1[i]-f.c0[i])*u
 		}
-		if c[3] > 0 {
-			vector.DrawFilledRect(screen, 0, 0, ScreenW, ScreenH, color.RGBA{
-				uint8(c[0] * 255 * c[3]), uint8(c[1] * 255 * c[3]), uint8(c[2] * 255 * c[3]), uint8(c[3] * 255),
-			}, false)
-		}
+		hit = true
+	}
+	if hit && c[3] > 0 {
+		vector.DrawFilledRect(screen, 0, 0, ScreenW, ScreenH, color.RGBA{
+			uint8(c[0] * 255 * c[3]), uint8(c[1] * 255 * c[3]), uint8(c[2] * 255 * c[3]), uint8(c[3] * 255),
+		}, false)
 	}
 }
 
