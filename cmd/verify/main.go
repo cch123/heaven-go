@@ -20,12 +20,14 @@ import (
 
 	// 已移植模块（与主程序保持同步）
 	"hsdemo/games/bluebear"
+	"hsdemo/games/kitties"
 	"hsdemo/games/lockstep"
 	"hsdemo/games/marchingorders"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/munchymonk"
 	"hsdemo/games/seesaw"
 	"hsdemo/games/somen"
+	"hsdemo/games/spacedance"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
 )
@@ -89,7 +91,9 @@ func main() {
 	engine.Register("seeSaw", seesaw.New)
 	engine.Register("blueBear", bluebear.New)
 	engine.Register("marchingOrders", marchingorders.New)
+	engine.Register("kitties", kitties.New)
 	engine.Register("lockstep", lockstep.New)
+	engine.Register("spaceDance", spacedance.New)
 	engine.Register("munchyMonk", munchymonk.New)
 
 	app, err := engine.New(*assetsRoot, *path)

@@ -1,0 +1,10 @@
+{
+ "blackYayParticle": "NerdsHolder/BlackParticle",
+ "bottomPoster": "NerdsHolder/ThirdRow/Poster",
+ "middlePoster": "NerdsHolder/SecondRow/Poster",
+ "missPoster": "NerdsHolder/ThirdRow/MissPoster",
+ "player": "NerdsHolder/ThirdRow/player",
+ "playerMask": "NerdsHolder/ThirdRow/playerBook",
+ "topPoster": "NerdsHolder/FirstRow/Poster",
+ "whiteYayParticle": "NerdsHolder/WhiteParticle"
+}

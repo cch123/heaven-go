@@ -1,0 +1,194 @@
+{
+ "BaseAnim": {
+  "default": "Idle",
+  "states": {
+   "BlackBop": {
+    "clip": "Animations/BlackBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BlackIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BlackIdle": {
+    "clip": "Animations/BlackIdle",
+    "speed": 1
+   },
+   "BlackYay": {
+    "clip": "Animations/BlackYay",
+    "speed": 1
+   },
+   "BlacktoWhite": {
+    "clip": "Animations/BlacktoWhite",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "WhiteIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "MissBlack": {
+    "clip": "Animations/MissBlack",
+    "speed": 1
+   },
+   "MissWhite": {
+    "clip": "Animations/MissWhite",
+    "speed": 1
+   },
+   "OpenBook": {
+    "clip": "Animations/OpenBook",
+    "speed": 1
+   },
+   "OpenIdle": {
+    "speed": 1
+   },
+   "RepositionToBlack": {
+    "clip": "Animations/RepositionToBlack",
+    "speed": 1
+   },
+   "RepositionToWhite": {
+    "clip": "Animations/RepositionToWhite",
+    "speed": 1
+   },
+   "SpinfromBlack": {
+    "clip": "Animations/SpinfromBlack",
+    "speed": 1
+   },
+   "SpinfromWhite": {
+    "clip": "Animations/SpinfromWhite",
+    "speed": 1
+   },
+   "WhiteBop": {
+    "clip": "Animations/WhiteBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "WhiteIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "WhiteIdle": {
+    "clip": "Animations/WhiteIdle",
+    "speed": 1
+   },
+   "WhiteYay": {
+    "clip": "Animations/WhiteYay",
+    "speed": 1
+   },
+   "WhitetoBlack": {
+    "clip": "Animations/WhitetoBlack",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BlackIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "FaceAnim": {
+  "default": "FaceIdle",
+  "states": {
+   "FaceBlush": {
+    "clip": "Animations/FaceBlush",
+    "speed": 1
+   },
+   "FaceBoom": {
+    "clip": "Animations/FaceBoom",
+    "speed": 1
+   },
+   "FaceBoomNPC": {
+    "clip": "Animations/FaceBoomNPC",
+    "speed": 1
+   },
+   "FaceBop": {
+    "clip": "Animations/FaceBop",
+    "speed": 1
+   },
+   "FaceIdle": {
+    "clip": "Animations/FaceIdle",
+    "speed": 1
+   },
+   "FaceIdleNPC": {
+    "clip": "Animations/FaceIdleNPC",
+    "speed": 1
+   },
+   "FaceIts": {
+    "clip": "Animations/FaceIts",
+    "speed": 1
+   },
+   "FaceItsOnHappy": {
+    "clip": "Animations/FaceItsOnHappy",
+    "speed": 1
+   },
+   "FaceItsOnNPC": {
+    "clip": "Animations/FaceItsOnNPC",
+    "speed": 1
+   },
+   "FaceNPCLook1": {
+    "clip": "Animations/FaceNPCLook1",
+    "speed": 1
+   },
+   "FaceNPCLook2": {
+    "clip": "Animations/FaceNPCLook2",
+    "speed": 1
+   },
+   "FaceOne": {
+    "clip": "Animations/FaceOne",
+    "speed": 1
+   },
+   "FaceThree": {
+    "clip": "Animations/FaceThree",
+    "speed": 1
+   },
+   "FaceTo": {
+    "clip": "Animations/FaceTo",
+    "speed": 1
+   },
+   "FaceTwo": {
+    "clip": "Animations/FaceTwo",
+    "speed": 1
+   },
+   "FaceUp": {
+    "clip": "Animations/FaceUp",
+    "speed": 1
+   },
+   "FaceYay": {
+    "clip": "Animations/FaceYay",
+    "speed": 1
+   },
+   "FaceYou": {
+    "clip": "Animations/FaceYou",
+    "speed": 1
+   }
+  }
+ },
+ "Facial Features": {
+  "default": "",
+  "states": {}
+ }
+}

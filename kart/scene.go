@@ -84,6 +84,9 @@ type SceneInst struct {
 	palettes map[string]Palette // 按材质名（Node.Mat）覆盖（多材质游戏）
 
 	drawOrder []int // 预排序的可绘制节点（layer, order, dfs）
+
+	scratch *ebiten.Image // SpriteMask 合成的离屏缓冲（懒分配）
+	maskBuf *ebiten.Image
 }
 
 // SetCamera 设置相机世界位置（GameCamera：默认 (0,0,-10)、FOV 53.15°）。
@@ -648,12 +651,22 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		extra             int // ≥0：s.queued 下标（动态绘制项）
 	}
 	items := make([]item, 0, len(s.state)+len(s.queued))
+	// 活动的 SpriteMask（本体不绘制，为 MaskIn=1 的渲染器提供可见区域）
+	var masks []int
+	for i := range s.state {
+		if s.as.Rig.Nodes[i].Mask && s.actives[i] && s.state[i].renderOn && s.state[i].sprite != "" {
+			masks = append(masks, i)
+		}
+	}
 	for i := range s.state {
 		st := &s.state[i]
 		if !s.actives[i] || !st.renderOn {
 			continue
 		}
 		if st.sprite == "" || st.color[3] <= 0 {
+			continue
+		}
+		if s.as.Rig.Nodes[i].Mask {
 			continue
 		}
 		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.worldZ[i], extra: -1}
@@ -729,6 +742,38 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		view, ok := s.camView(s.worldZ[i])
 		if !ok {
 			continue // 相机背后
+		}
+		if s.as.Rig.Nodes[i].MaskIn == 1 {
+			// Unity VisibleInsideMask：先画到离屏，再与掩码并集做
+			// DestinationIn 合成（无活动掩码时不可见）。
+			if len(masks) == 0 {
+				continue
+			}
+			w, h := dst.Bounds().Dx(), dst.Bounds().Dy()
+			if s.scratch == nil || s.scratch.Bounds().Dx() != w || s.scratch.Bounds().Dy() != h {
+				s.scratch = ebiten.NewImage(w, h)
+				s.maskBuf = ebiten.NewImage(w, h)
+			}
+			s.scratch.Clear()
+			if s.as.Rig.Nodes[i].Mapped {
+				s.as.DrawSpriteMapped(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteOf(s.as.Rig.Nodes[i].Mat))
+			} else {
+				s.as.DrawSpriteOpts(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts)
+			}
+			s.maskBuf.Clear()
+			for _, mi := range masks {
+				mview, ok := s.camView(s.worldZ[mi])
+				if !ok {
+					continue
+				}
+				ms := &s.state[mi]
+				s.as.DrawSpriteOpts(s.maskBuf, ms.sprite, mview.Mul(s.world[mi]), proj,
+					SpriteOpts{FlipX: ms.flipX, FlipY: ms.flipY})
+			}
+			mop := &ebiten.DrawImageOptions{Blend: ebiten.BlendDestinationIn}
+			s.scratch.DrawImage(s.maskBuf, mop)
+			dst.DrawImage(s.scratch, nil)
+			continue
 		}
 		if s.as.Rig.Nodes[i].Mapped {
 			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteOf(s.as.Rig.Nodes[i].Mat))

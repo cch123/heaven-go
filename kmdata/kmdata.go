@@ -66,6 +66,11 @@ type Node struct {
 	// Mat 是映射材质的文件主名（多材质游戏按名换色，如 marchingOrders
 	// 的 Tile/Pipe/Conveyor 三组调色板）。
 	Mat string `json:"mat,omitempty"`
+	// Mask 表示节点挂 SpriteMask（classID 331）：本体不绘制，
+	// 激活时为 MaskIn=1 的渲染器提供可见区域（cheerReaders 海报书窗）。
+	Mask bool `json:"mask,omitempty"`
+	// MaskIn 是 SpriteRenderer m_MaskInteraction（1=仅掩码内可见）。
+	MaskIn int `json:"maskIn,omitempty"`
 }
 
 // Rig 是一棵节点树（KarateMan 的单骨架与整游戏场景共用此结构）。

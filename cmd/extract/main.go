@@ -235,7 +235,8 @@ type prefabIndex struct {
 	tfByID    map[int64]map[string]any // Transform fileID → 内容
 	tfOwner   map[int64]int64          // Transform fileID → GameObject fileID
 	rendByGO  map[int64]map[string]any // GameObject fileID → SpriteRenderer 内容
-	groupByGO map[int64][]int          // GameObject fileID → SortingGroup [layer, order]
+	groupByGO map[int64][]int
+	maskByGO  map[int64]map[string]any // GameObject → SpriteMask（classID 331）          // GameObject fileID → SortingGroup [layer, order]
 
 	mappedMats map[string]string // 调色板映射材质 guid → 文件主名（scene 模式填充）
 }

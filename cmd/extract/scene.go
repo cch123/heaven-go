@@ -114,6 +114,23 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"_treatCurves", "donutGradient"}},
 		},
 	},
+	"cheerReaders": {
+		dir:    "CheerReaders",
+		prefab: "cheerReaders.prefab",
+		roleFields: []string{
+			"playerMask", "missPoster", "topPoster", "middlePoster", "bottomPoster",
+			"player", "whiteYayParticle", "blackYayParticle",
+		},
+		refArrayFields: []string{
+			"firstRow", "secondRow", "thirdRow", "topMasks", "middleMasks", "bottomMasks",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"posters", "topMasks"}},
+			{name: "girl", markers: []string{"faceAnim", "blushLeft"}, multi: true},
+		},
+	},
 	"spaceDance": {
 		dir:    "SpaceDance",
 		prefab: "spaceDance.prefab",
@@ -314,6 +331,7 @@ func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
 		tfByID: map[int64]map[string]any{}, tfOwner: map[int64]int64{},
 		rendByGO: map[int64]map[string]any{}, goActive: map[int64]bool{},
 		groupByGO: map[int64][]int{},
+		maskByGO:  map[int64]map[string]any{},
 	}
 	dt := &docTable{byID: map[int64]*docRef{}}
 	for i := range docs {
@@ -335,6 +353,9 @@ func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
 		case 210: // SortingGroup
 			gid := uy.I(uy.Get(c, "m_GameObject", "fileID"))
 			idx.groupByGO[gid] = []int{int(uy.I(c["m_SortingLayer"])), int(uy.I(c["m_SortingOrder"]))}
+		case 331: // SpriteMask
+			gid := uy.I(uy.Get(c, "m_GameObject", "fileID"))
+			idx.maskByGO[gid] = c
 		}
 	}
 	return idx, dt
@@ -412,6 +433,13 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]st
 				uy.F(uy.Get(r, "m_Color", "r")), uy.F(uy.Get(r, "m_Color", "g")),
 				uy.F(uy.Get(r, "m_Color", "b")), uy.F(uy.Get(r, "m_Color", "a")),
 			}
+			n.MaskIn = int(uy.I(r["m_MaskInteraction"]))
+		}
+		if mk := idx.maskByGO[gid]; mk != nil {
+			n.Mask = true
+			n.Sprite = resolveSprite(tables,
+				uy.S(uy.Get(mk, "m_Sprite", "guid")), uy.I(uy.Get(mk, "m_Sprite", "fileID")))
+			n.Hidden = uy.I(mk["m_Enabled"]) == 0
 		}
 		self := len(scene.Nodes)
 		nodeIdx[gid] = self

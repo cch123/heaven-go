@@ -1,0 +1,303 @@
+{
+ "refArrays": {
+  "bottomMasks": [
+   "NerdsHolder/ThirdRow/Masks/book",
+   "NerdsHolder/ThirdRow/Masks/book (1)",
+   "NerdsHolder/ThirdRow/Masks/book (2)"
+  ],
+  "firstRow": [
+   "NerdsHolder/FirstRow/pepSquad12",
+   "NerdsHolder/FirstRow/pepSquad11",
+   "NerdsHolder/FirstRow/pepSquad10",
+   "NerdsHolder/FirstRow/pepSquad9"
+  ],
+  "middleMasks": [
+   "NerdsHolder/SecondRow/Masks/book",
+   "NerdsHolder/SecondRow/Masks/book (1)",
+   "NerdsHolder/SecondRow/Masks/book (2)",
+   "NerdsHolder/SecondRow/Masks/book (3)"
+  ],
+  "secondRow": [
+   "NerdsHolder/SecondRow/pepSquad5",
+   "NerdsHolder/SecondRow/pepSquad6",
+   "NerdsHolder/SecondRow/pepSquad7",
+   "NerdsHolder/SecondRow/pepSquad8"
+  ],
+  "thirdRow": [
+   "NerdsHolder/ThirdRow/pepSquad4",
+   "NerdsHolder/ThirdRow/pepSquad3",
+   "NerdsHolder/ThirdRow/pepSquad2"
+  ],
+  "topMasks": [
+   "NerdsHolder/FirstRow/Masks/book",
+   "NerdsHolder/FirstRow/Masks/book (1)",
+   "NerdsHolder/FirstRow/Masks/book (2)",
+   "NerdsHolder/FirstRow/Masks/book (3)"
+  ]
+ },
+ "refArrayIdx": {
+  "bottomMasks": [
+   315,
+   318,
+   321
+  ],
+  "firstRow": [
+   112,
+   60,
+   86,
+   138
+  ],
+  "middleMasks": [
+   167,
+   170,
+   173,
+   176
+  ],
+  "secondRow": [
+   205,
+   257,
+   231,
+   179
+  ],
+  "thirdRow": [
+   325,
+   377,
+   351
+  ],
+  "topMasks": [
+   48,
+   51,
+   54,
+   57
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "doingCue": 0,
+    "shouldBeBlack": 0
+   },
+   "strs": {
+    "evbdygoText": "Let's go read a buncha books!",
+    "hycdText": "It's up to you!",
+    "okdmText": "OK, it's on!",
+    "ottText": "One! Two! Three!",
+    "rrsbbbText": "Rah-rah sis boom bah-BOOM!"
+   },
+   "refs": {
+    "CheerCaption0": "StickyText/CheerCaption0",
+    "CheerCaption1": "StickyText/CheerCaption1",
+    "CheerUnderlay0": "StickyText/CheerCaption0/CheerCaption0 Underlay",
+    "CheerUnderlay1": "StickyText/CheerCaption1/CheerCaption1 Underlay",
+    "StickyCaptions": "StickyText",
+    "blackYayParticle": "NerdsHolder/BlackParticle",
+    "bottomPoster": "NerdsHolder/ThirdRow/Poster",
+    "middlePoster": "NerdsHolder/SecondRow/Poster",
+    "missPoster": "NerdsHolder/ThirdRow/MissPoster",
+    "player": "NerdsHolder/ThirdRow/player",
+    "playerMask": "NerdsHolder/ThirdRow/playerBook",
+    "topPoster": "NerdsHolder/FirstRow/Poster",
+    "whiteYayParticle": "NerdsHolder/WhiteParticle"
+   },
+   "refArrays": {
+    "bottomMasks": [
+     "NerdsHolder/ThirdRow/Masks/book",
+     "NerdsHolder/ThirdRow/Masks/book (1)",
+     "NerdsHolder/ThirdRow/Masks/book (2)"
+    ],
+    "firstRow": [
+     "NerdsHolder/FirstRow/pepSquad12",
+     "NerdsHolder/FirstRow/pepSquad11",
+     "NerdsHolder/FirstRow/pepSquad10",
+     "NerdsHolder/FirstRow/pepSquad9"
+    ],
+    "middleMasks": [
+     "NerdsHolder/SecondRow/Masks/book",
+     "NerdsHolder/SecondRow/Masks/book (1)",
+     "NerdsHolder/SecondRow/Masks/book (2)",
+     "NerdsHolder/SecondRow/Masks/book (3)"
+    ],
+    "secondRow": [
+     "NerdsHolder/SecondRow/pepSquad5",
+     "NerdsHolder/SecondRow/pepSquad6",
+     "NerdsHolder/SecondRow/pepSquad7",
+     "NerdsHolder/SecondRow/pepSquad8"
+    ],
+    "thirdRow": [
+     "NerdsHolder/ThirdRow/pepSquad4",
+     "NerdsHolder/ThirdRow/pepSquad3",
+     "NerdsHolder/ThirdRow/pepSquad2"
+    ],
+    "topMasks": [
+     "NerdsHolder/FirstRow/Masks/book",
+     "NerdsHolder/FirstRow/Masks/book (1)",
+     "NerdsHolder/FirstRow/Masks/book (2)",
+     "NerdsHolder/FirstRow/Masks/book (3)"
+    ]
+   },
+   "lists": {
+    "posters": [
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {},
+     {}
+    ]
+   }
+  },
+  "girl0": {
+   "path": "NerdsHolder/FirstRow/pepSquad10",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/FirstRow/pepSquad10/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/FirstRow/pepSquad10/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/FirstRow/pepSquad10/Head/faceSprites"
+   }
+  },
+  "girl1": {
+   "path": "NerdsHolder/FirstRow/pepSquad11",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/FirstRow/pepSquad11/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/FirstRow/pepSquad11/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/FirstRow/pepSquad11/Head/faceSprites"
+   }
+  },
+  "girl10": {
+   "path": "NerdsHolder/ThirdRow/pepSquad4",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/ThirdRow/pepSquad4/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/ThirdRow/pepSquad4/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/ThirdRow/pepSquad4/Head/faceSprites"
+   }
+  },
+  "girl11": {
+   "path": "NerdsHolder/ThirdRow/player",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 1
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/ThirdRow/player/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/ThirdRow/player/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/ThirdRow/player/Head/faceSprites"
+   }
+  },
+  "girl2": {
+   "path": "NerdsHolder/FirstRow/pepSquad12",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/FirstRow/pepSquad12/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/FirstRow/pepSquad12/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/FirstRow/pepSquad12/Head/faceSprites"
+   }
+  },
+  "girl3": {
+   "path": "NerdsHolder/FirstRow/pepSquad9",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/FirstRow/pepSquad9/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/FirstRow/pepSquad9/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/FirstRow/pepSquad9/Head/faceSprites"
+   }
+  },
+  "girl4": {
+   "path": "NerdsHolder/SecondRow/pepSquad5",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/SecondRow/pepSquad5/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/SecondRow/pepSquad5/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/SecondRow/pepSquad5/Head/faceSprites"
+   }
+  },
+  "girl5": {
+   "path": "NerdsHolder/SecondRow/pepSquad6",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/SecondRow/pepSquad6/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/SecondRow/pepSquad6/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/SecondRow/pepSquad6/Head/faceSprites"
+   }
+  },
+  "girl6": {
+   "path": "NerdsHolder/SecondRow/pepSquad7",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/SecondRow/pepSquad7/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/SecondRow/pepSquad7/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/SecondRow/pepSquad7/Head/faceSprites"
+   }
+  },
+  "girl7": {
+   "path": "NerdsHolder/SecondRow/pepSquad8",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/SecondRow/pepSquad8/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/SecondRow/pepSquad8/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/SecondRow/pepSquad8/Head/faceSprites"
+   }
+  },
+  "girl8": {
+   "path": "NerdsHolder/ThirdRow/pepSquad2",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/ThirdRow/pepSquad2/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/ThirdRow/pepSquad2/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/ThirdRow/pepSquad2/Head/faceSprites"
+   }
+  },
+  "girl9": {
+   "path": "NerdsHolder/ThirdRow/pepSquad3",
+   "nums": {
+    "bookIsWhite": 1,
+    "player": 0
+   },
+   "refs": {
+    "blushLeft": "NerdsHolder/ThirdRow/pepSquad3/Head/faceSprites/Blush",
+    "blushRight": "NerdsHolder/ThirdRow/pepSquad3/Head/faceSprites/Blush (1)",
+    "faceAnim": "NerdsHolder/ThirdRow/pepSquad3/Head/faceSprites"
+   }
+  }
+ }
+}

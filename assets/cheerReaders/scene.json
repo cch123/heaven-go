@@ -1,0 +1,10722 @@
+{
+ "nodes": [
+  {
+   "name": "cheerReaders",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cheereadersref",
+   "path": "cheereadersref",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1102073,
+    2.1102073
+   ],
+   "order": 100,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.48,
+    4.71
+   ]
+  },
+  {
+   "name": "cheereadersref (1)",
+   "path": "cheereadersref (1)",
+   "parent": 0,
+   "pos": [
+    0.009999999,
+    0.009999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1102073,
+    2.1102073
+   ],
+   "order": 100,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.48,
+    4.71
+   ]
+  },
+  {
+   "name": "GirlHolder",
+   "path": "GirlHolder",
+   "parent": 0,
+   "pos": [
+    4.51,
+    -4.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1102073,
+    2.1102073
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "GirlHolder/BookFront",
+   "parent": 3,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "GirlHolder/Head",
+   "parent": 3,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "GirlHolder/Head/faceSprites",
+   "parent": 5,
+   "pos": [
+    -0.3747918,
+    -0.11363497
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "GirlHolder/Head/faceSprites/Eyes",
+   "parent": 6,
+   "pos": [
+    0.405,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_6",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "GirlHolder/Head/faceSprites/Mouth",
+   "parent": 6,
+   "pos": [
+    0.366,
+    -1.091
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "GirlHolder/Head/faceSprites/Blush",
+   "parent": 6,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "GirlHolder/Head/faceSprites/Blush (1)",
+   "parent": 6,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "GirlHolder/Head/Hair",
+   "parent": 5,
+   "pos": [
+    0.00926686,
+    0.38677502
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_190",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "GirlHolder/Head/Glasses",
+   "parent": 5,
+   "pos": [
+    0.016474247,
+    -0.44724083
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_177",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "GirlHolder/Head/BackHair",
+   "parent": 5,
+   "pos": [
+    -0.038096406,
+    0.24290673
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_189",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "GirlHolder/Neck",
+   "parent": 3,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "GirlHolder/Arm",
+   "parent": 3,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "GirlHolder/Arm/Forearm",
+   "parent": 15,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "GirlHolder/Arm/Forearm/Band",
+   "parent": 16,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "GirlHolder/Arm/Forearm/Band/Hand",
+   "parent": 17,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "GirlHolder/Arm (1)",
+   "parent": 3,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "GirlHolder/Arm (1)/Forearm",
+   "parent": 19,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "GirlHolder/Arm (1)/Forearm/Band",
+   "parent": 20,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "GirlHolder/Arm (1)/Forearm/Band/Hand",
+   "parent": 21,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "GirlHolder/Body",
+   "parent": 3,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "GirlHolder/Skirt",
+   "parent": 3,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "GirlHolder/Leg1",
+   "parent": 3,
+   "pos": [
+    -0.08536148,
+    -0.4904859
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "GirlHolder/Leg2",
+   "parent": 3,
+   "pos": [
+    0.19863844,
+    -0.5044856
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "BG_1",
+   "path": "BG_1",
+   "parent": 0,
+   "pos": [
+    5.21,
+    0.82
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.585,
+    0.585
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_0",
+   "order": -201,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.57,
+    6.1
+   ]
+  },
+  {
+   "name": "BG_2",
+   "path": "BG_2",
+   "parent": 0,
+   "pos": [
+    -5.25,
+    0.82
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.585,
+    0.585
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_0",
+   "order": -201,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.57,
+    6.1
+   ]
+  },
+  {
+   "name": "BG_3",
+   "path": "BG_3",
+   "parent": 0,
+   "pos": [
+    -0.01,
+    -16.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    43.584072
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_2",
+   "order": -201,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.57,
+    6.1
+   ]
+  },
+  {
+   "name": "Stand",
+   "path": "Stand",
+   "parent": 0,
+   "pos": [
+    5.03,
+    -5.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2828166,
+    2.2828166
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stand_1",
+   "path": "Stand/Stand_1",
+   "parent": 30,
+   "pos": [
+    4.824,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_1",
+   "order": -199,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "Stand_2",
+   "path": "Stand/Stand_2",
+   "parent": 30,
+   "pos": [
+    2.217,
+    0.012
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.05,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_7",
+   "order": -199,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "Stand_3",
+   "path": "Stand/Stand_3",
+   "parent": 30,
+   "pos": [
+    -0.393,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_1",
+   "order": -199,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "Stand2",
+   "path": "Stand2",
+   "parent": 0,
+   "pos": [
+    4.88,
+    -3.95
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2122662,
+    2.2122662
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stand_1",
+   "path": "Stand2/Stand_1",
+   "parent": 34,
+   "pos": [
+    4.608,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_1",
+   "order": -200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "Stand_2",
+   "path": "Stand2/Stand_2",
+   "parent": 34,
+   "pos": [
+    2.201,
+    0.012
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.8,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_7",
+   "order": -200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "Stand_3",
+   "path": "Stand2/Stand_3",
+   "parent": 34,
+   "pos": [
+    -0.172,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_1",
+   "order": -200,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "Stand3",
+   "path": "Stand3",
+   "parent": 0,
+   "pos": [
+    5.45,
+    -8.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.4690943,
+    2.4690943
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stand_1",
+   "path": "Stand3/Stand_1",
+   "parent": 38,
+   "pos": [
+    4.824,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_1",
+   "order": -198,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "Stand_2",
+   "path": "Stand3/Stand_2",
+   "parent": 38,
+   "pos": [
+    2.217,
+    0.012
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.05,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_7",
+   "order": -197,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "Stand_3",
+   "path": "Stand3/Stand_3",
+   "parent": 38,
+   "pos": [
+    -0.393,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22,
+    0.22
+   ],
+   "sprite": "tex1_1024x1024_e5fe04bdb6c79e4d_5_1",
+   "order": -198,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    13.02
+   ]
+  },
+  {
+   "name": "NerdsHolder",
+   "path": "NerdsHolder",
+   "parent": 0,
+   "pos": [
+    -0.6696524,
+    -0.33314478
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WhiteParticle",
+   "path": "NerdsHolder/WhiteParticle",
+   "parent": 42,
+   "pos": [
+    0.64,
+    0.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlackParticle",
+   "path": "NerdsHolder/BlackParticle",
+   "parent": 42,
+   "pos": [
+    0.64,
+    0.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FirstRow",
+   "path": "NerdsHolder/FirstRow",
+   "parent": 42,
+   "pos": [
+    1.228085,
+    2.5912795
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    13
+   ]
+  },
+  {
+   "name": "Poster",
+   "path": "NerdsHolder/FirstRow/Poster",
+   "parent": 45,
+   "pos": [
+    -0.589,
+    0.656
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.08,
+    1.08
+   ],
+   "sprite": "TopPart",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.77,
+    0.9
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Masks",
+   "path": "NerdsHolder/FirstRow/Masks",
+   "parent": 45,
+   "pos": [
+    0.100000024,
+    -0.059999943
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "book",
+   "path": "NerdsHolder/FirstRow/Masks/book",
+   "parent": 47,
+   "pos": [
+    1.97,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/FirstRow/Masks/book/bookmask",
+   "parent": 48,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/FirstRow/Masks/book/bookmaskLeft",
+   "parent": 48,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "book (1)",
+   "path": "NerdsHolder/FirstRow/Masks/book (1)",
+   "parent": 47,
+   "pos": [
+    5.08,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/FirstRow/Masks/book (1)/bookmask",
+   "parent": 51,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/FirstRow/Masks/book (1)/bookmaskLeft",
+   "parent": 51,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "book (2)",
+   "path": "NerdsHolder/FirstRow/Masks/book (2)",
+   "parent": 47,
+   "pos": [
+    8.19,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/FirstRow/Masks/book (2)/bookmask",
+   "parent": 54,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/FirstRow/Masks/book (2)/bookmaskLeft",
+   "parent": 54,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "book (3)",
+   "path": "NerdsHolder/FirstRow/Masks/book (3)",
+   "parent": 47,
+   "pos": [
+    11.3,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/FirstRow/Masks/book (3)/bookmask",
+   "parent": 57,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/FirstRow/Masks/book (3)/bookmaskLeft",
+   "parent": 57,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "pepSquad11",
+   "path": "NerdsHolder/FirstRow/pepSquad11",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/FirstRow/pepSquad11/BookFront",
+   "parent": 60,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Neck",
+   "parent": 60,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Arm",
+   "parent": 60,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Arm/Forearm",
+   "parent": 63,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Arm/Forearm/Band",
+   "parent": 64,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Arm/Forearm/Band/Hand",
+   "parent": 65,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head",
+   "parent": 60,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head/faceSprites",
+   "parent": 67,
+   "pos": [
+    -0.3747918,
+    -0.144
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head/faceSprites/Eyes",
+   "parent": 68,
+   "pos": [
+    0.405,
+    -0.175
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head/faceSprites/Mouth",
+   "parent": 68,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head/faceSprites/Blush",
+   "parent": 68,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head/faceSprites/Blush (1)",
+   "parent": 68,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head/Hair",
+   "parent": 67,
+   "pos": [
+    0,
+    0.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0115434,
+    1.0241876
+   ],
+   "sprite": "cheer-readers_156",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head/Glasses",
+   "parent": 67,
+   "pos": [
+    0.016474247,
+    -0.409
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_197",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Head/BackHair",
+   "parent": 67,
+   "pos": [
+    -0.038096406,
+    0.24290673
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_189",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Arm (1)",
+   "parent": 60,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Arm (1)/Forearm",
+   "parent": 76,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Arm (1)/Forearm/Band",
+   "parent": 77,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Arm (1)/Forearm/Band/Hand",
+   "parent": 78,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Body (1)",
+   "parent": 60,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Skirt",
+   "parent": 60,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Leg1",
+   "parent": 60,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/FirstRow/pepSquad11/Leg2",
+   "parent": 60,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/FirstRow/pepSquad11/OpenBook1",
+   "parent": 60,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/FirstRow/pepSquad11/OpenBook2",
+   "parent": 60,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "pepSquad10",
+   "path": "NerdsHolder/FirstRow/pepSquad10",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/FirstRow/pepSquad10/BookFront",
+   "parent": 86,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Neck",
+   "parent": 86,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Arm",
+   "parent": 86,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Arm/Forearm",
+   "parent": 89,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Arm/Forearm/Band",
+   "parent": 90,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Arm/Forearm/Band/Hand",
+   "parent": 91,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head",
+   "parent": 86,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head/faceSprites",
+   "parent": 93,
+   "pos": [
+    -0.3747918,
+    -0.142
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head/faceSprites/Eyes",
+   "parent": 94,
+   "pos": [
+    0.405,
+    -0.151
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head/faceSprites/Mouth",
+   "parent": 94,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head/faceSprites/Blush",
+   "parent": 94,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head/faceSprites/Blush (1)",
+   "parent": 94,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head/Hair",
+   "parent": 93,
+   "pos": [
+    -0.02,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9581037,
+    1.0211366
+   ],
+   "sprite": "cheer-readers_143",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head/Glasses",
+   "parent": 93,
+   "pos": [
+    -0.007,
+    -0.403
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_186",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Head/BackHair",
+   "parent": 93,
+   "pos": [
+    1.79,
+    1.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_131",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Arm (1)",
+   "parent": 86,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Arm (1)/Forearm",
+   "parent": 102,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Arm (1)/Forearm/Band",
+   "parent": 103,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Arm (1)/Forearm/Band/Hand",
+   "parent": 104,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Body (1)",
+   "parent": 86,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Skirt",
+   "parent": 86,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Leg1",
+   "parent": 86,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/FirstRow/pepSquad10/Leg2",
+   "parent": 86,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/FirstRow/pepSquad10/OpenBook1",
+   "parent": 86,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/FirstRow/pepSquad10/OpenBook2",
+   "parent": 86,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "pepSquad12",
+   "path": "NerdsHolder/FirstRow/pepSquad12",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/FirstRow/pepSquad12/BookFront",
+   "parent": 112,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Neck",
+   "parent": 112,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Arm",
+   "parent": 112,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Arm/Forearm",
+   "parent": 115,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Arm/Forearm/Band",
+   "parent": 116,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Arm/Forearm/Band/Hand",
+   "parent": 117,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head",
+   "parent": 112,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head/faceSprites",
+   "parent": 119,
+   "pos": [
+    -0.3747918,
+    -0.145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head/faceSprites/Eyes",
+   "parent": 120,
+   "pos": [
+    0.405,
+    -0.185
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head/faceSprites/Mouth",
+   "parent": 120,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head/faceSprites/Blush",
+   "parent": 120,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head/faceSprites/Blush (1)",
+   "parent": 120,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head/Hair",
+   "parent": 119,
+   "pos": [
+    -0.001,
+    0.059
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.91667825,
+    0.9281366
+   ],
+   "sprite": "cheer-readers_149",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head/Glasses",
+   "parent": 119,
+   "pos": [
+    -0.014,
+    -0.393
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_186",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Head/BackHair",
+   "parent": 119,
+   "pos": [
+    -1.08,
+    0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0109587,
+    1.0385245
+   ],
+   "sprite": "cheer-readers_136",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Arm (1)",
+   "parent": 112,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Arm (1)/Forearm",
+   "parent": 128,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Arm (1)/Forearm/Band",
+   "parent": 129,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Arm (1)/Forearm/Band/Hand",
+   "parent": 130,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Body (1)",
+   "parent": 112,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Skirt",
+   "parent": 112,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Leg1",
+   "parent": 112,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/FirstRow/pepSquad12/Leg2",
+   "parent": 112,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/FirstRow/pepSquad12/OpenBook1",
+   "parent": 112,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/FirstRow/pepSquad12/OpenBook2",
+   "parent": 112,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "pepSquad9",
+   "path": "NerdsHolder/FirstRow/pepSquad9",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/FirstRow/pepSquad9/BookFront",
+   "parent": 138,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Neck",
+   "parent": 138,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Arm",
+   "parent": 138,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Arm/Forearm",
+   "parent": 141,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Arm/Forearm/Band",
+   "parent": 142,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Arm/Forearm/Band/Hand",
+   "parent": 143,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head",
+   "parent": 138,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head/faceSprites",
+   "parent": 145,
+   "pos": [
+    -0.3747918,
+    -0.136
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head/faceSprites/Eyes",
+   "parent": 146,
+   "pos": [
+    0.405,
+    -0.149
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head/faceSprites/Mouth",
+   "parent": 146,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head/faceSprites/Blush",
+   "parent": 146,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head/faceSprites/Blush (1)",
+   "parent": 146,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head/Hair",
+   "parent": 145,
+   "pos": [
+    0.00926686,
+    0.51
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0219716,
+    1.034746
+   ],
+   "sprite": "cheer-readers_155",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head/Glasses",
+   "parent": 145,
+   "pos": [
+    0.016474247,
+    -0.395
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_197",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Head/BackHair",
+   "parent": 145,
+   "pos": [
+    -0.038096406,
+    0.24290673
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_189",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Arm (1)",
+   "parent": 138,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Arm (1)/Forearm",
+   "parent": 154,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Arm (1)/Forearm/Band",
+   "parent": 155,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Arm (1)/Forearm/Band/Hand",
+   "parent": 156,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Body (1)",
+   "parent": 138,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Skirt",
+   "parent": 138,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Leg1",
+   "parent": 138,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/FirstRow/pepSquad9/Leg2",
+   "parent": 138,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/FirstRow/pepSquad9/OpenBook1",
+   "parent": 138,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/FirstRow/pepSquad9/OpenBook2",
+   "parent": 138,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "SecondRow",
+   "path": "NerdsHolder/SecondRow",
+   "parent": 42,
+   "pos": [
+    1.228085,
+    0.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    14
+   ]
+  },
+  {
+   "name": "Poster",
+   "path": "NerdsHolder/SecondRow/Poster",
+   "parent": 164,
+   "pos": [
+    -0.589,
+    0.656
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.08,
+    1.08
+   ],
+   "sprite": "MiddlePart",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.89,
+    0.89
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Masks",
+   "path": "NerdsHolder/SecondRow/Masks",
+   "parent": 164,
+   "pos": [
+    0.1,
+    -0.05999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "book",
+   "path": "NerdsHolder/SecondRow/Masks/book",
+   "parent": 166,
+   "pos": [
+    1.97,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/SecondRow/Masks/book/bookmask",
+   "parent": 167,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/SecondRow/Masks/book/bookmaskLeft",
+   "parent": 167,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "book (1)",
+   "path": "NerdsHolder/SecondRow/Masks/book (1)",
+   "parent": 166,
+   "pos": [
+    5.08,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/SecondRow/Masks/book (1)/bookmask",
+   "parent": 170,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/SecondRow/Masks/book (1)/bookmaskLeft",
+   "parent": 170,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "book (2)",
+   "path": "NerdsHolder/SecondRow/Masks/book (2)",
+   "parent": 166,
+   "pos": [
+    8.19,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/SecondRow/Masks/book (2)/bookmask",
+   "parent": 173,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/SecondRow/Masks/book (2)/bookmaskLeft",
+   "parent": 173,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "book (3)",
+   "path": "NerdsHolder/SecondRow/Masks/book (3)",
+   "parent": 166,
+   "pos": [
+    11.3,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/SecondRow/Masks/book (3)/bookmask",
+   "parent": 176,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/SecondRow/Masks/book (3)/bookmaskLeft",
+   "parent": 176,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "pepSquad8",
+   "path": "NerdsHolder/SecondRow/pepSquad8",
+   "parent": 164,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/SecondRow/pepSquad8/BookFront",
+   "parent": 179,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Neck",
+   "parent": 179,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Arm",
+   "parent": 179,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Arm/Forearm",
+   "parent": 182,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Arm/Forearm/Band",
+   "parent": 183,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Arm/Forearm/Band/Hand",
+   "parent": 184,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head",
+   "parent": 179,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head/faceSprites",
+   "parent": 186,
+   "pos": [
+    -0.3747918,
+    -0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head/faceSprites/Eyes",
+   "parent": 187,
+   "pos": [
+    0.405,
+    -0.161
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head/faceSprites/Mouth",
+   "parent": 187,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head/faceSprites/Blush",
+   "parent": 187,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head/faceSprites/Blush (1)",
+   "parent": 187,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head/Hair",
+   "parent": 186,
+   "pos": [
+    0,
+    0.864
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0278081,
+    1.0406556
+   ],
+   "sprite": "cheer-readers_144",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head/Glasses",
+   "parent": 186,
+   "pos": [
+    0.016474247,
+    -0.411
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_197",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Head/BackHair",
+   "parent": 186,
+   "pos": [
+    0.02,
+    0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.018976,
+    1.0317132
+   ],
+   "sprite": "cheer-readers_158",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Arm (1)",
+   "parent": 179,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Arm (1)/Forearm",
+   "parent": 195,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Arm (1)/Forearm/Band",
+   "parent": 196,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Arm (1)/Forearm/Band/Hand",
+   "parent": 197,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Body (1)",
+   "parent": 179,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Skirt",
+   "parent": 179,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Leg1",
+   "parent": 179,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/SecondRow/pepSquad8/Leg2",
+   "parent": 179,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/SecondRow/pepSquad8/OpenBook1",
+   "parent": 179,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/SecondRow/pepSquad8/OpenBook2",
+   "parent": 179,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "pepSquad5",
+   "path": "NerdsHolder/SecondRow/pepSquad5",
+   "parent": 164,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/SecondRow/pepSquad5/BookFront",
+   "parent": 205,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Neck",
+   "parent": 205,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Arm",
+   "parent": 205,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Arm/Forearm",
+   "parent": 208,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Arm/Forearm/Band",
+   "parent": 209,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Arm/Forearm/Band/Hand",
+   "parent": 210,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head",
+   "parent": 205,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head/faceSprites",
+   "parent": 212,
+   "pos": [
+    -0.3747918,
+    -0.151
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head/faceSprites/Eyes",
+   "parent": 213,
+   "pos": [
+    0.402,
+    -0.168
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head/faceSprites/Mouth",
+   "parent": 213,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head/faceSprites/Blush",
+   "parent": 213,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head/faceSprites/Blush (1)",
+   "parent": 213,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head/Hair",
+   "parent": 212,
+   "pos": [
+    -0.01,
+    0.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.97197425,
+    0.98412377
+   ],
+   "sprite": "cheer-readers_150",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head/Glasses",
+   "parent": 212,
+   "pos": [
+    0.016474247,
+    -0.404
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_197",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Head/BackHair",
+   "parent": 212,
+   "pos": [
+    1.16,
+    0.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_135",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Arm (1)",
+   "parent": 205,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Arm (1)/Forearm",
+   "parent": 221,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Arm (1)/Forearm/Band",
+   "parent": 222,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Arm (1)/Forearm/Band/Hand",
+   "parent": 223,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Body (1)",
+   "parent": 205,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Skirt",
+   "parent": 205,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Leg1",
+   "parent": 205,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/SecondRow/pepSquad5/Leg2",
+   "parent": 205,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/SecondRow/pepSquad5/OpenBook1",
+   "parent": 205,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/SecondRow/pepSquad5/OpenBook2",
+   "parent": 205,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "pepSquad7",
+   "path": "NerdsHolder/SecondRow/pepSquad7",
+   "parent": 164,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/SecondRow/pepSquad7/BookFront",
+   "parent": 231,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Neck",
+   "parent": 231,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Arm",
+   "parent": 231,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Arm/Forearm",
+   "parent": 234,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Arm/Forearm/Band",
+   "parent": 235,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Arm/Forearm/Band/Hand",
+   "parent": 236,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head",
+   "parent": 231,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head/faceSprites",
+   "parent": 238,
+   "pos": [
+    -0.3747918,
+    -0.152
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head/faceSprites/Eyes",
+   "parent": 239,
+   "pos": [
+    0.405,
+    -0.174
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head/faceSprites/Mouth",
+   "parent": 239,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head/faceSprites/Blush",
+   "parent": 239,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head/faceSprites/Blush (1)",
+   "parent": 239,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head/Hair",
+   "parent": 238,
+   "pos": [
+    0.00926686,
+    0.879
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0223806,
+    1.0351602
+   ],
+   "sprite": "cheer-readers_119",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head/Glasses",
+   "parent": 238,
+   "pos": [
+    0.016474247,
+    -0.417
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_177",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Head/BackHair",
+   "parent": 238,
+   "pos": [
+    -0.01,
+    0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0180521,
+    1.0307778
+   ],
+   "sprite": "cheer-readers_157",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Arm (1)",
+   "parent": 231,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Arm (1)/Forearm",
+   "parent": 247,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Arm (1)/Forearm/Band",
+   "parent": 248,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Arm (1)/Forearm/Band/Hand",
+   "parent": 249,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Body (1)",
+   "parent": 231,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Skirt",
+   "parent": 231,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Leg1",
+   "parent": 231,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/SecondRow/pepSquad7/Leg2",
+   "parent": 231,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/SecondRow/pepSquad7/OpenBook1",
+   "parent": 231,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/SecondRow/pepSquad7/OpenBook2",
+   "parent": 231,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "pepSquad6",
+   "path": "NerdsHolder/SecondRow/pepSquad6",
+   "parent": 164,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/SecondRow/pepSquad6/BookFront",
+   "parent": 257,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Neck",
+   "parent": 257,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Arm",
+   "parent": 257,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Arm/Forearm",
+   "parent": 260,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Arm/Forearm/Band",
+   "parent": 261,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Arm/Forearm/Band/Hand",
+   "parent": 262,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head",
+   "parent": 257,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head/faceSprites",
+   "parent": 264,
+   "pos": [
+    -0.3747918,
+    -0.151
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head/faceSprites/Eyes",
+   "parent": 265,
+   "pos": [
+    0.405,
+    -0.171
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head/faceSprites/Mouth",
+   "parent": 265,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head/faceSprites/Blush",
+   "parent": 265,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head/faceSprites/Blush (1)",
+   "parent": 265,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head/Hair",
+   "parent": 264,
+   "pos": [
+    0.00926686,
+    0.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0011151,
+    1.0136288
+   ],
+   "sprite": "cheer-readers_154",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head/Glasses",
+   "parent": 264,
+   "pos": [
+    -0.007,
+    -0.396
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_186",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Head/BackHair",
+   "parent": 264,
+   "pos": [
+    -1.872,
+    0.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_151",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Arm (1)",
+   "parent": 257,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Arm (1)/Forearm",
+   "parent": 273,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Arm (1)/Forearm/Band",
+   "parent": 274,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Arm (1)/Forearm/Band/Hand",
+   "parent": 275,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Body (1)",
+   "parent": 257,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Skirt",
+   "parent": 257,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Leg1",
+   "parent": 257,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/SecondRow/pepSquad6/Leg2",
+   "parent": 257,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/SecondRow/pepSquad6/OpenBook1",
+   "parent": 257,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/SecondRow/pepSquad6/OpenBook2",
+   "parent": 257,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "ThirdRow",
+   "path": "NerdsHolder/ThirdRow",
+   "parent": 42,
+   "pos": [
+    1.228085,
+    -1.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    15
+   ]
+  },
+  {
+   "name": "Poster",
+   "path": "NerdsHolder/ThirdRow/Poster",
+   "parent": 283,
+   "pos": [
+    -0.589,
+    0.656
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.08,
+    1.08
+   ],
+   "sprite": "BottomPart",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.01,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "player",
+   "path": "NerdsHolder/ThirdRow/player",
+   "parent": 283,
+   "pos": [
+    3.9715672,
+    -2.6268554
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1016078,
+    2.1016078
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/ThirdRow/player/BookFront",
+   "parent": 285,
+   "pos": [
+    0.05863833,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/ThirdRow/player/Neck",
+   "parent": 285,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/ThirdRow/player/Arm",
+   "parent": 285,
+   "pos": [
+    0.24363828,
+    0.4855145
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/ThirdRow/player/Arm/Forearm",
+   "parent": 288,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/ThirdRow/player/Arm/Forearm/Band",
+   "parent": 289,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/ThirdRow/player/Arm/Forearm/Band/Hand",
+   "parent": 290,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/ThirdRow/player/Head",
+   "parent": 285,
+   "pos": [
+    0.06583095,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/ThirdRow/player/Head/faceSprites",
+   "parent": 292,
+   "pos": [
+    -0.3747918,
+    -0.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/ThirdRow/player/Head/faceSprites/Eyes",
+   "parent": 293,
+   "pos": [
+    0.405,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_6",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/ThirdRow/player/Head/faceSprites/Mouth",
+   "parent": 293,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/ThirdRow/player/Head/faceSprites/Blush",
+   "parent": 293,
+   "pos": [
+    -0.355,
+    -0.829
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7967696,
+    0.7967696
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/ThirdRow/player/Head/faceSprites/Blush (1)",
+   "parent": 293,
+   "pos": [
+    1.092,
+    -0.806
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7967696,
+    0.7967696
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/ThirdRow/player/Head/Hair",
+   "parent": 292,
+   "pos": [
+    0.00926686,
+    0.38677502
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0223806,
+    1.0351602
+   ],
+   "sprite": "cheer-readers_190",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/ThirdRow/player/Head/Glasses",
+   "parent": 292,
+   "pos": [
+    0.016474247,
+    -0.44724083
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_177",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/ThirdRow/player/Head/BackHair",
+   "parent": 292,
+   "pos": [
+    -0.038096406,
+    0.24290673
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_189",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/ThirdRow/player/Arm (1)",
+   "parent": 285,
+   "pos": [
+    -0.1583617,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/ThirdRow/player/Arm (1)/Forearm",
+   "parent": 301,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/ThirdRow/player/Arm (1)/Forearm/Band",
+   "parent": 302,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/ThirdRow/player/Arm (1)/Forearm/Band/Hand",
+   "parent": 303,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/ThirdRow/player/Body (1)",
+   "parent": 285,
+   "pos": [
+    0.07890368,
+    0.3661594
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/ThirdRow/player/Skirt",
+   "parent": 285,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/ThirdRow/player/Leg1",
+   "parent": 285,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/ThirdRow/player/Leg2",
+   "parent": 285,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/ThirdRow/player/OpenBook1",
+   "parent": 285,
+   "pos": [
+    -0.487019,
+    4.929721
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    0.36684,
+    0.36684
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/ThirdRow/player/OpenBook2",
+   "parent": 285,
+   "pos": [
+    -2.145121,
+    4.929721
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    0.3668401,
+    0.3668401
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "playerBook",
+   "path": "NerdsHolder/ThirdRow/playerBook",
+   "parent": 283,
+   "pos": [
+    11.42,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/ThirdRow/playerBook/bookmask",
+   "parent": 311,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/ThirdRow/playerBook/bookmaskLeft",
+   "parent": 311,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Masks",
+   "path": "NerdsHolder/ThirdRow/Masks",
+   "parent": 283,
+   "pos": [
+    0.1,
+    -0.05999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "book",
+   "path": "NerdsHolder/ThirdRow/Masks/book",
+   "parent": 314,
+   "pos": [
+    1.97,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/ThirdRow/Masks/book/bookmask",
+   "parent": 315,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/ThirdRow/Masks/book/bookmaskLeft",
+   "parent": 315,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "book (1)",
+   "path": "NerdsHolder/ThirdRow/Masks/book (1)",
+   "parent": 314,
+   "pos": [
+    5.08,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/ThirdRow/Masks/book (1)/bookmask",
+   "parent": 318,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/ThirdRow/Masks/book (1)/bookmaskLeft",
+   "parent": 318,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "book (2)",
+   "path": "NerdsHolder/ThirdRow/Masks/book (2)",
+   "parent": 314,
+   "pos": [
+    8.19,
+    0.2591071
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bookmask",
+   "path": "NerdsHolder/ThirdRow/Masks/book (2)/bookmask",
+   "parent": 321,
+   "pos": [
+    -6.513,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "bookmaskLeft",
+   "path": "NerdsHolder/ThirdRow/Masks/book (2)/bookmaskLeft",
+   "parent": 321,
+   "pos": [
+    -8.1,
+    0.42299986
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.095,
+    0.095
+   ],
+   "sprite": "bookmask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "MissPoster",
+   "path": "NerdsHolder/ThirdRow/MissPoster",
+   "parent": 283,
+   "pos": [
+    4.045,
+    0.601
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.073,
+    1.08
+   ],
+   "sprite": "Miss",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.96,
+    2.19
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "pepSquad4",
+   "path": "NerdsHolder/ThirdRow/pepSquad4",
+   "parent": 283,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/BookFront",
+   "parent": 325,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Neck",
+   "parent": 325,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Arm",
+   "parent": 325,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Arm/Forearm",
+   "parent": 328,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Arm/Forearm/Band",
+   "parent": 329,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Arm/Forearm/Band/Hand",
+   "parent": 330,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head",
+   "parent": 325,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head/faceSprites",
+   "parent": 332,
+   "pos": [
+    -0.3747918,
+    -0.11363497
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head/faceSprites/Eyes",
+   "parent": 333,
+   "pos": [
+    0.405,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_6",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head/faceSprites/Mouth",
+   "parent": 333,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head/faceSprites/Blush",
+   "parent": 333,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head/faceSprites/Blush (1)",
+   "parent": 333,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head/Hair",
+   "parent": 332,
+   "pos": [
+    0.00926686,
+    0.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9810723,
+    0.99333555
+   ],
+   "sprite": "cheer-readers_142",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head/Glasses",
+   "parent": 332,
+   "pos": [
+    0.016474247,
+    -0.44724083
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_178",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Head/BackHair",
+   "parent": 332,
+   "pos": [
+    1.43,
+    0.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_137",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Arm (1)",
+   "parent": 325,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Arm (1)/Forearm",
+   "parent": 341,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Arm (1)/Forearm/Band",
+   "parent": 342,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Arm (1)/Forearm/Band/Hand",
+   "parent": 343,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Body (1)",
+   "parent": 325,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Skirt",
+   "parent": 325,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Leg1",
+   "parent": 325,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/Leg2",
+   "parent": 325,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/OpenBook1",
+   "parent": 325,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/ThirdRow/pepSquad4/OpenBook2",
+   "parent": 325,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "pepSquad2",
+   "path": "NerdsHolder/ThirdRow/pepSquad2",
+   "parent": 283,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/BookFront",
+   "parent": 351,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Neck",
+   "parent": 351,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Arm",
+   "parent": 351,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Arm/Forearm",
+   "parent": 354,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Arm/Forearm/Band",
+   "parent": 355,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Arm/Forearm/Band/Hand",
+   "parent": 356,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head",
+   "parent": 351,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head/faceSprites",
+   "parent": 358,
+   "pos": [
+    -0.3747918,
+    -0.11363497
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head/faceSprites/Eyes",
+   "parent": 359,
+   "pos": [
+    0.406,
+    -0.158
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head/faceSprites/Mouth",
+   "parent": 359,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head/faceSprites/Blush",
+   "parent": 359,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head/faceSprites/Blush (1)",
+   "parent": 359,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head/Hair",
+   "parent": 358,
+   "pos": [
+    0.00926686,
+    0.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0223806,
+    1.0351602
+   ],
+   "sprite": "cheer-readers_153",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head/Glasses",
+   "parent": 358,
+   "pos": [
+    0.016474247,
+    -0.44724083
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_178",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Head/BackHair",
+   "parent": 358,
+   "pos": [
+    1.56,
+    -1.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_152",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Arm (1)",
+   "parent": 351,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Arm (1)/Forearm",
+   "parent": 367,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Arm (1)/Forearm/Band",
+   "parent": 368,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Arm (1)/Forearm/Band/Hand",
+   "parent": 369,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Body (1)",
+   "parent": 351,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Skirt",
+   "parent": 351,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Leg1",
+   "parent": 351,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/Leg2",
+   "parent": 351,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/OpenBook1",
+   "parent": 351,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/ThirdRow/pepSquad2/OpenBook2",
+   "parent": 351,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "pepSquad3",
+   "path": "NerdsHolder/ThirdRow/pepSquad3",
+   "parent": 283,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.110207,
+    2.110207
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BookFront",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/BookFront",
+   "parent": 377,
+   "pos": [
+    0.058638334,
+    1.3755145
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15883794,
+    0.15883794
+   ],
+   "sprite": "cheer-readers_141",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Neck",
+   "parent": 377,
+   "pos": [
+    0.06341267,
+    0.5814098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2039214,
+    0.15431209
+   ],
+   "sprite": "cheer-readers_185",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Arm",
+   "parent": 377,
+   "pos": [
+    0.24363828,
+    0.48551452
+   ],
+   "rotZ": -0.3492446904198264,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Arm/Forearm",
+   "parent": 380,
+   "pos": [
+    1,
+    1.23
+   ],
+   "rotZ": -1.4506496243147458,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_84",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Arm/Forearm/Band",
+   "parent": 381,
+   "pos": [
+    -1.19,
+    0.05
+   ],
+   "rotZ": -1.454238624764042,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Arm/Forearm/Band/Hand",
+   "parent": 382,
+   "pos": [
+    0.32,
+    -1.63
+   ],
+   "rotZ": -2.638076075647116,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head",
+   "parent": 377,
+   "pos": [
+    0.065830946,
+    0.8588395
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15478016,
+    0.15286928
+   ],
+   "sprite": "cheer-readers_191",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "faceSprites",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head/faceSprites",
+   "parent": 384,
+   "pos": [
+    -0.3747918,
+    -0.11363497
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0296495,
+    1.0425202
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head/faceSprites/Eyes",
+   "parent": 385,
+   "pos": [
+    0.405,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98402274,
+    0.98402274
+   ],
+   "sprite": "cheer-readers_6",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head/faceSprites/Mouth",
+   "parent": 385,
+   "pos": [
+    0.366,
+    -1.053
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cheer-readers_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head/faceSprites/Blush",
+   "parent": 385,
+   "pos": [
+    -0.43,
+    -0.79500103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head/faceSprites/Blush (1)",
+   "parent": 385,
+   "pos": [
+    1.16,
+    -0.795
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58586,
+    0.58586
+   ],
+   "sprite": "cheer-readers_199",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.91999996,
+    0.69
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head/Hair",
+   "parent": 384,
+   "pos": [
+    -0.03,
+    0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0017265,
+    1.0142479
+   ],
+   "sprite": "cheer-readers_192",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head/Glasses",
+   "parent": 384,
+   "pos": [
+    0.016474247,
+    -0.44724083
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0327077,
+    1.0456164
+   ],
+   "sprite": "cheer-readers_178",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "BackHair",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Head/BackHair",
+   "parent": 384,
+   "pos": [
+    -0.038096406,
+    0.24290673
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0196836,
+    1.0324297
+   ],
+   "sprite": "cheer-readers_131",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.45,
+    3.99
+   ]
+  },
+  {
+   "name": "Arm (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Arm (1)",
+   "parent": 377,
+   "pos": [
+    -0.15836167,
+    0.6055145
+   ],
+   "rotZ": 2.4673750709560274,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_129",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Forearm",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Arm (1)/Forearm",
+   "parent": 393,
+   "pos": [
+    2.21,
+    -0.62
+   ],
+   "rotZ": -3.6665872831519186,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_104",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Band",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Arm (1)/Forearm/Band",
+   "parent": 394,
+   "pos": [
+    -1.31,
+    0.12
+   ],
+   "rotZ": -1.8408070275524437,
+   "scale": [
+    0.9694214,
+    0.9694214
+   ],
+   "sprite": "cheer-readers_85",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Arm (1)/Forearm/Band/Hand",
+   "parent": 395,
+   "pos": [
+    -0.43,
+    -1.63
+   ],
+   "rotZ": -3.6882972847662776,
+   "scale": [
+    1.0178924,
+    1.0178924
+   ],
+   "sprite": "cheer-readers_118",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Body (1)",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Body (1)",
+   "parent": 377,
+   "pos": [
+    0.078903675,
+    0.36615944
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15807034,
+    0.15792395
+   ],
+   "sprite": "cheer-readers_188",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.22
+   ]
+  },
+  {
+   "name": "Skirt",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Skirt",
+   "parent": 377,
+   "pos": [
+    0.071,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15924856,
+    0.15910108
+   ],
+   "sprite": "cheer-readers_179",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9299998,
+    2.41
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Leg1",
+   "parent": 377,
+   "pos": [
+    -0.08536148,
+    -0.329
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/Leg2",
+   "parent": 377,
+   "pos": [
+    0.19863844,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16514792,
+    0.16514792
+   ],
+   "sprite": "cheer-readers_86",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    6.72
+   ]
+  },
+  {
+   "name": "OpenBook1",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/OpenBook1",
+   "parent": 377,
+   "pos": [
+    0.443,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.167855,
+    0.167855
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "OpenBook2",
+   "path": "NerdsHolder/ThirdRow/pepSquad3/OpenBook2",
+   "parent": 377,
+   "pos": [
+    -0.31510237,
+    1.588
+   ],
+   "rotZ": 0.007752764326262651,
+   "scale": [
+    0.16785502,
+    0.16785502
+   ],
+   "sprite": "cheer-readers_132",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8599997,
+    4.72
+   ]
+  },
+  {
+   "name": "StickyText",
+   "path": "StickyText",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CheerCaption0",
+   "path": "StickyText/CheerCaption0",
+   "parent": 403,
+   "pos": [
+    0,
+    -3.14
+   ],
+   "rotZ": 0,
+   "scale": [
+    9,
+    9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CheerCaption0 Underlay",
+   "path": "StickyText/CheerCaption0/CheerCaption0 Underlay",
+   "parent": 404,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CheerCaption1",
+   "path": "StickyText/CheerCaption1",
+   "parent": 403,
+   "pos": [
+    0,
+    -4.14
+   ],
+   "rotZ": 0,
+   "scale": [
+    9,
+    9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CheerCaption1 Underlay",
+   "path": "StickyText/CheerCaption1/CheerCaption1 Underlay",
+   "parent": 406,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}
