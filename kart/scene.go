@@ -145,6 +145,14 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 }
 
+// NodeWorld 返回节点当前的世界变换（需先 Sample）。
+func (s *SceneInst) NodeWorld(path string) (Aff, bool) {
+	if i, ok := s.byPath[path]; ok {
+		return s.world[i], true
+	}
+	return Identity(), false
+}
+
 func (s *SceneInst) node(p *scenePlayer, curvePath string) (int, bool) {
 	full := p.rootPath
 	if curvePath != "" {

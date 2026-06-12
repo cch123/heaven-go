@@ -31,6 +31,11 @@ type Aff struct{ A, B, C, D, Tx, Ty float64 }
 
 func Identity() Aff { return Aff{A: 1, D: 1} }
 
+// Apply 变换一个点。
+func (m Aff) Apply(x, y float64) (float64, float64) {
+	return m.A*x + m.C*y + m.Tx, m.B*x + m.D*y + m.Ty
+}
+
 // Mul 返回 m ∘ n（先施加 n，再施加 m）。
 func (m Aff) Mul(n Aff) Aff {
 	return Aff{

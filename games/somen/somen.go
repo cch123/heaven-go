@@ -6,9 +6,11 @@ package somen
 import (
 	"image/color"
 	"math"
+	"math/rand"
 	"sort"
 
 	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/hajimehoshi/ebiten/v2/vector"
 
 	"hsdemo/engine"
 	"hsdemo/kart"
@@ -29,6 +31,59 @@ type Module struct {
 	hasSlurped bool
 	bops       []bopEvt
 	endBeat    float64
+	splashes   []splash
+}
+
+// splash 是接住面条时的水花粒子（对应 prefab 里的 SplashEffect ParticleSystem：
+// 2 颗水珠、初速 5、重力系数 2、生存 0.5s、尺寸 0.2）。
+type splash struct {
+	pos  [2]float64
+	vel  [2]float64
+	born float64
+}
+
+const (
+	splashLife    = 0.5
+	splashSpeed   = 5.0
+	splashGravity = 2 * 9.81
+	splashSize    = 0.2
+)
+
+// spawnSplash 在 SplashEffect 节点位置喷出一组水珠。
+func (m *Module) spawnSplash() {
+	world, ok := m.ctx.Scene.NodeWorld("SplashEffect")
+	if !ok {
+		return
+	}
+	x, y := world.Tx, world.Ty
+	t := m.ctx.Time()
+	for i := 0; i < 2; i++ {
+		ang := math.Pi/2 + (rand.Float64()-0.5)*math.Pi/3 // 竖直向上 ±30°
+		m.splashes = append(m.splashes, splash{
+			pos:  [2]float64{x, y},
+			vel:  [2]float64{math.Cos(ang) * splashSpeed, math.Sin(ang) * splashSpeed},
+			born: t,
+		})
+	}
+}
+
+func (m *Module) drawSplashes(screen *ebiten.Image, t float64) {
+	alive := m.splashes[:0]
+	for _, s := range m.splashes {
+		age := t - s.born
+		if age > splashLife {
+			continue
+		}
+		alive = append(alive, s)
+		x := s.pos[0] + s.vel[0]*age
+		y := s.pos[1] + s.vel[1]*age - 0.5*splashGravity*age*age
+		sx, sy := m.proj.Apply(x, y)
+		a := 1 - age/splashLife
+		r := float32(splashSize / 2 * 54)
+		vector.DrawFilledCircle(screen, float32(sx), float32(sy), r,
+			color.RGBA{0xcf, 0xe8, 0xff, uint8(220 * a)}, true)
+	}
+	m.splashes = alive
 }
 
 func New() engine.Module { return &Module{} }
@@ -58,7 +113,7 @@ func (m *Module) OnSwitch(beat float64) {
 		m.ctx.Role("EffectShock"):  "ShockNothing",
 		m.ctx.Role("CloseCrane"):   "Nothing",
 		m.ctx.Role("FarCrane"):     "Nothing",
-		"Shoot/Flow":               "WaterFlow", // 流水循环
+		"Shoot":                    "WaterFlow", // 流水循环（Animator 在 Shoot，曲线 path = Flow）
 	} {
 		m.ctx.Play(path, clip, beat, 0.5)
 	}
@@ -166,6 +221,7 @@ func (m *Module) catchHit(state float64, _ engine.Judgment) {
 	beat := ctx.Beat()
 	ctx.Play(ctx.Role("backArm"), "BackArmNothing", beat, 0) // timeScale 0：定格
 	m.hasSlurped = false
+	m.spawnSplash()
 
 	if state >= 1 || state <= -1 {
 		ctx.Sound("somen_splash")
@@ -202,6 +258,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(bgColor)
 	m.ctx.Scene.Sample(beat)
 	m.ctx.Scene.Draw(screen, m.proj)
+	m.drawSplashes(screen, t)
 }
 
 func boolParam(e *riq.Entity, key string) bool {
