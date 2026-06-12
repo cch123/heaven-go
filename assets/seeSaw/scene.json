@@ -1,0 +1,3167 @@
+{
+ "nodes": [
+  {
+   "name": "seeSaw",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Game",
+   "path": "Game",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stage",
+   "path": "Game/Stage",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Front",
+   "path": "Game/Stage/Front",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Floor",
+   "path": "Game/Stage/Front/Floor",
+   "parent": 3,
+   "pos": [
+    0,
+    -18.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    199.503,
+    30
+   ],
+   "order": 20,
+   "color": [
+    0.039215688,
+    0.0627451,
+    0.23529412,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Floor",
+   "path": "Game/Stage/Front/Floor/Floor",
+   "parent": 4,
+   "pos": [
+    0,
+    -1.089
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9989303,
+    1.335225
+   ],
+   "order": 20,
+   "color": [
+    0.039215688,
+    0.0627451,
+    0.23529412,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Triangle",
+   "path": "Game/Stage/Front/Triangle",
+   "parent": 3,
+   "pos": [
+    0,
+    -3.5875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3734124,
+    1.5455
+   ],
+   "order": 1,
+   "color": [
+    0.039215688,
+    0.0627451,
+    0.23529412,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Back",
+   "path": "Game/Stage/Back",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "Game/Stage/Back/Gradient",
+   "parent": 7,
+   "pos": [
+    0.0002,
+    18.91
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.978325,
+    1.1335428
+   ],
+   "sprite": "Gradient",
+   "order": -19,
+   "color": [
+    1,
+    0,
+    0.89411736,
+    1
+   ],
+   "size": [
+    40,
+    30.000002
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "Game/Stage/Back/BG",
+   "parent": 7,
+   "pos": [
+    0,
+    15.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    199.17188,
+    40
+   ],
+   "order": -20,
+   "color": [
+    1,
+    0.7058824,
+    0.96862745,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BG (1)",
+   "path": "Game/Stage/Back/BG (1)",
+   "parent": 7,
+   "pos": [
+    0,
+    55.69
+   ],
+   "rotZ": 0,
+   "scale": [
+    199.17188,
+    40
+   ],
+   "order": -20,
+   "color": [
+    1,
+    0.011764707,
+    0.8980393,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Seesaw",
+   "path": "Game/Seesaw",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rod",
+   "path": "Game/Seesaw/Rod",
+   "parent": 11,
+   "pos": [
+    0,
+    -3.025
+   ],
+   "rotZ": -0.17453299908797273,
+   "scale": [
+    0.54,
+    0.54
+   ],
+   "sprite": "Seesaw2_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Zoop",
+   "path": "Game/Seesaw/Zoop",
+   "parent": 11,
+   "pos": [
+    -1.964,
+    -2.221
+   ],
+   "rotZ": -0.02582918560670588,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "Seesaw2_11",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Lightning1",
+   "path": "Game/Seesaw/Lightning1",
+   "parent": 11,
+   "pos": [
+    1.8183689,
+    -3.58122
+   ],
+   "z": 0.04923508,
+   "rotZ": 0,
+   "scale": [
+    1.3874104,
+    0.5395763
+   ],
+   "sprite": "Seesaw1_36",
+   "order": 21,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Lightning2",
+   "path": "Game/Seesaw/Lightning2",
+   "parent": 11,
+   "pos": [
+    2.993005,
+    -3.58122
+   ],
+   "z": 0.04923508,
+   "rotZ": 0,
+   "scale": [
+    1.6197476,
+    0.4744899
+   ],
+   "sprite": "Seesaw1_36",
+   "order": 21,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Guys",
+   "path": "Game/Guys",
+   "parent": 1,
+   "pos": [
+    0.9804402,
+    -2.6294072
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SeeHolder",
+   "path": "Game/Guys/SeeHolder",
+   "parent": 16,
+   "pos": [
+    -6.1,
+    -1.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "See",
+   "path": "Game/Guys/SeeHolder/See",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "Game/Guys/SeeHolder/See/EyeL",
+   "parent": 18,
+   "pos": [
+    -0.26399994,
+    1.91
+   ],
+   "rotZ": 2.56695596781995,
+   "scale": [
+    0.43000004,
+    0.43000004
+   ],
+   "sprite": "Seesaw1_3",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "EyeR",
+   "path": "Game/Guys/SeeHolder/See/EyeR",
+   "parent": 18,
+   "pos": [
+    0.064,
+    1.888
+   ],
+   "rotZ": 1.5064535907071468,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Seesaw1_3",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Mouth",
+   "path": "Game/Guys/SeeHolder/See/Mouth",
+   "parent": 18,
+   "pos": [
+    -0.181,
+    1.575
+   ],
+   "rotZ": -0.45883108974142894,
+   "scale": [
+    0.5357,
+    0.5357
+   ],
+   "sprite": "Seesaw1_9",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Head",
+   "path": "Game/Guys/SeeHolder/See/Head",
+   "parent": 18,
+   "pos": [
+    -0.085999966,
+    1.477
+   ],
+   "rotZ": -0.12323862492567379,
+   "scale": [
+    0.546,
+    0.546
+   ],
+   "sprite": "Seesaw1_15",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "ArmUpL",
+   "path": "Game/Guys/SeeHolder/See/ArmUpL",
+   "parent": 18,
+   "pos": [
+    -0.623,
+    1.589
+   ],
+   "rotZ": 0.8916223541086886,
+   "scale": [
+    0.5200001,
+    0.5200001
+   ],
+   "sprite": "Seesaw1_10",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "ArmUpR",
+   "path": "Game/Guys/SeeHolder/See/ArmUpR",
+   "parent": 18,
+   "pos": [
+    0.458,
+    1.581
+   ],
+   "rotZ": -0.8008585918604615,
+   "scale": [
+    0.52,
+    0.52
+   ],
+   "sprite": "Seesaw1_10",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "ArmLowL",
+   "path": "Game/Guys/SeeHolder/See/ArmLowL",
+   "parent": 18,
+   "pos": [
+    -0.811,
+    1.219
+   ],
+   "rotZ": 2.6087170142192777,
+   "scale": [
+    0.5199998,
+    0.5199998
+   ],
+   "sprite": "Seesaw1_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "ArmLowR",
+   "path": "Game/Guys/SeeHolder/See/ArmLowR",
+   "parent": 18,
+   "pos": [
+    0.6539998,
+    1.2019999
+   ],
+   "rotZ": -0.02956102544202647,
+   "scale": [
+    0.52,
+    0.52
+   ],
+   "sprite": "Seesaw1_14",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "HandL",
+   "path": "Game/Guys/SeeHolder/See/HandL",
+   "parent": 18,
+   "pos": [
+    -0.866,
+    0.858
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "Seesaw1_4",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "HandR",
+   "path": "Game/Guys/SeeHolder/See/HandR",
+   "parent": 18,
+   "pos": [
+    0.638,
+    0.811
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "Seesaw1_4",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "LegUpL",
+   "path": "Game/Guys/SeeHolder/See/LegUpL",
+   "parent": 18,
+   "pos": [
+    -0.312,
+    1.038
+   ],
+   "rotZ": 0.19444104095080444,
+   "scale": [
+    0.5100001,
+    0.5100001
+   ],
+   "sprite": "Seesaw1_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "LegUpR",
+   "path": "Game/Guys/SeeHolder/See/LegUpR",
+   "parent": 18,
+   "pos": [
+    0.1159997,
+    1.0610001
+   ],
+   "rotZ": 0.77784504629071,
+   "scale": [
+    0.52874,
+    0.52874
+   ],
+   "sprite": "Seesaw1_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "LegLowL",
+   "path": "Game/Guys/SeeHolder/See/LegLowL",
+   "parent": 18,
+   "pos": [
+    -0.406,
+    0.509
+   ],
+   "rotZ": -0.38346668594105704,
+   "scale": [
+    0.5100001,
+    0.5566978
+   ],
+   "sprite": "Seesaw1_12",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "LegLowR",
+   "path": "Game/Guys/SeeHolder/See/LegLowR",
+   "parent": 18,
+   "pos": [
+    0.16400003,
+    0.47999996
+   ],
+   "rotZ": -0.42197906503290633,
+   "scale": [
+    0.51,
+    0.51
+   ],
+   "sprite": "Seesaw1_12",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "FootL",
+   "path": "Game/Guys/SeeHolder/See/FootL",
+   "parent": 18,
+   "pos": [
+    -0.596,
+    0.083
+   ],
+   "rotZ": -0.02291461454553197,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "Seesaw1_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "FootR",
+   "path": "Game/Guys/SeeHolder/See/FootR",
+   "parent": 18,
+   "pos": [
+    0.375,
+    0.079
+   ],
+   "rotZ": 0.0536544277125625,
+   "scale": [
+    -0.5525,
+    0.5525
+   ],
+   "sprite": "Seesaw1_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Woosh",
+   "path": "Game/Guys/SeeHolder/See/Woosh",
+   "parent": 18,
+   "pos": [
+    0.004,
+    2.391
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    -0.5531641,
+    -0.5531641
+   ],
+   "sprite": "Seesaw1_44",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Bwik",
+   "path": "Game/Guys/SeeHolder/See/Bwik",
+   "parent": 18,
+   "pos": [
+    2.088,
+    1.361
+   ],
+   "rotZ": 0.11344640522452097,
+   "scale": [
+    1,
+    -1
+   ],
+   "sprite": "Seesaw1_42",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4980392
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BodyCover",
+   "path": "Game/Guys/SeeHolder/See/BodyCover",
+   "parent": 18,
+   "pos": [
+    2.291,
+    1.622
+   ],
+   "rotZ": -3.1576685330226275,
+   "scale": [
+    0.4359405,
+    0.5050098
+   ],
+   "sprite": "Seesaw1_17",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.550144
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Brow",
+   "path": "Game/Guys/SeeHolder/See/Brow",
+   "parent": 18,
+   "pos": [
+    -0.229,
+    0.844
+   ],
+   "rotZ": 0.9951185869024262,
+   "scale": [
+    0.5458583,
+    0.5583828
+   ],
+   "sprite": "Seesaw1_27",
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Brow2",
+   "path": "Game/Guys/SeeHolder/See/Brow2",
+   "parent": 18,
+   "pos": [
+    1.896,
+    0.9540004
+   ],
+   "rotZ": -3.258329811875963,
+   "scale": [
+    0.5458583,
+    0.5583828
+   ],
+   "sprite": "Seesaw1_27",
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Stars",
+   "path": "Game/Guys/SeeHolder/See/Stars",
+   "parent": 18,
+   "pos": [
+    -0.022,
+    -0.334
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5129414,
+    0.53125
+   ],
+   "sprite": "Seesaw1_46",
+   "order": 21,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Game/Guys/SeeHolder/See/Stars/Star",
+   "parent": 40,
+   "pos": [
+    -2.543,
+    -0.972
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Seesaw1_49",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Game/Guys/SeeHolder/See/Stars/Star (1)",
+   "parent": 40,
+   "pos": [
+    -0.009,
+    -0.846
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Seesaw1_49",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "Game/Guys/SeeHolder/See/Stars/Star (2)",
+   "parent": 40,
+   "pos": [
+    2.751,
+    -0.545
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Seesaw1_49",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BlackOrbs (1)",
+   "path": "Game/Guys/SeeHolder/BlackOrbs (1)",
+   "parent": 17,
+   "pos": [
+    -0.1500001,
+    1.95
+   ],
+   "rotZ": -0.7477163131045873,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Orbs2",
+   "path": "Game/Guys/SeeHolder/BlackOrbs (1)/Orbs2",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.518500091371725,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/SeeHolder/BlackOrbs (1)/Orbs2/Plane Transform 1",
+   "parent": 45,
+   "pos": [
+    -1.39,
+    -4.1
+   ],
+   "z": 0.16,
+   "rotZ": -0.6936129401121303,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OrbChild2",
+   "path": "Game/Guys/SeeHolder/BlackOrbs (1)/Orbs2/OrbChild2",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.21528636655383954,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/SeeHolder/BlackOrbs (1)/Orbs2/OrbChild2/Plane Transform 1",
+   "parent": 47,
+   "pos": [
+    -1.25,
+    -3.94
+   ],
+   "z": 0.16,
+   "rotZ": -0.4853527156265011,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SawHolder",
+   "path": "Game/Guys/SawHolder",
+   "parent": 16,
+   "pos": [
+    2.25,
+    -0.825
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Saw",
+   "path": "Game/Guys/SawHolder/Saw",
+   "parent": 49,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "Game/Guys/SawHolder/Saw/EyeL",
+   "parent": 50,
+   "pos": [
+    -0.26399994,
+    1.91
+   ],
+   "rotZ": 2.56695596781995,
+   "scale": [
+    0.43000004,
+    0.43000004
+   ],
+   "sprite": "Seesaw1_3",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "EyeR",
+   "path": "Game/Guys/SawHolder/Saw/EyeR",
+   "parent": 50,
+   "pos": [
+    0.064,
+    1.888
+   ],
+   "rotZ": 1.5064535907071468,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Seesaw1_3",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Mouth",
+   "path": "Game/Guys/SawHolder/Saw/Mouth",
+   "parent": 50,
+   "pos": [
+    -0.181,
+    1.575
+   ],
+   "rotZ": -0.45883108974142894,
+   "scale": [
+    0.5357,
+    0.5357
+   ],
+   "sprite": "Seesaw1_9",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Head",
+   "path": "Game/Guys/SawHolder/Saw/Head",
+   "parent": 50,
+   "pos": [
+    -0.085999966,
+    1.477
+   ],
+   "rotZ": -0.12323862492567379,
+   "scale": [
+    0.546,
+    0.546
+   ],
+   "sprite": "Seesaw1_15",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "ArmUpL",
+   "path": "Game/Guys/SawHolder/Saw/ArmUpL",
+   "parent": 50,
+   "pos": [
+    -0.623,
+    1.589
+   ],
+   "rotZ": 0.8916223541086886,
+   "scale": [
+    0.5200001,
+    0.5200001
+   ],
+   "sprite": "Seesaw1_10",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "ArmUpR",
+   "path": "Game/Guys/SawHolder/Saw/ArmUpR",
+   "parent": 50,
+   "pos": [
+    0.458,
+    1.581
+   ],
+   "rotZ": -0.8008585918604615,
+   "scale": [
+    0.52,
+    0.52
+   ],
+   "sprite": "Seesaw1_10",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "ArmLowL",
+   "path": "Game/Guys/SawHolder/Saw/ArmLowL",
+   "parent": 50,
+   "pos": [
+    -0.811,
+    1.219
+   ],
+   "rotZ": 2.6087170142192777,
+   "scale": [
+    0.5199998,
+    0.5199998
+   ],
+   "sprite": "Seesaw1_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "ArmLowR",
+   "path": "Game/Guys/SawHolder/Saw/ArmLowR",
+   "parent": 50,
+   "pos": [
+    0.6539998,
+    1.2019999
+   ],
+   "rotZ": -0.02956102544202647,
+   "scale": [
+    0.52,
+    0.52
+   ],
+   "sprite": "Seesaw1_14",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "HandL",
+   "path": "Game/Guys/SawHolder/Saw/HandL",
+   "parent": 50,
+   "pos": [
+    -0.866,
+    0.858
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "Seesaw1_4",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "HandR",
+   "path": "Game/Guys/SawHolder/Saw/HandR",
+   "parent": 50,
+   "pos": [
+    0.638,
+    0.811
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "Seesaw1_4",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "LegUpL",
+   "path": "Game/Guys/SawHolder/Saw/LegUpL",
+   "parent": 50,
+   "pos": [
+    -0.312,
+    1.038
+   ],
+   "rotZ": 0.19444104095080444,
+   "scale": [
+    0.5100001,
+    0.5100001
+   ],
+   "sprite": "Seesaw1_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "LegUpR",
+   "path": "Game/Guys/SawHolder/Saw/LegUpR",
+   "parent": 50,
+   "pos": [
+    0.1159997,
+    1.0610001
+   ],
+   "rotZ": 0.77784504629071,
+   "scale": [
+    0.52874,
+    0.52874
+   ],
+   "sprite": "Seesaw1_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "LegLowL",
+   "path": "Game/Guys/SawHolder/Saw/LegLowL",
+   "parent": 50,
+   "pos": [
+    -0.406,
+    0.509
+   ],
+   "rotZ": -0.38346668594105704,
+   "scale": [
+    0.5100001,
+    0.5566978
+   ],
+   "sprite": "Seesaw1_12",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "LegLowR",
+   "path": "Game/Guys/SawHolder/Saw/LegLowR",
+   "parent": 50,
+   "pos": [
+    0.16400003,
+    0.47999996
+   ],
+   "rotZ": -0.42197906503290633,
+   "scale": [
+    0.51,
+    0.51
+   ],
+   "sprite": "Seesaw1_12",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "FootL",
+   "path": "Game/Guys/SawHolder/Saw/FootL",
+   "parent": 50,
+   "pos": [
+    -0.596,
+    0.083
+   ],
+   "rotZ": -0.02291461454553197,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "Seesaw1_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "FootR",
+   "path": "Game/Guys/SawHolder/Saw/FootR",
+   "parent": 50,
+   "pos": [
+    0.375,
+    0.079
+   ],
+   "rotZ": 0.0536544277125625,
+   "scale": [
+    -0.5525,
+    0.5525
+   ],
+   "sprite": "Seesaw1_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Woosh",
+   "path": "Game/Guys/SawHolder/Saw/Woosh",
+   "parent": 50,
+   "pos": [
+    0.004,
+    2.391
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    -0.5531641,
+    -0.5531641
+   ],
+   "sprite": "Seesaw1_44",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Bwik",
+   "path": "Game/Guys/SawHolder/Saw/Bwik",
+   "parent": 50,
+   "pos": [
+    2.088,
+    1.361
+   ],
+   "rotZ": 0.11344640522452097,
+   "scale": [
+    1,
+    -1
+   ],
+   "sprite": "Seesaw1_42",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4980392
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BodyCover",
+   "path": "Game/Guys/SawHolder/Saw/BodyCover",
+   "parent": 50,
+   "pos": [
+    2.291,
+    1.622
+   ],
+   "rotZ": -3.1576685330226275,
+   "scale": [
+    0.4359405,
+    0.5050098
+   ],
+   "sprite": "Seesaw1_17",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.550144
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Brow",
+   "path": "Game/Guys/SawHolder/Saw/Brow",
+   "parent": 50,
+   "pos": [
+    -0.229,
+    0.844
+   ],
+   "rotZ": 0.9951185869024262,
+   "scale": [
+    0.5458583,
+    0.5583828
+   ],
+   "sprite": "Seesaw1_27",
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Brow2",
+   "path": "Game/Guys/SawHolder/Saw/Brow2",
+   "parent": 50,
+   "pos": [
+    1.896,
+    0.9540004
+   ],
+   "rotZ": -3.258329811875963,
+   "scale": [
+    0.5458583,
+    0.5583828
+   ],
+   "sprite": "Seesaw1_27",
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true
+  },
+  {
+   "name": "Stars",
+   "path": "Game/Guys/SawHolder/Saw/Stars",
+   "parent": 50,
+   "pos": [
+    -0.022,
+    -0.334
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5129414,
+    0.53125
+   ],
+   "sprite": "Seesaw1_46",
+   "order": 21,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Game/Guys/SawHolder/Saw/Stars/Star",
+   "parent": 72,
+   "pos": [
+    -2.543,
+    -0.972
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Seesaw1_49",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Game/Guys/SawHolder/Saw/Stars/Star (1)",
+   "parent": 72,
+   "pos": [
+    -0.009,
+    -0.846
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Seesaw1_49",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "Game/Guys/SawHolder/Saw/Stars/Star (2)",
+   "parent": 72,
+   "pos": [
+    2.751,
+    -0.545
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Seesaw1_49",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BlackOrbs (2)",
+   "path": "Game/Guys/SawHolder/BlackOrbs (2)",
+   "parent": 49,
+   "pos": [
+    -0.15,
+    1.93
+   ],
+   "rotZ": 0.20251579341204706,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Orbs2",
+   "path": "Game/Guys/SawHolder/BlackOrbs (2)/Orbs2",
+   "parent": 76,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.518500091371725,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/SawHolder/BlackOrbs (2)/Orbs2/Plane Transform 1",
+   "parent": 77,
+   "pos": [
+    -1.39,
+    -4.1
+   ],
+   "z": 0.16,
+   "rotZ": -0.6936129401121303,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OrbChild2",
+   "path": "Game/Guys/SawHolder/BlackOrbs (2)/Orbs2/OrbChild2",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.21528636655383954,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/SawHolder/BlackOrbs (2)/Orbs2/OrbChild2/Plane Transform 1",
+   "parent": 79,
+   "pos": [
+    -1.25,
+    -3.94
+   ],
+   "z": 0.16,
+   "rotZ": -0.4853527156265011,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightOrbs",
+   "path": "Game/Guys/RightOrbs",
+   "parent": 16,
+   "pos": [
+    2.164,
+    0.65199995
+   ],
+   "rotZ": -0.12323862492567379,
+   "scale": [
+    0.54599994,
+    0.54599994
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlackOrbs",
+   "path": "Game/Guys/RightOrbs/BlackOrbs",
+   "parent": 81,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.303213741112594,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/RightOrbs/BlackOrbs/Plane Transform 1",
+   "parent": 82,
+   "pos": [
+    -1.25,
+    -3.94
+   ],
+   "z": 0.16,
+   "rotZ": -0.17453299908797273,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Orbs2",
+   "path": "Game/Guys/RightOrbs/BlackOrbs/Orbs2",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.518500091371725,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/RightOrbs/BlackOrbs/Orbs2/Plane Transform 1",
+   "parent": 84,
+   "pos": [
+    -1.39,
+    -4.1
+   ],
+   "z": 0.16,
+   "rotZ": -0.6936129401121303,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OrbChild2",
+   "path": "Game/Guys/RightOrbs/BlackOrbs/Orbs2/OrbChild2",
+   "parent": 84,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.21528636655383954,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/RightOrbs/BlackOrbs/Orbs2/OrbChild2/Plane Transform 1",
+   "parent": 86,
+   "pos": [
+    -1.25,
+    -3.94
+   ],
+   "z": 0.16,
+   "rotZ": -0.4853527156265011,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OrbChild",
+   "path": "Game/Guys/RightOrbs/BlackOrbs/OrbChild",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.8217138033362328,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/RightOrbs/BlackOrbs/OrbChild/Plane Transform 1",
+   "parent": 88,
+   "pos": [
+    -1.25,
+    -3.94
+   ],
+   "z": 0.16,
+   "rotZ": -0.17453299908797273,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftOrbs",
+   "path": "Game/Guys/LeftOrbs",
+   "parent": 16,
+   "pos": [
+    -0.15,
+    0.62
+   ],
+   "rotZ": -0.12323862492567379,
+   "scale": [
+    0.54599994,
+    0.54599994
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WhiteOrbs",
+   "path": "Game/Guys/LeftOrbs/WhiteOrbs",
+   "parent": 90,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.303213741112594,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/LeftOrbs/WhiteOrbs/Plane Transform 1",
+   "parent": 91,
+   "pos": [
+    -1.25,
+    -3.94
+   ],
+   "z": 0.16,
+   "rotZ": -0.17453299908797273,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Orbs2",
+   "path": "Game/Guys/LeftOrbs/WhiteOrbs/Orbs2",
+   "parent": 91,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.518500091371725,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/LeftOrbs/WhiteOrbs/Orbs2/Plane Transform 1",
+   "parent": 93,
+   "pos": [
+    -1.39,
+    -4.1
+   ],
+   "z": 0.16,
+   "rotZ": -0.6936129401121303,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OrbChild2",
+   "path": "Game/Guys/LeftOrbs/WhiteOrbs/Orbs2/OrbChild2",
+   "parent": 93,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.21528636655383954,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/LeftOrbs/WhiteOrbs/Orbs2/OrbChild2/Plane Transform 1",
+   "parent": 95,
+   "pos": [
+    -1.25,
+    -3.94
+   ],
+   "z": 0.16,
+   "rotZ": -0.4853527156265011,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OrbChild",
+   "path": "Game/Guys/LeftOrbs/WhiteOrbs/OrbChild",
+   "parent": 91,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.8217138033362328,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Game/Guys/LeftOrbs/WhiteOrbs/OrbChild/Plane Transform 1",
+   "parent": 97,
+   "pos": [
+    -1.25,
+    -3.94
+   ],
+   "z": 0.16,
+   "rotZ": -0.17453299908797273,
+   "scale": [
+    288.15268,
+    13.429929
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Refs",
+   "path": "Game/Refs",
+   "parent": 1,
+   "pos": [
+    0.9804402,
+    -2.6294072
+   ],
+   "z": -0.04923508,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ShortJump Ref",
+   "path": "Game/Refs/ShortJump Ref",
+   "parent": 99,
+   "pos": [
+    -1.0798402,
+    2.71
+   ],
+   "z": 0.04923508,
+   "rotZ": 0,
+   "scale": [
+    1.2362765,
+    1.3109844
+   ],
+   "sprite": "ShortJump",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.66,
+    7.68
+   ]
+  },
+  {
+   "name": "Ref",
+   "path": "Game/Refs/Ref",
+   "parent": 99,
+   "pos": [
+    -0.9804402,
+    2.6294072
+   ],
+   "z": 0.04923508,
+   "rotZ": 0,
+   "scale": [
+    0.925925,
+    0.925925
+   ],
+   "sprite": "Screenspace",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Full Ref",
+   "path": "Game/Refs/Full Ref",
+   "parent": 99,
+   "pos": [
+    -0.9804402,
+    18.029408
+   ],
+   "z": 0.04923508,
+   "rotZ": 0,
+   "scale": [
+    7.666,
+    7.666
+   ],
+   "sprite": "Full",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Game/Refs/Square",
+   "parent": 99,
+   "pos": [
+    2.226,
+    -0.898
+   ],
+   "z": 0.04923508,
+   "rotZ": 0,
+   "scale": [
+    2.125,
+    2.125
+   ],
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    0.5896226,
+    0.5896226,
+    0.5176471
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Game/Curves",
+   "parent": 1,
+   "pos": [
+    0.9804402,
+    -2.629407
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "See",
+   "path": "Game/Curves/See",
+   "parent": 104,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OutSee",
+   "path": "Game/Curves/See/OutSee",
+   "parent": 105,
+   "pos": [
+    -4.01,
+    -0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SeeStartJump",
+   "path": "Game/Curves/See/SeeStartJump",
+   "parent": 105,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point0",
+   "path": "Game/Curves/See/SeeStartJump/Point0",
+   "parent": 107,
+   "pos": [
+    -6.1,
+    -1.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "InSee",
+   "path": "Game/Curves/See/InSee",
+   "parent": 105,
+   "pos": [
+    -2.4,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SeeOutOut",
+   "path": "Game/Curves/See/SeeOutOut",
+   "parent": 105,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point0",
+   "path": "Game/Curves/See/SeeOutOut/Point0",
+   "parent": 110,
+   "pos": [
+    -4.01,
+    1.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SeeInIn",
+   "path": "Game/Curves/See/SeeInIn",
+   "parent": 105,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point0",
+   "path": "Game/Curves/See/SeeInIn/Point0",
+   "parent": 112,
+   "pos": [
+    -2.4,
+    1.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Saw",
+   "path": "Game/Curves/Saw",
+   "parent": 104,
+   "pos": [
+    -2.16,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OutSaw",
+   "path": "Game/Curves/Saw/OutSaw",
+   "parent": 114,
+   "pos": [
+    -4.01,
+    -0.816
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "InSaw",
+   "path": "Game/Curves/Saw/InSaw",
+   "parent": 114,
+   "pos": [
+    -2.4,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SawOutOut",
+   "path": "Game/Curves/Saw/SawOutOut",
+   "parent": 114,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point0",
+   "path": "Game/Curves/Saw/SawOutOut/Point0",
+   "parent": 117,
+   "pos": [
+    -4.01,
+    1.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SawInIn",
+   "path": "Game/Curves/Saw/SawInIn",
+   "parent": 114,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point0",
+   "path": "Game/Curves/Saw/SawInIn/Point0",
+   "parent": 119,
+   "pos": [
+    -2.4,
+    1.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

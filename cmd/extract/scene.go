@@ -84,6 +84,21 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "frog", markers: []string{"_animLeft", "_jumperPointLeft"}},
 		},
 	},
+	"seeSaw": {
+		dir:    "SeeSaw",
+		prefab: "seeSaw.prefab",
+		roleFields: []string{
+			"seeSawAnim", "see", "saw", "leftWhiteOrbs", "rightBlackOrbs",
+			"gradient", "bgLow", "bgHigh",
+		},
+		refArrayFields:  []string{"recolors"},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"jumpPaths", "seeSawAnim"}},
+			{name: "see", markers: []string{"landOutTrans", "deathParticle"}, atPath: "Game/Guys/SeeHolder"},
+			{name: "saw", markers: []string{"landOutTrans", "deathParticle"}, atPath: "Game/Guys/SawHolder"},
+		},
+	},
 	"meatGrinder": {
 		dir:    "MeatGrinder",
 		prefab: "meatGrinder.prefab",
@@ -104,6 +119,28 @@ func bundlePath(dir string, parts ...string) string {
 	return filepath.Join(append([]string{*hsRoot, "Assets", "Bundled", "Games", dir}, parts...)...)
 }
 
+// mappingShaderGUID 是 CellAnime_MappedInvert（调色板映射）shader 的 guid：
+// 贴图 RGB 通道为掩码权重，out = ColorAlpha·r + ColorBravo·g + ColorDelta·b。
+const mappingShaderGUID = "d6702951943fe3f48b9e437dd725e76f"
+
+// scanMappedMats 扫描游戏目录下使用映射 shader 的材质 guid 集合。
+func scanMappedMats(root string) map[string]bool {
+	out := map[string]bool{}
+	for guid, p := range scanGUIDs(root, ".mat") {
+		raw, err := os.ReadFile(p)
+		if err != nil {
+			continue
+		}
+		if strings.Contains(string(raw), mappingShaderGUID) {
+			out[guid] = true
+		}
+	}
+	if len(out) > 0 {
+		fmt.Printf("mapped materials: %d\n", len(out))
+	}
+	return out
+}
+
 func extractScene(game string) {
 	spec, ok := sceneSpecs[game]
 	if !ok {
@@ -114,6 +151,7 @@ func extractScene(game string) {
 	tables := scanSpriteMetas(bundlePath(spec.dir, "Sprites"))
 	exportSheetMulti(tables)
 	idx, docs := buildPrefabIndex(bundlePath(spec.dir, spec.prefab))
+	idx.mappedMats = scanMappedMats(bundlePath(spec.dir))
 	paths, nodeIdx := exportScene(idx, tables)
 	exportRoles(spec, docs, idx, paths)
 	exportExtra(spec, docs, idx, paths, nodeIdx, tables)
@@ -273,6 +311,11 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]st
 		}
 		n.SortGroup = idx.groupByGO[gid]
 		if r := idx.rendByGO[gid]; r != nil {
+			for _, mv := range uy.L(r["m_Materials"]) {
+				if idx.mappedMats[uy.S(uy.Get(uy.M(mv), "guid"))] {
+					n.Mapped = true
+				}
+			}
 			n.Sprite = resolveSprite(tables,
 				uy.S(uy.Get(r, "m_Sprite", "guid")), uy.I(uy.Get(r, "m_Sprite", "fileID")))
 			n.Order = int(uy.I(r["m_SortingOrder"]))
@@ -715,25 +758,55 @@ func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spri
 					}
 					continue
 				}
-				// 结构体数组项
-				item := kmdata.ComponentItem{Nums: map[string]float64{}, Refs: map[string]string{}}
-				for ik, ivv := range im {
-					switch itv := ivv.(type) {
-					case int, int64, uint64, float64:
-						item.Nums[ik] = uy.F(ivv)
-					case map[string]any:
-						if _, hasID := itv["fileID"]; hasID {
-							if val, isSprite := resolveRef(k+"."+ik, itv); val != "" && !isSprite {
-								item.Refs[ik] = val
-							}
-						}
-					}
-				}
-				c.Lists[k] = append(c.Lists[k], item)
+				c.Lists[k] = append(c.Lists[k], dumpItem(k, im, resolveRef, true))
 			}
 		}
 	}
 	return c
+}
+
+// dumpItem 解析结构体数组的一项；nest=true 时再下钻一层嵌套结构数组
+//（SuperCurveObject.Path 的 positions 等）。
+func dumpItem(field string, im map[string]any,
+	resolveRef func(string, map[string]any) (string, bool), nest bool) kmdata.ComponentItem {
+	item := kmdata.ComponentItem{
+		Nums: map[string]float64{}, Strs: map[string]string{}, Refs: map[string]string{},
+	}
+	for ik, ivv := range im {
+		switch itv := ivv.(type) {
+		case int, int64, uint64, float64:
+			item.Nums[ik] = uy.F(ivv)
+		case string:
+			item.Strs[ik] = itv
+		case map[string]any:
+			if _, hasID := itv["fileID"]; hasID {
+				if val, isSprite := resolveRef(field+"."+ik, itv); val != "" && !isSprite {
+					item.Refs[ik] = val
+				}
+			} else if _, hasX := itv["x"]; hasX {
+				for _, axis := range []string{"x", "y", "z", "w"} {
+					if av, ok := itv[axis]; ok {
+						item.Nums[ik+"."+axis] = uy.F(av)
+					}
+				}
+			}
+		case []any:
+			if !nest {
+				continue
+			}
+			for _, nv := range itv {
+				nm := uy.M(nv)
+				if nm == nil {
+					continue
+				}
+				if item.Items == nil {
+					item.Items = map[string][]kmdata.ComponentItem{}
+				}
+				item.Items[ik] = append(item.Items[ik], dumpItem(field+"."+ik, nm, resolveRef, false))
+			}
+		}
+	}
+	return item
 }
 
 // ---------- anims / sounds ----------

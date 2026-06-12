@@ -60,6 +60,9 @@ type Node struct {
 	// SortGroup 非空表示该节点挂有 Unity SortingGroup（[layer, order]）：
 	// 整个子树作为单一排序单元参与全局排序，子树内部再按各自 order 排。
 	SortGroup []int `json:"sortGroup,omitempty"`
+	// Mapped 表示渲染器使用调色板映射材质（CellAnime_MappedInvert：
+	// 贴图 RGB 通道为掩码，out = A·r + B·g + D·b，运行时换色）。
+	Mapped bool `json:"mapped,omitempty"`
 }
 
 // Rig 是一棵节点树（KarateMan 的单骨架与整游戏场景共用此结构）。
@@ -128,10 +131,14 @@ type Component struct {
 	Lists        map[string][]ComponentItem   `json:"lists,omitempty"`        // 结构体数组字段
 }
 
-// ComponentItem 是结构体数组的一项（引用解析为 path，数值直存）。
+// ComponentItem 是结构体数组的一项（引用解析为 path，数值直存；
+// Strs 存字符串字段；Items 支持一层嵌套结构数组，如 SuperCurveObject.Path
+// 的 positions）。
 type ComponentItem struct {
-	Nums map[string]float64 `json:"nums,omitempty"`
-	Refs map[string]string  `json:"refs,omitempty"`
+	Nums  map[string]float64         `json:"nums,omitempty"`
+	Strs  map[string]string          `json:"strs,omitempty"`
+	Refs  map[string]string          `json:"refs,omitempty"`
+	Items map[string][]ComponentItem `json:"items,omitempty"`
 }
 
 // ---------- AnimatorController（controllers.json / animators.json） ----------

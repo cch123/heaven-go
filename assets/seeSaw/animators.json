@@ -1,0 +1,7 @@
+{
+ "Game/Guys/SawHolder": "GuyInverter",
+ "Game/Guys/SawHolder/Saw": "Saw",
+ "Game/Guys/SeeHolder": "SeeInverter",
+ "Game/Guys/SeeHolder/See": "Saw",
+ "Game/Seesaw": "Seesaw"
+}

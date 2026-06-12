@@ -1,0 +1,216 @@
+{
+ "GuyInverter": {
+  "default": "NoInvert",
+  "states": {
+   "Invert": {
+    "clip": "SawInverter/Invert",
+    "speed": 1
+   },
+   "NoInvert": {
+    "clip": "SawInverter/NoInvert",
+    "speed": 1
+   }
+  }
+ },
+ "Saw": {
+  "default": "NeutralSee",
+  "states": {
+   "BadIn_SeeReact": {
+    "clip": "Guy/BadIn_SeeReact",
+    "speed": 1
+   },
+   "BadOut_SeeReact": {
+    "clip": "Guy/BadOut_SeeReact",
+    "speed": 1
+   },
+   "BigTuck_See": {
+    "clip": "Guy/BigTuck_See",
+    "speed": 1
+   },
+   "BopSaw": {
+    "clip": "Guy/BopSaw",
+    "speed": 1
+   },
+   "BopSaw_Strum": {
+    "clip": "Guy/BopSaw_Strum",
+    "speed": 1
+   },
+   "BopSee": {
+    "clip": "Guy/BopSee",
+    "speed": 1
+   },
+   "BopSee_Strum": {
+    "clip": "Guy/BopSee_Strum",
+    "speed": 1
+   },
+   "Choke_Saw": {
+    "clip": "Guy/Choke_Saw",
+    "speed": 1
+   },
+   "Choke_Saw_Intro": {
+    "clip": "Guy/Choke_Saw_Intro",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Choke_Saw",
+      "exitTime": 0.75,
+      "duration": 0.25
+     }
+    ]
+   },
+   "Choke_See": {
+    "clip": "Guy/Choke_See",
+    "speed": 1
+   },
+   "Choke_See_Intro": {
+    "clip": "Guy/Choke_See_Intro",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Choke_See",
+      "exitTime": 0.75,
+      "duration": 0.25
+     }
+    ]
+   },
+   "Explode": {
+    "clip": "Guy/Explode",
+    "speed": 1
+   },
+   "GetUp_In": {
+    "clip": "Guy/GetUp_In",
+    "speed": 1
+   },
+   "GetUp_In_Big": {
+    "clip": "Guy/GetUp_In_Big",
+    "speed": 1
+   },
+   "GetUp_In_Miss": {
+    "clip": "Guy/GetUp_In_Miss",
+    "speed": 1
+   },
+   "GetUp_Out": {
+    "clip": "Guy/GetUp_Out",
+    "speed": 1
+   },
+   "GetUp_Out_Big": {
+    "clip": "Guy/GetUp_Out_Big",
+    "speed": 1
+   },
+   "GetUp_Out_Miss": {
+    "clip": "Guy/GetUp_Out_Miss",
+    "speed": 1
+   },
+   "Jump_InIn_Fall": {
+    "clip": "Guy/Jump_InIn_Fall",
+    "speed": 1
+   },
+   "Jump_InIn_Start": {
+    "clip": "Guy/Jump_InIn_Start",
+    "speed": 1
+   },
+   "Jump_InOut_Tuck": {
+    "clip": "Guy/Jump_InOut_Tuck",
+    "speed": 1
+   },
+   "Jump_OutIn_Start": {
+    "clip": "Guy/Jump_OutIn_Start",
+    "speed": 1
+   },
+   "Jump_OutIn_Transform": {
+    "clip": "Guy/Jump_OutIn_Transform",
+    "speed": 1
+   },
+   "Jump_OutIn_Tuck": {
+    "clip": "Guy/Jump_OutIn_Tuck",
+    "speed": 1
+   },
+   "Jump_OutOut_Fall": {
+    "clip": "Guy/Jump_OutOut_Fall",
+    "speed": 1
+   },
+   "Jump_OutOut_Start": {
+    "clip": "Guy/Jump_OutOut_Start",
+    "speed": 1
+   },
+   "Jump_OutOut_Transform": {
+    "clip": "Guy/Jump_OutOut_Transform",
+    "speed": 1
+   },
+   "Land_In": {
+    "clip": "Guy/Land_In",
+    "speed": 1
+   },
+   "Land_In_Barely": {
+    "clip": "Guy/Land_In_Barely",
+    "speed": 1
+   },
+   "Land_In_Big": {
+    "clip": "Guy/Land_In_Big",
+    "speed": 1
+   },
+   "Land_In_Miss": {
+    "clip": "Guy/Land_In_Miss",
+    "speed": 1
+   },
+   "Land_Out": {
+    "clip": "Guy/Land_Out",
+    "speed": 1
+   },
+   "Land_Out_Barely": {
+    "clip": "Guy/Land_Out_Barely",
+    "speed": 1
+   },
+   "Land_Out_Big": {
+    "clip": "Guy/Land_Out_Big",
+    "speed": 1
+   },
+   "Land_Out_Miss": {
+    "clip": "Guy/Land_Out_Miss",
+    "speed": 1
+   },
+   "NeutralSaw": {
+    "clip": "Guy/NeutralSaw",
+    "speed": 1
+   },
+   "NeutralSee": {
+    "clip": "Guy/NeutralSee",
+    "speed": 1
+   }
+  }
+ },
+ "SeeInverter": {
+  "default": "NoInvert",
+  "states": {
+   "Invert": {
+    "clip": "Animation/Invert",
+    "speed": 1
+   },
+   "NoInvert": {
+    "clip": "Animation/NoInvert",
+    "speed": 1
+   }
+  }
+ },
+ "Seesaw": {
+  "default": "Neut",
+  "states": {
+   "Bad": {
+    "clip": "Rod/Bad",
+    "speed": 1
+   },
+   "Good": {
+    "clip": "Rod/Good",
+    "speed": 1
+   },
+   "Lightning": {
+    "clip": "Rod/Lightning",
+    "speed": 1
+   },
+   "Neut": {
+    "clip": "Rod/Neut",
+    "speed": 1
+   }
+  }
+ }
+}

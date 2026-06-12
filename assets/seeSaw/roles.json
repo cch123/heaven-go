@@ -1,0 +1,10 @@
+{
+ "bgHigh": "Game/Stage/Back/BG (1)",
+ "bgLow": "Game/Stage/Back/BG",
+ "gradient": "Game/Stage/Back/Gradient",
+ "leftWhiteOrbs": "Game/Guys/LeftOrbs/WhiteOrbs",
+ "rightBlackOrbs": "Game/Guys/RightOrbs/BlackOrbs",
+ "saw": "Game/Guys/SawHolder",
+ "see": "Game/Guys/SeeHolder",
+ "seeSawAnim": "Game/Seesaw"
+}

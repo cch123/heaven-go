@@ -1,0 +1,872 @@
+{
+ "refArrays": {
+  "recolors": [
+   "Game/Stage/Front/Floor",
+   "Game/Stage/Front/Floor/Floor",
+   "Game/Stage/Front/Triangle"
+  ]
+ },
+ "refArrayIdx": {
+  "recolors": [
+   4,
+   5,
+   6
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "cameraMove": 1
+   },
+   "refs": {
+    "bgHigh": "Game/Stage/Back/BG (1)",
+    "bgLow": "Game/Stage/Back/BG",
+    "gradient": "Game/Stage/Back/Gradient",
+    "leftWhiteOrbs": "Game/Guys/LeftOrbs/WhiteOrbs",
+    "rightBlackOrbs": "Game/Guys/RightOrbs/BlackOrbs",
+    "saw": "Game/Guys/SawHolder",
+    "see": "Game/Guys/SeeHolder",
+    "seeSawAnim": "Game/Seesaw"
+   },
+   "refArrays": {
+    "recolors": [
+     "Game/Stage/Front/Floor",
+     "Game/Stage/Front/Floor/Floor",
+     "Game/Stage/Front/Triangle"
+    ]
+   },
+   "lists": {
+    "jumpPaths": [
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeStartJump"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.25,
+          "height": 6,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeStartJump/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/OutSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeJumpOutOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.25,
+          "height": 6.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/OutSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SawJumpOutOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.25,
+          "height": 6.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/SawOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/OutSaw"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeJumpInIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.25,
+          "height": 5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/InSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SawJumpInIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.25,
+          "height": 5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/SawInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/InSaw"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeJumpInOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.25,
+          "height": 3.75,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/OutSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SawJumpInOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.25,
+          "height": 3.75,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/SawInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/OutSaw"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeStartJumpIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.25,
+          "height": 4,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeStartJump/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/InSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeJumpOutIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.25,
+          "height": 6.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/InSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SawJumpOutIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.25,
+          "height": 6.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/SawOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/InSaw"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeEndJumpOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 6.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeStartJump/Point0"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeEndJumpIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeStartJump/Point0"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeHighOutOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.1,
+          "height": 12,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/OutSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SawHighOutOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.1,
+          "height": 12,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/SawOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/OutSaw"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeHighOutIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.1,
+          "height": 12,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/InSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SawHighOutIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.1,
+          "height": 12,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/SawOutOut/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/InSaw"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeHighInIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.1,
+          "height": 9,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/InSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SawHighInIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.1,
+          "height": 9,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/SawInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/InSaw"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SeeHighInOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.1,
+          "height": 9,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/SeeInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/See/OutSee"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SawHighInOut"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.1,
+          "height": 9,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/SawInIn/Point0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Game/Curves/Saw/OutSaw"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "Camera"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 12,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "saw": {
+   "path": "Game/Guys/SawHolder",
+   "nums": {
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0,
+    "see": 0,
+    "strum": 0
+   },
+   "refs": {
+    "deathParticle": "Game/Guys/SawHolder/BlackOrbs (2)",
+    "gameTrans": "Game",
+    "invertAnim": "Game/Guys/SawHolder",
+    "landInTrans": "Game/Curves/Saw/InSaw",
+    "landOutTrans": "Game/Curves/Saw/OutSaw"
+   }
+  },
+  "see": {
+   "path": "Game/Guys/SeeHolder",
+   "nums": {
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0,
+    "see": 1,
+    "strum": 0
+   },
+   "refs": {
+    "deathParticle": "Game/Guys/SeeHolder/BlackOrbs (1)",
+    "gameTrans": "Game",
+    "groundTrans": "Game/Curves/See/SeeStartJump/Point0",
+    "invertAnim": "Game/Guys/SeeHolder",
+    "landInTrans": "Game/Curves/See/InSee",
+    "landOutTrans": "Game/Curves/See/OutSee"
+   }
+  }
+ }
+}
