@@ -8,7 +8,13 @@
    "W": 276,
    "H": 256,
    "PivotX": 0.5005042,
-   "PivotY": 0.48580885
+   "PivotY": 0.48580885,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_altpunch_0": {
    "X": 4,
@@ -16,7 +22,13 @@
    "W": 664,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_altpunch_1": {
    "X": 676,
@@ -24,7 +36,13 @@
    "W": 536,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_altpunch_2": {
    "X": 1219,
@@ -32,7 +50,13 @@
    "W": 472,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_altpunch_3": {
    "X": 1699,
@@ -40,7 +64,13 @@
    "W": 440,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_0": {
    "X": 2595,
@@ -48,7 +78,13 @@
    "W": 376,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_1": {
    "X": 4,
@@ -56,7 +92,13 @@
    "W": 440,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_1_part00": {
    "X": 2513,
@@ -64,7 +106,13 @@
    "W": 336,
    "H": 236,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_1_part01": {
    "X": 2897,
@@ -72,7 +120,13 @@
    "W": 165,
    "H": 135,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_2": {
    "X": 452,
@@ -80,7 +134,13 @@
    "W": 408,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_3": {
    "X": 868,
@@ -88,7 +148,13 @@
    "W": 344,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_4": {
    "X": 1219,
@@ -96,7 +162,13 @@
    "W": 312,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_5": {
    "X": 1539,
@@ -104,7 +176,13 @@
    "W": 312,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_6": {
    "X": 1857,
@@ -112,7 +190,13 @@
    "W": 474,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_7": {
    "X": 2339,
@@ -120,7 +204,13 @@
    "W": 440,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_8": {
    "X": 2786,
@@ -128,7 +218,13 @@
    "W": 408,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_arm_9": {
    "X": 2690,
@@ -136,7 +232,13 @@
    "W": 216,
    "H": 281,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_ball": {
    "X": 292,
@@ -144,7 +246,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_barrel": {
    "X": 868,
@@ -152,7 +260,13 @@
    "W": 280,
    "H": 376,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_barrelfx_0": {
    "X": 1827,
@@ -160,7 +274,13 @@
    "W": 184,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_barrelfx_1": {
    "X": 2019,
@@ -168,7 +288,13 @@
    "W": 184,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_barrelfx_2": {
    "X": 2211,
@@ -176,7 +302,13 @@
    "W": 184,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_barrelfx_3": {
    "X": 2403,
@@ -184,7 +316,13 @@
    "W": 280,
    "H": 184,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_barrelfx_4": {
    "X": 2403,
@@ -192,7 +330,13 @@
    "W": 280,
    "H": 184,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_bomb": {
    "X": 580,
@@ -200,7 +344,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_bulb": {
    "X": 4,
@@ -208,7 +358,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_combo_crouch_toIdle_leg": {
    "X": 2688,
@@ -216,7 +372,13 @@
    "W": 401,
    "H": 409,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_combo_crouchpunch_0": {
    "X": 548,
@@ -224,7 +386,13 @@
    "W": 472,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_combo_crouchpunch_1": {
    "X": 1027,
@@ -232,7 +400,13 @@
    "W": 536,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_combo_kick_0": {
    "X": 4,
@@ -240,7 +414,13 @@
    "W": 696,
    "H": 537,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_combo_kick_1": {
    "X": 708,
@@ -248,7 +428,13 @@
    "W": 760,
    "H": 537,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_combo_miss_0": {
    "X": 1475,
@@ -256,7 +442,13 @@
    "W": 664,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_combo_miss_1": {
    "X": 2147,
@@ -264,7 +456,13 @@
    "W": 536,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_combo_miss_2": {
    "X": 4,
@@ -272,7 +470,13 @@
    "W": 536,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_cookingpot": {
    "X": 3500,
@@ -280,7 +484,13 @@
    "W": 294,
    "H": 155,
    "PivotX": 0.48875457,
-   "PivotY": 0.6137561
+   "PivotY": 0.6137561,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_cookingpot_lid": {
    "X": 3518,
@@ -288,7 +498,13 @@
    "W": 257,
    "H": 121,
    "PivotX": 0.4871356,
-   "PivotY": 0.34517047
+   "PivotY": 0.34517047,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_fastfx_0": {
    "X": 1571,
@@ -296,7 +512,13 @@
    "W": 472,
    "H": 216,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_fastfx_1": {
    "X": 2690,
@@ -304,7 +526,13 @@
    "W": 856,
    "H": 568,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_fastfx_2": {
    "X": 1571,
@@ -312,7 +540,13 @@
    "W": 738,
    "H": 142,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_fastfx_3": {
    "X": 2467,
@@ -320,7 +554,13 @@
    "W": 440,
    "H": 664,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_fire": {
    "X": 3367,
@@ -328,7 +568,13 @@
    "W": 239,
    "H": 240,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_hand": {
    "X": 2467,
@@ -336,7 +582,13 @@
    "W": 216,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_0": {
    "X": 4,
@@ -344,7 +596,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_1": {
    "X": 292,
@@ -352,7 +610,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_2": {
    "X": 580,
@@ -360,7 +624,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_3": {
    "X": 868,
@@ -368,7 +638,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_4": {
    "X": 1155,
@@ -376,7 +652,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_5": {
    "X": 1443,
@@ -384,7 +666,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_6": {
    "X": 1731,
@@ -392,7 +680,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_7": {
    "X": 2019,
@@ -400,7 +694,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_head_8": {
    "X": 2307,
@@ -408,7 +708,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_hiteffect_0": {
    "X": 1443,
@@ -416,7 +722,13 @@
    "W": 376,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick2": {
    "X": 772,
@@ -424,7 +736,13 @@
    "W": 440,
    "H": 309,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_": {
    "X": 772,
@@ -432,7 +750,13 @@
    "W": 440,
    "H": 451,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_0": {
    "X": 4,
@@ -440,7 +764,13 @@
    "W": 760,
    "H": 792,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_1": {
    "X": 772,
@@ -448,7 +778,13 @@
    "W": 440,
    "H": 760,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_2": {
    "X": 1859,
@@ -456,7 +792,13 @@
    "W": 376,
    "H": 440,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_3": {
    "X": 2243,
@@ -464,7 +806,13 @@
    "W": 440,
    "H": 440,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_leg_0": {
    "X": 3330,
@@ -472,7 +820,13 @@
    "W": 472,
    "H": 279,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_leg_1": {
    "X": 2946,
@@ -480,7 +834,13 @@
    "W": 376,
    "H": 440,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_leg_2": {
    "X": 2690,
@@ -488,7 +848,13 @@
    "W": 248,
    "H": 472,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_prepare_0": {
    "X": 3426,
@@ -496,7 +862,13 @@
    "W": 664,
    "H": 536,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_prepare_1": {
    "X": 1529,
@@ -504,7 +876,13 @@
    "W": 290,
    "H": 440,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_kick_prepare_2": {
    "X": 1239,
@@ -512,7 +890,13 @@
    "W": 290,
    "H": 440,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_leftleg_crouch": {
    "X": 963,
@@ -520,7 +904,13 @@
    "W": 376,
    "H": 472,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_legleft": {
    "X": 292,
@@ -528,7 +918,13 @@
    "W": 344,
    "H": 472,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_legright": {
    "X": 4,
@@ -536,7 +932,13 @@
    "W": 280,
    "H": 472,
    "PivotX": 0.4994876,
-   "PivotY": 0.52430433
+   "PivotY": 0.52430433,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_main_0": {
    "X": 3416,
@@ -544,7 +946,13 @@
    "W": 300,
    "H": 614,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_main_1": {
    "X": 2955,
@@ -552,7 +960,13 @@
    "W": 387,
    "H": 532,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_object_shadow": {
    "X": 1155,
@@ -560,7 +974,13 @@
    "W": 280,
    "H": 216,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_pot": {
    "X": 4,
@@ -568,7 +988,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_rainy_0": {
    "X": 3904,
@@ -576,7 +1002,13 @@
    "W": 145,
    "H": 282,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_rainy_1": {
    "X": 3838,
@@ -584,7 +1016,13 @@
    "W": 212,
    "H": 328,
    "PivotX": 0.5,
-   "PivotY": 0.1
+   "PivotY": 0.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_rainy_2": {
    "X": 3780,
@@ -592,7 +1030,13 @@
    "W": 290,
    "H": 203,
    "PivotX": 0.5,
-   "PivotY": 0.36
+   "PivotY": 0.36,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_rainy_3": {
    "X": 3718,
@@ -600,7 +1044,13 @@
    "W": 360,
    "H": 201,
    "PivotX": 0.5,
-   "PivotY": 0.48
+   "PivotY": 0.48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_rightleg_crouch": {
    "X": 644,
@@ -608,7 +1058,13 @@
    "W": 312,
    "H": 472,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_rock": {
    "X": 292,
@@ -616,7 +1072,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_shadow": {
    "X": 2115,
@@ -624,7 +1086,13 @@
    "W": 344,
    "H": 472,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_snow": {
    "X": 3620,
@@ -632,7 +1100,13 @@
    "W": 244,
    "H": 244,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_tacobell": {
    "X": 3494,
@@ -640,7 +1114,13 @@
    "W": 280,
    "H": 280,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_torso_0": {
    "X": 1347,
@@ -648,7 +1128,13 @@
    "W": 376,
    "H": 472,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_torso_1": {
    "X": 1731,
@@ -656,7 +1142,13 @@
    "W": 376,
    "H": 472,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "karateman_torso_2": {
    "X": 2914,
@@ -664,7 +1156,13 @@
    "W": 440,
    "H": 983,
    "PivotX": 0.5,
-   "PivotY": 0.5
+   "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   }
  }
 }

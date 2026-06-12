@@ -12,7 +12,13 @@
    "H": 5086,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "ppu": 145.84201
+   "ppu": 145.84201,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_bg00_1": {
    "X": 1137,
@@ -21,7 +27,13 @@
    "H": 1031,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "ppu": 145.84201
+   "ppu": 145.84201,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_bg00_2": {
    "X": 643,
@@ -30,7 +42,13 @@
    "H": 1259,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "ppu": 145.84201
+   "ppu": 145.84201,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_bg00_3": {
    "X": 774,
@@ -39,7 +57,13 @@
    "H": 760,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "ppu": 145.84201
+   "ppu": 145.84201,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_0": {
    "X": 7105,
@@ -49,7 +73,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_1": {
    "X": 6378,
@@ -59,7 +89,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_10": {
    "X": 7732,
@@ -69,7 +105,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_11": {
    "X": 2739,
@@ -79,7 +121,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_12": {
    "X": 3524,
@@ -89,7 +137,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_13": {
    "X": 3574,
@@ -99,7 +153,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_14": {
    "X": 4052,
@@ -109,7 +169,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_15": {
    "X": 4052,
@@ -119,7 +185,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_16": {
    "X": 4547,
@@ -129,7 +201,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_17": {
    "X": 5349,
@@ -139,7 +217,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_18": {
    "X": 5364,
@@ -149,17 +233,29 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_19": {
    "X": 5931,
    "Y": 1621,
    "W": 199,
    "H": 352,
-   "PivotX": 0.5,
+   "PivotX": 0,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    42,
+    0
+   ]
   },
   "mobTrick_parts00_2": {
    "X": 8297,
@@ -169,7 +265,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_20": {
    "X": 3662,
@@ -179,7 +281,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_21": {
    "X": 3504,
@@ -189,7 +297,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_22": {
    "X": 3708,
@@ -199,7 +313,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_23": {
    "X": 3708,
@@ -209,7 +329,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_24": {
    "X": 3784,
@@ -219,7 +345,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_25": {
    "X": 3870,
@@ -229,7 +361,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_26": {
    "X": 3784,
@@ -239,7 +377,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_27": {
    "X": 3870,
@@ -249,7 +393,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_28": {
    "X": 3026,
@@ -259,7 +409,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_29": {
    "X": 3988,
@@ -269,7 +425,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_3": {
    "X": 2400,
@@ -279,7 +441,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_30": {
    "X": 7770,
@@ -289,7 +457,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_4": {
    "X": 2780,
@@ -299,7 +473,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_5": {
    "X": 3197,
@@ -309,7 +489,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_6": {
    "X": 3965,
@@ -319,7 +505,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_7": {
    "X": 4019,
@@ -329,7 +521,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_8": {
    "X": 5279,
@@ -339,7 +537,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts00_9": {
    "X": 6525,
@@ -349,7 +553,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_0": {
    "X": 445,
@@ -359,7 +569,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_1": {
    "X": 1626,
@@ -369,7 +585,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_10": {
    "X": 2354,
@@ -379,7 +601,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_11": {
    "X": 1264,
@@ -389,7 +617,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_12": {
    "X": 1245,
@@ -399,7 +633,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_13": {
    "X": 1831,
@@ -409,7 +649,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_14": {
    "X": 2690,
@@ -419,7 +665,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_15": {
    "X": 1889,
@@ -429,7 +681,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_16": {
    "X": 6468,
@@ -439,7 +697,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_17": {
    "X": 4568,
@@ -449,7 +713,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_18": {
    "X": 7322,
@@ -459,7 +729,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_2": {
    "X": 2884,
@@ -469,7 +745,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_3": {
    "X": 632,
@@ -479,7 +761,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_4": {
    "X": 1854,
@@ -489,7 +777,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_5": {
    "X": 479,
@@ -499,7 +793,13 @@
    "PivotX": 0.4452555,
    "PivotY": 0.4940048,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_6": {
    "X": 767,
@@ -509,7 +809,13 @@
    "PivotX": 0.58677685,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_7": {
    "X": 1804,
@@ -519,7 +825,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_8": {
    "X": 618,
@@ -529,7 +841,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   },
   "mobTrick_parts01_9": {
    "X": 643,
@@ -539,7 +857,13 @@
    "PivotX": 0.5,
    "PivotY": 0.5,
    "atlas": 1,
-   "ppu": 73.1
+   "ppu": 73.1,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
   }
  }
 }
