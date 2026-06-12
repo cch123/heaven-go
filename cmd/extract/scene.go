@@ -299,10 +299,22 @@ func exportSheetMulti(tables map[string]*spriteTable) {
 			}
 			continue
 		}
+		base := strings.TrimSuffix(filepath.Base(t.pngPath), ".png")
 		for sname, sp := range t.sheet {
 			sp.Atlas = atlasIdx
 			sp.PPU = t.ppu
-			sheet.Sprites[sname] = sp
+			key := sname
+			if _, dup := sheet.Sprites[key]; dup {
+				// 跨贴图同名切片（cheerReaders 14 张海报均为
+				// TopPart/MiddlePart/BottomPart/Miss）：按文件名命名空间。
+				key = base + "/" + sname
+				for id, n := range t.byID {
+					if n == sname {
+						t.byID[id] = key
+					}
+				}
+			}
+			sheet.Sprites[key] = sp
 		}
 	}
 	writeJSON("sprites.json", sheet)
@@ -998,17 +1010,25 @@ func exportAnimDir(dir string, tables map[string]*spriteTable) {
 }
 
 func copySounds(dir string) {
-	entries, err := os.ReadDir(dir)
-	must(err)
 	n := 0
-	for _, e := range entries {
-		if e.IsDir() || strings.HasSuffix(e.Name(), ".meta") {
-			continue
+	must(filepath.WalkDir(dir, func(p string, d os.DirEntry, err error) error {
+		if err != nil || d.IsDir() || strings.HasSuffix(d.Name(), ".meta") {
+			return err
 		}
-		b, err := os.ReadFile(filepath.Join(dir, e.Name()))
+		rel, err := filepath.Rel(dir, p)
+		if err != nil {
+			return err
+		}
+		// 子目录音效（cheerReaders 的 Solo/Girls/All）保留相对路径作 key
+		dst := filepath.Join(*outDir, "sounds", rel)
+		if err := os.MkdirAll(filepath.Dir(dst), 0o755); err != nil {
+			return err
+		}
+		b, err := os.ReadFile(p)
 		must(err)
-		must(os.WriteFile(filepath.Join(*outDir, "sounds", e.Name()), b, 0o644))
+		must(os.WriteFile(dst, b, 0o644))
 		n++
-	}
+		return nil
+	}))
 	fmt.Printf("sounds: %d copied\n", n)
 }

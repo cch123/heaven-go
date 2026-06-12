@@ -38,6 +38,7 @@ import (
 	"hsdemo/conductor"
 	"hsdemo/engine"
 	"hsdemo/games/bluebear"
+	"hsdemo/games/cheerreaders"
 	"hsdemo/games/kitties"
 	"hsdemo/games/lockstep"
 	"hsdemo/games/marchingorders"
@@ -625,6 +626,7 @@ func main() {
 	engine.Register("seeSaw", seesaw.New)
 	engine.Register("blueBear", bluebear.New)
 	engine.Register("marchingOrders", marchingorders.New)
+	engine.Register("cheerReaders", cheerreaders.New)
 	engine.Register("kitties", kitties.New)
 	engine.Register("lockstep", lockstep.New)
 	engine.Register("spaceDance", spacedance.New)

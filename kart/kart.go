@@ -166,25 +166,32 @@ func Load(dir string, audioRate int) (*Assets, error) {
 		a.Atlas = img
 	}
 
-	sounds, err := filepath.Glob(filepath.Join(dir, "sounds", "*"))
-	if err != nil {
-		return nil, err
-	}
-	for _, p := range sounds {
-		ext := strings.ToLower(filepath.Ext(p))
-		if ext != ".ogg" && ext != ".wav" {
-			continue // .DS_Store 等杂物
-		}
-		raw, err := os.ReadFile(p)
+	sndRoot := filepath.Join(dir, "sounds")
+	if _, err := os.Stat(sndRoot); err == nil {
+		err = filepath.WalkDir(sndRoot, func(p string, d os.DirEntry, err error) error {
+			if err != nil || d.IsDir() {
+				return err
+			}
+			ext := strings.ToLower(filepath.Ext(p))
+			if ext != ".ogg" && ext != ".wav" {
+				return nil // .DS_Store 等杂物
+			}
+			raw, err := os.ReadFile(p)
+			if err != nil {
+				return err
+			}
+			pcm, err := decodePCM(raw, ext, audioRate)
+			if err != nil {
+				return fmt.Errorf("decode %s: %w", p, err)
+			}
+			rel, _ := filepath.Rel(sndRoot, p)
+			key := strings.TrimSuffix(filepath.ToSlash(rel), filepath.Ext(p))
+			a.Sounds[key] = pcm
+			return nil
+		})
 		if err != nil {
 			return nil, err
 		}
-		pcm, err := decodePCM(raw, ext, audioRate)
-		if err != nil {
-			return nil, fmt.Errorf("decode %s: %w", p, err)
-		}
-		base := strings.TrimSuffix(filepath.Base(p), filepath.Ext(p))
-		a.Sounds[base] = pcm
 	}
 	return a, nil
 }

@@ -74,6 +74,7 @@ type SceneInst struct {
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
 	zOver      map[int]float64    // 节点下标 → 世界 z 覆盖（kitties 斜列生成等，根节点语义）
+	spriteOver map[int]string     // 节点下标 → 切片覆盖（sr.sprite 直写，如海报换图）
 
 	queued []ExtraSprite // 本帧注入的动态绘制项
 
@@ -151,6 +152,7 @@ func NewScene(as *Assets) *SceneInst {
 		colorOver:  map[int][4]float64{},
 		posOver:    map[int][2]float64{},
 		zOver:      map[int]float64{},
+		spriteOver: map[int]string{},
 	}
 	for path, ctrlName := range as.Animators {
 		if ctrl, ok := as.Controllers[ctrlName]; ok {
@@ -431,6 +433,18 @@ func (s *SceneInst) ClearPosOver(path string) {
 	}
 }
 
+// SetSpriteOver 覆盖节点的切片（SpriteRenderer.sprite 直写语义；
+// 覆盖在剪辑采样之后生效，空串恢复 prefab/剪辑值）。
+func (s *SceneInst) SetSpriteOver(path, sprite string) {
+	if i, ok := s.byPath[path]; ok {
+		if sprite == "" {
+			delete(s.spriteOver, i)
+		} else {
+			s.spriteOver[i] = sprite
+		}
+	}
+}
+
 // SetZOver 覆盖节点的深度 z（transform.position.z 直写语义；
 // 仅根节点向（worldZ 不再叠加父链））。
 func (s *SceneInst) SetZOver(path string, z float64) {
@@ -510,6 +524,9 @@ func (s *SceneInst) Sample(beat float64) {
 			}
 		}
 		s.applyClip(p, clipT)
+	}
+	for i, sp := range s.spriteOver {
+		s.state[i].sprite = sp
 	}
 	for i, rad := range s.spinOver {
 		s.state[i].rot += rad

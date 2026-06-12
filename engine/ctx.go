@@ -9,6 +9,7 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/audio"
 
 	"hsdemo/kart"
+	"hsdemo/riq"
 )
 
 // Ctx 是模块与引擎之间的接口：资产、场景、时间轴调度与输入注册。
@@ -165,6 +166,9 @@ func (c *Ctx) GameAt(beat float64) string {
 	}
 	return id
 }
+
+// Entities 返回谱面实体（cheerReaders 的 Automatic 仲裁等需要重查参数）。
+func (c *Ctx) Entities() []riq.Entity { return c.App.bm.Entities }
 
 // NextSwitchBeat 返回 beat 之后下一次 switchGame/end 的拍（无则 +Inf；
 // Lockstep.QueueSwitches 的 nextGameSwitchBeat 语义）。
