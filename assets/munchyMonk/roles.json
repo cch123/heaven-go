@@ -1,0 +1,15 @@
+{
+ "Baby": "MonkHolder/Monk/Torso/Baby",
+ "BrowAnim": "MonkHolder/Monk/Head/BrowHolder/Eyebrow",
+ "BrowHolder": "MonkHolder/Monk/Head/BrowHolder",
+ "CloudMonkey": "CloudMonkey",
+ "DumplingObj": "DumplingStuff/DumplingHolder/Dumpling",
+ "MonkAnim": "MonkHolder/Monk",
+ "MonkArmsAnim": "MonkHolder/ArmsHolder/Arms",
+ "MonkHolderAnim": "MonkHolder",
+ "OneGiverAnim": "AssistantHolder1",
+ "StacheAnim": "MonkHolder/Monk/Head/StacheHolder/Mustache",
+ "StacheHolder": "MonkHolder/Monk/Head/StacheHolder",
+ "ThreeGiverAnim": "AssistantHolder3",
+ "TwoGiverAnim": "AssistantHolder2"
+}

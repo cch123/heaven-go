@@ -1,0 +1,2321 @@
+{
+ "nodes": [
+  {
+   "name": "munchyMonk",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "refff",
+   "path": "refff",
+   "parent": 0,
+   "pos": [
+    -0.09,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.38,
+    1.3559992
+   ],
+   "order": 3912,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5803922
+   ],
+   "size": [
+    12.8,
+    7.2
+   ]
+  },
+  {
+   "name": "Bg",
+   "path": "Bg",
+   "parent": 0,
+   "pos": [
+    2.18,
+    -0.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "Bg/Sky",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    150,
+    1.4681876
+   ],
+   "sprite": "munchymonkbg_14",
+   "order": -120,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.88,
+    8.64
+   ]
+  },
+  {
+   "name": "SkyTop",
+   "path": "Bg/Sky/SkyTop",
+   "parent": 3,
+   "pos": [
+    0,
+    14.4147
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.84,
+    21.4694
+   ],
+   "order": -200,
+   "color": [
+    0.69803923,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "WaterBelow",
+   "path": "Bg/Sky/WaterBelow",
+   "parent": 3,
+   "pos": [
+    0,
+    -14.0716
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.84,
+    22.155056
+   ],
+   "order": -80,
+   "color": [
+    0.5176471,
+    0.78431374,
+    0.72156864,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "Bg/Water",
+   "parent": 2,
+   "pos": [
+    11.04,
+    -4.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.807,
+    0.807
+   ],
+   "sprite": "munchymonkbg_9",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    65.51,
+    1.24
+   ]
+  },
+  {
+   "name": "MidHills",
+   "path": "Bg/MidHills",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MediumHills_1",
+   "path": "Bg/MidHills/MediumHills_1",
+   "parent": 7,
+   "pos": [
+    -7.1038,
+    0.51821
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_0",
+   "order": -95,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.14,
+    9.46
+   ]
+  },
+  {
+   "name": "MediumHills_2",
+   "path": "Bg/MidHills/MediumHills_2",
+   "parent": 7,
+   "pos": [
+    18,
+    -0.48483998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_1",
+   "order": -97,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.8,
+    9.48
+   ]
+  },
+  {
+   "name": "MidShortHills",
+   "path": "Bg/MidHills/MidShortHills",
+   "parent": 7,
+   "pos": [
+    10.04,
+    -2.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_0",
+   "order": -95,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.14,
+    9.46
+   ]
+  },
+  {
+   "name": "Mountains",
+   "path": "Bg/Mountains",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mountains_1",
+   "path": "Bg/Mountains/Mountains_1",
+   "parent": 11,
+   "pos": [
+    2.8700001,
+    -1.7026999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4994594,
+    1.4994594
+   ],
+   "sprite": "munchymonkbg_8",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    26.72,
+    4.94
+   ]
+  },
+  {
+   "name": "Mountains_2",
+   "path": "Bg/Mountains/Mountains_2",
+   "parent": 11,
+   "pos": [
+    36.31,
+    -1.7026999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4994594,
+    1.4994594
+   ],
+   "sprite": "munchymonkbg_8",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    26.72,
+    4.94
+   ]
+  },
+  {
+   "name": "ShortHills",
+   "path": "Bg/ShortHills",
+   "parent": 2,
+   "pos": [
+    -10.082,
+    -2.895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_5",
+   "order": -92,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.03,
+    2.95
+   ]
+  },
+  {
+   "name": "ShortHills (1)",
+   "path": "Bg/ShortHills (1)",
+   "parent": 2,
+   "pos": [
+    11.45,
+    -2.895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_5",
+   "order": -92,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.03,
+    2.95
+   ]
+  },
+  {
+   "name": "TallHills",
+   "path": "Bg/TallHills",
+   "parent": 2,
+   "pos": [
+    3.0661,
+    -0.48484
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_1",
+   "order": -97,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.8,
+    9.48
+   ]
+  },
+  {
+   "name": "Clouds",
+   "path": "Bg/Clouds",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallCloud_1",
+   "path": "Bg/Clouds/SmallCloud_1",
+   "parent": 17,
+   "pos": [
+    -4,
+    1.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.1075517,
+    1.1075516
+   ],
+   "sprite": "munchymonkbg_3",
+   "order": -96,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.47,
+    8.96
+   ]
+  },
+  {
+   "name": "BigCloud",
+   "path": "Bg/Clouds/BigCloud",
+   "parent": 17,
+   "pos": [
+    5.5971994,
+    3.1895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_7",
+   "order": -96,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.65,
+    3.57
+   ]
+  },
+  {
+   "name": "SmallCloud_2",
+   "path": "Bg/Clouds/SmallCloud_2",
+   "parent": 17,
+   "pos": [
+    13.31,
+    1.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.1075517,
+    1.1075516
+   ],
+   "sprite": "munchymonkbg_3",
+   "order": -96,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.47,
+    8.96
+   ]
+  },
+  {
+   "name": "MediumCloud",
+   "path": "Bg/Clouds/MediumCloud",
+   "parent": 17,
+   "pos": [
+    19.46,
+    3.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonkbg_6",
+   "order": -96,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.49,
+    2.67
+   ]
+  },
+  {
+   "name": "DesertHill",
+   "path": "Bg/DesertHill",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DesertHillSprite1",
+   "path": "Bg/DesertHill/DesertHillSprite1",
+   "parent": 22,
+   "pos": [
+    -9.226,
+    -2.9735
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_2",
+   "order": -91,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.25,
+    2.68
+   ]
+  },
+  {
+   "name": "DesertHillSprite2",
+   "path": "Bg/DesertHill/DesertHillSprite2",
+   "parent": 22,
+   "pos": [
+    6.0374,
+    -2.9735
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0917743,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_2",
+   "order": -91,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.25,
+    2.68
+   ]
+  },
+  {
+   "name": "DesertHillSprite3",
+   "path": "Bg/DesertHill/DesertHillSprite3",
+   "parent": 22,
+   "pos": [
+    11.765,
+    -2.9735
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.0917747,
+    1.0917743
+   ],
+   "sprite": "munchymonkbg_2",
+   "order": -91,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.25,
+    2.68
+   ]
+  },
+  {
+   "name": "MonkHolder",
+   "path": "MonkHolder",
+   "parent": 0,
+   "pos": [
+    0.25,
+    0.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.94,
+    0.94
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Monk",
+   "path": "MonkHolder/Monk",
+   "parent": 26,
+   "pos": [
+    2.32,
+    0.59
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98419625,
+    0.98419625
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "MonkHolder/Monk/Head",
+   "parent": 27,
+   "pos": [
+    1.15,
+    3.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61142194,
+    0.6038735
+   ],
+   "sprite": "munchymonk_0",
+   "order": 150,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Nose",
+   "path": "MonkHolder/Monk/Head/Nose",
+   "parent": 28,
+   "pos": [
+    -4.301448,
+    -0.2649563
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonk_21",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "MonkHolder/Monk/Head/Mouth",
+   "parent": 28,
+   "pos": [
+    -2.213,
+    -4.14
+   ],
+   "rotZ": 0.049475370931023305,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonk_19",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Ear",
+   "path": "MonkHolder/Monk/Head/Ear",
+   "parent": 28,
+   "pos": [
+    1.08,
+    -0.89
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonk_71",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Eye",
+   "path": "MonkHolder/Monk/Head/Eye",
+   "parent": 28,
+   "pos": [
+    -2.02,
+    1.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonk_20",
+   "order": 180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "EyeBack",
+   "path": "MonkHolder/Monk/Head/EyeBack",
+   "parent": 28,
+   "pos": [
+    -2.14,
+    1.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonk_20",
+   "order": 180,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Brow",
+   "path": "MonkHolder/Monk/Head/Brow",
+   "parent": 28,
+   "pos": [
+    -2.05,
+    2.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonk_27",
+   "order": 250,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "MonkHolder/Monk/Head/Blush",
+   "parent": 28,
+   "pos": [
+    -1.39,
+    -0.61
+   ],
+   "rotZ": 0.059766066879723294,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonk_66",
+   "order": 200,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "BrowHolder",
+   "path": "MonkHolder/Monk/Head/BrowHolder",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eyebrow",
+   "path": "MonkHolder/Monk/Head/BrowHolder/Eyebrow",
+   "parent": 36,
+   "pos": [
+    -1.9,
+    1.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8450219,
+    0.8345894
+   ],
+   "sprite": "munchymonk_62",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "StacheHolder",
+   "path": "MonkHolder/Monk/Head/StacheHolder",
+   "parent": 28,
+   "pos": [
+    0.19,
+    -0.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mustache",
+   "path": "MonkHolder/Monk/Head/StacheHolder/Mustache",
+   "parent": 38,
+   "pos": [
+    -1.49,
+    -1.500001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8450218,
+    0.8345894
+   ],
+   "sprite": "munchymonk_31",
+   "order": 500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "MonkHolder/Monk/Head/StacheHolder/Mustache/Thing",
+   "parent": 39,
+   "pos": [
+    1.27,
+    -1.41
+   ],
+   "rotZ": -1.5423831144508484,
+   "scale": [
+    1.0174909,
+    1.0049292
+   ],
+   "sprite": "munchymonk_31",
+   "order": 500,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "MonkHolder/Monk/Torso",
+   "parent": 27,
+   "pos": [
+    1.4,
+    -4.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6038735,
+    0.6038735
+   ],
+   "sprite": "munchymonk_1",
+   "order": 100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Baby",
+   "path": "MonkHolder/Monk/Torso/Baby",
+   "parent": 41,
+   "pos": [
+    4.3220973,
+    2.566763
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "munchymonk_56",
+   "order": 151,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "BabyHolder",
+   "path": "MonkHolder/Monk/Torso/Baby/BabyHolder",
+   "parent": 42,
+   "pos": [
+    -0.66239053,
+    -0.9770253
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.94,
+    0.95175
+   ],
+   "sprite": "munchymonk_60",
+   "order": 152,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Belt",
+   "path": "MonkHolder/Monk/Torso/Belt",
+   "parent": 41,
+   "pos": [
+    -1.2,
+    -4.51
+   ],
+   "rotZ": 0.19949108399489288,
+   "scale": [
+    0.9901156,
+    0.9901156
+   ],
+   "sprite": "munchymonk_59",
+   "order": 150,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.12,
+    7.060413
+   ]
+  },
+  {
+   "name": "ArmsHolder",
+   "path": "MonkHolder/ArmsHolder",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arms",
+   "path": "MonkHolder/ArmsHolder/Arms",
+   "parent": 45,
+   "pos": [
+    2.28,
+    0.66999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "MonkHolder/ArmsHolder/Arms/Arm",
+   "parent": 46,
+   "pos": [
+    0.6,
+    -4.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.59433,
+    0.59433
+   ],
+   "sprite": "munchymonk_7",
+   "order": 400,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Lines",
+   "path": "MonkHolder/ArmsHolder/Arms/Arm/Lines",
+   "parent": 47,
+   "pos": [
+    0.18,
+    -1.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9745213,
+    0.9745213
+   ],
+   "sprite": "munchymonk_10",
+   "order": 500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Lines (1)",
+   "path": "MonkHolder/ArmsHolder/Arms/Arm/Lines (1)",
+   "parent": 47,
+   "pos": [
+    0.54,
+    -1.47
+   ],
+   "rotZ": -0.2645079115370729,
+   "scale": [
+    1.0429088,
+    1.0429088
+   ],
+   "sprite": "munchymonk_11",
+   "order": 500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "ArmUpper",
+   "path": "MonkHolder/ArmsHolder/Arms/ArmUpper",
+   "parent": 46,
+   "pos": [
+    -1.55,
+    -5.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6062166,
+    0.6062166
+   ],
+   "sprite": "munchymonk_52",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "MonkHolder/ArmsHolder/Arms/Hand",
+   "parent": 46,
+   "pos": [
+    -4.62,
+    -5.5
+   ],
+   "rotZ": 0.11652842977202926,
+   "scale": [
+    0.594,
+    0.594
+   ],
+   "sprite": "munchymonk_37",
+   "order": 300,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Orb",
+   "path": "MonkHolder/ArmsHolder/Arms/Orb",
+   "parent": 46,
+   "pos": [
+    -2.9,
+    -5.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67290044,
+    0.67290044
+   ],
+   "sprite": "munchymonk_44",
+   "order": 350,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "ArmBack",
+   "path": "MonkHolder/ArmsHolder/Arms/ArmBack",
+   "parent": 46,
+   "pos": [
+    -0.53,
+    -3.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.59433,
+    0.59433
+   ],
+   "sprite": "munchymonk_53",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "HandBack",
+   "path": "MonkHolder/ArmsHolder/Arms/HandBack",
+   "parent": 46,
+   "pos": [
+    -1.82,
+    -2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.59433,
+    0.59433
+   ],
+   "sprite": "munchymonk_40",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Smear1",
+   "path": "MonkHolder/ArmsHolder/Arms/Smear1",
+   "parent": 46,
+   "pos": [
+    -2.384458,
+    -2.598796
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6123394,
+    0.6123394
+   ],
+   "sprite": "munchymonk_58",
+   "order": 300,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "AssistantHolder1",
+   "path": "AssistantHolder1",
+   "parent": 0,
+   "pos": [
+    -6.31,
+    -1.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.94,
+    0.94
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "AssistantHolder1/Arm",
+   "parent": 56,
+   "pos": [
+    0,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArmOutline",
+   "path": "AssistantHolder1/Arm/ArmOutline",
+   "parent": 57,
+   "pos": [
+    -1.9200001,
+    -0.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059303,
+    0.60059303
+   ],
+   "sprite": "munchymonk_51",
+   "order": 5500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "ArmFill",
+   "path": "AssistantHolder1/Arm/ArmFill",
+   "parent": 57,
+   "pos": [
+    -2.4599998,
+    -0.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059303,
+    0.60059303
+   ],
+   "sprite": "munchymonk_50",
+   "order": 5200,
+   "color": [
+    1,
+    0.09045226,
+    0,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "AssistantHolder1/Arm/Hand",
+   "parent": 57,
+   "pos": [
+    3.450001,
+    -0.43999982
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059,
+    0.60059
+   ],
+   "sprite": "munchymonk_47",
+   "order": 5300,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "AssistantHolder1/Arm/Smear",
+   "parent": 57,
+   "pos": [
+    1.95,
+    0.13
+   ],
+   "rotZ": -1.5770761519533432,
+   "scale": [
+    0.60059,
+    0.60059
+   ],
+   "sprite": "munchymonk_70",
+   "order": 6000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "AssistantHolder2",
+   "path": "AssistantHolder2",
+   "parent": 0,
+   "pos": [
+    16.56,
+    -1.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.94,
+    0.94
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "AssistantHolder2/LeftArm",
+   "parent": 62,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArmOutline (1)",
+   "path": "AssistantHolder2/LeftArm/ArmOutline (1)",
+   "parent": 63,
+   "pos": [
+    -26.13,
+    -1.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059303,
+    0.60059303
+   ],
+   "sprite": "munchymonk_51",
+   "order": 2000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "ArmFill (1)",
+   "path": "AssistantHolder2/LeftArm/ArmFill (1)",
+   "parent": 63,
+   "pos": [
+    -26.669996,
+    -1.5300002
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059303,
+    0.60059303
+   ],
+   "sprite": "munchymonk_50",
+   "order": 1900,
+   "color": [
+    0.9607843,
+    0.13725491,
+    0.9254902,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Hand (1)",
+   "path": "AssistantHolder2/LeftArm/Hand (1)",
+   "parent": 63,
+   "pos": [
+    -21.052998,
+    -1.0710001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58887845,
+    0.58887845
+   ],
+   "sprite": "munchymonk_5",
+   "order": 2100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Smear (1)",
+   "path": "AssistantHolder2/LeftArm/Smear (1)",
+   "parent": 63,
+   "pos": [
+    -22.379786,
+    -1.0653191
+   ],
+   "rotZ": -1.5770761519533432,
+   "scale": [
+    0.6005851,
+    0.6005851
+   ],
+   "sprite": "munchymonk_70",
+   "order": 3000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "AssistantHolder2/Arm",
+   "parent": 62,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArmOutline",
+   "path": "AssistantHolder2/Arm/ArmOutline",
+   "parent": 68,
+   "pos": [
+    -25.560001,
+    -1.9699999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059303,
+    0.60059303
+   ],
+   "sprite": "munchymonk_51",
+   "order": 2500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "ArmFill",
+   "path": "AssistantHolder2/Arm/ArmFill",
+   "parent": 68,
+   "pos": [
+    -26.1,
+    -1.9699999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059303,
+    0.60059303
+   ],
+   "sprite": "munchymonk_50",
+   "order": 2400,
+   "color": [
+    0.9607843,
+    0.13725491,
+    0.9254902,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "AssistantHolder2/Arm/Hand",
+   "parent": 68,
+   "pos": [
+    -20.483,
+    -1.511
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58887845,
+    0.58887845
+   ],
+   "sprite": "munchymonk_5",
+   "order": 2200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "AssistantHolder2/Arm/Smear",
+   "parent": 68,
+   "pos": [
+    -22.379786,
+    -1.065319
+   ],
+   "rotZ": -1.5770761519533432,
+   "scale": [
+    0.6005851,
+    0.6005851
+   ],
+   "sprite": "munchymonk_70",
+   "order": 2900,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "AssistantHolder3",
+   "path": "AssistantHolder3",
+   "parent": 0,
+   "pos": [
+    -6.31,
+    -1.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.94,
+    0.94
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "AssistantHolder3/Arm",
+   "parent": 73,
+   "pos": [
+    -24.35,
+    -3.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArmOutline",
+   "path": "AssistantHolder3/Arm/ArmOutline",
+   "parent": 74,
+   "pos": [
+    -1.7100004,
+    -0.5400003
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059303,
+    0.60059303
+   ],
+   "sprite": "munchymonk_51",
+   "order": 7500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "ArmFill",
+   "path": "AssistantHolder3/Arm/ArmFill",
+   "parent": 74,
+   "pos": [
+    -2.25,
+    -0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.60059303,
+    0.60059303
+   ],
+   "sprite": "munchymonk_50",
+   "order": 7200,
+   "color": [
+    0.8980392,
+    0.8980392,
+    0.8980392,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "AssistantHolder3/Arm/Hand",
+   "parent": 74,
+   "pos": [
+    4.2980003,
+    1.7859999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61752665,
+    0.61752665
+   ],
+   "sprite": "munchymonk_3",
+   "order": 7300,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "AssistantHolder3/Arm/Smear",
+   "parent": 74,
+   "pos": [
+    1.95,
+    0.13
+   ],
+   "rotZ": -1.5770761519533432,
+   "scale": [
+    0.60059,
+    0.60059
+   ],
+   "sprite": "munchymonk_70",
+   "order": 8000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "DumplingStuff",
+   "path": "DumplingStuff",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DumplingHolder",
+   "path": "DumplingStuff/DumplingHolder",
+   "parent": 79,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dumpling",
+   "path": "DumplingStuff/DumplingHolder/Dumpling",
+   "parent": 80,
+   "pos": [
+    -2.46,
+    -3.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.605,
+    0.605
+   ],
+   "sprite": "MMdumpling",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.25,
+    0.32
+   ]
+  },
+  {
+   "name": "DumplingSmear1",
+   "path": "DumplingStuff/DumplingSmear1",
+   "parent": 79,
+   "pos": [
+    -0.2,
+    -1.67
+   ],
+   "rotZ": -0.6700757995500459,
+   "scale": [
+    0.713743,
+    0.97839886
+   ],
+   "sprite": "munchymonk_69",
+   "order": 1500,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "DumplingSmear2",
+   "path": "DumplingStuff/DumplingSmear2",
+   "parent": 79,
+   "pos": [
+    -0.8,
+    -1.06
+   ],
+   "rotZ": -0.6700757995500459,
+   "scale": [
+    0.713743,
+    0.889181
+   ],
+   "sprite": "munchymonk_69",
+   "order": 1500,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    7.15,
+    4.03
+   ]
+  },
+  {
+   "name": "CloudMonkey",
+   "path": "CloudMonkey",
+   "parent": 0,
+   "pos": [
+    -5,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MonkeyHead",
+   "path": "CloudMonkey/MonkeyHead",
+   "parent": 84,
+   "pos": [
+    -4.611,
+    3.603
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4241314,
+    0.4241314
+   ],
+   "sprite": "munchymonkbg_12",
+   "order": 25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.59,
+    3.5
+   ]
+  },
+  {
+   "name": "MonkeyBody",
+   "path": "CloudMonkey/MonkeyBody",
+   "parent": 84,
+   "pos": [
+    -4.888,
+    3.188
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.42413142,
+    0.42413142
+   ],
+   "sprite": "munchymonkbg_13",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.2,
+    3.53
+   ]
+  },
+  {
+   "name": "MonkeyTail",
+   "path": "CloudMonkey/MonkeyTail",
+   "parent": 84,
+   "pos": [
+    -5.276,
+    3.115
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4656,
+    0.4656
+   ],
+   "sprite": "munchymonkbg_10",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.28,
+    2.28
+   ]
+  },
+  {
+   "name": "MonkeyCloud",
+   "path": "CloudMonkey/MonkeyCloud",
+   "parent": 84,
+   "pos": [
+    -5.2427,
+    2.5783
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4152331,
+    0.4581134
+   ],
+   "sprite": "munchymonkbg_11",
+   "order": 20,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.9,
+    3.87
+   ]
+  }
+ ]
+}

@@ -22,6 +22,7 @@ import (
 	"hsdemo/games/bluebear"
 	"hsdemo/games/marchingorders"
 	"hsdemo/games/meatgrinder"
+	"hsdemo/games/munchymonk"
 	"hsdemo/games/seesaw"
 	"hsdemo/games/somen"
 	"hsdemo/games/totemclimb"
@@ -82,6 +83,7 @@ func main() {
 	engine.Register("seeSaw", seesaw.New)
 	engine.Register("blueBear", bluebear.New)
 	engine.Register("marchingOrders", marchingorders.New)
+	engine.Register("munchyMonk", munchymonk.New)
 
 	app, err := engine.New(*assetsRoot, *path)
 	if err != nil {

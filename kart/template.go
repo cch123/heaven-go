@@ -100,6 +100,7 @@ type Instance struct {
 	players map[int]*instPlayer
 	actives map[int]bool // 模板内下标 → SetActive 覆盖
 	sprites map[int]string
+	colors  map[int][4]float64 // SpriteRenderer.color 覆盖（sr.color 直写）
 }
 
 // NewInstance 创建实例（Offset 先取模板根的 prefab 位置）。
@@ -111,6 +112,7 @@ func (t *Template) NewInstance() *Instance {
 		players: map[int]*instPlayer{},
 		actives: map[int]bool{},
 		sprites: map[int]string{},
+		colors:  map[int][4]float64{},
 	}
 	// controller 默认状态不自动播（Unity 激活时播默认态；由调用方
 	// PlayDefaultState 以正确的 timeScale 启动）
@@ -203,6 +205,16 @@ func (in *Instance) SetActive(relPath string, active bool) {
 	for ti, tn := range in.T.Nodes {
 		if tn.RelPath == relPath {
 			in.actives[ti] = active
+			return
+		}
+	}
+}
+
+// SetColor 覆盖子树内节点的颜色（sr.color 直写，如饺子调色）。
+func (in *Instance) SetColor(relPath string, c [4]float64) {
+	for ti, tn := range in.T.Nodes {
+		if tn.RelPath == relPath {
+			in.colors[ti] = c
 			return
 		}
 	}
@@ -319,6 +331,9 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 	}
 	for ti, sp := range in.sprites {
 		states[ti].sprite = sp
+	}
+	for ti, c := range in.colors {
+		states[ti].color = c
 	}
 	// 剪辑采样
 	for _, p := range in.players {

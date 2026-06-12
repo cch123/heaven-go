@@ -1,0 +1,328 @@
+{
+ "BrowAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Brow/BrowBop",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Brow/BrowIdle",
+    "speed": 1
+   }
+  }
+ },
+ "CloudMonkeyAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "CloudMonkey/Bop",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "DumplingsAnim": {
+  "default": "Idle",
+  "states": {
+   "FallOff": {
+    "clip": "Dumplings/FallOff",
+    "speed": 1
+   },
+   "FollowHand": {
+    "clip": "Dumplings/FollowHand",
+    "speed": 1
+   },
+   "HitHead": {
+    "clip": "Dumplings/HitHead",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Dumplings/Idle",
+    "speed": 1
+   },
+   "IdleOnTop": {
+    "clip": "Dumplings/IdleOnTop",
+    "speed": 1
+   },
+   "Squish": {
+    "clip": "Dumplings/Squish",
+    "speed": 1
+   }
+  }
+ },
+ "HolderAnim": {
+  "default": "IdleLeft",
+  "states": {
+   "GoLeft": {
+    "clip": "Holder/GoLeft",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "IdleLeft",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "GoRight": {
+    "clip": "Holder/GoRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "IdleRight",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "IdleLeft": {
+    "clip": "Holder/IdleLeft",
+    "speed": 1
+   },
+   "IdleRight": {
+    "clip": "Holder/IdleRight",
+    "speed": 1
+   }
+  }
+ },
+ "MonkAnim": {
+  "default": "Idle",
+  "states": {
+   "Barely": {
+    "clip": "Monk/Miss",
+    "speed": 1
+   },
+   "Blush": {
+    "clip": "Monk/Blush",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Monk/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Eat": {
+    "clip": "Monk/Eat",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Monk/Idle",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Monk/Sad",
+    "speed": 1
+   },
+   "NoseRed": {
+    "clip": "Monk/NoseRed",
+    "speed": 1
+   },
+   "Stare": {
+    "clip": "Monk/Stare",
+    "speed": 1
+   }
+  }
+ },
+ "MonkArm": {
+  "default": "ArmIdle",
+  "states": {
+   "ArmIdle": {
+    "clip": "Arm/ArmIdle",
+    "speed": 1
+   },
+   "WristSlap": {
+    "clip": "Arm/WristSlap",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ArmIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "WristSlapWhiff": {
+    "clip": "Arm/WristSlapWhiff",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ArmIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "OneGiverAnim": {
+  "default": "Idle",
+  "states": {
+   "GiveIn": {
+    "clip": "OneGiver/OneGiveIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "InIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "GiveOut": {
+    "clip": "OneGiver/OneGiveOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "OneGiver/OneIdle",
+    "speed": 1
+   },
+   "InIdle": {
+    "clip": "OneGiver/OneInIdle",
+    "speed": 1
+   }
+  }
+ },
+ "SmearAnim": {
+  "default": "SmearIdle",
+  "states": {
+   "SmearAppear": {
+    "clip": "Smears/SmearAppear",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "SmearIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "SmearIdle": {
+    "clip": "Smears/SmearIdle",
+    "speed": 1
+   }
+  }
+ },
+ "StacheAnim": {
+  "default": "Bop1",
+  "states": {
+   "Bop1": {
+    "clip": "Stache/Stache1Bop",
+    "speed": 1
+   },
+   "Bop2": {
+    "clip": "Stache/Stache2Bop",
+    "speed": 1
+   },
+   "Bop3": {
+    "clip": "Stache/Stache3Bop",
+    "speed": 1
+   },
+   "Bop4": {
+    "clip": "Stache/Stache4Bop",
+    "speed": 1
+   },
+   "Idle1": {
+    "clip": "Stache/Stache1Idle",
+    "speed": 1
+   },
+   "Idle2": {
+    "clip": "Stache/Stache2Idle",
+    "speed": 1
+   },
+   "Idle3": {
+    "clip": "Stache/Stache3Idle",
+    "speed": 1
+   },
+   "Idle4": {
+    "clip": "Stache/Stache4Idle",
+    "speed": 1
+   }
+  }
+ },
+ "ThreeGiverAnim": {
+  "default": "Idle",
+  "states": {
+   "GiveIn": {
+    "clip": "ThreeGiver/ThreeGiveIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "InIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "GiveOut": {
+    "clip": "ThreeGiver/ThreeGiveOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "ThreeGiver/ThreeIdle",
+    "speed": 1
+   },
+   "InIdle": {
+    "clip": "ThreeGiver/ThreeInIdle",
+    "speed": 1
+   }
+  }
+ },
+ "TwoGiverAnim": {
+  "default": "Idle",
+  "states": {
+   "GiveIn": {
+    "clip": "TwoGiver/TwoGiveIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "InIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "GiveOut": {
+    "clip": "TwoGiver/TwoGiveOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "TwoGiver/TwoIdle",
+    "speed": 1
+   },
+   "InIdle": {
+    "clip": "TwoGiver/TwoInIdle",
+    "speed": 1
+   }
+  }
+ }
+}

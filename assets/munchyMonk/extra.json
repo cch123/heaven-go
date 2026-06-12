@@ -1,0 +1,300 @@
+{
+ "sequences": {
+  "one_go": [
+   {
+    "clip": "one_1",
+    "beat": 0,
+    "volume": 1
+   },
+   {
+    "clip": "one_2",
+    "beat": 1,
+    "volume": 1
+   }
+  ],
+  "three_go": [
+   {
+    "clip": "three_1",
+    "beat": 0,
+    "volume": 1
+   },
+   {
+    "clip": "three_2",
+    "beat": 1,
+    "volume": 1
+   },
+   {
+    "clip": "three_3",
+    "beat": 2,
+    "volume": 1
+   },
+   {
+    "clip": "three_4",
+    "beat": 3,
+    "volume": 1
+   }
+  ],
+  "two_go": [
+   {
+    "clip": "two_1",
+    "beat": -0.5,
+    "volume": 1
+   },
+   {
+    "clip": "two_2",
+    "beat": 0,
+    "volume": 1
+   },
+   {
+    "clip": "two_3",
+    "beat": 1,
+    "volume": 1
+   },
+   {
+    "clip": "two_4",
+    "beat": 1.5,
+    "volume": 1
+   }
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "isStaring": 0,
+    "lastReportedBeat": 0,
+    "needBlush": 0
+   },
+   "refs": {
+    "Baby": "MonkHolder/Monk/Torso/Baby",
+    "BrowAnim": "MonkHolder/Monk/Head/BrowHolder/Eyebrow",
+    "BrowHolder": "MonkHolder/Monk/Head/BrowHolder",
+    "CloudMonkey": "CloudMonkey",
+    "CloudMonkeyScroll": "CloudMonkey",
+    "DumplingObj": "DumplingStuff/DumplingHolder/Dumpling",
+    "MonkAnim": "MonkHolder/Monk",
+    "MonkArmsAnim": "MonkHolder/ArmsHolder/Arms",
+    "MonkHolderAnim": "MonkHolder",
+    "OneGiverAnim": "AssistantHolder1",
+    "StacheAnim": "MonkHolder/Monk/Head/StacheHolder/Mustache",
+    "StacheHolder": "MonkHolder/Monk/Head/StacheHolder",
+    "ThreeGiverAnim": "AssistantHolder3",
+    "TwoGiverAnim": "AssistantHolder2"
+   },
+   "spriteArrays": {
+    "dumplingSprites": [
+     "MMdumpling",
+     "MMdumpling",
+     "MMdumpling",
+     "MMdumpling",
+     "MMdumpling",
+     "MMdumpling"
+    ]
+   }
+  },
+  "scroll0": {
+   "path": "Bg/Clouds/BigCloud",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -15,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 15,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.15,
+    "YSpeed": 0
+   }
+  },
+  "scroll1": {
+   "path": "Bg/Clouds/MediumCloud",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -15,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 15,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.15,
+    "YSpeed": 0
+   }
+  },
+  "scroll10": {
+   "path": "Bg/Mountains/Mountains_1",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -33,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 33,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.06,
+    "YSpeed": 0
+   }
+  },
+  "scroll11": {
+   "path": "Bg/Mountains/Mountains_2",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -33,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 33,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.06,
+    "YSpeed": 0
+   }
+  },
+  "scroll12": {
+   "path": "Bg/ShortHills",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.42,
+    "YSpeed": 0
+   }
+  },
+  "scroll13": {
+   "path": "Bg/ShortHills (1)",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.42,
+    "YSpeed": 0
+   }
+  },
+  "scroll14": {
+   "path": "Bg/TallHills",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.1,
+    "YSpeed": 0
+   }
+  },
+  "scroll15": {
+   "path": "Bg/Water",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -15.54,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 11.04,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.5,
+    "YSpeed": 0
+   }
+  },
+  "scroll16": {
+   "path": "CloudMonkey",
+   "nums": {
+    "AutoScroll": 0,
+    "NegativeBounds.x": -1000,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 1000,
+    "PositiveBounds.y": 0,
+    "XSpeed": 1,
+    "YSpeed": 0
+   }
+  },
+  "scroll2": {
+   "path": "Bg/Clouds/SmallCloud_1",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -15,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 15,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.15,
+    "YSpeed": 0
+   }
+  },
+  "scroll3": {
+   "path": "Bg/Clouds/SmallCloud_2",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -15,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 15,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.15,
+    "YSpeed": 0
+   }
+  },
+  "scroll4": {
+   "path": "Bg/DesertHill/DesertHillSprite1",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.5,
+    "YSpeed": 0
+   }
+  },
+  "scroll5": {
+   "path": "Bg/DesertHill/DesertHillSprite2",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.5,
+    "YSpeed": 0
+   }
+  },
+  "scroll6": {
+   "path": "Bg/DesertHill/DesertHillSprite3",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.5,
+    "YSpeed": 0
+   }
+  },
+  "scroll7": {
+   "path": "Bg/MidHills/MediumHills_1",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.28,
+    "YSpeed": 0
+   }
+  },
+  "scroll8": {
+   "path": "Bg/MidHills/MediumHills_2",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.1,
+    "YSpeed": 0
+   }
+  },
+  "scroll9": {
+   "path": "Bg/MidHills/MidShortHills",
+   "nums": {
+    "AutoScroll": 1,
+    "NegativeBounds.x": -20,
+    "NegativeBounds.y": 0,
+    "PositiveBounds.x": 20,
+    "PositiveBounds.y": 0,
+    "XSpeed": -0.28,
+    "YSpeed": 0
+   }
+  }
+ }
+}

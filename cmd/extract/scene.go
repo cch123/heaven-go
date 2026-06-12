@@ -40,6 +40,7 @@ type componentSpec struct {
 	name    string
 	markers []string // 必须同时存在的字段
 	atPath  string   // 非空时限定组件所在 GameObject 的 path（同字段集脚本如 TCTotem/TCDragon）
+	multi   bool     // 匹配多个组件：导出为 name0、name1…（按 path 排序）
 }
 
 var sceneSpecs = map[string]sceneSpec{
@@ -123,6 +124,21 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		wantSequences:   true,
 		commonSounds:    []string{"miss.wav", "nearMiss.ogg"},
+	},
+	"munchyMonk": {
+		dir:    "MunchyMonk",
+		prefab: "munchyMonk.prefab",
+		roleFields: []string{
+			"Baby", "BrowHolder", "StacheHolder", "DumplingObj", "CloudMonkey",
+			"OneGiverAnim", "TwoGiverAnim", "ThreeGiverAnim", "BrowAnim",
+			"StacheAnim", "MonkHolderAnim", "MonkAnim", "MonkArmsAnim",
+		},
+		wantControllers: true,
+		wantSequences:   true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"dumplingSprites", "MonkAnim"}},
+			{name: "scroll", markers: []string{"XSpeed", "PositiveBounds"}, multi: true},
+		},
 	},
 	"meatGrinder": {
 		dir:    "MeatGrinder",
@@ -654,7 +670,11 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 	if len(spec.components) > 0 {
 		extra.Components = map[string]kmdata.Component{}
 		for _, cs := range spec.components {
-			found := false
+			type hit struct {
+				p       string
+				content map[string]any
+			}
+			var hits []hit
 			for _, d := range dt.byID {
 				if d.classID != 114 {
 					continue
@@ -677,15 +697,21 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 				if cs.atPath != "" && p != cs.atPath {
 					continue
 				}
-				if found {
-					log.Printf("warn: 组件 %s 匹配多个（path %q），保留首个——用 atPath 限定", cs.name, p)
-					continue
-				}
-				extra.Components[cs.name] = dumpComponent(dt, paths, tables, idx.mappedMats, p, d.content)
-				found = true
+				hits = append(hits, hit{p, d.content})
 			}
-			if !found {
+			sort.Slice(hits, func(i, j int) bool { return hits[i].p < hits[j].p })
+			switch {
+			case len(hits) == 0:
 				log.Fatalf("组件 %s（markers %v）未在 prefab 中找到", cs.name, cs.markers)
+			case cs.multi:
+				for i, h := range hits {
+					extra.Components[fmt.Sprintf("%s%d", cs.name, i)] = dumpComponent(dt, paths, tables, idx.mappedMats, h.p, h.content)
+				}
+			default:
+				if len(hits) > 1 {
+					log.Printf("warn: 组件 %s 匹配 %d 个，保留 path 最小者 %q（用 atPath/multi 限定）", cs.name, len(hits), hits[0].p)
+				}
+				extra.Components[cs.name] = dumpComponent(dt, paths, tables, idx.mappedMats, hits[0].p, hits[0].content)
 			}
 		}
 	}
@@ -801,7 +827,7 @@ func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spri
 				if im == nil {
 					continue
 				}
-				if _, hasID := im["fileID"]; hasID && len(im) <= 2 { // 纯引用数组
+				if _, hasID := im["fileID"]; hasID && len(im) <= 3 { // 纯引用数组（fileID[+guid+type]）
 					val, isSprite := resolveRef(k, im)
 					if isSprite {
 						c.SpriteArrays[k] = append(c.SpriteArrays[k], val)
