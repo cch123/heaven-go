@@ -1,0 +1,1372 @@
+{
+ "nodes": [
+  {
+   "name": "sneakySpirits",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "House",
+   "path": "House",
+   "parent": 0,
+   "pos": [
+    -0.3193,
+    2.044
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.279546,
+    2.279546
+   ],
+   "sprite": "House",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.47,
+    2.63
+   ]
+  },
+  {
+   "name": "Groundtile",
+   "path": "House/Groundtile",
+   "parent": 1,
+   "pos": [
+    0.23,
+    -0.99
+   ],
+   "rotZ": 0,
+   "scale": [
+    331.6418,
+    225.36447
+   ],
+   "sprite": "Groundtile",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "House/Wall",
+   "parent": 1,
+   "pos": [
+    0.004,
+    -1.4542
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Wall",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.47,
+    2.22
+   ]
+  },
+  {
+   "name": "Wall (1)",
+   "path": "House/Wall/Wall (1)",
+   "parent": 3,
+   "pos": [
+    0.828,
+    0.185
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Wall_shadow",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.47,
+    2.22
+   ]
+  },
+  {
+   "name": "Door",
+   "path": "House/Door",
+   "parent": 1,
+   "pos": [
+    -1.419,
+    -0.351
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Door_closed",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.19,
+    1.83
+   ]
+  },
+  {
+   "name": "Tree",
+   "path": "House/Tree",
+   "parent": 1,
+   "pos": [
+    2.507,
+    0.008
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0726686,
+    1.073848
+   ],
+   "sprite": "Tree_1",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    1.43
+   ]
+  },
+  {
+   "name": "Tree Stationary",
+   "path": "House/Tree Stationary",
+   "parent": 1,
+   "pos": [
+    2.507,
+    0.008
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0726686,
+    1.073848
+   ],
+   "sprite": "Tree_1",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    1.43
+   ]
+  },
+  {
+   "name": "HouseOverlap",
+   "path": "House/HouseOverlap",
+   "parent": 1,
+   "pos": [
+    -2.972,
+    0.148
+   ],
+   "rotZ": 0,
+   "scale": [
+    21.347832,
+    22.163277
+   ],
+   "sprite": "Groundtile",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.39,
+    2.59
+   ]
+  },
+  {
+   "name": "Groundtile (1)",
+   "path": "House/Groundtile (1)",
+   "parent": 1,
+   "pos": [
+    0.23,
+    -4.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    84.3925,
+    57.348236
+   ],
+   "sprite": "Groundtile",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "Floor",
+   "path": "House/Floor",
+   "parent": 1,
+   "pos": [
+    0.23,
+    -2.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    84.3925,
+    57.348236
+   ],
+   "sprite": "Groundtile",
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "Rain Slow",
+   "path": "Rain Slow",
+   "parent": 0,
+   "pos": [
+    -1.92,
+    -3.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RainSplash",
+   "path": "Rain Slow/RainSplash",
+   "parent": 11,
+   "pos": [
+    2.21,
+    0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rain",
+   "path": "Rain",
+   "parent": 0,
+   "pos": [
+    0,
+    6.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RainSplash",
+   "path": "Rain/RainSplash",
+   "parent": 13,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BowHolder",
+   "path": "BowHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bow",
+   "path": "BowHolder/Bow",
+   "parent": 15,
+   "pos": [
+    -0.09,
+    -0.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8463,
+    0.8463
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BowSprite",
+   "path": "BowHolder/Bow/BowSprite",
+   "parent": 16,
+   "pos": [
+    4.12,
+    -2.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "sprite": "Bow_neutral",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    1.67
+   ]
+  },
+  {
+   "name": "BowShadow",
+   "path": "BowHolder/Bow/BowShadow",
+   "parent": 16,
+   "pos": [
+    4.266,
+    -4.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "sprite": "Bow_neutral_shadow",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.47
+   ]
+  },
+  {
+   "name": "Arrow",
+   "path": "BowHolder/Bow/Arrow",
+   "parent": 16,
+   "pos": [
+    2.924,
+    -1.928
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "sprite": "Arrow",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.59,
+    0.95
+   ]
+  },
+  {
+   "name": "ArrowShadow",
+   "path": "BowHolder/Bow/ArrowShadow",
+   "parent": 16,
+   "pos": [
+    3.183,
+    -3.577
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "sprite": "Arrow_shadow",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.47
+   ]
+  },
+  {
+   "name": "Button",
+   "path": "BowHolder/Bow/Button",
+   "parent": 16,
+   "pos": [
+    2.52,
+    -1.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "sprite": "Bow_draw_button",
+   "order": 14,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.95,
+    0.63
+   ]
+  },
+  {
+   "name": "Bow_wobble",
+   "path": "BowHolder/Bow/Bow_wobble",
+   "parent": 16,
+   "pos": [
+    4.12,
+    -2.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "sprite": "Bow_wobble",
+   "order": 17,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    1.67
+   ]
+  },
+  {
+   "name": "Bowstring",
+   "path": "BowHolder/Bow/Bow_wobble/Bowstring",
+   "parent": 22,
+   "pos": [
+    0.089,
+    0.038
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bowstring",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.31,
+    1.67
+   ]
+  },
+  {
+   "name": "GhostPositions",
+   "path": "GhostPositions",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "First",
+   "path": "GhostPositions/First",
+   "parent": 24,
+   "pos": [
+    -8.2,
+    -1.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Second",
+   "path": "GhostPositions/Second",
+   "parent": 24,
+   "pos": [
+    -7.24,
+    -1.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Third",
+   "path": "GhostPositions/Third",
+   "parent": 24,
+   "pos": [
+    -6.52,
+    -1.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Fourth",
+   "path": "GhostPositions/Fourth",
+   "parent": 24,
+   "pos": [
+    -5.56,
+    -1.43
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Fifth",
+   "path": "GhostPositions/Fifth",
+   "parent": 24,
+   "pos": [
+    -4.67,
+    -1.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sixth",
+   "path": "GhostPositions/Sixth",
+   "parent": 24,
+   "pos": [
+    -3.8,
+    -1.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Seventh",
+   "path": "GhostPositions/Seventh",
+   "parent": 24,
+   "pos": [
+    -2.99,
+    -1.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GhostDeath",
+   "path": "GhostDeath",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ghost",
+   "path": "GhostDeath/Ghost",
+   "parent": 32,
+   "pos": [
+    -2.44,
+    0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arrow",
+   "path": "GhostDeath/Ghost/Arrow",
+   "parent": 33,
+   "pos": [
+    0.08000001,
+    0.002000004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Arrow_hit_long",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.59,
+    0.95
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "GhostDeath/Ghost/Sprite",
+   "parent": 33,
+   "pos": [
+    -0.147,
+    0.078
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Ghost_hit_nose",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.95
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "GhostDeath/Impact",
+   "parent": 32,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arrow_hit",
+   "path": "GhostDeath/Impact/Arrow_hit",
+   "parent": 36,
+   "pos": [
+    -0.157,
+    -0.413
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Arrow_hit",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.03,
+    0.95
+   ]
+  },
+  {
+   "name": "Ghost_trail_hit",
+   "path": "GhostDeath/Impact/Ghost_trail_hit",
+   "parent": 36,
+   "pos": [
+    -0.375,
+    -0.297
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Ghost_trail_hit",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.19,
+    0.79
+   ]
+  },
+  {
+   "name": "Ghost_trail_hit (1)",
+   "path": "GhostDeath/Impact/Ghost_trail_hit (1)",
+   "parent": 36,
+   "pos": [
+    -0.676,
+    -0.602
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Ghost_trail",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.19,
+    0.79
+   ]
+  },
+  {
+   "name": "ArrowMiss",
+   "path": "ArrowMiss",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArrowSprite",
+   "path": "ArrowMiss/ArrowSprite",
+   "parent": 40,
+   "pos": [
+    -1.232,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Arrow_hit_shrot",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.79
+   ]
+  },
+  {
+   "name": "Arrow_miss_woosh",
+   "path": "ArrowMiss/Arrow_miss_woosh",
+   "parent": 40,
+   "pos": [
+    -1.174,
+    0.192
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Arrow_miss_woosh",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    0.7176471
+   ],
+   "size": [
+    1.11,
+    0.79
+   ]
+  },
+  {
+   "name": "Arrow_miss_woosh",
+   "path": "ArrowMiss/Arrow_miss_woosh/Arrow_miss_woosh",
+   "parent": 42,
+   "pos": [
+    0.804,
+    -0.401
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Arrow_miss_woosh",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    0.7176471
+   ],
+   "size": [
+    1.11,
+    0.78
+   ]
+  },
+  {
+   "name": "Arrow_miss_woosh (1)",
+   "path": "ArrowMiss/Arrow_miss_woosh (1)",
+   "parent": 40,
+   "pos": [
+    -1.129,
+    0.222
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Arrow_miss_woosh",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    0.7176471
+   ],
+   "size": [
+    1.11,
+    0.79
+   ]
+  },
+  {
+   "name": "Arrow_miss_woosh",
+   "path": "ArrowMiss/Arrow_miss_woosh (1)/Arrow_miss_woosh",
+   "parent": 44,
+   "pos": [
+    0.804,
+    -0.401
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Arrow_miss_woosh",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    0.7176471
+   ],
+   "size": [
+    1.11,
+    0.78
+   ]
+  },
+  {
+   "name": "GhostMiss",
+   "path": "GhostMiss",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ghost",
+   "path": "GhostMiss/Ghost",
+   "parent": 46,
+   "pos": [
+    0.318,
+    -0.263
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Ghost_miss",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    0.95
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "GhostMiss/Shadow",
+   "parent": 46,
+   "pos": [
+    0.079,
+    -0.643
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SneakySpirits_35",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.47
+   ]
+  },
+  {
+   "name": "Ghost_nyoom",
+   "path": "GhostMiss/Ghost_nyoom",
+   "parent": 46,
+   "pos": [
+    -0.938,
+    -0.432
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.535,
+    0.68
+   ]
+  },
+  {
+   "name": "Tongue",
+   "path": "GhostMiss/Tongue",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Ghost_tongue1",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.63,
+    0.63
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "GhostMiss/LeftHand",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Ghost_hand1",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    0.47
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "GhostMiss/RightHand",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Ghost_hand1",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    0.47
+   ]
+  }
+ ]
+}

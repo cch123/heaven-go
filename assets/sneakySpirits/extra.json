@@ -1,0 +1,24 @@
+{
+ "refArrays": {
+  "ghostPositions": [
+   "GhostPositions/First",
+   "GhostPositions/Second",
+   "GhostPositions/Third",
+   "GhostPositions/Fourth",
+   "GhostPositions/Fifth",
+   "GhostPositions/Sixth",
+   "GhostPositions/Seventh"
+  ]
+ },
+ "refArrayIdx": {
+  "ghostPositions": [
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31
+  ]
+ }
+}

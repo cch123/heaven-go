@@ -1,0 +1,146 @@
+{
+ "ArrowMiss": {
+  "default": "ArrowRecoil",
+  "states": {
+   "ArrowRecoil": {
+    "clip": "Animations/ArrowRecoil",
+    "speed": 1
+   }
+  }
+ },
+ "Bow": {
+  "default": "BowIdle",
+  "states": {
+   "BowDraw": {
+    "clip": "Animations/BowDraw",
+    "speed": 1
+   },
+   "BowIdle": {
+    "clip": "Animations/BowIdle",
+    "speed": 1
+   },
+   "BowRecoil": {
+    "clip": "Animations/BowRecoil",
+    "speed": 1
+   },
+   "BowRelease": {
+    "clip": "Animations/BowDraw",
+    "speed": -1
+   }
+  }
+ },
+ "BowHolder": {
+  "default": "Entered",
+  "states": {
+   "Enter": {
+    "clip": "Animations/Enter",
+    "speed": 1
+   },
+   "Entered": {
+    "clip": "Animations/Entered",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Animations/Exit",
+    "speed": 1
+   }
+  }
+ },
+ "Door": {
+  "default": "DoorClosed",
+  "states": {
+   "DoorClose": {
+    "clip": "Animations/DoorClose",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "DoorClosed",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DoorClosed": {
+    "clip": "Animations/DoorClosed",
+    "speed": 1
+   },
+   "DoorOpen": {
+    "clip": "Animations/DoorOpen",
+    "speed": 1
+   }
+  }
+ },
+ "GhostDeath": {
+  "default": "GhostDieNose",
+  "states": {
+   "GhostDieBody": {
+    "clip": "Animations/GhostDieBody",
+    "speed": 1
+   },
+   "GhostDieCheek": {
+    "clip": "Animations/GhostDieCheek",
+    "speed": 1
+   },
+   "GhostDieMouth": {
+    "clip": "Animations/GhostDieMouth",
+    "speed": 1
+   },
+   "GhostDieNose": {
+    "clip": "Animations/GhostDieNose",
+    "speed": 1
+   }
+  }
+ },
+ "GhostMiss": {
+  "default": "GhostBarely",
+  "states": {
+   "GhostBarely": {
+    "clip": "Animations/GhostBarely",
+    "speed": 1
+   },
+   "GhostLaugh": {
+    "clip": "Animations/GhostLaugh",
+    "speed": 1
+   },
+   "GhostMiss": {
+    "clip": "Animations/GhostMiss",
+    "speed": 1
+   }
+  }
+ },
+ "MovingGhost": {
+  "default": "Gone",
+  "states": {
+   "Gone": {
+    "clip": "Animations/Gone",
+    "speed": 1
+   },
+   "Move": {
+    "clip": "Animations/Move",
+    "speed": 0.5
+   },
+   "MoveDown": {
+    "clip": "Animations/MoveDown",
+    "speed": 0.5
+   }
+  }
+ },
+ "Tree Stationary": {
+  "default": "TreeSlow",
+  "states": {
+   "TreeSlow": {
+    "clip": "Animations/TreeSlow",
+    "speed": 1
+   }
+  }
+ },
+ "Tree_1": {
+  "default": "Tree",
+  "states": {
+   "Tree": {
+    "clip": "Animations/Tree",
+    "speed": 1
+   }
+  }
+ }
+}

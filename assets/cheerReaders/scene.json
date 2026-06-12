@@ -1578,13 +1578,13 @@
    "path": "NerdsHolder/FirstRow/pepSquad11",
    "parent": 45,
    "pos": [
-    0,
-    0
+    -2.248433,
+    -2.648135
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [
@@ -2261,13 +2261,13 @@
    "path": "NerdsHolder/FirstRow/pepSquad10",
    "parent": 45,
    "pos": [
-    0,
-    0
+    0.8415673,
+    -2.648135
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [
@@ -2943,13 +2943,13 @@
    "path": "NerdsHolder/FirstRow/pepSquad12",
    "parent": 45,
    "pos": [
-    0,
-    0
+    -1.14,
+    0.37
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    1.0412874,
+    1.0696802
    ],
    "order": 0,
    "color": [
@@ -3625,13 +3625,13 @@
    "path": "NerdsHolder/FirstRow/pepSquad9",
    "parent": 45,
    "pos": [
-    0,
-    0
+    3.941567,
+    -2.648135
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [
@@ -4709,13 +4709,13 @@
    "path": "NerdsHolder/SecondRow/pepSquad8",
    "parent": 164,
    "pos": [
-    0,
-    0
+    3.951568,
+    -2.626855
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [
@@ -5391,13 +5391,13 @@
    "path": "NerdsHolder/SecondRow/pepSquad5",
    "parent": 164,
    "pos": [
-    0,
-    0
+    -5.348433,
+    -2.626855
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [
@@ -6073,13 +6073,13 @@
    "path": "NerdsHolder/SecondRow/pepSquad7",
    "parent": 164,
    "pos": [
-    0,
-    0
+    0.8415673,
+    -2.626855
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [
@@ -6755,13 +6755,13 @@
    "path": "NerdsHolder/SecondRow/pepSquad6",
    "parent": 164,
    "pos": [
-    0,
-    0
+    -2.248433,
+    -2.626855
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [
@@ -7494,12 +7494,12 @@
    "parent": 283,
    "pos": [
     3.9715672,
-    -2.6268554
+    -0.86
    ],
    "rotZ": 0,
    "scale": [
-    2.1016078,
-    2.1016078
+    0.46560374,
+    0.46560374
    ],
    "order": 0,
    "color": [
@@ -8550,13 +8550,13 @@
    "path": "NerdsHolder/ThirdRow/pepSquad4",
    "parent": 283,
    "pos": [
-    0,
-    0
+    -5.358433,
+    -0.152
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [
@@ -9232,13 +9232,13 @@
    "path": "NerdsHolder/ThirdRow/pepSquad2",
    "parent": 283,
    "pos": [
-    0,
-    0
+    0.41,
+    -0.168
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    1.0428282,
+    1.0558634
    ],
    "order": 0,
    "color": [
@@ -9915,13 +9915,13 @@
    "path": "NerdsHolder/ThirdRow/pepSquad3",
    "parent": 283,
    "pos": [
-    0,
-    0
+    -2.239433,
+    -0.16
    ],
    "rotZ": 0,
    "scale": [
-    2.110207,
-    2.110207
+    2.101608,
+    2.101608
    ],
    "order": 0,
    "color": [

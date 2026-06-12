@@ -1,0 +1,12 @@
+{
+ "arrowMissPrefab": "ArrowMiss",
+ "bowAnim": "BowHolder/Bow",
+ "bowHolderAnim": "BowHolder",
+ "deathGhostPrefab": "GhostDeath",
+ "doorAnim": "House/Door",
+ "ghostMissPrefab": "GhostMiss",
+ "normalRain": "Rain",
+ "normalTree": "House/Tree",
+ "slowRain": "Rain Slow",
+ "slowTree": "House/Tree Stationary"
+}

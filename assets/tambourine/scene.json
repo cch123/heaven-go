@@ -1,0 +1,1318 @@
+{
+ "nodes": [
+  {
+   "name": "tambourine",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    45.410625,
+    27.6
+   ],
+   "order": -100,
+   "color": [
+    0.21960784,
+    0.54901963,
+    0.8156863,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Monkey",
+   "path": "Monkey",
+   "parent": 0,
+   "pos": [
+    -3.2,
+    1.95
+   ],
+   "rotZ": 0.1528660723436057,
+   "scale": [
+    0.85,
+    0.85
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Monkey/Head",
+   "parent": 2,
+   "pos": [
+    -0.33,
+    -0.27
+   ],
+   "rotZ": 0.19065181761014585,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MonkeyHeadUp",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.26,
+    4.14
+   ]
+  },
+  {
+   "name": "HappyFace",
+   "path": "Monkey/Head/HappyFace",
+   "parent": 3,
+   "pos": [
+    0,
+    -1.119
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MonkeyFaceHappy",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    2.25
+   ]
+  },
+  {
+   "name": "SadFace",
+   "path": "Monkey/Head/SadFace",
+   "parent": 3,
+   "pos": [
+    0.001,
+    -0.948
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MonkeyFaceFail",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    2.25
+   ]
+  },
+  {
+   "name": "Sweat",
+   "path": "Monkey/Head/Sweat",
+   "parent": 3,
+   "pos": [
+    -1.61,
+    -0.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Sweat",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.34,
+    1.04
+   ]
+  },
+  {
+   "name": "Frog",
+   "path": "Monkey/Head/Frog",
+   "parent": 3,
+   "pos": [
+    1,
+    1.71
+   ],
+   "rotZ": -0.19065181761014585,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "frog0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.18
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Monkey/Body",
+   "parent": 2,
+   "pos": [
+    0,
+    -2.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MonkeyBody",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.55,
+    1.73
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "Monkey/LeftArm",
+   "parent": 2,
+   "pos": [
+    -1.02,
+    -2.32
+   ],
+   "rotZ": -0.14784473665632827,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MonkeyArm",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.63,
+    1.41
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "Monkey/LeftArm/Hand",
+   "parent": 9,
+   "pos": [
+    -0.87,
+    -0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MonkeyHand",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3,
+    1.3
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "Monkey/RightArm",
+   "parent": 2,
+   "pos": [
+    0.89,
+    -2.26
+   ],
+   "rotZ": 0.2559388826788337,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "MonkeyArm",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.63,
+    1.41
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "Monkey/RightArm/Hand",
+   "parent": 11,
+   "pos": [
+    -0.87,
+    -0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MonkeyHand",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3,
+    1.3
+   ]
+  },
+  {
+   "name": "LeftFoot",
+   "path": "Monkey/LeftFoot",
+   "parent": 2,
+   "pos": [
+    -0.57,
+    -3.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0895668,
+    1
+   ],
+   "sprite": "MonkeyFootStill1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    1.22
+   ]
+  },
+  {
+   "name": "RightFoot",
+   "path": "Monkey/RightFoot",
+   "parent": 2,
+   "pos": [
+    0.56,
+    -3.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1312,
+    1
+   ],
+   "sprite": "MonkeyFootStill1",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    1.22
+   ]
+  },
+  {
+   "name": "Tambourine",
+   "path": "Monkey/Tambourine",
+   "parent": 2,
+   "pos": [
+    2.53,
+    -2.63
+   ],
+   "rotZ": 0.8218896091217088,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SmallTambourine",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.96,
+    2.71
+   ]
+  },
+  {
+   "name": "SmallTambourineDrum",
+   "path": "Monkey/Tambourine/SmallTambourineDrum",
+   "parent": 15,
+   "pos": [
+    -0.2,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SmallTambourineDrum",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.64,
+    2.7
+   ]
+  },
+  {
+   "name": "STBigShakerBottom",
+   "path": "Monkey/Tambourine/STBigShakerBottom",
+   "parent": 15,
+   "pos": [
+    0.324,
+    -1.106
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "STBigShakerBottom",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.24,
+    0.37
+   ]
+  },
+  {
+   "name": "STMediumShakerMiddle",
+   "path": "Monkey/Tambourine/STMediumShakerMiddle",
+   "parent": 15,
+   "pos": [
+    0.607,
+    -0.94
+   ],
+   "rotZ": -0.23711641732219935,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "STMediumShakerMiddle",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.25,
+    0.38
+   ]
+  },
+  {
+   "name": "STBigShakerTop0",
+   "path": "Monkey/Tambourine/STBigShakerTop0",
+   "parent": 15,
+   "pos": [
+    0.576,
+    -0.589
+   ],
+   "rotZ": -0.31247052815787896,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "STBigShakerTop0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.54
+   ]
+  },
+  {
+   "name": "STBigShakerTop0 (1)",
+   "path": "Monkey/Tambourine/STBigShakerTop0 (1)",
+   "parent": 15,
+   "pos": [
+    0.576,
+    0.573
+   ],
+   "rotZ": 0.26087499872661696,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "STBigShakerTop0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.54
+   ]
+  },
+  {
+   "name": "STBigShakerTop1",
+   "path": "Monkey/Tambourine/STBigShakerTop1",
+   "parent": 15,
+   "pos": [
+    0.572,
+    0.94
+   ],
+   "rotZ": 0.34467688586947437,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "STBigShakerTop1",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.51
+   ]
+  },
+  {
+   "name": "STBigShakerTop1 (1)",
+   "path": "Monkey/Tambourine/STBigShakerTop1 (1)",
+   "parent": 15,
+   "pos": [
+    0.306,
+    1.111
+   ],
+   "rotZ": 0.34467688586947437,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "STBigShakerTop1",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.51
+   ]
+  },
+  {
+   "name": "STSmallShakerTop1",
+   "path": "Monkey/Tambourine/STSmallShakerTop1",
+   "parent": 15,
+   "pos": [
+    0.141,
+    1.274
+   ],
+   "rotZ": 0.2820638244033386,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "STSmallShakerTop1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.33
+   ]
+  },
+  {
+   "name": "STSmallShakerTop1 (1)",
+   "path": "Monkey/Tambourine/STSmallShakerTop1 (1)",
+   "parent": 15,
+   "pos": [
+    0.475,
+    1.221
+   ],
+   "rotZ": 0.2820638244033386,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "STSmallShakerTop1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.33
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Monkey/Shadow",
+   "parent": 2,
+   "pos": [
+    0.014,
+    -3.834
+   ],
+   "rotZ": 0.018337340332737834,
+   "scale": [
+    2,
+    2.6604
+   ],
+   "sprite": "Shadow",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    0.39607844
+   ],
+   "size": [
+    1.32,
+    0.52
+   ]
+  },
+  {
+   "name": "Smack",
+   "path": "Monkey/Smack",
+   "parent": 2,
+   "pos": [
+    -0.05,
+    -3.53
+   ],
+   "rotZ": -0.8186740189773343,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Smack",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8156863
+   ],
+   "size": [
+    1.96,
+    2.17
+   ]
+  },
+  {
+   "name": "WhiteStar",
+   "path": "Monkey/WhiteStar",
+   "parent": 2,
+   "pos": [
+    -0.89,
+    -4.43
+   ],
+   "rotZ": -0.1528660723436057,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "WhiteStar",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8235294
+   ],
+   "size": [
+    0.87,
+    0.85
+   ]
+  },
+  {
+   "name": "WhiteStar (1)",
+   "path": "Monkey/WhiteStar (1)",
+   "parent": 2,
+   "pos": [
+    1.48,
+    -4.08
+   ],
+   "rotZ": -0.1528660723436057,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "WhiteStar",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8235294
+   ],
+   "size": [
+    0.87,
+    0.85
+   ]
+  },
+  {
+   "name": "Player",
+   "path": "Player",
+   "parent": 0,
+   "pos": [
+    -0.6885459,
+    3.18
+   ],
+   "z": -24.23632,
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "Player/Arm",
+   "parent": 29,
+   "pos": [
+    2.6,
+    -6.93
+   ],
+   "z": 24.23632,
+   "rotZ": -0.16825296382889707,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Arm",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.33,
+    2.72
+   ]
+  },
+  {
+   "name": "HoldingHand",
+   "path": "Player/Arm/HoldingHand",
+   "parent": 30,
+   "pos": [
+    0.39,
+    2.31
+   ],
+   "rotZ": 0.10714365904687596,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "HoldingHand",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.19,
+    2.44
+   ]
+  },
+  {
+   "name": "BigTambourine",
+   "path": "Player/Arm/HoldingHand/BigTambourine",
+   "parent": 31,
+   "pos": [
+    -0.64,
+    1.49
+   ],
+   "rotZ": -0.7191896102006763,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BigTambourine",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.15,
+    4.37
+   ]
+  },
+  {
+   "name": "BigTambourineDrum",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BigTambourineDrum",
+   "parent": 32,
+   "pos": [
+    -0.3,
+    -0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BigTambourineDrum",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.64,
+    4.37
+   ]
+  },
+  {
+   "name": "BTBigShakerMiddle",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTBigShakerMiddle",
+   "parent": 32,
+   "pos": [
+    0.94,
+    -1.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTBigShakerMiddle",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.45,
+    0.85
+   ]
+  },
+  {
+   "name": "BTSmallShakerBottom",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTSmallShakerBottom",
+   "parent": 32,
+   "pos": [
+    0.86,
+    -1.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTSmallShakerBottom",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.38,
+    0.54
+   ]
+  },
+  {
+   "name": "BTMediumShakerBottom",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTMediumShakerBottom",
+   "parent": 32,
+   "pos": [
+    0.53,
+    -1.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTMediumShakerBottom",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.38,
+    0.59
+   ]
+  },
+  {
+   "name": "BTSmallShakerTop2",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTSmallShakerTop2",
+   "parent": 32,
+   "pos": [
+    0.28,
+    -2.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTSmallShakerTop2",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.36
+   ]
+  },
+  {
+   "name": "BTBigShakerTop1",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTBigShakerTop1",
+   "parent": 32,
+   "pos": [
+    0.974,
+    0.983
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTBigShakerTop1",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.8
+   ]
+  },
+  {
+   "name": "BTBigShakerTop0",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTBigShakerTop0",
+   "parent": 32,
+   "pos": [
+    0.99,
+    1.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTBigShakerTop0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.44,
+    0.84
+   ]
+  },
+  {
+   "name": "BTBigShakerTop1 (1)",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTBigShakerTop1 (1)",
+   "parent": 32,
+   "pos": [
+    0.45,
+    1.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTBigShakerTop1",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.8
+   ]
+  },
+  {
+   "name": "BTSmallShakerTop1",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTSmallShakerTop1",
+   "parent": 32,
+   "pos": [
+    0.21,
+    2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTSmallShakerTop1",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.45
+   ]
+  },
+  {
+   "name": "BTSmallShakerTop1 (1)",
+   "path": "Player/Arm/HoldingHand/BigTambourine/BTSmallShakerTop1 (1)",
+   "parent": 32,
+   "pos": [
+    0.62,
+    2.07
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BTSmallShakerTop1",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.45
+   ]
+  },
+  {
+   "name": "OpenHand",
+   "path": "Player/OpenHand",
+   "parent": 29,
+   "pos": [
+    -0.31,
+    -5.18
+   ],
+   "z": 24.23632,
+   "rotZ": 0.8462577592026921,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "OpenHand",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.03,
+    4.01
+   ]
+  },
+  {
+   "name": "Smack",
+   "path": "Player/Smack",
+   "parent": 29,
+   "pos": [
+    1.01,
+    -3.9
+   ],
+   "rotZ": 4.777347022706626,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "Smack",
+   "order": 6,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7647059
+   ],
+   "size": [
+    1.96,
+    2.17
+   ]
+  },
+  {
+   "name": "WhiteStar",
+   "path": "Player/WhiteStar",
+   "parent": 29,
+   "pos": [
+    3.66,
+    -2.1
+   ],
+   "z": 24.236322,
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "WhiteStar",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8
+   ],
+   "size": [
+    0.87,
+    0.85
+   ]
+  },
+  {
+   "name": "WhiteStar (1)",
+   "path": "Player/WhiteStar (1)",
+   "parent": 29,
+   "pos": [
+    2.82,
+    -0.91
+   ],
+   "z": 24.236322,
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "WhiteStar",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8
+   ],
+   "size": [
+    0.87,
+    0.85
+   ]
+  },
+  {
+   "name": "WhiteStar (2)",
+   "path": "Player/WhiteStar (2)",
+   "parent": 29,
+   "pos": [
+    1.27,
+    -1.05
+   ],
+   "z": 24.236322,
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "WhiteStar",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8
+   ],
+   "size": [
+    0.87,
+    0.85
+   ]
+  },
+  {
+   "name": "WhiteStar (3)",
+   "path": "Player/WhiteStar (3)",
+   "parent": 29,
+   "pos": [
+    0.05,
+    -1.91
+   ],
+   "z": 24.236322,
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "WhiteStar",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8
+   ],
+   "size": [
+    0.87,
+    0.85
+   ]
+  },
+  {
+   "name": "FlowerParticles",
+   "path": "FlowerParticles",
+   "parent": 0,
+   "pos": [
+    -3.57,
+    1.87
+   ],
+   "rotZ": 0.30199543814396934,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

@@ -131,6 +131,27 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "girl", markers: []string{"faceAnim", "blushLeft"}, multi: true},
 		},
 	},
+	"tambourine": {
+		dir:    "Tambourine",
+		prefab: "tambourine.prefab",
+		roleFields: []string{
+			"handsAnimator", "bg", "monkeyAnimator", "flowerParticles",
+			"happyFace", "sadFace", "sweatAnimator", "frogAnimator",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+	},
+	"sneakySpirits": {
+		dir:    "SneakySpirits",
+		prefab: "sneakySpirits.prefab",
+		roleFields: []string{
+			"bowAnim", "bowHolderAnim", "doorAnim", "arrowMissPrefab", "ghostMissPrefab",
+			"deathGhostPrefab", "normalRain", "slowRain", "normalTree", "slowTree",
+		},
+		refArrayFields:  []string{"ghostPositions"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+	},
 	"spaceDance": {
 		dir:    "SpaceDance",
 		prefab: "spaceDance.prefab",

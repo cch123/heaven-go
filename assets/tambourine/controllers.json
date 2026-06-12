@@ -1,0 +1,160 @@
+{
+ "Frog": {
+  "default": "FrogExited",
+  "states": {
+   "FrogEnter": {
+    "clip": "Animations/FrogEnter",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FrogIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "FrogExit": {
+    "clip": "Animations/FrogExit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FrogExited",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "FrogExited": {
+    "clip": "Animations/FrogExited",
+    "speed": 1
+   },
+   "FrogIdle": {
+    "clip": "Animations/FrogIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Monkey": {
+  "default": "MonkeyIdle",
+  "states": {
+   "MonkeyBop": {
+    "clip": "Animations/MonkeyBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MonkeyIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MonkeyIdle": {
+    "clip": "Animations/MonkeyIdle",
+    "speed": 1
+   },
+   "MonkeyPassTurn": {
+    "clip": "Animations/MonkeyPassTurn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MonkeyIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MonkeyShake": {
+    "clip": "Animations/MonkeyShake",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MonkeyShakeRest",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MonkeyShakeRest": {
+    "clip": "Animations/MonkeyShakeRest",
+    "speed": 1
+   },
+   "MonkeySmack": {
+    "clip": "Animations/MonkeySmack",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MonkeySmackRest",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MonkeySmackRest": {
+    "clip": "Animations/MonkeySmackRest",
+    "speed": 1
+   }
+  }
+ },
+ "Player": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Shake": {
+    "clip": "Animations/Shake",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Smack": {
+    "clip": "Animations/Smack",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Sweat": {
+  "default": "NoSweat",
+  "states": {
+   "NoSweat": {
+    "clip": "Animations/NoSweat",
+    "speed": 1
+   },
+   "Sweating": {
+    "clip": "Animations/Sweating",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NoSweat",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

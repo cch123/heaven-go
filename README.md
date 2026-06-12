@@ -79,8 +79,8 @@ karateman 旧 demo 路径：
 engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
 - AnimatorController 转换的 duration（交叉淡入）按立即切换处理；当前唯一非零用例
   BossCall→BossCallIdle 已逐曲线验证源末帧与目标姿态一致，视觉无差。
-- 缓动函数实现 Linear / Instant / Quad / Cubic / Sine 系（engine/ease.go），
-  其余枚举值回退线性并打日志。
+- 缓动函数全表实现（engine/ease.go，HS Ease 枚举 0..43 含 Expo/Circ/Bounce/
+  Back/Elastic/OutIn/InstantOut）。
 - TMP 文本用源 OTF 排版（原版为 SDF 渲染），字体/字号/颜色/对齐一致，字形边缘
   抗锯齿方式不同；只实现 Center/Middle 对齐（其他对齐出现时显式报错）。
 - 多游戏 remix 中，未激活游戏的 interval 调度音效仍会播放（与 C# MultiSound 全局
@@ -89,6 +89,14 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
   用），未移植——bop 的不悦表现走 `bossAnnoyed ? BossMiss : Bop` 分支，与原版一致。
 - countIn 计数音实现 Normal/Alt/Cowbell 音色；GBA/DS 变体音色目录未提取（出现时
   回退 Normal 并打日志）。
+- kitties：roll 成功后的 spinnya 循环音未实现随机变调（±5%，循环重采样
+  不支持）；音量 0.85 与起止时序一致。
+- cheerReaders：字幕（toggleCaption 启用路径）未实现——官方非 PRACTICE 关
+  均为 version=0 旧谱面且无 toggleCaption 块，按 CheckCaptions 语义自动禁
+  用，行为一致；若自制谱启用会打日志提示。yay 纸花粒子为等价手写实现
+  （白/黑方片爆散），未逐参数复刻 ParticleSystem。
+- lockstep：人群渲染将原版"3 台正交相机 → RenderTexture → 平铺 quad"等价
+  实现为同尺度无限棋盘格直绘（几何/相位/缩放一致）。
 - ppe 后处理（engine/postfx.go）：colorGrading/vignette/cabb/lensD/pixelQuad 按
   PPv2 / X-PostProcessing 公式逐式复刻；bloom 用 1/4 分辨率两轮高斯近似 PPv2 的
   mip 金字塔；grain 用 hash 噪声近似烘焙噪声纹理；anamorphicRatio、technicolor

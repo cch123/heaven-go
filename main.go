@@ -45,8 +45,10 @@ import (
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/munchymonk"
 	"hsdemo/games/seesaw"
+	"hsdemo/games/sneakyspirits"
 	"hsdemo/games/somen"
 	"hsdemo/games/spacedance"
+	"hsdemo/games/tambourine"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
 	"hsdemo/kart"
@@ -620,10 +622,12 @@ func main() {
 
 	// 已移植的游戏模块
 	engine.Register("rhythmSomen", somen.New)
+	engine.Register("tambourine", tambourine.New)
 	engine.Register("trickClass", trickclass.New)
 	engine.Register("meatGrinder", meatgrinder.New)
 	engine.Register("totemClimb", totemclimb.New)
 	engine.Register("seeSaw", seesaw.New)
+	engine.Register("sneakySpirits", sneakyspirits.New)
 	engine.Register("blueBear", bluebear.New)
 	engine.Register("marchingOrders", marchingorders.New)
 	engine.Register("cheerReaders", cheerreaders.New)

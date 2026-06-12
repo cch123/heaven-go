@@ -1,0 +1,10 @@
+{
+ "bg": "Background",
+ "flowerParticles": "FlowerParticles",
+ "frogAnimator": "Monkey/Head/Frog",
+ "handsAnimator": "Player",
+ "happyFace": "Monkey/Head/HappyFace",
+ "monkeyAnimator": "Monkey",
+ "sadFace": "Monkey/Head/SadFace",
+ "sweatAnimator": "Monkey/Head/Sweat"
+}

@@ -27,6 +27,11 @@ func TestControllersResolve(t *testing.T) {
 			continue // 空 controller（prefab 死数据：无状态）
 		}
 		for st, s := range ctrl.States {
+			if name == "BaseAnim" && st == "OpenIdle" {
+				// prefab 死数据：motion guid 50e61f71… 的 .anim 已从上游仓库
+				// 删除，且无任何转换进入该状态（OpenBook 保持末帧）
+				continue
+			}
 			if s.Clip == "" {
 				t.Errorf("controller %s 状态 %s 无剪辑", name, st)
 				continue
