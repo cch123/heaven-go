@@ -2,7 +2,11 @@
 // 整条曲线的归一化时间按各段近似弧长加权分配，段内三次 Bezier。
 package kart
 
-import "hsdemo/kmdata"
+import (
+	"math"
+
+	"hsdemo/kmdata"
+)
 
 const bezierLenSamples = 16
 
@@ -16,14 +20,16 @@ func cubic(t float64, p0, c0, c1, p1 [3]float64) [3]float64 {
 	}
 }
 
+// segLen 是一段三次曲线的近似弧长（三维，等价 NaughtyBezierCurves
+// GetApproximateLengthOfCubicCurve 的采样求和）。
 func segLen(a, b kmdata.CurvePoint) float64 {
 	prev := a.P
 	total := 0.0
 	for i := 1; i <= bezierLenSamples; i++ {
 		t := float64(i) / bezierLenSamples
 		p := cubic(t, a.P, a.RH, b.LH, b.P)
-		dx, dy := p[0]-prev[0], p[1]-prev[1]
-		total += dx*dx + dy*dy // 平方和近似足够做权重（单调）
+		dx, dy, dz := p[0]-prev[0], p[1]-prev[1], p[2]-prev[2]
+		total += math.Sqrt(dx*dx + dy*dy + dz*dz)
 		prev = p
 	}
 	return total
