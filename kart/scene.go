@@ -24,8 +24,11 @@ type sceneNodeState struct {
 	scale  [2]float64
 	sprite string
 	flipX  bool
+	flipY  bool
 	active bool
 	color  [4]float64
+	size   [2]float64 // drawMode != 0 时生效
+	order  int        // sortingOrder（可被动画驱动）
 }
 
 // scenePlayer 是绑定到某个子树根的剪辑播放器。
@@ -117,7 +120,8 @@ func (s *SceneInst) Sample(beat float64) {
 		}
 		s.state[i] = sceneNodeState{
 			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
-			sprite: n.Sprite, flipX: n.FlipX, active: !n.Inactive, color: c,
+			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
+			active: !n.Inactive, color: c, size: n.Size, order: n.Order,
 		}
 	}
 	for _, p := range s.players {
@@ -213,6 +217,14 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 			switch {
 			case attr == "m_FlipX":
 				s.state[i].flipX = v > 0.5
+			case attr == "m_FlipY":
+				s.state[i].flipY = v > 0.5
+			case attr == "m_Size.x":
+				s.state[i].size[0] = v
+			case attr == "m_Size.y":
+				s.state[i].size[1] = v
+			case attr == "m_SortingOrder":
+				s.state[i].order = int(v)
 			case attr == "m_IsActive" || attr == "m_Enabled":
 				s.state[i].active = v > 0.5
 			case strings.HasPrefix(attr, "m_Color."):
@@ -232,8 +244,11 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 }
 
 // Draw 按 (sortingLayer, sortingOrder, DFS) 顺序绘制（需先 Sample）。
+// sortingOrder 可能被动画驱动（m_SortingOrder 曲线），故每帧重排。
 func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
-	for _, i := range s.drawOrder {
+	type item struct{ idx, layer, order int }
+	items := make([]item, 0, len(s.state))
+	for i := range s.state {
 		if !s.actives[i] || s.as.Rig.Nodes[i].Hidden {
 			continue
 		}
@@ -241,6 +256,24 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if st.sprite == "" || st.color[3] <= 0 {
 			continue
 		}
-		s.as.DrawSpriteTint(dst, st.sprite, s.world[i], proj, st.flipX, st.color)
+		items = append(items, item{i, s.as.Rig.Nodes[i].Layer, st.order})
+	}
+	sort.SliceStable(items, func(a, b int) bool {
+		if items[a].layer != items[b].layer {
+			return items[a].layer < items[b].layer
+		}
+		if items[a].order != items[b].order {
+			return items[a].order < items[b].order
+		}
+		return items[a].idx < items[b].idx
+	})
+	for _, it := range items {
+		i := it.idx
+		st := &s.state[i]
+		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color}
+		if s.as.Rig.Nodes[i].DrawMode != 0 {
+			opts.Stretch = st.size
+		}
+		s.as.DrawSpriteOpts(dst, st.sprite, s.world[i], proj, opts)
 	}
 }

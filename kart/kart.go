@@ -249,6 +249,48 @@ func (a *Assets) DrawSpriteTint(dst *ebiten.Image, name string, world, proj Aff,
 	dst.DrawImage(img, op)
 }
 
+// SpriteOpts 是 DrawSpriteOpts 的渲染选项。
+type SpriteOpts struct {
+	FlipX, FlipY bool
+	Tint         [4]float64 // 零值视为白色
+	Stretch      [2]float64 // 非零时拉伸到该尺寸（unit，对应 SpriteRenderer sliced/tiled 的 m_Size）
+}
+
+// DrawSpriteOpts 按选项绘制切片（sliced/tiled 的 m_Size 以整体拉伸近似）。
+func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff, o SpriteOpts) {
+	img := a.Sub(name)
+	if img == nil {
+		return
+	}
+	sp := a.Sheet.Sprites[name]
+	ppu := a.ppuOf(sp)
+	fx, fy := 1.0, 1.0
+	if o.FlipX {
+		fx = -1
+	}
+	if o.FlipY {
+		fy = -1
+	}
+	sx, sy := fx/ppu, fy/ppu
+	if o.Stretch[0] != 0 && o.Stretch[1] != 0 {
+		nw, nh := float64(sp.W)/ppu, float64(sp.H)/ppu
+		if nw > 0 && nh > 0 {
+			sx *= o.Stretch[0] / nw
+			sy *= o.Stretch[1] / nh
+		}
+	}
+	tint := o.Tint
+	if tint == [4]float64{} {
+		tint = [4]float64{1, 1, 1, 1}
+	}
+	local := Scale(sx, -sy).
+		Mul(Translate(-sp.PivotX*float64(sp.W), -(1-sp.PivotY)*float64(sp.H)))
+	op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
+	op.GeoM = proj.Mul(world).Mul(local).GeoM()
+	op.ColorScale.Scale(float32(tint[0]), float32(tint[1]), float32(tint[2]), float32(tint[3]))
+	dst.DrawImage(img, op)
+}
+
 // ---------- 曲线采样 ----------
 
 // evalKeys 对 Hermite 关键帧曲线求值；|斜率| ≥ StepSlope 视为阶跃。

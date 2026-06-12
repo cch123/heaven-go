@@ -52,6 +52,9 @@ type Node struct {
 	FlipX    bool       `json:"flipX,omitempty"`
 	Inactive bool       `json:"inactive,omitempty"` // GameObject m_IsActive == 0
 	Color    [4]float64 `json:"color,omitempty"`    // SpriteRenderer m_Color（零值视为白色）
+	FlipY    bool       `json:"flipY,omitempty"`
+	DrawMode int        `json:"drawMode,omitempty"` // 0=simple 1=sliced 2=tiled
+	Size     [2]float64 `json:"size,omitempty"`     // drawMode != 0 时的渲染尺寸（unit）
 }
 
 // Rig 是一棵节点树（KarateMan 的单骨架与整游戏场景共用此结构）。

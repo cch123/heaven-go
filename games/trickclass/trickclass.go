@@ -171,6 +171,7 @@ func (m *Module) scheduleToss(b float64, typ int, variant bool) {
 				ctx.SoundAt(obj.startBeat+obj.flyBeats, strs["missSound"], 0.4)
 			}
 			ctx.SoundVol(strs["missSound"], 0.6)
+			ctx.Sound("common_miss") // SoundByte.PlayOneShot("miss")
 			m.objMiss(obj)
 			return
 		}

@@ -25,6 +25,7 @@ type sceneSpec struct {
 	curveFields    []string // BezierCurve3D 引用字段
 	objMarkers     []string // 识别"对象模板组件"的字段集合（如 MobTrickObj）
 	wantSequences  bool     // 提取 SoundSequences 组件
+	commonSounds   []string // 需要的公共音效（Assets/Resources/Sfx/<name>）
 }
 
 var sceneSpecs = map[string]sceneSpec{
@@ -45,6 +46,7 @@ var sceneSpecs = map[string]sceneSpec{
 		curveFields:    []string{"ballTossCurve", "ballMissCurve", "planeTossCurve", "planeMissCurve", "shockTossCurve"},
 		objMarkers:     []string{"flyBeats", "dodgeBeats"},
 		wantSequences:  true,
+		commonSounds:   []string{"miss.wav"},
 	},
 }
 
@@ -67,6 +69,12 @@ func extractScene(game string) {
 	exportExtra(spec, docs, idx, paths)
 	exportAnimDir(bundlePath(spec.dir, "Sprites"), tables)
 	copySounds(bundlePath(spec.dir, "Sounds"))
+	for _, name := range spec.commonSounds {
+		b, err := os.ReadFile(filepath.Join(*hsRoot, "Assets", "Resources", "Sfx", name))
+		must(err)
+		// 公共音效加 common_ 前缀避免与游戏音效重名
+		must(os.WriteFile(filepath.Join(*outDir, "sounds", "common_"+name), b, 0o644))
+	}
 	fmt.Println("done.")
 }
 
@@ -201,6 +209,9 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) map[int64]str
 			n.Layer = int(uy.I(r["m_SortingLayer"]))
 			n.Hidden = uy.I(r["m_Enabled"]) == 0
 			n.FlipX = uy.I(r["m_FlipX"]) != 0
+			n.FlipY = uy.I(r["m_FlipY"]) != 0
+			n.DrawMode = int(uy.I(r["m_DrawMode"]))
+			n.Size = [2]float64{uy.F(uy.Get(r, "m_Size", "x")), uy.F(uy.Get(r, "m_Size", "y"))}
 			n.Color = [4]float64{
 				uy.F(uy.Get(r, "m_Color", "r")), uy.F(uy.Get(r, "m_Color", "g")),
 				uy.F(uy.Get(r, "m_Color", "b")), uy.F(uy.Get(r, "m_Color", "a")),
