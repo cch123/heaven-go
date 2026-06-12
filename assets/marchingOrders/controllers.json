@@ -1,0 +1,127 @@
+{
+ "CadetHead": {
+  "default": "HeadIdle",
+  "states": {
+   "FaceL": {
+    "clip": "Cadets/FaceL",
+    "speed": 1
+   },
+   "FaceR": {
+    "clip": "Cadets/FaceR",
+    "speed": 1
+   },
+   "HeadIdle": {
+    "clip": "Cadets/HeadIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Cadets": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Cadets/Bop",
+    "speed": 1
+   },
+   "Clap": {
+    "clip": "Cadets/Clap",
+    "speed": 1
+   },
+   "Halt": {
+    "clip": "Cadets/Halt",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Cadets/Idle",
+    "speed": 1
+   },
+   "MarchL": {
+    "clip": "Cadets/MarchL",
+    "speed": 1
+   },
+   "MarchR": {
+    "clip": "Cadets/MarchR",
+    "speed": 1
+   },
+   "PointL": {
+    "clip": "Cadets/PointL",
+    "speed": 1
+   },
+   "PointR": {
+    "clip": "Cadets/PointR",
+    "speed": 1
+   },
+   "PreMarchL": {
+    "clip": "Cadets/PrepMarchL",
+    "speed": 1
+   },
+   "PrepareClap": {
+    "clip": "Cadets/PrepareClap",
+    "speed": 1
+   }
+  }
+ },
+ "ConveyorAnim": {
+  "default": "Idle",
+  "params": {
+   "shouldMove": false
+  },
+  "states": {
+   "Idle": {
+    "clip": "Conveyor/Idle",
+    "speed": 1
+   },
+   "Moving": {
+    "clip": "Conveyor/Moving",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "shouldMove"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Sarge": {
+  "default": "Idle",
+  "states": {
+   "Anger": {
+    "clip": "Sarge/Anger",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Sarge/Idle",
+    "speed": 1
+   },
+   "Irritate": {
+    "clip": "Sarge/Irritate",
+    "speed": 1
+   },
+   "Talk": {
+    "clip": "Sarge/Talk",
+    "speed": 1
+   }
+  }
+ },
+ "Steam": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Steam/Idle",
+    "speed": 1
+   },
+   "Steam": {
+    "clip": "Steam/Steam",
+    "speed": 1
+   }
+  }
+ }
+}

@@ -38,6 +38,7 @@ import (
 	"hsdemo/conductor"
 	"hsdemo/engine"
 	"hsdemo/games/bluebear"
+	"hsdemo/games/marchingorders"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/seesaw"
 	"hsdemo/games/somen"
@@ -619,6 +620,7 @@ func main() {
 	engine.Register("totemClimb", totemclimb.New)
 	engine.Register("seeSaw", seesaw.New)
 	engine.Register("blueBear", bluebear.New)
+	engine.Register("marchingOrders", marchingorders.New)
 
 	// karateman 仍走早期 demo 路径（未迁移到 engine）
 	if *path != "" {

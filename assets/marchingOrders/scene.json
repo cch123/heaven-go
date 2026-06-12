@@ -1,0 +1,1621 @@
+{
+ "nodes": [
+  {
+   "name": "marchingOrders",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bgFill",
+   "path": "BG/bgFill",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    64,
+    32
+   ],
+   "order": -50,
+   "color": [
+    0.259,
+    0.353,
+    0.404,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "bgWalls",
+   "path": "BG/bgWalls",
+   "parent": 1,
+   "pos": [
+    0,
+    -0.00157
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.082,
+    2.082
+   ],
+   "sprite": "bgWalls",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    30.00913,
+    4.8285537
+   ],
+   "mapped": true,
+   "mat": "tilesMat"
+  },
+  {
+   "name": "bgPipes",
+   "path": "BG/bgPipes",
+   "parent": 1,
+   "pos": [
+    0,
+    1.288
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.08,
+    2.08
+   ],
+   "sprite": "bgPipes",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    29.415764,
+    0.6175508
+   ],
+   "mapped": true,
+   "mat": "pipesMat"
+  },
+  {
+   "name": "bgConveyor",
+   "path": "BG/bgConveyor",
+   "parent": 1,
+   "pos": [
+    6.181,
+    -3.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.082,
+    2.082
+   ],
+   "sprite": "bgConveyor",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    23.825014,
+    1
+   ],
+   "mapped": true,
+   "mat": "conveyorMat"
+  },
+  {
+   "name": "bgConveyorEnd",
+   "path": "BG/bgConveyorEnd",
+   "parent": 1,
+   "pos": [
+    -6.659,
+    -3.2057
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.082,
+    2.082
+   ],
+   "sprite": "bgFloor",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "conveyorMat"
+  },
+  {
+   "name": "bgFloorFill",
+   "path": "BG/bgFloorFill",
+   "parent": 1,
+   "pos": [
+    -19.1052,
+    -3.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    23.578545,
+    2.346476
+   ],
+   "order": -5,
+   "color": [
+    0.16078432,
+    0.25490198,
+    0.2901961,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Sarge",
+   "path": "Sarge",
+   "parent": 0,
+   "pos": [
+    -6.66,
+    -1.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "sargeBody",
+   "path": "Sarge/sargeBody",
+   "parent": 8,
+   "pos": [
+    0.02,
+    -0.513
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "sargeBody",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "sargeHead",
+   "path": "Sarge/sargeHead",
+   "parent": 8,
+   "pos": [
+    0.083,
+    1.421
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "sargeHeadNormal",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Sarge/shadow",
+   "parent": 8,
+   "pos": [
+    0,
+    -2.325
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Steam",
+   "path": "Steam",
+   "parent": 0,
+   "pos": [
+    -6.649,
+    2.213
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "steam0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Cadets",
+   "path": "Cadets",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cadet1",
+   "path": "Cadets/Cadet1",
+   "parent": 13,
+   "pos": [
+    -2.705,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CadetHead",
+   "path": "Cadets/Cadet1/CadetHead",
+   "parent": 14,
+   "pos": [
+    0,
+    0.666
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cadetHead",
+   "path": "Cadets/Cadet1/CadetHead/cadetHead",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cadetHeadNormal",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetTorso",
+   "path": "Cadets/Cadet1/cadetTorso",
+   "parent": 14,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "torsoNormal",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetNeck",
+   "path": "Cadets/Cadet1/cadetNeck",
+   "parent": 14,
+   "pos": [
+    0.018,
+    -0.042
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetNeck",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetLeg1",
+   "path": "Cadets/Cadet1/cadetLeg1",
+   "parent": 14,
+   "pos": [
+    -0.166,
+    -2.2257
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetLegNormal",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetLeg2",
+   "path": "Cadets/Cadet1/cadetLeg2",
+   "parent": 14,
+   "pos": [
+    0.166,
+    -2.2257
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "cadetLegNormal",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetHand1",
+   "path": "Cadets/Cadet1/cadetHand1",
+   "parent": 14,
+   "pos": [
+    -0.688,
+    -1.44
+   ],
+   "rotZ": 0.5502695570968439,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmRaiseUpB",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetArm1",
+   "path": "Cadets/Cadet1/cadetArm1",
+   "parent": 14,
+   "pos": [
+    -0.406,
+    -0.915
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "cadetArmNormal",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetHand2",
+   "path": "Cadets/Cadet1/cadetHand2",
+   "parent": 14,
+   "pos": [
+    0.755,
+    -1.399
+   ],
+   "rotZ": -1.9432899242123245,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmRaiseUpC",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetArm2",
+   "path": "Cadets/Cadet1/cadetArm2",
+   "parent": 14,
+   "pos": [
+    0.406,
+    -0.915
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmNormal",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Cadets/Cadet1/shadow",
+   "parent": 14,
+   "pos": [
+    0,
+    -3.034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "shadow",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Cadet2",
+   "path": "Cadets/Cadet2",
+   "parent": 13,
+   "pos": [
+    0.2087,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CadetHead",
+   "path": "Cadets/Cadet2/CadetHead",
+   "parent": 26,
+   "pos": [
+    0,
+    0.666
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cadetHead",
+   "path": "Cadets/Cadet2/CadetHead/cadetHead",
+   "parent": 27,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cadetHeadNormal",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetTorso",
+   "path": "Cadets/Cadet2/cadetTorso",
+   "parent": 26,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "torsoNormal",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetNeck",
+   "path": "Cadets/Cadet2/cadetNeck",
+   "parent": 26,
+   "pos": [
+    0.018,
+    -0.042
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetNeck",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetLeg1",
+   "path": "Cadets/Cadet2/cadetLeg1",
+   "parent": 26,
+   "pos": [
+    -0.153,
+    -2.2257
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetLegNormal",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetLeg2",
+   "path": "Cadets/Cadet2/cadetLeg2",
+   "parent": 26,
+   "pos": [
+    0.148,
+    -2.2257
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "cadetLegNormal",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetHand1",
+   "path": "Cadets/Cadet2/cadetHand1",
+   "parent": 26,
+   "pos": [
+    -0.688,
+    -1.44
+   ],
+   "rotZ": 0.5502695570968439,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmRaiseUpB",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetArm1",
+   "path": "Cadets/Cadet2/cadetArm1",
+   "parent": 26,
+   "pos": [
+    -0.406,
+    -0.915
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "cadetArmNormal",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetHand2",
+   "path": "Cadets/Cadet2/cadetHand2",
+   "parent": 26,
+   "pos": [
+    0.755,
+    -1.399
+   ],
+   "rotZ": -1.9432899242123245,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmRaiseUpC",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetArm2",
+   "path": "Cadets/Cadet2/cadetArm2",
+   "parent": 26,
+   "pos": [
+    0.406,
+    -0.915
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmNormal",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Cadets/Cadet2/shadow",
+   "parent": 26,
+   "pos": [
+    0,
+    -3.034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "shadow",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Cadet3",
+   "path": "Cadets/Cadet3",
+   "parent": 13,
+   "pos": [
+    3.122,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CadetHead",
+   "path": "Cadets/Cadet3/CadetHead",
+   "parent": 38,
+   "pos": [
+    0,
+    0.666
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cadetHead",
+   "path": "Cadets/Cadet3/CadetHead/cadetHead",
+   "parent": 39,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cadetHeadNormal",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetTorso",
+   "path": "Cadets/Cadet3/cadetTorso",
+   "parent": 38,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "torsoNormal",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetNeck",
+   "path": "Cadets/Cadet3/cadetNeck",
+   "parent": 38,
+   "pos": [
+    0.018,
+    -0.042
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetNeck",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetLeg1",
+   "path": "Cadets/Cadet3/cadetLeg1",
+   "parent": 38,
+   "pos": [
+    -0.153,
+    -2.2257
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetLegNormal",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetLeg2",
+   "path": "Cadets/Cadet3/cadetLeg2",
+   "parent": 38,
+   "pos": [
+    0.148,
+    -2.2257
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "cadetLegNormal",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetHand1",
+   "path": "Cadets/Cadet3/cadetHand1",
+   "parent": 38,
+   "pos": [
+    -0.688,
+    -1.44
+   ],
+   "rotZ": 0.5502695570968439,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmRaiseUpB",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetArm1",
+   "path": "Cadets/Cadet3/cadetArm1",
+   "parent": 38,
+   "pos": [
+    -0.406,
+    -0.915
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "cadetArmNormal",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetHand2",
+   "path": "Cadets/Cadet3/cadetHand2",
+   "parent": 38,
+   "pos": [
+    0.755,
+    -1.399
+   ],
+   "rotZ": -1.9432899242123245,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmRaiseUpC",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetArm2",
+   "path": "Cadets/Cadet3/cadetArm2",
+   "parent": 38,
+   "pos": [
+    0.406,
+    -0.915
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmNormal",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Cadets/Cadet3/shadow",
+   "parent": 38,
+   "pos": [
+    0,
+    -3.034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "shadow",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CadetPlayer",
+   "path": "Cadets/CadetPlayer",
+   "parent": 13,
+   "pos": [
+    6.036,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CadetHead",
+   "path": "Cadets/CadetPlayer/CadetHead",
+   "parent": 50,
+   "pos": [
+    0,
+    0.666
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cadetHead",
+   "path": "Cadets/CadetPlayer/CadetHead/cadetHead",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cadetHeadNormal",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetTorso",
+   "path": "Cadets/CadetPlayer/cadetTorso",
+   "parent": 50,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "torsoNormal",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetNeck",
+   "path": "Cadets/CadetPlayer/cadetNeck",
+   "parent": 50,
+   "pos": [
+    0.018,
+    -0.042
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetNeck",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetLeg1",
+   "path": "Cadets/CadetPlayer/cadetLeg1",
+   "parent": 50,
+   "pos": [
+    -0.153,
+    -2.2257
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetLegNormal",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetLeg2",
+   "path": "Cadets/CadetPlayer/cadetLeg2",
+   "parent": 50,
+   "pos": [
+    0.148,
+    -2.2257
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "cadetLegNormal",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetHand1",
+   "path": "Cadets/CadetPlayer/cadetHand1",
+   "parent": 50,
+   "pos": [
+    -0.688,
+    -1.44
+   ],
+   "rotZ": 0.5502695570968439,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmRaiseUpB",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetArm1",
+   "path": "Cadets/CadetPlayer/cadetArm1",
+   "parent": 50,
+   "pos": [
+    -0.406,
+    -0.915
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.04,
+    1.04
+   ],
+   "sprite": "cadetArmNormal",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetHand2",
+   "path": "Cadets/CadetPlayer/cadetHand2",
+   "parent": 50,
+   "pos": [
+    0.755,
+    -1.399
+   ],
+   "rotZ": -1.9432899242123245,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmRaiseUpC",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "cadetArm2",
+   "path": "Cadets/CadetPlayer/cadetArm2",
+   "parent": 50,
+   "pos": [
+    0.406,
+    -0.915
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "cadetArmNormal",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Cadets/CadetPlayer/shadow",
+   "parent": 50,
+   "pos": [
+    0,
+    -3.034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.04,
+    1.04
+   ],
+   "sprite": "shadow",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

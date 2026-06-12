@@ -62,8 +62,8 @@ type Input struct {
 	// Release 为 true 时在按键"抬起"时判定（HS InputAction_FlickRelease，
 	// totemClimb 高跳的甩出）；否则按下判定。
 	Release bool
-	// Action 是输入动作通道：0 = 主键（Space/J/左键），1 = 副键（F/K，
-	// 对应 HS 的方向键/West，blueBear 的左口等双键游戏用）。
+	// Action 是输入动作通道：0=主键（Space/J/左键） 1=左（F/←/↑）
+	// 2=右（K/→） 3=替代键（L/↓/X，HS 的 South/Alt）。
 	Action int
 	// OnHit 在 NG 窗口内的任意按键触发；state 为 just 窗归一化偏移
 	//（|state|<=1 = just 命中，1<|state|<=2 = NG，负 = 早），与 C# 语义一致。
@@ -426,14 +426,22 @@ func pressed() bool {
 		inpututil.IsMouseButtonJustPressed(ebiten.MouseButtonLeft)
 }
 
-// pressedAlt：副键（动作通道 1）——F / K / 方向键。
-func pressedAlt() bool {
-	return inpututil.IsKeyJustPressed(ebiten.KeyF) ||
-		inpututil.IsKeyJustPressed(ebiten.KeyK) ||
-		inpututil.IsKeyJustPressed(ebiten.KeyUp) ||
-		inpututil.IsKeyJustPressed(ebiten.KeyDown) ||
-		inpututil.IsKeyJustPressed(ebiten.KeyLeft) ||
-		inpututil.IsKeyJustPressed(ebiten.KeyRight)
+// pressedN：动作通道 1=左（F/←/↑）、2=右（K/→）、3=替代（L/↓/X）。
+func pressedN(action int) bool {
+	switch action {
+	case 1:
+		return inpututil.IsKeyJustPressed(ebiten.KeyF) ||
+			inpututil.IsKeyJustPressed(ebiten.KeyLeft) ||
+			inpututil.IsKeyJustPressed(ebiten.KeyUp)
+	case 2:
+		return inpututil.IsKeyJustPressed(ebiten.KeyK) ||
+			inpututil.IsKeyJustPressed(ebiten.KeyRight)
+	case 3:
+		return inpututil.IsKeyJustPressed(ebiten.KeyL) ||
+			inpututil.IsKeyJustPressed(ebiten.KeyDown) ||
+			inpututil.IsKeyJustPressed(ebiten.KeyX)
+	}
+	return false
 }
 
 func released() bool {
@@ -477,8 +485,10 @@ func (a *App) updatePlay() {
 	if a.pressedNow && a.inputOn {
 		a.judgePress(t-a.LatencyMS/1000, beat, false, 0)
 	}
-	if pressedAlt() && a.inputOn {
-		a.judgePress(t-a.LatencyMS/1000, beat, false, 1)
+	for act := 1; act <= 3; act++ {
+		if pressedN(act) && a.inputOn {
+			a.judgePress(t-a.LatencyMS/1000, beat, false, act)
+		}
 	}
 	if a.releasedNow && a.inputOn {
 		a.judgePress(t-a.LatencyMS/1000, beat, true, 0)

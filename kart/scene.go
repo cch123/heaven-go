@@ -79,7 +79,8 @@ type SceneInst struct {
 	cam    [3]float64 // 相机世界位置（vfx/move camera），默认 (0,0,-10)
 	hasCam bool
 
-	palette Palette // 映射材质（mapped 节点）的当前调色板
+	palette  Palette            // 映射材质默认调色板（单材质游戏）
+	palettes map[string]Palette // 按材质名（Node.Mat）覆盖（多材质游戏）
 
 	drawOrder []int // 预排序的可绘制节点（layer, order, dfs）
 }
@@ -91,8 +92,24 @@ func (s *SceneInst) SetCamera(x, y, z float64) {
 	s.cam, s.hasCam = [3]float64{x, y, z}, true
 }
 
-// SetPalette 设置映射材质（CellAnime_MappedInvert）的调色板（recolor 事件）。
+// SetPalette 设置映射材质（CellAnime_MappedInvert）的默认调色板（recolor 事件）。
 func (s *SceneInst) SetPalette(p Palette) { s.palette = p }
+
+// SetPaletteFor 按材质名设置调色板（marchingOrders 的 Tile/Pipe/Conveyor 等）。
+func (s *SceneInst) SetPaletteFor(mat string, p Palette) {
+	if s.palettes == nil {
+		s.palettes = map[string]Palette{}
+	}
+	s.palettes[mat] = p
+}
+
+// paletteOf 取节点应使用的调色板。
+func (s *SceneInst) paletteOf(mat string) Palette {
+	if p, ok := s.palettes[mat]; ok {
+		return p
+	}
+	return s.palette
+}
 
 // camView 返回节点深度 z 处的视图变换（含相机平移与透视缩放）；ok=false 表示在相机背后。
 func (s *SceneInst) camView(z float64) (Aff, bool) {
@@ -425,6 +442,7 @@ type ExtraSprite struct {
 	FlipX, FlipY bool
 	Tint         [4]float64 // 零值视为白色
 	Mapped       bool       // 调色板映射材质（SceneInst.SetPalette）
+	Mat          string     // 映射材质名（按名调色板）
 }
 
 // Queue 注入一帧动态绘制项（Draw 后清空，每帧重新注入）。
@@ -669,7 +687,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			}
 			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint}
 			if q.Mapped {
-				s.as.DrawSpriteMapped(dst, q.Sprite, view.Mul(q.World), proj, qo, s.palette)
+				s.as.DrawSpriteMapped(dst, q.Sprite, view.Mul(q.World), proj, qo, s.paletteOf(q.Mat))
 			} else {
 				s.as.DrawSpriteOpts(dst, q.Sprite, view.Mul(q.World), proj, qo)
 			}
@@ -691,7 +709,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			continue // 相机背后
 		}
 		if s.as.Rig.Nodes[i].Mapped {
-			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, s.palette)
+			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteOf(s.as.Rig.Nodes[i].Mat))
 		} else {
 			s.as.DrawSpriteOpts(dst, st.sprite, view.Mul(s.world[i]), proj, opts)
 		}

@@ -20,6 +20,7 @@
     "cameraMove": 1
    },
    "refs": {
+    "MappingMaterial": "SeeSaw",
     "bgHigh": "Game/Stage/Back/BG (1)",
     "bgLow": "Game/Stage/Back/BG",
     "gradient": "Game/Stage/Back/Gradient",

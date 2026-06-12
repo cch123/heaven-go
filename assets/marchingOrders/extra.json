@@ -1,0 +1,100 @@
+{
+ "refArrays": {
+  "BackgroundRecolorable": [
+   "BG/bgFill",
+   "BG/bgFloorFill"
+  ],
+  "CadetHeads": [
+   "Cadets/Cadet1/CadetHead",
+   "Cadets/Cadet2/CadetHead",
+   "Cadets/Cadet3/CadetHead"
+  ],
+  "Cadets": [
+   "Cadets/Cadet1",
+   "Cadets/Cadet2",
+   "Cadets/Cadet3"
+  ],
+  "ConveyorGo": [
+   "BG/bgConveyor",
+   "Cadets"
+  ],
+  "RecolorMats": [
+   "tilesMat",
+   "pipesMat",
+   "conveyorMat"
+  ]
+ },
+ "sequences": {
+  "susume": [
+   {
+    "clip": "march1",
+    "beat": 0,
+    "volume": 1
+   },
+   {
+    "clip": "marchStart",
+    "beat": 1,
+    "volume": 1
+   }
+  ],
+  "tomare": [
+   {
+    "clip": "halt1",
+    "beat": 0,
+    "volume": 1
+   },
+   {
+    "clip": "halt2",
+    "beat": 1,
+    "volume": 1
+   },
+   {
+    "clip": "stepOther",
+    "beat": 1,
+    "volume": 1
+   }
+  ],
+  "zentai": [
+   {
+    "clip": "attention1",
+    "beat": 0.75,
+    "volume": 1
+   },
+   {
+    "clip": "attention2",
+    "beat": 1,
+    "volume": 1
+   },
+   {
+    "clip": "attention3",
+    "beat": 1.5,
+    "volume": 1
+   }
+  ]
+ },
+ "refArrayIdx": {
+  "BackgroundRecolorable": [
+   2,
+   7
+  ],
+  "CadetHeads": [
+   15,
+   27,
+   39
+  ],
+  "Cadets": [
+   14,
+   26,
+   38
+  ],
+  "ConveyorGo": [
+   5,
+   13
+  ],
+  "RecolorMats": [
+   -1,
+   -1,
+   -1
+  ]
+ }
+}

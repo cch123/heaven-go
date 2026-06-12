@@ -113,6 +113,17 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"_treatCurves", "donutGradient"}},
 		},
 	},
+	"marchingOrders": {
+		dir:    "MarchingOrders",
+		prefab: "marchingOrders.prefab",
+		roleFields: []string{
+			"Sarge", "Steam", "CadetPlayer", "CadetHeadPlayer",
+		},
+		refArrayFields:  []string{"Cadets", "CadetHeads", "BackgroundRecolorable", "RecolorMats", "ConveyorGo"},
+		wantControllers: true,
+		wantSequences:   true,
+		commonSounds:    []string{"miss.wav", "nearMiss.ogg"},
+	},
 	"meatGrinder": {
 		dir:    "MeatGrinder",
 		prefab: "meatGrinder.prefab",
@@ -133,20 +144,27 @@ func bundlePath(dir string, parts ...string) string {
 	return filepath.Join(append([]string{*hsRoot, "Assets", "Bundled", "Games", dir}, parts...)...)
 }
 
-// mappingShaderGUID 是 CellAnime_MappedInvert（调色板映射）shader 的 guid：
-// 贴图 RGB 通道为掩码权重，out = ColorAlpha·r + ColorBravo·g + ColorDelta·b。
-const mappingShaderGUID = "d6702951943fe3f48b9e437dd725e76f"
+// mappingShaderGUIDs 是调色板映射 shader（CellAnime_MappedInvert /
+// CellAnime_Mapped）的 guid：贴图 RGB 通道为掩码权重，
+// out = ColorAlpha·r + ColorBravo·g + ColorDelta·b。
+var mappingShaderGUIDs = []string{
+	"d6702951943fe3f48b9e437dd725e76f", // CellAnime_MappedInvert
+	"ff54fed5718ccc543808dec1f266d1c8", // CellAnime_Mapped
+}
 
-// scanMappedMats 扫描游戏目录下使用映射 shader 的材质 guid 集合。
-func scanMappedMats(root string) map[string]bool {
-	out := map[string]bool{}
+// scanMappedMats 扫描游戏目录下使用映射 shader 的材质，guid → 文件主名。
+func scanMappedMats(root string) map[string]string {
+	out := map[string]string{}
 	for guid, p := range scanGUIDs(root, ".mat") {
 		raw, err := os.ReadFile(p)
 		if err != nil {
 			continue
 		}
-		if strings.Contains(string(raw), mappingShaderGUID) {
-			out[guid] = true
+		for _, sg := range mappingShaderGUIDs {
+			if strings.Contains(string(raw), sg) {
+				out[guid] = strings.TrimSuffix(filepath.Base(p), ".mat")
+				break
+			}
 		}
 	}
 	if len(out) > 0 {
@@ -235,11 +253,11 @@ type docRef struct {
 }
 
 func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
-	raw, err := os.ReadFile(prefabPath)
+	// 展开嵌套 prefab（子 prefab 在游戏目录与共享 Prefabs 下扫描）
+	prefabGUIDs := scanGUIDs(filepath.Dir(prefabPath), ".prefab")
+	docs, err := expandPrefab(prefabPath, prefabGUIDs)
 	must(err)
-	docs, err := uy.Parse(raw)
-	must(err)
-	fmt.Printf("prefab: %d documents\n", len(docs))
+	fmt.Printf("prefab: %d documents（含嵌套展开）\n", len(docs))
 
 	idx := &prefabIndex{
 		goName: map[int64]string{}, tfByGO: map[int64]map[string]any{},
@@ -326,8 +344,9 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]st
 		n.SortGroup = idx.groupByGO[gid]
 		if r := idx.rendByGO[gid]; r != nil {
 			for _, mv := range uy.L(r["m_Materials"]) {
-				if idx.mappedMats[uy.S(uy.Get(uy.M(mv), "guid"))] {
+				if name, ok := idx.mappedMats[uy.S(uy.Get(uy.M(mv), "guid"))]; ok {
 					n.Mapped = true
+					n.Mat = name
 				}
 			}
 			n.Sprite = resolveSprite(tables,
@@ -487,6 +506,11 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 	for _, f := range spec.refArrayFields {
 		for _, rv := range uy.L(script[f]) {
 			fid := uy.I(uy.Get(uy.M(rv), "fileID"))
+			if mname, isMat := idx.mappedMats[uy.S(uy.Get(uy.M(rv), "guid"))]; isMat {
+				extra.RefArrays[f] = append(extra.RefArrays[f], mname)
+				extra.RefArrayIdx[f] = append(extra.RefArrayIdx[f], -1)
+				continue
+			}
 			p, ok := goPathOf(dt, paths, fid)
 			if !ok {
 				log.Printf("warn: refArray %s -> &%d not in scene", f, fid)
@@ -657,7 +681,7 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 					log.Printf("warn: 组件 %s 匹配多个（path %q），保留首个——用 atPath 限定", cs.name, p)
 					continue
 				}
-				extra.Components[cs.name] = dumpComponent(dt, paths, tables, p, d.content)
+				extra.Components[cs.name] = dumpComponent(dt, paths, tables, idx.mappedMats, p, d.content)
 				found = true
 			}
 			if !found {
@@ -705,7 +729,7 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 // 数值/字符串直存；{fileID} 引用 → 节点 path；{fileID, guid} → 图集切片名
 //（解析失败回退节点 path）；x/y/z 向量按分量展开；结构体数组逐项解析。
 func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spriteTable,
-	p string, content map[string]any) kmdata.Component {
+	mats map[string]string, p string, content map[string]any) kmdata.Component {
 	c := kmdata.Component{
 		Path: p,
 		Nums: map[string]float64{}, Strs: map[string]string{},
@@ -721,6 +745,9 @@ func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spri
 		if g := uy.S(m["guid"]); g != "" {
 			if name := resolveSprite(tables, g, fid); name != "" {
 				return name, true // sprite
+			}
+			if name, ok := mats[g]; ok {
+				return name, false // 映射材质 → 文件主名
 			}
 		}
 		rp, ok := goPathOf(dt, paths, fid)

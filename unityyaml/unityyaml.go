@@ -21,9 +21,10 @@ import (
 
 // Doc 是一个 Unity YAML 文档。
 type Doc struct {
-	ClassID int   // Unity class，如 1=GameObject 4=Transform 74=AnimationClip 95=Animator 212=SpriteRenderer
-	FileID  int64 // 文档内引用锚
-	Root    map[string]any
+	ClassID  int   // Unity class，如 1=GameObject 4=Transform 74=AnimationClip 95=Animator 212=SpriteRenderer
+	FileID   int64 // 文档内引用锚
+	Stripped bool  // 嵌套 prefab 的剥离引用文档
+	Root     map[string]any
 }
 
 var docMarker = regexp.MustCompile(`(?m)^--- !u!(\d+) &(-?\d+)( stripped)?\s*$`)
@@ -50,7 +51,7 @@ func Parse(data []byte) ([]Doc, error) {
 		if err := yaml.Unmarshal([]byte(text[bodyStart:bodyEnd]), &root); err != nil {
 			return nil, fmt.Errorf("doc !u!%d &%d: %w", classID, fileID, err)
 		}
-		docs = append(docs, Doc{ClassID: classID, FileID: fileID, Root: root})
+		docs = append(docs, Doc{ClassID: classID, FileID: fileID, Stripped: m[6] >= 0, Root: root})
 	}
 	return docs, nil
 }

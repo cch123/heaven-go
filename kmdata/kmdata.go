@@ -63,6 +63,9 @@ type Node struct {
 	// Mapped 表示渲染器使用调色板映射材质（CellAnime_MappedInvert：
 	// 贴图 RGB 通道为掩码，out = A·r + B·g + D·b，运行时换色）。
 	Mapped bool `json:"mapped,omitempty"`
+	// Mat 是映射材质的文件主名（多材质游戏按名换色，如 marchingOrders
+	// 的 Tile/Pipe/Conveyor 三组调色板）。
+	Mat string `json:"mat,omitempty"`
 }
 
 // Rig 是一棵节点树（KarateMan 的单骨架与整游戏场景共用此结构）。

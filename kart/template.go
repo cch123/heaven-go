@@ -363,7 +363,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			Sprite: st.sprite, World: world[ti], Z: z,
 			Layer: n.Layer, Order: st.order,
 			FlipX: st.flipX, FlipY: st.flipY, Tint: st.color,
-			Mapped: n.Mapped,
+			Mapped: n.Mapped, Mat: n.Mat,
 		})
 	}
 }

@@ -237,7 +237,7 @@ type prefabIndex struct {
 	rendByGO  map[int64]map[string]any // GameObject fileID → SpriteRenderer 内容
 	groupByGO map[int64][]int          // GameObject fileID → SortingGroup [layer, order]
 
-	mappedMats map[string]bool // 调色板映射材质 guid 集合（scene 模式填充）
+	mappedMats map[string]string // 调色板映射材质 guid → 文件主名（scene 模式填充）
 }
 
 // xAff 是提取器内部的 2D 仿射（与 kart.Aff 同布局）。
