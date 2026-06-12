@@ -39,6 +39,7 @@ import (
 	"hsdemo/engine"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/somen"
+	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
 	"hsdemo/kart"
 	"hsdemo/riq"
@@ -613,6 +614,7 @@ func main() {
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("trickClass", trickclass.New)
 	engine.Register("meatGrinder", meatgrinder.New)
+	engine.Register("totemClimb", totemclimb.New)
 
 	// karateman 仍走早期 demo 路径（未迁移到 engine）
 	if *path != "" {

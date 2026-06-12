@@ -21,6 +21,7 @@ import (
 	// 已移植模块（与主程序保持同步）
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/somen"
+	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
 )
 
@@ -74,6 +75,7 @@ func main() {
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("trickClass", trickclass.New)
 	engine.Register("meatGrinder", meatgrinder.New)
+	engine.Register("totemClimb", totemclimb.New)
 
 	app, err := engine.New(*assetsRoot, *path)
 	if err != nil {

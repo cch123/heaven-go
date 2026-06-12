@@ -76,6 +76,12 @@ func (c *Conductor) Update() {
 
 	c.pos += dt
 
+	// 音频播完后 Position() 冻结：改纯单调时钟推进，否则漂移校正会把
+	// 时间拽住，谱面尾部（音频结束之后的 end 事件）永远到不了
+	if !c.player.IsPlaying() && c.pos >= c.player.Position().Seconds() {
+		return
+	}
+
 	real := c.player.Position().Seconds()
 	c.drift = c.pos - real
 	if abs(c.drift) > snapThreshold {

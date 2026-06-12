@@ -73,7 +73,37 @@ type SceneInst struct {
 
 	queued []ExtraSprite // 本帧注入的动态绘制项
 
+	cam    [3]float64 // 相机世界位置（vfx/move camera），默认 (0,0,-10)
+	hasCam bool
+
 	drawOrder []int // 预排序的可绘制节点（layer, order, dfs）
+}
+
+// SetCamera 设置相机世界位置（GameCamera：默认 (0,0,-10)、FOV 53.15°）。
+// 透视缩放从 s = CamDist/(CamDist+z) 推广为 s = CamDist/(z - camZ)，
+// 屏幕坐标先平移 -cam.xy 再缩放（vfx/move camera 的拉近/平移）。
+func (s *SceneInst) SetCamera(x, y, z float64) {
+	s.cam, s.hasCam = [3]float64{x, y, z}, true
+}
+
+// camView 返回节点深度 z 处的视图变换（含相机平移与透视缩放）；ok=false 表示在相机背后。
+func (s *SceneInst) camView(z float64) (Aff, bool) {
+	if !s.hasCam {
+		if z == 0 {
+			return Identity(), true
+		}
+		ps := CamDist / (CamDist + z)
+		if ps <= 0 {
+			return Identity(), false
+		}
+		return Scale(ps, ps), true
+	}
+	d := z - s.cam[2]
+	if d <= 0 {
+		return Identity(), false
+	}
+	ps := CamDist / d
+	return Scale(ps, ps).Mul(Translate(-s.cam[0], -s.cam[1])), true
 }
 
 func NewScene(as *Assets) *SceneInst {
@@ -556,15 +586,11 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 	for _, it := range items {
 		if it.extra >= 0 {
 			q := &s.queued[it.extra]
-			world := q.World
-			if q.Z != 0 {
-				ps := CamDist / (CamDist + q.Z)
-				if ps <= 0 {
-					continue
-				}
-				world = Scale(ps, ps).Mul(world)
+			view, ok := s.camView(q.Z)
+			if !ok {
+				continue
 			}
-			s.as.DrawSpriteOpts(dst, q.Sprite, world, proj,
+			s.as.DrawSpriteOpts(dst, q.Sprite, view.Mul(q.World), proj,
 				SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint})
 			continue
 		}
@@ -579,15 +605,11 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			}
 			opts.Stretch = st.size
 		}
-		world := s.world[i]
-		if z := s.worldZ[i]; z != 0 {
-			ps := CamDist / (CamDist + z)
-			if ps <= 0 {
-				continue // 相机背后
-			}
-			world = Scale(ps, ps).Mul(world)
+		view, ok := s.camView(s.worldZ[i])
+		if !ok {
+			continue // 相机背后
 		}
-		s.as.DrawSpriteOpts(dst, st.sprite, world, proj, opts)
+		s.as.DrawSpriteOpts(dst, st.sprite, view.Mul(s.world[i]), proj, opts)
 	}
 	s.queued = s.queued[:0]
 }

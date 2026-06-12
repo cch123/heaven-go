@@ -30,6 +30,16 @@ type sceneSpec struct {
 	commonSounds    []string // 需要的公共音效（Assets/Resources/Sfx/<name>）
 	wantControllers bool     // 提取 AnimatorController 状态机（controllers.json + animators.json）
 	wantTexts       bool     // 提取 TMP 世界文本（texts.json + fonts/）
+
+	components []componentSpec // 通用组件 dump（Extra.Components）
+}
+
+// componentSpec 按字段特征（可选限定 GameObject path）识别一个 MonoBehaviour，
+// 全字段通用 dump 到 Extra.Components[name]。
+type componentSpec struct {
+	name    string
+	markers []string // 必须同时存在的字段
+	atPath  string   // 非空时限定组件所在 GameObject 的 path（同字段集脚本如 TCTotem/TCDragon）
 }
 
 var sceneSpecs = map[string]sceneSpec{
@@ -51,6 +61,28 @@ var sceneSpecs = map[string]sceneSpec{
 		objMarkers:     []string{"flyBeats", "dodgeBeats"},
 		wantSequences:  true,
 		commonSounds:   []string{"miss.wav"},
+	},
+	"totemClimb": {
+		dir:    "TotemClimb",
+		prefab: "totemClimb.prefab",
+		roleFields: []string{
+			"_cameraTransform", "_scrollTransform", "_jumper", "_totemManager",
+			"_birdManager", "_groundHolder", "_fakeTotemHolder",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav", "nearMiss.ogg"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"_scrollSpeedX", "_scrollTransform"}},
+			{name: "jumper", markers: []string{"_jumpHeight", "_initialPoint"}},
+			{name: "totemManager", markers: []string{"_xDistance", "_totemTransform"}},
+			{name: "birdManager", markers: []string{"_birdRef", "_speedX"}},
+			{name: "groundManager", markers: []string{"_groundFirst"}},
+			{name: "pillarManager", markers: []string{"_pillarFirst"}},
+			{name: "backgroundManager", markers: []string{"_objectsParent"}},
+			{name: "totem", markers: []string{"_anim", "_jumperPoint"}, atPath: "Game/Scrollable/Totems/Totem"},
+			{name: "dragon", markers: []string{"_anim", "_jumperPoint"}, atPath: "Game/Scrollable/Totems/Dragon"},
+			{name: "frog", markers: []string{"_animLeft", "_jumperPointLeft"}},
+		},
 	},
 	"meatGrinder": {
 		dir:    "MeatGrinder",
@@ -345,7 +377,7 @@ func goPathOf(dt *docTable, paths map[int64]string, fid int64) (string, bool) {
 }
 
 func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64]string, nodeIdx map[int64]int, tables map[string]*spriteTable) {
-	if len(spec.refArrayFields)+len(spec.strArrayFields)+len(spec.curveFields)+len(spec.objMarkers) == 0 && !spec.wantSequences {
+	if len(spec.refArrayFields)+len(spec.strArrayFields)+len(spec.curveFields)+len(spec.objMarkers)+len(spec.components) == 0 && !spec.wantSequences {
 		return
 	}
 	// 游戏主脚本（与 exportRoles 相同的定位方式）
@@ -537,6 +569,46 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 		}
 	}
 
+	// 通用组件 dump
+	if len(spec.components) > 0 {
+		extra.Components = map[string]kmdata.Component{}
+		for _, cs := range spec.components {
+			found := false
+			for _, d := range dt.byID {
+				if d.classID != 114 {
+					continue
+				}
+				ok := true
+				for _, mk := range cs.markers {
+					if _, has := d.content[mk]; !has {
+						ok = false
+						break
+					}
+				}
+				if !ok {
+					continue
+				}
+				gid := uy.I(uy.Get(d.content, "m_GameObject", "fileID"))
+				p, inScene := paths[gid]
+				if !inScene {
+					continue
+				}
+				if cs.atPath != "" && p != cs.atPath {
+					continue
+				}
+				if found {
+					log.Printf("warn: 组件 %s 匹配多个（path %q），保留首个——用 atPath 限定", cs.name, p)
+					continue
+				}
+				extra.Components[cs.name] = dumpComponent(dt, paths, tables, p, d.content)
+				found = true
+			}
+			if !found {
+				log.Fatalf("组件 %s（markers %v）未在 prefab 中找到", cs.name, cs.markers)
+			}
+		}
+	}
+
 	if spec.wantSequences {
 		for _, d := range dt.byID {
 			if d.classID != 114 {
@@ -570,6 +642,98 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 	writeJSON("extra.json", extra)
 	fmt.Printf("extra: %d refArrays, %d curves, %d obj templates, %d sequences\n",
 		len(extra.RefArrays), len(extra.Curves), len(extra.ObjNums), len(extra.Sequences))
+}
+
+// dumpComponent 通用 dump 一个 MonoBehaviour 的全部序列化字段：
+// 数值/字符串直存；{fileID} 引用 → 节点 path；{fileID, guid} → 图集切片名
+//（解析失败回退节点 path）；x/y/z 向量按分量展开；结构体数组逐项解析。
+func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spriteTable,
+	p string, content map[string]any) kmdata.Component {
+	c := kmdata.Component{
+		Path: p,
+		Nums: map[string]float64{}, Strs: map[string]string{},
+		Refs: map[string]string{}, Sprites: map[string]string{},
+		RefArrays: map[string][]string{}, SpriteArrays: map[string][]string{},
+		Lists: map[string][]kmdata.ComponentItem{},
+	}
+	resolveRef := func(field string, m map[string]any) (string, bool) {
+		fid := uy.I(m["fileID"])
+		if fid == 0 {
+			return "", false
+		}
+		if g := uy.S(m["guid"]); g != "" {
+			if name := resolveSprite(tables, g, fid); name != "" {
+				return name, true // sprite
+			}
+		}
+		rp, ok := goPathOf(dt, paths, fid)
+		if !ok {
+			log.Printf("warn: 组件字段 %s.%s 引用 &%d 无法解析", p, field, fid)
+			return "", false
+		}
+		return rp, false
+	}
+	for k, v := range content {
+		if strings.HasPrefix(k, "m_") || k == "SoundSequences" {
+			continue
+		}
+		switch tv := v.(type) {
+		case int, int64, uint64, float64:
+			c.Nums[k] = uy.F(v)
+		case string:
+			c.Strs[k] = tv
+		case map[string]any:
+			if _, hasID := tv["fileID"]; hasID {
+				val, isSprite := resolveRef(k, tv)
+				if val == "" {
+					continue
+				}
+				if isSprite {
+					c.Sprites[k] = val
+				} else {
+					c.Refs[k] = val
+				}
+			} else if _, hasX := tv["x"]; hasX {
+				for _, axis := range []string{"x", "y", "z", "w"} {
+					if av, ok := tv[axis]; ok {
+						c.Nums[k+"."+axis] = uy.F(av)
+					}
+				}
+			}
+		case []any:
+			for _, iv := range tv {
+				im := uy.M(iv)
+				if im == nil {
+					continue
+				}
+				if _, hasID := im["fileID"]; hasID && len(im) <= 2 { // 纯引用数组
+					val, isSprite := resolveRef(k, im)
+					if isSprite {
+						c.SpriteArrays[k] = append(c.SpriteArrays[k], val)
+					} else {
+						c.RefArrays[k] = append(c.RefArrays[k], val)
+					}
+					continue
+				}
+				// 结构体数组项
+				item := kmdata.ComponentItem{Nums: map[string]float64{}, Refs: map[string]string{}}
+				for ik, ivv := range im {
+					switch itv := ivv.(type) {
+					case int, int64, uint64, float64:
+						item.Nums[ik] = uy.F(ivv)
+					case map[string]any:
+						if _, hasID := itv["fileID"]; hasID {
+							if val, isSprite := resolveRef(k+"."+ik, itv); val != "" && !isSprite {
+								item.Refs[ik] = val
+							}
+						}
+					}
+				}
+				c.Lists[k] = append(c.Lists[k], item)
+			}
+		}
+	}
+	return c
 }
 
 // ---------- anims / sounds ----------

@@ -109,6 +109,29 @@ type Extra struct {
 	ObjRefs map[string]map[string]string `json:"objRefs,omitempty"`
 	// ObjSprites：模板组件的 sprite 引用数组字段 → 切片名列表（如 Meat.meats）。
 	ObjSprites map[string]map[string][]string `json:"objSprites,omitempty"`
+	// Components：按 componentSpec 通用 dump 的脚本组件（totemClimb 起用，
+	// 同一 GameObject 可挂多个脚本，按 spec 名而非 path 作键）。
+	Components map[string]Component `json:"components,omitempty"`
+}
+
+// Component 是一个 MonoBehaviour 的全字段 dump：
+// 数值/字符串直存，fileID 引用解析为节点 path，sprite 引用解析为切片名，
+// 结构体数组（如 BackgroundScrollPair）逐项解析。
+type Component struct {
+	Path         string                       `json:"path"`
+	Nums         map[string]float64           `json:"nums,omitempty"`
+	Strs         map[string]string            `json:"strs,omitempty"`
+	Refs         map[string]string            `json:"refs,omitempty"`         // 字段 → 节点 path
+	Sprites      map[string]string            `json:"sprites,omitempty"`      // 字段 → 切片名
+	RefArrays    map[string][]string          `json:"refArrays,omitempty"`    // 字段 → 节点 path 列表
+	SpriteArrays map[string][]string          `json:"spriteArrays,omitempty"` // 字段 → 切片名列表
+	Lists        map[string][]ComponentItem   `json:"lists,omitempty"`        // 结构体数组字段
+}
+
+// ComponentItem 是结构体数组的一项（引用解析为 path，数值直存）。
+type ComponentItem struct {
+	Nums map[string]float64 `json:"nums,omitempty"`
+	Refs map[string]string  `json:"refs,omitempty"`
 }
 
 // ---------- AnimatorController（controllers.json / animators.json） ----------

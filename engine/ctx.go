@@ -2,7 +2,10 @@
 package engine
 
 import (
+	"bytes"
 	"path/filepath"
+
+	"github.com/hajimehoshi/ebiten/v2/audio"
 
 	"hsdemo/kart"
 )
@@ -71,8 +74,43 @@ func (c *Ctx) SoundAt(beat float64, name string, vol float64) {
 // ScheduleInput 注册一次输入判定（HS Minigame.ScheduleInput 等价物）。
 // onHit 的 state：just 窗归一化偏移，|state|<=1 = just，1<|state|<=2 = NG，负 = 早。
 func (c *Ctx) ScheduleInput(beat float64, onHit func(state float64, j Judgment), onMiss func()) {
-	c.App.scheduleInput(beat, onHit, onMiss)
+	c.App.scheduleInput(beat, false, onHit, onMiss)
 }
+
+// ScheduleInputRelease 注册一次"抬起"判定（InputAction_FlickRelease，
+// totemClimb 高跳甩出等）。空抬不触发 Whiff。
+func (c *Ctx) ScheduleInputRelease(beat float64, onHit func(state float64, j Judgment), onMiss func()) {
+	c.App.scheduleInput(beat, true, onHit, onMiss)
+}
+
+// PressedNow / ReleasedNow 报告本逻辑帧是否有按下/抬起（HoldCo 式轮询用）。
+func (c *Ctx) PressedNow() bool  { return c.App.pressedNow }
+func (c *Ctx) ReleasedNow() bool { return c.App.releasedNow }
+
+// ExpectingReleaseNow 报告当前时刻是否在某个未判定 release 输入的 NG 窗口内
+//（IsExpectingInputNow(InputAction_FlickRelease) 等价物）。
+func (c *Ctx) ExpectingReleaseNow() bool {
+	t := c.App.cond.Time()
+	for _, in := range c.App.inputs {
+		if in.Release && !in.judged && t >= in.hitT-WinNG && t <= in.hitT+WinNG {
+			return true
+		}
+	}
+	return false
+}
+
+// ScoreMiss 记一次 miss（HS Minigame.ScoreMiss：无对应判定窗的扣分，
+// 如 totemClimb 高跳保持期提前松手）。
+func (c *Ctx) ScoreMiss() {
+	c.App.misses++
+	c.App.setMsg("MISS...")
+}
+
+// CameraAt 返回 beat 时刻相机世界位置（vfx/move camera 时间轴，默认 (0,0,-10)）。
+func (c *Ctx) CameraAt(beat float64) [3]float64 { return c.App.CameraAt(beat) }
+
+// PlayCommon 播放公共音效（assets/common：miss/nearMiss/count-ins 等）。
+func (c *Ctx) PlayCommon(name string) { c.App.PlayCommon(name, 1) }
 
 // Time / Beat 返回当前歌曲时间与节拍。
 func (c *Ctx) Time() float64 { return c.App.cond.Time() }
@@ -103,4 +141,20 @@ func (c *Ctx) GameAt(beat float64) string {
 		id = sw.id
 	}
 	return id
+}
+
+// SoundLoop 循环播放音效，返回停止函数（HS looping SoundByte + KillLoop，
+// totemClimb 的 charge_start 等）。
+func (c *Ctx) SoundLoop(name string) func() {
+	pcm, ok := c.Assets.Sounds[name]
+	if !ok {
+		return func() {}
+	}
+	loop := audio.NewInfiniteLoop(bytes.NewReader(pcm), int64(len(pcm)))
+	p, err := audioCtx.NewPlayer(loop)
+	if err != nil {
+		return func() {}
+	}
+	p.Play()
+	return func() { p.Pause() }
 }

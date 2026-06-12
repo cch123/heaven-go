@@ -205,6 +205,11 @@ func readJSON(p string, v any) error {
 	return json.Unmarshal(b, v)
 }
 
+// DecodePCM 把 ogg/wav 字节解码为 16-bit LE 立体声裸 PCM（公共音效加载用）。
+func DecodePCM(raw []byte, ext string, rate int) ([]byte, error) {
+	return decodePCM(raw, ext, rate)
+}
+
 func decodePCM(raw []byte, ext string, rate int) ([]byte, error) {
 	br := bytes.NewReader(raw)
 	var (

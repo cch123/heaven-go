@@ -50,6 +50,10 @@ func main() {
 	if *outDir == "" {
 		*outDir = filepath.Join("assets", *game)
 	}
+	if *game == "common" {
+		extractCommon()
+		return
+	}
 	if *game != "karateman" {
 		extractScene(*game)
 		return
@@ -586,6 +590,38 @@ func capInf(f float64) float64 {
 		return -1e30
 	}
 	return f
+}
+
+// ---------- 公共音效（assets/common） ----------
+
+// extractCommon 导出引擎级公共音效：countIn 计数音（count-ins/ 根目录全部，
+// gba/dsmale/dsfemale 变体目录暂不需要）与通用判定音。engine 启动时加载
+// assets/common，countIn/* 事件由 engine 直接播放。
+func extractCommon() {
+	outSounds := filepath.Join(*outDir, "sounds")
+	must(os.MkdirAll(outSounds, 0o755))
+	sfxRoot := filepath.Join(*hsRoot, "Assets", "Resources", "Sfx")
+	n := 0
+	copyOne := func(rel string) {
+		b, err := os.ReadFile(filepath.Join(sfxRoot, rel))
+		if err != nil {
+			log.Fatalf("公共音效 %s: %v", rel, err)
+		}
+		must(os.WriteFile(filepath.Join(outSounds, filepath.Base(rel)), b, 0o644))
+		n++
+	}
+	entries, err := os.ReadDir(filepath.Join(sfxRoot, "count-ins"))
+	must(err)
+	for _, e := range entries {
+		if e.IsDir() || strings.HasSuffix(e.Name(), ".meta") {
+			continue
+		}
+		copyOne(filepath.Join("count-ins", e.Name()))
+	}
+	for _, name := range []string{"miss.wav", "nearMiss.ogg", "skillStar.ogg", "metronome.wav"} {
+		copyOne(name)
+	}
+	fmt.Printf("common sounds: %d copied -> %s\n", n, outSounds)
 }
 
 // ---------- sounds ----------

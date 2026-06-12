@@ -1,0 +1,150 @@
+{
+ "Dragon": {
+  "default": "Idle",
+  "states": {
+   "Hold": {
+    "clip": "Dragon/Hold",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Dragon/Idle",
+    "speed": 1
+   },
+   "Release": {
+    "clip": "Dragon/Release",
+    "speed": 1
+   }
+  }
+ },
+ "EndTotem": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "EndTotem/Idle",
+    "speed": 1
+   },
+   "Land": {
+    "clip": "EndTotem/Land",
+    "speed": 1
+   },
+   "OpenWings": {
+    "clip": "EndTotem/OpenWings",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "OpenWingsIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "OpenWingsIdle": {
+    "clip": "EndTotem/OpenWingsIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Frog": {
+  "default": "NoWings",
+  "states": {
+   "NoWings": {
+    "clip": "Frog/NoWings",
+    "speed": 1
+   },
+   "Wings": {
+    "clip": "Frog/Wings",
+    "speed": 1
+   },
+   "WingsNoFlap": {
+    "clip": "Frog/WingsNoFlap",
+    "speed": 1
+   }
+  }
+ },
+ "Jumper": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Jumper/Bop",
+    "speed": 1
+   },
+   "Fall": {
+    "clip": "Jumper/Fall",
+    "speed": 1
+   },
+   "HighFall": {
+    "clip": "Jumper/HighFall",
+    "speed": 1
+   },
+   "HighJump": {
+    "clip": "Jumper/HighJump",
+    "speed": 1
+   },
+   "HighMiss": {
+    "clip": "Jumper/HighMiss",
+    "speed": 1
+   },
+   "Hold": {
+    "clip": "Jumper/Hold",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "HoldIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HoldIdle": {
+    "clip": "Jumper/HoldIdle",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Jumper/Idle",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Jumper/Jump",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Jumper/Miss",
+    "speed": 1
+   },
+   "NearMiss": {
+    "clip": "Jumper/NearMiss",
+    "speed": 1
+   },
+   "UnHold": {
+    "clip": "Jumper/UnHold",
+    "speed": 1
+   }
+  }
+ },
+ "Totem": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Totem/Bop",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Totem/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "frog0": {
+  "default": "Idle",
+  "states": {
+   "Fall": {
+    "clip": "Frog/Fall",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Frog/Idle",
+    "speed": 1
+   }
+  }
+ }
+}

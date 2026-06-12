@@ -59,11 +59,22 @@ type Input struct {
 	hitT   float64
 	judged bool
 	Result Judgment
+	// Release 为 true 时在按键"抬起"时判定（HS InputAction_FlickRelease，
+	// totemClimb 高跳的甩出）；否则按下判定。
+	Release bool
 	// OnHit 在 NG 窗口内的任意按键触发；state 为 just 窗归一化偏移
 	//（|state|<=1 = just 命中，1<|state|<=2 = NG，负 = 早），与 C# 语义一致。
 	OnHit func(state float64, j Judgment)
 	// OnMiss 在超窗未按时触发。
 	OnMiss func()
+}
+
+// camEvt 是 vfx/move camera 事件（GameCamera.UpdateCameraTranslate 语义）。
+type camEvt struct {
+	beat, length float64
+	target       [3]float64 // (valA, valB, -valC)
+	ease         int
+	axis         int // 0=All 1=X 2=Y 3=Z
 }
 
 type flashEvt struct {
@@ -101,7 +112,15 @@ type App struct {
 	actIdx   int
 	inputs   []*Input
 	flashes  []flashEvt
+	camEvts  []camEvt
 	unported []string
+
+	// commonSounds：assets/common/sounds 的公共音效（countIn 计数音、
+	// miss/nearMiss 等），缺目录时为空 map（相关事件静默跳过）
+	commonSounds map[string][]byte
+
+	pressedNow  bool // 本逻辑帧是否有按下（模块轮询用，如 totemClimb HoldCo）
+	releasedNow bool // 本逻辑帧是否有抬起
 
 	state   gameState
 	inputOn bool
@@ -138,11 +157,13 @@ func New(assetsRoot, riqPath string) (*App, error) {
 		return nil, err
 	}
 	a := &App{
-		assetsRoot: assetsRoot,
-		faceBig:    &text.GoTextFace{Source: src, Size: 44},
-		faceMid:    &text.GoTextFace{Source: src, Size: 24},
-		faceSmall:  &text.GoTextFace{Source: src, Size: 15},
+		assetsRoot:   assetsRoot,
+		faceBig:      &text.GoTextFace{Source: src, Size: 44},
+		faceMid:      &text.GoTextFace{Source: src, Size: 24},
+		faceSmall:    &text.GoTextFace{Source: src, Size: 15},
+		commonSounds: map[string][]byte{},
 	}
+	a.loadCommonSounds()
 	if riqPath != "" {
 		r, err := riq.Load(riqPath)
 		if err != nil {
@@ -196,6 +217,7 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	a.actions = nil
 	a.inputs = nil
 	a.flashes = nil
+	a.camEvts = nil
 	a.unported = nil
 	a.starBeat, a.endBeat = -1, 0
 	a.resetRunState()
@@ -251,7 +273,16 @@ func (a *App) loadRiq(r *riq.Riq) error {
 				beat: e.Beat, length: e.Length,
 				c0: colorParam(e, "colorA"), c1: colorParam(e, "colorB"),
 			})
-		case e.Game() == "gameManager" || e.Game() == "vfx" || e.Game() == "countIn" || e.Game() == "global":
+		case e.Datamodel == "vfx/move camera" || e.Datamodel == "gameManager/move camera":
+			a.camEvts = append(a.camEvts, camEvt{
+				beat: e.Beat, length: e.Length,
+				target: [3]float64{e.Float("valA", 0), e.Float("valB", 0), -e.Float("valC", 10)},
+				ease:   int(e.Float("ease", 0)),
+				axis:   int(e.Float("axis", 0)),
+			})
+		case e.Game() == "countIn":
+			a.scheduleCountIn(e.Datamodel, e.Beat, e.Length, e.Data)
+		case e.Game() == "gameManager" || e.Game() == "vfx" || e.Game() == "global":
 			// 其余全局事件暂不支持
 		default:
 			if m, ok := a.modules[e.Game()]; ok {
@@ -340,9 +371,9 @@ func (a *App) at(beat float64, fn func()) {
 	}
 }
 
-func (a *App) scheduleInput(beat float64, onHit func(state float64, j Judgment), onMiss func()) {
+func (a *App) scheduleInput(beat float64, release bool, onHit func(state float64, j Judgment), onMiss func()) {
 	a.inputs = append(a.inputs, &Input{
-		Beat: beat, hitT: a.bm.BeatToTime(beat),
+		Beat: beat, hitT: a.bm.BeatToTime(beat), Release: release,
 		OnHit: onHit, OnMiss: onMiss,
 	})
 }
@@ -381,6 +412,12 @@ func pressed() bool {
 		inpututil.IsMouseButtonJustPressed(ebiten.MouseButtonLeft)
 }
 
+func released() bool {
+	return inpututil.IsKeyJustReleased(ebiten.KeySpace) ||
+		inpututil.IsKeyJustReleased(ebiten.KeyJ) ||
+		inpututil.IsMouseButtonJustReleased(ebiten.MouseButtonLeft)
+}
+
 func (a *App) updatePlay() {
 	t := a.cond.Time()
 	beat := a.cond.Beat()
@@ -412,13 +449,17 @@ func (a *App) updatePlay() {
 		a.setMsg(fmt.Sprintf("latency %+.0fms", a.LatencyMS))
 	}
 
-	if pressed() && a.inputOn {
-		a.judgePress(t-a.LatencyMS/1000, beat)
+	a.pressedNow, a.releasedNow = pressed(), released()
+	if a.pressedNow && a.inputOn {
+		a.judgePress(t-a.LatencyMS/1000, beat, false)
+	}
+	if a.releasedNow && a.inputOn {
+		a.judgePress(t-a.LatencyMS/1000, beat, true)
 	}
 	if a.Autoplay {
 		for _, in := range a.inputs {
 			if !in.judged && t >= in.hitT {
-				a.judgePress(in.hitT, beat)
+				a.judgePress(in.hitT, beat, in.Release)
 			}
 		}
 	}
@@ -446,11 +487,14 @@ func (a *App) updatePlay() {
 	}
 }
 
-func (a *App) judgePress(t, beat float64) {
+// judgePress 判定一次按下（release=false）或抬起（release=true）。
+// 抬起只匹配 Release 输入，且空抬不计 whiff（HS 的 flick release whiff
+// 由游戏侧自行处理，如 totemClimb HoldCo）。
+func (a *App) judgePress(t, beat float64, release bool) {
 	var best *Input
 	bestDiff := math.Inf(1)
 	for _, in := range a.inputs {
-		if in.judged {
+		if in.judged || in.Release != release {
 			continue
 		}
 		if d := math.Abs(t - in.hitT); d < bestDiff {
@@ -458,6 +502,9 @@ func (a *App) judgePress(t, beat float64) {
 		}
 	}
 	if best == nil || bestDiff > WinNG {
+		if release {
+			return
+		}
 		a.whiffs++
 		a.setMsg("...")
 		if a.active != nil {

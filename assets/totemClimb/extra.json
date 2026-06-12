@@ -1,0 +1,165 @@
+{
+ "components": {
+  "backgroundManager": {
+   "path": "backgroundbackground",
+   "refs": {
+    "_objectsParent": "backgroundbackground/BackgroundObjects"
+   },
+   "lists": {
+    "_objects": [
+     {
+      "nums": {
+       "moveSpeed": 6
+      },
+      "refs": {
+       "first": "backgroundbackground/BackgroundObjects/bluback",
+       "second": "backgroundbackground/BackgroundObjects/bluback (1)"
+      }
+     },
+     {
+      "nums": {
+       "moveSpeed": 5
+      },
+      "refs": {
+       "first": "backgroundbackground/BackgroundObjects/whiteback",
+       "second": "backgroundbackground/BackgroundObjects/whiteback (1)"
+      }
+     },
+     {
+      "nums": {
+       "moveSpeed": 4
+      },
+      "refs": {
+       "first": "backgroundbackground/BackgroundObjects/trees",
+       "second": "backgroundbackground/BackgroundObjects/trees (1)"
+      }
+     },
+     {
+      "nums": {
+       "moveSpeed": 3
+      },
+      "refs": {
+       "first": "backgroundbackground/BackgroundObjects/blubackback",
+       "second": "backgroundbackground/BackgroundObjects/blubackback (1)"
+      }
+     },
+     {
+      "nums": {
+       "moveSpeed": 2
+      },
+      "refs": {
+       "first": "backgroundbackground/BackgroundObjects/whitebackback",
+       "second": "backgroundbackground/BackgroundObjects/whitebackback (1)"
+      }
+     }
+    ]
+   }
+  },
+  "birdManager": {
+   "path": "BirdManager",
+   "nums": {
+    "_speedX": 3.838,
+    "_speedY": 1.45
+   },
+   "refs": {
+    "_birdRef": "BirdManager/BirdRef",
+    "_deathThresholdPoint": "BirdManager/Death"
+   },
+   "sprites": {
+    "_penguinSprite": "penguin"
+   }
+  },
+  "dragon": {
+   "path": "Game/Scrollable/Totems/Dragon",
+   "refs": {
+    "_anim": "Game/Scrollable/Totems/Dragon",
+    "_jumperPoint": "Game/Scrollable/Totems/Dragon/JumperPoint"
+   }
+  },
+  "frog": {
+   "path": "Game/Scrollable/Totems/Frog",
+   "refs": {
+    "_anim": "Game/Scrollable/Totems/Frog",
+    "_animLeft": "Game/Scrollable/Totems/Frog/left",
+    "_animMiddle": "Game/Scrollable/Totems/Frog/middle",
+    "_animRight": "Game/Scrollable/Totems/Frog/right",
+    "_jumperPointLeft": "Game/Scrollable/Totems/Frog/JumperPointLeft",
+    "_jumperPointMiddle": "Game/Scrollable/Totems/Frog/JumperPointMiddle",
+    "_jumperPointRight": "Game/Scrollable/Totems/Frog/JumperPointRight"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "_scrollSpeedX": 3.838,
+    "_scrollSpeedY": 1.45
+   },
+   "refs": {
+    "_birdManager": "BirdManager",
+    "_cameraTransform": "Game",
+    "_fakeTotemHolder": "Game/Scrollable/FakeTotems",
+    "_groundHolder": "Game/Scrollable/Ground",
+    "_jumper": "Game/Scrollable/Jumper",
+    "_scrollTransform": "Game/Scrollable",
+    "_totemManager": "Game/Scrollable/Totems"
+   }
+  },
+  "groundManager": {
+   "path": "Game/Scrollable/Ground",
+   "refs": {
+    "_groundFirst": "Game/Scrollable/Ground/ground",
+    "_groundSecond": "Game/Scrollable/Ground/ground (1)"
+   }
+  },
+  "jumper": {
+   "path": "Game/Scrollable/Jumper",
+   "nums": {
+    "_jumpHeight": 2,
+    "_jumpHeightTriple": 1,
+    "_jumpHighHeight": 4,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0
+   },
+   "refs": {
+    "_highMissParticle": "Game/Scrollable/Jumper/HighParticleMiss",
+    "_highParticle": "Game/Scrollable/Jumper/HighParticle",
+    "_initialPoint": "Game/Scrollable/InitialJumperPoint",
+    "_jumpParticle": "Game/Scrollable/Jumper/JumpParticle"
+   }
+  },
+  "pillarManager": {
+   "path": "Game/Scrollable/Pillars",
+   "refs": {
+    "_pillarFirst": "Game/Scrollable/Pillars/pillar",
+    "_pillarSecond": "Game/Scrollable/Pillars/pillar (1)",
+    "_pillarUp": "Game/Scrollable/Pillars/pillar (2)"
+   }
+  },
+  "totem": {
+   "path": "Game/Scrollable/Totems/Totem",
+   "refs": {
+    "_anim": "Game/Scrollable/Totems/Totem",
+    "_jumperPoint": "Game/Scrollable/Totems/Totem/JumperPoint"
+   }
+  },
+  "totemManager": {
+   "path": "Game/Scrollable/Totems",
+   "nums": {
+    "_totemAmount": 12,
+    "_xDistance": 3.838,
+    "_yDistance": 1.45
+   },
+   "refs": {
+    "_dragon": "Game/Scrollable/Totems/Dragon",
+    "_endJumperPoint": "Game/Scrollable/Totems/EndTotem/JumperPoint",
+    "_endParticleLeft": "Game/Scrollable/Totems/EndTotem/FeatherEffect",
+    "_endParticleRight": "Game/Scrollable/Totems/EndTotem/FeatherEffect (1)",
+    "_endTotemAnimator": "Game/Scrollable/Totems/EndTotem",
+    "_endTotemTransform": "Game/Scrollable/Totems/EndTotem",
+    "_frogTransform": "Game/Scrollable/Totems/Frog",
+    "_totemTransform": "Game/Scrollable/Totems/Totem"
+   }
+  }
+ }
+}

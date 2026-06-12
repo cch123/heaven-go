@@ -7,6 +7,7 @@ import (
 	"hsdemo/engine"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/somen"
+	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
 )
 
@@ -83,6 +84,28 @@ func TestLoadMeatGrinderLevel(t *testing.T) {
 	stats := app.LoadStats()
 	if stats.Inputs != 111 {
 		t.Errorf("inputs = %d, want 111", stats.Inputs)
+	}
+	if len(stats.Unported) != 0 {
+		t.Errorf("unexpected unported games: %v", stats.Unported)
+	}
+}
+
+// TestLoadTotemClimbLevel 验证 totemClimb 关卡加载：
+// 输入链静态展开后共 213 个判定（普通 100 + 三连 93 + 高跳 hold/release 20）。
+func TestLoadTotemClimbLevel(t *testing.T) {
+	level := packInDir + "/Totem Climb.riq"
+	if _, err := os.Stat(level); err != nil {
+		t.Skipf("pack-in level not present: %v", err)
+	}
+	engine.Register("totemClimb", totemclimb.New)
+
+	app, err := engine.New("../assets", level)
+	if err != nil {
+		t.Fatalf("engine.New: %v", err)
+	}
+	stats := app.LoadStats()
+	if stats.Inputs != 213 {
+		t.Errorf("inputs = %d, want 213", stats.Inputs)
 	}
 	if len(stats.Unported) != 0 {
 		t.Errorf("unexpected unported games: %v", stats.Unported)

@@ -1,0 +1,12 @@
+{
+ "Game/Scrollable/FakeTotems/FakeTotem": "Totem",
+ "Game/Scrollable/FakeTotems/FakeTotem (1)": "Totem",
+ "Game/Scrollable/Jumper": "Jumper",
+ "Game/Scrollable/Totems/Dragon": "Dragon",
+ "Game/Scrollable/Totems/EndTotem": "EndTotem",
+ "Game/Scrollable/Totems/Frog": "Frog",
+ "Game/Scrollable/Totems/Frog/left": "frog0",
+ "Game/Scrollable/Totems/Frog/middle": "frog0",
+ "Game/Scrollable/Totems/Frog/right": "frog0",
+ "Game/Scrollable/Totems/Totem": "Totem"
+}

@@ -1,0 +1,9 @@
+{
+ "_birdManager": "BirdManager",
+ "_cameraTransform": "Game",
+ "_fakeTotemHolder": "Game/Scrollable/FakeTotems",
+ "_groundHolder": "Game/Scrollable/Ground",
+ "_jumper": "Game/Scrollable/Jumper",
+ "_scrollTransform": "Game/Scrollable",
+ "_totemManager": "Game/Scrollable/Totems"
+}
