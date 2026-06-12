@@ -94,6 +94,8 @@ type Instance struct {
 	// Offset：实例根的本地位移（替换模板根的 prefab 位移；
 	// Instantiate 后 localPosition 被代码改写的语义）
 	Offset [2]float64
+	// Rot：实例根的附加旋转（弧度；transform.rotation 直写语义，如收腿翻滚）
+	Rot float64
 	// 叠加变换：实例整体的额外世界仿射（滚动容器等），绘制时左乘
 	players map[int]*instPlayer
 	actives map[int]bool // 模板内下标 → SetActive 覆盖
@@ -310,6 +312,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 		}
 	}
 	states[0].pos = in.Offset
+	states[0].rot += in.Rot
 	states[0].active = true // 模板本体可能 inactive（Instantiate 后 SetActive(true) 语义）
 	for ti, v := range in.actives {
 		states[ti].active = v

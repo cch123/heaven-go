@@ -66,6 +66,23 @@ func (c *Ctx) SoundPitch(name string, vol, pitch float64) {
 	p.Play()
 }
 
+// SoundAtOff 在指定拍播放音效并跳过开头 offset 秒（SoundByte 的 offset 参数）。
+func (c *Ctx) SoundAtOff(beat float64, name string, vol, offsetSec float64) {
+	c.At(beat, func() {
+		pcm, ok := c.Assets.Sounds[name]
+		if !ok {
+			return
+		}
+		skip := int(offsetSec*float64(SampleRate)) * 4
+		if skip < 0 || skip >= len(pcm) {
+			skip = 0
+		}
+		p := audioCtx.NewPlayerFromBytes(pcm[skip:])
+		p.SetVolume(vol)
+		p.Play()
+	})
+}
+
 // SoundAt 在指定拍播放音效（MultiSound 等价物）。
 func (c *Ctx) SoundAt(beat float64, name string, vol float64) {
 	c.At(beat, func() { c.SoundVol(name, vol) })

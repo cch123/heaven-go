@@ -68,8 +68,11 @@ type SceneInst struct {
 	machines map[string]*smachine // rootPath → 状态机（有 controller 的 Animator）
 
 	// 模块驱动的持久覆盖（在 prefab 默认值之后、剪辑采样之前生效）
-	spinOver   map[int]float64 // 节点下标 → 旋转叠加（弧度，transform.Rotate 积分）
-	activeOver map[int]bool    // 节点下标 → m_IsActive 覆盖（SetActive 语义）
+	spinOver   map[int]float64    // 节点下标 → 旋转叠加（弧度，transform.Rotate 积分）
+	activeOver map[int]bool       // 节点下标 → m_IsActive 覆盖（SetActive 语义）
+	mirrorOver map[int]bool       // 节点下标 → localScale.x 取负（transform.localScale=(-1,1,1)）
+	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
+	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
 
 	queued []ExtraSprite // 本帧注入的动态绘制项
 
@@ -123,6 +126,9 @@ func NewScene(as *Assets) *SceneInst {
 		machines:   map[string]*smachine{},
 		spinOver:   map[int]float64{},
 		activeOver: map[int]bool{},
+		mirrorOver: map[int]bool{},
+		colorOver:  map[int][4]float64{},
+		posOver:    map[int][2]float64{},
 	}
 	for path, ctrlName := range as.Animators {
 		if ctrl, ok := as.Controllers[ctrlName]; ok {
@@ -350,6 +356,34 @@ func (s *SceneInst) SetActive(path string, active bool) {
 	}
 }
 
+// SetMirrorX 覆盖节点 localScale.x 的符号（transform.localScale = (-1,1,1) 语义）。
+func (s *SceneInst) SetMirrorX(path string, mirror bool) {
+	if i, ok := s.byPath[path]; ok {
+		s.mirrorOver[i] = mirror
+	}
+}
+
+// SetColorOver 覆盖节点 SpriteRenderer.color（代码直写 sr.color 语义）。
+func (s *SceneInst) SetColorOver(path string, c [4]float64) {
+	if i, ok := s.byPath[path]; ok {
+		s.colorOver[i] = c
+	}
+}
+
+// SetPosOver 覆盖节点 localPosition（伪相机 gameTrans 平移等）。
+func (s *SceneInst) SetPosOver(path string, x, y float64) {
+	if i, ok := s.byPath[path]; ok {
+		s.posOver[i] = [2]float64{x, y}
+	}
+}
+
+// ClearPosOver 撤销 localPosition 覆盖。
+func (s *SceneInst) ClearPosOver(path string) {
+	if i, ok := s.byPath[path]; ok {
+		delete(s.posOver, i)
+	}
+}
+
 // Index 返回 path 的节点下标（重名 path 取首个，Unity 同语义）。
 func (s *SceneInst) Index(path string) (int, bool) {
 	i, ok := s.byPath[path]
@@ -389,6 +423,12 @@ func (s *SceneInst) Sample(beat float64) {
 	for i, v := range s.activeOver {
 		s.state[i].active = v
 	}
+	for i, v := range s.colorOver {
+		s.state[i].color = v
+	}
+	for i, v := range s.posOver {
+		s.state[i].pos = v
+	}
 	for _, p := range s.players {
 		var clipT float64
 		if p.normalized {
@@ -408,6 +448,12 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, rad := range s.spinOver {
 		s.state[i].rot += rad
+	}
+	for i, m := range s.mirrorOver {
+		sx := s.state[i].scale[0]
+		if (m && sx > 0) || (!m && sx < 0) {
+			s.state[i].scale[0] = -sx
+		}
 	}
 	for i, n := range s.as.Rig.Nodes {
 		st := &s.state[i]
