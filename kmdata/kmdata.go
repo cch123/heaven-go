@@ -68,11 +68,12 @@ type Rig struct {
 // （如 "FarCrane" → "Crane/FarArm"），由提取器从 prefab 的 MonoBehaviour 解析。
 type Roles map[string]string
 
-// CurvePoint 是 NaughtyBezierCurves 关键点（世界坐标，含两侧控制柄）。
+// CurvePoint 是 NaughtyBezierCurves 关键点（世界坐标 x/y/z，含两侧控制柄）。
+// z 用于透视投影：对象沿曲线从背景（z 大）飞向前景时近大远小。
 type CurvePoint struct {
-	P  [2]float64 `json:"p"`
-	LH [2]float64 `json:"lh"`
-	RH [2]float64 `json:"rh"`
+	P  [3]float64 `json:"p"`
+	LH [3]float64 `json:"lh"`
+	RH [3]float64 `json:"rh"`
 }
 
 // SeqClip 是音效序列（SoundSequence）中的一个片段。

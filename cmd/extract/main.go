@@ -271,6 +271,20 @@ func (idx *prefabIndex) worldPos(tfID int64) (float64, float64) {
 	return m.tx, m.ty
 }
 
+// worldZ 沿 m_Father 链累加深度（父链按无旋转/单位 z 缩放近似）。
+func (idx *prefabIndex) worldZ(tfID int64) float64 {
+	z := 0.0
+	for tfID != 0 {
+		tf := idx.tfByID[tfID]
+		if tf == nil {
+			break
+		}
+		z += uy.F(uy.Get(tf, "m_LocalPosition", "z"))
+		tfID = uy.I(uy.Get(tf, "m_Father", "fileID"))
+	}
+	return z
+}
+
 func exportRigAndStage(tables map[string]*spriteTable) *kmdata.Rig {
 	ctrlMeta, err := os.ReadFile(gamePath("Sprites", "anime", "karateman", "KarateMan.controller.meta"))
 	must(err)

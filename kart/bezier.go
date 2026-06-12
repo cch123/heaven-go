@@ -6,12 +6,13 @@ import "hsdemo/kmdata"
 
 const bezierLenSamples = 16
 
-func cubic(t float64, p0, c0, c1, p1 [2]float64) [2]float64 {
+func cubic(t float64, p0, c0, c1, p1 [3]float64) [3]float64 {
 	u := 1 - t
 	a, b, c, d := u*u*u, 3*u*u*t, 3*u*t*t, t*t*t
-	return [2]float64{
+	return [3]float64{
 		a*p0[0] + b*c0[0] + c*c1[0] + d*p1[0],
 		a*p0[1] + b*c0[1] + c*c1[1] + d*p1[1],
+		a*p0[2] + b*c0[2] + c*c1[2] + d*p1[2],
 	}
 }
 
@@ -29,10 +30,10 @@ func segLen(a, b kmdata.CurvePoint) float64 {
 }
 
 // EvalBezier 在归一化时间 t∈[0,1] 处求曲线上点。
-func EvalBezier(pts []kmdata.CurvePoint, t float64) [2]float64 {
+func EvalBezier(pts []kmdata.CurvePoint, t float64) [3]float64 {
 	switch {
 	case len(pts) == 0:
-		return [2]float64{}
+		return [3]float64{}
 	case len(pts) == 1:
 		return pts[0].P
 	case t <= 0:

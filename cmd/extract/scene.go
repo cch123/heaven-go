@@ -382,14 +382,17 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 				}
 			}
 			m := idx.worldAff(tfID)
+			pz := idx.worldZ(tfID)
 			lx, ly := m.apply(
 				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "x")),
 				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "y")))
+			lz := pz + uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "z"))
 			rx, ry := m.apply(
 				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "x")),
 				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "y")))
+			rz := pz + uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "z"))
 			extra.Curves[f] = append(extra.Curves[f], kmdata.CurvePoint{
-				P: [2]float64{m.tx, m.ty}, LH: [2]float64{lx, ly}, RH: [2]float64{rx, ry},
+				P: [3]float64{m.tx, m.ty, pz}, LH: [3]float64{lx, ly, lz}, RH: [3]float64{rx, ry, rz},
 			})
 		}
 	}

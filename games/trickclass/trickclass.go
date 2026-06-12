@@ -56,7 +56,7 @@ type tossObj struct {
 	rot       float64
 
 	falling bool // phone 被躲开后自由落体
-	fallPos [2]float64
+	fallPos [3]float64
 	fallV   float64
 	gravity float64
 	lastT   float64
@@ -428,7 +428,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	m.ctx.Scene.Draw(screen, m.proj)
 
 	for _, o := range m.objs {
-		var pos [2]float64
+		var pos [3]float64
 		switch {
 		case o.falling:
 			pos = o.fallPos
@@ -441,23 +441,35 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 				flyPos *= 0.95
 			}
 			pos = kart.EvalBezier(o.curve, flyPos)
-			// 旋转
+			// 旋转（朝向用投影后坐标，与观感一致）
 			switch o.flyType {
 			case 1: // 朝向运动方向（纸飞机）
 				next := kart.EvalBezier(o.curve, math.Min(flyPos+0.01, 1))
-				o.rot = math.Atan2(next[1]-pos[1], next[0]-pos[0])
+				ps0 := persp(pos[2])
+				ps1 := persp(next[2])
+				o.rot = math.Atan2(next[1]*ps1-pos[1]*ps0, next[0]*ps1-pos[0]*ps0)
 			case 2: // 不旋转（闪电）
 				o.rot = 0
 			default: // 自转 360°/s
 				o.rot += (1.0 / float64(ebiten.TPS())) * 2 * math.Pi
 			}
 		}
-		world := kart.Translate(pos[0], pos[1]).Mul(kart.Rotate(o.rot))
+		// 透视：对象沿曲线从背景（女孩 z=16）飞向前景（男孩 z=0），近大远小
+		ps := persp(pos[2])
+		if ps <= 0 {
+			continue
+		}
+		world := kart.Translate(pos[0]*ps, pos[1]*ps).
+			Mul(kart.Rotate(o.rot)).
+			Mul(kart.Scale(ps, ps))
 		for _, n := range o.nodes {
 			m.ctx.Assets.DrawSprite(screen, n.sprite, world.Mul(n.rel), m.proj, n.flipX, 1)
 		}
 	}
 }
+
+// persp 返回深度 z 处的透视缩放（GameCamera：s = D/(D+z)）。
+func persp(z float64) float64 { return kart.CamDist / (kart.CamDist + z) }
 
 func boolParam(e *riq.Entity, key string) bool {
 	if v, ok := e.Data[key]; ok {
