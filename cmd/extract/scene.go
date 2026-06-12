@@ -192,6 +192,7 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) map[int64]str
 				uy.F(uy.Get(tf, "m_LocalPosition", "x")),
 				uy.F(uy.Get(tf, "m_LocalPosition", "y")),
 			},
+			PosZ: uy.F(uy.Get(tf, "m_LocalPosition", "z")),
 			RotZ: quatToZ(
 				uy.F(uy.Get(tf, "m_LocalRotation", "z")),
 				uy.F(uy.Get(tf, "m_LocalRotation", "w")),

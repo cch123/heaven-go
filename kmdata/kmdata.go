@@ -44,7 +44,8 @@ type Node struct {
 	Path     string     `json:"path"` // 相对子树根，如 "LeftArm/LeftArmAttatch"
 	Parent   int        `json:"parent"`
 	Pos      [2]float64 `json:"pos"`
-	RotZ     float64    `json:"rotZ"` // 弧度
+	PosZ     float64    `json:"z,omitempty"` // 深度（透视投影用，相机在 z=-10）
+	RotZ     float64    `json:"rotZ"`        // 弧度
 	Scale    [2]float64 `json:"scale"`
 	Sprite   string     `json:"sprite,omitempty"`
 	Order    int        `json:"order"`           // SpriteRenderer sortingOrder

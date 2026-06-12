@@ -47,7 +47,8 @@ type SceneInst struct {
 	byPath  map[string]int
 	state   []sceneNodeState
 	world   []Aff
-	actives []bool // activeInHierarchy
+	worldZ  []float64 // 节点深度（透视投影：s = CamDist/(CamDist+z)）
+	actives []bool    // activeInHierarchy
 	players map[string]*scenePlayer
 
 	drawOrder []int // 预排序的可绘制节点（layer, order, dfs）
@@ -58,6 +59,7 @@ func NewScene(as *Assets) *SceneInst {
 		as:      as,
 		byPath:  map[string]int{},
 		state:   make([]sceneNodeState, len(as.Rig.Nodes)),
+		worldZ:  make([]float64, len(as.Rig.Nodes)),
 		world:   make([]Aff, len(as.Rig.Nodes)),
 		actives: make([]bool, len(as.Rig.Nodes)),
 		players: map[string]*scenePlayer{},
@@ -141,9 +143,11 @@ func (s *SceneInst) Sample(beat float64) {
 		local := TRS(st.pos[0], st.pos[1], st.rot, st.scale[0], st.scale[1])
 		if n.Parent < 0 {
 			s.world[i] = local
+			s.worldZ[i] = n.PosZ
 			s.actives[i] = st.active
 		} else {
 			s.world[i] = s.world[n.Parent].Mul(local)
+			s.worldZ[i] = s.worldZ[n.Parent] + n.PosZ
 			s.actives[i] = st.active && s.actives[n.Parent]
 		}
 	}
@@ -243,10 +247,18 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 	}
 }
 
-// Draw 按 (sortingLayer, sortingOrder, DFS) 顺序绘制（需先 Sample）。
-// sortingOrder 可能被动画驱动（m_SortingOrder 曲线），故每帧重排。
+// CamDist 是 GameCamera 默认相机距离（位置 (0,0,-10)，FOV 53.15°，
+// 在 z=0 平面恰好等价于半高 5 的正交视野）。
+const CamDist = 10.0
+
+// Draw 按 (sortingLayer, sortingOrder, 深度, DFS) 顺序绘制（需先 Sample）。
+// sortingOrder 可能被动画驱动（m_SortingOrder 曲线），故每帧重排；
+// 节点深度 z 经透视投影缩放（s = CamDist/(CamDist+z)），复刻原版透视相机。
 func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
-	type item struct{ idx, layer, order int }
+	type item struct {
+		idx, layer, order int
+		z                 float64
+	}
 	items := make([]item, 0, len(s.state))
 	for i := range s.state {
 		if !s.actives[i] || s.as.Rig.Nodes[i].Hidden {
@@ -256,7 +268,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if st.sprite == "" || st.color[3] <= 0 {
 			continue
 		}
-		items = append(items, item{i, s.as.Rig.Nodes[i].Layer, st.order})
+		items = append(items, item{i, s.as.Rig.Nodes[i].Layer, st.order, s.worldZ[i]})
 	}
 	sort.SliceStable(items, func(a, b int) bool {
 		if items[a].layer != items[b].layer {
@@ -264,6 +276,9 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		if items[a].order != items[b].order {
 			return items[a].order < items[b].order
+		}
+		if items[a].z != items[b].z { // 同层同序：远者先画
+			return items[a].z > items[b].z
 		}
 		return items[a].idx < items[b].idx
 	})
@@ -274,6 +289,14 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if s.as.Rig.Nodes[i].DrawMode != 0 {
 			opts.Stretch = st.size
 		}
-		s.as.DrawSpriteOpts(dst, st.sprite, s.world[i], proj, opts)
+		world := s.world[i]
+		if z := s.worldZ[i]; z != 0 {
+			ps := CamDist / (CamDist + z)
+			if ps <= 0 {
+				continue // 相机背后
+			}
+			world = Scale(ps, ps).Mul(world)
+		}
+		s.as.DrawSpriteOpts(dst, st.sprite, world, proj, opts)
 	}
 }
