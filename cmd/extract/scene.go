@@ -131,6 +131,16 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "girl", markers: []string{"faceAnim", "blushLeft"}, multi: true},
 		},
 	},
+	"tapTrial": {
+		dir:    "TapTrial",
+		prefab: "tapTrial.prefab",
+		roleFields: []string{
+			"player", "monkeyL", "monkeyR", "giraffe",
+			"rootPlayer", "rootMonkeyL", "rootMonkeyR", "flash",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav", "nearMiss.ogg"},
+	},
 	"tambourine": {
 		dir:    "Tambourine",
 		prefab: "tambourine.prefab",

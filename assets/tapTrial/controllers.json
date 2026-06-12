@@ -1,0 +1,233 @@
+{
+ "Giraffe": {
+  "default": "Idle",
+  "states": {
+   "Blink": {
+    "clip": "Giraffe/Blink",
+    "speed": 1
+   },
+   "Enter": {
+    "clip": "Giraffe/Enter",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Giraffe/Exit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Giraffe/Idle",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Giraffe/Miss",
+    "speed": 1
+   }
+  }
+ },
+ "MonkeyTapTrial": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "monkey_bop/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DoubleTap": {
+    "clip": "Monkey/DoubleTap",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DoubleTapPrepare": {
+    "clip": "Monkey/DoubleTapPrepare",
+    "speed": 1
+   },
+   "DoubleTapPrepare_2": {
+    "clip": "Monkey/DoubleTapPrepare_2",
+    "speed": 1
+   },
+   "FinalJumpTap": {
+    "clip": "final/FinalJumpTap",
+    "speed": 1
+   },
+   "FinalJumpTapAlt": {
+    "clip": "final/FinalJumpTapAlt",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Monkey/Idle",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Monkey/Jump",
+    "speed": 1
+   },
+   "JumpPrepare": {
+    "clip": "ready/JumpPrepare",
+    "speed": 1
+   },
+   "JumpTap": {
+    "clip": "tap/JumpTap",
+    "speed": 1
+   },
+   "Jumpactualtap": {
+    "clip": "tap/Jumpactualtap",
+    "speed": 1
+   },
+   "New Animation": {
+    "speed": 1
+   },
+   "PostPrepare_1": {
+    "clip": "ready/PostPrepare_1",
+    "speed": 1
+   },
+   "PostPrepare_2": {
+    "clip": "ready/PostPrepare_2",
+    "speed": 1
+   },
+   "PostTap": {
+    "clip": "tap/PostTap",
+    "speed": 1
+   },
+   "PostTap_2": {
+    "clip": "tap/PostTap_2",
+    "speed": 1
+   },
+   "Tap": {
+    "clip": "tap/Tap",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TapPrepare": {
+    "clip": "ready/TapPrepare",
+    "speed": 1
+   }
+  }
+ },
+ "Player": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "girl_bop/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DoubleTap": {
+    "clip": "Animations/DoubleTap",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DoubleTapPrepare": {
+    "clip": "Animations/DoubleTapPrepare",
+    "speed": 1
+   },
+   "FinalJump": {
+    "clip": "final/FinalJump",
+    "speed": 1
+   },
+   "FinalJumpTap": {
+    "speed": 1
+   },
+   "FinalJump_Miss": {
+    "clip": "miss/FinalJump_Miss",
+    "speed": 1
+   },
+   "FinalJump_Tap": {
+    "clip": "final/FinalJump_Tap",
+    "speed": 1
+   },
+   "FinalJump_TapAlt": {
+    "clip": "final/FinalJump_TapAlt",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 0
+   },
+   "JumpPrepare": {
+    "clip": "ready/JumpPrepare",
+    "speed": 1
+   },
+   "JumpTap": {
+    "clip": "tap/JumpTap",
+    "speed": 1
+   },
+   "JumpTap_Miss": {
+    "clip": "miss/JumpTap_Miss",
+    "speed": 1
+   },
+   "JumpTap_Success": {
+    "clip": "tap/JumpTap_Success",
+    "speed": 1
+   },
+   "Pose": {
+    "clip": "Animations/Pose",
+    "speed": 1
+   },
+   "PosePrepare": {
+    "clip": "Animations/PosePrepare",
+    "speed": 1
+   },
+   "PosePrepare_1": {
+    "clip": "Animations/PosePrepare_1",
+    "speed": 1
+   },
+   "PosePrepare_2": {
+    "clip": "Animations/PosePrepare_2",
+    "speed": 1
+   },
+   "PoseTap_L": {
+    "clip": "Animations/PoseTap_L",
+    "speed": 1
+   },
+   "PoseTap_R": {
+    "clip": "Animations/PoseTap_R",
+    "speed": 1
+   },
+   "Tap": {
+    "clip": "Animations/Tap",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TapPrepare": {
+    "clip": "Animations/TapPrepare",
+    "speed": 1
+   }
+  }
+ }
+}

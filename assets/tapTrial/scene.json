@@ -1,0 +1,1922 @@
+{
+ "nodes": [
+  {
+   "name": "tapTrial",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tap_effectPL",
+   "path": "tap_effectPL",
+   "parent": 0,
+   "pos": [
+    1.67,
+    -2.595
+   ],
+   "rotZ": 3.4578261375956916,
+   "scale": [
+    1.1000004,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "tap_effectPR",
+   "path": "tap_effectPR",
+   "parent": 0,
+   "pos": [
+    3.87,
+    -2.615
+   ],
+   "rotZ": 2.8851791007522056,
+   "scale": [
+    -1.0999999,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "Player",
+   "path": "Player",
+   "parent": 0,
+   "pos": [
+    2.77,
+    2.345
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "root_body",
+   "path": "Player/root_body",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "girl_head_0",
+   "path": "Player/root_body/girl_head_0",
+   "parent": 4,
+   "pos": [
+    -0.002799988,
+    0.0009999275
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "girl_head_1",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    0.84
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "girl_face",
+   "path": "Player/root_body/girl_head_0/girl_face",
+   "parent": 5,
+   "pos": [
+    0.002,
+    -0.105
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_face_0",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.68,
+    0.52
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "makeup_0",
+   "path": "Player/root_body/girl_head_0/girl_face/makeup_0",
+   "parent": 6,
+   "pos": [
+    -0.1119,
+    -0.0551
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0795,
+    1.0795
+   ],
+   "sprite": "girl_makeup",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.44,
+    0.44
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "makeup_1",
+   "path": "Player/root_body/girl_head_0/girl_face/makeup_1",
+   "parent": 6,
+   "pos": [
+    0.1354,
+    -0.0501
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0442,
+    1.0442
+   ],
+   "sprite": "girl_makeup",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.44,
+    0.44
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "girl_hair",
+   "path": "Player/root_body/girl_head_0/girl_hair",
+   "parent": 5,
+   "pos": [
+    0.2437,
+    -0.4466
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_hair",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "girl_torso_0",
+   "path": "Player/root_body/girl_torso_0",
+   "parent": 4,
+   "pos": [
+    0,
+    -1.583
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "girl_torso_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.32
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "girl_arm_l",
+   "path": "Player/root_body/girl_arm_l",
+   "parent": 4,
+   "pos": [
+    0.9430001,
+    -1.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "girl_arm_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    1
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "girl_arm_r",
+   "path": "Player/root_body/girl_arm_r",
+   "parent": 4,
+   "pos": [
+    -0.9449999,
+    -1.409
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "girl_arm_0",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    1
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "girl_leg_0",
+   "path": "Player/root_body/girl_leg_0",
+   "parent": 4,
+   "pos": [
+    0.415,
+    -3.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "girl_leg_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.68,
+    1.48
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "girl_leg_0 (1)",
+   "path": "Player/root_body/girl_leg_0 (1)",
+   "parent": 4,
+   "pos": [
+    -0.4230001,
+    -3.877
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "girl_leg_0",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.68,
+    1.48
+   ],
+   "mapped": true,
+   "mat": "tapgirl"
+  },
+  {
+   "name": "Shadow",
+   "path": "Player/Shadow",
+   "parent": 3,
+   "pos": [
+    0,
+    -5.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.4,
+    0.68
+   ],
+   "order": -4,
+   "color": [
+    0,
+    0,
+    0,
+    0.3254902
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "tap_splash",
+   "path": "Player/tap_splash",
+   "parent": 3,
+   "pos": [
+    -1.7682,
+    -5.8663
+   ],
+   "rotZ": 6.107954726433658,
+   "scale": [
+    2.025829,
+    1.8307359
+   ],
+   "sprite": "tap_effect",
+   "order": -3,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    0.94
+   ]
+  },
+  {
+   "name": "tap_splash (1)",
+   "path": "Player/tap_splash (1)",
+   "parent": 3,
+   "pos": [
+    -0.247,
+    -5.68
+   ],
+   "rotZ": 5.9841188729695,
+   "scale": [
+    -2.050303,
+    1.8434321
+   ],
+   "sprite": "tap_effect",
+   "order": -3,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    0.94
+   ]
+  },
+  {
+   "name": "tap_effectLL",
+   "path": "tap_effectLL",
+   "parent": 0,
+   "pos": [
+    -2.566,
+    -2.4620001
+   ],
+   "z": -0.66,
+   "rotZ": 3.4578261375956916,
+   "scale": [
+    1.1000001,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "tap_effectLR",
+   "path": "tap_effectLR",
+   "parent": 0,
+   "pos": [
+    -2.566,
+    -2.4620001
+   ],
+   "z": -0.66,
+   "rotZ": -0.925434862533737,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "MonkeyL",
+   "path": "MonkeyL",
+   "parent": 0,
+   "pos": [
+    -2.566,
+    -0.002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "root_body",
+   "path": "MonkeyL/root_body",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "monkey_head",
+   "path": "MonkeyL/root_body/monkey_head",
+   "parent": 21,
+   "pos": [
+    0,
+    -1.794
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "monkey_head_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "monkey_mouth",
+   "path": "MonkeyL/root_body/monkey_head/monkey_mouth",
+   "parent": 22,
+   "pos": [
+    0,
+    -0.154
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "monkey_mouth_0",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.46
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "monkey_body",
+   "path": "MonkeyL/root_body/monkey_body",
+   "parent": 21,
+   "pos": [
+    0.004800081,
+    -2.412
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "monkey_body_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "monkey_arm_r",
+   "path": "MonkeyL/root_body/monkey_arm_r",
+   "parent": 21,
+   "pos": [
+    -0.402,
+    -2.282
+   ],
+   "rotZ": -0.949686078253151,
+   "scale": [
+    2.1366034,
+    2.2011101
+   ],
+   "sprite": "monkey_arm_0",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.6
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "monkey_arm_l",
+   "path": "MonkeyL/root_body/monkey_arm_l",
+   "parent": 21,
+   "pos": [
+    0.4089999,
+    -2.282
+   ],
+   "rotZ": 0.9496892797011636,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "monkey_arm_0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.6
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "Shadow",
+   "path": "MonkeyL/Shadow",
+   "parent": 20,
+   "pos": [
+    0,
+    -2.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.67,
+    0.48
+   ],
+   "order": -4,
+   "color": [
+    0,
+    0,
+    0,
+    0.3254902
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "tap_effect",
+   "path": "MonkeyL/tap_effect",
+   "parent": 20,
+   "pos": [
+    -0.629,
+    -3.023
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wave",
+   "path": "MonkeyL/tap_effect/wave",
+   "parent": 28,
+   "pos": [
+    0.035,
+    -0.09
+   ],
+   "rotZ": -0.25095834975074915,
+   "scale": [
+    1.2861999,
+    1.2861999
+   ],
+   "sprite": "tap_effect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    0.94
+   ]
+  },
+  {
+   "name": "tap_effect (1)",
+   "path": "MonkeyL/tap_effect (1)",
+   "parent": 20,
+   "pos": [
+    -0.629,
+    -3.023
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wave",
+   "path": "MonkeyL/tap_effect (1)/wave",
+   "parent": 30,
+   "pos": [
+    0.035,
+    -0.09
+   ],
+   "rotZ": -0.25095834975074915,
+   "scale": [
+    1.2861999,
+    1.2861999
+   ],
+   "sprite": "tap_effect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    0.94
+   ]
+  },
+  {
+   "name": "tap_effectRL",
+   "path": "tap_effectRL",
+   "parent": 0,
+   "pos": [
+    -0.45000005,
+    -2.4620001
+   ],
+   "z": -0.66,
+   "rotZ": 3.4578261375956916,
+   "scale": [
+    1.1000007,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "tap_effectRR",
+   "path": "tap_effectRR",
+   "parent": 0,
+   "pos": [
+    -0.45000005,
+    -2.4620001
+   ],
+   "z": -0.66,
+   "rotZ": -0.9599309667411735,
+   "scale": [
+    1.1000005,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "MonkeyR",
+   "path": "MonkeyR",
+   "parent": 0,
+   "pos": [
+    -0.45,
+    -0.002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "root_body",
+   "path": "MonkeyR/root_body",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "monkey_head",
+   "path": "MonkeyR/root_body/monkey_head",
+   "parent": 35,
+   "pos": [
+    0,
+    -1.794
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "monkey_head_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "monkey_mouth",
+   "path": "MonkeyR/root_body/monkey_head/monkey_mouth",
+   "parent": 36,
+   "pos": [
+    0,
+    -0.15400006
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "monkey_mouth_0",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.46
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "tongue bg",
+   "path": "MonkeyR/root_body/monkey_head/tongue bg",
+   "parent": 36,
+   "pos": [
+    0.00266,
+    -0.19603
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.08011187,
+    0.033095434
+   ],
+   "order": 4,
+   "inactive": true,
+   "color": [
+    0.9529412,
+    0.3529412,
+    0.3529412,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "monkey_body",
+   "path": "MonkeyR/root_body/monkey_body",
+   "parent": 35,
+   "pos": [
+    0.004799992,
+    -2.412
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "monkey_body_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "monkey_arm_r",
+   "path": "MonkeyR/root_body/monkey_arm_r",
+   "parent": 35,
+   "pos": [
+    -0.402,
+    -2.282
+   ],
+   "rotZ": -0.949686078253151,
+   "scale": [
+    2.1366034,
+    2.2011101
+   ],
+   "sprite": "monkey_arm_0",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.6
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "monkey_arm_l",
+   "path": "MonkeyR/root_body/monkey_arm_l",
+   "parent": 35,
+   "pos": [
+    0.409,
+    -2.282
+   ],
+   "rotZ": 0.9496892797011636,
+   "scale": [
+    2.136603,
+    2.20111
+   ],
+   "sprite": "monkey_arm_0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.6
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "Shadow",
+   "path": "MonkeyR/Shadow",
+   "parent": 34,
+   "pos": [
+    0,
+    -2.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.67,
+    0.48
+   ],
+   "order": -4,
+   "color": [
+    0,
+    0,
+    0,
+    0.3254902
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "tap_effect",
+   "path": "MonkeyR/tap_effect",
+   "parent": 34,
+   "pos": [
+    -0.629,
+    -3.023
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wave",
+   "path": "MonkeyR/tap_effect/wave",
+   "parent": 43,
+   "pos": [
+    0.035,
+    -0.09
+   ],
+   "rotZ": -0.25095834975074915,
+   "scale": [
+    1.2861999,
+    1.2861999
+   ],
+   "sprite": "tap_effect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    0.94
+   ]
+  },
+  {
+   "name": "tap_effect (1)",
+   "path": "MonkeyR/tap_effect (1)",
+   "parent": 34,
+   "pos": [
+    -0.629,
+    -3.023
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wave",
+   "path": "MonkeyR/tap_effect (1)/wave",
+   "parent": 45,
+   "pos": [
+    0.035,
+    -0.09
+   ],
+   "rotZ": -0.25095834975074915,
+   "scale": [
+    1.2861999,
+    1.2861999
+   ],
+   "sprite": "tap_effect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    0.94
+   ]
+  },
+  {
+   "name": "Giraffe",
+   "path": "Giraffe",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Giraffe/Head",
+   "parent": 47,
+   "pos": [
+    -6.32,
+    1.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.23,
+    2.23
+   ],
+   "sprite": "giraffe_head",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.66
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "Ears",
+   "path": "Giraffe/Head/Ears",
+   "parent": 48,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "L",
+   "path": "Giraffe/Head/Ears/L",
+   "parent": 49,
+   "pos": [
+    -0.479,
+    0.292
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "giraffe_ear_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.62
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "R",
+   "path": "Giraffe/Head/Ears/R",
+   "parent": 49,
+   "pos": [
+    0.476,
+    0.337
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "giraffe_ear_0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.62
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "Eyes",
+   "path": "Giraffe/Head/Eyes",
+   "parent": 48,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "L",
+   "path": "Giraffe/Head/Eyes/L",
+   "parent": 52,
+   "pos": [
+    -0.182,
+    0.004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.25,
+    1.25
+   ],
+   "sprite": "giraffe_eye",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.54
+   ]
+  },
+  {
+   "name": "R",
+   "path": "Giraffe/Head/Eyes/R",
+   "parent": 52,
+   "pos": [
+    0.198,
+    0.014
+   ],
+   "rotZ": -0.3192152937215686,
+   "scale": [
+    1.25,
+    1.25
+   ],
+   "sprite": "giraffe_eye",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.54
+   ]
+  },
+  {
+   "name": "Eyebrows",
+   "path": "Giraffe/Head/Eyebrows",
+   "parent": 48,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "L",
+   "path": "Giraffe/Head/Eyebrows/L",
+   "parent": 55,
+   "pos": [
+    -0.187,
+    0.181
+   ],
+   "rotZ": 0.05786882650439251,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "giraffe_eyebrow",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.46
+   ]
+  },
+  {
+   "name": "R",
+   "path": "Giraffe/Head/Eyebrows/R",
+   "parent": 55,
+   "pos": [
+    0.167,
+    0.191
+   ],
+   "rotZ": -0.07566053494663186,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "sprite": "giraffe_eyebrow",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.46
+   ]
+  },
+  {
+   "name": "Nose",
+   "path": "Giraffe/Head/Nose",
+   "parent": 48,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Left_Outlines",
+   "path": "Giraffe/Head/Nose/Left_Outlines",
+   "parent": 58,
+   "pos": [
+    -0.138,
+    -0.317
+   ],
+   "rotZ": -0.020716443329865015,
+   "scale": [
+    1.07,
+    1.07
+   ],
+   "sprite": "giraffe_nose_edge",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.62
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "Giraffe/Head/Nose/Left_Outlines/Hole",
+   "parent": 59,
+   "pos": [
+    0.015,
+    -0.016
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "giraffe_nose_hole",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.54
+   ]
+  },
+  {
+   "name": "Right_Outlines",
+   "path": "Giraffe/Head/Nose/Right_Outlines",
+   "parent": 58,
+   "pos": [
+    0.168,
+    -0.318
+   ],
+   "rotZ": -0.020716443329865015,
+   "scale": [
+    1.07,
+    1.07
+   ],
+   "sprite": "giraffe_nose_edge",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.62
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "Giraffe/Head/Nose/Right_Outlines/Hole",
+   "parent": 61,
+   "pos": [
+    -0.007,
+    -0.006
+   ],
+   "rotZ": -0.12348432846250643,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "giraffe_nose_hole",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.54
+   ]
+  },
+  {
+   "name": "MouthSad",
+   "path": "Giraffe/Head/MouthSad",
+   "parent": 48,
+   "pos": [
+    0.07937221,
+    -0.52152467
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "taptrial_main_4",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.66
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "SmokeL",
+   "path": "Giraffe/Head/SmokeL",
+   "parent": 48,
+   "pos": [
+    -0.158,
+    -0.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "taptrial_main_0",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4117647
+   ],
+   "size": [
+    1.02,
+    1.66
+   ]
+  },
+  {
+   "name": "SmokeR",
+   "path": "Giraffe/Head/SmokeR",
+   "parent": 48,
+   "pos": [
+    0.207,
+    -0.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "taptrial_main_0",
+   "order": 8,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4117647
+   ],
+   "size": [
+    1.02,
+    1.66
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "Giraffe/Neck",
+   "parent": 47,
+   "pos": [
+    -7.88,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.23,
+    2.23
+   ],
+   "sprite": "giraffe_neck",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    2.06
+   ],
+   "mapped": true,
+   "mat": "tapmonkeys"
+  },
+  {
+   "name": "taptrial_stage",
+   "path": "taptrial_stage",
+   "parent": 0,
+   "pos": [
+    0.3192,
+    -3.6741
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.136603,
+    2.2011096
+   ],
+   "sprite": "taptrial_stage",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.68,
+    2.76
+   ],
+   "mapped": true,
+   "mat": "tapplatform"
+  },
+  {
+   "name": "Canvas",
+   "path": "Canvas",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG (1)",
+   "path": "Canvas/BG (1)",
+   "parent": 68,
+   "pos": [
+    -1.74,
+    1.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.11,
+    0.11
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Flash",
+   "path": "Flash",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -48,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

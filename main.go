@@ -49,6 +49,7 @@ import (
 	"hsdemo/games/somen"
 	"hsdemo/games/spacedance"
 	"hsdemo/games/tambourine"
+	"hsdemo/games/taptrial"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
 	"hsdemo/kart"
@@ -623,6 +624,7 @@ func main() {
 	// 已移植的游戏模块
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("tambourine", tambourine.New)
+	engine.Register("tapTrial", taptrial.New)
 	engine.Register("trickClass", trickclass.New)
 	engine.Register("meatGrinder", meatgrinder.New)
 	engine.Register("totemClimb", totemclimb.New)

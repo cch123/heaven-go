@@ -31,6 +31,7 @@ import (
 	"hsdemo/games/somen"
 	"hsdemo/games/spacedance"
 	"hsdemo/games/tambourine"
+	"hsdemo/games/taptrial"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
 )
@@ -89,6 +90,7 @@ func main() {
 
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("tambourine", tambourine.New)
+	engine.Register("tapTrial", taptrial.New)
 	engine.Register("trickClass", trickclass.New)
 	engine.Register("meatGrinder", meatgrinder.New)
 	engine.Register("totemClimb", totemclimb.New)

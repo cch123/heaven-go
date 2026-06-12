@@ -1,0 +1,10 @@
+{
+ "flash": "Flash",
+ "giraffe": "Giraffe",
+ "monkeyL": "MonkeyL",
+ "monkeyR": "MonkeyR",
+ "player": "Player",
+ "rootMonkeyL": "MonkeyL/root_body",
+ "rootMonkeyR": "MonkeyR/root_body",
+ "rootPlayer": "Player/root_body"
+}
