@@ -1,0 +1,886 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "Bacon_Ball": {
+   "X": 2292,
+   "Y": 1289,
+   "W": 350,
+   "H": 368,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    3,
+    0,
+    4
+   ]
+  },
+  "Bacon_Smack": {
+   "X": 4324,
+   "Y": 858,
+   "W": 370,
+   "H": 597,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Bacon_Smear": {
+   "X": 2554,
+   "Y": 1717,
+   "W": 865,
+   "H": 310,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    4
+   ]
+  },
+  "BossArmLeft_Call": {
+   "X": 347,
+   "Y": 996,
+   "W": 141,
+   "H": 310,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossArmLeft_Idle": {
+   "X": 298,
+   "Y": 1362,
+   "W": 246,
+   "H": 139,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossArmRight_Call": {
+   "X": 77,
+   "Y": 1013,
+   "W": 178,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossArmRight_Idle": {
+   "X": 669,
+   "Y": 1367,
+   "W": 245,
+   "H": 132,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossBody_Idle": {
+   "X": 497,
+   "Y": 944,
+   "W": 429,
+   "H": 350,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossBody_Sway": {
+   "X": 977,
+   "Y": 926,
+   "W": 396,
+   "H": 378,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossEyebrow": {
+   "X": 81,
+   "Y": 1394,
+   "W": 97,
+   "H": 87,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossFace_Barely": {
+   "X": 510,
+   "Y": 525,
+   "W": 379,
+   "H": 315,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossFace_Call": {
+   "X": 971,
+   "Y": 522,
+   "W": 375,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossFace_Idle": {
+   "X": 509,
+   "Y": 98,
+   "W": 377,
+   "H": 317,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossFace_Scared": {
+   "X": 47,
+   "Y": 114,
+   "W": 379,
+   "H": 315,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossFace_Stare": {
+   "X": 37,
+   "Y": 545,
+   "W": 379,
+   "H": 315,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossFace_Start": {
+   "X": 959,
+   "Y": 97,
+   "W": 379,
+   "H": 315,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossLeg_Call": {
+   "X": 1305,
+   "Y": 1368,
+   "W": 195,
+   "H": 159,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossLeg_Idle": {
+   "X": 1038,
+   "Y": 1351,
+   "W": 153,
+   "H": 199,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BossRail": {
+   "X": 0,
+   "Y": 1685,
+   "W": 1555,
+   "H": 696,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Cartguy_Body": {
+   "X": 3450,
+   "Y": 1601,
+   "W": 1202,
+   "H": 1083,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    1
+   ]
+  },
+  "Cartguy_Head": {
+   "X": 1581,
+   "Y": 2309,
+   "W": 395,
+   "H": 334,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    8
+   ]
+  },
+  "Cartguy_Phone": {
+   "X": 4702,
+   "Y": 1624,
+   "W": 1201,
+   "H": 1084,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    8,
+    0,
+    0
+   ]
+  },
+  "DarkMeat_Ball": {
+   "X": 2798,
+   "Y": 926,
+   "W": 386,
+   "H": 266,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DarkMeat_Smack": {
+   "X": 3793,
+   "Y": 837,
+   "W": 431,
+   "H": 622,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DarkMeat_Smear": {
+   "X": 2410,
+   "Y": 2425,
+   "W": 997,
+   "H": 252,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "HammerImpact": {
+   "X": 1417,
+   "Y": 1080,
+   "W": 296,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "HammerSmear": {
+   "X": 2076,
+   "Y": 2319,
+   "W": 286,
+   "H": 329,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "LightMeat_Ball": {
+   "X": 2825,
+   "Y": 1336,
+   "W": 336,
+   "H": 264,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "LightMeat_Smack": {
+   "X": 3345,
+   "Y": 865,
+   "W": 365,
+   "H": 622,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "LightMeat_Smear": {
+   "X": 2620,
+   "Y": 2090,
+   "W": 735,
+   "H": 291,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatBowl": {
+   "X": 1606,
+   "Y": 1709,
+   "W": 902,
+   "H": 555,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinderBG": {
+   "X": 0,
+   "Y": 0,
+   "W": 3840,
+   "H": 2160,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 288,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_0": {
+   "X": 2271,
+   "Y": 871,
+   "W": 65,
+   "H": 64,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_1": {
+   "X": 2425,
+   "Y": 860,
+   "W": 97,
+   "H": 89,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_2": {
+   "X": 2574,
+   "Y": 868,
+   "W": 86,
+   "H": 71,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_3": {
+   "X": 2280,
+   "Y": 1030,
+   "W": 65,
+   "H": 63,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_4": {
+   "X": 2433,
+   "Y": 1000,
+   "W": 96,
+   "H": 89,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_5": {
+   "X": 2581,
+   "Y": 1007,
+   "W": 86,
+   "H": 72,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_6": {
+   "X": 2265,
+   "Y": 1134,
+   "W": 75,
+   "H": 70,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_7": {
+   "X": 2413,
+   "Y": 1143,
+   "W": 104,
+   "H": 75,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MeatGrinder_8": {
+   "X": 2593,
+   "Y": 1153,
+   "W": 74,
+   "H": 43,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Pounder_Head": {
+   "X": 1422,
+   "Y": 78,
+   "W": 687,
+   "H": 684,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Pounder_Joint": {
+   "X": 2226,
+   "Y": 103,
+   "W": 150,
+   "H": 469,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Shock": {
+   "X": 1415,
+   "Y": 840,
+   "W": 121,
+   "H": 120,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackFace_Barely": {
+   "X": 3180,
+   "Y": 104,
+   "W": 645,
+   "H": 645,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackFace_Base": {
+   "X": 3921,
+   "Y": 103,
+   "W": 645,
+   "H": 644,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackFace_Happy": {
+   "X": 4642,
+   "Y": 103,
+   "W": 643,
+   "H": 643,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackFace_Idle": {
+   "X": 2449,
+   "Y": 106,
+   "W": 643,
+   "H": 644,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackFace_Relieved": {
+   "X": 5389,
+   "Y": 119,
+   "W": 643,
+   "H": 645,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackOverFace_Content": {
+   "X": 4781,
+   "Y": 763,
+   "W": 443,
+   "H": 342,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackOverFace_Empty": {
+   "X": 4772,
+   "Y": 1180,
+   "W": 434,
+   "H": 291,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackOverFace_Smug": {
+   "X": 5394,
+   "Y": 1215,
+   "W": 406,
+   "H": 275,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackOverFace_Wonder": {
+   "X": 5374,
+   "Y": 778,
+   "W": 378,
+   "H": 367,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackStand": {
+   "X": 1720,
+   "Y": 825,
+   "W": 456,
+   "H": 763,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "TackWonderSymbol": {
+   "X": 5823,
+   "Y": 809,
+   "W": 194,
+   "H": 254,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 148.56,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrel": {
+   "X": 0,
+   "Y": 0,
+   "W": 992,
+   "H": 1358,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gearmeat": {
+   "X": 0,
+   "Y": 0,
+   "W": 1505,
+   "H": 1505,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "smallgearmeat": {
+   "X": 0,
+   "Y": 0,
+   "W": 968,
+   "H": 968,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

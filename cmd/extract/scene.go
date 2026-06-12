@@ -20,12 +20,16 @@ type sceneSpec struct {
 	prefab     string   // prefab 文件名
 	roleFields []string // 游戏 MonoBehaviour 中需要解析的 Animator/GameObject 引用字段
 
-	refArrayFields []string // 引用数组字段（如对象模板表）
-	strArrayFields []string // 字符串数组字段（如动画名表）
-	curveFields    []string // BezierCurve3D 引用字段
-	objMarkers     []string // 识别"对象模板组件"的字段集合（如 MobTrickObj）
-	wantSequences  bool     // 提取 SoundSequences 组件
-	commonSounds   []string // 需要的公共音效（Assets/Resources/Sfx/<name>）
+	refArrayFields  []string // 引用数组字段（如对象模板表）
+	strArrayFields  []string // 字符串数组字段（如动画名表）
+	curveFields     []string // BezierCurve3D 引用字段
+	objMarkers      []string // 识别"对象模板组件"的字段集合（如 MobTrickObj）
+	objRefFields    []string // 模板组件上的单引用字段（→ 节点 path，如 Meat.startPosition）
+	objSpriteFields []string // 模板组件上的 sprite 引用数组字段（→ 切片名，如 Meat.meats）
+	wantSequences   bool     // 提取 SoundSequences 组件
+	commonSounds    []string // 需要的公共音效（Assets/Resources/Sfx/<name>）
+	wantControllers bool     // 提取 AnimatorController 状态机（controllers.json + animators.json）
+	wantTexts       bool     // 提取 TMP 世界文本（texts.json + fonts/）
 }
 
 var sceneSpecs = map[string]sceneSpec{
@@ -48,6 +52,20 @@ var sceneSpecs = map[string]sceneSpec{
 		wantSequences:  true,
 		commonSounds:   []string{"miss.wav"},
 	},
+	"meatGrinder": {
+		dir:    "MeatGrinder",
+		prefab: "meatGrinder.prefab",
+		roleFields: []string{
+			"GrinderText", "MeatBase", "MeatSplash",
+			"BossAnim", "TackAnim", "CartGuyParentAnim", "CartGuyAnim",
+		},
+		refArrayFields:  []string{"Gears"},
+		objMarkers:      []string{"meatFlyHeight", "meatFlyHeightAlt"}, // Meat.cs
+		objRefFields:    []string{"startPosition", "startPositionAlt", "hitPosition", "missPosition"},
+		objSpriteFields: []string{"meats"},
+		wantControllers: true,
+		wantTexts:       true,
+	},
 }
 
 func bundlePath(dir string, parts ...string) string {
@@ -64,10 +82,16 @@ func extractScene(game string) {
 	tables := scanSpriteMetas(bundlePath(spec.dir, "Sprites"))
 	exportSheetMulti(tables)
 	idx, docs := buildPrefabIndex(bundlePath(spec.dir, spec.prefab))
-	paths := exportScene(idx, tables)
+	paths, nodeIdx := exportScene(idx, tables)
 	exportRoles(spec, docs, idx, paths)
-	exportExtra(spec, docs, idx, paths)
+	exportExtra(spec, docs, idx, paths, nodeIdx, tables)
 	exportAnimDir(bundlePath(spec.dir, "Sprites"), tables)
+	if spec.wantControllers {
+		exportControllers(spec, docs, idx, paths)
+	}
+	if spec.wantTexts {
+		exportTexts(docs, paths)
+	}
 	copySounds(bundlePath(spec.dir, "Sounds"))
 	for _, name := range spec.commonSounds {
 		b, err := os.ReadFile(filepath.Join(*hsRoot, "Assets", "Resources", "Sfx", name))
@@ -148,7 +172,7 @@ func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
 		case 1: // GameObject
 			idx.goName[d.FileID] = uy.S(c["m_Name"])
 			idx.goActive[d.FileID] = uy.I(c["m_IsActive"]) != 0
-		case 4: // Transform
+		case 4, 224: // Transform / RectTransform（TMP 文本节点）
 			gid := uy.I(uy.Get(c, "m_GameObject", "fileID"))
 			idx.tfByGO[gid] = c
 			idx.tfByID[d.FileID] = c
@@ -164,8 +188,9 @@ func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
 	return idx, dt
 }
 
-// exportScene 导出整棵节点树，返回 GameObject fileID → 节点 path（供 roles 解析）。
-func exportScene(idx *prefabIndex, tables map[string]*spriteTable) map[int64]string {
+// exportScene 导出整棵节点树，返回 GameObject fileID → 节点 path（供 roles 解析）
+// 与 GameObject fileID → 节点下标（path 重名时按下标寻址）。
+func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]string, map[int64]int) {
 	// 根 Transform：m_Father 不在本 prefab 内
 	var rootTF map[string]any
 	for tfID, tf := range idx.tfByID {
@@ -184,18 +209,25 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) map[int64]str
 
 	scene := &kmdata.Rig{}
 	paths := map[int64]string{}
+	nodeIdx := map[int64]int{}
 	var walk func(tf map[string]any, parent int, path string)
 	walk = func(tf map[string]any, parent int, path string) {
 		gid := uy.I(uy.Get(tf, "m_GameObject", "fileID"))
 		paths[gid] = path
+		pos := [2]float64{
+			uy.F(uy.Get(tf, "m_LocalPosition", "x")),
+			uy.F(uy.Get(tf, "m_LocalPosition", "y")),
+		}
+		// RectTransform：本地位置由 m_AnchoredPosition 驱动（点锚 + 非 Rect 父
+		// 节点时即等于 localPosition.xy；m_LocalPosition 是序列化残留）
+		if ap, ok := tf["m_AnchoredPosition"]; ok {
+			pos = [2]float64{uy.F(uy.Get(uy.M(ap), "x")), uy.F(uy.Get(uy.M(ap), "y"))}
+		}
 		n := kmdata.Node{
 			Name:   idx.goName[gid],
 			Path:   path,
 			Parent: parent,
-			Pos: [2]float64{
-				uy.F(uy.Get(tf, "m_LocalPosition", "x")),
-				uy.F(uy.Get(tf, "m_LocalPosition", "y")),
-			},
+			Pos:    pos,
 			PosZ: uy.F(uy.Get(tf, "m_LocalPosition", "z")),
 			RotZ: quatToZ(
 				uy.F(uy.Get(tf, "m_LocalRotation", "z")),
@@ -224,6 +256,7 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) map[int64]str
 			}
 		}
 		self := len(scene.Nodes)
+		nodeIdx[gid] = self
 		scene.Nodes = append(scene.Nodes, n)
 
 		for _, cv := range uy.L(tf["m_Children"]) {
@@ -243,7 +276,7 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) map[int64]str
 	walk(rootTF, -1, "")
 	writeJSON("scene.json", scene)
 	fmt.Printf("scene: %d nodes\n", len(scene.Nodes))
-	return paths
+	return paths, nodeIdx
 }
 
 // ---------- roles ----------
@@ -311,7 +344,7 @@ func goPathOf(dt *docTable, paths map[int64]string, fid int64) (string, bool) {
 	return p, ok
 }
 
-func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64]string) {
+func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64]string, nodeIdx map[int64]int, tables map[string]*spriteTable) {
 	if len(spec.refArrayFields)+len(spec.strArrayFields)+len(spec.curveFields)+len(spec.objMarkers) == 0 && !spec.wantSequences {
 		return
 	}
@@ -337,12 +370,29 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 	}
 
 	extra := &kmdata.Extra{
-		RefArrays: map[string][]string{},
-		Strings:   map[string][]string{},
-		Curves:    map[string]kmdata.Curve{},
-		ObjNums:   map[string]map[string]float64{},
-		ObjStrs:   map[string]map[string]string{},
-		Sequences: map[string][]kmdata.SeqClip{},
+		RefArrays:   map[string][]string{},
+		Strings:     map[string][]string{},
+		Curves:      map[string]kmdata.Curve{},
+		ObjNums:     map[string]map[string]float64{},
+		ObjStrs:     map[string]map[string]string{},
+		Sequences:   map[string][]kmdata.SeqClip{},
+		RefArrayIdx: map[string][]int{},
+		ObjRefs:     map[string]map[string]string{},
+		ObjSprites:  map[string]map[string][]string{},
+	}
+
+	// goIdxOf 把组件或 GameObject 引用解析为场景节点下标。
+	goIdxOf := func(fid int64) (int, bool) {
+		ref := dt.byID[fid]
+		if ref == nil {
+			return -1, false
+		}
+		gid := fid
+		if ref.classID != 1 {
+			gid = uy.I(uy.Get(ref.content, "m_GameObject", "fileID"))
+		}
+		i, ok := nodeIdx[gid]
+		return i, ok
 	}
 
 	for _, f := range spec.refArrayFields {
@@ -353,6 +403,11 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 				log.Printf("warn: refArray %s -> &%d not in scene", f, fid)
 			}
 			extra.RefArrays[f] = append(extra.RefArrays[f], p)
+			i, ok := goIdxOf(fid)
+			if !ok {
+				i = -1
+			}
+			extra.RefArrayIdx[f] = append(extra.RefArrayIdx[f], i)
 		}
 	}
 	for _, f := range spec.strArrayFields {
@@ -441,6 +496,44 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 			}
 			extra.ObjNums[p] = nums
 			extra.ObjStrs[p] = strs
+			// 单引用字段（Transform/GameObject → 节点 path）
+			for _, f := range spec.objRefFields {
+				rv, ok := d.content[f]
+				if !ok {
+					continue
+				}
+				fid := uy.I(uy.Get(uy.M(rv), "fileID"))
+				rp, ok := goPathOf(dt, paths, fid)
+				if !ok {
+					log.Printf("warn: objRef %s.%s -> &%d not in scene", p, f, fid)
+					continue
+				}
+				if extra.ObjRefs[p] == nil {
+					extra.ObjRefs[p] = map[string]string{}
+				}
+				extra.ObjRefs[p][f] = rp
+			}
+			// sprite 引用数组字段（→ 图集切片名）
+			for _, f := range spec.objSpriteFields {
+				rv, ok := d.content[f]
+				if !ok {
+					continue
+				}
+				var names []string
+				for _, sv := range uy.L(rv) {
+					s := uy.M(sv)
+					name := resolveSprite(tables, uy.S(s["guid"]), uy.I(s["fileID"]))
+					if name == "" {
+						log.Printf("warn: objSprite %s.%s 切片解析失败 guid=%s fileID=%d",
+							p, f, uy.S(s["guid"]), uy.I(s["fileID"]))
+					}
+					names = append(names, name)
+				}
+				if extra.ObjSprites[p] == nil {
+					extra.ObjSprites[p] = map[string][]string{}
+				}
+				extra.ObjSprites[p][f] = names
+			}
 		}
 	}
 

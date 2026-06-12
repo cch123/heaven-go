@@ -91,3 +91,16 @@ func (c *Ctx) PlaySeq(name string, beat float64) {
 		c.SoundAt(beat+clip.Beat, clip.Clip, clip.Volume)
 	}
 }
+
+// GameAt 返回 beat 时刻的活动 minigame id（switchGame 时间轴；
+// 模块用它复刻"游戏未激活时事件只出声不生成判定"的 inactiveFunction 语义）。
+func (c *Ctx) GameAt(beat float64) string {
+	id := ""
+	for _, sw := range c.App.switches {
+		if sw.beat > beat {
+			break
+		}
+		id = sw.id
+	}
+	return id
+}

@@ -102,6 +102,67 @@ type Extra struct {
 	ObjNums   map[string]map[string]float64 `json:"objNums,omitempty"`   // 模板 path → 数值字段
 	ObjStrs   map[string]map[string]string  `json:"objStrs,omitempty"`   // 模板 path → 字符串字段
 	Sequences map[string][]SeqClip          `json:"sequences,omitempty"` // 音效序列名 → 片段
+	// RefArrayIdx 与 RefArrays 同序，给出场景节点下标。
+	// 节点 path 可能重名（如 meatGrinder 的 Gears/Big ×3），按下标寻址才不歧义。
+	RefArrayIdx map[string][]int `json:"refArrayIdx,omitempty"`
+	// ObjRefs：模板组件的单引用字段 → 节点 path（如 Meat.startPosition）。
+	ObjRefs map[string]map[string]string `json:"objRefs,omitempty"`
+	// ObjSprites：模板组件的 sprite 引用数组字段 → 切片名列表（如 Meat.meats）。
+	ObjSprites map[string]map[string][]string `json:"objSprites,omitempty"`
+}
+
+// ---------- AnimatorController（controllers.json / animators.json） ----------
+
+// CtrlCond 是状态转换条件（仅支持 bool 参数的 If/IfNot，HS 游戏只用到这两种）。
+type CtrlCond struct {
+	Mode  string `json:"mode"` // "if" / "ifnot"
+	Param string `json:"param"`
+}
+
+// CtrlTransition 是一条带退出时间的状态转换。
+// HS 用到的 controller 全部 hasExitTime=1：在剪辑结束（循环剪辑为每个循环
+// 边界）处评估条件，全部满足则切换到 Dst。
+type CtrlTransition struct {
+	Dst      string     `json:"dst"`
+	Conds    []CtrlCond `json:"conds,omitempty"`
+	ExitTime float64    `json:"exitTime"` // 归一化（相对源剪辑时长）
+	Duration float64    `json:"duration"` // 过渡时长（归一化）；运行时立即切换，
+	// 已验证用到非零值处（BossCall→BossCallIdle）源末帧与目标姿态一致
+}
+
+// CtrlState 是 controller 的一个状态。
+type CtrlState struct {
+	Clip        string           `json:"clip,omitempty"` // anims.json key（命名空间）；空 = 无 motion
+	Speed       float64          `json:"speed"`
+	Transitions []CtrlTransition `json:"transitions,omitempty"`
+}
+
+// Controller 是一个 AnimatorController 的状态机数据。
+type Controller struct {
+	Default string               `json:"default"`
+	Params  map[string]bool      `json:"params,omitempty"` // bool 参数 → 默认值
+	States  map[string]CtrlState `json:"states"`
+}
+
+// Animators 是节点 path → controller 名（animators.json），
+// 由 prefab 中 Animator 组件的 controller guid 解析。
+type Animators map[string]string
+
+// ---------- TMP 文本（texts.json） ----------
+
+// TextNode 是一个 TextMeshPro 世界文本（如 meatGrinder 的 GRINDER 牌子）。
+// TMP 语义：fontSize × 0.1 = em 世界高度（m_isOrthographic=0），水平/垂直居中。
+type TextNode struct {
+	Path   string     `json:"path"`
+	Text   string     `json:"text"`
+	Size   float64    `json:"size"`  // m_fontSize
+	Color  [4]float64 `json:"color"` // m_fontColor
+	Order  int        `json:"order"` // MeshRenderer m_SortingOrder
+	Layer  int        `json:"layer"`
+	Font   string     `json:"font"`           // fonts/ 下的字体文件名
+	Rect   [2]float64 `json:"rect"`           // RectTransform m_SizeDelta
+	HAlign int        `json:"hAlign"`         // m_HorizontalAlignment（2=Center）
+	VAlign int        `json:"vAlign"`         // m_VerticalAlignment（512=Middle）
 }
 
 // XYCurve 是二维向量曲线（位置/缩放按分量存）。

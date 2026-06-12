@@ -1,0 +1,7 @@
+{
+ "Boss": "BossAnim",
+ "CartGuyParent": "CartGuyParent",
+ "CartGuyParent/CartGuy": "CartGuy",
+ "MeatHolder/Meat": "MeatAnim",
+ "Tack": "Tack"
+}

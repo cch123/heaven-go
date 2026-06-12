@@ -1,0 +1,1307 @@
+{
+ "nodes": [
+  {
+   "name": "meatGrinder",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MeatStartPos",
+   "path": "MeatStartPos",
+   "parent": 0,
+   "pos": [
+    -20.58,
+    -4.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MeatStartPosAlt",
+   "path": "MeatStartPosAlt",
+   "parent": 0,
+   "pos": [
+    -23.14,
+    1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MeatHitPos",
+   "path": "MeatHitPos",
+   "parent": 0,
+   "pos": [
+    2.67,
+    -0.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MeatSplash",
+   "path": "MeatSplash",
+   "parent": 0,
+   "pos": [
+    2.67,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MeatHolder",
+   "path": "MeatHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Meat",
+   "path": "MeatHolder/Meat",
+   "parent": 5,
+   "pos": [
+    -19.8,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6415348,
+    0.6415348
+   ],
+   "sprite": "Bacon_Ball",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.947496,
+    1.9589579
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FactoryBackground",
+   "path": "Background/FactoryBackground",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.346957,
+    1.3469572
+   ],
+   "sprite": "MeatGrinderBG",
+   "order": -32768,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    66.7024,
+    7.5
+   ]
+  },
+  {
+   "name": "BossRail",
+   "path": "Background/BossRail",
+   "parent": 7,
+   "pos": [
+    -6.39,
+    -1.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.76532537,
+    0.7653255
+   ],
+   "sprite": "BossRail",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    4.4
+   ]
+  },
+  {
+   "name": "MeatBowl",
+   "path": "Background/MeatBowl",
+   "parent": 7,
+   "pos": [
+    2.65,
+    -4.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.704094,
+    0.704094
+   ],
+   "sprite": "MeatBowl",
+   "order": 52,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.26,
+    3.78
+   ]
+  },
+  {
+   "name": "GrinderText",
+   "path": "Background/MeatBowl/GrinderText",
+   "parent": 10,
+   "pos": [
+    -0.017043114,
+    0.43602037
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2498331,
+    1.2498331
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Barrel",
+   "path": "Background/Barrel",
+   "parent": 7,
+   "pos": [
+    6.5443006,
+    -1.4895
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.27914792,
+    0.27914792
+   ],
+   "sprite": "barrel",
+   "order": -150,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.92,
+    13.58
+   ]
+  },
+  {
+   "name": "Barrel (1)",
+   "path": "Background/Barrel (1)",
+   "parent": 7,
+   "pos": [
+    8.5365,
+    -1.827
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.27914792,
+    0.27914792
+   ],
+   "sprite": "barrel",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.92,
+    13.58
+   ]
+  },
+  {
+   "name": "Barrel (2)",
+   "path": "Background/Barrel (2)",
+   "parent": 7,
+   "pos": [
+    8.52,
+    1.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.27914792,
+    0.27914792
+   ],
+   "sprite": "barrel",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.92,
+    13.58
+   ]
+  },
+  {
+   "name": "Barrel (3)",
+   "path": "Background/Barrel (3)",
+   "parent": 7,
+   "pos": [
+    -8.11,
+    -5.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39759037,
+    0.39759037
+   ],
+   "sprite": "barrel",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.92,
+    13.58
+   ]
+  },
+  {
+   "name": "Gears",
+   "path": "Background/Gears",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Big",
+   "path": "Background/Gears/Big",
+   "parent": 16,
+   "pos": [
+    -1.5,
+    -1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.1213017,
+    0.1213017
+   ],
+   "sprite": "gearmeat",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.05,
+    15.05
+   ]
+  },
+  {
+   "name": "Small",
+   "path": "Background/Gears/Small",
+   "parent": 16,
+   "pos": [
+    -0.32,
+    -2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.13055326,
+    0.13055326
+   ],
+   "sprite": "smallgearmeat",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.66,
+    9.66
+   ]
+  },
+  {
+   "name": "Big",
+   "path": "Background/Gears/Big",
+   "parent": 16,
+   "pos": [
+    0.13,
+    2.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.1213017,
+    0.1213017
+   ],
+   "sprite": "gearmeat",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.05,
+    15.05
+   ]
+  },
+  {
+   "name": "Small",
+   "path": "Background/Gears/Small",
+   "parent": 16,
+   "pos": [
+    0.73999995,
+    3.51
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.13055326,
+    0.13055326
+   ],
+   "sprite": "smallgearmeat",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.66,
+    9.66
+   ]
+  },
+  {
+   "name": "Big",
+   "path": "Background/Gears/Big",
+   "parent": 16,
+   "pos": [
+    0,
+    4.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.1213017,
+    0.1213017
+   ],
+   "sprite": "gearmeat",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.05,
+    15.05
+   ]
+  },
+  {
+   "name": "Tack",
+   "path": "Tack",
+   "parent": 0,
+   "pos": [
+    1.588,
+    0.47145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pounder",
+   "path": "Tack/Pounder",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PounderHead",
+   "path": "Tack/Pounder/PounderHead",
+   "parent": 23,
+   "pos": [
+    4.338,
+    2.699
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71,
+    0.71
+   ],
+   "sprite": "Pounder_Head",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.76,
+    4.74
+   ]
+  },
+  {
+   "name": "PounderJoint",
+   "path": "Tack/Pounder/PounderJoint",
+   "parent": 23,
+   "pos": [
+    4.391992,
+    0.326
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71,
+    0.71
+   ],
+   "sprite": "Pounder_Joint",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    3.3
+   ]
+  },
+  {
+   "name": "Hammer_Smear",
+   "path": "Tack/Pounder/Hammer_Smear",
+   "parent": 23,
+   "pos": [
+    6.14,
+    3.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7342321,
+    0.8735123
+   ],
+   "sprite": "HammerSmear",
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9251482,
+    2.2147667
+   ]
+  },
+  {
+   "name": "TackHead",
+   "path": "Tack/TackHead",
+   "parent": 22,
+   "pos": [
+    4.3919916,
+    -2.0314488
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71,
+    0.71
+   ],
+   "sprite": "TackFace_Idle",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.52,
+    4.52
+   ]
+  },
+  {
+   "name": "MeatMissPos",
+   "path": "Tack/TackHead/MeatMissPos",
+   "parent": 27,
+   "pos": [
+    -1.7,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DarkMeat_Smack",
+   "path": "Tack/TackHead/DarkMeat_Smack",
+   "parent": 27,
+   "pos": [
+    -1.47,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.043999,
+    0.9490899
+   ],
+   "sprite": "DarkMeat_Smack",
+   "order": 40,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.04,
+    4.33
+   ]
+  },
+  {
+   "name": "LightMeat_Smack",
+   "path": "Tack/TackHead/LightMeat_Smack",
+   "parent": 27,
+   "pos": [
+    -4.27,
+    -0.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9490899,
+    0.9490899
+   ],
+   "sprite": "LightMeat_Smack",
+   "order": 40,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    4.35
+   ]
+  },
+  {
+   "name": "Bacon_Smack",
+   "path": "Tack/TackHead/Bacon_Smack",
+   "parent": 27,
+   "pos": [
+    -4.27,
+    -0.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9490899,
+    0.9490899
+   ],
+   "sprite": "Bacon_Smack",
+   "order": 40,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    4.35
+   ]
+  },
+  {
+   "name": "TackWonderSymbol",
+   "path": "Tack/TackHead/TackWonderSymbol",
+   "parent": 27,
+   "pos": [
+    1.68,
+    2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.017003,
+    1.017003
+   ],
+   "sprite": "TackWonderSymbol",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3058697,
+    1.7098808
+   ]
+  },
+  {
+   "name": "TackStand",
+   "path": "Tack/TackStand",
+   "parent": 22,
+   "pos": [
+    4.391992,
+    -4.1314487
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71,
+    0.71
+   ],
+   "sprite": "TackStand",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    5.22
+   ]
+  },
+  {
+   "name": "ShockLeft",
+   "path": "Tack/ShockLeft",
+   "parent": 22,
+   "pos": [
+    -0.254,
+    -0.92
+   ],
+   "rotZ": 0.8726645454873609,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "HammerImpact",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    1.5,
+    1.06
+   ]
+  },
+  {
+   "name": "ShockRight",
+   "path": "Tack/ShockRight",
+   "parent": 22,
+   "pos": [
+    2.94,
+    -0.92
+   ],
+   "rotZ": -0.8726645454873609,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "HammerImpact",
+   "order": 20,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    1.5,
+    1.06
+   ]
+  },
+  {
+   "name": "TackOverFace",
+   "path": "Tack/TackOverFace",
+   "parent": 22,
+   "pos": [
+    3.942,
+    -2.317
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71,
+    0.71
+   ],
+   "sprite": "TackOverFace_Wonder",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9213789,
+    1.9589579
+   ]
+  },
+  {
+   "name": "Boss",
+   "path": "Boss",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BossHead",
+   "path": "Boss/BossHead",
+   "parent": 37,
+   "pos": [
+    -6.3372,
+    0.894
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.76,
+    0.76
+   ],
+   "sprite": "BossFace_Idle",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.66,
+    2.22
+   ]
+  },
+  {
+   "name": "BossArmRight",
+   "path": "Boss/BossArmRight",
+   "parent": 37,
+   "pos": [
+    -6.469,
+    0.191
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.76,
+    0.76
+   ],
+   "sprite": "BossArmRight_Idle",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    0.96
+   ]
+  },
+  {
+   "name": "BossArmLeft",
+   "path": "Boss/BossArmLeft",
+   "parent": 37,
+   "pos": [
+    -6.236,
+    0.192
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.76,
+    0.76
+   ],
+   "sprite": "BossArmLeft_Idle",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    0.99
+   ]
+  },
+  {
+   "name": "BossTorso",
+   "path": "Boss/BossTorso",
+   "parent": 37,
+   "pos": [
+    -6.3371997,
+    -0.116000004
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.76,
+    0.76
+   ],
+   "sprite": "BossBody_Idle",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.04,
+    2.46
+   ]
+  },
+  {
+   "name": "BossRightLeg",
+   "path": "Boss/BossRightLeg",
+   "parent": 37,
+   "pos": [
+    -6.775,
+    -1.166
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.76,
+    0.76
+   ],
+   "sprite": "BossLeg_Idle",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.09,
+    1.42
+   ]
+  },
+  {
+   "name": "BossLeftLeg",
+   "path": "Boss/BossLeftLeg",
+   "parent": 37,
+   "pos": [
+    -5.851,
+    -1.174
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.76,
+    0.76
+   ],
+   "sprite": "BossLeg_Idle",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.09,
+    1.42
+   ]
+  },
+  {
+   "name": "BossParticle",
+   "path": "Boss/BossParticle",
+   "parent": 37,
+   "pos": [
+    -5.558,
+    1.781
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Shock",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.8144858,
+    0.8078177
+   ]
+  },
+  {
+   "name": "BossEyebrow",
+   "path": "Boss/BossEyebrow",
+   "parent": 37,
+   "pos": [
+    -6.072,
+    1.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.76,
+    0.76
+   ],
+   "sprite": "BossEyebrow",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.65293485,
+    0.58566785
+   ]
+  },
+  {
+   "name": "CartGuyParent",
+   "path": "CartGuyParent",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CartGuy",
+   "path": "CartGuyParent/CartGuy",
+   "parent": 46,
+   "pos": [
+    -15.5,
+    -4.5
+   ],
+   "z": 0.07427993,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CartguyBody",
+   "path": "CartGuyParent/CartGuy/CartguyBody",
+   "parent": 47,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -0.07427993,
+   "rotZ": 0,
+   "scale": [
+    1.8323487,
+    1.8323487
+   ],
+   "sprite": "Cartguy_Phone",
+   "order": 1500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.091007,
+    7.290555
+   ]
+  },
+  {
+   "name": "CartguyHead",
+   "path": "CartGuyParent/CartGuy/CartguyHead",
+   "parent": 47,
+   "pos": [
+    -3.06,
+    5.78
+   ],
+   "z": -0.07427993,
+   "rotZ": 0,
+   "scale": [
+    1.8323487,
+    1.8323487
+   ],
+   "sprite": "Cartguy_Head",
+   "order": 1500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6588585,
+    2.248426
+   ]
+  }
+ ]
+}

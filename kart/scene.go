@@ -40,6 +40,18 @@ type scenePlayer struct {
 	clipName  string
 	startBeat float64
 	timeScale float64
+
+	normalized bool    // DoNormalizedAnimation 语义：固定在归一化时间 normT 采样
+	normT      float64 // [0,1]
+}
+
+// smachine 是绑定到子树根的 AnimatorController 状态机
+//（DoScaledAnimationAsync 按状态名播放 + 剪辑结束按 bool 条件转换）。
+type smachine struct {
+	ctrl   *kmdata.Controller
+	state  string
+	params map[string]bool
+	lastT  float64 // 上次 Sample 的剪辑时间（循环边界跨越检测）
 }
 
 // SceneInst 是一个可播放多路动画的场景实例。
@@ -53,18 +65,39 @@ type SceneInst struct {
 	groupOf []int     // 节点归属的 SortingGroup 节点下标（-1 = 无）
 	players map[string]*scenePlayer
 
+	machines map[string]*smachine // rootPath → 状态机（有 controller 的 Animator）
+
+	// 模块驱动的持久覆盖（在 prefab 默认值之后、剪辑采样之前生效）
+	spinOver   map[int]float64 // 节点下标 → 旋转叠加（弧度，transform.Rotate 积分）
+	activeOver map[int]bool    // 节点下标 → m_IsActive 覆盖（SetActive 语义）
+
+	queued []ExtraSprite // 本帧注入的动态绘制项
+
 	drawOrder []int // 预排序的可绘制节点（layer, order, dfs）
 }
 
 func NewScene(as *Assets) *SceneInst {
 	s := &SceneInst{
-		as:      as,
-		byPath:  map[string]int{},
-		state:   make([]sceneNodeState, len(as.Rig.Nodes)),
-		worldZ:  make([]float64, len(as.Rig.Nodes)),
-		world:   make([]Aff, len(as.Rig.Nodes)),
-		actives: make([]bool, len(as.Rig.Nodes)),
-		players: map[string]*scenePlayer{},
+		as:         as,
+		byPath:     map[string]int{},
+		state:      make([]sceneNodeState, len(as.Rig.Nodes)),
+		worldZ:     make([]float64, len(as.Rig.Nodes)),
+		world:      make([]Aff, len(as.Rig.Nodes)),
+		actives:    make([]bool, len(as.Rig.Nodes)),
+		players:    map[string]*scenePlayer{},
+		machines:   map[string]*smachine{},
+		spinOver:   map[int]float64{},
+		activeOver: map[int]bool{},
+	}
+	for path, ctrlName := range as.Animators {
+		if ctrl, ok := as.Controllers[ctrlName]; ok {
+			params := map[string]bool{}
+			for k, v := range ctrl.Params {
+				params[k] = v
+			}
+			c := ctrl
+			s.machines[path] = &smachine{ctrl: &c, params: params}
+		}
 	}
 	for i, n := range as.Rig.Nodes {
 		if _, dup := s.byPath[n.Path]; !dup { // 重名路径取首个（Unity 同语义）
@@ -127,8 +160,184 @@ func (s *SceneInst) Current(rootPath string) string {
 	return ""
 }
 
+// PlayNormalized 以 DoNormalizedAnimation 语义播放：固定在归一化时间 t 采样
+//（Unity 等价 Play(name, 0, t) + speed 0，cartGuy 的推车位移用它逐帧驱动）。
+func (s *SceneInst) PlayNormalized(rootPath, clip string, t float64) {
+	anim, ok := s.as.Anims[clip]
+	if !ok {
+		return
+	}
+	idx, ok := s.byPath[rootPath]
+	if !ok {
+		return
+	}
+	s.players[rootPath] = &scenePlayer{
+		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: clip,
+		normalized: true, normT: math.Max(0, math.Min(1, t)),
+	}
+}
+
+// ---------- AnimatorController 状态机 ----------
+
+// PlayState 按状态名播放（DoScaledAnimationAsync 语义）：状态映射到剪辑，
+// 剪辑结束后由 Sample 按 controller 转换自动切换状态。
+// timeScale persists：转换到的新状态沿用（Unity animator.speed 同语义）。
+func (s *SceneInst) PlayState(rootPath, stateName string, startBeat, timeScale float64) {
+	m, ok := s.machines[rootPath]
+	if !ok {
+		s.Play(rootPath, stateName, startBeat, timeScale) // 无 controller：按剪辑名直接播
+		return
+	}
+	st, ok := m.ctrl.States[stateName]
+	if !ok {
+		return
+	}
+	m.state, m.lastT = stateName, 0
+	s.playMachineClip(rootPath, st, startBeat, timeScale)
+}
+
+// PlayDefaultState 进入 controller 默认状态（OnGameSwitch 时机；
+// Unity Animator 激活即按真实秒速播放默认态，故 timeScale 应传 secPerBeat）。
+func (s *SceneInst) PlayDefaultState(rootPath string, startBeat, timeScale float64) {
+	if m, ok := s.machines[rootPath]; ok {
+		s.PlayState(rootPath, m.ctrl.Default, startBeat, timeScale)
+	}
+}
+
+func (s *SceneInst) playMachineClip(rootPath string, st kmdata.CtrlState, startBeat, timeScale float64) {
+	if st.Clip == "" || st.Speed*timeScale == 0 {
+		delete(s.players, rootPath) // 无 motion / 速度 0：保持当前姿态（prefab 默认）
+		return
+	}
+	s.Play(rootPath, st.Clip, startBeat, timeScale*st.Speed)
+}
+
+// SetBool 设置状态机 bool 参数（Animator.SetBool）。
+func (s *SceneInst) SetBool(rootPath, param string, v bool) {
+	if m, ok := s.machines[rootPath]; ok {
+		m.params[param] = v
+	}
+}
+
+// StateInfo 返回当前状态名与是否仍在播放（normalizedTime < 1，
+// HS Util.IsPlayingAnimationNames 同语义），beat 为当前节拍。
+func (s *SceneInst) StateInfo(rootPath string, beat float64) (string, bool) {
+	m, ok := s.machines[rootPath]
+	if !ok {
+		return "", false
+	}
+	p := s.players[rootPath]
+	if p == nil || p.anim == nil || p.timeScale <= 0 || p.anim.Duration <= 0 {
+		return m.state, false
+	}
+	clipT := (beat - p.startBeat) * p.timeScale
+	return m.state, clipT < p.anim.Duration
+}
+
+// stepMachines 推进状态机：剪辑过了退出时间（循环剪辑按完整 normalizedTime 计）
+// 且条件满足时切换状态。条件在闸点后每帧评估（Unity hasExitTime+conditions 语义：
+// 退出时间是最早可触发时刻，此后条件一旦为真即转换）。
+func (s *SceneInst) stepMachines(beat float64) {
+	for path, m := range s.machines {
+		for iter := 0; iter < 8; iter++ { // 链式转换护栏
+			p := s.players[path]
+			if p == nil || p.normalized || m.state == "" || p.anim == nil ||
+				p.timeScale <= 0 || p.anim.Duration <= 0 {
+				break
+			}
+			st := m.ctrl.States[m.state]
+			clipT := (beat - p.startBeat) * p.timeScale
+			if clipT < 0 {
+				break
+			}
+			D := p.anim.Duration
+			var fired *kmdata.CtrlTransition
+			var fireBeat float64
+			for i := range st.Transitions {
+				tr := &st.Transitions[i]
+				gateT := D * tr.ExitTime
+				if clipT < gateT {
+					continue
+				}
+				ok := true
+				for _, c := range tr.Conds {
+					v := m.params[c.Param]
+					if (c.Mode == "if" && !v) || (c.Mode == "ifnot" && v) {
+						ok = false
+						break
+					}
+				}
+				if !ok {
+					continue
+				}
+				// 恰在本帧跨过闸点 → 从闸点起播；早已过闸（条件后到）→ 从当前拍起播
+				if m.lastT < gateT {
+					fireBeat = p.startBeat + gateT/p.timeScale
+				} else {
+					fireBeat = beat
+				}
+				fired = tr
+				break
+			}
+			if fired == nil {
+				m.lastT = clipT
+				break
+			}
+			dst, ok := m.ctrl.States[fired.Dst]
+			if !ok {
+				m.lastT = clipT
+				break
+			}
+			// Duration（过渡混合）按立即切换处理：用到非零值的
+			// BossCall→BossCallIdle 已验证源末帧与目标姿态逐曲线一致
+			m.state, m.lastT = fired.Dst, 0
+			s.playMachineClip(path, dst, fireBeat, p.timeScale/maxf(st.Speed, 1e-9))
+		}
+	}
+}
+
+func maxf(a, b float64) float64 {
+	if a > b {
+		return a
+	}
+	return b
+}
+
+// ---------- 模块驱动的覆盖 ----------
+
+// SetSpinIdx 设置节点旋转叠加（弧度；transform.Rotate 的积分由模块自做）。
+func (s *SceneInst) SetSpinIdx(idx int, rad float64) { s.spinOver[idx] = rad }
+
+// SetActive 覆盖节点 m_IsActive（GameObject.SetActive 语义，沿层级传播）。
+func (s *SceneInst) SetActive(path string, active bool) {
+	if i, ok := s.byPath[path]; ok {
+		s.activeOver[i] = active
+	}
+}
+
+// Index 返回 path 的节点下标（重名 path 取首个，Unity 同语义）。
+func (s *SceneInst) Index(path string) (int, bool) {
+	i, ok := s.byPath[path]
+	return i, ok
+}
+
+// ExtraSprite 是模块注入的动态绘制项（模板实例/手写粒子），
+// 与场景节点按同一 (layer, order, z) 规则统一排序。
+type ExtraSprite struct {
+	Sprite       string
+	World        Aff // 单位空间变换（z 的透视缩放由 Draw 统一施加）
+	Z            float64
+	Layer, Order int
+	FlipX, FlipY bool
+	Tint         [4]float64 // 零值视为白色
+}
+
+// Queue 注入一帧动态绘制项（Draw 后清空，每帧重新注入）。
+func (s *SceneInst) Queue(e ExtraSprite) { s.queued = append(s.queued, e) }
+
 // Sample 按歌曲节拍采样所有播放器并更新世界变换。
 func (s *SceneInst) Sample(beat float64) {
+	s.stepMachines(beat)
 	for i, n := range s.as.Rig.Nodes {
 		c := n.Color
 		if c == [4]float64{} {
@@ -141,17 +350,28 @@ func (s *SceneInst) Sample(beat float64) {
 			color: c, size: n.Size, order: n.Order,
 		}
 	}
+	for i, v := range s.activeOver {
+		s.state[i].active = v
+	}
 	for _, p := range s.players {
-		clipT := (beat - p.startBeat) * p.timeScale
-		if clipT < 0 {
-			clipT = 0
-		}
-		if p.anim.Loop && p.anim.Duration > 0 {
-			clipT = math.Mod(clipT, p.anim.Duration)
-		} else if clipT > p.anim.Duration {
-			clipT = p.anim.Duration // 非循环：保持末帧
+		var clipT float64
+		if p.normalized {
+			clipT = p.normT * p.anim.Duration
+		} else {
+			clipT = (beat - p.startBeat) * p.timeScale
+			if clipT < 0 {
+				clipT = 0
+			}
+			if p.anim.Loop && p.anim.Duration > 0 {
+				clipT = math.Mod(clipT, p.anim.Duration)
+			} else if clipT > p.anim.Duration {
+				clipT = p.anim.Duration // 非循环：保持末帧
+			}
 		}
 		s.applyClip(p, clipT)
+	}
+	for i, rad := range s.spinOver {
+		s.state[i].rot += rad
 	}
 	for i, n := range s.as.Rig.Nodes {
 		st := &s.state[i]
@@ -278,8 +498,9 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		gIdx              int // 排序单元（SortingGroup 根或自身）
 		gLayer, gOrder    int
 		gZ                float64
+		extra             int // ≥0：s.queued 下标（动态绘制项）
 	}
-	items := make([]item, 0, len(s.state))
+	items := make([]item, 0, len(s.state)+len(s.queued))
 	for i := range s.state {
 		st := &s.state[i]
 		if !s.actives[i] || !st.renderOn {
@@ -288,13 +509,21 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if st.sprite == "" || st.color[3] <= 0 {
 			continue
 		}
-		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.worldZ[i]}
+		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.worldZ[i], extra: -1}
 		if g := s.groupOf[i]; g >= 0 {
 			sg := s.as.Rig.Nodes[g].SortGroup
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.worldZ[g]
 		} else {
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = i, it.layer, it.order, it.z
 		}
+		items = append(items, it)
+	}
+	for qi := range s.queued {
+		q := &s.queued[qi]
+		it := item{
+			idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: qi,
+		}
+		it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, q.Z
 		items = append(items, it)
 	}
 	sort.SliceStable(items, func(a, b int) bool {
@@ -325,6 +554,20 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		return x.idx < y.idx
 	})
 	for _, it := range items {
+		if it.extra >= 0 {
+			q := &s.queued[it.extra]
+			world := q.World
+			if q.Z != 0 {
+				ps := CamDist / (CamDist + q.Z)
+				if ps <= 0 {
+					continue
+				}
+				world = Scale(ps, ps).Mul(world)
+			}
+			s.as.DrawSpriteOpts(dst, q.Sprite, world, proj,
+				SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint})
+			continue
+		}
 		i := it.idx
 		st := &s.state[i]
 		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color}
@@ -346,4 +589,5 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		s.as.DrawSpriteOpts(dst, st.sprite, world, proj, opts)
 	}
+	s.queued = s.queued[:0]
 }

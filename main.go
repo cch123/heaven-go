@@ -37,6 +37,7 @@ import (
 
 	"hsdemo/conductor"
 	"hsdemo/engine"
+	"hsdemo/games/meatgrinder"
 	"hsdemo/games/somen"
 	"hsdemo/games/trickclass"
 	"hsdemo/kart"
@@ -605,11 +606,13 @@ func main() {
 	path := flag.String("riq", "", ".riq 谱面路径（留空则进入标题屏等待拖放）")
 	assetsRoot := flag.String("assets", "assets", "提取资产根目录")
 	latency := flag.Float64("latency", 0, "输入延迟校准（毫秒，可在游戏内用 [ ] 微调）")
+	autoplay := flag.Bool("autoplay", false, "完美自动打击（调试/验证用）")
 	flag.Parse()
 
 	// 已移植的游戏模块
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("trickClass", trickclass.New)
+	engine.Register("meatGrinder", meatgrinder.New)
 
 	// karateman 仍走早期 demo 路径（未迁移到 engine）
 	if *path != "" {
@@ -634,6 +637,7 @@ func main() {
 		os.Exit(1)
 	}
 	app.LatencyMS = *latency
+	app.Autoplay = *autoplay
 
 	ebiten.SetWindowSize(screenW, screenH)
 	ebiten.SetWindowTitle("Heaven Go")

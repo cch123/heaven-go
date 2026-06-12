@@ -1,0 +1,47 @@
+{
+ "refArrays": {
+  "Gears": [
+   "Background/Gears/Big",
+   "Background/Gears/Small",
+   "Background/Gears/Big",
+   "Background/Gears/Small",
+   "Background/Gears/Big"
+  ]
+ },
+ "objNums": {
+  "MeatHolder/Meat": {
+   "meatFlyHeight": 4.4,
+   "meatFlyHeightAlt": 3.64,
+   "showAltCurve": 0
+  }
+ },
+ "objStrs": {
+  "MeatHolder/Meat": {}
+ },
+ "refArrayIdx": {
+  "Gears": [
+   17,
+   18,
+   19,
+   20,
+   21
+  ]
+ },
+ "objRefs": {
+  "MeatHolder/Meat": {
+   "hitPosition": "MeatHitPos",
+   "missPosition": "Tack/TackHead/MeatMissPos",
+   "startPosition": "MeatStartPos",
+   "startPositionAlt": "MeatStartPosAlt"
+  }
+ },
+ "objSprites": {
+  "MeatHolder/Meat": {
+   "meats": [
+    "DarkMeat_Smear",
+    "LightMeat_Smear",
+    "Bacon_Smear"
+   ]
+  }
+ }
+}

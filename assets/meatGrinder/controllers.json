@@ -1,0 +1,297 @@
+{
+ "BossAnim": {
+  "default": "Idle",
+  "params": {
+   "bossAnnoyed": false
+  },
+  "states": {
+   "Bop": {
+    "clip": "Boss/BossBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BossCall": {
+    "clip": "Boss/BossCall",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BossCallIdle",
+      "exitTime": 1,
+      "duration": 1
+     }
+    ]
+   },
+   "BossCallIdle": {
+    "clip": "Boss/BossCallIdle",
+    "speed": 1
+   },
+   "BossEyebrow": {
+    "clip": "Boss/BossEyebrow",
+    "speed": 1
+   },
+   "BossIdleMiss": {
+    "clip": "Boss/BossIdleMiss",
+    "speed": 1
+   },
+   "BossMiss": {
+    "clip": "Boss/BossMiss",
+    "speed": 1
+   },
+   "BossScared": {
+    "clip": "Boss/BossScared",
+    "speed": 1
+   },
+   "BossSignal": {
+    "clip": "Boss/BossSignal",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Boss/BossIdle",
+    "speed": 1
+   }
+  }
+ },
+ "CartGuy": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Cart Guy/CartguyBop",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Phone": {
+    "clip": "Cart Guy/CartguyPhone",
+    "speed": 1
+   },
+   "PhoneBop": {
+    "clip": "Cart Guy/CartguyPhoneBop",
+    "speed": 1
+   }
+  }
+ },
+ "CartGuyParent": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "MoveLeft": {
+    "clip": "Cart Guy/CartguyMoveLeft",
+    "speed": 1
+   },
+   "MoveRight": {
+    "clip": "Cart Guy/CartguyMoveRight",
+    "speed": 1
+   }
+  }
+ },
+ "Gear": {
+  "default": "Nothing",
+  "states": {
+   "Nothing": {
+    "speed": 1
+   },
+   "SpinForeverLeft": {
+    "clip": "Animations/GearSpinLeft",
+    "speed": 1
+   },
+   "SpinForeverRight": {
+    "clip": "Animations/GearSpinRight",
+    "speed": 1
+   },
+   "SpinOnceLeft": {
+    "clip": "Animations/GearSpinOnceLeft",
+    "speed": 1
+   },
+   "SpinOnceRight": {
+    "clip": "Animations/GearSpinOnceRight",
+    "speed": 1
+   }
+  }
+ },
+ "MeatAnim": {
+  "default": "MeatIdle",
+  "states": {
+   "BaconBallHit": {
+    "clip": "Meat/BaconBallHit",
+    "speed": 1
+   },
+   "DarkMeatHit": {
+    "clip": "Meat/DarkMeatHit",
+    "speed": 1
+   },
+   "LightMeatHit": {
+    "clip": "Meat/LightMeatHit",
+    "speed": 1
+   },
+   "MeatIdle": {
+    "speed": 0
+   }
+  }
+ },
+ "Tack": {
+  "default": "TackIdle",
+  "params": {
+   "tackMeated": false
+  },
+  "states": {
+   "TackBarelyIdle": {
+    "speed": 1
+   },
+   "TackContent": {
+    "clip": "Tack/TackContent",
+    "speed": 1
+   },
+   "TackEmptyHit": {
+    "clip": "Tack/TackEmptyHit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TackIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TackHitBarely": {
+    "clip": "Tack/TackHitBarely",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TackIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TackHitSuccess": {
+    "clip": "Tack/TackHitSuccess",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TackIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TackIdle": {
+    "clip": "Tack/TackIdle",
+    "speed": 1
+   },
+   "TackMissBaconBall": {
+    "clip": "Tack/TackMissBacon",
+    "speed": 1
+   },
+   "TackMissDarkIdle": {
+    "clip": "Tack/TackMissDarkIdle",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TackIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "tackMeated"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TackMissDarkMeat": {
+    "clip": "Tack/TackMissDark",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TackIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "tackMeated"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "TackMissDarkIdle",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "tackMeated"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TackMissLightIdle": {
+    "clip": "Tack/TackMissLightIdle",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TackIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "tackMeated"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TackMissLightMeat": {
+    "clip": "Tack/TackMissLight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TackIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "tackMeated"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "TackMissLightIdle",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "tackMeated"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "TackSmug": {
+    "clip": "Tack/TackSmug",
+    "speed": 1
+   },
+   "TackWonder": {
+    "clip": "Tack/TackWonder",
+    "speed": 1
+   },
+   "b": {
+    "speed": 1
+   }
+  }
+ }
+}

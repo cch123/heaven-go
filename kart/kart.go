@@ -83,6 +83,13 @@ type Assets struct {
 	// Sounds: 文件主名（无扩展名）→ 解码后的 16-bit LE 立体声裸 PCM
 	Sounds map[string][]byte
 
+	// AnimatorController 状态机（controllers.json / animators.json，可选）
+	Controllers map[string]kmdata.Controller
+	Animators   kmdata.Animators
+	// TMP 世界文本（texts.json + fonts/，可选）
+	Texts []kmdata.TextNode
+	Fonts map[string][]byte // 字体文件名 → 原始字节
+
 	subs map[string]*ebiten.Image
 }
 
@@ -120,6 +127,29 @@ func Load(dir string, audioRate int) (*Assets, error) {
 				return nil, err
 			}
 			a.Atlases = append(a.Atlases, img)
+		}
+		// 可选：AnimatorController 状态机与 TMP 文本
+		if _, err := os.Stat(filepath.Join(dir, "controllers.json")); err == nil {
+			if err := readJSON(filepath.Join(dir, "controllers.json"), &a.Controllers); err != nil {
+				return nil, err
+			}
+			if err := readJSON(filepath.Join(dir, "animators.json"), &a.Animators); err != nil {
+				return nil, err
+			}
+		}
+		if _, err := os.Stat(filepath.Join(dir, "texts.json")); err == nil {
+			if err := readJSON(filepath.Join(dir, "texts.json"), &a.Texts); err != nil {
+				return nil, err
+			}
+			a.Fonts = map[string][]byte{}
+			fonts, _ := filepath.Glob(filepath.Join(dir, "fonts", "*"))
+			for _, p := range fonts {
+				b, err := os.ReadFile(p)
+				if err != nil {
+					return nil, err
+				}
+				a.Fonts[filepath.Base(p)] = b
+			}
 		}
 	} else {
 		// karateman 布局
@@ -221,6 +251,69 @@ func ResamplePCM(pcm []byte, pitch float64) []byte {
 		}
 	}
 	return out
+}
+
+// RegisterSprite 注册一张运行时生成的贴图为切片（如 TMP 文本渲染结果），
+// pivotX/pivotY 为归一化枢轴（Unity 约定 y 从底边算）。
+func (a *Assets) RegisterSprite(name string, img *ebiten.Image, ppu, pivotX, pivotY float64) {
+	w, h := img.Bounds().Dx(), img.Bounds().Dy()
+	a.Sheet.Sprites[name] = kmdata.SpriteInfo{
+		X: 0, Y: 0, W: w, H: h, PivotX: pivotX, PivotY: pivotY, PPU: ppu,
+	}
+	a.subs[name] = img
+}
+
+// NodeIndex 返回 path 的首个节点下标。
+func (a *Assets) NodeIndex(path string) (int, bool) {
+	for i := range a.Rig.Nodes {
+		if a.Rig.Nodes[i].Path == path {
+			return i, true
+		}
+	}
+	return -1, false
+}
+
+// ClipPose 是对单个节点采样剪辑得到的姿态（Has* 标记该剪辑是否驱动了对应通道）。
+type ClipPose struct {
+	Pos       [2]float64
+	HasPos    [2]bool
+	Scale     [2]float64
+	HasScale  [2]bool
+	RotDeg    float64
+	HasRot    bool
+	Sprite    string
+	HasSprite bool
+}
+
+// SampleClipNode 在剪辑时间 at（秒）对节点 path 采样（模块自管的模板实例用，
+// 如 meatGrinder 的肉块：多实例共用同一剪辑，不经场景树播放器）。
+func SampleClipNode(a *kmdata.Anim, path string, at float64) ClipPose {
+	var p ClipPose
+	if c, ok := a.Pos[path]; ok {
+		if len(c.X) > 0 {
+			p.Pos[0], p.HasPos[0] = evalKeys(c.X, at), true
+		}
+		if len(c.Y) > 0 {
+			p.Pos[1], p.HasPos[1] = evalKeys(c.Y, at), true
+		}
+	}
+	if c, ok := a.Scale[path]; ok {
+		if len(c.X) > 0 {
+			p.Scale[0], p.HasScale[0] = evalKeys(c.X, at), true
+		}
+		if len(c.Y) > 0 {
+			p.Scale[1], p.HasScale[1] = evalKeys(c.Y, at), true
+		}
+	}
+	if keys, ok := a.Euler[path]; ok && len(keys) > 0 {
+		p.RotDeg, p.HasRot = evalKeys(keys, at), true
+	}
+	if keys, ok := a.Sprites[path]; ok {
+		if name, ok := sampleSwap(keys, at); ok {
+			p.Sprite, p.HasSprite = name, true
+		}
+	}
+	return p
 }
 
 // Sub 返回切片的图集子图（带缓存）。

@@ -1,0 +1,9 @@
+{
+ "BossAnim": "Boss",
+ "CartGuyAnim": "CartGuyParent/CartGuy",
+ "CartGuyParentAnim": "CartGuyParent",
+ "GrinderText": "Background/MeatBowl/GrinderText",
+ "MeatBase": "MeatHolder/Meat",
+ "MeatSplash": "MeatSplash",
+ "TackAnim": "Tack"
+}

@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"hsdemo/engine"
+	"hsdemo/games/meatgrinder"
 	"hsdemo/games/somen"
 	"hsdemo/games/trickclass"
 )
@@ -60,6 +61,28 @@ func TestLoadTrickLevel(t *testing.T) {
 	stats := app.LoadStats()
 	if stats.Inputs != 101 {
 		t.Errorf("inputs = %d, want 101", stats.Inputs)
+	}
+	if len(stats.Unported) != 0 {
+		t.Errorf("unexpected unported games: %v", stats.Unported)
+	}
+}
+
+// TestLoadMeatGrinderLevel 验证 meatGrinder 关卡加载：
+// MeatToss 59 + MeatCall 52（auto pass 回声）= 111 个判定输入。
+func TestLoadMeatGrinderLevel(t *testing.T) {
+	level := packInDir + "/Meat Grinder.riq"
+	if _, err := os.Stat(level); err != nil {
+		t.Skipf("pack-in level not present: %v", err)
+	}
+	engine.Register("meatGrinder", meatgrinder.New)
+
+	app, err := engine.New("../assets", level)
+	if err != nil {
+		t.Fatalf("engine.New: %v", err)
+	}
+	stats := app.LoadStats()
+	if stats.Inputs != 111 {
+		t.Errorf("inputs = %d, want 111", stats.Inputs)
 	}
 	if len(stats.Unported) != 0 {
 		t.Errorf("unexpected unported games: %v", stats.Unported)

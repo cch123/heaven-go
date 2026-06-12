@@ -122,6 +122,9 @@ type App struct {
 	// LatencyMS：输入延迟校准（毫秒，正值 = 按键时间戳前移），'['/']' 热键 ±5ms
 	LatencyMS float64
 
+	// Autoplay：调试用完美自动打击（HS 的 autoplay 等价物），-autoplay 开启
+	Autoplay bool
+
 	faceBig, faceMid, faceSmall *text.GoTextFace
 }
 
@@ -357,7 +360,7 @@ func (a *App) Update() error {
 
 	switch a.state {
 	case stateTitle:
-		if a.bm != nil && pressed() {
+		if a.bm != nil && (pressed() || a.Autoplay) {
 			a.cond.Play()
 			a.state = statePlay
 		}
@@ -411,6 +414,13 @@ func (a *App) updatePlay() {
 
 	if pressed() && a.inputOn {
 		a.judgePress(t-a.LatencyMS/1000, beat)
+	}
+	if a.Autoplay {
+		for _, in := range a.inputs {
+			if !in.judged && t >= in.hitT {
+				a.judgePress(in.hitT, beat)
+			}
+		}
 	}
 
 	// 超窗 miss
@@ -698,6 +708,22 @@ func (a *App) LoadStats() Stats {
 		EndBeat: a.endBeat, StarBeat: a.starBeat, Unported: a.unported,
 	}
 }
+
+// BeatNow 返回当前歌曲节拍（录制/验证工具用）。
+func (a *App) BeatNow() float64 {
+	if a.cond == nil {
+		return 0
+	}
+	return a.cond.Beat()
+}
+
+// RunCounts 返回当前判定计数 ace/just/ng/miss/whiff（验证工具用）。
+func (a *App) RunCounts() (int, int, int, int, int) {
+	return a.aces, a.justs, a.ngs, a.misses, a.whiffs
+}
+
+// Finished 报告是否已进入结算画面。
+func (a *App) Finished() bool { return a.state == stateResult }
 
 // ---------- 参数辅助 ----------
 

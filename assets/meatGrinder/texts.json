@@ -1,0 +1,22 @@
+[
+ {
+  "path": "Background/MeatBowl/GrinderText",
+  "text": "GRINDER",
+  "size": 5,
+  "color": [
+   0.6509804,
+   0.6313726,
+   0.6627451,
+   1
+  ],
+  "order": 55,
+  "layer": 0,
+  "font": "FOT-KurokaneStd_Megamix_Modified-EB.otf",
+  "rect": [
+   2.3603,
+   0.5328
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]
