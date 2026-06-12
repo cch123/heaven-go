@@ -76,6 +76,8 @@ type SceneInst struct {
 	cam    [3]float64 // 相机世界位置（vfx/move camera），默认 (0,0,-10)
 	hasCam bool
 
+	palette Palette // 映射材质（mapped 节点）的当前调色板
+
 	drawOrder []int // 预排序的可绘制节点（layer, order, dfs）
 }
 
@@ -85,6 +87,9 @@ type SceneInst struct {
 func (s *SceneInst) SetCamera(x, y, z float64) {
 	s.cam, s.hasCam = [3]float64{x, y, z}, true
 }
+
+// SetPalette 设置映射材质（CellAnime_MappedInvert）的调色板（recolor 事件）。
+func (s *SceneInst) SetPalette(p Palette) { s.palette = p }
 
 // camView 返回节点深度 z 处的视图变换（含相机平移与透视缩放）；ok=false 表示在相机背后。
 func (s *SceneInst) camView(z float64) (Aff, bool) {
@@ -360,6 +365,7 @@ type ExtraSprite struct {
 	Layer, Order int
 	FlipX, FlipY bool
 	Tint         [4]float64 // 零值视为白色
+	Mapped       bool       // 调色板映射材质（SceneInst.SetPalette）
 }
 
 // Queue 注入一帧动态绘制项（Draw 后清空，每帧重新注入）。
@@ -590,8 +596,12 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			if !ok {
 				continue
 			}
-			s.as.DrawSpriteOpts(dst, q.Sprite, view.Mul(q.World), proj,
-				SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint})
+			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint}
+			if q.Mapped {
+				s.as.DrawSpriteMapped(dst, q.Sprite, view.Mul(q.World), proj, qo, s.palette)
+			} else {
+				s.as.DrawSpriteOpts(dst, q.Sprite, view.Mul(q.World), proj, qo)
+			}
 			continue
 		}
 		i := it.idx
@@ -609,7 +619,11 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if !ok {
 			continue // 相机背后
 		}
-		s.as.DrawSpriteOpts(dst, st.sprite, view.Mul(s.world[i]), proj, opts)
+		if s.as.Rig.Nodes[i].Mapped {
+			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, s.palette)
+		} else {
+			s.as.DrawSpriteOpts(dst, st.sprite, view.Mul(s.world[i]), proj, opts)
+		}
 	}
 	s.queued = s.queued[:0]
 }
