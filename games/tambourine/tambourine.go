@@ -81,6 +81,11 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	ctx.Scene.SetActive(ctx.Role("happyFace"), false)
 	ctx.Scene.SetActive(ctx.Role("sadFace"), false)
+	// Awake 初始姿势（蛙退场/无汗/双手与猴 idle）
+	ctx.Scene.PlayState(ctx.Role("frogAnimator"), "FrogExited", 0, 1)
+	ctx.Scene.PlayState(ctx.Role("sweatAnimator"), "NoSweat", 0, 1)
+	ctx.Scene.PlayState(ctx.Role("handsAnimator"), "Idle", 0, 1)
+	ctx.Scene.PlayState(ctx.Role("monkeyAnimator"), "MonkeyIdle", 0, 1)
 	return nil
 }
 
@@ -116,8 +121,8 @@ func (m *Module) OnEvent(e *riq.Entity) {
 	case "tambourine/fade background":
 		ce := colorEase{
 			beat: b, length: e.Length,
-			c0: colorParam(e, "colorStart", [4]float64{1, 1, 1, 1}),
-			c1: colorParam(e, "colorEnd", defaultBG),
+			c0:   colorParam(e, "colorStart", [4]float64{1, 1, 1, 1}),
+			c1:   colorParam(e, "colorEnd", defaultBG),
 			ease: int(e.Float("ease", 0)),
 		}
 		m.bgEvts = append(m.bgEvts, ce)

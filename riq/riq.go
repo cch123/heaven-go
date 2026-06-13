@@ -66,7 +66,9 @@ func (e *Entity) Game() string {
 	return e.Datamodel
 }
 
-// Float 取动态参数并做宽松的数值转换（JSON 反序列化数值统一为 float64）。
+// Float 取动态参数并做宽松的数值转换（JSON 反序列化数值统一为 float64；
+// 布尔参数在部分官方谱面序列化为 JSON true/false——Character Select 的
+// beat intervals.auto——按 1/0 转换，否则 boolParam 系调用会吞掉 true）。
 func (e *Entity) Float(key string, def float64) float64 {
 	if v, ok := e.Data[key]; ok {
 		switch n := v.(type) {
@@ -74,6 +76,11 @@ func (e *Entity) Float(key string, def float64) float64 {
 			return n
 		case int:
 			return float64(n)
+		case bool:
+			if n {
+				return 1
+			}
+			return 0
 		}
 	}
 	return def
