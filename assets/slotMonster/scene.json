@@ -1,0 +1,1194 @@
+{
+ "nodes": [
+  {
+   "name": "slotMonster",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Backdrop",
+   "path": "Background/Backdrop",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonsterBG_2",
+   "order": -1027,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    30.62,
+    12.24
+   ]
+  },
+  {
+   "name": "LeftCurtain",
+   "path": "Background/LeftCurtain",
+   "parent": 1,
+   "pos": [
+    -10.64,
+    0.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "sprite": "SlotMonsterBG_0",
+   "order": 100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.758333,
+    9.708333
+   ]
+  },
+  {
+   "name": "RightCurtain",
+   "path": "Background/RightCurtain",
+   "parent": 1,
+   "pos": [
+    10.64,
+    0.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "sprite": "SlotMonsterBG_1",
+   "order": 100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.758333,
+    9.708333
+   ]
+  },
+  {
+   "name": "Machine",
+   "path": "Machine",
+   "parent": 0,
+   "pos": [
+    0,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Machine/Body",
+   "parent": 5,
+   "pos": [
+    0,
+    -3.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_8",
+   "order": 882,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.31,
+    4.8
+   ]
+  },
+  {
+   "name": "Button1",
+   "path": "Machine/Body/Button1",
+   "parent": 6,
+   "pos": [
+    -1.521,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ButtonBottom",
+   "path": "Machine/Body/Button1/ButtonBottom",
+   "parent": 7,
+   "pos": [
+    0,
+    0.44300008
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_42",
+   "order": 900,
+   "color": [
+    0.38039216,
+    0.9843137,
+    0.25490198,
+    1
+   ],
+   "size": [
+    1.1,
+    0.85333335
+   ]
+  },
+  {
+   "name": "Button",
+   "path": "Machine/Body/Button1/Button",
+   "parent": 7,
+   "pos": [
+    0,
+    0.845
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_38",
+   "order": 950,
+   "color": [
+    0.38039216,
+    0.9843137,
+    0.25490198,
+    1
+   ],
+   "size": [
+    1.1066667,
+    1.1933334
+   ]
+  },
+  {
+   "name": "ButtonSheen",
+   "path": "Machine/Body/Button1/Button/ButtonSheen",
+   "parent": 9,
+   "pos": [
+    0.17900002,
+    0.2550001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8024,
+    1
+   ],
+   "sprite": "SlotMonster_26",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    0.44666666
+   ]
+  },
+  {
+   "name": "Button2",
+   "path": "Machine/Body/Button2",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ButtonBottom",
+   "path": "Machine/Body/Button2/ButtonBottom",
+   "parent": 11,
+   "pos": [
+    0,
+    0.44300008
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_42",
+   "order": 900,
+   "color": [
+    0.827451,
+    0.28627452,
+    0.9843137,
+    1
+   ],
+   "size": [
+    1.1,
+    0.85333335
+   ]
+  },
+  {
+   "name": "Button",
+   "path": "Machine/Body/Button2/Button",
+   "parent": 11,
+   "pos": [
+    0,
+    0.845
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_38",
+   "order": 950,
+   "color": [
+    0.827451,
+    0.28627452,
+    0.9843137,
+    1
+   ],
+   "size": [
+    1.1066667,
+    1.1933334
+   ]
+  },
+  {
+   "name": "ButtonSheen",
+   "path": "Machine/Body/Button2/Button/ButtonSheen",
+   "parent": 13,
+   "pos": [
+    0.179,
+    0.2550001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8024,
+    1
+   ],
+   "sprite": "SlotMonster_26",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    0.44666666
+   ]
+  },
+  {
+   "name": "Button3",
+   "path": "Machine/Body/Button3",
+   "parent": 6,
+   "pos": [
+    1.519,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ButtonBottom",
+   "path": "Machine/Body/Button3/ButtonBottom",
+   "parent": 15,
+   "pos": [
+    0,
+    0.44300008
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_42",
+   "order": 900,
+   "color": [
+    0.89019614,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.1,
+    0.85333335
+   ]
+  },
+  {
+   "name": "Button",
+   "path": "Machine/Body/Button3/Button",
+   "parent": 15,
+   "pos": [
+    0,
+    0.845
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_38",
+   "order": 950,
+   "color": [
+    0.89019614,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.1066667,
+    1.1933334
+   ]
+  },
+  {
+   "name": "ButtonSheen",
+   "path": "Machine/Body/Button3/Button/ButtonSheen",
+   "parent": 17,
+   "pos": [
+    0.179,
+    0.2550001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8024,
+    1
+   ],
+   "sprite": "SlotMonster_26",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    0.44666666
+   ]
+  },
+  {
+   "name": "SlotMonster",
+   "path": "SlotMonster",
+   "parent": 0,
+   "pos": [
+    0,
+    0.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "SlotMonster/Head",
+   "parent": 19,
+   "pos": [
+    0,
+    2.317788
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_0",
+   "order": 650,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.8,
+    2.9933333
+   ]
+  },
+  {
+   "name": "HeadCover",
+   "path": "SlotMonster/Head/HeadCover",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_29",
+   "order": 700,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.8,
+    2.9933333
+   ]
+  },
+  {
+   "name": "EyesBG",
+   "path": "SlotMonster/Head/EyesBG",
+   "parent": 20,
+   "pos": [
+    0,
+    0.31221223
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_47",
+   "order": 465,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8266666,
+    1.0133333
+   ]
+  },
+  {
+   "name": "LeftEar",
+   "path": "SlotMonster/Head/LeftEar",
+   "parent": 20,
+   "pos": [
+    -2.183,
+    0.34921217
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_9",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2066667,
+    1.08
+   ]
+  },
+  {
+   "name": "RightEar",
+   "path": "SlotMonster/Head/RightEar",
+   "parent": 20,
+   "pos": [
+    2.183,
+    0.34921217
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_9",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2066667,
+    1.08
+   ]
+  },
+  {
+   "name": "RightHorn",
+   "path": "SlotMonster/Head/RightHorn",
+   "parent": 20,
+   "pos": [
+    0.75,
+    1.5322123
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_10",
+   "order": 33,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5933333,
+    0.88
+   ]
+  },
+  {
+   "name": "LeftHorn",
+   "path": "SlotMonster/Head/LeftHorn",
+   "parent": 20,
+   "pos": [
+    -0.75,
+    1.5322123
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_10",
+   "order": 33,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5933333,
+    0.88
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "SlotMonster/Head/Mouth",
+   "parent": 20,
+   "pos": [
+    0,
+    -0.8217881
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_48",
+   "order": 49,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3133333,
+    1.1866666
+   ]
+  },
+  {
+   "name": "Eye1",
+   "path": "SlotMonster/Head/Eye1",
+   "parent": 20,
+   "pos": [
+    -0.946,
+    0.295212
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eye1",
+   "path": "SlotMonster/Head/Eye1/Eye1",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_46",
+   "order": 600,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.43333334,
+    0.66
+   ]
+  },
+  {
+   "name": "EyeBarely",
+   "path": "SlotMonster/Head/Eye1/Eye1/EyeBarely",
+   "parent": 29,
+   "pos": [
+    0,
+    0.829
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_6",
+   "order": 600,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.42666668,
+    0.61333334
+   ]
+  },
+  {
+   "name": "Eye2",
+   "path": "SlotMonster/Head/Eye2",
+   "parent": 20,
+   "pos": [
+    0,
+    0.295212
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eye2",
+   "path": "SlotMonster/Head/Eye2/Eye2",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_46",
+   "order": 600,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.43333334,
+    0.66
+   ]
+  },
+  {
+   "name": "EyeBarely",
+   "path": "SlotMonster/Head/Eye2/Eye2/EyeBarely",
+   "parent": 32,
+   "pos": [
+    0,
+    0.829
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_6",
+   "order": 600,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.42666668,
+    0.61333334
+   ]
+  },
+  {
+   "name": "Eye3",
+   "path": "SlotMonster/Head/Eye3",
+   "parent": 20,
+   "pos": [
+    0.946,
+    0.295212
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eye3",
+   "path": "SlotMonster/Head/Eye3/Eye3",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_46",
+   "order": 600,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.43333334,
+    0.66
+   ]
+  },
+  {
+   "name": "EyeBarely",
+   "path": "SlotMonster/Head/Eye3/Eye3/EyeBarely",
+   "parent": 35,
+   "pos": [
+    0,
+    0.829
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_6",
+   "order": 600,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.42666668,
+    0.61333334
+   ]
+  },
+  {
+   "name": "Coins",
+   "path": "SlotMonster/Head/Coins",
+   "parent": 20,
+   "pos": [
+    0,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "VisibleCoins",
+   "path": "SlotMonster/Head/VisibleCoins",
+   "parent": 20,
+   "pos": [
+    0.0098,
+    -4.4630003
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.0978787,
+    7.986
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Body",
+   "path": "SlotMonster/Body",
+   "parent": 19,
+   "pos": [
+    0,
+    -1.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "SlotMonster_11",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.7133334,
+    6.7066665
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "SlotMonster/Arm",
+   "parent": 19,
+   "pos": [
+    2.246,
+    -2.0990005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.788,
+    0.788
+   ],
+   "sprite": "SlotMonster_13",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    8.206667
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "SlotMonster/Hand",
+   "parent": 19,
+   "pos": [
+    3.45,
+    3.52
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8821,
+    0.8821
+   ],
+   "sprite": "SlotMonster_12",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.0466666,
+    6.1266665
+   ]
+  },
+  {
+   "name": "BGCoins",
+   "path": "BGCoins",
+   "parent": 0,
+   "pos": [
+    0,
+    -10.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SlotCoinPile1",
+   "path": "BGCoins/SlotCoinPile1",
+   "parent": 42,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.73178065,
+    0.73178065
+   ],
+   "sprite": "SlotCoinPile",
+   "order": -997,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    36.97,
+    20.127712
+   ]
+  },
+  {
+   "name": "SlotCoinPile2",
+   "path": "BGCoins/SlotCoinPile2",
+   "parent": 42,
+   "pos": [
+    0,
+    -7.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.73178065,
+    0.73178065
+   ],
+   "sprite": "SlotCoinPile",
+   "order": -998,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    36.97,
+    20.127712
+   ]
+  },
+  {
+   "name": "SlotCoinPile3",
+   "path": "BGCoins/SlotCoinPile3",
+   "parent": 42,
+   "pos": [
+    0,
+    -14.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.73178065,
+    0.73178065
+   ],
+   "sprite": "SlotCoinPile",
+   "order": -999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    36.97,
+    20.127712
+   ]
+  }
+ ]
+}

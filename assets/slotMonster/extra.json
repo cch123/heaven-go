@@ -1,0 +1,88 @@
+{
+ "refArrays": {
+  "buttons": [
+   "Machine/Body/Button1",
+   "Machine/Body/Button2",
+   "Machine/Body/Button3"
+  ],
+  "eyeAnims": [
+   "SlotMonster/Head/Eye1/Eye1",
+   "SlotMonster/Head/Eye2/Eye2",
+   "SlotMonster/Head/Eye3/Eye3"
+  ]
+ },
+ "refArrayIdx": {
+  "buttons": [
+   7,
+   11,
+   15
+  ],
+  "eyeAnims": [
+   29,
+   32,
+   35
+  ]
+ },
+ "components": {
+  "button0": {
+   "path": "Machine/Body/Button1",
+   "nums": {
+    "color.a": 0,
+    "color.b": 0.25490198,
+    "color.g": 0.9843138,
+    "color.r": 0.3803922,
+    "missed": 0,
+    "pressed": 0
+   },
+   "refs": {
+    "anim": "Machine/Body/Button1"
+   },
+   "refArrays": {
+    "srs": [
+     "Machine/Body/Button1/ButtonBottom",
+     "Machine/Body/Button1/Button"
+    ]
+   }
+  },
+  "button1": {
+   "path": "Machine/Body/Button2",
+   "nums": {
+    "color.a": 0,
+    "color.b": 0.95294124,
+    "color.g": 0.2784314,
+    "color.r": 0.8000001,
+    "missed": 0,
+    "pressed": 0
+   },
+   "refs": {
+    "anim": "Machine/Body/Button2"
+   },
+   "refArrays": {
+    "srs": [
+     "Machine/Body/Button2/ButtonBottom",
+     "Machine/Body/Button2/Button"
+    ]
+   }
+  },
+  "button2": {
+   "path": "Machine/Body/Button3",
+   "nums": {
+    "color.a": 0,
+    "color.b": 0,
+    "color.g": 0,
+    "color.r": 0.86274517,
+    "missed": 0,
+    "pressed": 0
+   },
+   "refs": {
+    "anim": "Machine/Body/Button3"
+   },
+   "refArrays": {
+    "srs": [
+     "Machine/Body/Button3/ButtonBottom",
+     "Machine/Body/Button3/Button"
+    ]
+   }
+  }
+ }
+}

@@ -53,6 +53,7 @@ import (
 	"hsdemo/games/rhythmtweezers"
 	"hsdemo/games/ringside"
 	"hsdemo/games/seesaw"
+	"hsdemo/games/slotmonster"
 	"hsdemo/games/sneakyspirits"
 	"hsdemo/games/somen"
 	"hsdemo/games/spaceball"
@@ -149,6 +150,7 @@ func main() {
 	engine.Register("totemClimb", totemclimb.New)
 	engine.Register("seeSaw", seesaw.New)
 	engine.Register("sneakySpirits", sneakyspirits.New)
+	engine.Register("slotMonster", slotmonster.New)
 	engine.Register("blueBear", bluebear.New)
 	engine.Register("marchingOrders", marchingorders.New)
 	engine.Register("cheerReaders", cheerreaders.New)

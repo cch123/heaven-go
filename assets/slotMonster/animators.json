@@ -1,0 +1,9 @@
+{
+ "Machine/Body/Button1": "ButtonAnim",
+ "Machine/Body/Button2": "ButtonAnim",
+ "Machine/Body/Button3": "ButtonAnim",
+ "SlotMonster": "SlotMonsterAnim",
+ "SlotMonster/Head/Eye1/Eye1": "SMEyesAnim",
+ "SlotMonster/Head/Eye2/Eye2": "SMEyesAnim",
+ "SlotMonster/Head/Eye3/Eye3": "SMEyesAnim"
+}

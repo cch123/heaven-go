@@ -561,6 +561,19 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		wantTexts:       true,
 	},
+	"slotMonster": {
+		dir:    "SlotMonster",
+		prefab: "slotMonster.prefab",
+		roleFields: []string{
+			"smAnim", "winParticles",
+		},
+		refArrayFields:  []string{"eyeAnims", "buttons"},
+		wantControllers: true,
+		commonSounds:    []string{"bassDrumNTR.wav", "snareDrumNTR.wav", "nearMiss.ogg"},
+		components: []componentSpec{
+			{name: "button", markers: []string{"pressed", "color", "input", "missed", "anim", "srs"}, multi: true},
+		},
+	},
 }
 
 func bundlePath(dir string, parts ...string) string {

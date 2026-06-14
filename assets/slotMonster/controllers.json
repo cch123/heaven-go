@@ -1,0 +1,142 @@
+{
+ "ButtonAnim": {
+  "default": "Press",
+  "states": {
+   "Flash": {
+    "clip": "Button/Flash",
+    "speed": 1
+   },
+   "PopUp": {
+    "speed": 1
+   },
+   "Press": {
+    "clip": "Button/Press",
+    "speed": 1
+   }
+  }
+ },
+ "SMEyesAnim": {
+  "default": "Idle",
+  "states": {
+   "EyeItem1": {
+    "clip": "Eyes/EyeItem1",
+    "speed": 1
+   },
+   "EyeItem10": {
+    "clip": "Eyes/EyeItem10",
+    "speed": 1
+   },
+   "EyeItem10Barely": {
+    "clip": "Eyes/EyeItem10Barely",
+    "speed": 1
+   },
+   "EyeItem1Barely": {
+    "clip": "Eyes/EyeItem1Barely",
+    "speed": 1
+   },
+   "EyeItem2": {
+    "clip": "Eyes/EyeItem2",
+    "speed": 1
+   },
+   "EyeItem2Barely": {
+    "clip": "Eyes/EyeItem2Barely",
+    "speed": 1
+   },
+   "EyeItem3": {
+    "clip": "Eyes/EyeItem3",
+    "speed": 1
+   },
+   "EyeItem3Barely": {
+    "clip": "Eyes/EyeItem3Barely",
+    "speed": 1
+   },
+   "EyeItem4": {
+    "clip": "Eyes/EyeItem4",
+    "speed": 1
+   },
+   "EyeItem4Barely": {
+    "clip": "Eyes/EyeItem4Barely",
+    "speed": 1
+   },
+   "EyeItem5": {
+    "clip": "Eyes/EyeItem5",
+    "speed": 1
+   },
+   "EyeItem5Barely": {
+    "clip": "Eyes/EyeItem5Barely",
+    "speed": 1
+   },
+   "EyeItem6": {
+    "clip": "Eyes/EyeItem6",
+    "speed": 1
+   },
+   "EyeItem6Barely": {
+    "clip": "Eyes/EyeItem6Barely",
+    "speed": 1
+   },
+   "EyeItem7": {
+    "clip": "Eyes/EyeItem7",
+    "speed": 1
+   },
+   "EyeItem7Barely": {
+    "clip": "Eyes/EyeItem7Barely",
+    "speed": 1
+   },
+   "EyeItem8": {
+    "clip": "Eyes/EyeItem8",
+    "speed": 1
+   },
+   "EyeItem8Barely": {
+    "clip": "Eyes/EyeItem8Barely",
+    "speed": 1
+   },
+   "EyeItem9": {
+    "clip": "Eyes/EyeItem9",
+    "speed": 1
+   },
+   "EyeItem9Barely": {
+    "clip": "Eyes/EyeItem9Barely",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Item7Barely": {
+    "speed": 1
+   },
+   "Spin": {
+    "clip": "Eyes/Spin",
+    "speed": 1
+   }
+  }
+ },
+ "SlotMonsterAnim": {
+  "default": "Idle",
+  "states": {
+   "ArmRaise": {
+    "clip": "SlotMonster/ArmRaise",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "SlotMonster/Idle",
+    "speed": 1
+   },
+   "Lose": {
+    "clip": "SlotMonster/Lose",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "SlotMonster/Prepare",
+    "speed": 1
+   },
+   "Release": {
+    "clip": "SlotMonster/Release",
+    "speed": 1
+   },
+   "Win": {
+    "clip": "SlotMonster/Win",
+    "speed": 1
+   }
+  }
+ }
+}
