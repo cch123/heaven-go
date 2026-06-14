@@ -208,6 +208,38 @@ func (a *App) resetRunState() {
 	a.stopResultAudio()
 }
 
+// SeekBeat jumps an already loaded chart to beat. It is primarily used by
+// verification tooling for long remixes: past timeline actions are skipped,
+// past inputs are marked consumed, and the active minigame is restored as if
+// the chart had naturally switched to the containing segment.
+func (a *App) SeekBeat(beat float64) error {
+	if a.bm == nil || a.cond == nil {
+		return nil
+	}
+	if err := a.cond.SeekBeat(beat); err != nil {
+		return err
+	}
+	a.actIdx = sort.Search(len(a.actions), func(i int) bool { return a.actions[i].beat > beat })
+	pos := a.bm.BeatToTime(beat)
+	for _, in := range a.inputs {
+		if in.hitT < pos {
+			in.judged = true
+		}
+	}
+	a.active = nil
+	a.swIdx = 0
+	for a.swIdx < len(a.switches) && a.switches[a.swIdx].beat <= beat {
+		if m, ok := a.modules[a.switches[a.swIdx].id]; ok {
+			a.active = m
+		}
+		a.swIdx++
+	}
+	if a.active != nil {
+		a.active.OnSwitch(beat)
+	}
+	return nil
+}
+
 // restart 重置一轮游玩（不重载资产）。
 func (a *App) restart() error {
 	if err := a.cond.Reset(); err != nil {

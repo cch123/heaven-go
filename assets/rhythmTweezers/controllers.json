@@ -1,0 +1,249 @@
+{
+ "HairHolder": {
+  "default": "SmallAppear",
+  "states": {
+   "LongAppear": {
+    "clip": "Hairs/LongAppear",
+    "speed": 1
+   },
+   "LoopPull": {
+    "clip": "Hairs/LoopPull",
+    "speed": 1
+   },
+   "LoopPullReverse": {
+    "clip": "Hairs/LoopPull",
+    "speed": -1
+   },
+   "Plucked": {
+    "speed": 1
+   },
+   "SmallAppear": {
+    "clip": "Hairs/SmallAppear",
+    "speed": 1
+   }
+  }
+ },
+ "TweezerHolder": {
+  "default": "Tweezers_Idle",
+  "states": {
+   "Tweezers_Idle": {
+    "clip": "Tweezers/Tweezers_Idle",
+    "speed": 1
+   },
+   "Tweezers_LongPluck": {
+    "clip": "Tweezers/Tweezers_LongPluck",
+    "speed": 1
+   },
+   "Tweezers_Pluck": {
+    "clip": "Tweezers/Tweezers_Pluck",
+    "speed": 1
+   },
+   "Tweezers_Pluck_Fail": {
+    "clip": "Tweezers/Tweezers_Pluck_Fail",
+    "speed": 1
+   },
+   "Tweezers_Pluck_Success": {
+    "clip": "Tweezers/Tweezers_Pluck_Success",
+    "speed": 1
+   }
+  }
+ },
+ "Vegetable": {
+  "default": "Idle",
+  "params": {
+   "UseAltSmile": false,
+   "UseOpenEyeSmile": false
+  },
+  "states": {
+   "AltSmile": {
+    "clip": "Vegetable/AltSmile",
+    "speed": 1
+   },
+   "Blink": {
+    "clip": "Vegetable/Blink",
+    "speed": 1
+   },
+   "Hop0": {
+    "clip": "Vegetable/Hop0",
+    "speed": 1
+   },
+   "Hop1": {
+    "clip": "Vegetable/Hop1",
+    "speed": 1
+   },
+   "Hop10": {
+    "clip": "Vegetable/Hop10",
+    "speed": 1
+   },
+   "Hop2": {
+    "clip": "Vegetable/Hop2",
+    "speed": 1
+   },
+   "Hop3": {
+    "clip": "Vegetable/Hop3",
+    "speed": 1
+   },
+   "Hop4": {
+    "clip": "Vegetable/Hop4",
+    "speed": 1
+   },
+   "Hop5": {
+    "clip": "Vegetable/Hop5",
+    "speed": 1
+   },
+   "Hop6": {
+    "clip": "Vegetable/Hop6",
+    "speed": 1
+   },
+   "Hop7": {
+    "clip": "Vegetable/Hop7",
+    "speed": 1
+   },
+   "Hop8": {
+    "clip": "Vegetable/Hop8",
+    "speed": 1
+   },
+   "Hop9": {
+    "clip": "Vegetable/Hop9",
+    "speed": 1
+   },
+   "HopFinal": {
+    "clip": "Vegetable/HopFinal",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Smile",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "UseAltSmile"
+       },
+       {
+        "mode": "ifnot",
+        "param": "UseOpenEyeSmile"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "AltSmile",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "UseAltSmile"
+       },
+       {
+        "mode": "ifnot",
+        "param": "UseOpenEyeSmile"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "SmileClassic",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "UseAltSmile"
+       },
+       {
+        "mode": "if",
+        "param": "UseOpenEyeSmile"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HopFinalLightBulb": {
+    "clip": "Vegetable/HopFinalLightBulb",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Smile",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "UseAltSmile"
+       },
+       {
+        "mode": "ifnot",
+        "param": "UseOpenEyeSmile"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "AltSmile",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "UseAltSmile"
+       },
+       {
+        "mode": "if",
+        "param": "UseOpenEyeSmile"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "SmileClassic",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "UseAltSmile"
+       },
+       {
+        "mode": "if",
+        "param": "UseOpenEyeSmile"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "I hate it here": {
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Vegetable/Idle",
+    "speed": 1
+   },
+   "Idle 0": {
+    "speed": 1
+   },
+   "Smile": {
+    "clip": "Vegetable/Smile",
+    "speed": 1
+   },
+   "SmileClassic": {
+    "clip": "Vegetable/SmileClassic",
+    "speed": 1
+   }
+  }
+ },
+ "noPeek_2": {
+  "default": "NoPeekIdle",
+  "states": {
+   "NoPeekIdle": {
+    "clip": "Animations/NoPeekIdle",
+    "speed": 1
+   },
+   "NoPeekLower": {
+    "clip": "Animations/NoPeekLower",
+    "speed": 1
+   },
+   "NoPeekRise": {
+    "clip": "Animations/NoPeekRise",
+    "speed": 1
+   }
+  }
+ }
+}

@@ -44,6 +44,7 @@ import (
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/mrupbeat"
 	"hsdemo/games/munchymonk"
+	"hsdemo/games/rhythmtweezers"
 	"hsdemo/games/seesaw"
 	"hsdemo/games/sneakyspirits"
 	"hsdemo/games/somen"
@@ -110,6 +111,7 @@ func main() {
 	beats := flag.String("beats", "", "抓帧拍位（逗号分隔）")
 	out := flag.String("out", "/tmp/verify", "输出 PNG 前缀")
 	quit := flag.Bool("quit", false, "抓完所有拍位后立即退出")
+	startBeat := flag.Float64("start", -1, "从指定拍位开始播放（长 remix 局部验证用）")
 	flag.Parse()
 
 	engine.Register("rhythmSomen", somen.New)
@@ -148,6 +150,7 @@ func main() {
 	engine.Register("splashdown", splashdown.New)
 	engine.Register("mrUpbeat", mrupbeat.New)
 	engine.Register("munchyMonk", munchymonk.New)
+	engine.Register("rhythmTweezers", rhythmtweezers.New)
 	engine.Register("tramAndPauline", tramandpauline.New)
 	engine.Register("tunnel", tunnel.New)
 	engine.Register("wizardsWaltz", wizardswaltz.New)
@@ -157,6 +160,11 @@ func main() {
 		log.Fatal(err)
 	}
 	app.Autoplay = true
+	if *startBeat >= 0 {
+		if err := app.SeekBeat(*startBeat); err != nil {
+			log.Fatalf("seek beat %.2f: %v", *startBeat, err)
+		}
+	}
 
 	var targets []float64
 	for _, s := range strings.Split(*beats, ",") {

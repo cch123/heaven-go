@@ -151,6 +151,22 @@ func (c *Ctx) ScheduleInputRelease(beat float64, onHit func(state float64, j Jud
 	c.App.scheduleInput(beat, true, 0, onHit, onMiss)
 }
 
+// ScheduleInputReleaseCond is the release-channel equivalent of
+// ScheduleInputCond. Rhythm Tweezers needs this because a long hair release
+// window is cancelled if the player lets go early and the game has already
+// scored the miss from script-side hold polling.
+func (c *Ctx) ScheduleInputReleaseCond(beat float64, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) {
+	c.App.scheduleInputCond(beat, true, 0, canHit, onHit, onMiss)
+}
+
+// AutoHitRelease resolves a pending release input exactly on its target beat.
+// HS' Rhythm Tweezers does this when the player is still holding a curly hair
+// at the end of the pull, so "do not release" becomes a success instead of a
+// missed release input.
+func (c *Ctx) AutoHitRelease(beat float64) {
+	c.App.judgePress(c.BeatToTime(beat), c.App.cond.Beat(), true, 0)
+}
+
 // PressedNow / ReleasedNow 报告本逻辑帧是否有按下/抬起（HoldCo 式轮询用）。
 func (c *Ctx) PressedNow() bool  { return c.App.pressedNow }
 func (c *Ctx) ReleasedNow() bool { return c.App.releasedNow }

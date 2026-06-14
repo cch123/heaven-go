@@ -65,6 +65,34 @@ func (c *Conductor) Reset() error {
 	return c.player.SetPosition(0)
 }
 
+// SeekTime moves the audio clock to an absolute song time. It preserves the
+// playing state so verification tools can jump into long remixes without
+// invalidating the conductor's monotonic-clock extrapolation.
+func (c *Conductor) SeekTime(pos float64) error {
+	if pos < 0 {
+		pos = 0
+	}
+	wasPlaying := c.playing
+	c.player.Pause()
+	c.playing = false
+	if err := c.player.SetPosition(time.Duration(pos * float64(time.Second))); err != nil {
+		return err
+	}
+	c.pos = pos
+	c.drift = 0
+	c.lastTick = time.Now()
+	if wasPlaying {
+		c.player.Play()
+		c.playing = true
+	}
+	return nil
+}
+
+// SeekBeat moves to a beat through the chart tempo map.
+func (c *Conductor) SeekBeat(beat float64) error {
+	return c.SeekTime(c.bm.BeatToTime(beat))
+}
+
 // Update 每帧调用一次，推进并校正歌曲时间。
 func (c *Conductor) Update() {
 	if !c.playing {

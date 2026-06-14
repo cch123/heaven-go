@@ -1,0 +1,1254 @@
+{
+ "nodes": [
+  {
+   "name": "rhythmTweezersAlt",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "VegetableHolder",
+   "path": "VegetableHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Vegetable",
+   "path": "VegetableHolder/Vegetable",
+   "parent": 1,
+   "pos": [
+    0,
+    2.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.7,
+    3.7
+   ],
+   "sprite": "veggies_0",
+   "order": 0,
+   "color": [
+    0.78431374,
+    0.5882353,
+    0,
+    1
+   ],
+   "size": [
+    2.68,
+    3.32
+   ]
+  },
+  {
+   "name": "Eye_Left",
+   "path": "VegetableHolder/Vegetable/Eye_Left",
+   "parent": 2,
+   "pos": [
+    -0.535,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "eye_2",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Eye_Right",
+   "path": "VegetableHolder/Vegetable/Eye_Right",
+   "parent": 2,
+   "pos": [
+    0.535,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "eye_2",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Nose",
+   "path": "VegetableHolder/Vegetable/Nose",
+   "parent": 2,
+   "pos": [
+    0,
+    0.025
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.78,
+    0.78
+   ],
+   "sprite": "nose_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Stache_Right",
+   "path": "VegetableHolder/Vegetable/Stache_Right",
+   "parent": 2,
+   "pos": [
+    0.635,
+    -0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.78,
+    0.78
+   ],
+   "sprite": "mustache_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Stache_Left",
+   "path": "VegetableHolder/Vegetable/Stache_Left",
+   "parent": 2,
+   "pos": [
+    -0.635,
+    -0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.78,
+    0.78
+   ],
+   "sprite": "mustache_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "VegetableHolder/Vegetable/Mouth",
+   "parent": 2,
+   "pos": [
+    0,
+    -0.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mouth_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Hairs",
+   "path": "VegetableHolder/Vegetable/Hairs",
+   "parent": 2,
+   "pos": [
+    0,
+    -0.63809526
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DroppedHairs",
+   "path": "VegetableHolder/Vegetable/DroppedHairs",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HairPrefabs",
+   "path": "VegetableHolder/Vegetable/HairPrefabs",
+   "parent": 2,
+   "pos": [
+    0,
+    -0.6380953
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HairHolder",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/HairHolder",
+   "parent": 11,
+   "pos": [
+    0,
+    0.82142866
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/HairHolder/Hair",
+   "parent": 12,
+   "pos": [
+    0,
+    -1.3562
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.8
+   ],
+   "sprite": "hair_3",
+   "order": 50,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.6,
+    0.84
+   ]
+  },
+  {
+   "name": "Stubble",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/HairHolder/Stubble",
+   "parent": 12,
+   "pos": [
+    0,
+    -1.145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.8
+   ],
+   "sprite": "stubble_0",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.6,
+    0.84
+   ]
+  },
+  {
+   "name": "Missed",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/HairHolder/Missed",
+   "parent": 12,
+   "pos": [
+    0,
+    -1.222
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "stubbleMissed_0",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.6,
+    0.84
+   ]
+  },
+  {
+   "name": "LongHairHolder",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/LongHairHolder",
+   "parent": 11,
+   "pos": [
+    0,
+    0.82142866
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LongHairHolder",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/LongHairHolder/LongHairHolder",
+   "parent": 16,
+   "pos": [
+    0,
+    -1.111
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.79999995
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Loop",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/LongHairHolder/LongHairHolder/Loop",
+   "parent": 17,
+   "pos": [
+    0,
+    -1.3562
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1.25
+   ],
+   "sprite": "hair_3",
+   "order": 50,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.6,
+    0.84
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/LongHairHolder/LongHairHolder/Hair",
+   "parent": 17,
+   "pos": [
+    0,
+    -0.28399917
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "hair_3",
+   "order": 50,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.6,
+    0.84
+   ]
+  },
+  {
+   "name": "Stubble",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/LongHairHolder/Stubble",
+   "parent": 16,
+   "pos": [
+    0,
+    -1.145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.79999995
+   ],
+   "sprite": "stubble_0",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.6,
+    0.84
+   ]
+  },
+  {
+   "name": "PluckedHair",
+   "path": "VegetableHolder/Vegetable/HairPrefabs/PluckedHair",
+   "parent": 11,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.8
+   ],
+   "sprite": "hair_4",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.6,
+    0.84
+   ]
+  },
+  {
+   "name": "Sparkle",
+   "path": "VegetableHolder/Vegetable/Sparkle",
+   "parent": 2,
+   "pos": [
+    0.625,
+    -0.242
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Sparkle",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    0.44012085,
+    0.915
+   ]
+  },
+  {
+   "name": "LightBulb",
+   "path": "VegetableHolder/Vegetable/LightBulb",
+   "parent": 2,
+   "pos": [
+    -0.013,
+    -1.675
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "LightBulb_0",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    3.32
+   ]
+  },
+  {
+   "name": "Back",
+   "path": "VegetableHolder/Vegetable/LightBulb/Back",
+   "parent": 23,
+   "pos": [
+    0,
+    1.2162163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "LightBulb_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    3.32
+   ]
+  },
+  {
+   "name": "LightHolder",
+   "path": "VegetableHolder/Vegetable/LightHolder",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeLight",
+   "path": "VegetableHolder/Vegetable/LightHolder/EyeLight",
+   "parent": 25,
+   "pos": [
+    0.49200007,
+    0.39999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32000002,
+    0.32000002
+   ],
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "EyeLight2",
+   "path": "VegetableHolder/Vegetable/LightHolder/EyeLight2",
+   "parent": 25,
+   "pos": [
+    -0.49200007,
+    0.39999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32000002,
+    0.32000002
+   ],
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "LightbulbBack",
+   "path": "VegetableHolder/Vegetable/LightHolder/LightbulbBack",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3300002,
+    1.9040002
+   ],
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    0.44012085,
+    0.915
+   ]
+  },
+  {
+   "name": "VegetableDuplicate",
+   "path": "VegetableHolder/VegetableDuplicate",
+   "parent": 1,
+   "pos": [
+    16.7,
+    2.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.7,
+    3.7
+   ],
+   "sprite": "veggies_0",
+   "order": 0,
+   "color": [
+    0.78431374,
+    0.5882353,
+    0,
+    1
+   ],
+   "size": [
+    2.68,
+    3.32
+   ]
+  },
+  {
+   "name": "Eye_Left",
+   "path": "VegetableHolder/VegetableDuplicate/Eye_Left",
+   "parent": 29,
+   "pos": [
+    -0.535,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "eye_2",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Eye_Right",
+   "path": "VegetableHolder/VegetableDuplicate/Eye_Right",
+   "parent": 29,
+   "pos": [
+    0.535,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "eye_2",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Nose",
+   "path": "VegetableHolder/VegetableDuplicate/Nose",
+   "parent": 29,
+   "pos": [
+    0,
+    0.025
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.78,
+    0.78
+   ],
+   "sprite": "nose_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Stache_Right",
+   "path": "VegetableHolder/VegetableDuplicate/Stache_Right",
+   "parent": 29,
+   "pos": [
+    0.635,
+    -0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.78,
+    0.78
+   ],
+   "sprite": "mustache_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Stache_Left",
+   "path": "VegetableHolder/VegetableDuplicate/Stache_Left",
+   "parent": 29,
+   "pos": [
+    -0.635,
+    -0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.78,
+    0.78
+   ],
+   "sprite": "mustache_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "VegetableHolder/VegetableDuplicate/Mouth",
+   "parent": 29,
+   "pos": [
+    0,
+    -0.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mouth_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.92
+   ]
+  },
+  {
+   "name": "LightBulb",
+   "path": "VegetableHolder/VegetableDuplicate/LightBulb",
+   "parent": 29,
+   "pos": [
+    0,
+    -1.6750001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "LightBulb_0",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    3.32
+   ]
+  },
+  {
+   "name": "Back",
+   "path": "VegetableHolder/VegetableDuplicate/LightBulb/Back",
+   "parent": 36,
+   "pos": [
+    0,
+    1.2162163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "LightBulb_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    3.32
+   ]
+  },
+  {
+   "name": "TweezerHolder",
+   "path": "TweezerHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    3.68
+   ],
+   "rotZ": 6.0456467701472825,
+   "scale": [
+    0.88095236,
+    0.88095236
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Tweezers",
+   "path": "TweezerHolder/Tweezers",
+   "parent": 38,
+   "pos": [
+    0,
+    -8.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "sprite": "tweezers_0",
+   "order": 60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    1.24
+   ]
+  },
+  {
+   "name": "Zoom",
+   "path": "TweezerHolder/Zoom",
+   "parent": 38,
+   "pos": [
+    0,
+    -8.863
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "sprite": "zoom_0",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    1.24
+   ]
+  },
+  {
+   "name": "Clamp",
+   "path": "TweezerHolder/Clamp",
+   "parent": 38,
+   "pos": [
+    0,
+    -5.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.9,
+    3.9
+   ],
+   "sprite": "pluck_0",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    1.24
+   ]
+  },
+  {
+   "name": "PluckFx",
+   "path": "TweezerHolder/PluckFx",
+   "parent": 38,
+   "pos": [
+    0,
+    -4.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.9,
+    3.9
+   ],
+   "sprite": "pluck_1",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    1.24
+   ]
+  },
+  {
+   "name": "PluckedHair",
+   "path": "TweezerHolder/PluckedHair",
+   "parent": 38,
+   "pos": [
+    0,
+    -5.926039
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2000003,
+    3.36
+   ],
+   "sprite": "hair_4",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.6,
+    0.84
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    -0.1587,
+    -0.1652
+   ],
+   "rotZ": 0,
+   "scale": [
+    184.10315,
+    105.19222
+   ],
+   "order": -1000,
+   "color": [
+    0.6313726,
+    0.30980393,
+    0.6313726,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BG (1)",
+   "path": "BG (1)",
+   "parent": 0,
+   "pos": [
+    -0.1587,
+    -0.1652
+   ],
+   "rotZ": 0,
+   "scale": [
+    18.9426,
+    11.7704
+   ],
+   "order": -1000,
+   "inactive": true,
+   "color": [
+    0.6313726,
+    0.30980393,
+    0.6313726,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "noPeek_2",
+   "path": "noPeek_2",
+   "parent": 0,
+   "pos": [
+    0,
+    -13.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    3,
+    3
+   ],
+   "sprite": "noPeek_2",
+   "order": 70,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.2,
+    4.96
+   ]
+  },
+  {
+   "name": "Screenshot_3DS_Rhythm_Tweezers_2",
+   "path": "Screenshot_3DS_Rhythm_Tweezers_2",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.597409,
+    2.5974092
+   ],
+   "sprite": "Screenshot_3DS_Rhythm_Tweezers_2",
+   "order": 9999,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.40392157
+   ],
+   "size": [
+    6.4,
+    3.85
+   ]
+  }
+ ]
+}
