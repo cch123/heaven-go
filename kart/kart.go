@@ -7,6 +7,7 @@ package kart
 
 import (
 	"bytes"
+	"encoding/binary"
 	"encoding/json"
 	"fmt"
 	"image"
@@ -232,6 +233,11 @@ func decodePCM(raw []byte, ext string, rate int) ([]byte, error) {
 		s, err = vorbis.DecodeWithSampleRate(rate, br)
 	case ".wav":
 		s, err = wav.DecodeWithSampleRate(rate, br)
+		if err != nil {
+			if pcm, compatErr := decodeWAVCompat(raw, rate); compatErr == nil {
+				return pcm, nil
+			}
+		}
 	default:
 		return nil, fmt.Errorf("unsupported sound ext %q", ext)
 	}
@@ -239,6 +245,103 @@ func decodePCM(raw []byte, ext string, rate int) ([]byte, error) {
 		return nil, err
 	}
 	return io.ReadAll(s)
+}
+
+func decodeWAVCompat(raw []byte, targetRate int) ([]byte, error) {
+	if len(raw) < 12 || string(raw[:4]) != "RIFF" || string(raw[8:12]) != "WAVE" {
+		return nil, fmt.Errorf("not a RIFF/WAVE file")
+	}
+	var (
+		format     uint16
+		channels   uint16
+		sampleRate uint32
+		bits       uint16
+		data       []byte
+	)
+	for off := 12; off+8 <= len(raw); {
+		id := string(raw[off : off+4])
+		size := int(binary.LittleEndian.Uint32(raw[off+4 : off+8]))
+		start, end := off+8, off+8+size
+		if size < 0 || end > len(raw) {
+			return nil, fmt.Errorf("truncated wave chunk %q", id)
+		}
+		switch id {
+		case "fmt ":
+			if size < 16 {
+				return nil, fmt.Errorf("short fmt chunk")
+			}
+			format = binary.LittleEndian.Uint16(raw[start : start+2])
+			channels = binary.LittleEndian.Uint16(raw[start+2 : start+4])
+			sampleRate = binary.LittleEndian.Uint32(raw[start+4 : start+8])
+			bits = binary.LittleEndian.Uint16(raw[start+14 : start+16])
+		case "data":
+			data = raw[start:end]
+		}
+		off = end
+		if off%2 == 1 {
+			off++
+		}
+	}
+	if channels == 0 || sampleRate == 0 || len(data) == 0 {
+		return nil, fmt.Errorf("missing wave fmt/data")
+	}
+	bytesPerSample := int(bits / 8)
+	if bytesPerSample == 0 {
+		return nil, fmt.Errorf("unsupported wave bit depth %d", bits)
+	}
+	frameBytes := int(channels) * bytesPerSample
+	if frameBytes == 0 || len(data) < frameBytes {
+		return nil, fmt.Errorf("empty wave data")
+	}
+	if !supportedWaveFormat(format, bits) {
+		return nil, fmt.Errorf("unsupported wave format=%d bits=%d", format, bits)
+	}
+	frames := len(data) / frameBytes
+	out := make([]byte, frames*4) // 16-bit little-endian stereo
+	for i := 0; i < frames; i++ {
+		left := wavSample16(data, i, 0, int(channels), bytesPerSample, format, bits)
+		right := left
+		if channels > 1 {
+			right = wavSample16(data, i, 1, int(channels), bytesPerSample, format, bits)
+		}
+		binary.LittleEndian.PutUint16(out[i*4:], uint16(left))
+		binary.LittleEndian.PutUint16(out[i*4+2:], uint16(right))
+	}
+	if int(sampleRate) != targetRate {
+		out = ResamplePCM(out, float64(sampleRate)/float64(targetRate))
+	}
+	return out, nil
+}
+
+func supportedWaveFormat(format, bits uint16) bool {
+	return (format == 1 && (bits == 16 || bits == 24 || bits == 32)) ||
+		(format == 3 && bits == 32)
+}
+
+func wavSample16(data []byte, frame, ch, channels, bytesPerSample int, format, bits uint16) int16 {
+	off := frame*channels*bytesPerSample + ch*bytesPerSample
+	switch {
+	case format == 1 && bits == 16:
+		return int16(binary.LittleEndian.Uint16(data[off : off+2]))
+	case format == 1 && bits == 24:
+		v := int32(data[off]) | int32(data[off+1])<<8 | int32(data[off+2])<<16
+		if v&0x800000 != 0 {
+			v |= ^0xffffff
+		}
+		return int16(v >> 8)
+	case format == 1 && bits == 32:
+		return int16(int32(binary.LittleEndian.Uint32(data[off:off+4])) >> 16)
+	case format == 3 && bits == 32:
+		f := float64(math.Float32frombits(binary.LittleEndian.Uint32(data[off : off+4])))
+		if f > 1 {
+			f = 1
+		} else if f < -1 {
+			f = -1
+		}
+		return int16(f * 32767)
+	default:
+		return 0
+	}
 }
 
 // ResamplePCM 对 16-bit LE 立体声 PCM 做线性插值重采样实现变调：

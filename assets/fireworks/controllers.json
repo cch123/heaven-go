@@ -1,0 +1,46 @@
+{
+ "Bomb": {
+  "default": "IdleBomb",
+  "states": {
+   "ExplodeBomb": {
+    "clip": "Animations/ExplodeBomb",
+    "speed": 1
+   },
+   "IdleBomb": {
+    "clip": "Animations/IdleBomb",
+    "speed": 1
+   }
+  }
+ },
+ "Firework": {
+  "default": "Rocket",
+  "states": {
+   "End": {
+    "clip": "Animations/End",
+    "speed": 1
+   },
+   "Rocket": {
+    "clip": "Animations/Rocket",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "End",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Sparkler": {
+    "clip": "Animations/Sparkler",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "End",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,578 @@
+{
+ "nodes": [
+  {
+   "name": "fireworks",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    50,
+    50
+   ],
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Cityold",
+   "path": "BG/Cityold",
+   "parent": 1,
+   "pos": [
+    -0.0036000002,
+    -1.2871169
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.057482235,
+    0.01258653
+   ],
+   "sprite": "city_5",
+   "order": -100,
+   "inactive": true,
+   "color": [
+    0,
+    0.03137255,
+    0.1254902,
+    1
+   ],
+   "drawMode": 1,
+   "size": [
+    6.72,
+    192.72717
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "BG/Sky",
+   "parent": 1,
+   "pos": [
+    0,
+    0.007
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.21198751,
+    0.011052757
+   ],
+   "order": -200,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "City_Old",
+   "path": "BG/City_Old",
+   "parent": 1,
+   "pos": [
+    -0.00042600004,
+    -0.08829599
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0125865275,
+    0.012586529
+   ],
+   "sprite": "city_2",
+   "order": -100,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.36,
+    2.6
+   ]
+  },
+  {
+   "name": "SpawnPositions",
+   "path": "SpawnPositions",
+   "parent": 0,
+   "pos": [
+    0,
+    -6.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Left",
+   "path": "SpawnPositions/Left",
+   "parent": 5,
+   "pos": [
+    -5.04,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Right",
+   "path": "SpawnPositions/Right",
+   "parent": 5,
+   "pos": [
+    5.04,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Middle",
+   "path": "SpawnPositions/Middle",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BombCurve",
+   "path": "BombCurve",
+   "parent": 0,
+   "pos": [
+    0.34261814,
+    1.2302552
+   ],
+   "z": -2.8538387,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "BombCurve/Point 0",
+   "parent": 9,
+   "pos": [
+    -3.0968592,
+    -6.3948936
+   ],
+   "z": 0.00032305717,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "BombCurve/Point 1",
+   "parent": 9,
+   "pos": [
+    -0.3622792,
+    -0.6290142
+   ],
+   "z": 0.00032305717,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BombSpawnPoint",
+   "path": "BombSpawnPoint",
+   "parent": 0,
+   "pos": [
+    -2.84,
+    -5.281
+   ],
+   "z": -5.149107,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Flash",
+   "path": "Flash",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "agasgagag",
+   "path": "agasgagag",
+   "parent": 0,
+   "pos": [
+    95.77979,
+    -17.829262
+   ],
+   "z": -16.27828,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "agasgagag/Gradient",
+   "parent": 14,
+   "pos": [
+    -95.77979,
+    77.71207
+   ],
+   "z": 16.27828,
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.1314
+   ],
+   "sprite": "bg_gradient",
+   "order": -200,
+   "color": [
+    0,
+    0.03137255,
+    0.1254902,
+    1
+   ],
+   "drawMode": 1,
+   "size": [
+    250.00003,
+    991.12946
+   ]
+  },
+  {
+   "name": "City",
+   "path": "agasgagag/City",
+   "parent": 14,
+   "pos": [
+    -96.526794,
+    -46.52659
+   ],
+   "z": 16.27828,
+   "rotZ": 0,
+   "scale": [
+    0.62924993,
+    0.6293265
+   ],
+   "sprite": "city_2",
+   "order": -100,
+   "color": [
+    0,
+    0.03137255,
+    0.1254902,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    141.70032,
+    192.72717
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "agasgagag/Sky",
+   "parent": 14,
+   "pos": [
+    -95.77979,
+    -44.67074
+   ],
+   "z": 16.27828,
+   "rotZ": 0,
+   "scale": [
+    250,
+    125
+   ],
+   "order": -210,
+   "color": [
+    0,
+    0.2,
+    0.46666667,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "agasgagag/Stars",
+   "parent": 14,
+   "pos": [
+    -95.83849,
+    17.909262
+   ],
+   "z": 16.27828,
+   "rotZ": 0,
+   "scale": [
+    0.5759267,
+    0.5759267
+   ],
+   "sprite": "city_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    30.84,
+    17.98
+   ]
+  },
+  {
+   "name": "Faces",
+   "path": "agasgagag/Faces",
+   "parent": 14,
+   "pos": [
+    -95.93849,
+    17.664062
+   ],
+   "z": 16.27828,
+   "rotZ": 0,
+   "scale": [
+    50,
+    50
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "face_0",
+   "path": "agasgagag/Faces/face_0",
+   "parent": 19,
+   "pos": [
+    -0.1202,
+    0.0094
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.012033556,
+    0.012033556
+   ],
+   "sprite": "city_3",
+   "order": -101,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.66,
+    3.76
+   ]
+  },
+  {
+   "name": "face_1",
+   "path": "agasgagag/Faces/face_1",
+   "parent": 19,
+   "pos": [
+    0.092,
+    0.0068
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.012033556,
+    0.012033556
+   ],
+   "sprite": "city_4",
+   "order": -101,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.94,
+    4.12
+   ]
+  }
+ ]
+}
