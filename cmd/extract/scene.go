@@ -30,14 +30,23 @@ type sceneSpec struct {
 	objSpriteFields []string // 模板组件上的 sprite 引用数组字段（→ 切片名，如 Meat.meats）
 	wantSequences   bool     // 提取 SoundSequences 组件
 	commonSounds    []string // 需要的公共音效（Assets/Resources/Sfx/<name>）
-	wantControllers bool     // 提取 AnimatorController 状态机（controllers.json + animators.json）
-	wantTexts       bool     // 提取 TMP 世界文本（texts.json + fonts/）
+	extraSounds     []extraSound
+	wantControllers bool // 提取 AnimatorController 状态机（controllers.json + animators.json）
+	wantTexts       bool // 提取 TMP 世界文本（texts.json + fonts/）
 
 	components []componentSpec // 通用组件 dump（Extra.Components）
 	// templatePrefabs 是 C# 运行时 Instantiate 的 prefab 资产引用；这些
 	// prefab 不在主场景树里，但运行时必须有完整子树供 kart.Template 复用。
 	// 提取时作为隐藏根挂到导出 scene 下，保留原 fileID 以便主脚本字段引用解析。
 	templatePrefabs []string
+}
+
+// extraSound copies a sound referenced by C# using another minigame namespace
+// (for example Hole in One's whale sign cue uses clappyTrio/sign).
+type extraSound struct {
+	dir string // Assets/Bundled/Games/<dir>/Sounds
+	rel string // source path under Sounds
+	out string // output path under assets/<game>/sounds; defaults to rel
 }
 
 // componentSpec 按字段特征（可选限定 GameObject path）识别一个 MonoBehaviour，
@@ -48,6 +57,10 @@ type componentSpec struct {
 	atPath      string   // 非空时限定组件所在 GameObject 的 path（同字段集脚本如 TCTotem/TCDragon）
 	multi       bool     // 匹配多个组件：导出为 name0、name1…（按 path 排序）
 	curveFields []string // 组件字段里的 BezierCurve3D 引用，导出到 Extra.Curves
+
+	// curveArrayFields handles BezierCurve3D[] fields such as Hole in One's
+	// Ball.curve. Each entry is exported as <component>.<field><index>.
+	curveArrayFields []string
 }
 
 var sceneSpecs = map[string]sceneSpec{
@@ -274,6 +287,20 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		components: []componentSpec{
 			{name: "game", markers: []string{"frogAnim", "princessAnim", "Leaves", "Lotuses", "moveDistance", "moveTime"}},
+		},
+	},
+	"holeInOne": {
+		dir:    "HoleInOne",
+		prefab: "holeInOne.prefab",
+		roleFields: []string{
+			"baseBall", "MonkeyAnim", "MonkeyHeadAnim", "MandrillAnim", "GolferAnim",
+			"Hole", "HoleAnim", "GrassEffectAnim", "BallEffectAnim", "grassEffectPrefab", "grassArea",
+		},
+		wantControllers: true,
+		extraSounds:     []extraSound{{dir: "ClappyTrio", rel: "sign.ogg"}},
+		components: []componentSpec{
+			{name: "game", markers: []string{"baseBall", "MonkeyAnim", "MonkeyHeadAnim", "MandrillAnim", "GolferAnim", "Hole", "HoleAnim", "GrassEffectAnim", "BallEffectAnim", "grassEffectPrefab", "grassArea"}},
+			{name: "ball", markers: []string{"curve", "ballSR", "shadowSR", "bigBallSR", "bigShadowSR"}, atPath: "Golfball", curveArrayFields: []string{"curve"}},
 		},
 	},
 	"forkLifter": {
@@ -673,6 +700,17 @@ func extractScene(game string) {
 		// 公共音效加 common_ 前缀避免与游戏音效重名
 		outName := "common_" + strings.NewReplacer("/", "_", "\\", "_").Replace(name)
 		must(os.WriteFile(filepath.Join(*outDir, "sounds", outName), b, 0o644))
+	}
+	for _, snd := range spec.extraSounds {
+		b, err := os.ReadFile(bundlePath(snd.dir, "Sounds", filepath.FromSlash(snd.rel)))
+		must(err)
+		outName := snd.out
+		if outName == "" {
+			outName = snd.rel
+		}
+		dst := filepath.Join(*outDir, "sounds", filepath.FromSlash(outName))
+		must(os.MkdirAll(filepath.Dir(dst), 0o755))
+		must(os.WriteFile(dst, b, 0o644))
 	}
 	fmt.Println("done.")
 }
@@ -1118,6 +1156,22 @@ func extractCurveRef(dt *docTable, idx *prefabIndex, field string, rv any) (kmda
 	return curve, true
 }
 
+func exportComponentCurves(extra *kmdata.Extra, dt *docTable, idx *prefabIndex, key string, fields []string, arrayFields []string, content map[string]any) {
+	for _, f := range fields {
+		if curve, ok := extractCurveRef(dt, idx, key+"."+f, content[f]); ok {
+			extra.Curves[key+"."+f] = curve
+		}
+	}
+	for _, f := range arrayFields {
+		for i, rv := range uy.L(content[f]) {
+			ck := fmt.Sprintf("%s.%s%d", key, f, i)
+			if curve, ok := extractCurveRef(dt, idx, ck, rv); ok {
+				extra.Curves[ck] = curve
+			}
+		}
+	}
+}
+
 func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64]string, nodeIdx map[int64]int, tables map[string]*spriteTable) {
 	if len(spec.refArrayFields)+len(spec.strArrayFields)+len(spec.curveFields)+len(spec.objMarkers)+len(spec.components) == 0 && !spec.wantSequences {
 		return
@@ -1318,22 +1372,14 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 				for i, h := range hits {
 					key := fmt.Sprintf("%s%d", cs.name, i)
 					extra.Components[key] = dumpComponent(dt, paths, tables, idx.mappedMats, h.p, h.content)
-					for _, f := range cs.curveFields {
-						if curve, ok := extractCurveRef(dt, idx, key+"."+f, h.content[f]); ok {
-							extra.Curves[key+"."+f] = curve
-						}
-					}
+					exportComponentCurves(extra, dt, idx, key, cs.curveFields, cs.curveArrayFields, h.content)
 				}
 			default:
 				if len(hits) > 1 {
 					log.Printf("warn: 组件 %s 匹配 %d 个，保留 path 最小者 %q（用 atPath/multi 限定）", cs.name, len(hits), hits[0].p)
 				}
 				extra.Components[cs.name] = dumpComponent(dt, paths, tables, idx.mappedMats, hits[0].p, hits[0].content)
-				for _, f := range cs.curveFields {
-					if curve, ok := extractCurveRef(dt, idx, cs.name+"."+f, hits[0].content[f]); ok {
-						extra.Curves[cs.name+"."+f] = curve
-					}
-				}
+				exportComponentCurves(extra, dt, idx, cs.name, cs.curveFields, cs.curveArrayFields, hits[0].content)
 			}
 		}
 	}

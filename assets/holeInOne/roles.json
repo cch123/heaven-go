@@ -1,1 +1,13 @@
-{}
+{
+ "BallEffectAnim": "BallEffect",
+ "GolferAnim": "Golfer",
+ "GrassEffectAnim": "GrassEffect",
+ "Hole": "GolfHole",
+ "HoleAnim": "GolfHole",
+ "MandrillAnim": "Mandrill",
+ "MonkeyAnim": "Monkey",
+ "MonkeyHeadAnim": "Monkey/MonkeyHead",
+ "baseBall": "Golfball",
+ "grassArea": "GrassEffects/GrassArea",
+ "grassEffectPrefab": "GrassEffect"
+}
