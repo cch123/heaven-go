@@ -34,6 +34,7 @@ import (
 	"hsdemo/games/drummingpractice"
 	"hsdemo/games/forklifter"
 	"hsdemo/games/frogprincess"
+	"hsdemo/games/gleeclub"
 	"hsdemo/games/kitties"
 	"hsdemo/games/lockstep"
 	"hsdemo/games/marchingorders"
@@ -119,6 +120,7 @@ func main() {
 	engine.Register("drummingPractice", drummingpractice.New)
 	engine.Register("forkLifter", forklifter.New)
 	engine.Register("frogPrincess", frogprincess.New)
+	engine.Register("gleeClub", gleeclub.New)
 	engine.Register("tambourine", tambourine.New)
 	engine.Register("tapTrial", taptrial.New)
 	engine.Register("trickClass", trickclass.New)

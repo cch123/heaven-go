@@ -176,6 +176,18 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "player", markers: []string{"hitFX", "hitFXG", "hitFXMiss", "hitFX2", "early", "perfect", "late"}, atPath: "Player"},
 		},
 	},
+	"gleeClub": {
+		dir:    "GleeClub",
+		prefab: "gleeClub.prefab",
+		roleFields: []string{
+			"heartAnim", "condAnim", "leftChorusKid", "middleChorusKid", "playerChorusKid",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"heartAnim", "condAnim", "leftChorusKid", "middleChorusKid", "playerChorusKid", "kidMaterial", "bgMaterial"}},
+			{name: "kid", markers: []string{"anim", "sr", "player"}, multi: true},
+		},
+	},
 	"clappyTrio": {
 		dir:             "ClappyTrio",
 		prefab:          "clappyTrio.prefab",

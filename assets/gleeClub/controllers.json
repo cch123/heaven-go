@@ -1,0 +1,121 @@
+{
+ "ChorusKid": {
+  "default": "Idle",
+  "params": {
+   "Mega": false
+  },
+  "states": {
+   "CloseMouth": {
+    "clip": "Animations/CloseMouth",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "CrouchIdle": {
+    "clip": "Animations/CrouchIdle",
+    "speed": 1
+   },
+   "CrouchStart": {
+    "clip": "Animations/CrouchStart",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CrouchIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "MegaCloseMouth": {
+    "clip": "Animations/MegaCloseMouth",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MegaYellIdle": {
+    "clip": "Animations/MegaYellIdle",
+    "speed": 1
+   },
+   "MissIdle": {
+    "clip": "Animations/MissIdle",
+    "speed": 1
+   },
+   "OpenMouth": {
+    "clip": "Animations/OpenMouth",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "YellIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "Mega"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "MegaYellIdle",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "Mega"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "YellIdle": {
+    "clip": "Animations/YellIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Conductor": {
+  "default": "ConductorIdle",
+  "states": {
+   "ConductorBatonDown": {
+    "clip": "Animations/ConductorBatonDown",
+    "speed": 1
+   },
+   "ConductorBatonUp": {
+    "clip": "Animations/ConductorBatonUp",
+    "speed": 1
+   },
+   "ConductorIdle": {
+    "clip": "Animations/ConductorIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Heart": {
+  "default": "HeartNothing",
+  "states": {
+   "HeartIdle": {
+    "clip": "Animations/HeartIdle",
+    "speed": 1
+   },
+   "HeartNothing": {
+    "clip": "Animations/HeartNothing",
+    "speed": 1
+   }
+  }
+ }
+}

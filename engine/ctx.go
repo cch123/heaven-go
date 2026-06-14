@@ -6,6 +6,7 @@ import (
 	"math"
 	"path/filepath"
 
+	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/audio"
 
 	"hsdemo/kart"
@@ -92,6 +93,24 @@ func (c *Ctx) SoundAtOff(beat float64, name string, vol, offsetSec float64) {
 	})
 }
 
+// SoundAtPitchOff 在指定拍播放带音高并跳过开头 offset 秒的音效。
+func (c *Ctx) SoundAtPitchOff(beat float64, name string, vol, pitch, offsetSec float64) {
+	c.At(beat, func() {
+		pcm, ok := c.Assets.Sounds[name]
+		if !ok {
+			return
+		}
+		skip := int(offsetSec*float64(SampleRate)) * 4
+		if skip < 0 || skip >= len(pcm) {
+			skip = 0
+		}
+		pcm = kart.ResamplePCM(pcm[skip:], pitch)
+		p := audioCtx.NewPlayerFromBytes(pcm)
+		p.SetVolume(vol)
+		p.Play()
+	})
+}
+
 // SoundAt 在指定拍播放音效（MultiSound 等价物）。
 func (c *Ctx) SoundAt(beat float64, name string, vol float64) {
 	c.At(beat, func() { c.SoundVol(name, vol) })
@@ -130,12 +149,31 @@ func (c *Ctx) ScheduleInputRelease(beat float64, onHit func(state float64, j Jud
 func (c *Ctx) PressedNow() bool  { return c.App.pressedNow }
 func (c *Ctx) ReleasedNow() bool { return c.App.releasedNow }
 
+// PressingNow 报告主键当前是否保持按下（HS InputAction_BasicPressing）。
+func (c *Ctx) PressingNow() bool {
+	return ebiten.IsKeyPressed(ebiten.KeySpace) ||
+		ebiten.IsKeyPressed(ebiten.KeyJ) ||
+		ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft)
+}
+
 // ExpectingReleaseNow 报告当前时刻是否在某个未判定 release 输入的 NG 窗口内
 // （IsExpectingInputNow(InputAction_FlickRelease) 等价物）。
 func (c *Ctx) ExpectingReleaseNow() bool {
 	t := c.App.cond.Time()
 	for _, in := range c.App.inputs {
 		if in.Release && !in.judged && t >= in.hitT-WinNG && t <= in.hitT+WinNG {
+			return true
+		}
+	}
+	return false
+}
+
+// ExpectingPressNow 报告当前时刻是否在某个未判定主键按下的 NG 窗口内
+// （Glee Club 的空按闭嘴判定用）。
+func (c *Ctx) ExpectingPressNow() bool {
+	t := c.App.cond.Time()
+	for _, in := range c.App.inputs {
+		if !in.Release && in.Action == 0 && !in.judged && t >= in.hitT-WinNG && t <= in.hitT+WinNG {
 			return true
 		}
 	}
@@ -240,10 +278,17 @@ func (c *Ctx) SoundLoop(name string) func() { return c.SoundLoopVol(name, 1) }
 
 // SoundLoopVol 带音量的循环播放（kitties spinnya 0.85 等）。
 func (c *Ctx) SoundLoopVol(name string, vol float64) func() {
+	return c.SoundLoopPitchVol(name, 1, vol)
+}
+
+// SoundLoopPitchVol 带音高与音量的循环播放。Glee Club 的 WailLoop
+// 用 SoundByte.GetPitchFromSemiTones 变调后循环，必须在创建 loop 前重采样。
+func (c *Ctx) SoundLoopPitchVol(name string, pitch, vol float64) func() {
 	pcm, ok := c.Assets.Sounds[name]
 	if !ok {
 		return func() {}
 	}
+	pcm = kart.ResamplePCM(pcm, pitch)
 	loop := audio.NewInfiniteLoop(bytes.NewReader(pcm), int64(len(pcm)))
 	p, err := audioCtx.NewPlayer(loop)
 	if err != nil {

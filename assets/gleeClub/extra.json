@@ -1,0 +1,64 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "missed": 0
+   },
+   "refs": {
+    "bgMaterial": "BackgroundRGB",
+    "condAnim": "Conductor",
+    "heartAnim": "Heart",
+    "kidMaterial": "ChorusKidRGB",
+    "leftChorusKid": "ChorusKid",
+    "middleChorusKid": "ChorusKid (1)",
+    "playerChorusKid": "Player"
+   }
+  },
+  "kid0": {
+   "path": "ChorusKid",
+   "nums": {
+    "currentPitch": 1,
+    "disappeared": 0,
+    "gameSwitchFadeOutTime": 0,
+    "player": 0,
+    "shouldMegaClose": 0,
+    "singing": 0
+   },
+   "refs": {
+    "anim": "ChorusKid",
+    "sr": "ChorusKid/Sprite"
+   }
+  },
+  "kid1": {
+   "path": "ChorusKid (1)",
+   "nums": {
+    "currentPitch": 1,
+    "disappeared": 0,
+    "gameSwitchFadeOutTime": 0,
+    "player": 0,
+    "shouldMegaClose": 0,
+    "singing": 0
+   },
+   "refs": {
+    "anim": "ChorusKid (1)",
+    "sr": "ChorusKid (1)/Sprite"
+   }
+  },
+  "kid2": {
+   "path": "Player",
+   "nums": {
+    "currentPitch": 1,
+    "disappeared": 0,
+    "gameSwitchFadeOutTime": 0,
+    "player": 1,
+    "shouldMegaClose": 0,
+    "singing": 0
+   },
+   "refs": {
+    "anim": "Player",
+    "sr": "Player/Sprite"
+   }
+  }
+ }
+}

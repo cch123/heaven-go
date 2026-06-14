@@ -1,0 +1,403 @@
+{
+ "nodes": [
+  {
+   "name": "gleeClub",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    -0.71,
+    4.71
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Background/Square",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -16,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "BackgroundRGB"
+  },
+  {
+   "name": "Grey",
+   "path": "Background/Grey",
+   "parent": 1,
+   "pos": [
+    27.29,
+    14.08
+   ],
+   "rotZ": -0.07363636458205104,
+   "scale": [
+    70.109215,
+    35.08904
+   ],
+   "order": -10,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "BackgroundRGB"
+  },
+  {
+   "name": "Grey (1)",
+   "path": "Background/Grey (1)",
+   "parent": 1,
+   "pos": [
+    -23.28,
+    11.89
+   ],
+   "rotZ": 0.2345213044032751,
+   "scale": [
+    70.109215,
+    35.08904
+   ],
+   "order": -10,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "BackgroundRGB"
+  },
+  {
+   "name": "ChorusKid",
+   "path": "ChorusKid",
+   "parent": 0,
+   "pos": [
+    -1.79,
+    2.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.051391,
+    1.051391
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "ChorusKid/Sprite",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Idle0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.55,
+    4.1
+   ],
+   "mapped": true,
+   "mat": "ChorusKidRGB"
+  },
+  {
+   "name": "ChorusKid (1)",
+   "path": "ChorusKid (1)",
+   "parent": 0,
+   "pos": [
+    1.12,
+    1.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.051391,
+    1.051391
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "ChorusKid (1)/Sprite",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Idle0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.55,
+    4.1
+   ],
+   "mapped": true,
+   "mat": "ChorusKidRGB"
+  },
+  {
+   "name": "Player",
+   "path": "Player",
+   "parent": 0,
+   "pos": [
+    4.01,
+    1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.051391,
+    1.051391
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Player/Sprite",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Idle0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.55,
+    4.1
+   ],
+   "mapped": true,
+   "mat": "ChorusKidRGB"
+  },
+  {
+   "name": "Conductor",
+   "path": "Conductor",
+   "parent": 0,
+   "pos": [
+    -3.85,
+    -2.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.168176,
+    1.168176
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Conductor/Sprite",
+   "parent": 11,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ConductorIdle0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.5,
+    4.73
+   ],
+   "mapped": true,
+   "mat": "ChorusKidRGB"
+  },
+  {
+   "name": "Heart",
+   "path": "Heart",
+   "parent": 0,
+   "pos": [
+    5.85,
+    3.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "WhiteHeart0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.48235294
+   ],
+   "size": [
+    1.64,
+    1.33
+   ],
+   "mapped": true,
+   "mat": "ChorusKidRGB"
+  },
+  {
+   "name": "PinkHeart0",
+   "path": "Heart/PinkHeart0",
+   "parent": 13,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PinkHeart0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.25,
+    1.02
+   ],
+   "mapped": true,
+   "mat": "ChorusKidRGB"
+  }
+ ]
+}
