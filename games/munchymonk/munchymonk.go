@@ -326,6 +326,12 @@ func (m *Module) monkState(name string, beat float64) {
 	m.ctx.Scene.PlayState(m.ctx.Role("MonkAnim"), name, beat, 0.5)
 }
 
+func (m *Module) playDumplingSmear(beat float64) {
+	// Unity 的 Animator.Play("SmearAppear", 0, 0) 是从第 0 帧重播，
+	// 不是冻结在第 0 帧；这个 1 帧残影要按真实秒淡到 alpha=0。
+	m.ctx.Scene.PlayState("DumplingStuff/DumplingSmear1", "SmearAppear", beat, m.ctx.SecPerBeat(beat))
+}
+
 func (m *Module) monkBop(beat float64) {
 	m.monkState("Bop", beat)
 	if m.growLevel == 4 {
@@ -403,7 +409,7 @@ func (m *Module) scheduleDumplingInput(judgeBeat float64) {
 		}
 		m.ctx.Scene.PlayState(m.ctx.Role("MonkAnim"), "Eat", beat, 0.4)
 		ds[0].inst.PlayState("", "FollowHand", beat, 0.5)
-		ctx.Scene.PlayFrozen("DumplingStuff/DumplingSmear1", "SmearAppear", 0)
+		m.playDumplingSmear(beat)
 		m.needBlush = true
 		ctx.Sound("gulp")
 		m.gulps++
@@ -454,7 +460,7 @@ func (m *Module) Whiff(beat float64) {
 	}
 	d := ds[len(ds)-1]
 	m.monkState("Miss", beat)
-	ctx.Scene.PlayFrozen("DumplingStuff/DumplingSmear1", "SmearAppear", 0)
+	m.playDumplingSmear(beat)
 	d.inst.PlayState("", "HitHead", beat, 0.5)
 	ctx.Sound("miss")
 	d.fallable = true
