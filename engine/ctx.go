@@ -153,6 +153,12 @@ func (c *Ctx) ScoreMiss() {
 // CameraAt 返回 beat 时刻相机世界位置（vfx/move camera 时间轴，默认 (0,0,-10)）。
 func (c *Ctx) CameraAt(beat float64) [3]float64 { return c.App.CameraAt(beat) }
 
+// FadeMusicVolume fades the chart music multiplier for minigame-specific
+// ducking (HS Conductor.FadeMinigameVolume).
+func (c *Ctx) FadeMusicVolume(beat, length, target float64) {
+	c.App.fadeMusicVolume(beat, length, target)
+}
+
 // SampleScene applies the global GameCamera timeline before sampling the scene.
 // Remix charts drive cross-game zooms/pans through vfx/move camera, so every
 // scene-backed minigame must go through this helper instead of sampling with the
@@ -181,6 +187,9 @@ func (c *Ctx) Beat() float64 { return c.App.cond.Beat() }
 
 // BeatToTime 经 tempo map 换算。
 func (c *Ctx) BeatToTime(beat float64) float64 { return c.App.bm.BeatToTime(beat) }
+
+// TimeToBeat 是 BeatToTime 的逆映射（HS Conductor.GetBeatFromSongPos）。
+func (c *Ctx) TimeToBeat(t float64) float64 { return c.App.bm.TimeToBeat(t) }
 
 // SecPerBeat 返回某拍处的秒/拍（用于以 1x 真实速度播放剪辑：timeScale = SecPerBeat）。
 func (c *Ctx) SecPerBeat(beat float64) float64 { return 60 / c.App.bm.BPMAt(beat) }

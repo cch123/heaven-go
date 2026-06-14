@@ -421,6 +421,8 @@ func (a *Assets) DrawSpriteTint(dst *ebiten.Image, name string, world, proj Aff,
 type SpriteOpts struct {
 	FlipX, FlipY bool
 	Tint         [4]float64 // 零值视为白色
+	MatColor     [4]float64 // CellAnime _Color；零值视为白色
+	Add          [4]float64 // CellAnime _AddColor（screen 混合）
 	Stretch      [2]float64 // 非零时拉伸到该尺寸（unit，对应 SpriteRenderer sliced/tiled 的 m_Size）
 }
 
@@ -445,12 +447,16 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 	if tint == [4]float64{} {
 		tint = [4]float64{1, 1, 1, 1}
 	}
+	matColor := o.MatColor
+	if matColor == [4]float64{} {
+		matColor = [4]float64{1, 1, 1, 1}
+	}
 
 	stretch := o.Stretch[0] != 0 && o.Stretch[1] != 0
 	if !stretch {
 		local := Scale(fx/ppu, -fy/ppu).
 			Mul(Translate(-sp.PivotX*float64(sp.W), -(1-sp.PivotY)*float64(sp.H)))
-		drawTinted(dst, img, proj.Mul(world).Mul(local), tint)
+		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add)
 		return
 	}
 
@@ -462,7 +468,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 	bl, bb, br, bt := sp.Border[0], sp.Border[1], sp.Border[2], sp.Border[3]
 	if bl+bb+br+bt == 0 { // 无 border：整体拉伸
 		local := base.Mul(Scale(tw/float64(sp.W), th/float64(sp.H)))
-		drawTinted(dst, img, proj.Mul(world).Mul(local), tint)
+		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add)
 		return
 	}
 	// 端帽超过目标尺寸时按比例压缩（Unity 同语义）
@@ -493,9 +499,47 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 			local := base.
 				Mul(Translate(txs[ix], tys[iy])).
 				Mul(Scale(dw/sw, dh/sh))
-			drawTinted(dst, sub, proj.Mul(world).Mul(local), tint)
+			drawCellAnime(dst, sub, proj.Mul(world).Mul(local), tint, matColor, o.Add)
 		}
 	}
+}
+
+var cellAnimeShader *ebiten.Shader
+
+const cellAnimeKage = `//kage:unit pixels
+package main
+
+var Tint vec4
+var MatColor vec4
+var Add vec4
+
+func Fragment(dst vec4, src vec2, color vec4) vec4 {
+	tex := imageSrc0At(src)
+	base := tex * Tint * MatColor
+	a := base.a
+	scr := 1.0 - (1.0-Add)*(1.0-base)
+	out := scr * MatColor
+	out.a = a
+	out.r *= out.a
+	out.g *= out.a
+	out.b *= out.a
+	return out
+}
+`
+
+func ensureCellAnimeShader() *ebiten.Shader {
+	if cellAnimeShader == nil {
+		s, err := ebiten.NewShader([]byte(cellAnimeKage))
+		if err != nil {
+			panic("cell anime shader: " + err.Error())
+		}
+		cellAnimeShader = s
+	}
+	return cellAnimeShader
+}
+
+func isWhite(c [4]float64) bool {
+	return c == [4]float64{1, 1, 1, 1}
 }
 
 func drawTinted(dst, img *ebiten.Image, m Aff, tint [4]float64) {
@@ -503,6 +547,26 @@ func drawTinted(dst, img *ebiten.Image, m Aff, tint [4]float64) {
 	op.GeoM = m.GeoM()
 	op.ColorScale.Scale(float32(tint[0]), float32(tint[1]), float32(tint[2]), float32(tint[3]))
 	dst.DrawImage(img, op)
+}
+
+func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add [4]float64) {
+	if add == [4]float64{} && isWhite(matColor) {
+		drawTinted(dst, img, m, tint)
+		return
+	}
+	op := &ebiten.DrawRectShaderOptions{}
+	op.GeoM = m.GeoM()
+	op.Images[0] = img
+	v4 := func(c [4]float64) []float32 {
+		return []float32{float32(c[0]), float32(c[1]), float32(c[2]), float32(c[3])}
+	}
+	op.Uniforms = map[string]any{
+		"Tint":     v4(tint),
+		"MatColor": v4(matColor),
+		"Add":      v4(add),
+	}
+	b := img.Bounds()
+	dst.DrawRectShader(b.Dx(), b.Dy(), ensureCellAnimeShader(), op)
 }
 
 // ---------- 曲线采样 ----------

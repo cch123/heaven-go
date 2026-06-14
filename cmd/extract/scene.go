@@ -196,6 +196,20 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "frog", markers: []string{"_animLeft", "_jumperPointLeft"}},
 		},
 	},
+	"tunnel": {
+		dir:    "Tunnel",
+		prefab: "tunnel.prefab",
+		roleFields: []string{
+			"tunnelWall", "tunnelWallRenderer", "frontHand", "cowbellAnimator", "driverAnimator",
+		},
+		refArrayFields:  []string{"bg"},
+		curveFields:     []string{"handCurve"},
+		wantControllers: true,
+		commonSounds:    []string{"count-ins/cowbell.wav", "miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"tunnelWall", "tunnelWallRenderer", "tunnelChunksPerSec", "tunnelWallChunkSize"}},
+		},
+	},
 	"seeSaw": {
 		dir:    "SeeSaw",
 		prefab: "seeSaw.prefab",
@@ -424,7 +438,8 @@ func extractScene(game string) {
 		b, err := os.ReadFile(filepath.Join(*hsRoot, "Assets", "Resources", "Sfx", name))
 		must(err)
 		// 公共音效加 common_ 前缀避免与游戏音效重名
-		must(os.WriteFile(filepath.Join(*outDir, "sounds", "common_"+name), b, 0o644))
+		outName := "common_" + strings.NewReplacer("/", "_", "\\", "_").Replace(name)
+		must(os.WriteFile(filepath.Join(*outDir, "sounds", outName), b, 0o644))
 	}
 	fmt.Println("done.")
 }
@@ -1054,6 +1069,12 @@ func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spri
 				}
 			} else if _, hasX := tv["x"]; hasX {
 				for _, axis := range []string{"x", "y", "z", "w"} {
+					if av, ok := tv[axis]; ok {
+						c.Nums[k+"."+axis] = uy.F(av)
+					}
+				}
+			} else if _, hasR := tv["r"]; hasR {
+				for _, axis := range []string{"r", "g", "b", "a"} {
 					if av, ok := tv[axis]; ok {
 						c.Nums[k+"."+axis] = uy.F(av)
 					}

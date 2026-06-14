@@ -116,6 +116,11 @@ type camEvt struct {
 	axis         int // 0=All 1=X 2=Y 3=Z
 }
 
+type musicFadeEvt struct {
+	beat, length float64
+	from, to     float64
+}
+
 type flashEvt struct {
 	beat, length float64
 	c0, c1       [4]float64
@@ -209,21 +214,22 @@ type App struct {
 	assetsRoot string
 
 	// 谱面态（importRiq 时整体重建）
-	r        *riq.Riq
-	bm       *riq.Beatmap
-	cond     *conductor.Conductor
-	player   *audio.Player
-	modules  map[string]Module
-	active   Module
-	switches []gameSwitch
-	swIdx    int
-	actions  []beatAction
-	actIdx   int
-	inputs   []*Input
-	scores   []resultScoreInput
-	flashes  []flashEvt
-	camEvts  []camEvt
-	unported []string
+	r          *riq.Riq
+	bm         *riq.Beatmap
+	cond       *conductor.Conductor
+	player     *audio.Player
+	modules    map[string]Module
+	active     Module
+	switches   []gameSwitch
+	swIdx      int
+	actions    []beatAction
+	actIdx     int
+	inputs     []*Input
+	scores     []resultScoreInput
+	flashes    []flashEvt
+	camEvts    []camEvt
+	musicFades []musicFadeEvt
+	unported   []string
 
 	// commonSounds：assets/common/sounds 的公共音效（countIn 计数音、
 	// miss/nearMiss 等），缺目录时为空 map（相关事件静默跳过）
@@ -674,6 +680,7 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	a.scores = nil
 	a.flashes = nil
 	a.camEvts = nil
+	a.musicFades = nil
 	a.viewScales = nil
 	a.fx.reset()
 	a.flt.reset()
@@ -856,6 +863,7 @@ func (a *App) returnToLevelSelect() {
 	a.inputs = nil
 	a.flashes = nil
 	a.camEvts = nil
+	a.musicFades = nil
 	a.viewScales = nil
 	a.viewBuf = nil
 	a.unported = nil
@@ -1161,8 +1169,9 @@ func (a *App) updatePlay() {
 	dt := 1.0 / float64(ebiten.TPS())
 	a.tdArrow += (a.tdTarget - a.tdArrow) * math.Min(4*dt, 1)
 
-	// 音量时间轴（riq__VolumeChange，含渐变）
-	a.player.SetVolume(a.bm.VolumeAt(beat))
+	// 音量时间轴（riq__VolumeChange）再乘游戏局部 ducking
+	// （Tunnel/FadeMinigameVolume 等不改写谱面 volume 事件）。
+	a.player.SetVolume(a.bm.VolumeAt(beat) * a.MusicFadeAt(beat))
 
 	// 延迟校准热键
 	if inpututil.IsKeyJustPressed(ebiten.KeyLeftBracket) {

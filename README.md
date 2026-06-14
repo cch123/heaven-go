@@ -2,7 +2,7 @@
 
 Heaven Studio 游玩部分（play-only，无编辑器）的 Go + Ebitengine 移植。引擎层（判定/调度/切游戏/HUD）与游戏模块解耦，资产经导出管线从 Heaven Studio Unity 工程提取，支持加载任意用户 `.riq` 谱面。
 
-**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Drumming Practice、Frog Princess、Kitties!、Lockstep、Marching Orders、Meat Grinder、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Space Dance、Tambourine、Tap Trial、The Clappy Trio、Totem Climb、Trick on the Class、Wizard's Waltz（karateman 仍走旧 demo 路径）。
+**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Drumming Practice、Frog Princess、Kitties!、Lockstep、Marching Orders、Meat Grinder、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Space Dance、Tambourine、Tap Trial、The Clappy Trio、Totem Climb、Trick on the Class、Tunnel、Wizard's Waltz（karateman 仍走旧 demo 路径）。
 谱面中未移植的 minigame 显示占位画面，乐曲与其余游戏照常进行。
 
 ## 运行
@@ -23,6 +23,7 @@ go run ./cmd/extract -game clappyTrio
 go run ./cmd/extract -game coinToss
 go run ./cmd/extract -game drummingPractice
 go run ./cmd/extract -game frogPrincess
+go run ./cmd/extract -game tunnel
 go run ./cmd/extract -game wizardsWaltz
 go run ./cmd/extract -game common      # 公共音效（countIn 计数音、miss/nearMiss）
 go run ./cmd/officialgames             # 官方游戏移植矩阵：loader / Pack-In / 注册 / 提取状态
@@ -71,7 +72,7 @@ demo.riq (ZIP)                                                                  
 | `unityyaml` | Unity 多文档 YAML 解析（`!u!` 标记、stripped 文档、Infinity 斜率、UTF-8 BOM） | —（Unity 序列化层） |
 | `cmd/extract` | 资产导出管线，两种模式：单骨架（karateman）与整场景（`-game rhythmSomen`：全 prefab 树 + 多图集 + 全部剪辑 + 脚本字段→节点绑定 roles.json） | —（即移植方案中"必须先做的资产管线"） |
 | `kmdata` | 导出物的中间格式（JSON schema） | — |
-| `kart` | 运行时：图集子图、仿射骨架/场景合成、曲线采样（Hermite + 阶跃换帧 + FlipX + m_IsActive 层级传播 + m_Color）；`SceneInst` 支持多 Animator 并行，剪辑时间 = 拍数 × timeScale；AnimatorController 状态机（状态名→剪辑映射、退出转换 + bool 条件，meatGrinder 的 tackMeated 满脸肉循环）；DoNormalizedAnimation（按归一化时间采样）；TMP 世界文本（动态字体 glyph 表为空 → 用源 OTF 排版为动态切片，meatGrinder 的 GRINDER 铭牌与 changeText）；模块注入的动态绘制项（模板实例/手写粒子）与场景节点统一 (layer, order, z) 排序 | Animator(Controller) / TextMeshPro / SpriteRenderer |
+| `kart` | 运行时：图集子图、仿射骨架/场景合成、曲线采样（Hermite + 阶跃换帧 + FlipX + m_IsActive 层级传播 + m_Color + CellAnime `_Color/_AddColor`）；`SceneInst` 支持多 Animator 并行与同根多层剪辑，剪辑时间 = 拍数 × timeScale；AnimatorController 状态机（状态名→剪辑映射、退出转换 + bool 条件，meatGrinder 的 tackMeated 满脸肉循环）；DoNormalizedAnimation（按归一化时间采样）；TMP 世界文本（动态字体 glyph 表为空 → 用源 OTF 排版为动态切片，meatGrinder 的 GRINDER 铭牌与 changeText）；模块注入的动态绘制项（模板实例/手写粒子）与场景节点统一 (layer, order, z) 排序 | Animator(Controller) / TextMeshPro / SpriteRenderer |
 | `riq` | `.riq` 加载（v1 `remix.json` 与 v2 `Charts/chart0.json` 双布局）、tempo map、关卡元数据 | Jukebox（RiqFileHandler / RiqBeatmap） |
 | `conductor` | 采样时钟：以 `player.Position()` 为权威，单调时钟外推 + 漂移校正 | Conductor.cs（`dspTime` + `absTime` 平滑） |
 | `synth` | 程序化 PCM 合成（karateman demo 音轨鼓点） | —（替代版权音乐） |

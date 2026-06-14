@@ -28,6 +28,8 @@ type sceneNodeState struct {
 	active   bool // GameObject m_IsActive（沿层级传播）
 	renderOn bool // SpriteRenderer m_Enabled（仅本节点，不传播）
 	color    [4]float64
+	matColor [4]float64
+	matAdd   [4]float64
 	size     [2]float64 // drawMode != 0 时生效
 	order    int        // sortingOrder（可被动画驱动）
 }
@@ -72,7 +74,9 @@ type SceneInst struct {
 	activeOver map[int]bool       // 节点下标 → m_IsActive 覆盖（SetActive 语义）
 	mirrorOver map[int]bool       // 节点下标 → localScale.x 取负（transform.localScale=(-1,1,1)）
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
+	matOver    map[int]materialState
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
+	sizeOver   map[int][2]float64 // 节点下标 → SpriteRenderer.size 覆盖（sliced/tiled）
 	zOver      map[int]float64    // 节点下标 → 世界 z 覆盖（kitties 斜列生成等，根节点语义）
 	spriteOver map[int]string     // 节点下标 → 切片覆盖（sr.sprite 直写，如海报换图）
 
@@ -88,6 +92,11 @@ type SceneInst struct {
 
 	scratch *ebiten.Image // SpriteMask 合成的离屏缓冲（懒分配）
 	maskBuf *ebiten.Image
+}
+
+type materialState struct {
+	color [4]float64
+	add   [4]float64
 }
 
 // SetCamera 设置相机世界位置（GameCamera：默认 (0,0,-10)、FOV 53.15°）。
@@ -150,7 +159,9 @@ func NewScene(as *Assets) *SceneInst {
 		activeOver: map[int]bool{},
 		mirrorOver: map[int]bool{},
 		colorOver:  map[int][4]float64{},
+		matOver:    map[int]materialState{},
 		posOver:    map[int][2]float64{},
+		sizeOver:   map[int][2]float64{},
 		zOver:      map[int]float64{},
 		spriteOver: map[int]string{},
 	}
@@ -203,6 +214,14 @@ func NewScene(as *Assets) *SceneInst {
 // Play 在子树 rootPath 上从 startBeat 起播放剪辑（替换该子树原有播放器）。
 // timeScale 同 HS DoScaledAnimationAsync：clip 每秒对应 1/timeScale 拍。
 func (s *SceneInst) Play(rootPath, clip string, startBeat, timeScale float64) {
+	s.PlayLayer(rootPath, rootPath, clip, startBeat, timeScale)
+}
+
+// PlayLayer 在同一个子树 rootPath 上用独立 key 播放剪辑。
+// Unity 的一个 Animator 可同时通过多条不冲突曲线驱动同一根下的不同子树
+// （Tunnel 背景 Near/Far 滚动就是这种数据形态）；常规 Play 仍按 rootPath
+// 替换旧播放器，只有确实需要并行曲线时才传入额外 key。
+func (s *SceneInst) PlayLayer(key, rootPath, clip string, startBeat, timeScale float64) {
 	anim, ok := s.as.Anims[clip]
 	if !ok {
 		return
@@ -211,7 +230,7 @@ func (s *SceneInst) Play(rootPath, clip string, startBeat, timeScale float64) {
 	if !ok {
 		return
 	}
-	s.players[rootPath] = &scenePlayer{
+	s.players[key] = &scenePlayer{
 		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: clip,
 		startBeat: startBeat, timeScale: timeScale,
 	}
@@ -426,10 +445,26 @@ func (s *SceneInst) SetColorOver(path string, c [4]float64) {
 	}
 }
 
+// SetMaterialOver 覆盖 CellAnime 材质的 _Color/_AddColor。
+// SpriteRenderer.color 仍由 SetColorOver/m_Color 曲线管理；Tunnel 的灯墙
+// 是材质色而非 renderer 色，二者需要分开避免误染同节点其它动画属性。
+func (s *SceneInst) SetMaterialOver(path string, matColor, add [4]float64) {
+	if i, ok := s.byPath[path]; ok {
+		s.matOver[i] = materialState{color: matColor, add: add}
+	}
+}
+
 // SetPosOver 覆盖节点 localPosition（伪相机 gameTrans 平移等）。
 func (s *SceneInst) SetPosOver(path string, x, y float64) {
 	if i, ok := s.byPath[path]; ok {
 		s.posOver[i] = [2]float64{x, y}
+	}
+}
+
+// SetSizeOver 覆盖 SpriteRenderer.size（Unity 代码直写 tiled/sliced 尺寸）。
+func (s *SceneInst) SetSizeOver(path string, w, h float64) {
+	if i, ok := s.byPath[path]; ok {
+		s.sizeOver[i] = [2]float64{w, h}
 	}
 }
 
@@ -503,7 +538,7 @@ func (s *SceneInst) Sample(beat float64) {
 			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
 			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
 			active: !n.Inactive, renderOn: !n.Hidden,
-			color: c, size: n.Size, order: n.Order,
+			color: c, matColor: [4]float64{1, 1, 1, 1}, size: n.Size, order: n.Order,
 		}
 	}
 	for i, v := range s.activeOver {
@@ -511,6 +546,10 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, v := range s.colorOver {
 		s.state[i].color = v
+	}
+	for i, v := range s.matOver {
+		s.state[i].matColor = v.color
+		s.state[i].matAdd = v.add
 	}
 	for i, v := range s.posOver {
 		s.state[i].pos = v
@@ -534,6 +573,9 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, sp := range s.spriteOver {
 		s.state[i].sprite = sp
+	}
+	for i, sz := range s.sizeOver {
+		s.state[i].size = sz
 	}
 	for i, rad := range s.spinOver {
 		s.state[i].rot += rad
@@ -754,7 +796,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		i := it.idx
 		st := &s.state[i]
-		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color}
+		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor, Add: st.matAdd}
 		if s.as.Rig.Nodes[i].DrawMode != 0 {
 			// sliced/tiled：m_Size 是权威尺寸——动画把它压到 0 即等于隐藏
 			//（原版光束收束就是 size.y→0），不能退化成"按原始尺寸绘制"
