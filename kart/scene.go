@@ -76,6 +76,7 @@ type SceneInst struct {
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
 	matOver    map[int]materialState
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
+	scaleOver  map[int][2]float64 // 节点下标 → localScale 覆盖（脚本瞬时 squash/pose）
 	sizeOver   map[int][2]float64 // 节点下标 → SpriteRenderer.size 覆盖（sliced/tiled）
 	zOver      map[int]float64    // 节点下标 → 世界 z 覆盖（kitties 斜列生成等，根节点语义）
 	spriteOver map[int]string     // 节点下标 → 切片覆盖（sr.sprite 直写，如海报换图）
@@ -161,6 +162,7 @@ func NewScene(as *Assets) *SceneInst {
 		colorOver:  map[int][4]float64{},
 		matOver:    map[int]materialState{},
 		posOver:    map[int][2]float64{},
+		scaleOver:  map[int][2]float64{},
 		sizeOver:   map[int][2]float64{},
 		zOver:      map[int]float64{},
 		spriteOver: map[int]string{},
@@ -461,6 +463,21 @@ func (s *SceneInst) SetPosOver(path string, x, y float64) {
 	}
 }
 
+// SetScaleOver 覆盖节点 localScale。Ringside 的 pose 命中会在脚本里临时
+// 放大整名选手，这类一帧级变换不是 AnimationClip 曲线的一部分。
+func (s *SceneInst) SetScaleOver(path string, sx, sy float64) {
+	if i, ok := s.byPath[path]; ok {
+		s.scaleOver[i] = [2]float64{sx, sy}
+	}
+}
+
+// ClearScaleOver 撤销 localScale 覆盖。
+func (s *SceneInst) ClearScaleOver(path string) {
+	if i, ok := s.byPath[path]; ok {
+		delete(s.scaleOver, i)
+	}
+}
+
 // SetSizeOver 覆盖 SpriteRenderer.size（Unity 代码直写 tiled/sliced 尺寸）。
 func (s *SceneInst) SetSizeOver(path string, w, h float64) {
 	if i, ok := s.byPath[path]; ok {
@@ -553,6 +570,9 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, v := range s.posOver {
 		s.state[i].pos = v
+	}
+	for i, v := range s.scaleOver {
+		s.state[i].scale = v
 	}
 	for _, p := range s.players {
 		var clipT float64

@@ -132,6 +132,13 @@ func (c *Ctx) ScheduleInputAction(beat float64, action int, onHit func(state flo
 	c.App.scheduleInput(beat, false, action, onHit, onMiss)
 }
 
+// ScheduleInputActionCond registers a non-primary press window with an
+// optional can-hit predicate. Multi-action games use this to keep their late
+// windows from leaking across a switchGame boundary.
+func (c *Ctx) ScheduleInputActionCond(beat float64, action int, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) {
+	c.App.scheduleInputCond(beat, false, action, canHit, onHit, onMiss)
+}
+
 // ScheduleInputCond is ScheduleInput with HS' optional canJust predicate.
 // Board Meeting uses this to invalidate a pending stop cue after the player's
 // chair was already stopped by an early whiff.

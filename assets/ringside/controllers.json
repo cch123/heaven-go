@@ -1,0 +1,469 @@
+{
+ "Audience": {
+  "default": "IdleAudience",
+  "states": {
+   "IdleAudience": {
+    "clip": "Animations/IdleAudience",
+    "speed": 1
+   },
+   "PoseAudience": {
+    "clip": "Animations/PoseAudience",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "IdleAudience",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "PoseAudienceZoomed": {
+    "clip": "Animations/PoseAudienceZoomed",
+    "speed": 1
+   }
+  }
+ },
+ "Head": {
+  "default": "",
+  "states": {
+   "BlinkReporter": {
+    "speed": 1
+   }
+  }
+ },
+ "Head 1": {
+  "default": "Idle",
+  "states": {
+   "BlinkHead": {
+    "clip": "Head/BlinkHead",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Excited": {
+    "clip": "Head/Excited",
+    "speed": 1
+   },
+   "ExcitedBlink": {
+    "clip": "Head/ExcitedBlink",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Excited",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Extend": {
+    "clip": "Head/Extend",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ExtendIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ExtendBlink": {
+    "clip": "Head/ExtendBlink",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ExtendIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ExtendIdle": {
+    "clip": "Head/ExtendIdle",
+    "speed": 1
+   },
+   "ExtendSmile": {
+    "clip": "Head/ExtendSmile",
+    "speed": 1
+   },
+   "Flinch": {
+    "clip": "Head/Flinch",
+    "speed": 1
+   },
+   "Guy": {
+    "clip": "Head/Guy",
+    "speed": 1
+   },
+   "Heart": {
+    "clip": "Head/Heart",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Head/IdleHead",
+    "speed": 1
+   },
+   "IsThat": {
+    "clip": "Head/IsThat",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Extend",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Late": {
+    "clip": "Head/Late",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Head/Miss",
+    "speed": 1
+   },
+   "Smile": {
+    "clip": "Head/Smile",
+    "speed": 1
+   },
+   "Woah": {
+    "clip": "Head/Woah",
+    "speed": 1
+   },
+   "Wubba": {
+    "clip": "Head/Wubba",
+    "speed": 1
+   }
+  }
+ },
+ "Newspaper": {
+  "default": "NewspaperEnter",
+  "states": {
+   "NewpaperIdleRight": {
+    "clip": "Animations/NewpaperIdleRight",
+    "speed": 1
+   },
+   "NewspaperEnter": {
+    "clip": "Animations/NewspaperEnter",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NewspaperIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NewspaperEnterRight": {
+    "clip": "Animations/NewspaperEnterRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NewpaperIdleRight",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NewspaperIdle": {
+    "clip": "Animations/NewspaperIdle",
+    "speed": 1
+   }
+  }
+ },
+ "PoseFlash": {
+  "default": "PoseFlashing",
+  "states": {
+   "PoseFlashing": {
+    "clip": "Animations/PoseFlashing",
+    "speed": 1
+   }
+  }
+ },
+ "Reporter": {
+  "default": "IdleReporter",
+  "states": {
+   "BlinkReporter": {
+    "clip": "Animations/BlinkReporter",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "IdleReporter",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ExcitedReporter": {
+    "clip": "Animations/ExcitedReporter",
+    "speed": 1
+   },
+   "ExtendLate": {
+    "clip": "Animations/ExtendLate",
+    "speed": 1
+   },
+   "ExtendMiss": {
+    "clip": "Animations/ExtendMiss",
+    "speed": 1
+   },
+   "ExtendSmile": {
+    "clip": "Animations/ExtendSmile",
+    "speed": 1
+   },
+   "FlinchReporter": {
+    "clip": "Animations/FlinchReporter",
+    "speed": 1
+   },
+   "HeartReporter": {
+    "clip": "Animations/HeartReporter",
+    "speed": 1
+   },
+   "IdleLate": {
+    "clip": "Animations/IdleLate",
+    "speed": 1
+   },
+   "IdleMiss": {
+    "clip": "Animations/IdleMiss",
+    "speed": 1
+   },
+   "IdleReporter": {
+    "clip": "Animations/IdleReporter",
+    "speed": 1
+   },
+   "ReporterLate": {
+    "clip": "Animations/ReporterLate",
+    "speed": 1
+   },
+   "ReporterMiss": {
+    "clip": "Animations/ReporterMiss",
+    "speed": 1
+   },
+   "SmileReporter": {
+    "clip": "Animations/SmileReporter",
+    "speed": 1
+   },
+   "ThatTrue": {
+    "clip": "Animations/IsThat",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "true",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Woah": {
+    "clip": "Animations/Woah",
+    "speed": 1
+   },
+   "WubbaLubbaDubbaThatTrue": {
+    "clip": "Animations/Wubba",
+    "speed": 1
+   },
+   "true": {
+    "clip": "Animations/Extend",
+    "speed": 1
+   }
+  }
+ },
+ "ReporterNewspaper": {
+  "default": "HeartReporterNewspaper",
+  "states": {
+   "ExcitedReporterNewspaper": {
+    "clip": "Animations/ExcitedReporterNewspaper",
+    "speed": 1
+   },
+   "HeartReporterNewspaper": {
+    "clip": "Animations/HeartReporterNewspaper",
+    "speed": 1
+   },
+   "IdleReporterNewspaper": {
+    "clip": "Animations/IdleReporterNewspaper",
+    "speed": 1
+   }
+  }
+ },
+ "Wrestler": {
+  "default": "Idle",
+  "states": {
+   "BigGuyOne": {
+    "clip": "Animations/BigGuyOne",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BigGuyOneIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BigGuyOneIdle": {
+    "clip": "Animations/BigGuyOneIdle",
+    "speed": 1
+   },
+   "BigGuyTwo": {
+    "clip": "Animations/BigGuyTwo",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BigGuyTwoIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BigGuyTwoIdle": {
+    "clip": "Animations/BigGuyTwoIdle",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1
+   },
+   "BopPec": {
+    "clip": "Animations/BopPec",
+    "speed": 1
+   },
+   "Cough": {
+    "clip": "Animations/Cough",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Pec": {
+    "clip": "Animations/Pec",
+    "speed": 1
+   },
+   "Pose1": {
+    "clip": "Animations/Pose1",
+    "speed": 1
+   },
+   "Pose2": {
+    "clip": "Animations/Pose2",
+    "speed": 1
+   },
+   "Pose3": {
+    "clip": "Animations/Pose3",
+    "speed": 1
+   },
+   "Pose4": {
+    "clip": "Animations/Pose4",
+    "speed": 1
+   },
+   "Pose5": {
+    "clip": "Animations/Pose5",
+    "speed": 1
+   },
+   "Pose6": {
+    "clip": "Animations/Pose6",
+    "speed": 1
+   },
+   "PoseMiss1": {
+    "clip": "Animations/PoseMiss1",
+    "speed": 1
+   },
+   "PoseMiss2": {
+    "clip": "Animations/PoseMiss2",
+    "speed": 1
+   },
+   "PoseMiss3": {
+    "clip": "Animations/PoseMiss3",
+    "speed": 1
+   },
+   "PoseMiss4": {
+    "clip": "Animations/PoseMiss4",
+    "speed": 1
+   },
+   "PoseMiss5": {
+    "clip": "Animations/PoseMiss5",
+    "speed": 1
+   },
+   "PoseMiss6": {
+    "clip": "Animations/PoseMiss6",
+    "speed": 1
+   },
+   "PreparePose": {
+    "clip": "Animations/PreparePose",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "PreparePoseIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "PreparePoseIdle": {
+    "clip": "Animations/PreparePoseIdle",
+    "speed": 1
+   },
+   "Ye": {
+    "clip": "Animations/Ye",
+    "speed": 1
+   },
+   "YeMiss": {
+    "clip": "Animations/YeMiss",
+    "speed": 1
+   }
+  }
+ },
+ "WrestlerNewspaper": {
+  "default": "Pose1Newspaper",
+  "states": {
+   "Miss1Newspaper": {
+    "clip": "Animations/Miss1Newspaper",
+    "speed": 1
+   },
+   "Miss2Newspaper": {
+    "clip": "Animations/Miss2Newspaper",
+    "speed": 1
+   },
+   "Miss3Newspaper": {
+    "clip": "Animations/Miss3Newspaper",
+    "speed": 1
+   },
+   "Miss4Newspaper": {
+    "clip": "Animations/Miss4Newspaper",
+    "speed": 1
+   },
+   "Miss5Newspaper": {
+    "clip": "Animations/Miss5Newspaper",
+    "speed": 1
+   },
+   "Miss6Newspaper": {
+    "clip": "Animations/Miss6Newspaper",
+    "speed": 1
+   },
+   "Pose1Newspaper": {
+    "clip": "Animations/Pose1Newspaper",
+    "speed": 1
+   },
+   "Pose2Newspaper": {
+    "clip": "Animations/Pose2Newspaper",
+    "speed": 1
+   },
+   "Pose3Newspaper": {
+    "clip": "Animations/Pose3Newspaper",
+    "speed": 1
+   },
+   "Pose4Newspaper": {
+    "clip": "Animations/Pose4Newspaper",
+    "speed": 1
+   },
+   "Pose5Newspaper": {
+    "clip": "Animations/Pose5Newspaper",
+    "speed": 1
+   },
+   "Pose6Newspaper": {
+    "clip": "Animations/Pose6Newspaper",
+    "speed": 1
+   }
+  }
+ }
+}

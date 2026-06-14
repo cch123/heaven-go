@@ -1,0 +1,10 @@
+{
+ "Audience": "Audience",
+ "Newspaper": "Newspaper",
+ "Newspaper/ReporterNewspaper": "ReporterNewspaper",
+ "Newspaper/WrestlerNewspaper": "WrestlerNewspaper",
+ "PoseFlash": "PoseFlash",
+ "Reporter": "Reporter",
+ "Reporter/Upper/HeadAnim": "Head 1",
+ "Wrestler": "Wrestler"
+}
