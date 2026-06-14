@@ -44,6 +44,7 @@ import (
 	"hsdemo/games/seesaw"
 	"hsdemo/games/sneakyspirits"
 	"hsdemo/games/somen"
+	"hsdemo/games/spaceball"
 	"hsdemo/games/spacedance"
 	"hsdemo/games/tambourine"
 	"hsdemo/games/taptrial"
@@ -133,6 +134,7 @@ func main() {
 	engine.Register("cheerReaders", cheerreaders.New)
 	engine.Register("kitties", kitties.New)
 	engine.Register("lockstep", lockstep.New)
+	engine.Register("spaceball", spaceball.New)
 	engine.Register("spaceDance", spacedance.New)
 	engine.Register("mrUpbeat", mrupbeat.New)
 	engine.Register("munchyMonk", munchymonk.New)

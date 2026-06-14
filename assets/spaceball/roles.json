@@ -1,0 +1,13 @@
+{
+ "Ball": "Balls/Ball",
+ "BallsHolder": "Balls",
+ "Dispenser": "Dispenser",
+ "Dust": "Dust",
+ "alien": "Alien",
+ "bg": "SpaceBG",
+ "hole": "Hole",
+ "room": "RoomBG",
+ "shadow": "Player/playershadow",
+ "shadow2": "Alien/alien_shadow",
+ "square": "RoomBG/Square"
+}

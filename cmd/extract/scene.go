@@ -367,6 +367,22 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		commonSounds:    []string{"miss.wav"},
 	},
+	"spaceball": {
+		dir:    "Spaceball",
+		prefab: "spaceball.prefab",
+		roleFields: []string{
+			"bg", "square", "room", "hole", "shadow", "shadow2",
+			"Ball", "BallsHolder", "Dispenser", "Dust", "alien",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"bg", "square", "room", "hole", "shadow", "shadow2", "BallSprites", "CostumeColors"}},
+			{name: "ball", markers: []string{"Holder", "Sprite", "pitchLowCurve", "pitchHighCurve", "pitchQuickCurve", "pitchOffbeatCurve"}, atPath: "Balls/Ball",
+				curveFields: []string{"pitchLowCurve", "pitchHighCurve", "pitchQuickCurve", "pitchOffbeatCurve"}},
+			{name: "player", markers: []string{"PlayerSprite", "Hat", "Bat", "BatColors", "HatSprites1"}, atPath: "Player"},
+		},
+	},
 	"kitties": {
 		dir:    "Kitties",
 		prefab: "kitties.prefab",

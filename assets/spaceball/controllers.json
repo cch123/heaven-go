@@ -1,0 +1,65 @@
+{
+ "Alien": {
+  "default": "AlienIdle",
+  "states": {
+   "AlienHide": {
+    "clip": "Animations/AlienHide",
+    "speed": 1
+   },
+   "AlienIdle": {
+    "clip": "Animations/AlienIdle",
+    "speed": 1
+   },
+   "AlienShow": {
+    "clip": "Animations/AlienShow",
+    "speed": 1
+   },
+   "AlienSwing": {
+    "clip": "Animations/AlienSwing",
+    "speed": 1
+   }
+  }
+ },
+ "Dispenser": {
+  "default": "DispenserPrepare",
+  "states": {
+   "DispenserPrepare": {
+    "clip": "Animations/DispenserPrepare",
+    "speed": 1
+   },
+   "DispenserShoot": {
+    "clip": "Animations/DispenserShoot",
+    "speed": 1
+   }
+  }
+ },
+ "Dust": {
+  "default": "Dust",
+  "states": {
+   "Dust": {
+    "clip": "Animations/Dust",
+    "speed": 1
+   }
+  }
+ },
+ "Player": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Swing": {
+    "clip": "Animations/Swing",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

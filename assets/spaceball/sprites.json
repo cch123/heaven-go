@@ -1,0 +1,666 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "apple": {
+   "X": 0,
+   "Y": 0,
+   "W": 128,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_0": {
+   "X": 181,
+   "Y": 2810,
+   "W": 185,
+   "H": 185,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_1": {
+   "X": 39,
+   "Y": 2295,
+   "W": 185,
+   "H": 185,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_2": {
+   "X": 297,
+   "Y": 2295,
+   "W": 185,
+   "H": 185,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_3": {
+   "X": 44,
+   "Y": 2558,
+   "W": 185,
+   "H": 185,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_4": {
+   "X": 298,
+   "Y": 2557,
+   "W": 185,
+   "H": 185,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_ball": {
+   "X": 0,
+   "Y": 1599,
+   "W": 214,
+   "H": 214,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_bat_0": {
+   "X": 0,
+   "Y": 1,
+   "W": 588,
+   "H": 431,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_bat_1": {
+   "X": 588,
+   "Y": 1,
+   "W": 583,
+   "H": 431,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_bat_2": {
+   "X": 1171,
+   "Y": 1,
+   "W": 659,
+   "H": 431,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_bat_3": {
+   "X": 1830,
+   "Y": 1,
+   "W": 557,
+   "H": 431,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_bat_4": {
+   "X": 2387,
+   "Y": 1,
+   "W": 627,
+   "H": 428,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_dispenser_0": {
+   "X": 1362,
+   "Y": 1615,
+   "W": 164,
+   "H": 194,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_dispenser_1": {
+   "X": 1608,
+   "Y": 1662,
+   "W": 176,
+   "H": 146,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_dispenser_2": {
+   "X": 1852,
+   "Y": 1615,
+   "W": 191,
+   "H": 194,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_dust_0": {
+   "X": 810,
+   "Y": 1652,
+   "W": 123,
+   "H": 138,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_dust_1": {
+   "X": 997,
+   "Y": 1650,
+   "W": 123,
+   "H": 138,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_dust_2": {
+   "X": 1178,
+   "Y": 1650,
+   "W": 123,
+   "H": 138,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_hat_0_0": {
+   "X": 104,
+   "Y": 1221,
+   "W": 148,
+   "H": 313,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_hat_1_0": {
+   "X": 345,
+   "Y": 1283,
+   "W": 189,
+   "H": 190,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_hat_1_1": {
+   "X": 604,
+   "Y": 1283,
+   "W": 189,
+   "H": 190,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_hat_1_2": {
+   "X": 866,
+   "Y": 1283,
+   "W": 189,
+   "H": 190,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_hat_1_3": {
+   "X": 1120,
+   "Y": 1283,
+   "W": 189,
+   "H": 190,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_hat_1_4": {
+   "X": 1372,
+   "Y": 1283,
+   "W": 189,
+   "H": 190,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_hat_2_0": {
+   "X": 51,
+   "Y": 1840,
+   "W": 254,
+   "H": 395,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_hole": {
+   "X": 2135,
+   "Y": 1649,
+   "W": 392,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_player_0": {
+   "X": 0,
+   "Y": 431,
+   "W": 588,
+   "H": 698,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_player_1": {
+   "X": 588,
+   "Y": 431,
+   "W": 588,
+   "H": 699,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_player_2": {
+   "X": 1176,
+   "Y": 431,
+   "W": 588,
+   "H": 699,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_player_3": {
+   "X": 1763,
+   "Y": 431,
+   "W": 588,
+   "H": 699,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_player_4": {
+   "X": 2351,
+   "Y": 429,
+   "W": 663,
+   "H": 701,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_player_shadow": {
+   "X": 2625,
+   "Y": 1650,
+   "W": 117,
+   "H": 122,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_riceball": {
+   "X": 274,
+   "Y": 1600,
+   "W": 214,
+   "H": 214,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_room": {
+   "X": 515,
+   "Y": 1977,
+   "W": 2131,
+   "H": 2119,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_umpire_0": {
+   "X": 1679,
+   "Y": 1257,
+   "W": 292,
+   "H": 250,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_umpire_1": {
+   "X": 2011,
+   "Y": 1257,
+   "W": 292,
+   "H": 250,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_umpire_2": {
+   "X": 2342,
+   "Y": 1257,
+   "W": 292,
+   "H": 250,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_umpire_3": {
+   "X": 2675,
+   "Y": 1256,
+   "W": 292,
+   "H": 250,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "spaceball_umpire_shadow": {
+   "X": 2831,
+   "Y": 1665,
+   "W": 183,
+   "H": 73,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 39.984295,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "star": {
+   "X": 0,
+   "Y": 0,
+   "W": 63,
+   "H": 61,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tacobell": {
+   "X": 0,
+   "Y": 0,
+   "W": 738,
+   "H": 728,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

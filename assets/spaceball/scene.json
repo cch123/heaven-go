@@ -1,0 +1,947 @@
+{
+ "nodes": [
+  {
+   "name": "spaceball",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpaceBG",
+   "path": "SpaceBG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    600,
+    600
+   ],
+   "order": -900,
+   "color": [
+    0,
+    0,
+    0.45098042,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RoomBG",
+   "path": "RoomBG",
+   "parent": 0,
+   "pos": [
+    0.0023,
+    4.0373
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.346,
+    0.358
+   ],
+   "sprite": "spaceball_room",
+   "order": -10,
+   "color": [
+    0,
+    0.85882354,
+    0.07058824,
+    1
+   ],
+   "size": [
+    10.66,
+    10.6
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "RoomBG/Square",
+   "parent": 2,
+   "pos": [
+    -0.708,
+    -0.901
+   ],
+   "rotZ": 0,
+   "scale": [
+    19.236889,
+    33.827877
+   ],
+   "order": -200,
+   "color": [
+    0,
+    0,
+    0.45098042,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "Hole",
+   "parent": 0,
+   "pos": [
+    1.6536,
+    -4.0545
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.18780647,
+    0.19245788
+   ],
+   "sprite": "spaceball_hole",
+   "order": -5,
+   "color": [
+    0,
+    0.85882354,
+    0.07058824,
+    1
+   ],
+   "size": [
+    2.14,
+    0.86
+   ]
+  },
+  {
+   "name": "Player",
+   "path": "Player",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Player/Sprite",
+   "parent": 5,
+   "pos": [
+    4.394,
+    -0.458
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5014899,
+    0.50148994
+   ],
+   "sprite": "spaceball_player_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.2083335,
+    6.5277777
+   ],
+   "mapped": true,
+   "mat": "player_1"
+  },
+  {
+   "name": "BatSprite",
+   "path": "Player/BatSprite",
+   "parent": 5,
+   "pos": [
+    4.54,
+    1.689
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5014899,
+    0.50148994
+   ],
+   "sprite": "spaceball_bat_0",
+   "order": 6,
+   "color": [
+    0.80784315,
+    0.7411765,
+    0,
+    1
+   ],
+   "size": [
+    4.2083335,
+    6.5277777
+   ]
+  },
+  {
+   "name": "playershadow",
+   "path": "Player/playershadow",
+   "parent": 5,
+   "pos": [
+    4.499,
+    -4.191
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "spaceball_player_shadow",
+   "order": 0,
+   "color": [
+    0,
+    0.85882354,
+    0.07058824,
+    1
+   ],
+   "size": [
+    0.77,
+    0.86
+   ]
+  },
+  {
+   "name": "Hat",
+   "path": "Player/Hat",
+   "parent": 5,
+   "pos": [
+    4.03,
+    3.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.50675774,
+    0.50675774
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Player/Hat/Sprite",
+   "parent": 9,
+   "pos": [
+    -0.17,
+    -1.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.73,
+    4.74
+   ]
+  },
+  {
+   "name": "OldSprite",
+   "path": "Player/OldSprite",
+   "parent": 5,
+   "pos": [
+    4.0021,
+    1.0895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8092515,
+    1.8092515
+   ],
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    4.2083335,
+    6.5277777
+   ]
+  },
+  {
+   "name": "Dispenser",
+   "path": "Dispenser",
+   "parent": 0,
+   "pos": [
+    -4.041,
+    -3.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "spaceball_dispenser_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.75,
+    1.9583334
+   ]
+  },
+  {
+   "name": "Dust",
+   "path": "Dust",
+   "parent": 0,
+   "pos": [
+    1.66,
+    -3.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dust_0",
+   "path": "Dust/dust_0",
+   "parent": 13,
+   "pos": [
+    1.012,
+    0.1056
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.448189,
+    0.448189
+   ],
+   "sprite": "spaceball_dust_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3055556,
+    1.2916666
+   ]
+  },
+  {
+   "name": "dust_0 (3)",
+   "path": "Dust/dust_0 (3)",
+   "parent": 13,
+   "pos": [
+    -1.027,
+    0.1056
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.448189,
+    0.448189
+   ],
+   "sprite": "spaceball_dust_0",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3055556,
+    1.2916666
+   ]
+  },
+  {
+   "name": "Balls",
+   "path": "Balls",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ball",
+   "path": "Balls/Ball",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BallHolder",
+   "path": "Balls/Ball/BallHolder",
+   "parent": 17,
+   "pos": [
+    -73.27,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpriteRotHolder",
+   "path": "Balls/Ball/BallHolder/SpriteRotHolder",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Balls/Ball/BallHolder/SpriteRotHolder/Sprite",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "spaceball_ball",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.41,
+    1.41
+   ]
+  },
+  {
+   "name": "Particle System",
+   "path": "Particle System",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 107.6984,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve",
+   "path": "Curve",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curve/Point 0",
+   "parent": 22,
+   "pos": [
+    -4.015887,
+    -1.8464606
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curve/Point 1",
+   "parent": 22,
+   "pos": [
+    1.5709953,
+    -3.5697224
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HighCurve",
+   "path": "HighCurve",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "HighCurve/Point 0",
+   "parent": 25,
+   "pos": [
+    -4.015887,
+    -1.8464606
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "HighCurve/Point 1",
+   "parent": 25,
+   "pos": [
+    1.5709953,
+    -3.5697224
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HighishCurve",
+   "path": "HighishCurve",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "HighishCurve/Point 0",
+   "parent": 28,
+   "pos": [
+    -4.015887,
+    -1.8464606
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "HighishCurve/Point 1",
+   "parent": 28,
+   "pos": [
+    1.5709953,
+    -3.5697224
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LowCurve",
+   "path": "LowCurve",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "LowCurve/Point 0",
+   "parent": 31,
+   "pos": [
+    -4.015887,
+    -1.8464606
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "LowCurve/Point 1",
+   "parent": 31,
+   "pos": [
+    1.5709953,
+    -3.5697224
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Alien",
+   "path": "Alien",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Alien/Sprite",
+   "parent": 34,
+   "pos": [
+    -0.046,
+    -0.142
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "spaceball_umpire_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3055556,
+    2.0833333
+   ]
+  },
+  {
+   "name": "alien_shadow",
+   "path": "Alien/alien_shadow",
+   "parent": 34,
+   "pos": [
+    0,
+    -1.345
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "sprite": "spaceball_umpire_shadow",
+   "order": 0,
+   "color": [
+    0,
+    0.85882354,
+    0.07058824,
+    1
+   ],
+   "size": [
+    1.1,
+    0.6
+   ]
+  }
+ ]
+}

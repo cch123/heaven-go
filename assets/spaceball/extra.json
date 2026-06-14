@@ -1,0 +1,287 @@
+{
+ "curves": {
+  "ball.pitchHighCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -4.015887,
+      -1.8464606,
+      0
+     ],
+     "lh": [
+      -5.913391300000001,
+      -21.6606566,
+      0
+     ],
+     "rh": [
+      -2.1183827,
+      17.9677354,
+      0
+     ]
+    },
+    {
+     "p": [
+      1.5709953,
+      -3.5697224,
+      0
+     ],
+     "lh": [
+      -0.4664778999999999,
+      15.978588600000002,
+      0
+     ],
+     "rh": [
+      3.6084685,
+      -23.1180334,
+      0
+     ]
+    }
+   ]
+  },
+  "ball.pitchLowCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -4.015887,
+      -1.8464606,
+      0
+     ],
+     "lh": [
+      -5.982681,
+      -12.6009056,
+      0
+     ],
+     "rh": [
+      -2.049093,
+      8.9079844,
+      0
+     ]
+    },
+    {
+     "p": [
+      1.5709953,
+      -3.5697224,
+      0
+     ],
+     "lh": [
+      -0.3821861999999998,
+      6.767774600000001,
+      0
+     ],
+     "rh": [
+      3.5241768,
+      -13.9072194,
+      0
+     ]
+    }
+   ]
+  },
+  "ball.pitchOffbeatCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -4.015887,
+      -1.8464606,
+      0
+     ],
+     "lh": [
+      -5.913391300000001,
+      -15.9464606,
+      0
+     ],
+     "rh": [
+      -2.1183827,
+      12.2535394,
+      0
+     ]
+    },
+    {
+     "p": [
+      1.5709953,
+      -3.5697224,
+      0
+     ],
+     "lh": [
+      -0.4664778999999999,
+      10.5302776,
+      0
+     ],
+     "rh": [
+      3.6084685,
+      -17.669722399999998,
+      0
+     ]
+    }
+   ]
+  },
+  "ball.pitchQuickCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -4.015887,
+      -1.8464606,
+      0
+     ],
+     "lh": [
+      -5.913391300000001,
+      -10.8464606,
+      0
+     ],
+     "rh": [
+      -2.1183827,
+      7.1535394,
+      0
+     ]
+    },
+    {
+     "p": [
+      1.5709953,
+      -3.5697224,
+      0
+     ],
+     "lh": [
+      -0.4664778999999999,
+      5.4302776,
+      0
+     ],
+     "rh": [
+      3.6084685,
+      -12.5697224,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "components": {
+  "ball": {
+   "path": "Balls/Ball",
+   "nums": {
+    "high": 0,
+    "isTacobell": 0,
+    "offbeat": 0,
+    "quick": 0,
+    "startBeat": 0
+   },
+   "refs": {
+    "Holder": "Balls/Ball/BallHolder",
+    "Sprite": "Balls/Ball/BallHolder/SpriteRotHolder/Sprite",
+    "pitchHighCurve": "HighCurve",
+    "pitchLowCurve": "Curve",
+    "pitchOffbeatCurve": "HighishCurve",
+    "pitchQuickCurve": "LowCurve"
+   }
+  },
+  "game": {
+   "path": "",
+   "refs": {
+    "Ball": "Balls/Ball",
+    "BallsHolder": "Balls",
+    "Dispenser": "Dispenser",
+    "Dust": "Dust",
+    "alien": "Alien",
+    "bg": "SpaceBG",
+    "hole": "Hole",
+    "room": "RoomBG",
+    "shadow": "Player/playershadow",
+    "shadow2": "Alien/alien_shadow",
+    "square": "RoomBG/Square"
+   },
+   "refArrays": {
+    "BallSprites": [
+     ""
+    ],
+    "CostumeColors": [
+     "player_1",
+     "player_2",
+     "player_3",
+     "player_4",
+     "player_5",
+     "player_6",
+     "player_custom"
+    ]
+   },
+   "spriteArrays": {
+    "BallSprites": [
+     "spaceball_ball",
+     "spaceball_riceball",
+     "spaceball_umpire_3",
+     "tacobell",
+     "apple"
+    ]
+   }
+  },
+  "player": {
+   "path": "Player",
+   "refs": {
+    "Bat": "Player/BatSprite",
+    "Hat": "Player/Hat/Sprite",
+    "PlayerSprite": "Player/Sprite"
+   },
+   "lists": {
+    "BatColors": [
+     {
+      "nums": {
+       "a": 1,
+       "b": 0,
+       "g": 0.7411765,
+       "r": 0.80784315
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0,
+       "g": 0.7411765,
+       "r": 0.80784315
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0,
+       "g": 0.7411765,
+       "r": 0.80784315
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.7830189,
+       "g": 0.7830189,
+       "r": 0.7830189
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0,
+       "g": 0.7411765,
+       "r": 0.80784315
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0,
+       "g": 0.7411765,
+       "r": 0.80784315
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0,
+       "g": 0.7411765,
+       "r": 0.80784315
+      }
+     }
+    ]
+   }
+  }
+ }
+}
