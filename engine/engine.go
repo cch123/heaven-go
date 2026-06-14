@@ -838,6 +838,35 @@ func (a *App) restart() error {
 	return nil
 }
 
+// returnToLevelSelect unloads the active chart so stateTitle falls through to
+// the Library selector instead of the current chart's title card.
+func (a *App) returnToLevelSelect() {
+	if a.player != nil {
+		a.player.Close()
+		a.player = nil
+	}
+	a.r, a.bm, a.cond = nil, nil, nil
+	a.modules = nil
+	a.active = nil
+	a.switches = nil
+	a.actions = nil
+	a.inputs = nil
+	a.flashes = nil
+	a.camEvts = nil
+	a.viewScales = nil
+	a.viewBuf = nil
+	a.unported = nil
+	a.actIdx = 0
+	a.starBeat, a.endBeat = -1, 0
+	a.fx.reset()
+	a.flt.reset()
+	a.tbx.reset()
+	a.resetRunState()
+	a.loadErr = ""
+	a.state = stateTitle
+	a.keepMenuSelectionVisible()
+}
+
 // ---------- 时间轴 / 判定服务（Ctx 转发到这里） ----------
 
 func (a *App) at(beat float64, fn func()) {
@@ -935,8 +964,8 @@ func (a *App) Update() error {
 					a.enterResultEpilogue()
 				}
 			} else if a.resultT > 1.5 {
-				a.stopResultAudio()
-				return a.restart()
+				a.returnToLevelSelect()
+				return nil
 			}
 		}
 		a.updateResultAudio()
@@ -1980,7 +2009,7 @@ func (a *App) drawResultEpilogue(screen *ebiten.Image, white color.RGBA) {
 	a.text(screen, fmt.Sprintf("Final score %d  |  ACE %d  OK %d  NG %d  MISS %d",
 		int(a.result.Score*100), a.aces, a.justs, a.ngs, a.misses),
 		a.faceSmall, 58, ScreenH-42, color.RGBA{218, 214, 226, 255}, false)
-	a.text(screen, "Enter / Click - chart title    R - replay    Esc - quit", a.faceSmall, ScreenW-306, ScreenH-42, white, false)
+	a.text(screen, "Enter / Click - level select    R - replay    Esc - quit", a.faceSmall, ScreenW-326, ScreenH-42, white, false)
 }
 
 func resultRankColor(rank resultRank) color.RGBA {

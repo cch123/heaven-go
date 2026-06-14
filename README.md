@@ -25,7 +25,7 @@ go run ./cmd/verify -riq "levels/Meat Grinder.riq" -beats "1,36.6" -out /tmp/mg 
 
 `levels/` 收录已完成移植验证的官方 Pack-In 关卡。
 
-操作：`Space` / `J` / 鼠标左键（totemClimb 高跳需按住 2 拍后松开）；`F11` / `Alt+Enter`（macOS 也可 `⌘+Enter` / `⌃⌘F`）切换全屏；`Tab` 调试叠层；`R` 结算后重开；`Esc` 退出。可随时把新的 `.riq` 拖入窗口切换关卡。
+操作：`Space` / `J` / 鼠标左键（totemClimb 高跳需按住 2 拍后松开）；`F11` / `Alt+Enter`（macOS 也可 `⌘+Enter` / `⌃⌘F`）切换全屏；`Tab` 调试叠层；结算 epilogue 后 `Enter` / 点击回选关，`R` 重开当前关；`Esc` 退出。可随时把新的 `.riq` 拖入窗口切换关卡。
 
 ## 移植一个新 minigame 的流程
 

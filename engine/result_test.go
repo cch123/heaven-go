@@ -85,6 +85,50 @@ func TestDrawResultSmoke(t *testing.T) {
 	app.drawResult(screen, colorWhite())
 }
 
+func TestReturnToLevelSelectClearsActiveChart(t *testing.T) {
+	app := &App{
+		bm:      &riq.Beatmap{},
+		r:       &riq.Riq{Beatmap: &riq.Beatmap{}},
+		modules: map[string]Module{},
+		switches: []gameSwitch{
+			{beat: 0, id: "meatGrinder"},
+		},
+		actions: []beatAction{
+			{beat: 1},
+		},
+		inputs: []*Input{
+			{Beat: 1, Result: JudgeAce},
+		},
+		state:          stateResult,
+		result:         resultSummary{Score: 0.8, Rank: resultRankHi},
+		resultT:        2,
+		resultEpilogue: true,
+		levels: []menuLevel{
+			{title: "Meat Grinder"},
+			{title: "Practice"},
+		},
+		menuSel: 1,
+	}
+
+	app.returnToLevelSelect()
+
+	if app.state != stateTitle {
+		t.Fatalf("state = %v, want title/level select", app.state)
+	}
+	if app.bm != nil || app.r != nil || app.cond != nil || app.player != nil {
+		t.Fatalf("active chart was not unloaded: bm=%v r=%v cond=%v player=%v", app.bm, app.r, app.cond, app.player)
+	}
+	if app.modules != nil || app.switches != nil || app.actions != nil || app.inputs != nil {
+		t.Fatalf("runtime timeline was not cleared")
+	}
+	if app.resultEpilogue || app.resultT != 0 || app.result.Score != 0 {
+		t.Fatalf("result state = epilogue %v t %.2f score %.2f, want reset", app.resultEpilogue, app.resultT, app.result.Score)
+	}
+	if app.menuSel != 1 {
+		t.Fatalf("menuSel = %d, want to preserve the selected library item", app.menuSel)
+	}
+}
+
 func TestResultAudioAssetsDecode(t *testing.T) {
 	audio := loadResultAudio("../assets/common/result_sounds")
 	for _, name := range []string{
