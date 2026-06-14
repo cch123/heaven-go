@@ -38,6 +38,13 @@ const (
 	WinAce  = 0.01
 	WinJust = 0.05
 	WinNG   = 0.10
+
+	menuVisibleRows = 7
+	menuRowX        = 64
+	menuRowY        = 104
+	menuRowW        = 470
+	menuRowH        = 45
+	menuRowGap      = 8
 )
 
 type gameState int
@@ -88,6 +95,11 @@ type flashEvt struct {
 type gameSwitch struct {
 	beat float64
 	id   string
+}
+
+type menuLevel struct {
+	path string
+	name string
 }
 
 // viewScaleEvt 是 vfx/scale view 事件（StaticCamera：整张游戏画布的缩放，
@@ -163,6 +175,10 @@ type App struct {
 	// Autoplay：调试用完美自动打击（HS 的 autoplay 等价物），-autoplay 开启
 	Autoplay bool
 
+	levels     []menuLevel
+	menuSel    int
+	menuScroll int
+
 	faceBig, faceMid, faceSmall *text.GoTextFace
 }
 
@@ -181,6 +197,7 @@ func New(assetsRoot, riqPath string) (*App, error) {
 		faceMid:      &text.GoTextFace{Source: src, Size: 24},
 		faceSmall:    &text.GoTextFace{Source: src, Size: 15},
 		commonSounds: map[string][]byte{},
+		levels:       discoverLevels("levels"),
 	}
 	a.loadCommonSounds()
 	if riqPath != "" {
@@ -193,6 +210,20 @@ func New(assetsRoot, riqPath string) (*App, error) {
 		}
 	}
 	return a, nil
+}
+
+func discoverLevels(dir string) []menuLevel {
+	paths, err := filepath.Glob(filepath.Join(dir, "*.riq"))
+	if err != nil {
+		return nil
+	}
+	sort.Strings(paths)
+	out := make([]menuLevel, 0, len(paths))
+	for _, p := range paths {
+		name := strings.TrimSuffix(filepath.Base(p), filepath.Ext(p))
+		out = append(out, menuLevel{path: p, name: name})
+	}
+	return out
 }
 
 // ---------- 谱面装载 ----------
@@ -212,10 +243,10 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	case riq.AudioMP3:
 		stream, err = mp3.DecodeWithSampleRate(SampleRate, br)
 	default:
-		return fmt.Errorf("不支持的音频格式（%s）", r.AudioName)
+		return fmt.Errorf("unsupported audio format (%s)", r.AudioName)
 	}
 	if err != nil {
-		return fmt.Errorf("解码音乐失败: %w", err)
+		return fmt.Errorf("decode music: %w", err)
 	}
 	player, err := audioCtx.NewPlayer(stream)
 	if err != nil {
@@ -270,7 +301,7 @@ func (a *App) loadRiq(r *riq.Riq) error {
 		}
 		ctx := &Ctx{App: a, module: m}
 		if err := m.Load(ctx); err != nil {
-			return fmt.Errorf("加载 %s 资产失败: %w（先运行 go run ./cmd/extract -game %s）", id, err, id)
+			return fmt.Errorf("load %s assets: %w (run go run ./cmd/extract -game %s first)", id, err, id)
 		}
 		a.modules[id] = m
 	}
@@ -339,7 +370,7 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	a.fx.sortAll()
 	if a.fx.active() {
 		if err := a.fx.ensure(); err != nil {
-			return fmt.Errorf("ppe shader 编译失败: %w", err)
+			return fmt.Errorf("compile ppe shader: %w", err)
 		}
 	}
 
@@ -434,7 +465,11 @@ func (a *App) Update() error {
 
 	switch a.state {
 	case stateTitle:
-		if a.bm != nil && (pressed() || a.Autoplay) {
+		if a.bm == nil {
+			a.updateLevelSelect()
+			return nil
+		}
+		if a.bm != nil && (titlePressed() || a.Autoplay) {
 			a.cond.Play()
 			a.state = statePlay
 		}
@@ -447,6 +482,126 @@ func (a *App) Update() error {
 		}
 	}
 	return nil
+}
+
+func (a *App) updateLevelSelect() {
+	if len(a.levels) == 0 {
+		return
+	}
+	if inpututil.IsKeyJustPressed(ebiten.KeyArrowUp) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyUp) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyW) {
+		a.moveMenu(-1)
+	}
+	if inpututil.IsKeyJustPressed(ebiten.KeyArrowDown) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyDown) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyS) {
+		a.moveMenu(1)
+	}
+	if inpututil.IsKeyJustPressed(ebiten.KeyPageUp) {
+		a.moveMenu(-menuVisibleRows)
+	}
+	if inpututil.IsKeyJustPressed(ebiten.KeyPageDown) {
+		a.moveMenu(menuVisibleRows)
+	}
+	_, wheelY := ebiten.Wheel()
+	if wheelY > 0 {
+		a.moveMenu(-1)
+	} else if wheelY < 0 {
+		a.moveMenu(1)
+	}
+	if idx, ok := a.hoveredMenuLevel(); ok {
+		a.menuSel = idx
+		a.keepMenuSelectionVisible()
+		if inpututil.IsMouseButtonJustPressed(ebiten.MouseButtonLeft) {
+			a.loadSelectedLevel()
+			return
+		}
+	}
+	if menuConfirmPressed() {
+		a.loadSelectedLevel()
+	}
+}
+
+func menuConfirmPressed() bool {
+	return inpututil.IsKeyJustPressed(ebiten.KeySpace) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyJ) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyEnter) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyNumpadEnter)
+}
+
+func titlePressed() bool {
+	return pressed() ||
+		inpututil.IsKeyJustPressed(ebiten.KeyEnter) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyNumpadEnter)
+}
+
+func (a *App) moveMenu(delta int) {
+	a.menuSel += delta
+	if a.menuSel < 0 {
+		a.menuSel = 0
+	}
+	if a.menuSel >= len(a.levels) {
+		a.menuSel = len(a.levels) - 1
+	}
+	a.keepMenuSelectionVisible()
+}
+
+func (a *App) keepMenuSelectionVisible() {
+	if a.menuSel < a.menuScroll {
+		a.menuScroll = a.menuSel
+	}
+	if a.menuSel >= a.menuScroll+menuVisibleRows {
+		a.menuScroll = a.menuSel - menuVisibleRows + 1
+	}
+	maxScroll := len(a.levels) - menuVisibleRows
+	if maxScroll < 0 {
+		maxScroll = 0
+	}
+	if a.menuScroll > maxScroll {
+		a.menuScroll = maxScroll
+	}
+	if a.menuScroll < 0 {
+		a.menuScroll = 0
+	}
+}
+
+func (a *App) hoveredMenuLevel() (int, bool) {
+	x, y := ebiten.CursorPosition()
+	if x < menuRowX || x >= menuRowX+menuRowW {
+		return 0, false
+	}
+	rowStep := menuRowH + menuRowGap
+	if y < menuRowY || y >= menuRowY+menuVisibleRows*rowStep {
+		return 0, false
+	}
+	row := (y - menuRowY) / rowStep
+	if y >= menuRowY+row*rowStep+menuRowH {
+		return 0, false
+	}
+	idx := a.menuScroll + row
+	if idx < 0 || idx >= len(a.levels) {
+		return 0, false
+	}
+	return idx, true
+}
+
+func (a *App) loadSelectedLevel() {
+	if a.menuSel < 0 || a.menuSel >= len(a.levels) {
+		return
+	}
+	level := a.levels[a.menuSel]
+	r, err := riq.Load(level.path)
+	if err != nil {
+		a.loadErr = fmt.Sprintf("read %s failed: %v", level.name, err)
+		return
+	}
+	if err := a.loadRiq(r); err != nil {
+		a.loadErr = fmt.Sprintf("load %s failed: %v", level.name, err)
+		return
+	}
+	a.loadErr = ""
+	a.state = stateTitle
 }
 
 func pressed() bool {
@@ -641,16 +796,16 @@ func (a *App) pollDroppedRiq() {
 		}
 		b, err := fs.ReadFile(df, name)
 		if err != nil {
-			a.loadErr = fmt.Sprintf("读取 %s 失败: %v", name, err)
+			a.loadErr = fmt.Sprintf("read %s failed: %v", name, err)
 			return
 		}
 		r, err := riq.LoadBytes(b)
 		if err != nil {
-			a.loadErr = fmt.Sprintf("%s 不是有效的 riq: %v", name, err)
+			a.loadErr = fmt.Sprintf("%s is not a valid riq: %v", name, err)
 			return
 		}
 		if err := a.loadRiq(r); err != nil {
-			a.loadErr = fmt.Sprintf("加载 %s 失败: %v", filepath.Base(name), err)
+			a.loadErr = fmt.Sprintf("load %s failed: %v", filepath.Base(name), err)
 			return
 		}
 		a.loadErr = ""
@@ -735,8 +890,8 @@ func (a *App) Draw(screen *ebiten.Image) {
 
 func (a *App) drawTitle(screen *ebiten.Image, white, dim color.RGBA) {
 	if a.bm == nil {
-		a.text(screen, "HEAVEN GO", a.faceBig, ScreenW/2, 180, white, true)
-		a.text(screen, "拖入 .riq 文件开始游玩 / drop a .riq file here", a.faceMid, ScreenW/2, 280, dim, true)
+		a.drawLevelSelect(screen, white, dim)
+		return
 	} else {
 		title := a.bm.Prop("remixtitle")
 		if title == "" {
@@ -750,15 +905,121 @@ func (a *App) drawTitle(screen *ebiten.Image, white, dim color.RGBA) {
 			len(a.inputs), a.bm.Tempos[0].BPM, strings.Join(keys(a.modules), ", ")),
 			a.faceSmall, ScreenW/2, 208, dim, true)
 		if len(a.unported) > 0 {
-			a.text(screen, "尚未移植: "+strings.Join(a.unported, ", "), a.faceSmall, ScreenW/2, 232,
+			a.text(screen, "Unported: "+strings.Join(a.unported, ", "), a.faceSmall, ScreenW/2, 232,
 				color.RGBA{255, 170, 120, 255}, true)
 		}
-		a.text(screen, "Space / J / Click — play    (可拖入其他 .riq 切换)", a.faceMid, ScreenW/2, ScreenH-110, white, true)
+		a.text(screen, "Space / J / Click to play    (drop another .riq to switch)", a.faceMid, ScreenW/2, ScreenH-110, white, true)
 		a.text(screen, "press to start", a.faceMid, ScreenW/2, ScreenH-72, white, true)
 	}
 	if a.loadErr != "" {
 		a.text(screen, a.loadErr, a.faceSmall, ScreenW/2, ScreenH-36, color.RGBA{255, 120, 120, 255}, true)
 	}
+}
+
+func (a *App) drawLevelSelect(screen *ebiten.Image, white, dim color.RGBA) {
+	screen.Fill(color.RGBA{22, 24, 28, 255})
+	vector.DrawFilledRect(screen, 0, 0, ScreenW, 86, color.RGBA{33, 41, 54, 255}, false)
+	vector.DrawFilledRect(screen, 0, 84, ScreenW, 3, color.RGBA{232, 184, 74, 255}, false)
+	vector.DrawFilledRect(screen, 0, ScreenH-58, ScreenW, 58, color.RGBA{18, 19, 23, 255}, false)
+
+	a.text(screen, "HEAVEN GO", a.faceBig, 64, 22, white, false)
+	a.text(screen, "LEVEL SELECT", a.faceMid, 720, 30, color.RGBA{232, 184, 74, 255}, true)
+
+	if len(a.levels) == 0 {
+		a.text(screen, "No .riq levels found under levels/", a.faceMid, ScreenW/2, 230, white, true)
+		a.text(screen, "Drop a .riq file here to play", a.faceMid, ScreenW/2, 282, dim, true)
+		if a.loadErr != "" {
+			a.text(screen, a.fitText(a.loadErr, a.faceSmall, 760), a.faceSmall, ScreenW/2, ScreenH-36, color.RGBA{255, 120, 120, 255}, true)
+		}
+		return
+	}
+
+	a.keepMenuSelectionVisible()
+	for row := 0; row < menuVisibleRows; row++ {
+		idx := a.menuScroll + row
+		if idx >= len(a.levels) {
+			break
+		}
+		y := menuRowY + row*(menuRowH+menuRowGap)
+		fy := float32(y)
+		ty := float64(y)
+		selected := idx == a.menuSel
+		bg := color.RGBA{38, 41, 49, 255}
+		textCol := color.RGBA{216, 219, 228, 255}
+		if selected {
+			bg = color.RGBA{58, 66, 78, 255}
+			textCol = white
+		}
+		vector.DrawFilledRect(screen, menuRowX, fy, menuRowW, menuRowH, bg, false)
+		vector.DrawFilledRect(screen, menuRowX, fy, 7, menuRowH, menuAccent(idx), false)
+		a.text(screen, fmt.Sprintf("%02d", idx+1), a.faceSmall, menuRowX+20, ty+16, color.RGBA{170, 176, 188, 255}, false)
+		a.text(screen, a.fitText(a.levels[idx].name, a.faceMid, 340), a.faceMid, menuRowX+64, ty+10, textCol, false)
+		if selected {
+			vector.StrokeLine(screen, menuRowX, fy+menuRowH-1, menuRowX+menuRowW, fy+menuRowH-1, 2, color.RGBA{232, 184, 74, 255}, false)
+		}
+	}
+
+	a.drawLevelDetails(screen, a.levels[a.menuSel], a.menuSel, white, dim)
+	a.text(screen, "Enter / Space / Click to load    Arrow keys to choose    Drop .riq to import", a.faceSmall, ScreenW/2, ScreenH-38, dim, true)
+	if a.loadErr != "" {
+		a.text(screen, a.fitText(a.loadErr, a.faceSmall, 840), a.faceSmall, ScreenW/2, ScreenH-18, color.RGBA{255, 120, 120, 255}, true)
+	}
+}
+
+func (a *App) drawLevelDetails(screen *ebiten.Image, level menuLevel, idx int, white, dim color.RGBA) {
+	x, y := 575.0, 106.0
+	w, h := 320.0, 328.0
+	accent := menuAccent(idx)
+	vector.DrawFilledRect(screen, float32(x), float32(y), float32(w), float32(h), color.RGBA{34, 37, 45, 255}, false)
+	vector.DrawFilledRect(screen, float32(x), float32(y), float32(w), 7, accent, false)
+	a.text(screen, "SELECTED", a.faceSmall, x+24, y+28, color.RGBA{170, 176, 188, 255}, false)
+	a.text(screen, a.fitText(level.name, a.faceMid, w-48), a.faceMid, x+24, y+62, white, false)
+	a.text(screen, a.fitText(level.path, a.faceSmall, w-48), a.faceSmall, x+24, y+103, dim, false)
+
+	baseY := y + 162
+	for i := 0; i < 18; i++ {
+		barH := 18 + 54*math.Abs(math.Sin(float64(i+idx)*0.72))
+		c := accent
+		switch i % 4 {
+		case 1:
+			c = color.RGBA{83, 189, 179, 255}
+		case 2:
+			c = color.RGBA{235, 111, 94, 255}
+		case 3:
+			c = color.RGBA{147, 194, 86, 255}
+		}
+		vector.DrawFilledRect(screen, float32(x+24+float64(i)*15), float32(baseY+80-barH), 8, float32(barH), c, false)
+	}
+	vector.DrawFilledRect(screen, float32(x+24), float32(baseY+90), float32(w-48), 2, color.RGBA{95, 101, 112, 255}, false)
+	a.text(screen, "Official Pack-In level", a.faceSmall, x+24, y+h-72, dim, false)
+	a.text(screen, "Load opens the chart title screen", a.faceSmall, x+24, y+h-46, color.RGBA{218, 222, 232, 255}, false)
+}
+
+func menuAccent(i int) color.RGBA {
+	palette := []color.RGBA{
+		{232, 184, 74, 255},
+		{83, 189, 179, 255},
+		{235, 111, 94, 255},
+		{147, 194, 86, 255},
+		{157, 139, 214, 255},
+		{76, 151, 218, 255},
+	}
+	return palette[i%len(palette)]
+}
+
+func (a *App) fitText(s string, face *text.GoTextFace, maxW float64) string {
+	if w, _ := text.Measure(s, face, 0); w <= maxW {
+		return s
+	}
+	rs := []rune(s)
+	for len(rs) > 0 {
+		rs = rs[:len(rs)-1]
+		candidate := string(rs) + "..."
+		if w, _ := text.Measure(candidate, face, 0); w <= maxW {
+			return candidate
+		}
+	}
+	return "..."
 }
 
 func (a *App) drawResult(screen *ebiten.Image, white color.RGBA) {
@@ -778,7 +1039,7 @@ func (a *App) drawResult(screen *ebiten.Image, white color.RGBA) {
 	if a.starGot {
 		a.text(screen, "* skill star acquired", a.faceMid, ScreenW/2, 270, color.RGBA{255, 230, 90, 255}, true)
 	}
-	a.text(screen, "R — restart    Esc — quit    (可拖入其他 .riq)", a.faceMid, ScreenW/2, 340, white, true)
+	a.text(screen, "R - restart    Esc - quit    (drop .riq to switch)", a.faceMid, ScreenW/2, 340, white, true)
 }
 
 // viewScaleAt 折叠 vfx/scale view 事件得到画布缩放（StaticCamera.UpdateScale：
@@ -843,7 +1104,7 @@ func (a *App) drawFlash(screen *ebiten.Image, beat float64) {
 func (a *App) drawPlaceholder(screen *ebiten.Image, id string) {
 	screen.Fill(color.RGBA{40, 40, 52, 255})
 	a.text(screen, id, a.faceBig, ScreenW/2, ScreenH/2-40, color.RGBA{210, 210, 225, 255}, true)
-	a.text(screen, "这个 minigame 还没有移植，乐曲继续……", a.faceMid, ScreenW/2, ScreenH/2+20, color.RGBA{160, 160, 175, 255}, true)
+	a.text(screen, "This minigame is not ported yet; the song continues.", a.faceMid, ScreenW/2, ScreenH/2+20, color.RGBA{160, 160, 175, 255}, true)
 }
 
 func (a *App) drawDebug(screen *ebiten.Image, t, beat float64) {

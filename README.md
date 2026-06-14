@@ -17,7 +17,7 @@ go run . -riq "levels/Rhythm Somen.riq"        # 内置已移植关卡
 go run . -riq "levels/Trick on the Class.riq"
 go run . -riq "levels/Meat Grinder.riq"
 go run . -riq "levels/Totem Climb.riq"
-go run .                                 # 或标题屏，把任意 .riq 拖进窗口
+go run .                                 # 启动关卡选择 UI；也可把任意 .riq 拖进窗口
 go run . -riq "levels/Meat Grinder.riq" -autoplay   # 完美自动打击（调试）
 go run ./cmd/verify -riq "levels/Meat Grinder.riq" -beats "1,36.6" -out /tmp/mg  # 录制验证：抓帧 + 判定计数
 ```
