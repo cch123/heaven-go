@@ -98,6 +98,16 @@ var sceneSpecs = map[string]sceneSpec{
 			"Prefabs/Note.prefab",
 		},
 	},
+	"gardenDance": {
+		dir:             "GardenDance",
+		prefab:          "gardenDance.prefab",
+		roleFields:      []string{"flowerPlayer", "sunAnim", "birdAnim"},
+		refArrayFields:  []string{"flowers"},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "flower", markers: []string{"anim", "danceRight"}, multi: true},
+		},
+	},
 	"ninjaBodyguard": {
 		dir:    "NinjaBodyguard",
 		prefab: "ninjaBodyguard.prefab",

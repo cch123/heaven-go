@@ -57,6 +57,7 @@ import (
 	"hsdemo/games/flipperflop"
 	"hsdemo/games/forklifter"
 	"hsdemo/games/frogprincess"
+	"hsdemo/games/gardendance"
 	"hsdemo/games/gleeclub"
 	"hsdemo/games/holeinone"
 	"hsdemo/games/kitties"
@@ -685,6 +686,7 @@ func main() {
 	engine.Register("flipperFlop", flipperflop.New)
 	engine.Register("forkLifter", forklifter.New)
 	engine.Register("frogPrincess", frogprincess.New)
+	engine.Register("gardenDance", gardendance.New)
 	engine.Register("gleeClub", gleeclub.New)
 	engine.Register("holeInOne", holeinone.New)
 	engine.Register("tambourine", tambourine.New)

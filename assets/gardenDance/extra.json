@@ -1,0 +1,54 @@
+{
+ "refArrays": {
+  "flowers": [
+   "GreenFlower",
+   "SunFlower",
+   "RedFlower"
+  ]
+ },
+ "refArrayIdx": {
+  "flowers": [
+   29,
+   20,
+   11
+  ]
+ },
+ "components": {
+  "flower0": {
+   "path": "GreenFlower",
+   "nums": {
+    "danceRight": 0
+   },
+   "refs": {
+    "anim": "GreenFlower"
+   }
+  },
+  "flower1": {
+   "path": "PurpleFlower",
+   "nums": {
+    "danceRight": 0
+   },
+   "refs": {
+    "anim": "PurpleFlower"
+   }
+  },
+  "flower2": {
+   "path": "RedFlower",
+   "nums": {
+    "danceRight": 0
+   },
+   "refs": {
+    "anim": "RedFlower"
+   }
+  },
+  "flower3": {
+   "path": "SunFlower",
+   "nums": {
+    "danceRight": 0
+   },
+   "refs": {
+    "anim": "SunFlower"
+   }
+  }
+ }
+}

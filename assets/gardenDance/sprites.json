@@ -1,0 +1,659 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "GardenBG_0": {
+   "X": 29,
+   "Y": 13,
+   "W": 3004,
+   "H": 600,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenBG_1": {
+   "X": 3791,
+   "Y": 167,
+   "W": 110,
+   "H": 1470,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenBG_2": {
+   "X": 1807,
+   "Y": 707,
+   "W": 1202,
+   "H": 1192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenBG_4": {
+   "X": 3045,
+   "Y": 723,
+   "W": 358,
+   "H": 202,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenBG_6": {
+   "X": 5,
+   "Y": 1931,
+   "W": 2084,
+   "H": 484,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenBG_7": {
+   "X": 2205,
+   "Y": 1951,
+   "W": 1060,
+   "H": 248,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenBG_8": {
+   "X": 3465,
+   "Y": 1941,
+   "W": 534,
+   "H": 126,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenBG_9": {
+   "X": 27,
+   "Y": 2453,
+   "W": 4060,
+   "H": 1620,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_12": {
+   "X": 1507,
+   "Y": 179,
+   "W": 255,
+   "H": 132,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_13": {
+   "X": 1811,
+   "Y": 121,
+   "W": 254,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_16": {
+   "X": 2123,
+   "Y": 185,
+   "W": 188,
+   "H": 130,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_17": {
+   "X": 2365,
+   "Y": 179,
+   "W": 206,
+   "H": 140,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_19": {
+   "X": 3246,
+   "Y": 171,
+   "W": 215,
+   "H": 201,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_2": {
+   "X": 2637,
+   "Y": 109,
+   "W": 540,
+   "H": 528,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_3": {
+   "X": 435,
+   "Y": 173,
+   "W": 196,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_30": {
+   "X": 529,
+   "Y": 499,
+   "W": 194,
+   "H": 136,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_31": {
+   "X": 791,
+   "Y": 489,
+   "W": 260,
+   "H": 314,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_32": {
+   "X": 1113,
+   "Y": 479,
+   "W": 152,
+   "H": 328,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_33": {
+   "X": 1321,
+   "Y": 463,
+   "W": 134,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_34": {
+   "X": 1509,
+   "Y": 393,
+   "W": 144,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_35": {
+   "X": 1709,
+   "Y": 435,
+   "W": 140,
+   "H": 378,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_36": {
+   "X": 1887,
+   "Y": 478,
+   "W": 136,
+   "H": 335,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_37": {
+   "X": 2097,
+   "Y": 417,
+   "W": 178,
+   "H": 260,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_38": {
+   "X": 2293,
+   "Y": 417,
+   "W": 152,
+   "H": 260,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_39": {
+   "X": 509,
+   "Y": 987,
+   "W": 220,
+   "H": 158,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_40": {
+   "X": 877,
+   "Y": 965,
+   "W": 676,
+   "H": 416,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_41": {
+   "X": 1595,
+   "Y": 1041,
+   "W": 54,
+   "H": 54,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_42": {
+   "X": 515,
+   "Y": 1177,
+   "W": 274,
+   "H": 140,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_43": {
+   "X": 515,
+   "Y": 1357,
+   "W": 322,
+   "H": 126,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_44": {
+   "X": 899,
+   "Y": 1407,
+   "W": 178,
+   "H": 326,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_45": {
+   "X": 1129,
+   "Y": 1435,
+   "W": 178,
+   "H": 300,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_46": {
+   "X": 557,
+   "Y": 1519,
+   "W": 282,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_47": {
+   "X": 1355,
+   "Y": 1621,
+   "W": 178,
+   "H": 134,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_48": {
+   "X": 1563,
+   "Y": 1621,
+   "W": 178,
+   "H": 318,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_5": {
+   "X": 701,
+   "Y": 187,
+   "W": 208,
+   "H": 140,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_8": {
+   "X": 983,
+   "Y": 171,
+   "W": 196,
+   "H": 226,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "GardenCharacters_9": {
+   "X": 1223,
+   "Y": 174,
+   "W": 242,
+   "H": 167,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "garden_ref": {
+   "X": 0,
+   "Y": 0,
+   "W": 640,
+   "H": 360,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "garden_smears_0": {
+   "X": 127,
+   "Y": 139,
+   "W": 267,
+   "H": 263,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "garden_smears_2": {
+   "X": 177,
+   "Y": 585,
+   "W": 214,
+   "H": 161,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "garden_smears_4": {
+   "X": 1249,
+   "Y": 1284,
+   "W": 649,
+   "H": 592,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

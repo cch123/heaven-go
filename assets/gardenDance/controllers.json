@@ -1,0 +1,132 @@
+{
+ "BirdAnim": {
+  "default": "Stationary",
+  "states": {
+   "Flap": {
+    "clip": "Bird/Flap",
+    "speed": 1
+   },
+   "FlyLeft": {
+    "clip": "Bird/FlyLeft",
+    "speed": 1
+   },
+   "FlyRight": {
+    "clip": "Bird/FlyRight",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Shut": {
+    "speed": 1
+   },
+   "Stationary": {
+    "speed": 1
+   },
+   "Whistle": {
+    "clip": "Bird/Whistle",
+    "speed": 1
+   }
+  }
+ },
+ "FlowerAnim": {
+  "default": "Idle",
+  "states": {
+   "Barely": {
+    "clip": "Faces/Barely",
+    "speed": 1
+   },
+   "Blink": {
+    "clip": "Faces/Blink",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Flower/Bop",
+    "speed": 1
+   },
+   "DanceL": {
+    "clip": "Flower/DanceL",
+    "speed": 1
+   },
+   "DanceR": {
+    "clip": "Flower/DanceR",
+    "speed": 1
+   },
+   "Glare": {
+    "clip": "Faces/Glare",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "IdleFace": {
+    "clip": "Faces/IdleFace",
+    "speed": 1
+   },
+   "MissFace": {
+    "clip": "Faces/MissFace",
+    "speed": 1
+   },
+   "PDanceL": {
+    "clip": "Flower/PDanceL",
+    "speed": 1
+   },
+   "PDanceR": {
+    "clip": "Flower/PDanceR",
+    "speed": 1
+   },
+   "PoseFace": {
+    "clip": "Faces/PoseFace",
+    "speed": 1
+   },
+   "PoseL": {
+    "clip": "Flower/PoseL",
+    "speed": 1
+   },
+   "PoseR": {
+    "clip": "Flower/PoseR",
+    "speed": 1
+   },
+   "Stare": {
+    "clip": "Faces/Stare",
+    "speed": 1
+   },
+   "TripletFace": {
+    "clip": "Faces/TripletFace",
+    "speed": 1
+   },
+   "TripletL": {
+    "clip": "Flower/TripletL",
+    "speed": 1
+   },
+   "TripletR": {
+    "clip": "Flower/TripletR",
+    "speed": 1
+   }
+  }
+ },
+ "SunAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Sun/SunBop",
+    "speed": 1
+   },
+   "Enter": {
+    "clip": "Sun/SunEnter",
+    "speed": 1
+   },
+   "Hide": {
+    "clip": "Sun/SunHide",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Leave": {
+    "clip": "Sun/SunLeave",
+    "speed": 1
+   }
+  }
+ }
+}
