@@ -23,6 +23,7 @@ import (
 	"hsdemo/games/airrally"
 	"hsdemo/games/basketballgirls"
 	"hsdemo/games/bluebear"
+	"hsdemo/games/bluebirds"
 	"hsdemo/games/boardmeeting"
 	"hsdemo/games/bouncyroad"
 	"hsdemo/games/cannery"
@@ -166,6 +167,7 @@ func main() {
 	engine.Register("sneakySpirits", sneakyspirits.New)
 	engine.Register("slotMonster", slotmonster.New)
 	engine.Register("blueBear", bluebear.New)
+	engine.Register("blueBirds", bluebirds.New)
 	engine.Register("marchingOrders", marchingorders.New)
 	engine.Register("cheerReaders", cheerreaders.New)
 	engine.Register("kitties", kitties.New)

@@ -1,0 +1,11 @@
+{
+ "Birds/CPUBirdLeft/BlueBird": "Blue Bird",
+ "Birds/CPUBirdLeft/BlueBird/Effect": "Effect",
+ "Birds/CPUBirdMiddle/BlueBird": "Blue Bird",
+ "Birds/CPUBirdMiddle/BlueBird/Effect": "Effect",
+ "Birds/PlayerBird/BlueBird": "Blue Bird",
+ "Birds/PlayerBird/BlueBird/Effect": "Effect",
+ "CaptainTransform/Captain/BirdHolder": "Captain Holder",
+ "CaptainTransform/Captain/BirdHolder/Bird": "Captain Blue Bird",
+ "Story/image": "image"
+}

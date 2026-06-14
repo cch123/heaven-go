@@ -16,6 +16,9 @@ func (c *Ctx) BeatToTime(beat float64) float64 { return c.App.bm.BeatToTime(beat
 // TimeToBeat 是 BeatToTime 的逆映射（HS Conductor.GetBeatFromSongPos）。
 func (c *Ctx) TimeToBeat(t float64) float64 { return c.App.bm.TimeToBeat(t) }
 
+// BPMAt 返回指定拍位的 tempo（HS Conductor.GetBpmAtBeat）。
+func (c *Ctx) BPMAt(beat float64) float64 { return c.App.bm.BPMAt(beat) }
+
 // SecPerBeat 返回某拍处的秒/拍（用于以 1x 真实速度播放剪辑：timeScale = SecPerBeat）。
 func (c *Ctx) SecPerBeat(beat float64) float64 { return 60 / c.App.bm.BPMAt(beat) }
 

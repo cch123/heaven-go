@@ -1,0 +1,3117 @@
+{
+ "nodes": [
+  {
+   "name": "blueBirds",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Fence",
+   "path": "Background/Fence",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FenceExtend (1)",
+   "path": "Background/Fence/FenceExtend (1)",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FenceLeft",
+   "path": "Background/Fence/FenceExtend (1)/FenceLeft",
+   "parent": 3,
+   "pos": [
+    -43.64,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceRight",
+   "path": "Background/Fence/FenceExtend (1)/FenceRight",
+   "parent": 3,
+   "pos": [
+    43.3,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceLeft (1)",
+   "path": "Background/Fence/FenceExtend (1)/FenceLeft (1)",
+   "parent": 3,
+   "pos": [
+    59.71,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceRight (1)",
+   "path": "Background/Fence/FenceExtend (1)/FenceRight (1)",
+   "parent": 3,
+   "pos": [
+    76.2,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceRight (2)",
+   "path": "Background/Fence/FenceExtend (1)/FenceRight (2)",
+   "parent": 3,
+   "pos": [
+    92.7,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceExtend",
+   "path": "Background/Fence/FenceExtend",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FenceLeft",
+   "path": "Background/Fence/FenceExtend/FenceLeft",
+   "parent": 9,
+   "pos": [
+    26.79,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceRight",
+   "path": "Background/Fence/FenceExtend/FenceRight",
+   "parent": 9,
+   "pos": [
+    -27.18,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceRight (1)",
+   "path": "Background/Fence/FenceExtend/FenceRight (1)",
+   "parent": 9,
+   "pos": [
+    -60.06,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceRight (2)",
+   "path": "Background/Fence/FenceExtend/FenceRight (2)",
+   "parent": 9,
+   "pos": [
+    -76.55,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceRight (3)",
+   "path": "Background/Fence/FenceExtend/FenceRight (3)",
+   "parent": 9,
+   "pos": [
+    -92.95,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceLeft",
+   "path": "Background/Fence/FenceLeft",
+   "parent": 2,
+   "pos": [
+    -10.74,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "FenceRight",
+   "path": "Background/Fence/FenceRight",
+   "parent": 2,
+   "pos": [
+    10.38,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_89",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    39.14,
+    4.96
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "Background/Gradient",
+   "parent": 1,
+   "pos": [
+    -0.25,
+    -1.02
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.3,
+    150
+   ],
+   "sprite": "gradientTex_0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.05,
+    1.93
+   ],
+   "mapped": true,
+   "mat": "gradient"
+  },
+  {
+   "name": "Top",
+   "path": "Background/Top",
+   "parent": 1,
+   "pos": [
+    0,
+    50.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    200,
+    100
+   ],
+   "order": -2,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "gradient"
+  },
+  {
+   "name": "Bottom",
+   "path": "Background/Bottom",
+   "parent": 1,
+   "pos": [
+    0,
+    -50
+   ],
+   "rotZ": 0,
+   "scale": [
+    200,
+    100
+   ],
+   "order": -2,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "gradient"
+  },
+  {
+   "name": "Story",
+   "path": "Background/Story",
+   "parent": 1,
+   "pos": [
+    0.015,
+    2.536
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.175556,
+    4.175556
+   ],
+   "sprite": "story_0",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.41,
+    1.36
+   ]
+  },
+  {
+   "name": "CaptainTransform",
+   "path": "CaptainTransform",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Captain",
+   "path": "CaptainTransform/Captain",
+   "parent": 21,
+   "pos": [
+    -0.31,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "BirdHolder",
+   "path": "CaptainTransform/Captain/BirdHolder",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Platform",
+   "path": "CaptainTransform/Captain/BirdHolder/Platform",
+   "parent": 23,
+   "pos": [
+    -7,
+    0.776
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_85",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.43,
+    1.94
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird",
+   "parent": 23,
+   "pos": [
+    -0.35,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "Effect",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Effect",
+   "parent": 25,
+   "pos": [
+    0.31,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cloud1",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Effect/Cloud1",
+   "parent": 26,
+   "pos": [
+    -6.039,
+    4.494
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_86",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    1.49
+   ]
+  },
+  {
+   "name": "Cloud2",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Effect/Cloud2",
+   "parent": 26,
+   "pos": [
+    -5.021,
+    3.376
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_87",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.49,
+    0.89
+   ]
+  },
+  {
+   "name": "Beak",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Beak",
+   "parent": 25,
+   "pos": [
+    -5.3,
+    2.756
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_74",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.39,
+    0.95
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Head",
+   "parent": 25,
+   "pos": [
+    -5.761,
+    3.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_52",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.97,
+    3.02
+   ]
+  },
+  {
+   "name": "Note",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Head/Note",
+   "parent": 30,
+   "pos": [
+    -0.91,
+    0.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_82",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.84
+   ]
+  },
+  {
+   "name": "Wing",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Wing",
+   "parent": 25,
+   "pos": [
+    -6.351,
+    2.286
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_83",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.34,
+    1.93
+   ]
+  },
+  {
+   "name": "Wing (1)",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Wing (1)",
+   "parent": 25,
+   "pos": [
+    -6.351,
+    2.286
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_65",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.34,
+    1.93
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Body",
+   "parent": 25,
+   "pos": [
+    -6.043,
+    2.162
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_84",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.99,
+    2.17
+   ]
+  },
+  {
+   "name": "Foot",
+   "path": "CaptainTransform/Captain/BirdHolder/Bird/Foot",
+   "parent": 25,
+   "pos": [
+    -6.054,
+    1.542
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53,
+    0.53
+   ],
+   "sprite": "ntrBlueBird_51",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.75,
+    1.26
+   ]
+  },
+  {
+   "name": "Birds",
+   "path": "Birds",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CPUBirdLeft",
+   "path": "Birds/CPUBirdLeft",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "BlueBird",
+   "path": "Birds/CPUBirdLeft/BlueBird",
+   "parent": 37,
+   "pos": [
+    1.21,
+    -3.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.52,
+    0.52
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Birds/CPUBirdLeft/BlueBird/Shadow",
+   "parent": 38,
+   "pos": [
+    -0.23,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_49",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    4.31,
+    0.97
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Birds/CPUBirdLeft/BlueBird/Star",
+   "parent": 38,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_70",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.64,
+    0.65
+   ]
+  },
+  {
+   "name": "Whiff",
+   "path": "Birds/CPUBirdLeft/BlueBird/Whiff",
+   "parent": 38,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_50",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.38,
+    10.93
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird",
+   "parent": 38,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hat",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird/Hat",
+   "parent": 42,
+   "pos": [
+    -1.441,
+    8.179
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_17",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    1.37
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird/Head",
+   "parent": 42,
+   "pos": [
+    -1.37,
+    6.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.79,
+    4.22
+   ]
+  },
+  {
+   "name": "Wing",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird/Wing",
+   "parent": 42,
+   "pos": [
+    0.182,
+    3.785
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_26",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    1.86
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird/Body",
+   "parent": 42,
+   "pos": [
+    -0.121,
+    3.517
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.55,
+    2.51
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird/Neck",
+   "parent": 42,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_20",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.89
+   ]
+  },
+  {
+   "name": "WingBack",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird/WingBack",
+   "parent": 42,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_36",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.89,
+    2.06
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird/LegLeft",
+   "parent": 42,
+   "pos": [
+    -0.93,
+    1.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_34",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.89
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "Birds/CPUBirdLeft/BlueBird/Bird/LegRight",
+   "parent": 42,
+   "pos": [
+    -0.068,
+    1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_34",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.89
+   ]
+  },
+  {
+   "name": "Effect",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect",
+   "parent": 38,
+   "pos": [
+    -0.32,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "Attack",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Attack",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Attack/Star",
+   "parent": 52,
+   "pos": [
+    -5.65,
+    2.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Attack/Star (1)",
+   "parent": 52,
+   "pos": [
+    -4.31,
+    0.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Attack/Star (2)",
+   "parent": 52,
+   "pos": [
+    -1.35,
+    2.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (3)",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Attack/Star (3)",
+   "parent": 52,
+   "pos": [
+    -2.78,
+    0.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (2)",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Attack/ntrBlueBird_63 (2)",
+   "parent": 52,
+   "pos": [
+    -4.064,
+    -0.029
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (3)",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Attack/ntrBlueBird_63 (3)",
+   "parent": 52,
+   "pos": [
+    -3.137,
+    -0.029
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "Miss",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Miss",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Drop",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Miss/Drop",
+   "parent": 59,
+   "pos": [
+    -2.22,
+    3.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_78",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.73,
+    1.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Miss/ntrBlueBird_63",
+   "parent": 59,
+   "pos": [
+    -3.744,
+    -0.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (1)",
+   "path": "Birds/CPUBirdLeft/BlueBird/Effect/Miss/ntrBlueBird_63 (1)",
+   "parent": 59,
+   "pos": [
+    -2.671,
+    -0.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "CPUBirdMiddle",
+   "path": "Birds/CPUBirdMiddle",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    15
+   ]
+  },
+  {
+   "name": "BlueBird",
+   "path": "Birds/CPUBirdMiddle/BlueBird",
+   "parent": 63,
+   "pos": [
+    3.54,
+    -4.07
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.52,
+    0.52
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Shadow",
+   "parent": 64,
+   "pos": [
+    -0.23,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_49",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    4.31,
+    0.97
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Star",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_70",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.64,
+    0.65
+   ]
+  },
+  {
+   "name": "Whiff",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Whiff",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_50",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.38,
+    10.93
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hat",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird/Hat",
+   "parent": 68,
+   "pos": [
+    -1.441,
+    8.179
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_17",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    1.37
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird/Head",
+   "parent": 68,
+   "pos": [
+    -1.37,
+    6.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.79,
+    4.22
+   ]
+  },
+  {
+   "name": "Wing",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird/Wing",
+   "parent": 68,
+   "pos": [
+    0.182,
+    3.785
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_26",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    1.86
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird/Body",
+   "parent": 68,
+   "pos": [
+    -0.121,
+    3.517
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.55,
+    2.51
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird/Neck",
+   "parent": 68,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_20",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.89
+   ]
+  },
+  {
+   "name": "WingBack",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird/WingBack",
+   "parent": 68,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_36",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.89,
+    2.06
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird/LegLeft",
+   "parent": 68,
+   "pos": [
+    -0.93,
+    1.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_34",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.89
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Bird/LegRight",
+   "parent": 68,
+   "pos": [
+    -0.068,
+    1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_34",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.89
+   ]
+  },
+  {
+   "name": "Effect",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect",
+   "parent": 64,
+   "pos": [
+    -0.32,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "Attack",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Attack",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Attack/Star",
+   "parent": 78,
+   "pos": [
+    -5.65,
+    2.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Attack/Star (1)",
+   "parent": 78,
+   "pos": [
+    -4.31,
+    0.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Attack/Star (2)",
+   "parent": 78,
+   "pos": [
+    -1.35,
+    2.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (3)",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Attack/Star (3)",
+   "parent": 78,
+   "pos": [
+    -2.78,
+    0.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (2)",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Attack/ntrBlueBird_63 (2)",
+   "parent": 78,
+   "pos": [
+    -4.064,
+    -0.029
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (3)",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Attack/ntrBlueBird_63 (3)",
+   "parent": 78,
+   "pos": [
+    -3.137,
+    -0.029
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "Miss",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Miss",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Drop",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Miss/Drop",
+   "parent": 85,
+   "pos": [
+    -2.22,
+    3.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_78",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.73,
+    1.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Miss/ntrBlueBird_63",
+   "parent": 85,
+   "pos": [
+    -3.744,
+    -0.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (1)",
+   "path": "Birds/CPUBirdMiddle/BlueBird/Effect/Miss/ntrBlueBird_63 (1)",
+   "parent": 85,
+   "pos": [
+    -2.671,
+    -0.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "PlayerBird",
+   "path": "Birds/PlayerBird",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    20
+   ]
+  },
+  {
+   "name": "BlueBird",
+   "path": "Birds/PlayerBird/BlueBird",
+   "parent": 89,
+   "pos": [
+    5.88,
+    -4.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.52,
+    0.52
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Birds/PlayerBird/BlueBird/Shadow",
+   "parent": 90,
+   "pos": [
+    -0.23,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_49",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    4.31,
+    0.97
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Birds/PlayerBird/BlueBird/Star",
+   "parent": 90,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_70",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.64,
+    0.65
+   ]
+  },
+  {
+   "name": "Whiff",
+   "path": "Birds/PlayerBird/BlueBird/Whiff",
+   "parent": 90,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_50",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.38,
+    10.93
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "Birds/PlayerBird/BlueBird/Bird",
+   "parent": 90,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hat",
+   "path": "Birds/PlayerBird/BlueBird/Bird/Hat",
+   "parent": 94,
+   "pos": [
+    -1.441,
+    8.179
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_17",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    1.37
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Birds/PlayerBird/BlueBird/Bird/Head",
+   "parent": 94,
+   "pos": [
+    -1.37,
+    6.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.79,
+    4.22
+   ]
+  },
+  {
+   "name": "Wing",
+   "path": "Birds/PlayerBird/BlueBird/Bird/Wing",
+   "parent": 94,
+   "pos": [
+    0.182,
+    3.785
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_26",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    1.86
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Birds/PlayerBird/BlueBird/Bird/Body",
+   "parent": 94,
+   "pos": [
+    -0.121,
+    3.517
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.55,
+    2.51
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "Birds/PlayerBird/BlueBird/Bird/Neck",
+   "parent": 94,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_20",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.89
+   ]
+  },
+  {
+   "name": "WingBack",
+   "path": "Birds/PlayerBird/BlueBird/Bird/WingBack",
+   "parent": 94,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_36",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.89,
+    2.06
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "Birds/PlayerBird/BlueBird/Bird/LegLeft",
+   "parent": 94,
+   "pos": [
+    -0.93,
+    1.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_34",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.89
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "Birds/PlayerBird/BlueBird/Bird/LegRight",
+   "parent": 94,
+   "pos": [
+    -0.068,
+    1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_34",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.89
+   ]
+  },
+  {
+   "name": "Effect",
+   "path": "Birds/PlayerBird/BlueBird/Effect",
+   "parent": 90,
+   "pos": [
+    -0.32,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "Attack",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Attack",
+   "parent": 103,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Attack/Star",
+   "parent": 104,
+   "pos": [
+    -5.65,
+    2.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Attack/Star (1)",
+   "parent": 104,
+   "pos": [
+    -4.31,
+    0.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Attack/Star (2)",
+   "parent": 104,
+   "pos": [
+    -1.35,
+    2.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "Star (3)",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Attack/Star (3)",
+   "parent": 104,
+   "pos": [
+    -2.78,
+    0.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_80",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.67
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (2)",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Attack/ntrBlueBird_63 (2)",
+   "parent": 104,
+   "pos": [
+    -4.064,
+    -0.029
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (3)",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Attack/ntrBlueBird_63 (3)",
+   "parent": 104,
+   "pos": [
+    -3.137,
+    -0.029
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "Miss",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Miss",
+   "parent": 103,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Drop",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Miss/Drop",
+   "parent": 111,
+   "pos": [
+    -2.22,
+    3.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_78",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.73,
+    1.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Miss/ntrBlueBird_63",
+   "parent": 111,
+   "pos": [
+    -3.744,
+    -0.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "ntrBlueBird_63 (1)",
+   "path": "Birds/PlayerBird/BlueBird/Effect/Miss/ntrBlueBird_63 (1)",
+   "parent": 111,
+   "pos": [
+    -2.671,
+    -0.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrBlueBird_63",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.5
+   ]
+  },
+  {
+   "name": "Story",
+   "path": "Story",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "image",
+   "path": "Story/image",
+   "parent": 115,
+   "pos": [
+    0,
+    2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.05,
+    4.05
+   ],
+   "sprite": "story_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    4.41,
+    1.36
+   ]
+  },
+  {
+   "name": "text",
+   "path": "text",
+   "parent": 0,
+   "pos": [
+    0,
+    3.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

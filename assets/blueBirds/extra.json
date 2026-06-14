@@ -1,0 +1,38 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "canBop": 1,
+    "canBopOthers": 1,
+    "canStretch": 0
+   },
+   "refs": {
+    "BirdTransform": "Birds",
+    "CaptainTransform": "CaptainTransform",
+    "bird1Anim": "Birds/CPUBirdLeft/BlueBird",
+    "bird2Anim": "Birds/CPUBirdMiddle/BlueBird",
+    "bird3Anim": "Birds/PlayerBird/BlueBird",
+    "captainAnim": "CaptainTransform/Captain/BirdHolder/Bird",
+    "captainHolderAnim": "CaptainTransform/Captain/BirdHolder",
+    "effect1Anim": "Birds/CPUBirdLeft/BlueBird/Effect",
+    "effect2Anim": "Birds/CPUBirdMiddle/BlueBird/Effect",
+    "effect3Anim": "Birds/PlayerBird/BlueBird/Effect",
+    "finText": "text",
+    "gradientMat": "gradient",
+    "memoryAnim": "Story/image",
+    "memorySprite": "Story/image"
+   },
+   "spriteArrays": {
+    "memoryImage": [
+     "story_0",
+     "story_2",
+     "story_4",
+     "story_1",
+     "story_3",
+     "story_5"
+    ]
+   }
+  }
+ }
+}

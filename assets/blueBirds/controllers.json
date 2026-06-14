@@ -1,0 +1,190 @@
+{
+ "Blue Bird": {
+  "default": "Beat",
+  "states": {
+   "Beat": {
+    "clip": "BlueBird/Beat",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "BlueBird/Miss",
+    "speed": 1
+   },
+   "New Animation": {
+    "clip": "BlueBird/Tame",
+    "speed": 1
+   },
+   "Pick": {
+    "clip": "BlueBird/Pick",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Tame",
+      "exitTime": 0.99742365,
+      "duration": 0
+     }
+    ]
+   },
+   "PickRelease": {
+    "clip": "BlueBird/PickRelease",
+    "speed": 1
+   },
+   "PickSuccess": {
+    "clip": "BlueBird/PickSuccess",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TameSuccess",
+      "exitTime": 0.9931052,
+      "duration": 0.002158925
+     }
+    ]
+   },
+   "PickSuccessAlt": {
+    "clip": "BlueBird/PickSuccessAlt",
+    "speed": 1
+   },
+   "PickSuccessRelease": {
+    "clip": "BlueBird/PickSuccessRelease",
+    "speed": 1
+   },
+   "PrePick01": {
+    "clip": "BlueBird/PrePick01",
+    "speed": 1
+   },
+   "PrePick02": {
+    "clip": "BlueBird/PrePick02",
+    "speed": 1
+   },
+   "PreShout01": {
+    "clip": "BlueBird/PreShout01",
+    "speed": 1
+   },
+   "PreShout02": {
+    "clip": "BlueBird/PreShout02",
+    "speed": 1
+   },
+   "Shout": {
+    "clip": "BlueBird/Shout",
+    "speed": 1
+   },
+   "Tame": {
+    "clip": "BlueBird/Tame",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "TameLoop",
+      "exitTime": 0.9949631,
+      "duration": 0
+     }
+    ]
+   },
+   "TameLoop": {
+    "clip": "BlueBird/TameLoop",
+    "speed": 1
+   },
+   "TameSuccess": {
+    "clip": "BlueBird/TameSuccess",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "BlueBird/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Captain Blue Bird": {
+  "default": "idle",
+  "states": {
+   "Angry": {
+    "clip": "Captain/Angry",
+    "speed": 1
+   },
+   "Beat": {
+    "clip": "Captain/Beat",
+    "speed": 1
+   },
+   "Smile": {
+    "clip": "Captain/Smile",
+    "speed": 1
+   },
+   "Talk": {
+    "clip": "Captain/Talk",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Captain/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Captain Holder": {
+  "default": "idle",
+  "states": {
+   "MoveIn": {
+    "clip": "Captain2/MoveIn",
+    "speed": 1
+   },
+   "MoveOut": {
+    "clip": "Captain2/MoveOut",
+    "speed": 1
+   },
+   "MoveOutInstant": {
+    "clip": "Captain2/MoveOutInstant",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Captain2/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Effect": {
+  "default": "idle",
+  "states": {
+   "Attack": {
+    "clip": "Effects/Attack",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "Miss": {
+    "clip": "Effects/Miss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "idle": {
+    "clip": "Effects/idle",
+    "speed": 1
+   }
+  }
+ },
+ "image": {
+  "default": "idle",
+  "states": {
+   "fadeIn": {
+    "clip": "Memory/fadeIn",
+    "speed": 1
+   },
+   "fadeOut": {
+    "clip": "Memory/fadeOut",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Memory/idle",
+    "speed": 1
+   }
+  }
+ }
+}

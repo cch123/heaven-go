@@ -195,6 +195,23 @@ var sceneSpecs = map[string]sceneSpec{
 		curveFields:     []string{"baseBounceCurve", "PosCurve"},
 		wantControllers: true,
 	},
+	"blueBirds": {
+		dir:    "BlueBirds",
+		prefab: "blueBirds.prefab",
+		roleFields: []string{
+			"captainAnim", "captainHolderAnim",
+			"bird1Anim", "bird2Anim", "bird3Anim",
+			"effect1Anim", "effect2Anim", "effect3Anim",
+			"memoryAnim", "memorySprite", "finText",
+			"CaptainTransform", "BirdTransform",
+		},
+		wantControllers: true,
+		wantTexts:       true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"captainAnim", "bird1Anim", "bird2Anim", "bird3Anim", "memoryImage", "gradientMat", "CaptainTransform", "BirdTransform"}},
+		},
+	},
 	"catchyTune": {
 		dir:    "CatchyTune",
 		prefab: "catchyTune.prefab",
