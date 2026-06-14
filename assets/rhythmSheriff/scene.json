@@ -1,0 +1,3100 @@
+{
+ "nodes": [
+  {
+   "name": "rhythmSheriff",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "Background/Sky",
+   "parent": 1,
+   "pos": [
+    0,
+    1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    35,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "top",
+   "path": "Background/Sky/top",
+   "parent": 2,
+   "pos": [
+    0,
+    9.3614
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.06,
+    18.723
+   ],
+   "order": -101,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "Sky"
+  },
+  {
+   "name": "gradient",
+   "path": "Background/Sky/gradient",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.04
+   ],
+   "sprite": "sky",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.16,
+    31.78
+   ],
+   "mapped": true,
+   "mat": "Sky"
+  },
+  {
+   "name": "bottom",
+   "path": "Background/Sky/bottom",
+   "parent": 2,
+   "pos": [
+    0,
+    -5
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.06,
+    10
+   ],
+   "order": -101,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "Sky"
+  },
+  {
+   "name": "RockFormations",
+   "path": "Background/RockFormations",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rockThingy1",
+   "path": "Background/RockFormations/rockThingy1",
+   "parent": 6,
+   "pos": [
+    -7.259,
+    -0.46
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "rockFormation",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.61,
+    35
+   ],
+   "mapped": true,
+   "mat": "Rocks"
+  },
+  {
+   "name": "rockThingy2",
+   "path": "Background/RockFormations/rockThingy2",
+   "parent": 6,
+   "pos": [
+    11.48,
+    -0.46
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "rockFormation",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.61,
+    35
+   ],
+   "mapped": true,
+   "mat": "Rocks"
+  },
+  {
+   "name": "rockThingy3",
+   "path": "Background/RockFormations/rockThingy3",
+   "parent": 6,
+   "pos": [
+    24.55,
+    -0.46
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "rockFormation",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    11.61,
+    35
+   ],
+   "mapped": true,
+   "mat": "Rocks"
+  },
+  {
+   "name": "rockThingy4",
+   "path": "Background/RockFormations/rockThingy4",
+   "parent": 6,
+   "pos": [
+    -24.9,
+    -0.46
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "rockFormation",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    11.61,
+    35
+   ],
+   "mapped": true,
+   "mat": "Rocks"
+  },
+  {
+   "name": "ground",
+   "path": "Background/ground",
+   "parent": 1,
+   "pos": [
+    0,
+    -14.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    35,
+    0.8
+   ],
+   "sprite": "ground",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.06,
+    31.78
+   ],
+   "mapped": true,
+   "mat": "Ground"
+  },
+  {
+   "name": "Cacti",
+   "path": "Background/Cacti",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cacti (1)",
+   "path": "Background/Cacti/cacti (1)",
+   "parent": 12,
+   "pos": [
+    5.929,
+    -1.589
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (1)/cactus1",
+   "parent": 13,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (1)/cactus2",
+   "parent": 13,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "cacti (2)",
+   "path": "Background/Cacti/cacti (2)",
+   "parent": 12,
+   "pos": [
+    -4.5,
+    -1.95
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.1,
+    0.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (2)/cactus1",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (2)/cactus2",
+   "parent": 16,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "cacti (3)",
+   "path": "Background/Cacti/cacti (3)",
+   "parent": 12,
+   "pos": [
+    -13.31,
+    -3.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (3)/cactus1",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (3)/cactus2",
+   "parent": 19,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "cacti (4)",
+   "path": "Background/Cacti/cacti (4)",
+   "parent": 12,
+   "pos": [
+    12.7,
+    -2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (4)/cactus1",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (4)/cactus2",
+   "parent": 22,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "cacti (5)",
+   "path": "Background/Cacti/cacti (5)",
+   "parent": 12,
+   "pos": [
+    -3.8,
+    -7.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (5)/cactus1",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (5)/cactus2",
+   "parent": 25,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "cacti (6)",
+   "path": "Background/Cacti/cacti (6)",
+   "parent": 12,
+   "pos": [
+    11.39,
+    -10.82
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (6)/cactus1",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (6)/cactus2",
+   "parent": 28,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "cacti (7)",
+   "path": "Background/Cacti/cacti (7)",
+   "parent": 12,
+   "pos": [
+    -18.9,
+    -9.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (7)/cactus1",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (7)/cactus2",
+   "parent": 31,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "cacti (8)",
+   "path": "Background/Cacti/cacti (8)",
+   "parent": 12,
+   "pos": [
+    -22.21,
+    -2.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (8)/cactus1",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (8)/cactus2",
+   "parent": 34,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "cacti (9)",
+   "path": "Background/Cacti/cacti (9)",
+   "parent": 12,
+   "pos": [
+    22.02,
+    -6.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6,
+    0.6
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cactus1",
+   "path": "Background/Cacti/cacti (9)/cactus1",
+   "parent": 37,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_big",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    4.9
+   ]
+  },
+  {
+   "name": "cactus2",
+   "path": "Background/Cacti/cacti (9)/cactus2",
+   "parent": 37,
+   "pos": [
+    2.43,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cactus_small",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    3.18
+   ]
+  },
+  {
+   "name": "Bushes",
+   "path": "Background/Bushes",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bush (1)",
+   "path": "Background/Bushes/bush (1)",
+   "parent": 40,
+   "pos": [
+    8.625,
+    -3.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bushL",
+   "path": "Background/Bushes/bush (1)/bushL",
+   "parent": 41,
+   "pos": [
+    -1.7649999,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bushR",
+   "path": "Background/Bushes/bush (1)/bushR",
+   "parent": 41,
+   "pos": [
+    1.7650003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bush (2)",
+   "path": "Background/Bushes/bush (2)",
+   "parent": 40,
+   "pos": [
+    -10.8,
+    -5.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    1.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bushL",
+   "path": "Background/Bushes/bush (2)/bushL",
+   "parent": 44,
+   "pos": [
+    -1.7649999,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bushR",
+   "path": "Background/Bushes/bush (2)/bushR",
+   "parent": 44,
+   "pos": [
+    1.7650003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bush (3)",
+   "path": "Background/Bushes/bush (3)",
+   "parent": 40,
+   "pos": [
+    4.59,
+    -8.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bushL",
+   "path": "Background/Bushes/bush (3)/bushL",
+   "parent": 47,
+   "pos": [
+    -1.7649999,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bushR",
+   "path": "Background/Bushes/bush (3)/bushR",
+   "parent": 47,
+   "pos": [
+    1.7650003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bush (4)",
+   "path": "Background/Bushes/bush (4)",
+   "parent": 40,
+   "pos": [
+    21.7,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bushL",
+   "path": "Background/Bushes/bush (4)/bushL",
+   "parent": 50,
+   "pos": [
+    -1.7649999,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bushR",
+   "path": "Background/Bushes/bush (4)/bushR",
+   "parent": 50,
+   "pos": [
+    1.7650003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bush (5)",
+   "path": "Background/Bushes/bush (5)",
+   "parent": 40,
+   "pos": [
+    23.98,
+    -10.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bushL",
+   "path": "Background/Bushes/bush (5)/bushL",
+   "parent": 53,
+   "pos": [
+    -1.7649999,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bushR",
+   "path": "Background/Bushes/bush (5)/bushR",
+   "parent": 53,
+   "pos": [
+    1.7650003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bush (6)",
+   "path": "Background/Bushes/bush (6)",
+   "parent": 40,
+   "pos": [
+    -22.82,
+    -12.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8000001,
+    1.8000001
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bushL",
+   "path": "Background/Bushes/bush (6)/bushL",
+   "parent": 56,
+   "pos": [
+    -1.7649999,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bushR",
+   "path": "Background/Bushes/bush (6)/bushR",
+   "parent": 56,
+   "pos": [
+    1.7650003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bush (7)",
+   "path": "Background/Bushes/bush (7)",
+   "parent": 40,
+   "pos": [
+    -24.92,
+    -4.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bushL",
+   "path": "Background/Bushes/bush (7)/bushL",
+   "parent": 59,
+   "pos": [
+    -1.7649999,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bushR",
+   "path": "Background/Bushes/bush (7)/bushR",
+   "parent": 59,
+   "pos": [
+    1.7650003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bush (8)",
+   "path": "Background/Bushes/bush (8)",
+   "parent": 40,
+   "pos": [
+    -18.15,
+    -2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bushL",
+   "path": "Background/Bushes/bush (8)/bushL",
+   "parent": 62,
+   "pos": [
+    -1.7649999,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "bushR",
+   "path": "Background/Bushes/bush (8)/bushR",
+   "parent": 62,
+   "pos": [
+    1.7650003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.28
+   ],
+   "sprite": "bush",
+   "order": -12,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.06,
+    8.02
+   ],
+   "mapped": true,
+   "mat": "Bush"
+  },
+  {
+   "name": "Skeletons",
+   "path": "Background/Skeletons",
+   "parent": 1,
+   "pos": [
+    -7.704,
+    -2.446
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "skeleton (1)",
+   "path": "Background/Skeletons/skeleton (1)",
+   "parent": 65,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "skeleton",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.78,
+    3.44
+   ]
+  },
+  {
+   "name": "skeleton (2)",
+   "path": "Background/Skeletons/skeleton (2)",
+   "parent": 65,
+   "pos": [
+    108.3,
+    -21.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8,
+    1.8
+   ],
+   "sprite": "skeleton",
+   "order": -10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.78,
+    3.44
+   ]
+  },
+  {
+   "name": "skeleton (3)",
+   "path": "Background/Skeletons/skeleton (3)",
+   "parent": 65,
+   "pos": [
+    -14.9,
+    -42.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.6,
+    2.6
+   ],
+   "sprite": "skeleton",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.78,
+    3.44
+   ]
+  },
+  {
+   "name": "skeleton (4)",
+   "path": "Background/Skeletons/skeleton (4)",
+   "parent": 65,
+   "pos": [
+    177.23,
+    -31.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "skeleton",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.78,
+    3.44
+   ]
+  },
+  {
+   "name": "skeleton (5)",
+   "path": "Background/Skeletons/skeleton (5)",
+   "parent": 65,
+   "pos": [
+    -48.97,
+    -6.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "skeleton",
+   "order": -10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.78,
+    3.44
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "Hole",
+   "parent": 0,
+   "pos": [
+    2.4,
+    -3.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.314,
+    0.314
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "front",
+   "path": "Hole/front",
+   "parent": 71,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "plank_front",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.76,
+    1.18
+   ]
+  },
+  {
+   "name": "back",
+   "path": "Hole/back",
+   "parent": 71,
+   "pos": [
+    0.484,
+    0.106
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "plank_back",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.78,
+    1.16
+   ]
+  },
+  {
+   "name": "TargetHolder",
+   "path": "TargetHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Target",
+   "path": "TargetHolder/Target",
+   "parent": 74,
+   "pos": [
+    2.49,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -5
+   ]
+  },
+  {
+   "name": "board",
+   "path": "TargetHolder/Target/board",
+   "parent": 75,
+   "pos": [
+    0,
+    -4.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33,
+    0.33
+   ],
+   "sprite": "board",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.26,
+    10.96
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "front",
+   "path": "TargetHolder/Target/board/front",
+   "parent": 76,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -0.1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cat",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6,
+    9.5
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "back",
+   "path": "TargetHolder/Target/board/back",
+   "parent": 76,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 0.1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "cat_shoot",
+   "order": -4,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6,
+    9.5
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "post",
+   "path": "TargetHolder/Target/board/post",
+   "parent": 76,
+   "pos": [
+    0,
+    -5.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "board_post",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    2.94
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "hole",
+   "path": "TargetHolder/Target/board/hole",
+   "parent": 76,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mask",
+   "path": "mask",
+   "parent": 0,
+   "pos": [
+    2.4117,
+    -5.6301
+   ],
+   "z": -0.0110636,
+   "rotZ": -0.0349066695396414,
+   "scale": [
+    7.791157,
+    5.0561748
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mask": true
+  },
+  {
+   "name": "Tumbleweed",
+   "path": "Tumbleweed",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tumbleweedBack",
+   "path": "Tumbleweed/tumbleweedBack",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tumbleGroundBack",
+   "path": "Tumbleweed/tumbleGroundBack",
+   "parent": 82,
+   "pos": [
+    0,
+    -3.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    25,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "tumbleweedFront",
+   "path": "Tumbleweed/tumbleweedFront",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tumbleGroundFront",
+   "path": "Tumbleweed/tumbleGroundFront",
+   "parent": 82,
+   "pos": [
+    0,
+    -3.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    25,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "tumbleweedOverlay",
+   "path": "Tumbleweed/tumbleweedOverlay",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wind",
+   "path": "Tumbleweed/wind",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DogSheriff",
+   "path": "DogSheriff",
+   "parent": 0,
+   "pos": [
+    -3.2,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "DogSheriff/head",
+   "parent": 89,
+   "pos": [
+    0.94,
+    4.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "head",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.58,
+    5.08
+   ],
+   "mapped": true,
+   "mat": "Fur"
+  },
+  {
+   "name": "hat",
+   "path": "DogSheriff/head/hat",
+   "parent": 90,
+   "pos": [
+    -0.77,
+    2.54
+   ],
+   "rotZ": 0.10471963843671714,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "hat",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.51,
+    3.85
+   ],
+   "mapped": true,
+   "mat": "Clothes"
+  },
+  {
+   "name": "tear",
+   "path": "DogSheriff/head/tear",
+   "parent": 90,
+   "pos": [
+    0.822,
+    -0.096
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.66,
+    0.66
+   ],
+   "sprite": "tear",
+   "order": 12,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.37,
+    2.52
+   ],
+   "mapped": true,
+   "mat": "Tear"
+  },
+  {
+   "name": "body",
+   "path": "DogSheriff/body",
+   "parent": 89,
+   "pos": [
+    -1.330001,
+    0.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "body_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.83,
+    7.72
+   ],
+   "mapped": true,
+   "mat": "Clothes"
+  },
+  {
+   "name": "bandana",
+   "path": "DogSheriff/body/bandana",
+   "parent": 93,
+   "pos": [
+    1.042,
+    3.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bandana",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.67,
+    2.13
+   ],
+   "mapped": true,
+   "mat": "Bandana"
+  },
+  {
+   "name": "holster",
+   "path": "DogSheriff/body/holster",
+   "parent": 93,
+   "pos": [
+    3.192,
+    -4.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "holster",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.87,
+    3.19
+   ],
+   "mapped": true,
+   "mat": "Clothes"
+  },
+  {
+   "name": "Arms",
+   "path": "DogSheriff/body/Arms",
+   "parent": 93,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "gun",
+   "path": "DogSheriff/body/Arms/gun",
+   "parent": 96,
+   "pos": [
+    2.93,
+    -2.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "gun_holster",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.59,
+    3.38
+   ],
+   "mapped": true,
+   "mat": "Clothes"
+  },
+  {
+   "name": "BOOSH",
+   "path": "DogSheriff/body/Arms/gun/BOOSH",
+   "parent": 97,
+   "pos": [
+    3.22,
+    0.88
+   ],
+   "rotZ": -0.45378562018506674,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "effect",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    3.14
+   ]
+  },
+  {
+   "name": "armLeft",
+   "path": "DogSheriff/body/Arms/armLeft",
+   "parent": 96,
+   "pos": [
+    -1.572,
+    0.57
+   ],
+   "rotZ": -0.314159328346512,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "arm_1",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.96,
+    7.05
+   ],
+   "mapped": true,
+   "mat": "Fur"
+  },
+  {
+   "name": "armLeft2",
+   "path": "DogSheriff/body/Arms/armLeft2",
+   "parent": 96,
+   "pos": [
+    -2.701,
+    0.304
+   ],
+   "rotZ": 0.017453336178711993,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "arm_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.71,
+    6.49
+   ],
+   "mapped": true,
+   "mat": "Fur"
+  },
+  {
+   "name": "armRight",
+   "path": "DogSheriff/body/Arms/armRight",
+   "parent": 96,
+   "pos": [
+    3.108,
+    0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "arm_1",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.96,
+    7.05
+   ],
+   "mapped": true,
+   "mat": "Fur"
+  },
+  {
+   "name": "blur",
+   "path": "DogSheriff/body/Arms/armRight/blur",
+   "parent": 101,
+   "pos": [
+    -0.523,
+    -1.905
+   ],
+   "rotZ": -1.633628150967852,
+   "scale": [
+    0.625,
+    0.625
+   ],
+   "sprite": "gun_blur",
+   "order": 14,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.49,
+    7.01
+   ],
+   "mapped": true,
+   "mat": "Fur"
+  },
+  {
+   "name": "legs",
+   "path": "DogSheriff/legs",
+   "parent": 89,
+   "pos": [
+    -1.279,
+    -5.577
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "legs_1",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.28,
+    6.41
+   ],
+   "mapped": true,
+   "mat": "Fur"
+  },
+  {
+   "name": "tail",
+   "path": "DogSheriff/legs/tail",
+   "parent": 103,
+   "pos": [
+    -2.554,
+    3.503
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tail",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.81,
+    6.51
+   ],
+   "mapped": true,
+   "mat": "Fur"
+  },
+  {
+   "name": "Boots",
+   "path": "DogSheriff/legs/Boots",
+   "parent": 103,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bootLeft",
+   "path": "DogSheriff/legs/Boots/bootLeft",
+   "parent": 105,
+   "pos": [
+    -3.5799997,
+    -3.419999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "boot_2",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    4.1
+   ],
+   "mapped": true,
+   "mat": "Clothes"
+  },
+  {
+   "name": "bootRight",
+   "path": "DogSheriff/legs/Boots/bootRight",
+   "parent": 105,
+   "pos": [
+    1.7000003,
+    -3.979
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "boot_3",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    4.1
+   ],
+   "mapped": true,
+   "mat": "Clothes"
+  },
+  {
+   "name": "shadow",
+   "path": "DogSheriff/shadow",
+   "parent": 89,
+   "pos": [
+    -1.83,
+    -10.99
+   ],
+   "rotZ": -0.06981334566113746,
+   "scale": [
+    3,
+    2
+   ],
+   "sprite": "shadow",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.72,
+    1.29
+   ]
+  },
+  {
+   "name": "References",
+   "path": "References",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -0.009585334,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ref",
+   "path": "References/ref",
+   "parent": 109,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.30208,
+    1.3020816
+   ],
+   "sprite": "2024-05-02 (2)",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.8,
+    7.68
+   ]
+  },
+  {
+   "name": "bg",
+   "path": "References/bg",
+   "parent": 109,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.25,
+    1.25
+   ],
+   "sprite": "bg",
+   "order": -20,
+   "inactive": true,
+   "color": [
+    0.73333335,
+    0.70980394,
+    0.5803922,
+    0.80784315
+   ],
+   "size": [
+    13.34,
+    8
+   ]
+  },
+  {
+   "name": "Screenshot 2024-05-11 134234",
+   "path": "References/Screenshot 2024-05-11 134234",
+   "parent": 109,
+   "pos": [
+    -5.48,
+    -1.355
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.33,
+    1.33
+   ],
+   "sprite": "Screenshot 2024-05-11 134234",
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.05,
+    4.88
+   ]
+  },
+  {
+   "name": "c042e8d9-d9f7-4b56-a1eb-cbd2bb05432a",
+   "path": "References/Screenshot 2024-05-11 134234/c042e8d9-d9f7-4b56-a1eb-cbd2bb05432a",
+   "parent": 112,
+   "pos": [
+    0,
+    -0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Screenshot 2024-05-11 134234",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    0.7019608
+   ],
+   "size": [
+    3.2,
+    4.9
+   ]
+  },
+  {
+   "name": "dbb9640d-e7e8-463f-b976-efad01f4950a",
+   "path": "References/Screenshot 2024-05-11 134234/dbb9640d-e7e8-463f-b976-efad01f4950a",
+   "parent": 112,
+   "pos": [
+    0.066,
+    -0.012
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "dbb9640d-e7e8-463f-b976-efad01f4950a",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    0.6313726
+   ],
+   "size": [
+    3.2,
+    4.9
+   ]
+  },
+  {
+   "name": "oops!_5",
+   "path": "References/oops!_5",
+   "parent": 109,
+   "pos": [
+    -3.8274,
+    -1.3433
+   ],
+   "z": 0.009585334,
+   "rotZ": 0,
+   "scale": [
+    0.356,
+    0.356
+   ],
+   "sprite": "19",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6666667
+   ],
+   "size": [
+    9.13,
+    17.53
+   ]
+  }
+ ]
+}

@@ -1,0 +1,7 @@
+{
+ "dogSheriff": "DogSheriff",
+ "targetObj": "TargetHolder/Target",
+ "tumbleweedBack": "Tumbleweed/tumbleweedBack",
+ "tumbleweedFront": "Tumbleweed/tumbleweedFront",
+ "tumbleweedOverlay": "Tumbleweed/tumbleweedOverlay"
+}

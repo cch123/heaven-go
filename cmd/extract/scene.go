@@ -61,6 +61,18 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		wantTexts:       true,
 	},
+	"rhythmSheriff": {
+		dir:    "RhythmSheriff",
+		prefab: "rhythmSheriff.prefab",
+		roleFields: []string{
+			"dogSheriff", "targetObj", "tumbleweedBack", "tumbleweedFront", "tumbleweedOverlay",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"dogSheriff", "ratPitch", "ratLowerPitch", "ratFinalPitch", "catPitch", "catLowerPitch", "catFinalPitch", "targetObj"}},
+			{name: "target", markers: []string{"target", "hole"}, atPath: "TargetHolder/Target"},
+		},
+	},
 	"ninjaBodyguard": {
 		dir:    "NinjaBodyguard",
 		prefab: "ninjaBodyguard.prefab",

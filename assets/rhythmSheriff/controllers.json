@@ -1,0 +1,88 @@
+{
+ "DogSheriff": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Sheriff/Bop",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Sheriff/Idle",
+    "speed": 1
+   },
+   "Ready": {
+    "clip": "Sheriff/Ready",
+    "speed": 1
+   },
+   "Return": {
+    "clip": "Sheriff/Return",
+    "speed": 1
+   },
+   "ShootJust": {
+    "clip": "Sheriff/ShootJust",
+    "speed": 1
+   },
+   "ShootNG": {
+    "clip": "Sheriff/ShootNG",
+    "speed": 1
+   }
+  }
+ },
+ "board": {
+  "default": "Cat",
+  "states": {
+   "Bop": {
+    "clip": "Target/Bop",
+    "speed": 1
+   },
+   "Cat": {
+    "clip": "Target/Cat",
+    "speed": 1
+   },
+   "CatTarget": {
+    "clip": "Target/CatTarget",
+    "speed": 1
+   },
+   "CatTargetLeft": {
+    "clip": "Target/CatTargetLeft",
+    "speed": 1
+   },
+   "CatTargetRight": {
+    "clip": "Target/CatTargetRight",
+    "speed": 1
+   },
+   "Rat": {
+    "clip": "Target/Rat",
+    "speed": 1
+   },
+   "RatTarget": {
+    "clip": "Target/RatTarget",
+    "speed": 1
+   },
+   "RatTargetLeft": {
+    "clip": "Target/RatTargetLeft",
+    "speed": 1
+   },
+   "RatTargetRight": {
+    "clip": "Target/RatTargetRight",
+    "speed": 1
+   },
+   "TutorialAppear": {
+    "clip": "Target/TutorialAppear",
+    "speed": 1
+   },
+   "TutorialLeave": {
+    "clip": "Target/TutorialLeave",
+    "speed": 1
+   },
+   "WhiffSpin": {
+    "clip": "Target/WhiffSpin",
+    "speed": 1
+   },
+   "empty": {
+    "clip": "Target/empty",
+    "speed": 1
+   }
+  }
+ }
+}

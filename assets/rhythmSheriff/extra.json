@@ -1,0 +1,33 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "catFinalPitch": 0.95,
+    "catLowerPitch": 0.3,
+    "catPitch": 1.05,
+    "ratFinalPitch": 1.85,
+    "ratLowerPitch": 0.5,
+    "ratPitch": 2.15
+   },
+   "refs": {
+    "dogSheriff": "DogSheriff",
+    "targetObj": "TargetHolder/Target",
+    "tumbleweedBack": "Tumbleweed/tumbleweedBack",
+    "tumbleweedFront": "Tumbleweed/tumbleweedFront",
+    "tumbleweedOverlay": "Tumbleweed/tumbleweedOverlay"
+   }
+  },
+  "target": {
+   "path": "TargetHolder/Target",
+   "nums": {
+    "beat": 0,
+    "targetType": 0
+   },
+   "refs": {
+    "hole": "TargetHolder/Target/board/hole",
+    "target": "TargetHolder/Target"
+   }
+  }
+ }
+}
