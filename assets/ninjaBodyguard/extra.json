@@ -1,0 +1,83 @@
+{
+ "curves": {
+  "arrow.hitCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      0.39999999999999997,
+      0,
+      0
+     ],
+     "lh": [
+      0.39999999999999997,
+      -4,
+      0
+     ],
+     "rh": [
+      0.39999999999999997,
+      4,
+      0
+     ]
+    },
+    {
+     "p": [
+      2.6,
+      -0.75,
+      0
+     ],
+     "lh": [
+      2.6,
+      2.75,
+      0
+     ],
+     "rh": [
+      2.6,
+      -4.25,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "components": {
+  "arrow": {
+   "path": "Gameplay/Right/Arrow",
+   "nums": {
+    "currentState": 0,
+    "divertPosition.x": -1.3,
+    "divertPosition.y": 1.6,
+    "divertPosition.z": 0
+   },
+   "refs": {
+    "anim": "Gameplay/Right/Arrow",
+    "hitCurve": "Gameplay/Right/ArrowMissCurve",
+    "sort": "Gameplay/Right/Arrow"
+   }
+  },
+  "enemy": {
+   "path": "Gameplay/Left/Ninja",
+   "refs": {
+    "anim": "Gameplay/Left/Ninja",
+    "sort": "Gameplay/Left/Ninja"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "xDistanceEnemy": -1.9,
+    "yDistanceEnemy": -1
+   },
+   "refs": {
+    "Blackout": "Blackout",
+    "FirstNinja": "Gameplay/Left/Ninja",
+    "GuideAnim": "Gameplay/Right/Guide",
+    "HitParticle": "Gameplay/Right/ArrowSliceA",
+    "LeftSceneObj": "Gameplay/Left",
+    "LordAnim": "Gameplay/Right/Samurai",
+    "NinjaArrow": "Gameplay/Right/Arrow",
+    "PlayerAnim": "Gameplay/Right/Player"
+   }
+  }
+ }
+}

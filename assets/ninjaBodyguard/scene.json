@@ -1,0 +1,1979 @@
+{
+ "nodes": [
+  {
+   "name": "ninjaBodyguard",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ninja_gameplay_3DS",
+   "path": "Ninja_gameplay_3DS",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4392157
+   ],
+   "size": [
+    12,
+    7.2
+   ]
+  },
+  {
+   "name": "Gameplay",
+   "path": "Gameplay",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Right",
+   "path": "Gameplay/Right",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Guide",
+   "path": "Gameplay/Right/Guide",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    100
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "Gameplay/Right/Guide/Circle",
+   "parent": 4,
+   "pos": [
+    -2.569,
+    2.965
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_87",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.24
+   ]
+  },
+  {
+   "name": "Arrow",
+   "path": "Gameplay/Right/Guide/Arrow",
+   "parent": 4,
+   "pos": [
+    -1.052,
+    2.956
+   ],
+   "rotZ": -0.219213224722225,
+   "scale": [
+    1.0500001,
+    1.0500001
+   ],
+   "sprite": "ninja_88",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4,
+    0.82
+   ]
+  },
+  {
+   "name": "Player",
+   "path": "Gameplay/Right/Player",
+   "parent": 3,
+   "pos": [
+    -1.453,
+    -2.719
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    20
+   ]
+  },
+  {
+   "name": "Whiff2",
+   "path": "Gameplay/Right/Player/Whiff2",
+   "parent": 7,
+   "pos": [
+    -0.02,
+    7.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_33",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.12,
+    5.25
+   ]
+  },
+  {
+   "name": "Whiff2 (1)",
+   "path": "Gameplay/Right/Player/Whiff2 (1)",
+   "parent": 7,
+   "pos": [
+    -0.01,
+    5.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_33",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.12,
+    5.25
+   ]
+  },
+  {
+   "name": "Sword",
+   "path": "Gameplay/Right/Player/Sword",
+   "parent": 7,
+   "pos": [
+    -1.206,
+    3.051
+   ],
+   "rotZ": 0.21711891837320102,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_38",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    3.61
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "Gameplay/Right/Player/Hit",
+   "parent": 7,
+   "pos": [
+    -0.12,
+    4.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_84",
+   "order": 2,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.12,
+    1.44
+   ]
+  },
+  {
+   "name": "Whiff",
+   "path": "Gameplay/Right/Player/Whiff",
+   "parent": 7,
+   "pos": [
+    -0.625,
+    4.197
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_58",
+   "order": 1,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.2,
+    1.64
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Gameplay/Right/Player/Head",
+   "parent": 7,
+   "pos": [
+    -0.115,
+    2.047
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_10",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    1.44
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Gameplay/Right/Player/Thing",
+   "parent": 7,
+   "pos": [
+    1.106,
+    1.475
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "ninja_14",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.86,
+    1.08
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Gameplay/Right/Player/Body",
+   "parent": 7,
+   "pos": [
+    -0.186,
+    1.108
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.14,
+    2.5
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Gameplay/Right/Player/Shadow",
+   "parent": 7,
+   "pos": [
+    -0.014,
+    -0.004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_61",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    1.16
+   ]
+  },
+  {
+   "name": "Samurai",
+   "path": "Gameplay/Right/Samurai",
+   "parent": 3,
+   "pos": [
+    1.45,
+    -1.52
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Gameplay/Right/Samurai/Head",
+   "parent": 17,
+   "pos": [
+    -0.09,
+    2.98
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_21",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3,
+    1.86
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Gameplay/Right/Samurai/Body",
+   "parent": 17,
+   "pos": [
+    0,
+    1.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_22",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.14,
+    2.59
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Gameplay/Right/Samurai/Shadow",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_61",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    1.16
+   ]
+  },
+  {
+   "name": "Whiffs",
+   "path": "Gameplay/Right/Samurai/Whiffs",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Whiff",
+   "path": "Gameplay/Right/Samurai/Whiffs/Whiff",
+   "parent": 21,
+   "pos": [
+    1.36,
+    3.803
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_69",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    2.08
+   ]
+  },
+  {
+   "name": "Whiff (1)",
+   "path": "Gameplay/Right/Samurai/Whiffs/Whiff (1)",
+   "parent": 21,
+   "pos": [
+    -1.381,
+    3.803
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_69",
+   "order": 3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    2.08
+   ]
+  },
+  {
+   "name": "Walls",
+   "path": "Gameplay/Right/Walls",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Gameplay/Right/Walls/Square",
+   "parent": 24,
+   "pos": [
+    0,
+    5.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    7
+   ],
+   "sprite": "ninjaBG_5",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "Gameplay/Right/Walls/Wall",
+   "parent": 24,
+   "pos": [
+    0,
+    1.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ninjaBG_3",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.66,
+    8.14
+   ]
+  },
+  {
+   "name": "Roof",
+   "path": "Gameplay/Right/Walls/Roof",
+   "parent": 24,
+   "pos": [
+    3.42,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_10",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.05,
+    4.1
+   ]
+  },
+  {
+   "name": "Floor",
+   "path": "Gameplay/Right/Walls/Floor",
+   "parent": 24,
+   "pos": [
+    0,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    10
+   ],
+   "sprite": "ninjaBG_6",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.01,
+    1
+   ]
+  },
+  {
+   "name": "Leaves",
+   "path": "Gameplay/Right/Walls/Leaves",
+   "parent": 24,
+   "pos": [
+    7.291,
+    4.215
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_8",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    1.19
+   ]
+  },
+  {
+   "name": "ArrowSliceA",
+   "path": "Gameplay/Right/ArrowSliceA",
+   "parent": 3,
+   "pos": [
+    -1.57,
+    1.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArrowSliceB",
+   "path": "Gameplay/Right/ArrowSliceA/ArrowSliceB",
+   "parent": 30,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ground",
+   "path": "Gameplay/Right/Ground",
+   "parent": 3,
+   "pos": [
+    0,
+    -3
+   ],
+   "rotZ": -0.25053303681418504,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arrow",
+   "path": "Gameplay/Right/Arrow",
+   "parent": 3,
+   "pos": [
+    -1.3,
+    1.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    15
+   ]
+  },
+  {
+   "name": "Arrow",
+   "path": "Gameplay/Right/Arrow/Arrow",
+   "parent": 33,
+   "pos": [
+    -0.29,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_83",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.99,
+    0.52
+   ]
+  },
+  {
+   "name": "Whiff",
+   "path": "Gameplay/Right/Arrow/Whiff",
+   "parent": 33,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_72",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.57,
+    0.67
+   ]
+  },
+  {
+   "name": "Whiff (1)",
+   "path": "Gameplay/Right/Arrow/Whiff (1)",
+   "parent": 33,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_72",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.57,
+    0.67
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "Gameplay/Right/Arrow/Hit",
+   "parent": 33,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_84",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.12,
+    1.44
+   ]
+  },
+  {
+   "name": "ArrowMissCurve",
+   "path": "Gameplay/Right/ArrowMissCurve",
+   "parent": 3,
+   "pos": [
+    0.6,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Right/ArrowMissCurve/Point 0",
+   "parent": 38,
+   "pos": [
+    -0.2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Right/ArrowMissCurve/Point 1",
+   "parent": 38,
+   "pos": [
+    2,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cutscene",
+   "path": "Gameplay/Cutscene",
+   "parent": 2,
+   "pos": [
+    -25,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "RedBuilding",
+   "path": "Gameplay/Cutscene/RedBuilding",
+   "parent": 41,
+   "pos": [
+    -7.2,
+    -2.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_1",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.97,
+    5.88
+   ]
+  },
+  {
+   "name": "YellowBuilding",
+   "path": "Gameplay/Cutscene/YellowBuilding",
+   "parent": 41,
+   "pos": [
+    7.2,
+    -2.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_2",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.97,
+    5.88
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Gameplay/Cutscene/Square",
+   "parent": 41,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    25,
+    25
+   ],
+   "sprite": "ninjaBG_11",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Moon",
+   "path": "Gameplay/Cutscene/Moon",
+   "parent": 41,
+   "pos": [
+    0,
+    2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.25,
+    6.25
+   ]
+  },
+  {
+   "name": "Hills",
+   "path": "Gameplay/Cutscene/Hills",
+   "parent": 41,
+   "pos": [
+    0,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_4",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.56,
+    2.7
+   ]
+  },
+  {
+   "name": "Town",
+   "path": "Gameplay/Cutscene/Town",
+   "parent": 41,
+   "pos": [
+    0,
+    -4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.58,
+    2.34
+   ]
+  },
+  {
+   "name": "ArrowCurve",
+   "path": "Gameplay/Cutscene/ArrowCurve",
+   "parent": 41,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Cutscene/ArrowCurve/Point 0",
+   "parent": 48,
+   "pos": [
+    -6,
+    -2.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Cutscene/ArrowCurve/Point 1",
+   "parent": 48,
+   "pos": [
+    5.62,
+    -2.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Left",
+   "path": "Gameplay/Left",
+   "parent": 2,
+   "pos": [
+    -50,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ninja",
+   "path": "Gameplay/Left/Ninja",
+   "parent": 51,
+   "pos": [
+    0,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Gameplay/Left/Ninja/Shadow",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_61",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    1.16
+   ]
+  },
+  {
+   "name": "Ninja",
+   "path": "Gameplay/Left/Ninja/Ninja",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Gameplay/Left/Ninja/Ninja/Head",
+   "parent": 54,
+   "pos": [
+    -0.107,
+    2.301
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_55",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    1.44
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "Gameplay/Left/Ninja/Ninja/Torso",
+   "parent": 54,
+   "pos": [
+    -0.081,
+    1.568
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_53",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.49,
+    1.03
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "Gameplay/Left/Ninja/Ninja/Legs",
+   "parent": 54,
+   "pos": [
+    0.145,
+    0.528
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_54",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.2
+   ]
+  },
+  {
+   "name": "Belt",
+   "path": "Gameplay/Left/Ninja/Ninja/Belt",
+   "parent": 54,
+   "pos": [
+    0.028,
+    1.144
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_50",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.88,
+    0.72
+   ]
+  },
+  {
+   "name": "LeftFoot",
+   "path": "Gameplay/Left/Ninja/Ninja/LeftFoot",
+   "parent": 54,
+   "pos": [
+    -0.632,
+    0.239
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_66",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.64
+   ]
+  },
+  {
+   "name": "RightFoot",
+   "path": "Gameplay/Left/Ninja/Ninja/RightFoot",
+   "parent": 54,
+   "pos": [
+    0.679,
+    0.126
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_67",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.68,
+    0.52
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "Gameplay/Left/Ninja/Ninja/Circle",
+   "parent": 54,
+   "pos": [
+    0.693,
+    1.8244965
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_73",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    0.6
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "Gameplay/Left/Ninja/Ninja/Arm",
+   "parent": 54,
+   "pos": [
+    1.468,
+    1.724
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_65",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    0.6
+   ]
+  },
+  {
+   "name": "Bow",
+   "path": "Gameplay/Left/Ninja/Ninja/Bow",
+   "parent": 54,
+   "pos": [
+    1.442,
+    1.675
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_31",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    3.4
+   ]
+  },
+  {
+   "name": "String",
+   "path": "Gameplay/Left/Ninja/Ninja/Bow/String",
+   "parent": 63,
+   "pos": [
+    -0.3419048,
+    0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    0.96
+   ],
+   "sprite": "ninja_79",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.15,
+    2.94
+   ]
+  },
+  {
+   "name": "Arrow",
+   "path": "Gameplay/Left/Ninja/Ninja/Arrow",
+   "parent": 54,
+   "pos": [
+    2.284,
+    1.711
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_68",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.55,
+    0.52
+   ]
+  },
+  {
+   "name": "Shoulder",
+   "path": "Gameplay/Left/Ninja/Ninja/Shoulder",
+   "parent": 54,
+   "pos": [
+    -0.323,
+    1.658
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_62",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.64
+   ]
+  },
+  {
+   "name": "Arm1",
+   "path": "Gameplay/Left/Ninja/Ninja/Arm1",
+   "parent": 54,
+   "pos": [
+    0.523,
+    1.682
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninja_64",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.74,
+    0.44
+   ]
+  },
+  {
+   "name": "Walls",
+   "path": "Gameplay/Left/Walls",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Gameplay/Left/Walls/Square",
+   "parent": 68,
+   "pos": [
+    0,
+    5.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    7
+   ],
+   "sprite": "ninjaBG_5",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "Gameplay/Left/Walls/Wall",
+   "parent": 68,
+   "pos": [
+    0,
+    1.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ninjaBG_3",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.66,
+    8.14
+   ]
+  },
+  {
+   "name": "Roof",
+   "path": "Gameplay/Left/Walls/Roof",
+   "parent": 68,
+   "pos": [
+    -3.52,
+    4.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_10",
+   "order": 3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.05,
+    4.1
+   ]
+  },
+  {
+   "name": "Floor",
+   "path": "Gameplay/Left/Walls/Floor",
+   "parent": 68,
+   "pos": [
+    0,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    10
+   ],
+   "sprite": "ninjaBG_6",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.01,
+    1
+   ]
+  },
+  {
+   "name": "Leaves",
+   "path": "Gameplay/Left/Walls/Leaves",
+   "parent": 68,
+   "pos": [
+    -7.04,
+    4.07
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "ninjaBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    1.19
+   ]
+  },
+  {
+   "name": "Blackout",
+   "path": "Blackout",
+   "parent": 0,
+   "pos": [
+    -25,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    150,
+    50
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

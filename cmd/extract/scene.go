@@ -51,6 +51,20 @@ type componentSpec struct {
 }
 
 var sceneSpecs = map[string]sceneSpec{
+	"ninjaBodyguard": {
+		dir:    "NinjaBodyguard",
+		prefab: "ninjaBodyguard.prefab",
+		roleFields: []string{
+			"PlayerAnim", "GuideAnim", "LordAnim", "FirstNinja", "NinjaArrow",
+			"LeftSceneObj", "Blackout", "HitParticle",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"PlayerAnim", "GuideAnim", "LordAnim", "FirstNinja", "NinjaArrow", "xDistanceEnemy", "yDistanceEnemy"}},
+			{name: "enemy", markers: []string{"anim", "sort", "game"}},
+			{name: "arrow", markers: []string{"anim", "sort", "divertPosition", "hitCurve", "currentState"}, curveFields: []string{"hitCurve"}},
+		},
+	},
 	"nipInTheBud": {
 		dir:             "NipInTheBud",
 		prefab:          "nipInTheBud.prefab",

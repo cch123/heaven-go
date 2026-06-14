@@ -1,0 +1,169 @@
+{
+ "Arrow": {
+  "default": "idle",
+  "states": {
+   "Destroy": {
+    "clip": "Arrow/Destroy",
+    "speed": 1
+   },
+   "DivertL": {
+    "clip": "Arrow/DivertL",
+    "speed": 1
+   },
+   "DivertR": {
+    "clip": "Arrow/DivertR",
+    "speed": 1
+   },
+   "Hit": {
+    "clip": "Arrow/Hit",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Arrow/idle",
+    "speed": 1
+   }
+  }
+ },
+ "CloudMonkey": {
+  "default": "idle",
+  "states": {
+   "Bop": {
+    "clip": "Monkey/Bop",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Monkey/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Guide": {
+  "default": "idle",
+  "states": {
+   "Left": {
+    "clip": "Guide/Left",
+    "speed": 1
+   },
+   "LeftTouch": {
+    "clip": "Guide/LeftTouch",
+    "speed": 1
+   },
+   "Right": {
+    "clip": "Guide/Right",
+    "speed": 1
+   },
+   "RightTouch": {
+    "clip": "Guide/RightTouch",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Guide/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Ninja": {
+  "default": "idle",
+  "states": {
+   "ArrowReady": {
+    "clip": "Ninja/ArrowReady",
+    "speed": 1
+   },
+   "ArrowShot": {
+    "clip": "Ninja/ArrowShot",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Ninja/idle",
+    "speed": 1
+   }
+  }
+ },
+ "NinjaAlt": {
+  "default": "idle",
+  "states": {
+   "ArrowReady": {
+    "clip": "NinjaAlt/ArrowReady",
+    "speed": 1
+   },
+   "ArrowShot": {
+    "clip": "NinjaAlt/ArrowShot",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "NinjaAlt/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Player": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Player/idle",
+    "speed": 1
+   },
+   "NinjaApology": {
+    "clip": "Player/NinjaApology",
+    "speed": 1
+   },
+   "NinjaAppear": {
+    "clip": "Player/NinjaAppear",
+    "speed": 1
+   },
+   "NinjaCutL": {
+    "clip": "Player/NinjaCutL",
+    "speed": 1
+   },
+   "NinjaCutR": {
+    "clip": "Player/NinjaCutR",
+    "speed": 1
+   },
+   "NinjaHold": {
+    "clip": "Player/NinjaHold",
+    "speed": 1
+   },
+   "NinjaStay": {
+    "clip": "Player/NinjaStay",
+    "speed": 1
+   },
+   "NinjaSwingL": {
+    "clip": "Player/NinjaSwingL",
+    "speed": 1
+   },
+   "NinjaSwingR": {
+    "clip": "Player/NinjaSwingR",
+    "speed": 1
+   },
+   "NinjaTurnL": {
+    "clip": "Player/NinjaTurnL",
+    "speed": 1
+   },
+   "NinjaTurnR": {
+    "clip": "Player/NinjaTurnR",
+    "speed": 1
+   }
+  }
+ },
+ "Samurai": {
+  "default": "idle",
+  "states": {
+   "Shock": {
+    "clip": "Samurai/Shock",
+    "speed": 1
+   },
+   "Stay": {
+    "clip": "Samurai/Stay",
+    "speed": 1
+   },
+   "Walk": {
+    "clip": "Samurai/Walk",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Samurai/idle",
+    "speed": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "Blackout": "Blackout",
+ "FirstNinja": "Gameplay/Left/Ninja",
+ "GuideAnim": "Gameplay/Right/Guide",
+ "HitParticle": "Gameplay/Right/ArrowSliceA",
+ "LeftSceneObj": "Gameplay/Left",
+ "LordAnim": "Gameplay/Right/Samurai",
+ "NinjaArrow": "Gameplay/Right/Arrow",
+ "PlayerAnim": "Gameplay/Right/Player"
+}

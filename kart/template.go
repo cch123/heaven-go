@@ -334,6 +334,21 @@ func (in *Instance) SetOrder(relPath string, order int) {
 	}
 }
 
+// SetGroupOrder approximates a Unity SortingGroup sortingOrder for queued
+// prefab instances. SceneInst sorts queued sprites directly by renderer order,
+// so a SortingGroup on an instance root has to be flattened into every child
+// sprite while preserving the prefab's internal renderer order.
+func (in *Instance) SetGroupOrder(order int) {
+	const groupStride = 100
+	for ti, tn := range in.T.Nodes {
+		n := &in.T.as.Rig.Nodes[tn.RigIdx]
+		if n.Sprite == "" {
+			continue
+		}
+		in.orders[ti] = order*groupStride + n.Order
+	}
+}
+
 // SetPos 覆盖子树内节点的本地坐标。Splashdown 的 NtrSynchrette.Update
 // 每帧直接写 PosHolder.localPosition；该类脚本运动不属于 AnimationClip。
 func (in *Instance) SetPos(relPath string, x, y float64) {
