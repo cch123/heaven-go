@@ -63,6 +63,16 @@ var sceneSpecs = map[string]sceneSpec{
 		},
 		wantControllers: true,
 	},
+	"coinToss": {
+		dir:    "CoinToss",
+		prefab: "coinToss.prefab",
+		roleFields: []string{
+			"fg", "bg", "imageBG", "handAnimator", "manHand",
+			"handHolder", "manHolder", "imageAnim",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"applause.ogg", "audienceSad.ogg"},
+	},
 	"rhythmSomen": {
 		dir:    "RhythmSomen",
 		prefab: "rhythmSomen.prefab",
