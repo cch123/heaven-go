@@ -64,6 +64,9 @@ const (
 	resultBarStart = 1.8
 	resultBarDur   = 1.25
 	resultRankTime = 3.45
+	// JudgementManager.WaitAndRank waits 1.5s after the rank sound before
+	// starting the rank jingle/loop music.
+	resultRankMusicWait = 1.5
 )
 
 type gameState int
@@ -259,11 +262,13 @@ type App struct {
 	menuSel    int
 	menuScroll int
 
-	result         resultSummary
-	resultAssets   resultAssets
-	libraryAssets  libraryAssets
-	resultT        float64
-	resultEpilogue bool
+	result           resultSummary
+	resultAssets     resultAssets
+	resultAudio      resultAudioAssets
+	resultAudioState resultAudioState
+	libraryAssets    libraryAssets
+	resultT          float64
+	resultEpilogue   bool
 
 	faceBig, faceMid, faceSmall *text.GoTextFace
 }
@@ -287,6 +292,7 @@ func New(assetsRoot, riqPath string) (*App, error) {
 	}
 	a.loadCommonSounds()
 	a.resultAssets = loadResultAssets(filepath.Join(assetsRoot, "common", "ratings"))
+	a.resultAudio = loadResultAudio(filepath.Join(assetsRoot, "common", "result_sounds"))
 	a.libraryAssets = loadLibraryAssets(filepath.Join(assetsRoot, "common", "library"))
 	if riqPath != "" {
 		r, err := riq.Load(riqPath)
@@ -810,6 +816,7 @@ func (a *App) resetRunState() {
 	a.tdArrow, a.tdTarget, a.tdHits = 0, 0, nil
 	a.scores = nil
 	a.result, a.resultT, a.resultEpilogue = resultSummary{}, 0, false
+	a.stopResultAudio()
 }
 
 // restart 重置一轮游玩（不重载资产）。
@@ -913,20 +920,23 @@ func (a *App) Update() error {
 	case stateResult:
 		a.resultT += 1 / float64(ebiten.TPS())
 		if inpututil.IsKeyJustPressed(ebiten.KeyR) {
+			a.stopResultAudio()
 			return a.restart()
 		}
 		if titlePressed() {
 			if !a.resultEpilogue {
 				if a.resultT < resultRankTime {
 					a.resultT = resultRankTime
+					a.skipResultAudioToRank()
 				} else {
-					a.resultEpilogue = true
-					a.resultT = 0
+					a.enterResultEpilogue()
 				}
 			} else if a.resultT > 1.5 {
+				a.stopResultAudio()
 				return a.restart()
 			}
 		}
+		a.updateResultAudio()
 	}
 	return nil
 }
@@ -1247,6 +1257,7 @@ func (a *App) enterResult() {
 	a.result = a.buildResultSummary()
 	a.resultT = 0
 	a.resultEpilogue = false
+	a.resetResultAudioCues()
 	a.state = stateResult
 }
 

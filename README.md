@@ -92,9 +92,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
   用），未移植——bop 的不悦表现走 `bossAnnoyed ? BossMiss : Bop` 分支，与原版一致。
 - countIn 计数音实现 Normal/Alt/Cowbell 音色；GBA/DS 变体音色目录未提取（出现时
   回退 Normal 并打日志）。
-- Judgement 结算页已接入 Heaven Studio 的评分阈值/分类评价消息、rank 标志图与
-  默认 epilogue 图；原版 `JudgementOpen.playable` 的逐信号精确定时和结算 jingle/
-  循环音乐音效尚未移植，当前用等价状态推进与静音结算替代。
+- Judgement 结算页已接入 Heaven Studio 的评分阈值/分类评价消息、rank 标志图、
+  默认 epilogue 图与结算音效/jingle/循环音乐；原版 `JudgementOpen.playable`
+  的逐信号精确定时尚未完整移植，当前用等价状态推进。
 - kitties：roll 成功后的 spinnya 循环音未实现随机变调（±5%，循环重采样
   不支持）；音量 0.85 与起止时序一致。
 - cheerReaders：字幕（toggleCaption 启用路径）未实现——官方非 PRACTICE 关

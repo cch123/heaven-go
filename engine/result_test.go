@@ -4,6 +4,7 @@ import (
 	"bytes"
 	"image/color"
 	"math"
+	"strings"
 	"testing"
 
 	"github.com/hajimehoshi/ebiten/v2"
@@ -82,6 +83,20 @@ func TestDrawResultSmoke(t *testing.T) {
 	app.drawResult(screen, colorWhite())
 	app.resultEpilogue = true
 	app.drawResult(screen, colorWhite())
+}
+
+func TestResultAudioAssetsDecode(t *testing.T) {
+	audio := loadResultAudio("../assets/common/result_sounds")
+	for _, name := range []string{
+		"resultMessage2", "resultMessage3", "resultGauge", "resultGaugeStop",
+		"resultRankNg", "resultRankOk", "resultRankHi", "resultStarGet", "resultNoMiss",
+		"mus_tryagain00", "mus_tryagain01", "mus_ok00", "mus_ok01", "mus_superb00", "mus_superb01",
+		"jgl_tryagain", "jgl_ok", "jgl_superb",
+	} {
+		if len(audio.clips[strings.ToLower(name)]) == 0 {
+			t.Fatalf("missing decoded result audio %s", name)
+		}
+	}
 }
 
 func TestDrawLevelSelectSmoke(t *testing.T) {
