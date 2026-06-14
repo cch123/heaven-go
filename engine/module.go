@@ -9,7 +9,7 @@ import (
 	"hsdemo/riq"
 )
 
-// Judgment 是一次输入的评级（窗口常量见 engine.go）。
+// Judgment 是一次输入的评级（窗口常量见 constants.go）。
 type Judgment int
 
 const (
