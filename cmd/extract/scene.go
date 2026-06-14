@@ -212,6 +212,23 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"captainAnim", "bird1Anim", "bird2Anim", "bird3Anim", "memoryImage", "gradientMat", "CaptainTransform", "BirdTransform"}},
 		},
 	},
+	"balloonHunter": {
+		dir:    "BalloonHunter",
+		prefab: "balloonHunter.prefab",
+		roleFields: []string{
+			"slowBalloon", "fastBalloon", "balloonFive", "bgAnimal",
+			"rock", "rockMissCurve", "hunterAnim", "birdAnim", "rockSmear",
+		},
+		curveFields:     []string{"rockMissCurve"},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"slowBalloon", "fastBalloon", "balloonFive", "bgAnimal", "rock", "rockMissCurve", "hunterAnim", "birdAnim", "rockSmear"}, curveFields: []string{"rockMissCurve"}},
+			{name: "slowBalloon", markers: []string{"startBeat", "balloonSpeed", "isFive", "moose", "anim", "hunterAnim", "popEffect", "popParticle", "mooseObject"}, atPath: "BalloonSlow"},
+			{name: "fastBalloon", markers: []string{"startBeat", "balloonSpeed", "isFive", "moose", "anim", "hunterAnim", "popEffect", "popParticle", "mooseObject"}, atPath: "BalloonFast"},
+			{name: "balloonFive", markers: []string{"startBeat", "balloonSpeed", "isFive", "moose", "anim", "hunterAnim", "popEffect", "popParticle", "mooseObject"}, atPath: "BalloonFive"},
+			{name: "bgAnimal", markers: []string{"bgObject", "anim", "rabbitAnim", "boarAnim", "mooseAnim", "type", "startBeat", "flyLength", "right", "startY", "endY"}, atPath: "BG/AnimalsBG"},
+		},
+	},
 	"dressYourBest": {
 		dir:    "DressYourBest",
 		prefab: "dressYourBest.prefab",

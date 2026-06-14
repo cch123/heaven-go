@@ -1,0 +1,169 @@
+{
+ "curves": {
+  "game.rockMissCurve": {
+   "sampling": 50,
+   "points": [
+    {
+     "p": [
+      -2.8695399999999998,
+      0.14149,
+      0
+     ],
+     "lh": [
+      -4.3899052222,
+      -0.15584084469000004,
+      0
+     ],
+     "rh": [
+      -1.3491747778,
+      0.43882084468999993,
+      0
+     ]
+    },
+    {
+     "p": [
+      -0.6400522846000001,
+      -5.881072676900001,
+      0
+     ],
+     "lh": [
+      -1.0138743952400002,
+      -2.3909757380000007,
+      0
+     ],
+     "rh": [
+      -0.26623017396000015,
+      -9.3711696158,
+      0
+     ]
+    }
+   ]
+  },
+  "rockMissCurve": {
+   "sampling": 50,
+   "points": [
+    {
+     "p": [
+      -2.8695399999999998,
+      0.14149,
+      0
+     ],
+     "lh": [
+      -4.3899052222,
+      -0.15584084469000004,
+      0
+     ],
+     "rh": [
+      -1.3491747778,
+      0.43882084468999993,
+      0
+     ]
+    },
+    {
+     "p": [
+      -0.6400522846000001,
+      -5.881072676900001,
+      0
+     ],
+     "lh": [
+      -1.0138743952400002,
+      -2.3909757380000007,
+      0
+     ],
+     "rh": [
+      -0.26623017396000015,
+      -9.3711696158,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "components": {
+  "balloonFive": {
+   "path": "BalloonFive",
+   "nums": {
+    "balloonSpeed": 0,
+    "isFive": 0,
+    "moose": 0,
+    "startBeat": 0
+   },
+   "refs": {
+    "anim": "BalloonFive",
+    "hunterAnim": "Hunter",
+    "mooseObject": "BalloonFive/MooseBody",
+    "popEffect": "PopMiddle",
+    "popParticle": "PopEffectMiddleL"
+   }
+  },
+  "bgAnimal": {
+   "path": "BG/AnimalsBG",
+   "nums": {
+    "endY": 0,
+    "flyLength": 0,
+    "right": 0,
+    "startBeat": 0,
+    "startY": 0,
+    "type": 0
+   },
+   "refs": {
+    "anim": "BG/AnimalsBG",
+    "bgObject": "BG",
+    "boarAnim": "BG/AnimalsBG/BoarHead",
+    "mooseAnim": "BG/AnimalsBG/MooseBody",
+    "rabbitAnim": "BG/AnimalsBG/BunnyBody"
+   }
+  },
+  "fastBalloon": {
+   "path": "BalloonFast",
+   "nums": {
+    "balloonSpeed": 0,
+    "isFive": 0,
+    "moose": 0,
+    "startBeat": 0
+   },
+   "refs": {
+    "anim": "BalloonFast",
+    "hunterAnim": "Hunter",
+    "popEffect": "PopRight",
+    "popParticle": "PopEffectRight"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "preparing": 0,
+    "tossPreparing": 0
+   },
+   "strs": {
+    "bopExpression": "Neutral"
+   },
+   "refs": {
+    "balloonFive": "BalloonFive",
+    "bgAnimal": "BG/AnimalsBG",
+    "birdAnim": "Bird",
+    "fastBalloon": "BalloonFast",
+    "hunterAnim": "Hunter",
+    "rock": "Rock",
+    "rockMissCurve": "RockBarelyCurve",
+    "rockSmear": "RockSmear",
+    "slowBalloon": "BalloonSlow"
+   }
+  },
+  "slowBalloon": {
+   "path": "BalloonSlow",
+   "nums": {
+    "balloonSpeed": 0,
+    "isFive": 0,
+    "moose": 0,
+    "startBeat": 0
+   },
+   "refs": {
+    "anim": "BalloonSlow",
+    "hunterAnim": "Hunter",
+    "popEffect": "PopLeft",
+    "popParticle": "PopEffectLeft"
+   }
+  }
+ }
+}

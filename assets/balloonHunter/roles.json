@@ -1,0 +1,11 @@
+{
+ "balloonFive": "BalloonFive",
+ "bgAnimal": "BG/AnimalsBG",
+ "birdAnim": "Bird",
+ "fastBalloon": "BalloonFast",
+ "hunterAnim": "Hunter",
+ "rock": "Rock",
+ "rockMissCurve": "RockBarelyCurve",
+ "rockSmear": "RockSmear",
+ "slowBalloon": "BalloonSlow"
+}

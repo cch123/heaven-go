@@ -1,0 +1,1671 @@
+{
+ "nodes": [
+  {
+   "name": "balloonHunter",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0.96,
+    0.5607
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.133,
+    1.133
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hunter",
+   "path": "Hunter",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Hunter/Body",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "Hunter/Body/Torso",
+   "parent": 2,
+   "pos": [
+    -6.2423,
+    0.28689992
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.34045228,
+    0.34045228
+   ],
+   "sprite": "balloonHunterCharacters_7",
+   "order": 112,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    5.84
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "Hunter/Body/Legs",
+   "parent": 2,
+   "pos": [
+    -5.85,
+    -2.4019
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.34045228,
+    0.34045228
+   ],
+   "sprite": "balloonHunterCharacters_5",
+   "order": 111,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.06,
+    11
+   ]
+  },
+  {
+   "name": "LeftLeg",
+   "path": "Hunter/Body/LeftLeg",
+   "parent": 2,
+   "pos": [
+    -6.762412,
+    -2.3315
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.34045228,
+    0.33
+   ],
+   "sprite": "balloonHunterCharactersExtra_11",
+   "order": 109,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.92,
+    10.56
+   ]
+  },
+  {
+   "name": "LeftFoot",
+   "path": "Hunter/Body/LeftLeg/LeftFoot",
+   "parent": 5,
+   "pos": [
+    0.55,
+    -4.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterCharactersExtra_15",
+   "order": 108,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.19,
+    2.78
+   ]
+  },
+  {
+   "name": "RightLeg",
+   "path": "Hunter/Body/RightLeg",
+   "parent": 2,
+   "pos": [
+    -5.7751,
+    -2.4041
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3404523,
+    0.33
+   ],
+   "sprite": "balloonHunterCharactersExtra_12",
+   "order": 111,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    10.35
+   ]
+  },
+  {
+   "name": "RightCheek",
+   "path": "Hunter/Body/RightLeg/RightCheek",
+   "parent": 7,
+   "pos": [
+    -0.91,
+    4.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterCharactersExtra_2",
+   "order": 110,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.26,
+    3.02
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "Hunter/Body/RightArm",
+   "parent": 2,
+   "pos": [
+    -5.8009,
+    0.6094999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.34045228,
+    0.3404523
+   ],
+   "sprite": "balloonHunterCharacters_11",
+   "order": 113,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.94,
+    4.86
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "Hunter/Body/RightArm/Smear",
+   "parent": 9,
+   "pos": [
+    0.27199954,
+    2.7610002
+   ],
+   "rotZ": 5.7471063095642005,
+   "scale": [
+    0.49117205,
+    0.3423469
+   ],
+   "sprite": "balloonHunterCharactersExtra_17",
+   "order": 112,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.72,
+    10.94
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "Hunter/Body/LeftArm",
+   "parent": 2,
+   "pos": [
+    -5.4069,
+    0.70799994
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.34045228,
+    0.34045228
+   ],
+   "sprite": "balloonHunterCharacters_10",
+   "order": 110,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.06,
+    4.32
+   ]
+  },
+  {
+   "name": "Gun",
+   "path": "Hunter/Body/LeftArm/Gun",
+   "parent": 11,
+   "pos": [
+    2.2182257,
+    1.639878
+   ],
+   "rotZ": 4.71239011175551,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterCharacters_6",
+   "order": 109,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    5.98
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Hunter/Head",
+   "parent": 1,
+   "pos": [
+    -6.11,
+    1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.34045228,
+    0.34045228
+   ],
+   "sprite": "balloonHunterCharacters_0",
+   "order": 100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.42,
+    4.32
+   ]
+  },
+  {
+   "name": "GunEffect",
+   "path": "Hunter/GunEffect",
+   "parent": 1,
+   "pos": [
+    -3.0245,
+    1.1968999
+   ],
+   "rotZ": 4.71239011175551,
+   "scale": [
+    0.34045228,
+    0.34045228
+   ],
+   "sprite": "balloonHunterCharacters_12",
+   "order": 100,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.78,
+    2.18
+   ]
+  },
+  {
+   "name": "RockFling",
+   "path": "Hunter/RockFling",
+   "parent": 1,
+   "pos": [
+    -3.78,
+    -0.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8826125,
+    0.8826125
+   ],
+   "sprite": "balloonHunterCharactersExtra_9",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4,
+    1.67
+   ]
+  },
+  {
+   "name": "Platform",
+   "path": "Platform",
+   "parent": 0,
+   "pos": [
+    -7.9897,
+    -2.7677
+   ],
+   "rotZ": 4.712390818862142,
+   "scale": [
+    0.34045228,
+    0.35679397
+   ],
+   "sprite": "balloonHunterCharacters_4",
+   "order": 140,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.74,
+    24.48
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "Bird",
+   "parent": 0,
+   "pos": [
+    -1.5386504,
+    -0.33985263
+   ],
+   "z": 0.065207556,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Bird/Body",
+   "parent": 17,
+   "pos": [
+    -2.86,
+    -0.23
+   ],
+   "z": -0.0652,
+   "rotZ": 0,
+   "scale": [
+    0.34045228,
+    0.34045228
+   ],
+   "sprite": "balloonHunterCharacters_13",
+   "order": 121,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.96,
+    2
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Bird/Body/Head",
+   "parent": 18,
+   "pos": [
+    1.2859387,
+    1.477744
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterCharacters_14",
+   "order": 122,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.66,
+    2.22
+   ]
+  },
+  {
+   "name": "Wing",
+   "path": "Bird/Body/Wing",
+   "parent": 18,
+   "pos": [
+    -0.6,
+    0.82
+   ],
+   "rotZ": 5.469706430853225,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterCharacters_22",
+   "order": 122,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.66,
+    2.22
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "Bird/Legs",
+   "parent": 17,
+   "pos": [
+    -2.6785,
+    -0.59970003
+   ],
+   "z": -0.0652,
+   "rotZ": 0,
+   "scale": [
+    0.34045228,
+    0.34045228
+   ],
+   "sprite": "balloonHunterCharacters_19",
+   "order": 120,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.56,
+    1.46
+   ]
+  },
+  {
+   "name": "BGColor",
+   "path": "BGColor",
+   "parent": 0,
+   "pos": [
+    -0.8600302,
+    -0.49641153
+   ],
+   "rotZ": 0,
+   "scale": [
+    36.274094,
+    20.47474
+   ],
+   "order": -50,
+   "inactive": true,
+   "color": [
+    0.83647794,
+    0.9365437,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BalloonSlow",
+   "path": "BalloonSlow",
+   "parent": 0,
+   "pos": [
+    -0.17,
+    -5.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4099727,
+    0.4099727
+   ],
+   "sprite": "balloonHunterCharacters_8",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.4,
+    4.34
+   ]
+  },
+  {
+   "name": "BalloonFast",
+   "path": "BalloonFast",
+   "parent": 0,
+   "pos": [
+    3.9499998,
+    -5.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.40997273,
+    0.40997273
+   ],
+   "sprite": "balloonHunterCharacters_9",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.78,
+    4.84
+   ]
+  },
+  {
+   "name": "BalloonFive",
+   "path": "BalloonFive",
+   "parent": 0,
+   "pos": [
+    1.82,
+    -5.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4099727,
+    0.4099727
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BalloonL",
+   "path": "BalloonFive/BalloonL",
+   "parent": 25,
+   "pos": [
+    -2.33,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterCharacters_27",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.4,
+    4.34
+   ]
+  },
+  {
+   "name": "BalloonR",
+   "path": "BalloonFive/BalloonR",
+   "parent": 25,
+   "pos": [
+    2.31,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterCharacters_27",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.4,
+    4.34
+   ]
+  },
+  {
+   "name": "MooseBody",
+   "path": "BalloonFive/MooseBody",
+   "parent": 25,
+   "pos": [
+    0.77,
+    -8.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8304268,
+    0.8304268
+   ],
+   "sprite": "balloonHunterMoose_0",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.63,
+    18.54
+   ]
+  },
+  {
+   "name": "MooseHead",
+   "path": "BalloonFive/MooseBody/MooseHead",
+   "parent": 28,
+   "pos": [
+    -6.31,
+    2.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterMoose_3",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.39,
+    8.85
+   ]
+  },
+  {
+   "name": "PopLeft",
+   "path": "PopLeft",
+   "parent": 0,
+   "pos": [
+    -0.2,
+    -5.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.40997273,
+    0.40997273
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PopEffect",
+   "path": "PopLeft/PopEffect",
+   "parent": 30,
+   "pos": [
+    0,
+    17.14748
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.96661687,
+    0.96661687
+   ],
+   "sprite": "balloonHunterCharacters_18",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    4.41
+   ]
+  },
+  {
+   "name": "PopRight",
+   "path": "PopRight",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PopEffect",
+   "path": "PopRight/PopEffect",
+   "parent": 32,
+   "pos": [
+    3.81,
+    1.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39628652,
+    0.39628652
+   ],
+   "sprite": "balloonHunterCharacters_18",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    4.41
+   ]
+  },
+  {
+   "name": "PopMiddle",
+   "path": "PopMiddle",
+   "parent": 0,
+   "pos": [
+    1.82,
+    -5.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.40997273,
+    0.40997273
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PopEffect",
+   "path": "PopMiddle/PopEffect",
+   "parent": 34,
+   "pos": [
+    -2.3,
+    17.14748
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.96661687,
+    0.96661687
+   ],
+   "sprite": "balloonHunterCharacters_18",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    4.41
+   ]
+  },
+  {
+   "name": "PopEffectR",
+   "path": "PopMiddle/PopEffectR",
+   "parent": 34,
+   "pos": [
+    1.9,
+    17.14748
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.96661687,
+    0.96661687
+   ],
+   "sprite": "balloonHunterCharacters_18",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    4.41
+   ]
+  },
+  {
+   "name": "Tree",
+   "path": "Tree",
+   "parent": 0,
+   "pos": [
+    -5.04,
+    0.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7451459,
+    0.7451459
+   ],
+   "sprite": "balloonHunterCharacters_26",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.2,
+    10.95
+   ]
+  },
+  {
+   "name": "Tree part",
+   "path": "Tree part",
+   "parent": 0,
+   "pos": [
+    -7.39,
+    -3.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5672051,
+    0.5672051
+   ],
+   "sprite": "balloonHunterCharacters_28",
+   "order": -29,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.26,
+    7.09
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "Gradient",
+   "parent": 0,
+   "pos": [
+    -0.34,
+    -2.52
+   ],
+   "rotZ": 0,
+   "scale": [
+    93.233864,
+    0.7790049
+   ],
+   "order": -10,
+   "color": [
+    0.32941177,
+    0.5568628,
+    0.86666673,
+    1
+   ],
+   "size": [
+    0.32,
+    20.48
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BGGradient",
+   "path": "BG/BGGradient",
+   "parent": 40,
+   "pos": [
+    -0.867,
+    -0.477
+   ],
+   "rotZ": 0,
+   "scale": [
+    14.569316,
+    1
+   ],
+   "sprite": "balloonHunterBG_1",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.68,
+    12.54
+   ]
+  },
+  {
+   "name": "CloudHolder",
+   "path": "BG/CloudHolder",
+   "parent": 40,
+   "pos": [
+    -0.12,
+    -0.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Clouds1",
+   "path": "BG/CloudHolder/Clouds1",
+   "parent": 42,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "balloonHunterBG_0",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.57,
+    21.21
+   ]
+  },
+  {
+   "name": "Clouds2",
+   "path": "BG/CloudHolder/Clouds2",
+   "parent": 42,
+   "pos": [
+    -1,
+    -10
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "balloonHunterBG_0",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.57,
+    21.21
+   ]
+  },
+  {
+   "name": "Mountain",
+   "path": "BG/Mountain",
+   "parent": 40,
+   "pos": [
+    2.84,
+    -1.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.49405524,
+    0.49405524
+   ],
+   "sprite": "balloonHunterBG_2",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    23.04,
+    18.32
+   ]
+  },
+  {
+   "name": "MountainRock",
+   "path": "BG/Mountain/MountainRock",
+   "parent": 45,
+   "pos": [
+    -2.3,
+    8.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterBG_3",
+   "order": -59,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.72,
+    2.26
+   ]
+  },
+  {
+   "name": "AnimalsBG",
+   "path": "BG/AnimalsBG",
+   "parent": 40,
+   "pos": [
+    -10.45,
+    0.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MooseBody",
+   "path": "BG/AnimalsBG/MooseBody",
+   "parent": 47,
+   "pos": [
+    -1.5924876,
+    -3.1419666
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterBGAnimals_2",
+   "order": -50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.94,
+    13.19
+   ]
+  },
+  {
+   "name": "MooseHead",
+   "path": "BG/AnimalsBG/MooseBody/MooseHead",
+   "parent": 48,
+   "pos": [
+    3.515,
+    0.064
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterBGAnimals_5",
+   "order": -49,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.87,
+    5.01
+   ]
+  },
+  {
+   "name": "BunnyBody",
+   "path": "BG/AnimalsBG/BunnyBody",
+   "parent": 47,
+   "pos": [
+    -1.204,
+    -2.164
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterBGAnimals_1",
+   "order": -48,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.53,
+    11.21
+   ]
+  },
+  {
+   "name": "BunnyHead",
+   "path": "BG/AnimalsBG/BunnyBody/BunnyHead",
+   "parent": 50,
+   "pos": [
+    1.506,
+    -2.426
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterBGAnimals_4",
+   "order": -47,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.44,
+    3
+   ]
+  },
+  {
+   "name": "BoarHead",
+   "path": "BG/AnimalsBG/BoarHead",
+   "parent": 47,
+   "pos": [
+    -1.04,
+    -8.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterBGAnimals_3",
+   "order": -46,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.05,
+    9.56
+   ]
+  },
+  {
+   "name": "BoarBody",
+   "path": "BG/AnimalsBG/BoarHead/BoarBody",
+   "parent": 52,
+   "pos": [
+    -0.32,
+    7.99
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "balloonHunterBGAnimals_0",
+   "order": -45,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.35,
+    8.38
+   ]
+  },
+  {
+   "name": "PopEffectLeft",
+   "path": "PopEffectLeft",
+   "parent": 0,
+   "pos": [
+    -0.2,
+    1.045
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PopEffectRight",
+   "path": "PopEffectRight",
+   "parent": 0,
+   "pos": [
+    3.83,
+    1.045
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PopEffectMiddleL",
+   "path": "PopEffectMiddleL",
+   "parent": 0,
+   "pos": [
+    0.86,
+    1.045
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PopEffectMiddleR",
+   "path": "PopEffectMiddleL/PopEffectMiddleR",
+   "parent": 56,
+   "pos": [
+    1.75,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RockBarelyCurve",
+   "path": "RockBarelyCurve",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "RockBarelyCurve/Point 0",
+   "parent": 58,
+   "pos": [
+    -3.38,
+    -0.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "RockBarelyCurve/Point 1",
+   "parent": 58,
+   "pos": [
+    -1.4122262,
+    -5.6855893
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RockSmear",
+   "path": "RockSmear",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmearObject",
+   "path": "RockSmear/SmearObject",
+   "parent": 61,
+   "pos": [
+    1.7499999,
+    0.46999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3404523,
+    0.3404523
+   ],
+   "sprite": "balloonHunterCharactersExtra_19",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    24.74,
+    1.98
+   ]
+  },
+  {
+   "name": "Rock",
+   "path": "Rock",
+   "parent": 0,
+   "pos": [
+    -3.38,
+    -0.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.34,
+    0.34
+   ],
+   "sprite": "balloonHunterCharactersExtra_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.48,
+    1.53
+   ]
+  }
+ ]
+}

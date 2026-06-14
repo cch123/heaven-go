@@ -1,0 +1,266 @@
+{
+ "AnimalsBG": {
+  "default": "Moose",
+  "states": {
+   "Boar": {
+    "clip": "BG/AnimalBoar",
+    "speed": 1
+   },
+   "Moose": {
+    "clip": "BG/AnimalMoose",
+    "speed": 1
+   },
+   "Rabbit": {
+    "clip": "BG/AnimalRabbit",
+    "speed": 1
+   }
+  }
+ },
+ "BalloonFiveAnim": {
+  "default": "Start",
+  "states": {
+   "Miss": {
+    "clip": "Balloon/BalloonMiss",
+    "speed": 1
+   },
+   "MooseFall": {
+    "clip": "Moose/MooseFall",
+    "speed": 1
+   },
+   "MooseRaspberry": {
+    "clip": "Moose/MooseRaspberry",
+    "speed": 1
+   },
+   "MooseShock": {
+    "clip": "Moose/MooseShock",
+    "speed": 1
+   },
+   "Move": {
+    "clip": "Balloon/BalloonFiveMove",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ },
+ "BirdAnim": {
+  "default": "Neutral",
+  "states": {
+   "Bop": {
+    "clip": "Bird/BirdBop",
+    "speed": 1
+   },
+   "Call": {
+    "clip": "Faces/BirdCall",
+    "speed": 1
+   },
+   "CallBig": {
+    "clip": "Faces/BirdCallBig",
+    "speed": 1
+   },
+   "CallScared": {
+    "clip": "Faces/BirdCallScared",
+    "speed": 1
+   },
+   "Cover": {
+    "clip": "Bird/BirdCover",
+    "speed": 1
+   },
+   "Determined": {
+    "clip": "Faces/BirdHappy",
+    "speed": 1
+   },
+   "Flap": {
+    "clip": "Bird/BirdFlap",
+    "speed": 1
+   },
+   "Happy": {
+    "clip": "Faces/BirdHappy",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Bird/BirdJump",
+    "speed": 1
+   },
+   "Neutral": {
+    "clip": "Faces/BirdNeutral",
+    "speed": 1
+   },
+   "Sad": {
+    "clip": "Faces/BirdSad",
+    "speed": 1
+   },
+   "Scared": {
+    "clip": "Bird/BirdScared",
+    "speed": 1
+   },
+   "Shock": {
+    "clip": "Faces/BirdSad",
+    "speed": 1
+   }
+  }
+ },
+ "BoarHead": {
+  "default": "Bop",
+  "states": {
+   "Bop": {
+    "clip": "Animals/BoarBop",
+    "speed": 1
+   }
+  }
+ },
+ "BunnyBody": {
+  "default": "Bop",
+  "states": {
+   "Bop": {
+    "clip": "Animals/BunnyBop",
+    "speed": 1
+   }
+  }
+ },
+ "CloudHolder": {
+  "default": "CloudScroll",
+  "states": {
+   "CloudScroll": {
+    "clip": "BG/CloudScroll",
+    "speed": 1
+   }
+  }
+ },
+ "FastBalloonAnim": {
+  "default": "Start",
+  "states": {
+   "Miss": {
+    "clip": "Balloon/BalloonMiss",
+    "speed": 1
+   },
+   "Move": {
+    "clip": "Balloon/FastBalloonMove",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ },
+ "HunterAnim": {
+  "default": "Idle",
+  "states": {
+   "Blow": {
+    "clip": "Hunter/HunterBlow",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Hunter/HunterBop",
+    "speed": 1
+   },
+   "Determined": {
+    "clip": "Faces/HunterDetermined",
+    "speed": 1
+   },
+   "Happy": {
+    "clip": "Faces/HunterHappy",
+    "speed": 1
+   },
+   "Hold": {
+    "clip": "Faces/HunterHold",
+    "speed": 1
+   },
+   "HunterToss": {
+    "clip": "Hunter/HunterToss",
+    "speed": 1
+   },
+   "HunterTossPrep": {
+    "clip": "Hunter/HunterTossPrep",
+    "speed": 1
+   },
+   "HunterTossPrep 0": {
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Hunter/HunterMiss",
+    "speed": 1
+   },
+   "Neutral": {
+    "clip": "Faces/HunterNeutral",
+    "speed": 1
+   },
+   "Prep Toss": {
+    "clip": "Faces/HunterPrepTossFace",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Hunter/HunterPrepare",
+    "speed": 1
+   },
+   "Sad": {
+    "clip": "Faces/HunterSad",
+    "speed": 1
+   },
+   "Shock": {
+    "clip": "Faces/HunterShock",
+    "speed": 1
+   },
+   "Shoot": {
+    "clip": "Hunter/HunterShoot",
+    "speed": 1
+   }
+  }
+ },
+ "MooseBody": {
+  "default": "Bop",
+  "states": {
+   "Bop": {
+    "clip": "Animals/MooseBop",
+    "speed": 1
+   }
+  }
+ },
+ "PopEffectAnim": {
+  "default": "Start",
+  "states": {
+   "Pop": {
+    "clip": "Animations/PopEffect",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ },
+ "RockSmearAnim": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "RockSmear": {
+    "clip": "Animations/RockSmear",
+    "speed": 1
+   }
+  }
+ },
+ "SlowBalloonAnim": {
+  "default": "Start",
+  "states": {
+   "Miss": {
+    "clip": "Balloon/BalloonMiss",
+    "speed": 1
+   },
+   "Move": {
+    "clip": "Balloon/SlowBalloonMove",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ }
+}

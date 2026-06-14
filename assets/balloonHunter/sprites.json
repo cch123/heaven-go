@@ -1,0 +1,1254 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png",
+  "atlas5.png",
+  "atlas6.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "balloonHunterBGAnimals_0": {
+   "X": 14,
+   "Y": 100,
+   "W": 505,
+   "H": 956,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBGAnimals_1": {
+   "X": 658,
+   "Y": 92,
+   "W": 353,
+   "H": 1121,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBGAnimals_2": {
+   "X": 1040,
+   "Y": 90,
+   "W": 994,
+   "H": 1319,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBGAnimals_3": {
+   "X": 20,
+   "Y": 1120,
+   "W": 635,
+   "H": 838,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBGAnimals_4": {
+   "X": 682,
+   "Y": 1387,
+   "W": 344,
+   "H": 300,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBGAnimals_5": {
+   "X": 1198,
+   "Y": 1434,
+   "W": 587,
+   "H": 501,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBG_0": {
+   "X": 273,
+   "Y": 1944,
+   "W": 3757,
+   "H": 2121,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBG_1": {
+   "X": 3835,
+   "Y": 69,
+   "W": 168,
+   "H": 1254,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBG_2": {
+   "X": 77,
+   "Y": 59,
+   "W": 2304,
+   "H": 1832,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBG_3": {
+   "X": 3526,
+   "Y": 84,
+   "W": 172,
+   "H": 226,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBG_particle1": {
+   "X": 3279,
+   "Y": 192,
+   "W": 72,
+   "H": 70,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBG_particle2": {
+   "X": 3375,
+   "Y": 221,
+   "W": 59,
+   "H": 61,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBG_particle3": {
+   "X": 3415,
+   "Y": 167,
+   "W": 74,
+   "H": 53,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterBG_particle4": {
+   "X": 3327,
+   "Y": 126,
+   "W": 72,
+   "H": 46,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_0": {
+   "X": 136,
+   "Y": 25,
+   "W": 413,
+   "H": 426,
+   "PivotX": 0.5594203,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_1": {
+   "X": 719,
+   "Y": 176,
+   "W": 406,
+   "H": 880,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_10": {
+   "X": 2739,
+   "Y": 572,
+   "W": 722,
+   "H": 1710,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_11": {
+   "X": 129,
+   "Y": 1185,
+   "W": 402,
+   "H": 1145,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_12": {
+   "X": 604,
+   "Y": 1207,
+   "W": 420,
+   "H": 1121,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_13": {
+   "X": 1275,
+   "Y": 1287,
+   "W": 495,
+   "H": 622,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_14": {
+   "X": 1907,
+   "Y": 963,
+   "W": 674,
+   "H": 372,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_15": {
+   "X": 1318,
+   "Y": 1984,
+   "W": 319,
+   "H": 278,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_16": {
+   "X": 1894,
+   "Y": 1516,
+   "W": 543,
+   "H": 828,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_17": {
+   "X": 85,
+   "Y": 2430,
+   "W": 1172,
+   "H": 1094,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_18": {
+   "X": 3349,
+   "Y": 73,
+   "W": 409,
+   "H": 403,
+   "PivotX": 0.4647787,
+   "PivotY": 0.52681065,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_19": {
+   "X": 1487,
+   "Y": 2494,
+   "W": 2474,
+   "H": 198,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_2": {
+   "X": 1212,
+   "Y": 152,
+   "W": 226,
+   "H": 302,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_3": {
+   "X": 1523,
+   "Y": 200,
+   "W": 148,
+   "H": 153,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_4": {
+   "X": 1760,
+   "Y": 74,
+   "W": 410,
+   "H": 404,
+   "PivotX": 0.4617491,
+   "PivotY": 0.5189142,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_5": {
+   "X": 2263,
+   "Y": 64,
+   "W": 422,
+   "H": 430,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_6": {
+   "X": 2895,
+   "Y": 152,
+   "W": 344,
+   "H": 288,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_7": {
+   "X": 144,
+   "Y": 498,
+   "W": 432,
+   "H": 593,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_8": {
+   "X": 1282,
+   "Y": 582,
+   "W": 460,
+   "H": 442,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharactersExtra_9": {
+   "X": 1932,
+   "Y": 683,
+   "W": 240,
+   "H": 167,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_0": {
+   "X": 304,
+   "Y": 198,
+   "W": 450,
+   "H": 427,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_1": {
+   "X": 924,
+   "Y": 197,
+   "W": 450,
+   "H": 427,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_10": {
+   "X": 1028,
+   "Y": 1542,
+   "W": 505,
+   "H": 433,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_11": {
+   "X": 1681,
+   "Y": 1531,
+   "W": 389,
+   "H": 484,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_12": {
+   "X": 2313,
+   "Y": 1479,
+   "W": 374,
+   "H": 215,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_13": {
+   "X": 255,
+   "Y": 2206,
+   "W": 291,
+   "H": 196,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_14": {
+   "X": 708,
+   "Y": 2171,
+   "W": 260,
+   "H": 218,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_15": {
+   "X": 1087,
+   "Y": 2171,
+   "W": 261,
+   "H": 218,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_16": {
+   "X": 1470,
+   "Y": 2171,
+   "W": 260,
+   "H": 218,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_17": {
+   "X": 1847,
+   "Y": 2171,
+   "W": 260,
+   "H": 218,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_18": {
+   "X": 2281,
+   "Y": 1944,
+   "W": 438,
+   "H": 438,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_19": {
+   "X": 348,
+   "Y": 2529,
+   "W": 154,
+   "H": 142,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_2": {
+   "X": 1545,
+   "Y": 190,
+   "W": 454,
+   "H": 435,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_20": {
+   "X": 571,
+   "Y": 2491,
+   "W": 179,
+   "H": 167,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_21": {
+   "X": 802,
+   "Y": 2470,
+   "W": 274,
+   "H": 197,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_22": {
+   "X": 1182,
+   "Y": 2471,
+   "W": 196,
+   "H": 148,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_23": {
+   "X": 1434,
+   "Y": 2468,
+   "W": 155,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_24": {
+   "X": 1629,
+   "Y": 2469,
+   "W": 126,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_25": {
+   "X": 1854,
+   "Y": 2446,
+   "W": 250,
+   "H": 218,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_26": {
+   "X": 73,
+   "Y": 2892,
+   "W": 1020,
+   "H": 1095,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_27": {
+   "X": 3598,
+   "Y": 2803,
+   "W": 317,
+   "H": 415,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_28": {
+   "X": 1264,
+   "Y": 3269,
+   "W": 726,
+   "H": 709,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_29": {
+   "X": 1282,
+   "Y": 2850,
+   "W": 221,
+   "H": 247,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_3": {
+   "X": 2195,
+   "Y": 192,
+   "W": 450,
+   "H": 426,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_30": {
+   "X": 1523,
+   "Y": 2775,
+   "W": 231,
+   "H": 302,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_31": {
+   "X": 1800,
+   "Y": 2714,
+   "W": 454,
+   "H": 378,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_32": {
+   "X": 2313,
+   "Y": 2432,
+   "W": 413,
+   "H": 343,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_33": {
+   "X": 3269,
+   "Y": 2940,
+   "W": 293,
+   "H": 309,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_34": {
+   "X": 2953,
+   "Y": 2910,
+   "W": 263,
+   "H": 295,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_35": {
+   "X": 2560,
+   "Y": 2937,
+   "W": 329,
+   "H": 345,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_4": {
+   "X": 2920,
+   "Y": 181,
+   "W": 971,
+   "H": 2444,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_5": {
+   "X": 173,
+   "Y": 833,
+   "W": 672,
+   "H": 1105,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_6": {
+   "X": 919,
+   "Y": 841,
+   "W": 72,
+   "H": 593,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_7": {
+   "X": 1176,
+   "Y": 835,
+   "W": 313,
+   "H": 588,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_8": {
+   "X": 1734,
+   "Y": 883,
+   "W": 331,
+   "H": 441,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterCharacters_9": {
+   "X": 2255,
+   "Y": 870,
+   "W": 371,
+   "H": 479,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterMoose_0": {
+   "X": 2209,
+   "Y": 74,
+   "W": 1763,
+   "H": 1854,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterMoose_1": {
+   "X": 124,
+   "Y": 1987,
+   "W": 1039,
+   "H": 1077,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterMoose_2": {
+   "X": 1332,
+   "Y": 1978,
+   "W": 1039,
+   "H": 885,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonHunterMoose_3": {
+   "X": 2490,
+   "Y": 1978,
+   "W": 1039,
+   "H": 885,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonParticle_0": {
+   "X": 12,
+   "Y": 86,
+   "W": 328,
+   "H": 344,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonParticle_1": {
+   "X": 404,
+   "Y": 82,
+   "W": 262,
+   "H": 294,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonParticle_2": {
+   "X": 720,
+   "Y": 89,
+   "W": 291,
+   "H": 308,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "balloonref": {
+   "X": 0,
+   "Y": 0,
+   "W": 754,
+   "H": 416,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

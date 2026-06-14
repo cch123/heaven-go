@@ -39,6 +39,7 @@ import (
 	"hsdemo/engine"
 	"hsdemo/games/agbsamuraislice"
 	"hsdemo/games/airrally"
+	"hsdemo/games/balloonhunter"
 	"hsdemo/games/basketballgirls"
 	"hsdemo/games/bluebear"
 	"hsdemo/games/bluebirds"
@@ -676,6 +677,7 @@ func main() {
 	engine.Register("agbSamuraiSlice", agbsamuraislice.New)
 	engine.Register("airRally", airrally.New)
 	engine.Register("basketballGirls", basketballgirls.New)
+	engine.Register("balloonHunter", balloonhunter.New)
 	engine.Register("boardMeeting", boardmeeting.New)
 	engine.Register("bouncyRoad", bouncyroad.New)
 	engine.Register("cannery", cannery.New)

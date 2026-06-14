@@ -1,0 +1,16 @@
+{
+ "BG/AnimalsBG": "AnimalsBG",
+ "BG/AnimalsBG/BoarHead": "BoarHead",
+ "BG/AnimalsBG/BunnyBody": "BunnyBody",
+ "BG/AnimalsBG/MooseBody": "MooseBody",
+ "BG/CloudHolder": "CloudHolder",
+ "BalloonFast": "FastBalloonAnim",
+ "BalloonFive": "BalloonFiveAnim",
+ "BalloonSlow": "SlowBalloonAnim",
+ "Bird": "BirdAnim",
+ "Hunter": "HunterAnim",
+ "PopLeft": "PopEffectAnim",
+ "PopMiddle": "PopEffectAnim",
+ "PopRight": "PopEffectAnim",
+ "RockSmear": "RockSmearAnim"
+}
