@@ -96,6 +96,9 @@ type Instance struct {
 	Offset [2]float64
 	// Rot：实例根的附加旋转（弧度；transform.rotation 直写语义，如收腿翻滚）
 	Rot float64
+	// Scale：实例根的附加缩放。默认 (1,1)；用于 prefab 实例被代码临时
+	// squash / shrink 的场合，避免改共享模板节点。
+	Scale [2]float64
 	// 叠加变换：实例整体的额外世界仿射（滚动容器等），绘制时左乘
 	players map[int]*instPlayer
 	actives map[int]bool // 模板内下标 → SetActive 覆盖
@@ -110,6 +113,7 @@ func (t *Template) NewInstance() *Instance {
 	in := &Instance{
 		T:       t,
 		Offset:  root.Pos,
+		Scale:   [2]float64{1, 1},
 		players: map[int]*instPlayer{},
 		actives: map[int]bool{},
 		sprites: map[int]string{},
@@ -385,6 +389,8 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 	}
 	states[0].pos = in.Offset
 	states[0].rot += in.Rot
+	states[0].scale[0] *= in.Scale[0]
+	states[0].scale[1] *= in.Scale[1]
 	states[0].active = true // 模板本体可能 inactive（Instantiate 后 SetActive(true) 语义）
 	for ti, v := range in.actives {
 		states[ti].active = v

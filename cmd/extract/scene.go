@@ -101,6 +101,24 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		commonSounds:    []string{"applause.ogg", "audienceSad.ogg"},
 	},
+	"cropStomp": {
+		dir:    "CropStomp",
+		prefab: "cropStomp.prefab",
+		roleFields: []string{
+			"baseVeggie", "baseMole", "legsAnim", "bodyAnim", "farmerTrans",
+			"grass", "Dots", "BG", "grassTrans", "dotsTrans", "scrollingHolder",
+			"veggieHolder", "farmer", "pickCurve", "moleCurve", "hitParticle",
+		},
+		curveFields:     []string{"pickCurve", "moleCurve"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"baseVeggie", "baseMole", "legsAnim", "bodyAnim", "farmerTrans", "pickCurve", "moleCurve", "hitParticle"}, curveFields: []string{"pickCurve", "moleCurve"}},
+			{name: "farmer", markers: []string{"collectedHolder", "plantLeftRef", "plantRightRef", "plantLastRef", "veggieSprites", "startPlant"}},
+			{name: "veggie", markers: []string{"veggieSprites", "veggieSprite", "veggieTrans", "curve"}, atPath: "ScrollingItems/Prefabs/Veggie", curveFields: []string{"curve"}},
+			{name: "mole", markers: []string{"isMole", "moleAnim", "veggieSprite", "veggieTrans", "curve"}, atPath: "ScrollingItems/Prefabs/Mole", curveFields: []string{"curve"}},
+		},
+	},
 	"wizardsWaltz": {
 		dir:             "WizardsWaltz",
 		prefab:          "wizardsWaltz.prefab",

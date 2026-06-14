@@ -1,0 +1,18 @@
+{
+ "BG": "BG",
+ "Dots": "BG/Dots",
+ "baseMole": "ScrollingItems/Prefabs/Mole",
+ "baseVeggie": "ScrollingItems/Prefabs/Veggie",
+ "bodyAnim": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body",
+ "dotsTrans": "BG",
+ "farmer": "ScrollingItems/FarmerHolder",
+ "farmerTrans": "ScrollingItems/FarmerHolder",
+ "grass": "Grass",
+ "grassTrans": "Grass",
+ "hitParticle": "HItParticle/Particle System",
+ "legsAnim": "ScrollingItems/FarmerHolder/Legs",
+ "moleCurve": "MoleCurve",
+ "pickCurve": "PickCurve",
+ "scrollingHolder": "ScrollingItems",
+ "veggieHolder": "ScrollingItems/VeggieHolder"
+}

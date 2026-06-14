@@ -98,6 +98,9 @@ type Input struct {
 	// 和分类评价消息。
 	Weight   float64
 	Category int
+	// NoScore 复刻 HS 的 countsForAccuracy=false：窗口吞掉输入并执行回调，
+	// 但不写判定计数、Timing Bar 或结算分数。
+	NoScore bool
 	// OnHit 在 NG 窗口内的任意按键触发；state 为 just 窗归一化偏移
 	//（|state|<=1 = just 命中，1<|state|<=2 = NG，负 = 早），与 C# 语义一致。
 	OnHit func(state float64, j Judgment)
@@ -897,10 +900,18 @@ func (a *App) scheduleInput(beat float64, release bool, action int, onHit func(s
 }
 
 func (a *App) scheduleInputCond(beat float64, release bool, action int, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) {
+	a.scheduleInputFull(beat, release, action, false, canHit, onHit, onMiss)
+}
+
+func (a *App) scheduleInputNoScore(beat float64, release bool, action int, onHit func(state float64, j Judgment), onMiss func()) {
+	a.scheduleInputFull(beat, release, action, true, nil, onHit, onMiss)
+}
+
+func (a *App) scheduleInputFull(beat float64, release bool, action int, noScore bool, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) {
 	weight, category := a.resultSectionAt(beat)
 	a.inputs = append(a.inputs, &Input{
 		Beat: beat, hitT: a.bm.BeatToTime(beat), Release: release, Action: action,
-		Weight: weight, Category: category, OnHit: onHit, OnMiss: onMiss,
+		Weight: weight, Category: category, NoScore: noScore, OnHit: onHit, OnMiss: onMiss,
 		CanHit: canHit,
 	})
 }
@@ -1213,9 +1224,11 @@ func (a *App) updatePlay() {
 			}
 			in.judged = true
 			in.Result = JudgeMiss
-			a.recordInputScore(in, 0)
-			a.misses++
-			a.setMsg("MISS...")
+			if !in.NoScore {
+				a.recordInputScore(in, 0)
+				a.misses++
+				a.setMsg("MISS...")
+			}
 			if in.OnMiss != nil {
 				in.OnMiss()
 			}
@@ -1271,24 +1284,32 @@ func (a *App) judgePress(t, beat float64, release bool, action int) {
 	switch d := math.Abs(signed); {
 	case d <= WinAce:
 		j = JudgeAce
-		a.aces++
-		a.setMsg("ACE!!")
+		if !best.NoScore {
+			a.aces++
+			a.setMsg("ACE!!")
+		}
 	case d <= WinJust:
 		j = JudgeJust
-		a.justs++
-		a.setMsg("OK!")
+		if !best.NoScore {
+			a.justs++
+			a.setMsg("OK!")
+		}
 	default:
 		j = JudgeNG
-		a.ngs++
-		a.setMsg("NG")
+		if !best.NoScore {
+			a.ngs++
+			a.setMsg("NG")
+		}
 	}
 	best.Result = j
-	a.recordInputScore(best, accuracyForDiff(math.Abs(signed)))
-	if j == JudgeAce && a.starBeat >= 0 && !a.starGot && math.Abs(best.Beat-a.starBeat) < 0.25 {
-		a.starGot = true
-		a.setMsg("SKILL STAR!")
+	if !best.NoScore {
+		a.recordInputScore(best, accuracyForDiff(math.Abs(signed)))
+		if j == JudgeAce && a.starBeat >= 0 && !a.starGot && math.Abs(best.Beat-a.starBeat) < 0.25 {
+			a.starGot = true
+			a.setMsg("SKILL STAR!")
+		}
+		a.pushTiming(signed, j)
 	}
-	a.pushTiming(signed, j)
 	if best.OnHit != nil {
 		best.OnHit(state, j)
 	}

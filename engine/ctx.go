@@ -139,6 +139,12 @@ func (c *Ctx) ScheduleInputCond(beat float64, canHit func() bool, onHit func(sta
 	c.App.scheduleInputCond(beat, false, 0, canHit, onHit, onMiss)
 }
 
+// ScheduleInputNoScore registers a press window that prevents whiffs and runs
+// callbacks without affecting score, timing display, or result rank.
+func (c *Ctx) ScheduleInputNoScore(beat float64, onHit func(state float64, j Judgment), onMiss func()) {
+	c.App.scheduleInputNoScore(beat, false, 0, onHit, onMiss)
+}
+
 // ScheduleInputRelease 注册一次"抬起"判定（InputAction_FlickRelease，
 // totemClimb 高跳甩出等）。空抬不触发 Whiff。
 func (c *Ctx) ScheduleInputRelease(beat float64, onHit func(state float64, j Judgment), onMiss func()) {

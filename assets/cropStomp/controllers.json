@@ -1,0 +1,73 @@
+{
+ "Body": {
+  "default": "Idle",
+  "states": {
+   "Crouch": {
+    "clip": "Body/Crouch",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Body/Idle",
+    "speed": 1
+   },
+   "Pick": {
+    "clip": "Body/Pick",
+    "speed": 1
+   },
+   "Raise": {
+    "clip": "Body/Raise",
+    "speed": 1
+   },
+   "Stomp": {
+    "clip": "Body/Stomp",
+    "speed": 1
+   }
+  }
+ },
+ "Legs": {
+  "default": "LiftFront",
+  "states": {
+   "LiftBack": {
+    "clip": "Legs/LiftBack",
+    "speed": 1
+   },
+   "LiftFront": {
+    "clip": "Legs/LiftFront",
+    "speed": 1
+   },
+   "StepBack": {
+    "clip": "Legs/StepBack",
+    "speed": 1
+   },
+   "StepFront": {
+    "clip": "Legs/StepFront",
+    "speed": 1
+   },
+   "StompBack": {
+    "clip": "Legs/StompBack",
+    "speed": 1
+   },
+   "StompFront": {
+    "clip": "Legs/StompFront",
+    "speed": 1
+   }
+  }
+ },
+ "Mole": {
+  "default": "Wiggle",
+  "states": {
+   "Chuckle": {
+    "clip": "Mole/Chuckle",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Mole/Idle",
+    "speed": 1
+   },
+   "Wiggle": {
+    "clip": "Mole/Wiggle",
+    "speed": 1
+   }
+  }
+ }
+}

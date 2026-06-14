@@ -1,0 +1,1179 @@
+{
+ "nodes": [
+  {
+   "name": "cropStomp",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ScrollingItems",
+   "path": "ScrollingItems",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FarmerHolder",
+   "path": "ScrollingItems/FarmerHolder",
+   "parent": 1,
+   "pos": [
+    5,
+    -1.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.5,
+    4.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "ScrollingItems/FarmerHolder/Legs",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "legs_front_down_3",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.79,
+    0.72
+   ]
+  },
+  {
+   "name": "BodyHolder",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BodyOffset",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset",
+   "parent": 4,
+   "pos": [
+    0,
+    0.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body",
+   "parent": 5,
+   "pos": [
+    0.185,
+    0.46460006
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0125,
+    1
+   ],
+   "sprite": "body_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.99
+   ]
+  },
+  {
+   "name": "Arms",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body/Arms",
+   "parent": 6,
+   "pos": [
+    -0.4395,
+    0.035
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "arms_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    0.68
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body/Head",
+   "parent": 6,
+   "pos": [
+    -0.2548,
+    0.4972
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "head_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.99,
+    0.59
+   ]
+  },
+  {
+   "name": "CollectedVeggieHolder",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body/CollectedVeggieHolder",
+   "parent": 6,
+   "pos": [
+    0.061,
+    0.329
+   ],
+   "rotZ": 0.06719630588300836,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "plants1",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body/CollectedVeggieHolder/plants1",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "plants1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.56340957,
+    0.32999998
+   ]
+  },
+  {
+   "name": "plants2",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body/CollectedVeggieHolder/plants2",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "plants2",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.556742,
+    0.37
+   ]
+  },
+  {
+   "name": "plants3",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body/CollectedVeggieHolder/plants3",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "plants3",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5550751,
+    0.405
+   ]
+  },
+  {
+   "name": "veggie_0",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/BodyOffset/Body/CollectedVeggieHolder/veggie_0",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "veggie_0",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.49006632,
+    0.68
+   ]
+  },
+  {
+   "name": "bodyref",
+   "path": "ScrollingItems/FarmerHolder/Legs/BodyHolder/bodyref",
+   "parent": 4,
+   "pos": [
+    0.185,
+    0.46460003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "body_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.3529412
+   ],
+   "size": [
+    0.86,
+    0.99
+   ]
+  },
+  {
+   "name": "ref",
+   "path": "ScrollingItems/FarmerHolder/ref",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "legs_front_down_3",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.25490198
+   ],
+   "size": [
+    0.79,
+    0.72
+   ]
+  },
+  {
+   "name": "Prefabs",
+   "path": "ScrollingItems/Prefabs",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Veggie",
+   "path": "ScrollingItems/Prefabs/Veggie",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.5,
+    4.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve",
+   "path": "ScrollingItems/Prefabs/Veggie/Curve",
+   "parent": 17,
+   "pos": [
+    0,
+    -0.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "ScrollingItems/Prefabs/Veggie/Curve/Point 0",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "ScrollingItems/Prefabs/Veggie/Curve/Point 1",
+   "parent": 18,
+   "pos": [
+    0,
+    1.5040001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "ScrollingItems/Prefabs/Veggie/Curve/Point 2",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pivot",
+   "path": "ScrollingItems/Prefabs/Veggie/Pivot",
+   "parent": 17,
+   "pos": [
+    0,
+    -0.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "ScrollingItems/Prefabs/Veggie/Pivot/Sprite",
+   "parent": 22,
+   "pos": [
+    0,
+    0.08799988
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "veggie_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Mole",
+   "path": "ScrollingItems/Prefabs/Mole",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.5,
+    4.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve",
+   "path": "ScrollingItems/Prefabs/Mole/Curve",
+   "parent": 24,
+   "pos": [
+    0,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "ScrollingItems/Prefabs/Mole/Curve/Point 0",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "ScrollingItems/Prefabs/Mole/Curve/Point 1",
+   "parent": 25,
+   "pos": [
+    0,
+    1.5040001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "ScrollingItems/Prefabs/Mole/Curve/Point 2",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pivot",
+   "path": "ScrollingItems/Prefabs/Mole/Pivot",
+   "parent": 24,
+   "pos": [
+    0,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "ScrollingItems/Prefabs/Mole/Pivot/Sprite",
+   "parent": 29,
+   "pos": [
+    -0.03,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mole_1",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "VeggieHolder",
+   "path": "ScrollingItems/VeggieHolder",
+   "parent": 1,
+   "pos": [
+    2.635,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PickCurve",
+   "path": "PickCurve",
+   "parent": 0,
+   "pos": [
+    3.6925,
+    -0.0879997
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "PickCurve/Point 0",
+   "parent": 32,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "PickCurve/Point 1",
+   "parent": 32,
+   "pos": [
+    1.79,
+    5.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "PickCurve/Point 2",
+   "parent": 32,
+   "pos": [
+    4.08,
+    1.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MoleCurve",
+   "path": "MoleCurve",
+   "parent": 0,
+   "pos": [
+    3.6925,
+    -0.0879997
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "MoleCurve/Point 0",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "MoleCurve/Point 1",
+   "parent": 36,
+   "pos": [
+    -8,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "MoleCurve/Point 2",
+   "parent": 36,
+   "pos": [
+    -15,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    1.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "order": -100,
+   "color": [
+    0.7529412,
+    0.9411765,
+    0.72156864,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    120,
+    12.8
+   ]
+  },
+  {
+   "name": "Dots",
+   "path": "BG/Dots",
+   "parent": 40,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    120,
+    12.8
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "Grass",
+   "parent": 0,
+   "pos": [
+    0,
+    -5
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.5,
+    4.5
+   ],
+   "sprite": "grass",
+   "order": 10,
+   "color": [
+    0.47058824,
+    0.972549,
+    0.15686275,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    10,
+    1
+   ]
+  },
+  {
+   "name": "BG2",
+   "path": "BG2",
+   "parent": 0,
+   "pos": [
+    -0.195,
+    -0.043
+   ],
+   "rotZ": 0,
+   "scale": [
+    18.9426,
+    11.7704
+   ],
+   "order": -1000,
+   "inactive": true,
+   "color": [
+    0.7490196,
+    0.87058824,
+    0.6509804,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "HItParticle",
+   "path": "HItParticle",
+   "parent": 0,
+   "pos": [
+    2.92,
+    -3.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Particle System",
+   "path": "HItParticle/Particle System",
+   "parent": 44,
+   "pos": [
+    -0.013,
+    -0.032
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}
