@@ -1,0 +1,12 @@
+{
+ "Fight": "FightTextAnim",
+ "Note": "NoteAnim",
+ "holder l": "HolderAnim",
+ "holder l/fighter": "FighterAnim",
+ "holder r": "HolderAnim",
+ "holder r/fighter": "FighterAnim",
+ "lights/spotlight l": "LightsAnim",
+ "lights/spotlight r": "LightsAnim",
+ "note display": "DisplayAnim",
+ "spot": "SpotlightAnim"
+}

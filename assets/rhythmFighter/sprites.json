@@ -1,0 +1,1613 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png",
+  "atlas5.png",
+  "atlas6.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "Screenshot_Wii_Rhythm_Fighter": {
+   "X": 0,
+   "Y": 0,
+   "W": 832,
+   "H": 452,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_0": {
+   "X": 0,
+   "Y": 19,
+   "W": 4661,
+   "H": 1680,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_1": {
+   "X": 4909,
+   "Y": 19,
+   "W": 2538,
+   "H": 314,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_10": {
+   "X": 1987,
+   "Y": 1743,
+   "W": 157,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_11": {
+   "X": 2181,
+   "Y": 1761,
+   "W": 172,
+   "H": 774,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_12": {
+   "X": 2401,
+   "Y": 1761,
+   "W": 170,
+   "H": 775,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_13": {
+   "X": 2643,
+   "Y": 1745,
+   "W": 2042,
+   "H": 2292,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_14": {
+   "X": 4963,
+   "Y": 1821,
+   "W": 160,
+   "H": 2204,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_15": {
+   "X": 35,
+   "Y": 3679,
+   "W": 42,
+   "H": 107,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_6": {
+   "X": 29,
+   "Y": 1769,
+   "W": 830,
+   "H": 1980,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_7": {
+   "X": 945,
+   "Y": 1771,
+   "W": 250,
+   "H": 250,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_8": {
+   "X": 1305,
+   "Y": 1768,
+   "W": 259,
+   "H": 258,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_bg_9": {
+   "X": 1627,
+   "Y": 1741,
+   "W": 326,
+   "H": 296,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_0": {
+   "X": 1679,
+   "Y": 82,
+   "W": 226,
+   "H": 405,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_1": {
+   "X": 2959,
+   "Y": 45,
+   "W": 325,
+   "H": 392,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_12": {
+   "X": 185,
+   "Y": 695,
+   "W": 222,
+   "H": 291,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_13": {
+   "X": 707,
+   "Y": 651,
+   "W": 278,
+   "H": 346,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_14": {
+   "X": 1946,
+   "Y": 635,
+   "W": 217,
+   "H": 420,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_15": {
+   "X": 2587,
+   "Y": 653,
+   "W": 302,
+   "H": 406,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_16": {
+   "X": 3585,
+   "Y": 249,
+   "W": 472,
+   "H": 455,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_17": {
+   "X": 1315,
+   "Y": 717,
+   "W": 191,
+   "H": 266,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_18": {
+   "X": 3171,
+   "Y": 777,
+   "W": 387,
+   "H": 377,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_19": {
+   "X": 129,
+   "Y": 1197,
+   "W": 433,
+   "H": 436,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_2": {
+   "X": 3585,
+   "Y": 15,
+   "W": 130,
+   "H": 200,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_20": {
+   "X": 987,
+   "Y": 1202,
+   "W": 146,
+   "H": 377,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_21": {
+   "X": 1621,
+   "Y": 1201,
+   "W": 286,
+   "H": 416,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_22": {
+   "X": 2153,
+   "Y": 1301,
+   "W": 617,
+   "H": 253,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_23": {
+   "X": 2857,
+   "Y": 1233,
+   "W": 1113,
+   "H": 174,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_24": {
+   "X": 313,
+   "Y": 1774,
+   "W": 282,
+   "H": 317,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_25": {
+   "X": 2742,
+   "Y": 1585,
+   "W": 609,
+   "H": 648,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_26": {
+   "X": 3473,
+   "Y": 1671,
+   "W": 525,
+   "H": 140,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_27": {
+   "X": 1029,
+   "Y": 1821,
+   "W": 756,
+   "H": 272,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_28": {
+   "X": 2189,
+   "Y": 1825,
+   "W": 306,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_29": {
+   "X": 301,
+   "Y": 2275,
+   "W": 305,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_30": {
+   "X": 1253,
+   "Y": 2297,
+   "W": 326,
+   "H": 238,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_31": {
+   "X": 2237,
+   "Y": 2307,
+   "W": 206,
+   "H": 188,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_32": {
+   "X": 337,
+   "Y": 2726,
+   "W": 262,
+   "H": 273,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_33": {
+   "X": 1282,
+   "Y": 2710,
+   "W": 231,
+   "H": 268,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_34": {
+   "X": 2298,
+   "Y": 2815,
+   "W": 89,
+   "H": 110,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_5": {
+   "X": 3737,
+   "Y": 3,
+   "W": 123,
+   "H": 216,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_6": {
+   "X": 89,
+   "Y": 130,
+   "W": 270,
+   "H": 191,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_7": {
+   "X": 513,
+   "Y": 110,
+   "W": 360,
+   "H": 260,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_8": {
+   "X": 1093,
+   "Y": 113,
+   "W": 261,
+   "H": 326,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighter R_9": {
+   "X": 2197,
+   "Y": 177,
+   "W": 314,
+   "H": 238,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_0": {
+   "X": 1679,
+   "Y": 82,
+   "W": 226,
+   "H": 405,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_1": {
+   "X": 2959,
+   "Y": 45,
+   "W": 325,
+   "H": 392,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_12": {
+   "X": 185,
+   "Y": 695,
+   "W": 222,
+   "H": 291,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_13": {
+   "X": 707,
+   "Y": 651,
+   "W": 278,
+   "H": 346,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_14": {
+   "X": 1946,
+   "Y": 635,
+   "W": 217,
+   "H": 420,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_15": {
+   "X": 2587,
+   "Y": 653,
+   "W": 302,
+   "H": 406,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_16": {
+   "X": 3585,
+   "Y": 249,
+   "W": 472,
+   "H": 455,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_17": {
+   "X": 1315,
+   "Y": 717,
+   "W": 191,
+   "H": 266,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_18": {
+   "X": 3171,
+   "Y": 777,
+   "W": 387,
+   "H": 377,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_19": {
+   "X": 129,
+   "Y": 1197,
+   "W": 433,
+   "H": 436,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_2": {
+   "X": 3585,
+   "Y": 15,
+   "W": 130,
+   "H": 200,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_20": {
+   "X": 987,
+   "Y": 1202,
+   "W": 146,
+   "H": 377,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_21": {
+   "X": 1621,
+   "Y": 1201,
+   "W": 286,
+   "H": 416,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_22": {
+   "X": 2153,
+   "Y": 1301,
+   "W": 617,
+   "H": 253,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_23": {
+   "X": 2857,
+   "Y": 1233,
+   "W": 1113,
+   "H": 174,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_24": {
+   "X": 313,
+   "Y": 1774,
+   "W": 282,
+   "H": 317,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_25": {
+   "X": 2742,
+   "Y": 1585,
+   "W": 609,
+   "H": 648,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_26": {
+   "X": 3473,
+   "Y": 1671,
+   "W": 525,
+   "H": 140,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_27": {
+   "X": 1029,
+   "Y": 1821,
+   "W": 756,
+   "H": 272,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_28": {
+   "X": 2189,
+   "Y": 1825,
+   "W": 306,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_29": {
+   "X": 301,
+   "Y": 2275,
+   "W": 305,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_30": {
+   "X": 1253,
+   "Y": 2297,
+   "W": 326,
+   "H": 238,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_31": {
+   "X": 2237,
+   "Y": 2307,
+   "W": 206,
+   "H": 188,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_32": {
+   "X": 337,
+   "Y": 2726,
+   "W": 262,
+   "H": 273,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_33": {
+   "X": 1282,
+   "Y": 2710,
+   "W": 231,
+   "H": 268,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_34": {
+   "X": 2298,
+   "Y": 2814,
+   "W": 89,
+   "H": 111,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_5": {
+   "X": 3737,
+   "Y": 3,
+   "W": 123,
+   "H": 216,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_6": {
+   "X": 89,
+   "Y": 130,
+   "W": 270,
+   "H": 191,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_7": {
+   "X": 513,
+   "Y": 110,
+   "W": 360,
+   "H": 260,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_8": {
+   "X": 1093,
+   "Y": 113,
+   "W": 261,
+   "H": 326,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_fighterL_9": {
+   "X": 2197,
+   "Y": 177,
+   "W": 314,
+   "H": 238,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_spot": {
+   "X": 0,
+   "Y": 0,
+   "W": 4096,
+   "H": 4096,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_0": {
+   "X": 34,
+   "Y": 69,
+   "W": 1663,
+   "H": 1153,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_1": {
+   "X": 1741,
+   "Y": 19,
+   "W": 78,
+   "H": 160,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_10": {
+   "X": 1751,
+   "Y": 826,
+   "W": 207,
+   "H": 157,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_11": {
+   "X": 21,
+   "Y": 1253,
+   "W": 304,
+   "H": 190,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_12": {
+   "X": 398,
+   "Y": 1258,
+   "W": 48,
+   "H": 117,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_13": {
+   "X": 567,
+   "Y": 1258,
+   "W": 76,
+   "H": 117,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_14": {
+   "X": 737,
+   "Y": 1258,
+   "W": 49,
+   "H": 117,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_15": {
+   "X": 907,
+   "Y": 1258,
+   "W": 76,
+   "H": 117,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_16": {
+   "X": 1048,
+   "Y": 1287,
+   "W": 167,
+   "H": 231,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_17": {
+   "X": 1277,
+   "Y": 1285,
+   "W": 118,
+   "H": 233,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_18": {
+   "X": 1507,
+   "Y": 1278,
+   "W": 143,
+   "H": 108,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_19": {
+   "X": 370,
+   "Y": 1494,
+   "W": 164,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_2": {
+   "X": 1878,
+   "Y": 37,
+   "W": 127,
+   "H": 258,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_20": {
+   "X": 598,
+   "Y": 1492,
+   "W": 129,
+   "H": 259,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_21": {
+   "X": 793,
+   "Y": 1498,
+   "W": 207,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_22": {
+   "X": 1471,
+   "Y": 1494,
+   "W": 168,
+   "H": 257,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_23": {
+   "X": 1675,
+   "Y": 1483,
+   "W": 336,
+   "H": 266,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_24": {
+   "X": 905,
+   "Y": 1901,
+   "W": 86,
+   "H": 80,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_25": {
+   "X": 1809,
+   "Y": 1901,
+   "W": 46,
+   "H": 44,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_3": {
+   "X": 1741,
+   "Y": 217,
+   "W": 78,
+   "H": 157,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_5": {
+   "X": 1741,
+   "Y": 414,
+   "W": 78,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_6": {
+   "X": 1853,
+   "Y": 354,
+   "W": 94,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fighter_versus_ui_9": {
+   "X": 1741,
+   "Y": 610,
+   "W": 78,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "videoframe_167816": {
+   "X": 0,
+   "Y": 0,
+   "W": 1280,
+   "H": 720,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

@@ -1,0 +1,156 @@
+{
+ "DisplayAnim": {
+  "default": "Four",
+  "states": {
+   "Call": {
+    "clip": "Animations/DisplayCall",
+    "speed": 1
+   },
+   "Eight": {
+    "clip": "Animations/DisplayEight",
+    "speed": 1
+   },
+   "Four": {
+    "clip": "Animations/DisplayFour",
+    "speed": 1
+   },
+   "Normal": {
+    "clip": "Animations/DisplayNormal",
+    "speed": 1
+   },
+   "Twelve": {
+    "clip": "Animations/DisplayTwelve",
+    "speed": 1
+   }
+  }
+ },
+ "FightTextAnim": {
+  "default": "Hidden",
+  "states": {
+   "Hidden": {
+    "speed": 1
+   },
+   "Show": {
+    "clip": "Animations/FightText",
+    "speed": 1
+   }
+  }
+ },
+ "FighterAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/FighterBop",
+    "speed": 1
+   },
+   "Duck": {
+    "clip": "Animations/FighterDuck",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Animations/FighterJump",
+    "speed": 1
+   },
+   "Kick": {
+    "clip": "Animations/FighterKick",
+    "speed": 1
+   },
+   "Kicked": {
+    "clip": "Animations/FighterKicked",
+    "speed": 1
+   },
+   "Punch": {
+    "clip": "Animations/FighterPunch",
+    "speed": 1
+   },
+   "Punched": {
+    "clip": "Animations/FighterPunched",
+    "speed": 1
+   },
+   "Retreat": {
+    "clip": "Animations/FighterRetreat",
+    "speed": 1
+   },
+   "Walk": {
+    "clip": "Animations/FighterWalk",
+    "speed": 1
+   },
+   "Whiff": {
+    "clip": "Animations/FighterWhiff",
+    "speed": 1
+   }
+  }
+ },
+ "HolderAnim": {
+  "default": "Idle",
+  "states": {
+   "Advance": {
+    "clip": "Animations/HolderAdvance",
+    "speed": 1
+   },
+   "Advanced": {
+    "clip": "Animations/HolderAdvanced",
+    "speed": 1
+   },
+   "Fall": {
+    "clip": "Animations/HolderFall",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "LightsAnim": {
+  "default": "Idle",
+  "states": {
+   "Flash": {
+    "clip": "Animations/LightsFlash",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "NoteAnim": {
+  "default": "QuarterO",
+  "states": {
+   "EightO": {
+    "clip": "Animations/NoteEightO",
+    "speed": 1
+   },
+   "EightW": {
+    "clip": "Animations/NoteEightW",
+    "speed": 1
+   },
+   "QuarterO": {
+    "clip": "Animations/NoteQuarterO",
+    "speed": 1
+   },
+   "QuarterW": {
+    "clip": "Animations/NoteQuarterW",
+    "speed": 1
+   }
+  }
+ },
+ "SpotlightAnim": {
+  "default": "Idle",
+  "states": {
+   "Hide": {
+    "clip": "Animations/SpotlightHide",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Show": {
+    "clip": "Animations/SpotlightShow",
+    "speed": 1
+   }
+  }
+ }
+}

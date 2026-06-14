@@ -86,6 +86,18 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "target", markers: []string{"target", "hole"}, atPath: "TargetHolder/Target"},
 		},
 	},
+	"rhythmFighter": {
+		dir:    "RhythmFighter",
+		prefab: "rhythmFighter.prefab",
+		roleFields: []string{
+			"fighterR", "fighterL", "holderR", "holderL", "displayHolderAnim",
+			"displayHolder", "musicNote", "lightsL", "lightsR", "fightText", "spotLight",
+		},
+		wantControllers: true,
+		templatePrefabs: []string{
+			"Prefabs/Note.prefab",
+		},
+	},
 	"ninjaBodyguard": {
 		dir:    "NinjaBodyguard",
 		prefab: "ninjaBodyguard.prefab",

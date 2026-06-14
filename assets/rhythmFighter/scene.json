@@ -1,0 +1,2241 @@
+{
+ "nodes": [
+  {
+   "name": "rhythmFighter",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Screenshot_Wii_Rhythm_Fighter",
+   "path": "Screenshot_Wii_Rhythm_Fighter",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1810682,
+    2.1810682
+   ],
+   "sprite": "Screenshot_Wii_Rhythm_Fighter",
+   "order": 300,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.32,
+    4.52
+   ]
+  },
+  {
+   "name": "lights",
+   "path": "lights",
+   "parent": 0,
+   "pos": [
+    1.4325855,
+    2.4045842
+   ],
+   "z": 0.06495781,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spotlight l",
+   "path": "lights/spotlight l",
+   "parent": 2,
+   "pos": [
+    -8.447585,
+    0.9694159
+   ],
+   "z": -0.06495781,
+   "rotZ": 0,
+   "scale": [
+    0.44697753,
+    0.4469775
+   ],
+   "sprite": "fighter_versus_bg_9",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.26,
+    2.96
+   ]
+  },
+  {
+   "name": "light",
+   "path": "lights/spotlight l/light",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 5.620516802562744,
+   "scale": [
+    1.433991,
+    1.433991
+   ],
+   "sprite": "fighter_versus_bg_8",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    0.8627451
+   ],
+   "size": [
+    3.26,
+    2.96
+   ]
+  },
+  {
+   "name": "spotlight r",
+   "path": "lights/spotlight r",
+   "parent": 2,
+   "pos": [
+    5.5824146,
+    0.9694159
+   ],
+   "z": -0.06495781,
+   "rotZ": 0,
+   "scale": [
+    0.44697753,
+    0.44697753
+   ],
+   "sprite": "fighter_versus_bg_9",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.26,
+    2.96
+   ]
+  },
+  {
+   "name": "light",
+   "path": "lights/spotlight r/light",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 5.620516802562744,
+   "scale": [
+    1.433991,
+    1.433991
+   ],
+   "sprite": "fighter_versus_bg_8",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    0.8627451
+   ],
+   "size": [
+    3.26,
+    2.96
+   ]
+  },
+  {
+   "name": "bg",
+   "path": "bg",
+   "parent": 0,
+   "pos": [
+    -2.1707926,
+    -0.27010304
+   ],
+   "z": 0.030366242,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "left ground",
+   "path": "bg/left ground",
+   "parent": 7,
+   "pos": [
+    -3.1812077,
+    0.68510306
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    0.6049696,
+    0.48286712
+   ],
+   "sprite": "fighter_versus_bg_13",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.42,
+    22.92
+   ]
+  },
+  {
+   "name": "right ground",
+   "path": "bg/right ground",
+   "parent": 7,
+   "pos": [
+    7.5267925,
+    0.68510306
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    0.6049696,
+    0.48286712
+   ],
+   "sprite": "fighter_versus_bg_13",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.42,
+    22.92
+   ]
+  },
+  {
+   "name": "gradient bg",
+   "path": "bg/gradient bg",
+   "parent": 7,
+   "pos": [
+    2.13,
+    1.16
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    26.505201,
+    0.41898212
+   ],
+   "sprite": "fighter_versus_bg_14",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.6,
+    22.04
+   ]
+  },
+  {
+   "name": "blue thingy",
+   "path": "bg/blue thingy",
+   "parent": 7,
+   "pos": [
+    -4.8302073,
+    -0.29269695
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    0.44252357,
+    0.4486124
+   ],
+   "sprite": "fighter_versus_bg_11",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.72,
+    7.74
+   ]
+  },
+  {
+   "name": "orange thingy",
+   "path": "bg/orange thingy",
+   "parent": 7,
+   "pos": [
+    9.171793,
+    -0.29269695
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    0.44252357,
+    0.4486124
+   ],
+   "sprite": "fighter_versus_bg_12",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.72,
+    7.74
+   ]
+  },
+  {
+   "name": "fence l",
+   "path": "bg/fence l",
+   "parent": 7,
+   "pos": [
+    -6.648308,
+    1.236003
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    0.4525797,
+    0.4525797
+   ],
+   "sprite": "fighter_versus_bg_6",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    0.6862745
+   ],
+   "size": [
+    8.3,
+    19.8
+   ]
+  },
+  {
+   "name": "fence r",
+   "path": "bg/fence r",
+   "parent": 7,
+   "pos": [
+    10.989893,
+    1.236003
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    0.4525797,
+    0.4525797
+   ],
+   "sprite": "fighter_versus_bg_6",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6862745
+   ],
+   "size": [
+    8.3,
+    19.8
+   ]
+  },
+  {
+   "name": "Sprite Mask",
+   "path": "bg/Sprite Mask",
+   "parent": 7,
+   "pos": [
+    2.1285925,
+    2.155903
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    13.850865,
+    8.110801
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "fence m",
+   "path": "bg/fence m",
+   "parent": 7,
+   "pos": [
+    2.3307924,
+    1.7665846
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    0.42243576,
+    0.45056868
+   ],
+   "sprite": "fighter_versus_bg_0",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    0.6862745
+   ],
+   "size": [
+    46.61,
+    16.8
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "bottom text",
+   "path": "bg/bottom text",
+   "parent": 7,
+   "pos": [
+    2.1707926,
+    -3.072897
+   ],
+   "z": -0.030366242,
+   "rotZ": 0,
+   "scale": [
+    0.4502378,
+    0.56467056
+   ],
+   "sprite": "fighter_versus_bg_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    25.38,
+    3.14
+   ]
+  },
+  {
+   "name": "holder l",
+   "path": "holder l",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fighter",
+   "path": "holder l/fighter",
+   "parent": 18,
+   "pos": [
+    4.76,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "holder l/fighter/head",
+   "parent": 19,
+   "pos": [
+    0.10899973,
+    0.218
+   ],
+   "rotZ": 0.1919861128495154,
+   "scale": [
+    0.3960001,
+    0.3960001
+   ],
+   "sprite": "fighter_versus_fighterL_14",
+   "order": 202,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.17,
+    4.2
+   ]
+  },
+  {
+   "name": "hair",
+   "path": "holder l/fighter/head/hair",
+   "parent": 20,
+   "pos": [
+    -0.038829897,
+    2.142737
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fighter_versus_fighterL_16",
+   "order": 204,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.72,
+    4.55
+   ]
+  },
+  {
+   "name": "face A",
+   "path": "holder l/fighter/head/face A",
+   "parent": 20,
+   "pos": [
+    -0.25448653,
+    -0.10488385
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fighter_versus_fighterL_5",
+   "order": 203,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.23,
+    2.16
+   ]
+  },
+  {
+   "name": "head alt",
+   "path": "holder l/fighter/head alt",
+   "parent": 19,
+   "pos": [
+    1.191,
+    -1.469
+   ],
+   "rotZ": 0.01570794882564459,
+   "scale": [
+    0.39600006,
+    0.38815922
+   ],
+   "sprite": "fighter_versus_fighterL_21",
+   "order": 202,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.86,
+    4.16
+   ]
+  },
+  {
+   "name": "hair",
+   "path": "holder l/fighter/head alt/hair",
+   "parent": 23,
+   "pos": [
+    -0.72,
+    2.31
+   ],
+   "rotZ": -0.01570794882564459,
+   "scale": [
+    1,
+    1.020195
+   ],
+   "sprite": "fighter_versus_fighterL_18",
+   "order": 204,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.87,
+    3.77
+   ]
+  },
+  {
+   "name": "boxers",
+   "path": "holder l/fighter/boxers",
+   "parent": 19,
+   "pos": [
+    0.1789994,
+    -1.6899999
+   ],
+   "rotZ": -0.3839722418736648,
+   "scale": [
+    0.39600003,
+    0.39600003
+   ],
+   "sprite": "fighter_versus_fighterL_6",
+   "order": 209,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.7,
+    1.91
+   ]
+  },
+  {
+   "name": "upper hand A",
+   "path": "holder l/fighter/upper hand A",
+   "parent": 19,
+   "pos": [
+    -0.3940005,
+    -0.357
+   ],
+   "rotZ": 0.10663952486881714,
+   "scale": [
+    0.39600018,
+    0.39600018
+   ],
+   "sprite": "fighter_versus_fighterL_8",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.61,
+    3.26
+   ]
+  },
+  {
+   "name": "lower hand A",
+   "path": "holder l/fighter/lower hand A",
+   "parent": 19,
+   "pos": [
+    -0.9370008,
+    -0.442
+   ],
+   "rotZ": -0.7330383186887819,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighterL_9",
+   "order": 201,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.14,
+    2.38
+   ]
+  },
+  {
+   "name": "fist A",
+   "path": "holder l/fighter/fist A",
+   "parent": 19,
+   "pos": [
+    -0.8410001,
+    0.16000006
+   ],
+   "rotZ": -1.0995570061199884,
+   "scale": [
+    0.39600003,
+    0.39600003
+   ],
+   "sprite": "fighter_versus_fighterL_24",
+   "order": 205,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    3.17
+   ]
+  },
+  {
+   "name": "foot A",
+   "path": "holder l/fighter/foot A",
+   "parent": 19,
+   "pos": [
+    -0.6310005,
+    -3.466
+   ],
+   "rotZ": -0.051661810362174924,
+   "scale": [
+    0.39600003,
+    0.39600003
+   ],
+   "sprite": "fighter_versus_fighterL_29",
+   "order": 206,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.06,
+    1.92
+   ]
+  },
+  {
+   "name": "upper leg A",
+   "path": "holder l/fighter/upper leg A",
+   "parent": 19,
+   "pos": [
+    -0.20700026,
+    -1.711
+   ],
+   "rotZ": -0.44680405572152665,
+   "scale": [
+    0.39599997,
+    0.39599997
+   ],
+   "sprite": "fighter_versus_fighterL_0",
+   "order": 207,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.26,
+    4.05
+   ]
+  },
+  {
+   "name": "lower leg A",
+   "path": "holder l/fighter/lower leg A",
+   "parent": 19,
+   "pos": [
+    -0.4710002,
+    -2.8
+   ],
+   "rotZ": -0.35779235272785365,
+   "scale": [
+    0.39600015,
+    0.39600015
+   ],
+   "sprite": "fighter_versus_fighterL_1",
+   "order": 208,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.25,
+    3.92
+   ]
+  },
+  {
+   "name": "torso",
+   "path": "holder l/fighter/torso",
+   "parent": 19,
+   "pos": [
+    0.08799982,
+    -0.764
+   ],
+   "rotZ": -0.1342158113667409,
+   "scale": [
+    0.3960001,
+    0.3632509
+   ],
+   "sprite": "fighter_versus_fighterL_15",
+   "order": 210,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    4.06
+   ]
+  },
+  {
+   "name": "torso alt",
+   "path": "holder l/fighter/torso alt",
+   "parent": 19,
+   "pos": [
+    0.9399996,
+    -1.85
+   ],
+   "rotZ": 0.052359828697694046,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighterL_19",
+   "order": 210,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    4.33,
+    4.36
+   ]
+  },
+  {
+   "name": "upper arm B",
+   "path": "holder l/fighter/upper arm B",
+   "parent": 19,
+   "pos": [
+    0.46199942,
+    -0.82600003
+   ],
+   "rotZ": 0.4789182515275072,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighterL_8",
+   "order": 211,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.61,
+    3.26
+   ]
+  },
+  {
+   "name": "lower arm B",
+   "path": "holder l/fighter/lower arm B",
+   "parent": 19,
+   "pos": [
+    0.24599981,
+    -0.878
+   ],
+   "rotZ": -0.7892379686601749,
+   "scale": [
+    0.39600003,
+    0.39600003
+   ],
+   "sprite": "fighter_versus_fighterL_9",
+   "order": 212,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.14,
+    2.38
+   ]
+  },
+  {
+   "name": "fist B",
+   "path": "holder l/fighter/fist B",
+   "parent": 19,
+   "pos": [
+    0.04899979,
+    -0.41000003
+   ],
+   "rotZ": -0.2967057501458114,
+   "scale": [
+    0.39600015,
+    0.39600015
+   ],
+   "sprite": "fighter_versus_fighterL_24",
+   "order": 213,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    3.17
+   ]
+  },
+  {
+   "name": "upper leg B",
+   "path": "holder l/fighter/upper leg B",
+   "parent": 19,
+   "pos": [
+    0.2849994,
+    -2.249
+   ],
+   "rotZ": 0.07853969590432038,
+   "scale": [
+    0.3960002,
+    0.39600018
+   ],
+   "sprite": "fighter_versus_fighterL_0",
+   "order": 214,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.26,
+    4.05
+   ]
+  },
+  {
+   "name": "lower leg B",
+   "path": "holder l/fighter/lower leg B",
+   "parent": 19,
+   "pos": [
+    0.53,
+    -3.084
+   ],
+   "rotZ": 0.019198531449168863,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighterL_1",
+   "order": 215,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.25,
+    3.92
+   ]
+  },
+  {
+   "name": "foot B",
+   "path": "holder l/fighter/foot B",
+   "parent": 19,
+   "pos": [
+    0.6779995,
+    -3.7290006
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighterL_29",
+   "order": 214,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.05,
+    1.92
+   ]
+  },
+  {
+   "name": "foot B alt",
+   "path": "holder l/fighter/foot B alt",
+   "parent": 19,
+   "pos": [
+    0.91399956,
+    -3.328
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighterL_33",
+   "order": 214,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    2.68
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "holder l/fighter/shadow",
+   "parent": 19,
+   "pos": [
+    0.03559971,
+    -3.7199
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.50712305,
+    0.62934065
+   ],
+   "sprite": "fighter_versus_fighterL_26",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    0.5882353
+   ],
+   "size": [
+    5.25,
+    1.4
+   ]
+  },
+  {
+   "name": "upper smear",
+   "path": "holder l/fighter/upper smear",
+   "parent": 19,
+   "pos": [
+    -3.1610003,
+    -0.171
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3960001,
+    0.3960001
+   ],
+   "sprite": "fighter_versus_fighterL_23",
+   "order": 300,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.13,
+    1.74
+   ]
+  },
+  {
+   "name": "lower smear",
+   "path": "holder l/fighter/lower smear",
+   "parent": 19,
+   "pos": [
+    -2.9610002,
+    -0.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3960001,
+    0.3960001
+   ],
+   "sprite": "fighter_versus_fighterL_23",
+   "order": 301,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.13,
+    1.74
+   ]
+  },
+  {
+   "name": "holder r",
+   "path": "holder r",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fighter",
+   "path": "holder r/fighter",
+   "parent": 44,
+   "pos": [
+    4.76,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "holder r/fighter/head",
+   "parent": 45,
+   "pos": [
+    0.10899973,
+    0.218
+   ],
+   "rotZ": 0.1919861128495154,
+   "scale": [
+    0.3960001,
+    0.3960001
+   ],
+   "sprite": "fighter_versus_fighter R_14",
+   "order": 202,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.17,
+    4.2
+   ]
+  },
+  {
+   "name": "hair",
+   "path": "holder r/fighter/head/hair",
+   "parent": 46,
+   "pos": [
+    -0.038829897,
+    2.142737
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fighter_versus_fighter R_16",
+   "order": 204,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.72,
+    4.55
+   ]
+  },
+  {
+   "name": "face A",
+   "path": "holder r/fighter/head/face A",
+   "parent": 46,
+   "pos": [
+    -0.25448653,
+    -0.10488385
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fighter_versus_fighter R_5",
+   "order": 203,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.23,
+    2.16
+   ]
+  },
+  {
+   "name": "head alt",
+   "path": "holder r/fighter/head alt",
+   "parent": 45,
+   "pos": [
+    1.191,
+    -1.469
+   ],
+   "rotZ": 0.01570794882564459,
+   "scale": [
+    0.39600006,
+    0.38815922
+   ],
+   "sprite": "fighter_versus_fighter R_21",
+   "order": 202,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.86,
+    4.16
+   ]
+  },
+  {
+   "name": "hair",
+   "path": "holder r/fighter/head alt/hair",
+   "parent": 49,
+   "pos": [
+    -0.72,
+    2.31
+   ],
+   "rotZ": -0.01570794882564459,
+   "scale": [
+    1,
+    1.020195
+   ],
+   "sprite": "fighter_versus_fighter R_18",
+   "order": 204,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.87,
+    3.77
+   ]
+  },
+  {
+   "name": "boxers",
+   "path": "holder r/fighter/boxers",
+   "parent": 45,
+   "pos": [
+    0.1789994,
+    -1.6899999
+   ],
+   "rotZ": -0.3839722418736648,
+   "scale": [
+    0.39600003,
+    0.39600003
+   ],
+   "sprite": "fighter_versus_fighter R_6",
+   "order": 209,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.7,
+    1.91
+   ]
+  },
+  {
+   "name": "upper hand A",
+   "path": "holder r/fighter/upper hand A",
+   "parent": 45,
+   "pos": [
+    -0.3940005,
+    -0.357
+   ],
+   "rotZ": 0.10663952486881714,
+   "scale": [
+    0.39600018,
+    0.39600018
+   ],
+   "sprite": "fighter_versus_fighter R_8",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.61,
+    3.26
+   ]
+  },
+  {
+   "name": "lower hand A",
+   "path": "holder r/fighter/lower hand A",
+   "parent": 45,
+   "pos": [
+    -0.9370008,
+    -0.442
+   ],
+   "rotZ": -0.7330383186887819,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighter R_9",
+   "order": 201,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.14,
+    2.38
+   ]
+  },
+  {
+   "name": "fist A",
+   "path": "holder r/fighter/fist A",
+   "parent": 45,
+   "pos": [
+    -0.8410001,
+    0.16000006
+   ],
+   "rotZ": -1.0995570061199884,
+   "scale": [
+    0.39600003,
+    0.39600003
+   ],
+   "sprite": "fighter_versus_fighter R_24",
+   "order": 205,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    3.17
+   ]
+  },
+  {
+   "name": "foot A",
+   "path": "holder r/fighter/foot A",
+   "parent": 45,
+   "pos": [
+    -0.6310005,
+    -3.466
+   ],
+   "rotZ": -0.051661810362174924,
+   "scale": [
+    0.39600003,
+    0.39600003
+   ],
+   "sprite": "fighter_versus_fighter R_29",
+   "order": 206,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.06,
+    1.92
+   ]
+  },
+  {
+   "name": "upper leg A",
+   "path": "holder r/fighter/upper leg A",
+   "parent": 45,
+   "pos": [
+    -0.20700026,
+    -1.711
+   ],
+   "rotZ": -0.44680405572152665,
+   "scale": [
+    0.39599997,
+    0.39599997
+   ],
+   "sprite": "fighter_versus_fighter R_0",
+   "order": 207,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.26,
+    4.05
+   ]
+  },
+  {
+   "name": "lower leg A",
+   "path": "holder r/fighter/lower leg A",
+   "parent": 45,
+   "pos": [
+    -0.4710002,
+    -2.8
+   ],
+   "rotZ": -0.35779235272785365,
+   "scale": [
+    0.39600015,
+    0.39600015
+   ],
+   "sprite": "fighter_versus_fighter R_1",
+   "order": 208,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.25,
+    3.92
+   ]
+  },
+  {
+   "name": "torso",
+   "path": "holder r/fighter/torso",
+   "parent": 45,
+   "pos": [
+    0.08799982,
+    -0.764
+   ],
+   "rotZ": -0.1342158113667409,
+   "scale": [
+    0.3960001,
+    0.3632509
+   ],
+   "sprite": "fighter_versus_fighter R_15",
+   "order": 210,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    4.06
+   ]
+  },
+  {
+   "name": "torso alt",
+   "path": "holder r/fighter/torso alt",
+   "parent": 45,
+   "pos": [
+    0.9399996,
+    -1.85
+   ],
+   "rotZ": 0.052359828697694046,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighter R_19",
+   "order": 210,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    4.33,
+    4.36
+   ]
+  },
+  {
+   "name": "upper arm B",
+   "path": "holder r/fighter/upper arm B",
+   "parent": 45,
+   "pos": [
+    0.46199942,
+    -0.82600003
+   ],
+   "rotZ": 0.4789182515275072,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighter R_8",
+   "order": 211,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.61,
+    3.26
+   ]
+  },
+  {
+   "name": "lower arm B",
+   "path": "holder r/fighter/lower arm B",
+   "parent": 45,
+   "pos": [
+    0.24599981,
+    -0.878
+   ],
+   "rotZ": -0.7892379686601749,
+   "scale": [
+    0.39600003,
+    0.39600003
+   ],
+   "sprite": "fighter_versus_fighter R_9",
+   "order": 212,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.14,
+    2.38
+   ]
+  },
+  {
+   "name": "fist B",
+   "path": "holder r/fighter/fist B",
+   "parent": 45,
+   "pos": [
+    0.04899979,
+    -0.41000003
+   ],
+   "rotZ": -0.2967057501458114,
+   "scale": [
+    0.39600015,
+    0.39600015
+   ],
+   "sprite": "fighter_versus_fighter R_24",
+   "order": 213,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    3.17
+   ]
+  },
+  {
+   "name": "upper leg B",
+   "path": "holder r/fighter/upper leg B",
+   "parent": 45,
+   "pos": [
+    0.2849994,
+    -2.249
+   ],
+   "rotZ": 0.07853969590432038,
+   "scale": [
+    0.3960002,
+    0.39600018
+   ],
+   "sprite": "fighter_versus_fighter R_0",
+   "order": 214,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.26,
+    4.05
+   ]
+  },
+  {
+   "name": "lower leg B",
+   "path": "holder r/fighter/lower leg B",
+   "parent": 45,
+   "pos": [
+    0.53,
+    -3.084
+   ],
+   "rotZ": 0.019198531449168863,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighter R_1",
+   "order": 215,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.25,
+    3.92
+   ]
+  },
+  {
+   "name": "foot B",
+   "path": "holder r/fighter/foot B",
+   "parent": 45,
+   "pos": [
+    0.6779995,
+    -3.7290006
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighter R_29",
+   "order": 214,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.05,
+    1.92
+   ]
+  },
+  {
+   "name": "foot B alt",
+   "path": "holder r/fighter/foot B alt",
+   "parent": 45,
+   "pos": [
+    0.91399956,
+    -3.328
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_fighter R_33",
+   "order": 214,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    2.68
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "holder r/fighter/shadow",
+   "parent": 45,
+   "pos": [
+    0.03559971,
+    -3.7199
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.50712305,
+    0.62934065
+   ],
+   "sprite": "fighter_versus_fighterL_26",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    0.5882353
+   ],
+   "size": [
+    5.25,
+    1.4
+   ]
+  },
+  {
+   "name": "upper smear",
+   "path": "holder r/fighter/upper smear",
+   "parent": 45,
+   "pos": [
+    -3.1610003,
+    -0.171
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3960001,
+    0.3960001
+   ],
+   "sprite": "fighter_versus_fighter R_23",
+   "order": 300,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.13,
+    1.74
+   ]
+  },
+  {
+   "name": "lower smear",
+   "path": "holder r/fighter/lower smear",
+   "parent": 45,
+   "pos": [
+    -2.9610002,
+    -0.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3960001,
+    0.3960001
+   ],
+   "sprite": "fighter_versus_fighter R_23",
+   "order": 301,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.13,
+    1.74
+   ]
+  },
+  {
+   "name": "videoframe_167816",
+   "path": "videoframe_167816",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4672511,
+    1.4282596
+   ],
+   "sprite": "videoframe_167816",
+   "order": 499,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.8,
+    7.2
+   ]
+  },
+  {
+   "name": "note display",
+   "path": "note display",
+   "parent": 0,
+   "pos": [
+    0,
+    2.781
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "center",
+   "path": "note display/center",
+   "parent": 71,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.9560922,
+    0.4261752
+   ],
+   "sprite": "fighter_versus_ui_16",
+   "order": 500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.67,
+    2.31
+   ]
+  },
+  {
+   "name": "right",
+   "path": "note display/right",
+   "parent": 71,
+   "pos": [
+    1.8,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4261752,
+    0.4261752
+   ],
+   "sprite": "fighter_versus_ui_17",
+   "order": 501,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    2.33
+   ]
+  },
+  {
+   "name": "left",
+   "path": "note display/left",
+   "parent": 71,
+   "pos": [
+    -1.8,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4261752,
+    0.4261752
+   ],
+   "sprite": "fighter_versus_ui_17",
+   "order": 501,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    2.33
+   ]
+  },
+  {
+   "name": "point",
+   "path": "note display/point",
+   "parent": 71,
+   "pos": [
+    -1.0119998,
+    -0.8069999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4261752,
+    0.4261752
+   ],
+   "sprite": "fighter_versus_ui_21",
+   "order": 510,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.07,
+    1.56
+   ]
+  },
+  {
+   "name": "Note",
+   "path": "Note",
+   "parent": 0,
+   "pos": [
+    -2.91,
+    2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.45,
+    0.45
+   ],
+   "sprite": "fighter_versus_ui_12",
+   "order": 600,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    1.17
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Square",
+   "parent": 0,
+   "pos": [
+    0,
+    -11.6386
+   ],
+   "rotZ": 0,
+   "scale": [
+    -22.998188,
+    -13.761594
+   ],
+   "order": 0,
+   "color": [
+    0.47450984,
+    0.8588236,
+    0.882353,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Square (1)",
+   "path": "Square (1)",
+   "parent": 0,
+   "pos": [
+    0,
+    -11.0284
+   ],
+   "rotZ": 0,
+   "scale": [
+    -40.987457,
+    -14.982248
+   ],
+   "order": -1,
+   "color": [
+    0.12941177,
+    0.09411766,
+    0.08235294,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Square (2)",
+   "path": "Square (2)",
+   "parent": 0,
+   "pos": [
+    0.14,
+    12.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    -40.987457,
+    -14.982248
+   ],
+   "order": -1,
+   "color": [
+    0.6,
+    0.5764706,
+    0.5686275,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Fight",
+   "path": "Fight",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble",
+   "path": "Fight/Bubble",
+   "parent": 80,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.396,
+    0.396
+   ],
+   "sprite": "fighter_versus_ui_0",
+   "order": 470,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.63,
+    11.53
+   ]
+  },
+  {
+   "name": "spot",
+   "path": "spot",
+   "parent": 0,
+   "pos": [
+    -3.53,
+    -0.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "spot/shadow",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6475975,
+    0.6475975
+   ],
+   "sprite": "fighter_versus_spot",
+   "order": 480,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    40.96
+   ]
+  },
+  {
+   "name": "Note",
+   "path": "Note",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.45,
+    0.45
+   ],
+   "sprite": "fighter_versus_ui_12",
+   "order": 600,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    1.17
+   ]
+  }
+ ]
+}
