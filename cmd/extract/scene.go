@@ -37,10 +37,11 @@ type sceneSpec struct {
 // componentSpec 按字段特征（可选限定 GameObject path）识别一个 MonoBehaviour，
 // 全字段通用 dump 到 Extra.Components[name]。
 type componentSpec struct {
-	name    string
-	markers []string // 必须同时存在的字段
-	atPath  string   // 非空时限定组件所在 GameObject 的 path（同字段集脚本如 TCTotem/TCDragon）
-	multi   bool     // 匹配多个组件：导出为 name0、name1…（按 path 排序）
+	name        string
+	markers     []string // 必须同时存在的字段
+	atPath      string   // 非空时限定组件所在 GameObject 的 path（同字段集脚本如 TCTotem/TCDragon）
+	multi       bool     // 匹配多个组件：导出为 name0、name1…（按 path 排序）
+	curveFields []string // 组件字段里的 BezierCurve3D 引用，导出到 Extra.Curves
 }
 
 var sceneSpecs = map[string]sceneSpec{
@@ -132,6 +133,19 @@ var sceneSpecs = map[string]sceneSpec{
 		components: []componentSpec{
 			{name: "game", markers: []string{"background", "backgroundGradient", "streaks", "player", "leftDrummer", "rightDrummer"}},
 			{name: "drummer", markers: []string{"animator", "miiFaces", "face"}, multi: true},
+		},
+	},
+	"dogNinja": {
+		dir:             "DogNinja",
+		prefab:          "dogNinja.prefab",
+		roleFields:      []string{"DogAnim", "BirdAnim", "ObjectBase", "CutEverythingText"},
+		wantControllers: true,
+		wantTexts:       true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"DogAnim", "BirdAnim", "ObjectBase", "ObjectTypes"}},
+			{name: "throwObject", markers: []string{"LeftCurve", "RightCurve", "BarelyLeftCurve", "BarelyRightCurve", "HalvesLeftBase", "HalvesRightBase", "objectLeftHalves", "objectRightHalves"}, curveFields: []string{"LeftCurve", "RightCurve", "BarelyLeftCurve", "BarelyRightCurve"}},
+			{name: "halves", markers: []string{"fallLeftCurve", "fallRightCurve", "rotSpeed", "sr"}, multi: true, curveFields: []string{"fallLeftCurve", "fallRightCurve"}},
 		},
 	},
 	"frogPrincess": {
@@ -726,6 +740,72 @@ func goPathOf(dt *docTable, paths map[int64]string, fid int64) (string, bool) {
 	return p, ok
 }
 
+func extractCurveRef(dt *docTable, idx *prefabIndex, field string, rv any) (kmdata.Curve, bool) {
+	fid := uy.I(uy.Get(uy.M(rv), "fileID"))
+	curveDoc := dt.byID[fid]
+	if curveDoc == nil {
+		log.Printf("warn: curve %s -> &%d missing", field, fid)
+		return kmdata.Curve{}, false
+	}
+	if curveDoc.classID == 1 {
+		// Some Heaven Studio prefabs serialize a BezierCurve3D field as the
+		// owning GameObject. Resolve that to the MonoBehaviour carrying
+		// keyPoints so runtime ports still use Unity-authored path data.
+		for _, d := range dt.byID {
+			if d.classID != 114 {
+				continue
+			}
+			if uy.I(uy.Get(d.content, "m_GameObject", "fileID")) != fid {
+				continue
+			}
+			if uy.L(d.content["keyPoints"]) != nil || uy.L(d.content["KeyPoints"]) != nil {
+				curveDoc = d
+				break
+			}
+		}
+	}
+	kps := uy.L(curveDoc.content["keyPoints"])
+	if kps == nil {
+		kps = uy.L(curveDoc.content["KeyPoints"])
+	}
+	if len(kps) == 0 {
+		log.Printf("warn: curve %s -> &%d has no keyPoints", field, fid)
+		return kmdata.Curve{}, false
+	}
+	curve := kmdata.Curve{Sampling: int(uy.I(curveDoc.content["sampling"]))}
+	for _, kv := range kps {
+		pid := uy.I(uy.Get(uy.M(kv), "fileID"))
+		pd := dt.byID[pid]
+		if pd == nil {
+			continue
+		}
+		gid := uy.I(uy.Get(pd.content, "m_GameObject", "fileID"))
+		var tfID int64
+		for id, owner := range idx.tfOwner {
+			if owner == gid {
+				tfID = id
+				break
+			}
+		}
+		lhl := [3]float64{
+			uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "x")),
+			uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "y")),
+			uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "z")),
+		}
+		rhl := [3]float64{
+			uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "x")),
+			uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "y")),
+			uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "z")),
+		}
+		curve.Points = append(curve.Points, kmdata.CurvePoint{
+			P:  idx.transformPoint3D(tfID, [3]float64{}),
+			LH: idx.transformPoint3D(tfID, lhl),
+			RH: idx.transformPoint3D(tfID, rhl),
+		})
+	}
+	return curve, true
+}
+
 func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64]string, nodeIdx map[int64]int, tables map[string]*spriteTable) {
 	if len(spec.refArrayFields)+len(spec.strArrayFields)+len(spec.curveFields)+len(spec.objMarkers)+len(spec.components) == 0 && !spec.wantSequences {
 		return
@@ -804,65 +884,9 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 	}
 
 	for _, f := range spec.curveFields {
-		fid := uy.I(uy.Get(uy.M(script[f]), "fileID"))
-		curveDoc := dt.byID[fid]
-		if curveDoc == nil {
-			log.Printf("warn: curve %s -> &%d missing", f, fid)
-			continue
+		if curve, ok := extractCurveRef(dt, idx, f, script[f]); ok {
+			extra.Curves[f] = curve
 		}
-		if curveDoc.classID == 1 {
-			// Some Heaven Studio prefabs serialize a BezierCurve3D field as the
-			// owning GameObject. Resolve that to the MonoBehaviour carrying
-			// keyPoints so runtime ports still use Unity-authored path data.
-			for _, d := range dt.byID {
-				if d.classID != 114 {
-					continue
-				}
-				if uy.I(uy.Get(d.content, "m_GameObject", "fileID")) != fid {
-					continue
-				}
-				if uy.L(d.content["keyPoints"]) != nil || uy.L(d.content["KeyPoints"]) != nil {
-					curveDoc = d
-					break
-				}
-			}
-		}
-		kps := uy.L(curveDoc.content["keyPoints"])
-		if kps == nil {
-			kps = uy.L(curveDoc.content["KeyPoints"])
-		}
-		curve := kmdata.Curve{Sampling: int(uy.I(curveDoc.content["sampling"]))}
-		for _, kv := range kps {
-			pid := uy.I(uy.Get(uy.M(kv), "fileID"))
-			pd := dt.byID[pid]
-			if pd == nil {
-				continue
-			}
-			gid := uy.I(uy.Get(pd.content, "m_GameObject", "fileID"))
-			var tfID int64
-			for id, owner := range idx.tfOwner {
-				if owner == gid {
-					tfID = id
-					break
-				}
-			}
-			lhl := [3]float64{
-				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "x")),
-				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "y")),
-				uy.F(uy.Get(pd.content, "leftHandleLocalPosition", "z")),
-			}
-			rhl := [3]float64{
-				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "x")),
-				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "y")),
-				uy.F(uy.Get(pd.content, "rightHandleLocalPosition", "z")),
-			}
-			curve.Points = append(curve.Points, kmdata.CurvePoint{
-				P:  idx.transformPoint3D(tfID, [3]float64{}),
-				LH: idx.transformPoint3D(tfID, lhl),
-				RH: idx.transformPoint3D(tfID, rhl),
-			})
-		}
-		extra.Curves[f] = curve
 	}
 
 	// 对象模板组件（按字段特征识别）
@@ -980,13 +1004,24 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 				log.Fatalf("组件 %s（markers %v）未在 prefab 中找到", cs.name, cs.markers)
 			case cs.multi:
 				for i, h := range hits {
-					extra.Components[fmt.Sprintf("%s%d", cs.name, i)] = dumpComponent(dt, paths, tables, idx.mappedMats, h.p, h.content)
+					key := fmt.Sprintf("%s%d", cs.name, i)
+					extra.Components[key] = dumpComponent(dt, paths, tables, idx.mappedMats, h.p, h.content)
+					for _, f := range cs.curveFields {
+						if curve, ok := extractCurveRef(dt, idx, key+"."+f, h.content[f]); ok {
+							extra.Curves[key+"."+f] = curve
+						}
+					}
 				}
 			default:
 				if len(hits) > 1 {
 					log.Printf("warn: 组件 %s 匹配 %d 个，保留 path 最小者 %q（用 atPath/multi 限定）", cs.name, len(hits), hits[0].p)
 				}
 				extra.Components[cs.name] = dumpComponent(dt, paths, tables, idx.mappedMats, hits[0].p, hits[0].content)
+				for _, f := range cs.curveFields {
+					if curve, ok := extractCurveRef(dt, idx, cs.name+"."+f, hits[0].content[f]); ok {
+						extra.Curves[cs.name+"."+f] = curve
+					}
+				}
 			}
 		}
 	}
