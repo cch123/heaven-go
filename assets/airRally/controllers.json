@@ -1,0 +1,151 @@
+{
+ "Baxter": {
+  "default": "Idle",
+  "states": {
+   "CloseReady": {
+    "clip": "Ready/CloseReady",
+    "speed": 1
+   },
+   "FarReady": {
+    "clip": "Ready/FarReady",
+    "speed": 1
+   },
+   "FarthestReady": {
+    "clip": "Ready/FarthestReady",
+    "speed": 1
+   },
+   "Forward": {
+    "clip": "Baxter/Forward",
+    "speed": 1
+   },
+   "Hit": {
+    "clip": "Ready/Hit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Ready/Idle",
+    "speed": 1
+   },
+   "PlanePropeller": {
+    "speed": 1
+   }
+  }
+ },
+ "Bluebird": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Bluebird/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Captain": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Captain/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Forthington": {
+  "default": "Idle",
+  "states": {
+   "Catch": {
+    "clip": "Forthington/Catch",
+    "speed": 1
+   },
+   "Forward": {
+    "clip": "Forthington/Forward",
+    "speed": 1
+   },
+   "Hit": {
+    "clip": "Hit/Hit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Forthington/Idle",
+    "speed": 1
+   },
+   "Ready": {
+    "clip": "Ready/Ready",
+    "speed": 1
+   },
+   "TalkShort": {
+    "clip": "TalkShort/TalkShort",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Goose": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Goose/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Pterosaur": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Pterosaur/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Tree": {
+  "default": "Tree4",
+  "states": {
+   "Threefish": {
+    "clip": "Trees/Threefish",
+    "speed": 1
+   },
+   "Tree0": {
+    "clip": "Trees/Tree0",
+    "speed": 1
+   },
+   "Tree1": {
+    "clip": "Trees/Tree1",
+    "speed": 1
+   },
+   "Tree2": {
+    "clip": "Trees/Tree2",
+    "speed": 1
+   },
+   "Tree3": {
+    "clip": "Trees/Tree3",
+    "speed": 1
+   },
+   "Tree4": {
+    "clip": "Trees/Tree4",
+    "speed": 1
+   }
+  }
+ },
+ "boat": {
+  "default": "BoatIdle",
+  "states": {
+   "BoatIdle": {
+    "clip": "Sprites/BoatIdle",
+    "speed": 1
+   }
+  }
+ }
+}

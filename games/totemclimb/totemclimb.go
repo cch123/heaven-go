@@ -1119,9 +1119,7 @@ func (m *Module) doEndTotem(beat float64) {
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(bgColor)
 	sc := m.ctx.Scene
-	cam := m.ctx.CameraAt(beat)
-	sc.SetCamera(cam[0], cam[1], cam[2])
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 
 	stage := m.stageAff()
 

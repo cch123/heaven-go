@@ -71,9 +71,9 @@ type stepEvt struct {
 }
 
 type colourEvt struct {
-	beat                 float64
-	on, off              [4]float64
-	out, dark, light     [4]float64
+	beat             float64
+	on, off          [4]float64
+	out, dark, light [4]float64
 }
 
 type Module struct {
@@ -486,10 +486,8 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 
 	ctx := m.ctx
 	sc := ctx.Scene
-	cam := ctx.CameraAt(beat)
+	cam := ctx.SampleSceneZ(beat, m.zoomZ)
 	camZ := cam[2] + m.zoomZ
-	sc.SetCamera(cam[0], cam[1], camZ)
-	sc.Sample(beat)
 
 	// 人群棋盘格平铺（主 stepper 当前帧；行越靠下绘制越靠前，全部在玩家之下）
 	sprite, fx, fy := sc.NodeSprite(m.master())

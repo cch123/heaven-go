@@ -25,9 +25,9 @@ import (
 var bgFill = [4]float64{1, 0.69, 0.03, 1}
 
 type marchEvt struct {
-	beat       float64
-	noVoice    bool
-	march      bool
+	beat    float64
+	noVoice bool
+	march   bool
 }
 
 type bopEvt struct {
@@ -427,7 +427,7 @@ func (m *Module) Update(t, beat float64) {
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(toRGBA(bgFill))
 	sc := m.ctx.Scene
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 	sc.Draw(screen, m.proj)
 }
 

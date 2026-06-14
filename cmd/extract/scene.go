@@ -162,6 +162,15 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		commonSounds:    []string{"miss.wav"},
 	},
+	"airRally": {
+		dir:    "AirRally",
+		prefab: "airRally.prefab",
+		roleFields: []string{
+			"Baxter", "Forthington", "Shuttlecock", "objHolder",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav", "nearMiss.ogg"},
+	},
 	"spaceDance": {
 		dir:    "SpaceDance",
 		prefab: "spaceDance.prefab",
@@ -444,7 +453,7 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]st
 			Path:   path,
 			Parent: parent,
 			Pos:    pos,
-			PosZ: uy.F(uy.Get(tf, "m_LocalPosition", "z")),
+			PosZ:   uy.F(uy.Get(tf, "m_LocalPosition", "z")),
 			RotZ: quatToZ(
 				uy.F(uy.Get(tf, "m_LocalRotation", "z")),
 				uy.F(uy.Get(tf, "m_LocalRotation", "w")),
@@ -858,7 +867,7 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 
 // dumpComponent 通用 dump 一个 MonoBehaviour 的全部序列化字段：
 // 数值/字符串直存；{fileID} 引用 → 节点 path；{fileID, guid} → 图集切片名
-//（解析失败回退节点 path）；x/y/z 向量按分量展开；结构体数组逐项解析。
+// （解析失败回退节点 path）；x/y/z 向量按分量展开；结构体数组逐项解析。
 func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spriteTable,
 	mats map[string]string, p string, content map[string]any) kmdata.Component {
 	c := kmdata.Component{
@@ -949,7 +958,7 @@ func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spri
 }
 
 // dumpItem 解析结构体数组的一项；nest=true 时再下钻一层嵌套结构数组
-//（SuperCurveObject.Path 的 positions 等）。
+// （SuperCurveObject.Path 的 positions 等）。
 func dumpItem(field string, im map[string]any,
 	resolveRef func(string, map[string]any) (string, bool), nest bool) kmdata.ComponentItem {
 	item := kmdata.ComponentItem{

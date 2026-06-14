@@ -553,7 +553,7 @@ func (m *Module) Update(t, beat float64) {
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(toRGBA(bgColor))
 	sc := m.ctx.Scene
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 
 	// treats（foodHolder 本地空间 + 自转）
 	holder, _ := sc.NodeWorld(m.ctx.Role("foodHolder"))

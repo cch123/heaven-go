@@ -361,7 +361,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 
 	screen.Fill(toRGBA(c))
 	sc := m.ctx.Scene
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 	sc.Draw(screen, m.proj)
 
 	// 花粒子（flowerParticles 等价手写）

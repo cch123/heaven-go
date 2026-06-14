@@ -709,8 +709,8 @@ func randF() float64 {
 
 // bgColors 按 changeBgColor 时间轴求当前背景双色。
 func (m *Module) bgColors(beat float64) ([4]float64, [4]float64) {
-	c1 := [4]float64{1, 0, 0.894, 1}      // #FF00E4
-	c2 := [4]float64{1, 0.706, 0.969, 1}  // #FFB4F7
+	c1 := [4]float64{1, 0, 0.894, 1}     // #FF00E4
+	c2 := [4]float64{1, 0.706, 0.969, 1} // #FFB4F7
 	for _, e := range m.bgEvts {
 		if beat < e.beat {
 			break
@@ -879,7 +879,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 		sc.SetColorOver(p, outline)
 	}
 
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 
 	// guy 实例（世界坐标直绘；camY 经场景 Game 覆盖已含在锚点里）
 	m.see.inst.Queue(sc, beat, kart.Identity(), 0)

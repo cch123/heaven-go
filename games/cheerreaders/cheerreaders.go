@@ -1007,10 +1007,8 @@ func min(a, b int) int {
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(bgColor)
 	sc := m.ctx.Scene
-	cam := m.ctx.CameraAt(beat)
 	// GameCamera.AdditionalPosition.z（冲击变焦）
-	sc.SetCamera(cam[0], cam[1], cam[2]+m.zoomAdd)
-	sc.Sample(beat)
+	m.ctx.SampleSceneZ(beat, m.zoomAdd)
 	sc.Draw(screen, m.proj)
 	m.drawConfetti(screen, t)
 }

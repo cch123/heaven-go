@@ -291,7 +291,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	// 空放箭（3 拍）
 	sc.SetActive(ctx.Role("arrowMissPrefab"), beat-m.arrowT <= 3)
 
-	sc.Sample(beat)
+	ctx.SampleScene(beat)
 
 	// 沿墙冒头的幽灵（MovingGhost 模板手绘：Move 0..40%，MoveDown 40%..100%）
 	moveClip := ctx.Assets.Anims["Animations/Move"]

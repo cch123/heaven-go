@@ -616,7 +616,7 @@ func (m *Module) Update(t, beat float64) {
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(bgColor)
 	sc := m.ctx.Scene
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 
 	m.queueMeats(t, beat)
 	m.queueSplash()

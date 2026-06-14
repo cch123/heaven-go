@@ -51,9 +51,9 @@ type colorEase struct {
 }
 
 type clapEvt struct {
-	beat                 float64
-	typ                  int
-	mice, inverse, keep  bool
+	beat                float64
+	typ                 int
+	mice, inverse, keep bool
 }
 
 type Module struct {
@@ -84,9 +84,9 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	return nil
 }
 
-func (m *Module) cats() []string    { return m.ctx.Assets.Extra.RefArrays["Cats"] }
-func (m *Module) catIdx(n int) int  { return m.ctx.Assets.Extra.RefArrayIdx["Cats"][n] }
-func (m *Module) player() string    { return m.ctx.Role("player") }
+func (m *Module) cats() []string   { return m.ctx.Assets.Extra.RefArrays["Cats"] }
+func (m *Module) catIdx(n int) int { return m.ctx.Assets.Extra.RefArrayIdx["Cats"][n] }
+func (m *Module) player() string   { return m.ctx.Role("player") }
 
 // ---------- 事件 ----------
 
@@ -390,7 +390,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	}
 	screen.Fill(toRGBA(c))
 	sc := m.ctx.Scene
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 	sc.Draw(screen, m.proj)
 }
 

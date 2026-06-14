@@ -39,11 +39,11 @@ type bopEvt struct {
 }
 
 type scrollObj struct {
-	path           string
-	xs, ys         float64
-	negX, posX     float64
-	auto           bool
-	offX           float64
+	path       string
+	xs, ys     float64
+	negX, posX float64
+	auto       bool
+	offX       float64
 }
 
 type Module struct {
@@ -59,31 +59,31 @@ type Module struct {
 	isStaring bool
 	noBlush   bool
 
-	gulps        int
-	growLevel    int
-	inputsTil    int
-	disableBaby  bool
+	gulps       int
+	growLevel   int
+	inputsTil   int
+	disableBaby bool
 
 	// MonkMove / ScrollBG
-	moveBeat, moveLen float64
-	moveAnim          string
-	moveEase          int
-	moving            bool
-	scrollBeat        float64
-	scrollLen         float64
+	moveBeat, moveLen    float64
+	moveAnim             string
+	moveEase             int
+	moving               bool
+	scrollBeat           float64
+	scrollLen            float64
 	scrollFrom, scrollTo float64
-	scrollEase        int
-	scrollRamp        bool
-	scrollCur         float64
+	scrollEase           int
+	scrollRamp           bool
+	scrollCur            float64
 
 	scrolls []scrollObj
 
 	// CloudMonkey
-	monkeyOn   bool
-	monkeySpd  float64
-	monkeyX    float64
-	lastT      float64
-	hasLastT   bool
+	monkeyOn  bool
+	monkeySpd float64
+	monkeyX   float64
+	lastT     float64
+	hasLastT  bool
 }
 
 func New() engine.Module { return &Module{inputsTil: 10} }
@@ -550,7 +550,7 @@ func (m *Module) Update(t, beat float64) {
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(bgColor)
 	sc := m.ctx.Scene
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 	holder, _ := sc.NodeWorld("DumplingStuff/DumplingHolder")
 	for _, d := range m.dumplings {
 		if d.dead && !d.fallable {

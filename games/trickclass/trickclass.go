@@ -436,7 +436,7 @@ func (m *Module) Update(t, beat float64) {
 
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(bgColor)
-	m.ctx.Scene.Sample(beat)
+	m.ctx.SampleScene(beat)
 	m.ctx.Scene.Draw(screen, m.proj)
 
 	for _, o := range m.objs {

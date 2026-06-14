@@ -1,0 +1,1480 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "AirRally_1_27": {
+   "X": 743,
+   "Y": 3335,
+   "W": 722,
+   "H": 754,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "AirRally_1_28": {
+   "X": 3239,
+   "Y": 7,
+   "W": 338,
+   "H": 338,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Arm_0": {
+   "X": 774,
+   "Y": 6,
+   "W": 276,
+   "H": 308,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Arm_1": {
+   "X": 774,
+   "Y": 646,
+   "W": 276,
+   "H": 308,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Badminton": {
+   "X": 422,
+   "Y": 519,
+   "W": 340,
+   "H": 595,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Body_0": {
+   "X": 422,
+   "Y": 1126,
+   "W": 340,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Body_1": {
+   "X": 422,
+   "Y": 1478,
+   "W": 340,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Hand": {
+   "X": 774,
+   "Y": 966,
+   "W": 276,
+   "H": 276,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Head_0": {
+   "X": 7,
+   "Y": 6,
+   "W": 403,
+   "H": 372,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Head_1": {
+   "X": 6,
+   "Y": 1158,
+   "W": 404,
+   "H": 372,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Left_Ear": {
+   "X": 6,
+   "Y": 390,
+   "W": 276,
+   "H": 372,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Plane": {
+   "X": 6,
+   "Y": 1830,
+   "W": 1268,
+   "H": 820,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Right_Ear": {
+   "X": 6,
+   "Y": 774,
+   "W": 276,
+   "H": 372,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Swing_Left_Ear": {
+   "X": 1062,
+   "Y": 1062,
+   "W": 404,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Baxter_Swing_Right_Ear": {
+   "X": 1062,
+   "Y": 358,
+   "W": 404,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Cloud_0": {
+   "X": 388,
+   "Y": 2516,
+   "W": 665,
+   "H": 570,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Cloud_1": {
+   "X": 1249,
+   "Y": 2498,
+   "W": 748,
+   "H": 657,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Cloud_2": {
+   "X": 2205,
+   "Y": 2409,
+   "W": 976,
+   "H": 824,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Fort_Hand": {
+   "X": 2950,
+   "Y": 966,
+   "W": 276,
+   "H": 276,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Fort_Left_Arm": {
+   "X": 2950,
+   "Y": 678,
+   "W": 276,
+   "H": 276,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Fort_Lower_Body": {
+   "X": 1894,
+   "Y": 1478,
+   "W": 340,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Fort_Plane": {
+   "X": 1286,
+   "Y": 1830,
+   "W": 1268,
+   "H": 820,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Fort_Right_Arm": {
+   "X": 2950,
+   "Y": 6,
+   "W": 276,
+   "H": 308,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Fort_Tail": {
+   "X": 2534,
+   "Y": 6,
+   "W": 404,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Fort_Upper_Body": {
+   "X": 1894,
+   "Y": 1126,
+   "W": 340,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Forth_Head_0": {
+   "X": 1478,
+   "Y": 6,
+   "W": 404,
+   "H": 404,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Forth_Head_1": {
+   "X": 1478,
+   "Y": 422,
+   "W": 404,
+   "H": 404,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Forthington_Badminton": {
+   "X": 1894,
+   "Y": 518,
+   "W": 340,
+   "H": 596,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Gradient": {
+   "X": 48,
+   "Y": 48,
+   "W": 192,
+   "H": 3360,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Plane_Propeller": {
+   "X": 6,
+   "Y": 2662,
+   "W": 628,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Plane_Seat": {
+   "X": 1286,
+   "Y": 2662,
+   "W": 372,
+   "H": 276,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Shuttlecock": {
+   "X": 2246,
+   "Y": 678,
+   "W": 276,
+   "H": 308,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Swing": {
+   "X": 3110,
+   "Y": 1254,
+   "W": 980,
+   "H": 1044,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "baxterbackarm": {
+   "X": 126,
+   "Y": 1604,
+   "W": 159,
+   "H": 168,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "baxterbackbody": {
+   "X": 815,
+   "Y": 386,
+   "W": 194,
+   "H": 173,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bbwing0": {
+   "X": 341,
+   "Y": 3748,
+   "W": 348,
+   "H": 558,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bbwing1": {
+   "X": 1222,
+   "Y": 3884,
+   "W": 330,
+   "H": 343,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bbwing2": {
+   "X": 2047,
+   "Y": 3808,
+   "W": 312,
+   "H": 435,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bbwing3": {
+   "X": 2865,
+   "Y": 3865,
+   "W": 268,
+   "H": 333,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bbwing4": {
+   "X": 3608,
+   "Y": 3781,
+   "W": 337,
+   "H": 469,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bgclouds0": {
+   "X": 425,
+   "Y": 3369,
+   "W": 3570,
+   "H": 148,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bgclouds1": {
+   "X": 3382,
+   "Y": 2919,
+   "W": 2177,
+   "H": 218,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bigballoon": {
+   "X": 4161,
+   "Y": 3482,
+   "W": 265,
+   "H": 403,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bluebirdbody": {
+   "X": 1841,
+   "Y": 5832,
+   "W": 640,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "boat": {
+   "X": 3301,
+   "Y": 5856,
+   "W": 353,
+   "H": 224,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "boatwater0": {
+   "X": 5735,
+   "Y": 3058,
+   "W": 379,
+   "H": 212,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "boatwater1": {
+   "X": 5742,
+   "Y": 2631,
+   "W": 359,
+   "H": 189,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "captainbody": {
+   "X": 2720,
+   "Y": 5850,
+   "W": 417,
+   "H": 237,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "captainwing0": {
+   "X": 45,
+   "Y": 3956,
+   "W": 199,
+   "H": 218,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "captainwing1": {
+   "X": 823,
+   "Y": 3973,
+   "W": 222,
+   "H": 201,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "captainwing2": {
+   "X": 1732,
+   "Y": 3956,
+   "W": 170,
+   "H": 201,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "captainwing3": {
+   "X": 2507,
+   "Y": 3971,
+   "W": 187,
+   "H": 164,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "captainwing4": {
+   "X": 3321,
+   "Y": 3933,
+   "W": 176,
+   "H": 229,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "forthbackbody": {
+   "X": 2998,
+   "Y": 428,
+   "W": 186,
+   "H": 140,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "forthbackhead": {
+   "X": 1478,
+   "Y": 838,
+   "W": 404,
+   "H": 404,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gleftwing0": {
+   "X": 342,
+   "Y": 4412,
+   "W": 380,
+   "H": 589,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gleftwing1": {
+   "X": 1162,
+   "Y": 4516,
+   "W": 449,
+   "H": 436,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gleftwing2": {
+   "X": 2063,
+   "Y": 4481,
+   "W": 286,
+   "H": 509,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gleftwing3": {
+   "X": 2820,
+   "Y": 4500,
+   "W": 336,
+   "H": 469,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gleftwing4": {
+   "X": 3632,
+   "Y": 4452,
+   "W": 329,
+   "H": 548,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "goosebody": {
+   "X": 944,
+   "Y": 5856,
+   "W": 698,
+   "H": 223,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "grightwing0": {
+   "X": 51,
+   "Y": 4497,
+   "W": 226,
+   "H": 469,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "grightwing1": {
+   "X": 778,
+   "Y": 4608,
+   "W": 294,
+   "H": 277,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "grightwing2": {
+   "X": 1684,
+   "Y": 4489,
+   "W": 280,
+   "H": 469,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "grightwing3": {
+   "X": 2443,
+   "Y": 4606,
+   "W": 314,
+   "H": 289,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "grightwing4": {
+   "X": 3260,
+   "Y": 4497,
+   "W": 264,
+   "H": 447,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "island0": {
+   "X": 4960,
+   "Y": 791,
+   "W": 1145,
+   "H": 484,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "island1": {
+   "X": 4706,
+   "Y": 122,
+   "W": 1420,
+   "H": 434,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "island2": {
+   "X": 4622,
+   "Y": 3451,
+   "W": 1434,
+   "H": 777,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "island2lights": {
+   "X": 3985,
+   "Y": 5577,
+   "W": 986,
+   "H": 515,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "island3": {
+   "X": 5133,
+   "Y": 1431,
+   "W": 981,
+   "H": 569,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "pterosaurbody": {
+   "X": 37,
+   "Y": 5855,
+   "W": 789,
+   "H": 245,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptleftwing0": {
+   "X": 334,
+   "Y": 5172,
+   "W": 385,
+   "H": 532,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptleftwing1": {
+   "X": 1241,
+   "Y": 5193,
+   "W": 271,
+   "H": 530,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptleftwing2": {
+   "X": 2028,
+   "Y": 5199,
+   "W": 353,
+   "H": 514,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptleftwing3": {
+   "X": 2804,
+   "Y": 5183,
+   "W": 366,
+   "H": 429,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptleftwing4": {
+   "X": 3622,
+   "Y": 5204,
+   "W": 320,
+   "H": 463,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptrightwing0": {
+   "X": 41,
+   "Y": 5185,
+   "W": 237,
+   "H": 530,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptrightwing1": {
+   "X": 819,
+   "Y": 5267,
+   "W": 216,
+   "H": 357,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptrightwing2": {
+   "X": 1707,
+   "Y": 5242,
+   "W": 250,
+   "H": 366,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptrightwing3": {
+   "X": 2473,
+   "Y": 5252,
+   "W": 239,
+   "H": 334,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ptrightwing4": {
+   "X": 3284,
+   "Y": 5226,
+   "W": 245,
+   "H": 420,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "rainbow": {
+   "X": 541,
+   "Y": 113,
+   "W": 1665,
+   "H": 1600,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "smallballoon": {
+   "X": 4308,
+   "Y": 4032,
+   "W": 173,
+   "H": 233,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "smallisle0": {
+   "X": 4109,
+   "Y": 4425,
+   "W": 397,
+   "H": 147,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "smallisle1": {
+   "X": 4092,
+   "Y": 4806,
+   "W": 395,
+   "H": 148,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "snowflake": {
+   "X": 3338,
+   "Y": 2406,
+   "W": 383,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "threefish": {
+   "X": 4074,
+   "Y": 5161,
+   "W": 431,
+   "H": 170,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tree0": {
+   "X": 4649,
+   "Y": 1458,
+   "W": 332,
+   "H": 806,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tree1": {
+   "X": 4198,
+   "Y": 1484,
+   "W": 302,
+   "H": 662,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tree2": {
+   "X": 3766,
+   "Y": 1408,
+   "W": 287,
+   "H": 876,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tree3": {
+   "X": 3300,
+   "Y": 1470,
+   "W": 314,
+   "H": 796,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tree4": {
+   "X": 2772,
+   "Y": 1461,
+   "W": 437,
+   "H": 796,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tree4crown": {
+   "X": 2816,
+   "Y": 83,
+   "W": 1855,
+   "H": 585,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

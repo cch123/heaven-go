@@ -5,8 +5,12 @@ import (
 	"testing"
 
 	"hsdemo/engine"
+	"hsdemo/games/airrally"
 	"hsdemo/games/meatgrinder"
+	"hsdemo/games/sneakyspirits"
 	"hsdemo/games/somen"
+	"hsdemo/games/tambourine"
+	"hsdemo/games/taptrial"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
 )
@@ -109,5 +113,27 @@ func TestLoadTotemClimbLevel(t *testing.T) {
 	}
 	if len(stats.Unported) != 0 {
 		t.Errorf("unexpected unported games: %v", stats.Unported)
+	}
+}
+
+// TestLoadCharacterSelectLevel guards the remix path that starts on Air Rally:
+// the level should instantiate every switched game instead of falling back to
+// the placeholder renderer.
+func TestLoadCharacterSelectLevel(t *testing.T) {
+	engine.Register("airRally", airrally.New)
+	engine.Register("sneakySpirits", sneakyspirits.New)
+	engine.Register("tambourine", tambourine.New)
+	engine.Register("tapTrial", taptrial.New)
+
+	app, err := engine.New("../assets", "../levels/Character Select.riq")
+	if err != nil {
+		t.Fatalf("engine.New: %v", err)
+	}
+	stats := app.LoadStats()
+	if len(stats.Unported) != 0 {
+		t.Errorf("unexpected unported games: %v", stats.Unported)
+	}
+	if stats.Inputs == 0 {
+		t.Fatal("expected scheduled inputs for Character Select")
 	}
 }

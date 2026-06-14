@@ -536,7 +536,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 			ebitenFillRect(screen, cx, cy, tile-2, tile-2, toRGBA(cc))
 		}
 	}
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 	sc.Draw(screen, m.proj)
 
 	// 白闪（scroll event flash）

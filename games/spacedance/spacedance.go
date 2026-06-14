@@ -80,18 +80,18 @@ type Module struct {
 	bgEvts []colorEase
 	bops   []bopEvt
 
-	canBop      bool
-	grampsBop   bool // grampsCanBop
-	grampsAuto  bool // spaceGrampsShouldBop
-	lastPulse   float64
-	grampsLoop  int // 0=无 1=talk 2=sniff
-	star        starEvt
-	hasStar     bool
+	canBop     bool
+	grampsBop  bool // grampsCanBop
+	grampsAuto bool // spaceGrampsShouldBop
+	lastPulse  float64
+	grampsLoop int // 0=无 1=talk 2=sniff
+	star       starEvt
+	hasStar    bool
 
-	xMult, yMult   float64
-	normX, normY   float64
-	lastT          float64
-	hasLastT       bool
+	xMult, yMult float64
+	normX, normY float64
+	lastT        float64
+	hasLastT     bool
 }
 
 func New() engine.Module {
@@ -529,7 +529,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(toRGBA(c))
 
 	sc := m.ctx.Scene
-	sc.Sample(beat)
+	m.ctx.SampleScene(beat)
 
 	// 三层视差星空（UV 滚动 → 世界平移，按层平铺铺满可视区）
 	offX := math.Mod(-m.normX*starTileW, starTileW)

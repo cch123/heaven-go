@@ -2,7 +2,7 @@
 
 Heaven Studio 游玩部分（play-only，无编辑器）的 Go + Ebitengine 移植。引擎层（判定/调度/切游戏/HUD）与游戏模块解耦，资产经导出管线从 Heaven Studio Unity 工程提取，支持加载任意用户 `.riq` 谱面。
 
-**已移植游戏**：rhythmSomen（Rhythm Sōmen）、trickClass（Trick on the Class）、meatGrinder（Meat Grinder）、totemClimb（Totem Climb）、karateman（旧 demo 路径）。
+**已移植游戏**：rhythmSomen（Rhythm Sōmen）、trickClass（Trick on the Class）、meatGrinder（Meat Grinder）、totemClimb（Totem Climb）、airRally（Air Rally，Character Select 使用子集）、karateman（旧 demo 路径）。
 谱面中未移植的 minigame 显示占位画面，乐曲与其余游戏照常进行。
 
 ## 运行
@@ -12,6 +12,7 @@ go run ./cmd/extract -game rhythmSomen   # 各游戏资产提取（一次性）
 go run ./cmd/extract -game trickClass
 go run ./cmd/extract -game meatGrinder
 go run ./cmd/extract -game totemClimb
+go run ./cmd/extract -game airRally
 go run ./cmd/extract -game common      # 公共音效（countIn 计数音、miss/nearMiss）
 go run . -riq "levels/Rhythm Somen.riq"        # 内置已移植关卡
 go run . -riq "levels/Trick on the Class.riq"
@@ -77,7 +78,7 @@ karateman 旧 demo 路径：
 - 未实现：swing、`karateman/hit` 的 `type` 参数（石头/灯泡等变体）、表情/特殊镜头。
 - 背景为纯色 + 节拍脉冲（原版背景色 `#fbca3e`），未接入背景贴图层与后处理。
 
-engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
+engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally 等）：
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
@@ -96,6 +97,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
   用），未移植——bop 的不悦表现走 `bossAnnoyed ? BossMiss : Bop` 分支，与原版一致。
 - countIn 计数音实现 Normal/Alt/Cowbell 音色；GBA/DS 变体音色目录未提取（出现时
   回退 Normal 并打日志）。
+- airRally：已覆盖 Character Select 使用的 rally、ba-bum-bum-bum、catch、set
+  distance、forward、4beat/count voice 与 rainbow；天气/树/鸟群/day-night 等
+  其他事件尚未完整移植，遇到对应谱面时需继续对照 AirRally.cs 补齐。
 - Judgement 结算页已接入 Heaven Studio 的评分阈值/分类评价消息、rank 标志图、
   默认 epilogue 图与结算音效/jingle/循环音乐；原版 `JudgementOpen.playable`
   的逐信号精确定时尚未完整移植，当前用等价状态推进。
