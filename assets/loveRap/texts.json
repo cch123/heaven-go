@@ -1,0 +1,62 @@
+[
+ {
+  "path": "BubbleHolder/player Bubble/bubble/Text",
+  "text": "\n",
+  "size": 2,
+  "color": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "order": 51,
+  "layer": 0,
+  "font": "FOT-Rodin Pro DB.otf",
+  "rect": [
+   1.8923,
+   0.6284
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ },
+ {
+  "path": "BubbleHolder/cpu Bubble/bubble/Text",
+  "text": "",
+  "size": 2,
+  "color": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "order": 49,
+  "layer": 0,
+  "font": "FOT-Rodin Pro DB.otf",
+  "rect": [
+   1.8923,
+   0.6284
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ },
+ {
+  "path": "BubbleHolder/mcAdore Bubble/bubble/Text",
+  "text": "",
+  "size": 2,
+  "color": [
+   0,
+   0,
+   0,
+   0
+  ],
+  "order": 51,
+  "layer": 0,
+  "font": "FOT-Rodin Pro DB.otf",
+  "rect": [
+   1.8923,
+   0.6284
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]

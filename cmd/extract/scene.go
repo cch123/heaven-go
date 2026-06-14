@@ -16,11 +16,12 @@ import (
 )
 
 type sceneSpec struct {
-	dir        string   // Assets/Bundled/Games/<dir>
-	prefab     string   // prefab 文件名
-	spritesDir string   // 可选：贴图根（默认 Sprites）
-	animsDir   string   // 可选：动画/controller 根（默认 spritesDir）
-	roleFields []string // 游戏 MonoBehaviour 中需要解析的 Animator/GameObject 引用字段
+	dir           string            // Assets/Bundled/Games/<dir>
+	prefab        string            // prefab 文件名
+	spritesDir    string            // 可选：贴图根（默认 Sprites）
+	animsDir      string            // 可选：动画/controller 根（默认 spritesDir）
+	roleFields    []string          // 游戏 MonoBehaviour 中需要解析的 Animator/GameObject 引用字段
+	roleFallbacks map[string]string // stripped prefab 引用无法唯一解析时的显式 path 兜底
 
 	refArrayFields  []string // 引用数组字段（如对象模板表）
 	strArrayFields  []string // 字符串数组字段（如动画名表）
@@ -107,6 +108,25 @@ var sceneSpecs = map[string]sceneSpec{
 		components: []componentSpec{
 			{name: "flower", markers: []string{"anim", "danceRight"}, multi: true},
 		},
+	},
+	"loveRap": {
+		dir:    "LoveRap",
+		prefab: "loveRap.prefab",
+		roleFields: []string{
+			"playerRapper", "playerBody", "playerLegs", "playerFace", "playerMouth", "playerFlash", "playerBubble", "playerText",
+			"cpuRapper", "cpuBody", "cpuLegs", "cpuFace", "cpuMouth", "cpuFlash", "cpuBubble", "cpuHeadTrans", "cpuText",
+			"mcMouth", "mcBody", "mcLegs", "car", "car_lights", "mcBubble", "mcText",
+			"bgSR", "bgWetSR",
+		},
+		roleFallbacks: map[string]string{
+			"playerFace":  "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_eye",
+			"playerMouth": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_mouth",
+			"cpuFace":     "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_eye",
+			"cpuMouth":    "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_mouth",
+		},
+		wantControllers: true,
+		wantTexts:       true,
+		commonSounds:    []string{"miss.wav"},
 	},
 	"ninjaBodyguard": {
 		dir:    "NinjaBodyguard",
@@ -1121,7 +1141,11 @@ func exportRoles(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 		fid := uy.I(uy.Get(uy.M(script[f]), "fileID"))
 		ref := dt.byID[fid]
 		if ref == nil {
-			log.Printf("warn: role %s -> &%d not found", f, fid)
+			if p := spec.roleFallbacks[f]; p != "" {
+				roles[f] = p
+			} else {
+				log.Printf("warn: role %s -> &%d not found", f, fid)
+			}
 			continue
 		}
 		gid := fid
@@ -1130,7 +1154,11 @@ func exportRoles(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 		}
 		p, ok := paths[gid]
 		if !ok {
-			log.Printf("warn: role %s GameObject &%d not in scene tree", f, gid)
+			if p := spec.roleFallbacks[f]; p != "" {
+				roles[f] = p
+			} else {
+				log.Printf("warn: role %s GameObject &%d not in scene tree", f, gid)
+			}
 			continue
 		}
 		roles[f] = p

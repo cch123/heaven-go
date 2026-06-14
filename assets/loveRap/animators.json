@@ -1,0 +1,23 @@
+{
+ "Background/Rain": "Rain",
+ "BubbleHolder/cpu Bubble/bubble": "bubble",
+ "BubbleHolder/mcAdore Bubble/bubble": "bubble",
+ "BubbleHolder/player Bubble/bubble": "bubble",
+ "CarHolder": "CarHolder",
+ "CarHolder/Car/Lights": "Lights",
+ "GirlHolder/Legs": "Legs",
+ "GirlHolder/Legs/Body": "Body",
+ "GirlHolder/Legs/Body/HeadHolder/Mouth": "Mouth",
+ "Rappers/OtherRapperHolder": "rappercolor",
+ "Rappers/OtherRapperHolder/OtherRapper": "Rapper",
+ "Rappers/OtherRapperHolder/OtherRapper/rap_body": "rap_body",
+ "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_eye": "rap_eye",
+ "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_mouth": "rap_mouth",
+ "Rappers/OtherRapperHolder/OtherRapper/rap_foot": "rap_foot",
+ "Rappers/PlayerHolder": "rappercolor",
+ "Rappers/PlayerHolder/OtherRapper": "Rapper",
+ "Rappers/PlayerHolder/OtherRapper/rap_body": "rap_body",
+ "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_eye": "rap_eye",
+ "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_mouth": "rap_mouth",
+ "Rappers/PlayerHolder/OtherRapper/rap_foot": "rap_foot"
+}

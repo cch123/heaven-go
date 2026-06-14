@@ -1,0 +1,352 @@
+{
+ "Body": {
+  "default": "idle",
+  "states": {
+   "D": {
+    "clip": "Body/D",
+    "speed": 1
+   },
+   "DB": {
+    "clip": "Body/DB",
+    "speed": 1
+   },
+   "H": {
+    "clip": "Body/H",
+    "speed": 1
+   },
+   "HB": {
+    "clip": "Body/HB",
+    "speed": 1
+   },
+   "MD": {
+    "clip": "Body/MD",
+    "speed": 1
+   },
+   "MDB": {
+    "clip": "Body/MDB",
+    "speed": 1
+   },
+   "S": {
+    "clip": "Body/S",
+    "speed": 1
+   },
+   "SB": {
+    "clip": "Body/SB",
+    "speed": 1
+   },
+   "blowLoop": {
+    "clip": "Body/blowLoop",
+    "speed": 1
+   },
+   "blowLoopEnd": {
+    "clip": "Body/blowLoopEnd",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Body/idle",
+    "speed": 1
+   }
+  }
+ },
+ "CarHolder": {
+  "default": "idle",
+  "states": {
+   "beat": {
+    "clip": "car/beat",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "car/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Legs": {
+  "default": "A",
+  "states": {
+   "A": {
+    "clip": "Legs/A",
+    "speed": 1
+   },
+   "B": {
+    "clip": "Legs/B",
+    "speed": 1
+   },
+   "Beat": {
+    "clip": "Legs/Beat",
+    "speed": 1
+   }
+  }
+ },
+ "Lights": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "clip": "light/idle",
+    "speed": 1
+   },
+   "light": {
+    "clip": "light/light",
+    "speed": 1
+   }
+  }
+ },
+ "Mouth": {
+  "default": "idle",
+  "states": {
+   "D": {
+    "clip": "Mouth/D",
+    "speed": 1
+   },
+   "H": {
+    "clip": "Mouth/H",
+    "speed": 1
+   },
+   "H_ura": {
+    "clip": "Mouth/H_ura",
+    "speed": 1
+   },
+   "MD": {
+    "clip": "Mouth/MD",
+    "speed": 1.45
+   },
+   "MD_ura": {
+    "clip": "Mouth/MD_ura",
+    "speed": 1.45
+   },
+   "S": {
+    "clip": "Mouth/S",
+    "speed": 1.45
+   },
+   "idle": {
+    "clip": "Mouth/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Rain": {
+  "default": "idle",
+  "states": {
+   "drop": {
+    "clip": "rain/drop",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "rain/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Rapper": {
+  "default": "idle",
+  "states": {
+   "Beat": {
+    "clip": "Animatons/Beat",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animatons/idle",
+    "speed": 1
+   }
+  }
+ },
+ "bubble": {
+  "default": "idle",
+  "states": {
+   "Appear": {
+    "clip": "bubble/Appear",
+    "speed": 1
+   },
+   "AppearMiss": {
+    "clip": "bubble/AppearMiss",
+    "speed": 1
+   },
+   "Hide": {
+    "clip": "bubble/Hide",
+    "speed": 1
+   },
+   "HideMiss": {
+    "clip": "bubble/HideMiss",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "bubble/idle",
+    "speed": 1
+   }
+  }
+ },
+ "rap_body": {
+  "default": "idle",
+  "states": {
+   "D": {
+    "clip": "body/D",
+    "speed": 1
+   },
+   "DB": {
+    "clip": "body/DB",
+    "speed": 1
+   },
+   "H": {
+    "clip": "body/H",
+    "speed": 1
+   },
+   "HB": {
+    "clip": "body/HB",
+    "speed": 1
+   },
+   "MD": {
+    "clip": "body/MD",
+    "speed": 1
+   },
+   "MDB": {
+    "clip": "body/MDB",
+    "speed": 1
+   },
+   "S": {
+    "clip": "body/S",
+    "speed": 1
+   },
+   "SB": {
+    "clip": "body/SB",
+    "speed": 1
+   },
+   "cough": {
+    "clip": "body/cough",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 0.9999999,
+      "duration": 0
+     }
+    ]
+   },
+   "idle": {
+    "clip": "body/idle",
+    "speed": 1
+   }
+  }
+ },
+ "rap_eye": {
+  "default": "A",
+  "states": {
+   "A": {
+    "clip": "eye/A",
+    "speed": 1
+   },
+   "B": {
+    "clip": "eye/B",
+    "speed": 1
+   },
+   "C": {
+    "clip": "eye/C",
+    "speed": 1
+   },
+   "D": {
+    "clip": "eye/D",
+    "speed": 1
+   },
+   "E": {
+    "clip": "eye/E",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "A",
+      "exitTime": 0.9999999,
+      "duration": 0
+     }
+    ]
+   },
+   "F": {
+    "clip": "eye/F",
+    "speed": 1
+   },
+   "G": {
+    "clip": "eye/G",
+    "speed": 1
+   }
+  }
+ },
+ "rap_foot": {
+  "default": "A",
+  "states": {
+   "A": {
+    "clip": "legs/A",
+    "speed": 1
+   },
+   "B": {
+    "clip": "legs/B",
+    "speed": 1
+   }
+  }
+ },
+ "rap_mouth": {
+  "default": "idle",
+  "states": {
+   "Cough": {
+    "clip": "mouth/Cough",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 0.9999999,
+      "duration": 0
+     }
+    ]
+   },
+   "D": {
+    "clip": "mouth/D",
+    "speed": 1
+   },
+   "H": {
+    "clip": "mouth/H",
+    "speed": 1
+   },
+   "HB": {
+    "clip": "mouth/HB",
+    "speed": 1
+   },
+   "H_ura": {
+    "clip": "mouth/H_ura",
+    "speed": 1.45
+   },
+   "MD": {
+    "clip": "mouth/MD",
+    "speed": 1
+   },
+   "MD_ura": {
+    "clip": "mouth/MD_ura",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "mouth/Miss",
+    "speed": 1
+   },
+   "S": {
+    "clip": "mouth/S",
+    "speed": 1.45
+   },
+   "SB": {
+    "clip": "mouth/SB",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "mouth/idle",
+    "speed": 1
+   }
+  }
+ },
+ "rappercolor": {
+  "default": "idle",
+  "states": {
+   "FadeOut": {
+    "clip": "color/FadeOut",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "color/idle",
+    "speed": 1
+   }
+  }
+ }
+}

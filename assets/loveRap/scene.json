@@ -1,0 +1,3090 @@
+{
+ "nodes": [
+  {
+   "name": "loveRap",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -100
+   ]
+  },
+  {
+   "name": "fence",
+   "path": "Background/fence",
+   "parent": 1,
+   "pos": [
+    0.044,
+    1.146
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.46
+   ],
+   "sprite": "LoveRapBG_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    35.73,
+    10.8
+   ]
+  },
+  {
+   "name": "groundWet",
+   "path": "Background/groundWet",
+   "parent": 1,
+   "pos": [
+    0,
+    -3.441
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "LoveRapBG_7",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    35.73,
+    11.15
+   ]
+  },
+  {
+   "name": "ground",
+   "path": "Background/ground",
+   "parent": 1,
+   "pos": [
+    0,
+    -2.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "LoveRapBG_3",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    35.73,
+    11.15
+   ]
+  },
+  {
+   "name": "day",
+   "path": "Background/day",
+   "parent": 1,
+   "pos": [
+    0,
+    3.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    15,
+    0.75
+   ],
+   "sprite": "LoveRapBG_5",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    15.04
+   ]
+  },
+  {
+   "name": "night",
+   "path": "Background/night",
+   "parent": 1,
+   "pos": [
+    0,
+    4.1635
+   ],
+   "rotZ": 0,
+   "scale": [
+    26.42717,
+    10.8872
+   ],
+   "order": 1,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.28,
+    1.28
+   ]
+  },
+  {
+   "name": "grad",
+   "path": "Background/grad",
+   "parent": 1,
+   "pos": [
+    0,
+    -3.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    16,
+    0.58
+   ],
+   "sprite": "LoveRapBG_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    15.04
+   ]
+  },
+  {
+   "name": "Rain",
+   "path": "Background/Rain",
+   "parent": 1,
+   "pos": [
+    0,
+    -4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "drop",
+   "path": "Background/Rain/drop",
+   "parent": 8,
+   "pos": [
+    3.17,
+    6.57
+   ],
+   "rotZ": -0.209439323757577,
+   "scale": [
+    1,
+    2
+   ],
+   "sprite": "LoveRapBG_6",
+   "order": 99,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8,
+    2.79
+   ]
+  },
+  {
+   "name": "Rappers",
+   "path": "Rappers",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    25
+   ]
+  },
+  {
+   "name": "PlayerHolder",
+   "path": "Rappers/PlayerHolder",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OtherRapper",
+   "path": "Rappers/PlayerHolder/OtherRapper",
+   "parent": 11,
+   "pos": [
+    4.38,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rap_foot",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_foot",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_foot/Holder",
+   "parent": 13,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FootL",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_foot/Holder/FootL",
+   "parent": 14,
+   "pos": [
+    -1.4,
+    -5.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_51",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    5.5
+   ]
+  },
+  {
+   "name": "FootR",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_foot/Holder/FootR",
+   "parent": 14,
+   "pos": [
+    1.22,
+    -5.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_51",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    5.5
+   ]
+  },
+  {
+   "name": "Rappers_54",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_foot/Holder/Rappers_54",
+   "parent": 14,
+   "pos": [
+    -0.067,
+    -7.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    1.2
+   ],
+   "sprite": "Rappers_54",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2.57,
+    0.96
+   ]
+  },
+  {
+   "name": "rap_body",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder",
+   "parent": 18,
+   "pos": [
+    0.06,
+    0.12
+   ],
+   "rotZ": -0.22689282497965846,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rap_mouth",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_mouth",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_mouth/Mouth",
+   "parent": 20,
+   "pos": [
+    -0.12,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_67",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.59
+   ]
+  },
+  {
+   "name": "rap_eye",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_eye",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeHolder",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder/EyeL",
+   "parent": 23,
+   "pos": [
+    -0.501,
+    1.049
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_78",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    1.19
+   ]
+  },
+  {
+   "name": "EyeR",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder/EyeR",
+   "parent": 23,
+   "pos": [
+    0.261,
+    1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_79",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    1.13
+   ]
+  },
+  {
+   "name": "Nose",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder/Nose",
+   "parent": 23,
+   "pos": [
+    -0.324,
+    0.486
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_58",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.33,
+    0.33
+   ]
+  },
+  {
+   "name": "blush",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder/blush",
+   "parent": 23,
+   "pos": [
+    -0.122,
+    0.355
+   ],
+   "rotZ": -0.27436575876577435,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_60",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.43,
+    0.85
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/Head",
+   "parent": 19,
+   "pos": [
+    0.28,
+    1.14
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_25",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.48,
+    3.19
+   ]
+  },
+  {
+   "name": "Head (1)",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/HeadHolder/Head (1)",
+   "parent": 19,
+   "pos": [
+    0.006,
+    1.191
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_26",
+   "order": 5,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.48,
+    3.19
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Chain",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/Chain",
+   "parent": 30,
+   "pos": [
+    -0.101,
+    -0.504
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_53",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    1.23
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/Torso",
+   "parent": 30,
+   "pos": [
+    -0.05800001,
+    -1.337
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_52",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.69,
+    3.89
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/ArmL",
+   "parent": 30,
+   "pos": [
+    -1.43,
+    -0.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_41",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.91
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/ArmR",
+   "parent": 30,
+   "pos": [
+    1.43,
+    -1.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_41",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.91
+   ]
+  },
+  {
+   "name": "WristL",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/WristL",
+   "parent": 30,
+   "pos": [
+    -2.065,
+    -1.641
+   ],
+   "rotZ": -5.166174580195744,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_42",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.31
+   ]
+  },
+  {
+   "name": "CircleL",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/CircleL",
+   "parent": 30,
+   "pos": [
+    -2.692,
+    -1.898
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_48",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.86
+   ]
+  },
+  {
+   "name": "HandL",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/HandL",
+   "parent": 30,
+   "pos": [
+    -3.313,
+    -2.36
+   ],
+   "rotZ": -0.10070530641452183,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_39",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.83,
+    1.51
+   ]
+  },
+  {
+   "name": "WristR",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/WristR",
+   "parent": 30,
+   "pos": [
+    1.956,
+    -1.623
+   ],
+   "rotZ": 5.166174285514547,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_42",
+   "order": 15,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    1.05
+   ]
+  },
+  {
+   "name": "CircleR",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/CircleR",
+   "parent": 30,
+   "pos": [
+    2.568,
+    -1.843
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_48",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.9
+   ]
+  },
+  {
+   "name": "HandR",
+   "path": "Rappers/PlayerHolder/OtherRapper/rap_body/Holder/HandR",
+   "parent": 30,
+   "pos": [
+    3.195,
+    -2.329
+   ],
+   "rotZ": 0.1007054921787745,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_39",
+   "order": 17,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    1.88
+   ]
+  },
+  {
+   "name": "OtherRapperHolder",
+   "path": "Rappers/OtherRapperHolder",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OtherRapper",
+   "path": "Rappers/OtherRapperHolder/OtherRapper",
+   "parent": 41,
+   "pos": [
+    -4.374,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rap_foot",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_foot",
+   "parent": 42,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_foot/Holder",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FootL",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_foot/Holder/FootL",
+   "parent": 44,
+   "pos": [
+    -1.4,
+    -5.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_51",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    5.5
+   ]
+  },
+  {
+   "name": "FootR",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_foot/Holder/FootR",
+   "parent": 44,
+   "pos": [
+    1.22,
+    -5.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_51",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    5.5
+   ]
+  },
+  {
+   "name": "Rappers_54",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_foot/Holder/Rappers_54",
+   "parent": 44,
+   "pos": [
+    -0.067,
+    -7.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    1.2
+   ],
+   "sprite": "Rappers_54",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2.57,
+    0.96
+   ]
+  },
+  {
+   "name": "rap_body",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body",
+   "parent": 42,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder",
+   "parent": 48,
+   "pos": [
+    0.06,
+    0.12
+   ],
+   "rotZ": -0.22689282497965846,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rap_mouth",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_mouth",
+   "parent": 49,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_mouth/Mouth",
+   "parent": 50,
+   "pos": [
+    -0.12,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_67",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.59
+   ]
+  },
+  {
+   "name": "rap_eye",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_eye",
+   "parent": 49,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeHolder",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder/EyeL",
+   "parent": 53,
+   "pos": [
+    -0.501,
+    1.049
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_78",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    1.19
+   ]
+  },
+  {
+   "name": "EyeR",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder/EyeR",
+   "parent": 53,
+   "pos": [
+    0.261,
+    1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_79",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    1.13
+   ]
+  },
+  {
+   "name": "Nose",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder/Nose",
+   "parent": 53,
+   "pos": [
+    -0.324,
+    0.486
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_58",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.33,
+    0.33
+   ]
+  },
+  {
+   "name": "blush",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/rap_eye/EyeHolder/blush",
+   "parent": 53,
+   "pos": [
+    -0.122,
+    0.355
+   ],
+   "rotZ": -0.27436575876577435,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_60",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.43,
+    0.85
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/Head",
+   "parent": 49,
+   "pos": [
+    0.28,
+    1.14
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_25",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.48,
+    3.19
+   ]
+  },
+  {
+   "name": "Head (1)",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/HeadHolder/Head (1)",
+   "parent": 49,
+   "pos": [
+    0.006,
+    1.191
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_26",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.48,
+    3.19
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder",
+   "parent": 48,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Chain",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/Chain",
+   "parent": 60,
+   "pos": [
+    -0.101,
+    -0.504
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_53",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    1.23
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/Torso",
+   "parent": 60,
+   "pos": [
+    -0.05800001,
+    -1.337
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_52",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.69,
+    3.89
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/ArmL",
+   "parent": 60,
+   "pos": [
+    -1.43,
+    -0.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_41",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.91
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/ArmR",
+   "parent": 60,
+   "pos": [
+    1.43,
+    -1.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_41",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.91
+   ]
+  },
+  {
+   "name": "WristL",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/WristL",
+   "parent": 60,
+   "pos": [
+    -2.065,
+    -1.641
+   ],
+   "rotZ": -5.166174580195744,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_42",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.31
+   ]
+  },
+  {
+   "name": "CircleL",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/CircleL",
+   "parent": 60,
+   "pos": [
+    -2.692,
+    -1.898
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_48",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.86
+   ]
+  },
+  {
+   "name": "HandL",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/HandL",
+   "parent": 60,
+   "pos": [
+    -3.313,
+    -2.36
+   ],
+   "rotZ": -0.10070530641452183,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_39",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.83,
+    1.51
+   ]
+  },
+  {
+   "name": "WristR",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/WristR",
+   "parent": 60,
+   "pos": [
+    1.956,
+    -1.623
+   ],
+   "rotZ": 5.166174285514547,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_42",
+   "order": 15,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    1.05
+   ]
+  },
+  {
+   "name": "CircleR",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/CircleR",
+   "parent": 60,
+   "pos": [
+    2.568,
+    -1.843
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_48",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.9
+   ]
+  },
+  {
+   "name": "HandR",
+   "path": "Rappers/OtherRapperHolder/OtherRapper/rap_body/Holder/HandR",
+   "parent": 60,
+   "pos": [
+    3.195,
+    -2.329
+   ],
+   "rotZ": 0.1007054921787745,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_39",
+   "order": 17,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    1.88
+   ]
+  },
+  {
+   "name": "CarHolder",
+   "path": "CarHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "CarHolder/shadow",
+   "parent": 71,
+   "pos": [
+    0.13,
+    -3.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    4,
+    2
+   ],
+   "sprite": "Rappers_55",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    3.21,
+    1.49
+   ]
+  },
+  {
+   "name": "wheel (1)",
+   "path": "CarHolder/wheel (1)",
+   "parent": 71,
+   "pos": [
+    4.14,
+    -3.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_1",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.69,
+    1.12
+   ]
+  },
+  {
+   "name": "wheel",
+   "path": "CarHolder/wheel",
+   "parent": 71,
+   "pos": [
+    -4.212,
+    -3.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.69,
+    1.12
+   ]
+  },
+  {
+   "name": "Car",
+   "path": "CarHolder/Car",
+   "parent": 71,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Lights",
+   "path": "CarHolder/Car/Lights",
+   "parent": 75,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "light",
+   "path": "CarHolder/Car/Lights/light",
+   "parent": 76,
+   "pos": [
+    -5.406,
+    -0.322
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_50",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    2.73,
+    2.73
+   ]
+  },
+  {
+   "name": "light (1)",
+   "path": "CarHolder/Car/Lights/light (1)",
+   "parent": 76,
+   "pos": [
+    -4.38,
+    -0.322
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_50",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    2.73,
+    2.73
+   ]
+  },
+  {
+   "name": "light (2)",
+   "path": "CarHolder/Car/Lights/light (2)",
+   "parent": 76,
+   "pos": [
+    4.244,
+    -0.322
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_50",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    2.73,
+    2.73
+   ]
+  },
+  {
+   "name": "light (3)",
+   "path": "CarHolder/Car/Lights/light (3)",
+   "parent": 76,
+   "pos": [
+    5.27,
+    -0.322
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_50",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    2.73,
+    2.73
+   ]
+  },
+  {
+   "name": "car",
+   "path": "CarHolder/Car/car",
+   "parent": 75,
+   "pos": [
+    -3.227,
+    0.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.37,
+    8.2
+   ]
+  },
+  {
+   "name": "car (1)",
+   "path": "CarHolder/Car/car (1)",
+   "parent": 75,
+   "pos": [
+    3.11,
+    0.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_0",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.37,
+    8.2
+   ]
+  },
+  {
+   "name": "GirlHolder",
+   "path": "GirlHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "GirlHolder/Legs",
+   "parent": 83,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Leg1",
+   "path": "GirlHolder/Legs/Leg1",
+   "parent": 84,
+   "pos": [
+    0.27,
+    -0.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_29",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    3.92
+   ]
+  },
+  {
+   "name": "Leg2",
+   "path": "GirlHolder/Legs/Leg2",
+   "parent": 84,
+   "pos": [
+    0.854,
+    -0.112
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_28",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.65,
+    3.34
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "GirlHolder/Legs/Shadow",
+   "parent": 84,
+   "pos": [
+    1.42,
+    -0.884
+   ],
+   "rotZ": -0.8499751828300485,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_54",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    0.5882353
+   ],
+   "size": [
+    2.57,
+    0.96
+   ]
+  },
+  {
+   "name": "Shadow (1)",
+   "path": "GirlHolder/Legs/Shadow (1)",
+   "parent": 84,
+   "pos": [
+    0.084,
+    -0.009
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_54",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    0.5882353
+   ],
+   "size": [
+    2.57,
+    0.96
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "GirlHolder/Legs/Body",
+   "parent": 84,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "GirlHolder/Legs/Body/HeadHolder",
+   "parent": 89,
+   "pos": [
+    -0.14,
+    4.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Head",
+   "parent": 90,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_7",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.41
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Hair",
+   "parent": 90,
+   "pos": [
+    -0.003,
+    0.407
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_6",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.75,
+    2.46
+   ]
+  },
+  {
+   "name": "Glass",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Glass",
+   "parent": 90,
+   "pos": [
+    -0.083,
+    -0.148
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Glass/Glasses",
+   "parent": 93,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_8",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    1.01
+   ]
+  },
+  {
+   "name": "eye",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Glass/eye",
+   "parent": 93,
+   "pos": [
+    -0.015,
+    -0.177
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_3",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.59,
+    0.62
+   ]
+  },
+  {
+   "name": "1",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Glass/1",
+   "parent": 93,
+   "pos": [
+    -0.591,
+    -0.088
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "sprite": "Rappers_11",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.36,
+    0.37
+   ]
+  },
+  {
+   "name": "1 (1)",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Glass/1 (1)",
+   "parent": 93,
+   "pos": [
+    0.38,
+    -0.086
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "sprite": "Rappers_11",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.36,
+    0.37
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Mouth",
+   "parent": 90,
+   "pos": [
+    0.123,
+    -0.81
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "GirlHolder/Legs/Body/HeadHolder/Mouth/sprite",
+   "parent": 98,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_14",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.67,
+    0.41
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "GirlHolder/Legs/Body/Torso",
+   "parent": 89,
+   "pos": [
+    -0.5,
+    2.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_2",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    2.71
+   ]
+  },
+  {
+   "name": "LowerTorso",
+   "path": "GirlHolder/Legs/Body/LowerTorso",
+   "parent": 89,
+   "pos": [
+    -0.565,
+    1.033
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_20",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    0.87
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "GirlHolder/Legs/Body/ArmL",
+   "parent": 89,
+   "pos": [
+    -1.36,
+    2.06
+   ],
+   "rotZ": 0.3148574211141207,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_18",
+   "order": 3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "GirlHolder/Legs/Body/ArmR",
+   "parent": 89,
+   "pos": [
+    0.93,
+    2.07
+   ],
+   "rotZ": -0.3148574211141207,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_18",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9,
+    2.01
+   ]
+  },
+  {
+   "name": "HandL",
+   "path": "GirlHolder/Legs/Body/HandL",
+   "parent": 89,
+   "pos": [
+    -2.715,
+    1.978
+   ],
+   "rotZ": 0.087266490994371,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_23",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.37,
+    1.1
+   ]
+  },
+  {
+   "name": "HandR",
+   "path": "GirlHolder/Legs/Body/HandR",
+   "parent": 89,
+   "pos": [
+    2.301,
+    1.969
+   ],
+   "rotZ": -0.087266490994371,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_23",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.37,
+    1.1
+   ]
+  },
+  {
+   "name": "Hair2",
+   "path": "GirlHolder/Legs/Body/Hair2",
+   "parent": 89,
+   "pos": [
+    -0.17,
+    3.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_5",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.38,
+    5.16
+   ]
+  },
+  {
+   "name": "Arm1L",
+   "path": "GirlHolder/Legs/Body/Arm1L",
+   "parent": 89,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_12",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.81,
+    0.65
+   ]
+  },
+  {
+   "name": "Arm1R",
+   "path": "GirlHolder/Legs/Body/Arm1R",
+   "parent": 89,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Rappers_12",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.81,
+    0.65
+   ]
+  },
+  {
+   "name": "BubbleHolder",
+   "path": "BubbleHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mcAdore Bubble",
+   "path": "BubbleHolder/mcAdore Bubble",
+   "parent": 109,
+   "pos": [
+    -3.97,
+    3.43
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bubble",
+   "path": "BubbleHolder/mcAdore Bubble/bubble",
+   "parent": 110,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "baloon_just.tpl-0",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "flipY": true,
+   "size": [
+    2.56,
+    1.28
+   ]
+  },
+  {
+   "name": "Text",
+   "path": "BubbleHolder/mcAdore Bubble/bubble/Text",
+   "parent": 111,
+   "pos": [
+    0.144,
+    0.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "player Bubble",
+   "path": "BubbleHolder/player Bubble",
+   "parent": 109,
+   "pos": [
+    -0.24,
+    -1.91
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bubble",
+   "path": "BubbleHolder/player Bubble/bubble",
+   "parent": 113,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "baloon_just.tpl-0",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "flipY": true,
+   "size": [
+    2.56,
+    1.28
+   ]
+  },
+  {
+   "name": "Text",
+   "path": "BubbleHolder/player Bubble/bubble/Text",
+   "parent": 114,
+   "pos": [
+    0.148,
+    0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cpu Bubble",
+   "path": "BubbleHolder/cpu Bubble",
+   "parent": 109,
+   "pos": [
+    0.16,
+    -2.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bubble",
+   "path": "BubbleHolder/cpu Bubble/bubble",
+   "parent": 116,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "baloon_just.tpl-0",
+   "order": 48,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "flipY": true,
+   "size": [
+    2.56,
+    1.28
+   ]
+  },
+  {
+   "name": "Text",
+   "path": "BubbleHolder/cpu Bubble/bubble/Text",
+   "parent": 117,
+   "pos": [
+    0.1499,
+    0.0546
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}
