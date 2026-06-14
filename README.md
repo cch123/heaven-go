@@ -2,7 +2,7 @@
 
 Heaven Studio 游玩部分（play-only，无编辑器）的 Go + Ebitengine 移植。引擎层（判定/调度/切游戏/HUD）与游戏模块解耦，资产经导出管线从 Heaven Studio Unity 工程提取，支持加载任意用户 `.riq` 谱面。
 
-**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Drumming Practice、Frog Princess、Kitties!、Lockstep、Marching Orders、Meat Grinder、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Space Dance、Tambourine、Tap Trial、The Clappy Trio、Totem Climb、Trick on the Class、Tunnel、Wizard's Waltz（karateman 仍走旧 demo 路径）。
+**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Drumming Practice、Frog Princess、Kitties!、Lockstep、Marching Orders、Meat Grinder、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Space Dance、Tambourine、Tap Trial、The Clappy Trio、Totem Climb、Tram & Pauline、Trick on the Class、Tunnel、Wizard's Waltz（karateman 仍走旧 demo 路径）。
 谱面中未移植的 minigame 显示占位画面，乐曲与其余游戏照常进行。
 
 ## 运行
@@ -23,6 +23,7 @@ go run ./cmd/extract -game clappyTrio
 go run ./cmd/extract -game coinToss
 go run ./cmd/extract -game drummingPractice
 go run ./cmd/extract -game frogPrincess
+go run ./cmd/extract -game tramAndPauline
 go run ./cmd/extract -game tunnel
 go run ./cmd/extract -game wizardsWaltz
 go run ./cmd/extract -game common      # 公共音效（countIn 计数音、miss/nearMiss）

@@ -210,6 +210,17 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"tunnelWall", "tunnelWallRenderer", "tunnelChunksPerSec", "tunnelWallChunkSize"}},
 		},
 	},
+	"tramAndPauline": {
+		dir:             "TramAndPauline",
+		prefab:          "tramAndPauline.prefab",
+		roleFields:      []string{"tram", "pauline", "curtainAnim", "audienceAnim"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"tram", "pauline", "curtainAnim", "audienceAnim"}},
+			{name: "kid", markers: []string{"rootBody", "trampolineAnim", "bodyAnim", "transformParticle", "smokeParticle", "jumpHeight"}, multi: true},
+		},
+	},
 	"seeSaw": {
 		dir:    "SeeSaw",
 		prefab: "seeSaw.prefab",

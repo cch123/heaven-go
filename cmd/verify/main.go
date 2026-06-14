@@ -44,6 +44,7 @@ import (
 	"hsdemo/games/tambourine"
 	"hsdemo/games/taptrial"
 	"hsdemo/games/totemclimb"
+	"hsdemo/games/tramandpauline"
 	"hsdemo/games/trickclass"
 	"hsdemo/games/tunnel"
 	"hsdemo/games/wizardswaltz"
@@ -127,6 +128,7 @@ func main() {
 	engine.Register("lockstep", lockstep.New)
 	engine.Register("spaceDance", spacedance.New)
 	engine.Register("munchyMonk", munchymonk.New)
+	engine.Register("tramAndPauline", tramandpauline.New)
 	engine.Register("tunnel", tunnel.New)
 	engine.Register("wizardsWaltz", wizardswaltz.New)
 
