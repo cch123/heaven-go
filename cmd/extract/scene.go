@@ -54,6 +54,15 @@ var sceneSpecs = map[string]sceneSpec{
 		curveFields:     []string{"baseBounceCurve", "PosCurve"},
 		wantControllers: true,
 	},
+	"catchyTune": {
+		dir:    "CatchyTune",
+		prefab: "catchyTune.prefab",
+		roleFields: []string{
+			"plalinAnim", "alalinAnim", "orangeBase", "pineappleBase",
+			"fruitHolder", "heartMessage", "bg2",
+		},
+		wantControllers: true,
+	},
 	"rhythmSomen": {
 		dir:    "RhythmSomen",
 		prefab: "rhythmSomen.prefab",

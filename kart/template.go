@@ -129,6 +129,53 @@ func (in *Instance) findAnimRoot(relPath string) (int, bool) {
 	return -1, false
 }
 
+func (in *Instance) findNode(relPath string) (int, bool) {
+	for ti, tn := range in.T.Nodes {
+		if tn.RelPath == relPath {
+			return ti, true
+		}
+	}
+	return -1, false
+}
+
+// Play 在实例子树的相对节点上直接播放 AnimationClip。部分 Unity prefab
+// 会复用目录外的 AnimatorController（Catchy Tune 的 pineapple），提取器
+// 不能安全内联该 controller 时仍要保留剪辑曲线本身，因此提供 raw clip
+// 路径复刻 Animator.Play/DoScaledAnimation 的采样语义。
+func (in *Instance) Play(relPath, clip string, startBeat, timeScale float64) {
+	anim, ok := in.T.as.Anims[clip]
+	if !ok {
+		return
+	}
+	ti, ok := in.findNode(relPath)
+	if !ok {
+		return
+	}
+	in.players[ti] = &instPlayer{rootTI: ti, anim: anim, startBeat: startBeat, timeScale: timeScale}
+}
+
+// PlayNormalized 以固定归一化时间采样实例剪辑（SceneInst.PlayNormalized 的
+// prefab-instance 版本）。
+func (in *Instance) PlayNormalized(relPath, clip string, t float64) {
+	anim, ok := in.T.as.Anims[clip]
+	if !ok {
+		return
+	}
+	ti, ok := in.findNode(relPath)
+	if !ok {
+		return
+	}
+	if t < 0 {
+		t = 0
+	} else if t > 1 {
+		t = 1
+	}
+	in.players[ti] = &instPlayer{
+		rootTI: ti, anim: anim, startBeat: 0, timeScale: 1,
+		frozen: true, frozenT: t * anim.Duration,
+	}
+}
+
 // PlayState 在实例的 Animator（相对 path）上按状态名播放。
 func (in *Instance) PlayState(relPath, stateName string, startBeat, timeScale float64) {
 	ti, ok := in.findAnimRoot(relPath)
@@ -384,7 +431,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 }
 
 // NodeWorld 返回子树内节点（相对 path）在 baseWorld 下的世界变换
-//（JumperPoint 等锚点查询；需与 Queue 相同的 beat 采样口径——
+// （JumperPoint 等锚点查询；需与 Queue 相同的 beat 采样口径——
 // 锚点节点不被剪辑驱动时直接按 prefab 变换合成）。
 func (in *Instance) NodeWorld(relPath string, baseWorld Aff) (Aff, bool) {
 	t := in.T
