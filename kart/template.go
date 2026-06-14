@@ -101,6 +101,7 @@ type Instance struct {
 	actives map[int]bool // 模板内下标 → SetActive 覆盖
 	sprites map[int]string
 	colors  map[int][4]float64 // SpriteRenderer.color 覆盖（sr.color 直写）
+	orders  map[int]int        // SpriteRenderer.sortingOrder 覆盖（sr.sortingOrder 直写）
 }
 
 // NewInstance 创建实例（Offset 先取模板根的 prefab 位置）。
@@ -113,6 +114,7 @@ func (t *Template) NewInstance() *Instance {
 		actives: map[int]bool{},
 		sprites: map[int]string{},
 		colors:  map[int][4]float64{},
+		orders:  map[int]int{},
 	}
 	// controller 默认状态不自动播（Unity 激活时播默认态；由调用方
 	// PlayDefaultState 以正确的 timeScale 启动）
@@ -267,6 +269,17 @@ func (in *Instance) SetColor(relPath string, c [4]float64) {
 	}
 }
 
+// SetOrder 覆盖子树内节点的 sortingOrder。Wizard's Waltz 的花会根据
+// z 位置每实例改排序；共享模板节点不能只改全局 rig order。
+func (in *Instance) SetOrder(relPath string, order int) {
+	for ti, tn := range in.T.Nodes {
+		if tn.RelPath == relPath {
+			in.orders[ti] = order
+			return
+		}
+	}
+}
+
 // SetSprite 覆盖子树内节点的切片（鸟的企鹅换皮等）。
 func (in *Instance) SetSprite(relPath, sprite string) {
 	for ti, tn := range in.T.Nodes {
@@ -381,6 +394,9 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 	}
 	for ti, c := range in.colors {
 		states[ti].color = c
+	}
+	for ti, o := range in.orders {
+		states[ti].order = o
 	}
 	// 剪辑采样
 	for _, p := range in.players {

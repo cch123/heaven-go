@@ -38,6 +38,7 @@ import (
 	"hsdemo/games/taptrial"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/trickclass"
+	"hsdemo/games/wizardswaltz"
 )
 
 type recorder struct {
@@ -111,6 +112,7 @@ func main() {
 	engine.Register("lockstep", lockstep.New)
 	engine.Register("spaceDance", spacedance.New)
 	engine.Register("munchyMonk", munchymonk.New)
+	engine.Register("wizardsWaltz", wizardswaltz.New)
 
 	app, err := engine.New(*assetsRoot, *path)
 	if err != nil {

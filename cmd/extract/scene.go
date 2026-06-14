@@ -73,6 +73,19 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		commonSounds:    []string{"applause.ogg", "audienceSad.ogg"},
 	},
+	"wizardsWaltz": {
+		dir:             "WizardsWaltz",
+		prefab:          "wizardsWaltz.prefab",
+		roleFields:      []string{"wizard", "girl", "plantHolder", "plantBase"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"wizard", "girl", "plantHolder", "plantBase"}},
+			{name: "wizard", markers: []string{"animator", "shadow"}, atPath: "Wizard"},
+			{name: "girl", markers: []string{"animator", "flowers"}, atPath: "Girl"},
+			{name: "plant", markers: []string{"animator", "spriteRenderer", "createBeat"}, atPath: "Prefabs/Plant"},
+		},
+	},
 	"rhythmSomen": {
 		dir:    "RhythmSomen",
 		prefab: "rhythmSomen.prefab",
