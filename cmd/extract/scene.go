@@ -107,6 +107,16 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "drummer", markers: []string{"animator", "miiFaces", "face"}, multi: true},
 		},
 	},
+	"clappyTrio": {
+		dir:             "ClappyTrio",
+		prefab:          "clappyTrio.prefab",
+		roleFields:      []string{"customText", "signAnim", "textTrioTiming", "textCustom"},
+		wantControllers: true,
+		wantTexts:       true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"Lion", "faces", "signAnim", "textTrioTiming", "textCustom"}},
+		},
+	},
 	"rhythmSomen": {
 		dir:    "RhythmSomen",
 		prefab: "rhythmSomen.prefab",

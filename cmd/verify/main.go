@@ -25,6 +25,7 @@ import (
 	"hsdemo/games/bouncyroad"
 	"hsdemo/games/catchytune"
 	"hsdemo/games/cheerreaders"
+	"hsdemo/games/clappytrio"
 	"hsdemo/games/cointoss"
 	"hsdemo/games/drummingpractice"
 	"hsdemo/games/kitties"
@@ -100,6 +101,7 @@ func main() {
 	engine.Register("basketballGirls", basketballgirls.New)
 	engine.Register("bouncyRoad", bouncyroad.New)
 	engine.Register("catchyTune", catchytune.New)
+	engine.Register("clappyTrio", clappytrio.New)
 	engine.Register("coinToss", cointoss.New)
 	engine.Register("drummingPractice", drummingpractice.New)
 	engine.Register("tambourine", tambourine.New)
