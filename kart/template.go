@@ -105,6 +105,9 @@ type Instance struct {
 	sprites map[int]string
 	colors  map[int][4]float64 // SpriteRenderer.color 覆盖（sr.color 直写）
 	orders  map[int]int        // SpriteRenderer.sortingOrder 覆盖（sr.sortingOrder 直写）
+	pos     map[int][2]float64 // Transform.localPosition 覆盖（脚本每帧写 transform）
+	rots    map[int]float64    // Transform.localEulerAngles.z 覆盖（弧度）
+	scales  map[int][2]float64 // Transform.localScale 覆盖
 }
 
 // NewInstance 创建实例（Offset 先取模板根的 prefab 位置）。
@@ -119,6 +122,9 @@ func (t *Template) NewInstance() *Instance {
 		sprites: map[int]string{},
 		colors:  map[int][4]float64{},
 		orders:  map[int]int{},
+		pos:     map[int][2]float64{},
+		rots:    map[int]float64{},
+		scales:  map[int][2]float64{},
 	}
 	// controller 默认状态不自动播（Unity 激活时播默认态；由调用方
 	// PlayDefaultState 以正确的 timeScale 启动）
@@ -284,6 +290,37 @@ func (in *Instance) SetOrder(relPath string, order int) {
 	}
 }
 
+// SetPos 覆盖子树内节点的本地坐标。Splashdown 的 NtrSynchrette.Update
+// 每帧直接写 PosHolder.localPosition；该类脚本运动不属于 AnimationClip。
+func (in *Instance) SetPos(relPath string, x, y float64) {
+	for ti, tn := range in.T.Nodes {
+		if tn.RelPath == relPath {
+			in.pos[ti] = [2]float64{x, y}
+			return
+		}
+	}
+}
+
+// SetRot 覆盖子树内节点的本地 z 旋转（弧度）。
+func (in *Instance) SetRot(relPath string, rot float64) {
+	for ti, tn := range in.T.Nodes {
+		if tn.RelPath == relPath {
+			in.rots[ti] = rot
+			return
+		}
+	}
+}
+
+// SetScale 覆盖子树内节点的本地缩放。
+func (in *Instance) SetScale(relPath string, sx, sy float64) {
+	for ti, tn := range in.T.Nodes {
+		if tn.RelPath == relPath {
+			in.scales[ti] = [2]float64{sx, sy}
+			return
+		}
+	}
+}
+
 // SetSprite 覆盖子树内节点的切片（鸟的企鹅换皮等）。
 func (in *Instance) SetSprite(relPath, sprite string) {
 	for ti, tn := range in.T.Nodes {
@@ -403,6 +440,15 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 	}
 	for ti, o := range in.orders {
 		states[ti].order = o
+	}
+	for ti, p := range in.pos {
+		states[ti].pos = p
+	}
+	for ti, r := range in.rots {
+		states[ti].rot = r
+	}
+	for ti, s := range in.scales {
+		states[ti].scale = s
 	}
 	// 剪辑采样
 	for _, p := range in.players {

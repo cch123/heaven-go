@@ -32,6 +32,10 @@ type sceneSpec struct {
 	wantTexts       bool     // 提取 TMP 世界文本（texts.json + fonts/）
 
 	components []componentSpec // 通用组件 dump（Extra.Components）
+	// templatePrefabs 是 C# 运行时 Instantiate 的 prefab 资产引用；这些
+	// prefab 不在主场景树里，但运行时必须有完整子树供 kart.Template 复用。
+	// 提取时作为隐藏根挂到导出 scene 下，保留原 fileID 以便主脚本字段引用解析。
+	templatePrefabs []string
 }
 
 // componentSpec 按字段特征（可选限定 GameObject path）识别一个 MonoBehaviour，
@@ -401,6 +405,24 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "player", markers: []string{"PlayerSprite", "Hat", "Bat", "BatColors", "HatSprites1"}, atPath: "Player"},
 		},
 	},
+	"splashdown": {
+		dir:    "Splashdown",
+		prefab: "splashdown.prefab",
+		roleFields: []string{
+			"synchretteHolder", "synchrettePrefab", "crowdAnim",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		templatePrefabs: []string{
+			"Prefabs/SynchretteHolder.prefab",
+			"Prefabs/Splashes.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{"synchretteHolder", "synchrettePrefab", "crowdAnim", "synchretteDistance"}},
+			{name: "synchrette", markers: []string{"splashPrefab", "anim", "synchretteTransform", "splashHolder", "throwAnim"}, atPath: "SynchretteHolder"},
+			{name: "splash", markers: []string{"smallSplashParticles", "bigSplashParticles"}},
+		},
+	},
 	"kitties": {
 		dir:    "Kitties",
 		prefab: "kitties.prefab",
@@ -524,7 +546,7 @@ func extractScene(game string) {
 
 	tables := scanSpriteMetas(bundlePath(spec.dir, "Sprites"))
 	exportSheetMulti(tables)
-	idx, docs := buildPrefabIndex(bundlePath(spec.dir, spec.prefab))
+	idx, docs := buildPrefabIndex(bundlePath(spec.dir, spec.prefab), spec.templatePrefabs)
 	idx.mappedMats = scanMappedMats(bundlePath(spec.dir))
 	paths, nodeIdx := exportScene(idx, tables)
 	exportRoles(spec, docs, idx, paths)
@@ -607,11 +629,15 @@ type docRef struct {
 	content map[string]any
 }
 
-func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
+func buildPrefabIndex(prefabPath string, templatePrefabs []string) (*prefabIndex, *docTable) {
 	// 展开嵌套 prefab（子 prefab 在游戏目录与共享 Prefabs 下扫描）
-	prefabGUIDs := scanGUIDs(filepath.Dir(prefabPath), ".prefab")
+	gameDir := filepath.Dir(prefabPath)
+	prefabGUIDs := scanGUIDs(gameDir, ".prefab")
 	docs, err := expandPrefab(prefabPath, prefabGUIDs)
 	must(err)
+	if len(templatePrefabs) > 0 {
+		docs = appendTemplatePrefabs(docs, gameDir, templatePrefabs, prefabGUIDs)
+	}
 	fmt.Printf("prefab: %d documents（含嵌套展开）\n", len(docs))
 
 	idx := &prefabIndex{
@@ -647,6 +673,87 @@ func buildPrefabIndex(prefabPath string) (*prefabIndex, *docTable) {
 		}
 	}
 	return idx, dt
+}
+
+func appendTemplatePrefabs(mainDocs []uy.Doc, gameDir string, rels []string, prefabGUIDs map[string]string) []uy.Doc {
+	rootTF := findSceneRootTF(mainDocs)
+	if rootTF == 0 {
+		log.Fatal("prefab root transform not found before template append")
+	}
+	byID := map[int64]bool{}
+	tfDocs := map[int64]*uy.Doc{}
+	for i := range mainDocs {
+		byID[mainDocs[i].FileID] = true
+		switch mainDocs[i].ClassID {
+		case 4, 224:
+			tfDocs[mainDocs[i].FileID] = &mainDocs[i]
+		}
+	}
+	rootDoc := tfDocs[rootTF]
+	if rootDoc == nil {
+		log.Fatal("prefab root transform doc missing before template append")
+	}
+	rootContent := rootDoc.Content()
+	for _, rel := range rels {
+		path := filepath.Join(gameDir, rel)
+		docs, err := expandPrefab(path, prefabGUIDs)
+		must(err)
+		extRootTF := findSceneRootTF(docs)
+		if extRootTF == 0 {
+			log.Fatalf("template prefab %s root transform not found", rel)
+		}
+		// Runtime-prefab references in the game script carry the prefab asset
+		// fileID. Keeping those IDs intact lets dumpComponent/exportRoles resolve
+		// fields like synchrettePrefab and splashPrefab back to template paths.
+		for i := range docs {
+			if byID[docs[i].FileID] {
+				log.Fatalf("template prefab %s fileID collision on &%d", rel, docs[i].FileID)
+			}
+			byID[docs[i].FileID] = true
+		}
+		for i := range docs {
+			d := &docs[i]
+			if d.ClassID == 4 || d.ClassID == 224 {
+				if d.FileID == extRootTF {
+					c := d.Content()
+					c["m_Father"] = map[string]any{"fileID": rootTF}
+					rootContent["m_Children"] = append(uy.L(rootContent["m_Children"]), map[string]any{"fileID": extRootTF})
+				}
+			}
+			if d.ClassID == 1 {
+				gid := d.FileID
+				for _, td := range docs {
+					if td.FileID == extRootTF {
+						gid = uy.I(uy.Get(td.Content(), "m_GameObject", "fileID"))
+						break
+					}
+				}
+				if gid == d.FileID {
+					d.Content()["m_IsActive"] = 0
+				}
+			}
+		}
+		mainDocs = append(mainDocs, docs...)
+		fmt.Printf("template prefab %s appended (%d docs)\n", rel, len(docs))
+	}
+	return mainDocs
+}
+
+func findSceneRootTF(docs []uy.Doc) int64 {
+	tfByID := map[int64]map[string]any{}
+	for i := range docs {
+		if docs[i].ClassID != 4 && docs[i].ClassID != 224 {
+			continue
+		}
+		tfByID[docs[i].FileID] = docs[i].Content()
+	}
+	for id, tf := range tfByID {
+		father := uy.I(uy.Get(tf, "m_Father", "fileID"))
+		if father == 0 || tfByID[father] == nil {
+			return id
+		}
+	}
+	return 0
 }
 
 // exportScene 导出整棵节点树，返回 GameObject fileID → 节点 path（供 roles 解析）

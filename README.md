@@ -29,6 +29,7 @@ go run ./cmd/extract -game frogPrincess
 go run ./cmd/extract -game gleeClub
 go run ./cmd/extract -game mrUpbeat
 go run ./cmd/extract -game spaceball
+go run ./cmd/extract -game splashdown
 go run ./cmd/extract -game tramAndPauline
 go run ./cmd/extract -game tunnel
 go run ./cmd/extract -game wizardsWaltz

@@ -1,0 +1,1238 @@
+{
+ "nodes": [
+  {
+   "name": "splashdown",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0.00024968,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9648744,
+    0.9648744
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SynchrettesHolder",
+   "path": "SynchrettesHolder",
+   "parent": 0,
+   "pos": [
+    0.05,
+    -0.024
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    -0.00022952,
+    -0.10150017
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0323384,
+    1.0323384
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "Background/Water",
+   "parent": 2,
+   "pos": [
+    -0.42,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9347281,
+    0.9347281
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "Background/Water/Water",
+   "parent": 3,
+   "pos": [
+    -5.2,
+    -6.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5227,
+    0.5227
+   ],
+   "sprite": "splashdownbg_0",
+   "order": 100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Water (1)",
+   "path": "Background/Water/Water (1)",
+   "parent": 3,
+   "pos": [
+    4.9,
+    -6.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5227,
+    0.5227
+   ],
+   "sprite": "splashdownbg_0",
+   "order": 100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Water (2)",
+   "path": "Background/Water/Water (2)",
+   "parent": 3,
+   "pos": [
+    -15.3,
+    -6.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5227,
+    0.5227
+   ],
+   "sprite": "splashdownbg_0",
+   "order": 100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "PoolSide",
+   "path": "Background/PoolSide",
+   "parent": 2,
+   "pos": [
+    -15.15,
+    -3.9398
+   ],
+   "rotZ": 0,
+   "scale": [
+    13.472985,
+    0.44429502
+   ],
+   "sprite": "splashdownbg_25",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BgColor",
+   "path": "Background/BgColor",
+   "parent": 2,
+   "pos": [
+    -14.248,
+    -3.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    11.102005,
+    5.5833244
+   ],
+   "sprite": "splashdownbg_26",
+   "order": -30,
+   "color": [
+    0.19607845,
+    0.48235297,
+    0.9607844,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Crowd",
+   "path": "Background/Crowd",
+   "parent": 2,
+   "pos": [
+    -0.3621778,
+    -0.59
+   ],
+   "z": 0.20437704,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CrowdPiece",
+   "path": "Background/Crowd/CrowdPiece",
+   "parent": 9,
+   "pos": [
+    -3.1024,
+    -2.15
+   ],
+   "z": -0.204377,
+   "rotZ": 0,
+   "scale": [
+    0.47887895,
+    0.47887895
+   ],
+   "sprite": "splashdownbg_1",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CrowdPiece (1)",
+   "path": "Background/Crowd/CrowdPiece (1)",
+   "parent": 9,
+   "pos": [
+    -10.093,
+    -2.15
+   ],
+   "z": -0.204377,
+   "rotZ": 0,
+   "scale": [
+    0.47887895,
+    0.47887895
+   ],
+   "sprite": "splashdownbg_1",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CrowdPiece (2)",
+   "path": "Background/Crowd/CrowdPiece (2)",
+   "parent": 9,
+   "pos": [
+    3.8485,
+    -2.15
+   ],
+   "z": -0.204377,
+   "rotZ": 0,
+   "scale": [
+    0.47887895,
+    0.47887895
+   ],
+   "sprite": "splashdownbg_1",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CrowdPiece (3)",
+   "path": "Background/Crowd/CrowdPiece (3)",
+   "parent": 9,
+   "pos": [
+    -3.65,
+    2.9394
+   ],
+   "z": -0.204377,
+   "rotZ": 0,
+   "scale": [
+    0.47887895,
+    0.47887895
+   ],
+   "sprite": "splashdownbg_1",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CrowdPiece (4)",
+   "path": "Background/Crowd/CrowdPiece (4)",
+   "parent": 9,
+   "pos": [
+    -10.6406,
+    2.9394
+   ],
+   "z": -0.204377,
+   "rotZ": 0,
+   "scale": [
+    0.47887895,
+    0.47887895
+   ],
+   "sprite": "splashdownbg_1",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CrowdPiece (5)",
+   "path": "Background/Crowd/CrowdPiece (5)",
+   "parent": 9,
+   "pos": [
+    3.3009,
+    2.9394
+   ],
+   "z": -0.204377,
+   "rotZ": 0,
+   "scale": [
+    0.47887895,
+    0.47887895
+   ],
+   "sprite": "splashdownbg_1",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BgColor (1)",
+   "path": "Background/BgColor (1)",
+   "parent": 2,
+   "pos": [
+    -14.78,
+    -20.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    11.102005,
+    5.5833244
+   ],
+   "sprite": "splashdownbg_26",
+   "order": -30,
+   "color": [
+    0,
+    0.34901962,
+    0.48235297,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "SynchretteHolder",
+   "path": "SynchretteHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    -3.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PosHolder",
+   "path": "SynchretteHolder/PosHolder",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Synchrette",
+   "path": "SynchretteHolder/PosHolder/Synchrette",
+   "parent": 18,
+   "pos": [
+    0,
+    3.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "SynchretteHolder/PosHolder/Synchrette/Holder",
+   "parent": 19,
+   "pos": [
+    0.45335,
+    -3.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0640129,
+    1.0640129
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "SynchretteHolder/PosHolder/Synchrette/Holder/Head",
+   "parent": 20,
+   "pos": [
+    -1.2636,
+    1.11887
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_8",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "SynchretteHolder/PosHolder/Synchrette/Holder/Body",
+   "parent": 20,
+   "pos": [
+    -0.91221,
+    -0.345
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_20",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "SynchretteHolder/PosHolder/Synchrette/Holder/LegRight",
+   "parent": 20,
+   "pos": [
+    -0.468,
+    -1.673
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_30",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "SynchretteHolder/PosHolder/Synchrette/Holder/LegLeft",
+   "parent": 20,
+   "pos": [
+    -0.372,
+    -1.673
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_30",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "SynchretteHolder/PosHolder/Synchrette/Holder/ArmLeft",
+   "parent": 20,
+   "pos": [
+    -0.64,
+    -0.538
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_14",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "SynchretteHolder/PosHolder/Synchrette/Holder/ArmRight",
+   "parent": 20,
+   "pos": [
+    -0.209,
+    -0.538
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_14",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Dolphin",
+   "path": "SynchretteHolder/PosHolder/Synchrette/Holder/Dolphin",
+   "parent": 20,
+   "pos": [
+    -2.99,
+    -2.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_38",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "SplashHolder",
+   "path": "SynchretteHolder/SplashHolder",
+   "parent": 17,
+   "pos": [
+    0,
+    3.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ThrowSynchrette",
+   "path": "SynchretteHolder/ThrowSynchrette",
+   "parent": 17,
+   "pos": [
+    0,
+    3.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "SynchretteHolder/ThrowSynchrette/Holder",
+   "parent": 29,
+   "pos": [
+    0.45335,
+    -3.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0640129,
+    1.0640129
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "SynchretteHolder/ThrowSynchrette/Holder/Head",
+   "parent": 30,
+   "pos": [
+    -1.2636,
+    1.11887
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_8",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "SynchretteHolder/ThrowSynchrette/Holder/Body",
+   "parent": 30,
+   "pos": [
+    -0.91221,
+    -0.345
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_20",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "SynchretteHolder/ThrowSynchrette/Holder/LegRight",
+   "parent": 30,
+   "pos": [
+    -0.468,
+    -1.673
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_30",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "SynchretteHolder/ThrowSynchrette/Holder/LegLeft",
+   "parent": 30,
+   "pos": [
+    -0.372,
+    -1.673
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_30",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "SynchretteHolder/ThrowSynchrette/Holder/ArmLeft",
+   "parent": 30,
+   "pos": [
+    -0.64,
+    -0.538
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_14",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "SynchretteHolder/ThrowSynchrette/Holder/ArmRight",
+   "parent": 30,
+   "pos": [
+    -0.209,
+    -0.538
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_14",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Dolphin",
+   "path": "SynchretteHolder/ThrowSynchrette/Holder/Dolphin",
+   "parent": 30,
+   "pos": [
+    -2.99,
+    -2.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39463896,
+    0.39463896
+   ],
+   "sprite": "splashdown_38",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Splashes",
+   "path": "Splashes",
+   "parent": 0,
+   "pos": [
+    0.04,
+    -3.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Splash",
+   "path": "Splashes/Splash",
+   "parent": 38,
+   "pos": [
+    -0.804,
+    0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4365101,
+    0.43651015
+   ],
+   "sprite": "splashdownbg_24",
+   "order": 14,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "White",
+   "path": "Splashes/Splash/White",
+   "parent": 39,
+   "pos": [
+    1.83,
+    3.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0025288,
+    1.002529
+   ],
+   "sprite": "splashdownbg_5",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "SmallDrops",
+   "path": "Splashes/SmallDrops",
+   "parent": 38,
+   "pos": [
+    0,
+    0.45000005
+   ],
+   "rotZ": 1.3618351673423938,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BigDrops",
+   "path": "Splashes/BigDrops",
+   "parent": 38,
+   "pos": [
+    0,
+    0.45000005
+   ],
+   "rotZ": 1.315438259122573,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Splash2",
+   "path": "Splashes/Splash2",
+   "parent": 38,
+   "pos": [
+    0.7,
+    -0.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4365101,
+    0.4365101
+   ],
+   "sprite": "splashdownbg_24",
+   "order": 16,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "White",
+   "path": "Splashes/Splash2/White",
+   "parent": 43,
+   "pos": [
+    1.83,
+    3.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0025288,
+    1.002529
+   ],
+   "sprite": "splashdownbg_5",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Splash3",
+   "path": "Splashes/Splash3",
+   "parent": 38,
+   "pos": [
+    -2.42,
+    -0.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4365101,
+    0.4365101
+   ],
+   "sprite": "splashdownbg_24",
+   "order": 18,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "White",
+   "path": "Splashes/Splash3/White",
+   "parent": 45,
+   "pos": [
+    1.83,
+    3.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0025288,
+    1.002529
+   ],
+   "sprite": "splashdownbg_5",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

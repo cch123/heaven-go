@@ -1,0 +1,36 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "synchretteDistance": 3.75
+   },
+   "refs": {
+    "crowdAnim": "Background/Crowd",
+    "synchretteHolder": "SynchrettesHolder",
+    "synchrettePrefab": "SynchretteHolder"
+   }
+  },
+  "splash": {
+   "path": "Splashes",
+   "refs": {
+    "bigSplashParticles": "Splashes/BigDrops",
+    "smallSplashParticles": "Splashes/SmallDrops"
+   }
+  },
+  "synchrette": {
+   "path": "SynchretteHolder",
+   "nums": {
+    "jumpHeight": 5,
+    "jumpStart": -3
+   },
+   "refs": {
+    "anim": "SynchretteHolder/PosHolder/Synchrette",
+    "splashHolder": "SynchretteHolder/SplashHolder",
+    "splashPrefab": "Splashes",
+    "synchretteTransform": "SynchretteHolder/PosHolder",
+    "throwAnim": "SynchretteHolder/ThrowSynchrette"
+   }
+  }
+ }
+}

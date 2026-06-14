@@ -1,0 +1,122 @@
+{
+ "Crowd": {
+  "default": "CrowdIdle",
+  "states": {
+   "CrowdCheer": {
+    "clip": "Animations/CrowdCheer",
+    "speed": 1
+   },
+   "CrowdIdle": {
+    "clip": "Animations/CrowdIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Splashes": {
+  "default": "NoSplash",
+  "states": {
+   "Appearsplash": {
+    "clip": "Animations/Appearsplash",
+    "speed": 1
+   },
+   "BigSplash": {
+    "clip": "Animations/BigSplash",
+    "speed": 1
+   },
+   "GodownSplash": {
+    "clip": "Animations/GodownSplash",
+    "speed": 1
+   },
+   "NoSplash": {
+    "clip": "Animations/NoSplash",
+    "speed": 1
+   }
+  }
+ },
+ "Synchrette ": {
+  "default": "Idle",
+  "states": {
+   "Appear1": {
+    "clip": "Animations/Appear1",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Appear2": {
+    "clip": "Animations/Appear2",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Appear3": {
+    "clip": "Animations/Appear3",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1
+   },
+   "Dolphin": {
+    "clip": "Animations/Dolphin",
+    "speed": 1
+   },
+   "DolphinMiss": {
+    "clip": "Animations/DolphinMiss",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "JumpMiss": {
+    "clip": "Animations/JumpMiss",
+    "speed": 1
+   },
+   "JumpOut": {
+    "clip": "Animations/JumpOut",
+    "speed": 1
+   },
+   "MissAppear": {
+    "clip": "Animations/MissAppear",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Throw": {
+    "clip": "Animations/Throw",
+    "speed": 1
+   }
+  }
+ },
+ "Water": {
+  "default": "WaterWave",
+  "states": {
+   "WaterWave": {
+    "clip": "Animations/WaterWave",
+    "speed": 1
+   }
+  }
+ }
+}
