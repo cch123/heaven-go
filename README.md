@@ -24,6 +24,7 @@ go run ./cmd/extract -game coinToss
 go run ./cmd/extract -game cropStomp
 go run ./cmd/extract -game dogNinja
 go run ./cmd/extract -game drummingPractice
+go run ./cmd/extract -game flipperFlop
 go run ./cmd/extract -game forkLifter
 go run ./cmd/extract -game frogPrincess
 go run ./cmd/extract -game gleeClub

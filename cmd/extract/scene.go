@@ -1442,6 +1442,10 @@ func copySounds(dir string) {
 		if err != nil || d.IsDir() || strings.HasSuffix(d.Name(), ".meta") {
 			return err
 		}
+		ext := strings.ToLower(filepath.Ext(p))
+		if ext != ".ogg" && ext != ".wav" {
+			return nil
+		}
 		rel, err := filepath.Rel(dir, p)
 		if err != nil {
 			return err
