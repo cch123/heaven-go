@@ -19,6 +19,9 @@ type Input struct {
 	// NoScore 复刻 HS 的 countsForAccuracy=false：窗口吞掉输入并执行回调，
 	// 但不写判定计数、Timing Bar 或结算分数。
 	NoScore bool
+	// NoAutoplay 复刻 HS ScheduleUserInput：真实玩家可以触发回调，但
+	// autoplay 不会代打，常用于“错误动作”窗口。
+	NoAutoplay bool
 	// OnHit 在 NG 窗口内的任意按键触发；state 为 just 窗归一化偏移
 	//（|state|<=1 = just 命中，1<|state|<=2 = NG，负 = 早），与 C# 语义一致。
 	OnHit func(state float64, j Judgment)

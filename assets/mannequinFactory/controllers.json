@@ -1,0 +1,78 @@
+{
+ "EyeStampAnim": {
+  "default": "Nothing",
+  "states": {
+   "Nothing": {
+    "speed": 1
+   },
+   "StampEmpty": {
+    "clip": "EyeStamps/StampEmpty",
+    "speed": 1
+   },
+   "StampJust": {
+    "clip": "EyeStamps/StampJust",
+    "speed": 1
+   }
+  }
+ },
+ "HandAnim": {
+  "default": "Nothing",
+  "states": {
+   "Nothing": {
+    "speed": 1
+   },
+   "SlapEmpty": {
+    "clip": "Hand/SlapEmpty",
+    "speed": 1
+   },
+   "SlapJust": {
+    "clip": "Hand/SlapJust",
+    "speed": 1
+   }
+  }
+ },
+ "MannequinHeadAnim": {
+  "default": "Nothing",
+  "states": {
+   "Grabbed1": {
+    "clip": "MannequinHead/MannequinHeadGrabbed1",
+    "speed": 1
+   },
+   "Grabbed2": {
+    "clip": "MannequinHead/MannequinHeadGrabbed2",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "MannequinHead/MannequinHeadMiss",
+    "speed": 1
+   },
+   "Move1": {
+    "clip": "MannequinHead/MannequinHeadMove1",
+    "speed": 1
+   },
+   "Move2": {
+    "clip": "MannequinHead/MannequinHeadMove2",
+    "speed": 1
+   },
+   "Move3": {
+    "clip": "MannequinHead/MannequinHeadMove3",
+    "speed": 1
+   },
+   "Nothing": {
+    "speed": 1
+   },
+   "Slapped": {
+    "clip": "MannequinHead/MannequinHeadSlapped",
+    "speed": 1
+   },
+   "Stamp": {
+    "clip": "MannequinHead/MannequinHeadStamp",
+    "speed": 1
+   },
+   "StampMiss": {
+    "clip": "MannequinHead/MannequinHeadStampMiss",
+    "speed": 1
+   }
+  }
+ }
+}

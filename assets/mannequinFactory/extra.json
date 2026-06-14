@@ -1,0 +1,26 @@
+{
+ "components": {
+  "head": {
+   "path": "MannequinHeadHolder/MannequinHead",
+   "nums": {
+    "needSlap": 0,
+    "startBeat": 1
+   },
+   "refs": {
+    "eyesSr": "MannequinHeadHolder/MannequinHead/HeadParent/Eyes",
+    "headAnim": "MannequinHeadHolder/MannequinHead",
+    "headSr": "MannequinHeadHolder/MannequinHead/HeadParent/Head"
+   },
+   "spriteArrays": {
+    "eyes": [
+     "MannequinFactory_19",
+     "MannequinFactory_20"
+    ],
+    "heads": [
+     "MannequinFactory_5",
+     "MannequinFactory_9"
+    ]
+   }
+  }
+ }
+}

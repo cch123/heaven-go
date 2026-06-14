@@ -1,0 +1,788 @@
+{
+ "nodes": [
+  {
+   "name": "mannequinFactory",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.94,
+    0.94
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MannequinHeadHolder",
+   "path": "MannequinHeadHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MannequinHead",
+   "path": "MannequinHeadHolder/MannequinHead",
+   "parent": 1,
+   "pos": [
+    -14.28,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadParent",
+   "path": "MannequinHeadHolder/MannequinHead/HeadParent",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "MannequinHeadHolder/MannequinHead/HeadParent/Head",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_9",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    4.45
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "MannequinHeadHolder/MannequinHead/HeadParent/Eyes",
+   "parent": 3,
+   "pos": [
+    -0.102,
+    0.488
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_20",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.6,
+    0.37
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "MannequinHeadHolder/MannequinHead/HeadParent/Smear",
+   "parent": 3,
+   "pos": [
+    -2.77,
+    0.621
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_29",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.56,
+    3.18
+   ]
+  },
+  {
+   "name": "Crane",
+   "path": "MannequinHeadHolder/MannequinHead/HeadParent/Crane",
+   "parent": 3,
+   "pos": [
+    0,
+    10
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_21",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.07,
+    1.11
+   ]
+  },
+  {
+   "name": "MissFX",
+   "path": "MannequinHeadHolder/MannequinHead/HeadParent/MissFX",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_12",
+   "order": 5000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.16,
+    4.28
+   ]
+  },
+  {
+   "name": "GrabbedFX",
+   "path": "MannequinHeadHolder/MannequinHead/GrabbedFX",
+   "parent": 2,
+   "pos": [
+    0,
+    0.62
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "MannequinFactory_22",
+   "order": 100,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.2,
+    0.56
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sign",
+   "path": "Background/Sign",
+   "parent": 10,
+   "pos": [
+    -4.2829,
+    10.8912
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1317338,
+    1.1317338
+   ],
+   "sprite": "MannequinFactory_47",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    8.420181,
+    14.716539
+   ]
+  },
+  {
+   "name": "SignText",
+   "path": "Background/Sign/SignText",
+   "parent": 11,
+   "pos": [
+    0,
+    -6.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MainBG",
+   "path": "Background/MainBG",
+   "parent": 10,
+   "pos": [
+    -12.7753,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactoryBackground_0",
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    44.750744,
+    10.8
+   ]
+  },
+  {
+   "name": "BGColor",
+   "path": "Background/BGColor",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -32000,
+   "color": [
+    0.9686275,
+    0.94117653,
+    0.5058824,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RedConveyor",
+   "path": "Background/RedConveyor",
+   "parent": 10,
+   "pos": [
+    26.1339,
+    -1.4251
+   ],
+   "rotZ": 0,
+   "scale": [
+    51,
+    1
+   ],
+   "sprite": "MannequinFactoryBackground_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.89,
+    1.77
+   ]
+  },
+  {
+   "name": "LeftStampRest",
+   "path": "Background/LeftStampRest",
+   "parent": 10,
+   "pos": [
+    3.305,
+    -10.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    15
+   ],
+   "sprite": "MannequinFactoryBackground_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.09,
+    0.72
+   ]
+  },
+  {
+   "name": "RightStampRest",
+   "path": "Background/RightStampRest",
+   "parent": 10,
+   "pos": [
+    6.005,
+    -10.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    15
+   ],
+   "sprite": "MannequinFactoryBackground_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.09,
+    0.72
+   ]
+  },
+  {
+   "name": "HandParent",
+   "path": "HandParent",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "HandParent/Hand",
+   "parent": 18,
+   "pos": [
+    -2.8476,
+    -0.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_8",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.79,
+    3.54
+   ]
+  },
+  {
+   "name": "SlapFX",
+   "path": "HandParent/SlapFX",
+   "parent": 18,
+   "pos": [
+    -1.82,
+    1.4
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.8362,
+    0.8362
+   ],
+   "sprite": "MannequinFactory_12",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.16,
+    4.28
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "HandParent/Smear",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_22",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.47,
+    1.94
+   ]
+  },
+  {
+   "name": "EyeStamper",
+   "path": "EyeStamper",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftEyeStamp",
+   "path": "EyeStamper/LeftEyeStamp",
+   "parent": 22,
+   "pos": [
+    3.308,
+    -3.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_0",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.09,
+    1.36
+   ]
+  },
+  {
+   "name": "LeftBar",
+   "path": "EyeStamper/LeftBar",
+   "parent": 22,
+   "pos": [
+    3.308,
+    -2.741
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_6",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.81,
+    0.78
+   ]
+  },
+  {
+   "name": "RightEyeStamp",
+   "path": "EyeStamper/RightEyeStamp",
+   "parent": 22,
+   "pos": [
+    6.006,
+    -3.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_0",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.09,
+    1.36
+   ]
+  },
+  {
+   "name": "RightBar",
+   "path": "EyeStamper/RightBar",
+   "parent": 22,
+   "pos": [
+    4.42,
+    -2.754
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_10",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.04,
+    1.11
+   ]
+  },
+  {
+   "name": "LeftSpring",
+   "path": "EyeStamper/LeftSpring",
+   "parent": 22,
+   "pos": [
+    3.308,
+    -4.358
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_31",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.64,
+    1.35
+   ]
+  },
+  {
+   "name": "RightSpring",
+   "path": "EyeStamper/RightSpring",
+   "parent": 22,
+   "pos": [
+    6.006,
+    -4.358
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_31",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.64,
+    1.35
+   ]
+  },
+  {
+   "name": "SmackFX",
+   "path": "EyeStamper/SmackFX",
+   "parent": 22,
+   "pos": [
+    3.88,
+    1.32
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "MannequinFactory_12",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.16,
+    4.28
+   ]
+  }
+ ]
+}

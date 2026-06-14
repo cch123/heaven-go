@@ -152,6 +152,18 @@ var sceneSpecs = map[string]sceneSpec{
 		},
 		wantControllers: true,
 	},
+	"mannequinFactory": {
+		dir:    "MannequinFactory",
+		prefab: "mannequinFactory.prefab",
+		roleFields: []string{
+			"HandAnim", "StampAnim", "bg", "SignText", "MannequinHeadObject",
+		},
+		wantControllers: true,
+		wantTexts:       true,
+		components: []componentSpec{
+			{name: "head", markers: []string{"headSr", "heads", "eyesSr", "eyes", "headAnim"}, atPath: "MannequinHeadHolder/MannequinHead"},
+		},
+	},
 	"fireworks": {
 		dir:             "Fireworks",
 		prefab:          "fireworks.prefab",

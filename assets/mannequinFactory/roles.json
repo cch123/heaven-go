@@ -1,0 +1,7 @@
+{
+ "HandAnim": "HandParent",
+ "MannequinHeadObject": "MannequinHeadHolder/MannequinHead",
+ "SignText": "Background/Sign/SignText",
+ "StampAnim": "EyeStamper",
+ "bg": "Background/BGColor"
+}

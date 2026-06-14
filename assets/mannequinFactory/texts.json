@@ -1,0 +1,22 @@
+[
+ {
+  "path": "Background/Sign/SignText",
+  "text": "Quality Goods",
+  "size": 6,
+  "color": [
+   0.5,
+   0.4746181,
+   0.14465407,
+   0.49411765
+  ],
+  "order": 20,
+  "layer": 0,
+  "font": "FOT-KurokaneStd_Megamix_Modified-EB.otf",
+  "rect": [
+   8.3114,
+   1.8148
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]

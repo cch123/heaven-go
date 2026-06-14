@@ -54,7 +54,7 @@ func (a *App) updatePlay() {
 	}
 	if a.Autoplay {
 		for _, in := range a.inputs {
-			if !in.judged && t >= in.hitT {
+			if !in.judged && !in.NoAutoplay && t >= in.hitT {
 				a.judgePress(in.hitT, beat, in.Release, in.Action)
 			}
 		}
