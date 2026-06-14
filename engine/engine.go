@@ -3,16 +3,23 @@
 package engine
 
 import (
+	"archive/zip"
 	"bytes"
+	"encoding/json"
 	"fmt"
+	"image"
 	"image/color"
 	"io"
 	"io/fs"
 	"log"
 	"math"
+	"os"
 	"path/filepath"
 	"sort"
 	"strings"
+
+	_ "image/jpeg"
+	_ "image/png"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/audio"
@@ -39,12 +46,24 @@ const (
 	WinJust = 0.05
 	WinNG   = 0.10
 
-	menuVisibleRows = 7
-	menuRowX        = 64
-	menuRowY        = 104
-	menuRowW        = 470
-	menuRowH        = 45
-	menuRowGap      = 8
+	rankOkThreshold = 0.6
+	rankHiThreshold = 0.8
+
+	menuGridX        = 54
+	menuGridY        = 116
+	menuCardW        = 148
+	menuCardH        = 172
+	menuCardGapX     = 20
+	menuCardGapY     = 24
+	menuGridCols     = 3
+	menuGridRows     = 2
+	menuVisibleItems = menuGridCols * menuGridRows
+
+	resultMsgTime  = 0.55
+	resultMsg2Time = 1.25
+	resultBarStart = 1.8
+	resultBarDur   = 1.25
+	resultRankTime = 3.45
 )
 
 type gameState int
@@ -72,6 +91,10 @@ type Input struct {
 	// Action 是输入动作通道：0=主键（Space/J/左键） 1=左（F/←/↑）
 	// 2=右（K/→） 3=替代键（L/↓/X，HS 的 South/Alt）。
 	Action int
+	// Weight/Category 来自当前 SectionMarker；Judgement 场景用它们做加权总评
+	// 和分类评价消息。
+	Weight   float64
+	Category int
 	// OnHit 在 NG 窗口内的任意按键触发；state 为 just 窗归一化偏移
 	//（|state|<=1 = just 命中，1<|state|<=2 = NG，负 = 早），与 C# 语义一致。
 	OnHit func(state float64, j Judgment)
@@ -98,8 +121,14 @@ type gameSwitch struct {
 }
 
 type menuLevel struct {
-	path string
-	name string
+	path       string
+	fileName   string
+	title      string
+	author     string
+	desc       string
+	games      []string
+	bpm        float64
+	customIcon *ebiten.Image
 }
 
 // viewScaleEvt 是 vfx/scale view 事件（StaticCamera：整张游戏画布的缩放，
@@ -115,6 +144,56 @@ type timingHit struct {
 	y      float64
 	rating Judgment
 	t      float64
+}
+
+type resultRank int
+
+const (
+	resultRankNg resultRank = iota
+	resultRankOk
+	resultRankHi
+)
+
+type resultScoreInput struct {
+	Beat     float64
+	Accuracy float64
+	Weight   float64
+	Category int
+}
+
+type resultSummary struct {
+	Score      float64
+	Rank       resultRank
+	Header     string
+	Message0   string
+	Message1   string
+	Message2   string
+	TwoMessage bool
+	SubRank    bool
+	NoMiss     bool
+	Perfect    bool
+	Star       bool
+}
+
+type resultAssets struct {
+	bg          *ebiten.Image
+	rankHi      *ebiten.Image
+	rankHiStar  *ebiten.Image
+	rankOk      *ebiten.Image
+	rankOkSweat *ebiten.Image
+	rankNg      []*ebiten.Image
+	epHi        *ebiten.Image
+	epOk        *ebiten.Image
+	epNg        *ebiten.Image
+}
+
+type libraryAssets struct {
+	bgBase      *ebiten.Image
+	bgGradient  *ebiten.Image
+	bgStars     *ebiten.Image
+	bgWaves     *ebiten.Image
+	borderSheet *ebiten.Image
+	border      *ebiten.Image
 }
 
 var audioCtx *audio.Context // audio.NewContext 进程内只能调用一次
@@ -135,6 +214,7 @@ type App struct {
 	actions  []beatAction
 	actIdx   int
 	inputs   []*Input
+	scores   []resultScoreInput
 	flashes  []flashEvt
 	camEvts  []camEvt
 	unported []string
@@ -179,6 +259,12 @@ type App struct {
 	menuSel    int
 	menuScroll int
 
+	result         resultSummary
+	resultAssets   resultAssets
+	libraryAssets  libraryAssets
+	resultT        float64
+	resultEpilogue bool
+
 	faceBig, faceMid, faceSmall *text.GoTextFace
 }
 
@@ -200,6 +286,8 @@ func New(assetsRoot, riqPath string) (*App, error) {
 		levels:       discoverLevels("levels"),
 	}
 	a.loadCommonSounds()
+	a.resultAssets = loadResultAssets(filepath.Join(assetsRoot, "common", "ratings"))
+	a.libraryAssets = loadLibraryAssets(filepath.Join(assetsRoot, "common", "library"))
 	if riqPath != "" {
 		r, err := riq.Load(riqPath)
 		if err != nil {
@@ -212,6 +300,70 @@ func New(assetsRoot, riqPath string) (*App, error) {
 	return a, nil
 }
 
+func loadResultAssets(dir string) resultAssets {
+	load := func(name string) *ebiten.Image {
+		f, err := os.Open(filepath.Join(dir, name))
+		if err != nil {
+			return nil
+		}
+		defer f.Close()
+		img, _, err := image.Decode(f)
+		if err != nil {
+			log.Printf("engine: decode result asset %s: %v", name, err)
+			return nil
+		}
+		return ebiten.NewImageFromImage(img)
+	}
+	return resultAssets{
+		bg:          load("judgementBg.png"),
+		rankHi:      load(filepath.Join("Superb", "superbrating.png")),
+		rankHiStar:  load(filepath.Join("Superb", "superbratingstar.png")),
+		rankOk:      load(filepath.Join("OK", "okrating.png")),
+		rankOkSweat: load(filepath.Join("OK", "okratingsweat.png")),
+		rankNg: []*ebiten.Image{
+			load(filepath.Join("TryAgain", "tryagainrating0001.png")),
+			load(filepath.Join("TryAgain", "tryagainrating0002.png")),
+			load(filepath.Join("TryAgain", "tryagainrating0003.png")),
+		},
+		epHi: load(filepath.Join("Epilogue", "superb.png")),
+		epOk: load(filepath.Join("Epilogue", "ok.png")),
+		epNg: load(filepath.Join("Epilogue", "tryagain.png")),
+	}
+}
+
+func loadLibraryAssets(dir string) libraryAssets {
+	load := func(name string) *ebiten.Image {
+		f, err := os.Open(filepath.Join(dir, name))
+		if err != nil {
+			return nil
+		}
+		defer f.Close()
+		img, _, err := image.Decode(f)
+		if err != nil {
+			log.Printf("engine: decode library asset %s: %v", name, err)
+			return nil
+		}
+		return ebiten.NewImageFromImage(img)
+	}
+	assets := libraryAssets{
+		bgBase:      load(filepath.Join("bg", "libBgBase.png")),
+		bgGradient:  load(filepath.Join("bg", "libBgGradient.png")),
+		bgStars:     load(filepath.Join("bg", "libBgStars.png")),
+		bgWaves:     load(filepath.Join("bg", "libBgWaves.png")),
+		borderSheet: load("levelBorders.png"),
+	}
+	// Unity's sprite atlas rects use a bottom-left origin. This is the original
+	// unplayed level border slice from levelBorders.png.
+	if assets.borderSheet != nil {
+		sheetH := assets.borderSheet.Bounds().Dy()
+		rect := image.Rect(40, sheetH-740-576, 40+576, sheetH-740)
+		if sub, ok := assets.borderSheet.SubImage(rect).(*ebiten.Image); ok {
+			assets.border = sub
+		}
+	}
+	return assets
+}
+
 func discoverLevels(dir string) []menuLevel {
 	paths, err := filepath.Glob(filepath.Join(dir, "*.riq"))
 	if err != nil {
@@ -220,10 +372,254 @@ func discoverLevels(dir string) []menuLevel {
 	sort.Strings(paths)
 	out := make([]menuLevel, 0, len(paths))
 	for _, p := range paths {
-		name := strings.TrimSuffix(filepath.Base(p), filepath.Ext(p))
-		out = append(out, menuLevel{path: p, name: name})
+		out = append(out, inspectMenuLevel(p))
 	}
 	return out
+}
+
+func inspectMenuLevel(p string) menuLevel {
+	fileName := strings.TrimSuffix(filepath.Base(p), filepath.Ext(p))
+	level := menuLevel{
+		path:     p,
+		fileName: fileName,
+		title:    fileName,
+		bpm:      120,
+	}
+	zr, err := zip.OpenReader(p)
+	if err != nil {
+		return level
+	}
+	defer zr.Close()
+
+	files := map[string]*zip.File{}
+	for _, f := range zr.File {
+		if !f.FileInfo().IsDir() {
+			files[f.Name] = f
+		}
+	}
+	if raw, ok := readZipFile(files, "remix.json"); ok {
+		applyV1MenuMetadata(&level, raw)
+	} else if chartName, ok := findZipChart(files); ok {
+		if raw, ok := readZipFile(files, chartName); ok {
+			applyV2MenuMetadata(&level, raw)
+		}
+	}
+	level.customIcon = readLibraryLevelIcon(files)
+	return level
+}
+
+type menuV1Chart struct {
+	Properties   map[string]any `json:"properties"`
+	Entities     []menuV1Entity `json:"entities"`
+	TempoChanges []menuV1Entity `json:"tempoChanges"`
+}
+
+type menuV1Entity struct {
+	Datamodel   string         `json:"datamodel"`
+	DynamicData map[string]any `json:"dynamicData"`
+}
+
+type menuV2Chart struct {
+	SongName string            `json:"songname"`
+	Entities []menuV2Entity    `json:"entities"`
+	Models   map[string]string `json:"models"`
+	Types    map[string]string `json:"types"`
+}
+
+type menuV2Entity struct {
+	Type  int            `json:"type"`
+	Model int            `json:"model"`
+	Data  map[string]any `json:"data"`
+}
+
+func applyV1MenuMetadata(level *menuLevel, raw []byte) {
+	var c menuV1Chart
+	raw = bytes.TrimPrefix(raw, []byte{0xEF, 0xBB, 0xBF})
+	if err := json.Unmarshal(raw, &c); err != nil {
+		log.Printf("engine: parse level metadata %s: %v", level.path, err)
+		return
+	}
+	if title := menuString(c.Properties, "remixtitle"); title != "" {
+		level.title = title
+	}
+	level.author = menuString(c.Properties, "remixauthor")
+	level.desc = menuString(c.Properties, "remixdesc")
+	if bpm := menuFloat(c.Properties, "remixtempo"); bpm > 0 {
+		level.bpm = bpm
+	}
+	for _, e := range c.TempoChanges {
+		if bpm := menuFloat(e.DynamicData, "tempo"); bpm > 0 {
+			level.bpm = bpm
+			break
+		}
+	}
+	level.games = summarizeMenuGames(v1MenuModels(c.Entities))
+}
+
+func v1MenuModels(entities []menuV1Entity) []string {
+	models := make([]string, 0, len(entities))
+	for _, e := range entities {
+		models = append(models, e.Datamodel)
+	}
+	return models
+}
+
+func applyV2MenuMetadata(level *menuLevel, raw []byte) {
+	var c menuV2Chart
+	if err := json.Unmarshal(raw, &c); err != nil {
+		log.Printf("engine: parse level metadata %s: %v", level.path, err)
+		return
+	}
+	if c.SongName != "" {
+		level.title = c.SongName
+	}
+	models := make([]string, 0, len(c.Entities))
+	for _, e := range c.Entities {
+		model := c.Models[fmt.Sprint(e.Model)]
+		typ := c.Types[fmt.Sprint(e.Type)]
+		if typ == "riq__TempoChange" {
+			if bpm := menuFloat(e.Data, "tempo"); bpm > 0 {
+				level.bpm = bpm
+			}
+			continue
+		}
+		models = append(models, model)
+	}
+	level.games = summarizeMenuGames(models)
+}
+
+func summarizeMenuGames(models []string) []string {
+	switches := make([]string, 0, 4)
+	fallback := make([]string, 0, 4)
+	seenSwitches := map[string]bool{}
+	seenFallback := map[string]bool{}
+	for _, model := range models {
+		if game, ok := strings.CutPrefix(model, "gameManager/switchGame/"); ok {
+			addUniqueGame(&switches, seenSwitches, game)
+			continue
+		}
+		game, _, ok := strings.Cut(model, "/")
+		if !ok || ignoredMenuGame(game) {
+			continue
+		}
+		addUniqueGame(&fallback, seenFallback, game)
+	}
+	if len(switches) > 0 {
+		return switches
+	}
+	return fallback
+}
+
+func ignoredMenuGame(game string) bool {
+	switch game {
+	case "", "gameManager", "global", "vfx", "ppe", "countIn":
+		return true
+	}
+	return false
+}
+
+func addUniqueGame(out *[]string, seen map[string]bool, game string) {
+	if game == "" || seen[game] {
+		return
+	}
+	seen[game] = true
+	*out = append(*out, game)
+}
+
+func findZipChart(files map[string]*zip.File) (string, bool) {
+	if _, ok := files["Charts/chart0.json"]; ok {
+		return "Charts/chart0.json", true
+	}
+	names := make([]string, 0)
+	for name := range files {
+		if strings.HasPrefix(name, "Charts/") && strings.HasSuffix(name, ".json") {
+			names = append(names, name)
+		}
+	}
+	if len(names) == 0 {
+		return "", false
+	}
+	sort.Strings(names)
+	return names[0], true
+}
+
+func readZipFile(files map[string]*zip.File, name string) ([]byte, bool) {
+	f, ok := findZipFile(files, name)
+	if !ok {
+		return nil, false
+	}
+	rc, err := f.Open()
+	if err != nil {
+		return nil, false
+	}
+	defer rc.Close()
+	b, err := io.ReadAll(rc)
+	return b, err == nil
+}
+
+func readLibraryLevelIcon(files map[string]*zip.File) *ebiten.Image {
+	for _, name := range []string{
+		"Resources/Images/LibraryIcon/LibraryLevelIcon.png",
+		"Resources/Images/LibraryIcon/LibraryLevelIcon.jpg",
+		"Resources/Images/LibraryIcon/LibraryLevelIcon.jpeg",
+	} {
+		f, ok := findZipFile(files, name)
+		if !ok {
+			continue
+		}
+		rc, err := f.Open()
+		if err != nil {
+			continue
+		}
+		img, _, err := image.Decode(rc)
+		rc.Close()
+		if err != nil {
+			log.Printf("engine: decode library icon %s: %v", name, err)
+			continue
+		}
+		return ebiten.NewImageFromImage(img)
+	}
+	return nil
+}
+
+func findZipFile(files map[string]*zip.File, name string) (*zip.File, bool) {
+	if f, ok := files[name]; ok {
+		return f, true
+	}
+	for path, f := range files {
+		if strings.EqualFold(path, name) {
+			return f, true
+		}
+	}
+	return nil, false
+}
+
+func menuString(m map[string]any, key string) string {
+	if v, ok := m[key]; ok {
+		if s, ok := v.(string); ok {
+			return s
+		}
+	}
+	return ""
+}
+
+func menuFloat(m map[string]any, key string) float64 {
+	if v, ok := m[key]; ok {
+		switch n := v.(type) {
+		case float64:
+			return n
+		case int:
+			return float64(n)
+		}
+	}
+	return 0
+}
+
+func (l menuLevel) displayName() string {
+	if l.title != "" {
+		return l.title
+	}
+	return l.fileName
 }
 
 // ---------- 谱面装载 ----------
@@ -266,6 +662,7 @@ func (a *App) loadRiq(r *riq.Riq) error {
 	a.switches = nil
 	a.actions = nil
 	a.inputs = nil
+	a.scores = nil
 	a.flashes = nil
 	a.camEvts = nil
 	a.viewScales = nil
@@ -411,6 +808,8 @@ func (a *App) resetRunState() {
 	a.aces, a.justs, a.ngs, a.misses, a.whiffs = 0, 0, 0, 0, 0
 	a.lastMsg, a.msgT = "", 0
 	a.tdArrow, a.tdTarget, a.tdHits = 0, 0, nil
+	a.scores = nil
+	a.result, a.resultT, a.resultEpilogue = resultSummary{}, 0, false
 }
 
 // restart 重置一轮游玩（不重载资产）。
@@ -446,9 +845,44 @@ func (a *App) at(beat float64, fn func()) {
 }
 
 func (a *App) scheduleInput(beat float64, release bool, action int, onHit func(state float64, j Judgment), onMiss func()) {
+	weight, category := a.resultSectionAt(beat)
 	a.inputs = append(a.inputs, &Input{
 		Beat: beat, hitT: a.bm.BeatToTime(beat), Release: release, Action: action,
-		OnHit: onHit, OnMiss: onMiss,
+		Weight: weight, Category: category, OnHit: onHit, OnMiss: onMiss,
+	})
+}
+
+func (a *App) resultSectionAt(beat float64) (float64, int) {
+	weight, category := 1.0, 0
+	if a.bm == nil {
+		return weight, category
+	}
+	for _, s := range a.bm.Sections {
+		if s.Beat > beat {
+			break
+		}
+		weight, category = s.Weight, s.Category
+	}
+	return weight, category
+}
+
+func (a *App) recordInputScore(in *Input, accuracy float64) {
+	if in.Weight <= 0 {
+		return
+	}
+	a.scores = append(a.scores, resultScoreInput{
+		Beat: in.Beat, Accuracy: math.Max(0, math.Min(1, accuracy)),
+		Weight: in.Weight, Category: in.Category,
+	})
+}
+
+func (a *App) recordMissScore(beat float64) {
+	weight, category := a.resultSectionAt(beat)
+	if weight <= 0 {
+		return
+	}
+	a.scores = append(a.scores, resultScoreInput{
+		Beat: beat, Accuracy: 0, Weight: weight, Category: category,
 	})
 }
 
@@ -477,8 +911,21 @@ func (a *App) Update() error {
 		a.cond.Update()
 		a.updatePlay()
 	case stateResult:
+		a.resultT += 1 / float64(ebiten.TPS())
 		if inpututil.IsKeyJustPressed(ebiten.KeyR) {
 			return a.restart()
+		}
+		if titlePressed() {
+			if !a.resultEpilogue {
+				if a.resultT < resultRankTime {
+					a.resultT = resultRankTime
+				} else {
+					a.resultEpilogue = true
+					a.resultT = 0
+				}
+			} else if a.resultT > 1.5 {
+				return a.restart()
+			}
 		}
 	}
 	return nil
@@ -491,24 +938,34 @@ func (a *App) updateLevelSelect() {
 	if inpututil.IsKeyJustPressed(ebiten.KeyArrowUp) ||
 		inpututil.IsKeyJustPressed(ebiten.KeyUp) ||
 		inpututil.IsKeyJustPressed(ebiten.KeyW) {
-		a.moveMenu(-1)
+		a.moveMenu(-menuGridCols)
 	}
 	if inpututil.IsKeyJustPressed(ebiten.KeyArrowDown) ||
 		inpututil.IsKeyJustPressed(ebiten.KeyDown) ||
 		inpututil.IsKeyJustPressed(ebiten.KeyS) {
+		a.moveMenu(menuGridCols)
+	}
+	if inpututil.IsKeyJustPressed(ebiten.KeyArrowLeft) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyLeft) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyA) {
+		a.moveMenu(-1)
+	}
+	if inpututil.IsKeyJustPressed(ebiten.KeyArrowRight) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyRight) ||
+		inpututil.IsKeyJustPressed(ebiten.KeyD) {
 		a.moveMenu(1)
 	}
 	if inpututil.IsKeyJustPressed(ebiten.KeyPageUp) {
-		a.moveMenu(-menuVisibleRows)
+		a.moveMenu(-menuVisibleItems)
 	}
 	if inpututil.IsKeyJustPressed(ebiten.KeyPageDown) {
-		a.moveMenu(menuVisibleRows)
+		a.moveMenu(menuVisibleItems)
 	}
 	_, wheelY := ebiten.Wheel()
 	if wheelY > 0 {
-		a.moveMenu(-1)
+		a.moveMenu(-menuGridCols)
 	} else if wheelY < 0 {
-		a.moveMenu(1)
+		a.moveMenu(menuGridCols)
 	}
 	if idx, ok := a.hoveredMenuLevel(); ok {
 		a.menuSel = idx
@@ -551,10 +1008,10 @@ func (a *App) keepMenuSelectionVisible() {
 	if a.menuSel < a.menuScroll {
 		a.menuScroll = a.menuSel
 	}
-	if a.menuSel >= a.menuScroll+menuVisibleRows {
-		a.menuScroll = a.menuSel - menuVisibleRows + 1
+	if a.menuSel >= a.menuScroll+menuVisibleItems {
+		a.menuScroll = a.menuSel - menuVisibleItems + 1
 	}
-	maxScroll := len(a.levels) - menuVisibleRows
+	maxScroll := len(a.levels) - menuVisibleItems
 	if maxScroll < 0 {
 		maxScroll = 0
 	}
@@ -568,18 +1025,20 @@ func (a *App) keepMenuSelectionVisible() {
 
 func (a *App) hoveredMenuLevel() (int, bool) {
 	x, y := ebiten.CursorPosition()
-	if x < menuRowX || x >= menuRowX+menuRowW {
+	if x < menuGridX || x >= menuGridX+menuGridCols*(menuCardW+menuCardGapX)-menuCardGapX {
 		return 0, false
 	}
-	rowStep := menuRowH + menuRowGap
-	if y < menuRowY || y >= menuRowY+menuVisibleRows*rowStep {
+	if y < menuGridY || y >= menuGridY+menuGridRows*(menuCardH+menuCardGapY)-menuCardGapY {
 		return 0, false
 	}
-	row := (y - menuRowY) / rowStep
-	if y >= menuRowY+row*rowStep+menuRowH {
+	colStep := menuCardW + menuCardGapX
+	rowStep := menuCardH + menuCardGapY
+	col := (x - menuGridX) / colStep
+	row := (y - menuGridY) / rowStep
+	if x >= menuGridX+col*colStep+menuCardW || y >= menuGridY+row*rowStep+menuCardH {
 		return 0, false
 	}
-	idx := a.menuScroll + row
+	idx := a.menuScroll + row*menuGridCols + col
 	if idx < 0 || idx >= len(a.levels) {
 		return 0, false
 	}
@@ -593,11 +1052,11 @@ func (a *App) loadSelectedLevel() {
 	level := a.levels[a.menuSel]
 	r, err := riq.Load(level.path)
 	if err != nil {
-		a.loadErr = fmt.Sprintf("read %s failed: %v", level.name, err)
+		a.loadErr = fmt.Sprintf("read %s failed: %v", level.displayName(), err)
 		return
 	}
 	if err := a.loadRiq(r); err != nil {
-		a.loadErr = fmt.Sprintf("load %s failed: %v", level.name, err)
+		a.loadErr = fmt.Sprintf("load %s failed: %v", level.displayName(), err)
 		return
 	}
 	a.loadErr = ""
@@ -690,6 +1149,7 @@ func (a *App) updatePlay() {
 		if !in.judged && t > in.hitT+WinNG {
 			in.judged = true
 			in.Result = JudgeMiss
+			a.recordInputScore(in, 0)
 			a.misses++
 			a.setMsg("MISS...")
 			if in.OnMiss != nil {
@@ -703,8 +1163,7 @@ func (a *App) updatePlay() {
 	}
 
 	if beat > a.endBeat {
-		a.cond.Pause()
-		a.state = stateResult
+		a.enterResult()
 	}
 }
 
@@ -757,6 +1216,7 @@ func (a *App) judgePress(t, beat float64, release bool, action int) {
 		a.setMsg("NG")
 	}
 	best.Result = j
+	a.recordInputScore(best, accuracyForDiff(math.Abs(signed)))
 	if j == JudgeAce && a.starBeat >= 0 && !a.starGot && math.Abs(best.Beat-a.starBeat) < 0.25 {
 		a.starGot = true
 		a.setMsg("SKILL STAR!")
@@ -765,6 +1225,205 @@ func (a *App) judgePress(t, beat float64, release bool, action int) {
 	if best.OnHit != nil {
 		best.OnHit(state, j)
 	}
+}
+
+func accuracyForDiff(d float64) float64 {
+	switch {
+	case d <= WinAce:
+		return 1
+	case d <= WinJust:
+		u := (d - WinAce) / (WinJust - WinAce)
+		return rankHiThreshold + (1-u)*(1-rankHiThreshold)
+	case d <= WinNG:
+		u := (d - WinJust) / (WinNG - WinJust)
+		return (1 - u) * rankOkThreshold
+	default:
+		return 0
+	}
+}
+
+func (a *App) enterResult() {
+	a.cond.Pause()
+	a.result = a.buildResultSummary()
+	a.resultT = 0
+	a.resultEpilogue = false
+	a.state = stateResult
+}
+
+func (a *App) buildResultSummary() resultSummary {
+	totalWeight, weightedScore := 0.0, 0.0
+	noMiss, perfect := len(a.scores) > 0, len(a.scores) > 0
+	for _, in := range a.scores {
+		totalWeight += in.Weight
+		weightedScore += math.Max(0, math.Min(1, in.Accuracy)) * in.Weight
+		if in.Accuracy < rankOkThreshold {
+			noMiss = false
+		}
+		if in.Accuracy < 1 {
+			perfect = false
+		}
+	}
+	score := 0.0
+	if totalWeight > 0 {
+		score = weightedScore / totalWeight
+	}
+	rank := resultRankHi
+	suffix := "hi"
+	switch {
+	case score < rankOkThreshold:
+		rank, suffix = resultRankNg, "ng"
+	case score < rankHiThreshold:
+		rank, suffix = resultRankOk, "ok"
+	}
+
+	res := resultSummary{
+		Score: score, Rank: rank, Header: a.resultProp("resultcaption"),
+		NoMiss: noMiss, Perfect: perfect, Star: a.starGot,
+	}
+	cats := a.resultCategories()
+	catScores := a.resultCategoryScores()
+	if len(cats) <= 1 {
+		res.Message0 = a.resultProp("resultcommon_" + suffix)
+		return res
+	}
+
+	switch rank {
+	case resultRankOk:
+		best, bestScore := cats[0], -1.0
+		for _, cat := range cats {
+			if catScores[cat] > bestScore {
+				best, bestScore = cat, catScores[cat]
+			}
+		}
+		if bestScore >= rankHiThreshold {
+			res.SubRank = true
+			res.Message0 = a.resultProp(fmt.Sprintf("resultcat%d_hi", best))
+		} else {
+			res.Message0 = a.resultProp("resultcommon_ok")
+		}
+	case resultRankNg:
+		first, second := twoExtremeCategories(cats, catScores, true)
+		res.TwoMessage = catScores[second] < rankOkThreshold
+		res.Message0 = a.resultProp(fmt.Sprintf("resultcat%d_ng", first))
+		res.Message1 = res.Message0
+		res.Message2 = resultSecondMessage(a.resultProp(fmt.Sprintf("resultcat%d_ng", second)))
+	case resultRankHi:
+		first, second := twoExtremeCategories(cats, catScores, false)
+		res.TwoMessage = catScores[second] >= rankHiThreshold
+		res.Message0 = a.resultProp(fmt.Sprintf("resultcat%d_hi", first))
+		res.Message1 = res.Message0
+		res.Message2 = resultSecondMessage(a.resultProp(fmt.Sprintf("resultcat%d_hi", second)))
+	}
+	return res
+}
+
+func (a *App) resultCategories() []int {
+	seen := map[int]bool{}
+	var cats []int
+	if a.bm != nil && len(a.bm.Sections) > 0 {
+		for _, s := range a.bm.Sections {
+			if !seen[s.Category] {
+				seen[s.Category] = true
+				cats = append(cats, s.Category)
+			}
+		}
+	}
+	for _, in := range a.scores {
+		if !seen[in.Category] {
+			seen[in.Category] = true
+			cats = append(cats, in.Category)
+		}
+	}
+	if len(cats) == 0 {
+		cats = []int{0}
+	}
+	sort.Ints(cats)
+	return cats
+}
+
+func (a *App) resultCategoryScores() map[int]float64 {
+	type bucket struct{ score, weight float64 }
+	buckets := map[int]bucket{}
+	for _, in := range a.scores {
+		b := buckets[in.Category]
+		b.score += math.Max(0, math.Min(1, in.Accuracy)) * in.Weight
+		b.weight += in.Weight
+		buckets[in.Category] = b
+	}
+	out := map[int]float64{}
+	for _, cat := range a.resultCategories() {
+		if b := buckets[cat]; b.weight > 0 {
+			out[cat] = b.score / b.weight
+		} else {
+			out[cat] = 0
+		}
+	}
+	return out
+}
+
+func twoExtremeCategories(cats []int, scores map[int]float64, lowest bool) (int, int) {
+	first, second := cats[0], cats[0]
+	firstScore, secondScore := scores[first], scores[first]
+	for i, cat := range cats {
+		score := scores[cat]
+		if i == 0 || (lowest && score < firstScore) || (!lowest && score > firstScore) {
+			second, secondScore = first, firstScore
+			first, firstScore = cat, score
+			continue
+		}
+		if second == first || (lowest && score < secondScore) || (!lowest && score > secondScore) {
+			second, secondScore = cat, score
+		}
+	}
+	return first, second
+}
+
+func resultSecondMessage(s string) string {
+	if len(s) > 1 {
+		rs := []rune(s)
+		if len(rs) > 1 && !isLowerASCII(rs[0]) && isLowerASCII(rs[1]) {
+			rs[0] = []rune(strings.ToLower(string(rs[0])))[0]
+			s = string(rs)
+		}
+	}
+	return "Also... " + s
+}
+
+func isLowerASCII(r rune) bool { return r >= 'a' && r <= 'z' }
+
+func (a *App) resultProp(key string) string {
+	if a.bm != nil {
+		if s := a.bm.Prop(key); s != "" {
+			return s
+		}
+	}
+	defaults := map[string]string{
+		"resultcaption":   "Rhythm League Notes",
+		"resultcommon_hi": "That was great! Really great!",
+		"resultcommon_ok": "Eh. Passable.",
+		"resultcommon_ng": "That...could have been better.",
+		"resultcat0_hi":   "You show strong fundamentals.",
+		"resultcat0_ng":   "Work on your fundamentals.",
+		"resultcat1_hi":   "You kept the beat well.",
+		"resultcat1_ng":   "You had trouble keeping the beat.",
+		"resultcat2_hi":   "You had great aim.",
+		"resultcat2_ng":   "Your aim was a little shaky.",
+		"resultcat3_hi":   "You followed the example well.",
+		"resultcat3_ng":   "Next time, follow the example better.",
+		"epilogue_hi":     "Superb",
+		"epilogue_ok":     "OK",
+		"epilogue_ng":     "Try Again",
+	}
+	if s, ok := defaults[key]; ok {
+		return s
+	}
+	switch {
+	case strings.HasPrefix(key, "resultcat") && strings.HasSuffix(key, "_hi"):
+		return defaults["resultcommon_hi"]
+	case strings.HasPrefix(key, "resultcat") && strings.HasSuffix(key, "_ng"):
+		return defaults["resultcommon_ng"]
+	}
+	return ""
 }
 
 func (a *App) setMsg(s string) {
@@ -917,17 +1576,21 @@ func (a *App) drawTitle(screen *ebiten.Image, white, dim color.RGBA) {
 }
 
 func (a *App) drawLevelSelect(screen *ebiten.Image, white, dim color.RGBA) {
-	screen.Fill(color.RGBA{22, 24, 28, 255})
-	vector.DrawFilledRect(screen, 0, 0, ScreenW, 86, color.RGBA{33, 41, 54, 255}, false)
-	vector.DrawFilledRect(screen, 0, 84, ScreenW, 3, color.RGBA{232, 184, 74, 255}, false)
-	vector.DrawFilledRect(screen, 0, ScreenH-58, ScreenW, 58, color.RGBA{18, 19, 23, 255}, false)
+	a.drawLibraryBackground(screen)
+	vector.DrawFilledRect(screen, 0, 0, ScreenW, 78, color.RGBA{255, 250, 236, 220}, false)
+	vector.DrawFilledRect(screen, 0, 77, ScreenW, 2, color.RGBA{118, 88, 148, 160}, false)
+	vector.DrawFilledRect(screen, 0, ScreenH-54, ScreenW, 54, color.RGBA{255, 250, 236, 220}, false)
 
-	a.text(screen, "HEAVEN GO", a.faceBig, 64, 22, white, false)
-	a.text(screen, "LEVEL SELECT", a.faceMid, 720, 30, color.RGBA{232, 184, 74, 255}, true)
+	ink := color.RGBA{66, 50, 88, 255}
+	soft := color.RGBA{104, 92, 118, 255}
+	a.text(screen, "Library", a.faceBig, 58, 20, ink, false)
+	a.text(screen, "HEAVEN GO", a.faceSmall, 854, 30, color.RGBA{122, 105, 142, 255}, true)
 
 	if len(a.levels) == 0 {
-		a.text(screen, "No .riq levels found under levels/", a.faceMid, ScreenW/2, 230, white, true)
-		a.text(screen, "Drop a .riq file here to play", a.faceMid, ScreenW/2, 282, dim, true)
+		vector.DrawFilledRect(screen, 248, 178, 464, 154, color.RGBA{255, 252, 242, 230}, false)
+		vector.DrawFilledRect(screen, 248, 178, 464, 4, color.RGBA{118, 88, 148, 210}, false)
+		a.text(screen, "No .riq levels found under levels/", a.faceMid, ScreenW/2, 222, ink, true)
+		a.text(screen, "Drop a .riq file here to play", a.faceMid, ScreenW/2, 274, soft, true)
 		if a.loadErr != "" {
 			a.text(screen, a.fitText(a.loadErr, a.faceSmall, 760), a.faceSmall, ScreenW/2, ScreenH-36, color.RGBA{255, 120, 120, 255}, true)
 		}
@@ -935,64 +1598,206 @@ func (a *App) drawLevelSelect(screen *ebiten.Image, white, dim color.RGBA) {
 	}
 
 	a.keepMenuSelectionVisible()
-	for row := 0; row < menuVisibleRows; row++ {
-		idx := a.menuScroll + row
+	for slot := 0; slot < menuVisibleItems; slot++ {
+		idx := a.menuScroll + slot
 		if idx >= len(a.levels) {
 			break
 		}
-		y := menuRowY + row*(menuRowH+menuRowGap)
-		fy := float32(y)
-		ty := float64(y)
-		selected := idx == a.menuSel
-		bg := color.RGBA{38, 41, 49, 255}
-		textCol := color.RGBA{216, 219, 228, 255}
-		if selected {
-			bg = color.RGBA{58, 66, 78, 255}
-			textCol = white
-		}
-		vector.DrawFilledRect(screen, menuRowX, fy, menuRowW, menuRowH, bg, false)
-		vector.DrawFilledRect(screen, menuRowX, fy, 7, menuRowH, menuAccent(idx), false)
-		a.text(screen, fmt.Sprintf("%02d", idx+1), a.faceSmall, menuRowX+20, ty+16, color.RGBA{170, 176, 188, 255}, false)
-		a.text(screen, a.fitText(a.levels[idx].name, a.faceMid, 340), a.faceMid, menuRowX+64, ty+10, textCol, false)
-		if selected {
-			vector.StrokeLine(screen, menuRowX, fy+menuRowH-1, menuRowX+menuRowW, fy+menuRowH-1, 2, color.RGBA{232, 184, 74, 255}, false)
-		}
+		col := slot % menuGridCols
+		row := slot / menuGridCols
+		x := float64(menuGridX + col*(menuCardW+menuCardGapX))
+		y := float64(menuGridY + row*(menuCardH+menuCardGapY))
+		a.drawLevelCard(screen, a.levels[idx], idx, x, y, idx == a.menuSel)
 	}
 
-	a.drawLevelDetails(screen, a.levels[a.menuSel], a.menuSel, white, dim)
-	a.text(screen, "Enter / Space / Click to load    Arrow keys to choose    Drop .riq to import", a.faceSmall, ScreenW/2, ScreenH-38, dim, true)
+	first := a.menuScroll + 1
+	last := a.menuScroll + menuVisibleItems
+	if last > len(a.levels) {
+		last = len(a.levels)
+	}
+	a.drawLibraryLevelInfo(screen, a.levels[a.menuSel], a.menuSel, ink, soft)
+	a.text(screen, fmt.Sprintf("%d-%d / %d", first, last, len(a.levels)), a.faceSmall, 66, ScreenH-34, soft, false)
+	a.text(screen, "Enter / Click    Arrows / WASD    Drop .riq", a.faceSmall, ScreenW/2, ScreenH-34, soft, true)
 	if a.loadErr != "" {
 		a.text(screen, a.fitText(a.loadErr, a.faceSmall, 840), a.faceSmall, ScreenW/2, ScreenH-18, color.RGBA{255, 120, 120, 255}, true)
 	}
 }
 
-func (a *App) drawLevelDetails(screen *ebiten.Image, level menuLevel, idx int, white, dim color.RGBA) {
-	x, y := 575.0, 106.0
-	w, h := 320.0, 328.0
-	accent := menuAccent(idx)
-	vector.DrawFilledRect(screen, float32(x), float32(y), float32(w), float32(h), color.RGBA{34, 37, 45, 255}, false)
-	vector.DrawFilledRect(screen, float32(x), float32(y), float32(w), 7, accent, false)
-	a.text(screen, "SELECTED", a.faceSmall, x+24, y+28, color.RGBA{170, 176, 188, 255}, false)
-	a.text(screen, a.fitText(level.name, a.faceMid, w-48), a.faceMid, x+24, y+62, white, false)
-	a.text(screen, a.fitText(level.path, a.faceSmall, w-48), a.faceSmall, x+24, y+103, dim, false)
-
-	baseY := y + 162
-	for i := 0; i < 18; i++ {
-		barH := 18 + 54*math.Abs(math.Sin(float64(i+idx)*0.72))
-		c := accent
-		switch i % 4 {
-		case 1:
-			c = color.RGBA{83, 189, 179, 255}
-		case 2:
-			c = color.RGBA{235, 111, 94, 255}
-		case 3:
-			c = color.RGBA{147, 194, 86, 255}
-		}
-		vector.DrawFilledRect(screen, float32(x+24+float64(i)*15), float32(baseY+80-barH), 8, float32(barH), c, false)
+func (a *App) drawLibraryBackground(screen *ebiten.Image) {
+	if a.libraryAssets.bgBase == nil {
+		screen.Fill(color.RGBA{231, 226, 215, 255})
+		return
 	}
-	vector.DrawFilledRect(screen, float32(x+24), float32(baseY+90), float32(w-48), 2, color.RGBA{95, 101, 112, 255}, false)
-	a.text(screen, "Official Pack-In level", a.faceSmall, x+24, y+h-72, dim, false)
-	a.text(screen, "Load opens the chart title screen", a.faceSmall, x+24, y+h-46, color.RGBA{218, 222, 232, 255}, false)
+	drawImageCover(screen, a.libraryAssets.bgBase, 0, 0, ScreenW, ScreenH, 1)
+	drawImageCover(screen, a.libraryAssets.bgGradient, 0, 0, ScreenW, ScreenH, 0.7)
+	drawImageCover(screen, a.libraryAssets.bgStars, 0, 0, ScreenW, ScreenH, 0.28)
+	drawImageCover(screen, a.libraryAssets.bgWaves, 0, 0, ScreenW, ScreenH, 0.24)
+	vector.DrawFilledRect(screen, 0, 0, ScreenW, ScreenH, color.RGBA{255, 250, 238, 70}, false)
+}
+
+func (a *App) drawLevelCard(screen *ebiten.Image, level menuLevel, idx int, x, y float64, selected bool) {
+	if selected {
+		vector.DrawFilledRect(screen, float32(x-5), float32(y-5), menuCardW+10, menuCardH+10, color.RGBA{255, 227, 95, 235}, false)
+	}
+	vector.DrawFilledRect(screen, float32(x), float32(y), menuCardW, menuCardH, color.RGBA{255, 252, 242, 236}, false)
+	vector.DrawFilledRect(screen, float32(x), float32(y+menuCardH-37), menuCardW, 37, color.RGBA{246, 239, 229, 245}, false)
+	if selected {
+		vector.DrawFilledRect(screen, float32(x), float32(y+menuCardH-4), menuCardW, 4, color.RGBA{118, 88, 148, 255}, false)
+	}
+	a.drawLevelThumbnail(screen, level, idx, x+11, y+9, 126)
+	title := a.fitText(level.displayName(), a.faceSmall, menuCardW-20)
+	a.text(screen, title, a.faceSmall, x+10, y+menuCardH-29, color.RGBA{68, 54, 82, 255}, false)
+	meta := "RIQ"
+	if len(level.games) > 0 {
+		meta = fmt.Sprintf("%d games", len(level.games))
+	}
+	a.text(screen, meta, a.faceSmall, x+10, y+menuCardH-12, color.RGBA{120, 106, 133, 255}, false)
+}
+
+func (a *App) drawLevelThumbnail(screen *ebiten.Image, level menuLevel, idx int, x, y, size float64) {
+	inner := size * 0.78
+	innerX := x + (size-inner)/2
+	innerY := y + (size-inner)/2
+	vector.DrawFilledRect(screen, float32(innerX), float32(innerY), float32(inner), float32(inner), color.RGBA{240, 232, 220, 255}, false)
+	if level.customIcon != nil {
+		drawImageFit(screen, level.customIcon, innerX, innerY, inner, inner, 1)
+	} else {
+		a.drawFallbackLevelIcon(screen, level, idx, innerX, innerY, inner)
+	}
+	if a.libraryAssets.border != nil {
+		drawImageFit(screen, a.libraryAssets.border, x, y, size, size, 1)
+	} else {
+		vector.DrawFilledRect(screen, float32(x), float32(y), float32(size), 5, color.RGBA{116, 94, 128, 255}, false)
+		vector.DrawFilledRect(screen, float32(x), float32(y+size-5), float32(size), 5, color.RGBA{116, 94, 128, 255}, false)
+		vector.DrawFilledRect(screen, float32(x), float32(y), 5, float32(size), color.RGBA{116, 94, 128, 255}, false)
+		vector.DrawFilledRect(screen, float32(x+size-5), float32(y), 5, float32(size), color.RGBA{116, 94, 128, 255}, false)
+	}
+}
+
+func (a *App) drawFallbackLevelIcon(screen *ebiten.Image, level menuLevel, idx int, x, y, size float64) {
+	games := level.games
+	if len(games) == 0 {
+		games = []string{"RIQ"}
+	}
+	if len(games) == 1 {
+		vector.DrawFilledRect(screen, float32(x), float32(y), float32(size), float32(size), menuAccent(idx), false)
+		a.text(screen, a.fitText(menuGameLabel(games[0]), a.faceMid, size-18), a.faceMid, x+size/2, y+size/2-12, color.RGBA{255, 252, 242, 255}, true)
+		return
+	}
+	tile := (size - 5) / 2
+	for i := 0; i < 4; i++ {
+		tx := x + float64(i%2)*(tile+5)
+		ty := y + float64(i/2)*(tile+5)
+		c := menuAccent(idx + i)
+		vector.DrawFilledRect(screen, float32(tx), float32(ty), float32(tile), float32(tile), c, false)
+		if i < len(games) {
+			label := a.fitText(menuGameLabel(games[i]), a.faceSmall, tile-8)
+			a.text(screen, label, a.faceSmall, tx+tile/2, ty+tile/2-8, color.RGBA{255, 252, 242, 255}, true)
+		}
+	}
+}
+
+func (a *App) drawLibraryLevelInfo(screen *ebiten.Image, level menuLevel, idx int, ink, soft color.RGBA) {
+	x, y := 585.0, 116.0
+	w, h := 326.0, 344.0
+	vector.DrawFilledRect(screen, float32(x), float32(y), float32(w), float32(h), color.RGBA{255, 252, 242, 236}, false)
+	vector.DrawFilledRect(screen, float32(x), float32(y), float32(w), 5, color.RGBA{118, 88, 148, 230}, false)
+	a.drawLevelThumbnail(screen, level, idx, x+24, y+32, 112)
+	a.text(screen, a.fitText(level.displayName(), a.faceMid, 172), a.faceMid, x+154, y+38, ink, false)
+	author := level.author
+	if author == "" {
+		author = "Unknown author"
+	}
+	a.text(screen, a.fitText(author, a.faceSmall, 150), a.faceSmall, x+156, y+78, soft, false)
+	a.text(screen, fmt.Sprintf("%.0f BPM", level.bpm), a.faceSmall, x+156, y+104, color.RGBA{118, 88, 148, 255}, false)
+
+	baseY := y + 176
+	games := level.games
+	if len(games) == 0 {
+		games = []string{"Unknown game"}
+	}
+	a.text(screen, "Games", a.faceSmall, x+24, baseY, soft, false)
+	a.drawGameList(screen, games, x+24, baseY+26, w-48)
+	desc := strings.TrimSpace(level.desc)
+	if desc != "" {
+		a.text(screen, "Description", a.faceSmall, x+24, y+276, soft, false)
+		a.drawWrappedTextLimit(screen, desc, a.faceSmall, x+24, y+302, w-48, 20, 2, ink)
+	} else {
+		a.text(screen, a.fitText(level.path, a.faceSmall, w-48), a.faceSmall, x+24, y+h-46, soft, false)
+	}
+}
+
+func (a *App) drawGameList(screen *ebiten.Image, games []string, x, y, maxW float64) {
+	cx := x
+	for i, game := range games {
+		label := a.fitText(menuGameLabel(game), a.faceSmall, 100)
+		tw, _ := text.Measure(label, a.faceSmall, 0)
+		pw := math.Min(tw+22, 120)
+		if cx+pw > x+maxW {
+			break
+		}
+		vector.DrawFilledRect(screen, float32(cx), float32(y), float32(pw), 24, menuAccent(i), false)
+		a.text(screen, label, a.faceSmall, cx+11, y+6, color.RGBA{255, 252, 242, 255}, false)
+		cx += pw + 8
+	}
+}
+
+func (a *App) drawWrappedTextLimit(screen *ebiten.Image, s string, face *text.GoTextFace, x, y, maxW, lineH float64, maxLines int, c color.Color) {
+	words := strings.Fields(s)
+	if len(words) == 0 || maxLines <= 0 {
+		return
+	}
+	line := words[0]
+	lines := 0
+	for _, word := range words[1:] {
+		next := line + " " + word
+		if w, _ := text.Measure(next, face, 0); w <= maxW {
+			line = next
+			continue
+		}
+		lines++
+		if lines >= maxLines {
+			a.text(screen, a.fitText(line+"...", face, maxW), face, x, y, c, false)
+			return
+		}
+		a.text(screen, line, face, x, y, c, false)
+		y += lineH
+		line = word
+	}
+	a.text(screen, line, face, x, y, c, false)
+}
+
+func menuGameLabel(game string) string {
+	names := map[string]string{
+		"blueBear":       "Blue Bear",
+		"marchingOrders": "Marching Orders",
+		"munchyMonk":     "Munchy Monk",
+		"seeSaw":         "See-Saw",
+		"somen":          "Somen",
+		"totemClimb":     "Totem Climb",
+		"trickClass":     "Trick Class",
+	}
+	if name, ok := names[game]; ok {
+		return name
+	}
+	return humanizeGameID(game)
+}
+
+func humanizeGameID(id string) string {
+	if id == "" {
+		return "Unknown"
+	}
+	var b strings.Builder
+	for i, r := range id {
+		if i > 0 && r >= 'A' && r <= 'Z' {
+			b.WriteByte(' ')
+		}
+		if i == 0 && r >= 'a' && r <= 'z' {
+			r -= 'a' - 'A'
+		}
+		b.WriteRune(r)
+	}
+	return b.String()
 }
 
 func menuAccent(i int) color.RGBA {
@@ -1023,23 +1828,220 @@ func (a *App) fitText(s string, face *text.GoTextFace, maxW float64) string {
 }
 
 func (a *App) drawResult(screen *ebiten.Image, white color.RGBA) {
-	vector.DrawFilledRect(screen, 0, 0, ScreenW, ScreenH, color.RGBA{0, 0, 0, 150}, false)
-	total := len(a.inputs)
-	bad := a.ngs + a.misses + a.whiffs
-	rank, c := "TRY AGAIN", color.RGBA{255, 120, 120, 255}
+	if a.resultEpilogue {
+		a.drawResultEpilogue(screen, white)
+		return
+	}
+	a.drawJudgementBackground(screen)
+
+	panel := color.RGBA{245, 239, 224, 235}
+	ink := color.RGBA{58, 46, 64, 255}
+	dim := color.RGBA{112, 98, 118, 255}
+	vector.DrawFilledRect(screen, 60, 82, 530, 255, panel, false)
+	vector.DrawFilledRect(screen, 60, 82, 530, 42, resultRankColor(a.result.Rank), false)
+	vector.DrawFilledRect(screen, 60, 333, 530, 4, color.RGBA{58, 46, 64, 180}, false)
+	a.text(screen, a.result.Header, a.faceMid, 82, 94, color.RGBA{255, 252, 242, 255}, false)
+
+	if a.result.TwoMessage {
+		if a.resultT >= resultMsgTime {
+			a.drawWrappedText(screen, a.result.Message1, a.faceMid, 90, 155, 455, 30, ink)
+		}
+		if a.resultT >= resultMsg2Time {
+			a.drawWrappedText(screen, a.result.Message2, a.faceMid, 90, 235, 455, 30, ink)
+		}
+	} else if a.resultT >= resultMsgTime {
+		a.drawWrappedText(screen, a.result.Message0, a.faceMid, 90, 178, 455, 32, ink)
+	}
+
+	scoreShown := a.result.Score
+	if a.resultT < resultBarStart {
+		scoreShown = 0
+	} else if a.resultT < resultBarStart+resultBarDur {
+		scoreShown *= (a.resultT - resultBarStart) / resultBarDur
+	}
+	barColor := resultScoreColor(scoreShown)
+	vector.DrawFilledRect(screen, 95, 388, 508, 32, color.RGBA{42, 38, 48, 220}, false)
+	vector.DrawFilledRect(screen, 101, 394, 496, 20, color.RGBA{102, 90, 108, 255}, false)
+	vector.DrawFilledRect(screen, 101, 394, float32(496*scoreShown), 20, barColor, false)
+	vector.StrokeLine(screen, 101+float32(496*rankOkThreshold), 390, 101+float32(496*rankOkThreshold), 419, 2, color.RGBA{255, 255, 255, 170}, false)
+	vector.StrokeLine(screen, 101+float32(496*rankHiThreshold), 390, 101+float32(496*rankHiThreshold), 419, 2, color.RGBA{255, 255, 255, 170}, false)
+	a.text(screen, fmt.Sprintf("%d", int(scoreShown*100)), a.faceBig, 626, 379, barColor, false)
+
+	if a.resultT >= resultRankTime {
+		a.drawRankLogo(screen)
+		if a.result.SubRank {
+			a.text(screen, "...but, just", a.faceMid, 760, 306, dim, true)
+		}
+		if a.result.Star {
+			a.drawBadge(screen, 86, 446, "SKILL STAR", color.RGBA{255, 220, 82, 255})
+		}
+		if a.result.NoMiss {
+			a.drawBadge(screen, 236, 446, "NO MISS", color.RGBA{92, 205, 236, 255})
+		}
+		if a.result.Perfect {
+			a.drawBadge(screen, 366, 446, "PERFECT", color.RGBA{255, 140, 210, 255})
+		}
+		a.text(screen, "Enter / Click - epilogue    R - replay    Esc - quit", a.faceSmall, ScreenW/2, ScreenH-34, white, true)
+	} else {
+		a.text(screen, "Enter / Click - skip    R - replay    Esc - quit", a.faceSmall, ScreenW/2, ScreenH-34, dim, true)
+	}
+}
+
+func (a *App) drawJudgementBackground(screen *ebiten.Image) {
+	if a.resultAssets.bg != nil {
+		drawImageCover(screen, a.resultAssets.bg, 0, 0, ScreenW, ScreenH, 1)
+	} else {
+		screen.Fill(color.RGBA{41, 38, 58, 255})
+	}
+	vector.DrawFilledRect(screen, 0, 0, ScreenW, ScreenH, color.RGBA{20, 18, 28, 90}, false)
+}
+
+func (a *App) drawRankLogo(screen *ebiten.Image) {
+	switch a.result.Rank {
+	case resultRankHi:
+		if a.resultAssets.rankHi != nil {
+			drawImageFit(screen, a.resultAssets.rankHi, 620, 104, 300, 120, 1)
+		} else {
+			a.text(screen, "SUPERB", a.faceBig, 768, 150, resultRankColor(resultRankHi), true)
+		}
+		if a.resultAssets.rankHiStar != nil {
+			s := 54 + 5*math.Sin(a.resultT*5)
+			drawImageFit(screen, a.resultAssets.rankHiStar, 842, 82, s, s, 1)
+		}
+	case resultRankOk:
+		if a.resultAssets.rankOk != nil {
+			drawImageFit(screen, a.resultAssets.rankOk, 656, 118, 230, 132, 1)
+		} else {
+			a.text(screen, "OK", a.faceBig, 768, 150, resultRankColor(resultRankOk), true)
+		}
+		if a.resultAssets.rankOkSweat != nil {
+			drawImageFit(screen, a.resultAssets.rankOkSweat, 826, 98, 58, 25, 1)
+		}
+	case resultRankNg:
+		img := firstResultImage(a.resultAssets.rankNg)
+		if len(a.resultAssets.rankNg) > 0 {
+			if frame := int(a.resultT*8) % len(a.resultAssets.rankNg); a.resultAssets.rankNg[frame] != nil {
+				img = a.resultAssets.rankNg[frame]
+			}
+		}
+		if img != nil {
+			drawImageFit(screen, img, 616, 120, 315, 118, 1)
+		} else {
+			a.text(screen, "TRY AGAIN", a.faceBig, 768, 150, resultRankColor(resultRankNg), true)
+		}
+	}
+}
+
+func firstResultImage(imgs []*ebiten.Image) *ebiten.Image {
+	for _, img := range imgs {
+		if img != nil {
+			return img
+		}
+	}
+	return nil
+}
+
+func (a *App) drawBadge(screen *ebiten.Image, x, y float32, label string, c color.RGBA) {
+	vector.DrawFilledRect(screen, x, y, 112, 27, color.RGBA{35, 31, 42, 210}, false)
+	vector.DrawFilledRect(screen, x, y, 6, 27, c, false)
+	a.text(screen, label, a.faceSmall, float64(x+15), float64(y+6), color.RGBA{242, 240, 248, 255}, false)
+}
+
+func (a *App) drawResultEpilogue(screen *ebiten.Image, white color.RGBA) {
+	img := a.resultAssets.epNg
+	msg := a.resultProp("epilogue_ng")
+	switch a.result.Rank {
+	case resultRankOk:
+		img, msg = a.resultAssets.epOk, a.resultProp("epilogue_ok")
+	case resultRankHi:
+		img, msg = a.resultAssets.epHi, a.resultProp("epilogue_hi")
+	}
+	if img != nil {
+		drawImageCover(screen, img, 0, 0, ScreenW, ScreenH, 1)
+	} else {
+		screen.Fill(resultRankColor(a.result.Rank))
+	}
+	vector.DrawFilledRect(screen, 0, ScreenH-116, ScreenW, 116, color.RGBA{24, 20, 30, 218}, false)
+	a.text(screen, msg, a.faceBig, 54, ScreenH-96, white, false)
+	a.text(screen, fmt.Sprintf("Final score %d  |  ACE %d  OK %d  NG %d  MISS %d",
+		int(a.result.Score*100), a.aces, a.justs, a.ngs, a.misses),
+		a.faceSmall, 58, ScreenH-42, color.RGBA{218, 214, 226, 255}, false)
+	a.text(screen, "Enter / Click - chart title    R - replay    Esc - quit", a.faceSmall, ScreenW-306, ScreenH-42, white, false)
+}
+
+func resultRankColor(rank resultRank) color.RGBA {
+	switch rank {
+	case resultRankHi:
+		return color.RGBA{252, 191, 54, 255}
+	case resultRankOk:
+		return color.RGBA{90, 196, 217, 255}
+	default:
+		return color.RGBA{238, 80, 93, 255}
+	}
+}
+
+func resultScoreColor(score float64) color.RGBA {
 	switch {
-	case bad == 0:
-		rank, c = "SUPERB!!", color.RGBA{140, 255, 170, 255}
-	case total > 0 && bad <= total/6:
-		rank, c = "OK", color.RGBA{140, 200, 255, 255}
+	case score >= rankHiThreshold:
+		return resultRankColor(resultRankHi)
+	case score >= rankOkThreshold:
+		return resultRankColor(resultRankOk)
+	default:
+		return resultRankColor(resultRankNg)
 	}
-	a.text(screen, rank, a.faceBig, ScreenW/2, 150, c, true)
-	a.text(screen, fmt.Sprintf("ACE %d   OK %d   NG %d   MISS %d   whiff %d",
-		a.aces, a.justs, a.ngs, a.misses, a.whiffs), a.faceMid, ScreenW/2, 230, white, true)
-	if a.starGot {
-		a.text(screen, "* skill star acquired", a.faceMid, ScreenW/2, 270, color.RGBA{255, 230, 90, 255}, true)
+}
+
+func drawImageFit(dst, src *ebiten.Image, x, y, w, h float64, alpha float32) {
+	if src == nil {
+		return
 	}
-	a.text(screen, "R - restart    Esc - quit    (drop .riq to switch)", a.faceMid, ScreenW/2, 340, white, true)
+	sw, sh := src.Bounds().Dx(), src.Bounds().Dy()
+	if sw == 0 || sh == 0 {
+		return
+	}
+	s := math.Min(w/float64(sw), h/float64(sh))
+	dw, dh := float64(sw)*s, float64(sh)*s
+	op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
+	op.GeoM.Scale(s, s)
+	op.GeoM.Translate(x+(w-dw)/2, y+(h-dh)/2)
+	op.ColorScale.ScaleAlpha(alpha)
+	dst.DrawImage(src, op)
+}
+
+func drawImageCover(dst, src *ebiten.Image, x, y, w, h float64, alpha float32) {
+	if src == nil {
+		return
+	}
+	sw, sh := src.Bounds().Dx(), src.Bounds().Dy()
+	if sw == 0 || sh == 0 {
+		return
+	}
+	s := math.Max(w/float64(sw), h/float64(sh))
+	dw, dh := float64(sw)*s, float64(sh)*s
+	op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
+	op.GeoM.Scale(s, s)
+	op.GeoM.Translate(x+(w-dw)/2, y+(h-dh)/2)
+	op.ColorScale.ScaleAlpha(alpha)
+	dst.DrawImage(src, op)
+}
+
+func (a *App) drawWrappedText(screen *ebiten.Image, s string, face *text.GoTextFace, x, y, maxW, lineH float64, c color.Color) {
+	words := strings.Fields(s)
+	if len(words) == 0 {
+		return
+	}
+	line := words[0]
+	for _, word := range words[1:] {
+		next := line + " " + word
+		if w, _ := text.Measure(next, face, 0); w <= maxW {
+			line = next
+			continue
+		}
+		a.text(screen, line, face, x, y, c, false)
+		y += lineH
+		line = word
+	}
+	a.text(screen, line, face, x, y, c, false)
 }
 
 // viewScaleAt 折叠 vfx/scale view 事件得到画布缩放（StaticCamera.UpdateScale：

@@ -77,6 +77,9 @@ karateman 旧 demo 路径：
 - 背景为纯色 + 节拍脉冲（原版背景色 `#fbca3e`），未接入背景贴图层与后处理。
 
 engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
+- 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
+  `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
+  勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
 - AnimatorController 转换的 duration（交叉淡入）按立即切换处理；当前唯一非零用例
   BossCall→BossCallIdle 已逐曲线验证源末帧与目标姿态一致，视觉无差。
 - 缓动函数全表实现（engine/ease.go，HS Ease 枚举 0..43 含 Expo/Circ/Bounce/
@@ -89,6 +92,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
   用），未移植——bop 的不悦表现走 `bossAnnoyed ? BossMiss : Bop` 分支，与原版一致。
 - countIn 计数音实现 Normal/Alt/Cowbell 音色；GBA/DS 变体音色目录未提取（出现时
   回退 Normal 并打日志）。
+- Judgement 结算页已接入 Heaven Studio 的评分阈值/分类评价消息、rank 标志图与
+  默认 epilogue 图；原版 `JudgementOpen.playable` 的逐信号精确定时和结算 jingle/
+  循环音乐音效尚未移植，当前用等价状态推进与静音结算替代。
 - kitties：roll 成功后的 spinnya 循环音未实现随机变调（±5%，循环重采样
   不支持）；音量 0.85 与起止时序一致。
 - cheerReaders：字幕（toggleCaption 启用路径）未实现——官方非 PRACTICE 关

@@ -123,8 +123,10 @@ type VolumeChange struct {
 
 // SectionMarker 是关卡分段标记。
 type SectionMarker struct {
-	Beat float64
-	Name string
+	Beat     float64
+	Name     string
+	Weight   float64
+	Category int
 }
 
 // VolumeAt 返回某拍处的音乐音量（0~1），节点间取该拍所属渐变段的插值。
@@ -365,7 +367,9 @@ func loadV2(files map[string][]byte, chartName string) (*Riq, error) {
 			if name == "" {
 				name = e.Str("name", "")
 			}
-			bm.Sections = append(bm.Sections, SectionMarker{Beat: e.Beat, Name: name})
+			bm.Sections = append(bm.Sections, SectionMarker{
+				Beat: e.Beat, Name: name, Weight: e.Float("weight", 1), Category: int(e.Float("category", 0)),
+			})
 		default:
 			bm.Entities = append(bm.Entities, e)
 		}
@@ -471,7 +475,9 @@ func loadV1(files map[string][]byte) (*Riq, error) {
 		if name == "" {
 			name = e.Str("name", "")
 		}
-		bm.Sections = append(bm.Sections, SectionMarker{Beat: raw.Beat, Name: name})
+		bm.Sections = append(bm.Sections, SectionMarker{
+			Beat: raw.Beat, Name: name, Weight: e.Float("weight", 1), Category: int(e.Float("category", 0)),
+		})
 	}
 	bm.normalizeTempos()
 	sort.SliceStable(bm.Entities, func(i, j int) bool { return bm.Entities[i].Beat < bm.Entities[j].Beat })

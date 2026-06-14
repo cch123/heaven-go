@@ -112,7 +112,7 @@ func (c *Ctx) PressedNow() bool  { return c.App.pressedNow }
 func (c *Ctx) ReleasedNow() bool { return c.App.releasedNow }
 
 // ExpectingReleaseNow 报告当前时刻是否在某个未判定 release 输入的 NG 窗口内
-//（IsExpectingInputNow(InputAction_FlickRelease) 等价物）。
+// （IsExpectingInputNow(InputAction_FlickRelease) 等价物）。
 func (c *Ctx) ExpectingReleaseNow() bool {
 	t := c.App.cond.Time()
 	for _, in := range c.App.inputs {
@@ -127,6 +127,7 @@ func (c *Ctx) ExpectingReleaseNow() bool {
 // 如 totemClimb 高跳保持期提前松手）。
 func (c *Ctx) ScoreMiss() {
 	c.App.misses++
+	c.App.recordMissScore(c.App.cond.Beat())
 	c.App.setMsg("MISS...")
 }
 
