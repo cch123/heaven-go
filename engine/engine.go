@@ -103,6 +103,9 @@ type Input struct {
 	OnHit func(state float64, j Judgment)
 	// OnMiss 在超窗未按时触发。
 	OnMiss func()
+	// CanHit 对应 HS ScheduleInput 的 canJust 谓词。条件变 false 后，
+	// 旧判定窗会静默失效，避免玩家对象已停止/消失后仍吃到输入。
+	CanHit func() bool
 }
 
 // camEvt 是 vfx/move camera 事件（GameCamera.UpdateCameraTranslate 语义）。
@@ -881,10 +884,15 @@ func (a *App) at(beat float64, fn func()) {
 }
 
 func (a *App) scheduleInput(beat float64, release bool, action int, onHit func(state float64, j Judgment), onMiss func()) {
+	a.scheduleInputCond(beat, release, action, nil, onHit, onMiss)
+}
+
+func (a *App) scheduleInputCond(beat float64, release bool, action int, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) {
 	weight, category := a.resultSectionAt(beat)
 	a.inputs = append(a.inputs, &Input{
 		Beat: beat, hitT: a.bm.BeatToTime(beat), Release: release, Action: action,
 		Weight: weight, Category: category, OnHit: onHit, OnMiss: onMiss,
+		CanHit: canHit,
 	})
 }
 
@@ -1189,6 +1197,10 @@ func (a *App) updatePlay() {
 	// 超窗 miss
 	for _, in := range a.inputs {
 		if !in.judged && t > in.hitT+WinNG {
+			if in.CanHit != nil && !in.CanHit() {
+				in.judged = true
+				continue
+			}
 			in.judged = true
 			in.Result = JudgeMiss
 			a.recordInputScore(in, 0)
@@ -1217,6 +1229,9 @@ func (a *App) judgePress(t, beat float64, release bool, action int) {
 	bestDiff := math.Inf(1)
 	for _, in := range a.inputs {
 		if in.judged || in.Release != release || in.Action != action {
+			continue
+		}
+		if in.CanHit != nil && !in.CanHit() {
 			continue
 		}
 		if d := math.Abs(t - in.hitT); d < bestDiff {

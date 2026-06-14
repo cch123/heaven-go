@@ -225,6 +225,13 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"_treatCurves", "donutGradient"}},
 		},
 	},
+	"boardMeeting": {
+		dir:             "BoardMeeting",
+		prefab:          "boardMeeting.prefab",
+		roleFields:      []string{"farLeft", "farRight", "assistantAnim"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+	},
 	"cheerReaders": {
 		dir:    "CheerReaders",
 		prefab: "cheerReaders.prefab",

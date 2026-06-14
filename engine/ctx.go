@@ -113,6 +113,13 @@ func (c *Ctx) ScheduleInputAction(beat float64, action int, onHit func(state flo
 	c.App.scheduleInput(beat, false, action, onHit, onMiss)
 }
 
+// ScheduleInputCond is ScheduleInput with HS' optional canJust predicate.
+// Board Meeting uses this to invalidate a pending stop cue after the player's
+// chair was already stopped by an early whiff.
+func (c *Ctx) ScheduleInputCond(beat float64, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) {
+	c.App.scheduleInputCond(beat, false, 0, canHit, onHit, onMiss)
+}
+
 // ScheduleInputRelease 注册一次"抬起"判定（InputAction_FlickRelease，
 // totemClimb 高跳甩出等）。空抬不触发 Whiff。
 func (c *Ctx) ScheduleInputRelease(beat float64, onHit func(state float64, j Judgment), onMiss func()) {
