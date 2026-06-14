@@ -311,6 +311,27 @@ func (s *SceneInst) PlayState(rootPath, stateName string, startBeat, timeScale f
 	s.playMachineClip(rootPath, st, startBeat, timeScale)
 }
 
+// PlayStateLayer mirrors DoScaledAnimationAsync(name, ..., animLayer:n) for
+// games that use one Animator's layers as independent, non-overlapping curve
+// sets. The controller is used only to resolve stateName -> clip; state-machine
+// transitions remain owned by PlayState on the base root player.
+func (s *SceneInst) PlayStateLayer(key, rootPath, stateName string, startBeat, timeScale float64) {
+	m, ok := s.machines[rootPath]
+	if !ok {
+		s.PlayLayer(key, rootPath, stateName, startBeat, timeScale)
+		return
+	}
+	st, ok := m.ctrl.States[stateName]
+	if !ok {
+		return
+	}
+	if st.Clip == "" || st.Speed*timeScale == 0 {
+		delete(s.players, key)
+		return
+	}
+	s.PlayLayer(key, rootPath, st.Clip, startBeat, timeScale*st.Speed)
+}
+
 // PlayDefaultState 进入 controller 默认状态（OnGameSwitch 时机；
 // Unity Animator 激活即按真实秒速播放默认态，故 timeScale 应传 secPerBeat）。
 func (s *SceneInst) PlayDefaultState(rootPath string, startBeat, timeScale float64) {

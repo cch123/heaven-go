@@ -18,25 +18,27 @@ func (a *App) at(beat float64, fn func()) {
 	}
 }
 
-func (a *App) scheduleInput(beat float64, release bool, action int, onHit func(state float64, j Judgment), onMiss func()) {
-	a.scheduleInputCond(beat, release, action, nil, onHit, onMiss)
+func (a *App) scheduleInput(beat float64, release bool, action int, onHit func(state float64, j Judgment), onMiss func()) *Input {
+	return a.scheduleInputCond(beat, release, action, nil, onHit, onMiss)
 }
 
-func (a *App) scheduleInputCond(beat float64, release bool, action int, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) {
-	a.scheduleInputFull(beat, release, action, false, canHit, onHit, onMiss)
+func (a *App) scheduleInputCond(beat float64, release bool, action int, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) *Input {
+	return a.scheduleInputFull(beat, release, action, false, canHit, onHit, onMiss)
 }
 
-func (a *App) scheduleInputNoScore(beat float64, release bool, action int, onHit func(state float64, j Judgment), onMiss func()) {
-	a.scheduleInputFull(beat, release, action, true, nil, onHit, onMiss)
+func (a *App) scheduleInputNoScore(beat float64, release bool, action int, onHit func(state float64, j Judgment), onMiss func()) *Input {
+	return a.scheduleInputFull(beat, release, action, true, nil, onHit, onMiss)
 }
 
-func (a *App) scheduleInputFull(beat float64, release bool, action int, noScore bool, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) {
+func (a *App) scheduleInputFull(beat float64, release bool, action int, noScore bool, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) *Input {
 	weight, category := a.resultSectionAt(beat)
-	a.inputs = append(a.inputs, &Input{
+	in := &Input{
 		Beat: beat, hitT: a.bm.BeatToTime(beat), Release: release, Action: action,
 		Weight: weight, Category: category, NoScore: noScore, OnHit: onHit, OnMiss: onMiss,
 		CanHit: canHit,
-	})
+	}
+	a.inputs = append(a.inputs, in)
+	return in
 }
 
 func (a *App) resultSectionAt(beat float64) (float64, int) {

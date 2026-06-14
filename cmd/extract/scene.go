@@ -143,6 +143,15 @@ var sceneSpecs = map[string]sceneSpec{
 		roleFields:      []string{"waffleAnim", "squareAnim"},
 		wantControllers: true,
 	},
+	"loveLizards": {
+		dir:    "LoveLizards",
+		prefab: "loveLizards.prefab",
+		roleFields: []string{
+			"MaleLizard", "FemaleLizard", "Guide",
+			"background1", "background2", "background3",
+		},
+		wantControllers: true,
+	},
 	"fireworks": {
 		dir:             "Fireworks",
 		prefab:          "fireworks.prefab",

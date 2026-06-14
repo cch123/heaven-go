@@ -1,0 +1,107 @@
+{
+ "FemaleLizardAnim": {
+  "default": "Idle",
+  "states": {
+   "FemaleLizardBopL": {
+    "clip": "FemaleLizard/FemaleLizardBopL",
+    "speed": 1
+   },
+   "FemaleLizardBopR": {
+    "clip": "FemaleLizard/FemaleLizardBopR",
+    "speed": 1
+   },
+   "FemaleLizardHold": {
+    "clip": "FemaleLizard/FemaleLizardHold",
+    "speed": 1
+   },
+   "FemaleLizardMouthDown": {
+    "clip": "FemaleLizard/FemaleLizardMouthDown",
+    "speed": 1
+   },
+   "FemaleLizardMouthUp": {
+    "clip": "FemaleLizard/FemaleLizardMouthUp",
+    "speed": 1
+   },
+   "FemaleLizardRelease": {
+    "clip": "FemaleLizard/FemaleLizardRelease",
+    "speed": 1
+   },
+   "FemaleLizardSlideDown": {
+    "clip": "FemaleLizard/FemaleLizardSlideDown",
+    "speed": 1
+   },
+   "FemaleLizardSlideUp": {
+    "clip": "FemaleLizard/FemaleLizardSlideUp",
+    "speed": 1
+   },
+   "FemaleLizardStepL": {
+    "clip": "FemaleLizard/FemaleLizardStepL",
+    "speed": 1
+   },
+   "FemaleLizardStepR": {
+    "clip": "FemaleLizard/FemaleLizardStepR",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "GuideAnim": {
+  "default": "GuideDown",
+  "states": {
+   "GuideDown": {
+    "clip": "Animations/GuideDown",
+    "speed": 1
+   },
+   "GuideUp": {
+    "clip": "Animations/GuideUp",
+    "speed": 1
+   }
+  }
+ },
+ "MaleLizardAnim": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "MaleLizardBopL": {
+    "clip": "MaleLizard/MaleLizardBopL",
+    "speed": 1
+   },
+   "MaleLizardBopR": {
+    "clip": "MaleLizard/MaleLizardBopR",
+    "speed": 1
+   },
+   "MaleLizardPrepare": {
+    "clip": "MaleLizard/MaleLizardPrepare",
+    "speed": 1
+   },
+   "MaleLizardShakeL": {
+    "clip": "MaleLizard/MaleLizardShakeL",
+    "speed": 1
+   },
+   "MaleLizardShakeR": {
+    "clip": "MaleLizard/MaleLizardShakeR",
+    "speed": 1
+   },
+   "MaleLizardSmile": {
+    "clip": "MaleLizard/MaleLizardSmile",
+    "speed": 1
+   },
+   "MaleLizardStepL": {
+    "clip": "MaleLizard/MaleLizardStepL",
+    "speed": 1
+   },
+   "MaleLizardStepR": {
+    "clip": "MaleLizard/MaleLizardStepR",
+    "speed": 1
+   },
+   "MaleLizardYawn": {
+    "clip": "MaleLizard/MaleLizarYawn",
+    "speed": 1
+   }
+  }
+ }
+}
