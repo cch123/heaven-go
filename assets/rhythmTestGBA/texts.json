@@ -1,0 +1,22 @@
+[
+ {
+  "path": "Text",
+  "text": "Testing in progress...",
+  "size": 7,
+  "color": [
+   0.97255,
+   0.40784317,
+   0,
+   1
+  ],
+  "order": 15,
+  "layer": 0,
+  "font": "FOT-KurokaneStd_Megamix_Modified-EB.otf",
+  "rect": [
+   19.88917,
+   5
+  ],
+  "hAlign": 2,
+  "vAlign": 256
+ }
+]

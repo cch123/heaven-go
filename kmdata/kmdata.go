@@ -129,14 +129,14 @@ type Extra struct {
 // 数值/字符串直存，fileID 引用解析为节点 path，sprite 引用解析为切片名，
 // 结构体数组（如 BackgroundScrollPair）逐项解析。
 type Component struct {
-	Path         string                       `json:"path"`
-	Nums         map[string]float64           `json:"nums,omitempty"`
-	Strs         map[string]string            `json:"strs,omitempty"`
-	Refs         map[string]string            `json:"refs,omitempty"`         // 字段 → 节点 path
-	Sprites      map[string]string            `json:"sprites,omitempty"`      // 字段 → 切片名
-	RefArrays    map[string][]string          `json:"refArrays,omitempty"`    // 字段 → 节点 path 列表
-	SpriteArrays map[string][]string          `json:"spriteArrays,omitempty"` // 字段 → 切片名列表
-	Lists        map[string][]ComponentItem   `json:"lists,omitempty"`        // 结构体数组字段
+	Path         string                     `json:"path"`
+	Nums         map[string]float64         `json:"nums,omitempty"`
+	Strs         map[string]string          `json:"strs,omitempty"`
+	Refs         map[string]string          `json:"refs,omitempty"`         // 字段 → 节点 path
+	Sprites      map[string]string          `json:"sprites,omitempty"`      // 字段 → 切片名
+	RefArrays    map[string][]string        `json:"refArrays,omitempty"`    // 字段 → 节点 path 列表
+	SpriteArrays map[string][]string        `json:"spriteArrays,omitempty"` // 字段 → 切片名列表
+	Lists        map[string][]ComponentItem `json:"lists,omitempty"`        // 结构体数组字段
 }
 
 // ComponentItem 是结构体数组的一项（引用解析为 path，数值直存；
@@ -189,7 +189,8 @@ type Animators map[string]string
 // ---------- TMP 文本（texts.json） ----------
 
 // TextNode 是一个 TextMeshPro 世界文本（如 meatGrinder 的 GRINDER 牌子）。
-// TMP 语义：fontSize × 0.1 = em 世界高度（m_isOrthographic=0），水平/垂直居中。
+// TMP 语义：fontSize × 0.1 = em 世界高度（m_isOrthographic=0）；颜色保留在
+// 节点 tint 上，便于动画继续驱动 m_fontColor.*。
 type TextNode struct {
 	Path   string     `json:"path"`
 	Text   string     `json:"text"`
@@ -197,10 +198,10 @@ type TextNode struct {
 	Color  [4]float64 `json:"color"` // m_fontColor
 	Order  int        `json:"order"` // MeshRenderer m_SortingOrder
 	Layer  int        `json:"layer"`
-	Font   string     `json:"font"`           // fonts/ 下的字体文件名
-	Rect   [2]float64 `json:"rect"`           // RectTransform m_SizeDelta
-	HAlign int        `json:"hAlign"`         // m_HorizontalAlignment（2=Center）
-	VAlign int        `json:"vAlign"`         // m_VerticalAlignment（512=Middle）
+	Font   string     `json:"font"`   // fonts/ 下的字体文件名
+	Rect   [2]float64 `json:"rect"`   // RectTransform m_SizeDelta
+	HAlign int        `json:"hAlign"` // m_HorizontalAlignment（2=Center）
+	VAlign int        `json:"vAlign"` // m_VerticalAlignment（512=Middle）
 }
 
 // XYCurve 是二维向量曲线（位置/缩放按分量存）。

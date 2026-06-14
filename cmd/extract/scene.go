@@ -51,6 +51,16 @@ type componentSpec struct {
 }
 
 var sceneSpecs = map[string]sceneSpec{
+	"rhythmTestGBA": {
+		dir:    "RhythmTestGBA",
+		prefab: "rhythmTestGBA.prefab",
+		roleFields: []string{
+			"noteFlash", "screenText", "buttonAnimator", "flashAnimator",
+			"numberBGAnimator", "numberAnimator", "textAnimator",
+		},
+		wantControllers: true,
+		wantTexts:       true,
+	},
 	"ninjaBodyguard": {
 		dir:    "NinjaBodyguard",
 		prefab: "ninjaBodyguard.prefab",

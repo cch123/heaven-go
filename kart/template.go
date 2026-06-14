@@ -674,8 +674,10 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 				states[ti].active = v > 0.5
 			case attr == "m_Enabled":
 				states[ti].renderOn = v > 0.5
-			case strings.HasPrefix(attr, "m_Color."):
-				switch attr[len("m_Color."):] {
+			case strings.HasPrefix(attr, "m_Color."), strings.HasPrefix(attr, "m_fontColor."):
+				ch := strings.TrimPrefix(attr, "m_Color.")
+				ch = strings.TrimPrefix(ch, "m_fontColor.")
+				switch ch {
 				case "r":
 					states[ti].color[0] = v
 				case "g":

@@ -5,8 +5,8 @@
 // 源 OTF 生成），因此这里直接用源字体文件排版：
 //
 //	em 世界高度 = m_fontSize × 0.1（TMP 非正交模式 fontScale = size/pointSize × 0.1）
-//	对齐：水平 Center（m_HorizontalAlignment=2）+ 垂直 Middle（512）——
-//	      行中线 = 基线 + (ascender+descender)/2，置于 RectTransform 中心
+//	对齐：水平 Center（m_HorizontalAlignment=2）+ 垂直 Middle/Top（512/256）；
+//	      行中线 = 基线 + (ascender+descender)/2，用 sprite 枢轴复刻 TMP 锚点
 //
 // 文本渲染为高分辨率位图后注册为动态切片，由场景树按 MeshRenderer 的
 // sortingOrder 参与统一排序绘制（节点缩放/层级变换照常生效）。
@@ -16,7 +16,6 @@ import (
 	"fmt"
 	"image"
 	"image/color"
-	"math"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"golang.org/x/image/font"
@@ -76,9 +75,18 @@ func (a *Assets) renderTextNode(tn *kmdata.TextNode, content string) error {
 	if !ok {
 		return fmt.Errorf("文本节点 path %q 不在场景树", tn.Path)
 	}
-	if tn.HAlign != 2 || tn.VAlign != 512 {
-		// 目前只实现 Center/Middle（meatGrinder 唯一用例）；其他对齐出现时报错而非静默错位
+	if tn.HAlign != 2 || (tn.VAlign != 512 && tn.VAlign != 256) {
+		// 目前官方移植只遇到 Center + Middle/Top；其他对齐出现时报错而非静默错位。
 		return fmt.Errorf("文本 %q 对齐 (%d,%d) 未实现", tn.Path, tn.HAlign, tn.VAlign)
+	}
+
+	n := &a.Rig.Nodes[idx]
+	n.Order = tn.Order
+	n.Layer = tn.Layer
+	n.Color = tn.Color
+	if content == "" {
+		n.Sprite = ""
+		return nil
 	}
 
 	f, err := a.font(tn.Font)
@@ -104,26 +112,23 @@ func (a *Assets) renderTextNode(tn *kmdata.TextNode, content string) error {
 	}
 	const pad = 4
 	img := image.NewRGBA(image.Rect(0, 0, w+2*pad, h+2*pad))
-	col := color.RGBA{
-		uint8(math.Round(tn.Color[0] * 255)), uint8(math.Round(tn.Color[1] * 255)),
-		uint8(math.Round(tn.Color[2] * 255)), uint8(math.Round(tn.Color[3] * 255)),
-	}
 	d := &font.Drawer{
-		Dst: img, Src: image.NewUniform(col), Face: face,
+		Dst: img, Src: image.NewUniform(color.White), Face: face,
 		Dot: fixed.P(pad, pad+ascent),
 	}
 	d.DrawString(content)
 
-	// 枢轴：x 取水平中心；y 取行中线（基线 + (asc+desc)/2，desc 为负 →
-	// 基线上方 (ascent-descent)/2 像素），换算为 Unity 归一化（自底边）
-	midFromTop := float64(pad) + (float64(ascent)+float64(descent))/2
+	// 枢轴：x 取水平中心；y 按 TMP 垂直对齐取行中线或顶边，换算为
+	// Unity 归一化（自底边）。颜色烘成节点 tint 而不是 glyph 像素，
+	// 因为 TextFlash 动画会继续驱动 m_fontColor.r/g/b。
 	H := float64(img.Bounds().Dy())
+	midFromTop := float64(pad) + (float64(ascent)+float64(descent))/2
 	pivotY := 1 - midFromTop/H
+	if tn.VAlign == 256 {
+		pivotY = 1 - float64(pad)/H
+	}
 
 	a.RegisterSprite("__text_"+tn.Path, ebiten.NewImageFromImage(img), textPPU, 0.5, pivotY)
-	n := &a.Rig.Nodes[idx]
 	n.Sprite = "__text_" + tn.Path
-	n.Order = tn.Order
-	n.Layer = tn.Layer
 	return nil
 }

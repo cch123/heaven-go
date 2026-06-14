@@ -1,0 +1,132 @@
+{
+ "BG": {
+  "default": "Idle",
+  "states": {
+   "FlashBG": {
+    "clip": "Number BG/FlashBG",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Static",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "FlashHit": {
+    "clip": "Number BG/FlashHit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Number BG/Idle",
+    "speed": 1
+   },
+   "Static": {
+    "clip": "Number BG/Static",
+    "speed": 1
+   }
+  }
+ },
+ "Button": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Button/Idle",
+    "speed": 1
+   },
+   "Press": {
+    "clip": "Button/Press",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Flash": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Flash/Idle",
+    "speed": 1
+   },
+   "KTBPulse": {
+    "clip": "Flash/KTBPulse",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 2.0895798e-9
+     }
+    ]
+   }
+  }
+ },
+ "Number": {
+  "default": "Idle",
+  "states": {
+   "Eight": {
+    "clip": "Number/Eight",
+    "speed": 1
+   },
+   "Five": {
+    "clip": "Number/Five",
+    "speed": 1
+   },
+   "Four": {
+    "clip": "Number/Four",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Number/Idle",
+    "speed": 1
+   },
+   "Nine": {
+    "clip": "Number/Nine",
+    "speed": 1
+   },
+   "One": {
+    "clip": "Number/One",
+    "speed": 1
+   },
+   "Seven": {
+    "clip": "Number/Seven",
+    "speed": 1
+   },
+   "Six": {
+    "clip": "Number/Six",
+    "speed": 1
+   },
+   "Three": {
+    "clip": "Number/Three",
+    "speed": 1
+   },
+   "Two": {
+    "clip": "Number/Two",
+    "speed": 1
+   },
+   "Zero": {
+    "clip": "Number/Zero",
+    "speed": 1
+   }
+  }
+ },
+ "Text (TMP)": {
+  "default": "TextIdle",
+  "states": {
+   "TextFlash": {
+    "clip": "Text/TextFlash",
+    "speed": 1
+   },
+   "TextIdle": {
+    "clip": "Text/TextIdle",
+    "speed": 1
+   }
+  }
+ }
+}

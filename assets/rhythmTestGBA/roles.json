@@ -1,0 +1,9 @@
+{
+ "buttonAnimator": "Button",
+ "flashAnimator": "Note",
+ "noteFlash": "Note",
+ "numberAnimator": "Countdown/Number",
+ "numberBGAnimator": "Countdown/BG",
+ "screenText": "Text",
+ "textAnimator": "Text"
+}
