@@ -76,6 +76,20 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "fly", markers: []string{"flyAnim", "wingAnim"}, atPath: "Fly"},
 		},
 	},
+	"clapTrap": {
+		dir:    "ClapTrap",
+		prefab: "clapTrap.prefab",
+		roleFields: []string{
+			"Background", "bg", "stageLeft", "stageRight", "stageLeftRim", "stageRightRim",
+			"spotlight", "doll", "dollHead", "dollArms", "dollBody", "clapEffect",
+			"sword", "swordObj", "shadowHead", "shadowLeftArm", "shadowLeftGlove",
+			"shadowLeftGloveRim", "shadowRightArm", "shadowRightGlove", "shadowRightGloveRim",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"Background", "spotlight", "dollHead", "swordObj"}},
+		},
+	},
 	"coinToss": {
 		dir:    "CoinToss",
 		prefab: "coinToss.prefab",
