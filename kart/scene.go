@@ -46,7 +46,7 @@ type scenePlayer struct {
 }
 
 // smachine 是绑定到子树根的 AnimatorController 状态机
-//（DoScaledAnimationAsync 按状态名播放 + 剪辑结束按 bool 条件转换）。
+// （DoScaledAnimationAsync 按状态名播放 + 剪辑结束按 bool 条件转换）。
 type smachine struct {
 	ctrl   *kmdata.Controller
 	state  string
@@ -226,7 +226,7 @@ func (s *SceneInst) Current(rootPath string) string {
 }
 
 // PlayNormalized 以 DoNormalizedAnimation 语义播放：固定在归一化时间 t 采样
-//（Unity 等价 Play(name, 0, t) + speed 0，cartGuy 的推车位移用它逐帧驱动）。
+// （Unity 等价 Play(name, 0, t) + speed 0，cartGuy 的推车位移用它逐帧驱动）。
 func (s *SceneInst) PlayNormalized(rootPath, clip string, t float64) {
 	anim, ok := s.as.Anims[clip]
 	if !ok {
@@ -347,6 +347,13 @@ func (s *SceneInst) stepMachines(beat float64) {
 				tr := &st.Transitions[i]
 				gateT := D * tr.ExitTime
 				if clipT < gateT {
+					continue
+				}
+				if gateT == 0 && clipT == 0 && m.lastT == 0 {
+					// Animator.Play should make the requested state visible for
+					// the current evaluation. Without this guard, 0-exit states
+					// such as Blue Bear's BiteL/BiteR transition away before
+					// their first frame is ever sampled.
 					continue
 				}
 				ok := true

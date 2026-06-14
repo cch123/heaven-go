@@ -39,6 +39,11 @@ type treat struct {
 	height float64
 }
 
+type treatEvt struct {
+	beat, length       float64
+	isCake, long, open bool
+}
+
 type emotionEvt struct {
 	beat, length float64
 	typ          int
@@ -72,6 +77,7 @@ type Module struct {
 	treats   []*treat
 	donutT   *kart.Template
 	cakeT    *kart.Template
+	treatLog []treatEvt
 	emotions []emotionEvt // stretch（非 instant）
 	instants []emotionEvt
 	stories  []storyEvt
@@ -156,6 +162,11 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		if _, has := e.Data["open"]; has {
 			open = boolParam(e, "open")
 		}
+		length := e.Length
+		if length <= 0 {
+			length = defaultTreatLength(isCake)
+		}
+		m.treatLog = append(m.treatLog, treatEvt{b, length, isCake, long, open})
 		// TreatSound（preFunction：事件拍出声）
 		ctx.At(b, func() {
 			if isCake {
@@ -163,7 +174,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			} else {
 				ctx.Sound("donut")
 			}
-			m.spawnTreat(b, isCake, long, open)
+			m.spawnTreat(b, isCake, long, open, true)
 		})
 		m.scheduleTreatInput(b, isCake, long)
 	case "blueBear/stretchEmotion":
@@ -211,13 +222,26 @@ func (m *Module) OnEvent(e *riq.Entity) {
 }
 
 func (m *Module) Ready() {
+	sort.Slice(m.treatLog, func(i, j int) bool { return m.treatLog[i].beat < m.treatLog[j].beat })
 	sort.Slice(m.emotions, func(i, j int) bool { return m.emotions[i].beat < m.emotions[j].beat })
+	sort.Slice(m.instants, func(i, j int) bool { return m.instants[i].beat < m.instants[j].beat })
 	sort.Slice(m.stories, func(i, j int) bool { return m.stories[i].beat < m.stories[j].beat })
+	sort.Slice(m.crumbs, func(i, j int) bool { return m.crumbs[i].beat < m.crumbs[j].beat })
 }
 
 // ---------- treat ----------
 
-func (m *Module) spawnTreat(b float64, isCake, long, open bool) {
+func defaultTreatLength(isCake bool) float64 {
+	if isCake {
+		return 4
+	}
+	return 3
+}
+
+func (m *Module) spawnTreat(b float64, isCake, long, open, squash bool) {
+	if m.findTreat(b, isCake) != nil {
+		return
+	}
 	t := &treat{
 		isCake: isCake, startBeat: b, judgeBeat: b, hold: long, shouldOpn: open,
 	}
@@ -234,7 +258,9 @@ func (m *Module) spawnTreat(b float64, isCake, long, open bool) {
 		m.openCount++
 	}
 	m.treats = append(m.treats, t)
-	m.squashBag(isCake)
+	if squash {
+		m.squashBag(isCake)
+	}
 }
 
 func (m *Module) scheduleTreatInput(b float64, isCake, long bool) {
@@ -348,19 +374,23 @@ func (m *Module) bearFrozenBite(left bool) {
 }
 
 func (m *Module) setEmotion(beat float64, typ int) {
-	m.emoCancelBeat = beat
+	m.setEmotionAt(beat, beat, typ)
+}
+
+func (m *Module) setEmotionAt(playBeat, cancelBeat float64, typ int) {
+	m.emoCancelBeat = cancelBeat
 	m.wantMouthOpen = false
 	m.crying = false
 	switch typ {
 	case -1:
-		m.bearState("Idle", beat)
+		m.bearState("Idle", playBeat)
 	case 3:
-		m.bearState("EyesClosed", beat)
+		m.bearState("EyesClosed", playBeat)
 	case 5:
-		m.bearState("CryIdle", beat)
+		m.bearState("CryIdle", playBeat)
 		m.crying = true
 	case 4:
-		m.bearState("SmileIdle", beat)
+		m.bearState("SmileIdle", playBeat)
 	}
 }
 
@@ -494,7 +524,77 @@ func (m *Module) OnSwitch(beat float64) {
 	} {
 		sc.PlayDefaultState(p, beat, sec)
 	}
+	m.restoreTreatsAt(beat)
+	m.restoreEmotionsAt(beat)
+	m.restoreCrumbsAt(beat)
 	m.updateCrumbs()
+}
+
+func (m *Module) restoreTreatsAt(beat float64) {
+	for _, e := range m.treatLog {
+		if e.beat >= beat {
+			break
+		}
+		// Heaven Studio uses event.length-1 as the visible approach window:
+		// donut defaults to 3 (2-beat flight), cake to 4 (3-beat flight).
+		if e.beat+e.length-1 > beat {
+			m.spawnTreat(e.beat, e.isCake, e.long, e.open, false)
+		}
+	}
+}
+
+func (m *Module) restoreEmotionsAt(beat float64) {
+	m.emoIdx = 0
+	m.emoFirstFrame = true
+	m.crying = false
+	for m.emoIdx < len(m.emotions) && beat > m.emotions[m.emoIdx].beat+m.emotions[m.emoIdx].length {
+		m.crying = m.emotions[m.emoIdx].typ == 2
+		m.emoIdx++
+	}
+	var lastStretch *emotionEvt
+	for i := range m.emotions {
+		if m.emotions[i].beat >= beat {
+			break
+		}
+		lastStretch = &m.emotions[i]
+	}
+	if lastStretch != nil {
+		switch lastStretch.typ {
+		case 2:
+			m.bearState("CryIdle", beat)
+			m.crying = true
+		case 1:
+			m.bearState("SmileIdle", beat)
+			m.crying = false
+		}
+	}
+	var lastInstant *emotionEvt
+	for i := range m.instants {
+		if m.instants[i].beat >= beat {
+			break
+		}
+		lastInstant = &m.instants[i]
+	}
+	if lastInstant != nil {
+		m.setEmotionAt(beat, lastInstant.beat, lastInstant.typ)
+	}
+}
+
+func (m *Module) restoreCrumbsAt(beat float64) {
+	var last *crumbEvt
+	for i := range m.crumbs {
+		if m.crumbs[i].beat >= beat {
+			break
+		}
+		last = &m.crumbs[i]
+	}
+	if last == nil {
+		return
+	}
+	m.rightThreshold, m.leftThreshold = last.right, last.left
+	if last.reset {
+		m.eaten = 0
+	}
 }
 
 func (m *Module) Whiff(beat float64) { m.WhiffAction(beat, 0) }

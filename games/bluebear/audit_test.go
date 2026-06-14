@@ -3,6 +3,7 @@ package bluebear
 import (
 	"testing"
 
+	"hsdemo/engine"
 	"hsdemo/kart"
 )
 
@@ -45,5 +46,63 @@ func TestBlueBearAssets(t *testing.T) {
 		if as.Roles[role] == "" {
 			t.Errorf("role %s 未解析", role)
 		}
+	}
+}
+
+func TestBlueBearShortBiteSurvivesFirstSample(t *testing.T) {
+	as, err := kart.Load("../../assets/blueBear", 44100)
+	if err != nil {
+		t.Skipf("assets not extracted: %v", err)
+	}
+	sc := kart.NewScene(as)
+	root := "Bear/HeadAndBody"
+	beat := 10.0
+
+	sc.PlayState(root, "BiteR", beat, 0.5)
+	sc.SetBool(root, "ShouldOpenMouth", false)
+	sc.Sample(beat)
+	if got, _ := sc.StateInfo(root, beat); got != "BiteR" {
+		t.Fatalf("首帧状态 = %q, want BiteR", got)
+	}
+
+	next := beat + 1.0/60.0
+	sc.Sample(next)
+	if got, _ := sc.StateInfo(root, next); got != "Idle" {
+		t.Fatalf("下一帧状态 = %q, want Idle", got)
+	}
+}
+
+func TestRestoreTreatsOnSwitchCatchesMidFlightTreat(t *testing.T) {
+	as, err := kart.Load("../../assets/blueBear", 44100)
+	if err != nil {
+		t.Skipf("assets not extracted: %v", err)
+	}
+	m := &Module{
+		ctx:            &engine.Ctx{Assets: as, Scene: kart.NewScene(as)},
+		donutT:         kart.NewTemplate(as, as.Roles["donutBase"]),
+		cakeT:          kart.NewTemplate(as, as.Roles["cakeBase"]),
+		emoCancelBeat:  -1,
+		emoFirstFrame:  true,
+		rightThreshold: 15,
+		leftThreshold:  30,
+		treatLog: []treatEvt{{
+			beat: 10, length: 3, isCake: false, long: true, open: true,
+		}},
+	}
+
+	m.restoreTreatsAt(11)
+	if got := len(m.treats); got != 1 {
+		t.Fatalf("treats = %d, want 1", got)
+	}
+	if got := m.openCount; got != 1 {
+		t.Fatalf("openCount = %d, want 1", got)
+	}
+	if m.squashing {
+		t.Fatal("切入中段的补生成不应重播包袋挤压")
+	}
+
+	m.restoreTreatsAt(11.5)
+	if got := len(m.treats); got != 1 {
+		t.Fatalf("restore duplicated treat, got %d", got)
 	}
 }
