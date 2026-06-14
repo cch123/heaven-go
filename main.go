@@ -37,6 +37,7 @@ import (
 
 	"hsdemo/conductor"
 	"hsdemo/engine"
+	"hsdemo/games/agbsamuraislice"
 	"hsdemo/games/airrally"
 	"hsdemo/games/basketballgirls"
 	"hsdemo/games/bluebear"
@@ -669,6 +670,7 @@ func main() {
 
 	// 已移植的游戏模块
 	engine.Register("rhythmSomen", somen.New)
+	engine.Register("agbSamuraiSlice", agbsamuraislice.New)
 	engine.Register("airRally", airrally.New)
 	engine.Register("basketballGirls", basketballgirls.New)
 	engine.Register("boardMeeting", boardmeeting.New)

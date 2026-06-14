@@ -1,0 +1,3546 @@
+{
+ "nodes": [
+  {
+   "name": "agbSamuraiSlice",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaihalve3",
+   "path": "yokaihalve3",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokaihalve (1)",
+   "path": "yokaihalve3/yokaihalve (1)",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaihalve (3)",
+   "path": "yokaihalve3/yokaihalve (3)",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaihalve (4)",
+   "path": "yokaihalve3/yokaihalve (4)",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaihalve (5)",
+   "path": "yokaihalve3/yokaihalve (5)",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaihalve (2)",
+   "path": "yokaihalve3/yokaihalve (2)",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaihalve",
+   "path": "yokaihalve",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokaihalve (1)",
+   "path": "yokaihalve/yokaihalve (1)",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "mayahalve",
+   "path": "mayahalve",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokaihalve (1)",
+   "path": "mayahalve/yokaihalve (1)",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaiflyinghalve",
+   "path": "yokaiflyinghalve",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokaihalve (1)",
+   "path": "yokaiflyinghalve/yokaihalve (1)",
+   "parent": 11,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaihalve (2)",
+   "path": "yokaiflyinghalve/yokaihalve (2)",
+   "parent": 11,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaihalve2",
+   "path": "yokaihalve2",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokaihalve (1)",
+   "path": "yokaihalve2/yokaihalve (1)",
+   "parent": 14,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaihalveflying2",
+   "path": "yokaihalveflying2",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokaihalve (1)",
+   "path": "yokaihalveflying2/yokaihalve (1)",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "yokaibarelyparticle",
+   "path": "yokaibarelyparticle",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "mayabarelyparticle",
+   "path": "mayabarelyparticle",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokaibarelyparticle (1)",
+   "path": "yokaibarelyparticle (1)",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokai3barelyparticle",
+   "path": "yokai3barelyparticle",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokai2barelyparticle",
+   "path": "yokai2barelyparticle",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "yokai2barelyparticle (1)",
+   "path": "yokai2barelyparticle (1)",
+   "parent": 0,
+   "pos": [
+    -3.0069997,
+    0.29999995
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    -0.32,
+    -0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "Background",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    81.92,
+    46.08
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-25_22-01-44",
+   "path": "Snipaste_2025-09-25_22-01-44",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9265,
+    0.9265
+   ],
+   "sprite": "Snipaste_2025-09-25_22-01-44",
+   "order": -99,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "samurai",
+   "path": "samurai",
+   "parent": 0,
+   "pos": [
+    -5.5,
+    -2.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "samuraihead1",
+   "path": "samurai/samuraihead1",
+   "parent": 26,
+   "pos": [
+    -0.232,
+    2.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "samuraihead1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    3.3
+   ]
+  },
+  {
+   "name": "neck",
+   "path": "samurai/neck",
+   "parent": 26,
+   "pos": [
+    -0.541,
+    1.725
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "neck",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.38,
+    2.54
+   ]
+  },
+  {
+   "name": "rightleg",
+   "path": "samurai/rightleg",
+   "parent": 26,
+   "pos": [
+    -1.526,
+    -1.433
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "rightleg",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.68,
+    5.26
+   ]
+  },
+  {
+   "name": "leftleg1",
+   "path": "samurai/leftleg1",
+   "parent": 26,
+   "pos": [
+    0.2,
+    -1.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "leftleg1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8,
+    4.46
+   ]
+  },
+  {
+   "name": "samuraishadow",
+   "path": "samurai/samuraishadow",
+   "parent": 26,
+   "pos": [
+    -0.6,
+    -2.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "samuraishadow",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.1,
+    1.02
+   ]
+  },
+  {
+   "name": "body",
+   "path": "samurai/body",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body1",
+   "path": "samurai/body/body1",
+   "parent": 32,
+   "pos": [
+    -1.3,
+    0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "body1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8,
+    6.78
+   ]
+  },
+  {
+   "name": "hand1",
+   "path": "samurai/body/hand1",
+   "parent": 32,
+   "pos": [
+    -0.94799995,
+    -0.16400003
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "hand1",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.64,
+    1.52
+   ]
+  },
+  {
+   "name": "katana",
+   "path": "samurai/body/katana",
+   "parent": 32,
+   "pos": [
+    -0.69000006,
+    -0.04099989
+   ],
+   "rotZ": 2.007128661498701,
+   "scale": [
+    0.40000004,
+    0.40000004
+   ],
+   "sprite": "katana",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.22,
+    7.04
+   ]
+  },
+  {
+   "name": "body3",
+   "path": "samurai/body/body3",
+   "parent": 32,
+   "pos": [
+    -0.6,
+    0.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "body3",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.94,
+    5.26
+   ]
+  },
+  {
+   "name": "katanacover",
+   "path": "samurai/body/katanacover",
+   "parent": 32,
+   "pos": [
+    -1.273,
+    -0.312
+   ],
+   "rotZ": -1.134464099551015,
+   "scale": [
+    0.40000004,
+    0.40000004
+   ],
+   "sprite": "katanacover",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.74,
+    7.4
+   ]
+  },
+  {
+   "name": "hand2",
+   "path": "samurai/body/hand2",
+   "parent": 32,
+   "pos": [
+    0.106,
+    0.312
+   ],
+   "rotZ": 0.34906579928311926,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "hand2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.48,
+    1.42
+   ]
+  },
+  {
+   "name": "hand3",
+   "path": "samurai/body/hand3",
+   "parent": 32,
+   "pos": [
+    -0.48000002,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "hand3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    1.22
+   ]
+  },
+  {
+   "name": "bigsmear2",
+   "path": "samurai/bigsmear2",
+   "parent": 26,
+   "pos": [
+    -0.48,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bigsmear2",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.8,
+    3.88
+   ]
+  },
+  {
+   "name": "breath1",
+   "path": "samurai/breath1",
+   "parent": 26,
+   "pos": [
+    0.52,
+    1.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "breath1",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.14,
+    1.1
+   ]
+  },
+  {
+   "name": "heydontlookatthis",
+   "path": "heydontlookatthis",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 12.25,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": -1225,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.53,
+    6.77
+   ]
+  },
+  {
+   "name": "Refs",
+   "path": "Refs",
+   "parent": 0,
+   "pos": [
+    1.4,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9265,
+    0.9265
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-09-28_00-57-25",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.54509807
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (1)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (1)",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-09-28_01-01-49",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (2)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (2)",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-09-28_01-03-57",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (3)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (3)",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sliceframe1",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (4)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (4)",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sliceframe2",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (5)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (5)",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sliceframe3",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (6)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (6)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "missframe2",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (7)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (7)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "missframe1",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (8)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (8)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-01_21-12-07",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (9)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (9)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-01_22-07-09",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (10)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (10)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-01_22-07-19",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (11)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (11)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-01_22-07-33",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (12)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (12)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-01_22-14-10",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (13)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (13)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-02_14-01-32",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (14)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (14)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-02_14-02-10",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (15)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (15)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-02_19-32-22",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (16)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (16)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-10-20_13-41-02",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (17)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (17)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-12-12",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (18)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (18)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-12-56",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (19)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (19)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-13-19",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7529412
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (20)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (20)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-13-26",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7529412
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (21)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (21)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-13-32",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7529412
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (22)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (22)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-13-46",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7529412
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (23)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (23)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-13-51",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7529412
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (24)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (24)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-13-57",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7529412
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Snipaste_2025-09-28_00-57-25 (25)",
+   "path": "Refs/Snipaste_2025-09-28_00-57-25 (25)",
+   "parent": 43,
+   "pos": [
+    -1.5110631,
+    -0.2698327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Snipaste_2025-11-01_16-14-08",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7529412
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "bigshadow",
+   "path": "bigshadow",
+   "parent": 0,
+   "pos": [
+    7,
+    1.8600001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bigshadow",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.32,
+    1.36
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "shadow",
+   "parent": 0,
+   "pos": [
+    8.9,
+    1.9000001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.46,
+    1.02
+   ]
+  },
+  {
+   "name": "yokai1",
+   "path": "yokai1",
+   "parent": 0,
+   "pos": [
+    12,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "yokai1_3",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.65,
+    4.92
+   ]
+  },
+  {
+   "name": "jumpeffect",
+   "path": "yokai1/jumpeffect",
+   "parent": 72,
+   "pos": [
+    -1.805,
+    -1.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "jumpeffect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    1.96
+   ]
+  },
+  {
+   "name": "jumpeffect (1)",
+   "path": "yokai1/jumpeffect (1)",
+   "parent": 72,
+   "pos": [
+    2.164998,
+    -1.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "jumpeffect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    1.96
+   ]
+  },
+  {
+   "name": "ribbon1",
+   "path": "yokai1/ribbon1",
+   "parent": 72,
+   "pos": [
+    -0.25,
+    2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ribbon1",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.06,
+    1.56
+   ]
+  },
+  {
+   "name": "wing1",
+   "path": "yokai1/wing1",
+   "parent": 72,
+   "pos": [
+    3.4,
+    2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "wing1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.34,
+    2.96
+   ]
+  },
+  {
+   "name": "wing11",
+   "path": "yokai1/wing11",
+   "parent": 72,
+   "pos": [
+    -1.3,
+    2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wing1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.34,
+    2.96
+   ]
+  },
+  {
+   "name": "yokai3",
+   "path": "yokai1/yokai3",
+   "parent": 72,
+   "pos": [
+    -2,
+    1.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "yokai3",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.6,
+    6.76
+   ]
+  },
+  {
+   "name": "yokai1_3",
+   "path": "yokai1/yokai1_3",
+   "parent": 72,
+   "pos": [
+    -1.75,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "yokai1_3",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.65,
+    4.92
+   ]
+  },
+  {
+   "name": "yokai1_3 (1)",
+   "path": "yokai1/yokai1_3 (1)",
+   "parent": 72,
+   "pos": [
+    -1.2,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "yokai1_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.65,
+    4.92
+   ]
+  },
+  {
+   "name": "yokai1_3 (2)",
+   "path": "yokai1/yokai1_3 (2)",
+   "parent": 72,
+   "pos": [
+    -3.1,
+    0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "yokai1_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.65,
+    4.92
+   ]
+  },
+  {
+   "name": "yokai1_3 (3)",
+   "path": "yokai1/yokai1_3 (3)",
+   "parent": 72,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "yokai1_3",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.65,
+    4.92
+   ]
+  },
+  {
+   "name": "yokaijumpcurve",
+   "path": "yokaijumpcurve",
+   "parent": 0,
+   "pos": [
+    7.87,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaijumpcurve/Point 0",
+   "parent": 83,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaijumpcurve/Point 1",
+   "parent": 83,
+   "pos": [
+    -0.98,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaijumpcurve (1)",
+   "path": "yokaijumpcurve (1)",
+   "parent": 0,
+   "pos": [
+    5.89,
+    2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaijumpcurve (1)/Point 0",
+   "parent": 86,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaijumpcurve (1)/Point 1",
+   "parent": 86,
+   "pos": [
+    -0.98,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaijumpcurve (2)",
+   "path": "yokaijumpcurve (2)",
+   "parent": 0,
+   "pos": [
+    3.91,
+    1.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaijumpcurve (2)/Point 0",
+   "parent": 89,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaijumpcurve (2)/Point 1",
+   "parent": 89,
+   "pos": [
+    -0.98,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaijumpcurve (3)",
+   "path": "yokaijumpcurve (3)",
+   "parent": 0,
+   "pos": [
+    1.93,
+    1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaijumpcurve (3)/Point 0",
+   "parent": 92,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaijumpcurve (3)/Point 1",
+   "parent": 92,
+   "pos": [
+    -0.98,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaijumpcurve (4)",
+   "path": "yokaijumpcurve (4)",
+   "parent": 0,
+   "pos": [
+    -0.05,
+    1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaijumpcurve (4)/Point 0",
+   "parent": 95,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaijumpcurve (4)/Point 1",
+   "parent": 95,
+   "pos": [
+    -0.98,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaifinaljumpcurve",
+   "path": "yokaifinaljumpcurve",
+   "parent": 0,
+   "pos": [
+    -2.03,
+    0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaifinaljumpcurve/Point 0",
+   "parent": 98,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaifinaljumpcurve/Point 1",
+   "parent": 98,
+   "pos": [
+    -0.98,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaiearlyjumpcurve",
+   "path": "yokaiearlyjumpcurve",
+   "parent": 0,
+   "pos": [
+    -2.03,
+    0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaiearlyjumpcurve/Point 0",
+   "parent": 101,
+   "pos": [
+    2.98,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaiearlyjumpcurve/Point 1",
+   "parent": 101,
+   "pos": [
+    -0.98,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaiflyingcurve",
+   "path": "yokaiflyingcurve",
+   "parent": 0,
+   "pos": [
+    7.87,
+    4.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaiflyingcurve/Point 0",
+   "parent": 104,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaiflyingcurve/Point 1",
+   "parent": 104,
+   "pos": [
+    -0.98,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaiflyingcurve (1)",
+   "path": "yokaiflyingcurve (1)",
+   "parent": 0,
+   "pos": [
+    5.89,
+    4.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaiflyingcurve (1)/Point 0",
+   "parent": 107,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaiflyingcurve (1)/Point 1",
+   "parent": 107,
+   "pos": [
+    -0.98,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaiflyingcurve (2)",
+   "path": "yokaiflyingcurve (2)",
+   "parent": 0,
+   "pos": [
+    3.91,
+    4.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaiflyingcurve (2)/Point 0",
+   "parent": 110,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaiflyingcurve (2)/Point 1",
+   "parent": 110,
+   "pos": [
+    -0.98,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaiflyingcurve (3)",
+   "path": "yokaiflyingcurve (3)",
+   "parent": 0,
+   "pos": [
+    1.93,
+    4.1000004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaiflyingcurve (3)/Point 0",
+   "parent": 113,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaiflyingcurve (3)/Point 1",
+   "parent": 113,
+   "pos": [
+    -0.98,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaiflyingcurve (4)",
+   "path": "yokaiflyingcurve (4)",
+   "parent": 0,
+   "pos": [
+    -0.05,
+    3.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaiflyingcurve (4)/Point 0",
+   "parent": 116,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaiflyingcurve (4)/Point 1",
+   "parent": 116,
+   "pos": [
+    -0.98,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaiflyingcurve (5)",
+   "path": "yokaiflyingcurve (5)",
+   "parent": 0,
+   "pos": [
+    -2.03,
+    0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaiflyingcurve (5)/Point 0",
+   "parent": 119,
+   "pos": [
+    1,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaiflyingcurve (5)/Point 1",
+   "parent": 119,
+   "pos": [
+    -0.98,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "yokaicurvemiss",
+   "path": "yokaicurvemiss",
+   "parent": 0,
+   "pos": [
+    2.193,
+    3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaicurvemiss/Point 0",
+   "parent": 122,
+   "pos": [
+    -5.2,
+    -3.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "yokaicurvemiss/Point 0",
+   "parent": 122,
+   "pos": [
+    -5.25,
+    -7.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "yokaicurvemiss/Point 1",
+   "parent": 122,
+   "pos": [
+    -12,
+    -7.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fireparent",
+   "path": "fireparent",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fire1",
+   "path": "fireparent/fire1",
+   "parent": 126,
+   "pos": [
+    -6.7,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fire1",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.22,
+    5.3
+   ]
+  },
+  {
+   "name": "AA1_Maya_0",
+   "path": "AA1_Maya_0",
+   "parent": 0,
+   "pos": [
+    10.9,
+    4.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22,
+    0.22
+   ],
+   "sprite": "AA1_Maya_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.12,
+    19
+   ]
+  },
+  {
+   "name": "narumayo canon",
+   "path": "narumayo canon",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fog1",
+   "path": "narumayo canon/fog1",
+   "parent": 129,
+   "pos": [
+    0,
+    -2.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.435,
+    0.435
+   ],
+   "sprite": "fog1",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    40.96,
+    40.96
+   ]
+  },
+  {
+   "name": "fog2",
+   "path": "narumayo canon/fog2",
+   "parent": 129,
+   "pos": [
+    0,
+    -2.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.435,
+    0.435
+   ],
+   "sprite": "fog2",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    40.96,
+    40.66
+   ]
+  },
+  {
+   "name": "slasheffect1",
+   "path": "narumayo canon/slasheffect1",
+   "parent": 129,
+   "pos": [
+    0,
+    1
+   ],
+   "rotZ": 0.21816605387745167,
+   "scale": [
+    2.25,
+    0.39999998
+   ],
+   "sprite": "slasheffect1",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    9.16,
+    2.92
+   ]
+  },
+  {
+   "name": "flash",
+   "path": "flash",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    25,
+    25
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

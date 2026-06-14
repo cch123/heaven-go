@@ -19,6 +19,7 @@ import (
 	"hsdemo/engine"
 
 	// 已移植模块（与主程序保持同步）
+	"hsdemo/games/agbsamuraislice"
 	"hsdemo/games/airrally"
 	"hsdemo/games/basketballgirls"
 	"hsdemo/games/bluebear"
@@ -132,6 +133,7 @@ func main() {
 	flag.Parse()
 
 	engine.Register("rhythmSomen", somen.New)
+	engine.Register("agbSamuraiSlice", agbsamuraislice.New)
 	engine.Register("airRally", airrally.New)
 	engine.Register("basketballGirls", basketballgirls.New)
 	engine.Register("boardMeeting", boardmeeting.New)

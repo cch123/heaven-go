@@ -1,0 +1,145 @@
+{
+ "Fire": {
+  "default": "Idle",
+  "states": {
+   "Fire1": {
+    "clip": "Animations/Fire1",
+    "speed": 1
+   },
+   "Fire2": {
+    "clip": "Animations/Fire2",
+    "speed": 1
+   },
+   "Fire3": {
+    "clip": "Animations/Fire3",
+    "speed": 1
+   },
+   "Fire4": {
+    "clip": "Animations/Fire4",
+    "speed": 1
+   },
+   "Fire5": {
+    "clip": "Animations/Fire5",
+    "speed": 1
+   },
+   "Fire6": {
+    "clip": "Animations/Fire6",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "Flash": {
+  "default": "Idle",
+  "states": {
+   "Flash": {
+    "clip": "Animations/Flash",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "Samurai": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1
+   },
+   "Bop1": {
+    "clip": "Animations/Bop1",
+    "speed": 1
+   },
+   "Bop2": {
+    "clip": "Animations/Bop2",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Idle 0": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Idle1": {
+    "clip": "Animations/Idle1",
+    "speed": 1
+   },
+   "Idle2": {
+    "clip": "Animations/Idle2",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Animations/Miss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Rest": {
+    "clip": "Animations/Rest",
+    "speed": 1
+   },
+   "Slice": {
+    "clip": "Animations/Slice",
+    "speed": 1
+   },
+   "Slice1": {
+    "clip": "Animations/Slice1",
+    "speed": 1
+   },
+   "Slice2": {
+    "clip": "Animations/Slice2",
+    "speed": 1
+   }
+  }
+ },
+ "SliceFog": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "SliceFog": {
+    "clip": "Animations/SliceFog",
+    "speed": 1
+   }
+  }
+ },
+ "Yokai1": {
+  "default": "Idle",
+  "states": {
+   "Flying": {
+    "clip": "Animations/Flying",
+    "speed": 1
+   },
+   "Flying1": {
+    "clip": "Animations/Flying1",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Animations/Jump",
+    "speed": 1
+   },
+   "Jump1": {
+    "clip": "Animations/Jump1",
+    "speed": 1
+   },
+   "YokaiWalk": {
+    "clip": "Animations/YokaiWalk",
+    "speed": 1
+   }
+  }
+ }
+}

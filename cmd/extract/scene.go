@@ -65,6 +65,22 @@ type componentSpec struct {
 }
 
 var sceneSpecs = map[string]sceneSpec{
+	"agbSamuraiSlice": {
+		dir:    "SamuraiSliceAgb",
+		prefab: "agbSamuraiSlice.prefab",
+		roleFields: []string{
+			"samuraiAnim", "yokaiEntity", "mayaFeyFromAceAttorney", "samuraiObject",
+			"fireAnim", "fireParent", "fogAnim",
+		},
+		refArrayFields:  []string{"fogSprite"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"samuraiAnim", "yokaiEntity", "mayaFeyFromAceAttorney", "stepDistance", "startPosition", "fogSprite"}},
+			{name: "yokai", markers: []string{"enterCurves", "flyingCurves", "missCurve", "bigYokaiStartPosition", "bigYokaiXDistance", "shadowOffsetX"}, atPath: "yokai1", curveFields: []string{"missCurve"}, curveArrayFields: []string{"enterCurves", "flyingCurves"}},
+			{name: "maya", markers: []string{"enterCurves", "flyingCurves", "missCurve", "bigYokaiStartPosition", "bigYokaiXDistance", "shadowOffsetX"}, atPath: "AA1_Maya_0", curveFields: []string{"missCurve"}, curveArrayFields: []string{"enterCurves", "flyingCurves"}},
+		},
+	},
 	"rhythmTestGBA": {
 		dir:    "RhythmTestGBA",
 		prefab: "rhythmTestGBA.prefab",
