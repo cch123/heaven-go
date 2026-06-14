@@ -14,6 +14,7 @@ go run ./cmd/extract -game meatGrinder
 go run ./cmd/extract -game totemClimb
 go run ./cmd/extract -game airRally
 go run ./cmd/extract -game common      # 公共音效（countIn 计数音、miss/nearMiss）
+go run ./cmd/officialgames             # 官方游戏移植矩阵：loader / Pack-In / 注册 / 提取状态
 go run . -riq "levels/Rhythm Somen.riq"        # 内置已移植关卡
 go run . -riq "levels/Trick on the Class.riq"
 go run . -riq "levels/Meat Grinder.riq"
@@ -33,6 +34,11 @@ go run ./cmd/verify -riq "levels/Meat Grinder.riq" -beats "1,36.6" -out /tmp/mg 
 1. 在 `cmd/extract/scene.go` 的 `sceneSpecs` 里登记游戏（prefab 名、角色字段、可选的引用数组/字符串表/Bezier 曲线/对象模板/音效序列），运行提取。
 2. 在 `games/<id>/` 实现 `engine.Module` 接口：`OnEvent` 把谱面实体翻译成 `ctx.At`（时间轴动作）、`ctx.ScheduleInput`（判定）、`ctx.Play`（动画）、`ctx.PlaySeq`（音效序列）。
 3. `main.go` 中 `engine.Register` 注册。判定窗口、时机条、技能星、flash、切游戏、结算均由 engine 处理。
+
+`cmd/extract/scene_specs_official.go` 给官方 bundled prefab 提供了基础提取入口
+（scene/anims/controllers）。这些条目只代表资产可提取，不代表玩法已完成；注册到
+`engine.Register` 前仍必须按 `AGENTS.md` 对照 Unity C#、prefab、`.anim`、图集 meta
+完成交互、音效、特效和动画审计。
 
 ## 架构
 
