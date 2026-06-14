@@ -1,9 +1,9 @@
 // Package airrally ports the Air Rally subset used by Character Select.
 //
 // Covered events: rally, ba bum bum bum, catch, set distance, forward,
-// 4beat, forthington voice lines, and rainbow. The full environmental systems
-// (cloud/tree/snow density, bird prefabs, day-night material swaps) are still
-// listed as known simplifications in README.
+// 4beat, forthington voice lines, rainbow, and islandSpeed. The full
+// environmental systems (cloud/tree/snow density, bird prefabs, day-night
+// material swaps) are still listed as known simplifications in README.
 package airrally
 
 import (
@@ -37,9 +37,22 @@ var baBumOffsets = [4][4]float64{
 }
 var baBumFarAltOffsets = []float64{0.001, 0.012, 0.012, 0.012}
 
+const (
+	// AirRally prefab: IslandsManager.loopMult=0.35, speedMult=0.0125.
+	// IslandsManager.Start divides speedMult by loopMult before RvlIsland.Update.
+	islandLoopMult  = 0.35
+	islandSpeedMult = 0.0125 / islandLoopMult
+)
+
 type distanceEvt struct {
 	beat, length float64
 	typ, ease    int
+}
+
+type speedEvt struct {
+	beat, length float64
+	from, to     float64
+	ease         int
 }
 
 type baBumEvt struct {
@@ -65,16 +78,30 @@ type interval struct {
 	beat, length float64
 }
 
+type rallyIsland struct {
+	path        string
+	spritePaths []string
+	startZ      float64
+	norm        float64
+	offset      float64
+	fadeLeft    float64
+}
+
 type Module struct {
 	ctx  *engine.Ctx
 	proj kart.Aff
 
-	distances []distanceEvt
-	rallies   map[float64]bool
-	baBums    map[float64]baBumEvt
-	catches   map[float64]bool
-	silences  []interval
-	rainbows  []rainbowEvt
+	distances    []distanceEvt
+	islandSpeeds []speedEvt
+	rallies      map[float64]bool
+	baBums       map[float64]baBumEvt
+	catches      map[float64]bool
+	silences     []interval
+	rainbows     []rainbowEvt
+	islands      []rallyIsland
+	islandEndZ   float64
+	islandLastT  float64
+	islandHasT   bool
 
 	shuttle shuttleFlight
 
@@ -103,6 +130,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.ctx.Scene.PlayState(m.ctx.Role("Baxter"), "Idle", 0, 1)
 	m.ctx.Scene.PlayState(m.ctx.Role("Forthington"), "Idle", 0, 1)
 	m.ctx.Scene.SetActive(m.ctx.Role("Shuttlecock"), false)
+	m.initIslands()
 	return nil
 }
 
@@ -119,6 +147,12 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		m.silences = append(m.silences, interval{b, e.Length})
 	case "airRally/set distance":
 		m.distances = append(m.distances, distanceEvt{beat: b, length: e.Length, typ: int(e.Float("type", 0)), ease: int(e.Float("ease", 0))})
+	case "airRally/islandSpeed":
+		m.islandSpeeds = append(m.islandSpeeds, speedEvt{
+			beat: b, length: e.Length,
+			from: e.Float("speed", 1), to: e.Float("endSpeed", 1),
+			ease: int(e.Float("ease", 0)),
+		})
 	case "airRally/forward":
 		reset := boolParam(e, "reset")
 		m.ctx.At(b, func() {
@@ -140,6 +174,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 
 func (m *Module) Ready() {
 	sort.Slice(m.distances, func(i, j int) bool { return m.distances[i].beat < m.distances[j].beat })
+	sort.Slice(m.islandSpeeds, func(i, j int) bool { return m.islandSpeeds[i].beat < m.islandSpeeds[j].beat })
 	sort.Slice(m.silences, func(i, j int) bool { return m.silences[i].beat < m.silences[j].beat })
 	for b := range m.rallies {
 		m.scheduleRally(b)
@@ -150,6 +185,9 @@ func (m *Module) Ready() {
 }
 
 func (m *Module) OnSwitch(beat float64) {
+	if beat == 0 {
+		m.resetIslandMotion()
+	}
 	m.ctx.Scene.PlayState(m.ctx.Role("Baxter"), "Idle", beat, m.ctx.SecPerBeat(beat))
 	m.ctx.Scene.PlayState(m.ctx.Role("Forthington"), "Idle", beat, m.ctx.SecPerBeat(beat))
 }
@@ -159,12 +197,15 @@ func (m *Module) Whiff(beat float64) {
 	m.ctx.Sound("swing")
 }
 
-func (m *Module) Update(t, beat float64) {}
+func (m *Module) Update(t, beat float64) {
+	m.updateIslands(t, beat)
+}
 
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(colorRGBA{181, 255, 255, 255})
 	sc := m.ctx.Scene
 	sc.SetZOver(m.ctx.Role("Forthington"), m.forthZAt(beat))
+	m.applyIslandOverrides(sc)
 	m.ctx.SampleScene(beat)
 	m.queueRainbow(sc, beat)
 	m.queueShuttle(sc, beat)
@@ -420,6 +461,131 @@ func (m *Module) silentAt(beat float64) bool {
 		}
 	}
 	return false
+}
+
+func (m *Module) initIslands() {
+	roots := []string{"IslandManager/Island", "IslandManager/island1", "IslandManager/Island2", "IslandManager/island3"}
+	nodes := m.ctx.Assets.Rig.Nodes
+	byPath := map[string]int{}
+	for i, n := range nodes {
+		byPath[n.Path] = i
+	}
+	var minZ, maxZ float64
+	found := false
+	for _, p := range roots {
+		i, ok := byPath[p]
+		if !ok {
+			continue
+		}
+		z := nodes[i].PosZ
+		if !found || z < minZ {
+			minZ = z
+		}
+		if !found || z > maxZ {
+			maxZ = z
+		}
+		found = true
+	}
+	if !found || maxZ == minZ {
+		return
+	}
+	m.islandEndZ = -(maxZ - minZ) * islandLoopMult
+	m.islands = m.islands[:0]
+	for _, p := range roots {
+		i, ok := byPath[p]
+		if !ok {
+			continue
+		}
+		z := nodes[i].PosZ
+		it := rallyIsland{
+			path:   p,
+			startZ: z,
+			offset: (1 - (z-minZ)/(maxZ-minZ)) / islandLoopMult,
+		}
+		prefix := p + "/"
+		for _, n := range nodes {
+			if n.Sprite == "" {
+				continue
+			}
+			if n.Path == p || len(n.Path) > len(prefix) && n.Path[:len(prefix)] == prefix {
+				it.spritePaths = append(it.spritePaths, n.Path)
+			}
+		}
+		m.islands = append(m.islands, it)
+	}
+	m.resetIslandMotion()
+}
+
+func (m *Module) resetIslandMotion() {
+	for i := range m.islands {
+		m.islands[i].norm = 0
+		m.islands[i].fadeLeft = 0
+	}
+	m.islandHasT = false
+}
+
+func (m *Module) updateIslands(t, beat float64) {
+	if len(m.islands) == 0 {
+		return
+	}
+	if !m.islandHasT || t < m.islandLastT {
+		m.islandLastT = t
+		m.islandHasT = true
+		return
+	}
+	dt := t - m.islandLastT
+	m.islandLastT = t
+	if dt <= 0 {
+		return
+	}
+	speed := islandSpeedMult * m.islandSpeedAt(beat)
+	for i := range m.islands {
+		it := &m.islands[i]
+		it.norm += speed * dt
+		wrapped := false
+		if m.islandZ(*it) < m.islandEndZ {
+			// RvlIsland resets to -normalizedOffset so the island rejoins the
+			// far end of the staggered queue instead of snapping to its own startZ.
+			it.norm = -it.offset
+			it.fadeLeft = 0.4
+			wrapped = true
+		}
+		if it.fadeLeft > 0 && !wrapped {
+			it.fadeLeft = math.Max(0, it.fadeLeft-dt)
+		}
+	}
+}
+
+func (m *Module) islandZ(it rallyIsland) float64 {
+	return it.startZ + m.islandEndZ*it.norm
+}
+
+func (m *Module) applyIslandOverrides(sc *kart.SceneInst) {
+	for _, it := range m.islands {
+		sc.SetZOver(it.path, m.islandZ(it))
+		alpha := 1.0
+		if it.fadeLeft > 0 {
+			alpha = 1 - it.fadeLeft/0.4
+		}
+		for _, p := range it.spritePaths {
+			sc.SetColorOver(p, [4]float64{1, 1, 1, alpha})
+		}
+	}
+}
+
+func (m *Module) islandSpeedAt(beat float64) float64 {
+	speed := 1.0
+	for _, e := range m.islandSpeeds {
+		if beat < e.beat {
+			break
+		}
+		if e.length > 0 && beat < e.beat+e.length {
+			u := (beat - e.beat) / e.length
+			return engine.Ease(e.ease, e.from, e.to, u)
+		}
+		speed = e.to
+	}
+	return speed
 }
 
 func (m *Module) queueShuttle(sc *kart.SceneInst, beat float64) {
