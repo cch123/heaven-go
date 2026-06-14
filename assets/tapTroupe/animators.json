@@ -1,0 +1,19 @@
+{
+ "": "tapTroupe",
+ "Legs/Tapper": "Tapper",
+ "Legs/Tapper (1)": "Tapper",
+ "Legs/Tapper (2)": "Tapper",
+ "Legs/TapperPlayer": "Tapper",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper": "CornerTapper",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)": "CornerTapper",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body": "CornerBody",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/HeadHolder/Head": "CornerExpression",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)": "CornerTapper",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body": "CornerBody",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/HeadHolder/Head": "CornerExpression",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body": "CornerBody",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/HeadHolder/Head": "CornerExpression",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer": "CornerTapper",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body": "CornerBody",
+ "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/HeadHolder/Head": "CornerExpression"
+}

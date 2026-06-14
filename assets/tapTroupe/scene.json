@@ -1,0 +1,3940 @@
+{
+ "nodes": [
+  {
+   "name": "tapTroupe",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    2.2522,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    400,
+    400
+   ],
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ForegroundElements",
+   "path": "ForegroundElements",
+   "parent": 0,
+   "pos": [
+    -2.873769,
+    -1.2993346
+   ],
+   "z": -20.09578,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Black (1)",
+   "path": "ForegroundElements/Black (1)",
+   "parent": 2,
+   "pos": [
+    5.2229,
+    64.5392
+   ],
+   "z": 20.09578,
+   "rotZ": 0,
+   "scale": [
+    142.18599,
+    120.65881
+   ],
+   "order": -15,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Darkness",
+   "path": "ForegroundElements/Darkness",
+   "parent": 2,
+   "pos": [
+    2.02,
+    0.2
+   ],
+   "z": 20.095783,
+   "rotZ": 0,
+   "scale": [
+    500,
+    500
+   ],
+   "order": -11,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.8156863
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "Legs",
+   "path": "Legs",
+   "parent": 0,
+   "pos": [
+    4.503,
+    0.93235195
+   ],
+   "z": -9.178155,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TapperPlayer",
+   "path": "Legs/TapperPlayer",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftLeg",
+   "path": "Legs/TapperPlayer/LeftLeg",
+   "parent": 6,
+   "pos": [
+    -0.6,
+    0.65
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Leg0",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4699998,
+    14.556877
+   ]
+  },
+  {
+   "name": "Sock",
+   "path": "Legs/TapperPlayer/LeftLeg/Sock",
+   "parent": 7,
+   "pos": [
+    -0.09,
+    -5.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Stripes",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    3.371593
+   ]
+  },
+  {
+   "name": "Shoe",
+   "path": "Legs/TapperPlayer/LeftLeg/Shoe",
+   "parent": 7,
+   "pos": [
+    -0.57,
+    -7.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Foot1",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.85,
+    3.481645
+   ]
+  },
+  {
+   "name": "RightLeg",
+   "path": "Legs/TapperPlayer/RightLeg",
+   "parent": 6,
+   "pos": [
+    0.6,
+    0.65
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "Leg0",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4699998,
+    14.556877
+   ]
+  },
+  {
+   "name": "Sock",
+   "path": "Legs/TapperPlayer/RightLeg/Sock",
+   "parent": 10,
+   "pos": [
+    -0.09,
+    -5.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Stripes",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    3.371593
+   ]
+  },
+  {
+   "name": "Shoe",
+   "path": "Legs/TapperPlayer/RightLeg/Shoe",
+   "parent": 10,
+   "pos": [
+    -0.57,
+    -7.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Foot1",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.85,
+    3.481645
+   ]
+  },
+  {
+   "name": "InbetweenFeetShadow",
+   "path": "Legs/TapperPlayer/InbetweenFeetShadow",
+   "parent": 6,
+   "pos": [
+    0,
+    -2.624
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "InbetweenFeetShadow",
+   "order": -25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9099998,
+    1.2906098
+   ]
+  },
+  {
+   "name": "FootShadowLeft",
+   "path": "Legs/TapperPlayer/FootShadowLeft",
+   "parent": 6,
+   "pos": [
+    -0.9,
+    -2.796
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "FootShadow",
+   "order": -25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.09,
+    2.9113755
+   ]
+  },
+  {
+   "name": "FootShadowRight",
+   "path": "Legs/TapperPlayer/FootShadowRight",
+   "parent": 6,
+   "pos": [
+    0.9,
+    -2.796
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "FootShadow",
+   "order": -25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.09,
+    2.9113755
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "Legs/TapperPlayer/Impact",
+   "parent": 6,
+   "pos": [
+    1.01,
+    -3.12
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "SmallImpact",
+   "order": -22,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.56,
+    2.861352
+   ]
+  },
+  {
+   "name": "Tapper",
+   "path": "Legs/Tapper",
+   "parent": 5,
+   "pos": [
+    -3,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftLeg",
+   "path": "Legs/Tapper/LeftLeg",
+   "parent": 17,
+   "pos": [
+    -0.6,
+    0.65
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Leg0",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4699998,
+    14.556877
+   ]
+  },
+  {
+   "name": "Sock",
+   "path": "Legs/Tapper/LeftLeg/Sock",
+   "parent": 18,
+   "pos": [
+    -0.09,
+    -5.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Stripes",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    3.371593
+   ]
+  },
+  {
+   "name": "Shoe",
+   "path": "Legs/Tapper/LeftLeg/Shoe",
+   "parent": 18,
+   "pos": [
+    -0.57,
+    -7.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Foot1",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.85,
+    3.481645
+   ]
+  },
+  {
+   "name": "RightLeg",
+   "path": "Legs/Tapper/RightLeg",
+   "parent": 17,
+   "pos": [
+    0.6,
+    0.65
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "Leg0",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4699998,
+    14.556877
+   ]
+  },
+  {
+   "name": "Sock",
+   "path": "Legs/Tapper/RightLeg/Sock",
+   "parent": 21,
+   "pos": [
+    -0.09,
+    -5.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Stripes",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    3.371593
+   ]
+  },
+  {
+   "name": "Shoe",
+   "path": "Legs/Tapper/RightLeg/Shoe",
+   "parent": 21,
+   "pos": [
+    -0.57,
+    -7.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Foot1",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.85,
+    3.481645
+   ]
+  },
+  {
+   "name": "InbetweenFeetShadow",
+   "path": "Legs/Tapper/InbetweenFeetShadow",
+   "parent": 17,
+   "pos": [
+    0,
+    -2.624
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "InbetweenFeetShadow",
+   "order": -25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9099998,
+    1.2906098
+   ]
+  },
+  {
+   "name": "FootShadowLeft",
+   "path": "Legs/Tapper/FootShadowLeft",
+   "parent": 17,
+   "pos": [
+    -0.9,
+    -2.796
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "FootShadow",
+   "order": -25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.09,
+    2.9113755
+   ]
+  },
+  {
+   "name": "FootShadowRight",
+   "path": "Legs/Tapper/FootShadowRight",
+   "parent": 17,
+   "pos": [
+    0.9,
+    -2.796
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "FootShadow",
+   "order": -25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.09,
+    2.9113755
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "Legs/Tapper/Impact",
+   "parent": 17,
+   "pos": [
+    1.01,
+    -3.12
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "SmallImpact",
+   "order": -22,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.56,
+    2.861352
+   ]
+  },
+  {
+   "name": "Tapper (1)",
+   "path": "Legs/Tapper (1)",
+   "parent": 5,
+   "pos": [
+    -6.01,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftLeg",
+   "path": "Legs/Tapper (1)/LeftLeg",
+   "parent": 28,
+   "pos": [
+    -0.6,
+    0.65
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Leg0",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4699998,
+    14.556877
+   ]
+  },
+  {
+   "name": "Sock",
+   "path": "Legs/Tapper (1)/LeftLeg/Sock",
+   "parent": 29,
+   "pos": [
+    -0.09,
+    -5.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Stripes",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    3.371593
+   ]
+  },
+  {
+   "name": "Shoe",
+   "path": "Legs/Tapper (1)/LeftLeg/Shoe",
+   "parent": 29,
+   "pos": [
+    -0.57,
+    -7.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Foot1",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.85,
+    3.481645
+   ]
+  },
+  {
+   "name": "RightLeg",
+   "path": "Legs/Tapper (1)/RightLeg",
+   "parent": 28,
+   "pos": [
+    0.6,
+    0.65
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "Leg0",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4699998,
+    14.556877
+   ]
+  },
+  {
+   "name": "Sock",
+   "path": "Legs/Tapper (1)/RightLeg/Sock",
+   "parent": 32,
+   "pos": [
+    -0.09,
+    -5.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Stripes",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    3.371593
+   ]
+  },
+  {
+   "name": "Shoe",
+   "path": "Legs/Tapper (1)/RightLeg/Shoe",
+   "parent": 32,
+   "pos": [
+    -0.57,
+    -7.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Foot1",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.85,
+    3.481645
+   ]
+  },
+  {
+   "name": "InbetweenFeetShadow",
+   "path": "Legs/Tapper (1)/InbetweenFeetShadow",
+   "parent": 28,
+   "pos": [
+    0,
+    -2.624
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "InbetweenFeetShadow",
+   "order": -25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9099998,
+    1.2906098
+   ]
+  },
+  {
+   "name": "FootShadowLeft",
+   "path": "Legs/Tapper (1)/FootShadowLeft",
+   "parent": 28,
+   "pos": [
+    -0.9,
+    -2.796
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "FootShadow",
+   "order": -25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.09,
+    2.9113755
+   ]
+  },
+  {
+   "name": "FootShadowRight",
+   "path": "Legs/Tapper (1)/FootShadowRight",
+   "parent": 28,
+   "pos": [
+    0.9,
+    -2.796
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "FootShadow",
+   "order": -25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.09,
+    2.9113755
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "Legs/Tapper (1)/Impact",
+   "parent": 28,
+   "pos": [
+    1.01,
+    -3.12
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "SmallImpact",
+   "order": -22,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.56,
+    2.861352
+   ]
+  },
+  {
+   "name": "Tapper (2)",
+   "path": "Legs/Tapper (2)",
+   "parent": 5,
+   "pos": [
+    -9.02,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftLeg",
+   "path": "Legs/Tapper (2)/LeftLeg",
+   "parent": 39,
+   "pos": [
+    -0.6,
+    0.65
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Leg0",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4699998,
+    14.556877
+   ]
+  },
+  {
+   "name": "Sock",
+   "path": "Legs/Tapper (2)/LeftLeg/Sock",
+   "parent": 40,
+   "pos": [
+    -0.09,
+    -5.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Stripes",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    3.371593
+   ]
+  },
+  {
+   "name": "Shoe",
+   "path": "Legs/Tapper (2)/LeftLeg/Shoe",
+   "parent": 40,
+   "pos": [
+    -0.57,
+    -7.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Foot1",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.85,
+    3.481645
+   ]
+  },
+  {
+   "name": "RightLeg",
+   "path": "Legs/Tapper (2)/RightLeg",
+   "parent": 39,
+   "pos": [
+    0.6,
+    0.65
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "Leg0",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4699998,
+    14.556877
+   ]
+  },
+  {
+   "name": "Sock",
+   "path": "Legs/Tapper (2)/RightLeg/Sock",
+   "parent": 43,
+   "pos": [
+    -0.09,
+    -5.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Stripes",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.18,
+    3.371593
+   ]
+  },
+  {
+   "name": "Shoe",
+   "path": "Legs/Tapper (2)/RightLeg/Shoe",
+   "parent": 43,
+   "pos": [
+    -0.57,
+    -7.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Foot1",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.85,
+    3.481645
+   ]
+  },
+  {
+   "name": "InbetweenFeetShadow",
+   "path": "Legs/Tapper (2)/InbetweenFeetShadow",
+   "parent": 39,
+   "pos": [
+    0,
+    -2.624
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "InbetweenFeetShadow",
+   "order": -25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9099998,
+    1.2906098
+   ]
+  },
+  {
+   "name": "FootShadowLeft",
+   "path": "Legs/Tapper (2)/FootShadowLeft",
+   "parent": 39,
+   "pos": [
+    -0.9,
+    -2.796
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "FootShadow",
+   "order": -25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.09,
+    2.9113755
+   ]
+  },
+  {
+   "name": "FootShadowRight",
+   "path": "Legs/Tapper (2)/FootShadowRight",
+   "parent": 39,
+   "pos": [
+    0.9,
+    -2.796
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "FootShadow",
+   "order": -25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.09,
+    2.9113755
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "Legs/Tapper (2)/Impact",
+   "parent": 39,
+   "pos": [
+    1.01,
+    -3.12
+   ],
+   "z": 9.178155,
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "SmallImpact",
+   "order": -22,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.56,
+    2.861352
+   ]
+  },
+  {
+   "name": "SpotLights",
+   "path": "SpotLights",
+   "parent": 0,
+   "pos": [
+    0.5865827,
+    0.100856654
+   ],
+   "z": -10.001053,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spotlight",
+   "path": "SpotLights/spotlight",
+   "parent": 50,
+   "pos": [
+    3.92,
+    0.91
+   ],
+   "z": 10.001053,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "spotlight",
+   "order": -16,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    14.860547,
+    21.6
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "SpotLights/spotlight/Mask",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "spotlight",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "spotlight (1)",
+   "path": "SpotLights/spotlight (1)",
+   "parent": 50,
+   "pos": [
+    0.91,
+    0.91
+   ],
+   "z": 10.001053,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "spotlight",
+   "order": -16,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    14.860547,
+    21.6
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "SpotLights/spotlight (1)/Mask",
+   "parent": 53,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "spotlight",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "spotlight (2)",
+   "path": "SpotLights/spotlight (2)",
+   "parent": 50,
+   "pos": [
+    -2.11,
+    0.91
+   ],
+   "z": 10.001053,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "spotlight",
+   "order": -16,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    14.860547,
+    21.6
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "SpotLights/spotlight (2)/Mask",
+   "parent": 55,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "spotlight",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "spotlight (3)",
+   "path": "SpotLights/spotlight (3)",
+   "parent": 50,
+   "pos": [
+    -5.1,
+    0.91
+   ],
+   "z": 10.001053,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "spotlight",
+   "order": -16,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    14.860547,
+    21.6
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "SpotLights/spotlight (3)/Mask",
+   "parent": 57,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "spotlight",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "ZoomoutTroupe",
+   "path": "ZoomoutTroupe",
+   "parent": 0,
+   "pos": [
+    2.3638709,
+    1.6623516
+   ],
+   "z": -143.10336,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LongTapper",
+   "path": "ZoomoutTroupe/LongTapper",
+   "parent": 59,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "UpperBody",
+   "path": "ZoomoutTroupe/LongTapper/UpperBody",
+   "parent": 60,
+   "pos": [
+    2.11,
+    64.72
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "UpperBody",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.884752,
+    21.150002
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "ZoomoutTroupe/LongTapper/Legs",
+   "parent": 60,
+   "pos": [
+    2.135,
+    31.4057
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.379,
+    0.379
+   ],
+   "sprite": "Legs",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    5.8821692,
+    158.17432
+   ]
+  },
+  {
+   "name": "Feet",
+   "path": "ZoomoutTroupe/LongTapper/Feet",
+   "parent": 60,
+   "pos": [
+    2.16,
+    -0.83
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.38,
+    0.38
+   ],
+   "sprite": "Feet",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.884752,
+    17.19
+   ]
+  },
+  {
+   "name": "LongTapper (1)",
+   "path": "ZoomoutTroupe/LongTapper (1)",
+   "parent": 59,
+   "pos": [
+    -3,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "UpperBody",
+   "path": "ZoomoutTroupe/LongTapper (1)/UpperBody",
+   "parent": 64,
+   "pos": [
+    2.11,
+    64.72
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "UpperBody",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.884752,
+    21.150002
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "ZoomoutTroupe/LongTapper (1)/Legs",
+   "parent": 64,
+   "pos": [
+    2.135,
+    31.4057
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.379,
+    0.379
+   ],
+   "sprite": "Legs",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    5.8821692,
+    158.17432
+   ]
+  },
+  {
+   "name": "Feet",
+   "path": "ZoomoutTroupe/LongTapper (1)/Feet",
+   "parent": 64,
+   "pos": [
+    2.16,
+    -0.83
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.38,
+    0.38
+   ],
+   "sprite": "Feet",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.884752,
+    17.19
+   ]
+  },
+  {
+   "name": "LongTapper (2)",
+   "path": "ZoomoutTroupe/LongTapper (2)",
+   "parent": 59,
+   "pos": [
+    -6.01,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "UpperBody",
+   "path": "ZoomoutTroupe/LongTapper (2)/UpperBody",
+   "parent": 68,
+   "pos": [
+    2.11,
+    64.72
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "UpperBody",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.884752,
+    21.150002
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "ZoomoutTroupe/LongTapper (2)/Legs",
+   "parent": 68,
+   "pos": [
+    2.135,
+    31.4057
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.379,
+    0.379
+   ],
+   "sprite": "Legs",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    5.8821692,
+    158.17432
+   ]
+  },
+  {
+   "name": "Feet",
+   "path": "ZoomoutTroupe/LongTapper (2)/Feet",
+   "parent": 68,
+   "pos": [
+    2.16,
+    -0.83
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.38,
+    0.38
+   ],
+   "sprite": "Feet",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.884752,
+    17.19
+   ]
+  },
+  {
+   "name": "LongTapper (3)",
+   "path": "ZoomoutTroupe/LongTapper (3)",
+   "parent": 59,
+   "pos": [
+    -9.01,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "UpperBody",
+   "path": "ZoomoutTroupe/LongTapper (3)/UpperBody",
+   "parent": 72,
+   "pos": [
+    2.11,
+    64.72
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "UpperBody",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.884752,
+    21.150002
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "ZoomoutTroupe/LongTapper (3)/Legs",
+   "parent": 72,
+   "pos": [
+    2.135,
+    31.4057
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.379,
+    0.379
+   ],
+   "sprite": "Legs",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    5.8821692,
+    158.17432
+   ]
+  },
+  {
+   "name": "Feet",
+   "path": "ZoomoutTroupe/LongTapper (3)/Feet",
+   "parent": 72,
+   "pos": [
+    2.16,
+    -0.83
+   ],
+   "z": 143.10336,
+   "rotZ": 0,
+   "scale": [
+    0.38,
+    0.38
+   ],
+   "sprite": "Feet",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.884752,
+    17.19
+   ]
+  },
+  {
+   "name": "UnderForegroundElementsHolder",
+   "path": "UnderForegroundElementsHolder",
+   "parent": 0,
+   "pos": [
+    1.596803,
+    3.477627
+   ],
+   "z": -326.0552,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Black",
+   "path": "UnderForegroundElementsHolder/Black",
+   "parent": 76,
+   "pos": [
+    0.86462736,
+    -30.122763
+   ],
+   "z": 326.05524,
+   "rotZ": 0,
+   "scale": [
+    141.85547,
+    47.383713
+   ],
+   "order": -14,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Foreground",
+   "path": "UnderForegroundElementsHolder/Foreground",
+   "parent": 76,
+   "pos": [
+    -6.866803,
+    -6.546962
+   ],
+   "z": 326.05524,
+   "rotZ": 0,
+   "scale": [
+    0.6,
+    0.6
+   ],
+   "sprite": "Foreground",
+   "order": -14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    21.539999,
+    6.5631013
+   ]
+  },
+  {
+   "name": "Black (2)",
+   "path": "UnderForegroundElementsHolder/Black (2)",
+   "parent": 76,
+   "pos": [
+    -41.583168,
+    -12.286962
+   ],
+   "z": 326.05524,
+   "rotZ": 0,
+   "scale": [
+    56.724,
+    15.3429785
+   ],
+   "order": -14,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CornerTappers",
+   "path": "UnderForegroundElementsHolder/CornerTappers",
+   "parent": 76,
+   "pos": [
+    -4.1638274,
+    -6.4448404
+   ],
+   "z": 320.86728,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CornerTapper",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper",
+   "parent": 80,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Parts",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts",
+   "parent": 81,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body",
+   "parent": 82,
+   "pos": [
+    -3.05,
+    -1.08
+   ],
+   "z": 5.187943,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "BodyWithArm",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9199998,
+    7.4122176
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/HeadHolder",
+   "parent": 83,
+   "pos": [
+    -0.43,
+    5.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/HeadHolder/Head",
+   "parent": 84,
+   "pos": [
+    0,
+    0.03
+   ],
+   "z": -5.1879425,
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadSprite",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/HeadHolder/Head/HeadSprite",
+   "parent": 85,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 5.187943,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Neutral",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.5699997,
+    5.391613
+   ]
+  },
+  {
+   "name": "PopperEffect",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/PopperEffect",
+   "parent": 83,
+   "pos": [
+    6.13,
+    -0.19
+   ],
+   "rotZ": 2.4368649373354194,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BowTie",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/BowTie",
+   "parent": 83,
+   "pos": [
+    0.6,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BowTie",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    1.440431
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/Impact",
+   "parent": 83,
+   "pos": [
+    14.04256,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.53,
+    4.161245
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/RightArm",
+   "parent": 83,
+   "pos": [
+    1.47,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "RightArm",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8800001,
+    6.822041
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/LeftArm",
+   "parent": 83,
+   "pos": [
+    -0.06,
+    0.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "LeftArm2",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9199998,
+    5.541658
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/RightHand",
+   "parent": 83,
+   "pos": [
+    14.04256,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Hold",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.03,
+    2.1606464
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/LeftHand",
+   "parent": 83,
+   "pos": [
+    14.04256,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "OpenHand",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6899998,
+    3.5610654
+   ]
+  },
+  {
+   "name": "PartyPopper",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/PartyPopper",
+   "parent": 83,
+   "pos": [
+    1.23,
+    -1.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PartyPopper",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4799995,
+    3.0409095
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/PartyPopper/Circle",
+   "parent": 94,
+   "pos": [
+    1.35,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Circle",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7900001,
+    3.1009278
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/PartyPopper/Circle/Circle",
+   "parent": 95,
+   "pos": [
+    0.003,
+    0.038
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2777672,
+    2.38714
+   ],
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Line",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper/Parts/Body/PartyPopper/Line",
+   "parent": 94,
+   "pos": [
+    -3.15,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Line",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.49,
+    0.2600778
+   ]
+  },
+  {
+   "name": "CornerTapper (1)",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)",
+   "parent": 80,
+   "pos": [
+    0.68,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Parts",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts",
+   "parent": 98,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body",
+   "parent": 99,
+   "pos": [
+    -3.05,
+    -1.0800002
+   ],
+   "z": 5.1879425,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "BodyWithArm",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9199998,
+    7.4122176
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/HeadHolder",
+   "parent": 100,
+   "pos": [
+    -0.43,
+    5.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/HeadHolder/Head",
+   "parent": 101,
+   "pos": [
+    0,
+    0.03
+   ],
+   "z": -5.1879425,
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadSprite",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/HeadHolder/Head/HeadSprite",
+   "parent": 102,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 5.187943,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Neutral",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.5699997,
+    5.391613
+   ]
+  },
+  {
+   "name": "PopperEffect",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/PopperEffect",
+   "parent": 100,
+   "pos": [
+    6.13,
+    -0.19
+   ],
+   "rotZ": 2.4368649373354194,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BowTie",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/BowTie",
+   "parent": 100,
+   "pos": [
+    0.6,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BowTie",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    1.440431
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/Impact",
+   "parent": 100,
+   "pos": [
+    14.04256,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.53,
+    4.161245
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/RightArm",
+   "parent": 100,
+   "pos": [
+    1.47,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "RightArm",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8800001,
+    6.822041
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/LeftArm",
+   "parent": 100,
+   "pos": [
+    -0.06,
+    0.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "LeftArm2",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9199998,
+    5.541658
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/RightHand",
+   "parent": 100,
+   "pos": [
+    14.042561,
+    10.11803
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Hold",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.03,
+    2.1606464
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/LeftHand",
+   "parent": 100,
+   "pos": [
+    14.042561,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "OpenHand",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6899998,
+    3.5610654
+   ]
+  },
+  {
+   "name": "PartyPopper",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/PartyPopper",
+   "parent": 100,
+   "pos": [
+    1.23,
+    -1.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PartyPopper",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4799995,
+    3.0409095
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/PartyPopper/Circle",
+   "parent": 111,
+   "pos": [
+    1.35,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Circle",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7900001,
+    3.1009278
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/PartyPopper/Circle/Circle",
+   "parent": 112,
+   "pos": [
+    0.003,
+    0.038
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2777672,
+    2.38714
+   ],
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Line",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (1)/Parts/Body/PartyPopper/Line",
+   "parent": 111,
+   "pos": [
+    -3.15,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Line",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.49,
+    0.2600778
+   ]
+  },
+  {
+   "name": "CornerTapper (2)",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)",
+   "parent": 80,
+   "pos": [
+    1.41,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Parts",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts",
+   "parent": 115,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body",
+   "parent": 116,
+   "pos": [
+    -3.05,
+    -1.0800002
+   ],
+   "z": 5.1879425,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "BodyWithArm",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9199998,
+    7.4122176
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/HeadHolder",
+   "parent": 117,
+   "pos": [
+    -0.43,
+    5.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/HeadHolder/Head",
+   "parent": 118,
+   "pos": [
+    0,
+    0.03
+   ],
+   "z": -5.1879425,
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadSprite",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/HeadHolder/Head/HeadSprite",
+   "parent": 119,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 5.187943,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Neutral",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.5699997,
+    5.391613
+   ]
+  },
+  {
+   "name": "PopperEffect",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/PopperEffect",
+   "parent": 117,
+   "pos": [
+    6.13,
+    -0.19
+   ],
+   "rotZ": 2.4368649373354194,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BowTie",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/BowTie",
+   "parent": 117,
+   "pos": [
+    0.6,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BowTie",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    1.440431
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/Impact",
+   "parent": 117,
+   "pos": [
+    14.04256,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.53,
+    4.161245
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/RightArm",
+   "parent": 117,
+   "pos": [
+    1.47,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "RightArm",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8800001,
+    6.822041
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/LeftArm",
+   "parent": 117,
+   "pos": [
+    -0.06,
+    0.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "LeftArm2",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9199998,
+    5.541658
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/RightHand",
+   "parent": 117,
+   "pos": [
+    14.042561,
+    10.11803
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Hold",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.03,
+    2.1606464
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/LeftHand",
+   "parent": 117,
+   "pos": [
+    14.042561,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "OpenHand",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6899998,
+    3.5610654
+   ]
+  },
+  {
+   "name": "PartyPopper",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/PartyPopper",
+   "parent": 117,
+   "pos": [
+    1.23,
+    -1.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PartyPopper",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4799995,
+    3.0409095
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/PartyPopper/Circle",
+   "parent": 128,
+   "pos": [
+    1.35,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Circle",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7900001,
+    3.1009278
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/PartyPopper/Circle/Circle",
+   "parent": 129,
+   "pos": [
+    0.003,
+    0.038
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2777672,
+    2.38714
+   ],
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Line",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapper (2)/Parts/Body/PartyPopper/Line",
+   "parent": 128,
+   "pos": [
+    -3.15,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Line",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.49,
+    0.2600778
+   ]
+  },
+  {
+   "name": "CornerTapperPlayer",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer",
+   "parent": 80,
+   "pos": [
+    2.02,
+    -0.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6,
+    0.6
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Parts",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts",
+   "parent": 132,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body",
+   "parent": 133,
+   "pos": [
+    -3.05,
+    -1.0800002
+   ],
+   "z": 5.1879425,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "BodyWithArm",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9199998,
+    7.4122176
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/HeadHolder",
+   "parent": 134,
+   "pos": [
+    -0.43,
+    5.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/HeadHolder/Head",
+   "parent": 135,
+   "pos": [
+    0,
+    0.03
+   ],
+   "z": -5.1879425,
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadSprite",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/HeadHolder/Head/HeadSprite",
+   "parent": 136,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 5.187943,
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Neutral",
+   "order": -8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.5699997,
+    5.391613
+   ]
+  },
+  {
+   "name": "PopperEffect",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/PopperEffect",
+   "parent": 134,
+   "pos": [
+    6.13,
+    -0.19
+   ],
+   "rotZ": 2.4368649373354194,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BowTie",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/BowTie",
+   "parent": 134,
+   "pos": [
+    0.6,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BowTie",
+   "order": -8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    1.440431
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/Impact",
+   "parent": 134,
+   "pos": [
+    14.04256,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.53,
+    4.161245
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/RightArm",
+   "parent": 134,
+   "pos": [
+    1.47,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "RightArm",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8800001,
+    6.822041
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/LeftArm",
+   "parent": 134,
+   "pos": [
+    -0.06,
+    0.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "LeftArm2",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9199998,
+    5.541658
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/RightHand",
+   "parent": 134,
+   "pos": [
+    14.042561,
+    10.11803
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Hold",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.03,
+    2.1606464
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/LeftHand",
+   "parent": 134,
+   "pos": [
+    14.042561,
+    10.118034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "OpenHand",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6899998,
+    3.5610654
+   ]
+  },
+  {
+   "name": "PartyPopper",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/PartyPopper",
+   "parent": 134,
+   "pos": [
+    1.23,
+    -1.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PartyPopper",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4799995,
+    3.0409095
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/PartyPopper/Circle",
+   "parent": 145,
+   "pos": [
+    1.35,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Circle",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7900001,
+    3.1009278
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/PartyPopper/Circle/Circle",
+   "parent": 146,
+   "pos": [
+    0.003,
+    0.038
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2777672,
+    2.38714
+   ],
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Line",
+   "path": "UnderForegroundElementsHolder/CornerTappers/CornerTapperPlayer/Parts/Body/PartyPopper/Line",
+   "parent": 145,
+   "pos": [
+    -3.15,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Line",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.49,
+    0.2600778
+   ]
+  }
+ ]
+}

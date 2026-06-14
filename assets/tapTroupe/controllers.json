@@ -1,0 +1,168 @@
+{
+ "CornerBody": {
+  "default": "IdleBody",
+  "states": {
+   "IdleBody": {
+    "clip": "Animations/IdleBody",
+    "speed": 1
+   },
+   "OkaySign": {
+    "clip": "Animations/OkaySign",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "IdleBody",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "PartyPopper": {
+    "clip": "Animations/PartyPopper",
+    "speed": 1
+   },
+   "PartyPopperPop": {
+    "clip": "Animations/PartyPopperPop",
+    "speed": 1
+   },
+   "PartyPopperReady": {
+    "clip": "Animations/PartyPopperReady",
+    "speed": 1
+   }
+  }
+ },
+ "CornerExpression": {
+  "default": "NoExpression",
+  "states": {
+   "LOL": {
+    "clip": "Animations/LOL",
+    "speed": 1
+   },
+   "NoExpression": {
+    "clip": "Animations/NoExpression",
+    "speed": 1
+   },
+   "Okay": {
+    "clip": "Animations/Okay",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NoExpression",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Sad": {
+    "clip": "Animations/Sad",
+    "speed": 1
+   },
+   "Spit": {
+    "clip": "Animations/Spit",
+    "speed": 1
+   }
+  }
+ },
+ "CornerTapper": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Tapper": {
+  "default": "IdleFeet",
+  "states": {
+   "BamFeet": {
+    "clip": "Animations/BamFeet",
+    "speed": 1
+   },
+   "BamReadyFeet": {
+    "clip": "Animations/BamReadyFeet",
+    "speed": 1
+   },
+   "BamReadyTap": {
+    "clip": "Animations/BamReadyTap",
+    "speed": 1
+   },
+   "BopFeet": {
+    "clip": "Animations/BopFeet",
+    "speed": 1
+   },
+   "FeetFadeOut": {
+    "clip": "Animations/FeetFadeOut",
+    "speed": 1
+   },
+   "HitBamFeet": {
+    "clip": "Animations/HitBamFeet",
+    "speed": 1
+   },
+   "HitBamReadyFeet": {
+    "clip": "Animations/HitBamReadyFeet",
+    "speed": 1
+   },
+   "HitBamReadyTap": {
+    "clip": "Animations/HitBamReadyTap",
+    "speed": 1
+   },
+   "HitStepFeet": {
+    "clip": "Animations/HitStepFeet",
+    "speed": 1
+   },
+   "HitStepReadyTap": {
+    "clip": "Animations/HitStepReadyTap",
+    "speed": 1
+   },
+   "HitTapFeet": {
+    "clip": "Animations/HitTapFeet",
+    "speed": 1
+   },
+   "IdleFeet": {
+    "clip": "Animations/IdleFeet",
+    "speed": 1
+   },
+   "LastTapFeet": {
+    "clip": "Animations/LastTapFeet",
+    "speed": 1
+   },
+   "StepFeet": {
+    "clip": "Animations/StepFeet",
+    "speed": 1
+   },
+   "StepReadyTap": {
+    "clip": "Animations/StepReadyTap",
+    "speed": 1
+   },
+   "TapFeet": {
+    "clip": "Animations/TapFeet",
+    "speed": 1
+   }
+  }
+ },
+ "tapTroupe": {
+  "default": "NoZoomOut",
+  "states": {
+   "NoZoomOut": {
+    "clip": "Animations/NoZoomOut",
+    "speed": 1
+   },
+   "ZoomOut": {
+    "clip": "Animations/ZoomOut",
+    "speed": 1
+   }
+  }
+ }
+}

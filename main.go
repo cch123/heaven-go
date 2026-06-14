@@ -69,6 +69,7 @@ import (
 	"hsdemo/games/splashdown"
 	"hsdemo/games/tambourine"
 	"hsdemo/games/taptrial"
+	"hsdemo/games/taptroupe"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/tramandpauline"
 	"hsdemo/games/trickclass"
@@ -667,6 +668,7 @@ func main() {
 	engine.Register("gleeClub", gleeclub.New)
 	engine.Register("tambourine", tambourine.New)
 	engine.Register("tapTrial", taptrial.New)
+	engine.Register("tapTroupe", taptroupe.New)
 	engine.Register("trickClass", trickclass.New)
 	engine.Register("meatGrinder", meatgrinder.New)
 	engine.Register("totemClimb", totemclimb.New)
