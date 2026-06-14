@@ -3,6 +3,7 @@ package seesaw
 // 交付前审计：路径/锚点/剪辑/调色板，资产未提取时跳过。
 
 import (
+	"math"
 	"testing"
 
 	"hsdemo/kart"
@@ -49,6 +50,34 @@ func TestJumpPathsResolve(t *testing.T) {
 		if !nodeSet[p] {
 			t.Errorf("锚点 %q 不在场景树", p)
 		}
+	}
+}
+
+func TestGameLocalAnchorIgnoresCameraOffset(t *testing.T) {
+	as := loadAssets(t)
+	sc := kart.NewScene(as)
+	const anchor = "Game/Curves/Saw/OutSaw"
+
+	localAt := func(beat float64) [2]float64 {
+		t.Helper()
+		sc.Sample(beat)
+		game, ok := sc.NodeWorld("Game")
+		if !ok {
+			t.Fatal("Game node missing")
+		}
+		node, ok := sc.NodeWorld(anchor)
+		if !ok {
+			t.Fatalf("%s node missing", anchor)
+		}
+		x, y := inverseApply(game, node.Tx, node.Ty)
+		return [2]float64{x, y}
+	}
+
+	base := localAt(0)
+	sc.SetPosOver("Game", 0, -7)
+	shifted := localAt(1)
+	if math.Abs(base[0]-shifted[0]) > 1e-9 || math.Abs(base[1]-shifted[1]) > 1e-9 {
+		t.Fatalf("Game-local anchor changed after camera offset: base=%v shifted=%v", base, shifted)
 	}
 }
 

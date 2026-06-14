@@ -592,7 +592,7 @@ func (m *Module) landGuy(g *guy, landType int, getUpOut bool) {
 	case stEndJumpOut, stEndJumpIn:
 		// 终落：回地面，转 Neutral
 		g.state, g.lastState = stNone, g.state
-		g.inst.Offset = m.nodeWorld("Game/Curves/See/SeeStartJump/Point0")
+		g.inst.Offset = m.nodeInGame("Game/Curves/See/SeeStartJump/Point0")
 		neutral := "NeutralSaw"
 		if g.see {
 			neutral = "NeutralSee"
@@ -626,21 +626,37 @@ func (m *Module) landGuy(g *guy, landType int, getUpOut bool) {
 		m.ctx.At(beat+delay, func() { g.inst.PlayState(g.animRel, getUp, beat+delay, 0.5) })
 	}
 	if landedOut {
-		g.inst.Offset = m.nodeWorld(pickS(g.see, "Game/Curves/See/OutSee", "Game/Curves/Saw/OutSaw"))
+		g.inst.Offset = m.nodeInGame(pickS(g.see, "Game/Curves/See/OutSee", "Game/Curves/Saw/OutSaw"))
 	} else {
-		g.inst.Offset = m.nodeWorld(pickS(g.see, "Game/Curves/See/InSee", "Game/Curves/Saw/InSaw"))
+		g.inst.Offset = m.nodeInGame(pickS(g.see, "Game/Curves/See/InSee", "Game/Curves/Saw/InSaw"))
 	}
 	g.lastState = g.state
 	g.state = stNone
 }
 
-// nodeWorld 取场景节点世界坐标（gameTrans 伪相机位移已含在内）。
-func (m *Module) nodeWorld(path string) [2]float64 {
+// nodeInGame 取场景节点在 Game 根下的本地坐标。
+// See/Saw 是模板实例，不能直接挂回 SceneInst 的 Game 子树；保存本地坐标并
+// 在 Draw 时乘 Game 当前世界变换，才能复刻 Unity gameTrans 相机位移。
+func (m *Module) nodeInGame(path string) [2]float64 {
 	a, ok := m.ctx.Scene.NodeWorld(path)
 	if !ok {
 		return [2]float64{}
 	}
-	return [2]float64{a.Tx, a.Ty}
+	game, ok := m.ctx.Scene.NodeWorld("Game")
+	if !ok {
+		return [2]float64{a.Tx, a.Ty}
+	}
+	x, y := inverseApply(game, a.Tx, a.Ty)
+	return [2]float64{x, y}
+}
+
+func inverseApply(a kart.Aff, x, y float64) (float64, float64) {
+	det := a.A*a.D - a.B*a.C
+	if math.Abs(det) < 1e-12 {
+		return x, y
+	}
+	px, py := x-a.Tx, y-a.Ty
+	return (a.D*px - a.C*py) / det, (-a.B*px + a.A*py) / det
 }
 
 // evalPath：SuperCurveObject.GetPathPositionFromBeat（双点 lerp + 抛物线；
@@ -653,8 +669,8 @@ func (m *Module) evalPath(p jumpPath, beat, startBeat float64) ([2]float64, floa
 	if t < 0 {
 		t = 0
 	}
-	from := m.nodeWorld(p.from)
-	to := m.nodeWorld(p.to)
+	from := m.nodeInGame(p.from)
+	to := m.nodeInGame(p.to)
 	x := from[0] + (to[0]-from[0])*t
 	y := from[1] + (to[1]-from[1])*t
 	yMul := t*2 - 1
@@ -685,7 +701,7 @@ func (m *Module) spawnOrbs(white bool) {
 	}
 	// PlayScaledAsync(0.65)：粒子时钟 0.65/secPerBeat
 	sim := 0.65 / m.ctx.SecPerBeat(m.ctx.Beat())
-	pos := m.nodeWorld(src)
+	pos := m.nodeInGame(src)
 	t := m.ctx.Time()
 	for i := 0; i < 8; i++ {
 		ang := randF() * 2 * math.Pi
@@ -750,13 +766,15 @@ func (m *Module) OnSwitch(beat float64) {
 	m.see.inst.PlayState("See", "NeutralSee", beat, sec)
 	m.saw.inst.PlayState("Saw", "NeutralSaw", beat, sec)
 	sc.PlayState(m.ctx.Role("seeSawAnim"), "Neut", beat, sec)
+	// OnSwitch 早于首帧 Draw；先采样一次，下面读取曲线锚点才有有效世界矩阵。
+	sc.Sample(beat)
 	// 初始位置：see 站台外、saw 站板内/外（首事件为 short* 时 saw 在板内侧已就位）
-	m.see.inst.Offset = m.nodeWorld("Game/Curves/See/SeeStartJump/Point0")
+	m.see.inst.Offset = m.nodeInGame("Game/Curves/See/SeeStartJump/Point0")
 	if len(m.jumps) > 0 && (m.jumps[0].model == "shortLong" || m.jumps[0].model == "shortShort") {
-		m.saw.inst.Offset = m.nodeWorld("Game/Curves/Saw/InSaw")
+		m.saw.inst.Offset = m.nodeInGame("Game/Curves/Saw/InSaw")
 		m.saw.inst.PlayFrozen("Saw", "GetUp_In", 1)
 	} else {
-		m.saw.inst.Offset = m.nodeWorld("Game/Curves/Saw/OutSaw")
+		m.saw.inst.Offset = m.nodeInGame("Game/Curves/Saw/OutSaw")
 	}
 }
 
@@ -881,9 +899,13 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 
 	m.ctx.SampleScene(beat)
 
-	// guy 实例（世界坐标直绘；camY 经场景 Game 覆盖已含在锚点里）
-	m.see.inst.Queue(sc, beat, kart.Identity(), 0)
-	m.saw.inst.Queue(sc, beat, kart.Identity(), 0)
+	gameWorld, ok := sc.NodeWorld("Game")
+	if !ok {
+		gameWorld = kart.Identity()
+	}
+	// guy 实例保存 Game 本地坐标，这里统一乘当前 Game 世界变换。
+	m.see.inst.Queue(sc, beat, gameWorld, 0)
+	m.saw.inst.Queue(sc, beat, gameWorld, 0)
 
 	// 轨道珠
 	for _, o := range m.orbs {
@@ -898,8 +920,8 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 		if ppu == 0 {
 			ppu = m.ctx.Assets.Sheet.PPU
 		}
-		w := kart.Translate(x, y).Mul(kart.Scale(
-			o.size/(float64(sp.W)/ppu), o.size/(float64(sp.H)/ppu)))
+		scale := kart.Scale(o.size/(float64(sp.W)/ppu), o.size/(float64(sp.H)/ppu))
+		w := gameWorld.Mul(kart.Translate(x, y).Mul(scale))
 		sc.Queue(kart.ExtraSprite{Sprite: o.sprite, World: w, Order: 30})
 	}
 
