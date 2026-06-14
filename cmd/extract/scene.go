@@ -93,6 +93,20 @@ var sceneSpecs = map[string]sceneSpec{
 		refArrayFields:  []string{"CameraPosition"},
 		wantControllers: true,
 	},
+	"drummingPractice": {
+		dir:    "DrummingPractice",
+		prefab: "drummingPractice.prefab",
+		roleFields: []string{
+			"background", "backgroundGradient", "player", "leftDrummer",
+			"rightDrummer", "hitPrefab", "NPCDrummers",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"applause.ogg"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"background", "backgroundGradient", "streaks", "player", "leftDrummer", "rightDrummer"}},
+			{name: "drummer", markers: []string{"animator", "miiFaces", "face"}, multi: true},
+		},
+	},
 	"rhythmSomen": {
 		dir:    "RhythmSomen",
 		prefab: "rhythmSomen.prefab",
