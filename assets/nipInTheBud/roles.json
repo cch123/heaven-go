@@ -1,0 +1,9 @@
+{
+ "Bubble": "bubble",
+ "Leilani": "Scene/Leilani",
+ "Mayfly": "Scene/mayfly",
+ "Mosquito": "Scene/mosquito",
+ "bg": "bg stuff/sky",
+ "mayflyStart": "Scene/mayflyPath/startPath/Point 0",
+ "mosquitoStart": "Scene/mosquitoPath/startPoint"
+}

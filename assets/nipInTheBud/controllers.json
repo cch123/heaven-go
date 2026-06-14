@@ -1,0 +1,101 @@
+{
+ "Leilani": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Leilani/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 0.022274157,
+      "duration": 0.25000003
+     }
+    ]
+   },
+   "Happy": {
+    "clip": "Leilani/Happy",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Leilani/Idle",
+    "speed": 1
+   },
+   "MissFace": {
+    "clip": "Leilani/MissFace",
+    "speed": 1
+   },
+   "Neutral": {
+    "clip": "Leilani/Neutral",
+    "speed": 1
+   },
+   "PrepFace": {
+    "clip": "Leilani/PrepFace",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Leilani/Prepare",
+    "speed": 1
+   },
+   "QuickPrep": {
+    "clip": "Leilani/QuickPrep",
+    "speed": 1
+   },
+   "Sad": {
+    "clip": "Leilani/Sad",
+    "speed": 1
+   },
+   "Snap": {
+    "clip": "Leilani/Snap",
+    "speed": 1
+   },
+   "SnapMiss": {
+    "clip": "Leilani/SnapMiss",
+    "speed": 1
+   },
+   "SnapWhiff": {
+    "clip": "Leilani/SnapWhiff",
+    "speed": 1
+   },
+   "Unprepare": {
+    "clip": "Leilani/Unprepare",
+    "speed": 1
+   }
+  }
+ },
+ "Mosquito": {
+  "default": "Buzz",
+  "states": {
+   "Buzz": {
+    "clip": "Mosquito/Buzz",
+    "speed": 1
+   }
+  }
+ },
+ "bubble": {
+  "default": "disable",
+  "states": {
+   "alert1": {
+    "clip": "Bubble/alert1",
+    "speed": 1
+   },
+   "alert2": {
+    "clip": "Bubble/alert2",
+    "speed": 1
+   },
+   "disable": {
+    "clip": "Bubble/disable",
+    "speed": 1
+   }
+  }
+ },
+ "mayfly": {
+  "default": "BuzzMayfly",
+  "states": {
+   "BuzzMayfly": {
+    "clip": "Mayfly/BuzzMayfly",
+    "speed": 1
+   }
+  }
+ }
+}

@@ -58,14 +58,15 @@ type smachine struct {
 
 // SceneInst 是一个可播放多路动画的场景实例。
 type SceneInst struct {
-	as      *Assets
-	byPath  map[string]int
-	state   []sceneNodeState
-	world   []Aff
-	worldZ  []float64 // 节点深度（透视投影：s = CamDist/(CamDist+z)）
-	actives []bool    // activeInHierarchy
-	groupOf []int     // 节点归属的 SortingGroup 节点下标（-1 = 无）
-	players map[string]*scenePlayer
+	as          *Assets
+	byPath      map[string]int
+	state       []sceneNodeState
+	world       []Aff
+	worldZ      []float64 // 节点深度（透视投影：s = CamDist/(CamDist+z)）
+	actives     []bool    // activeInHierarchy
+	groupOf     []int     // 节点归属的 SortingGroup 节点下标（-1 = 无）
+	players     map[string]*scenePlayer
+	playerOrder []string // Unity layer 叠放顺序有定义；Go map 采样不能决定覆盖顺序。
 
 	machines map[string]*smachine // rootPath → 状态机（有 controller 的 Animator）
 
@@ -231,6 +232,9 @@ func (s *SceneInst) PlayLayer(key, rootPath, clip string, startBeat, timeScale f
 	idx, ok := s.byPath[rootPath]
 	if !ok {
 		return
+	}
+	if _, exists := s.players[key]; !exists {
+		s.playerOrder = append(s.playerOrder, key)
 	}
 	s.players[key] = &scenePlayer{
 		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: clip,
@@ -574,7 +578,11 @@ func (s *SceneInst) Sample(beat float64) {
 	for i, v := range s.scaleOver {
 		s.state[i].scale = v
 	}
-	for _, p := range s.players {
+	for _, key := range s.playerOrder {
+		p := s.players[key]
+		if p == nil {
+			continue
+		}
 		var clipT float64
 		if p.normalized {
 			clipT = p.normT * p.anim.Duration

@@ -1,0 +1,1562 @@
+{
+ "nodes": [
+  {
+   "name": "nipInTheBud",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Scene",
+   "path": "Scene",
+   "parent": 0,
+   "pos": [
+    0,
+    -3.81
+   ],
+   "z": 6.3,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mayfly",
+   "path": "Scene/mayfly",
+   "parent": 1,
+   "pos": [
+    1.69,
+    -3.17
+   ],
+   "z": -5.68,
+   "rotZ": 0,
+   "scale": [
+    0.20000002,
+    0.20000002
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body",
+   "path": "Scene/mayfly/body",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bug_sprites_2",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15,
+    8.74
+   ]
+  },
+  {
+   "name": "wing",
+   "path": "Scene/mayfly/wing",
+   "parent": 2,
+   "pos": [
+    1.37,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bug_sprites_3",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.83,
+    9.63
+   ]
+  },
+  {
+   "name": "mosquito",
+   "path": "Scene/mosquito",
+   "parent": 1,
+   "pos": [
+    10,
+    -10
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body",
+   "path": "Scene/mosquito/body",
+   "parent": 5,
+   "pos": [
+    -0.7531448,
+    0.04521084
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bug_sprites_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.08,
+    12.82
+   ]
+  },
+  {
+   "name": "wing 1",
+   "path": "Scene/mosquito/wing 1",
+   "parent": 5,
+   "pos": [
+    0.83,
+    2.36
+   ],
+   "rotZ": -0.20773262508931575,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bug_sprites_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.17,
+    7.04
+   ]
+  },
+  {
+   "name": "wing 2",
+   "path": "Scene/mosquito/wing 2",
+   "parent": 5,
+   "pos": [
+    -0.75,
+    2.73
+   ],
+   "rotZ": -0.32358125572173463,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bug_sprites_1",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.17,
+    7.04
+   ]
+  },
+  {
+   "name": "mosquitoPath",
+   "path": "Scene/mosquitoPath",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "startPoint",
+   "path": "Scene/mosquitoPath/startPoint",
+   "parent": 9,
+   "pos": [
+    10,
+    -10
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mosquitoBarely",
+   "path": "Scene/mosquitoPath/mosquitoBarely",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Scene/mosquitoPath/mosquitoBarely/Point 0",
+   "parent": 11,
+   "pos": [
+    3.702798,
+    8.710632
+   ],
+   "z": 3.9920926,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Scene/mosquitoPath/mosquitoBarely/Point 1",
+   "parent": 11,
+   "pos": [
+    14.569739,
+    10.401081
+   ],
+   "z": 4.311583,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mosquitoStartCurve",
+   "path": "Scene/mosquitoPath/mosquitoStartCurve",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Scene/mosquitoPath/mosquitoStartCurve/Point 0",
+   "parent": 14,
+   "pos": [
+    10,
+    -10
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Scene/mosquitoPath/mosquitoStartCurve/Point 1",
+   "parent": 14,
+   "pos": [
+    15.57,
+    -0.87000084
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Scene/mosquitoPath/mosquitoStartCurve/Point 2",
+   "parent": 14,
+   "pos": [
+    10,
+    3.35
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mosquitoCurve",
+   "path": "Scene/mosquitoPath/mosquitoCurve",
+   "parent": 9,
+   "pos": [
+    9.536743e-7,
+    -9.536743e-7
+   ],
+   "z": 0.0000019073486,
+   "rotZ": 0,
+   "scale": [
+    0.99999994,
+    0.99999994
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Scene/mosquitoPath/mosquitoCurve/Point 1",
+   "parent": 18,
+   "pos": [
+    5.2912498,
+    1.9919233
+   ],
+   "z": 8.626055,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Scene/mosquitoPath/mosquitoCurve/Point 2",
+   "parent": 18,
+   "pos": [
+    3.7027977,
+    8.710632
+   ],
+   "z": 3.9920912,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Scene/mosquitoPath/mosquitoCurve/Point 0",
+   "parent": 18,
+   "pos": [
+    10,
+    3.35
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    1.0000001,
+    1.0000001
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mayflyPath",
+   "path": "Scene/mayflyPath",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "startPath",
+   "path": "Scene/mayflyPath/startPath",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Scene/mayflyPath/startPath/Point 0",
+   "parent": 23,
+   "pos": [
+    6.3294916,
+    -6.1219096
+   ],
+   "z": -1.855988,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Scene/mayflyPath/startPath/Point 1",
+   "parent": 23,
+   "pos": [
+    -31.1,
+    8.05
+   ],
+   "z": -1.1956077,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "approachPath",
+   "path": "Scene/mayflyPath/approachPath",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Scene/mayflyPath/approachPath/Point 0",
+   "parent": 26,
+   "pos": [
+    -17.093616,
+    2.3327842
+   ],
+   "z": 1.6294479,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Scene/mayflyPath/approachPath/Point 1",
+   "parent": 26,
+   "pos": [
+    -7.23,
+    7.89
+   ],
+   "z": 3.87,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "exitPath",
+   "path": "Scene/mayflyPath/exitPath",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Scene/mayflyPath/exitPath/Point 0",
+   "parent": 29,
+   "pos": [
+    -7.23,
+    7.89
+   ],
+   "z": 3.87,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Scene/mayflyPath/exitPath/Point 1",
+   "parent": 29,
+   "pos": [
+    12.387926,
+    5.008183
+   ],
+   "z": -13.176629,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fleePath",
+   "path": "Scene/mayflyPath/fleePath",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Scene/mayflyPath/fleePath/Point 0",
+   "parent": 32,
+   "pos": [
+    -7.23,
+    7.89
+   ],
+   "z": 4,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Scene/mayflyPath/fleePath/Point 1",
+   "parent": 32,
+   "pos": [
+    -17.839525,
+    14.712421
+   ],
+   "z": 1.4643483,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cube",
+   "path": "Scene/Cube",
+   "parent": 1,
+   "pos": [
+    4.5,
+    -92.9
+   ],
+   "z": -8.8,
+   "rotZ": 0,
+   "scale": [
+    47.94913,
+    178.06085
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Directional Light",
+   "path": "Scene/Directional Light",
+   "parent": 1,
+   "pos": [
+    33,
+    28.3
+   ],
+   "z": -56.4,
+   "rotZ": 3.6827397032421993,
+   "scale": [
+    65.8134,
+    77.48913
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Leilani",
+   "path": "Scene/Leilani",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 3.87,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "pot",
+   "path": "Scene/Leilani/pot",
+   "parent": 37,
+   "pos": [
+    -2.28,
+    -1.1
+   ],
+   "rotZ": -0.04767755419003652,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_21",
+   "order": 80,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.11,
+    10.92
+   ]
+  },
+  {
+   "name": "her body",
+   "path": "Scene/Leilani/her body",
+   "parent": 37,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body",
+   "path": "Scene/Leilani/her body/body",
+   "parent": 39,
+   "pos": [
+    -2.1,
+    3.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_1",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.18,
+    8.53
+   ]
+  },
+  {
+   "name": "left arm",
+   "path": "Scene/Leilani/her body/left arm",
+   "parent": 39,
+   "pos": [
+    -3.85,
+    0.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_29",
+   "order": 81,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.5,
+    9.1
+   ]
+  },
+  {
+   "name": "right arm",
+   "path": "Scene/Leilani/her body/right arm",
+   "parent": 39,
+   "pos": [
+    -1.58,
+    0.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_30",
+   "order": 81,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.78,
+    9.54
+   ]
+  },
+  {
+   "name": "her head",
+   "path": "Scene/Leilani/her head",
+   "parent": 37,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "band 1",
+   "path": "Scene/Leilani/her head/band 1",
+   "parent": 43,
+   "pos": [
+    -0.59,
+    8.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_32",
+   "order": 85,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    4.4
+   ]
+  },
+  {
+   "name": "face",
+   "path": "Scene/Leilani/her head/face",
+   "parent": 43,
+   "pos": [
+    -3,
+    7.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_26",
+   "order": 90,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.51,
+    7.09
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Scene/Leilani/her head/head",
+   "parent": 43,
+   "pos": [
+    -2.87,
+    7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_2",
+   "order": 82,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.71,
+    11.25
+   ]
+  },
+  {
+   "name": "band 2",
+   "path": "Scene/Leilani/her head/band 2",
+   "parent": 43,
+   "pos": [
+    -4.8,
+    8.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_32",
+   "order": 81,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    4.4
+   ]
+  },
+  {
+   "name": "flytrap 1",
+   "path": "Scene/Leilani/her head/flytrap 1",
+   "parent": 43,
+   "pos": [
+    1.13,
+    8.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_11",
+   "order": 60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.87,
+    6.01
+   ]
+  },
+  {
+   "name": "flytrap 2",
+   "path": "Scene/Leilani/her head/flytrap 2",
+   "parent": 43,
+   "pos": [
+    -6.6,
+    8.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_11",
+   "order": 60,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.87,
+    6.01
+   ]
+  },
+  {
+   "name": "flower",
+   "path": "Scene/Leilani/her head/flower",
+   "parent": 43,
+   "pos": [
+    -4.38,
+    8.98
+   ],
+   "rotZ": -0.37221975252942235,
+   "scale": [
+    0.35416,
+    0.35416
+   ],
+   "sprite": "leilani_sprites_5",
+   "order": 83,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.77,
+    6.26
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Scene/Leilani/shadow",
+   "parent": 37,
+   "pos": [
+    -2.14,
+    -3.86
+   ],
+   "z": 0.43,
+   "rotZ": 0,
+   "scale": [
+    7.4435,
+    4.2112346
+   ],
+   "order": 0,
+   "color": [
+    0.4528302,
+    0.41794235,
+    0.36909932,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "snap fx 1",
+   "path": "Scene/Leilani/snap fx 1",
+   "parent": 37,
+   "pos": [
+    6.22,
+    11.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_3",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    5.63
+   ]
+  },
+  {
+   "name": "snap fx 2",
+   "path": "Scene/Leilani/snap fx 2",
+   "parent": 37,
+   "pos": [
+    -11.43,
+    12.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "leilani_sprites_3",
+   "order": 0,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    5.63
+   ]
+  },
+  {
+   "name": "bubble",
+   "path": "bubble",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "flower",
+   "path": "bubble/flower",
+   "parent": 54,
+   "pos": [
+    -6.45,
+    0
+   ],
+   "rotZ": 0.06051490864584957,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "bug_sprites_6",
+   "order": 1005,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.6,
+    12.71
+   ]
+  },
+  {
+   "name": "exclamation",
+   "path": "bubble/exclamation",
+   "parent": 54,
+   "pos": [
+    -6.32,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "bug_sprites_4",
+   "order": 1006,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.32,
+    7.97
+   ]
+  },
+  {
+   "name": "bg stuff",
+   "path": "bg stuff",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sky",
+   "path": "bg stuff/sky",
+   "parent": 57,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 121,
+   "rotZ": 0,
+   "scale": [
+    369.75568,
+    369.75568
+   ],
+   "order": -99,
+   "color": [
+    0.52156866,
+    0.7960785,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "background",
+   "path": "bg stuff/background",
+   "parent": 57,
+   "pos": [
+    0,
+    34.1
+   ],
+   "z": 121,
+   "rotZ": 0,
+   "scale": [
+    6.4139996,
+    5.3877597
+   ],
+   "sprite": "background",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    40.96
+   ]
+  }
+ ]
+}

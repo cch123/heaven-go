@@ -18,6 +18,8 @@ import (
 type sceneSpec struct {
 	dir        string   // Assets/Bundled/Games/<dir>
 	prefab     string   // prefab 文件名
+	spritesDir string   // 可选：贴图根（默认 Sprites）
+	animsDir   string   // 可选：动画/controller 根（默认 spritesDir）
 	roleFields []string // 游戏 MonoBehaviour 中需要解析的 Animator/GameObject 引用字段
 
 	refArrayFields  []string // 引用数组字段（如对象模板表）
@@ -49,6 +51,18 @@ type componentSpec struct {
 }
 
 var sceneSpecs = map[string]sceneSpec{
+	"nipInTheBud": {
+		dir:             "NipInTheBud",
+		prefab:          "nipInTheBud.prefab",
+		spritesDir:      "Models/Sprites",
+		animsDir:        "Models/Animations",
+		roleFields:      []string{"Leilani", "Bubble", "Mosquito", "Mayfly", "mosquitoStart", "mayflyStart", "bg"},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "mosquito", markers: []string{"startCurve", "approachCurve", "fleeCurve", "body", "wingA", "wingB", "mosquitoAnim"}, curveFields: []string{"startCurve", "approachCurve", "fleeCurve"}},
+			{name: "mayfly", markers: []string{"startCurve", "approachCurve", "fleeCurve", "exitCurve", "body", "wing", "mayflyAnim"}, curveFields: []string{"startCurve", "approachCurve", "fleeCurve", "exitCurve"}},
+		},
+	},
 	"bouncyRoad": {
 		dir:    "BouncyRoad",
 		prefab: "bouncyRoad.prefab",
@@ -550,14 +564,14 @@ func extractScene(game string) {
 	}
 	must(os.MkdirAll(filepath.Join(*outDir, "sounds"), 0o755))
 
-	tables := scanSpriteMetas(bundlePath(spec.dir, "Sprites"))
+	tables := scanSpriteMetas(spec.spriteRoot())
 	exportSheetMulti(tables)
 	idx, docs := buildPrefabIndex(bundlePath(spec.dir, spec.prefab), spec.templatePrefabs)
 	idx.mappedMats = scanMappedMats(bundlePath(spec.dir))
 	paths, nodeIdx := exportScene(idx, tables)
 	exportRoles(spec, docs, idx, paths)
 	exportExtra(spec, docs, idx, paths, nodeIdx, tables)
-	exportAnimDir(bundlePath(spec.dir, "Sprites"), tables)
+	exportAnimDir(spec.animRoot(), tables)
 	if spec.wantControllers {
 		exportControllers(spec, docs, idx, paths)
 	}
@@ -573,6 +587,25 @@ func extractScene(game string) {
 		must(os.WriteFile(filepath.Join(*outDir, "sounds", outName), b, 0o644))
 	}
 	fmt.Println("done.")
+}
+
+func (s sceneSpec) spriteRoot() string {
+	dir := s.spritesDir
+	if dir == "" {
+		dir = "Sprites"
+	}
+	return bundlePath(s.dir, filepath.FromSlash(dir))
+}
+
+func (s sceneSpec) animRoot() string {
+	dir := s.animsDir
+	if dir == "" {
+		dir = s.spritesDir
+	}
+	if dir == "" {
+		dir = "Sprites"
+	}
+	return bundlePath(s.dir, filepath.FromSlash(dir))
 }
 
 // ---------- 多图集 ----------
