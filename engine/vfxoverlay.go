@@ -4,20 +4,23 @@
 // 直到后续事件改写同 slot）；BlendAmount = ease(1-start, 1-end)（AmplifyColor
 // 语义 0=全滤镜、1=无效果），本地混合强度为其反相。LUT 为 1024×32 的 32³ 条带。
 //
-// textbox：事件期间显示九宫格文本框（textboxSDF 贴图 + OTF 排版），
-// 富文本仅剥离标签（<align=center> 等），按 anchor 摆位。
+// textbox：事件期间显示原版 TextboxPrefab 风格的文本框（原版尺寸圆角面板
+// + OTF 排版），按 anchor 摆位。
 package engine
 
 import (
 	"image"
 	"image/color"
 	"log"
+	"math"
 	"os"
 	"path/filepath"
 	"regexp"
+	"strconv"
 	"strings"
 
 	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/hajimehoshi/ebiten/v2/vector"
 	"golang.org/x/image/font"
 	"golang.org/x/image/font/opentype"
 	"golang.org/x/image/math/fixed"
@@ -178,6 +181,7 @@ func (f *filterFX) Apply(dst *ebiten.Image, assetsRoot string, beat float64) {
 type textboxEvt struct {
 	beat, length float64
 	text         string
+	align        string
 	anchor       int
 	w, h         float64
 	x, y         float64
@@ -185,17 +189,19 @@ type textboxEvt struct {
 
 type textboxFX struct {
 	evts  []textboxEvt
-	box   *ebiten.Image
 	font  *opentype.Font
 	cache map[string]*ebiten.Image
 }
 
 var richTagRe = regexp.MustCompile(`<[^>]*>`)
+var alignTagRe = regexp.MustCompile(`(?i)<align\s*=\s*"?([a-z]+)"?>`)
 
 func (t *textboxFX) add(e *riq.Entity) {
+	rawText := e.Str("text1", "")
 	t.evts = append(t.evts, textboxEvt{
 		beat: e.Beat, length: e.Length,
-		text:   richTagRe.ReplaceAllString(e.Str("text1", ""), ""),
+		text:   strings.TrimSpace(richTagRe.ReplaceAllString(rawText, "")),
+		align:  textboxAlign(rawText),
 		anchor: int(e.Float("type", 1)),
 		w:      e.Float("valA", 1), h: e.Float("valB", 1),
 		x: e.Float("x", 0), y: e.Float("y", 0),
@@ -204,29 +210,40 @@ func (t *textboxFX) add(e *riq.Entity) {
 
 func (t *textboxFX) reset() { t.evts = nil }
 
-// anchorPos 返回 anchor 枚举的屏幕坐标（TextboxAnchor：0=TopLeft..8=BottomRight 风格，
-// 1=TopMiddle；Custom 用 x/y，单位与游戏世界一致 54px/unit）。
+func textboxAlign(s string) string {
+	if m := alignTagRe.FindStringSubmatch(s); len(m) == 2 {
+		switch strings.ToLower(m[1]) {
+		case "left", "right", "center":
+			return strings.ToLower(m[1])
+		}
+	}
+	return "center"
+}
+
+// anchorPos 返回原版 VFXObject.TextboxAnchor 坐标：XAnchor=3, YAnchor=3.5；
+// Custom 用 x/y，单位与游戏世界一致 54px/unit。
 func anchorPos(anchor int, x, y float64) (float64, float64) {
 	cx, cy := float64(ScreenW/2), float64(ScreenH/2)
-	top, bot := 70.0, float64(ScreenH)-70
-	lft, rgt := 160.0, float64(ScreenW)-160
+	xAnchor, yAnchor := 3*54.0, 3.5*54.0
+	top, mid, bot := cy-yAnchor, cy, cy+yAnchor
+	lft, ctr, rgt := cx-xAnchor, cx, cx+xAnchor
 	switch anchor {
 	case 0:
 		return lft, top
 	case 1:
-		return cx, top
+		return ctr, top
 	case 2:
 		return rgt, top
 	case 3:
-		return lft, cy
+		return lft, mid
 	case 4:
-		return cx, cy
+		return ctr, mid
 	case 5:
-		return rgt, cy
+		return rgt, mid
 	case 6:
 		return lft, bot
 	case 7:
-		return cx, bot
+		return ctr, bot
 	case 8:
 		return rgt, bot
 	default: // Custom
@@ -235,18 +252,9 @@ func anchorPos(anchor int, x, y float64) (float64, float64) {
 }
 
 func (t *textboxFX) ensure(assetsRoot string) bool {
-	if t.box != nil && t.font != nil {
+	if t.font != nil {
 		return true
 	}
-	raw, err := os.ReadFile(filepath.Join(assetsRoot, "common", "textbox.png"))
-	if err != nil {
-		return false
-	}
-	img, _, err := image.Decode(strings.NewReader(string(raw)))
-	if err != nil {
-		return false
-	}
-	t.box = ebiten.NewImageFromImage(img)
 	fraw, err := os.ReadFile(filepath.Join(assetsRoot, "common", "textbox_font.otf"))
 	if err != nil {
 		return false
@@ -260,24 +268,64 @@ func (t *textboxFX) ensure(assetsRoot string) bool {
 	return true
 }
 
-func (t *textboxFX) renderText(s string) *ebiten.Image {
-	if img, ok := t.cache[s]; ok {
+func (t *textboxFX) renderText(s, align string, maxW, maxH float64) *ebiten.Image {
+	key := s + "\x00" + align + "\x00" + fmtSize(maxW) + "\x00" + fmtSize(maxH)
+	if img, ok := t.cache[key]; ok {
 		return img
 	}
-	face, err := opentype.NewFace(t.font, &opentype.FaceOptions{Size: 40, DPI: 72})
+	face, err := opentype.NewFace(t.font, &opentype.FaceOptions{Size: 28, DPI: 72})
 	if err != nil {
 		return nil
 	}
 	defer face.Close()
-	adv := font.MeasureString(face, s)
 	met := face.Metrics()
-	w, h := adv.Ceil()+8, met.Ascent.Ceil()+met.Descent.Ceil()+8
+	lineH := (met.Ascent + met.Descent).Ceil()
+	lines := wrapTextboxLines(face, s, int(maxW)-36)
+	w, h := int(maxW), int(maxH)
+	if w < 1 || h < 1 {
+		return nil
+	}
 	img := image.NewRGBA(image.Rect(0, 0, w, h))
-	d := &font.Drawer{Dst: img, Src: image.White, Face: face, Dot: fixed.P(4, 4+met.Ascent.Ceil())}
-	d.DrawString(s)
+	totalH := lineH * len(lines)
+	y := (h-totalH)/2 + met.Ascent.Ceil()
+	for _, line := range lines {
+		adv := font.MeasureString(face, line).Ceil()
+		x := 18
+		switch align {
+		case "right":
+			x = w - 18 - adv
+		case "center":
+			x = (w - adv) / 2
+		}
+		d := &font.Drawer{Dst: img, Src: image.Black, Face: face, Dot: fixed.P(x, y)}
+		d.DrawString(line)
+		y += lineH
+	}
 	e := ebiten.NewImageFromImage(img)
-	t.cache[s] = e
+	t.cache[key] = e
 	return e
+}
+
+func fmtSize(v float64) string { return strconv.Itoa(int(math.Round(v))) }
+
+func wrapTextboxLines(face font.Face, s string, maxW int) []string {
+	words := strings.Fields(s)
+	if len(words) == 0 {
+		return []string{""}
+	}
+	lines := make([]string, 0, 2)
+	line := words[0]
+	for _, word := range words[1:] {
+		next := line + " " + word
+		if font.MeasureString(face, next).Ceil() <= maxW {
+			line = next
+			continue
+		}
+		lines = append(lines, line)
+		line = word
+	}
+	lines = append(lines, line)
+	return lines
 }
 
 // Draw 绘制当前活动的 textbox（事件区间内显示）。
@@ -290,28 +338,44 @@ func (t *textboxFX) Draw(dst *ebiten.Image, assetsRoot string, beat float64) {
 			continue
 		}
 		px, py := anchorPos(e.anchor, e.x, e.y)
-		// 框体（textboxSize 3×0.75 unit × 宽高参数 × 54px/unit，双倍留白）
-		bw, bh := 3*e.w*54*2, 0.75*e.h*54*2
-		op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
-		bs := t.box.Bounds()
-		op.GeoM.Scale(bw/float64(bs.Dx()), bh/float64(bs.Dy()))
-		op.GeoM.Translate(px-bw/2, py-bh/2)
-		op.ColorScale.ScaleAlpha(0.92)
-		dst.DrawImage(t.box, op)
+		// TextboxPrefab 的四个 sliced SDF SpriteRenderer 合成约 12×3 world-unit
+		// 的白底黑边圆角框；这里按同一几何尺寸直接绘制圆角面板。
+		bw, bh := 6*e.w*54*2, 1.5*e.h*54*2
+		drawTextboxPanel(dst, px-bw/2, py-bh/2, bw, bh)
 		if e.text != "" {
-			txt := t.renderText(e.text)
+			txt := t.renderText(e.text, e.align, 11.2*e.w*54, 2.2*e.h*54)
 			if txt != nil {
 				to := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
 				tb := txt.Bounds()
-				scale := 1.0
-				if maxW := bw * 0.9; float64(tb.Dx()) > maxW {
-					scale = maxW / float64(tb.Dx())
-				}
-				to.GeoM.Scale(scale, scale)
-				to.GeoM.Translate(px-float64(tb.Dx())*scale/2, py-float64(tb.Dy())*scale/2)
-				to.ColorScale.ScaleWithColor(color.Black)
+				to.GeoM.Translate(px-float64(tb.Dx())/2, py-float64(tb.Dy())/2)
 				dst.DrawImage(txt, to)
 			}
 		}
 	}
+}
+
+func drawTextboxPanel(dst *ebiten.Image, x, y, w, h float64) {
+	r := math.Min(h*0.42, 34)
+	drawRoundedRect(dst, x, y, w, h, r+7, color.RGBA{0, 0, 0, 245})
+	drawRoundedRect(dst, x+6, y+6, w-12, h-12, r, color.RGBA{255, 255, 255, 245})
+}
+
+func drawRoundedRect(dst *ebiten.Image, x, y, w, h, r float64, c color.RGBA) {
+	if w <= 0 || h <= 0 {
+		return
+	}
+	if r > w/2 {
+		r = w / 2
+	}
+	if r > h/2 {
+		r = h / 2
+	}
+	fx, fy, fw, fh := float32(x), float32(y), float32(w), float32(h)
+	fr := float32(r)
+	vector.DrawFilledRect(dst, fx+fr, fy, fw-2*fr, fh, c, true)
+	vector.DrawFilledRect(dst, fx, fy+fr, fw, fh-2*fr, c, true)
+	vector.DrawFilledCircle(dst, fx+fr, fy+fr, fr, c, true)
+	vector.DrawFilledCircle(dst, fx+fw-fr, fy+fr, fr, c, true)
+	vector.DrawFilledCircle(dst, fx+fr, fy+fh-fr, fr, c, true)
+	vector.DrawFilledCircle(dst, fx+fw-fr, fy+fh-fr, fr, c, true)
 }

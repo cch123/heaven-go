@@ -86,6 +86,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb）：
   Back/Elastic/OutIn/InstantOut）。
 - TMP 文本用源 OTF 排版（原版为 SDF 渲染），字体/字号/颜色/对齐一致，字形边缘
   抗锯齿方式不同；只实现 Center/Middle 对齐（其他对齐出现时显式报错）。
+- vfx/display textbox 已按原版 TextboxAnchor、TextboxPrefab 尺寸、文本矩形、
+  富文本 align 与自动换行绘制；框体暂用等价白底黑边圆角面板替代 TextboxSDF
+  shader 的四角 sliced 渲染，边缘抗锯齿细节不同。
 - 多游戏 remix 中，未激活游戏的 interval 调度音效仍会播放（与 C# MultiSound 全局
   播放行为一致）；其动画动作也会执行但不可见。
 - C# 的 `BossAnim.SetBool("bossAnnoyed")` 在原版 controller 中无任何转换引用（死调

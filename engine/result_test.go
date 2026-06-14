@@ -127,6 +127,21 @@ func TestDrawLevelSelectSmoke(t *testing.T) {
 	app.drawLevelSelect(screen, colorWhite(), color.RGBA{170, 170, 180, 255})
 }
 
+func TestTextboxDrawSmoke(t *testing.T) {
+	var tb textboxFX
+	tb.add(&riq.Entity{
+		Beat: 1, Length: 5,
+		Data: map[string]any{
+			"text1": "<align=center>Next, we'll be throwing a chain of smaller pieces of meat at you.",
+			"type":  float64(1),
+			"valA":  1.1715,
+			"valB":  1.0,
+		},
+	})
+	screen := ebiten.NewImage(ScreenW, ScreenH)
+	tb.Draw(screen, "../assets", 2)
+}
+
 func colorWhite() color.RGBA { return color.RGBA{245, 245, 250, 255} }
 
 func setTestFaces(t *testing.T, app *App) {
