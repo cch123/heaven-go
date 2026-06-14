@@ -86,6 +86,13 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "plant", markers: []string{"animator", "spriteRenderer", "createBeat"}, atPath: "Prefabs/Plant"},
 		},
 	},
+	"basketballGirls": {
+		dir:             "BasketballGirls",
+		prefab:          "basketballGirls.prefab",
+		roleFields:      []string{"baseBall", "girlLeftAnim", "girlRightAnim", "goalAnim", "BGPlane"},
+		refArrayFields:  []string{"CameraPosition"},
+		wantControllers: true,
+	},
 	"rhythmSomen": {
 		dir:    "RhythmSomen",
 		prefab: "rhythmSomen.prefab",

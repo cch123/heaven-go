@@ -38,6 +38,7 @@ import (
 	"hsdemo/conductor"
 	"hsdemo/engine"
 	"hsdemo/games/airrally"
+	"hsdemo/games/basketballgirls"
 	"hsdemo/games/bluebear"
 	"hsdemo/games/bouncyroad"
 	"hsdemo/games/catchytune"
@@ -633,6 +634,7 @@ func main() {
 	// 已移植的游戏模块
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("airRally", airrally.New)
+	engine.Register("basketballGirls", basketballgirls.New)
 	engine.Register("bouncyRoad", bouncyroad.New)
 	engine.Register("catchyTune", catchytune.New)
 	engine.Register("coinToss", cointoss.New)
