@@ -269,6 +269,37 @@ func ResamplePCM(pcm []byte, pitch float64) []byte {
 	return out
 }
 
+// PanPCM applies Unity-style stereo panning to decoded 16-bit LE stereo PCM.
+// pan=-1 keeps only the left channel, pan=+1 keeps only the right channel.
+func PanPCM(pcm []byte, pan float64) []byte {
+	if pan == 0 || len(pcm) < 4 {
+		return pcm
+	}
+	if pan < -1 {
+		pan = -1
+	} else if pan > 1 {
+		pan = 1
+	}
+	lgain, rgain := 1.0, 1.0
+	if pan > 0 {
+		lgain = 1 - pan
+	} else {
+		rgain = 1 + pan
+	}
+	out := make([]byte, len(pcm))
+	for i := 0; i+3 < len(pcm); i += 4 {
+		l := int16(uint16(pcm[i]) | uint16(pcm[i+1])<<8)
+		r := int16(uint16(pcm[i+2]) | uint16(pcm[i+3])<<8)
+		lo := int16(float64(l) * lgain)
+		ro := int16(float64(r) * rgain)
+		out[i] = byte(lo)
+		out[i+1] = byte(uint16(lo) >> 8)
+		out[i+2] = byte(ro)
+		out[i+3] = byte(uint16(ro) >> 8)
+	}
+	return out
+}
+
 // RegisterSprite 注册一张运行时生成的贴图为切片（如 TMP 文本渲染结果），
 // pivotX/pivotY 为归一化枢轴（Unity 约定 y 从底边算）。
 func (a *Assets) RegisterSprite(name string, img *ebiten.Image, ppu, pivotX, pivotY float64) {

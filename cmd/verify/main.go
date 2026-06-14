@@ -21,6 +21,7 @@ import (
 	// 已移植模块（与主程序保持同步）
 	"hsdemo/games/airrally"
 	"hsdemo/games/bluebear"
+	"hsdemo/games/bouncyroad"
 	"hsdemo/games/cheerreaders"
 	"hsdemo/games/kitties"
 	"hsdemo/games/lockstep"
@@ -91,6 +92,7 @@ func main() {
 
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("airRally", airrally.New)
+	engine.Register("bouncyRoad", bouncyroad.New)
 	engine.Register("tambourine", tambourine.New)
 	engine.Register("tapTrial", taptrial.New)
 	engine.Register("trickClass", trickclass.New)

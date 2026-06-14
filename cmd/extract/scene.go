@@ -44,6 +44,16 @@ type componentSpec struct {
 }
 
 var sceneSpecs = map[string]sceneSpec{
+	"bouncyRoad": {
+		dir:    "BouncyRoad",
+		prefab: "bouncyRoad.prefab",
+		roleFields: []string{
+			"baseBall", "baseBounceCurve", "CurveHolder", "ThingsTrans",
+			"PosCurve", "BGGradient", "BGHigh", "BGLow",
+		},
+		curveFields:     []string{"baseBounceCurve", "PosCurve"},
+		wantControllers: true,
+	},
 	"rhythmSomen": {
 		dir:    "RhythmSomen",
 		prefab: "rhythmSomen.prefab",
@@ -665,6 +675,23 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 		if curveDoc == nil {
 			log.Printf("warn: curve %s -> &%d missing", f, fid)
 			continue
+		}
+		if curveDoc.classID == 1 {
+			// Some Heaven Studio prefabs serialize a BezierCurve3D field as the
+			// owning GameObject. Resolve that to the MonoBehaviour carrying
+			// keyPoints so runtime ports still use Unity-authored path data.
+			for _, d := range dt.byID {
+				if d.classID != 114 {
+					continue
+				}
+				if uy.I(uy.Get(d.content, "m_GameObject", "fileID")) != fid {
+					continue
+				}
+				if uy.L(d.content["keyPoints"]) != nil || uy.L(d.content["KeyPoints"]) != nil {
+					curveDoc = d
+					break
+				}
+			}
 		}
 		kps := uy.L(curveDoc.content["keyPoints"])
 		if kps == nil {

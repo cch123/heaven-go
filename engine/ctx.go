@@ -59,11 +59,18 @@ func (c *Ctx) SoundVol(name string, vol float64) {
 
 // SoundPitch 以指定音量与音高播放音效（SoundByte pitch 语义）。
 func (c *Ctx) SoundPitch(name string, vol, pitch float64) {
+	c.SoundPitchPan(name, vol, pitch, 0)
+}
+
+// SoundPitchPan 以指定音量、音高和左右声像播放音效（MultiSound panning）。
+func (c *Ctx) SoundPitchPan(name string, vol, pitch, pan float64) {
 	pcm, ok := c.Assets.Sounds[name]
 	if !ok {
 		return
 	}
-	p := audioCtx.NewPlayerFromBytes(kart.ResamplePCM(pcm, pitch))
+	pcm = kart.ResamplePCM(pcm, pitch)
+	pcm = kart.PanPCM(pcm, pan)
+	p := audioCtx.NewPlayerFromBytes(pcm)
 	p.SetVolume(vol)
 	p.Play()
 }
@@ -88,6 +95,11 @@ func (c *Ctx) SoundAtOff(beat float64, name string, vol, offsetSec float64) {
 // SoundAt 在指定拍播放音效（MultiSound 等价物）。
 func (c *Ctx) SoundAt(beat float64, name string, vol float64) {
 	c.At(beat, func() { c.SoundVol(name, vol) })
+}
+
+// SoundAtPitchPan 在指定拍播放带音高和声像的音效。
+func (c *Ctx) SoundAtPitchPan(beat float64, name string, vol, pitch, pan float64) {
+	c.At(beat, func() { c.SoundPitchPan(name, vol, pitch, pan) })
 }
 
 // ScheduleInput 注册一次输入判定（HS Minigame.ScheduleInput 等价物）。
