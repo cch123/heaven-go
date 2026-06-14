@@ -63,6 +63,19 @@ var sceneSpecs = map[string]sceneSpec{
 		},
 		wantControllers: true,
 	},
+	"chameleon": {
+		dir:    "Chameleon",
+		prefab: "chameleon.prefab",
+		roleFields: []string{
+			"baseFly", "chameleonAnim", "chameleonEye", "Crown",
+			"gradient", "bgHigh", "bgLow",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"baseFly", "chameleonAnim", "chameleonEye", "Crown"}},
+			{name: "fly", markers: []string{"flyAnim", "wingAnim"}, atPath: "Fly"},
+		},
+	},
 	"coinToss": {
 		dir:    "CoinToss",
 		prefab: "coinToss.prefab",
