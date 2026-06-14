@@ -152,7 +152,8 @@ type viewScaleEvt struct {
 }
 
 type timingHit struct {
-	y      float64
+	y      float64 // normalized visual position on the TimingAccuracy bar, after prefab segment scaling.
+	signed float64
 	rating Judgment
 	t      float64
 }
@@ -1499,9 +1500,10 @@ func (a *App) setMsg(s string) {
 }
 
 func (a *App) pushTiming(signed float64, j Judgment) {
-	y := math.Max(-1, math.Min(1, signed/WinNG))
+	signed = math.Max(-WinNG, math.Min(WinNG, signed))
+	y := timingBarNorm(signed)
 	a.tdTarget = (a.tdTarget + y) * 0.5
-	a.tdHits = append(a.tdHits, timingHit{y: y, rating: j, t: a.cond.Time()})
+	a.tdHits = append(a.tdHits, timingHit{y: y, signed: signed, rating: j, t: a.cond.Time()})
 }
 
 // ---------- riq 拖放导入 ----------
@@ -1591,7 +1593,7 @@ func (a *App) Draw(screen *ebiten.Image) {
 	case stateTitle:
 		a.drawTitle(screen, white, dim)
 	case statePlay:
-		if a.lastMsg != "" && t-a.msgT < 0.6 {
+		if a.lastMsg != "" && t-a.msgT < 0.6 && !isTimingFeedbackMsg(a.lastMsg) {
 			a.text(screen, a.lastMsg, a.faceBig, ScreenW/2, 90, white, true)
 		}
 		if a.starGot {
@@ -1611,6 +1613,15 @@ func (a *App) Draw(screen *ebiten.Image) {
 
 	if a.debug {
 		a.drawDebug(screen, t, beat)
+	}
+}
+
+func isTimingFeedbackMsg(s string) bool {
+	switch s {
+	case "ACE!!", "OK!", "NG", "MISS...", "...", "SKILL STAR!":
+		return true
+	default:
+		return false
 	}
 }
 
