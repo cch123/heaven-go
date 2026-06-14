@@ -390,6 +390,21 @@ var sceneSpecs = map[string]sceneSpec{
 		wantSequences:   true,
 		commonSounds:    []string{"miss.wav", "nearMiss.ogg"},
 	},
+	"mrUpbeat": {
+		dir:    "MrUpbeat",
+		prefab: "mrUpbeat.prefab",
+		roleFields: []string{
+			"metronomeAnim", "man", "bg",
+		},
+		refArrayFields:  []string{"shadowSr"},
+		wantControllers: true,
+		wantTexts:       true,
+		commonSounds:    []string{"applause.ogg", "miss.wav", "nearMiss.ogg"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"metronomeAnim", "man", "blipMaterial", "bg", "shadowSr"}},
+			{name: "man", markers: []string{"anim", "blipAnim", "antennaLight", "shadows", "blipText"}, atPath: "MrUpbeat"},
+		},
+	},
 	"munchyMonk": {
 		dir:    "MunchyMonk",
 		prefab: "munchyMonk.prefab",
