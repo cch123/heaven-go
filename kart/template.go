@@ -100,14 +100,16 @@ type Instance struct {
 	// squash / shrink 的场合，避免改共享模板节点。
 	Scale [2]float64
 	// 叠加变换：实例整体的额外世界仿射（滚动容器等），绘制时左乘
-	players map[int]*instPlayer
-	actives map[int]bool // 模板内下标 → SetActive 覆盖
-	sprites map[int]string
-	colors  map[int][4]float64 // SpriteRenderer.color 覆盖（sr.color 直写）
-	orders  map[int]int        // SpriteRenderer.sortingOrder 覆盖（sr.sortingOrder 直写）
-	pos     map[int][2]float64 // Transform.localPosition 覆盖（脚本每帧写 transform）
-	rots    map[int]float64    // Transform.localEulerAngles.z 覆盖（弧度）
-	scales  map[int][2]float64 // Transform.localScale 覆盖
+	players    map[int]*instPlayer
+	layerOrder []string
+	layers     map[string]*instPlayer
+	actives    map[int]bool // 模板内下标 → SetActive 覆盖
+	sprites    map[int]string
+	colors     map[int][4]float64 // SpriteRenderer.color 覆盖（sr.color 直写）
+	orders     map[int]int        // SpriteRenderer.sortingOrder 覆盖（sr.sortingOrder 直写）
+	pos        map[int][2]float64 // Transform.localPosition 覆盖（脚本每帧写 transform）
+	rots       map[int]float64    // Transform.localEulerAngles.z 覆盖（弧度）
+	scales     map[int][2]float64 // Transform.localScale 覆盖
 }
 
 // NewInstance 创建实例（Offset 先取模板根的 prefab 位置）。
@@ -118,6 +120,7 @@ func (t *Template) NewInstance() *Instance {
 		Offset:  root.Pos,
 		Scale:   [2]float64{1, 1},
 		players: map[int]*instPlayer{},
+		layers:  map[string]*instPlayer{},
 		actives: map[int]bool{},
 		sprites: map[int]string{},
 		colors:  map[int][4]float64{},
@@ -164,6 +167,23 @@ func (in *Instance) Play(relPath, clip string, startBeat, timeScale float64) {
 		return
 	}
 	in.players[ti] = &instPlayer{rootTI: ti, anim: anim, startBeat: startBeat, timeScale: timeScale}
+}
+
+// PlayLayer 在实例子树上播放独立曲线层。Unity 允许同一 Animator 的
+// layer 1 命中动画叠在 layer 0 移动动画上，Cannery 的罐头需要这个语义。
+func (in *Instance) PlayLayer(key, relPath, clip string, startBeat, timeScale float64) {
+	anim, ok := in.T.as.Anims[clip]
+	if !ok {
+		return
+	}
+	ti, ok := in.findNode(relPath)
+	if !ok {
+		return
+	}
+	if _, exists := in.layers[key]; !exists {
+		in.layerOrder = append(in.layerOrder, key)
+	}
+	in.layers[key] = &instPlayer{rootTI: ti, anim: anim, startBeat: startBeat, timeScale: timeScale}
 }
 
 // PlayNormalized 以固定归一化时间采样实例剪辑（SceneInst.PlayNormalized 的
@@ -221,6 +241,30 @@ func (in *Instance) PlayState(relPath, stateName string, startBeat, timeScale fl
 	}
 	p.anim = in.T.as.Anims[st.Clip]
 	p.startBeat, p.timeScale = startBeat, timeScale*st.Speed
+}
+
+// PlayStateLayer mirrors Animator layer playback for template instances. It
+// resolves the state through the controller but keeps transition ownership on
+// the base PlayState player, matching SceneInst.PlayStateLayer.
+func (in *Instance) PlayStateLayer(key, relPath, stateName string, startBeat, timeScale float64) {
+	ti, ok := in.findAnimRoot(relPath)
+	if !ok {
+		return
+	}
+	ctrlName := in.T.animRoots[ti]
+	ctrl, ok := in.T.as.Controllers[ctrlName]
+	if !ok {
+		return
+	}
+	st, ok := ctrl.States[stateName]
+	if !ok {
+		return
+	}
+	if st.Clip == "" || st.Speed*timeScale == 0 {
+		delete(in.layers, key)
+		return
+	}
+	in.PlayLayer(key, relPath, st.Clip, startBeat, timeScale*st.Speed)
 }
 
 // PlayFrozen 以暂停状态把状态摆到指定归一化时间（Anim.Play(name,0,t)+不推进；
@@ -452,25 +496,12 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 	}
 	// 剪辑采样
 	for _, p := range in.players {
-		in.stepMachine(p, beat)
-		if p.anim == nil {
-			continue
+		in.samplePlayer(p, states, beat)
+	}
+	for _, key := range in.layerOrder {
+		if p := in.layers[key]; p != nil {
+			in.samplePlayer(p, states, beat)
 		}
-		var clipT float64
-		if p.frozen {
-			clipT = p.frozenT
-		} else {
-			clipT = (beat - p.startBeat) * p.timeScale
-			if clipT < 0 {
-				clipT = 0
-			}
-			if p.anim.Loop && p.anim.Duration > 0 {
-				clipT = math.Mod(clipT, p.anim.Duration)
-			} else if clipT > p.anim.Duration {
-				clipT = p.anim.Duration
-			}
-		}
-		in.applyClip(p, states, clipT)
 	}
 	// 合成 + 注入
 	world := make([]Aff, len(t.Nodes))
@@ -496,6 +527,28 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			Mapped: n.Mapped, Mat: n.Mat,
 		})
 	}
+}
+
+func (in *Instance) samplePlayer(p *instPlayer, states []instNodeState, beat float64) {
+	in.stepMachine(p, beat)
+	if p.anim == nil {
+		return
+	}
+	var clipT float64
+	if p.frozen {
+		clipT = p.frozenT
+	} else {
+		clipT = (beat - p.startBeat) * p.timeScale
+		if clipT < 0 {
+			clipT = 0
+		}
+		if p.anim.Loop && p.anim.Duration > 0 {
+			clipT = math.Mod(clipT, p.anim.Duration)
+		} else if clipT > p.anim.Duration {
+			clipT = p.anim.Duration
+		}
+	}
+	in.applyClip(p, states, clipT)
 }
 
 // NodeWorld 返回子树内节点（相对 path）在 baseWorld 下的世界变换

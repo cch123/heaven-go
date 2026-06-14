@@ -1,0 +1,27 @@
+{
+ "refArrays": {
+  "bgAnims": [
+   "Conveyor1Angle/Conveyor1",
+   "Conveyor2Angle/Conveyor2",
+   "Conveyor3Angle/Conveyor3"
+  ]
+ },
+ "refArrayIdx": {
+  "bgAnims": [
+   22,
+   28,
+   34
+  ]
+ },
+ "components": {
+  "can": {
+   "path": "CanParent",
+   "nums": {
+    "startBeat": 0
+   },
+   "refs": {
+    "anim": "CanParent"
+   }
+  }
+ }
+}

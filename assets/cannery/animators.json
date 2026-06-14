@@ -1,0 +1,10 @@
+{
+ "Alarm": "AlarmAnim",
+ "AlarmFlash": "AlarmFlashAnim",
+ "CanParent": "CanAnim",
+ "CannerParent/Canner": "CannerAnim",
+ "Conveyor1Angle/Conveyor1": "Conveyor1",
+ "Conveyor2Angle/Conveyor2": "Conveyor1",
+ "Conveyor3Angle/Conveyor3": "Conveyor1",
+ "ConveyorBelt": "ConveyorBeltAnim"
+}

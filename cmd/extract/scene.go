@@ -164,6 +164,18 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "head", markers: []string{"headSr", "heads", "eyesSr", "eyes", "headAnim"}, atPath: "MannequinHeadHolder/MannequinHead"},
 		},
 	},
+	"cannery": {
+		dir:    "Cannery",
+		prefab: "cannery.prefab",
+		roleFields: []string{
+			"can", "blackout", "conveyorBeltAnim", "alarmAnim", "dingAnim", "cannerAnim",
+		},
+		refArrayFields:  []string{"bgAnims"},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "can", markers: []string{"anim"}, atPath: "CanParent"},
+		},
+	},
 	"fireworks": {
 		dir:             "Fireworks",
 		prefab:          "fireworks.prefab",

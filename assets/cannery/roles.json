@@ -1,0 +1,8 @@
+{
+ "alarmAnim": "Alarm",
+ "blackout": "Blackout",
+ "can": "CanParent",
+ "cannerAnim": "CannerParent/Canner",
+ "conveyorBeltAnim": "ConveyorBelt",
+ "dingAnim": "AlarmFlash"
+}

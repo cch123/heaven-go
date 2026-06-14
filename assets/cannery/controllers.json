@@ -1,0 +1,98 @@
+{
+ "AlarmAnim": {
+  "default": "Start",
+  "states": {
+   "Bop": {
+    "clip": "Alarm/AlarmBop",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ },
+ "AlarmFlashAnim": {
+  "default": "Start",
+  "states": {
+   "Ding": {
+    "clip": "AlarmFlash/AlarmFlash",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ },
+ "CanAnim": {
+  "default": "Start",
+  "states": {
+   "Can": {
+    "clip": "Can/CanCan",
+    "speed": 1
+   },
+   "Flip": {
+    "clip": "Can/CanFlip",
+    "speed": 1
+   },
+   "Move": {
+    "clip": "Can/CanMove",
+    "speed": 1
+   },
+   "Reopen": {
+    "clip": "Can/CanReopen",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ },
+ "CannerAnim": {
+  "default": "Start",
+  "states": {
+   "Can": {
+    "clip": "Canner/CannerCan",
+    "speed": 1
+   },
+   "CanBarely": {
+    "clip": "Canner/CannerCanBarely",
+    "speed": 1
+   },
+   "CanEmpty": {
+    "clip": "Canner/CannerCanEmpty",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ },
+ "Conveyor1": {
+  "default": "Scroll",
+  "states": {
+   "ConveyorScroll": {
+    "clip": "BG/ConveyorScroll",
+    "speed": 1
+   },
+   "Scroll": {
+    "clip": "BG/ClawConveyorScroll",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ },
+ "ConveyorBeltAnim": {
+  "default": "Start",
+  "states": {
+   "Move": {
+    "clip": "ConveyorBelt/ConveyorBeltMove",
+    "speed": 1
+   },
+   "Start": {
+    "speed": 1
+   }
+  }
+ }
+}
