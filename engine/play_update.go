@@ -96,7 +96,7 @@ func (a *App) judgePress(t, beat float64, release bool, action int) {
 	var best *Input
 	bestDiff := math.Inf(1)
 	for _, in := range a.inputs {
-		if in.judged || in.Release != release || in.Action != action {
+		if in.judged || in.Release != release || (in.Action != action && in.Action != -1) {
 			continue
 		}
 		if in.CanHit != nil && !in.CanHit() {

@@ -35,6 +35,7 @@ import (
 	"hsdemo/games/cointoss"
 	"hsdemo/games/cropstomp"
 	"hsdemo/games/dogninja"
+	"hsdemo/games/dressyourbest"
 	"hsdemo/games/drummingpractice"
 	"hsdemo/games/fallingwaffle"
 	"hsdemo/games/fireworks"
@@ -148,6 +149,7 @@ func main() {
 	engine.Register("coinToss", cointoss.New)
 	engine.Register("cropStomp", cropstomp.New)
 	engine.Register("dogNinja", dogninja.New)
+	engine.Register("dressYourBest", dressyourbest.New)
 	engine.Register("drummingPractice", drummingpractice.New)
 	engine.Register("fireworks", fireworks.New)
 	engine.Register("fallingWaffle", fallingwaffle.New)

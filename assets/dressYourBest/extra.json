@@ -1,0 +1,70 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "refs": {
+    "bgSpriteRenderer": "Old BG Placeholder",
+    "cameoAnim": "Background/Cameo",
+    "girlAnim": "Girl",
+    "lightMaterialTemplate": "LightMat",
+    "lightRenderer": "SewingMachine/Light",
+    "monkeyAnim": "Monkey",
+    "newBG": "Background",
+    "reactionAnim": "Reaction",
+    "sewingAnim": "SewingMachine"
+   },
+   "lists": {
+    "lightStates": [
+     {
+      "nums": {
+       "inside.a": 0,
+       "inside.b": 1,
+       "inside.g": 0.9450981,
+       "inside.r": 0.62352943,
+       "outside.a": 0,
+       "outside.b": 0.9921569,
+       "outside.g": 0.7960785,
+       "outside.r": 0.63529414
+      }
+     },
+     {
+      "nums": {
+       "inside.a": 0,
+       "inside.b": 0.011764706,
+       "inside.g": 0.92156863,
+       "inside.r": 0.91764706,
+       "outside.a": 0,
+       "outside.b": 0.03137255,
+       "outside.g": 0.8039216,
+       "outside.r": 0.9372549
+      }
+     },
+     {
+      "nums": {
+       "inside.a": 0,
+       "inside.b": 0.23529412,
+       "inside.g": 1,
+       "inside.r": 0,
+       "outside.a": 0,
+       "outside.b": 0.29803923,
+       "outside.g": 0.7254902,
+       "outside.r": 0.27450982
+      }
+     },
+     {
+      "nums": {
+       "inside.a": 0,
+       "inside.b": 0,
+       "inside.g": 0,
+       "inside.r": 1,
+       "outside.a": 0,
+       "outside.b": 0.12615699,
+       "outside.g": 0.12615699,
+       "outside.r": 0.764151
+      }
+     }
+    ]
+   }
+  }
+ }
+}

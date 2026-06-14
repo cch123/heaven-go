@@ -1,0 +1,10 @@
+{
+ "bgSpriteRenderer": "Old BG Placeholder",
+ "cameoAnim": "Background/Cameo",
+ "girlAnim": "Girl",
+ "lightRenderer": "SewingMachine/Light",
+ "monkeyAnim": "Monkey",
+ "newBG": "Background",
+ "reactionAnim": "Reaction",
+ "sewingAnim": "SewingMachine"
+}

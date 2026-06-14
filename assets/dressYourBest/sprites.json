@@ -1,0 +1,808 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "BG_sheet_0": {
+   "X": 138,
+   "Y": 240,
+   "W": 77,
+   "H": 111,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_1": {
+   "X": 351,
+   "Y": 98,
+   "W": 220,
+   "H": 390,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_10": {
+   "X": 79,
+   "Y": 854,
+   "W": 101,
+   "H": 256,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_11": {
+   "X": 892,
+   "Y": 1113,
+   "W": 393,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_12": {
+   "X": 1449,
+   "Y": 1480,
+   "W": 584,
+   "H": 556,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_13": {
+   "X": 53,
+   "Y": 1132,
+   "W": 392,
+   "H": 419,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_14": {
+   "X": 485,
+   "Y": 1122,
+   "W": 393,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_15": {
+   "X": 58,
+   "Y": 1582,
+   "W": 392,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_16": {
+   "X": 481,
+   "Y": 1582,
+   "W": 393,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_17": {
+   "X": 899,
+   "Y": 1577,
+   "W": 393,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_19": {
+   "X": 1442,
+   "Y": 922,
+   "W": 544,
+   "H": 520,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_2": {
+   "X": 687,
+   "Y": 58,
+   "W": 610,
+   "H": 285,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_3": {
+   "X": 1457,
+   "Y": 239,
+   "W": 531,
+   "H": 32,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_4": {
+   "X": 70,
+   "Y": 677,
+   "W": 142,
+   "H": 133,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_5": {
+   "X": 333,
+   "Y": 654,
+   "W": 151,
+   "H": 158,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_6": {
+   "X": 607,
+   "Y": 658,
+   "W": 152,
+   "H": 167,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_7": {
+   "X": 876,
+   "Y": 575,
+   "W": 179,
+   "H": 232,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_8": {
+   "X": 1171,
+   "Y": 654,
+   "W": 155,
+   "H": 151,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_sheet_9": {
+   "X": 1467,
+   "Y": 396,
+   "W": 511,
+   "H": 467,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_0": {
+   "X": 188,
+   "Y": 165,
+   "W": 595,
+   "H": 560,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_1": {
+   "X": 1707,
+   "Y": 93,
+   "W": 547,
+   "H": 2679,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_10": {
+   "X": 2291,
+   "Y": 916,
+   "W": 768,
+   "H": 761,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_11": {
+   "X": 1022,
+   "Y": 1096,
+   "W": 368,
+   "H": 313,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_15": {
+   "X": 209,
+   "Y": 1742,
+   "W": 601,
+   "H": 560,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_16": {
+   "X": 937,
+   "Y": 1606,
+   "W": 655,
+   "H": 595,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_17": {
+   "X": 3197,
+   "Y": 2552,
+   "W": 803,
+   "H": 780,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_18": {
+   "X": 3221,
+   "Y": 1726,
+   "W": 803,
+   "H": 780,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_19": {
+   "X": 1132,
+   "Y": 2355,
+   "W": 281,
+   "H": 474,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_2": {
+   "X": 2292,
+   "Y": 64,
+   "W": 767,
+   "H": 761,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_20": {
+   "X": 2380,
+   "Y": 2040,
+   "W": 102,
+   "H": 146,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_21": {
+   "X": 2544,
+   "Y": 2022,
+   "W": 94,
+   "H": 229,
+   "PivotX": 0.46207368,
+   "PivotY": 0.97140914,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_22": {
+   "X": 2741,
+   "Y": 2023,
+   "W": 81,
+   "H": 227,
+   "PivotX": 0.4360314,
+   "PivotY": 0.9706009,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_23": {
+   "X": 2895,
+   "Y": 2022,
+   "W": 118,
+   "H": 213,
+   "PivotX": 0.47064784,
+   "PivotY": 0.9755932,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_24": {
+   "X": 3083,
+   "Y": 2022,
+   "W": 76,
+   "H": 213,
+   "PivotX": 0.48758194,
+   "PivotY": 0.9726634,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_25": {
+   "X": 2421,
+   "Y": 2303,
+   "W": 36,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_26": {
+   "X": 2507,
+   "Y": 2354,
+   "W": 172,
+   "H": 51,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_28": {
+   "X": 219,
+   "Y": 2591,
+   "W": 597,
+   "H": 557,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_29": {
+   "X": 1084,
+   "Y": 2933,
+   "W": 408,
+   "H": 362,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_3": {
+   "X": 1790,
+   "Y": 2970,
+   "W": 380,
+   "H": 230,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_30": {
+   "X": 2407,
+   "Y": 2567,
+   "W": 613,
+   "H": 605,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_33": {
+   "X": 1044,
+   "Y": 3382,
+   "W": 491,
+   "H": 450,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_34": {
+   "X": 2315,
+   "Y": 3287,
+   "W": 612,
+   "H": 437,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_35": {
+   "X": 3051,
+   "Y": 3371,
+   "W": 874,
+   "H": 598,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_4": {
+   "X": 3215,
+   "Y": 52,
+   "W": 803,
+   "H": 780,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_5": {
+   "X": 3205,
+   "Y": 881,
+   "W": 813,
+   "H": 778,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_6": {
+   "X": 1000,
+   "Y": 321,
+   "W": 478,
+   "H": 359,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_7": {
+   "X": 198,
+   "Y": 955,
+   "W": 596,
+   "H": 558,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_8": {
+   "X": 999,
+   "Y": 756,
+   "W": 221,
+   "H": 240,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_spritesheet_9": {
+   "X": 1313,
+   "Y": 799,
+   "W": 362,
+   "H": 197,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 150.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "DYB_walls": {
+   "X": 0,
+   "Y": 0,
+   "W": 6000,
+   "H": 2256,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ref": {
+   "X": 0,
+   "Y": 0,
+   "W": 3639,
+   "H": 2256,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

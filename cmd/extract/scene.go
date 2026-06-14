@@ -212,6 +212,19 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"captainAnim", "bird1Anim", "bird2Anim", "bird3Anim", "memoryImage", "gradientMat", "CaptainTransform", "BirdTransform"}},
 		},
 	},
+	"dressYourBest": {
+		dir:    "DressYourBest",
+		prefab: "dressYourBest.prefab",
+		roleFields: []string{
+			"girlAnim", "monkeyAnim", "sewingAnim", "reactionAnim", "cameoAnim",
+			"newBG", "bgSpriteRenderer", "lightRenderer",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"nearMiss.ogg"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"girlAnim", "monkeyAnim", "sewingAnim", "reactionAnim", "cameoAnim", "newBG", "bgSpriteRenderer", "lightRenderer", "lightMaterialTemplate", "lightStates"}},
+		},
+	},
 	"catchyTune": {
 		dir:    "CatchyTune",
 		prefab: "catchyTune.prefab",
@@ -1680,6 +1693,12 @@ func dumpItem(field string, im map[string]any,
 				}
 			} else if _, hasX := itv["x"]; hasX {
 				for _, axis := range []string{"x", "y", "z", "w"} {
+					if av, ok := itv[axis]; ok {
+						item.Nums[ik+"."+axis] = uy.F(av)
+					}
+				}
+			} else if _, hasR := itv["r"]; hasR {
+				for _, axis := range []string{"r", "g", "b", "a"} {
 					if av, ok := itv[axis]; ok {
 						item.Nums[ik+"."+axis] = uy.F(av)
 					}

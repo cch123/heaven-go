@@ -1,0 +1,125 @@
+{
+ "Cameo": {
+  "default": "CameoIdle",
+  "states": {
+   "CameoIdle": {
+    "clip": "BG/CameoIdle",
+    "speed": 1
+   },
+   "CameoWalk1": {
+    "clip": "BG/CameoWalk1",
+    "speed": 1
+   },
+   "CameoWalk2": {
+    "clip": "BG/CameoWalk2",
+    "speed": 1
+   },
+   "CameoWalk3": {
+    "clip": "BG/CameoWalk3",
+    "speed": 1
+   },
+   "CameoWalk4": {
+    "clip": "BG/CameoWalk4",
+    "speed": 1
+   },
+   "CameoWalk5": {
+    "clip": "BG/CameoWalk5",
+    "speed": 1
+   }
+  }
+ },
+ "GirlAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Girl/GirlBop",
+    "speed": 1
+   },
+   "Happy": {
+    "clip": "Faces/GirlCorrect",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Faces/GirlDefault",
+    "speed": 1
+   },
+   "Looking": {
+    "clip": "Faces/GirlLooking",
+    "speed": 1
+   },
+   "Sad": {
+    "clip": "Faces/GirlIncorrect",
+    "speed": 1
+   }
+  }
+ },
+ "LightAnim": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "MonkeyAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Monkey/MonkeyBop",
+    "speed": 1
+   },
+   "Call": {
+    "clip": "Monkey/MonkeyCall",
+    "speed": 1
+   },
+   "CallFace": {
+    "clip": "Faces/MonkeyCallFace",
+    "speed": 1
+   },
+   "Happy": {
+    "clip": "Faces/MonkeyCorrect",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Faces/MonkeyDefault",
+    "speed": 1
+   },
+   "Sad": {
+    "clip": "Faces/MonkeyIncorrect",
+    "speed": 1
+   }
+  }
+ },
+ "ReactionAnim": {
+  "default": "Idle",
+  "states": {
+   "Correct": {
+    "clip": "Reaction/ReactionCorrect",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Incorrect": {
+    "clip": "Reaction/ReactionIncorrect",
+    "speed": 1
+   }
+  }
+ },
+ "SewingMachineAnim": {
+  "default": "Idle",
+  "states": {
+   "Hit": {
+    "clip": "SewingMachine/Sew",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "SewingMachine/SewNot",
+    "speed": 1
+   }
+  }
+ }
+}

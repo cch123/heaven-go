@@ -13,6 +13,13 @@ func (c *Ctx) ScheduleInputAction(beat float64, action int, onHit func(state flo
 	return c.App.scheduleInput(beat, false, action, onHit, onMiss)
 }
 
+// ScheduleInputAny registers a press window consumed by any press action.
+// Dress Your Best's IA_PadAny accepts all D-pad/cardinal buttons as the same
+// sewing input; one shared window avoids duplicate misses from four channels.
+func (c *Ctx) ScheduleInputAny(beat float64, onHit func(state float64, j Judgment), onMiss func()) *Input {
+	return c.App.scheduleInput(beat, false, -1, onHit, onMiss)
+}
+
 // ScheduleInputActionCond registers a non-primary press window with an
 // optional can-hit predicate. Multi-action games use this to keep their late
 // windows from leaking across a switchGame boundary.
