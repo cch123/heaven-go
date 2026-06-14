@@ -1,0 +1,83 @@
+{
+ "bm_assistant": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Assistant/Bop",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Assistant/Idle",
+    "speed": 1
+   },
+   "MissBop": {
+    "clip": "Assistant/MissBop",
+    "speed": 1
+   },
+   "MissIdle": {
+    "clip": "Assistant/MissIdle",
+    "speed": 1
+   },
+   "One": {
+    "clip": "Assistant/One",
+    "speed": 1
+   },
+   "Stop": {
+    "clip": "Assistant/Stop",
+    "speed": 1
+   },
+   "Three": {
+    "clip": "Assistant/Three",
+    "speed": 1
+   }
+  }
+ },
+ "bm_executive": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Executive/Bop",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Executive/Idle",
+    "speed": 1
+   },
+   "LoopSpin": {
+    "clip": "Executive/LoopSpin",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Executive/Miss",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Executive/Prepare",
+    "speed": 1
+   },
+   "SmileBop": {
+    "clip": "Executive/SmileBop",
+    "speed": 1
+   },
+   "SmileIdle": {
+    "clip": "Executive/SmileIdle",
+    "speed": 1
+   },
+   "Spin": {
+    "clip": "Executive/Spin",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "LoopSpin",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Stop": {
+    "clip": "Executive/Stop",
+    "speed": 1
+   }
+  }
+ }
+}

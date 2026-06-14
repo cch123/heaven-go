@@ -1,0 +1,6 @@
+{
+ "BirdAnim": "BirdFull",
+ "CutEverythingText": "BirdFull/CutEverythingSign/textstuffs",
+ "DogAnim": "Dog",
+ "ObjectBase": "Holders/ObjectHolder/ThrownObject"
+}

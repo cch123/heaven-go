@@ -1,0 +1,27 @@
+{
+ "components": {
+  "fly": {
+   "path": "Fly",
+   "nums": {
+    "lengthBeat": 0,
+    "startBeat": 0
+   },
+   "refs": {
+    "flyAnim": "Fly",
+    "wingAnim": "Fly/wing"
+   }
+  },
+  "game": {
+   "path": "",
+   "refs": {
+    "Crown": "Chameleon/head/crown",
+    "baseFly": "Fly",
+    "bgHigh": "BGContainer/Back/BGHigh",
+    "bgLow": "BGContainer/Back/BGLow",
+    "chameleonAnim": "Chameleon",
+    "chameleonEye": "Chameleon/head/eye",
+    "gradient": "BGContainer/Back/Gradient"
+   }
+  }
+ }
+}

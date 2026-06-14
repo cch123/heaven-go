@@ -1,0 +1,22 @@
+[
+ {
+  "path": "Sign/SignContents/customText",
+  "text": "WWWWWWWWWW",
+  "size": 6,
+  "color": [
+   1,
+   1,
+   0.09411765,
+   1
+  ],
+  "order": 20,
+  "layer": 0,
+  "font": "FOT-KurokaneStd_Megamix_Modified-EB.otf",
+  "rect": [
+   7.04126,
+   0.91385
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]

@@ -1,0 +1,43 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "refs": {
+    "audienceAnim": "BgObjects/audience",
+    "curtainAnim": "BgObjects/Curtain",
+    "pauline": "PaulineObjects",
+    "tram": "TramObjects"
+   }
+  },
+  "kid0": {
+   "path": "PaulineObjects",
+   "nums": {
+    "jumpHeight": 5,
+    "jumpHeightIdle": 1,
+    "prepareHeight": 0.2
+   },
+   "refs": {
+    "bodyAnim": "PaulineObjects/PaulineRoot/Pauline",
+    "rootBody": "PaulineObjects/PaulineRoot",
+    "smokeParticle": "PaulineObjects/PaulineRoot/Pauline/Particle/Smoke",
+    "trampolineAnim": "PaulineObjects/TrampolineRight",
+    "transformParticle": "PaulineObjects/PaulineRoot/Pauline/Particle"
+   }
+  },
+  "kid1": {
+   "path": "TramObjects",
+   "nums": {
+    "jumpHeight": 5,
+    "jumpHeightIdle": 1,
+    "prepareHeight": 0.2
+   },
+   "refs": {
+    "bodyAnim": "TramObjects/TramRoot/Tram",
+    "rootBody": "TramObjects/TramRoot",
+    "smokeParticle": "TramObjects/TramRoot/Tram/Particle/Smoke",
+    "trampolineAnim": "TramObjects/TrampolineLeft",
+    "transformParticle": "TramObjects/TramRoot/Tram/Particle"
+   }
+  }
+ }
+}

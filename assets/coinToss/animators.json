@@ -1,0 +1,7 @@
+{
+ "ArmHolder": "CTHolder",
+ "ArmHolder/Arm": "CoinTossController",
+ "Image": "CTImageAnim",
+ "ManHolder": "CTManHolder",
+ "ManHolder/ManArm": "CoinTossManController"
+}

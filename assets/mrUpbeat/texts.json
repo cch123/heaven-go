@@ -1,0 +1,22 @@
+[
+ {
+  "path": "Letter",
+  "text": "R",
+  "size": 5,
+  "color": [
+   0.99607843,
+   0.99607843,
+   0.8039216,
+   1
+  ],
+  "order": 1337,
+  "layer": 0,
+  "font": "FOT-Rodin Pro DB.otf",
+  "rect": [
+   1,
+   1
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]

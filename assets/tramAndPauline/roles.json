@@ -1,0 +1,6 @@
+{
+ "audienceAnim": "BgObjects/audience",
+ "curtainAnim": "BgObjects/Curtain",
+ "pauline": "PaulineObjects",
+ "tram": "TramObjects"
+}

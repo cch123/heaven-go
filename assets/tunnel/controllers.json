@@ -1,0 +1,68 @@
+{
+ "BeachBG": {
+  "default": "Far",
+  "states": {
+   "Far": {
+    "clip": "Animation/BeachFar",
+    "speed": 1
+   },
+   "Near": {
+    "clip": "Animation/Beach",
+    "speed": 1
+   }
+  }
+ },
+ "Cowbell": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "Shake": {
+    "clip": "Animations/Shake",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Driver": {
+  "default": "Idle",
+  "states": {
+   "Angry1": {
+    "clip": "Animations/Angry1",
+    "speed": 1
+   },
+   "Angry2": {
+    "clip": "Animations/Angry2",
+    "speed": 1
+   },
+   "Disturbed": {
+    "clip": "Animations/Disturbed",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Idle2": {
+    "clip": "Animations/Idle2",
+    "speed": 1
+   }
+  }
+ },
+ "Driver_Arms": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animations/Arms_Idle",
+    "speed": 1
+   }
+  }
+ }
+}

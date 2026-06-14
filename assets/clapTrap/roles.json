@@ -1,0 +1,23 @@
+{
+ "Background": "background",
+ "bg": "background",
+ "clapEffect": "clapTrapDoll/clapEffect",
+ "doll": "clapTrapDoll",
+ "dollArms": "clapTrapDoll/arms",
+ "dollBody": "clapTrapDoll/body",
+ "dollHead": "clapTrapDoll/dollHead",
+ "shadowHead": "clapTrapDoll/dollHead/head/shadow",
+ "shadowLeftArm": "clapTrapDoll/arms/armLeft/shadow",
+ "shadowLeftGlove": "clapTrapDoll/arms/armLeft/glove/shadow",
+ "shadowLeftGloveRim": "clapTrapDoll/arms/armLeft/glove/gloveRim/shadow",
+ "shadowRightArm": "clapTrapDoll/arms/armRight/shadow",
+ "shadowRightGlove": "clapTrapDoll/arms/armRight/glove/shadow",
+ "shadowRightGloveRim": "clapTrapDoll/arms/armRight/glove/gloveRim/shadow",
+ "spotlight": "spotlight",
+ "stageLeft": "clapTrapDoll/arms/armLeft/glove",
+ "stageLeftRim": "clapTrapDoll/arms/armLeft/glove/gloveRim",
+ "stageRight": "clapTrapDoll/arms/armRight/glove",
+ "stageRightRim": "clapTrapDoll/arms/armRight/glove/gloveRim",
+ "sword": "sword/sword",
+ "swordObj": "sword/sword"
+}

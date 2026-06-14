@@ -1,0 +1,450 @@
+{
+ "nodes": [
+  {
+   "name": "mrUpbeat",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    69,
+    42
+   ],
+   "order": -32768,
+   "color": [
+    0.8784314,
+    0.8784314,
+    0.8784314,
+    1
+   ],
+   "size": [
+    2.84,
+    1.6
+   ]
+  },
+  {
+   "name": "Metronome",
+   "path": "Metronome",
+   "parent": 0,
+   "pos": [
+    0,
+    -2.623
+   ],
+   "rotZ": 3.6651912652641023,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "mrupbeat_metronome",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.75,
+    0.8611111
+   ]
+  },
+  {
+   "name": "Letter",
+   "path": "Letter",
+   "parent": 0,
+   "pos": [
+    -0.6750004,
+    3.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MrUpbeat",
+   "path": "MrUpbeat",
+   "parent": 0,
+   "pos": [
+    0,
+    0.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ShadowL",
+   "path": "MrUpbeat/ShadowL",
+   "parent": 4,
+   "pos": [
+    -0.561,
+    0.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_shadow_left",
+   "order": -2,
+   "color": [
+    0.12,
+    0,
+    0,
+    0.18039216
+   ],
+   "size": [
+    1.9583334,
+    1.6041666
+   ]
+  },
+  {
+   "name": "ShadowR",
+   "path": "MrUpbeat/ShadowR",
+   "parent": 4,
+   "pos": [
+    -0.561,
+    0.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "mrupbeat_shadow_right",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    0.12156863,
+    0,
+    0,
+    0.18039216
+   ],
+   "size": [
+    1.9583334,
+    1.6041666
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "MrUpbeat/Holder",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "MrUpbeat/Holder/Body",
+   "parent": 7,
+   "pos": [
+    -0.5,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_step_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1250002,
+    2.1041813
+   ]
+  },
+  {
+   "name": "StepSmearHead",
+   "path": "MrUpbeat/Holder/Body/StepSmearHead",
+   "parent": 8,
+   "pos": [
+    0.32,
+    1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_smear_fx_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.2916667,
+    1.1041666
+   ]
+  },
+  {
+   "name": "StepSmearFoot",
+   "path": "MrUpbeat/Holder/Body/StepSmearFoot",
+   "parent": 8,
+   "pos": [
+    0.81,
+    0.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_smear_fx_2",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.2916667,
+    1.1041666
+   ]
+  },
+  {
+   "name": "FallSmear",
+   "path": "MrUpbeat/Holder/Body/FallSmear",
+   "parent": 8,
+   "pos": [
+    0,
+    0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_smear_fx_1",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.2916667,
+    1.1041666
+   ]
+  },
+  {
+   "name": "FallFX",
+   "path": "MrUpbeat/Holder/Body/FallFX",
+   "parent": 8,
+   "pos": [
+    0.556,
+    -0.074
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_miss_fx",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.2916667,
+    1.1041666
+   ]
+  },
+  {
+   "name": "ShadowFall",
+   "path": "MrUpbeat/Holder/Body/ShadowFall",
+   "parent": 8,
+   "pos": [
+    0.523,
+    0.016
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_shadow_fall",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    0.1215686,
+    0,
+    0,
+    0.18039216
+   ],
+   "size": [
+    2.1250002,
+    0.77083874
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "MrUpbeat/Holder/Head",
+   "parent": 7,
+   "pos": [
+    -0.675,
+    1.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_head_normal",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2916666,
+    1.2708334
+   ]
+  },
+  {
+   "name": "Antenna",
+   "path": "MrUpbeat/Holder/Head/Antenna",
+   "parent": 14,
+   "pos": [
+    0,
+    0.39
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_antenna",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.125,
+    0.9375
+   ]
+  },
+  {
+   "name": "AntennaLight",
+   "path": "MrUpbeat/Holder/Head/Antenna/AntennaLight",
+   "parent": 15,
+   "pos": [
+    0.008000017,
+    9.313226e-10
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mrupbeat_antenna_light_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9583333,
+    0.9375
+   ],
+   "mapped": true,
+   "mat": "blip"
+  }
+ ]
+}

@@ -1,0 +1,1675 @@
+{
+ "nodes": [
+  {
+   "name": "bouncyRoad",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ref",
+   "path": "ref",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3888888,
+    1.38888
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    0,
+    0.5686275
+   ],
+   "size": [
+    12,
+    7.2
+   ]
+  },
+  {
+   "name": "test",
+   "path": "test",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -10,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ball",
+   "path": "Ball",
+   "parent": 0,
+   "pos": [
+    -11.26,
+    -2.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "Ball",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.24
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "BG/Gradient",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    181.82,
+    2.1424723
+   ],
+   "sprite": "Gradient (Prolly will be replaced)",
+   "order": -999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.44,
+    15.36
+   ],
+   "mapped": true,
+   "mat": "BouncyBg"
+  },
+  {
+   "name": "High",
+   "path": "BG/High",
+   "parent": 4,
+   "pos": [
+    0,
+    40
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    200,
+    50
+   ],
+   "order": -1000,
+   "color": [
+    0.003921569,
+    0.59607846,
+    0.99607843,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Low",
+   "path": "BG/Low",
+   "parent": 4,
+   "pos": [
+    0,
+    -40
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    200,
+    50
+   ],
+   "order": -1000,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "curveBounce",
+   "path": "curveBounce",
+   "parent": 0,
+   "pos": [
+    0,
+    0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "curveBounce/Point 0",
+   "parent": 8,
+   "pos": [
+    -20,
+    10.5
+   ],
+   "z": 14,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "curveBounce/Point 1",
+   "parent": 8,
+   "pos": [
+    -12.12,
+    10.15
+   ],
+   "z": 13,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PosCurve",
+   "path": "PosCurve",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "PosCurve/Point 0",
+   "parent": 11,
+   "pos": [
+    -20,
+    10.45
+   ],
+   "z": 14,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "PosCurve/Point 1",
+   "parent": 11,
+   "pos": [
+    11.3,
+    3.1
+   ],
+   "z": 6,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "PosCurve/Point 2",
+   "parent": 11,
+   "pos": [
+    -8.95,
+    -2.75
+   ],
+   "z": 0.5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Things",
+   "path": "Things",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing (1)",
+   "path": "Things/Thing (1)",
+   "parent": 15,
+   "pos": [
+    -20,
+    10.45
+   ],
+   "z": 14,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (1)/Thing Top",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (1)/Thing",
+   "parent": 16,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (2)",
+   "path": "Things/Thing (2)",
+   "parent": 15,
+   "pos": [
+    -12.12,
+    9.95
+   ],
+   "z": 13,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (2)/Thing Top",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (2)/Thing",
+   "parent": 19,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (3)",
+   "path": "Things/Thing (3)",
+   "parent": 15,
+   "pos": [
+    -5.45,
+    9.3
+   ],
+   "z": 12,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (3)/Thing Top",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (3)/Thing",
+   "parent": 22,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (4)",
+   "path": "Things/Thing (4)",
+   "parent": 15,
+   "pos": [
+    0,
+    8.5
+   ],
+   "z": 11,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (4)/Thing Top",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (4)/Thing",
+   "parent": 25,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (5)",
+   "path": "Things/Thing (5)",
+   "parent": 15,
+   "pos": [
+    4.35,
+    7.6
+   ],
+   "z": 10,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (5)/Thing Top",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (5)/Thing",
+   "parent": 28,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (6)",
+   "path": "Things/Thing (6)",
+   "parent": 15,
+   "pos": [
+    7.6,
+    6.6
+   ],
+   "z": 9,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (6)/Thing Top",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (6)/Thing",
+   "parent": 31,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (7)",
+   "path": "Things/Thing (7)",
+   "parent": 15,
+   "pos": [
+    9.9,
+    5.5
+   ],
+   "z": 8,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (7)/Thing Top",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (7)/Thing",
+   "parent": 34,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (8)",
+   "path": "Things/Thing (8)",
+   "parent": 15,
+   "pos": [
+    11.1,
+    4.3
+   ],
+   "z": 7,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (8)/Thing Top",
+   "parent": 37,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (8)/Thing",
+   "parent": 37,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (9)",
+   "path": "Things/Thing (9)",
+   "parent": 15,
+   "pos": [
+    11.3,
+    3.1
+   ],
+   "z": 6,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (9)/Thing Top",
+   "parent": 40,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (9)/Thing",
+   "parent": 40,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (10)",
+   "path": "Things/Thing (10)",
+   "parent": 15,
+   "pos": [
+    10.4,
+    1.9
+   ],
+   "z": 5,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (10)/Thing Top",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (10)/Thing",
+   "parent": 43,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (11)",
+   "path": "Things/Thing (11)",
+   "parent": 15,
+   "pos": [
+    8.4,
+    0.7
+   ],
+   "z": 4,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (11)/Thing Top",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (11)/Thing",
+   "parent": 46,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "Thing (12)",
+   "path": "Things/Thing (12)",
+   "parent": 15,
+   "pos": [
+    5.35,
+    -0.35
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (12)/Thing Top",
+   "parent": 49,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (12)/Thing",
+   "parent": 49,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "A Button Thing",
+   "path": "Things/A Button Thing",
+   "parent": 15,
+   "pos": [
+    1.4,
+    -1.3
+   ],
+   "z": 2.5,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/A Button Thing/Thing Top",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "A Button Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/A Button Thing/Thing",
+   "parent": 52,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "A Button Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    9.18
+   ]
+  },
+  {
+   "name": "D-Pad Thing",
+   "path": "Things/D-Pad Thing",
+   "parent": 15,
+   "pos": [
+    -3.6,
+    -2.15
+   ],
+   "z": 1.75,
+   "rotZ": 0,
+   "scale": [
+    1.4999999,
+    1.4999999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/D-Pad Thing/Thing Top",
+   "parent": 55,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "D-Pad Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/D-Pad Thing/Thing",
+   "parent": 55,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "D-Pad Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    9.18
+   ]
+  },
+  {
+   "name": "Thing (15)",
+   "path": "Things/Thing (15)",
+   "parent": 15,
+   "pos": [
+    -8.95,
+    -2.75
+   ],
+   "z": 0.5,
+   "rotZ": 0,
+   "scale": [
+    1.4999998,
+    1.4999998
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Thing Top",
+   "path": "Things/Thing (15)/Thing Top",
+   "parent": 58,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing Top",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.27
+   ]
+  },
+  {
+   "name": "Thing",
+   "path": "Things/Thing (15)/Thing",
+   "parent": 58,
+   "pos": [
+    0,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "Thing",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    0.82
+   ]
+  },
+  {
+   "name": "CurveHolder_1",
+   "path": "CurveHolder_1",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

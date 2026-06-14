@@ -1,0 +1,87 @@
+{
+ "Alalin and plalin": {
+  "default": "idle",
+  "states": {
+   "bop": {
+    "clip": "Characters/bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "catchOrange": {
+    "clip": "Characters/catch orange",
+    "speed": 1
+   },
+   "catchPineapple": {
+    "clip": "Characters/catch pineapple",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Characters/idle",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "bop",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "bop"
+       }
+      ],
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   },
+   "missOrange": {
+    "clip": "Characters/miss",
+    "speed": 1
+   },
+   "missPineapple": {
+    "clip": "Characters/miss pineapple",
+    "speed": 1
+   },
+   "smile": {
+    "clip": "Characters/smile",
+    "speed": 1
+   },
+   "stopsmile": {
+    "clip": "Characters/stopsmile",
+    "speed": 1
+   },
+   "whiff": {
+    "clip": "Characters/whiff",
+    "speed": 1
+   }
+  }
+ },
+ "orange": {
+  "default": "still",
+  "states": {
+   "barely": {
+    "clip": "Fruit/fruit barely",
+    "speed": 1
+   },
+   "fruit bounce": {
+    "clip": "Fruit/orange bounce",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "still",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "still": {
+    "clip": "Characters/still",
+    "speed": 1
+   }
+  }
+ }
+}

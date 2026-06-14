@@ -1,0 +1,906 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "wizardswaltz_bg": {
+   "X": 0,
+   "Y": 0,
+   "W": 284,
+   "H": 160,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 16,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_bg_new": {
+   "X": 0,
+   "Y": 0,
+   "W": 1024,
+   "H": 512,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_bg_new - Copy": {
+   "X": 0,
+   "Y": 0,
+   "W": 1024,
+   "H": 512,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_chew_0": {
+   "X": 689,
+   "Y": 751,
+   "W": 114,
+   "H": 162,
+   "PivotX": 0.34210527,
+   "PivotY": 0.14814815,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_chew_1": {
+   "X": 805,
+   "Y": 751,
+   "W": 111,
+   "H": 162,
+   "PivotX": 0.32432434,
+   "PivotY": 0.14814815,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_evil_flower_0": {
+   "X": 685,
+   "Y": 112,
+   "W": 38,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_evil_flower_1": {
+   "X": 685,
+   "Y": 152,
+   "W": 38,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_evil_flower_2": {
+   "X": 685,
+   "Y": 192,
+   "W": 38,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_0": {
+   "X": 659,
+   "Y": 915,
+   "W": 90,
+   "H": 108,
+   "PivotX": 0.5,
+   "PivotY": 0.22222222,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_1": {
+   "X": 751,
+   "Y": 915,
+   "W": 90,
+   "H": 108,
+   "PivotX": 0.5,
+   "PivotY": 0.22222222,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_2": {
+   "X": 843,
+   "Y": 915,
+   "W": 90,
+   "H": 108,
+   "PivotX": 0.5,
+   "PivotY": 0.22222222,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_grow_0": {
+   "X": 1,
+   "Y": 825,
+   "W": 114,
+   "H": 198,
+   "PivotX": 0.5,
+   "PivotY": 0.18181819,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_grow_1": {
+   "X": 117,
+   "Y": 816,
+   "W": 126,
+   "H": 207,
+   "PivotX": 0.5,
+   "PivotY": 0.17391305,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_grow_2": {
+   "X": 245,
+   "Y": 825,
+   "W": 108,
+   "H": 198,
+   "PivotX": 0.5,
+   "PivotY": 0.16666667,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_grow_3": {
+   "X": 355,
+   "Y": 849,
+   "W": 99,
+   "H": 174,
+   "PivotX": 0.5151515,
+   "PivotY": 0.1724138,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_grow_4": {
+   "X": 456,
+   "Y": 858,
+   "W": 109,
+   "H": 165,
+   "PivotX": 0.49541283,
+   "PivotY": 0.18181817,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_flower_grow_5": {
+   "X": 567,
+   "Y": 918,
+   "W": 90,
+   "H": 105,
+   "PivotX": 0.5,
+   "PivotY": 0.22857144,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_0": {
+   "X": 921,
+   "Y": 1,
+   "W": 102,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_1": {
+   "X": 921,
+   "Y": 93,
+   "W": 102,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_2": {
+   "X": 921,
+   "Y": 185,
+   "W": 102,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_bop_0": {
+   "X": 921,
+   "Y": 369,
+   "W": 102,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_bop_1": {
+   "X": 921,
+   "Y": 277,
+   "W": 102,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_happy_0": {
+   "X": 817,
+   "Y": 1,
+   "W": 102,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_happy_1": {
+   "X": 817,
+   "Y": 93,
+   "W": 102,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_happy_2": {
+   "X": 817,
+   "Y": 185,
+   "W": 102,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_sad_0": {
+   "X": 725,
+   "Y": 1,
+   "W": 90,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_sad_1": {
+   "X": 725,
+   "Y": 93,
+   "W": 90,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_girl_sad_2": {
+   "X": 725,
+   "Y": 185,
+   "W": 90,
+   "H": 90,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_miss_0": {
+   "X": 114,
+   "Y": 667,
+   "W": 111,
+   "H": 147,
+   "PivotX": 0.32432434,
+   "PivotY": 0.1632653,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_miss_1": {
+   "X": 1,
+   "Y": 652,
+   "W": 111,
+   "H": 162,
+   "PivotX": 0.32432434,
+   "PivotY": 0.14814815,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_miss_2": {
+   "X": 227,
+   "Y": 649,
+   "W": 117,
+   "H": 165,
+   "PivotX": 0.35897437,
+   "PivotY": 0.14545454,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_miss_3": {
+   "X": 346,
+   "Y": 675,
+   "W": 109,
+   "H": 139,
+   "PivotX": 0.3211009,
+   "PivotY": 0.16546763,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_miss_4": {
+   "X": 457,
+   "Y": 691,
+   "W": 111,
+   "H": 123,
+   "PivotX": 0.32432434,
+   "PivotY": 0.19512194,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_miss_5": {
+   "X": 570,
+   "Y": 781,
+   "W": 117,
+   "H": 132,
+   "PivotX": 0.33333334,
+   "PivotY": 0.18181819,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_plant_0": {
+   "X": 131,
+   "Y": 572,
+   "W": 78,
+   "H": 75,
+   "PivotX": 0.5,
+   "PivotY": 0.32,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_plant_1": {
+   "X": 211,
+   "Y": 572,
+   "W": 78,
+   "H": 75,
+   "PivotX": 0.5,
+   "PivotY": 0.32,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_plant_2": {
+   "X": 291,
+   "Y": 572,
+   "W": 78,
+   "H": 75,
+   "PivotX": 0.5,
+   "PivotY": 0.32,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_plant_grow_0": {
+   "X": 371,
+   "Y": 647,
+   "W": 26,
+   "H": 26,
+   "PivotX": 0.5,
+   "PivotY": 0.3846154,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_plant_grow_1": {
+   "X": 1,
+   "Y": 590,
+   "W": 60,
+   "H": 57,
+   "PivotX": 0.5,
+   "PivotY": 0.36842105,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_plant_grow_2": {
+   "X": 63,
+   "Y": 572,
+   "W": 66,
+   "H": 75,
+   "PivotX": 0.5,
+   "PivotY": 0.32,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_shadow": {
+   "X": 477,
+   "Y": 1,
+   "W": 96,
+   "H": 54,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_small_flower_0": {
+   "X": 688,
+   "Y": 1,
+   "W": 35,
+   "H": 35,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_small_flower_1": {
+   "X": 688,
+   "Y": 38,
+   "W": 35,
+   "H": 35,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_small_flower_2": {
+   "X": 688,
+   "Y": 75,
+   "W": 35,
+   "H": 35,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_sparkle_fx_0": {
+   "X": 1,
+   "Y": 505,
+   "W": 68,
+   "H": 65,
+   "PivotX": 0.27941176,
+   "PivotY": 0.2923077,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_sparkle_fx_1": {
+   "X": 71,
+   "Y": 523,
+   "W": 56,
+   "H": 47,
+   "PivotX": 0.39285716,
+   "PivotY": 0.46808508,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_sparkle_fx_2": {
+   "X": 178,
+   "Y": 532,
+   "W": 50,
+   "H": 38,
+   "PivotX": 0.32,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_sparkle_fx_3": {
+   "X": 129,
+   "Y": 535,
+   "W": 47,
+   "H": 35,
+   "PivotX": 0.34042552,
+   "PivotY": 0.45714286,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_wand_fx_0": {
+   "X": 230,
+   "Y": 538,
+   "W": 32,
+   "H": 32,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_wand_fx_1": {
+   "X": 264,
+   "Y": 532,
+   "W": 38,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_wizard_0": {
+   "X": 1,
+   "Y": 1,
+   "W": 120,
+   "H": 111,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_wizard_1": {
+   "X": 1,
+   "Y": 114,
+   "W": 120,
+   "H": 111,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_wizard_2": {
+   "X": 1,
+   "Y": 227,
+   "W": 120,
+   "H": 111,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_wizard_turn_0": {
+   "X": 364,
+   "Y": 1,
+   "W": 111,
+   "H": 120,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_wizard_turn_1": {
+   "X": 245,
+   "Y": 1,
+   "W": 117,
+   "H": 117,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "wizardswaltz_wizard_turn_2": {
+   "X": 123,
+   "Y": 1,
+   "W": 119,
+   "H": 108,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 48,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

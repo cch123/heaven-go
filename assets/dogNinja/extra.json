@@ -1,0 +1,587 @@
+{
+ "curves": {
+  "halves0.fallLeftCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      1.1783247759999997,
+      -9.6252043146,
+      0
+     ],
+     "lh": [
+      1.27913235705,
+      -12.5079935246,
+      0
+     ],
+     "rh": [
+      1.077517194949999,
+      -6.742415104599999,
+      0
+     ]
+    },
+    {
+     "p": [
+      -1.2510000000000003,
+      0.8740998753999999,
+      0
+     ],
+     "lh": [
+      0.9139693818574126,
+      0.8395315884962641,
+      0
+     ],
+     "rh": [
+      -3.415969381857413,
+      0.9086681623037357,
+      0
+     ]
+    },
+    {
+     "p": [
+      -4.720271175,
+      -11.1442491946,
+      0
+     ],
+     "lh": [
+      -4.4454911777,
+      -8.0112178836,
+      0
+     ],
+     "rh": [
+      -4.995051172300001,
+      -14.277280505599999,
+      0
+     ]
+    }
+   ]
+  },
+  "halves0.fallRightCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -1.1794265560000001,
+      -9.6252043146,
+      0
+     ],
+     "lh": [
+      -1.2802341370499999,
+      -12.5079935246,
+      0
+     ],
+     "rh": [
+      -1.0786189749499995,
+      -6.742415104599999,
+      0
+     ]
+    },
+    {
+     "p": [
+      1.2498982199999995,
+      0.8740998753999999,
+      0
+     ],
+     "lh": [
+      -0.915071161857413,
+      0.8395315884962641,
+      0
+     ],
+     "rh": [
+      3.414867601857411,
+      0.9086681623037357,
+      0
+     ]
+    },
+    {
+     "p": [
+      4.719169395,
+      -11.1442491946,
+      0
+     ],
+     "lh": [
+      4.444389397699999,
+      -8.0112178836,
+      0
+     ],
+     "rh": [
+      4.9939493923,
+      -14.277280505599999,
+      0
+     ]
+    }
+   ]
+  },
+  "halves1.fallLeftCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      1.1590496365999994,
+      -9.0297401136,
+      0
+     ],
+     "lh": [
+      1.2704099787999992,
+      -11.5362678506,
+      0
+     ],
+     "rh": [
+      1.0476892943999996,
+      -6.5232123766,
+      0
+     ]
+    },
+    {
+     "p": [
+      -1.5593346794,
+      1.3368997864,
+      0
+     ],
+     "lh": [
+      1.090477243184182,
+      1.3560047530048172,
+      0
+     ],
+     "rh": [
+      -4.209146601984183,
+      1.3177948197951834,
+      0
+     ]
+    },
+    {
+     "p": [
+      -6.0714144934,
+      -9.5744461906,
+      0
+     ],
+     "lh": [
+      -5.7336116114,
+      -7.343602450600001,
+      0
+     ],
+     "rh": [
+      -6.4092173754,
+      -11.805289930599999,
+      0
+     ]
+    }
+   ]
+  },
+  "halves1.fallRightCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -1.16014969,
+      -9.0297401136,
+      0
+     ],
+     "lh": [
+      -1.2715100322000001,
+      -11.5362678506,
+      0
+     ],
+     "rh": [
+      -1.0487893478000005,
+      -6.5232123766,
+      0
+     ]
+    },
+    {
+     "p": [
+      1.558234626,
+      1.3368997864,
+      0
+     ],
+     "lh": [
+      -1.091577296584183,
+      1.3560047530048172,
+      0
+     ],
+     "rh": [
+      4.208046548584182,
+      1.3177948197951834,
+      0
+     ]
+    },
+    {
+     "p": [
+      6.070314439999999,
+      -9.5744461906,
+      0
+     ],
+     "lh": [
+      5.732511557999999,
+      -7.343602450600001,
+      0
+     ],
+     "rh": [
+      6.408117321999999,
+      -11.805289930599999,
+      0
+     ]
+    }
+   ]
+  },
+  "throwObject.BarelyLeftCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      0.37404334599999967,
+      -6.907137604,
+      0
+     ],
+     "lh": [
+      0.3792883210559994,
+      -9.577137426,
+      0
+     ],
+     "rh": [
+      0.3687983709439999,
+      -4.237137782,
+      0
+     ]
+    },
+    {
+     "p": [
+      -0.7614999999999998,
+      1.6840000000000002,
+      0
+     ],
+     "lh": [
+      0.238500084,
+      1.6840000000000002,
+      0
+     ],
+     "rh": [
+      -1.7615000839999997,
+      1.6840000000000002,
+      0
+     ]
+    },
+    {
+     "p": [
+      -2.4383988400000005,
+      -9.7551789,
+      0
+     ],
+     "lh": [
+      -2.3912776680700008,
+      -7.043316504,
+      0
+     ],
+     "rh": [
+      -2.485520011930001,
+      -12.467041296,
+      0
+     ]
+    }
+   ]
+  },
+  "throwObject.BarelyRightCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -0.1615433460000002,
+      -6.907137604,
+      0
+     ],
+     "lh": [
+      -0.16678832105600083,
+      -9.577137426,
+      0
+     ],
+     "rh": [
+      -0.15629837094400045,
+      -4.237137782,
+      0
+     ]
+    },
+    {
+     "p": [
+      0.9739999999999993,
+      1.6840000000000002,
+      0
+     ],
+     "lh": [
+      -0.026000084000000534,
+      1.6840000000000002,
+      0
+     ],
+     "rh": [
+      1.9740000839999992,
+      1.6840000000000002,
+      0
+     ]
+    },
+    {
+     "p": [
+      2.65089884,
+      -9.7551789,
+      0
+     ],
+     "lh": [
+      2.60377766807,
+      -7.043316504,
+      0
+     ],
+     "rh": [
+      2.69802001193,
+      -12.467041296,
+      0
+     ]
+    }
+   ]
+  },
+  "throwObject.LeftCurve": {
+   "sampling": 50,
+   "points": [
+    {
+     "p": [
+      -18.66987708,
+      -7.296532095000001,
+      0
+     ],
+     "lh": [
+      -21.157403405999997,
+      -10.870921259000003,
+      0
+     ],
+     "rh": [
+      -16.182350753999998,
+      -3.7221429310000005,
+      0
+     ]
+    },
+    {
+     "p": [
+      -5.002367799999999,
+      3.2635755600000005,
+      0
+     ],
+     "lh": [
+      -10.726072580791161,
+      3.247016054609002,
+      0
+     ],
+     "rh": [
+      0.7213369807911612,
+      3.2801350653909984,
+      0
+     ]
+    },
+    {
+     "p": [
+      9.20942988,
+      -7.554177749999999,
+      0
+     ],
+     "lh": [
+      6.680649117000001,
+      -3.5843036469999996,
+      0
+     ],
+     "rh": [
+      11.738210643,
+      -11.524051853,
+      0
+     ]
+    }
+   ]
+  },
+  "throwObject.RightCurve": {
+   "sampling": 50,
+   "points": [
+    {
+     "p": [
+      18.55307708,
+      -7.296532095000001,
+      0
+     ],
+     "lh": [
+      21.040603406000002,
+      -10.870921259000003,
+      0
+     ],
+     "rh": [
+      16.065550754,
+      -3.7221429310000005,
+      0
+     ]
+    },
+    {
+     "p": [
+      4.8855678,
+      3.2635755600000005,
+      0
+     ],
+     "lh": [
+      10.609272580791162,
+      3.247016054609002,
+      0
+     ],
+     "rh": [
+      -0.8381369807911607,
+      3.2801350653909984,
+      0
+     ]
+    },
+    {
+     "p": [
+      -9.052392900000001,
+      -7.55417686,
+      0
+     ],
+     "lh": [
+      -6.5236121370000015,
+      -3.584302757,
+      0
+     ],
+     "rh": [
+      -11.581173663000001,
+      -11.524050963,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "preparing": 0,
+    "queuePrepare": 0
+   },
+   "refs": {
+    "BirdAnim": "BirdFull",
+    "CutEverythingText": "BirdFull/CutEverythingSign/textstuffs",
+    "DogAnim": "Dog",
+    "ObjectBase": "Holders/ObjectHolder/ThrownObject",
+    "WhichObject": "Holders/ObjectHolder/ThrownObject"
+   },
+   "refArrays": {
+    "ObjectTypes": [
+     ""
+    ]
+   },
+   "spriteArrays": {
+    "ObjectTypes": [
+     "Apple_Full",
+     "Broccoli_Full",
+     "Carrot_Full",
+     "Cucumber_Full",
+     "Pepper_Full",
+     "Potato_Full",
+     "Bone_Full",
+     "Pan_Full",
+     "Tire_Full",
+     "Alien_Full",
+     "Pot_Full",
+     "Melon_Full",
+     "Mole_Full",
+     "Ball_Full",
+     "Meat_Full",
+     "Idol_Full",
+     "TacoBell_Full",
+     "WildBreath_Full"
+    ]
+   }
+  },
+  "halves0": {
+   "path": "Holders/HalvesHolder/HalvesLeftBase",
+   "nums": {
+    "lefty": 1,
+    "objPos.x": 0,
+    "objPos.y": 0,
+    "objPos.z": 0,
+    "rotSpeed": -140,
+    "startBeat": 0
+   },
+   "refs": {
+    "fallLeftCurve": "Holders/FallLeftCurves/LeftHalfCurveL",
+    "fallRightCurve": "Holders/FallRightCurves/LeftHalfCurveR",
+    "sr": "Holders/HalvesHolder/HalvesLeftBase"
+   }
+  },
+  "halves1": {
+   "path": "Holders/HalvesHolder/HalvesRightBase",
+   "nums": {
+    "lefty": 0,
+    "objPos.x": 0,
+    "objPos.y": 0,
+    "objPos.z": 0,
+    "rotSpeed": 140,
+    "startBeat": 0
+   },
+   "refs": {
+    "fallLeftCurve": "Holders/FallLeftCurves/RightHalfCurveL",
+    "fallRightCurve": "Holders/FallRightCurves/RightHalfCurveR",
+    "sr": "Holders/HalvesHolder/HalvesRightBase"
+   }
+  },
+  "throwObject": {
+   "path": "Holders/ObjectHolder/ThrownObject",
+   "nums": {
+    "direction": 0,
+    "fromLeft": 0,
+    "shouldSfx": 1,
+    "startBeat": 0,
+    "type": 0
+   },
+   "refs": {
+    "BarelyLeftCurve": "Holders/BarelyCurveGoLeft",
+    "BarelyRightCurve": "Holders/BarelyCurveGoRight",
+    "HalvesLeftBase": "Holders/HalvesHolder/HalvesLeftBase",
+    "HalvesRightBase": "Holders/HalvesHolder/HalvesRightBase",
+    "LeftCurve": "Holders/CurveFromLeft",
+    "RightCurve": "Holders/CurveFromRight"
+   },
+   "spriteArrays": {
+    "objectLeftHalves": [
+     "Apple_Left",
+     "Broccoli_Left",
+     "Carrot_Left",
+     "Cucumber_Left",
+     "Pepper_Left",
+     "Potato_Left",
+     "Bone_Left",
+     "Pan_Left",
+     "Tire_Left",
+     "Alien_Left",
+     "Pot_Left",
+     "Melon_Full",
+     "Mole_Left",
+     "Ball_Left",
+     "Meat_Left",
+     "Idol_Left",
+     "TacoBell_Left",
+     "WildBreath_Left"
+    ],
+    "objectRightHalves": [
+     "Apple_Right",
+     "Broccoli_Right",
+     "Carrot_Right",
+     "Cucumber_Right",
+     "Pepper_Right",
+     "Potato_Right",
+     "Bone_Right",
+     "Pan_Right",
+     "Tire_Right",
+     "Alien_Right",
+     "Pot_Right",
+     "Melon_Right",
+     "Mole_Right",
+     "Ball_Right",
+     "Meat_Right",
+     "Idol_Right",
+     "TacoBell_Right",
+     "WildBreath_Right"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,180 @@
+{
+ "CaptainTuck": {
+  "default": "CaptainIdle",
+  "states": {
+   "CaptainBop": {
+    "clip": "Animations/CaptainBop",
+    "speed": 1
+   },
+   "CaptainIdle": {
+    "clip": "Animations/CaptainIdle",
+    "speed": 1
+   },
+   "CaptainRoll": {
+    "clip": "Animations/CaptainRoll",
+    "speed": 1
+   },
+   "CaptainSucessBop": {
+    "clip": "Animations/CaptainSucessBop",
+    "speed": 1
+   },
+   "CaptainTuckMissBop": {
+    "clip": "Animations/CaptainTuckMissBop",
+    "speed": 1
+   },
+   "CaptainTuckWalkIntro": {
+    "clip": "Animations/CaptainTuckWalkIntro",
+    "speed": 1
+   },
+   "CaptainWalk": {
+    "clip": "Animations/CaptainWalk",
+    "speed": 1
+   }
+  }
+ },
+ "CaptainTuckHead": {
+  "default": "CaptainTuckNeutralExpression",
+  "states": {
+   "CaptainTuckBlushExpression": {
+    "clip": "Animations/CaptainTuckBlushExpression",
+    "speed": 1
+   },
+   "CaptainTuckMissExpression": {
+    "clip": "Animations/CaptainTuckMissExpression",
+    "speed": 1
+   },
+   "CaptainTuckMissSpeakExpression": {
+    "clip": "Animations/CaptainTuckMissSpeakExpression",
+    "speed": 1
+   },
+   "CaptainTuckNeutralExpression": {
+    "clip": "Animations/CaptainTuckNeutralExpression",
+    "speed": 1
+   },
+   "CaptainTuckRollExpression": {
+    "clip": "Animations/CaptainTuckRollExpression",
+    "speed": 1
+   },
+   "CaptainTuckSpeakExpression": {
+    "clip": "Animations/CaptainTuckSpeakExpression",
+    "speed": 1
+   }
+  }
+ },
+ "FaceFlipper": {
+  "default": "FaceNormal",
+  "states": {
+   "FaceAngry": {
+    "clip": "Animations/FaceAngry",
+    "speed": 1
+   },
+   "FaceAnnoyed": {
+    "clip": "Animations/FaceAnnoyed",
+    "speed": 1
+   },
+   "FaceBarely": {
+    "clip": "Animations/FaceBarely",
+    "speed": 1
+   },
+   "FaceGoofy": {
+    "clip": "Animations/FaceGoofy",
+    "speed": 1
+   },
+   "FaceNormal": {
+    "clip": "Animations/FaceNormal",
+    "speed": 1
+   },
+   "FaceOw": {
+    "clip": "Animations/FaceOw",
+    "speed": 1
+   },
+   "FlipperBlink": {
+    "clip": "Animations/FlipperBlink",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FaceNormal",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Flipper": {
+  "default": "FlipperIdle",
+  "states": {
+   "FlipperBop": {
+    "clip": "Animations/FlipperBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FlipperIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "FlipperIdle": {
+    "clip": "Animations/FlipperIdle",
+    "speed": 1
+   },
+   "FlopLeft": {
+    "clip": "Animations/FlopLeft",
+    "speed": 1
+   },
+   "FlopRight": {
+    "clip": "Animations/FlopRight",
+    "speed": 1
+   },
+   "MissFlopLeft": {
+    "clip": "Animations/MissFlopLeft",
+    "speed": 1
+   },
+   "MissFlopRight": {
+    "clip": "Animations/MissFlopRight",
+    "speed": 1
+   },
+   "PrepareFlop": {
+    "clip": "Animations/PrepareFlop",
+    "speed": 1
+   },
+   "ReverseFlopLeft": {
+    "clip": "Animations/ReverseFlopLeft",
+    "speed": 1
+   },
+   "ReverseFlopRight": {
+    "clip": "Animations/ReverseFlopRight",
+    "speed": 1
+   },
+   "ReverseMissFlopLeft": {
+    "clip": "Animations/ReverseMissFlopLeft",
+    "speed": 1
+   },
+   "ReverseMissFlopRight": {
+    "clip": "Animations/ReverseMissFlopRight",
+    "speed": 1
+   },
+   "ReverseRollLeft": {
+    "clip": "Animations/ReverseRollLeft",
+    "speed": 1
+   },
+   "ReverseRollRight": {
+    "clip": "Animations/ReverseRollRight",
+    "speed": 1
+   },
+   "RollLeft": {
+    "clip": "Animations/RollLeft",
+    "speed": 1
+   },
+   "RollRight": {
+    "clip": "Animations/RollRight",
+    "speed": 1
+   },
+   "Test": {
+    "clip": "Animations/Test",
+    "speed": 1
+   }
+  }
+ }
+}

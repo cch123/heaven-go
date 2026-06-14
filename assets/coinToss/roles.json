@@ -1,0 +1,10 @@
+{
+ "bg": "Background",
+ "fg": "Background2",
+ "handAnimator": "ArmHolder/Arm",
+ "handHolder": "ArmHolder",
+ "imageAnim": "Image",
+ "imageBG": "Image/BG",
+ "manHand": "ManHolder/ManArm",
+ "manHolder": "ManHolder"
+}

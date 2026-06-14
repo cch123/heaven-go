@@ -1,0 +1,19 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "moveDistance": 7.7,
+    "moveTime": 0.3
+   },
+   "refs": {
+    "BGPlane": "BG",
+    "Leaves": "Leaves",
+    "Lotuses": "Lotuses",
+    "frogAnim": "frog",
+    "princessAnim": "princess",
+    "splashEffect": "SplashEffect"
+   }
+  }
+ }
+}

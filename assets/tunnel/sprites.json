@@ -1,0 +1,2479 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png",
+  "atlas5.png",
+  "atlas6.png",
+  "atlas7.png",
+  "atlas8.png",
+  "atlas9.png",
+  "atlas10.png",
+  "atlas11.png",
+  "atlas12.png",
+  "atlas13.png",
+  "atlas14.png",
+  "atlas15.png",
+  "atlas16.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "Tunnel - Player, Lady, and Misc. Sprites_0": {
+   "X": 37,
+   "Y": 69,
+   "W": 789,
+   "H": 946,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_1": {
+   "X": 843,
+   "Y": 69,
+   "W": 846,
+   "H": 946,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_10": {
+   "X": 3164,
+   "Y": 915,
+   "W": 24,
+   "H": 42,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_11": {
+   "X": 35,
+   "Y": 1101,
+   "W": 768,
+   "H": 945,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_12": {
+   "X": 841,
+   "Y": 1100,
+   "W": 812,
+   "H": 945,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_13": {
+   "X": 1765,
+   "Y": 1163,
+   "W": 346,
+   "H": 597,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_14": {
+   "X": 2218,
+   "Y": 1277,
+   "W": 298,
+   "H": 406,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_15": {
+   "X": 2610,
+   "Y": 1075,
+   "W": 684,
+   "H": 856,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_16": {
+   "X": 165,
+   "Y": 2283,
+   "W": 112,
+   "H": 94,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_17": {
+   "X": 439,
+   "Y": 2283,
+   "W": 70,
+   "H": 94,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_18": {
+   "X": 673,
+   "Y": 2283,
+   "W": 120,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_19": {
+   "X": 921,
+   "Y": 2283,
+   "W": 118,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_2": {
+   "X": 1755,
+   "Y": 61,
+   "W": 789,
+   "H": 948,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_20": {
+   "X": 1196,
+   "Y": 2283,
+   "W": 116,
+   "H": 191,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_21": {
+   "X": 1443,
+   "Y": 2283,
+   "W": 124,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_22": {
+   "X": 1704,
+   "Y": 2283,
+   "W": 118,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_23": {
+   "X": 1977,
+   "Y": 2283,
+   "W": 98,
+   "H": 94,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_24": {
+   "X": 2220,
+   "Y": 2283,
+   "W": 120,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_25": {
+   "X": 2479,
+   "Y": 2283,
+   "W": 120,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_26": {
+   "X": 2920,
+   "Y": 2311,
+   "W": 174,
+   "H": 134,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_27": {
+   "X": 157,
+   "Y": 2379,
+   "W": 112,
+   "H": 96,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_28": {
+   "X": 463,
+   "Y": 2379,
+   "W": 34,
+   "H": 95,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_29": {
+   "X": 2029,
+   "Y": 2379,
+   "W": 34,
+   "H": 95,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_3": {
+   "X": 2612,
+   "Y": 83,
+   "W": 518,
+   "H": 209,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_30": {
+   "X": 2748,
+   "Y": 2411,
+   "W": 34,
+   "H": 34,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_31": {
+   "X": 143,
+   "Y": 2607,
+   "W": 66,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_32": {
+   "X": 293,
+   "Y": 2607,
+   "W": 40,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_33": {
+   "X": 419,
+   "Y": 2607,
+   "W": 66,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_34": {
+   "X": 553,
+   "Y": 2607,
+   "W": 66,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_35": {
+   "X": 701,
+   "Y": 2609,
+   "W": 64,
+   "H": 104,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_36": {
+   "X": 835,
+   "Y": 2607,
+   "W": 65,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_37": {
+   "X": 973,
+   "Y": 2607,
+   "W": 65,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_38": {
+   "X": 1120,
+   "Y": 2607,
+   "W": 54,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_39": {
+   "X": 1251,
+   "Y": 2607,
+   "W": 66,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_4": {
+   "X": 2660,
+   "Y": 393,
+   "W": 382,
+   "H": 206,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_40": {
+   "X": 1389,
+   "Y": 2607,
+   "W": 66,
+   "H": 106,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_41": {
+   "X": 1541,
+   "Y": 2677,
+   "W": 21,
+   "H": 20,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_42": {
+   "X": 1667,
+   "Y": 2624,
+   "W": 92,
+   "H": 73,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_43": {
+   "X": 1879,
+   "Y": 2613,
+   "W": 65,
+   "H": 94,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_44": {
+   "X": 1953,
+   "Y": 2613,
+   "W": 18,
+   "H": 94,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_45": {
+   "X": 1975,
+   "Y": 2613,
+   "W": 70,
+   "H": 96,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_46": {
+   "X": 2053,
+   "Y": 2613,
+   "W": 68,
+   "H": 94,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_47": {
+   "X": 2154,
+   "Y": 2613,
+   "W": 62,
+   "H": 96,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_48": {
+   "X": 2218,
+   "Y": 2613,
+   "W": 66,
+   "H": 96,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_49": {
+   "X": 2286,
+   "Y": 2613,
+   "W": 74,
+   "H": 96,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_5": {
+   "X": 3155,
+   "Y": 477,
+   "W": 116,
+   "H": 96,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_50": {
+   "X": 2366,
+   "Y": 2613,
+   "W": 62,
+   "H": 94,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_51": {
+   "X": 2432,
+   "Y": 2613,
+   "W": 58,
+   "H": 94,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_52": {
+   "X": 2736,
+   "Y": 2631,
+   "W": 62,
+   "H": 70,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_53": {
+   "X": 2904,
+   "Y": 2607,
+   "W": 90,
+   "H": 104,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_54": {
+   "X": 119,
+   "Y": 2839,
+   "W": 206,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_55": {
+   "X": 324,
+   "Y": 2839,
+   "W": 248,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_56": {
+   "X": 577,
+   "Y": 2841,
+   "W": 218,
+   "H": 240,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_57": {
+   "X": 799,
+   "Y": 2839,
+   "W": 194,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_58": {
+   "X": 1107,
+   "Y": 2837,
+   "W": 218,
+   "H": 248,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_59": {
+   "X": 1318,
+   "Y": 2839,
+   "W": 237,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_6": {
+   "X": 2715,
+   "Y": 672,
+   "W": 348,
+   "H": 279,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    1,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_60": {
+   "X": 1558,
+   "Y": 2839,
+   "W": 192,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_61": {
+   "X": 1778,
+   "Y": 2839,
+   "W": 226,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_62": {
+   "X": 2170,
+   "Y": 2877,
+   "W": 280,
+   "H": 574,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_63": {
+   "X": 167,
+   "Y": 3231,
+   "W": 120,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_64": {
+   "X": 307,
+   "Y": 3231,
+   "W": 118,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_65": {
+   "X": 445,
+   "Y": 3231,
+   "W": 118,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_66": {
+   "X": 589,
+   "Y": 3333,
+   "W": 91,
+   "H": 24,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_67": {
+   "X": 705,
+   "Y": 3231,
+   "W": 118,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_68": {
+   "X": 843,
+   "Y": 3231,
+   "W": 120,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_69": {
+   "X": 981,
+   "Y": 3231,
+   "W": 118,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_7": {
+   "X": 3159,
+   "Y": 605,
+   "W": 108,
+   "H": 104,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_70": {
+   "X": 1119,
+   "Y": 3229,
+   "W": 116,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_71": {
+   "X": 1247,
+   "Y": 3331,
+   "W": 58,
+   "H": 26,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_72": {
+   "X": 1348,
+   "Y": 3233,
+   "W": 130,
+   "H": 234,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_73": {
+   "X": 1494,
+   "Y": 3231,
+   "W": 118,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_74": {
+   "X": 1632,
+   "Y": 3231,
+   "W": 118,
+   "H": 236,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_75": {
+   "X": 2795,
+   "Y": 3175,
+   "W": 279,
+   "H": 722,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_76": {
+   "X": 167,
+   "Y": 3639,
+   "W": 1629,
+   "H": 346,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_77": {
+   "X": 2189,
+   "Y": 3681,
+   "W": 236,
+   "H": 214,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_78": {
+   "X": 2781,
+   "Y": 3951,
+   "W": 40,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_79": {
+   "X": 2822,
+   "Y": 3965,
+   "W": 36,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_8": {
+   "X": 3163,
+   "Y": 755,
+   "W": 30,
+   "H": 36,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_80": {
+   "X": 2859,
+   "Y": 3951,
+   "W": 57,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_81": {
+   "X": 2918,
+   "Y": 3965,
+   "W": 60,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_82": {
+   "X": 2980,
+   "Y": 3965,
+   "W": 34,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_83": {
+   "X": 3017,
+   "Y": 3965,
+   "W": 30,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_84": {
+   "X": 3048,
+   "Y": 3965,
+   "W": 36,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Tunnel - Player, Lady, and Misc. Sprites_9": {
+   "X": 3163,
+   "Y": 837,
+   "W": 28,
+   "H": 30,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 14,
+   "ppu": 66.06452,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnelWall_0": {
+   "X": 263,
+   "Y": 269,
+   "W": 273,
+   "H": 2737,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 15,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnelWall_1": {
+   "X": 940,
+   "Y": 269,
+   "W": 2728,
+   "H": 2737,
+   "PivotX": 0,
+   "PivotY": 0.5,
+   "atlas": 15,
+   "ppu": 200,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_0": {
+   "X": 114,
+   "Y": 151,
+   "W": 108,
+   "H": 1362,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_1": {
+   "X": 395,
+   "Y": 239,
+   "W": 140,
+   "H": 312,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_2": {
+   "X": 777,
+   "Y": 203,
+   "W": 1233,
+   "H": 509,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_3": {
+   "X": 2133,
+   "Y": 207,
+   "W": 633,
+   "H": 91,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_4": {
+   "X": 3631,
+   "Y": 74,
+   "W": 282,
+   "H": 259,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_6": {
+   "X": 2367,
+   "Y": 361,
+   "W": 1414,
+   "H": 356,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_7": {
+   "X": 390,
+   "Y": 874,
+   "W": 1411,
+   "H": 629,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_8": {
+   "X": 1832,
+   "Y": 964,
+   "W": 2149,
+   "H": 474,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_beach_assets_9": {
+   "X": 122,
+   "Y": 1656,
+   "W": 3567,
+   "H": 494,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_backbuildings_0": {
+   "X": 77,
+   "Y": 167,
+   "W": 2325,
+   "H": 1537,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_backbuildings_1": {
+   "X": 2477,
+   "Y": 167,
+   "W": 1559,
+   "H": 1537,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_backbuildings_2": {
+   "X": 46,
+   "Y": 1774,
+   "W": 3690,
+   "H": 408,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_backbuildings_3": {
+   "X": 3817,
+   "Y": 1916,
+   "W": 176,
+   "H": 175,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_0": {
+   "X": 147,
+   "Y": 105,
+   "W": 312,
+   "H": 1392,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_1": {
+   "X": 640,
+   "Y": 316,
+   "W": 471,
+   "H": 1182,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_10": {
+   "X": 991,
+   "Y": 1898,
+   "W": 197,
+   "H": 292,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_11": {
+   "X": 1413,
+   "Y": 1930,
+   "W": 116,
+   "H": 262,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_2": {
+   "X": 1279,
+   "Y": 550,
+   "W": 723,
+   "H": 947,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_3": {
+   "X": 2207,
+   "Y": 313,
+   "W": 322,
+   "H": 293,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_4": {
+   "X": 2775,
+   "Y": 484,
+   "W": 224,
+   "H": 1013,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_5": {
+   "X": 2218,
+   "Y": 696,
+   "W": 301,
+   "H": 801,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_6": {
+   "X": 3235,
+   "Y": 834,
+   "W": 116,
+   "H": 663,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_7": {
+   "X": 3594,
+   "Y": 856,
+   "W": 197,
+   "H": 643,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_8": {
+   "X": 189,
+   "Y": 1639,
+   "W": 222,
+   "H": 551,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_city_frontbuildings_9": {
+   "X": 633,
+   "Y": 1757,
+   "W": 108,
+   "H": 433,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_desert_dunes_0": {
+   "X": 0,
+   "Y": 1599,
+   "W": 4096,
+   "H": 873,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_desert_sky_0": {
+   "X": 0,
+   "Y": 0,
+   "W": 4096,
+   "H": 1769,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_farmer_assets_0": {
+   "X": 3692,
+   "Y": 139,
+   "W": 292,
+   "H": 293,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_farmer_assets_1": {
+   "X": 301,
+   "Y": 510,
+   "W": 710,
+   "H": 710,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_farmer_assets_2": {
+   "X": 1477,
+   "Y": 583,
+   "W": 492,
+   "H": 492,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_farmer_assets_3": {
+   "X": 2464,
+   "Y": 665,
+   "W": 328,
+   "H": 328,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_farmer_assets_4": {
+   "X": 178,
+   "Y": 1711,
+   "W": 1784,
+   "H": 434,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_farmer_assets_5": {
+   "X": 2299,
+   "Y": 1772,
+   "W": 215,
+   "H": 346,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_farmer_assets_6": {
+   "X": 2807,
+   "Y": 1773,
+   "W": 215,
+   "H": 300,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_farmer_assets_7": {
+   "X": 3282,
+   "Y": 1131,
+   "W": 639,
+   "H": 948,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_field_grass_0": {
+   "X": 172,
+   "Y": 76,
+   "W": 3794,
+   "H": 688,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_field_grass_1": {
+   "X": 172,
+   "Y": 848,
+   "W": 3794,
+   "H": 708,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_field_grass_2": {
+   "X": 129,
+   "Y": 1693,
+   "W": 3794,
+   "H": 525,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_field_misc_0": {
+   "X": 111,
+   "Y": 91,
+   "W": 141,
+   "H": 1522,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_field_misc_1": {
+   "X": 417,
+   "Y": 71,
+   "W": 1185,
+   "H": 703,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_field_misc_2": {
+   "X": 631,
+   "Y": 1068,
+   "W": 714,
+   "H": 413,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_field_misc_3": {
+   "X": 272,
+   "Y": 1775,
+   "W": 936,
+   "H": 375,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_grass_0": {
+   "X": 181,
+   "Y": 155,
+   "W": 3818,
+   "H": 523,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_grass_1": {
+   "X": 166,
+   "Y": 902,
+   "W": 3818,
+   "H": 751,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_grass_2": {
+   "X": 181,
+   "Y": 1842,
+   "W": 3818,
+   "H": 312,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_0": {
+   "X": 233,
+   "Y": 177,
+   "W": 290,
+   "H": 200,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_1": {
+   "X": 623,
+   "Y": 260,
+   "W": 372,
+   "H": 123,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_2": {
+   "X": 1078,
+   "Y": 235,
+   "W": 340,
+   "H": 136,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_3": {
+   "X": 3695,
+   "Y": 120,
+   "W": 212,
+   "H": 212,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_4": {
+   "X": 136,
+   "Y": 638,
+   "W": 1324,
+   "H": 993,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_5": {
+   "X": 1802,
+   "Y": 615,
+   "W": 535,
+   "H": 1010,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_6": {
+   "X": 2794,
+   "Y": 1040,
+   "W": 200,
+   "H": 135,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_7": {
+   "X": 2605,
+   "Y": 1511,
+   "W": 593,
+   "H": 113,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_moai_misc_8": {
+   "X": 106,
+   "Y": 1826,
+   "W": 3818,
+   "H": 393,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 9,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_night_aurora_0": {
+   "X": 185,
+   "Y": 164,
+   "W": 3878,
+   "H": 2163,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 10,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_night_aurora_1": {
+   "X": 4285,
+   "Y": 116,
+   "W": 186,
+   "H": 186,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 10,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_night_closeupstars": {
+   "X": 0,
+   "Y": 0,
+   "W": 4096,
+   "H": 2304,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 11,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_night_farawaystars": {
+   "X": 0,
+   "Y": 0,
+   "W": 4096,
+   "H": 2304,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 12,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_quiz_0": {
+   "X": 81,
+   "Y": 106,
+   "W": 172,
+   "H": 140,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 13,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_quiz_1": {
+   "X": 289,
+   "Y": 111,
+   "W": 173,
+   "H": 137,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 13,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_quiz_10": {
+   "X": 604,
+   "Y": 751,
+   "W": 1377,
+   "H": 411,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 13,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_quiz_11": {
+   "X": 47,
+   "Y": 886,
+   "W": 482,
+   "H": 295,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 13,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_quiz_2": {
+   "X": 596,
+   "Y": 172,
+   "W": 173,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 13,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_quiz_3": {
+   "X": 845,
+   "Y": 172,
+   "W": 173,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 13,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_quiz_4": {
+   "X": 65,
+   "Y": 313,
+   "W": 371,
+   "H": 228,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 13,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnel_quiz_7": {
+   "X": 67,
+   "Y": 588,
+   "W": 410,
+   "H": 253,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 13,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "tunnelcar": {
+   "X": 0,
+   "Y": 0,
+   "W": 4096,
+   "H": 2304,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 16,
+   "ppu": 85.333336,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

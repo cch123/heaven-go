@@ -1,0 +1,79 @@
+{
+ "GirlAnimator": {
+  "default": "Idle",
+  "states": {
+   "Happy": {
+    "clip": "Animations/GirlHappy",
+    "speed": 0.25
+   },
+   "Idle": {
+    "clip": "Animations/GirlIdle",
+    "speed": 0.25
+   },
+   "Sad": {
+    "clip": "Animations/GirlSad",
+    "speed": 0.25
+   }
+  }
+ },
+ "GirlFlowerAnimator": {
+  "default": "Flower",
+  "states": {
+   "Flower": {
+    "clip": "Animations/GirlFlower",
+    "speed": 0.25
+   }
+  }
+ },
+ "PlantAnimator": {
+  "default": "Appear",
+  "states": {
+   "Appear": {
+    "clip": "Animations/PlantAppear",
+    "speed": 0.25
+   },
+   "Eat": {
+    "clip": "Animations/PlantEat",
+    "speed": 0.25
+   },
+   "EatLoop": {
+    "clip": "Animations/PlantEatLoop",
+    "speed": 0.25
+   },
+   "Hit": {
+    "clip": "Animations/PlantHit",
+    "speed": 0.25
+   },
+   "IdleFlower": {
+    "clip": "Animations/PlantIdleFlower",
+    "speed": 0.25
+   },
+   "IdlePlant": {
+    "clip": "Animations/PlantIdlePlant",
+    "speed": 0.25
+   }
+  }
+ },
+ "WandAnimator": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animations/WandIdle",
+    "speed": 0.25
+   }
+  }
+ },
+ "WizardAnimator": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animations/WizardIdle",
+    "speed": 0.25
+   },
+   "Magic": {
+    "clip": "Animations/WizardMagic",
+    "speed": 0.25
+   }
+  }
+ }
+}

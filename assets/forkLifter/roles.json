@@ -1,0 +1,14 @@
+{
+ "ForkLifterHand": "Hand",
+ "bg": "Background/SolidBG",
+ "flickedObject": "Object",
+ "forkSR": "Player/fork",
+ "gradientFiller": "Background/Filler",
+ "handAnim": "Hand",
+ "handShadow": "Hand/HandVisual/hand_shadow1",
+ "mmLines": "Background/megamixfloor",
+ "peaPreview": "Hand/PeaVisual",
+ "playerShadow": "Player/shadow",
+ "viewerCircle": "Hand/ViewerCircle",
+ "viewerCircleBg": "Hand/ViewerCircle/viewcirclebg"
+}

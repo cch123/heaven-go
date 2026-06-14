@@ -1,0 +1,87 @@
+{
+ "BlipAnimator": {
+  "default": "Idle",
+  "states": {
+   "Blip1": {
+    "clip": "BlipAnims/Blip1",
+    "speed": 0.25
+   },
+   "Blip2": {
+    "clip": "BlipAnims/Blip2",
+    "speed": 0.25
+   },
+   "Blip3": {
+    "clip": "BlipAnims/Blip3",
+    "speed": 0.25
+   },
+   "Blip4": {
+    "clip": "BlipAnims/Blip4",
+    "speed": 0.25
+   },
+   "Blip5": {
+    "clip": "BlipAnims/Blip5",
+    "speed": 0.25
+   },
+   "Idle": {
+    "clip": "BlipAnims/BlipIdle",
+    "speed": 0.25
+   }
+  }
+ },
+ "Metronome": {
+  "default": "MetronomeIdle",
+  "states": {
+   "MetronomeGoLeft": {
+    "clip": "MetronomeAnims/MetronomeGoLeft",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MetronomeIdleLeft",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MetronomeGoRight": {
+    "clip": "MetronomeAnims/MetronomeGoRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MetronomeIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MetronomeIdle": {
+    "clip": "MetronomeAnims/MetronomeIdle",
+    "speed": 1
+   },
+   "MetronomeIdleLeft": {
+    "clip": "MetronomeAnims/MetronomeIdleLeft",
+    "speed": 1
+   }
+  }
+ },
+ "MrUpbeatAnimator": {
+  "default": "Idle",
+  "states": {
+   "FallL": {
+    "clip": "UpbeatAnims/FallL",
+    "speed": 0.25
+   },
+   "FallR": {
+    "clip": "UpbeatAnims/FallR",
+    "speed": 0.25
+   },
+   "Idle": {
+    "clip": "UpbeatAnims/Idle",
+    "speed": 0.25
+   },
+   "Step": {
+    "clip": "UpbeatAnims/Step",
+    "speed": 0.25
+   }
+  }
+ }
+}

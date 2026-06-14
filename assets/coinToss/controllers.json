@@ -1,0 +1,99 @@
+{
+ "CTHolder": {
+  "default": "Idle",
+  "states": {
+   "Enter": {
+    "clip": "Animations/Enter",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Offscreen": {
+    "clip": "Animations/Offscreen",
+    "speed": 1
+   }
+  }
+ },
+ "CTImageAnim": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "ImageFadeIn": {
+    "clip": "Animations/ImageFadeIn",
+    "speed": 1
+   },
+   "ImageFadeOut": {
+    "clip": "Animations/ImageFadeOut",
+    "speed": 1
+   },
+   "ImageShow": {
+    "clip": "Animations/ImageShow",
+    "speed": 1
+   }
+  }
+ },
+ "CTManHolder": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "ManExit": {
+    "clip": "Animations/ManExit",
+    "speed": 1
+   },
+   "ManShow": {
+    "clip": "Animations/ManShow",
+    "speed": 1
+   }
+  }
+ },
+ "CoinTossController": {
+  "default": "Idle",
+  "states": {
+   "Catch_empty": {
+    "clip": "Animations/Catch_empty",
+    "speed": 1
+   },
+   "Catch_success": {
+    "clip": "Animations/Catch_success",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Idle_open": {
+    "clip": "Animations/Idle_open",
+    "speed": 1
+   },
+   "Pickup": {
+    "clip": "Animations/Pickup",
+    "speed": 1
+   },
+   "Throw": {
+    "clip": "Animations/Throw",
+    "speed": 1
+   },
+   "Throw_empty": {
+    "clip": "Animations/Throw_empty",
+    "speed": 1
+   }
+  }
+ },
+ "CoinTossManController": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "Toss": {
+    "clip": "Animations/ManThrow",
+    "speed": 1
+   }
+  }
+ }
+}

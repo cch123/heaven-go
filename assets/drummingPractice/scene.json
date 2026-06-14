@@ -1,0 +1,1688 @@
+{
+ "nodes": [
+  {
+   "name": "drummingPractice",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    332.226,
+    186.81944
+   ],
+   "order": -32768,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    1.6
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "Background/Gradient",
+   "parent": 1,
+   "pos": [
+    0,
+    0.1995
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0026701333,
+    0.0044672024
+   ],
+   "sprite": "drummingpractice_bg",
+   "order": -32767,
+   "color": [
+    0.14509805,
+    0.7137255,
+    0.16862746,
+    1
+   ],
+   "drawMode": 1,
+   "size": [
+    325,
+    100
+   ]
+  },
+  {
+   "name": "Streaks",
+   "path": "Streaks",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Streak",
+   "path": "Streaks/Streak",
+   "parent": 3,
+   "pos": [
+    -0.96,
+    11.24
+   ],
+   "rotZ": -3.111045481579572,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (1)",
+   "path": "Streaks/Streak (1)",
+   "parent": 3,
+   "pos": [
+    0.65,
+    12.58
+   ],
+   "rotZ": -3.1888159793842834,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (2)",
+   "path": "Streaks/Streak (2)",
+   "parent": 3,
+   "pos": [
+    2.14,
+    11.54
+   ],
+   "rotZ": -3.274360577575264,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (3)",
+   "path": "Streaks/Streak (3)",
+   "parent": 3,
+   "pos": [
+    -2.71,
+    12.03
+   ],
+   "rotZ": -2.9978437830136793,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (4)",
+   "path": "Streaks/Streak (4)",
+   "parent": 3,
+   "pos": [
+    -6.46,
+    11.74
+   ],
+   "rotZ": -2.8701198951747973,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (5)",
+   "path": "Streaks/Streak (5)",
+   "parent": 3,
+   "pos": [
+    -11.059999,
+    10.62
+   ],
+   "rotZ": -2.535366961772735,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (6)",
+   "path": "Streaks/Streak (6)",
+   "parent": 3,
+   "pos": [
+    -11.9,
+    9.48
+   ],
+   "rotZ": -2.4529801008146634,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (7)",
+   "path": "Streaks/Streak (7)",
+   "parent": 3,
+   "pos": [
+    -14.43,
+    8.08
+   ],
+   "rotZ": -2.3008193778296437,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (8)",
+   "path": "Streaks/Streak (8)",
+   "parent": 3,
+   "pos": [
+    -15.21,
+    5.72
+   ],
+   "rotZ": -2.219208882932686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (9)",
+   "path": "Streaks/Streak (9)",
+   "parent": 3,
+   "pos": [
+    5.71,
+    11.9
+   ],
+   "rotZ": -3.468908082616566,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (10)",
+   "path": "Streaks/Streak (10)",
+   "parent": 3,
+   "pos": [
+    10.5,
+    10.03
+   ],
+   "rotZ": -3.828400548427164,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (11)",
+   "path": "Streaks/Streak (11)",
+   "parent": 3,
+   "pos": [
+    11.44,
+    8.34
+   ],
+   "rotZ": -3.9402480436551306,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (12)",
+   "path": "Streaks/Streak (12)",
+   "parent": 3,
+   "pos": [
+    14.84,
+    6.82
+   ],
+   "rotZ": -4.152293979595957,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "Streak (13)",
+   "path": "Streaks/Streak (13)",
+   "parent": 3,
+   "pos": [
+    16.69,
+    4.16
+   ],
+   "rotZ": -4.286361036354891,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_screen_fx",
+   "order": -1000,
+   "color": [
+    1,
+    0.96862745,
+    0,
+    0
+   ],
+   "size": [
+    1.5833334,
+    10.583333
+   ]
+  },
+  {
+   "name": "PlayerDrummer",
+   "path": "PlayerDrummer",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "PlayerDrummer/Body",
+   "parent": 18,
+   "pos": [
+    0.02,
+    -0.014337629
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_body",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9375,
+    2.9375
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "PlayerDrummer/Body/Head",
+   "parent": 19,
+   "pos": [
+    0,
+    1.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "mii_guestA",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "PlayerDrummer/Body/LeftHand",
+   "parent": 19,
+   "pos": [
+    -1.43,
+    1.8670707
+   ],
+   "rotZ": -0.3376008517794317,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_hand",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftDrumstick",
+   "path": "PlayerDrummer/Body/LeftHand/LeftDrumstick",
+   "parent": 21,
+   "pos": [
+    -0.088,
+    0.255
+   ],
+   "rotZ": 0.34906579928311926,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftStreak",
+   "path": "PlayerDrummer/Body/LeftHand/LeftDrumstick/LeftStreak",
+   "parent": 22,
+   "pos": [
+    0.018,
+    0.718
+   ],
+   "rotZ": 2.124034149241184,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick_smear_fx",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "PlayerDrummer/Body/RightHand",
+   "parent": 19,
+   "pos": [
+    1.43,
+    0.13298833
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_hand",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightDrumstick",
+   "path": "PlayerDrummer/Body/RightHand/RightDrumstick",
+   "parent": 24,
+   "pos": [
+    0.088,
+    0.255
+   ],
+   "rotZ": -0.3490659765485052,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightStreak",
+   "path": "PlayerDrummer/Body/RightHand/RightDrumstick/RightStreak",
+   "parent": 25,
+   "pos": [
+    -0.03,
+    0.65
+   ],
+   "rotZ": -2.1088397461842128,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick_smear_fx",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftFX",
+   "path": "PlayerDrummer/Body/LeftFX",
+   "parent": 19,
+   "pos": [
+    -0.51,
+    -1.41
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "drummingpractice_hit_fx",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightFX",
+   "path": "PlayerDrummer/Body/RightFX",
+   "parent": 19,
+   "pos": [
+    0.59,
+    -1.41
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "drummingpractice_hit_fx",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Drum",
+   "path": "PlayerDrummer/Drum",
+   "parent": 18,
+   "pos": [
+    0,
+    -4.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightSide",
+   "path": "PlayerDrummer/Drum/RightSide",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drum",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftSide",
+   "path": "PlayerDrummer/Drum/LeftSide",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "drummingpractice_drum",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "NPCDrummers",
+   "path": "NPCDrummers",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftDrummerHolder",
+   "path": "NPCDrummers/LeftDrummerHolder",
+   "parent": 32,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftDrummer",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer",
+   "parent": 33,
+   "pos": [
+    -5.45,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body",
+   "parent": 34,
+   "pos": [
+    0.02,
+    -0.014337629
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_body",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9375,
+    2.9375
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/Head",
+   "parent": 35,
+   "pos": [
+    0,
+    1.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "mii_guestA",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/LeftHand",
+   "parent": 35,
+   "pos": [
+    -1.43,
+    1.8670707
+   ],
+   "rotZ": -0.3376008517794317,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_hand",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftDrumstick",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/LeftHand/LeftDrumstick",
+   "parent": 37,
+   "pos": [
+    -0.088,
+    0.255
+   ],
+   "rotZ": 0.34906579928311926,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftStreak",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/LeftHand/LeftDrumstick/LeftStreak",
+   "parent": 38,
+   "pos": [
+    0.018,
+    0.718
+   ],
+   "rotZ": 2.124034149241184,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick_smear_fx",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/RightHand",
+   "parent": 35,
+   "pos": [
+    1.43,
+    0.13298833
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_hand",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightDrumstick",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/RightHand/RightDrumstick",
+   "parent": 40,
+   "pos": [
+    0.088,
+    0.255
+   ],
+   "rotZ": -0.3490659765485052,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightStreak",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/RightHand/RightDrumstick/RightStreak",
+   "parent": 41,
+   "pos": [
+    -0.03,
+    0.65
+   ],
+   "rotZ": -2.1088397461842128,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick_smear_fx",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftFX",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/LeftFX",
+   "parent": 35,
+   "pos": [
+    -0.51,
+    -1.41
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "drummingpractice_hit_fx",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightFX",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/RightFX",
+   "parent": 35,
+   "pos": [
+    0.59,
+    -1.41
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "drummingpractice_hit_fx",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Drum",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Drum",
+   "parent": 34,
+   "pos": [
+    0,
+    -4.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightSide",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Drum/RightSide",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drum",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftSide",
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Drum/LeftSide",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "drummingpractice_drum",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightDrummerHolder",
+   "path": "NPCDrummers/RightDrummerHolder",
+   "parent": 32,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightDrummer",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer",
+   "parent": 48,
+   "pos": [
+    5.45,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body",
+   "parent": 49,
+   "pos": [
+    0.02,
+    -0.014337629
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_body",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9375,
+    2.9375
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/Head",
+   "parent": 50,
+   "pos": [
+    0,
+    1.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "mii_guestA",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftHand",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/LeftHand",
+   "parent": 50,
+   "pos": [
+    -1.43,
+    1.8670707
+   ],
+   "rotZ": -0.3376008517794317,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_hand",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftDrumstick",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/LeftHand/LeftDrumstick",
+   "parent": 52,
+   "pos": [
+    -0.088,
+    0.255
+   ],
+   "rotZ": 0.34906579928311926,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftStreak",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/LeftHand/LeftDrumstick/LeftStreak",
+   "parent": 53,
+   "pos": [
+    0.018,
+    0.718
+   ],
+   "rotZ": 2.124034149241184,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick_smear_fx",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/RightHand",
+   "parent": 50,
+   "pos": [
+    1.43,
+    0.13298833
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_hand",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightDrumstick",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/RightHand/RightDrumstick",
+   "parent": 55,
+   "pos": [
+    0.088,
+    0.255
+   ],
+   "rotZ": -0.3490659765485052,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightStreak",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/RightHand/RightDrumstick/RightStreak",
+   "parent": 56,
+   "pos": [
+    -0.03,
+    0.65
+   ],
+   "rotZ": -2.1088397461842128,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "drummingpractice_drumstick_smear_fx",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftFX",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/LeftFX",
+   "parent": 50,
+   "pos": [
+    -0.51,
+    -1.41
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "drummingpractice_hit_fx",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "RightFX",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/RightFX",
+   "parent": 50,
+   "pos": [
+    0.59,
+    -1.41
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "drummingpractice_hit_fx",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Drum",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Drum",
+   "parent": 49,
+   "pos": [
+    0,
+    -4.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightSide",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Drum/RightSide",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummingpractice_drum",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "LeftSide",
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer/Drum/LeftSide",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "drummingpractice_drum",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Hits",
+   "path": "Hits",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "Hits/Hit",
+   "parent": 63,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

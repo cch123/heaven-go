@@ -1,0 +1,2473 @@
+{
+ "nodes": [
+  {
+   "name": "catchyTune",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Prefabs",
+   "path": "Prefabs",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "orange",
+   "path": "Prefabs/orange",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "effect",
+   "path": "Prefabs/orange/effect",
+   "parent": 2,
+   "pos": [
+    1.64,
+    -0.08
+   ],
+   "rotZ": -1.3962633136299953,
+   "scale": [
+    3.800834,
+    3.800834
+   ],
+   "sprite": "sprites_11",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.7,
+    1.04
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "Prefabs/orange/sprite",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_14",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    1.84
+   ]
+  },
+  {
+   "name": "pineapple",
+   "path": "Prefabs/pineapple",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "effect",
+   "path": "Prefabs/pineapple/effect",
+   "parent": 5,
+   "pos": [
+    1.64,
+    -0.08
+   ],
+   "rotZ": -1.3962633136299953,
+   "scale": [
+    3.800834,
+    3.800834
+   ],
+   "sprite": "sprites_11",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.7,
+    1.04
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "Prefabs/pineapple/sprite",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_18",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    1.84
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Curves",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "left curve",
+   "path": "Curves/left curve",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Curves/left curve/Point 2",
+   "parent": 9,
+   "pos": [
+    -1.597414,
+    3.5091205
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/left curve/Point 0",
+   "parent": 9,
+   "pos": [
+    -1.4553857,
+    5.7815695
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/left curve/Point 1",
+   "parent": 9,
+   "pos": [
+    -1.399434,
+    1.6398358
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 3",
+   "path": "Curves/left curve/Point 3",
+   "parent": 9,
+   "pos": [
+    -1.8152832,
+    0.6116966
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 4",
+   "path": "Curves/left curve/Point 4",
+   "parent": 9,
+   "pos": [
+    -2.0274622,
+    3.0196939
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 5",
+   "path": "Curves/left curve/Point 5",
+   "parent": 9,
+   "pos": [
+    -2.6603394,
+    -1.2598727
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 6",
+   "path": "Curves/left curve/Point 6",
+   "parent": 9,
+   "pos": [
+    -3.1087022,
+    1.7733566
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 7",
+   "path": "Curves/left curve/Point 7",
+   "parent": 9,
+   "pos": [
+    -3.6845303,
+    0.28929138
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 8",
+   "path": "Curves/left curve/Point 8",
+   "parent": 9,
+   "pos": [
+    -3.9553828,
+    -6.551852
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "right curve",
+   "path": "Curves/right curve",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Curves/right curve/Point 2",
+   "parent": 19,
+   "pos": [
+    -1.597414,
+    3.5091205
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/right curve/Point 0",
+   "parent": 19,
+   "pos": [
+    -1.4553857,
+    5.7815695
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/right curve/Point 1",
+   "parent": 19,
+   "pos": [
+    -1.399434,
+    1.6398358
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 3",
+   "path": "Curves/right curve/Point 3",
+   "parent": 19,
+   "pos": [
+    -1.8152832,
+    0.6116966
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 4",
+   "path": "Curves/right curve/Point 4",
+   "parent": 19,
+   "pos": [
+    -2.0274622,
+    3.0196939
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 5",
+   "path": "Curves/right curve/Point 5",
+   "parent": 19,
+   "pos": [
+    -2.6603394,
+    -1.2598727
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 6",
+   "path": "Curves/right curve/Point 6",
+   "parent": 19,
+   "pos": [
+    -3.1087022,
+    1.7733566
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 7",
+   "path": "Curves/right curve/Point 7",
+   "parent": 19,
+   "pos": [
+    -3.6845303,
+    0.28929138
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 8",
+   "path": "Curves/right curve/Point 8",
+   "parent": 19,
+   "pos": [
+    -3.9553828,
+    -6.551852
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background 2",
+   "path": "Background 2",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "waves",
+   "path": "Background 2/waves",
+   "parent": 29,
+   "pos": [
+    -17.33,
+    4.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_2",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.400001,
+    5.64
+   ]
+  },
+  {
+   "name": "buildings",
+   "path": "Background 2/buildings",
+   "parent": 29,
+   "pos": [
+    17.33,
+    8.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0778016,
+    1.0778016
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.59,
+    23.5
+   ]
+  },
+  {
+   "name": "no idea",
+   "path": "Background 2/no idea",
+   "parent": 29,
+   "pos": [
+    -6.42,
+    16.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_10",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.91,
+    2.42
+   ]
+  },
+  {
+   "name": "left railing",
+   "path": "Background 2/left railing",
+   "parent": 29,
+   "pos": [
+    -14.79,
+    1.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.0445116,
+    1.0445116
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_7",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.66,
+    20.529999
+   ]
+  },
+  {
+   "name": "right railing ",
+   "path": "Background 2/right railing ",
+   "parent": 29,
+   "pos": [
+    15.1,
+    1.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.0537033,
+    1.0537033
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_7",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.66,
+    20.529999
+   ]
+  },
+  {
+   "name": "middle railing",
+   "path": "Background 2/middle railing",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_5",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.49,
+    17.79
+   ]
+  },
+  {
+   "name": "stairs left",
+   "path": "Background 2/stairs left",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "stair1",
+   "path": "Background 2/stairs left/stair1",
+   "parent": 36,
+   "pos": [
+    -4.98,
+    6.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_4",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.08,
+    3.04
+   ]
+  },
+  {
+   "name": "stair2",
+   "path": "Background 2/stairs left/stair2",
+   "parent": 36,
+   "pos": [
+    -6.6,
+    3.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_6",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.889999,
+    4.81
+   ]
+  },
+  {
+   "name": "stair3",
+   "path": "Background 2/stairs left/stair3",
+   "parent": 36,
+   "pos": [
+    -9.14,
+    -2.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_8",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.16,
+    6.3199997
+   ]
+  },
+  {
+   "name": "stair4",
+   "path": "Background 2/stairs left/stair4",
+   "parent": 36,
+   "pos": [
+    -12.33,
+    -7.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_9",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    21.06,
+    4.3199997
+   ]
+  },
+  {
+   "name": "stairs right",
+   "path": "Background 2/stairs right",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "stair1",
+   "path": "Background 2/stairs right/stair1",
+   "parent": 41,
+   "pos": [
+    -4.98,
+    6.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_4",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.08,
+    3.04
+   ]
+  },
+  {
+   "name": "stair2",
+   "path": "Background 2/stairs right/stair2",
+   "parent": 41,
+   "pos": [
+    -6.6,
+    3.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_6",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.889999,
+    4.81
+   ]
+  },
+  {
+   "name": "stair3",
+   "path": "Background 2/stairs right/stair3",
+   "parent": 41,
+   "pos": [
+    -9.14,
+    -2.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_8",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.16,
+    6.3199997
+   ]
+  },
+  {
+   "name": "stair4",
+   "path": "Background 2/stairs right/stair4",
+   "parent": 41,
+   "pos": [
+    -12.33,
+    -7.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_9",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    21.06,
+    4.3199997
+   ]
+  },
+  {
+   "name": "tree",
+   "path": "Background 2/tree",
+   "parent": 29,
+   "pos": [
+    -17.46,
+    10.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0626588,
+    1.0626588
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.13,
+    12.06
+   ]
+  },
+  {
+   "name": "sky",
+   "path": "Background 2/sky",
+   "parent": 29,
+   "pos": [
+    0.51,
+    6.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    -22.451757,
+    1.1427621
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_3",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "tree (1)",
+   "path": "Background 2/tree (1)",
+   "parent": 29,
+   "pos": [
+    -10.83,
+    10.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.70359755,
+    0.70359755
+   ],
+   "sprite": "Catchy_Tune_-_Long_Version_Background_1",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.13,
+    12.06
+   ]
+  },
+  {
+   "name": "Alalin",
+   "path": "Alalin",
+   "parent": 0,
+   "pos": [
+    4.91,
+    -5.315
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61060655,
+    0.61060655
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "effect",
+   "path": "Alalin/effect",
+   "parent": 49,
+   "pos": [
+    -13.943333,
+    8.783333
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2,
+    2
+   ],
+   "sprite": "sprites_21",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.64,
+    2.58
+   ]
+  },
+  {
+   "name": "sparks",
+   "path": "Alalin/sparks",
+   "parent": 49,
+   "pos": [
+    -0.6633329,
+    6.5133333
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8333332,
+    0.8333332
+   ],
+   "sprite": "sprites_16",
+   "order": 21,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.46,
+    4.64
+   ]
+  },
+  {
+   "name": "sprites_20",
+   "path": "Alalin/sparks/sprites_20",
+   "parent": 51,
+   "pos": [
+    -4.08,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_20",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "sprites_20 (1)",
+   "path": "Alalin/sparks/sprites_20 (1)",
+   "parent": 51,
+   "pos": [
+    3,
+    3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_20",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "sprites_20 (2)",
+   "path": "Alalin/sparks/sprites_20 (2)",
+   "parent": 51,
+   "pos": [
+    -3.3400002,
+    -1.1999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_20",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "sprites_20 (3)",
+   "path": "Alalin/sparks/sprites_20 (3)",
+   "parent": 51,
+   "pos": [
+    3.92,
+    -2.1799998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_20",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "orange",
+   "path": "Alalin/orange",
+   "parent": 49,
+   "pos": [
+    -14.345367,
+    10.03164
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_14",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    1.84
+   ]
+  },
+  {
+   "name": "pineapple",
+   "path": "Alalin/pineapple",
+   "parent": 49,
+   "pos": [
+    -1.4879655,
+    9.964973
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "sprites_18",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    1.84
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Alalin/head",
+   "parent": 49,
+   "pos": [
+    -0.13360786,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "normal",
+   "path": "Alalin/head/normal",
+   "parent": 58,
+   "pos": [
+    -0.27,
+    0.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_7",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5,
+    5.02
+   ]
+  },
+  {
+   "name": "smile",
+   "path": "Alalin/head/smile",
+   "parent": 58,
+   "pos": [
+    -0.83,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_15",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5,
+    5.02
+   ]
+  },
+  {
+   "name": "torso",
+   "path": "Alalin/torso",
+   "parent": 49,
+   "pos": [
+    -0.03,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_3",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.44,
+    5.42
+   ]
+  },
+  {
+   "name": "shoulder",
+   "path": "Alalin/shoulder",
+   "parent": 49,
+   "pos": [
+    -1.21,
+    0.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "normal",
+   "path": "Alalin/shoulder/normal",
+   "parent": 62,
+   "pos": [
+    -0.07,
+    0.22
+   ],
+   "rotZ": 0.042359177691986515,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_5",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    2.54
+   ]
+  },
+  {
+   "name": "grabbing",
+   "path": "Alalin/shoulder/grabbing",
+   "parent": 62,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_4",
+   "order": 22,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    2.54
+   ]
+  },
+  {
+   "name": "other shoulder",
+   "path": "Alalin/other shoulder",
+   "parent": 49,
+   "pos": [
+    -15.833332,
+    -0.066666596
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "sprites_4",
+   "order": 22,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    2.54
+   ]
+  },
+  {
+   "name": "armleft",
+   "path": "Alalin/armleft",
+   "parent": 49,
+   "pos": [
+    -5.355367,
+    -3.1883602
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_12",
+   "order": 18,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.92,
+    4.94
+   ]
+  },
+  {
+   "name": "hand",
+   "path": "Alalin/armleft/hand",
+   "parent": 66,
+   "pos": [
+    -1.74,
+    -3.16
+   ],
+   "rotZ": 2.4066630320102083,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_6",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.84
+   ]
+  },
+  {
+   "name": "armright",
+   "path": "Alalin/armright",
+   "parent": 49,
+   "pos": [
+    -0.6,
+    3.66
+   ],
+   "rotZ": 2.4169345106918447,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "sprites_12",
+   "order": 18,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.92,
+    4.94
+   ]
+  },
+  {
+   "name": "hand",
+   "path": "Alalin/armright/hand",
+   "parent": 68,
+   "pos": [
+    -2.2700129,
+    -2.860015
+   ],
+   "rotZ": 2.1566634665388893,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_6",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.84
+   ]
+  },
+  {
+   "name": "Plalin",
+   "path": "Plalin",
+   "parent": 0,
+   "pos": [
+    -4.513,
+    -5.3668003
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.61060655,
+    0.61060655
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "effect",
+   "path": "Plalin/effect",
+   "parent": 70,
+   "pos": [
+    -1.22,
+    8.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.6666665,
+    1.666667
+   ],
+   "sprite": "sprites_21",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.64,
+    2.58
+   ]
+  },
+  {
+   "name": "sparks",
+   "path": "Plalin/sparks",
+   "parent": 70,
+   "pos": [
+    -15.17,
+    6.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.83333325,
+    0.83333325
+   ],
+   "sprite": "sprites_16",
+   "order": 21,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.46,
+    4.64
+   ]
+  },
+  {
+   "name": "sprites_20",
+   "path": "Plalin/sparks/sprites_20",
+   "parent": 72,
+   "pos": [
+    -4.08,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_20",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "sprites_20 (1)",
+   "path": "Plalin/sparks/sprites_20 (1)",
+   "parent": 72,
+   "pos": [
+    3,
+    3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_20",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "sprites_20 (2)",
+   "path": "Plalin/sparks/sprites_20 (2)",
+   "parent": 72,
+   "pos": [
+    -3.3400002,
+    -1.1999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_20",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "sprites_20 (3)",
+   "path": "Plalin/sparks/sprites_20 (3)",
+   "parent": 72,
+   "pos": [
+    3.92,
+    -2.1799998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_20",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "orange",
+   "path": "Plalin/orange",
+   "parent": 70,
+   "pos": [
+    -14.345367,
+    10.03164
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_14",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    1.84
+   ]
+  },
+  {
+   "name": "pineapple",
+   "path": "Plalin/pineapple",
+   "parent": 70,
+   "pos": [
+    -14.345367,
+    10.03164
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_18",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    1.84
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Plalin/head",
+   "parent": 70,
+   "pos": [
+    -0.13360786,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "normal",
+   "path": "Plalin/head/normal",
+   "parent": 79,
+   "pos": [
+    0.19,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_2",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5,
+    5.02
+   ]
+  },
+  {
+   "name": "smile",
+   "path": "Plalin/head/smile",
+   "parent": 79,
+   "pos": [
+    -0.83,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_19",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5,
+    5.02
+   ]
+  },
+  {
+   "name": "torso",
+   "path": "Plalin/torso",
+   "parent": 70,
+   "pos": [
+    -0.03,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_8",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.44,
+    5.42
+   ]
+  },
+  {
+   "name": "other shoulder",
+   "path": "Plalin/other shoulder",
+   "parent": 70,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_9",
+   "order": 22,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    2.54
+   ]
+  },
+  {
+   "name": "shoulder",
+   "path": "Plalin/shoulder",
+   "parent": 70,
+   "pos": [
+    -1.21,
+    0.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "normal",
+   "path": "Plalin/shoulder/normal",
+   "parent": 84,
+   "pos": [
+    -0.03,
+    0.31
+   ],
+   "rotZ": 0.04236014747444609,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_10",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    2.54
+   ]
+  },
+  {
+   "name": "grabbing",
+   "path": "Plalin/shoulder/grabbing",
+   "parent": 84,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_9",
+   "order": 22,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    2.54
+   ]
+  },
+  {
+   "name": "armleft",
+   "path": "Plalin/armleft",
+   "parent": 70,
+   "pos": [
+    -5.355367,
+    -3.1883602
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_12",
+   "order": 18,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.92,
+    4.94
+   ]
+  },
+  {
+   "name": "hand",
+   "path": "Plalin/armleft/hand",
+   "parent": 87,
+   "pos": [
+    -1.74,
+    -3.16
+   ],
+   "rotZ": 2.4066630320102083,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_6",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.84
+   ]
+  },
+  {
+   "name": "armright",
+   "path": "Plalin/armright",
+   "parent": 70,
+   "pos": [
+    -0.6,
+    3.66
+   ],
+   "rotZ": 2.4169345106918447,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "sprites_12",
+   "order": 18,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.92,
+    4.94
+   ]
+  },
+  {
+   "name": "hand",
+   "path": "Plalin/armright/hand",
+   "parent": 89,
+   "pos": [
+    -2.2700129,
+    -2.860015
+   ],
+   "rotZ": 2.1566634665388893,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_6",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    2.84
+   ]
+  },
+  {
+   "name": "Fruit Holder",
+   "path": "Fruit Holder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "heart message",
+   "path": "heart message",
+   "parent": 0,
+   "pos": [
+    0,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprites_17",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.76,
+    6.52
+   ]
+  },
+  {
+   "name": "sprites_13",
+   "path": "heart message/sprites_13",
+   "parent": 92,
+   "pos": [
+    0,
+    0.53999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprites_13",
+   "order": 31,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    2.42
+   ]
+  },
+  {
+   "name": "ok3343434",
+   "path": "ok3343434",
+   "parent": 0,
+   "pos": [
+    0.01,
+    0.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8040392,
+    1.8040392
+   ],
+   "order": 99,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.32,
+    5.6
+   ]
+  }
+ ]
+}

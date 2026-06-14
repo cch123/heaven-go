@@ -1,0 +1,54 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "plantYOffset": -2,
+    "wizardBeatOffset": 0,
+    "xRange": 6,
+    "yRange": 0.5,
+    "zRange": 3.5
+   },
+   "refs": {
+    "girl": "Girl",
+    "plantBase": "Prefabs/Plant",
+    "plantHolder": "Plants",
+    "wizard": "Wizard"
+   }
+  },
+  "girl": {
+   "path": "Girl",
+   "refs": {
+    "animator": "Girl"
+   },
+   "refArrays": {
+    "flowers": [
+     "Girl/Flowers/Flower1",
+     "Girl/Flowers/Flower2",
+     "Girl/Flowers/Flower3",
+     "Girl/Flowers/Flower4",
+     "Girl/Flowers/Flower5",
+     "Girl/Flowers/Flower6"
+    ]
+   }
+  },
+  "plant": {
+   "path": "Prefabs/Plant",
+   "nums": {
+    "createBeat": 0,
+    "order": 0
+   },
+   "refs": {
+    "animator": "Prefabs/Plant",
+    "spriteRenderer": "Prefabs/Plant/SpriteHolder"
+   }
+  },
+  "wizard": {
+   "path": "Wizard",
+   "refs": {
+    "animator": "Wizard",
+    "shadow": "WizardShadow"
+   }
+  }
+ }
+}

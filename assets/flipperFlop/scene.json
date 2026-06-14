@@ -1,0 +1,2970 @@
+{
+ "nodes": [
+  {
+   "name": "flipperFlop",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FlipperFlopReference",
+   "path": "FlipperFlopReference",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4627451
+   ],
+   "size": [
+    12.76,
+    7.26
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Horizon",
+   "path": "BG/Horizon",
+   "parent": 2,
+   "pos": [
+    -11.84,
+    -0.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Horizon",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    206.68575,
+    2.7099998
+   ]
+  },
+  {
+   "name": "Horizon",
+   "path": "BG/Horizon/Horizon",
+   "parent": 3,
+   "pos": [
+    4.38,
+    0.01
+   ],
+   "z": 0.15,
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Horizon",
+   "order": -43,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "drawMode": 2,
+   "size": [
+    206.68575,
+    2.7099998
+   ]
+  },
+  {
+   "name": "Snow",
+   "path": "BG/Snow",
+   "parent": 2,
+   "pos": [
+    5.9,
+    -21.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    200,
+    40
+   ],
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "BG/Snow/Gradient",
+   "parent": 5,
+   "pos": [
+    -0.015,
+    0.4414
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6740365,
+    0.011233734
+   ],
+   "sprite": "Gradient",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Blue",
+   "path": "BG/Snow/Blue",
+   "parent": 5,
+   "pos": [
+    -0.0078,
+    -0.033
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.76671654,
+    2.261043
+   ],
+   "sprite": "Gradientend",
+   "order": -35,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "BG/Sky",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    400,
+    400
+   ],
+   "sprite": "Pink",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.47,
+    1.47
+   ]
+  },
+  {
+   "name": "Objects",
+   "path": "BG/Objects",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallestRock",
+   "path": "BG/Objects/SmallestRock",
+   "parent": 9,
+   "pos": [
+    -6.61,
+    -3.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32000002,
+    0.32000002
+   ],
+   "sprite": "SmallestRock",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.2499995,
+    2.8999999
+   ]
+  },
+  {
+   "name": "SmallRock",
+   "path": "BG/Objects/SmallRock",
+   "parent": 9,
+   "pos": [
+    6.25,
+    -3.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.31752,
+    0.31752
+   ],
+   "sprite": "SmallRock",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.98,
+    5.9
+   ]
+  },
+  {
+   "name": "BiggestRock",
+   "path": "BG/Objects/BiggestRock",
+   "parent": 9,
+   "pos": [
+    -5.13,
+    1.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.34800002,
+    0.34800002
+   ],
+   "sprite": "BiggestRock",
+   "order": -41,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    14.25,
+    9.71
+   ]
+  },
+  {
+   "name": "BigRock",
+   "path": "BG/Objects/BigRock",
+   "parent": 9,
+   "pos": [
+    6.79,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.36400002,
+    0.36400002
+   ],
+   "sprite": "BigRock",
+   "order": -41,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.44,
+    6.89
+   ]
+  },
+  {
+   "name": "MediumRock",
+   "path": "BG/Objects/MediumRock",
+   "parent": 9,
+   "pos": [
+    3.99,
+    0.07
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.27600002,
+    0.27600002
+   ],
+   "sprite": "MediumRock",
+   "order": -41,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.190001,
+    5.2
+   ]
+  },
+  {
+   "name": "Clouds",
+   "path": "BG/Objects/Clouds",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3,
+    1.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallCloud",
+   "path": "BG/Objects/Clouds/SmallCloud",
+   "parent": 15,
+   "pos": [
+    5.53,
+    1.51
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -42,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "BigCloud",
+   "path": "BG/Objects/Clouds/BigCloud",
+   "parent": 15,
+   "pos": [
+    0.43,
+    1.6
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "BigCloud",
+   "order": -42,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    23.61,
+    15.28
+   ]
+  },
+  {
+   "name": "SmallCloud (1)",
+   "path": "BG/Objects/Clouds/SmallCloud (1)",
+   "parent": 15,
+   "pos": [
+    -5.51,
+    1.55
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -43,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "FarawayClouds",
+   "path": "BG/Objects/FarawayClouds",
+   "parent": 9,
+   "pos": [
+    0,
+    -1.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    3,
+    3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallCloud",
+   "path": "BG/Objects/FarawayClouds/SmallCloud",
+   "parent": 19,
+   "pos": [
+    5.53,
+    1.44
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -42,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "BigCloud",
+   "path": "BG/Objects/FarawayClouds/BigCloud",
+   "parent": 19,
+   "pos": [
+    0.43,
+    0.63
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "BigCloud",
+   "order": -42,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    23.61,
+    15.28
+   ]
+  },
+  {
+   "name": "SmallCloud (1)",
+   "path": "BG/Objects/FarawayClouds/SmallCloud (1)",
+   "parent": 19,
+   "pos": [
+    -4.77,
+    1.05
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -43,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "Objects (1)",
+   "path": "BG/Objects (1)",
+   "parent": 2,
+   "pos": [
+    27.8,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallestRock",
+   "path": "BG/Objects (1)/SmallestRock",
+   "parent": 23,
+   "pos": [
+    -6.452,
+    -3.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "SmallestRock",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.2499995,
+    2.8999999
+   ]
+  },
+  {
+   "name": "SmallRock",
+   "path": "BG/Objects (1)/SmallRock",
+   "parent": 23,
+   "pos": [
+    6.23,
+    -3.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "SmallRock",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.98,
+    5.9
+   ]
+  },
+  {
+   "name": "BiggestRock",
+   "path": "BG/Objects (1)/BiggestRock",
+   "parent": 23,
+   "pos": [
+    -4.85,
+    0.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "BiggestRock",
+   "order": -41,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    14.25,
+    9.71
+   ]
+  },
+  {
+   "name": "BigRock",
+   "path": "BG/Objects (1)/BigRock",
+   "parent": 23,
+   "pos": [
+    6.81,
+    0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "BigRock",
+   "order": -41,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.44,
+    6.89
+   ]
+  },
+  {
+   "name": "MediumRock",
+   "path": "BG/Objects (1)/MediumRock",
+   "parent": 23,
+   "pos": [
+    3.9,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "MediumRock",
+   "order": -41,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.190001,
+    5.2
+   ]
+  },
+  {
+   "name": "Clouds",
+   "path": "BG/Objects (1)/Clouds",
+   "parent": 23,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3,
+    1.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallCloud",
+   "path": "BG/Objects (1)/Clouds/SmallCloud",
+   "parent": 29,
+   "pos": [
+    5.53,
+    1.51
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -42,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "BigCloud",
+   "path": "BG/Objects (1)/Clouds/BigCloud",
+   "parent": 29,
+   "pos": [
+    0.43,
+    1.6
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "BigCloud",
+   "order": -42,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    23.61,
+    15.28
+   ]
+  },
+  {
+   "name": "SmallCloud (1)",
+   "path": "BG/Objects (1)/Clouds/SmallCloud (1)",
+   "parent": 29,
+   "pos": [
+    -5.51,
+    1.55
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -43,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "FarawayClouds",
+   "path": "BG/Objects (1)/FarawayClouds",
+   "parent": 23,
+   "pos": [
+    0,
+    -1.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    3,
+    3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallCloud",
+   "path": "BG/Objects (1)/FarawayClouds/SmallCloud",
+   "parent": 33,
+   "pos": [
+    5.53,
+    1.44
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -42,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "BigCloud",
+   "path": "BG/Objects (1)/FarawayClouds/BigCloud",
+   "parent": 33,
+   "pos": [
+    0.43,
+    0.63
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "BigCloud",
+   "order": -42,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    23.61,
+    15.28
+   ]
+  },
+  {
+   "name": "SmallCloud (1)",
+   "path": "BG/Objects (1)/FarawayClouds/SmallCloud (1)",
+   "parent": 33,
+   "pos": [
+    -4.77,
+    1.05
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -43,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "Objects (2)",
+   "path": "BG/Objects (2)",
+   "parent": 2,
+   "pos": [
+    -27.4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallestRock",
+   "path": "BG/Objects (2)/SmallestRock",
+   "parent": 37,
+   "pos": [
+    -6.452,
+    -3.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "SmallestRock",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.2499995,
+    2.8999999
+   ]
+  },
+  {
+   "name": "SmallRock",
+   "path": "BG/Objects (2)/SmallRock",
+   "parent": 37,
+   "pos": [
+    6.23,
+    -3.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "SmallRock",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.98,
+    5.9
+   ]
+  },
+  {
+   "name": "BiggestRock",
+   "path": "BG/Objects (2)/BiggestRock",
+   "parent": 37,
+   "pos": [
+    -4.85,
+    0.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "BiggestRock",
+   "order": -41,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    14.25,
+    9.71
+   ]
+  },
+  {
+   "name": "BigRock",
+   "path": "BG/Objects (2)/BigRock",
+   "parent": 37,
+   "pos": [
+    6.81,
+    0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "BigRock",
+   "order": -41,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.44,
+    6.89
+   ]
+  },
+  {
+   "name": "MediumRock",
+   "path": "BG/Objects (2)/MediumRock",
+   "parent": 37,
+   "pos": [
+    3.9,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "MediumRock",
+   "order": -41,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.190001,
+    5.2
+   ]
+  },
+  {
+   "name": "Clouds",
+   "path": "BG/Objects (2)/Clouds",
+   "parent": 37,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3,
+    1.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallCloud",
+   "path": "BG/Objects (2)/Clouds/SmallCloud",
+   "parent": 43,
+   "pos": [
+    5.53,
+    1.51
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -42,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "BigCloud",
+   "path": "BG/Objects (2)/Clouds/BigCloud",
+   "parent": 43,
+   "pos": [
+    0.43,
+    1.6
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "BigCloud",
+   "order": -42,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    23.61,
+    15.28
+   ]
+  },
+  {
+   "name": "SmallCloud (1)",
+   "path": "BG/Objects (2)/Clouds/SmallCloud (1)",
+   "parent": 43,
+   "pos": [
+    -5.51,
+    1.55
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -43,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "FarawayClouds",
+   "path": "BG/Objects (2)/FarawayClouds",
+   "parent": 37,
+   "pos": [
+    0,
+    -1.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    3,
+    3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallCloud",
+   "path": "BG/Objects (2)/FarawayClouds/SmallCloud",
+   "parent": 47,
+   "pos": [
+    5.53,
+    1.44
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -42,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "BigCloud",
+   "path": "BG/Objects (2)/FarawayClouds/BigCloud",
+   "parent": 47,
+   "pos": [
+    0.43,
+    0.63
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "BigCloud",
+   "order": -42,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    23.61,
+    15.28
+   ]
+  },
+  {
+   "name": "SmallCloud (1)",
+   "path": "BG/Objects (2)/FarawayClouds/SmallCloud (1)",
+   "parent": 47,
+   "pos": [
+    -4.77,
+    1.05
+   ],
+   "z": 13.16,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "SmallCloud",
+   "order": -43,
+   "color": [
+    1,
+    1,
+    1,
+    0.2627451
+   ],
+   "size": [
+    20.140001,
+    15.21
+   ]
+  },
+  {
+   "name": "Flippers",
+   "path": "Flippers",
+   "parent": 0,
+   "pos": [
+    -0.3,
+    -0.5254178
+   ],
+   "z": -106.50359,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SnowLeft",
+   "path": "Flippers/SnowLeft",
+   "parent": 51,
+   "pos": [
+    -3.29,
+    -1.33
+   ],
+   "z": 106.29,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SnowRight",
+   "path": "Flippers/SnowRight",
+   "parent": 51,
+   "pos": [
+    4.48,
+    -1.33
+   ],
+   "z": 106.29,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FlipperHolder",
+   "path": "Flippers/FlipperHolder",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Flipper",
+   "path": "Flippers/FlipperHolder/Flipper",
+   "parent": 54,
+   "pos": [
+    -2.726,
+    -0.5899999
+   ],
+   "z": 106.5036,
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "Body",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.52,
+    5.3799996
+   ]
+  },
+  {
+   "name": "FaceHolder",
+   "path": "Flippers/FlipperHolder/Flipper/FaceHolder",
+   "parent": 55,
+   "pos": [
+    -0.2,
+    -0.59
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Flippers/FlipperHolder/Flipper/FaceHolder/Face",
+   "parent": 56,
+   "pos": [
+    0.2,
+    -0.06999987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FaceSprite",
+   "path": "Flippers/FlipperHolder/Flipper/FaceHolder/Face/FaceSprite",
+   "parent": 57,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper-Flop - The Flippers/Face",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.75,
+    4.38
+   ]
+  },
+  {
+   "name": "LeftFlipper",
+   "path": "Flippers/FlipperHolder/Flipper/LeftFlipper",
+   "parent": 55,
+   "pos": [
+    -2.17,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper0",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.0299997,
+    2.5
+   ]
+  },
+  {
+   "name": "RightFlipper",
+   "path": "Flippers/FlipperHolder/Flipper/RightFlipper",
+   "parent": 55,
+   "pos": [
+    2.24,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.0299997,
+    2.5
+   ]
+  },
+  {
+   "name": "RightImpact",
+   "path": "Flippers/FlipperHolder/Flipper/RightImpact",
+   "parent": 55,
+   "pos": [
+    3.01,
+    5.74
+   ],
+   "rotZ": -0.2238604903242129,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "LeftImpact",
+   "path": "Flippers/FlipperHolder/Flipper/LeftImpact",
+   "parent": 55,
+   "pos": [
+    -3.01,
+    5.91
+   ],
+   "rotZ": 0.2238559539301297,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "FlipperHolder (1)",
+   "path": "Flippers/FlipperHolder (1)",
+   "parent": 51,
+   "pos": [
+    2.05,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Flipper (1)",
+   "path": "Flippers/FlipperHolder (1)/Flipper (1)",
+   "parent": 63,
+   "pos": [
+    -2.726,
+    -0.5899999
+   ],
+   "z": 106.5036,
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "Body",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.52,
+    5.3799996
+   ]
+  },
+  {
+   "name": "FaceHolder",
+   "path": "Flippers/FlipperHolder (1)/Flipper (1)/FaceHolder",
+   "parent": 64,
+   "pos": [
+    -0.2,
+    -0.59
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Flippers/FlipperHolder (1)/Flipper (1)/FaceHolder/Face",
+   "parent": 65,
+   "pos": [
+    0.2,
+    -0.06999987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FaceSprite",
+   "path": "Flippers/FlipperHolder (1)/Flipper (1)/FaceHolder/Face/FaceSprite",
+   "parent": 66,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper-Flop - The Flippers/Face",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.75,
+    4.38
+   ]
+  },
+  {
+   "name": "LeftFlipper",
+   "path": "Flippers/FlipperHolder (1)/Flipper (1)/LeftFlipper",
+   "parent": 64,
+   "pos": [
+    -2.17,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper0",
+   "order": 3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.0299997,
+    2.5
+   ]
+  },
+  {
+   "name": "RightFlipper",
+   "path": "Flippers/FlipperHolder (1)/Flipper (1)/RightFlipper",
+   "parent": 64,
+   "pos": [
+    2.24,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.0299997,
+    2.5
+   ]
+  },
+  {
+   "name": "RightImpact",
+   "path": "Flippers/FlipperHolder (1)/Flipper (1)/RightImpact",
+   "parent": 64,
+   "pos": [
+    3.01,
+    5.74
+   ],
+   "rotZ": -0.2238604903242129,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "LeftImpact",
+   "path": "Flippers/FlipperHolder (1)/Flipper (1)/LeftImpact",
+   "parent": 64,
+   "pos": [
+    -3.01,
+    5.91
+   ],
+   "rotZ": 0.2238559539301297,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "RightImpact",
+   "path": "Flippers/FlipperHolder (1)/RightImpact",
+   "parent": 63,
+   "pos": [
+    -1.823,
+    1.1320001
+   ],
+   "z": 106.5036,
+   "rotZ": -0.2238604903242129,
+   "scale": [
+    0.29999998,
+    0.29999998
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "LeftImpact",
+   "path": "Flippers/FlipperHolder (1)/LeftImpact",
+   "parent": 63,
+   "pos": [
+    -3.6290002,
+    1.1830001
+   ],
+   "z": 106.5036,
+   "rotZ": 0.2238559539301297,
+   "scale": [
+    0.29999998,
+    0.29999998
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "FlipperHolderPlayer",
+   "path": "Flippers/FlipperHolderPlayer",
+   "parent": 51,
+   "pos": [
+    4.07,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FlipperPlayer",
+   "path": "Flippers/FlipperHolderPlayer/FlipperPlayer",
+   "parent": 74,
+   "pos": [
+    -2.726,
+    -0.5899999
+   ],
+   "z": 106.5036,
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "Body",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.52,
+    5.3799996
+   ]
+  },
+  {
+   "name": "FaceHolder",
+   "path": "Flippers/FlipperHolderPlayer/FlipperPlayer/FaceHolder",
+   "parent": 75,
+   "pos": [
+    -0.2,
+    -0.59
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Flippers/FlipperHolderPlayer/FlipperPlayer/FaceHolder/Face",
+   "parent": 76,
+   "pos": [
+    0.2,
+    -0.06999987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FaceSprite",
+   "path": "Flippers/FlipperHolderPlayer/FlipperPlayer/FaceHolder/Face/FaceSprite",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper-Flop - The Flippers/Face",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.75,
+    4.38
+   ]
+  },
+  {
+   "name": "LeftFlipper",
+   "path": "Flippers/FlipperHolderPlayer/FlipperPlayer/LeftFlipper",
+   "parent": 75,
+   "pos": [
+    -2.17,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper0",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.0299997,
+    2.5
+   ]
+  },
+  {
+   "name": "RightFlipper",
+   "path": "Flippers/FlipperHolderPlayer/FlipperPlayer/RightFlipper",
+   "parent": 75,
+   "pos": [
+    2.24,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.0299997,
+    2.5
+   ]
+  },
+  {
+   "name": "RightImpact",
+   "path": "Flippers/FlipperHolderPlayer/FlipperPlayer/RightImpact",
+   "parent": 75,
+   "pos": [
+    3.01,
+    5.74
+   ],
+   "rotZ": -0.2238604903242129,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "LeftImpact",
+   "path": "Flippers/FlipperHolderPlayer/FlipperPlayer/LeftImpact",
+   "parent": 75,
+   "pos": [
+    -3.01,
+    5.91
+   ],
+   "rotZ": 0.2238559539301297,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "FlipperHolder (2)",
+   "path": "Flippers/FlipperHolder (2)",
+   "parent": 51,
+   "pos": [
+    6.1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightImpact",
+   "path": "Flippers/FlipperHolder (2)/RightImpact",
+   "parent": 83,
+   "pos": [
+    -1.823,
+    1.1320001
+   ],
+   "z": 106.5036,
+   "rotZ": -0.2238604903242129,
+   "scale": [
+    0.29999998,
+    0.29999998
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "LeftImpact",
+   "path": "Flippers/FlipperHolder (2)/LeftImpact",
+   "parent": 83,
+   "pos": [
+    -3.6290002,
+    1.1830001
+   ],
+   "z": 106.5036,
+   "rotZ": 0.2238559539301297,
+   "scale": [
+    0.29999998,
+    0.29999998
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "Flipper (2)",
+   "path": "Flippers/FlipperHolder (2)/Flipper (2)",
+   "parent": 83,
+   "pos": [
+    -2.726,
+    -0.5899999
+   ],
+   "z": 106.5036,
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "Body",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.52,
+    5.3799996
+   ]
+  },
+  {
+   "name": "FaceHolder",
+   "path": "Flippers/FlipperHolder (2)/Flipper (2)/FaceHolder",
+   "parent": 86,
+   "pos": [
+    -0.2,
+    -0.59
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Flippers/FlipperHolder (2)/Flipper (2)/FaceHolder/Face",
+   "parent": 87,
+   "pos": [
+    0.2,
+    -0.06999987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FaceSprite",
+   "path": "Flippers/FlipperHolder (2)/Flipper (2)/FaceHolder/Face/FaceSprite",
+   "parent": 88,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper-Flop - The Flippers/Face",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.75,
+    4.38
+   ]
+  },
+  {
+   "name": "LeftFlipper",
+   "path": "Flippers/FlipperHolder (2)/Flipper (2)/LeftFlipper",
+   "parent": 86,
+   "pos": [
+    -2.17,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper0",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.0299997,
+    2.5
+   ]
+  },
+  {
+   "name": "RightFlipper",
+   "path": "Flippers/FlipperHolder (2)/Flipper (2)/RightFlipper",
+   "parent": 86,
+   "pos": [
+    2.24,
+    -1.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Flipper0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.0299997,
+    2.5
+   ]
+  },
+  {
+   "name": "RightImpact",
+   "path": "Flippers/FlipperHolder (2)/Flipper (2)/RightImpact",
+   "parent": 86,
+   "pos": [
+    3.01,
+    5.74
+   ],
+   "rotZ": -0.2238604903242129,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "LeftImpact",
+   "path": "Flippers/FlipperHolder (2)/Flipper (2)/LeftImpact",
+   "parent": 86,
+   "pos": [
+    -3.01,
+    5.91
+   ],
+   "rotZ": 0.2238559539301297,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Impact",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.5800004,
+    5.0399995
+   ]
+  },
+  {
+   "name": "CaptainTuck",
+   "path": "CaptainTuck",
+   "parent": 0,
+   "pos": [
+    -0.33491474,
+    -0.19
+   ],
+   "z": -122.25679,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CrossedArms",
+   "path": "CaptainTuck/CrossedArms",
+   "parent": 94,
+   "pos": [
+    -1.098,
+    2.295
+   ],
+   "z": 122.25679,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "CrossedArms",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.7999997,
+    4.9100003
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "CaptainTuck/HeadHolder",
+   "parent": 94,
+   "pos": [
+    -1.098,
+    3.66
+   ],
+   "z": 122.2568,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "CaptainTuck/HeadHolder/Head",
+   "parent": 96,
+   "pos": [
+    0.07999966,
+    0.5999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Head",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.66,
+    6.92
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "CaptainTuck/HeadHolder/Head/Face",
+   "parent": 97,
+   "pos": [
+    -0.02,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Face",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.67,
+    3.78
+   ]
+  },
+  {
+   "name": "Mouth0",
+   "path": "CaptainTuck/HeadHolder/Head/Mouth0",
+   "parent": 97,
+   "pos": [
+    0.07,
+    -2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Mouth0",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.6099999,
+    0.91999996
+   ]
+  },
+  {
+   "name": "Heart",
+   "path": "CaptainTuck/HeadHolder/Head/Heart",
+   "parent": 97,
+   "pos": [
+    3.65,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Heart",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.16,
+    1.62
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "CaptainTuck/Body",
+   "parent": 94,
+   "pos": [
+    -1.036,
+    1.873
+   ],
+   "z": 122.25679,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "BodyFront",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.03,
+    7.74
+   ]
+  },
+  {
+   "name": "Waist",
+   "path": "CaptainTuck/Waist",
+   "parent": 94,
+   "pos": [
+    -0.9979999,
+    0.876
+   ],
+   "z": 122.25679,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "Waist",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.5299997,
+    2.73
+   ]
+  },
+  {
+   "name": "LegFrontLeft",
+   "path": "CaptainTuck/LegFrontLeft",
+   "parent": 94,
+   "pos": [
+    -1.834,
+    0.029
+   ],
+   "z": 122.25679,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "LegFront0",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9299998,
+    6.18
+   ]
+  },
+  {
+   "name": "LegFrontRight",
+   "path": "CaptainTuck/LegFrontRight",
+   "parent": 94,
+   "pos": [
+    -0.22,
+    0.029
+   ],
+   "z": 122.25679,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "LegFront0",
+   "order": -3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9299998,
+    6.18
+   ]
+  },
+  {
+   "name": "Walk",
+   "path": "CaptainTuck/Walk",
+   "parent": 94,
+   "pos": [
+    0.33491474,
+    0.19
+   ],
+   "z": 122.2568,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "WalkCycleBack0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.12,
+    6.7599998
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "CaptainTuck/ArmLeft",
+   "parent": 94,
+   "pos": [
+    -2,
+    1.99
+   ],
+   "z": 122.2568,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "ArmFrontStraight",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    5.52
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "CaptainTuck/ArmRight",
+   "parent": 94,
+   "pos": [
+    -2,
+    1.99
+   ],
+   "z": 122.2568,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "ArmFrontStraight",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.35,
+    5.52
+   ]
+  },
+  {
+   "name": "GloveLeft",
+   "path": "CaptainTuck/GloveLeft",
+   "parent": 94,
+   "pos": [
+    0.3349147,
+    0.19
+   ],
+   "z": 122.2568,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "GloveUp0",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.01,
+    3.11
+   ]
+  },
+  {
+   "name": "GloveRight",
+   "path": "CaptainTuck/GloveRight",
+   "parent": 94,
+   "pos": [
+    0.3349147,
+    0.19
+   ],
+   "z": 122.2568,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "GloveUp0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.01,
+    3.11
+   ]
+  },
+  {
+   "name": "HandPuff",
+   "path": "CaptainTuck/HandPuff",
+   "parent": 94,
+   "pos": [
+    0.3349147,
+    0.19
+   ],
+   "z": 122.2568,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "HandPuff",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.1299999,
+    1.58
+   ]
+  },
+  {
+   "name": "HandPuff (1)",
+   "path": "CaptainTuck/HandPuff (1)",
+   "parent": 94,
+   "pos": [
+    0.33491474,
+    0.19
+   ],
+   "z": 122.2568,
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "HandPuff",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.1299999,
+    1.58
+   ]
+  }
+ ]
+}

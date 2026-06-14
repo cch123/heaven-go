@@ -1,0 +1,87 @@
+{
+ "DrummerAnimator": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/DrummerBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "HitLeft": {
+    "clip": "Animations/DrummerHitLeft",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "HitRight": {
+    "clip": "Animations/DrummerHitRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/DrummerIdle",
+    "speed": 0.25
+   },
+   "PrepareLeft": {
+    "clip": "Animations/DrummerPrepareLeft",
+    "speed": 1
+   },
+   "PrepareRight": {
+    "clip": "Animations/DrummerPrepareRight",
+    "speed": 1
+   }
+  }
+ },
+ "NPCDrummers": {
+  "default": "NPCDrummersEntered",
+  "states": {
+   "NPCDrummersEnter": {
+    "clip": "Animations/NPCDrummersEnter",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NPCDrummersEntered",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NPCDrummersEntered": {
+    "clip": "Animations/NPCDrummersEntered",
+    "speed": 1
+   },
+   "NPCDrummersExit": {
+    "clip": "Animations/NPCDrummersExit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NPCDrummersExited",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NPCDrummersExited": {
+    "clip": "Animations/NPCDrummersExited",
+    "speed": 1
+   }
+  }
+ }
+}

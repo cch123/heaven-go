@@ -1,0 +1,14 @@
+{
+ "refArrays": {
+  "CameraPosition": [
+   "CameraPosition/CameraPOVFar",
+   "CameraPosition/CameraPOVNear"
+  ]
+ },
+ "refArrayIdx": {
+  "CameraPosition": [
+   3,
+   4
+  ]
+ }
+}

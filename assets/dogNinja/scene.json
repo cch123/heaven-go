@@ -1,0 +1,1819 @@
+{
+ "nodes": [
+  {
+   "name": "dogNinja",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    4.89,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.89,
+    0.89
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holders",
+   "path": "Holders",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CurveFromLeft",
+   "path": "Holders/CurveFromLeft",
+   "parent": 1,
+   "pos": [
+    -5.56,
+    0.7116
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Holders/CurveFromLeft/Point 0",
+   "parent": 2,
+   "pos": [
+    -20.911772,
+    -8.2020855
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Holders/CurveFromLeft/Point 1",
+   "parent": 2,
+   "pos": [
+    -5.55502,
+    3.663204
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1235956,
+    1.1235956
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Holders/CurveFromLeft/Point 2",
+   "parent": 2,
+   "pos": [
+    10.413292,
+    -8.491575
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CurveFromRight",
+   "path": "Holders/CurveFromRight",
+   "parent": 1,
+   "pos": [
+    -5.56,
+    0.7116
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Holders/CurveFromRight/Point 0",
+   "parent": 6,
+   "pos": [
+    -20.911772,
+    -8.2020855
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Holders/CurveFromRight/Point 1",
+   "parent": 6,
+   "pos": [
+    -5.55502,
+    3.663204
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1235956,
+    1.1235956
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Holders/CurveFromRight/Point 2",
+   "parent": 6,
+   "pos": [
+    10.10561,
+    -8.491574
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ObjectHolder",
+   "path": "Holders/ObjectHolder",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ThrownObject",
+   "path": "Holders/ObjectHolder/ThrownObject",
+   "parent": 10,
+   "pos": [
+    -5.500002,
+    -21.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.175,
+    1.175
+   ],
+   "sprite": "Apple_Full",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.57,
+    1.8
+   ]
+  },
+  {
+   "name": "FallLeftCurves",
+   "path": "Holders/FallLeftCurves",
+   "parent": 1,
+   "pos": [
+    0,
+    -0.73000014
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightHalfCurveL",
+   "path": "Holders/FallLeftCurves/RightHalfCurveL",
+   "parent": 12,
+   "pos": [
+    0.33999994,
+    -1.6800001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Holders/FallLeftCurves/RightHalfCurveL/Point 0",
+   "parent": 13,
+   "pos": [
+    -4.532079,
+    -7.02791
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Holders/FallLeftCurves/RightHalfCurveL/Point 1",
+   "parent": 13,
+   "pos": [
+    -7.5864434,
+    4.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1235956,
+    1.1235956
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Holders/FallLeftCurves/RightHalfCurveL/Point 2",
+   "parent": 13,
+   "pos": [
+    -12.656196,
+    -7.6399393
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftHalfCurveL",
+   "path": "Holders/FallLeftCurves/LeftHalfCurveL",
+   "parent": 12,
+   "pos": [
+    2.04,
+    -0.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Holders/FallLeftCurves/LeftHalfCurveL/Point 0",
+   "parent": 17,
+   "pos": [
+    -6.2104216,
+    -8.436971
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Holders/FallLeftCurves/LeftHalfCurveL/Point 1",
+   "parent": 17,
+   "pos": [
+    -8.94,
+    3.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1235956,
+    1.1235956
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Holders/FallLeftCurves/LeftHalfCurveL/Point 2",
+   "parent": 17,
+   "pos": [
+    -12.8380575,
+    -10.143763
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FallRightCurves",
+   "path": "Holders/FallRightCurves",
+   "parent": 1,
+   "pos": [
+    0,
+    -0.73000014
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightHalfCurveR",
+   "path": "Holders/FallRightCurves/RightHalfCurveR",
+   "parent": 21,
+   "pos": [
+    11.33,
+    -1.6800001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Holders/FallRightCurves/RightHalfCurveR/Point 0",
+   "parent": 22,
+   "pos": [
+    -4.532079,
+    -7.02791
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Holders/FallRightCurves/RightHalfCurveR/Point 1",
+   "parent": 22,
+   "pos": [
+    -7.5864434,
+    4.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1235956,
+    1.1235956
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Holders/FallRightCurves/RightHalfCurveR/Point 2",
+   "parent": 22,
+   "pos": [
+    -12.656196,
+    -7.6399393
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftHalfCurveR",
+   "path": "Holders/FallRightCurves/LeftHalfCurveR",
+   "parent": 21,
+   "pos": [
+    13.030002,
+    -0.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Holders/FallRightCurves/LeftHalfCurveR/Point 0",
+   "parent": 26,
+   "pos": [
+    -6.2104216,
+    -8.436971
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Holders/FallRightCurves/LeftHalfCurveR/Point 1",
+   "parent": 26,
+   "pos": [
+    -8.94,
+    3.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1235956,
+    1.1235956
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Holders/FallRightCurves/LeftHalfCurveR/Point 2",
+   "parent": 26,
+   "pos": [
+    -12.8380575,
+    -10.143763
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HalvesHolder",
+   "path": "Holders/HalvesHolder",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HalvesLeftBase",
+   "path": "Holders/HalvesHolder/HalvesLeftBase",
+   "parent": 30,
+   "pos": [
+    -6.500001,
+    -24.900003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.175,
+    1.175
+   ],
+   "sprite": "Apple_Left",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.25,
+    1.45
+   ]
+  },
+  {
+   "name": "HalvesRightBase",
+   "path": "Holders/HalvesHolder/HalvesRightBase",
+   "parent": 30,
+   "pos": [
+    -6.500001,
+    -24.900003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.175,
+    1.175
+   ],
+   "sprite": "Apple_Right",
+   "order": -12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    1.8
+   ]
+  },
+  {
+   "name": "BarelyCurveGoLeft",
+   "path": "Holders/BarelyCurveGoLeft",
+   "parent": 1,
+   "pos": [
+    1.25,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Holders/BarelyCurveGoLeft/Point 0",
+   "parent": 33,
+   "pos": [
+    -6.3241086,
+    -6.6529636
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Holders/BarelyCurveGoLeft/Point 1",
+   "parent": 33,
+   "pos": [
+    -7.6,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1235956,
+    1.1235956
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Holders/BarelyCurveGoLeft/Point 2",
+   "parent": 33,
+   "pos": [
+    -9.484156,
+    -9.85301
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BarelyCurveGoRight",
+   "path": "Holders/BarelyCurveGoRight",
+   "parent": 1,
+   "pos": [
+    -12,
+    -0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Holders/BarelyCurveGoRight/Point 0",
+   "parent": 37,
+   "pos": [
+    -6.3241086,
+    -6.6529636
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Holders/BarelyCurveGoRight/Point 1",
+   "parent": 37,
+   "pos": [
+    -7.6,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1235956,
+    1.1235956
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Holders/BarelyCurveGoRight/Point 2",
+   "parent": 37,
+   "pos": [
+    -9.484156,
+    -9.85301
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    -4.589473,
+    -2.4983993
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FarBackground",
+   "path": "Background/FarBackground",
+   "parent": 41,
+   "pos": [
+    0.8,
+    -2.88
+   ],
+   "z": 10,
+   "rotZ": 0,
+   "scale": [
+    1.88,
+    1.88
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "Background/FarBackground/Sky",
+   "parent": 42,
+   "pos": [
+    -0.9600005,
+    4.0549
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.162977,
+    1.162977
+   ],
+   "sprite": "Sky",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.36,
+    8.94
+   ]
+  },
+  {
+   "name": "BgExtender_Top",
+   "path": "Background/FarBackground/Sky/BgExtender_Top",
+   "parent": 43,
+   "pos": [
+    0,
+    18.3474
+   ],
+   "rotZ": 0,
+   "scale": [
+    106,
+    29.872805
+   ],
+   "order": -500,
+   "color": [
+    0.33333334,
+    0.27058825,
+    0.5921569,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BackgroundGradient",
+   "path": "Background/FarBackground/Sky/BackgroundGradient",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    1
+   ],
+   "sprite": "DogNinjaBackground_0",
+   "order": -400,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    8.73
+   ]
+  },
+  {
+   "name": "BgExtender_Bottom",
+   "path": "Background/FarBackground/Sky/BgExtender_Bottom",
+   "parent": 43,
+   "pos": [
+    0,
+    -22.2752
+   ],
+   "rotZ": 0,
+   "scale": [
+    106,
+    36.223763
+   ],
+   "order": -500,
+   "color": [
+    0.5372549,
+    0.45882353,
+    0.98039216,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Mountains",
+   "path": "Background/FarBackground/Mountains",
+   "parent": 42,
+   "pos": [
+    1.2178998,
+    1.0970799
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.167,
+    1.1540002
+   ],
+   "sprite": "Mountains",
+   "order": -90,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    101.916046,
+    4.025626
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "Background/FarBackground/Water",
+   "parent": 42,
+   "pos": [
+    1.2527997,
+    -1.8276
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.161757,
+    1.0444324
+   ],
+   "sprite": "Water",
+   "order": -80,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    102.329384,
+    1.7290864
+   ]
+  },
+  {
+   "name": "CloseBackground",
+   "path": "Background/CloseBackground",
+   "parent": 41,
+   "pos": [
+    0.39,
+    -1.4
+   ],
+   "z": 5,
+   "rotZ": 0,
+   "scale": [
+    1.43,
+    1.43
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ledge_Left",
+   "path": "Background/CloseBackground/Ledge_Left",
+   "parent": 49,
+   "pos": [
+    -7.379524,
+    2.4599912
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1615744,
+    1.1615744
+   ],
+   "sprite": "Ledge_Left",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    8.98
+   ]
+  },
+  {
+   "name": "Tree_Left",
+   "path": "Background/CloseBackground/Tree_Left",
+   "parent": 49,
+   "pos": [
+    -8.769523,
+    1.7499912
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1660208,
+    1.1660208
+   ],
+   "sprite": "Tree_Left",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.67,
+    7.79
+   ]
+  },
+  {
+   "name": "Ledge_Right",
+   "path": "Background/CloseBackground/Ledge_Right",
+   "parent": 49,
+   "pos": [
+    7.1041775,
+    -0.017008543
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.185895,
+    1.185895
+   ],
+   "sprite": "Ledge_Right",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.78,
+    4.96
+   ]
+  },
+  {
+   "name": "Tree_Right",
+   "path": "Background/CloseBackground/Tree_Right",
+   "parent": 49,
+   "pos": [
+    6.1900005,
+    3.1709914
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1706378,
+    1.1706378
+   ],
+   "sprite": "Tree_Right",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.63,
+    7.33
+   ]
+  },
+  {
+   "name": "Dog",
+   "path": "Dog",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DogHead",
+   "path": "Dog/DogHead",
+   "parent": 54,
+   "pos": [
+    -5.57,
+    -0.608
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    1.174,
+    1.174
+   ],
+   "sprite": "DogHead",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.39,
+    2.71
+   ]
+  },
+  {
+   "name": "DogBody",
+   "path": "Dog/DogBody",
+   "parent": 54,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sword",
+   "path": "Dog/DogBody/Sword",
+   "parent": 56,
+   "pos": [
+    -5.8489957,
+    -3.078408
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.174,
+    1.174
+   ],
+   "sprite": "Sword",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    4.94
+   ]
+  },
+  {
+   "name": "DogTorso",
+   "path": "Dog/DogBody/DogTorso",
+   "parent": 56,
+   "pos": [
+    -5.589496,
+    -3.1524081
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.174,
+    1.174
+   ],
+   "sprite": "DogBody",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    4.1
+   ]
+  },
+  {
+   "name": "DogArmLeft",
+   "path": "Dog/DogBody/DogArmLeft",
+   "parent": 56,
+   "pos": [
+    -9.02,
+    -2.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.174,
+    1.174
+   ],
+   "sprite": "DogPrepare1_Left",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.39,
+    2.4
+   ]
+  },
+  {
+   "name": "DogArmRight",
+   "path": "Dog/DogBody/DogArmRight",
+   "parent": 56,
+   "pos": [
+    -2.2689958,
+    -1.143
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.174,
+    1.174
+   ],
+   "sprite": "DogPrepare1_Right",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    3.3
+   ]
+  },
+  {
+   "name": "Slash1",
+   "path": "Dog/Slash1",
+   "parent": 54,
+   "pos": [
+    -3.68,
+    1.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.174,
+    1.174
+   ],
+   "sprite": "Slash",
+   "order": 4,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.03,
+    6.52
+   ]
+  },
+  {
+   "name": "Slash2",
+   "path": "Dog/Slash2",
+   "parent": 54,
+   "pos": [
+    -7.31,
+    1.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.174,
+    1.174
+   ],
+   "sprite": "Slash",
+   "order": 1,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.03,
+    6.52
+   ]
+  },
+  {
+   "name": "Smoke",
+   "path": "Dog/Smoke",
+   "parent": 54,
+   "pos": [
+    -4.55,
+    1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1740003,
+    1.1740003
+   ],
+   "sprite": "DogNinja_102",
+   "order": 1,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.03,
+    6.52
+   ]
+  },
+  {
+   "name": "Smoke (1)",
+   "path": "Dog/Smoke (1)",
+   "parent": 54,
+   "pos": [
+    -4.25,
+    2.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1740003,
+    1.1740003
+   ],
+   "sprite": "DogNinja_103",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.03,
+    6.52
+   ]
+  },
+  {
+   "name": "Smoke (2)",
+   "path": "Dog/Smoke (2)",
+   "parent": 54,
+   "pos": [
+    -6.45,
+    3.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1740003,
+    1.1740003
+   ],
+   "sprite": "DogNinja_102",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.03,
+    6.52
+   ]
+  },
+  {
+   "name": "Smoke (3)",
+   "path": "Dog/Smoke (3)",
+   "parent": 54,
+   "pos": [
+    -6.23,
+    1.51
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1740003,
+    1.1740003
+   ],
+   "sprite": "DogNinja_105",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.03,
+    6.52
+   ]
+  },
+  {
+   "name": "BirdFull",
+   "path": "BirdFull",
+   "parent": 0,
+   "pos": [
+    0,
+    69
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "BirdFull/Bird",
+   "parent": 67,
+   "pos": [
+    -5.1111,
+    4.7888
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.17,
+    1.17
+   ],
+   "sprite": "Bird2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.69,
+    6.3
+   ]
+  },
+  {
+   "name": "CutEverythingSign",
+   "path": "BirdFull/CutEverythingSign",
+   "parent": 67,
+   "pos": [
+    -5.7800007,
+    -0.31000003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.262467,
+    1.262467
+   ],
+   "sprite": "CutEverythingSign",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.4,
+    3.44
+   ]
+  },
+  {
+   "name": "textstuffs",
+   "path": "BirdFull/CutEverythingSign/textstuffs",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

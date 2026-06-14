@@ -1,0 +1,9 @@
+{
+ "Crown": "Chameleon/head/crown",
+ "baseFly": "Fly",
+ "bgHigh": "BGContainer/Back/BGHigh",
+ "bgLow": "BGContainer/Back/BGLow",
+ "chameleonAnim": "Chameleon",
+ "chameleonEye": "Chameleon/head/eye",
+ "gradient": "BGContainer/Back/Gradient"
+}

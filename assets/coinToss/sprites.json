@@ -1,0 +1,313 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "foreground": {
+   "X": 0,
+   "Y": 0,
+   "W": 1496,
+   "H": 856,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_45": {
+   "X": 3658,
+   "Y": 1484,
+   "W": 430,
+   "H": 424,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_closed_01": {
+   "X": 1352,
+   "Y": 1544,
+   "W": 1456,
+   "H": 752,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_closed_02": {
+   "X": 1352,
+   "Y": 2316,
+   "W": 1456,
+   "H": 808,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_closed_45": {
+   "X": 1352,
+   "Y": 776,
+   "W": 1456,
+   "H": 748,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_closed_90": {
+   "X": 1352,
+   "Y": 8,
+   "W": 1452,
+   "H": 752,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_closed_empty": {
+   "X": 0,
+   "Y": 8,
+   "W": 1336,
+   "H": 688,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_faceup": {
+   "X": 0,
+   "Y": 3336,
+   "W": 1720,
+   "H": 620,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_man_0": {
+   "X": 584,
+   "Y": 802,
+   "W": 2039,
+   "H": 694,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_man_1": {
+   "X": 2721,
+   "Y": 96,
+   "W": 1295,
+   "H": 1417,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_man_2": {
+   "X": 418,
+   "Y": 1717,
+   "W": 2205,
+   "H": 867,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_man_3": {
+   "X": 3161,
+   "Y": 1831,
+   "W": 855,
+   "H": 1524,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_man_4": {
+   "X": 425,
+   "Y": 2764,
+   "W": 2198,
+   "H": 845,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_open1": {
+   "X": 0,
+   "Y": 716,
+   "W": 1328,
+   "H": 812,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_open2": {
+   "X": 0,
+   "Y": 1548,
+   "W": 1332,
+   "H": 876,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_pickup": {
+   "X": 0,
+   "Y": 2440,
+   "W": 1336,
+   "H": 876,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_shockwave": {
+   "X": 3208,
+   "Y": 1480,
+   "W": 432,
+   "H": 432,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_sleeve": {
+   "X": 3212,
+   "Y": 264,
+   "W": 688,
+   "H": 1132,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "sprsh_cointoss_whoosh": {
+   "X": 2824,
+   "Y": 72,
+   "W": 368,
+   "H": 1840,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

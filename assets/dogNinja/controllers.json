@@ -1,0 +1,185 @@
+{
+ "BirdAnim": {
+  "default": "Idle",
+  "params": {
+   "birdOnScreen": false
+  },
+  "states": {
+   "FlyIn": {
+    "clip": "Bird/FlyIn",
+    "speed": 1
+   },
+   "FlyOut": {
+    "clip": "Bird/FlyOut",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "DogAnim": {
+  "default": "Idle",
+  "params": {
+   "needPrepare": false
+  },
+  "states": {
+   "BarelyBoth": {
+    "clip": "Dog/BarelyGlobal",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BarelyLeft": {
+    "clip": "Dog/BarelyLeft",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BarelyRight": {
+    "clip": "Dog/BarelyRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Bop": {
+    "clip": "Dog/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Dog/Idle",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Dog/Prepare",
+    "speed": 1
+   },
+   "SliceBoth": {
+    "clip": "Dog/SliceBoth",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "SliceLeft": {
+    "clip": "Dog/SliceLeft",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "SliceRight": {
+    "clip": "Dog/SliceRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Unprepare": {
+    "clip": "Dog/UnPrepare",
+    "speed": 1
+   },
+   "WhiffBoth": {
+    "clip": "Dog/WhiffGlobal",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "WhiffLeft": {
+    "clip": "Dog/WhiffLeft",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "WhiffRight": {
+    "clip": "Dog/WhiffRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "LeftHalfAnim": {
+  "default": "Idle",
+  "states": {
+   "FallLeft": {
+    "clip": "Halves/LeftHalfFallLeft",
+    "speed": 1
+   },
+   "FallRight": {
+    "clip": "Halves/LeftHalfFallRight",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Halves/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "RightHalfAnim": {
+  "default": "Idle",
+  "states": {
+   "FallLeft": {
+    "clip": "Halves/RightHalfFallLeft",
+    "speed": 1
+   },
+   "FallRight": {
+    "clip": "Halves/RightHalfFallRight",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Halves/Idle",
+    "speed": 1
+   }
+  }
+ }
+}

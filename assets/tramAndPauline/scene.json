@@ -1,0 +1,1081 @@
+{
+ "nodes": [
+  {
+   "name": "tramAndPauline",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BgObjects",
+   "path": "BgObjects",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Flat",
+   "path": "BgObjects/Flat",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -100,
+   "color": [
+    0.64705884,
+    0.6666667,
+    0.9137255,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CurtainStarRight",
+   "path": "BgObjects/CurtainStarRight",
+   "parent": 1,
+   "pos": [
+    4.89,
+    2.423
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_54",
+   "order": -98,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.04,
+    12.96
+   ]
+  },
+  {
+   "name": "CurtainStarLeft",
+   "path": "BgObjects/CurtainStarLeft",
+   "parent": 1,
+   "pos": [
+    -4.89,
+    2.423
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_54",
+   "order": -98,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.04,
+    12.96
+   ]
+  },
+  {
+   "name": "Curtain",
+   "path": "BgObjects/Curtain",
+   "parent": 1,
+   "pos": [
+    0,
+    9.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Tram_Poline_53",
+   "path": "BgObjects/Curtain/Tram_Poline_53",
+   "parent": 5,
+   "pos": [
+    -0.006,
+    4.7255
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.40000004
+   ],
+   "sprite": "Tram_Poline_53",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    44.489483,
+    41.207306
+   ]
+  },
+  {
+   "name": "Tram_Poline_67",
+   "path": "BgObjects/Curtain/Tram_Poline_67",
+   "parent": 5,
+   "pos": [
+    -0.0035,
+    -3.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39677417,
+    0.3918033
+   ],
+   "sprite": "Tram_Poline_67",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    44.82232,
+    2.44
+   ]
+  },
+  {
+   "name": "audience",
+   "path": "BgObjects/audience",
+   "parent": 1,
+   "pos": [
+    -0.34,
+    -1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neutral",
+   "path": "BgObjects/audience/neutral",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "neutral",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.08,
+    11.25
+   ]
+  },
+  {
+   "name": "neutral (1)",
+   "path": "BgObjects/audience/neutral (1)",
+   "parent": 8,
+   "pos": [
+    5.88,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "neutral",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.08,
+    11.25
+   ]
+  },
+  {
+   "name": "neutral (2)",
+   "path": "BgObjects/audience/neutral (2)",
+   "parent": 8,
+   "pos": [
+    11.76,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "neutral",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.08,
+    11.25
+   ]
+  },
+  {
+   "name": "neutral (3)",
+   "path": "BgObjects/audience/neutral (3)",
+   "parent": 8,
+   "pos": [
+    -5.88,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "neutral",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.08,
+    11.25
+   ]
+  },
+  {
+   "name": "neutral (4)",
+   "path": "BgObjects/audience/neutral (4)",
+   "parent": 8,
+   "pos": [
+    -11.76,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "neutral",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.08,
+    11.25
+   ]
+  },
+  {
+   "name": "TramObjects",
+   "path": "TramObjects",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TrampolineLeft",
+   "path": "TramObjects/TrampolineLeft",
+   "parent": 14,
+   "pos": [
+    -4.82,
+    -5.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "TramObjects/TrampolineLeft/LegLeft",
+   "parent": 15,
+   "pos": [
+    -2.347,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_62",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    5.46
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "TramObjects/TrampolineLeft/LegRight",
+   "parent": 15,
+   "pos": [
+    4.154,
+    0.09000015
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_62",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    5.46
+   ]
+  },
+  {
+   "name": "Pad",
+   "path": "TramObjects/TrampolineLeft/Pad",
+   "parent": 15,
+   "pos": [
+    0.9,
+    1.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_57",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.92,
+    0.78
+   ]
+  },
+  {
+   "name": "TramRoot",
+   "path": "TramObjects/TramRoot",
+   "parent": 14,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Tram",
+   "path": "TramObjects/TramRoot/Tram",
+   "parent": 19,
+   "pos": [
+    -3.83,
+    -3.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body",
+   "path": "TramObjects/TramRoot/Tram/body",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_12",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.3,
+    4.42
+   ]
+  },
+  {
+   "name": "head",
+   "path": "TramObjects/TramRoot/Tram/head",
+   "parent": 20,
+   "pos": [
+    0,
+    1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.8,
+    3.39
+   ]
+  },
+  {
+   "name": "tail",
+   "path": "TramObjects/TramRoot/Tram/tail",
+   "parent": 20,
+   "pos": [
+    -0.61,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_14",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.18,
+    3.38
+   ]
+  },
+  {
+   "name": "armLeft",
+   "path": "TramObjects/TramRoot/Tram/armLeft",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_56",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    3.38,
+    4.34
+   ]
+  },
+  {
+   "name": "armRight",
+   "path": "TramObjects/TramRoot/Tram/armRight",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_56",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    3.38,
+    4.34
+   ]
+  },
+  {
+   "name": "Particle",
+   "path": "TramObjects/TramRoot/Tram/Particle",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke",
+   "path": "TramObjects/TramRoot/Tram/Particle/Smoke",
+   "parent": 26,
+   "pos": [
+    0.049,
+    -0.164
+   ],
+   "rotZ": -2.959379092213872,
+   "scale": [
+    1.2825899,
+    1.2825899
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PaulineObjects",
+   "path": "PaulineObjects",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TrampolineRight",
+   "path": "PaulineObjects/TrampolineRight",
+   "parent": 28,
+   "pos": [
+    3.17,
+    -5.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "PaulineObjects/TrampolineRight/LegLeft",
+   "parent": 29,
+   "pos": [
+    -2.347,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_62",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    5.46
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "PaulineObjects/TrampolineRight/LegRight",
+   "parent": 29,
+   "pos": [
+    4.154,
+    0.09000015
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_62",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    5.46
+   ]
+  },
+  {
+   "name": "Pad",
+   "path": "PaulineObjects/TrampolineRight/Pad",
+   "parent": 29,
+   "pos": [
+    0.9,
+    1.1300001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_57",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.92,
+    0.78
+   ]
+  },
+  {
+   "name": "PaulineRoot",
+   "path": "PaulineObjects/PaulineRoot",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pauline",
+   "path": "PaulineObjects/PaulineRoot/Pauline",
+   "parent": 33,
+   "pos": [
+    4.11,
+    -3.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body",
+   "path": "PaulineObjects/PaulineRoot/Pauline/body",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_15",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.3,
+    4.42
+   ]
+  },
+  {
+   "name": "head",
+   "path": "PaulineObjects/PaulineRoot/Pauline/head",
+   "parent": 34,
+   "pos": [
+    0,
+    1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_4",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.8,
+    3.39
+   ]
+  },
+  {
+   "name": "tail",
+   "path": "PaulineObjects/PaulineRoot/Pauline/tail",
+   "parent": 34,
+   "pos": [
+    -0.61,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_17",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.18,
+    3.38
+   ]
+  },
+  {
+   "name": "Particle",
+   "path": "PaulineObjects/PaulineRoot/Pauline/Particle",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke",
+   "path": "PaulineObjects/PaulineRoot/Pauline/Particle/Smoke",
+   "parent": 38,
+   "pos": [
+    0.049,
+    -0.164
+   ],
+   "rotZ": -2.959379092213872,
+   "scale": [
+    1.2825899,
+    1.2825899
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "armLeft",
+   "path": "PaulineObjects/PaulineRoot/Pauline/armLeft",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_56",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    3.38,
+    4.34
+   ]
+  },
+  {
+   "name": "armRight",
+   "path": "PaulineObjects/PaulineRoot/Pauline/armRight",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "Tram_Poline_56",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    3.38,
+    4.34
+   ]
+  }
+ ]
+}

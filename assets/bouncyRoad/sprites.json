@@ -1,0 +1,128 @@
+{
+ "atlases": [
+  "atlas0.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "A Button Thing": {
+   "X": 462,
+   "Y": 375,
+   "W": 398,
+   "H": 1285,
+   "PivotX": 0.43661973,
+   "PivotY": 0.9553377,
+   "ppu": 140,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "A Button Thing Top": {
+   "X": 530,
+   "Y": 71,
+   "W": 213,
+   "H": 178,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 140,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Ball": {
+   "X": 1350,
+   "Y": 75,
+   "W": 174,
+   "H": 174,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 140,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "D-Pad Thing": {
+   "X": 30,
+   "Y": 379,
+   "W": 398,
+   "H": 1285,
+   "PivotX": 0.5633803,
+   "PivotY": 0.9553377,
+   "ppu": 140,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "D-Pad Thing Top": {
+   "X": 149,
+   "Y": 76,
+   "W": 213,
+   "H": 178,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 140,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Gradient (Prolly will be replaced)": {
+   "X": 1894,
+   "Y": 0,
+   "W": 154,
+   "H": 2048,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 140,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Thing": {
+   "X": 977,
+   "Y": 396,
+   "W": 213,
+   "H": 115,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 140,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Thing Top": {
+   "X": 978,
+   "Y": 72,
+   "W": 213,
+   "H": 178,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 140,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

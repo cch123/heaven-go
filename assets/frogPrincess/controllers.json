@@ -1,0 +1,217 @@
+{
+ "frog": {
+  "default": "idle",
+  "states": {
+   "appear": {
+    "clip": "Animations/frogAppear",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "fall": {
+    "clip": "Animations/frogFall",
+    "speed": 1
+   },
+   "frogNeutral": {
+    "clip": "Animations/frogNeutral",
+    "speed": 1
+   },
+   "gone": {
+    "clip": "Animations/frogGone",
+    "speed": 1
+   },
+   "hold": {
+    "clip": "Animations/frogHold",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/frogNeutral",
+    "speed": 1
+   },
+   "jump": {
+    "clip": "Animations/frogJump",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "jumpBarely": {
+    "clip": "Animations/frogJumpBarely",
+    "speed": 1
+   },
+   "jumpFast": {
+    "clip": "Animations/frogJumpFast",
+    "speed": 1
+   },
+   "ready": {
+    "clip": "Animations/frogReady",
+    "speed": 1
+   },
+   "release": {
+    "clip": "Animations/frogRelease",
+    "speed": 1
+   }
+  }
+ },
+ "lotus": {
+  "default": "idle",
+  "states": {
+   "fall": {
+    "clip": "Animations/lotusFall",
+    "speed": 1
+   },
+   "hold": {
+    "clip": "Animations/lotusHold",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/lotusIdle",
+    "speed": 1
+   },
+   "jump": {
+    "clip": "Animations/lotusJump",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "jumpBarely": {
+    "clip": "Animations/lotusJumpBarely",
+    "speed": 1
+   },
+   "release": {
+    "clip": "Animations/lotusRelease",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "princess": {
+  "default": "idle",
+  "states": {
+   "appear": {
+    "clip": "Animations/princessAppear",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "fallBackward": {
+    "clip": "Animations/princessFallBackward",
+    "speed": 1
+   },
+   "fallForward": {
+    "clip": "Animations/princessFallForward",
+    "speed": 1
+   },
+   "gone": {
+    "clip": "Animations/princessGone",
+    "speed": 1
+   },
+   "happy": {
+    "clip": "Animations/princessHappy",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "hold": {
+    "clip": "Animations/princessHold",
+    "speed": 1
+   },
+   "holdBarely": {
+    "clip": "Animations/princessHoldBarely",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/princessIdle",
+    "speed": 1
+   },
+   "jump": {
+    "clip": "Animations/princessJump",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "jumpBarely": {
+    "clip": "Animations/princessJumpBarely",
+    "speed": 1
+   },
+   "jumpFast": {
+    "clip": "Animations/princessJumpFast",
+    "speed": 1
+   },
+   "princessAppear": {
+    "clip": "Animations/princessAppear",
+    "speed": 1
+   },
+   "princessGone": {
+    "clip": "Animations/princessGone",
+    "speed": 1
+   },
+   "princessNeutral": {
+    "clip": "Animations/princessNeutral",
+    "speed": 1
+   },
+   "ready": {
+    "clip": "Animations/princessReady",
+    "speed": 1
+   },
+   "surpriseFall": {
+    "clip": "Animations/princessSurpriseFall",
+    "speed": 1
+   },
+   "surpriseHoldBarely": {
+    "clip": "Animations/princessSurpriseHoldBarely",
+    "speed": 1
+   },
+   "surpriseJumpBarely": {
+    "clip": "Animations/princessSurpriseJumpBarely",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 0.5,
+      "duration": 0.25
+     }
+    ]
+   },
+   "wary": {
+    "clip": "Animations/princessWary",
+    "speed": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,10 @@
+{
+ "BGGradient": "BG/Gradient",
+ "BGHigh": "BG/High",
+ "BGLow": "BG/Low",
+ "CurveHolder": "CurveHolder_1",
+ "PosCurve": "PosCurve",
+ "ThingsTrans": "Things",
+ "baseBall": "Ball",
+ "baseBounceCurve": "curveBounce"
+}

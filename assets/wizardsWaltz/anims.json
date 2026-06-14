@@ -1,0 +1,674 @@
+{
+ "Animations/GirlFlower": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_small_flower_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_small_flower_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_small_flower_2"
+    }
+   ]
+  }
+ },
+ "Animations/GirlHappy": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_girl_happy_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_girl_happy_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_girl_happy_2"
+    }
+   ]
+  }
+ },
+ "Animations/GirlIdle": {
+  "duration": 0.083333336,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_girl_bop_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_girl_bop_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_girl_0"
+    },
+    {
+     "t": 0.05,
+     "name": "wizardswaltz_girl_1"
+    },
+    {
+     "t": 0.06666667,
+     "name": "wizardswaltz_girl_2"
+    }
+   ]
+  }
+ },
+ "Animations/GirlSad": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_girl_sad_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_girl_sad_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_girl_sad_2"
+    }
+   ]
+  }
+ },
+ "Animations/PlantAppear": {
+  "duration": 0.050000004,
+  "loop": false,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_plant_grow_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_plant_grow_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_plant_grow_2"
+    }
+   ]
+  }
+ },
+ "Animations/PlantEat": {
+  "duration": 0.1,
+  "loop": false,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_miss_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_miss_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_miss_2"
+    },
+    {
+     "t": 0.05,
+     "name": "wizardswaltz_miss_3"
+    },
+    {
+     "t": 0.06666667,
+     "name": "wizardswaltz_miss_4"
+    },
+    {
+     "t": 0.083333336,
+     "name": "wizardswaltz_miss_5"
+    }
+   ]
+  }
+ },
+ "Animations/PlantEatLoop": {
+  "duration": 0.033333335,
+  "loop": true,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_chew_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_chew_1"
+    }
+   ]
+  }
+ },
+ "Animations/PlantHit": {
+  "duration": 0.13333334,
+  "loop": false,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_flower_grow_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_flower_grow_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_flower_grow_2"
+    },
+    {
+     "t": 0.05,
+     "name": "wizardswaltz_flower_grow_3"
+    },
+    {
+     "t": 0.06666667,
+     "name": "wizardswaltz_flower_grow_4"
+    },
+    {
+     "t": 0.083333336,
+     "name": "wizardswaltz_flower_grow_5"
+    },
+    {
+     "t": 0.1,
+     "name": "wizardswaltz_flower_0"
+    },
+    {
+     "t": 0.11666667,
+     "name": "wizardswaltz_flower_grow_5"
+    }
+   ]
+  }
+ },
+ "Animations/PlantIdleFlower": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_flower_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_flower_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_flower_2"
+    }
+   ]
+  }
+ },
+ "Animations/PlantIdlePlant": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_plant_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_plant_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_plant_2"
+    }
+   ]
+  }
+ },
+ "Animations/WandIdle": {
+  "duration": 0.033333335,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_wand_fx_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_wand_fx_1"
+    }
+   ]
+  }
+ },
+ "Animations/WizardIdle": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_wizard_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_wizard_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_wizard_2"
+    }
+   ]
+  }
+ },
+ "Animations/WizardMagic": {
+  "duration": 0.050000004,
+  "loop": false,
+  "pos": {
+   "WandFX": {
+    "x": [
+     {
+      "t": 0,
+      "v": -1.47,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 0.016666668,
+      "v": -1.28,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 0.050000004,
+      "v": -1.351,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "y": [
+     {
+      "t": 0,
+      "v": -0.79,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 0.016666668,
+      "v": -0.75,
+      "i": 3.2000015,
+      "o": 3.2000015
+     },
+     {
+      "t": 0.050000004,
+      "v": -0.352,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   }
+  },
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_wizard_turn_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_wizard_turn_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_wizard_turn_2"
+    }
+   ]
+  }
+ },
+ "GirlFlower": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_small_flower_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_small_flower_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_small_flower_2"
+    }
+   ]
+  }
+ },
+ "GirlHappy": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_girl_happy_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_girl_happy_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_girl_happy_2"
+    }
+   ]
+  }
+ },
+ "GirlIdle": {
+  "duration": 0.083333336,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_girl_bop_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_girl_bop_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_girl_0"
+    },
+    {
+     "t": 0.05,
+     "name": "wizardswaltz_girl_1"
+    },
+    {
+     "t": 0.06666667,
+     "name": "wizardswaltz_girl_2"
+    }
+   ]
+  }
+ },
+ "GirlSad": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_girl_sad_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_girl_sad_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_girl_sad_2"
+    }
+   ]
+  }
+ },
+ "PlantAppear": {
+  "duration": 0.050000004,
+  "loop": false,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_plant_grow_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_plant_grow_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_plant_grow_2"
+    }
+   ]
+  }
+ },
+ "PlantEat": {
+  "duration": 0.1,
+  "loop": false,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_miss_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_miss_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_miss_2"
+    },
+    {
+     "t": 0.05,
+     "name": "wizardswaltz_miss_3"
+    },
+    {
+     "t": 0.06666667,
+     "name": "wizardswaltz_miss_4"
+    },
+    {
+     "t": 0.083333336,
+     "name": "wizardswaltz_miss_5"
+    }
+   ]
+  }
+ },
+ "PlantEatLoop": {
+  "duration": 0.033333335,
+  "loop": true,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_chew_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_chew_1"
+    }
+   ]
+  }
+ },
+ "PlantHit": {
+  "duration": 0.13333334,
+  "loop": false,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_flower_grow_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_flower_grow_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_flower_grow_2"
+    },
+    {
+     "t": 0.05,
+     "name": "wizardswaltz_flower_grow_3"
+    },
+    {
+     "t": 0.06666667,
+     "name": "wizardswaltz_flower_grow_4"
+    },
+    {
+     "t": 0.083333336,
+     "name": "wizardswaltz_flower_grow_5"
+    },
+    {
+     "t": 0.1,
+     "name": "wizardswaltz_flower_0"
+    },
+    {
+     "t": 0.11666667,
+     "name": "wizardswaltz_flower_grow_5"
+    }
+   ]
+  }
+ },
+ "PlantIdleFlower": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_flower_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_flower_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_flower_2"
+    }
+   ]
+  }
+ },
+ "PlantIdlePlant": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "SpriteHolder": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_plant_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_plant_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_plant_2"
+    }
+   ]
+  }
+ },
+ "WandIdle": {
+  "duration": 0.033333335,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_wand_fx_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_wand_fx_1"
+    }
+   ]
+  }
+ },
+ "WizardIdle": {
+  "duration": 0.050000004,
+  "loop": true,
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_wizard_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_wizard_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_wizard_2"
+    }
+   ]
+  }
+ },
+ "WizardMagic": {
+  "duration": 0.050000004,
+  "loop": false,
+  "pos": {
+   "WandFX": {
+    "x": [
+     {
+      "t": 0,
+      "v": -1.47,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 0.016666668,
+      "v": -1.28,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 0.050000004,
+      "v": -1.351,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "y": [
+     {
+      "t": 0,
+      "v": -0.79,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 0.016666668,
+      "v": -0.75,
+      "i": 3.2000015,
+      "o": 3.2000015
+     },
+     {
+      "t": 0.050000004,
+      "v": -0.352,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   }
+  },
+  "sprites": {
+   "": [
+    {
+     "t": 0,
+     "name": "wizardswaltz_wizard_turn_0"
+    },
+    {
+     "t": 0.016666668,
+     "name": "wizardswaltz_wizard_turn_1"
+    },
+    {
+     "t": 0.033333335,
+     "name": "wizardswaltz_wizard_turn_2"
+    }
+   ]
+  }
+ }
+}

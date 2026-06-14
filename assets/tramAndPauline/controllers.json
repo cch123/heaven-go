@@ -1,0 +1,151 @@
+{
+ "Curtain": {
+  "default": "Curtain",
+  "states": {
+   "Curtain": {
+    "clip": "Animations/Curtain",
+    "speed": 1
+   }
+  }
+ },
+ "Pauline": {
+  "default": "FoxIdle",
+  "states": {
+   "BarelyIdle": {
+    "clip": "Pauline/BarelyIdle",
+    "speed": 1
+   },
+   "FoxIdle": {
+    "clip": "Pauline/FoxIdle",
+    "speed": 1
+   },
+   "HumanIdle": {
+    "clip": "Pauline/HumanIdle",
+    "speed": 1
+   },
+   "JumpBarely": {
+    "clip": "Pauline/JumpBarely",
+    "speed": 1
+   },
+   "JumpFox": {
+    "clip": "Pauline/JumpFox",
+    "speed": 1
+   },
+   "JumpHuman": {
+    "clip": "Pauline/JumpHuman",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Pauline/Prepare",
+    "speed": 1
+   },
+   "PrepareBarely": {
+    "clip": "Pauline/PrepareBarely",
+    "speed": 1
+   },
+   "PrepareHuman": {
+    "clip": "Pauline/PrepareHuman",
+    "speed": 1
+   },
+   "TransformBarely": {
+    "clip": "Pauline/TransformBarely",
+    "speed": 1
+   },
+   "TransformFox": {
+    "clip": "Pauline/TransformFox",
+    "speed": 1
+   },
+   "TransformHuman": {
+    "clip": "Pauline/TransformHuman",
+    "speed": 1
+   }
+  }
+ },
+ "Tram": {
+  "default": "FoxIdle",
+  "states": {
+   "BarelyIdle": {
+    "clip": "Tram/BarelyIdle",
+    "speed": 1
+   },
+   "FoxIdle": {
+    "clip": "Tram/FoxIdle",
+    "speed": 1
+   },
+   "HumanIdle": {
+    "clip": "Tram/HumanIdle",
+    "speed": 1
+   },
+   "JumpBarely": {
+    "clip": "Tram/JumpBarely",
+    "speed": 1
+   },
+   "JumpFox": {
+    "clip": "Tram/JumpFox",
+    "speed": 1
+   },
+   "JumpHuman": {
+    "clip": "Tram/JumpHuman",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Tram/Prepare",
+    "speed": 1
+   },
+   "PrepareBarely": {
+    "clip": "Tram/PrepareBarely",
+    "speed": 1
+   },
+   "PrepareHuman": {
+    "clip": "Tram/PrepareHuman",
+    "speed": 1
+   },
+   "TransformBarely": {
+    "clip": "Tram/TransformBarely",
+    "speed": 1
+   },
+   "TransformFox": {
+    "clip": "Tram/TransformFox",
+    "speed": 1
+   },
+   "TransformHuman": {
+    "clip": "Tram/TransformHuman",
+    "speed": 1
+   }
+  }
+ },
+ "Trampoline": {
+  "default": "Idle",
+  "states": {
+   "Bounce": {
+    "clip": "Trampoline/Bounce",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Trampoline/Idle",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Trampoline/Jump",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Trampoline/Prepare",
+    "speed": 1
+   }
+  }
+ },
+ "audience": {
+  "default": "Idle",
+  "states": {
+   "Happy": {
+    "clip": "Animations/Happy",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   }
+  }
+ }
+}

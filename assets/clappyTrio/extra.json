@@ -1,0 +1,32 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "emoCounter": 0,
+    "lionCount": 3,
+    "misses": 0
+   },
+   "refs": {
+    "customText": "Sign/SignContents/customText",
+    "signAnim": "Sign",
+    "textCustom": "Sign/SignContents/customText",
+    "textTrioTiming": "Sign/SignContents/trioTiming"
+   },
+   "refArrays": {
+    "Lion": [
+     "Lion"
+    ]
+   },
+   "spriteArrays": {
+    "faces": [
+     "head_1",
+     "head_2",
+     "head_3",
+     "head_4",
+     "head_5"
+    ]
+   }
+  }
+ }
+}

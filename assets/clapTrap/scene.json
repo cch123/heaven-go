@@ -1,0 +1,1228 @@
+{
+ "nodes": [
+  {
+   "name": "clapTrap",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.89,
+    0.89
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "background",
+   "path": "background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    70,
+    70
+   ],
+   "order": -10,
+   "color": [
+    1,
+    0.9372549,
+    0.06666667,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "sortGroup": [
+    0,
+    -2
+   ]
+  },
+  {
+   "name": "clapTrapDoll",
+   "path": "clapTrapDoll",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dollHead",
+   "path": "clapTrapDoll/dollHead",
+   "parent": 2,
+   "pos": [
+    -0.15000002,
+    0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "head",
+   "path": "clapTrapDoll/dollHead/head",
+   "parent": 3,
+   "pos": [
+    0.05,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58,
+    0.58
+   ],
+   "sprite": "ClapTrapTrapper_25",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.92,
+    3.46
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "clapTrapDoll/dollHead/head/shadow",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapperLit/ClapTrapTrapper_25",
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.92,
+    3.46
+   ]
+  },
+  {
+   "name": "face",
+   "path": "clapTrapDoll/dollHead/face",
+   "parent": 3,
+   "pos": [
+    -0.16,
+    -0.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58,
+    0.58
+   ],
+   "sprite": "ClapTrapTrapper_30",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.49,
+    1.46
+   ]
+  },
+  {
+   "name": "mouth",
+   "path": "clapTrapDoll/dollHead/mouth",
+   "parent": 3,
+   "pos": [
+    -0.26,
+    -0.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58,
+    0.58
+   ],
+   "sprite": "ClapTrapTrapper_18",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.43
+   ]
+  },
+  {
+   "name": "jaw",
+   "path": "clapTrapDoll/dollHead/mouth/jaw",
+   "parent": 7,
+   "pos": [
+    0.1,
+    -0.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapper_28",
+   "order": 17,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    0.9
+   ]
+  },
+  {
+   "name": "air",
+   "path": "clapTrapDoll/dollHead/mouth/air",
+   "parent": 7,
+   "pos": [
+    -1.01,
+    -0.72
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapper_76",
+   "order": 12,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    1
+   ]
+  },
+  {
+   "name": "eyes",
+   "path": "clapTrapDoll/dollHead/eyes",
+   "parent": 3,
+   "pos": [
+    -0.21431859,
+    -0.028536856
+   ],
+   "z": 0.40507722,
+   "rotZ": 0,
+   "scale": [
+    1.1235957,
+    1.1235957
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "eyeL",
+   "path": "clapTrapDoll/dollHead/eyes/eyeL",
+   "parent": 10,
+   "pos": [
+    -0.58,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "ClapTrapTrapper_12",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8,
+    0.84
+   ]
+  },
+  {
+   "name": "eyeR",
+   "path": "clapTrapDoll/dollHead/eyes/eyeR",
+   "parent": 10,
+   "pos": [
+    -0.07,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "ClapTrapTrapper_12",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8,
+    0.84
+   ]
+  },
+  {
+   "name": "body",
+   "path": "clapTrapDoll/body",
+   "parent": 2,
+   "pos": [
+    0,
+    -3.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58,
+    0.58
+   ],
+   "sprite": "ClapTrapTrapper_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 1,
+   "size": [
+    3.26,
+    9.27
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "arms",
+   "path": "clapTrapDoll/arms",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "armLeft",
+   "path": "clapTrapDoll/arms/armLeft",
+   "parent": 14,
+   "pos": [
+    -0.55,
+    -1.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58000004,
+    0.58000004
+   ],
+   "sprite": "ClapTrapTrapper_3",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    5.34
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "clapTrapDoll/arms/armLeft/shadow",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapperLit/ClapTrapTrapper_3",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    6.5
+   ]
+  },
+  {
+   "name": "woosh",
+   "path": "clapTrapDoll/arms/armLeft/woosh",
+   "parent": 15,
+   "pos": [
+    -2.64,
+    2.49
+   ],
+   "rotZ": 0.10471963843671714,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapper_9",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    9.6
+   ]
+  },
+  {
+   "name": "glove",
+   "path": "clapTrapDoll/arms/armLeft/glove",
+   "parent": 15,
+   "pos": [
+    -3.72,
+    -4.82
+   ],
+   "rotZ": -0.651007842002066,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapper_5",
+   "order": 5,
+   "color": [
+    0.0627451,
+    0.70980394,
+    0.90588236,
+    1
+   ],
+   "size": [
+    1.2,
+    2.16
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "clapTrapDoll/arms/armLeft/glove/shadow",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapperLit/ClapTrapTrapper_5",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    2.16
+   ]
+  },
+  {
+   "name": "gloveRim",
+   "path": "clapTrapDoll/arms/armLeft/glove/gloveRim",
+   "parent": 18,
+   "pos": [
+    0.021648377,
+    0.84618616
+   ],
+   "rotZ": -0.23038958091209627,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapper_16",
+   "order": 7,
+   "color": [
+    0.0627451,
+    0.70980394,
+    0.90588236,
+    1
+   ],
+   "size": [
+    1.2,
+    0.7
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "clapTrapDoll/arms/armLeft/glove/gloveRim/shadow",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapperLit/ClapTrapTrapper_16",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    2.16
+   ]
+  },
+  {
+   "name": "armRight",
+   "path": "clapTrapDoll/arms/armRight",
+   "parent": 14,
+   "pos": [
+    0.53000003,
+    -0.98000056
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58000004,
+    0.58000004
+   ],
+   "sprite": "ClapTrapTrapper_4",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.84,
+    5.04
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "clapTrapDoll/arms/armRight/shadow",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapperLit/ClapTrapTrapper_4",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    6.5
+   ]
+  },
+  {
+   "name": "woosh",
+   "path": "clapTrapDoll/arms/armRight/woosh",
+   "parent": 22,
+   "pos": [
+    3.02,
+    2.92
+   ],
+   "rotZ": 0.08936092902844557,
+   "scale": [
+    1.15,
+    1
+   ],
+   "sprite": "ClapTrapTrapper_9",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    9.6
+   ]
+  },
+  {
+   "name": "glove",
+   "path": "clapTrapDoll/arms/armRight/glove",
+   "parent": 22,
+   "pos": [
+    4.494,
+    -4.83
+   ],
+   "rotZ": 0.5811871260618887,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapper_11",
+   "order": 5,
+   "color": [
+    0.9254902,
+    0.45490196,
+    0.05882353,
+    1
+   ],
+   "size": [
+    1.16,
+    2.06
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "clapTrapDoll/arms/armRight/glove/shadow",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapperLit/ClapTrapTrapper_11",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    2.16
+   ]
+  },
+  {
+   "name": "gloveRim",
+   "path": "clapTrapDoll/arms/armRight/glove/gloveRim",
+   "parent": 25,
+   "pos": [
+    -0.145,
+    0.921
+   ],
+   "rotZ": 0.1570796634202127,
+   "scale": [
+    0.85,
+    1.1
+   ],
+   "sprite": "ClapTrapTrapper_17",
+   "order": 3,
+   "flipX": true,
+   "color": [
+    0.9254902,
+    0.45490196,
+    0.05882353,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    1.2,
+    0.7
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "clapTrapDoll/arms/armRight/glove/gloveRim/shadow",
+   "parent": 27,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapperLit/ClapTrapTrapper_16",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    2.16
+   ]
+  },
+  {
+   "name": "clapEffect",
+   "path": "clapTrapDoll/clapEffect",
+   "parent": 2,
+   "pos": [
+    0.2,
+    2.85
+   ],
+   "rotZ": -0.0349066695396414,
+   "scale": [
+    0.58,
+    0.58
+   ],
+   "sprite": "ClapTrapTrapper_45",
+   "order": 12,
+   "color": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    8.97,
+    7.82
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "spotlight",
+   "path": "spotlight",
+   "parent": 0,
+   "pos": [
+    0.01,
+    0.015
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.585,
+    0.585
+   ],
+   "sprite": "ClapTrapTrapperLit/ClapTrapTrapper_51",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.65,
+    2.57
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ],
+   "mapped": true,
+   "mat": "SpotlightMaterial"
+  },
+  {
+   "name": "woo refs",
+   "path": "woo refs",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "face_just.000.000",
+   "path": "woo refs/face_just.000.000",
+   "parent": 31,
+   "pos": [
+    -0.04,
+    0.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.15,
+    1.15
+   ],
+   "sprite": "face_just.000.000",
+   "order": 5000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.70980394
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "refclaptrap",
+   "path": "woo refs/refclaptrap",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.77254903
+   ],
+   "size": [
+    13.39,
+    7.53
+   ]
+  },
+  {
+   "name": "face_talk.000.02",
+   "path": "woo refs/face_talk.000.02",
+   "parent": 31,
+   "pos": [
+    -0.1,
+    -0.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.15,
+    1.15
+   ],
+   "sprite": "face_breath_01.002",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.65882355
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "body_miss.004",
+   "path": "woo refs/body_miss.004",
+   "parent": 31,
+   "pos": [
+    0,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3000002,
+    2.3000002
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.72156864
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "body_miss.004 (1)",
+   "path": "woo refs/body_miss.004 (1)",
+   "parent": 31,
+   "pos": [
+    0,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3000002,
+    2.3000002
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4627451
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "body_miss.005",
+   "path": "woo refs/body_miss.005",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3000002,
+    2.3000002
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "hand_l_block.000",
+   "path": "woo refs/hand_l_block.000",
+   "parent": 31,
+   "pos": [
+    0,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3000004,
+    2.3000004
+   ],
+   "sprite": "hand_r_break.001",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "hand_l_block.002",
+   "path": "woo refs/hand_l_block.002",
+   "parent": 31,
+   "pos": [
+    0,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3000004,
+    2.3000004
+   ],
+   "sprite": "hand_r_block.008",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.80784315
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "chop_block.000",
+   "path": "woo refs/chop_block.000",
+   "parent": 31,
+   "pos": [
+    0,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.600001,
+    4.600001
+   ],
+   "sprite": "chop_hit.0",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8156863
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "body_just.000",
+   "path": "woo refs/body_just.000",
+   "parent": 31,
+   "pos": [
+    0,
+    -6.882
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.6000004,
+    4.6000004
+   ],
+   "sprite": "body_miss.002",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "sword",
+   "path": "sword",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sword",
+   "path": "sword/sword",
+   "parent": 42,
+   "pos": [
+    -10.600001,
+    -3.1500003
+   ],
+   "rotZ": 0.34906579928311926,
+   "scale": [
+    0.574,
+    0.574
+   ],
+   "sprite": "ClapTrapHand_1",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    25,
+    6
+   ],
+   "sortGroup": [
+    0,
+    4
+   ]
+  },
+  {
+   "name": "hitEffect",
+   "path": "sword/sword/hitEffect",
+   "parent": 43,
+   "pos": [
+    18.36,
+    -2.2
+   ],
+   "rotZ": -0.3490659765485052,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ClapTrapTrapper_45",
+   "order": 15,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    8.97,
+    7.82
+   ]
+  }
+ ]
+}

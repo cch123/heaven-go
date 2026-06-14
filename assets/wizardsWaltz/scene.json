@@ -1,0 +1,581 @@
+{
+ "nodes": [
+  {
+   "name": "wizardsWaltz",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_bg",
+   "order": -32766,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    1.6
+   ]
+  },
+  {
+   "name": "wizardswaltz_bg_new",
+   "path": "wizardswaltz_bg_new",
+   "parent": 0,
+   "pos": [
+    0,
+    -3.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8912,
+    1.8912
+   ],
+   "sprite": "wizardswaltz_bg_new",
+   "order": -32765,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.24,
+    10.24
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "wizardswaltz_bg_new/Square",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    20
+   ],
+   "order": -32768,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Wizard",
+   "path": "Wizard",
+   "parent": 0,
+   "pos": [
+    -6,
+    3.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_wizard_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    2.3125
+   ]
+  },
+  {
+   "name": "WandFX",
+   "path": "Wizard/WandFX",
+   "parent": 4,
+   "pos": [
+    -1.351,
+    -0.352
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_wand_fx_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6666667,
+    0.6666667
+   ]
+  },
+  {
+   "name": "Sparkles",
+   "path": "Wizard/Sparkles",
+   "parent": 4,
+   "pos": [
+    0,
+    -0.98
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WizardShadow",
+   "path": "WizardShadow",
+   "parent": 0,
+   "pos": [
+    -6,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_shadow",
+   "order": -32767,
+   "color": [
+    0.9056604,
+    0.9056604,
+    0.9056604,
+    0.33333334
+   ],
+   "size": [
+    2,
+    1.125
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "Girl",
+   "parent": 0,
+   "pos": [
+    0,
+    -2.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_girl_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.125,
+    1.875
+   ]
+  },
+  {
+   "name": "GirlShadow",
+   "path": "Girl/GirlShadow",
+   "parent": 8,
+   "pos": [
+    0,
+    -0.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_shadow",
+   "order": -32767,
+   "color": [
+    0.90588236,
+    0.90588236,
+    0.90588236,
+    0.33333334
+   ],
+   "size": [
+    2,
+    1.125
+   ]
+  },
+  {
+   "name": "Flowers",
+   "path": "Girl/Flowers",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Flower1",
+   "path": "Girl/Flowers/Flower1",
+   "parent": 10,
+   "pos": [
+    0,
+    0.715
+   ],
+   "z": -0.03,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_small_flower_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7291667,
+    0.7291667
+   ]
+  },
+  {
+   "name": "Flower2",
+   "path": "Girl/Flowers/Flower2",
+   "parent": 10,
+   "pos": [
+    0.31,
+    0.595
+   ],
+   "z": -0.02,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_small_flower_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7291667,
+    0.7291667
+   ]
+  },
+  {
+   "name": "Flower3",
+   "path": "Girl/Flowers/Flower3",
+   "parent": 10,
+   "pos": [
+    -0.315,
+    0.595
+   ],
+   "z": -0.02,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_small_flower_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7291667,
+    0.7291667
+   ]
+  },
+  {
+   "name": "Flower4",
+   "path": "Girl/Flowers/Flower4",
+   "parent": 10,
+   "pos": [
+    0.56,
+    0.407
+   ],
+   "z": -0.01,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_small_flower_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7291667,
+    0.7291667
+   ]
+  },
+  {
+   "name": "Flower5",
+   "path": "Girl/Flowers/Flower5",
+   "parent": 10,
+   "pos": [
+    -0.566,
+    0.407
+   ],
+   "z": -0.01,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_small_flower_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7291667,
+    0.7291667
+   ]
+  },
+  {
+   "name": "Flower6",
+   "path": "Girl/Flowers/Flower6",
+   "parent": 10,
+   "pos": [
+    0,
+    -0.11
+   ],
+   "z": -1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_small_flower_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7291667,
+    0.7291667
+   ]
+  },
+  {
+   "name": "Plants",
+   "path": "Plants",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "FX",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Prefabs",
+   "path": "Prefabs",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plant",
+   "path": "Prefabs/Plant",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpriteHolder",
+   "path": "Prefabs/Plant/SpriteHolder",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wizardswaltz_plant_grow_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5416667,
+    0.5416667
+   ]
+  }
+ ]
+}

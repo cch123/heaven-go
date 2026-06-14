@@ -1,0 +1,1088 @@
+{
+ "nodes": [
+  {
+   "name": "boardMeeting",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bm_ref",
+   "path": "bm_ref",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 100,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.81,
+    7.21
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    -0.2274401,
+    -0.048712447
+   ],
+   "z": 0.057631962,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG BM_0",
+   "path": "BG/BG BM_0",
+   "parent": 2,
+   "pos": [
+    -9.19,
+    2.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.36332244,
+    0.36332247
+   ],
+   "sprite": "BG BM_0",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    100,
+    14.88
+   ]
+  },
+  {
+   "name": "BG BM_1",
+   "path": "BG/BG BM_1",
+   "parent": 2,
+   "pos": [
+    -8.62,
+    -2.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "BG BM_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    8.17,
+    14.4
+   ]
+  },
+  {
+   "name": "BG BM_3",
+   "path": "BG/BG BM_1/BG BM_3",
+   "parent": 4,
+   "pos": [
+    0,
+    13.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    7
+   ],
+   "sprite": "BG BM_3",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.16,
+    1.92
+   ]
+  },
+  {
+   "name": "BG BM_4",
+   "path": "BG/BG BM_1/BG BM_4",
+   "parent": 4,
+   "pos": [
+    0,
+    0.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BG BM_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.16,
+    1.92
+   ]
+  },
+  {
+   "name": "BG BM_1 (1)",
+   "path": "BG/BG BM_1 (1)",
+   "parent": 2,
+   "pos": [
+    9.07,
+    -2.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.37,
+    0.37
+   ],
+   "sprite": "BG BM_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    8.17,
+    14.4
+   ]
+  },
+  {
+   "name": "BG BM_3",
+   "path": "BG/BG BM_1 (1)/BG BM_3",
+   "parent": 7,
+   "pos": [
+    0,
+    13.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    7
+   ],
+   "sprite": "BG BM_3",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.16,
+    1.92
+   ]
+  },
+  {
+   "name": "BG BM_4",
+   "path": "BG/BG BM_1 (1)/BG BM_4",
+   "parent": 7,
+   "pos": [
+    0,
+    0.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BG BM_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.16,
+    1.92
+   ]
+  },
+  {
+   "name": "BG BM_2",
+   "path": "BG/BG BM_2",
+   "parent": 2,
+   "pos": [
+    -5.701,
+    -2.646
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "BG BM_2",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    100,
+    13.44
+   ]
+  },
+  {
+   "name": "BG BM_2 (1)",
+   "path": "BG/BG BM_2 (1)",
+   "parent": 2,
+   "pos": [
+    -5.46,
+    -2.646
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "BG BM_2",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    100,
+    13.44
+   ]
+  },
+  {
+   "name": "bm_assistant",
+   "path": "bm_assistant",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "bm_body",
+   "path": "bm_assistant/bm_body",
+   "parent": 12,
+   "pos": [
+    -5.359,
+    1.374
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Assistant BM_1",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.99,
+    5.2
+   ]
+  },
+  {
+   "name": "bm_legs",
+   "path": "bm_assistant/bm_legs",
+   "parent": 12,
+   "pos": [
+    -5.362,
+    -0.803
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Assistant BM_7",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    8.3
+   ]
+  },
+  {
+   "name": "bm_head",
+   "path": "bm_assistant/bm_head",
+   "parent": 12,
+   "pos": [
+    -5.352,
+    2.831
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Assistant BM_15",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    4.17
+   ]
+  },
+  {
+   "name": "bm_hair",
+   "path": "bm_assistant/bm_head/bm_hair",
+   "parent": 15,
+   "pos": [
+    1.19,
+    -2.44
+   ],
+   "rotZ": -0.09817795853444689,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Assistant BM_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.89,
+    2.43
+   ]
+  },
+  {
+   "name": "bm_glasses",
+   "path": "bm_assistant/bm_head/bm_glasses",
+   "parent": 15,
+   "pos": [
+    -0.01,
+    -0.43
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Assistant BM_16",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.62,
+    1.04
+   ]
+  },
+  {
+   "name": "bm_shadow",
+   "path": "bm_assistant/bm_shadow",
+   "parent": 12,
+   "pos": [
+    -5.37,
+    -2.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.54375,
+    0.7175
+   ],
+   "sprite": "Assistant BM_18",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    3.96,
+    1.5
+   ]
+  },
+  {
+   "name": "Chair BM_20",
+   "path": "bm_assistant/Chair BM_20",
+   "parent": 12,
+   "pos": [
+    -7.04,
+    4.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "SplitLeg",
+   "path": "bm_assistant/SplitLeg",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "SplitLeg",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    8.3
+   ]
+  },
+  {
+   "name": "SplitLeg (1)",
+   "path": "bm_assistant/SplitLeg (1)",
+   "parent": 12,
+   "pos": [
+    0.47,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.37,
+    0.37
+   ],
+   "sprite": "SplitLeg",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    8.3
+   ]
+  },
+  {
+   "name": "bm_executive",
+   "path": "bm_executive",
+   "parent": 0,
+   "pos": [
+    -2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bm_exbody",
+   "path": "bm_executive/bm_exbody",
+   "parent": 22,
+   "pos": [
+    -0.001,
+    -1.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "The Executives BM_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.640672,
+    7.3
+   ]
+  },
+  {
+   "name": "bm_exhead",
+   "path": "bm_executive/bm_exhead",
+   "parent": 22,
+   "pos": [
+    -0.018,
+    0.598
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "The Executives BM_11",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9003947,
+    3.2399998
+   ]
+  },
+  {
+   "name": "bm_shadow",
+   "path": "bm_executive/bm_shadow",
+   "parent": 22,
+   "pos": [
+    0,
+    -2.2903001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.555,
+    0.74
+   ],
+   "sprite": "Chair BM_19",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    3.82,
+    1.44
+   ]
+  },
+  {
+   "name": "bm_arm",
+   "path": "bm_executive/bm_arm",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "The Executives BM_26",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.970301,
+    3.07
+   ]
+  },
+  {
+   "name": "bm_impact",
+   "path": "bm_executive/bm_impact",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.61,
+    3.66
+   ]
+  },
+  {
+   "name": "bm_chair",
+   "path": "bm_executive/bm_chair",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bm_seat",
+   "path": "bm_executive/bm_chair/bm_seat",
+   "parent": 28,
+   "pos": [
+    -0.04,
+    -1.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chair BM_3",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.17,
+    7.58
+   ]
+  },
+  {
+   "name": "bm_chairlegs",
+   "path": "bm_executive/bm_chair/bm_chairlegs",
+   "parent": 28,
+   "pos": [
+    0,
+    -5.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chair BM_7",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.6,
+    3.85
+   ]
+  },
+  {
+   "name": "bm_star",
+   "path": "bm_executive/bm_star",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "bm_star (1)",
+   "path": "bm_executive/bm_star (1)",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "bm_star (2)",
+   "path": "bm_executive/bm_star (2)",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "bm_star (3)",
+   "path": "bm_executive/bm_star (3)",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "bm_star (4)",
+   "path": "bm_executive/bm_star (4)",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "bm_star (5)",
+   "path": "bm_executive/bm_star (5)",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "bm_star (6)",
+   "path": "bm_executive/bm_star (6)",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "bm_star (7)",
+   "path": "bm_executive/bm_star (7)",
+   "parent": 22,
+   "pos": [
+    2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37,
+    0.37
+   ],
+   "sprite": "Chair BM_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    2.3
+   ]
+  },
+  {
+   "name": "bm_farRightPos",
+   "path": "bm_farRightPos",
+   "parent": 0,
+   "pos": [
+    4.97,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bm_farLeftPos",
+   "path": "bm_farLeftPos",
+   "parent": 0,
+   "pos": [
+    -2.767,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

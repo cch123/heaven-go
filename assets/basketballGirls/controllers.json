@@ -1,0 +1,120 @@
+{
+ "Ball": {
+  "default": "prepare",
+  "states": {
+   "barely": {
+    "clip": "Animations/ballBarely",
+    "speed": 1
+   },
+   "catch": {
+    "clip": "Animations/ballCatch",
+    "speed": 0.5
+   },
+   "hit": {
+    "clip": "Animations/ballHit",
+    "speed": 1
+   },
+   "just": {
+    "clip": "Animations/ballJust",
+    "speed": 1
+   },
+   "prepare": {
+    "clip": "Animations/ballPrepare",
+    "speed": 0.5
+   },
+   "shootBarely": {
+    "clip": "Animations/ballShootBarely",
+    "speed": 1
+   },
+   "shootJust": {
+    "clip": "Animations/ballShootJust",
+    "speed": 1
+   }
+  }
+ },
+ "GirlLeft": {
+  "default": "idle",
+  "states": {
+   "dribble": {
+    "clip": "Animations/girlDribble",
+    "speed": 0.5
+   },
+   "idle": {
+    "clip": "Animations/girlLeftIdle",
+    "speed": 1
+   },
+   "pass": {
+    "clip": "Animations/girlPass",
+    "speed": 1
+   },
+   "prepare": {
+    "clip": "Animations/girlPrepare",
+    "speed": 0.5
+   },
+   "shock": {
+    "clip": "Animations/girlShock",
+    "speed": 1
+   }
+  }
+ },
+ "GirlRight": {
+  "default": "idle",
+  "states": {
+   "blank": {
+    "clip": "Animations/girlBlank",
+    "speed": 1
+   },
+   "bop": {
+    "clip": "Animations/girlBop",
+    "speed": 0.5
+   },
+   "catch": {
+    "clip": "Animations/girlCatch",
+    "speed": 0.5
+   },
+   "hit": {
+    "clip": "Animations/girlHit",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/girlRightIdle",
+    "speed": 1
+   },
+   "shoot": {
+    "clip": "Animations/girlShoot",
+    "speed": 1
+   }
+  }
+ },
+ "Goal": {
+  "default": "idle",
+  "states": {
+   "barely": {
+    "clip": "Animations/goalBarely",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "idle": {
+    "clip": "Animations/goalIdle",
+    "speed": 1
+   },
+   "just": {
+    "clip": "Animations/goalJust",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

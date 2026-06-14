@@ -1,0 +1,177 @@
+{
+ "arms": {
+  "default": "ArmsIdle",
+  "states": {
+   "ArmsHit": {
+    "clip": "Animations/ArmsHit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ArmsIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ArmsIdle": {
+    "clip": "Animations/ArmsIdle",
+    "speed": 1
+   },
+   "ArmsMiss": {
+    "clip": "Animations/ArmsMiss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ArmsIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ArmsWhiff": {
+    "clip": "Animations/ArmsWhiff",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ArmsIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "body": {
+  "default": "BodyIdle",
+  "states": {
+   "BodyIdle": {
+    "clip": "Animations/BodyIdle",
+    "speed": 1
+   },
+   "BodyIdleLit": {
+    "clip": "Animations/BodyIdleLit",
+    "speed": 1
+   }
+  }
+ },
+ "clapEffect": {
+  "default": "ClapEffectBlank",
+  "states": {
+   "ClapEffect": {
+    "clip": "Animations/ClapEffect",
+    "speed": 1
+   },
+   "ClapEffectBlank": {
+    "clip": "Animations/ClapEffectBlank",
+    "speed": 1
+   }
+  }
+ },
+ "clapTrapDoll": {
+  "default": "DollIdle",
+  "states": {
+   "DollHit": {
+    "clip": "Animations/DollHit",
+    "speed": 1
+   },
+   "DollIdle": {
+    "clip": "Animations/DollIdle",
+    "speed": 1
+   },
+   "DollMiss": {
+    "clip": "Animations/DollMiss",
+    "speed": 1
+   }
+  }
+ },
+ "head": {
+  "default": "HeadIdle",
+  "states": {
+   "HeadBarely": {
+    "clip": "Animations/HeadBarely",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "HeadIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HeadBreatheIn": {
+    "clip": "Animations/HeadBreatheIn",
+    "speed": 1
+   },
+   "HeadBreatheOut": {
+    "clip": "Animations/HeadBreatheOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "HeadIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HeadHit": {
+    "clip": "Animations/HeadHit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "HeadIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HeadIdle": {
+    "clip": "Animations/HeadIdle",
+    "speed": 1
+   },
+   "HeadMiss": {
+    "clip": "Animations/HeadMiss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "HeadIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HeadTalk": {
+    "clip": "Animations/HeadTalk",
+    "speed": 1
+   }
+  }
+ },
+ "sword": {
+  "default": "swordHandHit",
+  "states": {
+   "swordGreenOnionHit": {
+    "clip": "Animations/swordGreenOnionHit",
+    "speed": 1
+   },
+   "swordGreenOnionMiss": {
+    "clip": "Animations/swordGreenOnionMiss",
+    "speed": 1
+   },
+   "swordHandHit": {
+    "clip": "Animations/swordHandHit",
+    "speed": 1
+   },
+   "swordHandMiss": {
+    "clip": "Animations/swordHandMiss",
+    "speed": 1
+   },
+   "swordPawHit": {
+    "clip": "Animations/swordPawHit",
+    "speed": 1
+   },
+   "swordPawMiss": {
+    "clip": "Animations/swordPawMiss",
+    "speed": 1
+   }
+  }
+ }
+}

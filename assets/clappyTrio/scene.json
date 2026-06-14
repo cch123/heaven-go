@@ -1,0 +1,1254 @@
+{
+ "nodes": [
+  {
+   "name": "clappyTrio",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Lion",
+   "path": "Lion",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wig",
+   "path": "Lion/wig",
+   "parent": 1,
+   "pos": [
+    -3.031,
+    -2.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.536789,
+    1.536789
+   ],
+   "sprite": "wig",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8611112,
+    1.75
+   ]
+  },
+  {
+   "name": "head_1",
+   "path": "Lion/head_1",
+   "parent": 1,
+   "pos": [
+    -2.993,
+    -2.258
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5503128,
+    1.5503128
+   ],
+   "sprite": "head_1",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5277778,
+    1.3055556
+   ]
+  },
+  {
+   "name": "torso",
+   "path": "Lion/torso",
+   "parent": 1,
+   "pos": [
+    -3.102,
+    -2.984
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.536789,
+    1.536789
+   ],
+   "sprite": "torso",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.0833334,
+    0.8611111
+   ]
+  },
+  {
+   "name": "legs_2",
+   "path": "Lion/legs_2",
+   "parent": 1,
+   "pos": [
+    -3.103,
+    -3.532
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.536789,
+    1.536789
+   ],
+   "sprite": "legs_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3055556,
+    1.0833334
+   ]
+  },
+  {
+   "name": "Hands",
+   "path": "Lion/Hands",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "handleft",
+   "path": "Lion/Hands/handleft",
+   "parent": 6,
+   "pos": [
+    -3.829,
+    -2.422
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.536789,
+    1.536789
+   ],
+   "sprite": "handleft_1",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9722222,
+    1.1944444
+   ]
+  },
+  {
+   "name": "handright",
+   "path": "Lion/Hands/handright",
+   "parent": 6,
+   "pos": [
+    -2.382,
+    -2.524
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.536789,
+    1.536789
+   ],
+   "sprite": "handright_1",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9722222,
+    1.1944444
+   ]
+  },
+  {
+   "name": "handstogether",
+   "path": "Lion/Hands/handstogether",
+   "parent": 6,
+   "pos": [
+    -3.0795,
+    -1.5437
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5838702,
+    1.5838702
+   ],
+   "sprite": "clap_1",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1944444,
+    1.75
+   ]
+  },
+  {
+   "name": "ClapEffect",
+   "path": "Lion/Hands/ClapEffect",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ClapEffect_1",
+   "path": "Lion/Hands/ClapEffect/ClapEffect_1",
+   "parent": 10,
+   "pos": [
+    -3.615,
+    -1.491
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.58387,
+    1.58387
+   ],
+   "sprite": "clapeffect_1",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3055556,
+    1.6388888
+   ]
+  },
+  {
+   "name": "ClapEffect_1 (1)",
+   "path": "Lion/Hands/ClapEffect/ClapEffect_1/ClapEffect_1 (1)",
+   "parent": 11,
+   "pos": [
+    0.689,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "clapeffect_1",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3055556,
+    1.6388888
+   ]
+  },
+  {
+   "name": "ClapEffect_2",
+   "path": "Lion/Hands/ClapEffect/ClapEffect_2",
+   "parent": 10,
+   "pos": [
+    -3.1557,
+    -0.172
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8510822,
+    1.8510822
+   ],
+   "sprite": "clapeffect_2",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4166666,
+    1.3055556
+   ]
+  },
+  {
+   "name": "ClapEffect_3",
+   "path": "Lion/Hands/ClapEffect/ClapEffect_3",
+   "parent": 10,
+   "pos": [
+    -3.916,
+    -0.299
+   ],
+   "rotZ": 6.030775186170566,
+   "scale": [
+    1.1646065,
+    1.164606
+   ],
+   "sprite": "clapeffect_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4166666,
+    1.3055556
+   ]
+  },
+  {
+   "name": "ClapEffect_3 (1)",
+   "path": "Lion/Hands/ClapEffect/ClapEffect_3 (1)",
+   "parent": 10,
+   "pos": [
+    -2.2534251,
+    -0.30203432
+   ],
+   "rotZ": 0.2607247255437218,
+   "scale": [
+    -1.1646066,
+    1.1646066
+   ],
+   "sprite": "clapeffect_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4166666,
+    1.3055556
+   ]
+  },
+  {
+   "name": "tail",
+   "path": "Lion/tail",
+   "parent": 1,
+   "pos": [
+    -3.584,
+    -3.362
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.536789,
+    1.536789
+   ],
+   "sprite": "tail",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2916666,
+    0.75
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Lion/shadow",
+   "parent": 1,
+   "pos": [
+    -3.098,
+    -3.892
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.536789,
+    1.536789
+   ],
+   "sprite": "shadow",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8611112,
+    0.9722222
+   ]
+  },
+  {
+   "name": "test (1)",
+   "path": "Lion/test (1)",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 295,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    12.8,
+    7.2
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stage",
+   "path": "BG/Stage",
+   "parent": 19,
+   "pos": [
+    -4.518,
+    0.00058
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5675247,
+    1.6108128
+   ],
+   "sprite": "BG",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.7777777,
+    6.3333335
+   ]
+  },
+  {
+   "name": "BG (1)",
+   "path": "BG/Stage/BG (1)",
+   "parent": 20,
+   "pos": [
+    5.759,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "BG",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.7777777,
+    6.3333335
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "BG/Stars",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -50
+   ]
+  },
+  {
+   "name": "star_big",
+   "path": "BG/Stars/star_big",
+   "parent": 22,
+   "pos": [
+    -7.7957,
+    2.2804
+   ],
+   "rotZ": 5.941584896606497,
+   "scale": [
+    1.5000386,
+    1.5492109
+   ],
+   "sprite": "star_big",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5277778,
+    1.4166666
+   ]
+  },
+  {
+   "name": "star_big (1)",
+   "path": "BG/Stars/star_big (1)",
+   "parent": 22,
+   "pos": [
+    -4.5759,
+    3.0125
+   ],
+   "rotZ": 0.1250538615502973,
+   "scale": [
+    1.5565902,
+    1.5560274
+   ],
+   "sprite": "star_medium",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5277778,
+    1.4166666
+   ]
+  },
+  {
+   "name": "star_big (2)",
+   "path": "BG/Stars/star_big (2)",
+   "parent": 22,
+   "pos": [
+    -2.402,
+    4.373
+   ],
+   "rotZ": 0.007054971478822895,
+   "scale": [
+    1.5565902,
+    1.5560274
+   ],
+   "sprite": "star_medium",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5277778,
+    1.4166666
+   ]
+  },
+  {
+   "name": "star_big (3)",
+   "path": "BG/Stars/star_big (3)",
+   "parent": 22,
+   "pos": [
+    -6.483,
+    4.282
+   ],
+   "rotZ": 0.09623523254573699,
+   "scale": [
+    1.5180584,
+    1.5610896
+   ],
+   "sprite": "star_medium",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5277778,
+    1.4166666
+   ]
+  },
+  {
+   "name": "star_big (4)",
+   "path": "BG/Stars/star_big (4)",
+   "parent": 22,
+   "pos": [
+    1.376,
+    4.673
+   ],
+   "rotZ": 6.031715792564027,
+   "scale": [
+    1.5000386,
+    1.5492109
+   ],
+   "sprite": "star_big",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5277778,
+    1.4166666
+   ]
+  },
+  {
+   "name": "star_big (5)",
+   "path": "BG/Stars/star_big (5)",
+   "parent": 22,
+   "pos": [
+    6.57,
+    4.301
+   ],
+   "rotZ": 6.08539287711987,
+   "scale": [
+    1.5000386,
+    1.5492109
+   ],
+   "sprite": "star_big",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5277778,
+    1.4166666
+   ]
+  },
+  {
+   "name": "star_big (6)",
+   "path": "BG/Stars/star_big (6)",
+   "parent": 22,
+   "pos": [
+    3.103,
+    2.133
+   ],
+   "rotZ": 4.239176748306525,
+   "scale": [
+    1.501864,
+    1.5534256
+   ],
+   "sprite": "star_big",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5277778,
+    1.4166666
+   ]
+  },
+  {
+   "name": "star_small",
+   "path": "BG/Stars/star_small",
+   "parent": 22,
+   "pos": [
+    -7.088,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4192331,
+    1.4192331
+   ],
+   "sprite": "star_small",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "star_small (1)",
+   "path": "BG/Stars/star_small (1)",
+   "parent": 22,
+   "pos": [
+    -3.344,
+    -0.725
+   ],
+   "rotZ": 0.14711907772757962,
+   "scale": [
+    -1.4524429,
+    1.4524431
+   ],
+   "sprite": "star_small",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "star_small (2)",
+   "path": "BG/Stars/star_small (2)",
+   "parent": 22,
+   "pos": [
+    4.565,
+    -1.484
+   ],
+   "rotZ": 5.852681466455346,
+   "scale": [
+    0.8374365,
+    0.78431135
+   ],
+   "sprite": "star_medium",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "star_small (3)",
+   "path": "BG/Stars/star_small (3)",
+   "parent": 22,
+   "pos": [
+    7.0666,
+    -0.5701
+   ],
+   "rotZ": 6.079092589528062,
+   "scale": [
+    -1.4965972,
+    1.4965974
+   ],
+   "sprite": "star_small",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "star_small (4)",
+   "path": "BG/Stars/star_small (4)",
+   "parent": 22,
+   "pos": [
+    3.004,
+    0.314
+   ],
+   "rotZ": 6.184614220639487,
+   "scale": [
+    -1.4965972,
+    1.4965974
+   ],
+   "sprite": "star_small",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "star_small (5)",
+   "path": "BG/Stars/star_small (5)",
+   "parent": 22,
+   "pos": [
+    7.361,
+    2.278
+   ],
+   "rotZ": 1.2493032246863747,
+   "scale": [
+    1.4244112,
+    1.4244114
+   ],
+   "sprite": "star_medium",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "star_small (6)",
+   "path": "BG/Stars/star_small (6)",
+   "parent": 22,
+   "pos": [
+    5.868,
+    2.483
+   ],
+   "rotZ": 2.700754773898956,
+   "scale": [
+    1.4244112,
+    1.4244114
+   ],
+   "sprite": "star_small",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "star_small (7)",
+   "path": "BG/Stars/star_small (7)",
+   "parent": 22,
+   "pos": [
+    4.3396,
+    3.9454
+   ],
+   "rotZ": 0.40501140350857456,
+   "scale": [
+    1.4955332,
+    1.4955335
+   ],
+   "sprite": "star_medium",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "Sign",
+   "path": "Sign",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sing_border",
+   "path": "Sign/sing_border",
+   "parent": 38,
+   "pos": [
+    -5.543,
+    1.4439
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5818431,
+    1.5818431
+   ],
+   "sprite": "sing_border",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4861111,
+    1.4166666
+   ]
+  },
+  {
+   "name": "sing_border (1)",
+   "path": "Sign/sing_border (1)",
+   "parent": 38,
+   "pos": [
+    0.0212,
+    1.4439
+   ],
+   "rotZ": 0,
+   "scale": [
+    46.636703,
+    1.5818431
+   ],
+   "sprite": "sign_middle",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4861111,
+    1.4166666
+   ]
+  },
+  {
+   "name": "sing_border (2)",
+   "path": "Sign/sing_border (2)",
+   "parent": 38,
+   "pos": [
+    5.55,
+    1.4439
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5818431,
+    1.5818431
+   ],
+   "sprite": "sing_border",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4861111,
+    1.4166666
+   ]
+  },
+  {
+   "name": "SignContents",
+   "path": "Sign/SignContents",
+   "parent": 38,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "customText",
+   "path": "Sign/SignContents/customText",
+   "parent": 42,
+   "pos": [
+    0.00357,
+    1.44397
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "trioTiming",
+   "path": "Sign/SignContents/trioTiming",
+   "parent": 42,
+   "pos": [
+    -0.1287,
+    1.4078
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2273316,
+    1.1856024
+   ],
+   "sprite": "trioTiming",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.1944447,
+    1.3055556
+   ]
+  },
+  {
+   "name": "sign_grapple",
+   "path": "Sign/sign_grapple",
+   "parent": 38,
+   "pos": [
+    -4.3509,
+    4.032
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.707472,
+    2.1607769
+   ],
+   "sprite": "sign_grapple",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6388889,
+    2.0833333
+   ]
+  },
+  {
+   "name": "sign_grapple (3)",
+   "path": "Sign/sign_grapple (3)",
+   "parent": 38,
+   "pos": [
+    -0.009,
+    4.032
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.707472,
+    2.1607769
+   ],
+   "sprite": "sign_grapple",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6388889,
+    2.0833333
+   ]
+  },
+  {
+   "name": "sign_grapple (4)",
+   "path": "Sign/sign_grapple (4)",
+   "parent": 38,
+   "pos": [
+    4.357,
+    4.032
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.707472,
+    2.1607769
+   ],
+   "sprite": "sign_grapple",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6388889,
+    2.0833333
+   ]
+  }
+ ]
+}

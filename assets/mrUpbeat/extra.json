@@ -1,0 +1,63 @@
+{
+ "refArrays": {
+  "shadowSr": [
+   "MrUpbeat/ShadowL",
+   "MrUpbeat/ShadowR",
+   "MrUpbeat/Holder/Body/ShadowFall"
+  ]
+ },
+ "refArrayIdx": {
+  "shadowSr": [
+   5,
+   6,
+   13
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "stepIterate": 0,
+    "stopBlipping": 0
+   },
+   "refs": {
+    "bg": "Background",
+    "blipMaterial": "blip",
+    "man": "MrUpbeat",
+    "metronomeAnim": "Metronome"
+   },
+   "refArrays": {
+    "shadowSr": [
+     "MrUpbeat/ShadowL",
+     "MrUpbeat/ShadowR",
+     "MrUpbeat/Holder/Body/ShadowFall"
+    ]
+   }
+  },
+  "man": {
+   "path": "MrUpbeat",
+   "nums": {
+    "blipSize": 0,
+    "canStep": 1,
+    "canStepFromAnim": 1,
+    "shouldBlip": 1,
+    "shouldGrow": 0
+   },
+   "strs": {
+    "blipString": "M"
+   },
+   "refs": {
+    "anim": "MrUpbeat",
+    "antennaLight": "MrUpbeat/Holder/Head/Antenna/AntennaLight",
+    "blipAnim": "MrUpbeat/Holder/Head/Antenna/AntennaLight",
+    "blipText": "Letter"
+   },
+   "refArrays": {
+    "shadows": [
+     "MrUpbeat/ShadowL",
+     "MrUpbeat/ShadowR"
+    ]
+   }
+  }
+ }
+}

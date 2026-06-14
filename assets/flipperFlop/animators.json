@@ -1,0 +1,12 @@
+{
+ "CaptainTuck": "CaptainTuck",
+ "CaptainTuck/HeadHolder/Head": "CaptainTuckHead",
+ "Flippers/FlipperHolder (1)/Flipper (1)": "Flipper",
+ "Flippers/FlipperHolder (1)/Flipper (1)/FaceHolder/Face": "FaceFlipper",
+ "Flippers/FlipperHolder (2)/Flipper (2)": "Flipper",
+ "Flippers/FlipperHolder (2)/Flipper (2)/FaceHolder/Face": "FaceFlipper",
+ "Flippers/FlipperHolder/Flipper": "Flipper",
+ "Flippers/FlipperHolder/Flipper/FaceHolder/Face": "FaceFlipper",
+ "Flippers/FlipperHolderPlayer/FlipperPlayer": "Flipper",
+ "Flippers/FlipperHolderPlayer/FlipperPlayer/FaceHolder/Face": "FaceFlipper"
+}

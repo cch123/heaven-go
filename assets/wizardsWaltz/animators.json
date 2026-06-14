@@ -1,0 +1,12 @@
+{
+ "Girl": "GirlAnimator",
+ "Girl/Flowers/Flower1": "GirlFlowerAnimator",
+ "Girl/Flowers/Flower2": "GirlFlowerAnimator",
+ "Girl/Flowers/Flower3": "GirlFlowerAnimator",
+ "Girl/Flowers/Flower4": "GirlFlowerAnimator",
+ "Girl/Flowers/Flower5": "GirlFlowerAnimator",
+ "Girl/Flowers/Flower6": "GirlFlowerAnimator",
+ "Prefabs/Plant": "PlantAnimator",
+ "Wizard": "WizardAnimator",
+ "Wizard/WandFX": "WandAnimator"
+}

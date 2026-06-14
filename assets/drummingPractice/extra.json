@@ -1,0 +1,1273 @@
+{
+ "components": {
+  "drummer0": {
+   "path": "NPCDrummers/LeftDrummerHolder/LeftDrummer",
+   "nums": {
+    "count": 0,
+    "mii": 0,
+    "player": 0
+   },
+   "refs": {
+    "animator": "NPCDrummers/LeftDrummerHolder/LeftDrummer",
+    "face": "NPCDrummers/LeftDrummerHolder/LeftDrummer/Body/Head"
+   },
+   "lists": {
+    "miiFaces": [
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -5540771305685187000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5387077176029788000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 5908633236337766000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -121008135910702820,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 4541311985090151000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 5002273367315103000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -3223362767130723300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -4346205468493212000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 2797149342282210300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 2271605581261703700,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1387406566756033300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 3924629589221825500,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 6980909366671695000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5584672919903430000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 8937958738283631000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 81597826380008420,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1794906609286176000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5424627565685597000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 4139801074871027700,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -6932529944776642000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -4493850569072844000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -379133340629381800,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -2454444141153266000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 9090822406501296000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 282772628057177540,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -2849857784044403000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 7754190052455944000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 1417902611,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1630074310,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 649651619,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 1281042911,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1818277959,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1176351246,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -1534976312,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 980442806,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1264990263,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "drummer1": {
+   "path": "NPCDrummers/RightDrummerHolder/RightDrummer",
+   "nums": {
+    "count": 0,
+    "mii": 0,
+    "player": 0
+   },
+   "refs": {
+    "animator": "NPCDrummers/RightDrummerHolder/RightDrummer",
+    "face": "NPCDrummers/RightDrummerHolder/RightDrummer/Body/Head"
+   },
+   "lists": {
+    "miiFaces": [
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -5540771305685187000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5387077176029788000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 5908633236337766000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -121008135910702820,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 4541311985090151000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 5002273367315103000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -3223362767130723300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -4346205468493212000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 2797149342282210300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 2271605581261703700,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1387406566756033300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 3924629589221825500,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 6980909366671695000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5584672919903430000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 8937958738283631000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 81597826380008420,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1794906609286176000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5424627565685597000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 4139801074871027700,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -6932529944776642000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -4493850569072844000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -379133340629381800,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -2454444141153266000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 9090822406501296000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 282772628057177540,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -2849857784044403000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 7754190052455944000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 1417902611,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1630074310,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 649651619,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 1281042911,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1818277959,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1176351246,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -1534976312,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 980442806,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1264990263,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "drummer2": {
+   "path": "PlayerDrummer",
+   "nums": {
+    "count": 0,
+    "mii": 0,
+    "player": 1
+   },
+   "refs": {
+    "animator": "PlayerDrummer",
+    "face": "PlayerDrummer/Body/Head"
+   },
+   "lists": {
+    "miiFaces": [
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -5540771305685187000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5387077176029788000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 5908633236337766000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c9de1920527f0e249899ef33be33af06"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -121008135910702820,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 4541311985090151000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 5002273367315103000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "f123470a55dcb734692053198c6f423f"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -3223362767130723300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -4346205468493212000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 2797149342282210300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "ef918f8cf9bd3a144be9563f1a5271b3"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 2271605581261703700,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1387406566756033300,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 3924629589221825500,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b4746001362ea584fae324e76123d905"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 6980909366671695000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5584672919903430000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 8937958738283631000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "49009f3a60cc40a46b7239bb0d27464c"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 81597826380008420,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1794906609286176000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -5424627565685597000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "a3fb8267aa4125840bfbf3b92d842146"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 4139801074871027700,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -6932529944776642000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -4493850569072844000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "b31507a179bae67468e10918ffef3968"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -379133340629381800,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -2454444141153266000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 9090822406501296000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c3deda97ccb1d5c46ac73d7d88a966a2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 282772628057177540,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -2849857784044403000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 7754190052455944000,
+          "type": 3
+         },
+         "strs": {
+          "guid": "cf0781e3ff2fc904b95060af750cde14"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 1417902611,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1630074310,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 649651619,
+          "type": 3
+         },
+         "strs": {
+          "guid": "c72f79457281c8749be542067eee49d3"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": 1281042911,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1818277959,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 1176351246,
+          "type": 3
+         },
+         "strs": {
+          "guid": "688657a2aa561664c942ce10a1bc6f5e"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "items": {
+       "Sprites": [
+        {
+         "nums": {
+          "fileID": -1534976312,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        },
+        {
+         "nums": {
+          "fileID": 980442806,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        },
+        {
+         "nums": {
+          "fileID": -1264990263,
+          "type": 3
+         },
+         "strs": {
+          "guid": "647d8c2c002755049a1037fd51046723"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "count": 0
+   },
+   "refs": {
+    "NPCDrummers": "NPCDrummers",
+    "background": "Background",
+    "backgroundGradient": "Background/Gradient",
+    "hitPrefab": "Hits/Hit",
+    "leftDrummer": "NPCDrummers/LeftDrummerHolder/LeftDrummer",
+    "player": "PlayerDrummer",
+    "rightDrummer": "NPCDrummers/RightDrummerHolder/RightDrummer"
+   },
+   "refArrays": {
+    "streaks": [
+     "Streaks/Streak",
+     "Streaks/Streak (1)",
+     "Streaks/Streak (2)",
+     "Streaks/Streak (3)",
+     "Streaks/Streak (4)",
+     "Streaks/Streak (5)",
+     "Streaks/Streak (6)",
+     "Streaks/Streak (7)",
+     "Streaks/Streak (8)",
+     "Streaks/Streak (9)",
+     "Streaks/Streak (10)",
+     "Streaks/Streak (11)",
+     "Streaks/Streak (12)",
+     "Streaks/Streak (13)"
+    ]
+   }
+  }
+ }
+}

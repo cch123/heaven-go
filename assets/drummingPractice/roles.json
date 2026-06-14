@@ -1,0 +1,9 @@
+{
+ "NPCDrummers": "NPCDrummers",
+ "background": "Background",
+ "backgroundGradient": "Background/Gradient",
+ "hitPrefab": "Hits/Hit",
+ "leftDrummer": "NPCDrummers/LeftDrummerHolder/LeftDrummer",
+ "player": "PlayerDrummer",
+ "rightDrummer": "NPCDrummers/RightDrummerHolder/RightDrummer"
+}

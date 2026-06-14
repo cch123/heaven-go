@@ -1,0 +1,2965 @@
+{
+ "nodes": [
+  {
+   "name": "frogPrincess",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    64,
+    40
+   ],
+   "order": -1000,
+   "color": [
+    0.482,
+    0.74,
+    0.87,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Leaves",
+   "path": "Leaves",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    100
+   ]
+  },
+  {
+   "name": "leafs (1)",
+   "path": "Leaves/leafs (1)",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (1)/leaf_1",
+   "parent": 3,
+   "pos": [
+    5.8,
+    -4.66
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.26
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (1)/leaf_4",
+   "parent": 3,
+   "pos": [
+    5.972,
+    -3.417
+   ],
+   "rotZ": -0.13089955354324884,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (1)/leaf_2",
+   "parent": 3,
+   "pos": [
+    5.479,
+    -4.609
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (1)/leaf_1",
+   "parent": 3,
+   "pos": [
+    4.27,
+    -4.02
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (1)/leaf_2",
+   "parent": 3,
+   "pos": [
+    3.953,
+    -4.501
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_0",
+   "path": "Leaves/leafs (1)/leaf_0",
+   "parent": 3,
+   "pos": [
+    3.41,
+    -4.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_3",
+   "path": "Leaves/leafs (1)/leaf_3",
+   "parent": 3,
+   "pos": [
+    2.04,
+    -4.47
+   ],
+   "rotZ": -2.443460869648465,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_3",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (1)/leaf_2",
+   "parent": 3,
+   "pos": [
+    1.83,
+    -4.48
+   ],
+   "rotZ": 3.316125652677766,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (1)/leaf_1",
+   "parent": 3,
+   "pos": [
+    0.85,
+    -4.38
+   ],
+   "rotZ": -1.9198622187416663,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (1)/leaf_4",
+   "parent": 3,
+   "pos": [
+    0.374,
+    -3.726
+   ],
+   "rotZ": -1.169370425720839,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (1)/leaf_2",
+   "parent": 3,
+   "pos": [
+    -0.32,
+    -4.719
+   ],
+   "rotZ": -0.45378562018506674,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_3",
+   "path": "Leaves/leafs (1)/leaf_3",
+   "parent": 3,
+   "pos": [
+    -1.35,
+    -4.675
+   ],
+   "rotZ": 1.1519172965348226,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_3",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_0",
+   "path": "Leaves/leafs (1)/leaf_0",
+   "parent": 3,
+   "pos": [
+    -1.488,
+    -4.693
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_0",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (1)/leaf_4",
+   "parent": 3,
+   "pos": [
+    -2.67,
+    -5.26
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (1)/leaf_4",
+   "parent": 3,
+   "pos": [
+    -2.87,
+    -3.677
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (1)/leaf_2",
+   "parent": 3,
+   "pos": [
+    -3.4,
+    -4.51
+   ],
+   "rotZ": 1.1170106082571054,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 15,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (1)/leaf_2",
+   "parent": 3,
+   "pos": [
+    -4.963,
+    -4.664
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (1)/leaf_4",
+   "parent": 3,
+   "pos": [
+    -4.817,
+    -3.396
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leafs (2)",
+   "path": "Leaves/leafs (2)",
+   "parent": 2,
+   "pos": [
+    -10.7,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (2)/leaf_1",
+   "parent": 22,
+   "pos": [
+    5.8,
+    -4.66
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.26
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (2)/leaf_4",
+   "parent": 22,
+   "pos": [
+    5.972,
+    -3.417
+   ],
+   "rotZ": -0.13089955354324884,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (2)/leaf_2",
+   "parent": 22,
+   "pos": [
+    5.479,
+    -4.609
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (2)/leaf_1",
+   "parent": 22,
+   "pos": [
+    4.27,
+    -4.02
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (2)/leaf_2",
+   "parent": 22,
+   "pos": [
+    3.953,
+    -4.501
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_0",
+   "path": "Leaves/leafs (2)/leaf_0",
+   "parent": 22,
+   "pos": [
+    3.41,
+    -4.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_3",
+   "path": "Leaves/leafs (2)/leaf_3",
+   "parent": 22,
+   "pos": [
+    2.04,
+    -4.47
+   ],
+   "rotZ": -2.443460869648465,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_3",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (2)/leaf_2",
+   "parent": 22,
+   "pos": [
+    1.83,
+    -4.48
+   ],
+   "rotZ": 3.316125652677766,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (2)/leaf_1",
+   "parent": 22,
+   "pos": [
+    0.85,
+    -4.38
+   ],
+   "rotZ": -1.9198622187416663,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (2)/leaf_4",
+   "parent": 22,
+   "pos": [
+    0.374,
+    -3.726
+   ],
+   "rotZ": -1.169370425720839,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (2)/leaf_2",
+   "parent": 22,
+   "pos": [
+    -0.32,
+    -4.719
+   ],
+   "rotZ": -0.45378562018506674,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_3",
+   "path": "Leaves/leafs (2)/leaf_3",
+   "parent": 22,
+   "pos": [
+    -1.35,
+    -4.675
+   ],
+   "rotZ": 1.1519172965348226,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_3",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_0",
+   "path": "Leaves/leafs (2)/leaf_0",
+   "parent": 22,
+   "pos": [
+    -1.488,
+    -4.693
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_0",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (2)/leaf_4",
+   "parent": 22,
+   "pos": [
+    -2.67,
+    -5.26
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (2)/leaf_4",
+   "parent": 22,
+   "pos": [
+    -2.87,
+    -3.677
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (2)/leaf_2",
+   "parent": 22,
+   "pos": [
+    -3.4,
+    -4.51
+   ],
+   "rotZ": 1.1170106082571054,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 15,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (2)/leaf_2",
+   "parent": 22,
+   "pos": [
+    -4.963,
+    -4.664
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (2)/leaf_4",
+   "parent": 22,
+   "pos": [
+    -4.817,
+    -3.396
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leafs (3)",
+   "path": "Leaves/leafs (3)",
+   "parent": 2,
+   "pos": [
+    -21.4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (3)/leaf_1",
+   "parent": 41,
+   "pos": [
+    5.8,
+    -4.66
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.26
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (3)/leaf_4",
+   "parent": 41,
+   "pos": [
+    5.972,
+    -3.417
+   ],
+   "rotZ": -0.13089955354324884,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (3)/leaf_2",
+   "parent": 41,
+   "pos": [
+    5.479,
+    -4.609
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (3)/leaf_1",
+   "parent": 41,
+   "pos": [
+    4.27,
+    -4.02
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (3)/leaf_2",
+   "parent": 41,
+   "pos": [
+    3.953,
+    -4.501
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_0",
+   "path": "Leaves/leafs (3)/leaf_0",
+   "parent": 41,
+   "pos": [
+    3.41,
+    -4.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_3",
+   "path": "Leaves/leafs (3)/leaf_3",
+   "parent": 41,
+   "pos": [
+    2.04,
+    -4.47
+   ],
+   "rotZ": -2.443460869648465,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_3",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (3)/leaf_2",
+   "parent": 41,
+   "pos": [
+    1.83,
+    -4.48
+   ],
+   "rotZ": 3.316125652677766,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (3)/leaf_1",
+   "parent": 41,
+   "pos": [
+    0.85,
+    -4.38
+   ],
+   "rotZ": -1.9198622187416663,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (3)/leaf_4",
+   "parent": 41,
+   "pos": [
+    0.374,
+    -3.726
+   ],
+   "rotZ": -1.169370425720839,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (3)/leaf_2",
+   "parent": 41,
+   "pos": [
+    -0.32,
+    -4.719
+   ],
+   "rotZ": -0.45378562018506674,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_3",
+   "path": "Leaves/leafs (3)/leaf_3",
+   "parent": 41,
+   "pos": [
+    -1.35,
+    -4.675
+   ],
+   "rotZ": 1.1519172965348226,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_3",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_0",
+   "path": "Leaves/leafs (3)/leaf_0",
+   "parent": 41,
+   "pos": [
+    -1.488,
+    -4.693
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_0",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (3)/leaf_4",
+   "parent": 41,
+   "pos": [
+    -2.67,
+    -5.26
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (3)/leaf_4",
+   "parent": 41,
+   "pos": [
+    -2.87,
+    -3.677
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (3)/leaf_2",
+   "parent": 41,
+   "pos": [
+    -3.4,
+    -4.51
+   ],
+   "rotZ": 1.1170106082571054,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 15,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (3)/leaf_2",
+   "parent": 41,
+   "pos": [
+    -4.963,
+    -4.664
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (3)/leaf_4",
+   "parent": 41,
+   "pos": [
+    -4.817,
+    -3.396
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leafs (4)",
+   "path": "Leaves/leafs (4)",
+   "parent": 2,
+   "pos": [
+    -32.1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (4)/leaf_1",
+   "parent": 60,
+   "pos": [
+    5.8,
+    -4.66
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.26
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (4)/leaf_4",
+   "parent": 60,
+   "pos": [
+    5.972,
+    -3.417
+   ],
+   "rotZ": -0.13089955354324884,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (4)/leaf_2",
+   "parent": 60,
+   "pos": [
+    5.479,
+    -4.609
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (4)/leaf_1",
+   "parent": 60,
+   "pos": [
+    4.27,
+    -4.02
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (4)/leaf_2",
+   "parent": 60,
+   "pos": [
+    3.953,
+    -4.501
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_0",
+   "path": "Leaves/leafs (4)/leaf_0",
+   "parent": 60,
+   "pos": [
+    3.41,
+    -4.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_3",
+   "path": "Leaves/leafs (4)/leaf_3",
+   "parent": 60,
+   "pos": [
+    2.04,
+    -4.47
+   ],
+   "rotZ": -2.443460869648465,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_3",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (4)/leaf_2",
+   "parent": 60,
+   "pos": [
+    1.83,
+    -4.48
+   ],
+   "rotZ": 3.316125652677766,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_1",
+   "path": "Leaves/leafs (4)/leaf_1",
+   "parent": 60,
+   "pos": [
+    0.85,
+    -4.38
+   ],
+   "rotZ": -1.9198622187416663,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_1",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (4)/leaf_4",
+   "parent": 60,
+   "pos": [
+    0.374,
+    -3.726
+   ],
+   "rotZ": -1.169370425720839,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (4)/leaf_2",
+   "parent": 60,
+   "pos": [
+    -0.32,
+    -4.719
+   ],
+   "rotZ": -0.45378562018506674,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_3",
+   "path": "Leaves/leafs (4)/leaf_3",
+   "parent": 60,
+   "pos": [
+    -1.35,
+    -4.675
+   ],
+   "rotZ": 1.1519172965348226,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_3",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_0",
+   "path": "Leaves/leafs (4)/leaf_0",
+   "parent": 60,
+   "pos": [
+    -1.488,
+    -4.693
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_0",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.04,
+    5.04
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (4)/leaf_4",
+   "parent": 60,
+   "pos": [
+    -2.67,
+    -5.26
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (4)/leaf_4",
+   "parent": 60,
+   "pos": [
+    -2.87,
+    -3.677
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (4)/leaf_2",
+   "parent": 60,
+   "pos": [
+    -3.4,
+    -4.51
+   ],
+   "rotZ": 1.1170106082571054,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 15,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_2",
+   "path": "Leaves/leafs (4)/leaf_2",
+   "parent": 60,
+   "pos": [
+    -4.963,
+    -4.664
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_2",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    6
+   ]
+  },
+  {
+   "name": "leaf_4",
+   "path": "Leaves/leafs (4)/leaf_4",
+   "parent": 60,
+   "pos": [
+    -4.817,
+    -3.396
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "leaf_4",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.44
+   ]
+  },
+  {
+   "name": "Lotuses",
+   "path": "Lotuses",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "lotus (1)",
+   "path": "Lotuses/lotus (1)",
+   "parent": 79,
+   "pos": [
+    7.7,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leaf",
+   "path": "Lotuses/lotus (1)/leaf",
+   "parent": 80,
+   "pos": [
+    -0.38,
+    -2.5
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "lotus_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    11.76
+   ]
+  },
+  {
+   "name": "stem",
+   "path": "Lotuses/lotus (1)/stem",
+   "parent": 80,
+   "pos": [
+    -0.192,
+    -4.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.93625
+   ],
+   "sprite": "lotus_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8,
+    5.04
+   ]
+  },
+  {
+   "name": "lotus (2)",
+   "path": "Lotuses/lotus (2)",
+   "parent": 79,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leaf",
+   "path": "Lotuses/lotus (2)/leaf",
+   "parent": 83,
+   "pos": [
+    -0.38,
+    -2.5
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "lotus_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    11.76
+   ]
+  },
+  {
+   "name": "stem",
+   "path": "Lotuses/lotus (2)/stem",
+   "parent": 83,
+   "pos": [
+    -0.192,
+    -4.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.93625
+   ],
+   "sprite": "lotus_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8,
+    5.04
+   ]
+  },
+  {
+   "name": "lotus (3)",
+   "path": "Lotuses/lotus (3)",
+   "parent": 79,
+   "pos": [
+    -7.7,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leaf",
+   "path": "Lotuses/lotus (3)/leaf",
+   "parent": 86,
+   "pos": [
+    -0.38,
+    -2.5
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "lotus_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    11.76
+   ]
+  },
+  {
+   "name": "stem",
+   "path": "Lotuses/lotus (3)/stem",
+   "parent": 86,
+   "pos": [
+    -0.192,
+    -4.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.93625
+   ],
+   "sprite": "lotus_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8,
+    5.04
+   ]
+  },
+  {
+   "name": "lotus (4)",
+   "path": "Lotuses/lotus (4)",
+   "parent": 79,
+   "pos": [
+    -15.4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leaf",
+   "path": "Lotuses/lotus (4)/leaf",
+   "parent": 89,
+   "pos": [
+    -0.38,
+    -2.5
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "lotus_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    11.76
+   ]
+  },
+  {
+   "name": "stem",
+   "path": "Lotuses/lotus (4)/stem",
+   "parent": 89,
+   "pos": [
+    -0.192,
+    -4.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.93625
+   ],
+   "sprite": "lotus_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8,
+    5.04
+   ]
+  },
+  {
+   "name": "frog",
+   "path": "frog",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "frog/sprite",
+   "parent": 92,
+   "pos": [
+    -0.1,
+    0.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "frog_14",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.32,
+    5.04
+   ]
+  },
+  {
+   "name": "eye",
+   "path": "frog/eye",
+   "parent": 92,
+   "pos": [
+    -0.811,
+    0.65
+   ],
+   "rotZ": -0.8726645454873609,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "frog_eye",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.16,
+    1.84
+   ]
+  },
+  {
+   "name": "impact",
+   "path": "frog/impact",
+   "parent": 92,
+   "pos": [
+    1.4,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "frog/impact/sprite",
+   "parent": 95,
+   "pos": [
+    0.002,
+    -0.017000005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8000001,
+    0.8000001
+   ],
+   "sprite": "impact",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    3.12
+   ]
+  },
+  {
+   "name": "star (1)",
+   "path": "frog/impact/star (1)",
+   "parent": 95,
+   "pos": [
+    0.594,
+    0.95199996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "sprite": "star",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.08,
+    4.08
+   ]
+  },
+  {
+   "name": "star (2)",
+   "path": "frog/impact/star (2)",
+   "parent": 95,
+   "pos": [
+    1.088,
+    -0.085
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "sprite": "star",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.08,
+    4.08
+   ]
+  },
+  {
+   "name": "star (3)",
+   "path": "frog/impact/star (3)",
+   "parent": 95,
+   "pos": [
+    0.661,
+    -0.796
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "sprite": "star",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.08,
+    4.08
+   ]
+  },
+  {
+   "name": "princess",
+   "path": "princess",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "happy",
+   "path": "princess/happy",
+   "parent": 100,
+   "pos": [
+    -0.77,
+    3.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "happy",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    5.04,
+    5.36
+   ]
+  },
+  {
+   "name": "sweat",
+   "path": "princess/sweat",
+   "parent": 100,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0000001,
+    1.0000001
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spirte (1)",
+   "path": "princess/sweat/spirte (1)",
+   "parent": 102,
+   "pos": [
+    -0.029854234,
+    2.8080828
+   ],
+   "rotZ": 0.43633216093408583,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "sweat_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    2.48
+   ]
+  },
+  {
+   "name": "spirte (2)",
+   "path": "princess/sweat/spirte (2)",
+   "parent": 102,
+   "pos": [
+    0.4876439,
+    2.8593822
+   ],
+   "rotZ": 0.08726646901531186,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "sweat_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    2.48
+   ]
+  },
+  {
+   "name": "spirte (3)",
+   "path": "princess/sweat/spirte (3)",
+   "parent": 102,
+   "pos": [
+    0.8259997,
+    2.7323878
+   ],
+   "rotZ": -0.08726650697914128,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "sweat_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.84,
+    2.48
+   ]
+  },
+  {
+   "name": "head",
+   "path": "princess/head",
+   "parent": 100,
+   "pos": [
+    0,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hair",
+   "path": "princess/head/hair",
+   "parent": 106,
+   "pos": [
+    0.273,
+    0.50899994
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "princess_hair",
+   "order": 52,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.4,
+    4.72
+   ]
+  },
+  {
+   "name": "head",
+   "path": "princess/head/head",
+   "parent": 106,
+   "pos": [
+    0.241,
+    0.082999945
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "princess_head",
+   "order": 51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.44,
+    3.44
+   ]
+  },
+  {
+   "name": "face",
+   "path": "princess/head/face",
+   "parent": 106,
+   "pos": [
+    0.148,
+    -0.065
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "princess_face_0",
+   "order": 53,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.48,
+    2.48
+   ]
+  },
+  {
+   "name": "body",
+   "path": "princess/body",
+   "parent": 100,
+   "pos": [
+    0.742,
+    0.41499996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "princess_body",
+   "order": 51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    2.48
+   ]
+  },
+  {
+   "name": "arm",
+   "path": "princess/arm",
+   "parent": 100,
+   "pos": [
+    0.298,
+    0.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "princess_arm",
+   "order": 55,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.48,
+    2.48
+   ]
+  },
+  {
+   "name": "leg",
+   "path": "princess/leg",
+   "parent": 100,
+   "pos": [
+    0.932,
+    -0.046000004
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.535,
+    0.535
+   ],
+   "sprite": "princess_leg_0",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.16,
+    2.48
+   ]
+  },
+  {
+   "name": "SplashEffect",
+   "path": "SplashEffect",
+   "parent": 0,
+   "pos": [
+    1.6,
+    -4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

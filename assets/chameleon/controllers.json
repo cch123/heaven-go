@@ -1,0 +1,94 @@
+{
+ "Chameleon": {
+  "default": "idle",
+  "states": {
+   "closeIdle": {
+    "clip": "Animations/chameleonCloseIdle",
+    "speed": 1
+   },
+   "gurp": {
+    "clip": "Animations/chameleonGurp",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/chameleonIdle",
+    "speed": 1
+   },
+   "tongueClose": {
+    "clip": "Animations/chameleonClose",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "closeIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "tongueFar": {
+    "clip": "Animations/chameleonFar",
+    "speed": 1
+   }
+  }
+ },
+ "Fly": {
+  "default": "idle",
+  "states": {
+   "catchClose": {
+    "clip": "Animations/flyCloseCatch",
+    "speed": 1
+   },
+   "catchFar": {
+    "clip": "Animations/flyFarCatch",
+    "speed": 1
+   },
+   "fallClose": {
+    "clip": "Animations/flyCloseFall",
+    "speed": 1
+   },
+   "fallFar": {
+    "clip": "Animations/flyFarFall",
+    "speed": 1
+   },
+   "goneClose": {
+    "clip": "Animations/flyCloseGone",
+    "speed": 1
+   },
+   "goneFar": {
+    "clip": "Animations/flyFarGone",
+    "speed": 1
+   },
+   "idle": {
+    "speed": 1
+   },
+   "moveClose": {
+    "clip": "Animations/flyCloseMove",
+    "speed": 1
+   },
+   "moveEndClose": {
+    "clip": "Animations/flyCloseMoveEnd",
+    "speed": 1
+   },
+   "moveEndFar": {
+    "clip": "Animations/flyFarMoveEnd",
+    "speed": 1
+   },
+   "moveFar": {
+    "clip": "Animations/flyFarMove",
+    "speed": 1
+   }
+  }
+ },
+ "Wing": {
+  "default": "wing",
+  "states": {
+   "idle": {
+    "speed": 1
+   },
+   "wing": {
+    "clip": "Animations/wing",
+    "speed": 1
+   }
+  }
+ }
+}

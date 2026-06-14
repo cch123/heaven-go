@@ -1,0 +1,104 @@
+{
+ "refArrays": {
+  "bg": [
+   "BeachBG",
+   "DesertBG",
+   "FieldBG",
+   "CityBG",
+   "NightBG",
+   "MoaiBG",
+   "CropBG",
+   "QuizBG"
+  ]
+ },
+ "curves": {
+  "handCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      1.4152984999999996,
+      -3.6234374000000003,
+      0
+     ],
+     "lh": [
+      1.0245437999999991,
+      -4.7885420000000005,
+      0
+     ],
+     "rh": [
+      1.8060532,
+      -2.4583328,
+      0
+     ]
+    },
+    {
+     "p": [
+      4.209291000000001,
+      -3.2239837,
+      0
+     ],
+     "lh": [
+      3.1664510000000012,
+      -2.46643227,
+      0
+     ],
+     "rh": [
+      5.252131000000001,
+      -3.98153513,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "refArrayIdx": {
+  "bg": [
+   18,
+   36,
+   41,
+   75,
+   127,
+   138,
+   176,
+   246
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "tunnelChunksPerSec": 4,
+    "tunnelScreen.a": 1,
+    "tunnelScreen.b": 0.09803922,
+    "tunnelScreen.g": 0.09803922,
+    "tunnelScreen.r": 0.09803922,
+    "tunnelTint.a": 1,
+    "tunnelTint.b": 0.7921569,
+    "tunnelTint.g": 0.89411765,
+    "tunnelTint.r": 1,
+    "tunnelWallChunkSize": 13.7
+   },
+   "refs": {
+    "cowbellAnimator": "Player/Cowbell",
+    "driverAnimator": "Driver",
+    "frontHand": "Player/Hand_Front",
+    "handCurve": "Player/HitCurve",
+    "tunnelWall": "Tunnel",
+    "tunnelWallRenderer": "Tunnel"
+   },
+   "refArrays": {
+    "bg": [
+     "BeachBG",
+     "DesertBG",
+     "FieldBG",
+     "CityBG",
+     "NightBG",
+     "MoaiBG",
+     "CropBG",
+     "QuizBG"
+    ]
+   }
+  }
+ }
+}

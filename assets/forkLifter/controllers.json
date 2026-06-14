@@ -1,0 +1,96 @@
+{
+ "Conductor": {
+  "default": "",
+  "states": {
+   "FlickedObject": {
+    "speed": 1
+   }
+  }
+ },
+ "Hand": {
+  "default": "Hand_Idle",
+  "states": {
+   "Hand_Bop": {
+    "clip": "Animations/Hand_Bop",
+    "speed": 1
+   },
+   "Hand_Flick": {
+    "clip": "Animations/Hand_Flick",
+    "speed": 1
+   },
+   "Hand_Idle": {
+    "clip": "Animations/Hand_Idle",
+    "speed": 1
+   },
+   "Hand_Prepare": {
+    "clip": "Animations/Hand_Prepare",
+    "speed": 1
+   }
+  }
+ },
+ "Object": {
+  "default": "Flicked_Object",
+  "states": {
+   "Flicked_Object": {
+    "clip": "Animations/Flicked_Object",
+    "speed": 1
+   },
+   "Flicked_Object2": {
+    "speed": 1
+   }
+  }
+ },
+ "Player": {
+  "default": "Player_Idle",
+  "states": {
+   "Player_Bop": {
+    "clip": "Animations/Player_Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Player_Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Player_Eat": {
+    "clip": "Animations/Player_Eat",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Player_Eat_Comeback",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Player_Eat_Comeback": {
+    "clip": "Animations/Player_Eat_Comeback",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Player_Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Player_Idle": {
+    "clip": "Animations/Player_Idle",
+    "speed": 1
+   },
+   "Player_Stab": {
+    "clip": "Animations/Player_Stab",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Player_Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

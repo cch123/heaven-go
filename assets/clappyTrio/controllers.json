@@ -1,0 +1,53 @@
+{
+ "Lion": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Clap": {
+    "clip": "Animations/Clap",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Animations/Prepare",
+    "speed": 1
+   }
+  }
+ },
+ "Sign": {
+  "default": "SignIdle",
+  "states": {
+   "Enter": {
+    "clip": "Animations/Enter",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Animations/Exit",
+    "speed": 1
+   },
+   "SignIdle": {
+    "clip": "Animations/SignIdle",
+    "speed": 1
+   },
+   "TextCustom": {
+    "speed": 1
+   },
+   "TextTrioTiming": {
+    "speed": 1
+   }
+  }
+ }
+}

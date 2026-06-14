@@ -1,0 +1,530 @@
+{
+ "nodes": [
+  {
+   "name": "coinToss",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    49.213802,
+    29.528282
+   ],
+   "order": -10,
+   "color": [
+    0.9764706,
+    0.9254902,
+    0.23137255,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Background2",
+   "path": "Background2",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "foreground",
+   "order": -9,
+   "color": [
+    0.9764706,
+    0.9254902,
+    0.23137255,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ArmHolder",
+   "path": "ArmHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "ArmHolder/Arm",
+   "parent": 3,
+   "pos": [
+    6.66,
+    -3.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sleeve",
+   "path": "ArmHolder/Arm/Sleeve",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprsh_cointoss_sleeve",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    1.42
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "ArmHolder/Arm/Hand",
+   "parent": 4,
+   "pos": [
+    -4.520001,
+    0.78000045
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprsh_cointoss_closed_empty",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.67,
+    1.02
+   ]
+  },
+  {
+   "name": "whoosh",
+   "path": "ArmHolder/Arm/Hand/whoosh",
+   "parent": 6,
+   "pos": [
+    -4.3,
+    9.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprsh_cointoss_whoosh",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    2.3
+   ]
+  },
+  {
+   "name": "catch",
+   "path": "ArmHolder/Arm/Hand/catch",
+   "parent": 6,
+   "pos": [
+    -5.44,
+    3.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprsh_cointoss_shockwave",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.54
+   ]
+  },
+  {
+   "name": "Coin",
+   "path": "ArmHolder/Arm/Hand/Coin",
+   "parent": 6,
+   "pos": [
+    -4.24,
+    1.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sprsh_cointoss_45",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.54
+   ]
+  },
+  {
+   "name": "ManHolder",
+   "path": "ManHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ManArm",
+   "path": "ManHolder/ManArm",
+   "parent": 10,
+   "pos": [
+    -4.58,
+    -0.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "catch",
+   "path": "ManHolder/ManArm/catch",
+   "parent": 11,
+   "pos": [
+    4,
+    -0.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprsh_cointoss_shockwave",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.54
+   ]
+  },
+  {
+   "name": "whoosh",
+   "path": "ManHolder/ManArm/whoosh",
+   "parent": 11,
+   "pos": [
+    4.579747,
+    2.5146883
+   ],
+   "z": -0.2181118,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprsh_cointoss_whoosh",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    2.3
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "ManHolder/ManArm/Hand",
+   "parent": 11,
+   "pos": [
+    0.16,
+    -3.76
+   ],
+   "z": -0.2181118,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprsh_cointoss_man_0",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.39,
+    6.94
+   ]
+  },
+  {
+   "name": "Coin",
+   "path": "ManHolder/ManArm/Coin",
+   "parent": 11,
+   "pos": [
+    4.495,
+    -2.284
+   ],
+   "z": -0.2181118,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprsh_cointoss_45",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.3,
+    4.24
+   ]
+  },
+  {
+   "name": "Image",
+   "path": "Image",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Man",
+   "path": "Image/Man",
+   "parent": 16,
+   "pos": [
+    -2.99,
+    -0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprsh_cointoss_man_1",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.95,
+    14.17
+   ]
+  },
+  {
+   "name": "Woman",
+   "path": "Image/Woman",
+   "parent": 16,
+   "pos": [
+    3,
+    -0.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "sprsh_cointoss_man_3",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.55,
+    15.24
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "Image/BG",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    49.213802,
+    29.528282
+   ],
+   "order": 8,
+   "inactive": true,
+   "color": [
+    0.9764706,
+    0.9254902,
+    0.23137255,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

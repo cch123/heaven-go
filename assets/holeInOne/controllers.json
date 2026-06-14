@@ -1,0 +1,264 @@
+{
+ "BallEffect": {
+  "default": "BallEffect1",
+  "states": {
+   "BallEffect1": {
+    "clip": "Animations/BallEffect1",
+    "speed": 1
+   },
+   "BallEffectJust": {
+    "clip": "Animations/BallEffectJust",
+    "speed": 1
+   },
+   "BallEffectThrough": {
+    "clip": "Animations/BallEffectThrough",
+    "speed": 1
+   }
+  }
+ },
+ "Birds": {
+  "default": "BirdsIdle",
+  "states": {
+   "BirdsIdle": {
+    "clip": "Animations/BirdsIdle",
+    "speed": 1
+   }
+  }
+ },
+ "GolfHole": {
+  "default": "ZoomIdle",
+  "states": {
+   "ZoomBig": {
+    "clip": "Animations/ZoomBig",
+    "speed": 1
+   },
+   "ZoomIdle": {
+    "clip": "Animations/ZoomIdle",
+    "speed": 1
+   },
+   "ZoomSmall1": {
+    "clip": "Animations/ZoomSmall1",
+    "speed": 1
+   },
+   "ZoomSmall2": {
+    "clip": "Animations/ZoomSmall2",
+    "speed": 1
+   },
+   "ZoomSmall3": {
+    "clip": "Animations/ZoomSmall3",
+    "speed": 1
+   },
+   "ZoomSmall4": {
+    "clip": "Animations/ZoomSmall4",
+    "speed": 1
+   }
+  }
+ },
+ "Golfer": {
+  "default": "GolferIdle",
+  "states": {
+   "GolferBop": {
+    "clip": "Animations/GolferBop",
+    "speed": 1
+   },
+   "GolferIdle": {
+    "clip": "Animations/GolferIdle",
+    "speed": 1
+   },
+   "GolferJust": {
+    "clip": "Animations/GolferJust",
+    "speed": 1
+   },
+   "GolferMiss": {
+    "clip": "Animations/GolferMiss",
+    "speed": 1
+   },
+   "GolferPrepare": {
+    "clip": "Animations/GolferPrepare",
+    "speed": 1
+   },
+   "GolferThrough": {
+    "clip": "Animations/GolferThrough",
+    "speed": 1
+   },
+   "GolferThroughMandrill": {
+    "clip": "Animations/GolferThroughMandrill",
+    "speed": 1
+   },
+   "GolferWhiff": {
+    "clip": "Animations/GolferWhiff",
+    "speed": 1
+   }
+  }
+ },
+ "GrassEffect": {
+  "default": "New State",
+  "states": {
+   "GrassEffect0": {
+    "clip": "Animations/GrassEffect0",
+    "speed": 1
+   },
+   "GrassEffect1": {
+    "clip": "Animations/GrassEffect1",
+    "speed": 1
+   },
+   "GrassEffect2": {
+    "clip": "Animations/GrassEffect2",
+    "speed": 1
+   },
+   "GrassEffect3": {
+    "clip": "Animations/GrassEffect3",
+    "speed": 1
+   },
+   "New State": {
+    "speed": 1
+   }
+  }
+ },
+ "IslandArea": {
+  "default": "IslandIdle",
+  "states": {
+   "IslandIdle": {
+    "clip": "Animations/IslandIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Mandrill": {
+  "default": "MandrillIdle",
+  "states": {
+   "MandrillBop": {
+    "clip": "Animations/MandrillBop",
+    "speed": 1
+   },
+   "MandrillBop2": {
+    "clip": "Animations/MandrillBop2",
+    "speed": 1
+   },
+   "MandrillBop3": {
+    "clip": "Animations/MandrillBop3",
+    "speed": 1
+   },
+   "MandrillIdle": {
+    "clip": "Animations/MandrillIdle",
+    "speed": 1
+   },
+   "MandrillPitch": {
+    "clip": "Animations/MandrillPitch",
+    "speed": 1
+   },
+   "MandrillReady1": {
+    "clip": "Animations/MandrillReady1",
+    "speed": 1
+   },
+   "MandrillReady2": {
+    "clip": "Animations/MandrillReady2",
+    "speed": 1
+   },
+   "MandrillReady3": {
+    "clip": "Animations/MandrillReady3",
+    "speed": 1
+   }
+  }
+ },
+ "Monkey": {
+  "default": "MonkeyIdle",
+  "states": {
+   "MonkeyBlink": {
+    "clip": "Animations/MonkeyBlink",
+    "speed": 1
+   },
+   "MonkeyBop": {
+    "clip": "Animations/MonkeyBop",
+    "speed": 1
+   },
+   "MonkeyFace": {
+    "clip": "Animations/MonkeyFace",
+    "speed": 1
+   },
+   "MonkeyIdle": {
+    "clip": "Animations/MonkeyIdle",
+    "speed": 1
+   },
+   "MonkeyJust": {
+    "clip": "Animations/MonkeyJust",
+    "speed": 1
+   },
+   "MonkeyMiss": {
+    "clip": "Animations/MonkeyMiss",
+    "speed": 1
+   },
+   "MonkeyPrepare": {
+    "clip": "Animations/MonkeyPrepare",
+    "speed": 1
+   },
+   "MonkeyRemixBlink": {
+    "clip": "Animations/MonkeyRemixBlink",
+    "speed": 1
+   },
+   "MonkeyRemixIdle": {
+    "clip": "Animations/MonkeyRemixIdle",
+    "speed": 1
+   },
+   "MonkeyRemixTalk": {
+    "clip": "Animations/MonkeyRemixTalk",
+    "speed": 1
+   },
+   "MonkeySad": {
+    "clip": "Animations/MonkeySad",
+    "speed": 1
+   },
+   "MonkeySpin": {
+    "clip": "Animations/MonkeySpin",
+    "speed": 1
+   },
+   "MonkeyTalk": {
+    "clip": "Animations/MonkeyTalk",
+    "speed": 1
+   },
+   "MonkeyThrow": {
+    "clip": "Animations/MonkeyThrow",
+    "speed": 1
+   }
+  }
+ },
+ "MonkeyHead": {
+  "default": "MonkeyHead",
+  "states": {
+   "MonkeyHead": {
+    "clip": "Animations/MonkeyHead",
+    "speed": 1
+   },
+   "MonkeyJustHead": {
+    "clip": "Animations/MonkeyJustHead",
+    "speed": 1
+   },
+   "MonkeyMissHead": {
+    "clip": "Animations/MonkeyMissHead",
+    "speed": 1
+   },
+   "MonkeySadHead": {
+    "clip": "Animations/MonkeySadHead",
+    "speed": 1
+   }
+  }
+ },
+ "MovingClouds": {
+  "default": "MovingClouds",
+  "states": {
+   "MovingClouds": {
+    "clip": "Animations/MovingClouds",
+    "speed": 1
+   }
+  }
+ },
+ "Seagulls": {
+  "default": "SeagullWave",
+  "states": {
+   "SeagullWave": {
+    "clip": "Animations/SeagullWave",
+    "speed": 1
+   }
+  }
+ }
+}

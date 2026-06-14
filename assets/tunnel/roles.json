@@ -1,0 +1,7 @@
+{
+ "cowbellAnimator": "Player/Cowbell",
+ "driverAnimator": "Driver",
+ "frontHand": "Player/Hand_Front",
+ "tunnelWall": "Tunnel",
+ "tunnelWallRenderer": "Tunnel"
+}

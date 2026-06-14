@@ -1,0 +1,653 @@
+{
+ "atlases": [
+  "atlas0.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "mrupbeat_antenna": {
+   "X": 1124,
+   "Y": 1416,
+   "W": 216,
+   "H": 180,
+   "PivotX": 0.5925926,
+   "PivotY": 0.51111114,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_antenna_light_0": {
+   "X": 932,
+   "Y": 1416,
+   "W": 184,
+   "H": 180,
+   "PivotX": 0.7174,
+   "PivotY": 0.51,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_antenna_light_1": {
+   "X": 1540,
+   "Y": 1416,
+   "W": 184,
+   "H": 180,
+   "PivotX": 0.7174,
+   "PivotY": 0.51,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_antenna_light_2": {
+   "X": 1348,
+   "Y": 1416,
+   "W": 184,
+   "H": 180,
+   "PivotX": 0.7174,
+   "PivotY": 0.51,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_fall_0": {
+   "X": 4,
+   "Y": 8,
+   "W": 440,
+   "H": 308,
+   "PivotX": 0.23131311,
+   "PivotY": 0.2206722,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_fall_1": {
+   "X": 4,
+   "Y": 328,
+   "W": 440,
+   "H": 276,
+   "PivotX": 0.25480798,
+   "PivotY": 0.24740025,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_fall_2": {
+   "X": 4,
+   "Y": 904,
+   "W": 440,
+   "H": 244,
+   "PivotX": 0.19380306,
+   "PivotY": 0.24692748,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_fall_3": {
+   "X": 4,
+   "Y": 1160,
+   "W": 440,
+   "H": 244,
+   "PivotX": 0.1929862,
+   "PivotY": 0.21257469,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_head_blink": {
+   "X": 1124,
+   "Y": 8,
+   "W": 248,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_head_normal": {
+   "X": 868,
+   "Y": 8,
+   "W": 248,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_head_shocked": {
+   "X": 1380,
+   "Y": 8,
+   "W": 248,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_0": {
+   "X": 2087,
+   "Y": 36,
+   "W": 274,
+   "H": 273,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_1": {
+   "X": 2474,
+   "Y": 69,
+   "W": 205,
+   "H": 208,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_10": {
+   "X": 2852,
+   "Y": 823,
+   "W": 158,
+   "H": 159,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_11": {
+   "X": 3226,
+   "Y": 870,
+   "W": 115,
+   "H": 115,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_12": {
+   "X": 3495,
+   "Y": 39,
+   "W": 381,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_13": {
+   "X": 3495,
+   "Y": 417,
+   "W": 381,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_14": {
+   "X": 3495,
+   "Y": 678,
+   "W": 381,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_15": {
+   "X": 928,
+   "Y": 616,
+   "W": 417,
+   "H": 149,
+   "PivotX": 0.4374075,
+   "PivotY": 0,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_16": {
+   "X": 1475,
+   "Y": 630,
+   "W": 318,
+   "H": 136,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_17": {
+   "X": 926,
+   "Y": 893,
+   "W": 426,
+   "H": 134,
+   "PivotX": 0.42794013,
+   "PivotY": 0,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_18": {
+   "X": 1471,
+   "Y": 892,
+   "W": 428,
+   "H": 100,
+   "PivotX": 0.43002462,
+   "PivotY": 0,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_19": {
+   "X": 930,
+   "Y": 1150,
+   "W": 414,
+   "H": 134,
+   "PivotX": 0.42592838,
+   "PivotY": 0,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_2": {
+   "X": 2851,
+   "Y": 117,
+   "W": 159,
+   "H": 160,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_20": {
+   "X": 1471,
+   "Y": 1286,
+   "W": 114,
+   "H": 59,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_3": {
+   "X": 3226,
+   "Y": 164,
+   "W": 115,
+   "H": 114,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_4": {
+   "X": 2087,
+   "Y": 389,
+   "W": 274,
+   "H": 273,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_5": {
+   "X": 2474,
+   "Y": 423,
+   "W": 206,
+   "H": 206,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_6": {
+   "X": 2852,
+   "Y": 471,
+   "W": 158,
+   "H": 158,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_7": {
+   "X": 3226,
+   "Y": 516,
+   "W": 115,
+   "H": 116,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_8": {
+   "X": 2087,
+   "Y": 741,
+   "W": 274,
+   "H": 273,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_main_9": {
+   "X": 2474,
+   "Y": 776,
+   "W": 206,
+   "H": 206,
+   "PivotX": 1,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_metronome": {
+   "X": 6,
+   "Y": 1796,
+   "W": 1656,
+   "H": 248,
+   "PivotX": 0.575,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_miss_fx": {
+   "X": 1636,
+   "Y": 8,
+   "W": 408,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_shadow_fall": {
+   "X": 1412,
+   "Y": 1064,
+   "W": 408,
+   "H": 148,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_shadow_left": {
+   "X": 1252,
+   "Y": 264,
+   "W": 376,
+   "H": 308,
+   "PivotX": 0.46770754,
+   "PivotY": 0.18134259,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_shadow_right": {
+   "X": 868,
+   "Y": 264,
+   "W": 376,
+   "H": 308,
+   "PivotX": 0.8090567,
+   "PivotY": 0.16817167,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_smear_fx_0": {
+   "X": 4,
+   "Y": 1416,
+   "W": 440,
+   "H": 212,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_smear_fx_1": {
+   "X": 452,
+   "Y": 1416,
+   "W": 280,
+   "H": 240,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_smear_fx_2": {
+   "X": 740,
+   "Y": 1416,
+   "W": 184,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_step_0": {
+   "X": 452,
+   "Y": 804,
+   "W": 408,
+   "H": 344,
+   "PivotX": 0.42319235,
+   "PivotY": 0.1975449,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_step_1": {
+   "X": 452,
+   "Y": 424,
+   "W": 408,
+   "H": 372,
+   "PivotX": 0.42973134,
+   "PivotY": 0.1378374,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "mrupbeat_step_2": {
+   "X": 452,
+   "Y": 8,
+   "W": 408,
+   "H": 404,
+   "PivotX": 0.44062924,
+   "PivotY": 0.14561266,
+   "ppu": 192,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

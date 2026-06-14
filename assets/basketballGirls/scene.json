@@ -1,0 +1,1769 @@
+{
+ "nodes": [
+  {
+   "name": "basketballGirls",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    64,
+    40
+   ],
+   "order": -1000,
+   "color": [
+    1,
+    0.937,
+    0.224,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CameraPosition",
+   "path": "CameraPosition",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraPOVFar",
+   "path": "CameraPosition/CameraPOVFar",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -10,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraPOVNear",
+   "path": "CameraPosition/CameraPOVNear",
+   "parent": 2,
+   "pos": [
+    0,
+    3.16
+   ],
+   "z": -2.5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "basket",
+   "path": "basket",
+   "parent": 0,
+   "pos": [
+    -6.37,
+    -3.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "basket",
+   "order": 30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    2.06
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "basket/shadow",
+   "parent": 5,
+   "pos": [
+    0,
+    -0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "basket_shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.4
+   ],
+   "size": [
+    1.18,
+    0.7
+   ]
+  },
+  {
+   "name": "goal",
+   "path": "goal",
+   "parent": 0,
+   "pos": [
+    0,
+    2.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "goal",
+   "path": "goal/goal",
+   "parent": 7,
+   "pos": [
+    0,
+    -0.00999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "goal_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    1.66
+   ]
+  },
+  {
+   "name": "face",
+   "path": "goal/goal/face",
+   "parent": 8,
+   "pos": [
+    0,
+    0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "goal_face_0",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.94
+   ]
+  },
+  {
+   "name": "basket",
+   "path": "goal/goal/basket",
+   "parent": 8,
+   "pos": [
+    0,
+    -0.378
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "goal_basket_0",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    0.78
+   ]
+  },
+  {
+   "name": "arm",
+   "path": "goal/arm",
+   "parent": 7,
+   "pos": [
+    0,
+    2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "goal_arm",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    1.5
+   ]
+  },
+  {
+   "name": "impact",
+   "path": "goal/impact",
+   "parent": 7,
+   "pos": [
+    -0.9,
+    -0.54999995
+   ],
+   "rotZ": 1.9198621728555536,
+   "scale": [
+    2.1499999,
+    2.1499999
+   ],
+   "sprite": "impact_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.86
+   ]
+  },
+  {
+   "name": "star",
+   "path": "goal/star",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sprite (1)",
+   "path": "goal/star/sprite (1)",
+   "parent": 13,
+   "pos": [
+    -1.21,
+    1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.66,
+    0.66
+   ],
+   "sprite": "star_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.02
+   ]
+  },
+  {
+   "name": "sprite (2)",
+   "path": "goal/star/sprite (2)",
+   "parent": 13,
+   "pos": [
+    1.31,
+    1.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.66,
+    0.66
+   ],
+   "sprite": "star_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.02
+   ]
+  },
+  {
+   "name": "sprite (3)",
+   "path": "goal/star/sprite (3)",
+   "parent": 13,
+   "pos": [
+    -1.09,
+    -0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.66,
+    0.66
+   ],
+   "sprite": "star_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.02
+   ]
+  },
+  {
+   "name": "ball",
+   "path": "ball",
+   "parent": 0,
+   "pos": [
+    -3.77,
+    -1.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "ball",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.77
+   ]
+  },
+  {
+   "name": "catch",
+   "path": "ball/catch",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "line (1)",
+   "path": "ball/catch/line (1)",
+   "parent": 18,
+   "pos": [
+    -2.16,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95,
+    0.68
+   ],
+   "sprite": "line_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    0.62
+   ]
+  },
+  {
+   "name": "line (2)",
+   "path": "ball/catch/line (2)",
+   "parent": 18,
+   "pos": [
+    -0.7,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95,
+    0.68
+   ],
+   "sprite": "line_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    0.62
+   ]
+  },
+  {
+   "name": "impact",
+   "path": "ball/catch/impact",
+   "parent": 18,
+   "pos": [
+    -0.21,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.88,
+    0.88
+   ],
+   "sprite": "impact_2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.1
+   ]
+  },
+  {
+   "name": "hit",
+   "path": "ball/hit",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "impact",
+   "path": "ball/hit/impact",
+   "parent": 22,
+   "pos": [
+    -0.11,
+    0.285
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "impact_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    1.26
+   ]
+  },
+  {
+   "name": "line",
+   "path": "ball/hit/line",
+   "parent": 22,
+   "pos": [
+    -0.70000005,
+    0.09000002
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95000005,
+    0.68
+   ],
+   "sprite": "line_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    0.62
+   ]
+  },
+  {
+   "name": "GirlLeft",
+   "path": "GirlLeft",
+   "parent": 0,
+   "pos": [
+    -4.5,
+    -3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shock",
+   "path": "GirlLeft/shock",
+   "parent": 25,
+   "pos": [
+    -0.33,
+    4.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "impact_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.86
+   ]
+  },
+  {
+   "name": "head",
+   "path": "GirlLeft/head",
+   "parent": 25,
+   "pos": [
+    0.03999996,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_head_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.1
+   ]
+  },
+  {
+   "name": "hair",
+   "path": "GirlLeft/head/hair",
+   "parent": 27,
+   "pos": [
+    0.079,
+    0.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_hair_2_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.1
+   ]
+  },
+  {
+   "name": "tail",
+   "path": "GirlLeft/head/hair/tail",
+   "parent": 28,
+   "pos": [
+    0.4,
+    -0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_hair_2_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.02
+   ]
+  },
+  {
+   "name": "body",
+   "path": "GirlLeft/body",
+   "parent": 25,
+   "pos": [
+    0.07999992,
+    1.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_body_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.94
+   ]
+  },
+  {
+   "name": "arm (1)",
+   "path": "GirlLeft/body/arm (1)",
+   "parent": 30,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "GirlLeft/body/arm (1)/sprite",
+   "parent": 31,
+   "pos": [
+    0.079,
+    -0.065
+   ],
+   "rotZ": 1.4835297086023653,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_arm_3",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.7
+   ]
+  },
+  {
+   "name": "wristband",
+   "path": "GirlLeft/body/arm (1)/wristband",
+   "parent": 31,
+   "pos": [
+    -0.005,
+    -0.298
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_wristband_0",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.46
+   ]
+  },
+  {
+   "name": "hand",
+   "path": "GirlLeft/body/arm (1)/hand",
+   "parent": 31,
+   "pos": [
+    -0.149,
+    -0.423
+   ],
+   "rotZ": 0.7522368387175216,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_hand_1",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.54
+   ]
+  },
+  {
+   "name": "ball",
+   "path": "GirlLeft/ball",
+   "parent": 25,
+   "pos": [
+    -0.25,
+    0.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.15,
+    2.15
+   ],
+   "sprite": "ball",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.77
+   ]
+  },
+  {
+   "name": "waist",
+   "path": "GirlLeft/waist",
+   "parent": 25,
+   "pos": [
+    -0.1500001,
+    0.70000005
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_waist_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.78
+   ]
+  },
+  {
+   "name": "leg (1)",
+   "path": "GirlLeft/leg (1)",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leg",
+   "path": "GirlLeft/leg (1)/leg",
+   "parent": 37,
+   "pos": [
+    0.5,
+    0.20000005
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_leg_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.7
+   ]
+  },
+  {
+   "name": "shoe",
+   "path": "GirlLeft/leg (1)/shoe",
+   "parent": 37,
+   "pos": [
+    0.7750001,
+    -0.22000003
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_shoe_3",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.62
+   ]
+  },
+  {
+   "name": "leg (2)",
+   "path": "GirlLeft/leg (2)",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leg",
+   "path": "GirlLeft/leg (2)/leg",
+   "parent": 40,
+   "pos": [
+    -0.6500001,
+    0.44000006
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_leg_0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.94
+   ]
+  },
+  {
+   "name": "shoe",
+   "path": "GirlLeft/leg (2)/shoe",
+   "parent": 40,
+   "pos": [
+    -0.8299999,
+    -0.1400001
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_shoe_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.54
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "GirlLeft/shadow",
+   "parent": 25,
+   "pos": [
+    -0.03999996,
+    -0.34500003
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.6,
+    2.1
+   ],
+   "sprite": "girl_shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.4
+   ],
+   "size": [
+    1.02,
+    0.54
+   ]
+  },
+  {
+   "name": "GirlRight",
+   "path": "GirlRight",
+   "parent": 0,
+   "pos": [
+    4.5,
+    -3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "line",
+   "path": "GirlRight/line",
+   "parent": 44,
+   "pos": [
+    -0.5,
+    5.24
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "line_1",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    0.86
+   ]
+  },
+  {
+   "name": "head",
+   "path": "GirlRight/head",
+   "parent": 44,
+   "pos": [
+    0.03999996,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_head_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.1
+   ]
+  },
+  {
+   "name": "hair",
+   "path": "GirlRight/head/hair",
+   "parent": 46,
+   "pos": [
+    0.014,
+    0.088
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_hair_1_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.1
+   ]
+  },
+  {
+   "name": "body",
+   "path": "GirlRight/body",
+   "parent": 44,
+   "pos": [
+    0.07999992,
+    1.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_body_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.94
+   ]
+  },
+  {
+   "name": "arm (1)",
+   "path": "GirlRight/body/arm (1)",
+   "parent": 48,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "GirlRight/body/arm (1)/sprite",
+   "parent": 49,
+   "pos": [
+    -0.225,
+    0.1
+   ],
+   "rotZ": 0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_arm_0",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.86
+   ]
+  },
+  {
+   "name": "sleeve",
+   "path": "GirlRight/body/arm (1)/sleeve",
+   "parent": 49,
+   "pos": [
+    0.056,
+    0.12
+   ],
+   "rotZ": 2.8797931414739453,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_sleeve",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.62
+   ]
+  },
+  {
+   "name": "arm",
+   "path": "GirlRight/body/arm (1)/arm",
+   "parent": 49,
+   "pos": [
+    0.098,
+    -0.042
+   ],
+   "rotZ": 2.8797931414739453,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_arm_8",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.86
+   ]
+  },
+  {
+   "name": "wristband",
+   "path": "GirlRight/body/arm (1)/wristband",
+   "parent": 49,
+   "pos": [
+    0.125,
+    -0.295
+   ],
+   "rotZ": 0.8028513670932039,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_wristband_0",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.46
+   ]
+  },
+  {
+   "name": "hand",
+   "path": "GirlRight/body/arm (1)/hand",
+   "parent": 49,
+   "pos": [
+    -0.014,
+    -0.35
+   ],
+   "rotZ": 0.3926990231693204,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_hand_1",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.54
+   ]
+  },
+  {
+   "name": "arm (2)",
+   "path": "GirlRight/body/arm (2)",
+   "parent": 48,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "GirlRight/body/arm (2)/sprite",
+   "parent": 55,
+   "pos": [
+    -0.3,
+    0.16
+   ],
+   "rotZ": 0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_arm_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.86
+   ]
+  },
+  {
+   "name": "arm",
+   "path": "GirlRight/body/arm (2)/arm",
+   "parent": 55,
+   "pos": [
+    -0.27,
+    0.37000003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_arm_9",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.86
+   ]
+  },
+  {
+   "name": "wristband",
+   "path": "GirlRight/body/arm (2)/wristband",
+   "parent": 55,
+   "pos": [
+    -0.25,
+    0.9
+   ],
+   "rotZ": -1.745329278676244,
+   "scale": [
+    1,
+    -1
+   ],
+   "sprite": "girl_wristband_0",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.46
+   ]
+  },
+  {
+   "name": "hand",
+   "path": "GirlRight/body/arm (2)/hand",
+   "parent": 55,
+   "pos": [
+    -0.275,
+    1.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girl_hand_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.54
+   ]
+  },
+  {
+   "name": "waist",
+   "path": "GirlRight/waist",
+   "parent": 44,
+   "pos": [
+    -0.1500001,
+    0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_waist_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.78
+   ]
+  },
+  {
+   "name": "leg (1)",
+   "path": "GirlRight/leg (1)",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leg",
+   "path": "GirlRight/leg (1)/leg",
+   "parent": 61,
+   "pos": [
+    0.5,
+    0.20000005
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_leg_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.7
+   ]
+  },
+  {
+   "name": "shoe",
+   "path": "GirlRight/leg (1)/shoe",
+   "parent": 61,
+   "pos": [
+    0.7750001,
+    -0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_shoe_3",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.62
+   ]
+  },
+  {
+   "name": "leg (2)",
+   "path": "GirlRight/leg (2)",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leg",
+   "path": "GirlRight/leg (2)/leg",
+   "parent": 64,
+   "pos": [
+    -0.6500001,
+    0.4400001
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_leg_0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.94
+   ]
+  },
+  {
+   "name": "shoe",
+   "path": "GirlRight/leg (2)/shoe",
+   "parent": 64,
+   "pos": [
+    -0.8299999,
+    -0.1400001
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "girl_shoe_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.54
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "GirlRight/shadow",
+   "parent": 44,
+   "pos": [
+    -0.03999996,
+    -0.34500003
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.6,
+    2.1
+   ],
+   "sprite": "girl_shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.4
+   ],
+   "size": [
+    1.02,
+    0.54
+   ]
+  }
+ ]
+}

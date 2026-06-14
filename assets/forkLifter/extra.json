@@ -1,0 +1,111 @@
+{
+ "refArrays": {
+  "Gradients": [
+   "Background/GradientGame",
+   "Background/GradientRemix",
+   "Background/GradientClassic"
+  ],
+  "forkEffects": [
+   "Player/stabfx/forkstab_effect",
+   "Player/stabfx/forkstab_effect (1)",
+   "Player/stabfx/forkstab_effect (2)"
+  ]
+ },
+ "refArrayIdx": {
+  "Gradients": [
+   3,
+   5,
+   7
+  ],
+  "forkEffects": [
+   23,
+   24,
+   25
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "refs": {
+    "ForkLifterHand": "Hand",
+    "bg": "Background/SolidBG",
+    "flickedObject": "Object",
+    "forkSR": "Player/fork",
+    "gradientFiller": "Background/Filler",
+    "handAnim": "Hand",
+    "handMaterial": "forkhand",
+    "handShadow": "Hand/HandVisual/hand_shadow1",
+    "mmLines": "Background/megamixfloor",
+    "peaPreview": "Hand/PeaVisual",
+    "playerShadow": "Player/shadow",
+    "viewerCircle": "Hand/ViewerCircle",
+    "viewerCircleBg": "Hand/ViewerCircle/viewcirclebg"
+   },
+   "refArrays": {
+    "Gradients": [
+     "Background/GradientGame",
+     "Background/GradientRemix",
+     "Background/GradientClassic"
+    ],
+    "forkEffects": [
+     "Player/stabfx/forkstab_effect",
+     "Player/stabfx/forkstab_effect (1)",
+     "Player/stabfx/forkstab_effect (2)"
+    ]
+   },
+   "spriteArrays": {
+    "peaHitSprites": [
+     "pea_2",
+     "topbun_hit",
+     "burger_hit",
+     "bottombun_hit"
+    ],
+    "peaSprites": [
+     "pea_1",
+     "topbun",
+     "burger",
+     "bottombun"
+    ]
+   }
+  },
+  "hand": {
+   "path": "Hand",
+   "nums": {
+    "currentFlickIndex": 0
+   },
+   "refs": {
+    "fastSprite": "Hand/fast_1"
+   },
+   "spriteArrays": {
+    "fastSprites": [
+     "fast_1",
+     "fast_green1"
+    ]
+   }
+  },
+  "player": {
+   "path": "Player",
+   "nums": {
+    "bottombun": 0,
+    "currentEarlyPeasOnFork": 0,
+    "currentLatePeasOnFork": 0,
+    "currentPerfectPeasOnFork": 0,
+    "eatType": 0,
+    "middleburger": 0,
+    "shouldBop": 0,
+    "topbun": 0
+   },
+   "refs": {
+    "early": "Player/fork/early",
+    "late": "Player/fork/late",
+    "perfect": "Player/fork/perfect"
+   },
+   "sprites": {
+    "hitFX": "hitfx_1",
+    "hitFX2": "fast_2",
+    "hitFXG": "fast_green1",
+    "hitFXMiss": "hitfx_2"
+   }
+  }
+ }
+}

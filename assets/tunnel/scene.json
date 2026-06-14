@@ -1,0 +1,7847 @@
+{
+ "nodes": [
+  {
+   "name": "tunnel",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Car",
+   "path": "Car",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Interior",
+   "path": "Car/Interior",
+   "parent": 1,
+   "pos": [
+    -4.68,
+    0.73
+   ],
+   "z": 0.1337,
+   "rotZ": 0,
+   "scale": [
+    0.68216187,
+    0.68216187
+   ],
+   "sprite": "tunnelcar",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.56,
+    2.56
+   ]
+  },
+  {
+   "name": "Driver",
+   "path": "Driver",
+   "parent": 0,
+   "pos": [
+    -4.0969,
+    -0.7211
+   ],
+   "z": 0.8379,
+   "rotZ": 0,
+   "scale": [
+    1.2956474,
+    1.2956474
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Base",
+   "path": "Driver/Base",
+   "parent": 3,
+   "pos": [
+    0.41899985,
+    -1.17
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    0.706,
+    0.706
+   ],
+   "sprite": "Tunnel - Player, Lady, and Misc. Sprites_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.94,
+    2.16
+   ]
+  },
+  {
+   "name": "Eye",
+   "path": "Driver/Eye",
+   "parent": 3,
+   "pos": [
+    -1.229,
+    2.053
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    0.706,
+    0.706
+   ],
+   "sprite": "Tunnel - Player, Lady, and Misc. Sprites_10",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.06,
+    0.12
+   ]
+  },
+  {
+   "name": "Arms",
+   "path": "Driver/Arms",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Back",
+   "path": "Driver/Arms/Back",
+   "parent": 6,
+   "pos": [
+    0.58,
+    -1
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    0.706,
+    0.706
+   ],
+   "sprite": "Tunnel - Player, Lady, and Misc. Sprites_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.93,
+    0.5
+   ]
+  },
+  {
+   "name": "Wheel",
+   "path": "Driver/Arms/Wheel",
+   "parent": 6,
+   "pos": [
+    3.508,
+    -0.66999996
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    0.706,
+    0.706
+   ],
+   "sprite": "Tunnel - Player, Lady, and Misc. Sprites_6",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.74,
+    0.67
+   ]
+  },
+  {
+   "name": "Front",
+   "path": "Driver/Arms/Front",
+   "parent": 6,
+   "pos": [
+    0.43,
+    -1.14
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    0.706,
+    0.706
+   ],
+   "sprite": "Tunnel - Player, Lady, and Misc. Sprites_3",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.93,
+    0.5
+   ]
+  },
+  {
+   "name": "Player",
+   "path": "Player",
+   "parent": 0,
+   "pos": [
+    -7.133995,
+    0.6358736
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hand_Back",
+   "path": "Player/Hand_Back",
+   "parent": 10,
+   "pos": [
+    4.56,
+    -4.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.706,
+    0.706
+   ],
+   "sprite": "Tunnel - Player, Lady, and Misc. Sprites_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.85,
+    1.44
+   ]
+  },
+  {
+   "name": "Cowbell",
+   "path": "Player/Cowbell",
+   "parent": 10,
+   "pos": [
+    5.72,
+    -2.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.706,
+    0.706
+   ],
+   "sprite": "Tunnel - Player, Lady, and Misc. Sprites_14",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.74,
+    0.98
+   ]
+  },
+  {
+   "name": "Hand_Front",
+   "path": "Player/Hand_Front",
+   "parent": 10,
+   "pos": [
+    11.32664,
+    -3.54834
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.706,
+    0.706
+   ],
+   "sprite": "Tunnel - Player, Lady, and Misc. Sprites_15",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.59,
+    1.72
+   ]
+  },
+  {
+   "name": "HitCurve",
+   "path": "Player/HitCurve",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Player/HitCurve/Point 0",
+   "parent": 14,
+   "pos": [
+    8.5492935,
+    -4.259311
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Player/HitCurve/Point 1",
+   "parent": 14,
+   "pos": [
+    11.343286,
+    -3.8598573
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Tunnel",
+   "path": "Tunnel",
+   "parent": 0,
+   "pos": [
+    13.7,
+    0.66
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnelWall_1",
+   "order": -5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    13.7,
+    13.7
+   ]
+  },
+  {
+   "name": "BeachBG",
+   "path": "BeachBG",
+   "parent": 0,
+   "pos": [
+    -0.31,
+    3.98
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "BeachBG/Sky",
+   "parent": 18,
+   "pos": [
+    0,
+    -1
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_0",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    50,
+    13.62
+   ]
+  },
+  {
+   "name": "Sea",
+   "path": "BeachBG/Sea",
+   "parent": 18,
+   "pos": [
+    0,
+    -3.72
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    50,
+    3.12
+   ]
+  },
+  {
+   "name": "Sun",
+   "path": "BeachBG/Sun",
+   "parent": 18,
+   "pos": [
+    -6,
+    2
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_4",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    2.59
+   ]
+  },
+  {
+   "name": "Caustic",
+   "path": "BeachBG/Caustic",
+   "parent": 18,
+   "pos": [
+    -6.158,
+    -2.7
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_3",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.33,
+    0.91
+   ]
+  },
+  {
+   "name": "Scroll",
+   "path": "BeachBG/Scroll",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_8",
+   "path": "BeachBG/Scroll/tunnel_beach_assets_8",
+   "parent": 23,
+   "pos": [
+    1.74,
+    -6.47
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    21.49,
+    4.74
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_8 (1)",
+   "path": "BeachBG/Scroll/tunnel_beach_assets_8 (1)",
+   "parent": 23,
+   "pos": [
+    31.74,
+    -6.47
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    21.49,
+    4.74
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_9",
+   "path": "BeachBG/Scroll/tunnel_beach_assets_9",
+   "parent": 23,
+   "pos": [
+    -10,
+    -5.5
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_9",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    35.67,
+    4.94
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_9 (1)",
+   "path": "BeachBG/Scroll/tunnel_beach_assets_9 (1)",
+   "parent": 23,
+   "pos": [
+    20,
+    -5.5
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_9",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    35.67,
+    4.94
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_9 (2)",
+   "path": "BeachBG/Scroll/tunnel_beach_assets_9 (2)",
+   "parent": 23,
+   "pos": [
+    50,
+    -5.5
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_9",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    35.67,
+    4.94
+   ]
+  },
+  {
+   "name": "ScrollFar",
+   "path": "BeachBG/ScrollFar",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_2",
+   "path": "BeachBG/ScrollFar/tunnel_beach_assets_2",
+   "parent": 29,
+   "pos": [
+    -10,
+    -1.05
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.33,
+    5.09
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_7",
+   "path": "BeachBG/ScrollFar/tunnel_beach_assets_7",
+   "parent": 29,
+   "pos": [
+    2,
+    0.5999999
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_7",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    14.11,
+    6.29
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_6",
+   "path": "BeachBG/ScrollFar/tunnel_beach_assets_6",
+   "parent": 29,
+   "pos": [
+    11.3,
+    2.1399999
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "tunnel_beach_assets_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    14.14,
+    3.56
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_2 (1)",
+   "path": "BeachBG/ScrollFar/tunnel_beach_assets_2 (1)",
+   "parent": 29,
+   "pos": [
+    20,
+    -1.05
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.33,
+    5.09
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_7 (1)",
+   "path": "BeachBG/ScrollFar/tunnel_beach_assets_7 (1)",
+   "parent": 29,
+   "pos": [
+    32,
+    0.5999999
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_beach_assets_7",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    14.11,
+    6.29
+   ]
+  },
+  {
+   "name": "tunnel_beach_assets_6 (1)",
+   "path": "BeachBG/ScrollFar/tunnel_beach_assets_6 (1)",
+   "parent": 29,
+   "pos": [
+    41.3,
+    2.1399999
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "tunnel_beach_assets_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    14.14,
+    3.56
+   ]
+  },
+  {
+   "name": "DesertBG",
+   "path": "DesertBG",
+   "parent": 0,
+   "pos": [
+    -0.31,
+    3.98
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "DesertBG/Sky",
+   "parent": 36,
+   "pos": [
+    0,
+    -2.3
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.49672875,
+    0.49672875
+   ],
+   "sprite": "tunnel_desert_sky_0",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    17.69
+   ]
+  },
+  {
+   "name": "Scroll",
+   "path": "DesertBG/Scroll",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dunes1",
+   "path": "DesertBG/Scroll/Dunes1",
+   "parent": 38,
+   "pos": [
+    0,
+    -6.16
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_desert_dunes_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    8.73
+   ]
+  },
+  {
+   "name": "Dunes2",
+   "path": "DesertBG/Scroll/Dunes2",
+   "parent": 38,
+   "pos": [
+    40.787,
+    -6.16
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_desert_dunes_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    8.73
+   ]
+  },
+  {
+   "name": "FieldBG",
+   "path": "FieldBG",
+   "parent": 0,
+   "pos": [
+    -0.31,
+    3.98
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "FieldBG/Sky",
+   "parent": 41,
+   "pos": [
+    12.5,
+    -0.4649
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    44.41679,
+    0.5434003
+   ],
+   "sprite": "tunnel_field_misc_0",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.41,
+    15.22
+   ]
+  },
+  {
+   "name": "Scroll",
+   "path": "FieldBG/Scroll",
+   "parent": 41,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Grass11",
+   "path": "FieldBG/Scroll/Grass11",
+   "parent": 43,
+   "pos": [
+    0,
+    -5.76
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_field_grass_2",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.94,
+    5.25
+   ]
+  },
+  {
+   "name": "Grass12",
+   "path": "FieldBG/Scroll/Grass12",
+   "parent": 43,
+   "pos": [
+    37.869,
+    -5.76
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_field_grass_2",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.94,
+    5.25
+   ]
+  },
+  {
+   "name": "Grass21",
+   "path": "FieldBG/Scroll/Grass21",
+   "parent": 43,
+   "pos": [
+    0,
+    -6.1400003
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_field_grass_1",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.94,
+    7.08
+   ]
+  },
+  {
+   "name": "Grass22",
+   "path": "FieldBG/Scroll/Grass22",
+   "parent": 43,
+   "pos": [
+    37.869,
+    -6.14
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_field_grass_1",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.94,
+    7.08
+   ]
+  },
+  {
+   "name": "Grass31",
+   "path": "FieldBG/Scroll/Grass31",
+   "parent": 43,
+   "pos": [
+    0,
+    -5.6180005
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_field_grass_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.94,
+    6.88
+   ]
+  },
+  {
+   "name": "Grass32",
+   "path": "FieldBG/Scroll/Grass32",
+   "parent": 43,
+   "pos": [
+    37.869,
+    -5.618001
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_field_grass_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    37.94,
+    6.88
+   ]
+  },
+  {
+   "name": "Flowers1",
+   "path": "FieldBG/Scroll/Flowers1",
+   "parent": 43,
+   "pos": [
+    -13.16,
+    -3.33
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers2",
+   "path": "FieldBG/Scroll/Flowers2",
+   "parent": 43,
+   "pos": [
+    -6.26,
+    -3.31
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers3",
+   "path": "FieldBG/Scroll/Flowers3",
+   "parent": 43,
+   "pos": [
+    2.09,
+    -3.56
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers4",
+   "path": "FieldBG/Scroll/Flowers4",
+   "parent": 43,
+   "pos": [
+    8.37,
+    -3.13
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers5",
+   "path": "FieldBG/Scroll/Flowers5",
+   "parent": 43,
+   "pos": [
+    16.31,
+    -3.2
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers6",
+   "path": "FieldBG/Scroll/Flowers6",
+   "parent": 43,
+   "pos": [
+    31.609,
+    -3.31
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers7",
+   "path": "FieldBG/Scroll/Flowers7",
+   "parent": 43,
+   "pos": [
+    39.959,
+    -3.56
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers8",
+   "path": "FieldBG/Scroll/Flowers8",
+   "parent": 43,
+   "pos": [
+    46.239,
+    -3.13
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers9",
+   "path": "FieldBG/Scroll/Flowers9",
+   "parent": 43,
+   "pos": [
+    54.179,
+    -3.2
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "Flowers10",
+   "path": "FieldBG/Scroll/Flowers10",
+   "parent": 43,
+   "pos": [
+    24.709,
+    -3.33
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4645,
+    0.4645
+   ],
+   "sprite": "tunnel_field_misc_3",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.36,
+    3.75
+   ]
+  },
+  {
+   "name": "ScrollFar",
+   "path": "FieldBG/ScrollFar",
+   "parent": 41,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cloud1",
+   "path": "FieldBG/ScrollFar/Cloud1",
+   "parent": 60,
+   "pos": [
+    -14.58,
+    -0.55
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2934814,
+    0.2934814
+   ],
+   "sprite": "tunnel_field_misc_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.85,
+    7.03
+   ]
+  },
+  {
+   "name": "Cloud2",
+   "path": "FieldBG/ScrollFar/Cloud2",
+   "parent": 60,
+   "pos": [
+    -8.95,
+    0.08
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2733292,
+    0.2733292
+   ],
+   "sprite": "tunnel_field_misc_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.14,
+    4.13
+   ]
+  },
+  {
+   "name": "Cloud3",
+   "path": "FieldBG/ScrollFar/Cloud3",
+   "parent": 60,
+   "pos": [
+    1.08,
+    -0.67
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.34825453,
+    0.34825453
+   ],
+   "sprite": "tunnel_field_misc_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.14,
+    4.13
+   ]
+  },
+  {
+   "name": "Cloud4",
+   "path": "FieldBG/ScrollFar/Cloud4",
+   "parent": 60,
+   "pos": [
+    8.66,
+    -1.4
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.3900368,
+    0.3900368
+   ],
+   "sprite": "tunnel_field_misc_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.85,
+    7.03
+   ]
+  },
+  {
+   "name": "Cloud5",
+   "path": "FieldBG/ScrollFar/Cloud5",
+   "parent": 60,
+   "pos": [
+    12.79,
+    0.42
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.25872606,
+    0.25872606
+   ],
+   "sprite": "tunnel_field_misc_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.85,
+    7.03
+   ]
+  },
+  {
+   "name": "Cloud6",
+   "path": "FieldBG/ScrollFar/Cloud6",
+   "parent": 60,
+   "pos": [
+    18.99,
+    -0.38
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2934814,
+    0.2934814
+   ],
+   "sprite": "tunnel_field_misc_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.85,
+    7.03
+   ]
+  },
+  {
+   "name": "Cloud7",
+   "path": "FieldBG/ScrollFar/Cloud7",
+   "parent": 60,
+   "pos": [
+    24.3741,
+    -0.5154
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.28282535,
+    0.28282535
+   ],
+   "sprite": "tunnel_field_misc_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.14,
+    4.13
+   ]
+  },
+  {
+   "name": "Cloud8",
+   "path": "FieldBG/ScrollFar/Cloud8",
+   "parent": 60,
+   "pos": [
+    29.08,
+    -0.55
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2934814,
+    0.2934814
+   ],
+   "sprite": "tunnel_field_misc_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.85,
+    7.03
+   ]
+  },
+  {
+   "name": "Cloud9",
+   "path": "FieldBG/ScrollFar/Cloud9",
+   "parent": 60,
+   "pos": [
+    34.71,
+    0.08
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2733292,
+    0.2733292
+   ],
+   "sprite": "tunnel_field_misc_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.14,
+    4.13
+   ]
+  },
+  {
+   "name": "Cloud10",
+   "path": "FieldBG/ScrollFar/Cloud10",
+   "parent": 60,
+   "pos": [
+    44.74,
+    -0.67
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.34825453,
+    0.34825453
+   ],
+   "sprite": "tunnel_field_misc_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.14,
+    4.13
+   ]
+  },
+  {
+   "name": "Cloud11",
+   "path": "FieldBG/ScrollFar/Cloud11",
+   "parent": 60,
+   "pos": [
+    52.32,
+    -1.4
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.3900368,
+    0.3900368
+   ],
+   "sprite": "tunnel_field_misc_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.85,
+    7.03
+   ]
+  },
+  {
+   "name": "Cloud12",
+   "path": "FieldBG/ScrollFar/Cloud12",
+   "parent": 60,
+   "pos": [
+    56.45,
+    0.42
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.25872606,
+    0.25872606
+   ],
+   "sprite": "tunnel_field_misc_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.85,
+    7.03
+   ]
+  },
+  {
+   "name": "Cloud13",
+   "path": "FieldBG/ScrollFar/Cloud13",
+   "parent": 60,
+   "pos": [
+    62.65,
+    -0.38
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2934814,
+    0.2934814
+   ],
+   "sprite": "tunnel_field_misc_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.85,
+    7.03
+   ]
+  },
+  {
+   "name": "Cloud14",
+   "path": "FieldBG/ScrollFar/Cloud14",
+   "parent": 60,
+   "pos": [
+    68.034096,
+    -0.5154
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.28282535,
+    0.28282535
+   ],
+   "sprite": "tunnel_field_misc_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.14,
+    4.13
+   ]
+  },
+  {
+   "name": "CityBG",
+   "path": "CityBG",
+   "parent": 0,
+   "pos": [
+    -0.31,
+    3.98
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "CityBG/Sky",
+   "parent": 75,
+   "pos": [
+    0,
+    -1.26
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    19.9046,
+    10.0434065
+   ],
+   "sprite": "tunnel_city_backbuildings_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    1.75
+   ]
+  },
+  {
+   "name": "Scroll",
+   "path": "CityBG/Scroll",
+   "parent": 75,
+   "pos": [
+    0,
+    -0.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Building1",
+   "path": "CityBG/Scroll/Building1",
+   "parent": 77,
+   "pos": [
+    -10.2579,
+    -0.23
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.43862095,
+    0.43862095
+   ],
+   "sprite": "tunnel_city_frontbuildings_0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    13.92
+   ]
+  },
+  {
+   "name": "Building2",
+   "path": "CityBG/Scroll/Building2",
+   "parent": 77,
+   "pos": [
+    -7.49,
+    -0.28
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building3",
+   "path": "CityBG/Scroll/Building3",
+   "parent": 77,
+   "pos": [
+    -4.38,
+    -0.8
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_2",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.23,
+    9.47
+   ]
+  },
+  {
+   "name": "Building4",
+   "path": "CityBG/Scroll/Building4",
+   "parent": 77,
+   "pos": [
+    -1.79,
+    -2.13
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_3",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.22,
+    2.93
+   ]
+  },
+  {
+   "name": "Building5",
+   "path": "CityBG/Scroll/Building5",
+   "parent": 77,
+   "pos": [
+    -1.9579,
+    -1.596
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.24698235,
+    0.24698235
+   ],
+   "sprite": "tunnel_city_frontbuildings_4",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.24,
+    10.13
+   ]
+  },
+  {
+   "name": "Building6",
+   "path": "CityBG/Scroll/Building6",
+   "parent": 77,
+   "pos": [
+    -0.5616,
+    -1.6964
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.35576552,
+    0.35576552
+   ],
+   "sprite": "tunnel_city_frontbuildings_7",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    6.43
+   ]
+  },
+  {
+   "name": "Building7",
+   "path": "CityBG/Scroll/Building7",
+   "parent": 77,
+   "pos": [
+    0.229,
+    -2.101
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.25106022,
+    0.25106022
+   ],
+   "sprite": "tunnel_city_frontbuildings_8",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.22,
+    5.51
+   ]
+  },
+  {
+   "name": "Building8",
+   "path": "CityBG/Scroll/Building8",
+   "parent": 77,
+   "pos": [
+    1.79,
+    -0.2
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building9",
+   "path": "CityBG/Scroll/Building9",
+   "parent": 77,
+   "pos": [
+    3.11,
+    -2.25
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2718573,
+    0.2718573
+   ],
+   "sprite": "tunnel_city_frontbuildings_9",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    4.33
+   ]
+  },
+  {
+   "name": "Building10",
+   "path": "CityBG/Scroll/Building10",
+   "parent": 77,
+   "pos": [
+    4.45,
+    -0.23
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building11",
+   "path": "CityBG/Scroll/Building11",
+   "parent": 77,
+   "pos": [
+    5.91,
+    -2.14
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.25106022,
+    0.25106022
+   ],
+   "sprite": "tunnel_city_frontbuildings_8",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.22,
+    5.51
+   ]
+  },
+  {
+   "name": "Building12",
+   "path": "CityBG/Scroll/Building12",
+   "parent": 77,
+   "pos": [
+    11.45,
+    -1.07
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_2",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.23,
+    9.47
+   ]
+  },
+  {
+   "name": "Building13",
+   "path": "CityBG/Scroll/Building13",
+   "parent": 77,
+   "pos": [
+    6.5,
+    -2.28
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2718573,
+    0.2718573
+   ],
+   "sprite": "tunnel_city_frontbuildings_9",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    4.33
+   ]
+  },
+  {
+   "name": "Building14",
+   "path": "CityBG/Scroll/Building14",
+   "parent": 77,
+   "pos": [
+    7.15,
+    -1.66
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.35576552,
+    0.35576552
+   ],
+   "sprite": "tunnel_city_frontbuildings_7",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    6.43
+   ]
+  },
+  {
+   "name": "Building15",
+   "path": "CityBG/Scroll/Building15",
+   "parent": 77,
+   "pos": [
+    8.65,
+    -0.54
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building16",
+   "path": "CityBG/Scroll/Building16",
+   "parent": 77,
+   "pos": [
+    13.47,
+    -1.62
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.24698235,
+    0.24698235
+   ],
+   "sprite": "tunnel_city_frontbuildings_4",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.24,
+    10.13
+   ]
+  },
+  {
+   "name": "Building17",
+   "path": "CityBG/Scroll/Building17",
+   "parent": 77,
+   "pos": [
+    14.92,
+    -1.44
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building18",
+   "path": "CityBG/Scroll/Building18",
+   "parent": 77,
+   "pos": [
+    16.47,
+    -1.61
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.35576552,
+    0.35576552
+   ],
+   "sprite": "tunnel_city_frontbuildings_7",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    6.43
+   ]
+  },
+  {
+   "name": "Building19",
+   "path": "CityBG/Scroll/Building19",
+   "parent": 77,
+   "pos": [
+    17.1,
+    -2.21
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2718573,
+    0.2718573
+   ],
+   "sprite": "tunnel_city_frontbuildings_9",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    4.33
+   ]
+  },
+  {
+   "name": "Building1 (1)",
+   "path": "CityBG/Scroll/Building1 (1)",
+   "parent": 77,
+   "pos": [
+    18.1021,
+    -0.23
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.43862095,
+    0.43862095
+   ],
+   "sprite": "tunnel_city_frontbuildings_0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    13.92
+   ]
+  },
+  {
+   "name": "Building2 (1)",
+   "path": "CityBG/Scroll/Building2 (1)",
+   "parent": 77,
+   "pos": [
+    20.87,
+    -0.28
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building3 (1)",
+   "path": "CityBG/Scroll/Building3 (1)",
+   "parent": 77,
+   "pos": [
+    23.98,
+    -0.8
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_2",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.23,
+    9.47
+   ]
+  },
+  {
+   "name": "Building4 (1)",
+   "path": "CityBG/Scroll/Building4 (1)",
+   "parent": 77,
+   "pos": [
+    26.57,
+    -2.13
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_3",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.22,
+    2.93
+   ]
+  },
+  {
+   "name": "Building5 (1)",
+   "path": "CityBG/Scroll/Building5 (1)",
+   "parent": 77,
+   "pos": [
+    26.4021,
+    -1.596
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.24698235,
+    0.24698235
+   ],
+   "sprite": "tunnel_city_frontbuildings_4",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.24,
+    10.13
+   ]
+  },
+  {
+   "name": "Building6 (1)",
+   "path": "CityBG/Scroll/Building6 (1)",
+   "parent": 77,
+   "pos": [
+    27.7984,
+    -1.6964
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.35576552,
+    0.35576552
+   ],
+   "sprite": "tunnel_city_frontbuildings_7",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    6.43
+   ]
+  },
+  {
+   "name": "Building7 (1)",
+   "path": "CityBG/Scroll/Building7 (1)",
+   "parent": 77,
+   "pos": [
+    28.589,
+    -2.101
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.25106022,
+    0.25106022
+   ],
+   "sprite": "tunnel_city_frontbuildings_8",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.22,
+    5.51
+   ]
+  },
+  {
+   "name": "Building8 (1)",
+   "path": "CityBG/Scroll/Building8 (1)",
+   "parent": 77,
+   "pos": [
+    30.150002,
+    -0.2
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building9 (1)",
+   "path": "CityBG/Scroll/Building9 (1)",
+   "parent": 77,
+   "pos": [
+    31.470001,
+    -2.25
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2718573,
+    0.2718573
+   ],
+   "sprite": "tunnel_city_frontbuildings_9",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    4.33
+   ]
+  },
+  {
+   "name": "Building10 (1)",
+   "path": "CityBG/Scroll/Building10 (1)",
+   "parent": 77,
+   "pos": [
+    32.81,
+    -0.23
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building11 (1)",
+   "path": "CityBG/Scroll/Building11 (1)",
+   "parent": 77,
+   "pos": [
+    34.27,
+    -2.14
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.25106022,
+    0.25106022
+   ],
+   "sprite": "tunnel_city_frontbuildings_8",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.22,
+    5.51
+   ]
+  },
+  {
+   "name": "Building12 (1)",
+   "path": "CityBG/Scroll/Building12 (1)",
+   "parent": 77,
+   "pos": [
+    39.81,
+    -1.07
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_2",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.23,
+    9.47
+   ]
+  },
+  {
+   "name": "Building13 (1)",
+   "path": "CityBG/Scroll/Building13 (1)",
+   "parent": 77,
+   "pos": [
+    34.86,
+    -2.28
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2718573,
+    0.2718573
+   ],
+   "sprite": "tunnel_city_frontbuildings_9",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    4.33
+   ]
+  },
+  {
+   "name": "Building14 (1)",
+   "path": "CityBG/Scroll/Building14 (1)",
+   "parent": 77,
+   "pos": [
+    35.510002,
+    -1.66
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.35576552,
+    0.35576552
+   ],
+   "sprite": "tunnel_city_frontbuildings_7",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    6.43
+   ]
+  },
+  {
+   "name": "Building15 (1)",
+   "path": "CityBG/Scroll/Building15 (1)",
+   "parent": 77,
+   "pos": [
+    37.010002,
+    -0.54
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building16 (1)",
+   "path": "CityBG/Scroll/Building16 (1)",
+   "parent": 77,
+   "pos": [
+    41.83,
+    -1.62
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.24698235,
+    0.24698235
+   ],
+   "sprite": "tunnel_city_frontbuildings_4",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.24,
+    10.13
+   ]
+  },
+  {
+   "name": "Building17 (1)",
+   "path": "CityBG/Scroll/Building17 (1)",
+   "parent": 77,
+   "pos": [
+    43.28,
+    -1.44
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.438621,
+    0.438621
+   ],
+   "sprite": "tunnel_city_frontbuildings_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.71,
+    11.82
+   ]
+  },
+  {
+   "name": "Building18 (1)",
+   "path": "CityBG/Scroll/Building18 (1)",
+   "parent": 77,
+   "pos": [
+    44.83,
+    -1.61
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.35576552,
+    0.35576552
+   ],
+   "sprite": "tunnel_city_frontbuildings_7",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    6.43
+   ]
+  },
+  {
+   "name": "Building19 (1)",
+   "path": "CityBG/Scroll/Building19 (1)",
+   "parent": 77,
+   "pos": [
+    45.46,
+    -2.21
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.2718573,
+    0.2718573
+   ],
+   "sprite": "tunnel_city_frontbuildings_9",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    4.33
+   ]
+  },
+  {
+   "name": "ScrollFar",
+   "path": "CityBG/ScrollFar",
+   "parent": 75,
+   "pos": [
+    0,
+    -0.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Road1",
+   "path": "CityBG/ScrollFar/Road1",
+   "parent": 116,
+   "pos": [
+    2.28,
+    -4.284
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.7508,
+    0.7508
+   ],
+   "sprite": "tunnel_city_backbuildings_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    36.9,
+    4.08
+   ]
+  },
+  {
+   "name": "Road2",
+   "path": "CityBG/ScrollFar/Road2",
+   "parent": 116,
+   "pos": [
+    29.971699,
+    -4.284
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.7508,
+    0.7508
+   ],
+   "sprite": "tunnel_city_backbuildings_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    36.9,
+    4.08
+   ]
+  },
+  {
+   "name": "BGCity1",
+   "path": "CityBG/ScrollFar/BGCity1",
+   "parent": 116,
+   "pos": [
+    -7.8623,
+    -1.4834
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.31855163,
+    0.31855163
+   ],
+   "sprite": "tunnel_city_backbuildings_0",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    23.25,
+    15.37
+   ]
+  },
+  {
+   "name": "BGCity2",
+   "path": "CityBG/ScrollFar/BGCity2",
+   "parent": 116,
+   "pos": [
+    -0.9267,
+    -1.7119
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.41553825,
+    0.41553825
+   ],
+   "sprite": "tunnel_city_backbuildings_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.59,
+    15.37
+   ]
+  },
+  {
+   "name": "BGCity3",
+   "path": "CityBG/ScrollFar/BGCity3",
+   "parent": 116,
+   "pos": [
+    5.9613,
+    -1.4834
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.31855163,
+    0.31855163
+   ],
+   "sprite": "tunnel_city_backbuildings_0",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    23.25,
+    15.37
+   ]
+  },
+  {
+   "name": "BGCity4",
+   "path": "CityBG/ScrollFar/BGCity4",
+   "parent": 116,
+   "pos": [
+    12.8968,
+    -1.7119
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.41553825,
+    0.41553825
+   ],
+   "sprite": "tunnel_city_backbuildings_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.59,
+    15.37
+   ]
+  },
+  {
+   "name": "BGCity5",
+   "path": "CityBG/ScrollFar/BGCity5",
+   "parent": 116,
+   "pos": [
+    19.8294,
+    -1.4834
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.31855163,
+    0.31855163
+   ],
+   "sprite": "tunnel_city_backbuildings_0",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    23.25,
+    15.37
+   ]
+  },
+  {
+   "name": "BGCity6",
+   "path": "CityBG/ScrollFar/BGCity6",
+   "parent": 116,
+   "pos": [
+    26.764997,
+    -1.7119
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.41553825,
+    0.41553825
+   ],
+   "sprite": "tunnel_city_backbuildings_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.59,
+    15.37
+   ]
+  },
+  {
+   "name": "BGCity7",
+   "path": "CityBG/ScrollFar/BGCity7",
+   "parent": 116,
+   "pos": [
+    33.653,
+    -1.4834
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.31855163,
+    0.31855163
+   ],
+   "sprite": "tunnel_city_backbuildings_0",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    23.25,
+    15.37
+   ]
+  },
+  {
+   "name": "BGCity8",
+   "path": "CityBG/ScrollFar/BGCity8",
+   "parent": 116,
+   "pos": [
+    40.588497,
+    -1.7119
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.41553825,
+    0.41553825
+   ],
+   "sprite": "tunnel_city_backbuildings_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.59,
+    15.37
+   ]
+  },
+  {
+   "name": "NightBG",
+   "path": "NightBG",
+   "parent": 0,
+   "pos": [
+    -0.31,
+    3.98
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "NightBG/Sky",
+   "parent": 127,
+   "pos": [
+    -3.7208,
+    -3.5202
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    19.3863,
+    10.7951
+   ],
+   "sprite": "tunnel_night_aurora_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8600001,
+    1.8601707
+   ]
+  },
+  {
+   "name": "Aurora",
+   "path": "NightBG/Aurora",
+   "parent": 127,
+   "pos": [
+    0.52,
+    -1.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4238859,
+    0.40983403
+   ],
+   "sprite": "tunnel_night_aurora_0",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.780003,
+    21.631985
+   ]
+  },
+  {
+   "name": "Scroll",
+   "path": "NightBG/Scroll",
+   "parent": 127,
+   "pos": [
+    -6,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars1",
+   "path": "NightBG/Scroll/Stars1",
+   "parent": 130,
+   "pos": [
+    -2.82,
+    -1.61
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4003,
+    0.4003
+   ],
+   "sprite": "tunnel_night_closeupstars",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    23.04
+   ]
+  },
+  {
+   "name": "Stars2",
+   "path": "NightBG/Scroll/Stars2",
+   "parent": 130,
+   "pos": [
+    12.69,
+    -1.61
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4003,
+    0.4003
+   ],
+   "sprite": "tunnel_night_closeupstars",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    23.04
+   ]
+  },
+  {
+   "name": "Stars3",
+   "path": "NightBG/Scroll/Stars3",
+   "parent": 130,
+   "pos": [
+    28.2,
+    -1.61
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4003,
+    0.4003
+   ],
+   "sprite": "tunnel_night_closeupstars",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    23.04
+   ]
+  },
+  {
+   "name": "ScrollFar",
+   "path": "NightBG/ScrollFar",
+   "parent": 127,
+   "pos": [
+    -8,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars1",
+   "path": "NightBG/ScrollFar/Stars1",
+   "parent": 134,
+   "pos": [
+    1.7,
+    -1.48
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5685552,
+    0.5685552
+   ],
+   "sprite": "tunnel_night_farawaystars",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    23.04
+   ]
+  },
+  {
+   "name": "Stars2",
+   "path": "NightBG/ScrollFar/Stars2",
+   "parent": 134,
+   "pos": [
+    21.7,
+    -1.48
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5685552,
+    0.5685552
+   ],
+   "sprite": "tunnel_night_farawaystars",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    23.04
+   ]
+  },
+  {
+   "name": "Stars3",
+   "path": "NightBG/ScrollFar/Stars3",
+   "parent": 134,
+   "pos": [
+    41.7,
+    -1.48
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5685552,
+    0.5685552
+   ],
+   "sprite": "tunnel_night_farawaystars",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.96,
+    23.04
+   ]
+  },
+  {
+   "name": "MoaiBG",
+   "path": "MoaiBG",
+   "parent": 0,
+   "pos": [
+    -0.31,
+    3.98
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "MoaiBG/Sky",
+   "parent": 138,
+   "pos": [
+    -1.12,
+    -2.6
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    18.57501,
+    9.844227
+   ],
+   "sprite": "tunnel_moai_misc_3",
+   "order": -11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.12,
+    2.12
+   ]
+  },
+  {
+   "name": "Cloud1",
+   "path": "MoaiBG/Cloud1",
+   "parent": 138,
+   "pos": [
+    -5.9715,
+    0.2638
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.42675775,
+    0.42675775
+   ],
+   "sprite": "tunnel_moai_misc_4",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.24,
+    9.93
+   ]
+  },
+  {
+   "name": "Cloud2",
+   "path": "MoaiBG/Cloud2",
+   "parent": 138,
+   "pos": [
+    6.64,
+    0.2638
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.42675775,
+    0.42675775
+   ],
+   "sprite": "tunnel_moai_misc_4",
+   "order": -10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.24,
+    9.93
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "MoaiBG/Water",
+   "parent": 138,
+   "pos": [
+    -0.02,
+    -3.48
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_moai_misc_8",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    3.93
+   ]
+  },
+  {
+   "name": "Scroll",
+   "path": "MoaiBG/Scroll",
+   "parent": 138,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Grass1",
+   "path": "MoaiBG/Scroll/Grass1",
+   "parent": 143,
+   "pos": [
+    0,
+    -3.88
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.59832186,
+    0.59832186
+   ],
+   "sprite": "tunnel_moai_grass_2",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    3.12
+   ]
+  },
+  {
+   "name": "Grass2",
+   "path": "MoaiBG/Scroll/Grass2",
+   "parent": 143,
+   "pos": [
+    0,
+    -4.7
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5983219,
+    0.5983219
+   ],
+   "sprite": "tunnel_moai_grass_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    7.51
+   ]
+  },
+  {
+   "name": "Grass3",
+   "path": "MoaiBG/Scroll/Grass3",
+   "parent": 143,
+   "pos": [
+    0,
+    -3.7135997
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5983219,
+    0.5983219
+   ],
+   "sprite": "tunnel_moai_grass_0",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    5.23
+   ]
+  },
+  {
+   "name": "Grass4",
+   "path": "MoaiBG/Scroll/Grass4",
+   "parent": 143,
+   "pos": [
+    22.832,
+    -3.88
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.59832186,
+    0.59832186
+   ],
+   "sprite": "tunnel_moai_grass_2",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    3.12
+   ]
+  },
+  {
+   "name": "Grass5",
+   "path": "MoaiBG/Scroll/Grass5",
+   "parent": 143,
+   "pos": [
+    22.832,
+    -4.7
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5983219,
+    0.5983219
+   ],
+   "sprite": "tunnel_moai_grass_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    7.51
+   ]
+  },
+  {
+   "name": "Grass6",
+   "path": "MoaiBG/Scroll/Grass6",
+   "parent": 143,
+   "pos": [
+    22.832,
+    -3.7135997
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5983219,
+    0.5983219
+   ],
+   "sprite": "tunnel_moai_grass_0",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    5.23
+   ]
+  },
+  {
+   "name": "Moai",
+   "path": "MoaiBG/Scroll/Moai",
+   "parent": 143,
+   "pos": [
+    51.694,
+    -1.91
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.4767,
+    0.4767
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (1)",
+   "path": "MoaiBG/Scroll/Moai (1)",
+   "parent": 143,
+   "pos": [
+    -0.66,
+    -1.97
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.28584114,
+    0.28584114
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (2)",
+   "path": "MoaiBG/Scroll/Moai (2)",
+   "parent": 143,
+   "pos": [
+    -8.04,
+    -1.84
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.39928392,
+    0.39928392
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Bow",
+   "path": "MoaiBG/Scroll/Moai (2)/Bow",
+   "parent": 152,
+   "pos": [
+    -0.9016132,
+    4.1073527
+   ],
+   "rotZ": 0.37182129358799565,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_moai_misc_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.35
+   ]
+  },
+  {
+   "name": "Moai (3)",
+   "path": "MoaiBG/Scroll/Moai (3)",
+   "parent": 143,
+   "pos": [
+    10.34,
+    -1.84
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33191875,
+    0.33191875
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (4)",
+   "path": "MoaiBG/Scroll/Moai (4)",
+   "parent": 143,
+   "pos": [
+    61.284,
+    -1.99
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.39542267,
+    0.39542267
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (5)",
+   "path": "MoaiBG/Scroll/Moai (5)",
+   "parent": 143,
+   "pos": [
+    29.73,
+    -2.08
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.3223423,
+    0.3223423
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (6)",
+   "path": "MoaiBG/Scroll/Moai (6)",
+   "parent": 143,
+   "pos": [
+    70.914,
+    -0.2272
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.7914041,
+    0.7914041
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (7)",
+   "path": "MoaiBG/Scroll/Moai (7)",
+   "parent": 143,
+   "pos": [
+    19.75,
+    -1.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.39928392,
+    0.39928392
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Bow",
+   "path": "MoaiBG/Scroll/Moai (7)/Bow",
+   "parent": 158,
+   "pos": [
+    0.68999785,
+    4.2699995
+   ],
+   "rotZ": 5.6950335900588005,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_moai_misc_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.35
+   ]
+  },
+  {
+   "name": "Grass1 (1)",
+   "path": "MoaiBG/Scroll/Grass1 (1)",
+   "parent": 143,
+   "pos": [
+    45.664,
+    -3.88
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.59832186,
+    0.59832186
+   ],
+   "sprite": "tunnel_moai_grass_2",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    3.12
+   ]
+  },
+  {
+   "name": "Grass2 (1)",
+   "path": "MoaiBG/Scroll/Grass2 (1)",
+   "parent": 143,
+   "pos": [
+    45.664,
+    -4.7
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5983219,
+    0.5983219
+   ],
+   "sprite": "tunnel_moai_grass_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    7.51
+   ]
+  },
+  {
+   "name": "Grass3 (1)",
+   "path": "MoaiBG/Scroll/Grass3 (1)",
+   "parent": 143,
+   "pos": [
+    45.664,
+    -3.7135997
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5983219,
+    0.5983219
+   ],
+   "sprite": "tunnel_moai_grass_0",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    5.23
+   ]
+  },
+  {
+   "name": "Grass4 (1)",
+   "path": "MoaiBG/Scroll/Grass4 (1)",
+   "parent": 143,
+   "pos": [
+    68.496,
+    -3.88
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.59832186,
+    0.59832186
+   ],
+   "sprite": "tunnel_moai_grass_2",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    3.12
+   ]
+  },
+  {
+   "name": "Grass5 (1)",
+   "path": "MoaiBG/Scroll/Grass5 (1)",
+   "parent": 143,
+   "pos": [
+    68.496,
+    -4.7
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5983219,
+    0.5983219
+   ],
+   "sprite": "tunnel_moai_grass_1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    7.51
+   ]
+  },
+  {
+   "name": "Grass6 (1)",
+   "path": "MoaiBG/Scroll/Grass6 (1)",
+   "parent": 143,
+   "pos": [
+    68.496,
+    -3.7135997
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5983219,
+    0.5983219
+   ],
+   "sprite": "tunnel_moai_grass_0",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.18,
+    5.23
+   ]
+  },
+  {
+   "name": "Moai",
+   "path": "MoaiBG/Scroll/Moai",
+   "parent": 143,
+   "pos": [
+    6.0300016,
+    -1.9099998
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.47669998,
+    0.47669998
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (1)",
+   "path": "MoaiBG/Scroll/Moai (1)",
+   "parent": 143,
+   "pos": [
+    45.004,
+    -1.97
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.28584,
+    0.28584
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (2)",
+   "path": "MoaiBG/Scroll/Moai (2)",
+   "parent": 143,
+   "pos": [
+    37.624,
+    -1.8400002
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.39928392,
+    0.39928392
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Bow",
+   "path": "MoaiBG/Scroll/Moai (2)/Bow",
+   "parent": 168,
+   "pos": [
+    -0.9016132,
+    4.1073527
+   ],
+   "rotZ": 0.37182129358799565,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_moai_misc_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.35
+   ]
+  },
+  {
+   "name": "Moai (3)",
+   "path": "MoaiBG/Scroll/Moai (3)",
+   "parent": 143,
+   "pos": [
+    56.004,
+    -1.8400002
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33192,
+    0.33192
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (4)",
+   "path": "MoaiBG/Scroll/Moai (4)",
+   "parent": 143,
+   "pos": [
+    15.62,
+    -1.99
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.39541999,
+    0.39541999
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (5)",
+   "path": "MoaiBG/Scroll/Moai (5)",
+   "parent": 143,
+   "pos": [
+    75.394,
+    -2.08
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.32233995,
+    0.32233995
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (6)",
+   "path": "MoaiBG/Scroll/Moai (6)",
+   "parent": 143,
+   "pos": [
+    25.25,
+    -0.22720003
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.79139996,
+    0.79139996
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Moai (7)",
+   "path": "MoaiBG/Scroll/Moai (7)",
+   "parent": 143,
+   "pos": [
+    65.414,
+    -1.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.39928392,
+    0.39928392
+   ],
+   "sprite": "tunnel_moai_misc_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.35,
+    10.1
+   ]
+  },
+  {
+   "name": "Bow",
+   "path": "MoaiBG/Scroll/Moai (7)/Bow",
+   "parent": 174,
+   "pos": [
+    0.68999785,
+    4.2699995
+   ],
+   "rotZ": 5.6950335900588005,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_moai_misc_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.35
+   ]
+  },
+  {
+   "name": "CropBG",
+   "path": "CropBG",
+   "parent": 0,
+   "pos": [
+    -0.31,
+    3.98
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "CropBG/Sky",
+   "parent": 176,
+   "pos": [
+    0.0937,
+    -2.2456
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    15.2765,
+    7.0303
+   ],
+   "sprite": "tunnel_farmer_assets_0",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.92,
+    2.93
+   ]
+  },
+  {
+   "name": "Scroll",
+   "path": "CropBG/Scroll",
+   "parent": 176,
+   "pos": [
+    -2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ground1",
+   "path": "CropBG/Scroll/Ground1",
+   "parent": 178,
+   "pos": [
+    0,
+    -4.81
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_farmer_assets_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.84,
+    4.34
+   ]
+  },
+  {
+   "name": "Ground2",
+   "path": "CropBG/Scroll/Ground2",
+   "parent": 178,
+   "pos": [
+    17.81,
+    -4.81
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_farmer_assets_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.84,
+    4.34
+   ]
+  },
+  {
+   "name": "Ground3",
+   "path": "CropBG/Scroll/Ground3",
+   "parent": 178,
+   "pos": [
+    35.62,
+    -4.81
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_farmer_assets_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.84,
+    4.34
+   ]
+  },
+  {
+   "name": "Stomp Farmer",
+   "path": "CropBG/Scroll/Stomp Farmer",
+   "parent": 178,
+   "pos": [
+    40.6189,
+    -1.6233
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.36334643,
+    0.36334643
+   ],
+   "sprite": "tunnel_farmer_assets_7",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.39,
+    9.48
+   ]
+  },
+  {
+   "name": "Veggie",
+   "path": "CropBG/Scroll/Veggie",
+   "parent": 178,
+   "pos": [
+    37.17,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (1)",
+   "path": "CropBG/Scroll/Veggie (1)",
+   "parent": 178,
+   "pos": [
+    32.24,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (2)",
+   "path": "CropBG/Scroll/Veggie (2)",
+   "parent": 178,
+   "pos": [
+    30.66,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (3)",
+   "path": "CropBG/Scroll/Veggie (3)",
+   "parent": 178,
+   "pos": [
+    23.6,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (4)",
+   "path": "CropBG/Scroll/Veggie (4)",
+   "parent": 178,
+   "pos": [
+    20.63,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (5)",
+   "path": "CropBG/Scroll/Veggie (5)",
+   "parent": 178,
+   "pos": [
+    19.3,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (6)",
+   "path": "CropBG/Scroll/Veggie (6)",
+   "parent": 178,
+   "pos": [
+    17.9,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (7)",
+   "path": "CropBG/Scroll/Veggie (7)",
+   "parent": 178,
+   "pos": [
+    13.74,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (8)",
+   "path": "CropBG/Scroll/Veggie (8)",
+   "parent": 178,
+   "pos": [
+    10.82,
+    -2.87
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (9)",
+   "path": "CropBG/Scroll/Veggie (9)",
+   "parent": 178,
+   "pos": [
+    6.99,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (10)",
+   "path": "CropBG/Scroll/Veggie (10)",
+   "parent": 178,
+   "pos": [
+    5.63,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (11)",
+   "path": "CropBG/Scroll/Veggie (11)",
+   "parent": 178,
+   "pos": [
+    55.11,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (12)",
+   "path": "CropBG/Scroll/Veggie (12)",
+   "parent": 178,
+   "pos": [
+    -2.66,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (13)",
+   "path": "CropBG/Scroll/Veggie (13)",
+   "parent": 178,
+   "pos": [
+    -4.75,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Ground1 (1)",
+   "path": "CropBG/Scroll/Ground1 (1)",
+   "parent": 178,
+   "pos": [
+    53.43,
+    -4.81
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_farmer_assets_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.84,
+    4.34
+   ]
+  },
+  {
+   "name": "Ground2 (1)",
+   "path": "CropBG/Scroll/Ground2 (1)",
+   "parent": 178,
+   "pos": [
+    71.24,
+    -4.81
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tunnel_farmer_assets_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.84,
+    4.34
+   ]
+  },
+  {
+   "name": "Veggie (15)",
+   "path": "CropBG/Scroll/Veggie (15)",
+   "parent": 178,
+   "pos": [
+    74.06,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (16)",
+   "path": "CropBG/Scroll/Veggie (16)",
+   "parent": 178,
+   "pos": [
+    72.73,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (17)",
+   "path": "CropBG/Scroll/Veggie (17)",
+   "parent": 178,
+   "pos": [
+    71.33,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (18)",
+   "path": "CropBG/Scroll/Veggie (18)",
+   "parent": 178,
+   "pos": [
+    67.17,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (19)",
+   "path": "CropBG/Scroll/Veggie (19)",
+   "parent": 178,
+   "pos": [
+    64.25,
+    -2.87
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (20)",
+   "path": "CropBG/Scroll/Veggie (20)",
+   "parent": 178,
+   "pos": [
+    60.42,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (21)",
+   "path": "CropBG/Scroll/Veggie (21)",
+   "parent": 178,
+   "pos": [
+    59.06,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (22)",
+   "path": "CropBG/Scroll/Veggie (22)",
+   "parent": 178,
+   "pos": [
+    1.68,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (23)",
+   "path": "CropBG/Scroll/Veggie (23)",
+   "parent": 178,
+   "pos": [
+    50.77,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "Veggie (24)",
+   "path": "CropBG/Scroll/Veggie (24)",
+   "parent": 178,
+   "pos": [
+    77.03,
+    -2.94
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5233,
+    0.5233
+   ],
+   "sprite": "tunnel_farmer_assets_5",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    3.46
+   ]
+  },
+  {
+   "name": "ScrollFar",
+   "path": "CropBG/ScrollFar",
+   "parent": 176,
+   "pos": [
+    -5,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "CropBG/ScrollFar/Circle",
+   "parent": 209,
+   "pos": [
+    -3.93,
+    1.07
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (1)",
+   "path": "CropBG/ScrollFar/Circle (1)",
+   "parent": 209,
+   "pos": [
+    -0.69,
+    3.46
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (2)",
+   "path": "CropBG/ScrollFar/Circle (2)",
+   "parent": 209,
+   "pos": [
+    -0.2282,
+    -0.3482
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (3)",
+   "path": "CropBG/ScrollFar/Circle (3)",
+   "parent": 209,
+   "pos": [
+    2.84,
+    -2.03
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (4)",
+   "path": "CropBG/ScrollFar/Circle (4)",
+   "parent": 209,
+   "pos": [
+    9.56,
+    -1.74
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (5)",
+   "path": "CropBG/ScrollFar/Circle (5)",
+   "parent": 209,
+   "pos": [
+    5.06,
+    0.65
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (6)",
+   "path": "CropBG/ScrollFar/Circle (6)",
+   "parent": 209,
+   "pos": [
+    3.51,
+    3.09
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (7)",
+   "path": "CropBG/ScrollFar/Circle (7)",
+   "parent": 209,
+   "pos": [
+    -3.22,
+    -2.34
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (8)",
+   "path": "CropBG/ScrollFar/Circle (8)",
+   "parent": 209,
+   "pos": [
+    -7.94,
+    2.84
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (9)",
+   "path": "CropBG/ScrollFar/Circle (9)",
+   "parent": 209,
+   "pos": [
+    -9.05,
+    -1.38
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (10)",
+   "path": "CropBG/ScrollFar/Circle (10)",
+   "parent": 209,
+   "pos": [
+    7.94,
+    1.2
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (11)",
+   "path": "CropBG/ScrollFar/Circle (11)",
+   "parent": 209,
+   "pos": [
+    11.87,
+    0.91
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (12)",
+   "path": "CropBG/ScrollFar/Circle (12)",
+   "parent": 209,
+   "pos": [
+    15.36,
+    -1.58
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (13)",
+   "path": "CropBG/ScrollFar/Circle (13)",
+   "parent": 209,
+   "pos": [
+    9.76,
+    3.6
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (14)",
+   "path": "CropBG/ScrollFar/Circle (14)",
+   "parent": 209,
+   "pos": [
+    15.73,
+    2.74
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (15)",
+   "path": "CropBG/ScrollFar/Circle (15)",
+   "parent": 209,
+   "pos": [
+    18.15,
+    0.84
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (16)",
+   "path": "CropBG/ScrollFar/Circle (16)",
+   "parent": 209,
+   "pos": [
+    21.337597,
+    0.069944
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (17)",
+   "path": "CropBG/ScrollFar/Circle (17)",
+   "parent": 209,
+   "pos": [
+    18.48,
+    -1.69
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (18)",
+   "path": "CropBG/ScrollFar/Circle (18)",
+   "parent": 209,
+   "pos": [
+    29.525417,
+    1.07
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (19)",
+   "path": "CropBG/ScrollFar/Circle (19)",
+   "parent": 209,
+   "pos": [
+    32.76542,
+    3.46
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (20)",
+   "path": "CropBG/ScrollFar/Circle (20)",
+   "parent": 209,
+   "pos": [
+    33.22722,
+    -0.3482
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (21)",
+   "path": "CropBG/ScrollFar/Circle (21)",
+   "parent": 209,
+   "pos": [
+    36.295418,
+    -2.03
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (22)",
+   "path": "CropBG/ScrollFar/Circle (22)",
+   "parent": 209,
+   "pos": [
+    43.01542,
+    -1.74
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (23)",
+   "path": "CropBG/ScrollFar/Circle (23)",
+   "parent": 209,
+   "pos": [
+    38.51542,
+    0.65
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (24)",
+   "path": "CropBG/ScrollFar/Circle (24)",
+   "parent": 209,
+   "pos": [
+    36.96542,
+    3.09
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (25)",
+   "path": "CropBG/ScrollFar/Circle (25)",
+   "parent": 209,
+   "pos": [
+    30.235418,
+    -2.34
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (26)",
+   "path": "CropBG/ScrollFar/Circle (26)",
+   "parent": 209,
+   "pos": [
+    25.515417,
+    2.84
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (27)",
+   "path": "CropBG/ScrollFar/Circle (27)",
+   "parent": 209,
+   "pos": [
+    24.405418,
+    -1.38
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (28)",
+   "path": "CropBG/ScrollFar/Circle (28)",
+   "parent": 209,
+   "pos": [
+    41.395416,
+    1.2
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (29)",
+   "path": "CropBG/ScrollFar/Circle (29)",
+   "parent": 209,
+   "pos": [
+    45.325417,
+    0.91
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (30)",
+   "path": "CropBG/ScrollFar/Circle (30)",
+   "parent": 209,
+   "pos": [
+    48.81542,
+    -1.58
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (31)",
+   "path": "CropBG/ScrollFar/Circle (31)",
+   "parent": 209,
+   "pos": [
+    43.215416,
+    3.6
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.76815176,
+    0.76815176
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (32)",
+   "path": "CropBG/ScrollFar/Circle (32)",
+   "parent": 209,
+   "pos": [
+    49.185417,
+    2.74
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (33)",
+   "path": "CropBG/ScrollFar/Circle (33)",
+   "parent": 209,
+   "pos": [
+    51.605415,
+    0.84
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (34)",
+   "path": "CropBG/ScrollFar/Circle (34)",
+   "parent": 209,
+   "pos": [
+    54.793015,
+    0.069944
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.5793,
+    0.5793
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "Circle (35)",
+   "path": "CropBG/ScrollFar/Circle (35)",
+   "parent": 209,
+   "pos": [
+    51.935417,
+    -1.69
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.33041245,
+    0.33041245
+   ],
+   "sprite": "tunnel_farmer_assets_3",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.28
+   ]
+  },
+  {
+   "name": "QuizBG",
+   "path": "QuizBG",
+   "parent": 0,
+   "pos": [
+    -0.31,
+    3.2
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "QuizBG/Wall",
+   "parent": 246,
+   "pos": [
+    -2.9678,
+    -4.3955
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    19.595741,
+    12.278461
+   ],
+   "sprite": "tunnel_quiz_0",
+   "order": -15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.72,
+    1.4
+   ]
+  },
+  {
+   "name": "Scroll",
+   "path": "QuizBG/Scroll",
+   "parent": 246,
+   "pos": [
+    0,
+    -0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Floor1",
+   "path": "QuizBG/Scroll/Floor1",
+   "parent": 248,
+   "pos": [
+    -2.5478997,
+    -5.88
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1.6113214,
+    1.6113214
+   ],
+   "sprite": "tunnel_quiz_10",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.77,
+    4.11
+   ]
+  },
+  {
+   "name": "Floor2",
+   "path": "QuizBG/Scroll/Floor2",
+   "parent": 248,
+   "pos": [
+    19.611,
+    -5.88
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1.6113214,
+    1.6113214
+   ],
+   "sprite": "tunnel_quiz_10",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.77,
+    4.11
+   ]
+  },
+  {
+   "name": "Floor3",
+   "path": "QuizBG/Scroll/Floor3",
+   "parent": 248,
+   "pos": [
+    41.77,
+    -5.88
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1.6113214,
+    1.6113214
+   ],
+   "sprite": "tunnel_quiz_10",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.77,
+    4.11
+   ]
+  },
+  {
+   "name": "ScrollFar",
+   "path": "QuizBG/ScrollFar",
+   "parent": 246,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Edge",
+   "path": "QuizBG/ScrollFar/Edge",
+   "parent": 252,
+   "pos": [
+    12.9468,
+    -2.601
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    40.82647,
+    1
+   ],
+   "sprite": "tunnel_quiz_1",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.37
+   ]
+  },
+  {
+   "name": "AudienceFar",
+   "path": "QuizBG/ScrollFar/AudienceFar",
+   "parent": 252,
+   "pos": [
+    0,
+    2.53
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar",
+   "parent": 254,
+   "pos": [
+    -0.2321,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (1)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (1)",
+   "parent": 254,
+   "pos": [
+    6.8281,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (2)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (2)",
+   "parent": 254,
+   "pos": [
+    10.3582,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (3)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (3)",
+   "parent": 254,
+   "pos": [
+    13.8883,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (4)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (4)",
+   "parent": 254,
+   "pos": [
+    17.4184,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (5)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (5)",
+   "parent": 254,
+   "pos": [
+    20.9485,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (6)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (6)",
+   "parent": 254,
+   "pos": [
+    24.4786,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (7)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (7)",
+   "parent": 254,
+   "pos": [
+    3.298,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (8)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (8)",
+   "parent": 254,
+   "pos": [
+    28.0087,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (9)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (9)",
+   "parent": 254,
+   "pos": [
+    -3.7622,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (10)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (10)",
+   "parent": 254,
+   "pos": [
+    -7.2923,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceFar (11)",
+   "path": "QuizBG/ScrollFar/AudienceFar/AudienceFar (11)",
+   "parent": 254,
+   "pos": [
+    -10.8224,
+    -0.6417
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_4",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceMid",
+   "path": "QuizBG/ScrollFar/AudienceMid",
+   "parent": 252,
+   "pos": [
+    0,
+    2.53
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceMid",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid",
+   "parent": 267,
+   "pos": [
+    -0.2321,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (1)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (1)",
+   "parent": 267,
+   "pos": [
+    3.638,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (2)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (2)",
+   "parent": 267,
+   "pos": [
+    -4.1022,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (3)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (3)",
+   "parent": 267,
+   "pos": [
+    26.8586,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (4)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (4)",
+   "parent": 267,
+   "pos": [
+    22.9885,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (5)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (5)",
+   "parent": 267,
+   "pos": [
+    19.1184,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (6)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (6)",
+   "parent": 267,
+   "pos": [
+    15.2483,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (7)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (7)",
+   "parent": 267,
+   "pos": [
+    11.3782,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (8)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (8)",
+   "parent": 267,
+   "pos": [
+    7.5081,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (9)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (9)",
+   "parent": 267,
+   "pos": [
+    7.5081,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (10)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (10)",
+   "parent": 267,
+   "pos": [
+    -7.9723,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (11)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (11)",
+   "parent": 267,
+   "pos": [
+    -11.8424,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceMid (12)",
+   "path": "QuizBG/ScrollFar/AudienceMid/AudienceMid (12)",
+   "parent": 267,
+   "pos": [
+    -15.7125,
+    -1.9936
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_7",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1,
+    2.53
+   ]
+  },
+  {
+   "name": "AudienceClose",
+   "path": "QuizBG/ScrollFar/AudienceClose",
+   "parent": 252,
+   "pos": [
+    0,
+    2.53
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.71,
+    2.28
+   ]
+  },
+  {
+   "name": "AudienceClose",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose",
+   "parent": 281,
+   "pos": [
+    -0.2321,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (1)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (1)",
+   "parent": 281,
+   "pos": [
+    4.333,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (2)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (2)",
+   "parent": 281,
+   "pos": [
+    -9.3623,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (3)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (3)",
+   "parent": 281,
+   "pos": [
+    -4.7972,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (4)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (4)",
+   "parent": 281,
+   "pos": [
+    22.5934,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (5)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (5)",
+   "parent": 281,
+   "pos": [
+    18.0283,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (6)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (6)",
+   "parent": 281,
+   "pos": [
+    13.4632,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (7)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (7)",
+   "parent": 281,
+   "pos": [
+    8.8981,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (8)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (8)",
+   "parent": 281,
+   "pos": [
+    -13.9274,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  },
+  {
+   "name": "AudienceClose (9)",
+   "path": "QuizBG/ScrollFar/AudienceClose/AudienceClose (9)",
+   "parent": 281,
+   "pos": [
+    -18.4925,
+    -3.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9037,
+    0.9037
+   ],
+   "sprite": "tunnel_quiz_11",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    2.95
+   ]
+  }
+ ]
+}

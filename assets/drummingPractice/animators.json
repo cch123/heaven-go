@@ -1,0 +1,6 @@
+{
+ "NPCDrummers": "NPCDrummers",
+ "NPCDrummers/LeftDrummerHolder/LeftDrummer": "DrummerAnimator",
+ "NPCDrummers/RightDrummerHolder/RightDrummer": "DrummerAnimator",
+ "PlayerDrummer": "DrummerAnimator"
+}

@@ -1,0 +1,38 @@
+{
+ "A Button Podium Thing": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "speed": 1
+   },
+   "podium": {
+    "clip": "Animations/A Podium",
+    "speed": 1
+   }
+  }
+ },
+ "D-Pad Podium Thing": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "speed": 1
+   },
+   "podium": {
+    "clip": "Animations/D-Pad Podium",
+    "speed": 1
+   }
+  }
+ },
+ "Thing": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "speed": 1
+   },
+   "podium": {
+    "clip": "Animations/Thing Podium",
+    "speed": 1
+   }
+  }
+ }
+}

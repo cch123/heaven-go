@@ -1,0 +1,1207 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "Assistant BM_0": {
+   "X": 67,
+   "Y": 31,
+   "W": 521,
+   "H": 1054,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_1": {
+   "X": 1383,
+   "Y": 38,
+   "W": 399,
+   "H": 520,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_10": {
+   "X": 2752,
+   "Y": 1026,
+   "W": 174,
+   "H": 174,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_11": {
+   "X": 37,
+   "Y": 1473,
+   "W": 1304,
+   "H": 909,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_12": {
+   "X": 1401,
+   "Y": 1625,
+   "W": 266,
+   "H": 856,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_13": {
+   "X": 1727,
+   "Y": 1645,
+   "W": 289,
+   "H": 243,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_14": {
+   "X": 2094,
+   "Y": 1633,
+   "W": 371,
+   "H": 417,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_15": {
+   "X": 2568,
+   "Y": 1534,
+   "W": 371,
+   "H": 417,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_16": {
+   "X": 1718,
+   "Y": 2018,
+   "W": 262,
+   "H": 104,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_17": {
+   "X": 2568,
+   "Y": 2033,
+   "W": 371,
+   "H": 417,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_18": {
+   "X": 29,
+   "Y": 2551,
+   "W": 396,
+   "H": 150,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_2": {
+   "X": 1873,
+   "Y": 38,
+   "W": 444,
+   "H": 611,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_3": {
+   "X": 2420,
+   "Y": 37,
+   "W": 371,
+   "H": 417,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_4": {
+   "X": 2880,
+   "Y": 18,
+   "W": 67,
+   "H": 111,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_5": {
+   "X": 755,
+   "Y": 139,
+   "W": 490,
+   "H": 946,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_6": {
+   "X": 1367,
+   "Y": 817,
+   "W": 430,
+   "H": 520,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_7": {
+   "X": 1920,
+   "Y": 710,
+   "W": 265,
+   "H": 830,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_8": {
+   "X": 2420,
+   "Y": 536,
+   "W": 371,
+   "H": 417,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Assistant BM_9": {
+   "X": 2289,
+   "Y": 1035,
+   "W": 371,
+   "H": 417,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG BM_0": {
+   "X": 45,
+   "Y": 495,
+   "W": 623,
+   "H": 1488,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    57,
+    0,
+    64,
+    0
+   ]
+  },
+  "BG BM_1": {
+   "X": 728,
+   "Y": 551,
+   "W": 817,
+   "H": 1344,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG BM_2": {
+   "X": 1586,
+   "Y": 455,
+   "W": 768,
+   "H": 1344,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG BM_3": {
+   "X": 1586,
+   "Y": 1837,
+   "W": 816,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG BM_4": {
+   "X": 2500,
+   "Y": 455,
+   "W": 817,
+   "H": 1294,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_0": {
+   "X": 0,
+   "Y": 2695,
+   "W": 761,
+   "H": 366,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_1": {
+   "X": 779,
+   "Y": 2498,
+   "W": 727,
+   "H": 345,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_10": {
+   "X": 840,
+   "Y": 946,
+   "W": 634,
+   "H": 765,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_11": {
+   "X": 1579,
+   "Y": 950,
+   "W": 657,
+   "H": 753,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_12": {
+   "X": 2294,
+   "Y": 940,
+   "W": 699,
+   "H": 793,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_13": {
+   "X": 3074,
+   "Y": 993,
+   "W": 559,
+   "H": 384,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_14": {
+   "X": 1546,
+   "Y": 1812,
+   "W": 625,
+   "H": 783,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_15": {
+   "X": 2224,
+   "Y": 1808,
+   "W": 697,
+   "H": 811,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_16": {
+   "X": 3067,
+   "Y": 1431,
+   "W": 555,
+   "H": 384,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_17": {
+   "X": 33,
+   "Y": 1882,
+   "W": 617,
+   "H": 386,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_18": {
+   "X": 718,
+   "Y": 1897,
+   "W": 272,
+   "H": 321,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_19": {
+   "X": 1062,
+   "Y": 1921,
+   "W": 382,
+   "H": 144,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_2": {
+   "X": 2926,
+   "Y": 2189,
+   "W": 636,
+   "H": 232,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_20": {
+   "X": 2984,
+   "Y": 1886,
+   "W": 230,
+   "H": 230,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_21": {
+   "X": 3252,
+   "Y": 1892,
+   "W": 68,
+   "H": 178,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_3": {
+   "X": 64,
+   "Y": 70,
+   "W": 717,
+   "H": 758,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_4": {
+   "X": 868,
+   "Y": 64,
+   "W": 694,
+   "H": 780,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_5": {
+   "X": 1663,
+   "Y": 70,
+   "W": 681,
+   "H": 780,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_6": {
+   "X": 2431,
+   "Y": 58,
+   "W": 574,
+   "H": 758,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_7": {
+   "X": 3097,
+   "Y": 52,
+   "W": 560,
+   "H": 385,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_8": {
+   "X": 3078,
+   "Y": 532,
+   "W": 563,
+   "H": 378,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "Chair BM_9": {
+   "X": 47,
+   "Y": 943,
+   "W": 672,
+   "H": 781,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "SplitLeg": {
+   "X": 1920,
+   "Y": 710,
+   "W": 132,
+   "H": 830,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_0": {
+   "X": 71,
+   "Y": 81,
+   "W": 664,
+   "H": 730,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_1": {
+   "X": 864,
+   "Y": 41,
+   "W": 621,
+   "H": 941,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_10": {
+   "X": 3031,
+   "Y": 1057,
+   "W": 616,
+   "H": 1035,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_11": {
+   "X": 3702,
+   "Y": 1098,
+   "W": 390,
+   "H": 324,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_12": {
+   "X": 3726,
+   "Y": 1491,
+   "W": 406,
+   "H": 389,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_13": {
+   "X": 41,
+   "Y": 1978,
+   "W": 705,
+   "H": 834,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_14": {
+   "X": 858,
+   "Y": 2149,
+   "W": 573,
+   "H": 1008,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_15": {
+   "X": 1522,
+   "Y": 2181,
+   "W": 630,
+   "H": 1040,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_16": {
+   "X": 2299,
+   "Y": 2168,
+   "W": 668,
+   "H": 954,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_17": {
+   "X": 3075,
+   "Y": 2165,
+   "W": 581,
+   "H": 617,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_18": {
+   "X": 3726,
+   "Y": 1983,
+   "W": 391,
+   "H": 344,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_19": {
+   "X": 3759,
+   "Y": 2420,
+   "W": 405,
+   "H": 344,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_2": {
+   "X": 1593,
+   "Y": 49,
+   "W": 660,
+   "H": 931,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_20": {
+   "X": 3051,
+   "Y": 2835,
+   "W": 636,
+   "H": 597,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_21": {
+   "X": 3765,
+   "Y": 2883,
+   "W": 435,
+   "H": 377,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_22": {
+   "X": 25,
+   "Y": 3366,
+   "W": 467,
+   "H": 370,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_23": {
+   "X": 557,
+   "Y": 3349,
+   "W": 492,
+   "H": 385,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_24": {
+   "X": 1126,
+   "Y": 3347,
+   "W": 394,
+   "H": 362,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_25": {
+   "X": 1585,
+   "Y": 3343,
+   "W": 288,
+   "H": 287,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_26": {
+   "X": 1929,
+   "Y": 3332,
+   "W": 297,
+   "H": 307,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_27": {
+   "X": 2383,
+   "Y": 3452,
+   "W": 304,
+   "H": 122,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_28": {
+   "X": 2806,
+   "Y": 3472,
+   "W": 111,
+   "H": 96,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_3": {
+   "X": 2327,
+   "Y": 37,
+   "W": 730,
+   "H": 789,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_4": {
+   "X": 3114,
+   "Y": 50,
+   "W": 571,
+   "H": 944,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_5": {
+   "X": 3775,
+   "Y": 56,
+   "W": 611,
+   "H": 983,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_6": {
+   "X": 55,
+   "Y": 913,
+   "W": 673,
+   "H": 765,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_7": {
+   "X": 861,
+   "Y": 1114,
+   "W": 609,
+   "H": 900,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_8": {
+   "X": 1593,
+   "Y": 1069,
+   "W": 644,
+   "H": 887,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "The Executives BM_9": {
+   "X": 2315,
+   "Y": 910,
+   "W": 626,
+   "H": 958,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

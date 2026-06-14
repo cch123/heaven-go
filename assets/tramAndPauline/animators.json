@@ -1,0 +1,8 @@
+{
+ "BgObjects/Curtain": "Curtain",
+ "BgObjects/audience": "audience",
+ "PaulineObjects/PaulineRoot/Pauline": "Pauline",
+ "PaulineObjects/TrampolineRight": "Trampoline",
+ "TramObjects/TramRoot/Tram": "Tram",
+ "TramObjects/TrampolineLeft": "Trampoline"
+}

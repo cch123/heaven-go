@@ -1,0 +1,1057 @@
+{
+ "nodes": [
+  {
+   "name": "forkLifter",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SolidBG",
+   "path": "Background/SolidBG",
+   "parent": 1,
+   "pos": [
+    -0.1587,
+    -0.1652
+   ],
+   "rotZ": 0,
+   "scale": [
+    45.85651,
+    28.493948
+   ],
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "GradientGame",
+   "path": "Background/GradientGame",
+   "parent": 1,
+   "pos": [
+    -0.116,
+    -0.137
+   ],
+   "rotZ": 0,
+   "scale": [
+    73.37161,
+    0.6
+   ],
+   "sprite": "gamegradient_white",
+   "order": -120,
+   "color": [
+    0.8784314,
+    0.8784314,
+    0.8784314,
+    1
+   ],
+   "size": [
+    0.6213974,
+    2.5599823
+   ]
+  },
+  {
+   "name": "mask",
+   "path": "Background/GradientGame/mask",
+   "parent": 3,
+   "pos": [
+    0,
+    13.5565
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6406305,
+    25.25095
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "GradientRemix",
+   "path": "Background/GradientRemix",
+   "parent": 1,
+   "pos": [
+    -0.17437,
+    -1.968
+   ],
+   "rotZ": 0,
+   "scale": [
+    73.37125,
+    0.775
+   ],
+   "sprite": "remixgradient_white",
+   "order": -120,
+   "inactive": true,
+   "color": [
+    0.8784314,
+    0.8784314,
+    0.8784314,
+    1
+   ],
+   "size": [
+    0.6213974,
+    6.8528757
+   ]
+  },
+  {
+   "name": "mask",
+   "path": "Background/GradientRemix/mask",
+   "parent": 5,
+   "pos": [
+    0,
+    12.343356
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.62911147,
+    18.64542
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "GradientClassic",
+   "path": "Background/GradientClassic",
+   "parent": 1,
+   "pos": [
+    -0.18896,
+    -2.0479
+   ],
+   "rotZ": 0,
+   "scale": [
+    146.75307,
+    2.495626
+   ],
+   "sprite": "bg",
+   "order": -150,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3106987,
+    2.3324282
+   ]
+  },
+  {
+   "name": "mask",
+   "path": "Background/GradientClassic/mask",
+   "parent": 7,
+   "pos": [
+    0,
+    4.0091
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32029378,
+    6.07085
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "megamixfloor",
+   "path": "Background/megamixfloor",
+   "parent": 1,
+   "pos": [
+    0,
+    -2.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "megamixfloor",
+   "order": -121,
+   "inactive": true,
+   "color": [
+    0.9529412,
+    0.9529412,
+    0.9529412,
+    1
+   ],
+   "size": [
+    40.96,
+    20.48
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "Filler",
+   "path": "Background/Filler",
+   "parent": 1,
+   "pos": [
+    -0.1657,
+    -6.5473
+   ],
+   "rotZ": 0,
+   "scale": [
+    45.859734,
+    15.737885
+   ],
+   "order": -151,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "Player",
+   "path": "Player",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "Player/Hand",
+   "parent": 11,
+   "pos": [
+    5.401,
+    1.359
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5714916,
+    1.5977578
+   ],
+   "sprite": "SOME01_128091f1_6_0",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.0833335,
+    3.3055556
+   ],
+   "mapped": true,
+   "mat": "forkhand"
+  },
+  {
+   "name": "thumb_2",
+   "path": "Player/Hand/thumb_2",
+   "parent": 12,
+   "pos": [
+    -1.846,
+    0.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98477775,
+    0.98477775
+   ],
+   "sprite": "thumb_2",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1944445,
+    0.9722222
+   ],
+   "mapped": true,
+   "mat": "forkhand"
+  },
+  {
+   "name": "fork",
+   "path": "Player/fork",
+   "parent": 11,
+   "pos": [
+    2.207,
+    1.699
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.566272,
+    1.5899271
+   ],
+   "sprite": "fork",
+   "order": 0,
+   "color": [
+    0.7764706,
+    0.7764706,
+    0.7764706,
+    1
+   ],
+   "size": [
+    1.1944445,
+    4.3055553
+   ]
+  },
+  {
+   "name": "fork_swipe_1",
+   "path": "Player/fork/fork_swipe_1",
+   "parent": 14,
+   "pos": [
+    -1.2423,
+    -0.171
+   ],
+   "rotZ": -1.690122217174585,
+   "scale": [
+    1.1972994,
+    1.1794857
+   ],
+   "sprite": "fork_swipe_1",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8611112,
+    3.1944444
+   ]
+  },
+  {
+   "name": "fork_swipe_2",
+   "path": "Player/fork/fork_swipe_2",
+   "parent": 14,
+   "pos": [
+    0.416,
+    1.322
+   ],
+   "rotZ": -1.690122217174585,
+   "scale": [
+    1.1972994,
+    1.1794857
+   ],
+   "sprite": "fork_swipe_2",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.3055556,
+    1.3055556
+   ]
+  },
+  {
+   "name": "early",
+   "path": "Player/fork/early",
+   "parent": 14,
+   "pos": [
+    -0.12,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "perfect",
+   "path": "Player/fork/perfect",
+   "parent": 14,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "late",
+   "path": "Player/fork/late",
+   "parent": 14,
+   "pos": [
+    0.12,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Player/shadow",
+   "parent": 11,
+   "pos": [
+    5.39,
+    -3.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4640131,
+    1.3493
+   ],
+   "sprite": "shadow",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.9722223,
+    1.638889
+   ]
+  },
+  {
+   "name": "SOME01_128091f1_6_16",
+   "path": "Player/SOME01_128091f1_6_16",
+   "parent": 11,
+   "pos": [
+    2.21,
+    0.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.566272,
+    1.566272
+   ],
+   "sprite": "SOME01_128091f1_6_16",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1944445,
+    3.3055556
+   ]
+  },
+  {
+   "name": "stabfx",
+   "path": "Player/stabfx",
+   "parent": 11,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "forkstab_effect",
+   "path": "Player/stabfx/forkstab_effect",
+   "parent": 22,
+   "pos": [
+    1.845,
+    -3.9987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.080676,
+    1.2177411
+   ],
+   "sprite": "forkstab_effect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9722222,
+    0.9722222
+   ]
+  },
+  {
+   "name": "forkstab_effect (1)",
+   "path": "Player/stabfx/forkstab_effect (1)",
+   "parent": 22,
+   "pos": [
+    2.2123,
+    -3.9987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.080676,
+    1.2177411
+   ],
+   "sprite": "forkstab_effect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9722222,
+    0.9722222
+   ]
+  },
+  {
+   "name": "forkstab_effect (2)",
+   "path": "Player/stabfx/forkstab_effect (2)",
+   "parent": 22,
+   "pos": [
+    2.575,
+    -3.9987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.080676,
+    1.2177411
+   ],
+   "sprite": "forkstab_effect",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9722222,
+    0.9722222
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "Hand",
+   "parent": 0,
+   "pos": [
+    -4.38,
+    2.085
+   ],
+   "z": -74.52776,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ViewerCircle",
+   "path": "Hand/ViewerCircle",
+   "parent": 26,
+   "pos": [
+    -0.077264786,
+    0.66982126
+   ],
+   "z": 74.52776,
+   "rotZ": 0,
+   "scale": [
+    1.5850028,
+    1.5866843
+   ],
+   "sprite": "SOME01_128091f1_6_10",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.4166667,
+    3.4166667
+   ]
+  },
+  {
+   "name": "viewcirclebg",
+   "path": "Hand/ViewerCircle/viewcirclebg",
+   "parent": 27,
+   "pos": [
+    0.105,
+    -0.089
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "viewcirclebg",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.288668,
+    2.417761
+   ]
+  },
+  {
+   "name": "HandVisual",
+   "path": "Hand/HandVisual",
+   "parent": 26,
+   "pos": [
+    0.029435158,
+    1.231121
+   ],
+   "z": 74.52776,
+   "rotZ": -2.3291417896195816,
+   "scale": [
+    1.5722877,
+    1.5722877
+   ],
+   "sprite": "SOME01_128091f1_6_11",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4166666,
+    2.5277777
+   ],
+   "mapped": true,
+   "mat": "forkhand"
+  },
+  {
+   "name": "hand_shadow1",
+   "path": "Hand/HandVisual/hand_shadow1",
+   "parent": 29,
+   "pos": [
+    0.141,
+    0.058
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "hand_shadow2",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4166666,
+    2.5277777
+   ]
+  },
+  {
+   "name": "PeaVisual",
+   "path": "Hand/PeaVisual",
+   "parent": 26,
+   "pos": [
+    0.17443514,
+    0.1891212
+   ],
+   "z": 74.52776,
+   "rotZ": 0,
+   "scale": [
+    1.5779293,
+    1.5779293
+   ],
+   "sprite": "pea_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9722222,
+    0.9722222
+   ]
+  },
+  {
+   "name": "fast_1",
+   "path": "Hand/fast_1",
+   "parent": 26,
+   "pos": [
+    0.6727,
+    -0.2046
+   ],
+   "z": 74.52776,
+   "rotZ": 5.596293302701621,
+   "scale": [
+    1.6174635,
+    1.8699
+   ],
+   "sprite": "fast_1",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4166666,
+    0.6388889
+   ]
+  },
+  {
+   "name": "MiniHand",
+   "path": "Hand/MiniHand",
+   "parent": 26,
+   "pos": [
+    3.25,
+    -0.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HandVisual",
+   "path": "Hand/MiniHand/HandVisual",
+   "parent": 33,
+   "pos": [
+    1.284,
+    -1.644
+   ],
+   "z": 74.52776,
+   "rotZ": -2.3291417896195816,
+   "scale": [
+    0.08,
+    0.08
+   ],
+   "sprite": "SOME01_128091f1_6_11",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4166666,
+    2.5277777
+   ]
+  },
+  {
+   "name": "Object",
+   "path": "Object",
+   "parent": 0,
+   "pos": [
+    -3.082,
+    0.403
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Object/Sprite",
+   "parent": 35,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pea_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9722222,
+    0.9722222
+   ]
+  },
+  {
+   "name": "follow",
+   "path": "Object/Sprite/follow",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pea_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    0.35686275
+   ],
+   "size": [
+    0.9722222,
+    0.9722222
+   ]
+  },
+  {
+   "name": "follow (1)",
+   "path": "Object/Sprite/follow (1)",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pea_1",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    0.15686275
+   ],
+   "size": [
+    0.9722222,
+    0.9722222
+   ]
+  },
+  {
+   "name": "fast_1",
+   "path": "Object/fast_1",
+   "parent": 35,
+   "pos": [
+    4.065,
+    -3.344
+   ],
+   "rotZ": 5.586043993722572,
+   "scale": [
+    5.1571603,
+    1.6651131
+   ],
+   "sprite": "fast_1",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4166666,
+    0.6388889
+   ]
+  }
+ ]
+}
