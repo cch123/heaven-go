@@ -1,0 +1,169 @@
+{
+ "refArrays": {
+  "Bubbles": [
+   "Bubbles/BackBubbles",
+   "Bubbles/FrontBubbles"
+  ],
+  "octopodes": [
+   "Octopodes/Octopus1",
+   "Octopodes/Octopus2",
+   "Octopodes/Octopus3_Player"
+  ]
+ },
+ "refArrayIdx": {
+  "Bubbles": [
+   4,
+   5
+  ],
+  "octopodes": [
+   7,
+   26,
+   45
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "bopStatus": 0,
+    "hasMissed": 0
+   },
+   "refs": {
+    "Text": "Text",
+    "bg": "Background",
+    "mat": "octopus"
+   },
+   "refArrays": {
+    "Bubbles": [
+     "Bubbles/BackBubbles",
+     "Bubbles/FrontBubbles"
+    ],
+    "octopodes": [
+     "Octopodes/Octopus1",
+     "Octopodes/Octopus2",
+     "Octopodes/Octopus3_Player"
+    ]
+   }
+  },
+  "octopus0": {
+   "path": "Octopodes/Octopus1",
+   "nums": {
+    "cantBop": 0,
+    "isPreparing": 0,
+    "isSqueezed": 0,
+    "lastReportedBeat": 0,
+    "octoNum": 0,
+    "player": 0,
+    "queuePrepare": 0
+   },
+   "refs": {
+    "anim": "Octopodes/Octopus1"
+   },
+   "refArrays": {
+    "sr": [
+     "Octopodes/Octopus1/Arms/Arm1",
+     "Octopodes/Octopus1/Arms/Arm2",
+     "Octopodes/Octopus1/Arms/Arm3",
+     "Octopodes/Octopus1/Arms/Arm4",
+     "Octopodes/Octopus1/Body/Head",
+     "Octopodes/Octopus1/Body/Head/Mouth"
+    ],
+    "srAll": [
+     "Octopodes/Octopus1/Arms/Arm1",
+     "Octopodes/Octopus1/Arms/Arm2",
+     "Octopodes/Octopus1/Arms/Arm3",
+     "Octopodes/Octopus1/Arms/Arm4",
+     "Octopodes/Octopus1/Body/Head",
+     "Octopodes/Octopus1/Body/Head/Mouth",
+     "Octopodes/Octopus1/Body/Head/Mouth/Cork",
+     "Octopodes/Octopus1/Body/Head/BothEyes",
+     "Octopodes/Octopus1/Body/Head/CorkString",
+     "Octopodes/Octopus1/Body/FX/FX Down",
+     "Octopodes/Octopus1/Body/FX/FX Up",
+     "Octopodes/Octopus1/Body/Eyes/RightEye",
+     "Octopodes/Octopus1/Body/Eyes/LeftEye"
+    ]
+   }
+  },
+  "octopus1": {
+   "path": "Octopodes/Octopus2",
+   "nums": {
+    "cantBop": 0,
+    "isPreparing": 0,
+    "isSqueezed": 0,
+    "lastReportedBeat": 0,
+    "octoNum": 1,
+    "player": 0,
+    "queuePrepare": 0
+   },
+   "refs": {
+    "anim": "Octopodes/Octopus2"
+   },
+   "refArrays": {
+    "sr": [
+     "Octopodes/Octopus2/Arms/Arm1",
+     "Octopodes/Octopus2/Arms/Arm2",
+     "Octopodes/Octopus2/Arms/Arm3",
+     "Octopodes/Octopus2/Arms/Arm4",
+     "Octopodes/Octopus2/Body/Head",
+     "Octopodes/Octopus2/Body/Head/Mouth"
+    ],
+    "srAll": [
+     "Octopodes/Octopus2/Arms/Arm1",
+     "Octopodes/Octopus2/Arms/Arm2",
+     "Octopodes/Octopus2/Arms/Arm3",
+     "Octopodes/Octopus2/Arms/Arm4",
+     "Octopodes/Octopus2/Body/Head",
+     "Octopodes/Octopus2/Body/Head/Mouth",
+     "Octopodes/Octopus2/Body/Head/Mouth/Cork",
+     "Octopodes/Octopus2/Body/Head/BothEyes",
+     "Octopodes/Octopus2/Body/Head/CorkString",
+     "Octopodes/Octopus2/Body/FX/FX Down",
+     "Octopodes/Octopus2/Body/FX/FX Up",
+     "Octopodes/Octopus2/Body/Eyes/RightEye",
+     "Octopodes/Octopus2/Body/Eyes/LeftEye"
+    ]
+   }
+  },
+  "octopus2": {
+   "path": "Octopodes/Octopus3_Player",
+   "nums": {
+    "cantBop": 0,
+    "isPreparing": 0,
+    "isSqueezed": 0,
+    "lastReportedBeat": 0,
+    "octoNum": 2,
+    "player": 1,
+    "queuePrepare": 0
+   },
+   "refs": {
+    "anim": "Octopodes/Octopus3_Player"
+   },
+   "refArrays": {
+    "sr": [
+     "Octopodes/Octopus3_Player/Arms/Arm1",
+     "Octopodes/Octopus3_Player/Arms/Arm2",
+     "Octopodes/Octopus3_Player/Arms/Arm3",
+     "Octopodes/Octopus3_Player/Arms/Arm4",
+     "Octopodes/Octopus3_Player/Body/Head",
+     "Octopodes/Octopus3_Player/Body/Head/Mouth"
+    ],
+    "srAll": [
+     "Octopodes/Octopus3_Player/Arms/Arm1",
+     "Octopodes/Octopus3_Player/Arms/Arm2",
+     "Octopodes/Octopus3_Player/Arms/Arm3",
+     "Octopodes/Octopus3_Player/Arms/Arm4",
+     "Octopodes/Octopus3_Player/Body/Head",
+     "Octopodes/Octopus3_Player/Body/Head/Mouth",
+     "Octopodes/Octopus3_Player/Body/Head/Mouth/Cork",
+     "Octopodes/Octopus3_Player/Body/Head/BothEyes",
+     "Octopodes/Octopus3_Player/Body/Head/CorkString",
+     "Octopodes/Octopus3_Player/Body/FX/FX Down",
+     "Octopodes/Octopus3_Player/Body/FX/FX Up",
+     "Octopodes/Octopus3_Player/Body/Eyes/RightEye",
+     "Octopodes/Octopus3_Player/Body/Eyes/LeftEye"
+    ]
+   }
+  }
+ }
+}

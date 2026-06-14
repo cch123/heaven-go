@@ -1,0 +1,1723 @@
+{
+ "nodes": [
+  {
+   "name": "octopusMachine",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    160,
+    90
+   ],
+   "order": -1000,
+   "color": [
+    1,
+    0.87,
+    0.24,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Text",
+   "path": "Text",
+   "parent": 0,
+   "pos": [
+    4.27,
+    2.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1236,
+    1.1236
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubbles",
+   "path": "Bubbles",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BackBubbles",
+   "path": "Bubbles/BackBubbles",
+   "parent": 3,
+   "pos": [
+    0,
+    -12.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FrontBubbles",
+   "path": "Bubbles/FrontBubbles",
+   "parent": 3,
+   "pos": [
+    0,
+    -12.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Octopodes",
+   "path": "Octopodes",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Octopus1",
+   "path": "Octopodes/Octopus1",
+   "parent": 6,
+   "pos": [
+    -4.64,
+    2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "Octopus",
+   "path": "Octopodes/Octopus1/Octopus",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 187,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    3.4705994,
+    2.25
+   ]
+  },
+  {
+   "name": "Arms",
+   "path": "Octopodes/Octopus1/Arms",
+   "parent": 7,
+   "pos": [
+    0.6184164,
+    0.8623677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm1",
+   "path": "Octopodes/Octopus1/Arms/Arm1",
+   "parent": 9,
+   "pos": [
+    -2.122416,
+    -1.699368
+   ],
+   "rotZ": 0.15009830006636504,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_25",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5209303,
+    0.77231586
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm2",
+   "path": "Octopodes/Octopus1/Arms/Arm2",
+   "parent": 9,
+   "pos": [
+    -1.580416,
+    -1.7403678
+   ],
+   "rotZ": 0.2265438139253044,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_17",
+   "order": 30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2651163,
+    1.0979912
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm3",
+   "path": "Octopodes/Octopus1/Arms/Arm3",
+   "parent": 9,
+   "pos": [
+    0.07058358,
+    -1.5653677
+   ],
+   "rotZ": -0.12007855455891182,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_28",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4465116,
+    0.5862157
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm4",
+   "path": "Octopodes/Octopus1/Arms/Arm4",
+   "parent": 9,
+   "pos": [
+    -0.3314164,
+    -1.792368
+   ],
+   "rotZ": -0.27925264991162274,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_18",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.572093,
+    0.91654354
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Body",
+   "path": "Octopodes/Octopus1/Body",
+   "parent": 7,
+   "pos": [
+    -0.4357499,
+    -0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Octopodes/Octopus1/Body/Head",
+   "parent": 14,
+   "pos": [
+    0.574,
+    1.185
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_0",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.25,
+    4.5613165
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Mouth",
+   "path": "Octopodes/Octopus1/Body/Head/Mouth",
+   "parent": 15,
+   "pos": [
+    0.7186,
+    -0.167
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9750486,
+    0.9337065
+   ],
+   "sprite": "octopus_new_3",
+   "order": 35,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.27907,
+    2.2657702
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Cork",
+   "path": "Octopodes/Octopus1/Body/Head/Mouth/Cork",
+   "parent": 16,
+   "pos": [
+    0.5142307,
+    0.09103514
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8739068,
+    0.99422705
+   ],
+   "sprite": "octopus_new_14",
+   "order": 104,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.0558139,
+    0.87932354
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "BothEyes",
+   "path": "Octopodes/Octopus1/Body/Head/BothEyes",
+   "parent": 15,
+   "pos": [
+    -0.295,
+    0.164
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_32",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "CorkString",
+   "path": "Octopodes/Octopus1/Body/Head/CorkString",
+   "parent": 15,
+   "pos": [
+    1.458,
+    0.014
+   ],
+   "rotZ": 0.2513273011084692,
+   "scale": [
+    1.8956281,
+    0.0822989
+   ],
+   "order": 100,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "Octopodes/Octopus1/Body/Eyes",
+   "parent": 14,
+   "pos": [
+    0.75588644,
+    1.4964352
+   ],
+   "z": 0.011104093,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightEye",
+   "path": "Octopodes/Octopus1/Body/Eyes/RightEye",
+   "parent": 20,
+   "pos": [
+    -0.286,
+    -0.154
+   ],
+   "z": -0.01110409,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_2",
+   "order": 121,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "LeftEye",
+   "path": "Octopodes/Octopus1/Body/Eyes/LeftEye",
+   "parent": 20,
+   "pos": [
+    -0.5428,
+    -0.461
+   ],
+   "z": -0.011104093,
+   "rotZ": 0,
+   "scale": [
+    1.1213663,
+    1.1213663
+   ],
+   "sprite": "octopus_new_37",
+   "order": 121,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "Octopodes/Octopus1/Body/FX",
+   "parent": 14,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FX Up",
+   "path": "Octopodes/Octopus1/Body/FX/FX Up",
+   "parent": 23,
+   "pos": [
+    0.4357499,
+    0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.0651164,
+    2.0657125
+   ]
+  },
+  {
+   "name": "FX Down",
+   "path": "Octopodes/Octopus1/Body/FX/FX Down",
+   "parent": 23,
+   "pos": [
+    0.4357499,
+    0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.0651164,
+    2.0657125
+   ]
+  },
+  {
+   "name": "Octopus2",
+   "path": "Octopodes/Octopus2",
+   "parent": 6,
+   "pos": [
+    -0.637,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    20
+   ]
+  },
+  {
+   "name": "Octopus",
+   "path": "Octopodes/Octopus2/Octopus",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 187,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    3.4705994,
+    2.25
+   ]
+  },
+  {
+   "name": "Arms",
+   "path": "Octopodes/Octopus2/Arms",
+   "parent": 26,
+   "pos": [
+    0.6184164,
+    0.8623677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm1",
+   "path": "Octopodes/Octopus2/Arms/Arm1",
+   "parent": 28,
+   "pos": [
+    -2.122416,
+    -1.699368
+   ],
+   "rotZ": 0.15009830006636504,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_25",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5209303,
+    0.77231586
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm2",
+   "path": "Octopodes/Octopus2/Arms/Arm2",
+   "parent": 28,
+   "pos": [
+    -1.580416,
+    -1.7403678
+   ],
+   "rotZ": 0.2265438139253044,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_17",
+   "order": 30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2651163,
+    1.0979912
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm3",
+   "path": "Octopodes/Octopus2/Arms/Arm3",
+   "parent": 28,
+   "pos": [
+    0.07058358,
+    -1.5653677
+   ],
+   "rotZ": -0.12007855455891182,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_28",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4465116,
+    0.5862157
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm4",
+   "path": "Octopodes/Octopus2/Arms/Arm4",
+   "parent": 28,
+   "pos": [
+    -0.3314164,
+    -1.792368
+   ],
+   "rotZ": -0.27925264991162274,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_18",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.572093,
+    0.91654354
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Body",
+   "path": "Octopodes/Octopus2/Body",
+   "parent": 26,
+   "pos": [
+    -0.4357499,
+    -0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Octopodes/Octopus2/Body/Head",
+   "parent": 33,
+   "pos": [
+    0.574,
+    1.185
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_0",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.25,
+    4.5613165
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Mouth",
+   "path": "Octopodes/Octopus2/Body/Head/Mouth",
+   "parent": 34,
+   "pos": [
+    0.7186,
+    -0.167
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9750486,
+    0.9337065
+   ],
+   "sprite": "octopus_new_3",
+   "order": 35,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.27907,
+    2.2657702
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Cork",
+   "path": "Octopodes/Octopus2/Body/Head/Mouth/Cork",
+   "parent": 35,
+   "pos": [
+    0.5142307,
+    0.09103514
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8739068,
+    0.99422705
+   ],
+   "sprite": "octopus_new_14",
+   "order": 104,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.0558139,
+    0.87932354
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "BothEyes",
+   "path": "Octopodes/Octopus2/Body/Head/BothEyes",
+   "parent": 34,
+   "pos": [
+    -0.295,
+    0.164
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_32",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "CorkString",
+   "path": "Octopodes/Octopus2/Body/Head/CorkString",
+   "parent": 34,
+   "pos": [
+    1.458,
+    0.014
+   ],
+   "rotZ": 0.2513273011084692,
+   "scale": [
+    1.8956281,
+    0.0822989
+   ],
+   "order": 100,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "Octopodes/Octopus2/Body/Eyes",
+   "parent": 33,
+   "pos": [
+    0.75588644,
+    1.4964352
+   ],
+   "z": 0.011104093,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightEye",
+   "path": "Octopodes/Octopus2/Body/Eyes/RightEye",
+   "parent": 39,
+   "pos": [
+    -0.286,
+    -0.154
+   ],
+   "z": -0.01110409,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_2",
+   "order": 121,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "LeftEye",
+   "path": "Octopodes/Octopus2/Body/Eyes/LeftEye",
+   "parent": 39,
+   "pos": [
+    -0.5428,
+    -0.461
+   ],
+   "z": -0.011104093,
+   "rotZ": 0,
+   "scale": [
+    1.1213663,
+    1.1213663
+   ],
+   "sprite": "octopus_new_37",
+   "order": 121,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "Octopodes/Octopus2/Body/FX",
+   "parent": 33,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FX Up",
+   "path": "Octopodes/Octopus2/Body/FX/FX Up",
+   "parent": 42,
+   "pos": [
+    0.4357499,
+    0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.0651164,
+    2.0657125
+   ]
+  },
+  {
+   "name": "FX Down",
+   "path": "Octopodes/Octopus2/Body/FX/FX Down",
+   "parent": 42,
+   "pos": [
+    0.4357499,
+    0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.0651164,
+    2.0657125
+   ]
+  },
+  {
+   "name": "Octopus3_Player",
+   "path": "Octopodes/Octopus3_Player",
+   "parent": 6,
+   "pos": [
+    3.363,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    30
+   ]
+  },
+  {
+   "name": "Octopus",
+   "path": "Octopodes/Octopus3_Player/Octopus",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 187,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    3.4705994,
+    2.25
+   ]
+  },
+  {
+   "name": "Arms",
+   "path": "Octopodes/Octopus3_Player/Arms",
+   "parent": 45,
+   "pos": [
+    0.6184164,
+    0.8623677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm1",
+   "path": "Octopodes/Octopus3_Player/Arms/Arm1",
+   "parent": 47,
+   "pos": [
+    -2.122416,
+    -1.699368
+   ],
+   "rotZ": 0.15009830006636504,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_25",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5209303,
+    0.77231586
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm2",
+   "path": "Octopodes/Octopus3_Player/Arms/Arm2",
+   "parent": 47,
+   "pos": [
+    -1.580416,
+    -1.7403678
+   ],
+   "rotZ": 0.2265438139253044,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_17",
+   "order": 30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2651163,
+    1.0979912
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm3",
+   "path": "Octopodes/Octopus3_Player/Arms/Arm3",
+   "parent": 47,
+   "pos": [
+    0.07058358,
+    -1.5653677
+   ],
+   "rotZ": -0.12007855455891182,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_28",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4465116,
+    0.5862157
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Arm4",
+   "path": "Octopodes/Octopus3_Player/Arms/Arm4",
+   "parent": 47,
+   "pos": [
+    -0.3314164,
+    -1.792368
+   ],
+   "rotZ": -0.27925264991162274,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_18",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.572093,
+    0.91654354
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Body",
+   "path": "Octopodes/Octopus3_Player/Body",
+   "parent": 45,
+   "pos": [
+    -0.4357499,
+    -0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Octopodes/Octopus3_Player/Body/Head",
+   "parent": 52,
+   "pos": [
+    0.574,
+    1.185
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_0",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.25,
+    4.5613165
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Mouth",
+   "path": "Octopodes/Octopus3_Player/Body/Head/Mouth",
+   "parent": 53,
+   "pos": [
+    0.7186,
+    -0.167
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9750486,
+    0.9337065
+   ],
+   "sprite": "octopus_new_3",
+   "order": 35,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.27907,
+    2.2657702
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "Cork",
+   "path": "Octopodes/Octopus3_Player/Body/Head/Mouth/Cork",
+   "parent": 54,
+   "pos": [
+    0.5142307,
+    0.09103514
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8739068,
+    0.99422705
+   ],
+   "sprite": "octopus_new_14",
+   "order": 104,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.0558139,
+    0.87932354
+   ],
+   "mapped": true,
+   "mat": "octopus"
+  },
+  {
+   "name": "BothEyes",
+   "path": "Octopodes/Octopus3_Player/Body/Head/BothEyes",
+   "parent": 53,
+   "pos": [
+    -0.295,
+    0.164
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_32",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "CorkString",
+   "path": "Octopodes/Octopus3_Player/Body/Head/CorkString",
+   "parent": 53,
+   "pos": [
+    1.458,
+    0.014
+   ],
+   "rotZ": 0.2513273011084692,
+   "scale": [
+    1.8956281,
+    0.0822989
+   ],
+   "order": 100,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "Octopodes/Octopus3_Player/Body/Eyes",
+   "parent": 52,
+   "pos": [
+    0.75588644,
+    1.4964352
+   ],
+   "z": 0.011104093,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightEye",
+   "path": "Octopodes/Octopus3_Player/Body/Eyes/RightEye",
+   "parent": 58,
+   "pos": [
+    -0.286,
+    -0.154
+   ],
+   "z": -0.01110409,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_2",
+   "order": 121,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "LeftEye",
+   "path": "Octopodes/Octopus3_Player/Body/Eyes/LeftEye",
+   "parent": 58,
+   "pos": [
+    -0.5428,
+    -0.461
+   ],
+   "z": -0.011104093,
+   "rotZ": 0,
+   "scale": [
+    1.1213663,
+    1.1213663
+   ],
+   "sprite": "octopus_new_37",
+   "order": 121,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77209306,
+    0.5350381
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "Octopodes/Octopus3_Player/Body/FX",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FX Up",
+   "path": "Octopodes/Octopus3_Player/Body/FX/FX Up",
+   "parent": 61,
+   "pos": [
+    0.4357499,
+    0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.0651164,
+    2.0657125
+   ]
+  },
+  {
+   "name": "FX Down",
+   "path": "Octopodes/Octopus3_Player/Body/FX/FX Down",
+   "parent": 61,
+   "pos": [
+    0.4357499,
+    0.8940677
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "octopus_new_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.0651164,
+    2.0657125
+   ]
+  }
+ ]
+}

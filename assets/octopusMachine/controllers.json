@@ -1,0 +1,54 @@
+{
+ "Octopus": {
+  "default": "Idle",
+  "states": {
+   "Angry": {
+    "clip": "Animations/Angry",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 1
+   },
+   "ForceSqueeze": {
+    "clip": "Animations/ForceSqueeze",
+    "speed": 1
+   },
+   "Happy": {
+    "clip": "Animations/Happy",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Oops": {
+    "clip": "Animations/Oops",
+    "speed": 1
+   },
+   "Pop": {
+    "clip": "Animations/Pop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Prepare": {
+    "clip": "Animations/Prepare",
+    "speed": 1
+   },
+   "Release": {
+    "clip": "Animations/Release",
+    "speed": 1
+   },
+   "Squeeze": {
+    "clip": "Animations/Squeeze",
+    "speed": 1
+   }
+  }
+ }
+}

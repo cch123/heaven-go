@@ -170,6 +170,21 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "mayfly", markers: []string{"startCurve", "approachCurve", "fleeCurve", "exitCurve", "body", "wing", "mayflyAnim"}, curveFields: []string{"startCurve", "approachCurve", "fleeCurve", "exitCurve"}},
 		},
 	},
+	"octopusMachine": {
+		dir:    "OctopusMachine",
+		prefab: "octopusMachine.prefab",
+		roleFields: []string{
+			"bg", "YouArrow", "YouText", "Text",
+		},
+		refArrayFields:  []string{"Bubbles", "octopodes"},
+		wantControllers: true,
+		wantTexts:       true,
+		commonSounds:    []string{"nearMiss.ogg"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"bg", "Bubbles", "YouArrow", "YouText", "Text", "octopodes"}},
+			{name: "octopus", markers: []string{"sr", "srAll", "octoNum", "anim"}, multi: true},
+		},
+	},
 	"bouncyRoad": {
 		dir:    "BouncyRoad",
 		prefab: "bouncyRoad.prefab",

@@ -76,6 +76,7 @@ type SceneInst struct {
 	mirrorOver map[int]bool       // 节点下标 → localScale.x 取负（transform.localScale=(-1,1,1)）
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
 	matOver    map[int]materialState
+	palOver    map[int]Palette
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
 	scaleOver  map[int][2]float64 // 节点下标 → localScale 覆盖（脚本瞬时 squash/pose）
 	sizeOver   map[int][2]float64 // 节点下标 → SpriteRenderer.size 覆盖（sliced/tiled）
@@ -119,12 +120,35 @@ func (s *SceneInst) SetPaletteFor(mat string, p Palette) {
 	s.palettes[mat] = p
 }
 
+// SetPaletteOver sets a mapped-material palette for a single renderer node.
+// Octopus Machine recolors each Octo-Pop through SpriteRenderer.material,
+// so using only the shared material name would incorrectly recolor all three.
+func (s *SceneInst) SetPaletteOver(path string, p Palette) {
+	if i, ok := s.byPath[path]; ok {
+		s.palOver[i] = p
+	}
+}
+
+// ClearPaletteOver removes a per-node mapped-material override.
+func (s *SceneInst) ClearPaletteOver(path string) {
+	if i, ok := s.byPath[path]; ok {
+		delete(s.palOver, i)
+	}
+}
+
 // paletteOf 取节点应使用的调色板。
 func (s *SceneInst) paletteOf(mat string) Palette {
 	if p, ok := s.palettes[mat]; ok {
 		return p
 	}
 	return s.palette
+}
+
+func (s *SceneInst) paletteForNode(i int) Palette {
+	if p, ok := s.palOver[i]; ok {
+		return p
+	}
+	return s.paletteOf(s.as.Rig.Nodes[i].Mat)
 }
 
 // camView 返回节点深度 z 处的视图变换（含相机平移与透视缩放）；ok=false 表示在相机背后。
@@ -162,6 +186,7 @@ func NewScene(as *Assets) *SceneInst {
 		mirrorOver: map[int]bool{},
 		colorOver:  map[int][4]float64{},
 		matOver:    map[int]materialState{},
+		palOver:    map[int]Palette{},
 		posOver:    map[int][2]float64{},
 		scaleOver:  map[int][2]float64{},
 		sizeOver:   map[int][2]float64{},
@@ -885,7 +910,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			}
 			s.scratch.Clear()
 			if s.as.Rig.Nodes[i].Mapped {
-				s.as.DrawSpriteMapped(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteOf(s.as.Rig.Nodes[i].Mat))
+				s.as.DrawSpriteMapped(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteForNode(i))
 			} else {
 				s.as.DrawSpriteOpts(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts)
 			}
@@ -905,7 +930,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			continue
 		}
 		if s.as.Rig.Nodes[i].Mapped {
-			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteOf(s.as.Rig.Nodes[i].Mat))
+			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteForNode(i))
 		} else {
 			s.as.DrawSpriteOpts(dst, st.sprite, view.Mul(s.world[i]), proj, opts)
 		}
