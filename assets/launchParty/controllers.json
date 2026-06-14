@@ -1,0 +1,158 @@
+{
+ "Glare": {
+  "default": "Flashing",
+  "states": {
+   "Flashing": {
+    "clip": "Animations/Flashing",
+    "speed": 1
+   }
+  }
+ },
+ "LaunchPad": {
+  "default": "LaunchPadFloat",
+  "states": {
+   "LaunchPadFloat": {
+    "clip": "Animations/LaunchPadFloat",
+    "speed": 1
+   }
+  }
+ },
+ "LaunchPadSprite": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "SizeUp": {
+    "clip": "Animations/SizeUp",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Still": {
+    "speed": 1
+   }
+  }
+ },
+ "LensFlareLaunchParty": {
+  "default": "Flashing",
+  "states": {
+   "Flashing": {
+    "clip": "Animations/Flashing",
+    "speed": 1
+   }
+  }
+ },
+ "Number": {
+  "default": "CountOne",
+  "states": {
+   "CountFive": {
+    "clip": "Animations/CountFive",
+    "speed": 1
+   },
+   "CountFour": {
+    "clip": "Animations/CountFour",
+    "speed": 1
+   },
+   "CountImpact": {
+    "clip": "Animations/CountImpact",
+    "speed": 1
+   },
+   "CountOne": {
+    "clip": "Animations/CountOne",
+    "speed": 1
+   },
+   "CountSeven": {
+    "clip": "Animations/CountSeven",
+    "speed": 1
+   },
+   "CountSix": {
+    "clip": "Animations/CountSix",
+    "speed": 1
+   },
+   "CountThree": {
+    "clip": "Animations/CountThree",
+    "speed": 1
+   },
+   "CountTwo": {
+    "clip": "Animations/CountTwo",
+    "speed": 1
+   }
+  }
+ },
+ "Rocket": {
+  "default": "RocketHidden",
+  "params": {
+   "CanRise": true
+  },
+  "states": {
+   "RocketBarelyLeft": {
+    "clip": "Animations/RocketBarelyLeft",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "RocketRise",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "CanRise"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "RocketBarelyRight": {
+    "clip": "Animations/RocketBarelyRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "RocketRise",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "CanRise"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "RocketHidden": {
+    "clip": "Animations/RocketHidden",
+    "speed": 1
+   },
+   "RocketIdle": {
+    "clip": "Animations/RocketIdle",
+    "speed": 1
+   },
+   "RocketLaunch": {
+    "clip": "Animations/RocketLaunch",
+    "speed": 1
+   },
+   "RocketMiss": {
+    "clip": "Animations/RocketMiss",
+    "speed": 1
+   },
+   "RocketRise": {
+    "clip": "Animations/RocketRise",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "RocketIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

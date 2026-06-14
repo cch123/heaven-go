@@ -1464,6 +1464,15 @@ func copySounds(dir string) {
 		b, err := os.ReadFile(p)
 		must(err)
 		must(os.WriteFile(dst, b, 0o644))
+		parts := strings.Split(filepath.ToSlash(rel), "/")
+		if len(parts) == 2 && parts[0] == "en" {
+			// Heaven Studio 的 localized SoundByte 会用裸 clip 名引用当前语言音效。
+			// 保留 en/foo.ogg 给审计看源目录，同时写 foo.ogg 作为运行时默认英文 key。
+			alias := filepath.Join(*outDir, "sounds", parts[1])
+			if _, err := os.Stat(alias); os.IsNotExist(err) {
+				must(os.WriteFile(alias, b, 0o644))
+			}
+		}
 		n++
 		return nil
 	}))

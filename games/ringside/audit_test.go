@@ -114,6 +114,11 @@ func TestRingsideScriptedStatesAndSounds(t *testing.T) {
 
 func TestRingsideAllNamespacedClipsAccounted(t *testing.T) {
 	as := loadAssets(t)
+	unwired := map[string]string{
+		"Animations/ExtendBlink": "loose Reporter body clip in Unity assets; C# only uses Head/ExtendBlink",
+		"Animations/ExtendIdle":  "loose Reporter body clip in Unity assets; C# only uses Head/ExtendIdle",
+		"Animations/ExtendRest":  "loose Reporter body clip with no controller/script reference",
+	}
 	ctrlClips := map[string]bool{}
 	for _, c := range as.Controllers {
 		for _, st := range c.States {
@@ -126,8 +131,16 @@ func TestRingsideAllNamespacedClipsAccounted(t *testing.T) {
 		if !strings.Contains(name, "/") {
 			continue
 		}
+		if _, ok := unwired[name]; ok {
+			continue
+		}
 		if !ctrlClips[name] {
 			t.Errorf("clip %q has no controller state", name)
+		}
+	}
+	for name := range unwired {
+		if as.Anims[name] == nil {
+			t.Errorf("accounted loose clip %q missing from extracted assets", name)
 		}
 	}
 }
@@ -138,14 +151,23 @@ func TestRingsideClipPathResolution(t *testing.T) {
 	for _, n := range as.Rig.Nodes {
 		nodeSet[n.Path] = true
 	}
-	resolve := func(root, curvePath string) string {
+	resolve := func(root, curvePath string) (string, bool) {
 		if curvePath == "" {
-			return root
+			return root, nodeSet[root]
 		}
+		full := curvePath
 		if root == "" {
-			return curvePath
+			return full, nodeSet[full]
 		}
-		return root + "/" + curvePath
+		full = root + "/" + curvePath
+		if nodeSet[full] {
+			return full, true
+		}
+		if strings.Contains(full, "/Upper/Head") {
+			alt := strings.Replace(full, "/Upper/Head", "/Upper/HeadAnim/Upper/Head", 1)
+			return alt, nodeSet[alt]
+		}
+		return full, false
 	}
 	for animPath, ctrlName := range as.Animators {
 		ctrl := as.Controllers[ctrlName]
@@ -171,7 +193,7 @@ func TestRingsideClipPathResolution(t *testing.T) {
 				paths[p] = true
 			}
 			for p := range paths {
-				if !nodeSet[resolve(animPath, p)] {
+				if _, ok := resolve(animPath, p); !ok {
 					t.Errorf("clip %s path %q under root %q misses scene", st.Clip, p, animPath)
 				}
 			}

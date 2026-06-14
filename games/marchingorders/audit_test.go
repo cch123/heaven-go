@@ -38,7 +38,7 @@ func TestMarchingOrdersAssets(t *testing.T) {
 		}
 	}
 	head := as.Controllers["CadetHead"]
-	for _, st := range []string{"FaceL", "FaceR", "Idle"} {
+	for _, st := range []string{"FaceL", "FaceR", "HeadIdle"} {
 		if _, ok := head.States[st]; !ok {
 			t.Errorf("CadetHead 缺状态 %q", st)
 		}

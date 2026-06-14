@@ -1,0 +1,3336 @@
+{
+ "nodes": [
+  {
+   "name": "launchParty",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LaunchPadMove",
+   "path": "LaunchPadMove",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LaunchPad",
+   "path": "LaunchPadMove/LaunchPad",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.40276,
+    5.40276
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LaunchPadMove/LaunchPad/Sprite",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Background Elements_4",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.78,
+    0.93
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Underlay",
+   "path": "Background/Underlay",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -10000,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Overlay",
+   "path": "Background/Overlay",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Canvas",
+   "path": "Background/Canvas",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Earth",
+   "path": "Background/Canvas/Earth",
+   "parent": 7,
+   "pos": [
+    1.3,
+    -1.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3828673,
+    5.3828673
+   ],
+   "sprite": "Background Elements_0",
+   "order": -80,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.875,
+    1.611
+   ]
+  },
+  {
+   "name": "Glare",
+   "path": "Background/Canvas/Earth/Glare",
+   "parent": 8,
+   "pos": [
+    -1.101,
+    0.194
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Background Elements_5",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.875,
+    1.611
+   ]
+  },
+  {
+   "name": "BackStars",
+   "path": "Background/Canvas/BackStars",
+   "parent": 7,
+   "pos": [
+    0.0099964,
+    4.88
+   ],
+   "z": 11.502,
+   "rotZ": 0,
+   "scale": [
+    1.8565451,
+    1.8565451
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BackLayer",
+   "path": "Background/Canvas/BackStars/BackLayer",
+   "parent": 10,
+   "pos": [
+    -0.0099983215,
+    -4.880001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Galaxy",
+   "path": "Background/Canvas/BackStars/BackLayer/Galaxy",
+   "parent": 11,
+   "pos": [
+    4.8864,
+    5.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.4179926,
+    5.4179926
+   ],
+   "sprite": "Background Elements_1",
+   "order": -100,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.56078434
+   ],
+   "size": [
+    3.875,
+    1.611
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars",
+   "parent": 11,
+   "pos": [
+    7.259,
+    -3.502
+   ],
+   "rotZ": 0.004376447918194717,
+   "scale": [
+    3.1814318,
+    3.1814318
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (1)",
+   "parent": 11,
+   "pos": [
+    2.28,
+    -3.13
+   ],
+   "rotZ": -0.8619688236095281,
+   "scale": [
+    3.2657392,
+    3.2657392
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (2)",
+   "parent": 11,
+   "pos": [
+    -6.151,
+    0.374
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.847529,
+    4.847529
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (3)",
+   "parent": 11,
+   "pos": [
+    -6.278,
+    3.021
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2821555,
+    3.2821555
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (4)",
+   "parent": 11,
+   "pos": [
+    -2.084,
+    1.579
+   ],
+   "rotZ": -0.010983352035123496,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (5)",
+   "parent": 11,
+   "pos": [
+    2.822,
+    1.424
+   ],
+   "rotZ": 0.849074977879396,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (6)",
+   "parent": 11,
+   "pos": [
+    5.62,
+    3.263
+   ],
+   "rotZ": -0.8224352364420588,
+   "scale": [
+    3.270976,
+    3.270976
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (7)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (7)",
+   "parent": 11,
+   "pos": [
+    4.431,
+    -1.552
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2709758,
+    3.2709758
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (8)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (8)",
+   "parent": 11,
+   "pos": [
+    6.014,
+    0.111
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2590666,
+    2.2590666
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (9)",
+   "path": "Background/Canvas/BackStars/BackLayer/Stars (9)",
+   "parent": 11,
+   "pos": [
+    -3.006,
+    -2.389
+   ],
+   "rotZ": -0.11027425939316732,
+   "scale": [
+    2.723563,
+    2.723563
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "BackLayer (1)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)",
+   "parent": 10,
+   "pos": [
+    -0.0099983215,
+    4.879999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars",
+   "parent": 23,
+   "pos": [
+    7.0030003,
+    -5.811
+   ],
+   "rotZ": 0.004376447918194717,
+   "scale": [
+    3.1814318,
+    3.1814318
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (1)",
+   "parent": 23,
+   "pos": [
+    2.0240002,
+    -5.439
+   ],
+   "rotZ": -0.8619688236095281,
+   "scale": [
+    3.2657392,
+    3.2657392
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (2)",
+   "parent": 23,
+   "pos": [
+    -6.4069996,
+    -1.935
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.847529,
+    4.847529
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (3)",
+   "parent": 23,
+   "pos": [
+    -6.5339994,
+    0.7119999
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2821555,
+    3.2821555
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (4)",
+   "parent": 23,
+   "pos": [
+    -2.34,
+    -0.73
+   ],
+   "rotZ": -0.010983352035123496,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (5)",
+   "parent": 23,
+   "pos": [
+    2.5660002,
+    -0.885
+   ],
+   "rotZ": 0.849074977879396,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (6)",
+   "parent": 23,
+   "pos": [
+    5.3640003,
+    0.954
+   ],
+   "rotZ": -0.8224352364420588,
+   "scale": [
+    3.270976,
+    3.270976
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (7)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (7)",
+   "parent": 23,
+   "pos": [
+    4.175,
+    -3.861
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2709758,
+    3.2709758
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (8)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (8)",
+   "parent": 23,
+   "pos": [
+    5.7580004,
+    -2.198
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2590666,
+    2.2590666
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (9)",
+   "path": "Background/Canvas/BackStars/BackLayer (1)/Stars (9)",
+   "parent": 23,
+   "pos": [
+    -3.2619998,
+    -4.698
+   ],
+   "rotZ": -0.11027425939316732,
+   "scale": [
+    2.723563,
+    2.723563
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "BackLayer (2)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)",
+   "parent": 10,
+   "pos": [
+    15.870002,
+    -4.880001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars",
+   "parent": 34,
+   "pos": [
+    7.259,
+    -3.502
+   ],
+   "rotZ": 0.004376447918194717,
+   "scale": [
+    3.1814318,
+    3.1814318
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (1)",
+   "parent": 34,
+   "pos": [
+    2.28,
+    -3.13
+   ],
+   "rotZ": -0.8619688236095281,
+   "scale": [
+    3.2657392,
+    3.2657392
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (2)",
+   "parent": 34,
+   "pos": [
+    -6.151,
+    0.374
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.847529,
+    4.847529
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (3)",
+   "parent": 34,
+   "pos": [
+    -6.278,
+    3.021
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2821555,
+    3.2821555
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (4)",
+   "parent": 34,
+   "pos": [
+    -2.084,
+    1.579
+   ],
+   "rotZ": -0.010983352035123496,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (5)",
+   "parent": 34,
+   "pos": [
+    2.822,
+    1.424
+   ],
+   "rotZ": 0.849074977879396,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (6)",
+   "parent": 34,
+   "pos": [
+    5.62,
+    3.263
+   ],
+   "rotZ": -0.8224352364420588,
+   "scale": [
+    3.270976,
+    3.270976
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (7)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (7)",
+   "parent": 34,
+   "pos": [
+    4.431,
+    -1.552
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2709758,
+    3.2709758
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (8)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (8)",
+   "parent": 34,
+   "pos": [
+    6.014,
+    0.111
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2590666,
+    2.2590666
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (9)",
+   "path": "Background/Canvas/BackStars/BackLayer (2)/Stars (9)",
+   "parent": 34,
+   "pos": [
+    -3.006,
+    -2.389
+   ],
+   "rotZ": -0.11027425939316732,
+   "scale": [
+    2.723563,
+    2.723563
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "BackLayer (3)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)",
+   "parent": 10,
+   "pos": [
+    -15.869998,
+    -4.880001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars",
+   "parent": 45,
+   "pos": [
+    7.259,
+    -3.502
+   ],
+   "rotZ": 0.004376447918194717,
+   "scale": [
+    3.1814318,
+    3.1814318
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (1)",
+   "parent": 45,
+   "pos": [
+    2.28,
+    -3.13
+   ],
+   "rotZ": -0.8619688236095281,
+   "scale": [
+    3.2657392,
+    3.2657392
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (2)",
+   "parent": 45,
+   "pos": [
+    -6.151,
+    0.374
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.847529,
+    4.847529
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (3)",
+   "parent": 45,
+   "pos": [
+    -6.278,
+    3.021
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2821555,
+    3.2821555
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (4)",
+   "parent": 45,
+   "pos": [
+    -2.084,
+    1.579
+   ],
+   "rotZ": -0.010983352035123496,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (5)",
+   "parent": 45,
+   "pos": [
+    2.822,
+    1.424
+   ],
+   "rotZ": 0.849074977879396,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (6)",
+   "parent": 45,
+   "pos": [
+    5.62,
+    3.263
+   ],
+   "rotZ": -0.8224352364420588,
+   "scale": [
+    3.270976,
+    3.270976
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (7)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (7)",
+   "parent": 45,
+   "pos": [
+    4.431,
+    -1.552
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2709758,
+    3.2709758
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (8)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (8)",
+   "parent": 45,
+   "pos": [
+    6.014,
+    0.111
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2590666,
+    2.2590666
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (9)",
+   "path": "Background/Canvas/BackStars/BackLayer (3)/Stars (9)",
+   "parent": 45,
+   "pos": [
+    -3.006,
+    -2.389
+   ],
+   "rotZ": -0.11027425939316732,
+   "scale": [
+    2.723563,
+    2.723563
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "BackLayer (4)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)",
+   "parent": 10,
+   "pos": [
+    -15.609999,
+    4.879999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars",
+   "parent": 56,
+   "pos": [
+    7.0030003,
+    -5.811
+   ],
+   "rotZ": 0.004376447918194717,
+   "scale": [
+    3.1814318,
+    3.1814318
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (1)",
+   "parent": 56,
+   "pos": [
+    2.0240002,
+    -5.439
+   ],
+   "rotZ": -0.8619688236095281,
+   "scale": [
+    3.2657392,
+    3.2657392
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (2)",
+   "parent": 56,
+   "pos": [
+    -6.4069996,
+    -1.935
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.847529,
+    4.847529
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (3)",
+   "parent": 56,
+   "pos": [
+    -6.5339994,
+    0.7119999
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2821555,
+    3.2821555
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (4)",
+   "parent": 56,
+   "pos": [
+    -2.34,
+    -0.73
+   ],
+   "rotZ": -0.010983352035123496,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (5)",
+   "parent": 56,
+   "pos": [
+    2.5660002,
+    -0.885
+   ],
+   "rotZ": 0.849074977879396,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (6)",
+   "parent": 56,
+   "pos": [
+    5.3640003,
+    0.954
+   ],
+   "rotZ": -0.8224352364420588,
+   "scale": [
+    3.270976,
+    3.270976
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (7)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (7)",
+   "parent": 56,
+   "pos": [
+    4.175,
+    -3.861
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2709758,
+    3.2709758
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (8)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (8)",
+   "parent": 56,
+   "pos": [
+    5.7580004,
+    -2.198
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2590666,
+    2.2590666
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (9)",
+   "path": "Background/Canvas/BackStars/BackLayer (4)/Stars (9)",
+   "parent": 56,
+   "pos": [
+    -3.2619998,
+    -4.698
+   ],
+   "rotZ": -0.11027425939316732,
+   "scale": [
+    2.723563,
+    2.723563
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "BackLayer (5)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)",
+   "parent": 10,
+   "pos": [
+    15.750002,
+    4.879999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars",
+   "parent": 67,
+   "pos": [
+    7.0030003,
+    -5.811
+   ],
+   "rotZ": 0.004376447918194717,
+   "scale": [
+    3.1814318,
+    3.1814318
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (1)",
+   "parent": 67,
+   "pos": [
+    2.0240002,
+    -5.439
+   ],
+   "rotZ": -0.8619688236095281,
+   "scale": [
+    3.2657392,
+    3.2657392
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (2)",
+   "parent": 67,
+   "pos": [
+    -6.4069996,
+    -1.935
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.847529,
+    4.847529
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (3)",
+   "parent": 67,
+   "pos": [
+    -6.5339994,
+    0.7119999
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2821555,
+    3.2821555
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (4)",
+   "parent": 67,
+   "pos": [
+    -2.34,
+    -0.73
+   ],
+   "rotZ": -0.010983352035123496,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (5)",
+   "parent": 67,
+   "pos": [
+    2.5660002,
+    -0.885
+   ],
+   "rotZ": 0.849074977879396,
+   "scale": [
+    3.3402495,
+    3.3402495
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (6)",
+   "parent": 67,
+   "pos": [
+    5.3640003,
+    0.954
+   ],
+   "rotZ": -0.8224352364420588,
+   "scale": [
+    3.270976,
+    3.270976
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (7)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (7)",
+   "parent": 67,
+   "pos": [
+    4.175,
+    -3.861
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2709758,
+    3.2709758
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (8)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (8)",
+   "parent": 67,
+   "pos": [
+    5.7580004,
+    -2.198
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2590666,
+    2.2590666
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (9)",
+   "path": "Background/Canvas/BackStars/BackLayer (5)/Stars (9)",
+   "parent": 67,
+   "pos": [
+    -3.2619998,
+    -4.698
+   ],
+   "rotZ": -0.11027425939316732,
+   "scale": [
+    2.723563,
+    2.723563
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.36862746
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "FrontStars",
+   "path": "Background/Canvas/FrontStars",
+   "parent": 7,
+   "pos": [
+    0.0099981,
+    4.8918
+   ],
+   "z": 8.5265,
+   "rotZ": 0,
+   "scale": [
+    1.5411682,
+    1.5411682
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FrontLayer",
+   "path": "Background/Canvas/FrontStars/FrontLayer",
+   "parent": 78,
+   "pos": [
+    -0.0099983215,
+    -4.8899994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/FrontStars/FrontLayer/Stars",
+   "parent": 79,
+   "pos": [
+    5.745,
+    2.293
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.8509804
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/FrontStars/FrontLayer/Stars (1)",
+   "parent": 79,
+   "pos": [
+    4.449,
+    -2.25
+   ],
+   "rotZ": -3.2995828133437852,
+   "scale": [
+    5.3293114,
+    5.3293114
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/FrontStars/FrontLayer/Stars (2)",
+   "parent": 79,
+   "pos": [
+    -0.33,
+    2.799
+   ],
+   "rotZ": -2.9867441304466023,
+   "scale": [
+    5.370436,
+    5.370436
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.57254905
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/FrontStars/FrontLayer/Stars (3)",
+   "parent": 79,
+   "pos": [
+    -5.77,
+    -1.565
+   ],
+   "rotZ": 0.15898544248402646,
+   "scale": [
+    5.370438,
+    5.370438
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/FrontStars/FrontLayer/Stars (4)",
+   "parent": 79,
+   "pos": [
+    -2.969,
+    -3.548
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.80784315
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/FrontStars/FrontLayer/Stars (5)",
+   "parent": 79,
+   "pos": [
+    -4.65,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/FrontStars/FrontLayer/Stars (6)",
+   "parent": 79,
+   "pos": [
+    -4.15,
+    1.26
+   ],
+   "rotZ": 2.9759965706828138,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    0.57254905
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "FrontLayer (1)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (1)",
+   "parent": 78,
+   "pos": [
+    -0.0099983215,
+    4.8900003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/FrontStars/FrontLayer (1)/Stars",
+   "parent": 87,
+   "pos": [
+    5.745,
+    2.293
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (1)/Stars (1)",
+   "parent": 87,
+   "pos": [
+    4.449,
+    -2.25
+   ],
+   "rotZ": -3.2995828133437852,
+   "scale": [
+    5.3293114,
+    5.3293114
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (1)/Stars (2)",
+   "parent": 87,
+   "pos": [
+    -0.33,
+    2.799
+   ],
+   "rotZ": -2.9867441304466023,
+   "scale": [
+    5.370436,
+    5.370436
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (1)/Stars (3)",
+   "parent": 87,
+   "pos": [
+    -5.77,
+    -1.565
+   ],
+   "rotZ": 0.15898544248402646,
+   "scale": [
+    5.370438,
+    5.370438
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (1)/Stars (4)",
+   "parent": 87,
+   "pos": [
+    -2.969,
+    -3.548
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (1)/Stars (5)",
+   "parent": 87,
+   "pos": [
+    -4.65,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (1)/Stars (6)",
+   "parent": 87,
+   "pos": [
+    -4.15,
+    1.26
+   ],
+   "rotZ": 2.9759965706828138,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "FrontLayer (2)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (2)",
+   "parent": 78,
+   "pos": [
+    15.870002,
+    -4.8899994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/FrontStars/FrontLayer (2)/Stars",
+   "parent": 95,
+   "pos": [
+    5.745,
+    2.293
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (2)/Stars (1)",
+   "parent": 95,
+   "pos": [
+    4.449,
+    -2.25
+   ],
+   "rotZ": -3.2995828133437852,
+   "scale": [
+    5.3293114,
+    5.3293114
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (2)/Stars (2)",
+   "parent": 95,
+   "pos": [
+    -0.33,
+    2.799
+   ],
+   "rotZ": -2.9867441304466023,
+   "scale": [
+    5.370436,
+    5.370436
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (2)/Stars (3)",
+   "parent": 95,
+   "pos": [
+    -5.77,
+    -1.565
+   ],
+   "rotZ": 0.15898544248402646,
+   "scale": [
+    5.370438,
+    5.370438
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (2)/Stars (4)",
+   "parent": 95,
+   "pos": [
+    -2.969,
+    -3.548
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (2)/Stars (5)",
+   "parent": 95,
+   "pos": [
+    -4.65,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (2)/Stars (6)",
+   "parent": 95,
+   "pos": [
+    -4.15,
+    1.26
+   ],
+   "rotZ": 2.9759965706828138,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "FrontLayer (3)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (3)",
+   "parent": 78,
+   "pos": [
+    -15.869998,
+    -4.8899994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/FrontStars/FrontLayer (3)/Stars",
+   "parent": 103,
+   "pos": [
+    5.745,
+    2.293
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (3)/Stars (1)",
+   "parent": 103,
+   "pos": [
+    4.449,
+    -2.25
+   ],
+   "rotZ": -3.2995828133437852,
+   "scale": [
+    5.3293114,
+    5.3293114
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (3)/Stars (2)",
+   "parent": 103,
+   "pos": [
+    -0.33,
+    2.799
+   ],
+   "rotZ": -2.9867441304466023,
+   "scale": [
+    5.370436,
+    5.370436
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (3)/Stars (3)",
+   "parent": 103,
+   "pos": [
+    -5.77,
+    -1.565
+   ],
+   "rotZ": 0.15898544248402646,
+   "scale": [
+    5.370438,
+    5.370438
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (3)/Stars (4)",
+   "parent": 103,
+   "pos": [
+    -2.969,
+    -3.548
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (3)/Stars (5)",
+   "parent": 103,
+   "pos": [
+    -4.65,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (3)/Stars (6)",
+   "parent": 103,
+   "pos": [
+    -4.15,
+    1.26
+   ],
+   "rotZ": 2.9759965706828138,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "FrontLayer (4)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (4)",
+   "parent": 78,
+   "pos": [
+    -15.609999,
+    4.8900003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/FrontStars/FrontLayer (4)/Stars",
+   "parent": 111,
+   "pos": [
+    5.745,
+    2.293
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (4)/Stars (1)",
+   "parent": 111,
+   "pos": [
+    4.449,
+    -2.25
+   ],
+   "rotZ": -3.2995828133437852,
+   "scale": [
+    5.3293114,
+    5.3293114
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (4)/Stars (2)",
+   "parent": 111,
+   "pos": [
+    -0.33,
+    2.799
+   ],
+   "rotZ": -2.9867441304466023,
+   "scale": [
+    5.370436,
+    5.370436
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (4)/Stars (3)",
+   "parent": 111,
+   "pos": [
+    -5.77,
+    -1.565
+   ],
+   "rotZ": 0.15898544248402646,
+   "scale": [
+    5.370438,
+    5.370438
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (4)/Stars (4)",
+   "parent": 111,
+   "pos": [
+    -2.969,
+    -3.548
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (4)/Stars (5)",
+   "parent": 111,
+   "pos": [
+    -4.65,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (4)/Stars (6)",
+   "parent": 111,
+   "pos": [
+    -4.15,
+    1.26
+   ],
+   "rotZ": 2.9759965706828138,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "FrontLayer (5)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (5)",
+   "parent": 78,
+   "pos": [
+    15.750002,
+    4.8900003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Background/Canvas/FrontStars/FrontLayer (5)/Stars",
+   "parent": 119,
+   "pos": [
+    5.745,
+    2.293
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (1)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (5)/Stars (1)",
+   "parent": 119,
+   "pos": [
+    4.449,
+    -2.25
+   ],
+   "rotZ": -3.2995828133437852,
+   "scale": [
+    5.3293114,
+    5.3293114
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (2)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (5)/Stars (2)",
+   "parent": 119,
+   "pos": [
+    -0.33,
+    2.799
+   ],
+   "rotZ": -2.9867441304466023,
+   "scale": [
+    5.370436,
+    5.370436
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (3)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (5)/Stars (3)",
+   "parent": 119,
+   "pos": [
+    -5.77,
+    -1.565
+   ],
+   "rotZ": 0.15898544248402646,
+   "scale": [
+    5.370438,
+    5.370438
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (4)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (5)/Stars (4)",
+   "parent": 119,
+   "pos": [
+    -2.969,
+    -3.548
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (5)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (5)/Stars (5)",
+   "parent": 119,
+   "pos": [
+    -4.65,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  },
+  {
+   "name": "Stars (6)",
+   "path": "Background/Canvas/FrontStars/FrontLayer (5)/Stars (6)",
+   "parent": 119,
+   "pos": [
+    -4.15,
+    1.26
+   ],
+   "rotZ": 2.9759965706828138,
+   "scale": [
+    5.3704376,
+    5.3704376
+   ],
+   "sprite": "Background Elements_2",
+   "order": -180,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.964,
+    0.816
+   ]
+  }
+ ]
+}

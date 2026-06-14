@@ -466,6 +466,24 @@ func SampleClipNode(a *kmdata.Anim, path string, at float64) ClipPose {
 	return p
 }
 
+// SampleClipFloat samples a SpriteRenderer/Transform float property from an
+// AnimationClip. Dynamic prefab ports use it for m_IsActive, m_FlipX, alpha,
+// and sorting order without reimplementing Hermite key evaluation.
+func SampleClipFloat(a *kmdata.Anim, path, attr string, at float64) (float64, bool) {
+	if a == nil {
+		return 0, false
+	}
+	attrs, ok := a.Floats[path]
+	if !ok {
+		return 0, false
+	}
+	keys := attrs[attr]
+	if len(keys) == 0 {
+		return 0, false
+	}
+	return evalKeys(keys, at), true
+}
+
 // Sub 返回切片的图集子图（带缓存）。
 func (a *Assets) Sub(name string) *ebiten.Image {
 	if img, ok := a.subs[name]; ok {

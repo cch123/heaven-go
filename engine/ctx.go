@@ -76,6 +76,22 @@ func (c *Ctx) SoundPitchPan(name string, vol, pitch, pan float64) {
 	p.Play()
 }
 
+// SoundPitchOff 立即播放带音高并跳过开头 offset 秒的音效。
+func (c *Ctx) SoundPitchOff(name string, vol, pitch, offsetSec float64) {
+	pcm, ok := c.Assets.Sounds[name]
+	if !ok {
+		return
+	}
+	skip := int(offsetSec*float64(SampleRate)) * 4
+	if skip < 0 || skip >= len(pcm) {
+		skip = 0
+	}
+	pcm = kart.ResamplePCM(pcm[skip:], pitch)
+	p := audioCtx.NewPlayerFromBytes(pcm)
+	p.SetVolume(vol)
+	p.Play()
+}
+
 // SoundAtOff 在指定拍播放音效并跳过开头 offset 秒（SoundByte 的 offset 参数）。
 func (c *Ctx) SoundAtOff(beat float64, name string, vol, offsetSec float64) {
 	c.At(beat, func() {
@@ -95,20 +111,7 @@ func (c *Ctx) SoundAtOff(beat float64, name string, vol, offsetSec float64) {
 
 // SoundAtPitchOff 在指定拍播放带音高并跳过开头 offset 秒的音效。
 func (c *Ctx) SoundAtPitchOff(beat float64, name string, vol, pitch, offsetSec float64) {
-	c.At(beat, func() {
-		pcm, ok := c.Assets.Sounds[name]
-		if !ok {
-			return
-		}
-		skip := int(offsetSec*float64(SampleRate)) * 4
-		if skip < 0 || skip >= len(pcm) {
-			skip = 0
-		}
-		pcm = kart.ResamplePCM(pcm[skip:], pitch)
-		p := audioCtx.NewPlayerFromBytes(pcm)
-		p.SetVolume(vol)
-		p.Play()
-	})
+	c.At(beat, func() { c.SoundPitchOff(name, vol, pitch, offsetSec) })
 }
 
 // SoundAt 在指定拍播放音效（MultiSound 等价物）。

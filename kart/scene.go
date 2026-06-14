@@ -641,8 +641,20 @@ func (s *SceneInst) node(p *scenePlayer, curvePath string) (int, bool) {
 			full = full + "/" + curvePath
 		}
 	}
-	i, ok := s.byPath[full]
-	return i, ok
+	if i, ok := s.byPath[full]; ok {
+		return i, true
+	}
+	if strings.Contains(full, "/Upper/Head") {
+		// Some nested Unity prefabs keep parent clips authored against Upper/Head,
+		// while extraction inserts a child Animator wrapper (HeadAnim/Upper/Head).
+		// Resolve that serialized shape here so the original body clips still drive
+		// the head sprites instead of silently dropping those curves.
+		alt := strings.Replace(full, "/Upper/Head", "/Upper/HeadAnim/Upper/Head", 1)
+		if i, ok := s.byPath[alt]; ok {
+			return i, true
+		}
+	}
+	return 0, false
 }
 
 func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
