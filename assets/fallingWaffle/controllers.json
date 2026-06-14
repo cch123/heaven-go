@@ -1,0 +1,32 @@
+{
+ "Square": {
+  "default": "idleSquare",
+  "states": {
+   "Fade": {
+    "clip": "Animation/Fade",
+    "speed": 1
+   },
+   "idleSquare": {
+    "clip": "Animation/idleSquare",
+    "speed": 1
+   }
+  }
+ },
+ "waffle": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animation/Idle",
+    "speed": 1
+   },
+   "IdleFlop": {
+    "clip": "Animation/IdleFlop",
+    "speed": 1
+   },
+   "fall": {
+    "clip": "Animation/Flop",
+    "speed": 1
+   }
+  }
+ }
+}

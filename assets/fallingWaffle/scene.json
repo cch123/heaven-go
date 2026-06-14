@@ -1,0 +1,158 @@
+{
+ "nodes": [
+  {
+   "name": "fallingWaffle",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "background",
+   "path": "background",
+   "parent": 0,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "waffle_13",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    34.24,
+    18.69
+   ]
+  },
+  {
+   "name": "WaffleHolder",
+   "path": "WaffleHolder",
+   "parent": 0,
+   "pos": [
+    -0.6763426,
+    0.09695209
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "waffle",
+   "path": "WaffleHolder/waffle",
+   "parent": 2,
+   "pos": [
+    1.7163426,
+    -0.19695209
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "waffle_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.07,
+    7.45
+   ]
+  },
+  {
+   "name": "waffleEffect",
+   "path": "WaffleHolder/waffleEffect",
+   "parent": 2,
+   "pos": [
+    2.375,
+    -0.78799987
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "waffle_6",
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.21,
+    7.29
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Square",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    25,
+    25
+   ],
+   "order": 100,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

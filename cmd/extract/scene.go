@@ -137,6 +137,12 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "mole", markers: []string{"isMole", "moleAnim", "veggieSprite", "veggieTrans", "curve"}, atPath: "ScrollingItems/Prefabs/Mole", curveFields: []string{"curve"}},
 		},
 	},
+	"fallingWaffle": {
+		dir:             "FallingWaffle",
+		prefab:          "fallingWaffle.prefab",
+		roleFields:      []string{"waffleAnim", "squareAnim"},
+		wantControllers: true,
+	},
 	"fireworks": {
 		dir:             "Fireworks",
 		prefab:          "fireworks.prefab",
