@@ -21,12 +21,14 @@ func New(assetsRoot, riqPath string) (*App, error) {
 		return nil, err
 	}
 	a := &App{
-		assetsRoot:   assetsRoot,
-		faceBig:      &text.GoTextFace{Source: src, Size: 44},
-		faceMid:      &text.GoTextFace{Source: src, Size: 24},
-		faceSmall:    &text.GoTextFace{Source: src, Size: 15},
-		commonSounds: map[string][]byte{},
-		levels:       discoverLevels("levels"),
+		appConfig: appConfig{assetsRoot: assetsRoot},
+		fontState: fontState{
+			faceBig:   &text.GoTextFace{Source: src, Size: 44},
+			faceMid:   &text.GoTextFace{Source: src, Size: 24},
+			faceSmall: &text.GoTextFace{Source: src, Size: 15},
+		},
+		effectsRuntimeState: effectsRuntimeState{commonSounds: map[string][]byte{}},
+		menuRuntimeState:    menuRuntimeState{levels: discoverLevels("levels")},
 	}
 	a.loadCommonSounds()
 	a.resultAssets = loadResultAssets(filepath.Join(assetsRoot, "common", "ratings"))

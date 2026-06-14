@@ -33,22 +33,26 @@ func TestResultAccuracyCurveMatchesJudgementThresholds(t *testing.T) {
 
 func TestBuildResultSummaryUsesCategoryMessages(t *testing.T) {
 	app := &App{
-		bm: &riq.Beatmap{
-			Properties: map[string]any{
-				"resultcaption": "Notes",
-				"resultcat0_hi": "Great fundamentals.",
-				"resultcat1_hi": "Strong keeping.",
-			},
-			Sections: []riq.SectionMarker{
-				{Beat: 0, Weight: 1, Category: 0},
-				{Beat: 8, Weight: 1, Category: 1},
+		chartRuntimeState: chartRuntimeState{
+			bm: &riq.Beatmap{
+				Properties: map[string]any{
+					"resultcaption": "Notes",
+					"resultcat0_hi": "Great fundamentals.",
+					"resultcat1_hi": "Strong keeping.",
+				},
+				Sections: []riq.SectionMarker{
+					{Beat: 0, Weight: 1, Category: 0},
+					{Beat: 8, Weight: 1, Category: 1},
+				},
 			},
 		},
-		scores: []resultScoreInput{
-			{Beat: 1, Accuracy: 1, Weight: 1, Category: 0},
-			{Beat: 9, Accuracy: 0.9, Weight: 1, Category: 1},
+		scoreRuntimeState: scoreRuntimeState{
+			scores: []resultScoreInput{
+				{Beat: 1, Accuracy: 1, Weight: 1, Category: 0},
+				{Beat: 9, Accuracy: 0.9, Weight: 1, Category: 1},
+			},
+			starGot: true,
 		},
-		starGot: true,
 	}
 
 	res := app.buildResultSummary()
@@ -71,12 +75,14 @@ func TestBuildResultSummaryUsesCategoryMessages(t *testing.T) {
 
 func TestDrawResultSmoke(t *testing.T) {
 	app := &App{
-		result: resultSummary{
-			Score: 0.95, Rank: resultRankHi, Header: "Rhythm League Notes",
-			Message0: "That was great! Really great!", Star: true, NoMiss: true,
+		resultRuntimeState: resultRuntimeState{
+			result: resultSummary{
+				Score: 0.95, Rank: resultRankHi, Header: "Rhythm League Notes",
+				Message0: "That was great! Really great!", Star: true, NoMiss: true,
+			},
+			resultT:      resultRankTime,
+			resultAssets: loadResultAssets("../assets/common/ratings"),
 		},
-		resultT:      resultRankTime,
-		resultAssets: loadResultAssets("../assets/common/ratings"),
 	}
 	setTestFaces(t, app)
 	screen := ebiten.NewImage(ScreenW, ScreenH)
@@ -87,27 +93,37 @@ func TestDrawResultSmoke(t *testing.T) {
 
 func TestReturnToLevelSelectClearsActiveChart(t *testing.T) {
 	app := &App{
-		bm:      &riq.Beatmap{},
-		r:       &riq.Riq{Beatmap: &riq.Beatmap{}},
-		modules: map[string]Module{},
-		switches: []gameSwitch{
-			{beat: 0, id: "meatGrinder"},
+		chartRuntimeState: chartRuntimeState{
+			bm: &riq.Beatmap{},
+			r:  &riq.Riq{Beatmap: &riq.Beatmap{}},
 		},
-		actions: []beatAction{
-			{beat: 1},
+		moduleRuntimeState: moduleRuntimeState{
+			modules: map[string]Module{},
+			switches: []gameSwitch{
+				{beat: 0, id: "meatGrinder"},
+			},
+			actions: []beatAction{
+				{beat: 1},
+			},
 		},
-		inputs: []*Input{
-			{Beat: 1, Result: JudgeAce},
+		inputRuntimeState: inputRuntimeState{
+			inputs: []*Input{
+				{Beat: 1, Result: JudgeAce},
+			},
 		},
-		state:          stateResult,
-		result:         resultSummary{Score: 0.8, Rank: resultRankHi},
-		resultT:        2,
-		resultEpilogue: true,
-		levels: []menuLevel{
-			{title: "Meat Grinder"},
-			{title: "Practice"},
+		appFlowState: appFlowState{state: stateResult},
+		resultRuntimeState: resultRuntimeState{
+			result:         resultSummary{Score: 0.8, Rank: resultRankHi},
+			resultT:        2,
+			resultEpilogue: true,
 		},
-		menuSel: 1,
+		menuRuntimeState: menuRuntimeState{
+			levels: []menuLevel{
+				{title: "Meat Grinder"},
+				{title: "Practice"},
+			},
+			menuSel: 1,
+		},
 	}
 
 	app.returnToLevelSelect()
@@ -145,26 +161,28 @@ func TestResultAudioAssetsDecode(t *testing.T) {
 
 func TestDrawLevelSelectSmoke(t *testing.T) {
 	app := &App{
-		levels: []menuLevel{
-			{
-				path:     "levels/Candy Remix.riq",
-				fileName: "Candy Remix",
-				title:    "Candy Remix",
-				author:   "wookywok, saladplainzone",
-				desc:     "Ooh, candy? Don't mind if I do!",
-				games:    []string{"munchyMonk", "seeSaw", "blueBear", "marchingOrders"},
-				bpm:      195,
+		menuRuntimeState: menuRuntimeState{
+			levels: []menuLevel{
+				{
+					path:     "levels/Candy Remix.riq",
+					fileName: "Candy Remix",
+					title:    "Candy Remix",
+					author:   "wookywok, saladplainzone",
+					desc:     "Ooh, candy? Don't mind if I do!",
+					games:    []string{"munchyMonk", "seeSaw", "blueBear", "marchingOrders"},
+					bpm:      195,
+				},
+				{
+					path:     "levels/Meat Grinder.riq",
+					fileName: "Meat Grinder",
+					title:    "Meat Grinder",
+					author:   "Seanski2",
+					games:    []string{"meatGrinder"},
+					bpm:      128,
+				},
 			},
-			{
-				path:     "levels/Meat Grinder.riq",
-				fileName: "Meat Grinder",
-				title:    "Meat Grinder",
-				author:   "Seanski2",
-				games:    []string{"meatGrinder"},
-				bpm:      128,
-			},
+			libraryAssets: loadLibraryAssets("../assets/common/library"),
 		},
-		libraryAssets: loadLibraryAssets("../assets/common/library"),
 	}
 	setTestFaces(t, app)
 	screen := ebiten.NewImage(ScreenW, ScreenH)
