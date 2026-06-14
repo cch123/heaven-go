@@ -244,6 +244,9 @@ func (g *Game) playSound(name string) {
 // ---------- Update ----------
 
 func (g *Game) Update() error {
+	if engine.HandleFullscreenShortcut() {
+		return nil
+	}
 	if inpututil.IsKeyJustPressed(ebiten.KeyEscape) {
 		return ebiten.Termination
 	}
@@ -619,6 +622,7 @@ func main() {
 	assetsRoot := flag.String("assets", "assets", "提取资产根目录")
 	latency := flag.Float64("latency", 0, "输入延迟校准（毫秒，可在游戏内用 [ ] 微调）")
 	autoplay := flag.Bool("autoplay", false, "完美自动打击（调试/验证用）")
+	fullscreen := flag.Bool("fullscreen", false, "启动时进入全屏；运行中可用 F11 / Alt+Enter 切换")
 	flag.Parse()
 
 	// 已移植的游戏模块
@@ -645,8 +649,7 @@ func main() {
 			if err != nil {
 				log.Fatal(err)
 			}
-			ebiten.SetWindowSize(screenW, screenH)
-			ebiten.SetWindowTitle("Heaven Go — Karate Man (legacy)")
+			engine.ConfigureWindow("Heaven Go — Karate Man (legacy)", *fullscreen)
 			ebiten.SetTPS(240)
 			if err := ebiten.RunGame(g); err != nil && err != ebiten.Termination {
 				log.Fatal(err)
@@ -663,8 +666,7 @@ func main() {
 	app.LatencyMS = *latency
 	app.Autoplay = *autoplay
 
-	ebiten.SetWindowSize(screenW, screenH)
-	ebiten.SetWindowTitle("Heaven Go")
+	engine.ConfigureWindow("Heaven Go", *fullscreen)
 	// 提高逻辑帧率，把输入采样量化误差压到 ~±2ms（60Hz 下是 ±8ms）
 	ebiten.SetTPS(240)
 

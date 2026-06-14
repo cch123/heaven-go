@@ -896,6 +896,9 @@ func (a *App) recordMissScore(beat float64) {
 // ---------- Update ----------
 
 func (a *App) Update() error {
+	if HandleFullscreenShortcut() {
+		return nil
+	}
 	if inpututil.IsKeyJustPressed(ebiten.KeyEscape) {
 		return ebiten.Termination
 	}
