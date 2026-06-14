@@ -352,7 +352,11 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 }
 
 func (m *Module) scheduleRally(beat float64) {
-	if m.scheduledRally[beat] || beat >= m.ctx.NextSwitchBeat(beat) {
+	m.scheduleRallyUntil(beat, m.rallyStopBeat(beat))
+}
+
+func (m *Module) scheduleRallyUntil(beat, stopBeat float64) {
+	if m.scheduledRally[beat] || !rallyBeatBeforeStop(beat, stopBeat) {
 		return
 	}
 	m.scheduledRally[beat] = true
@@ -391,16 +395,20 @@ func (m *Module) scheduleRally(beat float64) {
 	})
 
 	if ev, ok := m.baBums[beat]; ok {
-		m.scheduleBaBum(beat, ev.count, ev.alt)
+		m.scheduleBaBumUntil(beat, ev.count, ev.alt, stopBeat)
 		return
 	}
 	if !m.catches[beat+2] {
-		m.scheduleRally(beat + 2)
+		m.scheduleRallyUntil(beat+2, stopBeat)
 	}
 }
 
 func (m *Module) scheduleBaBum(beat float64, count, alt bool) {
-	if m.scheduledBaBum[beat] || beat >= m.ctx.NextSwitchBeat(beat) {
+	m.scheduleBaBumUntil(beat, count, alt, m.rallyStopBeat(beat))
+}
+
+func (m *Module) scheduleBaBumUntil(beat float64, count, alt bool, stopBeat float64) {
+	if m.scheduledBaBum[beat] || !rallyBeatBeforeStop(beat, stopBeat) {
 		return
 	}
 	m.scheduledBaBum[beat] = true
@@ -458,10 +466,35 @@ func (m *Module) scheduleBaBum(beat float64, count, alt bool) {
 		return
 	}
 	if ev, ok := m.baBums[beat+4]; ok {
-		m.scheduleBaBum(beat+4, ev.count, ev.alt)
+		m.scheduleBaBumUntil(beat+4, ev.count, ev.alt, stopBeat)
 		return
 	}
-	m.scheduleRally(beat + 6)
+	m.scheduleRallyUntil(beat+6, stopBeat)
+}
+
+func (m *Module) rallyStopBeat(beat float64) float64 {
+	if m.ctx == nil {
+		return math.Inf(1)
+	}
+	return rallyStopBeatFromEntities(m.ctx.Entities(), beat)
+}
+
+func rallyStopBeatFromEntities(entities []riq.Entity, beat float64) float64 {
+	stop := math.Inf(1)
+	for i := range entities {
+		e := &entities[i]
+		if e.Beat <= beat || e.Beat >= stop {
+			continue
+		}
+		if e.Datamodel == "gameManager/end" || strings.HasPrefix(e.Datamodel, "gameManager/switchGame/") {
+			stop = e.Beat
+		}
+	}
+	return stop
+}
+
+func rallyBeatBeforeStop(beat, stopBeat float64) bool {
+	return beat < stopBeat
 }
 
 func (m *Module) scheduleCount4(beat, length float64) {

@@ -6,6 +6,7 @@ import (
 
 	"hsdemo/engine"
 	"hsdemo/kart"
+	"hsdemo/riq"
 )
 
 func loadAirRallyAssets(t *testing.T) *kart.Assets {
@@ -167,6 +168,26 @@ func TestWeatherEventsDriveRatesAndSpeeds(t *testing.T) {
 	tree := m.treeStateAt(6)
 	if !tree.enable || tree.main != 7 || tree.side != 8 || math.Abs(tree.speed-3) > 1e-9 {
 		t.Fatalf("tree state at beat 6 = %+v, want enabled rates 7/8 speed 3", tree)
+	}
+}
+
+func TestRallyRecursionUsesFixedGameBoundary(t *testing.T) {
+	entities := []riq.Entity{
+		{Datamodel: "gameManager/switchGame/airRally", Beat: 100},
+		{Datamodel: "airRally/rally", Beat: 104},
+		{Datamodel: "gameManager/switchGame/fireworks", Beat: 120},
+		{Datamodel: "gameManager/switchGame/spaceSoccer", Beat: 180},
+		{Datamodel: "gameManager/end", Beat: 220},
+	}
+	stop := rallyStopBeatFromEntities(entities, 104)
+	if stop != 120 {
+		t.Fatalf("rally stop = %.1f, want next switch at 120", stop)
+	}
+	if !rallyBeatBeforeStop(118, stop) {
+		t.Fatalf("rally at 118 should still be inside Air Rally segment")
+	}
+	if rallyBeatBeforeStop(120, stop) || rallyBeatBeforeStop(122, stop) {
+		t.Fatalf("rally recursion should stop at fixed segment boundary")
 	}
 }
 
