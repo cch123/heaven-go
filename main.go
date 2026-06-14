@@ -68,6 +68,7 @@ import (
 	"hsdemo/games/mrupbeat"
 	"hsdemo/games/munchymonk"
 	"hsdemo/games/nipinthebud"
+	"hsdemo/games/nogame"
 	"hsdemo/games/rhythmtweezers"
 	"hsdemo/games/ringside"
 	"hsdemo/games/seesaw"
@@ -702,6 +703,7 @@ func main() {
 	engine.Register("mrUpbeat", mrupbeat.New)
 	engine.Register("munchyMonk", munchymonk.New)
 	engine.Register("nipInTheBud", nipinthebud.New)
+	engine.Register("noGame", nogame.New)
 	engine.Register("rhythmTweezers", rhythmtweezers.New)
 	engine.Register("ringside", ringside.New)
 	engine.Register("tramAndPauline", tramandpauline.New)
