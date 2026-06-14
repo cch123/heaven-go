@@ -1,0 +1,998 @@
+{
+ "nodes": [
+  {
+   "name": "bigRockFinish",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ref2",
+   "path": "ref2",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    12.8,
+    7.2
+   ]
+  },
+  {
+   "name": "Flash",
+   "path": "Flash",
+   "parent": 0,
+   "pos": [
+    -0.0498,
+    0.0722
+   ],
+   "rotZ": 0,
+   "scale": [
+    19.500898,
+    11.692972
+   ],
+   "order": 999,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BackgroundHolder",
+   "path": "BackgroundHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Black",
+   "path": "BackgroundHolder/Black",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    12
+   ],
+   "order": 500,
+   "color": [
+    0,
+    0,
+    0,
+    0.4
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "SpotlightHolder",
+   "path": "BackgroundHolder/SpotlightHolder",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spotlight1",
+   "path": "BackgroundHolder/SpotlightHolder/spotlight1",
+   "parent": 5,
+   "pos": [
+    2.61,
+    1.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_BG_rot_1",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "spotlight2",
+   "path": "BackgroundHolder/SpotlightHolder/spotlight2",
+   "parent": 5,
+   "pos": [
+    -3.48,
+    1.8373218
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_BG_rot_4",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "spotlight3",
+   "path": "BackgroundHolder/SpotlightHolder/spotlight3",
+   "parent": 5,
+   "pos": [
+    -2,
+    0.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_BG_rot_5",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Background",
+   "path": "BackgroundHolder/Background",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1
+   ],
+   "sprite": "shortLive_BG_rot_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.7,
+    10.3
+   ]
+  },
+  {
+   "name": "SpotlightMask",
+   "path": "BackgroundHolder/SpotlightMask",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Black",
+   "path": "BackgroundHolder/SpotlightMask/Black",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    12
+   ],
+   "order": 500,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.4
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "spotlightBlue",
+   "path": "BackgroundHolder/SpotlightMask/spotlightBlue",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spotlightBlue",
+   "path": "BackgroundHolder/SpotlightMask/spotlightBlue/spotlightBlue",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "shortLive_BG_rot_3",
+   "order": 250,
+   "color": [
+    0,
+    0,
+    1,
+    0.29411766
+   ],
+   "drawMode": 2,
+   "size": [
+    17.28,
+    17.28
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "spotlightBlue (1)",
+   "path": "BackgroundHolder/SpotlightMask/spotlightBlue/spotlightBlue (1)",
+   "parent": 12,
+   "pos": [
+    0,
+    -17.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "shortLive_BG_rot_3",
+   "order": 250,
+   "color": [
+    0,
+    0,
+    1,
+    0.29411766
+   ],
+   "drawMode": 2,
+   "size": [
+    17.28,
+    17.28
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "spotlightRed",
+   "path": "BackgroundHolder/SpotlightMask/spotlightRed",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_BG_rot_2",
+   "order": 250,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    0.23529412
+   ],
+   "drawMode": 2,
+   "size": [
+    24,
+    24
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "spotlightGreen",
+   "path": "BackgroundHolder/SpotlightMask/spotlightGreen",
+   "parent": 10,
+   "pos": [
+    -1,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "shortLive_BG_rot_8",
+   "order": 250,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    0.23529412
+   ],
+   "size": [
+    14.14,
+    14.14
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "PlayerGhostHolder",
+   "path": "PlayerGhostHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.12
+   ]
+  },
+  {
+   "name": "Ghost",
+   "path": "PlayerGhostHolder/Ghost",
+   "parent": 17,
+   "pos": [
+    1.45,
+    0.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_3",
+   "order": 45,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.79,
+    3.64
+   ]
+  },
+  {
+   "name": "Mic",
+   "path": "PlayerGhostHolder/Mic",
+   "parent": 17,
+   "pos": [
+    2.4,
+    -0.3199999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_38",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.46,
+    2.94
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "PlayerGhostHolder/shadow",
+   "parent": 17,
+   "pos": [
+    1.24,
+    -1.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.99999994,
+    0.99999994
+   ],
+   "sprite": "shortLive_rot_59",
+   "order": 40,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    0.68
+   ]
+  },
+  {
+   "name": "GreenGhostHolder",
+   "path": "GreenGhostHolder",
+   "parent": 0,
+   "pos": [
+    -3.34,
+    -2.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ghost",
+   "path": "GreenGhostHolder/Ghost",
+   "parent": 21,
+   "pos": [
+    1.45,
+    0.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_29",
+   "order": 45,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.79,
+    3.64
+   ]
+  },
+  {
+   "name": "Mic",
+   "path": "GreenGhostHolder/Mic",
+   "parent": 21,
+   "pos": [
+    2.4,
+    -0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_60",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.46,
+    2.94
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "GreenGhostHolder/shadow",
+   "parent": 21,
+   "pos": [
+    1.24,
+    -1.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "shortLive_rot_59",
+   "order": 40,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    0.68
+   ]
+  },
+  {
+   "name": "RedGhostHolder",
+   "path": "RedGhostHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ghost",
+   "path": "RedGhostHolder/Ghost",
+   "parent": 25,
+   "pos": [
+    -5.2,
+    2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_39",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    4.12
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "RedGhostHolder/Ghost/ArmLeft",
+   "parent": 26,
+   "pos": [
+    -0.95,
+    1.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "shortLive_rot_77",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    2.56
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "RedGhostHolder/Ghost/ArmRight",
+   "parent": 26,
+   "pos": [
+    0.9142858,
+    1.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "shortLive_rot_96",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    2.56
+   ]
+  },
+  {
+   "name": "DrumHolder",
+   "path": "DrumHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bass",
+   "path": "DrumHolder/Bass",
+   "parent": 29,
+   "pos": [
+    -4.2,
+    0.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_42",
+   "order": 35,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.56,
+    2.6
+   ]
+  },
+  {
+   "name": "Cymbal",
+   "path": "DrumHolder/Cymbal",
+   "parent": 29,
+   "pos": [
+    -2.8,
+    1.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_66",
+   "order": 30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.28,
+    4.16
+   ]
+  },
+  {
+   "name": "TomLeft",
+   "path": "DrumHolder/TomLeft",
+   "parent": 29,
+   "pos": [
+    -4.97,
+    2.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_23",
+   "order": 30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.16
+   ]
+  },
+  {
+   "name": "TomRight",
+   "path": "DrumHolder/TomRight",
+   "parent": 29,
+   "pos": [
+    -3.576,
+    2.161
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_23",
+   "order": 30,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.16
+   ]
+  },
+  {
+   "name": "Snare",
+   "path": "DrumHolder/Snare",
+   "parent": 29,
+   "pos": [
+    -5.98,
+    0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_49",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.78,
+    2.52
+   ]
+  },
+  {
+   "name": "Hi-Hat",
+   "path": "DrumHolder/Hi-Hat",
+   "parent": 29,
+   "pos": [
+    -6.818,
+    1.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_45",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.36,
+    3.22
+   ]
+  },
+  {
+   "name": "AudienceHolder",
+   "path": "AudienceHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Audience",
+   "path": "AudienceHolder/Audience",
+   "parent": 36,
+   "pos": [
+    3.25,
+    -3.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "sprite": "shortLive_rot_105",
+   "order": 501,
+   "color": [
+    0.4,
+    0.4,
+    0.4,
+    1
+   ],
+   "size": [
+    11.11,
+    7.34
+   ]
+  }
+ ]
+}

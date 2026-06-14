@@ -1,0 +1,28 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "ghostJump": 0,
+    "playerInput": 0
+   },
+   "refs": {
+    "Bass": "DrumHolder/Bass",
+    "Cymbal": "DrumHolder/Cymbal",
+    "Hihat": "DrumHolder/Hi-Hat",
+    "Snare": "DrumHolder/Snare",
+    "TomL": "DrumHolder/TomLeft",
+    "TomR": "DrumHolder/TomRight",
+    "UnlitArea": "BackgroundHolder/Black",
+    "audience": "AudienceHolder",
+    "drummerGhost": "RedGhostHolder",
+    "flash": "Flash",
+    "ghostHandL": "RedGhostHolder/Ghost/ArmLeft",
+    "ghostHandR": "RedGhostHolder/Ghost/ArmRight",
+    "greenGhost": "GreenGhostHolder",
+    "playerGhost": "PlayerGhostHolder",
+    "spotlightMask": "BackgroundHolder/SpotlightMask"
+   }
+  }
+ }
+}

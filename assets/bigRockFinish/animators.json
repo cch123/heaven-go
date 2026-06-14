@@ -1,0 +1,16 @@
+{
+ "AudienceHolder": "AudienceHolder",
+ "BackgroundHolder/SpotlightMask": "SpotlightMask",
+ "DrumHolder/Bass": "Bass",
+ "DrumHolder/Cymbal": "Cymbal",
+ "DrumHolder/Hi-Hat": "Hi-Hat",
+ "DrumHolder/Snare": "Snare",
+ "DrumHolder/TomLeft": "TomLeft",
+ "DrumHolder/TomRight": "TomRight",
+ "Flash": "Flash",
+ "GreenGhostHolder": "GreenGhostHolder",
+ "PlayerGhostHolder": "PlayerGhostHolder",
+ "RedGhostHolder": "RedGhostHolder",
+ "RedGhostHolder/Ghost/ArmLeft": "ArmLeft",
+ "RedGhostHolder/Ghost/ArmRight": "ArmRight"
+}

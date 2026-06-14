@@ -1,0 +1,242 @@
+{
+ "ArmLeft": {
+  "default": "Idle",
+  "states": {
+   "Hit": {
+    "speed": 1
+   },
+   "Hit01": {
+    "clip": "ArmLeft/Hit01",
+    "speed": 1
+   },
+   "Hit02": {
+    "clip": "ArmLeft/Hit02",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "ArmLeft/Idle",
+    "speed": 1
+   },
+   "Idle2": {
+    "clip": "ArmLeft/Idle2",
+    "speed": 1
+   }
+  }
+ },
+ "ArmRight": {
+  "default": "Idle",
+  "states": {
+   "Hit01": {
+    "clip": "ArmRight/Hit01",
+    "speed": 1
+   },
+   "Hit02": {
+    "clip": "ArmRight/Hit02",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "ArmRight/Idle",
+    "speed": 1
+   },
+   "Idle2": {
+    "clip": "ArmRight/Idle2",
+    "speed": 1
+   }
+  }
+ },
+ "AudienceHolder": {
+  "default": "Idle",
+  "states": {
+   "Beat": {
+    "clip": "Audience/Beat",
+    "speed": 1
+   },
+   "Cheer": {
+    "clip": "Audience/Cheer",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Audience/Idle",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Audience/Miss",
+    "speed": 1
+   }
+  }
+ },
+ "Bass": {
+  "default": "Idle",
+  "states": {
+   "Hit": {
+    "clip": "Bass/Hit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Bass/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Cymbal": {
+  "default": "Idle",
+  "states": {
+   "Hit": {
+    "clip": "Cymbal/Hit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Cymbal/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Flash": {
+  "default": "",
+  "states": {}
+ },
+ "GreenGhostHolder": {
+  "default": "Idle",
+  "states": {
+   "Beat": {
+    "clip": "GreenGhost/Beat",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "GreenGhost/Idle",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "GreenGhost/Jump",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "GreenGhost/Prepare",
+    "speed": 1
+   },
+   "Release": {
+    "clip": "GreenGhost/Release",
+    "speed": 1
+   },
+   "Strum": {
+    "clip": "GreenGhost/Strum",
+    "speed": 1
+   }
+  }
+ },
+ "Hi-Hat": {
+  "default": "Idle",
+  "states": {
+   "Hit": {
+    "clip": "Hi-Hat/Hit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Hi-Hat/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "PlayerGhostHolder": {
+  "default": "Idle",
+  "states": {
+   "Beat": {
+    "clip": "Animations/Beat",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Animations/Jump",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Animations/Prepare",
+    "speed": 1
+   },
+   "Release": {
+    "clip": "Animations/Release",
+    "speed": 1
+   },
+   "Strum": {
+    "clip": "Animations/Strum",
+    "speed": 1
+   }
+  }
+ },
+ "RedGhostHolder": {
+  "default": "Idle",
+  "states": {
+   "Beat": {
+    "clip": "RedGhost/Beat",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "RedGhost/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Snare": {
+  "default": "I",
+  "states": {
+   "Hit": {
+    "clip": "Snare/Hit",
+    "speed": 1
+   },
+   "I": {
+    "clip": "Snare/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "SpotlightMask": {
+  "default": "None",
+  "states": {
+   "Blue": {
+    "clip": "Spotlight/Blue",
+    "speed": 1
+   },
+   "Green": {
+    "clip": "Spotlight/Green",
+    "speed": 1
+   },
+   "None": {
+    "clip": "Spotlight/None",
+    "speed": 1
+   },
+   "Red": {
+    "clip": "Spotlight/Red",
+    "speed": 1
+   }
+  }
+ },
+ "TomLeft": {
+  "default": "Idle",
+  "states": {
+   "Hit": {
+    "clip": "TomLeft/Hit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "TomLeft/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "TomRight": {
+  "default": "Idle",
+  "states": {
+   "Hit": {
+    "clip": "TomRight/Hit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "TomRight/Idle",
+    "speed": 1
+   }
+  }
+ }
+}

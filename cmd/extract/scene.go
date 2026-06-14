@@ -7,6 +7,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"os/exec"
 	"path/filepath"
 	"sort"
 	"strings"
@@ -227,6 +228,19 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "fastBalloon", markers: []string{"startBeat", "balloonSpeed", "isFive", "moose", "anim", "hunterAnim", "popEffect", "popParticle", "mooseObject"}, atPath: "BalloonFast"},
 			{name: "balloonFive", markers: []string{"startBeat", "balloonSpeed", "isFive", "moose", "anim", "hunterAnim", "popEffect", "popParticle", "mooseObject"}, atPath: "BalloonFive"},
 			{name: "bgAnimal", markers: []string{"bgObject", "anim", "rabbitAnim", "boarAnim", "mooseAnim", "type", "startBeat", "flyLength", "right", "startY", "endY"}, atPath: "BG/AnimalsBG"},
+		},
+	},
+	"bigRockFinish": {
+		dir:    "BigRockFinish",
+		prefab: "bigRockFinish.prefab",
+		roleFields: []string{
+			"playerGhost", "greenGhost", "drummerGhost", "ghostHandL", "ghostHandR",
+			"audience", "spotlightMask", "flash",
+			"Bass", "Cymbal", "TomL", "TomR", "Snare", "Hihat", "UnlitArea",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"playerGhost", "greenGhost", "drummerGhost", "ghostHandL", "ghostHandR", "audience", "spotlightMask", "flash", "Bass", "Cymbal", "TomL", "TomR", "Snare", "Hihat", "UnlitArea"}},
 		},
 	},
 	"dressYourBest": {
@@ -1795,21 +1809,39 @@ func copySounds(dir string) {
 			return err
 		}
 		ext := strings.ToLower(filepath.Ext(p))
-		if ext != ".ogg" && ext != ".wav" {
+		if ext != ".ogg" && ext != ".wav" && ext != ".flac" {
 			return nil
 		}
 		rel, err := filepath.Rel(dir, p)
 		if err != nil {
 			return err
 		}
+		if ext == ".flac" {
+			rel = strings.TrimSuffix(rel, filepath.Ext(rel)) + ".wav"
+		}
 		// 子目录音效（cheerReaders 的 Solo/Girls/All）保留相对路径作 key
 		dst := filepath.Join(*outDir, "sounds", rel)
 		if err := os.MkdirAll(filepath.Dir(dst), 0o755); err != nil {
 			return err
 		}
-		b, err := os.ReadFile(p)
-		must(err)
-		must(os.WriteFile(dst, b, 0o644))
+		var b []byte
+		if ext == ".flac" {
+			// Ebitengine has built-in decoders for wav/ogg in this project. Keep
+			// extraction reproducible by converting Unity FLAC clips into wav at
+			// asset build time instead of silently dropping reaction sounds.
+			if _, err := exec.LookPath("ffmpeg"); err != nil {
+				return fmt.Errorf("copy %s: ffmpeg required to convert flac: %w", p, err)
+			}
+			if err := exec.Command("ffmpeg", "-y", "-loglevel", "error", "-i", p, dst).Run(); err != nil {
+				return err
+			}
+			b, err = os.ReadFile(dst)
+			must(err)
+		} else {
+			b, err = os.ReadFile(p)
+			must(err)
+			must(os.WriteFile(dst, b, 0o644))
+		}
 		parts := strings.Split(filepath.ToSlash(rel), "/")
 		if len(parts) == 2 && parts[0] == "en" {
 			// Heaven Studio 的 localized SoundByte 会用裸 clip 名引用当前语言音效。

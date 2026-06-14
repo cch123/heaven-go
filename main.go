@@ -41,6 +41,7 @@ import (
 	"hsdemo/games/airrally"
 	"hsdemo/games/balloonhunter"
 	"hsdemo/games/basketballgirls"
+	"hsdemo/games/bigrockfinish"
 	"hsdemo/games/bluebear"
 	"hsdemo/games/bluebirds"
 	"hsdemo/games/boardmeeting"
@@ -678,6 +679,7 @@ func main() {
 	engine.Register("airRally", airrally.New)
 	engine.Register("basketballGirls", basketballgirls.New)
 	engine.Register("balloonHunter", balloonhunter.New)
+	engine.Register("bigRockFinish", bigrockfinish.New)
 	engine.Register("boardMeeting", boardmeeting.New)
 	engine.Register("bouncyRoad", bouncyroad.New)
 	engine.Register("cannery", cannery.New)
