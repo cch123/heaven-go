@@ -1,0 +1,13 @@
+{
+ "ButtonAnim": "Gameplay/Player Stuff/Mechanism/ButtonBase",
+ "LauncherAnim": "Gameplay/Player Stuff/Mechanism/LauncherNew",
+ "MonkeyAnim": "Gameplay/Player Stuff/Monkey(new)",
+ "ballStart": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball Curves/Up/Point 0",
+ "blockOneAnim": "Gameplay/Penguin Side/Platforms (penguin side)/GameObject",
+ "blockTwoAnim": "Gameplay/Penguin Side/Platforms (penguin side)/GameObject (1)",
+ "destroyerPoint": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Exit/Point 1",
+ "fallStart": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Fall/Point 0",
+ "leapStart": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Hop/Point 1",
+ "penguinStart": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/StartPoint",
+ "slideStart": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Exit/Point 0"
+}

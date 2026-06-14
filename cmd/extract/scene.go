@@ -624,6 +624,28 @@ var sceneSpecs = map[string]sceneSpec{
 		wantControllers: true,
 		wantTexts:       true,
 	},
+	"showtime": {
+		dir:    "Showtime",
+		prefab: "showtime.prefab",
+		roleFields: []string{
+			"MonkeyAnim", "ButtonAnim", "LauncherAnim", "blockOneAnim", "blockTwoAnim",
+			"penguinStart", "ballStart", "leapStart", "fallStart", "destroyerPoint", "slideStart",
+		},
+		curveFields: []string{
+			"entryCurve", "hopCurve", "leapCurve", "fallCurve", "exitCurve", "chuteCurve",
+			"ballUpCurve", "ballDownCurve",
+		},
+		wantControllers: true,
+		extraSounds: []extraSound{
+			{dir: "SneakySpirits", rel: "moving.ogg"},
+		},
+		templatePrefabs: []string{
+			"Prefabs/penguinGray.prefab",
+			"Prefabs/penguinWhite.prefab",
+			"Prefabs/penguinBig.prefab",
+			"Prefabs/showtimeBall.prefab",
+		},
+	},
 	"slotMonster": {
 		dir:    "SlotMonster",
 		prefab: "slotMonster.prefab",
@@ -867,12 +889,26 @@ func appendTemplatePrefabs(mainDocs []uy.Doc, gameDir string, rels []string, pre
 		if extRootTF == 0 {
 			log.Fatalf("template prefab %s root transform not found", rel)
 		}
-		// Runtime-prefab references in the game script carry the prefab asset
-		// fileID. Keeping those IDs intact lets dumpComponent/exportRoles resolve
-		// fields like synchrettePrefab and splashPrefab back to template paths.
+		if hasDocIDCollision(docs, byID) {
+			// Standalone prefab assets often reuse Unity local fileIDs. Main prefab
+			// references by GUID+fileID are only needed when a script field is
+			// exported as a role/component ref; template-only prefabs can be safely
+			// moved into the nested-prefab ID namespace as long as their internal
+			// references are rewritten together.
+			remap := map[int64]int64{}
+			for i := range docs {
+				remap[docs[i].FileID] = nestedNextID
+				nestedNextID++
+			}
+			for i := range docs {
+				docs[i].FileID = remap[docs[i].FileID]
+				remapRefs(docs[i].Content(), remap)
+			}
+			extRootTF = remap[extRootTF]
+		}
 		for i := range docs {
 			if byID[docs[i].FileID] {
-				log.Fatalf("template prefab %s fileID collision on &%d", rel, docs[i].FileID)
+				log.Fatalf("template prefab %s fileID collision after remap on &%d", rel, docs[i].FileID)
 			}
 			byID[docs[i].FileID] = true
 		}
@@ -902,6 +938,15 @@ func appendTemplatePrefabs(mainDocs []uy.Doc, gameDir string, rels []string, pre
 		fmt.Printf("template prefab %s appended (%d docs)\n", rel, len(docs))
 	}
 	return mainDocs
+}
+
+func hasDocIDCollision(docs []uy.Doc, byID map[int64]bool) bool {
+	for i := range docs {
+		if byID[docs[i].FileID] {
+			return true
+		}
+	}
+	return false
 }
 
 func findSceneRootTF(docs []uy.Doc) int64 {

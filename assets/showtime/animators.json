@@ -1,0 +1,18 @@
+{
+ "Background/BG Stripes": "GameObject",
+ "Gameplay/Penguin Side/Penguins/Big/penguinBig/penguinBig": "PenguinBig",
+ "Gameplay/Penguin Side/Penguins/Gray/penguinGray/penguinWhite": "penguinGray",
+ "Gameplay/Penguin Side/Penguins/White/penguinWhite/penguinWhite": "penguinWhite",
+ "Gameplay/Penguin Side/Platforms (penguin side)/GameObject": "Block",
+ "Gameplay/Penguin Side/Platforms (penguin side)/GameObject (1)": "Block",
+ "Gameplay/Player Stuff/Mechanism/Button": "Button",
+ "Gameplay/Player Stuff/Mechanism/ButtonBase": "ButtonBase",
+ "Gameplay/Player Stuff/Mechanism/LauncherNew": "LauncherNew",
+ "Gameplay/Player Stuff/Monkey": "Monkey",
+ "Gameplay/Player Stuff/Monkey(new)": "Monkey",
+ "WaterHolder": "WaterHolder",
+ "WaterHolder/Water/showtime_27": "Water",
+ "penguinBig/penguinBig": "PenguinBig",
+ "penguinGray/penguinWhite": "penguinWhite",
+ "penguinWhite/penguinWhite": "penguinWhite"
+}

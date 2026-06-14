@@ -1,0 +1,3055 @@
+{
+ "nodes": [
+  {
+   "name": "showtime",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "reference",
+   "path": "reference",
+   "parent": 0,
+   "pos": [
+    -0.06578934,
+    -0.0015456676
+   ],
+   "rotZ": 0,
+   "scale": [
+    6.2821,
+    6.2821
+   ],
+   "sprite": "reference",
+   "order": -3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4,
+    1.6
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 5,
+   "rotZ": 0,
+   "scale": [
+    0.48659387,
+    0.48659387
+   ],
+   "sprite": "BG_Stuff_V1_0",
+   "order": -99,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.43,
+    21.62
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG Stripes",
+   "path": "Background/BG Stripes",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bg_stripes",
+   "path": "Background/BG Stripes/bg_stripes",
+   "parent": 4,
+   "pos": [
+    0,
+    -15
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    10
+   ],
+   "sprite": "bg_stripes",
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.48,
+    20.48
+   ],
+   "mapped": true,
+   "mat": "backgroundRecolorable"
+  },
+  {
+   "name": "bg_stripes (1)",
+   "path": "Background/BG Stripes/bg_stripes (1)",
+   "parent": 4,
+   "pos": [
+    24.57,
+    -15
+   ],
+   "z": 3,
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    10
+   ],
+   "sprite": "bg_stripes",
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.48,
+    20.48
+   ],
+   "mapped": true,
+   "mat": "backgroundRecolorable"
+  },
+  {
+   "name": "bg_recolorable",
+   "path": "Background/bg_recolorable",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    0.61285716
+   ],
+   "sprite": "bg_foreground",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.48,
+    20.48
+   ],
+   "mapped": true,
+   "mat": "backgroundRecolorable"
+  },
+  {
+   "name": "Gameplay",
+   "path": "Gameplay",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "showtimeBall",
+   "path": "Gameplay/showtimeBall",
+   "parent": 8,
+   "pos": [
+    -3.285,
+    -2.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "gameplay_sprites_13",
+   "path": "Gameplay/showtimeBall/gameplay_sprites_13",
+   "parent": 9,
+   "pos": [
+    0,
+    -0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "sprite": "showtime_18",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7804346,
+    1.78
+   ]
+  },
+  {
+   "name": "Platforms (player side)",
+   "path": "Gameplay/Platforms (player side)",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cube",
+   "path": "Gameplay/Platforms (player side)/Cube",
+   "parent": 11,
+   "pos": [
+    -7.085,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (1)",
+   "path": "Gameplay/Platforms (player side)/Cube (1)",
+   "parent": 11,
+   "pos": [
+    -6.08,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (2)",
+   "path": "Gameplay/Platforms (player side)/Cube (2)",
+   "parent": 11,
+   "pos": [
+    -5.075,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (3)",
+   "path": "Gameplay/Platforms (player side)/Cube (3)",
+   "parent": 11,
+   "pos": [
+    -4.07,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (4)",
+   "path": "Gameplay/Platforms (player side)/Cube (4)",
+   "parent": 11,
+   "pos": [
+    -3.065,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (5)",
+   "path": "Gameplay/Platforms (player side)/Cube (5)",
+   "parent": 11,
+   "pos": [
+    -8.08,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (6)",
+   "path": "Gameplay/Platforms (player side)/Cube (6)",
+   "parent": 11,
+   "pos": [
+    -9.08,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Player Stuff",
+   "path": "Gameplay/Player Stuff",
+   "parent": 8,
+   "pos": [
+    -0.19,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Monkey",
+   "path": "Gameplay/Player Stuff/Monkey",
+   "parent": 19,
+   "pos": [
+    -6.652255,
+    -2.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "gameplay_sprites/gameplay_sprites_0",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.381314,
+    6.93
+   ]
+  },
+  {
+   "name": "Mechanism",
+   "path": "Gameplay/Player Stuff/Mechanism",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Button",
+   "path": "Gameplay/Player Stuff/Mechanism/Button",
+   "parent": 21,
+   "pos": [
+    -4.65,
+    -3.568
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "gameplay_sprites/gameplay_sprites_12",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8204443,
+    1.8399999
+   ]
+  },
+  {
+   "name": "ButtonBase",
+   "path": "Gameplay/Player Stuff/Mechanism/ButtonBase",
+   "parent": 21,
+   "pos": [
+    -4.743,
+    -3.539
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "showtime_26",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.89,
+    0.96
+   ]
+  },
+  {
+   "name": "Button",
+   "path": "Gameplay/Player Stuff/Mechanism/ButtonBase/Button",
+   "parent": 23,
+   "pos": [
+    0,
+    0.69
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_25",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.35,
+    2.81
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "Gameplay/Player Stuff/Mechanism/ButtonBase/FX",
+   "parent": 23,
+   "pos": [
+    -0.52,
+    4.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "showtime_36",
+   "path": "Gameplay/Player Stuff/Mechanism/ButtonBase/FX/showtime_36",
+   "parent": 25,
+   "pos": [
+    -0.34,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_36",
+   "order": -8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.64,
+    5.97
+   ]
+  },
+  {
+   "name": "LauncherNew",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew",
+   "parent": 21,
+   "pos": [
+    0.1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ball Curves",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball Curves",
+   "parent": 27,
+   "pos": [
+    0.3999996,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3333333,
+    1.3333333
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Up",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball Curves/Up",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball Curves/Up/Point 0",
+   "parent": 29,
+   "pos": [
+    -9.412,
+    -6.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball Curves/Up/Point 1",
+   "parent": 29,
+   "pos": [
+    -6.9,
+    7.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Down",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball Curves/Down",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball Curves/Down/Point 0",
+   "parent": 32,
+   "pos": [
+    -6.9,
+    7.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball Curves/Down/Point 1",
+   "parent": 32,
+   "pos": [
+    -6,
+    -15
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ball",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Ball",
+   "parent": 27,
+   "pos": [
+    -12.096665,
+    -7.829999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_18",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7804346,
+    1.78
+   ]
+  },
+  {
+   "name": "Launcher",
+   "path": "Gameplay/Player Stuff/Mechanism/LauncherNew/Launcher",
+   "parent": 27,
+   "pos": [
+    -12.16,
+    -11.81
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_29",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9,
+    2.48
+   ]
+  },
+  {
+   "name": "Monkey(new)",
+   "path": "Gameplay/Player Stuff/Monkey(new)",
+   "parent": 19,
+   "pos": [
+    -0.2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Gameplay/Player Stuff/Monkey(new)/Body",
+   "parent": 37,
+   "pos": [
+    -6.1330004,
+    -3.554
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "showtime_2",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.49,
+    4.3
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "Gameplay/Player Stuff/Monkey(new)/Body/Arm",
+   "parent": 38,
+   "pos": [
+    -0.46,
+    3.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_11",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.55,
+    2.19
+   ]
+  },
+  {
+   "name": "Mallet",
+   "path": "Gameplay/Player Stuff/Monkey(new)/Body/Arm/Mallet",
+   "parent": 39,
+   "pos": [
+    0.1,
+    0.73
+   ],
+   "rotZ": 0.7393876833165011,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_24",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    4.67
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "Gameplay/Player Stuff/Monkey(new)/Body/Arm/Smear",
+   "parent": 39,
+   "pos": [
+    0.1,
+    0.73
+   ],
+   "rotZ": 0.7393876833165011,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_22",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    4.67
+   ]
+  },
+  {
+   "name": "Tail",
+   "path": "Gameplay/Player Stuff/Monkey(new)/Body/Tail",
+   "parent": 38,
+   "pos": [
+    -0.4,
+    2.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_17",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.4,
+    2.7
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Gameplay/Player Stuff/Monkey(new)/Body/Head",
+   "parent": 38,
+   "pos": [
+    -0.02,
+    3.81
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_3",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.01,
+    4.18
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Gameplay/Player Stuff/Monkey(new)/Body/Head/Face",
+   "parent": 43,
+   "pos": [
+    1.03,
+    1.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "showtime_6",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.01,
+    1.16
+   ]
+  },
+  {
+   "name": "Penguin Side",
+   "path": "Gameplay/Penguin Side",
+   "parent": 8,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Platforms (penguin side)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GameObject (1)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/GameObject (1)",
+   "parent": 46,
+   "pos": [
+    3.98,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "AnimCube1",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/GameObject (1)/AnimCube1",
+   "parent": 47,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (8)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (8)",
+   "parent": 46,
+   "pos": [
+    4.992,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (9)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (9)",
+   "parent": 46,
+   "pos": [
+    5.974,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (10)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (10)",
+   "parent": 46,
+   "pos": [
+    6.97,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/GameObject",
+   "parent": 46,
+   "pos": [
+    4.992,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "AnimCube1",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/GameObject/AnimCube1",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (12)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (12)",
+   "parent": 46,
+   "pos": [
+    5.974,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (13)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (13)",
+   "parent": 46,
+   "pos": [
+    6.97,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (14)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (14)",
+   "parent": 46,
+   "pos": [
+    5.974,
+    -2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (15)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (15)",
+   "parent": 46,
+   "pos": [
+    6.97,
+    -2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (16)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (16)",
+   "parent": 46,
+   "pos": [
+    7.98,
+    -2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (17)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (17)",
+   "parent": 46,
+   "pos": [
+    7.98,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (18)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (18)",
+   "parent": 46,
+   "pos": [
+    7.98,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (19)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (19)",
+   "parent": 46,
+   "pos": [
+    8.99,
+    -4.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (20)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (20)",
+   "parent": 46,
+   "pos": [
+    8.99,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Cube (21)",
+   "path": "Gameplay/Penguin Side/Platforms (penguin side)/Cube (21)",
+   "parent": 46,
+   "pos": [
+    8.99,
+    -2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.29,
+    0.29
+   ],
+   "sprite": "showtime_35",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4499998,
+    2.44
+   ]
+  },
+  {
+   "name": "Penguins",
+   "path": "Gameplay/Penguin Side/Penguins",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Big",
+   "path": "Gameplay/Penguin Side/Penguins/Big",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinBig",
+   "path": "Gameplay/Penguin Side/Penguins/Big/penguinBig",
+   "parent": 65,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinBig",
+   "path": "Gameplay/Penguin Side/Penguins/Big/penguinBig/penguinBig",
+   "parent": 66,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "big_idle",
+   "order": 27,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.7009034,
+    4.76
+   ],
+   "mapped": true,
+   "mat": "Black"
+  },
+  {
+   "name": "ball",
+   "path": "Gameplay/Penguin Side/Penguins/Big/penguinBig/penguinBig/ball",
+   "parent": 67,
+   "pos": [
+    -2.9751353,
+    3.3057806
+   ],
+   "rotZ": -0.39245484661152424,
+   "scale": [
+    0.74999994,
+    0.74999994
+   ],
+   "sprite": "showtime_18",
+   "order": 26,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.13,
+    3.13
+   ]
+  },
+  {
+   "name": "White",
+   "path": "Gameplay/Penguin Side/Penguins/White",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinWhite",
+   "path": "Gameplay/Penguin Side/Penguins/White/penguinWhite",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinWhite",
+   "path": "Gameplay/Penguin Side/Penguins/White/penguinWhite/penguinWhite",
+   "parent": 70,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "small_idle",
+   "order": 27,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2908034,
+    4.71
+   ],
+   "mapped": true,
+   "mat": "White"
+  },
+  {
+   "name": "ball",
+   "path": "Gameplay/Penguin Side/Penguins/White/penguinWhite/penguinWhite/ball",
+   "parent": 71,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "showtime_18",
+   "order": 26,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7804346,
+    1.78
+   ]
+  },
+  {
+   "name": "Gray",
+   "path": "Gameplay/Penguin Side/Penguins/Gray",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinGray",
+   "path": "Gameplay/Penguin Side/Penguins/Gray/penguinGray",
+   "parent": 73,
+   "pos": [
+    12.44,
+    -6.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinWhite",
+   "path": "Gameplay/Penguin Side/Penguins/Gray/penguinGray/penguinWhite",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "small_idle",
+   "order": 27,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2908034,
+    4.71
+   ],
+   "mapped": true,
+   "mat": "Gray"
+  },
+  {
+   "name": "ball",
+   "path": "Gameplay/Penguin Side/Penguins/Gray/penguinGray/penguinWhite/ball",
+   "parent": 75,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "showtime_18",
+   "order": 26,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7804346,
+    1.78
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Gameplay/Penguin Side/Penguins/Curves",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Penguin Curves",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "StartPoint",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/StartPoint",
+   "parent": 78,
+   "pos": [
+    25.46575,
+    -3.206923
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Enter",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Enter",
+   "parent": 78,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Enter/Point 0",
+   "parent": 80,
+   "pos": [
+    25.893448,
+    3.0659163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Enter/Point 1",
+   "parent": 80,
+   "pos": [
+    12.481669,
+    -6.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hop",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Hop",
+   "parent": 78,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Hop/Point 0",
+   "parent": 83,
+   "pos": [
+    12.48167,
+    -6.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Hop/Point 1",
+   "parent": 83,
+   "pos": [
+    9.94,
+    -9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Leap",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Leap",
+   "parent": 78,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Leap/Point 0",
+   "parent": 86,
+   "pos": [
+    9.94,
+    -9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Leap/Point 1",
+   "parent": 86,
+   "pos": [
+    -7,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Fall",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Fall",
+   "parent": 78,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Fall/Point 0",
+   "parent": 89,
+   "pos": [
+    -7,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Fall/Point 1",
+   "parent": 89,
+   "pos": [
+    -15,
+    -8.789457
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Exit",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Exit",
+   "parent": 78,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Exit/Point 0",
+   "parent": 92,
+   "pos": [
+    -15,
+    -8.80376
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Exit/Point 1",
+   "parent": 92,
+   "pos": [
+    -40,
+    -8.80376
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Chute",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Chute",
+   "parent": 78,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Chute/Point 0",
+   "parent": 95,
+   "pos": [
+    -7,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Penguin Curves/Chute/Point 1",
+   "parent": 95,
+   "pos": [
+    -26.526295,
+    -0.89715266
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Reference",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Reference",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Reference/Point 0",
+   "parent": 98,
+   "pos": [
+    9.94,
+    -9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Reference/Point 1",
+   "parent": 98,
+   "pos": [
+    -7,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Gameplay/Penguin Side/Penguins/Curves/Reference/Point 2",
+   "parent": 98,
+   "pos": [
+    -15,
+    -8.789457
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    2.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Anchor Points",
+   "path": "Gameplay/Anchor Points",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Anchor 1",
+   "path": "Gameplay/Anchor Points/Anchor 1",
+   "parent": 102,
+   "pos": [
+    5.004,
+    -2.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WaterHolder",
+   "path": "WaterHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "WaterHolder/Water",
+   "parent": 104,
+   "pos": [
+    -4.46,
+    -5.5
+   ],
+   "z": -1,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "showtime_27",
+   "path": "WaterHolder/Water/showtime_27",
+   "parent": 105,
+   "pos": [
+    21.28,
+    -1.6
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    0.5655173,
+    0.6
+   ],
+   "sprite": "showtime_27",
+   "order": 99,
+   "color": [
+    1,
+    1,
+    1,
+    0.6
+   ],
+   "drawMode": 2,
+   "size": [
+    500,
+    7.9
+   ]
+  },
+  {
+   "name": "penguinGray",
+   "path": "penguinGray",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinWhite",
+   "path": "penguinGray/penguinWhite",
+   "parent": 107,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "small_idle",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2908034,
+    4.71
+   ],
+   "mapped": true,
+   "mat": "Gray"
+  },
+  {
+   "name": "ball",
+   "path": "penguinGray/penguinWhite/ball",
+   "parent": 108,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "showtime_18",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7804346,
+    1.78
+   ]
+  },
+  {
+   "name": "penguinWhite",
+   "path": "penguinWhite",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinWhite",
+   "path": "penguinWhite/penguinWhite",
+   "parent": 110,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "small_idle",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2908034,
+    4.71
+   ],
+   "mapped": true,
+   "mat": "White"
+  },
+  {
+   "name": "ball",
+   "path": "penguinWhite/penguinWhite/ball",
+   "parent": 111,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "showtime_18",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7804346,
+    1.78
+   ]
+  },
+  {
+   "name": "penguinBig",
+   "path": "penguinBig",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "penguinBig",
+   "path": "penguinBig/penguinBig",
+   "parent": 113,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "big_idle",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.7009034,
+    4.76
+   ],
+   "mapped": true,
+   "mat": "Black"
+  },
+  {
+   "name": "ball",
+   "path": "penguinBig/penguinBig/ball",
+   "parent": 114,
+   "pos": [
+    -2.9751353,
+    3.3057806
+   ],
+   "rotZ": -0.39245484661152424,
+   "scale": [
+    0.74999994,
+    0.74999994
+   ],
+   "sprite": "showtime_18",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.13,
+    3.13
+   ]
+  },
+  {
+   "name": "showtimeBall",
+   "path": "showtimeBall",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "gameplay_sprites_13",
+   "path": "showtimeBall/gameplay_sprites_13",
+   "parent": 116,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "gameplay_sprites_13",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7804346,
+    1.78
+   ]
+  }
+ ]
+}

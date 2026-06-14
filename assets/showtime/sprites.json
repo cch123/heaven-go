@@ -1,0 +1,3081 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png",
+  "atlas5.png",
+  "atlas6.png",
+  "atlas7.png",
+  "atlas8.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "BG_Stuff_V1_0": {
+   "X": 42,
+   "Y": 49,
+   "W": 3843,
+   "H": 2162,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_Stuff_V1_1": {
+   "X": 3985,
+   "Y": 1967,
+   "W": 245,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_Stuff_V1_2": {
+   "X": 43,
+   "Y": 2271,
+   "W": 4191,
+   "H": 349,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_Stuff_V1_3": {
+   "X": 43,
+   "Y": 2680,
+   "W": 4197,
+   "H": 410,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_Stuff_V1_4": {
+   "X": 43,
+   "Y": 3150,
+   "W": 4197,
+   "H": 447,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_Stuff_V1_5": {
+   "X": 2355,
+   "Y": 3611,
+   "W": 17,
+   "H": 6,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "BG_Stuff_V1_6": {
+   "X": 43,
+   "Y": 3677,
+   "W": 4197,
+   "H": 472,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bg_foreground": {
+   "X": 0,
+   "Y": 0,
+   "W": 2048,
+   "H": 2048,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bg_recolorable": {
+   "X": 0,
+   "Y": 0,
+   "W": 2048,
+   "H": 2048,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "bg_stripes": {
+   "X": 0,
+   "Y": 0,
+   "W": 2048,
+   "H": 2048,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_catch": {
+   "X": 2966,
+   "Y": 1375,
+   "W": 600,
+   "H": 687,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_idle": {
+   "X": 3548,
+   "Y": 36,
+   "W": 458,
+   "H": 632,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_land0": {
+   "X": 80,
+   "Y": 1408,
+   "W": 569,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_land1": {
+   "X": 740,
+   "Y": 1370,
+   "W": 530,
+   "H": 504,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_land2": {
+   "X": 1295,
+   "Y": 1353,
+   "W": 510,
+   "H": 520,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_land3": {
+   "X": 1859,
+   "Y": 1334,
+   "W": 490,
+   "H": 539,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_land4": {
+   "X": 2423,
+   "Y": 1334,
+   "W": 471,
+   "H": 540,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_launch0": {
+   "X": 102,
+   "Y": 2706,
+   "W": 483,
+   "H": 526,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_launch1": {
+   "X": 683,
+   "Y": 2668,
+   "W": 525,
+   "H": 565,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_launch2": {
+   "X": 1289,
+   "Y": 2628,
+   "W": 560,
+   "H": 605,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_launch3": {
+   "X": 1883,
+   "Y": 2562,
+   "W": 599,
+   "H": 671,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_launch4": {
+   "X": 2502,
+   "Y": 2503,
+   "W": 602,
+   "H": 730,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_slide": {
+   "X": 3192,
+   "Y": 2890,
+   "W": 637,
+   "H": 375,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_squish0": {
+   "X": 3000,
+   "Y": 56,
+   "W": 458,
+   "H": 610,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_squish1": {
+   "X": 2455,
+   "Y": 75,
+   "W": 458,
+   "H": 591,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "big_squish2": {
+   "X": 1894,
+   "Y": 134,
+   "W": 479,
+   "H": 539,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_0": {
+   "X": 91,
+   "Y": 36,
+   "W": 538,
+   "H": 693,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_1": {
+   "X": 736,
+   "Y": 122,
+   "W": 601,
+   "H": 606,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_10": {
+   "X": 6177,
+   "Y": 102,
+   "W": 209,
+   "H": 216,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_11": {
+   "X": 5162,
+   "Y": 502,
+   "W": 209,
+   "H": 62,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_12": {
+   "X": 5536,
+   "Y": 380,
+   "W": 182,
+   "H": 184,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_13": {
+   "X": 5869,
+   "Y": 402,
+   "W": 178,
+   "H": 178,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_14": {
+   "X": 6168,
+   "Y": 404,
+   "W": 207,
+   "H": 197,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_15": {
+   "X": 91,
+   "Y": 882,
+   "W": 329,
+   "H": 471,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_16": {
+   "X": 517,
+   "Y": 920,
+   "W": 328,
+   "H": 433,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_17": {
+   "X": 942,
+   "Y": 931,
+   "W": 327,
+   "H": 422,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_18": {
+   "X": 1367,
+   "Y": 952,
+   "W": 343,
+   "H": 401,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_19": {
+   "X": 1807,
+   "Y": 966,
+   "W": 361,
+   "H": 387,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_2": {
+   "X": 1443,
+   "Y": 72,
+   "W": 563,
+   "H": 656,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_20": {
+   "X": 2266,
+   "Y": 1082,
+   "W": 364,
+   "H": 271,
+   "PivotX": 0.55,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_21": {
+   "X": 2727,
+   "Y": 979,
+   "W": 400,
+   "H": 374,
+   "PivotX": 0.83,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_22": {
+   "X": 3224,
+   "Y": 955,
+   "W": 420,
+   "H": 398,
+   "PivotX": 0.835,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_23": {
+   "X": 3743,
+   "Y": 936,
+   "W": 464,
+   "H": 417,
+   "PivotX": 0.85,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_24": {
+   "X": 4305,
+   "Y": 917,
+   "W": 483,
+   "H": 436,
+   "PivotX": 0.85,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_25": {
+   "X": 4885,
+   "Y": 857,
+   "W": 370,
+   "H": 496,
+   "PivotX": 0.35,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_26": {
+   "X": 5353,
+   "Y": 1095,
+   "W": 400,
+   "H": 258,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_27": {
+   "X": 5861,
+   "Y": 741,
+   "W": 473,
+   "H": 691,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_28": {
+   "X": 91,
+   "Y": 1501,
+   "W": 328,
+   "H": 471,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_29": {
+   "X": 517,
+   "Y": 1537,
+   "W": 328,
+   "H": 435,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_3": {
+   "X": 2111,
+   "Y": 183,
+   "W": 713,
+   "H": 545,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_30": {
+   "X": 942,
+   "Y": 1550,
+   "W": 327,
+   "H": 422,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_31": {
+   "X": 1367,
+   "Y": 1571,
+   "W": 343,
+   "H": 401,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_32": {
+   "X": 1807,
+   "Y": 1584,
+   "W": 361,
+   "H": 388,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_33": {
+   "X": 2266,
+   "Y": 1700,
+   "W": 364,
+   "H": 272,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_34": {
+   "X": 2727,
+   "Y": 1596,
+   "W": 400,
+   "H": 376,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_35": {
+   "X": 3224,
+   "Y": 1572,
+   "W": 420,
+   "H": 400,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_36": {
+   "X": 3743,
+   "Y": 1553,
+   "W": 464,
+   "H": 419,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_37": {
+   "X": 4305,
+   "Y": 1536,
+   "W": 483,
+   "H": 436,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_38": {
+   "X": 4885,
+   "Y": 1475,
+   "W": 370,
+   "H": 497,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_39": {
+   "X": 5353,
+   "Y": 1714,
+   "W": 400,
+   "H": 258,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_4": {
+   "X": 2931,
+   "Y": 187,
+   "W": 669,
+   "H": 541,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_40": {
+   "X": 50,
+   "Y": 2118,
+   "W": 370,
+   "H": 476,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_41": {
+   "X": 498,
+   "Y": 2129,
+   "W": 374,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_42": {
+   "X": 952,
+   "Y": 2134,
+   "W": 377,
+   "H": 460,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_43": {
+   "X": 1404,
+   "Y": 2167,
+   "W": 434,
+   "H": 427,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_44": {
+   "X": 1913,
+   "Y": 2166,
+   "W": 449,
+   "H": 430,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_45": {
+   "X": 2437,
+   "Y": 2223,
+   "W": 512,
+   "H": 371,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_46": {
+   "X": 3025,
+   "Y": 2233,
+   "W": 503,
+   "H": 561,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_47": {
+   "X": 3603,
+   "Y": 2220,
+   "W": 527,
+   "H": 574,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_48": {
+   "X": 4205,
+   "Y": 2194,
+   "W": 523,
+   "H": 600,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_49": {
+   "X": 4803,
+   "Y": 2182,
+   "W": 541,
+   "H": 612,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_5": {
+   "X": 3706,
+   "Y": 33,
+   "W": 308,
+   "H": 734,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_50": {
+   "X": 5415,
+   "Y": 2118,
+   "W": 381,
+   "H": 476,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_51": {
+   "X": 5869,
+   "Y": 2317,
+   "W": 462,
+   "H": 279,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_6": {
+   "X": 4120,
+   "Y": 33,
+   "W": 475,
+   "H": 727,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_7": {
+   "X": 5161,
+   "Y": 187,
+   "W": 210,
+   "H": 131,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_8": {
+   "X": 5523,
+   "Y": 42,
+   "W": 209,
+   "H": 276,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites/gameplay_sprites_9": {
+   "X": 5850,
+   "Y": 33,
+   "W": 209,
+   "H": 285,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_0": {
+   "X": 91,
+   "Y": 36,
+   "W": 538,
+   "H": 693,
+   "PivotX": 0.8,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_1": {
+   "X": 736,
+   "Y": 122,
+   "W": 601,
+   "H": 606,
+   "PivotX": 0.83,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_10": {
+   "X": 6177,
+   "Y": 102,
+   "W": 209,
+   "H": 216,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_11": {
+   "X": 5162,
+   "Y": 502,
+   "W": 209,
+   "H": 62,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_12": {
+   "X": 5536,
+   "Y": 380,
+   "W": 182,
+   "H": 184,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_13": {
+   "X": 5869,
+   "Y": 402,
+   "W": 178,
+   "H": 178,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_14": {
+   "X": 6168,
+   "Y": 404,
+   "W": 207,
+   "H": 197,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_15": {
+   "X": 91,
+   "Y": 882,
+   "W": 329,
+   "H": 471,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_16": {
+   "X": 517,
+   "Y": 920,
+   "W": 328,
+   "H": 433,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_17": {
+   "X": 942,
+   "Y": 931,
+   "W": 327,
+   "H": 422,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_18": {
+   "X": 1367,
+   "Y": 952,
+   "W": 343,
+   "H": 401,
+   "PivotX": 0.65,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_19": {
+   "X": 1807,
+   "Y": 966,
+   "W": 361,
+   "H": 387,
+   "PivotX": 0.65,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_2": {
+   "X": 1445,
+   "Y": 72,
+   "W": 563,
+   "H": 656,
+   "PivotX": 0.8,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_20": {
+   "X": 2266,
+   "Y": 1082,
+   "W": 364,
+   "H": 271,
+   "PivotX": 0.66,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_21": {
+   "X": 2727,
+   "Y": 979,
+   "W": 400,
+   "H": 374,
+   "PivotX": 0.83,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_22": {
+   "X": 3224,
+   "Y": 955,
+   "W": 420,
+   "H": 398,
+   "PivotX": 0.833,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_23": {
+   "X": 3743,
+   "Y": 936,
+   "W": 464,
+   "H": 417,
+   "PivotX": 0.85,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_24": {
+   "X": 4305,
+   "Y": 917,
+   "W": 483,
+   "H": 436,
+   "PivotX": 0.85,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_25": {
+   "X": 4885,
+   "Y": 857,
+   "W": 370,
+   "H": 496,
+   "PivotX": 0.4,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_26": {
+   "X": 5353,
+   "Y": 1095,
+   "W": 400,
+   "H": 258,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_27": {
+   "X": 5861,
+   "Y": 741,
+   "W": 473,
+   "H": 691,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_28": {
+   "X": 91,
+   "Y": 1501,
+   "W": 328,
+   "H": 471,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_29": {
+   "X": 517,
+   "Y": 1537,
+   "W": 328,
+   "H": 435,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_3": {
+   "X": 2111,
+   "Y": 183,
+   "W": 713,
+   "H": 545,
+   "PivotX": 0.35,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_30": {
+   "X": 942,
+   "Y": 1550,
+   "W": 327,
+   "H": 422,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_31": {
+   "X": 1367,
+   "Y": 1571,
+   "W": 343,
+   "H": 401,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_32": {
+   "X": 1807,
+   "Y": 1584,
+   "W": 361,
+   "H": 388,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_33": {
+   "X": 2266,
+   "Y": 1700,
+   "W": 364,
+   "H": 272,
+   "PivotX": 0.66,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_34": {
+   "X": 2727,
+   "Y": 1596,
+   "W": 400,
+   "H": 376,
+   "PivotX": 0.83,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_35": {
+   "X": 3224,
+   "Y": 1572,
+   "W": 420,
+   "H": 400,
+   "PivotX": 0.833,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_36": {
+   "X": 3743,
+   "Y": 1553,
+   "W": 464,
+   "H": 419,
+   "PivotX": 0.85,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_37": {
+   "X": 4305,
+   "Y": 1536,
+   "W": 483,
+   "H": 436,
+   "PivotX": 0.85,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_38": {
+   "X": 4885,
+   "Y": 1475,
+   "W": 370,
+   "H": 497,
+   "PivotX": 0.4,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_39": {
+   "X": 5353,
+   "Y": 1714,
+   "W": 400,
+   "H": 258,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_4": {
+   "X": 2931,
+   "Y": 187,
+   "W": 669,
+   "H": 541,
+   "PivotX": 0.36,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_40": {
+   "X": 50,
+   "Y": 2118,
+   "W": 370,
+   "H": 476,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_41": {
+   "X": 498,
+   "Y": 2129,
+   "W": 374,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_42": {
+   "X": 952,
+   "Y": 2134,
+   "W": 377,
+   "H": 460,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_43": {
+   "X": 1404,
+   "Y": 2167,
+   "W": 434,
+   "H": 427,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_44": {
+   "X": 1913,
+   "Y": 2166,
+   "W": 449,
+   "H": 430,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_45": {
+   "X": 2437,
+   "Y": 2223,
+   "W": 512,
+   "H": 371,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_46": {
+   "X": 3025,
+   "Y": 2233,
+   "W": 503,
+   "H": 561,
+   "PivotX": 0.57,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_47": {
+   "X": 3603,
+   "Y": 2220,
+   "W": 527,
+   "H": 574,
+   "PivotX": 0.57,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_48": {
+   "X": 4205,
+   "Y": 2194,
+   "W": 523,
+   "H": 600,
+   "PivotX": 0.57,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_49": {
+   "X": 4803,
+   "Y": 2182,
+   "W": 541,
+   "H": 612,
+   "PivotX": 0.58,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_5": {
+   "X": 3706,
+   "Y": 33,
+   "W": 308,
+   "H": 734,
+   "PivotX": 0.66,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_50": {
+   "X": 5415,
+   "Y": 2118,
+   "W": 381,
+   "H": 476,
+   "PivotX": 0.35,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_51": {
+   "X": 5869,
+   "Y": 2317,
+   "W": 462,
+   "H": 279,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_6": {
+   "X": 4120,
+   "Y": 33,
+   "W": 475,
+   "H": 727,
+   "PivotX": 0.8,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_7": {
+   "X": 5161,
+   "Y": 187,
+   "W": 210,
+   "H": 131,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_8": {
+   "X": 5523,
+   "Y": 42,
+   "W": 209,
+   "H": 276,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "gameplay_sprites_9": {
+   "X": 5850,
+   "Y": 33,
+   "W": 209,
+   "H": 285,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_13": {
+   "X": 2946,
+   "Y": 985,
+   "W": 130,
+   "H": 143,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_14": {
+   "X": 3119,
+   "Y": 988,
+   "W": 151,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_15": {
+   "X": 3321,
+   "Y": 1008,
+   "W": 147,
+   "H": 125,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_16": {
+   "X": 3519,
+   "Y": 1013,
+   "W": 149,
+   "H": 105,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_17": {
+   "X": 3713,
+   "Y": 1012,
+   "W": 148,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_18": {
+   "X": 3910,
+   "Y": 992,
+   "W": 127,
+   "H": 146,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_29": {
+   "X": 1556,
+   "Y": 2054,
+   "W": 470,
+   "H": 396,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_30": {
+   "X": 2082,
+   "Y": 2112,
+   "W": 499,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_31": {
+   "X": 2626,
+   "Y": 2131,
+   "W": 504,
+   "H": 322,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_39": {
+   "X": 647,
+   "Y": 3379,
+   "W": 494,
+   "H": 638,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_40": {
+   "X": 1167,
+   "Y": 3351,
+   "W": 502,
+   "H": 652,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_41": {
+   "X": 1700,
+   "Y": 3322,
+   "W": 376,
+   "H": 729,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_42": {
+   "X": 2136,
+   "Y": 3323,
+   "W": 370,
+   "H": 695,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_43": {
+   "X": 2563,
+   "Y": 3330,
+   "W": 371,
+   "H": 699,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "penguins_44": {
+   "X": 2954,
+   "Y": 3391,
+   "W": 486,
+   "H": 611,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "reference": {
+   "X": 0,
+   "Y": 0,
+   "W": 240,
+   "H": 160,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_0": {
+   "X": 259,
+   "Y": 190,
+   "W": 148,
+   "H": 407,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_1": {
+   "X": 576,
+   "Y": 176,
+   "W": 148,
+   "H": 429,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_11": {
+   "X": 236,
+   "Y": 822,
+   "W": 155,
+   "H": 219,
+   "PivotX": 0.24869287,
+   "PivotY": 0.2954525,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_12": {
+   "X": 514,
+   "Y": 797,
+   "W": 155,
+   "H": 242,
+   "PivotX": 0.13979295,
+   "PivotY": 0.28806677,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_13": {
+   "X": 771,
+   "Y": 810,
+   "W": 213,
+   "H": 210,
+   "PivotX": 0.10376807,
+   "PivotY": 0.363973,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_14": {
+   "X": 1064,
+   "Y": 861,
+   "W": 255,
+   "H": 173,
+   "PivotX": 0.10538162,
+   "PivotY": 0.6125771,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_15": {
+   "X": 1421,
+   "Y": 885,
+   "W": 289,
+   "H": 136,
+   "PivotX": 0,
+   "PivotY": 1,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_16": {
+   "X": 1803,
+   "Y": 833,
+   "W": 290,
+   "H": 203,
+   "PivotX": 0,
+   "PivotY": 1,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_17": {
+   "X": 2240,
+   "Y": 783,
+   "W": 340,
+   "H": 270,
+   "PivotX": 1,
+   "PivotY": 0.2,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_18": {
+   "X": 3368,
+   "Y": 1318,
+   "W": 313,
+   "H": 313,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_19": {
+   "X": 224,
+   "Y": 1865,
+   "W": 612,
+   "H": 1085,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_2": {
+   "X": 893,
+   "Y": 182,
+   "W": 149,
+   "H": 430,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_20": {
+   "X": 1096,
+   "Y": 1841,
+   "W": 611,
+   "H": 1085,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_22": {
+   "X": 1963,
+   "Y": 2048,
+   "W": 475,
+   "H": 563,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_24": {
+   "X": 2830,
+   "Y": 2028,
+   "W": 302,
+   "H": 467,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_25": {
+   "X": 3570,
+   "Y": 2029,
+   "W": 335,
+   "H": 281,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_26": {
+   "X": 3542,
+   "Y": 2504,
+   "W": 389,
+   "H": 96,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_27": {
+   "X": 716,
+   "Y": 3132,
+   "W": 492,
+   "H": 790,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_28": {
+   "X": 1302,
+   "Y": 3132,
+   "W": 492,
+   "H": 790,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_29": {
+   "X": 1998,
+   "Y": 2960,
+   "W": 390,
+   "H": 248,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_3": {
+   "X": 1301,
+   "Y": 161,
+   "W": 401,
+   "H": 418,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_30": {
+   "X": 2513,
+   "Y": 2928,
+   "W": 390,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_31": {
+   "X": 3032,
+   "Y": 2851,
+   "W": 390,
+   "H": 357,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_32": {
+   "X": 3546,
+   "Y": 2820,
+   "W": 391,
+   "H": 388,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_33": {
+   "X": 127,
+   "Y": 3132,
+   "W": 492,
+   "H": 790,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_34": {
+   "X": 1992,
+   "Y": 3692,
+   "W": 165,
+   "H": 165,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_35": {
+   "X": 2388,
+   "Y": 3508,
+   "W": 357,
+   "H": 357,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_36": {
+   "X": 2942,
+   "Y": 3362,
+   "W": 664,
+   "H": 597,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_37": {
+   "X": 3788,
+   "Y": 3612,
+   "W": 162,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_6": {
+   "X": 1932,
+   "Y": 382,
+   "W": 101,
+   "H": 116,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_7": {
+   "X": 2184,
+   "Y": 384,
+   "W": 105,
+   "H": 133,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "showtime_9": {
+   "X": 2422,
+   "Y": 340,
+   "W": 98,
+   "H": 168,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_catch": {
+   "X": 100,
+   "Y": 3404,
+   "W": 518,
+   "H": 613,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_idle": {
+   "X": 1446,
+   "Y": 50,
+   "W": 355,
+   "H": 627,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_launch0": {
+   "X": 49,
+   "Y": 823,
+   "W": 417,
+   "H": 377,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_launch1": {
+   "X": 494,
+   "Y": 822,
+   "W": 460,
+   "H": 415,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_launch2": {
+   "X": 1011,
+   "Y": 746,
+   "W": 554,
+   "H": 501,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_launch3": {
+   "X": 1632,
+   "Y": 747,
+   "W": 572,
+   "H": 538,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_launch4": {
+   "X": 2255,
+   "Y": 747,
+   "W": 589,
+   "H": 545,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_prep0": {
+   "X": 86,
+   "Y": 1947,
+   "W": 387,
+   "H": 494,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_prep1": {
+   "X": 534,
+   "Y": 1962,
+   "W": 406,
+   "H": 478,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_prep2": {
+   "X": 1054,
+   "Y": 2001,
+   "W": 424,
+   "H": 436,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_slide": {
+   "X": 3496,
+   "Y": 3676,
+   "W": 501,
+   "H": 323,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_squish0": {
+   "X": 978,
+   "Y": 68,
+   "W": 361,
+   "H": 605,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_squish1": {
+   "X": 511,
+   "Y": 90,
+   "W": 361,
+   "H": 586,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "small_squish2": {
+   "X": 46,
+   "Y": 147,
+   "W": 370,
+   "H": 529,
+   "PivotX": 0.5,
+   "PivotY": 0,
+   "atlas": 6,
+   "ppu": 130,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

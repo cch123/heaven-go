@@ -1,0 +1,221 @@
+{
+ "Block": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Block/Idle",
+    "speed": 1
+   },
+   "Squish": {
+    "clip": "Block/Squish",
+    "speed": 1
+   }
+  }
+ },
+ "Button": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Button/Idle",
+    "speed": 1
+   },
+   "Press": {
+    "clip": "Button/Press",
+    "speed": 1
+   }
+  }
+ },
+ "ButtonBase": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "ButtonNew/Idle",
+    "speed": 1
+   },
+   "Press": {
+    "clip": "ButtonNew/Press",
+    "speed": 1
+   }
+  }
+ },
+ "GameObject": {
+  "default": "move",
+  "states": {
+   "move": {
+    "clip": "Wall/move",
+    "speed": 0
+   }
+  }
+ },
+ "Launcher": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Launcher/Idle",
+    "speed": 1
+   },
+   "Launch": {
+    "clip": "Launcher/Launch",
+    "speed": 1
+   }
+  }
+ },
+ "LauncherNew": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "LauncherNew/Idle",
+    "speed": 1
+   },
+   "Launch": {
+    "clip": "LauncherNew/Launch",
+    "speed": 1
+   }
+  }
+ },
+ "Monkey": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Monkey/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 0,
+      "duration": 0.25
+     }
+    ]
+   },
+   "Hit": {
+    "clip": "Monkey/Hit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Monkey/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "PenguinBig": {
+  "default": "Idle",
+  "states": {
+   "Catch": {
+    "clip": "Big/Catch",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Big/Idle",
+    "speed": 1
+   },
+   "Land": {
+    "clip": "Big/Land",
+    "speed": 1
+   },
+   "Leap": {
+    "clip": "Big/Leap",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Big/Prepare",
+    "speed": 1
+   },
+   "Slide": {
+    "clip": "Big/Slide",
+    "speed": 1
+   },
+   "SlideBall": {
+    "clip": "Big/SlideBall",
+    "speed": 1
+   }
+  }
+ },
+ "Water": {
+  "default": "Waves",
+  "states": {
+   "Waves": {
+    "clip": "Water/Waves",
+    "speed": 0.3
+   }
+  }
+ },
+ "WaterHolder": {
+  "default": "Move",
+  "states": {
+   "Move": {
+    "clip": "Water/Move",
+    "speed": 0.025
+   }
+  }
+ },
+ "penguinGray": {
+  "default": "Idle",
+  "states": {
+   "Catch": {
+    "clip": "White/Catch",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "White/Idle",
+    "speed": 1
+   },
+   "Idle 0": {
+    "clip": "White/Idle",
+    "speed": 1
+   },
+   "Land": {
+    "clip": "White/Land",
+    "speed": 1
+   },
+   "Leap": {
+    "clip": "White/Leap",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "White/Prepare",
+    "speed": 1
+   },
+   "Slide": {
+    "clip": "White/Slide",
+    "speed": 1
+   },
+   "SlideBall": {
+    "clip": "White/SlideBall",
+    "speed": 1
+   }
+  }
+ },
+ "penguinWhite": {
+  "default": "Idle",
+  "states": {
+   "Catch": {
+    "clip": "White/Catch",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "White/Idle",
+    "speed": 1
+   },
+   "Land": {
+    "clip": "White/Land",
+    "speed": 1
+   },
+   "Leap": {
+    "clip": "White/Leap",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "White/Prepare",
+    "speed": 1
+   },
+   "Slide": {
+    "clip": "White/Slide",
+    "speed": 1
+   },
+   "SlideBall": {
+    "clip": "White/SlideBall",
+    "speed": 1
+   }
+  }
+ }
+}
