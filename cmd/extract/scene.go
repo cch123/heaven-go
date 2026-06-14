@@ -120,6 +120,17 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "drummer", markers: []string{"animator", "miiFaces", "face"}, multi: true},
 		},
 	},
+	"frogPrincess": {
+		dir:    "FrogPrincess",
+		prefab: "frogPrincess.prefab",
+		roleFields: []string{
+			"frogAnim", "princessAnim", "Leaves", "Lotuses", "splashEffect", "BGPlane",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"frogAnim", "princessAnim", "Leaves", "Lotuses", "moveDistance", "moveTime"}},
+		},
+	},
 	"clappyTrio": {
 		dir:             "ClappyTrio",
 		prefab:          "clappyTrio.prefab",
