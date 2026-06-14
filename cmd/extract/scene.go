@@ -159,6 +159,23 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"frogAnim", "princessAnim", "Leaves", "Lotuses", "moveDistance", "moveTime"}},
 		},
 	},
+	"forkLifter": {
+		dir:    "ForkLifter",
+		prefab: "forkLifter.prefab",
+		roleFields: []string{
+			"ForkLifterHand", "handAnim", "flickedObject", "peaPreview",
+			"bg", "gradientFiller", "mmLines", "viewerCircle", "viewerCircleBg",
+			"playerShadow", "handShadow", "forkSR",
+		},
+		refArrayFields:  []string{"Gradients", "forkEffects"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"ForkLifterHand", "handAnim", "flickedObject", "peaPreview", "peaSprites", "peaHitSprites"}},
+			{name: "hand", markers: []string{"fastSprite", "fastSprites"}, atPath: "Hand"},
+			{name: "player", markers: []string{"hitFX", "hitFXG", "hitFXMiss", "hitFX2", "early", "perfect", "late"}, atPath: "Player"},
+		},
+	},
 	"clappyTrio": {
 		dir:             "ClappyTrio",
 		prefab:          "clappyTrio.prefab",
