@@ -1,63 +1,12 @@
 package engine
 
 import (
-	"archive/zip"
 	"bytes"
 	"encoding/json"
 	"fmt"
-	"image"
-	"io"
 	"log"
-	"path/filepath"
-	"sort"
 	"strings"
-
-	"github.com/hajimehoshi/ebiten/v2"
 )
-
-func discoverLevels(dir string) []menuLevel {
-	paths, err := filepath.Glob(filepath.Join(dir, "*.riq"))
-	if err != nil {
-		return nil
-	}
-	sort.Strings(paths)
-	out := make([]menuLevel, 0, len(paths))
-	for _, p := range paths {
-		out = append(out, inspectMenuLevel(p))
-	}
-	return out
-}
-
-func inspectMenuLevel(p string) menuLevel {
-	fileName := strings.TrimSuffix(filepath.Base(p), filepath.Ext(p))
-	level := menuLevel{
-		path:     p,
-		fileName: fileName,
-		title:    fileName,
-		bpm:      120,
-	}
-	zr, err := zip.OpenReader(p)
-	if err != nil {
-		return level
-	}
-	defer zr.Close()
-
-	files := map[string]*zip.File{}
-	for _, f := range zr.File {
-		if !f.FileInfo().IsDir() {
-			files[f.Name] = f
-		}
-	}
-	if raw, ok := readZipFile(files, "remix.json"); ok {
-		applyV1MenuMetadata(&level, raw)
-	} else if chartName, ok := findZipChart(files); ok {
-		if raw, ok := readZipFile(files, chartName); ok {
-			applyV2MenuMetadata(&level, raw)
-		}
-	}
-	level.customIcon = readLibraryLevelIcon(files)
-	return level
-}
 
 type menuV1Chart struct {
 	Properties   map[string]any `json:"properties"`
@@ -177,74 +126,6 @@ func addUniqueGame(out *[]string, seen map[string]bool, game string) {
 	*out = append(*out, game)
 }
 
-func findZipChart(files map[string]*zip.File) (string, bool) {
-	if _, ok := files["Charts/chart0.json"]; ok {
-		return "Charts/chart0.json", true
-	}
-	names := make([]string, 0)
-	for name := range files {
-		if strings.HasPrefix(name, "Charts/") && strings.HasSuffix(name, ".json") {
-			names = append(names, name)
-		}
-	}
-	if len(names) == 0 {
-		return "", false
-	}
-	sort.Strings(names)
-	return names[0], true
-}
-
-func readZipFile(files map[string]*zip.File, name string) ([]byte, bool) {
-	f, ok := findZipFile(files, name)
-	if !ok {
-		return nil, false
-	}
-	rc, err := f.Open()
-	if err != nil {
-		return nil, false
-	}
-	defer rc.Close()
-	b, err := io.ReadAll(rc)
-	return b, err == nil
-}
-
-func readLibraryLevelIcon(files map[string]*zip.File) *ebiten.Image {
-	for _, name := range []string{
-		"Resources/Images/LibraryIcon/LibraryLevelIcon.png",
-		"Resources/Images/LibraryIcon/LibraryLevelIcon.jpg",
-		"Resources/Images/LibraryIcon/LibraryLevelIcon.jpeg",
-	} {
-		f, ok := findZipFile(files, name)
-		if !ok {
-			continue
-		}
-		rc, err := f.Open()
-		if err != nil {
-			continue
-		}
-		img, _, err := image.Decode(rc)
-		rc.Close()
-		if err != nil {
-			log.Printf("engine: decode library icon %s: %v", name, err)
-			continue
-		}
-		return ebiten.NewImageFromImage(img)
-	}
-	return nil
-}
-
-func findZipFile(files map[string]*zip.File, name string) (*zip.File, bool) {
-	if f, ok := files[name]; ok {
-		return f, true
-	}
-	for path, f := range files {
-		if strings.EqualFold(path, name) {
-			return f, true
-		}
-	}
-	return nil, false
-}
-
 func menuString(m map[string]any, key string) string {
 	if v, ok := m[key]; ok {
 		if s, ok := v.(string); ok {
@@ -264,11 +145,4 @@ func menuFloat(m map[string]any, key string) float64 {
 		}
 	}
 	return 0
-}
-
-func (l menuLevel) displayName() string {
-	if l.title != "" {
-		return l.title
-	}
-	return l.fileName
 }
