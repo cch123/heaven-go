@@ -6,7 +6,6 @@ import (
 	"log"
 	"os"
 	"path/filepath"
-	"sort"
 	"strings"
 
 	"hsdemo/kart"
@@ -176,81 +175,4 @@ func (a *App) scheduleCounts(beat, unit float64, offset, n int, withGo, withAnd,
 	if withAnd && !cowbell {
 		a.commonAt(beat-0.5, "and")
 	}
-}
-
-// ---------- 相机（vfx/move camera → GameCamera.UpdateCameraTranslate） ----------
-
-// CameraAt 返回 beat 时刻的相机世界位置（默认 (0,0,-10)）。
-// 事件按拍序折叠：进行中的事件从上一事件的终值缓动到自身目标。
-func (a *App) CameraAt(beat float64) [3]float64 {
-	pos := [3]float64{0, 0, -10}
-	last := pos
-	for _, e := range a.camEvts {
-		prog := 0.0
-		if beat >= e.beat {
-			if e.length > 0 {
-				prog = (beat - e.beat) / e.length
-			} else {
-				prog = 1
-			}
-		} else {
-			continue
-		}
-		p := prog
-		if p > 1 {
-			p = 1
-		}
-		switch e.axis {
-		case 1: // X
-			pos[0] = Ease(e.ease, last[0], e.target[0], p)
-		case 2: // Y
-			pos[1] = Ease(e.ease, last[1], e.target[1], p)
-		case 3: // Z
-			pos[2] = Ease(e.ease, last[2], e.target[2], p)
-		default:
-			for i := 0; i < 3; i++ {
-				pos[i] = Ease(e.ease, last[i], e.target[i], p)
-			}
-		}
-		if prog > 1 {
-			switch e.axis {
-			case 1:
-				last[0] = e.target[0]
-			case 2:
-				last[1] = e.target[1]
-			case 3:
-				last[2] = e.target[2]
-			default:
-				last = e.target
-			}
-		}
-	}
-	return pos
-}
-
-// MusicFadeAt returns the minigame-local music volume multiplier. It is
-// separate from riq__VolumeChange so games like Tunnel can duck the song
-// without rewriting the chart's authored volume events.
-func (a *App) MusicFadeAt(beat float64) float64 {
-	vol := 1.0
-	for _, e := range a.musicFades {
-		if beat < e.beat {
-			break
-		}
-		if e.length > 0 && beat < e.beat+e.length {
-			u := (beat - e.beat) / e.length
-			return e.from + (e.to-e.from)*u
-		}
-		vol = e.to
-	}
-	return vol
-}
-
-func (a *App) fadeMusicVolume(beat, length, target float64) {
-	from := a.MusicFadeAt(beat)
-	ev := musicFadeEvt{beat: beat, length: length, from: from, to: target}
-	i := sort.Search(len(a.musicFades), func(i int) bool { return a.musicFades[i].beat > beat })
-	a.musicFades = append(a.musicFades, musicFadeEvt{})
-	copy(a.musicFades[i+1:], a.musicFades[i:])
-	a.musicFades[i] = ev
 }
