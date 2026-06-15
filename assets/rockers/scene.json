@@ -1,0 +1,3455 @@
+{
+ "nodes": [
+  {
+   "name": "rockers",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rockerslayout",
+   "path": "rockerslayout",
+   "parent": 0,
+   "pos": [
+    -0.02,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46545997,
+    0.46545997
+   ],
+   "sprite": "rockerslayout",
+   "order": 100,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.399998,
+    21.599998
+   ]
+  },
+  {
+   "name": "StudentHolder",
+   "path": "StudentHolder",
+   "parent": 0,
+   "pos": [
+    2.8,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "StudentHolder/Head",
+   "parent": 2,
+   "pos": [
+    0.009,
+    0.921
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_1",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "StudentHolder/Head/Face",
+   "parent": 3,
+   "pos": [
+    -0.039,
+    -1.032
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0045452,
+    1.0045452
+   ],
+   "sprite": "rockersmain_2",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "StudentHolder/Torso",
+   "parent": 2,
+   "pos": [
+    -0.032,
+    -0.295
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_7",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "SoshiBodyMap"
+  },
+  {
+   "name": "LegR",
+   "path": "StudentHolder/LegR",
+   "parent": 2,
+   "pos": [
+    0.566,
+    -1.628
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_9",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "SoshiBodyMap"
+  },
+  {
+   "name": "LegL",
+   "path": "StudentHolder/LegL",
+   "parent": 2,
+   "pos": [
+    -0.609,
+    -1.628
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_9",
+   "order": 8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "SoshiBodyMap"
+  },
+  {
+   "name": "LegMain",
+   "path": "StudentHolder/LegMain",
+   "parent": 2,
+   "pos": [
+    -0.026,
+    -0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_8",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "SoshiBodyMap"
+  },
+  {
+   "name": "ArmL",
+   "path": "StudentHolder/ArmL",
+   "parent": 2,
+   "pos": [
+    -0.525,
+    -0.705
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_5",
+   "order": 20,
+   "color": [
+    0.93725497,
+    0.6313726,
+    0.86666673,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "StudentHolder/ArmR",
+   "parent": 2,
+   "pos": [
+    0.753,
+    -0.447
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_6",
+   "order": 9,
+   "color": [
+    0.93725497,
+    0.6313726,
+    0.86666673,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Guitar",
+   "path": "StudentHolder/Guitar",
+   "parent": 2,
+   "pos": [
+    0.451,
+    -0.579
+   ],
+   "rotZ": -1.0140324729545125,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_10",
+   "order": 18,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "SoshiGuitarMap"
+  },
+  {
+   "name": "HandL",
+   "path": "StudentHolder/HandL",
+   "parent": 2,
+   "pos": [
+    -0.185,
+    -1.141
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_12",
+   "order": 21,
+   "color": [
+    0.9686275,
+    0.8431373,
+    0.6039216,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "HandR",
+   "path": "StudentHolder/HandR",
+   "parent": 2,
+   "pos": [
+    1.152,
+    -0.482
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_11",
+   "order": 21,
+   "color": [
+    0.9686275,
+    0.8431373,
+    0.6039216,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "StudentHolder/Shadow",
+   "parent": 2,
+   "pos": [
+    -0.02,
+    -2.316
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4838715,
+    0.38018474
+   ],
+   "sprite": "rockersmain_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "StudentHolder/Smear",
+   "parent": 2,
+   "pos": [
+    1.548,
+    -0.272
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_35",
+   "order": 5,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "StrumEffects",
+   "path": "StudentHolder/StrumEffects",
+   "parent": 2,
+   "pos": [
+    0,
+    -0.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningLeft",
+   "path": "StudentHolder/StrumEffects/LightningLeft",
+   "parent": 16,
+   "pos": [
+    -0.15,
+    0.38
+   ],
+   "rotZ": 0.037455383465224944,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Lightning",
+   "path": "StudentHolder/StrumEffects/LightningLeft/Lightning",
+   "parent": 17,
+   "pos": [
+    -2.49,
+    1.67
+   ],
+   "rotZ": -0.3888125696241988,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_22",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Lightning (1)",
+   "path": "StudentHolder/StrumEffects/LightningLeft/Lightning (1)",
+   "parent": 17,
+   "pos": [
+    -3.58,
+    -0.03
+   ],
+   "rotZ": 0.08409126808546005,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_23",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Lightning (2)",
+   "path": "StudentHolder/StrumEffects/LightningLeft/Lightning (2)",
+   "parent": 17,
+   "pos": [
+    -2.46,
+    -1.98
+   ],
+   "rotZ": 0.49771229602859957,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_24",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "LightningRight",
+   "path": "StudentHolder/StrumEffects/LightningRight",
+   "parent": 16,
+   "pos": [
+    -0.060000017,
+    0.33
+   ],
+   "rotZ": 0.037455383465224944,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Lightning",
+   "path": "StudentHolder/StrumEffects/LightningRight/Lightning",
+   "parent": 21,
+   "pos": [
+    -2.6,
+    1.65
+   ],
+   "rotZ": -0.3888125696241988,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_22",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Lightning (1)",
+   "path": "StudentHolder/StrumEffects/LightningRight/Lightning (1)",
+   "parent": 21,
+   "pos": [
+    -3.58,
+    -0.03
+   ],
+   "rotZ": 0.08409126808546005,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_23",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Lightning (2)",
+   "path": "StudentHolder/StrumEffects/LightningRight/Lightning (2)",
+   "parent": 21,
+   "pos": [
+    -2.47,
+    -2
+   ],
+   "rotZ": 0.49771229602859957,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_24",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "JJHolder",
+   "path": "JJHolder",
+   "parent": 0,
+   "pos": [
+    -2.76,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "JJHolder/Head",
+   "parent": 25,
+   "pos": [
+    -0.045,
+    1.192
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_0",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "JJHolder/Head/Face",
+   "parent": 26,
+   "pos": [
+    0.02,
+    -1.445
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0045452,
+    1.0045452
+   ],
+   "sprite": "rockersmain_3",
+   "order": 18,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "JJHolder/Torso",
+   "parent": 25,
+   "pos": [
+    -0.032,
+    -0.295
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_7",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "JJBodyMap"
+  },
+  {
+   "name": "LegR",
+   "path": "JJHolder/LegR",
+   "parent": 25,
+   "pos": [
+    0.566,
+    -1.628
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_9",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "JJBodyMap"
+  },
+  {
+   "name": "LegL",
+   "path": "JJHolder/LegL",
+   "parent": 25,
+   "pos": [
+    -0.609,
+    -1.628
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_9",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "JJBodyMap"
+  },
+  {
+   "name": "LegMain",
+   "path": "JJHolder/LegMain",
+   "parent": 25,
+   "pos": [
+    -0.026,
+    -0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_8",
+   "order": 11,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "JJBodyMap"
+  },
+  {
+   "name": "ArmL",
+   "path": "JJHolder/ArmL",
+   "parent": 25,
+   "pos": [
+    -0.52499986,
+    -0.705
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_5",
+   "order": 22,
+   "color": [
+    0.53333336,
+    0.5019608,
+    0.5019608,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "JJHolder/ArmR",
+   "parent": 25,
+   "pos": [
+    0.753,
+    -0.447
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_6",
+   "order": 11,
+   "color": [
+    0.53333336,
+    0.5019608,
+    0.5019608,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Guitar",
+   "path": "JJHolder/Guitar",
+   "parent": 25,
+   "pos": [
+    0.45099998,
+    -0.579
+   ],
+   "rotZ": -1.0140324865606647,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_10",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ],
+   "mapped": true,
+   "mat": "JJGuitarMap"
+  },
+  {
+   "name": "HandL",
+   "path": "JJHolder/HandL",
+   "parent": 25,
+   "pos": [
+    -0.18499994,
+    -1.141
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_12",
+   "order": 23,
+   "color": [
+    0.9686275,
+    0.7960785,
+    0.45098042,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "HandR",
+   "path": "JJHolder/HandR",
+   "parent": 25,
+   "pos": [
+    1.152,
+    -0.482
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_11",
+   "order": 23,
+   "color": [
+    0.9686275,
+    0.7960785,
+    0.45098042,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "JJHolder/Shadow",
+   "parent": 25,
+   "pos": [
+    -0.02,
+    -2.316
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4838715,
+    0.38018474
+   ],
+   "sprite": "rockersmain_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "JJHolder/Smear",
+   "parent": 25,
+   "pos": [
+    1.548,
+    -0.272
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46083,
+    0.46083
+   ],
+   "sprite": "rockersmain_35",
+   "order": 7,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "StrumEffects",
+   "path": "JJHolder/StrumEffects",
+   "parent": 25,
+   "pos": [
+    0,
+    -0.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningLeft",
+   "path": "JJHolder/StrumEffects/LightningLeft",
+   "parent": 39,
+   "pos": [
+    -0.15,
+    0.38
+   ],
+   "rotZ": 0.037455383465224944,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Lightning",
+   "path": "JJHolder/StrumEffects/LightningLeft/Lightning",
+   "parent": 40,
+   "pos": [
+    -2.49,
+    1.67
+   ],
+   "rotZ": -0.3888125696241988,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_22",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Lightning (1)",
+   "path": "JJHolder/StrumEffects/LightningLeft/Lightning (1)",
+   "parent": 40,
+   "pos": [
+    -3.58,
+    -0.03
+   ],
+   "rotZ": 0.08409126808546005,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_23",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Lightning (2)",
+   "path": "JJHolder/StrumEffects/LightningLeft/Lightning (2)",
+   "parent": 40,
+   "pos": [
+    -2.46,
+    -1.98
+   ],
+   "rotZ": 0.49771229602859957,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_24",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "LightningRight",
+   "path": "JJHolder/StrumEffects/LightningRight",
+   "parent": 39,
+   "pos": [
+    -0.060000017,
+    0.33
+   ],
+   "rotZ": 0.037455383465224944,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Lightning",
+   "path": "JJHolder/StrumEffects/LightningRight/Lightning",
+   "parent": 44,
+   "pos": [
+    -2.6,
+    1.65
+   ],
+   "rotZ": -0.3888125696241988,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_22",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Lightning (1)",
+   "path": "JJHolder/StrumEffects/LightningRight/Lightning (1)",
+   "parent": 44,
+   "pos": [
+    -3.58,
+    -0.03
+   ],
+   "rotZ": 0.08409126808546005,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_23",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Lightning (2)",
+   "path": "JJHolder/StrumEffects/LightningRight/Lightning (2)",
+   "parent": 44,
+   "pos": [
+    -2.47,
+    -2
+   ],
+   "rotZ": 0.49771229602859957,
+   "scale": [
+    0.39158574,
+    0.39158574
+   ],
+   "sprite": "rockersmain_24",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.8,
+    6.8
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Floor",
+   "path": "Background/Floor",
+   "parent": 48,
+   "pos": [
+    -0.04,
+    -1.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.47,
+    0.46731848
+   ],
+   "sprite": "rockersbg_2",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    55.04,
+    11.621001
+   ]
+  },
+  {
+   "name": "Side",
+   "path": "Background/Side",
+   "parent": 48,
+   "pos": [
+    0.02,
+    -4.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46324193,
+    0.46324193
+   ],
+   "sprite": "rockersbg_3",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    55.04,
+    11.621001
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "Background/Wall",
+   "parent": 48,
+   "pos": [
+    -0.04,
+    3.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    10.77008,
+    0.47851
+   ],
+   "sprite": "rockersbg_7",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3700001,
+    13.051125
+   ]
+  },
+  {
+   "name": "FloorPattern",
+   "path": "Background/FloorPattern",
+   "parent": 48,
+   "pos": [
+    0.09,
+    -1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_1",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "AmpLeft",
+   "path": "Background/AmpLeft",
+   "parent": 48,
+   "pos": [
+    -8.322,
+    0.262
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_8",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "AmpRight",
+   "path": "Background/AmpRight",
+   "parent": 48,
+   "pos": [
+    8.22,
+    0.262
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_8",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "FrontLightLeft",
+   "path": "Background/FrontLightLeft",
+   "parent": 48,
+   "pos": [
+    -3.871,
+    -3.525
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_4",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "FrontLightRight",
+   "path": "Background/FrontLightRight",
+   "parent": 48,
+   "pos": [
+    3.92,
+    -3.525
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "WallPattern",
+   "path": "Background/WallPattern",
+   "parent": 48,
+   "pos": [
+    0.026,
+    1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.45296708,
+    0.45296708
+   ],
+   "sprite": "rockersbg_9",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "TopLights",
+   "path": "Background/TopLights",
+   "parent": 48,
+   "pos": [
+    0.16,
+    4.48
+   ],
+   "z": 0.11771565,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Light",
+   "path": "Background/TopLights/Light",
+   "parent": 58,
+   "pos": [
+    -1.9689971,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Light (1)",
+   "path": "Background/TopLights/Light (1)",
+   "parent": 58,
+   "pos": [
+    1.14,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Light (2)",
+   "path": "Background/TopLights/Light (2)",
+   "parent": 58,
+   "pos": [
+    4.26,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Light (3)",
+   "path": "Background/TopLights/Light (3)",
+   "parent": 58,
+   "pos": [
+    7.368997,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Light (4)",
+   "path": "Background/TopLights/Light (4)",
+   "parent": 58,
+   "pos": [
+    10.471003,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Light (5)",
+   "path": "Background/TopLights/Light (5)",
+   "parent": 58,
+   "pos": [
+    13.58,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Light (6)",
+   "path": "Background/TopLights/Light (6)",
+   "parent": 58,
+   "pos": [
+    -8.17,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Light (7)",
+   "path": "Background/TopLights/Light (7)",
+   "parent": 58,
+   "pos": [
+    -5.0610027,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Light (9)",
+   "path": "Background/TopLights/Light (9)",
+   "parent": 58,
+   "pos": [
+    -11.29,
+    -0.02
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    0.4570804,
+    0.4570804
+   ],
+   "sprite": "rockersbg_5",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Bar",
+   "path": "Background/TopLights/Bar",
+   "parent": 58,
+   "pos": [
+    0.02,
+    0.77
+   ],
+   "z": -0.11771565,
+   "rotZ": 0,
+   "scale": [
+    11.912659,
+    0.012838514
+   ],
+   "sprite": "rockersbg_7",
+   "order": -6,
+   "flipX": true,
+   "color": [
+    0.7735849,
+    0.7735849,
+    0.7735849,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "WallStars",
+   "path": "Background/WallStars",
+   "parent": 48,
+   "pos": [
+    -0.02,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Background/WallStars/Star",
+   "parent": 69,
+   "pos": [
+    -1.537,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Background/WallStars/Star (1)",
+   "parent": 69,
+   "pos": [
+    -3.147,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "Background/WallStars/Star (2)",
+   "parent": 69,
+   "pos": [
+    -4.766,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (3)",
+   "path": "Background/WallStars/Star (3)",
+   "parent": 69,
+   "pos": [
+    -6.361,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (4)",
+   "path": "Background/WallStars/Star (4)",
+   "parent": 69,
+   "pos": [
+    -7.9710007,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (5)",
+   "path": "Background/WallStars/Star (5)",
+   "parent": 69,
+   "pos": [
+    -9.59,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (6)",
+   "path": "Background/WallStars/Star (6)",
+   "parent": 69,
+   "pos": [
+    -11.2,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (7)",
+   "path": "Background/WallStars/Star (7)",
+   "parent": 69,
+   "pos": [
+    -12.81,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (8)",
+   "path": "Background/WallStars/Star (8)",
+   "parent": 69,
+   "pos": [
+    -14.429,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (9)",
+   "path": "Background/WallStars/Star (9)",
+   "parent": 69,
+   "pos": [
+    -2.077,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (10)",
+   "path": "Background/WallStars/Star (10)",
+   "parent": 69,
+   "pos": [
+    -3.687,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (11)",
+   "path": "Background/WallStars/Star (11)",
+   "parent": 69,
+   "pos": [
+    -5.3059998,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (12)",
+   "path": "Background/WallStars/Star (12)",
+   "parent": 69,
+   "pos": [
+    -6.901,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (13)",
+   "path": "Background/WallStars/Star (13)",
+   "parent": 69,
+   "pos": [
+    -8.511001,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (14)",
+   "path": "Background/WallStars/Star (14)",
+   "parent": 69,
+   "pos": [
+    -10.13,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (15)",
+   "path": "Background/WallStars/Star (15)",
+   "parent": 69,
+   "pos": [
+    -11.74,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (16)",
+   "path": "Background/WallStars/Star (16)",
+   "parent": 69,
+   "pos": [
+    -13.35,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (17)",
+   "path": "Background/WallStars/Star (17)",
+   "parent": 69,
+   "pos": [
+    -14.969,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (18)",
+   "path": "Background/WallStars/Star (18)",
+   "parent": 69,
+   "pos": [
+    -1.537,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (19)",
+   "path": "Background/WallStars/Star (19)",
+   "parent": 69,
+   "pos": [
+    -3.147,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (20)",
+   "path": "Background/WallStars/Star (20)",
+   "parent": 69,
+   "pos": [
+    -4.766,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (21)",
+   "path": "Background/WallStars/Star (21)",
+   "parent": 69,
+   "pos": [
+    -6.361,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (22)",
+   "path": "Background/WallStars/Star (22)",
+   "parent": 69,
+   "pos": [
+    -7.9710007,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (23)",
+   "path": "Background/WallStars/Star (23)",
+   "parent": 69,
+   "pos": [
+    -9.59,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (24)",
+   "path": "Background/WallStars/Star (24)",
+   "parent": 69,
+   "pos": [
+    -11.2,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (25)",
+   "path": "Background/WallStars/Star (25)",
+   "parent": 69,
+   "pos": [
+    -12.81,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (26)",
+   "path": "Background/WallStars/Star (26)",
+   "parent": 69,
+   "pos": [
+    -14.429,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (27)",
+   "path": "Background/WallStars/Star (27)",
+   "parent": 69,
+   "pos": [
+    14.433001,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (28)",
+   "path": "Background/WallStars/Star (28)",
+   "parent": 69,
+   "pos": [
+    12.823,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (29)",
+   "path": "Background/WallStars/Star (29)",
+   "parent": 69,
+   "pos": [
+    11.204,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (30)",
+   "path": "Background/WallStars/Star (30)",
+   "parent": 69,
+   "pos": [
+    9.608999,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (31)",
+   "path": "Background/WallStars/Star (31)",
+   "parent": 69,
+   "pos": [
+    7.998999,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (32)",
+   "path": "Background/WallStars/Star (32)",
+   "parent": 69,
+   "pos": [
+    6.3799996,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (33)",
+   "path": "Background/WallStars/Star (33)",
+   "parent": 69,
+   "pos": [
+    4.77,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (34)",
+   "path": "Background/WallStars/Star (34)",
+   "parent": 69,
+   "pos": [
+    3.1599991,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (35)",
+   "path": "Background/WallStars/Star (35)",
+   "parent": 69,
+   "pos": [
+    1.5409997,
+    3.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (36)",
+   "path": "Background/WallStars/Star (36)",
+   "parent": 69,
+   "pos": [
+    15.002,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (37)",
+   "path": "Background/WallStars/Star (37)",
+   "parent": 69,
+   "pos": [
+    13.391999,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (38)",
+   "path": "Background/WallStars/Star (38)",
+   "parent": 69,
+   "pos": [
+    11.773,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (39)",
+   "path": "Background/WallStars/Star (39)",
+   "parent": 69,
+   "pos": [
+    10.178,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (40)",
+   "path": "Background/WallStars/Star (40)",
+   "parent": 69,
+   "pos": [
+    8.568,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (41)",
+   "path": "Background/WallStars/Star (41)",
+   "parent": 69,
+   "pos": [
+    6.949,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (42)",
+   "path": "Background/WallStars/Star (42)",
+   "parent": 69,
+   "pos": [
+    5.339,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (43)",
+   "path": "Background/WallStars/Star (43)",
+   "parent": 69,
+   "pos": [
+    3.7289996,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (44)",
+   "path": "Background/WallStars/Star (44)",
+   "parent": 69,
+   "pos": [
+    2.11,
+    2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (45)",
+   "path": "Background/WallStars/Star (45)",
+   "parent": 69,
+   "pos": [
+    14.433001,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (46)",
+   "path": "Background/WallStars/Star (46)",
+   "parent": 69,
+   "pos": [
+    12.823,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (47)",
+   "path": "Background/WallStars/Star (47)",
+   "parent": 69,
+   "pos": [
+    11.204,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (48)",
+   "path": "Background/WallStars/Star (48)",
+   "parent": 69,
+   "pos": [
+    9.608999,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (49)",
+   "path": "Background/WallStars/Star (49)",
+   "parent": 69,
+   "pos": [
+    7.998999,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (50)",
+   "path": "Background/WallStars/Star (50)",
+   "parent": 69,
+   "pos": [
+    6.3799996,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (51)",
+   "path": "Background/WallStars/Star (51)",
+   "parent": 69,
+   "pos": [
+    4.77,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (52)",
+   "path": "Background/WallStars/Star (52)",
+   "parent": 69,
+   "pos": [
+    3.1599991,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Star (53)",
+   "path": "Background/WallStars/Star (53)",
+   "parent": 69,
+   "pos": [
+    1.5409997,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Railing",
+   "path": "Background/Railing",
+   "parent": 48,
+   "pos": [
+    -4.4900002,
+    -5.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_0",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Railing (1)",
+   "path": "Background/Railing (1)",
+   "parent": 48,
+   "pos": [
+    4.44,
+    -5.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_0",
+   "order": 15,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Railing (2)",
+   "path": "Background/Railing (2)",
+   "parent": 48,
+   "pos": [
+    14.88,
+    -5.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_0",
+   "order": 15,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "Railing (3)",
+   "path": "Background/Railing (3)",
+   "parent": 48,
+   "pos": [
+    -14.94,
+    -5.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.46530703,
+    0.46530703
+   ],
+   "sprite": "rockersbg_0",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.59,
+    8.81076
+   ]
+  },
+  {
+   "name": "RockerInput",
+   "path": "RockerInput",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BendInput",
+   "path": "BendInput",
+   "parent": 0,
+   "pos": [
+    0.2417924,
+    0.0016205013
+   ],
+   "z": 0.16338366,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

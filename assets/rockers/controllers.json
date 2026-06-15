@@ -1,0 +1,178 @@
+{
+ "JJHolder": {
+  "default": "JJIdle",
+  "states": {
+   "JJBend": {
+    "clip": "Animations/JJBend",
+    "speed": 1
+   },
+   "JJComeOnMute": {
+    "clip": "Animations/JJComeOnMute",
+    "speed": 1
+   },
+   "JJComeOnPrepare": {
+    "clip": "Animations/JJComeOnPrepare",
+    "speed": 1
+   },
+   "JJComeOnPrepareNoMute": {
+    "clip": "Animations/JJComeOnPrepareNoMute",
+    "speed": 1
+   },
+   "JJComeOnStrum": {
+    "clip": "Animations/JJComeOnStrum",
+    "speed": 1
+   },
+   "JJCrouch": {
+    "clip": "Animations/JJCrouch",
+    "speed": 1
+   },
+   "JJIdle": {
+    "clip": "Animations/JJIdle",
+    "speed": 1
+   },
+   "JJJump": {
+    "clip": "Animations/JJJump",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "JJLand",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "JJLand": {
+    "clip": "Animations/JJLand",
+    "speed": 1
+   },
+   "JJMiss": {
+    "clip": "Animations/JJMiss",
+    "speed": 1
+   },
+   "JJMissComeOn": {
+    "clip": "Animations/JJMissComeOn",
+    "speed": 1
+   },
+   "JJReturn": {
+    "clip": "Animations/JJReturn",
+    "speed": 1
+   },
+   "JJStrum": {
+    "clip": "Animations/JJStrum",
+    "speed": 1
+   },
+   "JJUnCrouch": {
+    "clip": "Animations/JJUnCrouch",
+    "speed": 1
+   },
+   "JJUnbend": {
+    "clip": "Animations/JJUnbend",
+    "speed": 1
+   }
+  }
+ },
+ "StrumEffects": {
+  "default": "StrumIdle",
+  "states": {
+   "StrumIdle": {
+    "clip": "Animations/StrumIdle",
+    "speed": 1
+   },
+   "StrumLeft": {
+    "clip": "Animations/StrumLeft",
+    "speed": 1
+   },
+   "StrumRight": {
+    "clip": "Animations/StrumRight",
+    "speed": 1
+   },
+   "StrumStart": {
+    "clip": "Animations/StrumStart",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "StrumIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "StrumStartLeft": {
+    "clip": "Animations/StrumStartLeft",
+    "speed": 1
+   },
+   "StrumStartRIght": {
+    "clip": "Animations/StrumStartRIght",
+    "speed": 1
+   }
+  }
+ },
+ "StudentHolder": {
+  "default": "Idle",
+  "states": {
+   "Bend": {
+    "clip": "Animations/Pitchbend",
+    "speed": 1
+   },
+   "ComeOnMute": {
+    "clip": "Animations/ComeOnMute",
+    "speed": 1
+   },
+   "ComeOnPrepare": {
+    "clip": "Animations/ComeOnPrepare",
+    "speed": 1
+   },
+   "ComeOnPrepareNoMute": {
+    "clip": "Animations/ComeOnPrepareNomute",
+    "speed": 1
+   },
+   "ComeOnStrum": {
+    "clip": "Animations/ComeOnStrum",
+    "speed": 1
+   },
+   "Crouch": {
+    "clip": "Animations/Crouch",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Animations/Jump",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Land",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Land": {
+    "clip": "Animations/Land",
+    "speed": 1
+   },
+   "Return": {
+    "clip": "Animations/Return",
+    "speed": 1
+   },
+   "Strum": {
+    "clip": "Animations/Strum",
+    "speed": 1
+   },
+   "Test": {
+    "clip": "Animations/Test",
+    "speed": 1
+   },
+   "UnCrouch": {
+    "clip": "Animations/UnCrouch",
+    "speed": 1
+   },
+   "Unbend": {
+    "clip": "Animations/UnPitchbend",
+    "speed": 1
+   }
+  }
+ }
+}

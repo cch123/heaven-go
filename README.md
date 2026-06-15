@@ -114,6 +114,11 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
   当前用 Ebitengine 几何体替代 3D SkinnedMeshRenderer/材质渲染，Piano 的
   `SetLoopParams` 持续尾音先按准确音高的一次性触发处理。
+- rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/
+  `cmon`/`lastOne`/together riff 的事件流、JJ/Soshi 动画、循环和弦/逐弦音色、
+  premade sample enum、mute 收尾与摄像机 pass-turn 已接入；`bend` 会重启当前
+  loop 到弯音后的 pitch，但尚未复刻 C# `BendUp/BendDown(0.05f)` 的连续滑音；
+  barely 命中时 Soshi 闪电颜色随机化仍待补。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。

@@ -82,6 +82,7 @@ import (
 	"hsdemo/games/rhythmtestgba"
 	"hsdemo/games/rhythmtweezers"
 	"hsdemo/games/ringside"
+	"hsdemo/games/rockers"
 	"hsdemo/games/samuraislicentr"
 	"hsdemo/games/seesaw"
 	"hsdemo/games/shootemup"
@@ -237,6 +238,7 @@ func main() {
 	engine.Register("rhythmSheriff", rhythmsheriff.New)
 	engine.Register("rhythmTweezers", rhythmtweezers.New)
 	engine.Register("ringside", ringside.New)
+	engine.Register("rockers", rockers.New)
 	engine.Register("samuraiSliceNtr", samuraislicentr.New)
 	engine.Register("shootEmUp", shootemup.New)
 	engine.Register("showtime", showtime.New)
