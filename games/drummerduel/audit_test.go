@@ -140,6 +140,30 @@ func TestDrummerDuelControllersAndSounds(t *testing.T) {
 	}
 }
 
+func TestDrummerDuelMappedMaterialsHavePalettes(t *testing.T) {
+	as := loadDrummerDuelAssets(t)
+	for _, n := range as.Rig.Nodes {
+		if !n.Mapped || n.Mat == "" {
+			continue
+		}
+		if _, ok := defaultPalettes[n.Mat]; !ok {
+			t.Fatalf("mapped material %s on %s has no runtime palette", n.Mat, n.Path)
+		}
+	}
+}
+
+func TestDrummerDuelAutomaticHitVoices(t *testing.T) {
+	if got := hitVoice(8, hitAuto, 10); got != "drummerDon" {
+		t.Fatalf("on-beat isolated automatic voice = %s", got)
+	}
+	if got := hitVoice(8, hitAuto, 8.5); got != "drummerDo" {
+		t.Fatalf("on-beat dense automatic voice = %s", got)
+	}
+	if got := hitVoice(8.5, hitAuto, 10); got != "drummerKo" {
+		t.Fatalf("offbeat automatic voice = %s", got)
+	}
+}
+
 func assertStringList(t *testing.T, name string, got, want []string) {
 	t.Helper()
 	if len(got) != len(want) {
