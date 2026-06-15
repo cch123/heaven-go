@@ -75,6 +75,7 @@ import (
 	"hsdemo/games/powercalligraphy"
 	"hsdemo/games/quizshow"
 	"hsdemo/games/rhythmfighter"
+	"hsdemo/games/rhythmrally"
 	"hsdemo/games/rhythmsheriff"
 	"hsdemo/games/rhythmtestgba"
 	"hsdemo/games/rhythmtweezers"
@@ -227,6 +228,7 @@ func main() {
 	engine.Register("powerCalligraphy", powercalligraphy.New)
 	engine.Register("quizShow", quizshow.New)
 	engine.Register("rhythmFighter", rhythmfighter.New)
+	engine.Register("rhythmRally", rhythmrally.New)
 	engine.Register("rhythmTestGBA", rhythmtestgba.New)
 	engine.Register("rhythmSheriff", rhythmsheriff.New)
 	engine.Register("rhythmTweezers", rhythmtweezers.New)
