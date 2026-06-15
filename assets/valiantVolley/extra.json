@@ -1,0 +1,253 @@
+{
+ "curves": {
+  "object.barelyCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      5.4,
+      0.9,
+      0
+     ],
+     "lh": [
+      3.1283750000000006,
+      -0.2530914999999999,
+      0
+     ],
+     "rh": [
+      7.671625000000001,
+      2.0530915,
+      0
+     ]
+    },
+    {
+     "p": [
+      13.257057,
+      -1.1512251,
+      0
+     ],
+     "lh": [
+      12.3488062,
+      0.6805124,
+      0
+     ],
+     "rh": [
+      14.165307799999999,
+      -2.9829626,
+      0
+     ]
+    }
+   ]
+  },
+  "object.bounceCurve1": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -5.4,
+      0.9,
+      0
+     ],
+     "lh": [
+      -5.46940889,
+      -1.9336039,
+      0
+     ],
+     "rh": [
+      -5.33059111,
+      3.7336039,
+      0
+     ]
+    },
+    {
+     "p": [
+      0,
+      0.9,
+      0
+     ],
+     "lh": [
+      -0.25332642,
+      3.6390884999999997,
+      0
+     ],
+     "rh": [
+      0.25332642,
+      -1.8390885,
+      0
+     ]
+    }
+   ]
+  },
+  "object.bounceCurve2": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      0,
+      0.9,
+      0
+     ],
+     "lh": [
+      0.081815004,
+      -2.0470230000000003,
+      0
+     ],
+     "rh": [
+      -0.081815004,
+      3.847023,
+      0
+     ]
+    },
+    {
+     "p": [
+      5.4,
+      0.9,
+      0
+     ],
+     "lh": [
+      5.62870398,
+      3.52567,
+      0
+     ],
+     "rh": [
+      5.171296020000001,
+      -1.72567,
+      0
+     ]
+    }
+   ]
+  },
+  "object.enterCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -11.115314,
+      1.5,
+      0
+     ],
+     "lh": [
+      -13.4413,
+      -0.3430557000000001,
+      0
+     ],
+     "rh": [
+      -8.789328,
+      3.3430557,
+      0
+     ]
+    },
+    {
+     "p": [
+      -5.4,
+      0.9,
+      0
+     ],
+     "lh": [
+      -5.5828289,
+      3.320185,
+      0
+     ],
+     "rh": [
+      -5.217171100000001,
+      -1.5201850000000001,
+      0
+     ]
+    }
+   ]
+  },
+  "object.hitCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      5.4,
+      0.9,
+      0
+     ],
+     "lh": [
+      5.407557392,
+      -2.0543514000000003,
+      0
+     ],
+     "rh": [
+      5.3924426080000005,
+      3.8543514,
+      0
+     ]
+    },
+    {
+     "p": [
+      12.665367,
+      3.5320866,
+      0
+     ],
+     "lh": [
+      11.0577,
+      4.09918164,
+      0
+     ],
+     "rh": [
+      14.273033999999999,
+      2.96499156,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "bopStatus": 0,
+    "hasMissed": 0,
+    "hitPitch": 1,
+    "intervalStarted": 0,
+    "multiInputInterval": 0,
+    "multiIntervalLength": 0,
+    "multiIntervalStartBeat": 1.7976931348623157e+308
+   },
+   "refs": {
+    "volleyObject": "ObjectHolder"
+   },
+   "refArrays": {
+    "ants": [
+     "Ants/AntLeft",
+     "Ants/AntMiddle",
+     "Ants/AntPlayer"
+    ]
+   }
+  },
+  "object": {
+   "path": "ObjectHolder",
+   "nums": {
+    "barely": 0,
+    "beingJuggled": 0,
+    "currentAnt": 0,
+    "distance": 0,
+    "isEntering": 0,
+    "isHit": 0,
+    "lastJuggle": 0,
+    "lastJuggleLength": 0,
+    "missed": 0,
+    "objectType": 0,
+    "startBeat": 0
+   },
+   "refs": {
+    "anim": "ObjectHolder",
+    "barelyCurve": "Curves/BarelyCurve",
+    "bounceCurve1": "Curves/BounceCurve1",
+    "bounceCurve2": "Curves/BounceCurve2",
+    "enterCurve": "Curves/EnterCurve",
+    "hitCurve": "Curves/ExitCurve",
+    "missImpact": "ObjectHolder/Object/missImpact",
+    "objectSprite": "ObjectHolder/Object",
+    "objectTransform": "ObjectHolder/Object"
+   },
+   "sprites": {
+    "fruitSprite": "fruit"
+   }
+  }
+ }
+}

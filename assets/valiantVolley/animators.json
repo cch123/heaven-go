@@ -1,0 +1,6 @@
+{
+ "Ants/AntLeft": "AntAnim",
+ "Ants/AntMiddle": "AntAnim",
+ "Ants/AntPlayer": "AntAnim",
+ "ObjectHolder": "ObjectAnim"
+}

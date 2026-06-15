@@ -114,6 +114,7 @@ import (
 	"hsdemo/games/tramandpauline"
 	"hsdemo/games/trickclass"
 	"hsdemo/games/tunnel"
+	"hsdemo/games/valiantvolley"
 	"hsdemo/games/wizardswaltz"
 	"hsdemo/kart"
 	"hsdemo/riq"
@@ -766,6 +767,7 @@ func main() {
 	engine.Register("showtime", showtime.New)
 	engine.Register("tramAndPauline", tramandpauline.New)
 	engine.Register("tunnel", tunnel.New)
+	engine.Register("valiantVolley", valiantvolley.New)
 	engine.Register("wizardsWaltz", wizardswaltz.New)
 
 	// karateman 仍走早期 demo 路径（未迁移到 engine）

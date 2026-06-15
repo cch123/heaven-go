@@ -237,10 +237,25 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 	"tossBoys":          basicOfficialSceneSpec("TossBoys", "tossBoys.prefab"),
 	"tramAndPauline":    basicOfficialSceneSpec("TramAndPauline", "tramAndPauline.prefab"),
 	"tunnel":            basicOfficialSceneSpec("Tunnel", "tunnel.prefab"),
-	"valiantVolley":     basicOfficialSceneSpec("ValiantVolley", "valiantVolley.prefab"),
-	"warioDeMambo":      basicOfficialSceneSpec("WarioDeMambo", "warioDeMambo.prefab"),
-	"wizardsWaltz":      basicOfficialSceneSpec("WizardsWaltz", "wizardsWaltz.prefab"),
-	"workingDough":      basicOfficialSceneSpec("WorkingDough", "workingDough.prefab"),
+	"valiantVolley": {
+		dir:             "ValiantVolley",
+		prefab:          "valiantVolley.prefab",
+		roleFields:      []string{"volleyObject"},
+		wantControllers: true,
+		commonSounds:    []string{"nearMiss.ogg"},
+		components: []componentSpec{
+			{name: "game", markers: []string{"ants", "volleyObject", "multiIntervalStartBeat", "hitPitch"}},
+			{name: "object", markers: []string{
+				"enterCurve", "bounceCurve1", "bounceCurve2", "hitCurve", "barelyCurve",
+				"objectTransform", "objectSprite", "fruitSprite", "missImpact",
+			}, atPath: "ObjectHolder", curveFields: []string{
+				"enterCurve", "bounceCurve1", "bounceCurve2", "hitCurve", "barelyCurve",
+			}},
+		},
+	},
+	"warioDeMambo": basicOfficialSceneSpec("WarioDeMambo", "warioDeMambo.prefab"),
+	"wizardsWaltz": basicOfficialSceneSpec("WizardsWaltz", "wizardsWaltz.prefab"),
+	"workingDough": basicOfficialSceneSpec("WorkingDough", "workingDough.prefab"),
 }
 
 func init() {

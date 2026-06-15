@@ -1,0 +1,54 @@
+{
+ "AntAnim": {
+  "default": "Idle",
+  "states": {
+   "AntAngry": {
+    "clip": "Animations/AntAngry",
+    "speed": 1
+   },
+   "AntBop": {
+    "clip": "Animations/AntBop",
+    "speed": 1
+   },
+   "AntHappy": {
+    "clip": "Animations/AntHappy",
+    "speed": 1
+   },
+   "AntOops": {
+    "clip": "Animations/AntOops",
+    "speed": 1
+   },
+   "AntPrepare": {
+    "clip": "Animations/AntPrepare",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Volley": {
+    "clip": "Animations/Volley",
+    "speed": 1
+   }
+  }
+ },
+ "ObjectAnim": {
+  "default": "Neutral",
+  "states": {
+   "Neutral": {
+    "speed": 1
+   },
+   "ObjectBarely": {
+    "clip": "Animations/ObjectBarely",
+    "speed": 1
+   },
+   "ObjectHit": {
+    "clip": "Animations/ObjectHit",
+    "speed": 1
+   },
+   "ObjectJuggle": {
+    "clip": "Animations/ObjectJuggle",
+    "speed": 1
+   }
+  }
+ }
+}

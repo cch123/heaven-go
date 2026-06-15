@@ -1,0 +1,2878 @@
+{
+ "nodes": [
+  {
+   "name": "valiantVolley",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ObjectHolder",
+   "path": "ObjectHolder",
+   "parent": 0,
+   "pos": [
+    -11.11531,
+    2.892351
+   ],
+   "z": -3.5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Object",
+   "path": "ObjectHolder/Object",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "dirt",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.21,
+    6.03
+   ]
+  },
+  {
+   "name": "missImpact",
+   "path": "ObjectHolder/Object/missImpact",
+   "parent": 2,
+   "pos": [
+    -0.5,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "missImpact",
+   "order": 18,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.36,
+    3.31
+   ]
+  },
+  {
+   "name": "Ants",
+   "path": "Ants",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "AntLeft",
+   "path": "Ants/AntLeft",
+   "parent": 4,
+   "pos": [
+    -6,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22222224,
+    0.22222224
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "path": "Ants/AntLeft/chest",
+   "parent": 5,
+   "pos": [
+    0,
+    -5.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67,
+    0.67
+   ],
+   "sprite": "chest",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.77,
+    7.24
+   ]
+  },
+  {
+   "name": "neck",
+   "path": "Ants/AntLeft/chest/neck",
+   "parent": 6,
+   "pos": [
+    0,
+    3.7313445
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1940297,
+    1.1940297
+   ],
+   "sprite": "neck",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.98,
+    2.6
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Ants/AntLeft/head",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "head",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.84,
+    6.34
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "eyes",
+   "path": "Ants/AntLeft/head/eyes",
+   "parent": 8,
+   "pos": [
+    0,
+    -0.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "eye",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.32,
+    1.44
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennas",
+   "path": "Ants/AntLeft/head/antennas",
+   "parent": 8,
+   "pos": [
+    0,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennaR",
+   "path": "Ants/AntLeft/head/antennas/antennaR",
+   "parent": 10,
+   "pos": [
+    0.60000014,
+    2.2991982
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16000001,
+    0.16000001
+   ],
+   "sprite": "antenna",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8,
+    4.12
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennaL",
+   "path": "Ants/AntLeft/head/antennas/antennaL",
+   "parent": 10,
+   "pos": [
+    -0.60000014,
+    2.2991982
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.16000001,
+    0.16000001
+   ],
+   "sprite": "antenna",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8,
+    4.12
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouth",
+   "path": "Ants/AntLeft/head/mouth",
+   "parent": 8,
+   "pos": [
+    0,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouthR",
+   "path": "Ants/AntLeft/head/mouth/mouthR",
+   "parent": 13,
+   "pos": [
+    0.20000005,
+    1.0791969
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "sprite": "mouth",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.86
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouthL",
+   "path": "Ants/AntLeft/head/mouth/mouthL",
+   "parent": 13,
+   "pos": [
+    -0.20000005,
+    1.0791969
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.2,
+    0.2
+   ],
+   "sprite": "mouth",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.86
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "armUpperR",
+   "path": "Ants/AntLeft/armUpperR",
+   "parent": 5,
+   "pos": [
+    5.55,
+    -5.85
+   ],
+   "rotZ": 1.221730352932923,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "arm",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    8.72
+   ]
+  },
+  {
+   "name": "armUpperL",
+   "path": "Ants/AntLeft/armUpperL",
+   "parent": 5,
+   "pos": [
+    -5.55,
+    -5.85
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "arm",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    8.72
+   ]
+  },
+  {
+   "name": "armLowerR",
+   "path": "Ants/AntLeft/armLowerR",
+   "parent": 5,
+   "pos": [
+    4.4,
+    -10.5
+   ],
+   "rotZ": 0.4363322585636825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "armLower",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    10.56
+   ]
+  },
+  {
+   "name": "armLowerL",
+   "path": "Ants/AntLeft/armLowerL",
+   "parent": 5,
+   "pos": [
+    -4.4,
+    -10.5
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "armLower",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    10.56
+   ]
+  },
+  {
+   "name": "torso",
+   "path": "Ants/AntLeft/torso",
+   "parent": 5,
+   "pos": [
+    0,
+    -8.199997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.70000017,
+    0.70000017
+   ],
+   "sprite": "torso",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    3.26
+   ]
+  },
+  {
+   "name": "hips",
+   "path": "Ants/AntLeft/hips",
+   "parent": 5,
+   "pos": [
+    0,
+    -10.2
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "hips",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.06,
+    6.8
+   ]
+  },
+  {
+   "name": "butt",
+   "path": "Ants/AntLeft/butt",
+   "parent": 5,
+   "pos": [
+    0,
+    -10.499992
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "butt",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.62,
+    5.92
+   ]
+  },
+  {
+   "name": "legs",
+   "path": "Ants/AntLeft/legs",
+   "parent": 5,
+   "pos": [
+    -0.0000011920929,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "legR",
+   "path": "Ants/AntLeft/legs/legR",
+   "parent": 23,
+   "pos": [
+    0.35600019,
+    -1.5708008
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "sprite": "leg",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    10.58
+   ]
+  },
+  {
+   "name": "legL",
+   "path": "Ants/AntLeft/legs/legL",
+   "parent": 23,
+   "pos": [
+    -0.35599995,
+    -1.5708008
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.2,
+    0.2
+   ],
+   "sprite": "leg",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    10.58
+   ]
+  },
+  {
+   "name": "Smears",
+   "path": "Ants/AntLeft/Smears",
+   "parent": 5,
+   "pos": [
+    0.09,
+    -2.15
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    0.77,
+    12
+   ],
+   "order": 10,
+   "inactive": true,
+   "color": [
+    0.72156864,
+    0.23529413,
+    0.20392159,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    3.25,
+    1
+   ]
+  },
+  {
+   "name": "Smears (1)",
+   "path": "Ants/AntLeft/Smears (1)",
+   "parent": 5,
+   "pos": [
+    0.09,
+    -2.15
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    0.77,
+    12
+   ],
+   "order": 10,
+   "inactive": true,
+   "color": [
+    0.72156864,
+    0.23529413,
+    0.20392159,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    3.25,
+    1
+   ]
+  },
+  {
+   "name": "AntMiddle",
+   "path": "Ants/AntMiddle",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2222222,
+    0.2222222
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "path": "Ants/AntMiddle/chest",
+   "parent": 28,
+   "pos": [
+    0,
+    -5.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67,
+    0.67
+   ],
+   "sprite": "chest",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.77,
+    7.24
+   ]
+  },
+  {
+   "name": "neck",
+   "path": "Ants/AntMiddle/chest/neck",
+   "parent": 29,
+   "pos": [
+    0,
+    3.7313445
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1940297,
+    1.1940297
+   ],
+   "sprite": "neck",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.98,
+    2.6
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Ants/AntMiddle/head",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "head",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.84,
+    6.34
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "eyes",
+   "path": "Ants/AntMiddle/head/eyes",
+   "parent": 31,
+   "pos": [
+    0,
+    -0.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "eye",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.32,
+    1.44
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennas",
+   "path": "Ants/AntMiddle/head/antennas",
+   "parent": 31,
+   "pos": [
+    0,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennaR",
+   "path": "Ants/AntMiddle/head/antennas/antennaR",
+   "parent": 33,
+   "pos": [
+    0.60000014,
+    2.2991982
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16000001,
+    0.16000001
+   ],
+   "sprite": "antenna",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8,
+    4.12
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennaL",
+   "path": "Ants/AntMiddle/head/antennas/antennaL",
+   "parent": 33,
+   "pos": [
+    -0.60000014,
+    2.2991982
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.16000001,
+    0.16000001
+   ],
+   "sprite": "antenna",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8,
+    4.12
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouth",
+   "path": "Ants/AntMiddle/head/mouth",
+   "parent": 31,
+   "pos": [
+    0,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouthR",
+   "path": "Ants/AntMiddle/head/mouth/mouthR",
+   "parent": 36,
+   "pos": [
+    0.20000005,
+    1.0791969
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "sprite": "mouth",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.86
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouthL",
+   "path": "Ants/AntMiddle/head/mouth/mouthL",
+   "parent": 36,
+   "pos": [
+    -0.20000005,
+    1.0791969
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.2,
+    0.2
+   ],
+   "sprite": "mouth",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.86
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "armUpperR",
+   "path": "Ants/AntMiddle/armUpperR",
+   "parent": 28,
+   "pos": [
+    5.55,
+    -5.85
+   ],
+   "rotZ": 1.221730352932923,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "arm",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    8.72
+   ]
+  },
+  {
+   "name": "armUpperL",
+   "path": "Ants/AntMiddle/armUpperL",
+   "parent": 28,
+   "pos": [
+    -5.55,
+    -5.85
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "arm",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    8.72
+   ]
+  },
+  {
+   "name": "armLowerR",
+   "path": "Ants/AntMiddle/armLowerR",
+   "parent": 28,
+   "pos": [
+    4.4,
+    -10.5
+   ],
+   "rotZ": 0.4363322585636825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "armLower",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    10.56
+   ]
+  },
+  {
+   "name": "armLowerL",
+   "path": "Ants/AntMiddle/armLowerL",
+   "parent": 28,
+   "pos": [
+    -4.4,
+    -10.5
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "armLower",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    10.56
+   ]
+  },
+  {
+   "name": "torso",
+   "path": "Ants/AntMiddle/torso",
+   "parent": 28,
+   "pos": [
+    0,
+    -8.199997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.70000017,
+    0.70000017
+   ],
+   "sprite": "torso",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    3.26
+   ]
+  },
+  {
+   "name": "hips",
+   "path": "Ants/AntMiddle/hips",
+   "parent": 28,
+   "pos": [
+    0,
+    -10.2
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "hips",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.06,
+    6.8
+   ]
+  },
+  {
+   "name": "butt",
+   "path": "Ants/AntMiddle/butt",
+   "parent": 28,
+   "pos": [
+    0,
+    -10.499992
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "butt",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.62,
+    5.92
+   ]
+  },
+  {
+   "name": "legs",
+   "path": "Ants/AntMiddle/legs",
+   "parent": 28,
+   "pos": [
+    -0.0000011920929,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "legR",
+   "path": "Ants/AntMiddle/legs/legR",
+   "parent": 46,
+   "pos": [
+    0.35600019,
+    -1.5708008
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "sprite": "leg",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    10.58
+   ]
+  },
+  {
+   "name": "legL",
+   "path": "Ants/AntMiddle/legs/legL",
+   "parent": 46,
+   "pos": [
+    -0.35599995,
+    -1.5708008
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.2,
+    0.2
+   ],
+   "sprite": "leg",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    10.58
+   ]
+  },
+  {
+   "name": "Smears",
+   "path": "Ants/AntMiddle/Smears",
+   "parent": 28,
+   "pos": [
+    0.09,
+    -2.15
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    0.77,
+    12
+   ],
+   "order": 10,
+   "inactive": true,
+   "color": [
+    0.72156864,
+    0.23529413,
+    0.20392159,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    3.25,
+    1
+   ]
+  },
+  {
+   "name": "Smears (1)",
+   "path": "Ants/AntMiddle/Smears (1)",
+   "parent": 28,
+   "pos": [
+    0.09,
+    -2.15
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    0.77,
+    12
+   ],
+   "order": 10,
+   "inactive": true,
+   "color": [
+    0.72156864,
+    0.23529413,
+    0.20392159,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    3.25,
+    1
+   ]
+  },
+  {
+   "name": "AntPlayer",
+   "path": "Ants/AntPlayer",
+   "parent": 4,
+   "pos": [
+    6,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22222224,
+    0.22222224
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "chest",
+   "path": "Ants/AntPlayer/chest",
+   "parent": 51,
+   "pos": [
+    0,
+    -5.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.67,
+    0.67
+   ],
+   "sprite": "chest",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.77,
+    7.24
+   ]
+  },
+  {
+   "name": "neck",
+   "path": "Ants/AntPlayer/chest/neck",
+   "parent": 52,
+   "pos": [
+    0,
+    3.7313445
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1940297,
+    1.1940297
+   ],
+   "sprite": "neck",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.98,
+    2.6
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Ants/AntPlayer/head",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "head",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.84,
+    6.34
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "eyes",
+   "path": "Ants/AntPlayer/head/eyes",
+   "parent": 54,
+   "pos": [
+    0,
+    -0.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "eye",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.32,
+    1.44
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennas",
+   "path": "Ants/AntPlayer/head/antennas",
+   "parent": 54,
+   "pos": [
+    0,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennaR",
+   "path": "Ants/AntPlayer/head/antennas/antennaR",
+   "parent": 56,
+   "pos": [
+    0.60000014,
+    2.299198
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.16000001,
+    0.16000001
+   ],
+   "sprite": "antenna",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8,
+    4.12
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "antennaL",
+   "path": "Ants/AntPlayer/head/antennas/antennaL",
+   "parent": 56,
+   "pos": [
+    -0.6000001,
+    2.2991982
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.16000001,
+    0.16000001
+   ],
+   "sprite": "antenna",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.8,
+    4.12
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouth",
+   "path": "Ants/AntPlayer/head/mouth",
+   "parent": 54,
+   "pos": [
+    0,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouthR",
+   "path": "Ants/AntPlayer/head/mouth/mouthR",
+   "parent": 59,
+   "pos": [
+    0.20000005,
+    1.079197
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "sprite": "mouth",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.86
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "mouthL",
+   "path": "Ants/AntPlayer/head/mouth/mouthL",
+   "parent": 59,
+   "pos": [
+    -0.2,
+    1.0791969
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.2,
+    0.2
+   ],
+   "sprite": "mouth",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.86
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "armUpperR",
+   "path": "Ants/AntPlayer/armUpperR",
+   "parent": 51,
+   "pos": [
+    5.55,
+    -5.85
+   ],
+   "rotZ": 1.221730352932923,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "arm",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    8.72
+   ]
+  },
+  {
+   "name": "armUpperL",
+   "path": "Ants/AntPlayer/armUpperL",
+   "parent": 51,
+   "pos": [
+    -5.55,
+    -5.85
+   ],
+   "rotZ": -1.221730352932923,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "arm",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    8.72
+   ]
+  },
+  {
+   "name": "armLowerR",
+   "path": "Ants/AntPlayer/armLowerR",
+   "parent": 51,
+   "pos": [
+    4.4,
+    -10.5
+   ],
+   "rotZ": 0.4363322585636825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "armLower",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    10.56
+   ]
+  },
+  {
+   "name": "armLowerL",
+   "path": "Ants/AntPlayer/armLowerL",
+   "parent": 51,
+   "pos": [
+    -4.4,
+    -10.5
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "armLower",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    10.56
+   ]
+  },
+  {
+   "name": "torso",
+   "path": "Ants/AntPlayer/torso",
+   "parent": 51,
+   "pos": [
+    0,
+    -8.199997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.70000017,
+    0.70000017
+   ],
+   "sprite": "torso",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    3.26
+   ]
+  },
+  {
+   "name": "hips",
+   "path": "Ants/AntPlayer/hips",
+   "parent": 51,
+   "pos": [
+    0,
+    -10.2
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "hips",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.06,
+    6.8
+   ]
+  },
+  {
+   "name": "butt",
+   "path": "Ants/AntPlayer/butt",
+   "parent": 51,
+   "pos": [
+    0,
+    -10.499992
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "butt",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.62,
+    5.92
+   ]
+  },
+  {
+   "name": "legs",
+   "path": "Ants/AntPlayer/legs",
+   "parent": 51,
+   "pos": [
+    -0.0000011920929,
+    -8.095989
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "legR",
+   "path": "Ants/AntPlayer/legs/legR",
+   "parent": 69,
+   "pos": [
+    0.3560002,
+    -1.570801
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "sprite": "leg",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    10.58
+   ]
+  },
+  {
+   "name": "legL",
+   "path": "Ants/AntPlayer/legs/legL",
+   "parent": 69,
+   "pos": [
+    -0.3559999,
+    -1.570801
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.2,
+    0.2
+   ],
+   "sprite": "leg",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    10.58
+   ]
+  },
+  {
+   "name": "Smears",
+   "path": "Ants/AntPlayer/Smears",
+   "parent": 51,
+   "pos": [
+    0.09,
+    -2.15
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    0.77,
+    12
+   ],
+   "order": 10,
+   "inactive": true,
+   "color": [
+    0.72156864,
+    0.23529413,
+    0.20392159,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    3.25,
+    1
+   ]
+  },
+  {
+   "name": "Smears (1)",
+   "path": "Ants/AntPlayer/Smears (1)",
+   "parent": 51,
+   "pos": [
+    0.09,
+    -2.15
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    0.77,
+    12
+   ],
+   "order": 10,
+   "inactive": true,
+   "color": [
+    0.72156864,
+    0.23529413,
+    0.20392159,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    3.25,
+    1
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Curves",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EnterCurve",
+   "path": "Curves/EnterCurve",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/EnterCurve/Point 0",
+   "parent": 75,
+   "pos": [
+    -11.115314,
+    1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/EnterCurve/Point 1",
+   "parent": 75,
+   "pos": [
+    -5.4,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BounceCurve1",
+   "path": "Curves/BounceCurve1",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/BounceCurve1/Point 0",
+   "parent": 78,
+   "pos": [
+    -5.4,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/BounceCurve1/Point 1",
+   "parent": 78,
+   "pos": [
+    0,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BounceCurve2",
+   "path": "Curves/BounceCurve2",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/BounceCurve2/Point 0",
+   "parent": 81,
+   "pos": [
+    0,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/BounceCurve2/Point 1",
+   "parent": 81,
+   "pos": [
+    5.4,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ExitCurve",
+   "path": "Curves/ExitCurve",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/ExitCurve/Point 0",
+   "parent": 84,
+   "pos": [
+    5.4,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/ExitCurve/Point 1",
+   "parent": 84,
+   "pos": [
+    12.665367,
+    3.5320866
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BarelyCurve",
+   "path": "Curves/BarelyCurve",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/BarelyCurve/Point 0",
+   "parent": 87,
+   "pos": [
+    5.4,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/BarelyCurve/Point 1",
+   "parent": 87,
+   "pos": [
+    13.257057,
+    -1.1512251
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    1.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "back",
+   "path": "Background/back",
+   "parent": 90,
+   "pos": [
+    0,
+    1
+   ],
+   "z": 15,
+   "rotZ": 0,
+   "scale": [
+    1.7,
+    1.7
+   ],
+   "sprite": "caveBack",
+   "order": -40,
+   "color": [
+    0.7132075,
+    0.7132075,
+    0.7132075,
+    1
+   ],
+   "size": [
+    18.14,
+    9.83
+   ]
+  },
+  {
+   "name": "resourcePiles",
+   "path": "Background/back/resourcePiles",
+   "parent": 91,
+   "pos": [
+    1.2,
+    -2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "resourcePiles",
+   "order": -38,
+   "color": [
+    0.7137255,
+    0.7137255,
+    0.7137255,
+    1
+   ],
+   "size": [
+    16.3,
+    5.25
+   ]
+  },
+  {
+   "name": "backRocks",
+   "path": "Background/backRocks",
+   "parent": 90,
+   "pos": [
+    0,
+    1
+   ],
+   "z": 10,
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    1.2
+   ],
+   "sprite": "rocksBack",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.96,
+    10.26
+   ]
+  },
+  {
+   "name": "backRocksTop",
+   "path": "Background/backRocks/backRocksTop",
+   "parent": 93,
+   "pos": [
+    0,
+    14
+   ],
+   "rotZ": 0,
+   "scale": [
+    50,
+    18.9
+   ],
+   "order": -30,
+   "color": [
+    0.10588236,
+    0.058823533,
+    0.050980397,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "backRocksR",
+   "path": "Background/backRocks/backRocksR",
+   "parent": 93,
+   "pos": [
+    33.5,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    50,
+    46.9
+   ],
+   "order": -30,
+   "color": [
+    0.10588236,
+    0.058823533,
+    0.050980397,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "backRocksL",
+   "path": "Background/backRocks/backRocksL",
+   "parent": 93,
+   "pos": [
+    -33.5,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    50,
+    46.9
+   ],
+   "order": -30,
+   "color": [
+    0.10588236,
+    0.058823533,
+    0.050980397,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "backRocksBottom",
+   "path": "Background/backRocks/backRocksBottom",
+   "parent": 93,
+   "pos": [
+    -1.09,
+    -14.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    16.6,
+    18.9
+   ],
+   "order": -30,
+   "color": [
+    0.12941177,
+    0.07450981,
+    0.0627451,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "backRocksBottom2",
+   "path": "Background/backRocks/backRocksBottom2",
+   "parent": 93,
+   "pos": [
+    8.17,
+    -14.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    18.9
+   ],
+   "order": -30,
+   "color": [
+    0.10588236,
+    0.058823533,
+    0.050980397,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "frontRocks",
+   "path": "Background/frontRocks",
+   "parent": 90,
+   "pos": [
+    0,
+    1
+   ],
+   "z": 5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "frontRocks",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    22.02,
+    12.36
+   ]
+  },
+  {
+   "name": "frontRocksTop",
+   "path": "Background/frontRocks/frontRocksTop",
+   "parent": 99,
+   "pos": [
+    0,
+    14.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    87.5,
+    18.9
+   ],
+   "order": -20,
+   "color": [
+    0.3529412,
+    0.17254902,
+    0.10588236,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "frontRocksR",
+   "path": "Background/frontRocks/frontRocksR",
+   "parent": 99,
+   "pos": [
+    26.95,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    70,
+    1.01
+   ],
+   "sprite": "frontGradient",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "frontRocksL",
+   "path": "Background/frontRocks/frontRocksL",
+   "parent": 99,
+   "pos": [
+    -26.95,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    70,
+    1.01
+   ],
+   "sprite": "frontGradient",
+   "order": -21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "frontRocksBottom",
+   "path": "Background/frontRocks/frontRocksBottom",
+   "parent": 99,
+   "pos": [
+    0,
+    -14.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    50,
+    18.9
+   ],
+   "order": -20,
+   "color": [
+    0.227451,
+    0.1137255,
+    0.0627451,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "floor",
+   "path": "Background/floor",
+   "parent": 90,
+   "pos": [
+    0,
+    -2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "floor",
+   "order": -15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    40.26,
+    11.4
+   ]
+  },
+  {
+   "name": "floor",
+   "path": "Background/floor/floor",
+   "parent": 104,
+   "pos": [
+    0,
+    -10.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    20.33,
+    18.1
+   ],
+   "order": -15,
+   "color": [
+    0.33333334,
+    0.16470589,
+    0.08627451,
+    1
+   ],
+   "size": [
+    40.26,
+    11.4
+   ]
+  },
+  {
+   "name": "floor (1)",
+   "path": "Background/floor/floor (1)",
+   "parent": 104,
+   "pos": [
+    30.166,
+    -8.571
+   ],
+   "rotZ": 0,
+   "scale": [
+    40,
+    20
+   ],
+   "order": -16,
+   "color": [
+    0.33333334,
+    0.16470589,
+    0.08627451,
+    1
+   ],
+   "size": [
+    40.26,
+    11.4
+   ]
+  },
+  {
+   "name": "floor (2)",
+   "path": "Background/floor/floor (2)",
+   "parent": 104,
+   "pos": [
+    -30.166,
+    -9.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    40,
+    20
+   ],
+   "order": -16,
+   "color": [
+    0.33333334,
+    0.16470589,
+    0.08627451,
+    1
+   ],
+   "size": [
+    40.26,
+    11.4
+   ]
+  }
+ ]
+}
