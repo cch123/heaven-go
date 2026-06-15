@@ -158,8 +158,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   播放行为一致）；其动画动作也会执行但不可见。
 - C# 的 `BossAnim.SetBool("bossAnnoyed")` 在原版 controller 中无任何转换引用（死调
   用），未移植——bop 的不悦表现走 `bossAnnoyed ? BossMiss : Bop` 分支，与原版一致。
-- countIn 计数音实现 Normal/Alt/Cowbell 音色；GBA/DS 变体音色目录未提取（出现时
-  回退 Normal 并打日志）。
+- countIn 计数音实现 Normal/Alt/Cowbell/GBA/DS Male/DS Female 音色；公共音效
+  以 `count-ins` 子目录相对路径加载，匹配 SoundEffects.cs 的 folder/type 语义。
 - agbSamuraiSlice：`slowDown` 命中已保留 slow 版 slice 音效和 Flash 动画；原版
   `conductor.SetMinigamePitch(0.5)` 的全曲实时变调需要 engine 音频重采样能力，
   当前尚未接入。

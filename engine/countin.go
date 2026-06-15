@@ -13,20 +13,47 @@ var (
 	countTimings = []float64{0, 2, 4, 5, 6, 7}
 )
 
-// countSuffix 对应 GetCountInSound：0=Normal "1"，1=Alt "2"，2=Cowbell。
-func countSuffix(typ int) string {
+type countInStyle struct {
+	suffix  string
+	folder  string
+	cowbell bool
+}
+
+// countStyle 对应 SoundEffects.GetCountInSound/GetCountInFolder：
+// 0=Normal, 1=Alt, 2=Cowbell, 3=GBA, 4=DSMale, 5=DSFemale。
+func countStyle(typ int) countInStyle {
 	switch typ {
 	case 0:
-		return "1"
+		return countInStyle{suffix: "1"}
 	case 1:
-		return "2"
+		return countInStyle{suffix: "2"}
 	case 2:
-		return "cowbell"
+		return countInStyle{suffix: "cowbell", cowbell: true}
+	case 3:
+		return countInStyle{folder: "gba/"}
+	case 4:
+		return countInStyle{folder: "dsmale/"}
+	case 5:
+		return countInStyle{folder: "dsfemale/"}
 	default:
-		// gba/dsmale/dsfemale 变体目录未提取——回退 Normal 并记录
-		log.Printf("engine: countIn 类型 %d 的音色目录未提取，回退 Normal", typ)
-		return "1"
+		log.Printf("engine: countIn 类型 %d 未知，回退 Normal", typ)
+		return countInStyle{suffix: "1"}
 	}
+}
+
+func (s countInStyle) count(name string) string {
+	if s.cowbell {
+		return "cowbell"
+	}
+	return s.folder + name + s.suffix
+}
+
+func (s countInStyle) and() string { return s.folder + "and" }
+func (s countInStyle) goSound() string {
+	if s.cowbell {
+		return "cowbell"
+	}
+	return s.folder + "go" + s.suffix
 }
 
 // scheduleCountIn 把一个 countIn/* 实体翻译为公共音效调度（载入期调用）。
@@ -41,22 +68,16 @@ func (a *App) scheduleCountIn(datamodel string, beat, length float64, data map[s
 		b, _ := data[key].(bool)
 		return b
 	}
-	suffix := countSuffix(int(num("type", 0)))
-	cowbell := suffix == "cowbell"
-	cname := func(i int) string {
-		if cowbell {
-			return "cowbell"
-		}
-		return countNames[i] + suffix
-	}
+	style := countStyle(int(num("type", 0)))
+	cname := func(i int) string { return style.count(countNames[i]) }
 
 	switch strings.TrimPrefix(datamodel, "countIn/") {
 	case "count": // 单次计数：type=数字（0=One..3=Four），countType=音色
-		suffix = countSuffix(int(num("countType", 0)))
+		style = countStyle(int(num("countType", 0)))
 		n := int(num("type", 0))
 		names := []string{"one", "two", "three", "four"}
 		if n >= 0 && n < len(names) {
-			a.commonAt(beat, names[n]+suffix)
+			a.commonAt(beat, style.count(names[n]))
 		}
 	case "cowbell":
 		a.commonAt(beat, "cowbell")
@@ -72,21 +93,21 @@ func (a *App) scheduleCountIn(datamodel string, beat, length float64, data map[s
 		a.commonAt(beat, "ready1")
 		a.commonAt(beat+length/2, "ready2")
 	case "2 beat count-in":
-		a.scheduleCounts(beat, length/2, 4, 2, flag("go"), flag("and"), cowbell, suffix)
+		a.scheduleCounts(beat, length/2, 4, 2, flag("go"), flag("and"), style)
 	case "4 beat count-in":
-		a.scheduleCounts(beat, length/4, 2, 4, flag("go"), flag("and"), cowbell, suffix)
+		a.scheduleCounts(beat, length/4, 2, 4, flag("go"), flag("and"), style)
 	case "8 beat count-in": // timings × (length/8)
 		unit := length / 8
 		last := len(countNames) - 1
 		for i := range countNames {
 			name := cname(i)
-			if flag("go") && !cowbell && i == last {
-				name = "go" + suffix
+			if flag("go") && !style.cowbell && i == last {
+				name = style.goSound()
 			}
 			a.commonAt(beat+countTimings[i]*unit, name)
 		}
-		if flag("and") && !cowbell {
-			a.commonAt(beat-0.5, "and")
+		if flag("and") && !style.cowbell {
+			a.commonAt(beat-0.5, style.and())
 		}
 	case "count-in": // 拉伸版：startBeat = beat+length-8，绝对 timings
 		start := beat + length - 8
@@ -98,15 +119,15 @@ func (a *App) scheduleCountIn(datamodel string, beat, length float64, data map[s
 				names = append(names, cname(i))
 			}
 		}
-		if flag("go") && !cowbell && len(names) > 0 {
-			names[len(names)-1] = "go" + suffix
+		if flag("go") && !style.cowbell && len(names) > 0 {
+			names[len(names)-1] = style.goSound()
 		}
-		if flag("and") && !cowbell {
+		if flag("and") && !style.cowbell {
 			andBeat := beat - 0.5
 			if s := start + 3.5; s > andBeat {
 				andBeat = s
 			}
-			a.commonAt(andBeat, "and")
+			a.commonAt(andBeat, style.and())
 		}
 		for i := range beats {
 			a.commonAt(beats[i], names[i])
@@ -115,18 +136,17 @@ func (a *App) scheduleCountIn(datamodel string, beat, length float64, data map[s
 }
 
 // scheduleCounts：2/4 拍数法（countNames 的后 n 个）。
-func (a *App) scheduleCounts(beat, unit float64, offset, n int, withGo, withAnd, cowbell bool, suffix string) {
+func (a *App) scheduleCounts(beat, unit float64, offset, n int, withGo, withAnd bool, style countInStyle) {
 	for i := 0; i < n; i++ {
-		name := "cowbell"
-		if !cowbell {
-			name = countNames[offset+i] + suffix
+		name := style.count(countNames[offset+i])
+		if !style.cowbell {
 			if withGo && i == n-1 {
-				name = "go" + suffix
+				name = style.goSound()
 			}
 		}
 		a.commonAt(beat+float64(i)*unit, name)
 	}
-	if withAnd && !cowbell {
-		a.commonAt(beat-0.5, "and")
+	if withAnd && !style.cowbell {
+		a.commonAt(beat-0.5, style.and())
 	}
 }

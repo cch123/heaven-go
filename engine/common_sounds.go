@@ -33,6 +33,27 @@ func (a *App) loadCommonSounds() {
 		base := strings.TrimSuffix(e.Name(), filepath.Ext(e.Name()))
 		a.commonSounds[strings.ToLower(base)] = pcm
 	}
+	_ = filepath.WalkDir(dir, func(p string, d os.DirEntry, err error) error {
+		if err != nil || d.IsDir() {
+			return err
+		}
+		rel, err := filepath.Rel(dir, p)
+		if err != nil || !strings.Contains(rel, string(filepath.Separator)) {
+			return err
+		}
+		raw, err := os.ReadFile(p)
+		if err != nil {
+			return nil
+		}
+		pcm, err := kart.DecodePCM(raw, filepath.Ext(p), SampleRate)
+		if err != nil {
+			log.Printf("engine: 公共音效 %s 解码失败: %v", rel, err)
+			return nil
+		}
+		key := strings.TrimSuffix(filepath.ToSlash(rel), filepath.Ext(rel))
+		a.commonSounds[strings.ToLower(key)] = pcm
+		return nil
+	})
 }
 
 // PlayCommon 立即播放公共音效（大小写不敏感，Unity Resources.Load 同语义）。

@@ -619,9 +619,9 @@ func capInf(f float64) float64 {
 
 // ---------- 公共音效（assets/common） ----------
 
-// extractCommon 导出引擎级公共音效：countIn 计数音（count-ins/ 根目录全部，
-// gba/dsmale/dsfemale 变体目录暂不需要）与通用判定音。engine 启动时加载
-// assets/common，countIn/* 事件由 engine 直接播放。
+// extractCommon 导出引擎级公共音效：countIn 计数音（含 gba/dsmale/dsfemale
+// 子目录）与通用判定音。engine 启动时加载 assets/common，countIn/* 事件由
+// engine 直接播放。
 func extractCommon() {
 	outSounds := filepath.Join(*outDir, "sounds")
 	must(os.MkdirAll(outSounds, 0o755))
@@ -632,17 +632,25 @@ func extractCommon() {
 		if err != nil {
 			log.Fatalf("公共音效 %s: %v", rel, err)
 		}
-		must(os.WriteFile(filepath.Join(outSounds, filepath.Base(rel)), b, 0o644))
+		dst := filepath.Join(outSounds, rel)
+		if strings.HasPrefix(rel, "count-ins"+string(filepath.Separator)) {
+			dst = filepath.Join(outSounds, strings.TrimPrefix(rel, "count-ins"+string(filepath.Separator)))
+		}
+		must(os.MkdirAll(filepath.Dir(dst), 0o755))
+		must(os.WriteFile(dst, b, 0o644))
 		n++
 	}
-	entries, err := os.ReadDir(filepath.Join(sfxRoot, "count-ins"))
-	must(err)
-	for _, e := range entries {
-		if e.IsDir() || strings.HasSuffix(e.Name(), ".meta") {
-			continue
+	must(filepath.WalkDir(filepath.Join(sfxRoot, "count-ins"), func(p string, d os.DirEntry, err error) error {
+		if err != nil || d.IsDir() || strings.HasSuffix(d.Name(), ".meta") {
+			return err
 		}
-		copyOne(filepath.Join("count-ins", e.Name()))
-	}
+		rel, err := filepath.Rel(sfxRoot, p)
+		if err != nil {
+			return err
+		}
+		copyOne(rel)
+		return nil
+	}))
 	for _, name := range []string{"miss.wav", "nearMiss.ogg", "skillStar.ogg", "metronome.wav"} {
 		copyOne(name)
 	}
