@@ -1,0 +1,460 @@
+{
+ "Arisa": {
+  "default": "MouthNormal",
+  "states": {
+   "EyeLeft": {
+    "clip": "Animations/Arisa/FacePoser/EyeLeft",
+    "speed": 0
+   },
+   "EyeRight": {
+    "clip": "Animations/Arisa/FacePoser/EyeRight",
+    "speed": 0
+   },
+   "Eyes": {
+    "speed": 1
+   },
+   "IdolBeat": {
+    "clip": "Animations/Arisa/Long/IdolBeat",
+    "speed": 1
+   },
+   "IdolBeatArrange": {
+    "clip": "Animations/Arisa/Arrange/IdolBeatArrange",
+    "speed": 1
+   },
+   "IdolBigCall0": {
+    "clip": "Animations/Arisa/Long/IdolBigCall0",
+    "speed": 1
+   },
+   "IdolBigCall0Arrange": {
+    "clip": "Animations/Arisa/Arrange/IdolBigCall0Arrange",
+    "speed": 1
+   },
+   "IdolBigCall1": {
+    "clip": "Animations/Arisa/Long/IdolBigCall1",
+    "speed": 1
+   },
+   "IdolBigCall1Arrange": {
+    "clip": "Animations/Arisa/Arrange/IdolBigCall1Arrange",
+    "speed": 1
+   },
+   "IdolCall0": {
+    "clip": "Animations/Arisa/Long/IdolCall0",
+    "speed": 1
+   },
+   "IdolCall0Arrange": {
+    "clip": "Animations/Arisa/Arrange/IdolCall0Arrange",
+    "speed": 1
+   },
+   "IdolCall1": {
+    "clip": "Animations/Arisa/Long/IdolCall1",
+    "speed": 1
+   },
+   "IdolCall1Arrange": {
+    "clip": "Animations/Arisa/Arrange/IdolCall1Arrange",
+    "speed": 1
+   },
+   "IdolCrap": {
+    "clip": "Animations/Arisa/Long/IdolCrap",
+    "speed": 1
+   },
+   "IdolCrapArrange": {
+    "clip": "Animations/Arisa/Arrange/IdolCrapArrange",
+    "speed": 1
+   },
+   "IdolDab": {
+    "clip": "Animations/Arisa/Long/IdolDab",
+    "speed": 1
+   },
+   "IdolDabArrange": {
+    "clip": "Animations/Arisa/Arrange/IdolDabArrange",
+    "speed": 1
+   },
+   "IdolJump": {
+    "clip": "Animations/Arisa/Long/IdolJump",
+    "speed": 1
+   },
+   "IdolJumpArrange": {
+    "clip": "Animations/Arisa/Arrange/IdolJumpArrange",
+    "speed": 1
+   },
+   "IdolLand": {
+    "clip": "Animations/Arisa/Long/IdolLand",
+    "speed": 1
+   },
+   "IdolLandArrange": {
+    "clip": "Animations/Arisa/Arrange/IdolLandArrange",
+    "speed": 1
+   },
+   "IdolPeace": {
+    "clip": "Animations/Arisa/Long/IdolPeace",
+    "speed": 1
+   },
+   "IdolPeaceArrange": {
+    "clip": "Animations/Arisa/Arrange/IdolPeaceArrange",
+    "speed": 1
+   },
+   "IdolPeaceNoSync": {
+    "clip": "Animations/Arisa/Long/IdolPeaceNoSync",
+    "speed": 1
+   },
+   "IdolPeaceNoSyncArrange": {
+    "clip": "Animations/Arisa/Arrange/IdolPeaceNoSyncArrange",
+    "speed": 1
+   },
+   "IdolResponse": {
+    "clip": "Animations/Arisa/Long/IdolResponse",
+    "speed": 1
+   },
+   "IdolResponseArrange": {
+    "clip": "Animations/Arisa/Arrange/IdolResponseArrange",
+    "speed": 1
+   },
+   "IdolSquat0": {
+    "clip": "Animations/Arisa/Long/IdolSquat0",
+    "speed": 1
+   },
+   "IdolSquat0Arrange": {
+    "clip": "Animations/Arisa/Arrange/IdolSquat0Arrange",
+    "speed": 1
+   },
+   "IdolSquat1": {
+    "clip": "Animations/Arisa/Long/IdolSquat1",
+    "speed": 1
+   },
+   "IdolSquat1Arrange": {
+    "clip": "Animations/Arisa/Arrange/IdolSquat1Arrange",
+    "speed": 1
+   },
+   "IdolWink0": {
+    "clip": "Animations/Arisa/Long/IdolWink0",
+    "speed": 1
+   },
+   "IdolWink0Arrange": {
+    "clip": "Animations/Arisa/Arrange/IdolWink0Arrange",
+    "speed": 1
+   },
+   "IdolWink1": {
+    "clip": "Animations/Arisa/Long/IdolWink1",
+    "speed": 1
+   },
+   "IdolWink1Arrange": {
+    "clip": "Animations/Arisa/Arrange/IdolWink1Arrange",
+    "speed": 1
+   },
+   "MouthA": {
+    "clip": "Animations/Arisa/FacePoser/MouthA",
+    "speed": 1
+   },
+   "MouthE": {
+    "clip": "Animations/Arisa/FacePoser/MouthE",
+    "speed": 1
+   },
+   "MouthFrown": {
+    "clip": "Animations/Arisa/FacePoser/MouthFrown",
+    "speed": 1
+   },
+   "MouthI": {
+    "clip": "Animations/Arisa/FacePoser/MouthI",
+    "speed": 1
+   },
+   "MouthNormal": {
+    "clip": "Animations/Arisa/FacePoser/MouthNormal",
+    "speed": 1
+   },
+   "MouthO": {
+    "clip": "Animations/Arisa/FacePoser/MouthO",
+    "speed": 1
+   },
+   "MouthU": {
+    "clip": "Animations/Arisa/FacePoser/MouthU",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Animations/Arisa/Long/NoPose",
+    "speed": 1
+   },
+   "NoPoseArrange": {
+    "clip": "Animations/Arisa/Arrange/NoPoseArrange",
+    "speed": 1
+   }
+  }
+ },
+ "Background": {
+  "default": "Bg",
+  "states": {
+   "Bg": {
+    "clip": "Animations/Stage/Bg",
+    "speed": 1
+   },
+   "Bg_Light": {
+    "clip": "Animations/Stage/Bg_Light",
+    "speed": 1
+   },
+   "Bg_Spot": {
+    "clip": "Animations/Stage/Bg_Spot",
+    "speed": 1
+   }
+  }
+ },
+ "Blue": {
+  "default": "NoPose",
+  "states": {
+   "Beat": {
+    "clip": "Animations/BackDancers/Beat",
+    "speed": 1
+   },
+   "Crap": {
+    "clip": "Animations/BackDancers/Crap",
+    "speed": 1
+   },
+   "Dab": {
+    "clip": "Animations/BackDancers/Blue/Dab",
+    "speed": 1
+   },
+   "EyeLeft": {
+    "clip": "Animations/BackDancers/FacePoser/EyeLeft",
+    "speed": 1
+   },
+   "EyeRight": {
+    "clip": "Animations/BackDancers/FacePoser/EyeRight",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Animations/BackDancers/Jump",
+    "speed": 1
+   },
+   "Land": {
+    "clip": "Animations/BackDancers/Blue/Land",
+    "speed": 1
+   },
+   "MouthA": {
+    "clip": "Animations/BackDancers/FacePoser/MouthA",
+    "speed": 1
+   },
+   "MouthE": {
+    "clip": "Animations/BackDancers/FacePoser/MouthE",
+    "speed": 1
+   },
+   "MouthFrown": {
+    "clip": "Animations/BackDancers/FacePoser/MouthFrown",
+    "speed": 1
+   },
+   "MouthI": {
+    "clip": "Animations/BackDancers/FacePoser/MouthI",
+    "speed": 1
+   },
+   "MouthNormal": {
+    "clip": "Animations/BackDancers/FacePoser/MouthNormal",
+    "speed": 1
+   },
+   "MouthO": {
+    "clip": "Animations/BackDancers/FacePoser/MouthO",
+    "speed": 1
+   },
+   "MouthU": {
+    "clip": "Animations/BackDancers/FacePoser/MouthU",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Animations/BackDancers/NoPose",
+    "speed": 1
+   },
+   "Peace": {
+    "clip": "Animations/BackDancers/Peace",
+    "speed": 1
+   },
+   "Squat0": {
+    "clip": "Animations/BackDancers/Squat0",
+    "speed": 1
+   },
+   "Squat1": {
+    "clip": "Animations/BackDancers/Blue/Squat1",
+    "speed": 1
+   },
+   "WalkA": {
+    "clip": "Animations/BackDancers/WalkA",
+    "speed": 1
+   },
+   "WalkB": {
+    "clip": "Animations/BackDancers/WalkB",
+    "speed": 1
+   },
+   "WalkTest": {
+    "clip": "Animations/BackDancers/WalkTest",
+    "speed": 1
+   },
+   "Wink0": {
+    "clip": "Animations/BackDancers/Wink0",
+    "speed": 1
+   },
+   "Wink1": {
+    "clip": "Animations/BackDancers/Wink1",
+    "speed": 1
+   }
+  }
+ },
+ "Fan": {
+  "default": "FanFaceNormal",
+  "states": {
+   "FanBeat": {
+    "clip": "Animations/Fan/FanBeat",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NoPose",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "FanBigReady": {
+    "clip": "Animations/Fan/FanBigReady",
+    "speed": 1
+   },
+   "FanCharge": {
+    "clip": "Animations/Fan/FanCharge",
+    "speed": 1
+   },
+   "FanClap": {
+    "clip": "Animations/Fan/FanClap",
+    "speed": 1
+   },
+   "FanClapCharge": {
+    "clip": "Animations/Fan/FanClapCharge",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FanCharge",
+      "exitTime": 1.1989686,
+      "duration": 0
+     }
+    ]
+   },
+   "FanFaceAngry": {
+    "clip": "Animations/Fan/Head/FanFaceAngry",
+    "speed": 1
+   },
+   "FanFaceAngryFlip": {
+    "clip": "Animations/Fan/Head/FanFaceAngryFlip",
+    "speed": 1
+   },
+   "FanFaceNormal": {
+    "clip": "Animations/Fan/Head/FanFaceNormal",
+    "speed": 1
+   },
+   "FanFree": {
+    "clip": "Animations/Fan/FanFree",
+    "speed": 1
+   },
+   "FanJump": {
+    "clip": "Animations/Fan/FanJump",
+    "speed": 1
+   },
+   "FanPrepare": {
+    "clip": "Animations/Fan/FanPrepare",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Animations/Fan/NoPose",
+    "speed": 1
+   }
+  }
+ },
+ "Orange": {
+  "default": "EyeLeft",
+  "states": {
+   "Beat": {
+    "clip": "Animations/BackDancers/Beat",
+    "speed": 1
+   },
+   "Crap": {
+    "clip": "Animations/BackDancers/Crap",
+    "speed": 1
+   },
+   "Dab": {
+    "clip": "Animations/BackDancers/Orange/Dab",
+    "speed": 1
+   },
+   "EyeLeft": {
+    "clip": "Animations/BackDancers/FacePoser/EyeLeft",
+    "speed": 1
+   },
+   "EyeRight": {
+    "clip": "Animations/BackDancers/FacePoser/EyeRight",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Animations/BackDancers/Jump",
+    "speed": 1
+   },
+   "Land": {
+    "clip": "Animations/BackDancers/Orange/Land",
+    "speed": 1
+   },
+   "MouthA": {
+    "clip": "Animations/BackDancers/FacePoser/MouthA",
+    "speed": 1
+   },
+   "MouthE": {
+    "clip": "Animations/BackDancers/FacePoser/MouthE",
+    "speed": 1
+   },
+   "MouthFrown": {
+    "clip": "Animations/BackDancers/FacePoser/MouthFrown",
+    "speed": 1
+   },
+   "MouthI": {
+    "clip": "Animations/BackDancers/FacePoser/MouthI",
+    "speed": 1
+   },
+   "MouthNormal": {
+    "clip": "Animations/BackDancers/FacePoser/MouthNormal",
+    "speed": 1
+   },
+   "MouthO": {
+    "clip": "Animations/BackDancers/FacePoser/MouthO",
+    "speed": 1
+   },
+   "MouthU": {
+    "clip": "Animations/BackDancers/FacePoser/MouthU",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Animations/BackDancers/NoPose",
+    "speed": 1
+   },
+   "Peace": {
+    "clip": "Animations/BackDancers/Peace",
+    "speed": 1
+   },
+   "Squat0": {
+    "clip": "Animations/BackDancers/Squat0",
+    "speed": 1
+   },
+   "Squat1": {
+    "clip": "Animations/BackDancers/Orange/Squat1",
+    "speed": 1
+   },
+   "WalkA": {
+    "clip": "Animations/BackDancers/WalkA",
+    "speed": 1
+   },
+   "WalkB": {
+    "clip": "Animations/BackDancers/WalkB",
+    "speed": 1
+   },
+   "WalkTest": {
+    "clip": "Animations/BackDancers/WalkTest",
+    "speed": 1
+   },
+   "Wink0": {
+    "clip": "Animations/BackDancers/Wink0",
+    "speed": 1
+   },
+   "Wink1": {
+    "clip": "Animations/BackDancers/Wink1",
+    "speed": 1
+   }
+  }
+ }
+}

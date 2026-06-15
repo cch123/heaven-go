@@ -89,10 +89,14 @@ func findFontByFamily(root, family string) (string, bool) {
 	return found, found != ""
 }
 
-// animNSKey 返回剪辑的命名空间 key（与 exportAnimDir 的约定一致：末级目录/文件名）。
-func animNSKey(animPath string) string {
-	base := strings.TrimSuffix(filepath.Base(animPath), ".anim")
-	return filepath.Base(filepath.Dir(animPath)) + "/" + base
+// animNSKey 返回剪辑的命名空间 key（与 exportAnimDir 的约定一致：动画根相对路径）。
+func animNSKey(animRoot, animPath string) string {
+	rel, err := filepath.Rel(animRoot, animPath)
+	if err != nil {
+		rel = filepath.Base(animPath)
+	}
+	rel = strings.TrimSuffix(filepath.ToSlash(rel), ".anim")
+	return rel
 }
 
 func exportControllers(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64]string) {
@@ -108,7 +112,7 @@ func exportControllers(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map
 
 	ctrls := map[string]kmdata.Controller{}
 	for guid, p := range ctrlGUIDs {
-		ctrls[ctrlName[guid]] = parseController(p, animGUIDs)
+		ctrls[ctrlName[guid]] = parseController(p, animDir, animGUIDs)
 	}
 	writeJSON("controllers.json", ctrls)
 
@@ -138,7 +142,7 @@ func exportControllers(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map
 	fmt.Printf("controllers: %d 个，animator 绑定 %d 处\n", len(ctrls), len(animators))
 }
 
-func parseController(path string, animGUIDs map[string]string) kmdata.Controller {
+func parseController(path, animRoot string, animGUIDs map[string]string) kmdata.Controller {
 	raw, err := os.ReadFile(path)
 	must(err)
 	docs, err := uy.Parse(raw)
@@ -187,7 +191,7 @@ func parseController(path string, animGUIDs map[string]string) kmdata.Controller
 			st := kmdata.CtrlState{Speed: uy.F(d.content["m_Speed"])}
 			if g := uy.S(uy.Get(uy.M(d.content["m_Motion"]), "guid")); g != "" {
 				if ap, ok := animGUIDs[g]; ok {
-					st.Clip = animNSKey(ap)
+					st.Clip = animNSKey(animRoot, ap)
 				} else {
 					log.Printf("warn: 状态 %s 的 motion guid %s 无对应 .anim", name, g)
 				}

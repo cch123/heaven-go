@@ -1,0 +1,71 @@
+{
+ "components": {
+  "amie0": {
+   "path": "dancerL_rootMotion/Orange",
+   "nums": {
+    "rootYPos": 0,
+    "startPostion": 0,
+    "stepDistance": 1
+   },
+   "refs": {
+    "baseHead": "dancerL_rootMotion/Orange/idol_head",
+    "facePoser": "dancerL_rootMotion/Orange/idol_head/FacePoser"
+   }
+  },
+  "amie1": {
+   "path": "dancerR_rootMotion/Blue",
+   "nums": {
+    "rootYPos": 0.6,
+    "startPostion": 9,
+    "stepDistance": -0.3125
+   },
+   "refs": {
+    "baseHead": "dancerR_rootMotion/Blue/idol_head",
+    "clapEffect": "dancerR_rootMotion/Blue/Effect_IdolCrap",
+    "coreMat": "NtrIdol_BackupR",
+    "facePoser": "dancerR_rootMotion/Blue/idol_head/FacePoser",
+    "rootTransform": "dancerR_rootMotion",
+    "shadow": "dancerR_Shadow",
+    "winkEffect": "dancerR_rootMotion/Blue/Effect_IdolWinkArr"
+   }
+  },
+  "arisa": {
+   "path": "Idol_rootMotion/Idol",
+   "refs": {
+    "baseHead": "Idol_rootMotion/Idol/idol_head",
+    "facePoser": "Idol_rootMotion/Idol/idol_head/FacePoser",
+    "idolClapEffect": "Effect_IdolCrap",
+    "idolKissEffect": "Effect_IdolKiss2",
+    "idolWinkArrEffect": "Effect_IdolWinkArr",
+    "idolWinkEffect": "Effect_IdolWink"
+   }
+  },
+  "fan": {
+   "path": "Fan",
+   "nums": {
+    "jumpStartTime": -99
+   },
+   "refs": {
+    "animator": "Fan",
+    "fanClapEffect": "Fan/Effect_FanCrap",
+    "headRoot": "Fan/root_motion/Head_root",
+    "motionRoot": "Fan/root_motion",
+    "shadow": "Fan/fan_Shadow",
+    "sortingGroup": "Fan/root_motion"
+   }
+  },
+  "game": {
+   "path": "",
+   "refs": {
+    "Arisa": "Idol_rootMotion/Idol",
+    "ArisaRootMotion": "Idol_rootMotion",
+    "ArisaShadow": "idol_Shadow",
+    "Blue": "dancerR_rootMotion/Blue",
+    "Orange": "dancerL_rootMotion/Orange",
+    "StageAnimator": "Background",
+    "spectator": "Fan",
+    "spectatorAnchor": "fan_SpawnAnchor"
+   }
+  }
+ }
+}

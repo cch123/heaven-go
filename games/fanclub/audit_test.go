@@ -1,0 +1,248 @@
+package fanclub
+
+import (
+	"strings"
+	"testing"
+
+	"hsdemo/kart"
+	"hsdemo/kmdata"
+)
+
+func loadAssets(t *testing.T) *kart.Assets {
+	t.Helper()
+	as, err := kart.Load("../../assets/fanClub", 44100)
+	if err != nil {
+		t.Skipf("assets not extracted: %v", err)
+	}
+	return as
+}
+
+var fanClubModuleDrivenClips = map[string]bool{
+	arisaFacePrefix + "EyeMiddle":      true,
+	arisaFacePrefix + "EyeEast":        true,
+	arisaFacePrefix + "EyeWest":        true,
+	arisaFacePrefix + "EyeNorth":       true,
+	arisaFacePrefix + "EyeNorthRaised": true,
+	arisaFacePrefix + "EyeSouth":       true,
+}
+
+func TestFanClubBindingsTemplatesAndSounds(t *testing.T) {
+	as := loadAssets(t)
+	nodeSet := nodeSet(as)
+	for role, want := range map[string]string{
+		"StageAnimator":   "Background",
+		"Arisa":           "Idol_rootMotion/Idol",
+		"ArisaRootMotion": "Idol_rootMotion",
+		"ArisaShadow":     "idol_Shadow",
+		"Blue":            "dancerR_rootMotion/Blue",
+		"Orange":          "dancerL_rootMotion/Orange",
+		"spectator":       "Fan",
+		"spectatorAnchor": "fan_SpawnAnchor",
+	} {
+		if got := as.Roles[role]; got != want || !nodeSet[got] {
+			t.Errorf("role %s = %q, want scene path %q", role, got, want)
+		}
+	}
+	if tmpl := kart.NewTemplate(as, as.Roles["spectator"]); tmpl == nil {
+		t.Fatalf("Fan spectator template not resolved")
+	}
+	for path, ctrl := range map[string]string{
+		"Background":                "Background",
+		"Idol_rootMotion/Idol":      "Arisa",
+		"dancerR_rootMotion/Blue":   "Blue",
+		"dancerL_rootMotion/Orange": "Orange",
+		"Fan":                       "Fan",
+	} {
+		if got := as.Animators[path]; got != ctrl {
+			t.Errorf("animator %s = %q, want %q", path, got, ctrl)
+		}
+	}
+	fan := as.Extra.Components["fan"]
+	if fan.Path != "Fan" || fan.Refs["motionRoot"] != "Fan/root_motion" || fan.Refs["shadow"] != "Fan/fan_Shadow" {
+		t.Fatalf("fan component refs drifted: %#v", fan)
+	}
+	arisa := as.Extra.Components["arisa"]
+	if arisa.Path != as.Roles["Arisa"] || arisa.Refs["facePoser"] != as.Roles["Arisa"]+"/idol_head/FacePoser" {
+		t.Fatalf("arisa component refs drifted: %#v", arisa)
+	}
+	for _, snd := range []string{
+		"play_clap", "crap_impact", "play_jump", "landing_impact", "crowd_big_ready",
+		"jp/arisa_hai_1_jp", "jp/arisa_ka_jp", "jp/crowd_hai_jp", "jp/crowd_ne_jp",
+	} {
+		if _, ok := as.Sounds[snd]; !ok {
+			t.Errorf("missing sound %s", snd)
+		}
+	}
+}
+
+func TestFanClubControllersAndNamespacedFaceposerClips(t *testing.T) {
+	as := loadAssets(t)
+	for ctrlName, states := range map[string][]string{
+		"Arisa":      {"NoPose", "NoPoseArrange", "IdolBeat", "IdolBeatArrange", "IdolCall0", "IdolBigCall1Arrange", "IdolDab"},
+		"Background": {"Bg", "Bg_Light", "Bg_Spot"},
+		"Blue":       {"NoPose", "Beat", "Crap", "Jump", "WalkA", "WalkB", "Dab", "MouthA", "EyeLeft"},
+		"Orange":     {"NoPose", "Beat", "Crap", "Jump", "WalkA", "WalkB", "Dab", "MouthA", "EyeRight"},
+		"Fan":        {"NoPose", "FanBeat", "FanPrepare", "FanClap", "FanClapCharge", "FanJump", "FanBigReady", "FanFaceAngry"},
+	} {
+		ctrl, ok := as.Controllers[ctrlName]
+		if !ok {
+			t.Fatalf("missing controller %s", ctrlName)
+		}
+		for _, st := range states {
+			cs, ok := ctrl.States[st]
+			if !ok {
+				t.Errorf("controller %s missing state %s", ctrlName, st)
+				continue
+			}
+			if cs.Clip != "" && as.Anims[cs.Clip] == nil {
+				t.Errorf("controller %s state %s references missing clip %s", ctrlName, st, cs.Clip)
+			}
+		}
+	}
+	for _, clip := range []string{
+		arisaFacePrefix + "MouthA",
+		arisaFacePrefix + "EyeLeft",
+		backupFacePrefix + "MouthA",
+		backupFacePrefix + "EyeRight",
+		"Animations/Arisa/Long/IdolBeat",
+		"Animations/Arisa/Arrange/IdolBeatArrange",
+		"Animations/BackDancers/Blue/Dab",
+		"Animations/BackDancers/Orange/Dab",
+		"Animations/Fan/FanClap",
+		"Animations/Fan/Head/FanFaceAngry",
+		"Animations/Stage/Bg_Light",
+	} {
+		if as.Anims[clip] == nil {
+			t.Errorf("missing clip %s", clip)
+		}
+	}
+	if as.Anims["FacePoser/MouthA"] != nil {
+		t.Fatalf("ambiguous short FacePoser/MouthA clip exported; Arisa and BackDancers must stay namespaced")
+	}
+}
+
+func TestFanClubAllClipsAccountedAndPathsResolve(t *testing.T) {
+	as := loadAssets(t)
+	nodeSet := nodeSet(as)
+	ctrlClips := map[string]bool{}
+	for animPath, ctrlName := range as.Animators {
+		ctrl := as.Controllers[ctrlName]
+		for stName, st := range ctrl.States {
+			if st.Clip == "" {
+				continue
+			}
+			ctrlClips[st.Clip] = true
+			checkAnimPaths(t, as.Anims[st.Clip], st.Clip, animPath, nodeSet)
+			checkSupportedAttrs(t, as.Anims[st.Clip], st.Clip)
+			if as.Anims[st.Clip] == nil {
+				t.Errorf("controller %s state %s references missing clip %s", ctrlName, stName, st.Clip)
+			}
+		}
+	}
+	for clip := range fanClubModuleDrivenClips {
+		checkAnimPaths(t, as.Anims[clip], clip, as.Roles["Arisa"], nodeSet)
+		checkSupportedAttrs(t, as.Anims[clip], clip)
+	}
+	for name := range as.Anims {
+		if !strings.Contains(name, "/") {
+			continue
+		}
+		if !ctrlClips[name] && !fanClubModuleDrivenClips[name] {
+			t.Errorf("clip %q has no controller state or module driver", name)
+		}
+	}
+}
+
+func TestFanClubLayeredFaceposerSamplingAndTimingConstants(t *testing.T) {
+	as := loadAssets(t)
+	sc := kart.NewScene(as)
+	root := as.Roles["Arisa"]
+	sc.PlayLayer("target", root, arisaFacePrefix+"EyeNorthRaised", 0, 1)
+	sc.PlayLayerNormalized("shape", root, arisaFacePrefix+"EyeLeft", eyeNorm(6, 6))
+	sc.Sample(0)
+	if got, _, _ := sc.NodeSprite(root + "/idol_head/FacePoser/EyeL/EyeSprite"); got != "fanClub_IdolParts_19" {
+		t.Fatalf("normalized eye shape sprite = %q, want fanClub_IdolParts_19", got)
+	}
+	if fanCount != 12 || radius != 1.5 || dancerAnimCount != 16 {
+		t.Fatalf("layout constants drifted: fanCount=%d radius=%v dancerAnimCount=%d", fanCount, radius, dancerAnimCount)
+	}
+	if got := fanClubSeq("arisa_hai"); len(got) != 3 || got[0].beat != 0 || got[1].beat != 1 || got[2].beat != 2 {
+		t.Fatalf("arisa_hai sequence drifted: %#v", got)
+	}
+	if got := fanClubSeq("arisa_kamone"); len(got) != 3 || got[1].name != "jp/arisa_mo_jp" || got[1].beat != 0.5 {
+		t.Fatalf("arisa_kamone sequence drifted: %#v", got)
+	}
+	if got := fanClubSeq("crowd_big_ready"); len(got) != 1 || got[0].name != "crowd_big_ready" {
+		t.Fatalf("crowd_big_ready sequence drifted: %#v", got)
+	}
+}
+
+func nodeSet(as *kart.Assets) map[string]bool {
+	out := map[string]bool{}
+	for _, n := range as.Rig.Nodes {
+		out[n.Path] = true
+	}
+	return out
+}
+
+func checkAnimPaths(t *testing.T, anim *kmdata.Anim, clip, root string, nodes map[string]bool) {
+	t.Helper()
+	if anim == nil {
+		t.Errorf("clip %s missing", clip)
+		return
+	}
+	for p := range animPaths(anim) {
+		full := p
+		if root != "" && p != "" {
+			full = root + "/" + p
+		} else if p == "" {
+			full = root
+		}
+		if !nodes[full] {
+			t.Errorf("clip %s path %q resolves to missing node %q", clip, p, full)
+		}
+	}
+}
+
+func animPaths(anim *kmdata.Anim) map[string]bool {
+	paths := map[string]bool{}
+	for p := range anim.Pos {
+		paths[p] = true
+	}
+	for p := range anim.Euler {
+		paths[p] = true
+	}
+	for p := range anim.Scale {
+		paths[p] = true
+	}
+	for p := range anim.Sprites {
+		paths[p] = true
+	}
+	for p := range anim.Floats {
+		paths[p] = true
+	}
+	return paths
+}
+
+func checkSupportedAttrs(t *testing.T, anim *kmdata.Anim, clip string) {
+	t.Helper()
+	if anim == nil {
+		return
+	}
+	for _, attrs := range anim.Floats {
+		for attr := range attrs {
+			if !fanClubSupportedFloatAttr(attr) {
+				t.Errorf("clip %s uses unsupported float attr %s", clip, attr)
+			}
+		}
+	}
+}
+
+func fanClubSupportedFloatAttr(attr string) bool {
+	switch attr {
+	case "m_FlipX", "m_FlipY", "m_SortingOrder", "m_IsActive", "m_Enabled", "m_Size.x", "m_Size.y":
+		return true
+	default:
+		return strings.HasPrefix(attr, "m_Color.") || strings.HasPrefix(attr, "m_fontColor.")
+	}
+}

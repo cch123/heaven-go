@@ -1927,8 +1927,9 @@ func scalarStructArray(items []any) bool {
 // ---------- anims / sounds ----------
 
 // exportAnimDir 导出全部剪辑。同名 .anim 可能分属不同 Animator（如
-// Girl/Bop 与 Player/Bop），因此每个剪辑都以"末级目录/文件名"为命名空间 key；
-// 文件名全局唯一时再额外写裸名 key（向后兼容只有单 Animator 的游戏）。
+// Arisa/FacePoser/MouthA 与 BackDancers/FacePoser/MouthA），因此每个剪辑
+// 都以动画根相对路径为命名空间 key；文件名全局唯一时再额外写裸名 key
+// （向后兼容只有单 Animator 的游戏）。
 func exportAnimDir(dir string, tables map[string]*spriteTable) {
 	type clipFile struct {
 		base, nsKey string
@@ -1951,7 +1952,7 @@ func exportAnimDir(dir string, tables map[string]*spriteTable) {
 		for i := range docs {
 			if docs[i].ClassID == 74 {
 				base := strings.TrimSuffix(filepath.Base(p), ".anim")
-				ns := filepath.Base(filepath.Dir(p)) + "/" + base
+				ns := animNSKey(dir, p)
 				clips = append(clips, clipFile{base, ns, convertClip(docs[i].Content(), tables)})
 				baseCount[base]++
 				break

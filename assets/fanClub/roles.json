@@ -1,0 +1,10 @@
+{
+ "Arisa": "Idol_rootMotion/Idol",
+ "ArisaRootMotion": "Idol_rootMotion",
+ "ArisaShadow": "idol_Shadow",
+ "Blue": "dancerR_rootMotion/Blue",
+ "Orange": "dancerL_rootMotion/Orange",
+ "StageAnimator": "Background",
+ "spectator": "Fan",
+ "spectatorAnchor": "fan_SpawnAnchor"
+}

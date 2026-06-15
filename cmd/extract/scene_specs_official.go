@@ -94,7 +94,47 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 	"drummerDuel":      basicOfficialSceneSpec("DrummerDuel", "drummerDuel.prefab"),
 	"drummingPractice": basicOfficialSceneSpec("DrummingPractice", "drummingPractice.prefab"),
 	"fallingWaffle":    basicOfficialSceneSpec("FallingWaffle", "fallingWaffle.prefab"),
-	"fanClub":          basicOfficialSceneSpec("FanClub", "fanClub.prefab"),
+	"fanClub": {
+		dir:    "FanClub",
+		prefab: "fanClub.prefab",
+		roleFields: []string{
+			"StageAnimator", "Arisa", "ArisaRootMotion", "ArisaShadow",
+			"spectator", "spectatorAnchor", "Blue", "Orange", "spectatorMat",
+		},
+		roleFallbacks: map[string]string{
+			"StageAnimator":   "Background",
+			"Arisa":           "Idol_rootMotion/Idol",
+			"ArisaRootMotion": "Idol_rootMotion",
+			"ArisaShadow":     "idol_Shadow",
+			"spectator":       "Fan",
+			"spectatorAnchor": "fan_SpawnAnchor",
+			"Blue":            "dancerR_rootMotion/Blue",
+			"Orange":          "dancerL_rootMotion/Orange",
+		},
+		wantControllers: true,
+		templatePrefabs: []string{
+			"Prefabs/Fan.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"StageAnimator", "Arisa", "ArisaRootMotion", "ArisaShadow",
+				"spectator", "spectatorAnchor", "Blue", "Orange", "spectatorMat",
+			}},
+			{name: "arisa", markers: []string{
+				"idolClapEffect", "idolWinkEffect", "idolKissEffect",
+				"idolWinkArrEffect", "baseHead", "facePoser", "coreMat",
+			}, atPath: "Idol_rootMotion/Idol"},
+			{name: "amie", markers: []string{
+				"stepDistance", "startPostion", "rootYPos", "clapEffect",
+				"winkEffect", "rootTransform", "shadow", "baseHead",
+				"facePoser", "coreMat",
+			}, multi: true},
+			{name: "fan", markers: []string{
+				"motionRoot", "headRoot", "sortingGroup", "animator",
+				"fanClapEffect", "shadow",
+			}, atPath: "Fan"},
+		},
+	},
 	"figureFighter":    basicOfficialSceneSpec("FigureFighter", "figureFighter.prefab"),
 	"fillbots":         basicOfficialSceneSpec("Fillbots", "fillbots.prefab"),
 	"fireworks":        basicOfficialSceneSpec("Fireworks", "fireworks.prefab"),

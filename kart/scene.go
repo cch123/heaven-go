@@ -294,6 +294,28 @@ func (s *SceneInst) PlayNormalized(rootPath, clip string, t float64) {
 	}
 }
 
+// PlayLayerNormalized is PlayNormalized for an independent overlay layer.
+// Unity face poser controllers often use float parameters to hold a static
+// frame while the body Animator keeps running on layer 0; using a separate key
+// preserves that composition instead of replacing the base player.
+func (s *SceneInst) PlayLayerNormalized(key, rootPath, clip string, t float64) {
+	anim, ok := s.as.Anims[clip]
+	if !ok {
+		return
+	}
+	idx, ok := s.byPath[rootPath]
+	if !ok {
+		return
+	}
+	if _, exists := s.players[key]; !exists {
+		s.playerOrder = append(s.playerOrder, key)
+	}
+	s.players[key] = &scenePlayer{
+		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: clip,
+		normalized: true, normT: math.Max(0, math.Min(1, t)),
+	}
+}
+
 // PlayFrozen 按状态名冻结在归一化时间 normT（DoScaledAnimationAsync(name, 0) 语义）。
 func (s *SceneInst) PlayFrozen(rootPath, stateName string, normT float64) {
 	m, ok := s.machines[rootPath]

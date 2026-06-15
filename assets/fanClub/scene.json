@@ -1,0 +1,4158 @@
+{
+ "nodes": [
+  {
+   "name": "fanClub",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "Jumbotron",
+   "path": "Background/Jumbotron",
+   "parent": 1,
+   "pos": [
+    0,
+    1.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6,
+    0.6
+   ],
+   "sprite": "fanClub_DVParts_0",
+   "order": -50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.46,
+    3.064
+   ]
+  },
+  {
+   "name": "Temp",
+   "path": "Background/Jumbotron/Temp",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4,
+    2.5
+   ],
+   "order": -51,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Render",
+   "path": "Background/Jumbotron/Render",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4,
+    4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -51
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_kanaami01 (1)",
+   "path": "Background/ntrIdol_BG_kanaami01 (1)",
+   "parent": 1,
+   "pos": [
+    0,
+    2.344
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9702467,
+    0.9204419
+   ],
+   "sprite": "ntrIdol_BG_kanaami01",
+   "order": -51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.29,
+    0.65
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_kanaami01",
+   "path": "Background/ntrIdol_BG_kanaami01",
+   "parent": 1,
+   "pos": [
+    0,
+    1.405
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9702467,
+    0.9204419
+   ],
+   "sprite": "ntrIdol_BG_kanaami01",
+   "order": -51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.29,
+    0.65
+   ]
+  },
+  {
+   "name": "bgCol",
+   "path": "Background/bgCol",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    512,
+    1
+   ],
+   "sprite": "ntrIdol_BG_sky",
+   "order": -80,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Background/bgCol/Square",
+   "parent": 7,
+   "pos": [
+    0,
+    32
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    64
+   ],
+   "order": -81,
+   "color": [
+    1,
+    0.78823537,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Square (1)",
+   "path": "Background/bgCol/Square (1)",
+   "parent": 7,
+   "pos": [
+    0,
+    -32
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    64
+   ],
+   "order": -81,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "bgFlash",
+   "path": "Background/bgFlash",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    50,
+    50
+   ],
+   "order": -79,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_spot",
+   "path": "Background/ntrIdol_BG_spot",
+   "parent": 1,
+   "pos": [
+    0,
+    2.25
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_spot",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    5.45,
+    2.37
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_spotDrop",
+   "path": "Background/ntrIdol_BG_spotDrop",
+   "parent": 1,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_spotDrop",
+   "order": -39,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.37,
+    1.21
+   ]
+  },
+  {
+   "name": "L_ntrIdol_BG_lightsGlow",
+   "path": "Background/L_ntrIdol_BG_lightsGlow",
+   "parent": 1,
+   "pos": [
+    -3.1640003,
+    1.7174035
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lightsGlow",
+   "order": -59,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.25,
+    1.03
+   ]
+  },
+  {
+   "name": "L_ntrIdol_BG_lightsGlow (1)",
+   "path": "Background/L_ntrIdol_BG_lightsGlow (1)",
+   "parent": 1,
+   "pos": [
+    -1.5358801,
+    0.87760335
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6800001,
+    0.6800001
+   ],
+   "sprite": "ntrIdol_BG_lightsGlow",
+   "order": -59,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    2.25,
+    1.03
+   ]
+  },
+  {
+   "name": "L_ntrIdol_BG_lightsGlow (2)",
+   "path": "Background/L_ntrIdol_BG_lightsGlow (2)",
+   "parent": 1,
+   "pos": [
+    -2.8058405,
+    1.0412035
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6800001,
+    0.6800001
+   ],
+   "sprite": "ntrIdol_BG_lightsGlow",
+   "order": -59,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    2.25,
+    1.03
+   ]
+  },
+  {
+   "name": "R_ntrIdol_BG_lightsGlow",
+   "path": "Background/R_ntrIdol_BG_lightsGlow",
+   "parent": 1,
+   "pos": [
+    3.1640003,
+    1.7174035
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lightsGlow",
+   "order": -59,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.25,
+    1.03
+   ]
+  },
+  {
+   "name": "R_ntrIdol_BG_lightsGlow (1)",
+   "path": "Background/R_ntrIdol_BG_lightsGlow (1)",
+   "parent": 1,
+   "pos": [
+    1.5358801,
+    0.87760335
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.6800001,
+    0.6800001
+   ],
+   "sprite": "ntrIdol_BG_lightsGlow",
+   "order": -59,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    2.25,
+    1.03
+   ]
+  },
+  {
+   "name": "R_ntrIdol_BG_lightsGlow (2)",
+   "path": "Background/R_ntrIdol_BG_lightsGlow (2)",
+   "parent": 1,
+   "pos": [
+    2.8058405,
+    1.0412035
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.6800001,
+    0.6800001
+   ],
+   "sprite": "ntrIdol_BG_lightsGlow",
+   "order": -59,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    2.25,
+    1.03
+   ]
+  },
+  {
+   "name": "L_ntrIdol_BG_lights",
+   "path": "Background/L_ntrIdol_BG_lights",
+   "parent": 1,
+   "pos": [
+    -3.2030003,
+    1.7064034
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lights",
+   "order": -60,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    0.85
+   ]
+  },
+  {
+   "name": "L_ntrIdol_BG_lights (2)",
+   "path": "Background/L_ntrIdol_BG_lights (2)",
+   "parent": 1,
+   "pos": [
+    -2.834,
+    1.0374033
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.68000007,
+    0.68000007
+   ],
+   "sprite": "ntrIdol_BG_lights",
+   "order": -60,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4705882
+   ],
+   "size": [
+    1.97,
+    0.85
+   ]
+  },
+  {
+   "name": "L_ntrIdol_BG_lights (1)",
+   "path": "Background/L_ntrIdol_BG_lights (1)",
+   "parent": 1,
+   "pos": [
+    -1.5560001,
+    0.8814034
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.68000007,
+    0.68000007
+   ],
+   "sprite": "ntrIdol_BG_lights",
+   "order": -60,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4705882
+   ],
+   "size": [
+    1.97,
+    0.85
+   ]
+  },
+  {
+   "name": "R_ntrIdol_BG_lights",
+   "path": "Background/R_ntrIdol_BG_lights",
+   "parent": 1,
+   "pos": [
+    3.2030003,
+    1.7064034
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lights",
+   "order": -60,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    0.85
+   ]
+  },
+  {
+   "name": "R_ntrIdol_BG_lights (2)",
+   "path": "Background/R_ntrIdol_BG_lights (2)",
+   "parent": 1,
+   "pos": [
+    2.834,
+    1.0374033
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.68000007,
+    0.68000007
+   ],
+   "sprite": "ntrIdol_BG_lights",
+   "order": -60,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4705882
+   ],
+   "size": [
+    1.97,
+    0.85
+   ]
+  },
+  {
+   "name": "R_ntrIdol_BG_lights (1)",
+   "path": "Background/R_ntrIdol_BG_lights (1)",
+   "parent": 1,
+   "pos": [
+    1.5560001,
+    0.8814034
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.68000007,
+    0.68000007
+   ],
+   "sprite": "ntrIdol_BG_lights",
+   "order": -60,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4705882
+   ],
+   "size": [
+    1.97,
+    0.85
+   ]
+  },
+  {
+   "name": "stageOnehalf",
+   "path": "Background/stageOnehalf",
+   "parent": 1,
+   "pos": [
+    -0.8,
+    -0.26459673
+   ],
+   "z": -2.7876513,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_stage",
+   "path": "Background/stageOnehalf/ntrIdol_BG_stage",
+   "parent": 25,
+   "pos": [
+    -2.31,
+    -0.348
+   ],
+   "z": 2.7876513,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_stage",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.27,
+    2.45
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_stageSteps",
+   "path": "Background/stageOnehalf/ntrIdol_BG_stageSteps",
+   "parent": 25,
+   "pos": [
+    -2.979,
+    0.639
+   ],
+   "z": 2.7876513,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_stageSteps",
+   "order": -51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    1.89
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_kanaami00",
+   "path": "Background/stageOnehalf/ntrIdol_BG_kanaami00",
+   "parent": 25,
+   "pos": [
+    -1.669,
+    2.345
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_kanaami00",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.41,
+    0.93
+   ]
+  },
+  {
+   "name": "rayGroup0",
+   "path": "Background/stageOnehalf/rayGroup0",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay",
+   "path": "Background/stageOnehalf/rayGroup0/ntrIdol_BG_lightRay",
+   "parent": 29,
+   "pos": [
+    0.293,
+    2.913
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.811477179420237,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.3921569
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (1)",
+   "path": "Background/stageOnehalf/rayGroup0/ntrIdol_BG_lightRay (1)",
+   "parent": 29,
+   "pos": [
+    -0.058,
+    2.814
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.986184882062882,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.3921569
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (2)",
+   "path": "Background/stageOnehalf/rayGroup0/ntrIdol_BG_lightRay (2)",
+   "parent": 29,
+   "pos": [
+    -0.249,
+    2.439
+   ],
+   "z": 2.7876513,
+   "rotZ": 2.16071761987178,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.3921569
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "rayGroup1",
+   "path": "Background/stageOnehalf/rayGroup1",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (3)",
+   "path": "Background/stageOnehalf/rayGroup1/ntrIdol_BG_lightRay (3)",
+   "parent": 33,
+   "pos": [
+    -2.618,
+    2.337
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.7843137
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (4)",
+   "path": "Background/stageOnehalf/rayGroup1/ntrIdol_BG_lightRay (4)",
+   "parent": 33,
+   "pos": [
+    -2.038,
+    2.364
+   ],
+   "z": 2.7876513,
+   "rotZ": 0.8726645454873609,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.7843137
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (5)",
+   "path": "Background/stageOnehalf/rayGroup1/ntrIdol_BG_lightRay (5)",
+   "parent": 33,
+   "pos": [
+    -1.659,
+    2.08
+   ],
+   "z": 2.7876513,
+   "rotZ": 0.6981315651864876,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.7843137
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lights (3)",
+   "path": "Background/stageOnehalf/ntrIdol_BG_lights (3)",
+   "parent": 25,
+   "pos": [
+    -4.121,
+    0.724
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.4474014654965335,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lights",
+   "order": 3,
+   "color": [
+    1,
+    0.47058827,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    0.85
+   ]
+  },
+  {
+   "name": "stageOnehalf (1)",
+   "path": "Background/stageOnehalf (1)",
+   "parent": 1,
+   "pos": [
+    0.8,
+    -0.26459673
+   ],
+   "z": -2.7876513,
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_stage",
+   "path": "Background/stageOnehalf (1)/ntrIdol_BG_stage",
+   "parent": 38,
+   "pos": [
+    -2.31,
+    -0.348
+   ],
+   "z": 2.7876513,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_stage",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.27,
+    2.45
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_stageSteps",
+   "path": "Background/stageOnehalf (1)/ntrIdol_BG_stageSteps",
+   "parent": 38,
+   "pos": [
+    -2.979,
+    0.639
+   ],
+   "z": 2.7876513,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_stageSteps",
+   "order": -51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    1.89
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_kanaami00",
+   "path": "Background/stageOnehalf (1)/ntrIdol_BG_kanaami00",
+   "parent": 38,
+   "pos": [
+    -1.669,
+    2.345
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_kanaami00",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.41,
+    0.93
+   ]
+  },
+  {
+   "name": "rayGroup0",
+   "path": "Background/stageOnehalf (1)/rayGroup0",
+   "parent": 38,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay",
+   "path": "Background/stageOnehalf (1)/rayGroup0/ntrIdol_BG_lightRay",
+   "parent": 42,
+   "pos": [
+    0.293,
+    2.913
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.811477179420237,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.3921569
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (1)",
+   "path": "Background/stageOnehalf (1)/rayGroup0/ntrIdol_BG_lightRay (1)",
+   "parent": 42,
+   "pos": [
+    -0.058,
+    2.814
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.986184882062882,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.3921569
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (2)",
+   "path": "Background/stageOnehalf (1)/rayGroup0/ntrIdol_BG_lightRay (2)",
+   "parent": 42,
+   "pos": [
+    -0.249,
+    2.439
+   ],
+   "z": 2.7876513,
+   "rotZ": 2.16071761987178,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.3921569
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "rayGroup1",
+   "path": "Background/stageOnehalf (1)/rayGroup1",
+   "parent": 38,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (3)",
+   "path": "Background/stageOnehalf (1)/rayGroup1/ntrIdol_BG_lightRay (3)",
+   "parent": 46,
+   "pos": [
+    -2.618,
+    2.337
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.7843137
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (4)",
+   "path": "Background/stageOnehalf (1)/rayGroup1/ntrIdol_BG_lightRay (4)",
+   "parent": 46,
+   "pos": [
+    -2.038,
+    2.364
+   ],
+   "z": 2.7876513,
+   "rotZ": 0.8726645454873609,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.7843137
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lightRay (5)",
+   "path": "Background/stageOnehalf (1)/rayGroup1/ntrIdol_BG_lightRay (5)",
+   "parent": 46,
+   "pos": [
+    -1.659,
+    2.08
+   ],
+   "z": 2.7876513,
+   "rotZ": 0.6981315651864876,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "ntrIdol_BG_lightRay",
+   "order": -70,
+   "color": [
+    1,
+    1,
+    1,
+    0.7843137
+   ],
+   "size": [
+    5.45,
+    0.21
+   ]
+  },
+  {
+   "name": "ntrIdol_BG_lights (3)",
+   "path": "Background/stageOnehalf (1)/ntrIdol_BG_lights (3)",
+   "parent": 38,
+   "pos": [
+    -4.121,
+    0.724
+   ],
+   "z": 2.7876513,
+   "rotZ": 1.4474014654965335,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ntrIdol_BG_lights",
+   "order": 3,
+   "color": [
+    1,
+    0.47058827,
+    1,
+    1
+   ],
+   "size": [
+    1.97,
+    0.85
+   ]
+  },
+  {
+   "name": "Effect_IdolCrap",
+   "path": "Effect_IdolCrap",
+   "parent": 0,
+   "pos": [
+    0,
+    2.87
+   ],
+   "z": -0.6,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "Effect_IdolWink",
+   "path": "Effect_IdolWink",
+   "parent": 0,
+   "pos": [
+    0.45,
+    1.22
+   ],
+   "z": -0.1,
+   "rotZ": 0,
+   "scale": [
+    0.8695652,
+    0.8695652
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SubStars",
+   "path": "Effect_IdolWink/SubStars",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0454545,
+    1.0454545
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ring",
+   "path": "Effect_IdolWink/Ring",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "idolReference",
+   "path": "idolReference",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    4,
+    4
+   ],
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5803922
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "fan_SpawnAnchor",
+   "path": "fan_SpawnAnchor",
+   "parent": 0,
+   "pos": [
+    0,
+    -3.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "Idol_rootMotion",
+   "path": "Idol_rootMotion",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Idol",
+   "path": "Idol_rootMotion/Idol",
+   "parent": 57,
+   "pos": [
+    0,
+    -1.0999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1799998,
+    1.1799998
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "idol_head",
+   "path": "Idol_rootMotion/Idol/idol_head",
+   "parent": 58,
+   "pos": [
+    0,
+    2.685
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Hed_neutral",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.61,
+    1.77
+   ]
+  },
+  {
+   "name": "idol_Hed_hair00",
+   "path": "Idol_rootMotion/Idol/idol_head/idol_Hed_hair00",
+   "parent": 59,
+   "pos": [
+    0.677,
+    0.171
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Hed_hair00",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.69,
+    2.17
+   ]
+  },
+  {
+   "name": "FacePoser",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser",
+   "parent": 59,
+   "pos": [
+    0.02,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "facePoser_base",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.6266667,
+    1.76
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "EyeBrowL",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/EyeBrowL",
+   "parent": 61,
+   "pos": [
+    -0.338,
+    -0.218
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/EyeBrowL/Sprite",
+   "parent": 62,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_IdolParts_11",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.24,
+    0.22666667
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/EyeL",
+   "parent": 61,
+   "pos": [
+    -0.283,
+    -0.322
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeSprite",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/EyeL/EyeSprite",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_IdolParts_12",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.24,
+    0.22666667
+   ]
+  },
+  {
+   "name": "EyeBrowR",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/EyeBrowR",
+   "parent": 61,
+   "pos": [
+    0.296,
+    -0.218
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/EyeBrowR/Sprite",
+   "parent": 66,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_IdolParts_11",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.24,
+    0.22666667
+   ]
+  },
+  {
+   "name": "EyeR",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/EyeR",
+   "parent": 61,
+   "pos": [
+    0.241,
+    -0.316
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EyeSprite",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/EyeR/EyeSprite",
+   "parent": 68,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_IdolParts_12",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.24,
+    0.22666667
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/Mouth",
+   "parent": 61,
+   "pos": [
+    0.002,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "facePoser_mouth_normal",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2566667,
+    0.12
+   ]
+  },
+  {
+   "name": "CheekL",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/CheekL",
+   "parent": 61,
+   "pos": [
+    -0.271,
+    -0.502
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "facePoser_cheek",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.2
+   ]
+  },
+  {
+   "name": "CheekR",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/CheekR",
+   "parent": 61,
+   "pos": [
+    0.214,
+    -0.512
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "facePoser_cheek",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.2
+   ]
+  },
+  {
+   "name": "Nose",
+   "path": "Idol_rootMotion/Idol/idol_head/FacePoser/Nose",
+   "parent": 61,
+   "pos": [
+    -0.05,
+    -0.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "facePoser_nose",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.2
+   ]
+  },
+  {
+   "name": "idol_torso",
+   "path": "Idol_rootMotion/Idol/idol_torso",
+   "parent": 58,
+   "pos": [
+    0,
+    1.473
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Clt_body",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.13,
+    1.21
+   ]
+  },
+  {
+   "name": "idol_Clt_body_down0",
+   "path": "Idol_rootMotion/Idol/idol_torso/idol_Clt_body_down0",
+   "parent": 74,
+   "pos": [
+    0,
+    -0.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Clt_body_down0",
+   "order": 2,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    0.53
+   ]
+  },
+  {
+   "name": "idol_Clt_body_up",
+   "path": "Idol_rootMotion/Idol/idol_torso/idol_Clt_body_up",
+   "parent": 74,
+   "pos": [
+    -0.02,
+    0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Clt_body_up",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    0.65,
+    0.67
+   ]
+  },
+  {
+   "name": "idol_collar",
+   "path": "Idol_rootMotion/Idol/idol_torso/idol_collar",
+   "parent": 74,
+   "pos": [
+    0,
+    0.362
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Clt_collar",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.63,
+    0.29
+   ]
+  },
+  {
+   "name": "idol_arm_R",
+   "path": "Idol_rootMotion/Idol/idol_torso/idol_arm_R",
+   "parent": 74,
+   "pos": [
+    -0.346,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Arm_00",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.57,
+    0.47
+   ]
+  },
+  {
+   "name": "idol_hand_R",
+   "path": "Idol_rootMotion/Idol/idol_torso/idol_arm_R/idol_hand_R",
+   "parent": 78,
+   "pos": [
+    0.27,
+    0.014
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Hnd_00",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.47
+   ]
+  },
+  {
+   "name": "idol_arm_L",
+   "path": "Idol_rootMotion/Idol/idol_torso/idol_arm_L",
+   "parent": 74,
+   "pos": [
+    0.346,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Arm_00",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.57,
+    0.47
+   ]
+  },
+  {
+   "name": "idol_hand_L",
+   "path": "Idol_rootMotion/Idol/idol_torso/idol_arm_L/idol_hand_L",
+   "parent": 80,
+   "pos": [
+    -0.301,
+    -0.018
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Hnd_00",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.47
+   ]
+  },
+  {
+   "name": "idol_leg_R",
+   "path": "Idol_rootMotion/Idol/idol_leg_R",
+   "parent": 58,
+   "pos": [
+    -0.184,
+    0.664
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Shs_beat00",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    1.37
+   ]
+  },
+  {
+   "name": "idol_leg_L",
+   "path": "Idol_rootMotion/Idol/idol_leg_L",
+   "parent": 58,
+   "pos": [
+    0.184,
+    0.664
+   ],
+   "rotZ": 0.022689317554172805,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_Shs_beat00",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    1.37
+   ]
+  },
+  {
+   "name": "idol_mike",
+   "path": "Idol_rootMotion/Idol/idol_mike",
+   "parent": 58,
+   "pos": [
+    0,
+    1.705
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "idol_mike00",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.83
+   ]
+  },
+  {
+   "name": "stageReference",
+   "path": "stageReference",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.1,
+    5.1
+   ],
+   "order": 15,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5803922
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "Effect_IdolKiss2",
+   "path": "Effect_IdolKiss2",
+   "parent": 0,
+   "pos": [
+    0,
+    1.4
+   ],
+   "z": -0.1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Effect_IdolKiss1",
+   "path": "Effect_IdolKiss2/Effect_IdolKiss1",
+   "parent": 86,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Effect_IdolWinkArr",
+   "path": "Effect_IdolWinkArr",
+   "parent": 0,
+   "pos": [
+    0,
+    1.7
+   ],
+   "z": -0.1,
+   "rotZ": 0,
+   "scale": [
+    0.8695652,
+    0.8695652
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SubStars",
+   "path": "Effect_IdolWinkArr/SubStars",
+   "parent": 88,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0454545,
+    1.0454545
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ring",
+   "path": "Effect_IdolWinkArr/Ring",
+   "parent": 88,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dancerR_rootMotion",
+   "path": "dancerR_rootMotion",
+   "parent": 0,
+   "pos": [
+    9,
+    0.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Blue",
+   "path": "dancerR_rootMotion/Blue",
+   "parent": 91,
+   "pos": [
+    0,
+    -1.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1799998,
+    1.1799998
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "idol_head",
+   "path": "dancerR_rootMotion/Blue/idol_head",
+   "parent": 92,
+   "pos": [
+    0,
+    2.685
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_49",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.61,
+    1.77
+   ]
+  },
+  {
+   "name": "FacePoser",
+   "path": "dancerR_rootMotion/Blue/idol_head/FacePoser",
+   "parent": 93,
+   "pos": [
+    -0.007,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_72",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7766668,
+    1.8133335
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "dancerR_rootMotion/Blue/idol_head/FacePoser/EyeL",
+   "parent": 94,
+   "pos": [
+    -0.3,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "dancerR_rootMotion/Blue/idol_head/FacePoser/EyeL/Sprite",
+   "parent": 95,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_37",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28333336,
+    0.3366667
+   ]
+  },
+  {
+   "name": "EyeR",
+   "path": "dancerR_rootMotion/Blue/idol_head/FacePoser/EyeR",
+   "parent": 94,
+   "pos": [
+    0.32,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "dancerR_rootMotion/Blue/idol_head/FacePoser/EyeR/Sprite",
+   "parent": 97,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_37",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28333336,
+    0.3366667
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "dancerR_rootMotion/Blue/idol_head/FacePoser/Mouth",
+   "parent": 94,
+   "pos": [
+    0.027,
+    -0.562
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "dancerR_rootMotion/Blue/idol_head/FacePoser/Mouth/Sprite",
+   "parent": 99,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_62",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28333336,
+    0.3366667
+   ]
+  },
+  {
+   "name": "NoseAndCheeks",
+   "path": "dancerR_rootMotion/Blue/idol_head/FacePoser/NoseAndCheeks",
+   "parent": 94,
+   "pos": [
+    0.007,
+    -0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_69",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28333336,
+    0.3366667
+   ]
+  },
+  {
+   "name": "idol_torso",
+   "path": "dancerR_rootMotion/Blue/idol_torso",
+   "parent": 92,
+   "pos": [
+    0,
+    1.473
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2133334,
+    1.5566667
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupR"
+  },
+  {
+   "name": "idol_Clt_body_down0",
+   "path": "dancerR_rootMotion/Blue/idol_torso/idol_Clt_body_down0",
+   "parent": 102,
+   "pos": [
+    0,
+    -0.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_6",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    0.53
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupR"
+  },
+  {
+   "name": "idol_Clt_body_up",
+   "path": "dancerR_rootMotion/Blue/idol_torso/idol_Clt_body_up",
+   "parent": 102,
+   "pos": [
+    0.01,
+    0.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_5",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.65,
+    0.67
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupR"
+  },
+  {
+   "name": "idol_arm_R",
+   "path": "dancerR_rootMotion/Blue/idol_torso/idol_arm_R",
+   "parent": 102,
+   "pos": [
+    -0.346,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_29",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.57,
+    0.47
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupR"
+  },
+  {
+   "name": "idol_hand_R",
+   "path": "dancerR_rootMotion/Blue/idol_torso/idol_arm_R/idol_hand_R",
+   "parent": 105,
+   "pos": [
+    0.27,
+    0.014
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_38",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.47
+   ]
+  },
+  {
+   "name": "idol_arm_L",
+   "path": "dancerR_rootMotion/Blue/idol_torso/idol_arm_L",
+   "parent": 102,
+   "pos": [
+    0.346,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_29",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.57,
+    0.47
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupR"
+  },
+  {
+   "name": "idol_hand_L",
+   "path": "dancerR_rootMotion/Blue/idol_torso/idol_arm_L/idol_hand_L",
+   "parent": 107,
+   "pos": [
+    -0.301,
+    -0.018
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_38",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.47
+   ]
+  },
+  {
+   "name": "idol_leg_R",
+   "path": "dancerR_rootMotion/Blue/idol_leg_R",
+   "parent": 92,
+   "pos": [
+    -0.184,
+    0.664
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    1.37
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupR"
+  },
+  {
+   "name": "idol_leg_L",
+   "path": "dancerR_rootMotion/Blue/idol_leg_L",
+   "parent": 92,
+   "pos": [
+    0.184,
+    0.664
+   ],
+   "rotZ": 0.022689317554172805,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_15",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    1.37
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupR"
+  },
+  {
+   "name": "Effect_IdolCrap",
+   "path": "dancerR_rootMotion/Blue/Effect_IdolCrap",
+   "parent": 92,
+   "pos": [
+    0,
+    2.6754239
+   ],
+   "z": -0.66,
+   "rotZ": 0,
+   "scale": [
+    0.9322035,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "Effect_IdolWinkArr",
+   "path": "dancerR_rootMotion/Blue/Effect_IdolWinkArr",
+   "parent": 92,
+   "pos": [
+    0,
+    1.584746
+   ],
+   "z": -0.11000001,
+   "rotZ": 0,
+   "scale": [
+    0.81061023,
+    0.81061023
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SubStars",
+   "path": "dancerR_rootMotion/Blue/Effect_IdolWinkArr/SubStars",
+   "parent": 112,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0454545,
+    1.0454545
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ring",
+   "path": "dancerR_rootMotion/Blue/Effect_IdolWinkArr/Ring",
+   "parent": 112,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dancerL_rootMotion",
+   "path": "dancerL_rootMotion",
+   "parent": 0,
+   "pos": [
+    -9,
+    0.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Orange",
+   "path": "dancerL_rootMotion/Orange",
+   "parent": 115,
+   "pos": [
+    0,
+    -1.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1799998,
+    1.1799998
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "idol_head",
+   "path": "dancerL_rootMotion/Orange/idol_head",
+   "parent": 116,
+   "pos": [
+    0,
+    2.685
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.61,
+    1.77
+   ]
+  },
+  {
+   "name": "FacePoser",
+   "path": "dancerL_rootMotion/Orange/idol_head/FacePoser",
+   "parent": 117,
+   "pos": [
+    -0.002,
+    -0.054
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_71",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7766668,
+    1.8133335
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "dancerL_rootMotion/Orange/idol_head/FacePoser/EyeL",
+   "parent": 118,
+   "pos": [
+    -0.31,
+    -0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "dancerL_rootMotion/Orange/idol_head/FacePoser/EyeL/Sprite",
+   "parent": 119,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_37",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28333336,
+    0.3366667
+   ]
+  },
+  {
+   "name": "EyeR",
+   "path": "dancerL_rootMotion/Orange/idol_head/FacePoser/EyeR",
+   "parent": 118,
+   "pos": [
+    0.286,
+    -0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "dancerL_rootMotion/Orange/idol_head/FacePoser/EyeR/Sprite",
+   "parent": 121,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_37",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28333336,
+    0.3366667
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "dancerL_rootMotion/Orange/idol_head/FacePoser/Mouth",
+   "parent": 118,
+   "pos": [
+    0.004,
+    -0.513
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "dancerL_rootMotion/Orange/idol_head/FacePoser/Mouth/Sprite",
+   "parent": 123,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_62",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28333336,
+    0.3366667
+   ]
+  },
+  {
+   "name": "NoseAndCheeks",
+   "path": "dancerL_rootMotion/Orange/idol_head/FacePoser/NoseAndCheeks",
+   "parent": 118,
+   "pos": [
+    -0.008,
+    -0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_70",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28333336,
+    0.3366667
+   ]
+  },
+  {
+   "name": "idol_torso",
+   "path": "dancerL_rootMotion/Orange/idol_torso",
+   "parent": 116,
+   "pos": [
+    0,
+    1.473
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2133334,
+    1.5566667
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupL"
+  },
+  {
+   "name": "idol_Clt_body_down0",
+   "path": "dancerL_rootMotion/Orange/idol_torso/idol_Clt_body_down0",
+   "parent": 126,
+   "pos": [
+    0,
+    -0.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_6",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    0.53
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupL"
+  },
+  {
+   "name": "idol_Clt_body_up",
+   "path": "dancerL_rootMotion/Orange/idol_torso/idol_Clt_body_up",
+   "parent": 126,
+   "pos": [
+    0.01,
+    0.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_5",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.65,
+    0.67
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupL"
+  },
+  {
+   "name": "idol_arm_R",
+   "path": "dancerL_rootMotion/Orange/idol_torso/idol_arm_R",
+   "parent": 126,
+   "pos": [
+    -0.346,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_29",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.57,
+    0.47
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupL"
+  },
+  {
+   "name": "idol_hand_R",
+   "path": "dancerL_rootMotion/Orange/idol_torso/idol_arm_R/idol_hand_R",
+   "parent": 129,
+   "pos": [
+    0.27,
+    0.014
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_38",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.47
+   ]
+  },
+  {
+   "name": "idol_arm_L",
+   "path": "dancerL_rootMotion/Orange/idol_torso/idol_arm_L",
+   "parent": 126,
+   "pos": [
+    0.346,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_29",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.57,
+    0.47
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupL"
+  },
+  {
+   "name": "idol_hand_L",
+   "path": "dancerL_rootMotion/Orange/idol_torso/idol_arm_L/idol_hand_L",
+   "parent": 131,
+   "pos": [
+    -0.301,
+    -0.018
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_38",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.47
+   ]
+  },
+  {
+   "name": "idol_leg_R",
+   "path": "dancerL_rootMotion/Orange/idol_leg_R",
+   "parent": 116,
+   "pos": [
+    -0.184,
+    0.664
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    1.37
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupL"
+  },
+  {
+   "name": "idol_leg_L",
+   "path": "dancerL_rootMotion/Orange/idol_leg_L",
+   "parent": 116,
+   "pos": [
+    0.184,
+    0.664
+   ],
+   "rotZ": 0.022689317554172805,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fanClub_AmieParts_15",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    1.37
+   ],
+   "mapped": true,
+   "mat": "NtrIdol_BackupL"
+  },
+  {
+   "name": "Effect_IdolCrap",
+   "path": "dancerL_rootMotion/Orange/Effect_IdolCrap",
+   "parent": 116,
+   "pos": [
+    0,
+    2.6754239
+   ],
+   "z": -0.66,
+   "rotZ": 0,
+   "scale": [
+    0.9322035,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "Effect_IdolWinkArr",
+   "path": "dancerL_rootMotion/Orange/Effect_IdolWinkArr",
+   "parent": 116,
+   "pos": [
+    0,
+    1.584746
+   ],
+   "z": -0.11000001,
+   "rotZ": 0,
+   "scale": [
+    0.81061023,
+    0.81061023
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SubStars",
+   "path": "dancerL_rootMotion/Orange/Effect_IdolWinkArr/SubStars",
+   "parent": 136,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0454545,
+    1.0454545
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ring",
+   "path": "dancerL_rootMotion/Orange/Effect_IdolWinkArr/Ring",
+   "parent": 136,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "idol_Shadow",
+   "path": "idol_Shadow",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.0999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1799996,
+    1.1799996
+   ],
+   "sprite": "idol_Shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    1.61,
+    0.49
+   ]
+  },
+  {
+   "name": "dancerR_Shadow",
+   "path": "dancerR_Shadow",
+   "parent": 0,
+   "pos": [
+    9,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1799998,
+    1.1799998
+   ],
+   "sprite": "idol_Shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    1.61,
+    0.49
+   ]
+  },
+  {
+   "name": "dancerL_Shadow",
+   "path": "dancerL_Shadow",
+   "parent": 0,
+   "pos": [
+    -9,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1799998,
+    1.1799998
+   ],
+   "sprite": "idol_Shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    1.61,
+    0.49
+   ]
+  },
+  {
+   "name": "Fan",
+   "path": "Fan",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fan_Shadow",
+   "path": "Fan/fan_Shadow",
+   "parent": 142,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "idol_Shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    1.61,
+    0.49
+   ]
+  },
+  {
+   "name": "root_motion",
+   "path": "Fan/root_motion",
+   "parent": 142,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Fan/root_motion/Body",
+   "parent": 144,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fan_Body00",
+   "path": "Fan/root_motion/Body/fan_Body00",
+   "parent": 145,
+   "pos": [
+    0,
+    0.9499999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fan_Body00",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.55,
+    1.97
+   ]
+  },
+  {
+   "name": "fan_ArmR",
+   "path": "Fan/root_motion/Body/fan_ArmR",
+   "parent": 145,
+   "pos": [
+    0.727,
+    1.987
+   ],
+   "rotZ": -0.3719214802210304,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fan_Arm04",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.65,
+    1.63
+   ]
+  },
+  {
+   "name": "fan_HandR",
+   "path": "Fan/root_motion/Body/fan_ArmR/fan_HandR",
+   "parent": 147,
+   "pos": [
+    0.302,
+    0.859
+   ],
+   "rotZ": -0.13962632575013897,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fan_Hand02",
+   "order": 3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.85
+   ]
+  },
+  {
+   "name": "fan_ArmL",
+   "path": "Fan/root_motion/Body/fan_ArmL",
+   "parent": 145,
+   "pos": [
+    -0.727,
+    1.987
+   ],
+   "rotZ": 0.3719214802210304,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fan_Arm04",
+   "order": 1,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.65,
+    1.63
+   ]
+  },
+  {
+   "name": "fan_HandL",
+   "path": "Fan/root_motion/Body/fan_ArmL/fan_HandL",
+   "parent": 149,
+   "pos": [
+    -0.302,
+    0.859
+   ],
+   "rotZ": 0.13962632575013897,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fan_Hand02",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.85
+   ]
+  },
+  {
+   "name": "impact_effect",
+   "path": "Fan/root_motion/impact_effect",
+   "parent": 144,
+   "pos": [
+    -0.015,
+    3.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "impact_effect",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    3.19,
+    1.57
+   ]
+  },
+  {
+   "name": "Head_root",
+   "path": "Fan/root_motion/Head_root",
+   "parent": 144,
+   "pos": [
+    0,
+    1.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Fan/root_motion/Head_root/Head",
+   "parent": 152,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fan_Face00",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.25
+   ]
+  },
+  {
+   "name": "fanReference",
+   "path": "Fan/fanReference",
+   "parent": 142,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.8999999,
+    3.8999999
+   ],
+   "order": -81,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.5803922
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "Effect_FanCrap",
+   "path": "Fan/Effect_FanCrap",
+   "parent": 142,
+   "pos": [
+    0,
+    3.5
+   ],
+   "z": -0.1,
+   "rotZ": 2.356194509392128,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

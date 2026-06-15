@@ -1,0 +1,2980 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png",
+  "atlas5.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "facePoser_base": {
+   "X": 2027,
+   "Y": 5428,
+   "W": 488,
+   "H": 528,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_cheek": {
+   "X": 1680,
+   "Y": 5621,
+   "W": 52,
+   "H": 55,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_cheek_covered": {
+   "X": 1678,
+   "Y": 5820,
+   "W": 66,
+   "H": 60,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_mouth_a": {
+   "X": 659,
+   "Y": 5843,
+   "W": 50,
+   "H": 61,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_mouth_e": {
+   "X": 845,
+   "Y": 5843,
+   "W": 84,
+   "H": 42,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_mouth_frown": {
+   "X": 401,
+   "Y": 5849,
+   "W": 80,
+   "H": 35,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_mouth_i": {
+   "X": 1318,
+   "Y": 5854,
+   "W": 77,
+   "H": 38,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_mouth_normal": {
+   "X": 151,
+   "Y": 5852,
+   "W": 77,
+   "H": 36,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_mouth_o": {
+   "X": 1044,
+   "Y": 5832,
+   "W": 43,
+   "H": 62,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_mouth_u": {
+   "X": 1190,
+   "Y": 5854,
+   "W": 24,
+   "H": 25,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "facePoser_nose": {
+   "X": 1836,
+   "Y": 5834,
+   "W": 28,
+   "H": 33,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_0": {
+   "X": 70,
+   "Y": 52,
+   "W": 587,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_1": {
+   "X": 785,
+   "Y": 52,
+   "W": 588,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_10": {
+   "X": 5620,
+   "Y": 146,
+   "W": 233,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_11": {
+   "X": 5964,
+   "Y": 233,
+   "W": 318,
+   "H": 253,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_12": {
+   "X": 69,
+   "Y": 721,
+   "W": 588,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_13": {
+   "X": 785,
+   "Y": 721,
+   "W": 588,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_14": {
+   "X": 1502,
+   "Y": 721,
+   "W": 586,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_15": {
+   "X": 2190,
+   "Y": 764,
+   "W": 195,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_16": {
+   "X": 2538,
+   "Y": 764,
+   "W": 179,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_17": {
+   "X": 2848,
+   "Y": 733,
+   "W": 170,
+   "H": 496,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_18": {
+   "X": 3142,
+   "Y": 751,
+   "W": 279,
+   "H": 476,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_19": {
+   "X": 5033,
+   "Y": 1432,
+   "W": 193,
+   "H": 195,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_2": {
+   "X": 1502,
+   "Y": 52,
+   "W": 586,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_20": {
+   "X": 3617,
+   "Y": 759,
+   "W": 230,
+   "H": 468,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_21": {
+   "X": 4037,
+   "Y": 771,
+   "W": 242,
+   "H": 458,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_22": {
+   "X": 4461,
+   "Y": 787,
+   "W": 245,
+   "H": 442,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_23": {
+   "X": 4907,
+   "Y": 804,
+   "W": 219,
+   "H": 429,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_24": {
+   "X": 5350,
+   "Y": 770,
+   "W": 199,
+   "H": 460,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_25": {
+   "X": 5794,
+   "Y": 728,
+   "W": 187,
+   "H": 504,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_26": {
+   "X": 69,
+   "Y": 1391,
+   "W": 588,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_27": {
+   "X": 785,
+   "Y": 1391,
+   "W": 588,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_28": {
+   "X": 1502,
+   "Y": 1391,
+   "W": 586,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_29": {
+   "X": 2161,
+   "Y": 1448,
+   "W": 229,
+   "H": 193,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_3": {
+   "X": 2213,
+   "Y": 52,
+   "W": 588,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.54,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_30": {
+   "X": 2564,
+   "Y": 1423,
+   "W": 188,
+   "H": 239,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_31": {
+   "X": 2857,
+   "Y": 1322,
+   "W": 272,
+   "H": 463,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_32": {
+   "X": 3259,
+   "Y": 1408,
+   "W": 236,
+   "H": 216,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_33": {
+   "X": 3637,
+   "Y": 1417,
+   "W": 271,
+   "H": 188,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_34": {
+   "X": 4089,
+   "Y": 1371,
+   "W": 204,
+   "H": 344,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_35": {
+   "X": 4466,
+   "Y": 1400,
+   "W": 148,
+   "H": 253,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_36": {
+   "X": 4696,
+   "Y": 1329,
+   "W": 193,
+   "H": 396,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_37": {
+   "X": 136,
+   "Y": 5714,
+   "W": 85,
+   "H": 101,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_38": {
+   "X": 2129,
+   "Y": 1920,
+   "W": 242,
+   "H": 193,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_39": {
+   "X": 2458,
+   "Y": 1878,
+   "W": 267,
+   "H": 241,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_4": {
+   "X": 3016,
+   "Y": 87,
+   "W": 364,
+   "H": 467,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_40": {
+   "X": 2813,
+   "Y": 1866,
+   "W": 230,
+   "H": 259,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_41": {
+   "X": 3240,
+   "Y": 1866,
+   "W": 232,
+   "H": 264,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_42": {
+   "X": 3655,
+   "Y": 1878,
+   "W": 261,
+   "H": 261,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_43": {
+   "X": 4098,
+   "Y": 1886,
+   "W": 245,
+   "H": 242,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_44": {
+   "X": 4545,
+   "Y": 1890,
+   "W": 220,
+   "H": 235,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_45": {
+   "X": 4984,
+   "Y": 1892,
+   "W": 211,
+   "H": 219,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_46": {
+   "X": 5305,
+   "Y": 1877,
+   "W": 257,
+   "H": 234,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_47": {
+   "X": 5709,
+   "Y": 1858,
+   "W": 206,
+   "H": 264,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_48": {
+   "X": 6060,
+   "Y": 1858,
+   "W": 221,
+   "H": 259,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_49": {
+   "X": 95,
+   "Y": 2370,
+   "W": 534,
+   "H": 544,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_5": {
+   "X": 3586,
+   "Y": 135,
+   "W": 242,
+   "H": 340,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_50": {
+   "X": 813,
+   "Y": 2372,
+   "W": 533,
+   "H": 543,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_51": {
+   "X": 1528,
+   "Y": 2372,
+   "W": 534,
+   "H": 543,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_52": {
+   "X": 2244,
+   "Y": 2370,
+   "W": 533,
+   "H": 544,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_53": {
+   "X": 96,
+   "Y": 3040,
+   "W": 533,
+   "H": 544,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_54": {
+   "X": 811,
+   "Y": 3039,
+   "W": 533,
+   "H": 545,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_55": {
+   "X": 1526,
+   "Y": 3039,
+   "W": 533,
+   "H": 545,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_56": {
+   "X": 96,
+   "Y": 3709,
+   "W": 533,
+   "H": 544,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_57": {
+   "X": 813,
+   "Y": 3709,
+   "W": 533,
+   "H": 544,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_58": {
+   "X": 1529,
+   "Y": 3709,
+   "W": 533,
+   "H": 544,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_59": {
+   "X": 402,
+   "Y": 5762,
+   "W": 78,
+   "H": 47,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_6": {
+   "X": 3997,
+   "Y": 232,
+   "W": 363,
+   "H": 239,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_60": {
+   "X": 647,
+   "Y": 5772,
+   "W": 71,
+   "H": 33,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_61": {
+   "X": 860,
+   "Y": 5760,
+   "W": 79,
+   "H": 49,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_62": {
+   "X": 155,
+   "Y": 5995,
+   "W": 75,
+   "H": 40,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_63": {
+   "X": 416,
+   "Y": 5990,
+   "W": 81,
+   "H": 42,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_64": {
+   "X": 671,
+   "Y": 5983,
+   "W": 61,
+   "H": 65,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_65": {
+   "X": 868,
+   "Y": 5989,
+   "W": 85,
+   "H": 42,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_66": {
+   "X": 1077,
+   "Y": 5976,
+   "W": 32,
+   "H": 64,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_67": {
+   "X": 1221,
+   "Y": 5999,
+   "W": 24,
+   "H": 28,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_68": {
+   "X": 1352,
+   "Y": 6000,
+   "W": 74,
+   "H": 36,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_69": {
+   "X": 1709,
+   "Y": 5763,
+   "W": 232,
+   "H": 32,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_7": {
+   "X": 4439,
+   "Y": 230,
+   "W": 329,
+   "H": 247,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_70": {
+   "X": 1730,
+   "Y": 5846,
+   "W": 186,
+   "H": 46,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_71": {
+   "X": 2021,
+   "Y": 5523,
+   "W": 586,
+   "H": 628,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_72": {
+   "X": 2692,
+   "Y": 5569,
+   "W": 533,
+   "H": 544,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_8": {
+   "X": 4819,
+   "Y": 253,
+   "W": 318,
+   "H": 239,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_AmieParts_9": {
+   "X": 5207,
+   "Y": 215,
+   "W": 342,
+   "H": 244,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_DVLight": {
+   "X": 0,
+   "Y": 0,
+   "W": 2048,
+   "H": 2048,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_DVParts_0": {
+   "X": 4809,
+   "Y": 7109,
+   "W": 2230,
+   "H": 1532,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_DVParts_1": {
+   "X": 8656,
+   "Y": 44,
+   "W": 1560,
+   "H": 1067,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_0": {
+   "X": 2602,
+   "Y": 4120,
+   "W": 903,
+   "H": 898,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_1": {
+   "X": 1668,
+   "Y": 1452,
+   "W": 244,
+   "H": 182,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_10": {
+   "X": 1204,
+   "Y": 5636,
+   "W": 94,
+   "H": 53,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_11": {
+   "X": 1402,
+   "Y": 5604,
+   "W": 76,
+   "H": 76,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_12": {
+   "X": 1500,
+   "Y": 5620,
+   "W": 72,
+   "H": 68,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_13": {
+   "X": 1185,
+   "Y": 3957,
+   "W": 543,
+   "H": 588,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_14": {
+   "X": 1821,
+   "Y": 3942,
+   "W": 546,
+   "H": 591,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_15": {
+   "X": 1680,
+   "Y": 5621,
+   "W": 199,
+   "H": 55,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_19": {
+   "X": 1500,
+   "Y": 5703,
+   "W": 72,
+   "H": 69,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_2": {
+   "X": 4704,
+   "Y": 3276,
+   "W": 216,
+   "H": 264,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_5": {
+   "X": 131,
+   "Y": 5578,
+   "W": 85,
+   "H": 98,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_6": {
+   "X": 394,
+   "Y": 5616,
+   "W": 76,
+   "H": 53,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_7": {
+   "X": 632,
+   "Y": 5628,
+   "W": 76,
+   "H": 36,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_8": {
+   "X": 841,
+   "Y": 5616,
+   "W": 72,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fanClub_IdolParts_9": {
+   "X": 1020,
+   "Y": 5602,
+   "W": 91,
+   "H": 98,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Arm00": {
+   "X": 2505,
+   "Y": 3369,
+   "W": 321,
+   "H": 429,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Arm01": {
+   "X": 2931,
+   "Y": 3351,
+   "W": 321,
+   "H": 447,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Arm02": {
+   "X": 3351,
+   "Y": 3333,
+   "W": 297,
+   "H": 471,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Arm03": {
+   "X": 3831,
+   "Y": 3273,
+   "W": 273,
+   "H": 567,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Arm04": {
+   "X": 4221,
+   "Y": 3303,
+   "W": 291,
+   "H": 537,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Arm05": {
+   "X": 5049,
+   "Y": 4203,
+   "W": 375,
+   "H": 357,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Body00": {
+   "X": 4395,
+   "Y": 1479,
+   "W": 561,
+   "H": 639,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Body01": {
+   "X": 2943,
+   "Y": 741,
+   "W": 591,
+   "H": 597,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Body02": {
+   "X": 3657,
+   "Y": 753,
+   "W": 597,
+   "H": 591,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Body03": {
+   "X": 4377,
+   "Y": 759,
+   "W": 597,
+   "H": 585,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Body04": {
+   "X": 5097,
+   "Y": 777,
+   "W": 597,
+   "H": 567,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Body05": {
+   "X": 5145,
+   "Y": 1485,
+   "W": 513,
+   "H": 693,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Body06": {
+   "X": 5211,
+   "Y": 3285,
+   "W": 387,
+   "H": 747,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Body07": {
+   "X": 5511,
+   "Y": 4215,
+   "W": 585,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Face00": {
+   "X": 765,
+   "Y": 819,
+   "W": 615,
+   "H": 423,
+   "PivotX": 0.5,
+   "PivotY": 0.056737587,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Face01": {
+   "X": 1569,
+   "Y": 819,
+   "W": 465,
+   "H": 423,
+   "PivotX": 0.5,
+   "PivotY": 0.056737587,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Face02": {
+   "X": 2295,
+   "Y": 819,
+   "W": 465,
+   "H": 423,
+   "PivotX": 0.5,
+   "PivotY": 0.056737587,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Hand00": {
+   "X": 3819,
+   "Y": 2841,
+   "W": 309,
+   "H": 321,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Hand01": {
+   "X": 4263,
+   "Y": 2835,
+   "W": 357,
+   "H": 321,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Hand02": {
+   "X": 4725,
+   "Y": 2847,
+   "W": 279,
+   "H": 303,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Hand04": {
+   "X": 4281,
+   "Y": 2403,
+   "W": 309,
+   "H": 339,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "fan_Hand05": {
+   "X": 4719,
+   "Y": 2397,
+   "W": 297,
+   "H": 327,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_00": {
+   "X": 57,
+   "Y": 2499,
+   "W": 267,
+   "H": 189,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_01": {
+   "X": 465,
+   "Y": 2481,
+   "W": 219,
+   "H": 225,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_02": {
+   "X": 825,
+   "Y": 2481,
+   "W": 315,
+   "H": 453,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_03": {
+   "X": 1257,
+   "Y": 2493,
+   "W": 267,
+   "H": 201,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_04": {
+   "X": 1635,
+   "Y": 2499,
+   "W": 303,
+   "H": 171,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_05": {
+   "X": 2721,
+   "Y": 2475,
+   "W": 231,
+   "H": 183,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_06": {
+   "X": 4029,
+   "Y": 1893,
+   "W": 231,
+   "H": 381,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_07": {
+   "X": 5556,
+   "Y": 2433,
+   "W": 243,
+   "H": 333,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Arm_08": {
+   "X": 5568,
+   "Y": 2901,
+   "W": 177,
+   "H": 237,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body": {
+   "X": 93,
+   "Y": 759,
+   "W": 339,
+   "H": 363,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body_down0": {
+   "X": 3669,
+   "Y": 1481,
+   "W": 303,
+   "H": 239,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body_down0_half": {
+   "X": 3653,
+   "Y": 1465,
+   "W": 168,
+   "H": 271,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body_down1": {
+   "X": 2148,
+   "Y": 1422,
+   "W": 336,
+   "H": 198,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body_down2": {
+   "X": 2548,
+   "Y": 1396,
+   "W": 358,
+   "H": 292,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body_down3": {
+   "X": 634,
+   "Y": 1402,
+   "W": 361,
+   "H": 292,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body_down4": {
+   "X": 2896,
+   "Y": 1441,
+   "W": 364,
+   "H": 295,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body_up": {
+   "X": 1116,
+   "Y": 1431,
+   "W": 291,
+   "H": 249,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_body_up1": {
+   "X": 3286,
+   "Y": 1426,
+   "W": 277,
+   "H": 331,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Clt_collar": {
+   "X": 51,
+   "Y": 3279,
+   "W": 285,
+   "H": 135,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hed_close": {
+   "X": 1506,
+   "Y": 33,
+   "W": 576,
+   "H": 579,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hed_fullOpen": {
+   "X": 2949,
+   "Y": 45,
+   "W": 579,
+   "H": 579,
+   "PivotX": 0.49861568,
+   "PivotY": 0.49446616,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hed_hair00": {
+   "X": 57,
+   "Y": 3969,
+   "W": 603,
+   "H": 699,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hed_halfClose": {
+   "X": 786,
+   "Y": 33,
+   "W": 576,
+   "H": 576,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hed_neutral": {
+   "X": 67,
+   "Y": 39,
+   "W": 579,
+   "H": 579,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hed_oh": {
+   "X": 4389,
+   "Y": 42,
+   "W": 579,
+   "H": 576,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hed_open": {
+   "X": 3669,
+   "Y": 45,
+   "W": 579,
+   "H": 579,
+   "PivotX": 0.49856088,
+   "PivotY": 0.4985613,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_00": {
+   "X": 51,
+   "Y": 2883,
+   "W": 279,
+   "H": 189,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_01": {
+   "X": 825,
+   "Y": 3099,
+   "W": 309,
+   "H": 231,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_02": {
+   "X": 1281,
+   "Y": 2865,
+   "W": 267,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_03": {
+   "X": 1707,
+   "Y": 2865,
+   "W": 273,
+   "H": 261,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_04": {
+   "X": 2127,
+   "Y": 2877,
+   "W": 303,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_05": {
+   "X": 2565,
+   "Y": 2883,
+   "W": 285,
+   "H": 237,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_06": {
+   "X": 3018,
+   "Y": 2889,
+   "W": 255,
+   "H": 225,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_07": {
+   "X": 3453,
+   "Y": 2889,
+   "W": 249,
+   "H": 207,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_08": {
+   "X": 3093,
+   "Y": 2481,
+   "W": 297,
+   "H": 231,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_09": {
+   "X": 3501,
+   "Y": 2463,
+   "W": 237,
+   "H": 249,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Hnd_10": {
+   "X": 3855,
+   "Y": 2457,
+   "W": 255,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shadow": {
+   "X": 2061,
+   "Y": 2493,
+   "W": 579,
+   "H": 195,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_beat00": {
+   "X": 51,
+   "Y": 1875,
+   "W": 237,
+   "H": 459,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_beat01": {
+   "X": 399,
+   "Y": 1875,
+   "W": 219,
+   "H": 453,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_beat02": {
+   "X": 711,
+   "Y": 1845,
+   "W": 201,
+   "H": 483,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_peace00": {
+   "X": 999,
+   "Y": 1863,
+   "W": 321,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_squat00": {
+   "X": 2766,
+   "Y": 1917,
+   "W": 258,
+   "H": 417,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_squat01": {
+   "X": 3213,
+   "Y": 1881,
+   "W": 237,
+   "H": 453,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_squat02": {
+   "X": 3657,
+   "Y": 1839,
+   "W": 225,
+   "H": 495,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_wink00": {
+   "X": 2325,
+   "Y": 1899,
+   "W": 279,
+   "H": 429,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_wink01": {
+   "X": 1893,
+   "Y": 1881,
+   "W": 285,
+   "H": 447,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_Shs_wink02": {
+   "X": 1479,
+   "Y": 1869,
+   "W": 261,
+   "H": 459,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_mike00": {
+   "X": 801,
+   "Y": 4029,
+   "W": 219,
+   "H": 297,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_mike02": {
+   "X": 4467,
+   "Y": 4005,
+   "W": 273,
+   "H": 183,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_wink_circle": {
+   "X": 0,
+   "Y": 0,
+   "W": 256,
+   "H": 256,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "idol_wink_star": {
+   "X": 0,
+   "Y": 0,
+   "W": 32,
+   "H": 32,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "impact_effect": {
+   "X": 1263,
+   "Y": 3291,
+   "W": 1053,
+   "H": 519,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_kanaami00": {
+   "X": 4835,
+   "Y": 1805,
+   "W": 1705,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_kanaami01": {
+   "X": 2455,
+   "Y": 1795,
+   "W": 2176,
+   "H": 325,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_lightRay": {
+   "X": 1205,
+   "Y": 2425,
+   "W": 2725,
+   "H": 105,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_lights": {
+   "X": 1235,
+   "Y": 1785,
+   "W": 985,
+   "H": 425,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_lightsGlow": {
+   "X": 5475,
+   "Y": 2755,
+   "W": 1125,
+   "H": 515,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_sky": {
+   "X": 7060,
+   "Y": 160,
+   "W": 200,
+   "H": 3115,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_spot": {
+   "X": 1195,
+   "Y": 2726,
+   "W": 2719,
+   "H": 1173,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_spotDrop": {
+   "X": 4085,
+   "Y": 2736,
+   "W": 1161,
+   "H": 598,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_stage": {
+   "X": 185,
+   "Y": 225,
+   "W": 3135,
+   "H": 1225,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_BG_stageSteps": {
+   "X": 115,
+   "Y": 1805,
+   "W": 895,
+   "H": 945,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 500,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_handCrapEffect": {
+   "X": 57,
+   "Y": 3573,
+   "W": 219,
+   "H": 195,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "ntrIdol_heartEffect": {
+   "X": 4659,
+   "Y": 3645,
+   "W": 297,
+   "H": 255,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "psyllium": {
+   "X": 5853,
+   "Y": 249,
+   "W": 243,
+   "H": 465,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 300,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}
