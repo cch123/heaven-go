@@ -1,0 +1,154 @@
+{
+ "DJ Yellow": {
+  "default": "Idle",
+  "states": {
+   "BreakCmon": {
+    "clip": "DJ Yellow/BreakCmon",
+    "speed": 1
+   },
+   "Hey": {
+    "clip": "DJ Yellow/Hey",
+    "speed": 1
+   },
+   "Hold": {
+    "clip": "DJ Yellow/Hold",
+    "speed": 1
+   },
+   "HoldBop": {
+    "clip": "DJ Yellow/HoldBop",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "DJ Yellow/Idle",
+    "speed": 0
+   },
+   "IdleBop": {
+    "clip": "DJ Yellow/IdleBop",
+    "speed": 1
+   },
+   "IdleBop2": {
+    "clip": "DJ Yellow/IdleBop2",
+    "speed": 1
+   },
+   "Scratcho": {
+    "clip": "DJ Yellow/Scratcho",
+    "speed": 1
+   },
+   "Scratcho2": {
+    "clip": "DJ Yellow/Scratcho2",
+    "speed": 1
+   }
+  }
+ },
+ "Student": {
+  "default": "Idle",
+  "states": {
+   "Hold": {
+    "clip": "Student/Hold",
+    "speed": 1
+   },
+   "HoldBop": {
+    "clip": "Student/HoldBop",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Student/Idle",
+    "speed": 0
+   },
+   "IdleBop": {
+    "clip": "Student/IdleBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Scratcho": {
+    "speed": 1
+   },
+   "Swipe": {
+    "clip": "Student/Swipe",
+    "speed": 1
+   },
+   "Unhold": {
+    "clip": "Student/Hold",
+    "speed": -1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "TurnTable": {
+  "default": "DJYellow_Turntable",
+  "states": {
+   "DJYellow_Turntable": {
+    "clip": "Turntable/DJYellow_Turntable",
+    "speed": 1
+   },
+   "Student_Turntable_Swipe": {
+    "speed": 1
+   }
+  }
+ },
+ "TurnTable_Player": {
+  "default": "Student_Turntable_Idle",
+  "states": {
+   "Student_Turntable_Hold": {
+    "clip": "Turntable/Student_Turntable_Hold",
+    "speed": 1
+   },
+   "Student_Turntable_Idle": {
+    "clip": "Turntable/Student_Turntable_Idle",
+    "speed": 1
+   },
+   "Student_Turntable_StartHold": {
+    "clip": "Turntable/Student_Turntable_StartHold",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Student_Turntable_Hold",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Student_Turntable_Swipe": {
+    "clip": "Turntable/Student_Turntable_Swipe",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Student_Turntable_Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "flash": {
+  "default": "Flash",
+  "states": {
+   "Flash": {
+    "clip": "Animations/Flash",
+    "speed": 1
+   }
+  }
+ },
+ "flashInverse": {
+  "default": "FlashInverse",
+  "states": {
+   "FlashInverse": {
+    "clip": "Animations/FlashInverse",
+    "speed": 1
+   }
+  }
+ }
+}

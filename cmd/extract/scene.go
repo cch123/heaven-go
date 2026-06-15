@@ -921,6 +921,17 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "button", markers: []string{"pressed", "color", "input", "missed", "anim", "srs"}, multi: true},
 		},
 	},
+	"djSchool": {
+		dir:             "DJSchool",
+		prefab:          "djSchool.prefab",
+		roleFields:      []string{"student", "djYellow", "djYellowScript"},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"student", "djYellow", "djYellowScript"}},
+			{name: "student", markers: []string{"flash", "flashFX", "flashFXInverse", "TurnTable"}},
+			{name: "djYellow", markers: []string{"djYellowHeadSprites", "djYellowHeadSprite"}},
+		},
+	},
 }
 
 func bundlePath(dir string, parts ...string) string {

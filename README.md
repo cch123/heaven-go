@@ -138,6 +138,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   的逐信号精确定时尚未完整移植，当前用等价状态推进。
 - kitties：roll 成功后的 spinnya 循环音未实现随机变调（±5%，循环重采样
   不支持）；音量 0.85 与起止时序一致。
+- djSchool：hold 期间的 `sound FX` 原版切到 `DJSchool_Hold` AudioMixer
+  snapshot（唱片摩擦滤波）；当前运行时先按同拍位做音乐 ducking，recordStop/
+  recordSwipe/voice/cheer/boo 与动画状态已按 C# 时序接入，后续需补 live music
+  filter 才能清掉此项。
 - cheerReaders：字幕（toggleCaption 启用路径）未实现——官方非 PRACTICE 关
   均为 version=0 旧谱面且无 toggleCaption 块，按 CheckCaptions 语义自动禁
   用，行为一致；若自制谱启用会打日志提示。yay 纸花粒子为等价手写实现

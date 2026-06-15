@@ -1,0 +1,53 @@
+{
+ "components": {
+  "djYellow": {
+   "path": "DJ Yellow",
+   "refs": {
+    "djYellowHeadSprite": "DJ Yellow/Head"
+   },
+   "spriteArrays": {
+    "djYellowHeadSprites": [
+     "dj-yellow_head1",
+     "dj-yellow_head2",
+     "dj-yellow_head3",
+     "dj-yellow_head4",
+     "dj-yellow_head5",
+     "dj-yellow_head6",
+     "dj-yellow_head7"
+    ]
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "andStop": 0,
+    "beatOfInstance": 0,
+    "djYellowHolding": 0,
+    "firstEnable": 0,
+    "goBop": 0,
+    "shouldBeHolding": 0,
+    "smileBeat": -10
+   },
+   "refs": {
+    "djYellow": "DJ Yellow",
+    "djYellowScript": "DJ Yellow",
+    "student": "Student"
+   }
+  },
+  "student": {
+   "path": "Student",
+   "nums": {
+    "isHolding": 0,
+    "missed": 0,
+    "shouldBeHolding": 0,
+    "swiping": 0
+   },
+   "refs": {
+    "TurnTable": "TurnTable_Player",
+    "flash": "FlashWhite",
+    "flashFX": "flash",
+    "flashFXInverse": "flashInverse"
+   }
+  }
+ }
+}

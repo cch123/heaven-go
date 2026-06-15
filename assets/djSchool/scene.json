@@ -1,0 +1,812 @@
+{
+ "nodes": [
+  {
+   "name": "djSchool",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "background",
+   "path": "background",
+   "parent": 0,
+   "pos": [
+    0.17,
+    2.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1347499,
+    1.1347499
+   ],
+   "sprite": "background",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "FlashWhite",
+   "path": "FlashWhite",
+   "parent": 0,
+   "pos": [
+    -0.2047,
+    -0.1023
+   ],
+   "rotZ": 0,
+   "scale": [
+    20.304338,
+    11.710139
+   ],
+   "order": -45,
+   "color": [
+    0.8160377,
+    0.9841287,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "table",
+   "path": "table",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "table",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "test",
+   "path": "test",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 99,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    0.56078434
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "Student",
+   "path": "Student",
+   "parent": 0,
+   "pos": [
+    2.854,
+    -0.958
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hand2",
+   "path": "Student/Hand2",
+   "parent": 5,
+   "pos": [
+    -2.17,
+    -0.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "studenthand6",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "Student/Torso",
+   "parent": 5,
+   "pos": [
+    0.622,
+    -0.06999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "studenttorsonormal",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Student/Head",
+   "parent": 5,
+   "pos": [
+    -0.03,
+    1.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "studentheadnormal",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "Student/Hand",
+   "parent": 5,
+   "pos": [
+    2.28,
+    -2.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "studenthand1",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "Student/Arm",
+   "parent": 5,
+   "pos": [
+    -0.91,
+    -0.14
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "studentarm1",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Arm2",
+   "path": "Student/Arm2",
+   "parent": 5,
+   "pos": [
+    1.33,
+    -0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "studentarm4",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Knob",
+   "path": "Student/Knob",
+   "parent": 5,
+   "pos": [
+    2.063,
+    -3.129
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "knobdown",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "DJ Yellow",
+   "path": "DJ Yellow",
+   "parent": 0,
+   "pos": [
+    -1.88,
+    1.907
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smear (2)",
+   "path": "DJ Yellow/Smear (2)",
+   "parent": 13,
+   "pos": [
+    -0.2800001,
+    -1.49
+   ],
+   "rotZ": 0.06680682287558412,
+   "scale": [
+    0.82819617,
+    0.82819617
+   ],
+   "sprite": "dj-yellow_smear3",
+   "order": 16,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.86,
+    3.83
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "DJ Yellow/Smear",
+   "parent": 13,
+   "pos": [
+    -0.2800001,
+    -1.49
+   ],
+   "rotZ": 0.06680682287558412,
+   "scale": [
+    0.82819617,
+    0.82819617
+   ],
+   "sprite": "dj-yellow_smear3",
+   "order": 16,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.86,
+    3.83
+   ]
+  },
+  {
+   "name": "Hand2",
+   "path": "DJ Yellow/Hand2",
+   "parent": 13,
+   "pos": [
+    -2.846,
+    -1.9469999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "dj-yellow_hand1",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "DJ Yellow/Torso",
+   "parent": 13,
+   "pos": [
+    -0.28,
+    -1.49
+   ],
+   "rotZ": 0.06680682287558412,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "dj-yellow_34",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.86,
+    3.83
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "DJ Yellow/Head",
+   "parent": 13,
+   "pos": [
+    -0.533,
+    0.414
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "dj-yellow_head1",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "DJ Yellow/Hand",
+   "parent": 13,
+   "pos": [
+    -0.679,
+    -1.611
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.92162097,
+    0.92162097
+   ],
+   "sprite": "dj-yellow_hand3",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "DJ Yellow/Arm",
+   "parent": 13,
+   "pos": [
+    -1.603,
+    -1.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "dj-yellow_arm2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Arm2",
+   "path": "DJ Yellow/Arm2",
+   "parent": 13,
+   "pos": [
+    0.1,
+    -1.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8282,
+    0.8282
+   ],
+   "sprite": "dj-yellow_arm7",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "test (1)",
+   "path": "DJ Yellow/test (1)",
+   "parent": 13,
+   "pos": [
+    7.8542004,
+    -1.8428999
+   ],
+   "rotZ": 0,
+   "scale": [
+    6.553633,
+    6.336067
+   ],
+   "order": 105,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.56078434
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "TurnTable_Player",
+   "path": "TurnTable_Player",
+   "parent": 0,
+   "pos": [
+    1.49,
+    -3.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7084,
+    0.7084
+   ],
+   "sprite": "turntable_27",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.54,
+    3.35
+   ]
+  },
+  {
+   "name": "Disc",
+   "path": "TurnTable_Player/Disc",
+   "parent": 23,
+   "pos": [
+    -0.05,
+    0.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98756886,
+    0.98756886
+   ],
+   "sprite": "turntable_0",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "SwipeEffect",
+   "path": "TurnTable_Player/SwipeEffect",
+   "parent": 23,
+   "pos": [
+    -0.05,
+    0.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98756886,
+    0.98756886
+   ],
+   "sprite": "turntable_29",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "TurnTable_Player/Shadow",
+   "parent": 23,
+   "pos": [
+    -0.04,
+    -0.35
+   ],
+   "rotZ": -0.018048990618848317,
+   "scale": [
+    1.0246027,
+    0.98756886
+   ],
+   "sprite": "turntable_28",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "TurnTable_Yellow",
+   "path": "TurnTable_Yellow",
+   "parent": 0,
+   "pos": [
+    -4.56,
+    -2.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7084,
+    0.7084
+   ],
+   "sprite": "turntable_27",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.54,
+    3.35
+   ]
+  },
+  {
+   "name": "Disc",
+   "path": "TurnTable_Yellow/Disc",
+   "parent": 27,
+   "pos": [
+    -0.07,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98756886,
+    0.98756886
+   ],
+   "sprite": "turntable_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.94,
+    7.87
+   ]
+  },
+  {
+   "name": "flash",
+   "path": "flash",
+   "parent": 0,
+   "pos": [
+    17.42,
+    -9.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "flash",
+   "order": -43,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.78,
+    11.09
+   ]
+  },
+  {
+   "name": "flashInverse",
+   "path": "flashInverse",
+   "parent": 0,
+   "pos": [
+    17.42,
+    -9.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "flash",
+   "order": -43,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    15.78,
+    11.09
+   ]
+  }
+ ]
+}
