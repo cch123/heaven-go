@@ -1,0 +1,1049 @@
+{
+ "nodes": [
+  {
+   "name": "spaceSoccer",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BallHolder",
+   "path": "BallHolder",
+   "parent": 0,
+   "pos": [
+    -2.38,
+    -5.91
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "BallHolder/Sprite",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ball",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    2.097826
+   ]
+  },
+  {
+   "name": "SpaceKickerHolder",
+   "path": "SpaceKickerHolder",
+   "parent": 0,
+   "pos": [
+    3.384,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Space Kicker",
+   "path": "SpaceKickerHolder/Space Kicker",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "SpaceKickerHolder/Space Kicker/Holder",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/Head",
+   "parent": 5,
+   "pos": [
+    0,
+    2.733
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_head_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Mouth",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/Head/Mouth",
+   "parent": 6,
+   "pos": [
+    -0.085,
+    -0.851
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_mouth",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_mouth"
+  },
+  {
+   "name": "Torso",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/Torso",
+   "parent": 5,
+   "pos": [
+    0,
+    0.753
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_torso_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "LowerTorso",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/LowerTorso",
+   "parent": 5,
+   "pos": [
+    -0.035000086,
+    -0.847
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_lowertorso_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "LeftArm",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/LeftArm",
+   "parent": 5,
+   "pos": [
+    0.29,
+    0.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_arm_9",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9782609,
+    2.8913043
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Hand",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/LeftArm/Hand",
+   "parent": 10,
+   "pos": [
+    -0.466,
+    -1.285
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_hand_0",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9782609,
+    2.8913043
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "RightArm",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/RightArm",
+   "parent": 5,
+   "pos": [
+    -0.84800005,
+    0.212
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_arm_9",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9782609,
+    2.8913043
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Hand",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/RightArm/Hand",
+   "parent": 12,
+   "pos": [
+    -0.199,
+    -0.968
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_hand_1",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9782609,
+    2.8913043
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "RightLeg",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/RightLeg",
+   "parent": 5,
+   "pos": [
+    -0.702,
+    -2.468
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_leg_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "LeftLeg",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/LeftLeg",
+   "parent": 5,
+   "pos": [
+    0.04699993,
+    -2.655
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_leg_1",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Platform",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/Platform",
+   "parent": 5,
+   "pos": [
+    -0.364,
+    -5.264
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "platform_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.98,
+    2.66
+   ],
+   "mapped": true,
+   "mat": "platform_main"
+  },
+  {
+   "name": "Flames",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/Platform/Flames",
+   "parent": 16,
+   "pos": [
+    0.258,
+    -1.667
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "flames1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.98,
+    2.66
+   ],
+   "mapped": true,
+   "mat": "platform_fire"
+  },
+  {
+   "name": "toeFX",
+   "path": "SpaceKickerHolder/Space Kicker/Holder/toeFX",
+   "parent": 5,
+   "pos": [
+    -1.49,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "toe_fx",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Square",
+   "path": "Square",
+   "parent": 0,
+   "pos": [
+    1.4222527,
+    -0.26944557
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -100,
+   "color": [
+    1,
+    0.49019608,
+    0.15294118,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "sortGroup": [
+    0,
+    -600
+   ]
+  },
+  {
+   "name": "KickerPrefab",
+   "path": "KickerPrefab",
+   "parent": 0,
+   "pos": [
+    3.384,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Space Kicker",
+   "path": "KickerPrefab/Space Kicker",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "KickerPrefab/Space Kicker/Holder",
+   "parent": 21,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "KickerPrefab/Space Kicker/Holder/Head",
+   "parent": 22,
+   "pos": [
+    0,
+    2.733
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_head_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Mouth",
+   "path": "KickerPrefab/Space Kicker/Holder/Head/Mouth",
+   "parent": 23,
+   "pos": [
+    -0.085,
+    -0.851
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_mouth",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_mouth"
+  },
+  {
+   "name": "Torso",
+   "path": "KickerPrefab/Space Kicker/Holder/Torso",
+   "parent": 22,
+   "pos": [
+    0,
+    0.753
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_torso_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "LowerTorso",
+   "path": "KickerPrefab/Space Kicker/Holder/LowerTorso",
+   "parent": 22,
+   "pos": [
+    -0.035000086,
+    -0.847
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_lowertorso_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "LeftArm",
+   "path": "KickerPrefab/Space Kicker/Holder/LeftArm",
+   "parent": 22,
+   "pos": [
+    0.29,
+    0.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_arm_9",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9782609,
+    2.8913043
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Hand",
+   "path": "KickerPrefab/Space Kicker/Holder/LeftArm/Hand",
+   "parent": 27,
+   "pos": [
+    -0.466,
+    -1.285
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_hand_0",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9782609,
+    2.8913043
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "RightArm",
+   "path": "KickerPrefab/Space Kicker/Holder/RightArm",
+   "parent": 22,
+   "pos": [
+    -0.84800005,
+    0.212
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_arm_9",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9782609,
+    2.8913043
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Hand",
+   "path": "KickerPrefab/Space Kicker/Holder/RightArm/Hand",
+   "parent": 29,
+   "pos": [
+    -0.199,
+    -0.968
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_hand_1",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9782609,
+    2.8913043
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "RightLeg",
+   "path": "KickerPrefab/Space Kicker/Holder/RightLeg",
+   "parent": 22,
+   "pos": [
+    -0.702,
+    -2.468
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_leg_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "LeftLeg",
+   "path": "KickerPrefab/Space Kicker/Holder/LeftLeg",
+   "parent": 22,
+   "pos": [
+    0.04699993,
+    -2.655
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "kicker_leg_1",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8695652,
+    2.8695652
+   ],
+   "mapped": true,
+   "mat": "kicker_main"
+  },
+  {
+   "name": "Platform",
+   "path": "KickerPrefab/Space Kicker/Holder/Platform",
+   "parent": 22,
+   "pos": [
+    -0.364,
+    -5.264
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "platform_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.98,
+    2.66
+   ],
+   "mapped": true,
+   "mat": "platform_main"
+  },
+  {
+   "name": "Flames",
+   "path": "KickerPrefab/Space Kicker/Holder/Platform/Flames",
+   "parent": 33,
+   "pos": [
+    0.258,
+    -1.667
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "flames1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.98,
+    2.66
+   ],
+   "mapped": true,
+   "mat": "platform_fire"
+  },
+  {
+   "name": "toeFX",
+   "path": "KickerPrefab/Space Kicker/Holder/toeFX",
+   "parent": 22,
+   "pos": [
+    -1.49,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "toe_fx",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Canvas",
+   "path": "Canvas",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "Canvas/BG",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.017,
+    0.017
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

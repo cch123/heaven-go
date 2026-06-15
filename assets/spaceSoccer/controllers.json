@@ -1,0 +1,157 @@
+{
+ "Flames": {
+  "default": "FlamesIdle",
+  "states": {
+   "FlamesIdle": {
+    "clip": "Animations/FlamesIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Holder": {
+  "default": "Present",
+  "states": {
+   "Enter": {
+    "clip": "Animations/Enter",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Animations/Exit",
+    "speed": 1
+   },
+   "Present": {
+    "clip": "Animations/Present",
+    "speed": 1
+   }
+  }
+ },
+ "NPCSpaceKickers": {
+  "default": "NPCKickersExited",
+  "states": {
+   "NPCKickersEnter": {
+    "clip": "Animations/NPCKickersEnter",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NPCKickersPresent",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NPCKickersExit": {
+    "clip": "Animations/NPCKickersExit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NPCKickersExited",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NPCKickersExited": {
+    "clip": "Animations/NPCKickersExited",
+    "speed": 1
+   },
+   "NPCKickersPresent": {
+    "clip": "Animations/NPCKickersPresent",
+    "speed": 1
+   }
+  }
+ },
+ "Space Kicker": {
+  "default": "Idle",
+  "states": {
+   "BarelyLeft": {
+    "clip": "Animations/BarelyLeft",
+    "speed": 1
+   },
+   "BarelyRight": {
+    "clip": "Animations/BarelyRight",
+    "speed": 1
+   },
+   "High": {
+    "speed": 1
+   },
+   "HighKickLeft_0": {
+    "clip": "Animations/HighKickLeft_0",
+    "speed": 1
+   },
+   "HighKickRight_0": {
+    "clip": "Animations/HighKickRight_0",
+    "speed": 1
+   },
+   "HighKickRight_1": {
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "KickLeft": {
+    "clip": "Animations/KickLeft",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "KickRight": {
+    "clip": "Animations/KickRight",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "MissLeft": {
+    "clip": "Animations/MissRight",
+    "speed": 1
+   },
+   "MissRight": {
+    "clip": "Animations/MissLeft",
+    "speed": 1
+   },
+   "ToeLeft": {
+    "clip": "Animations/ToeLeft",
+    "speed": 1
+   },
+   "ToeRight": {
+    "clip": "Animations/ToeRight",
+    "speed": 1
+   }
+  }
+ },
+ "SpaceKickerHolder": {
+  "default": "SpaceKickerFloat",
+  "states": {
+   "SpaceKickerEnter": {
+    "clip": "Animations/SpaceKickerEnter",
+    "speed": 1
+   },
+   "SpaceKickerExit": {
+    "clip": "Animations/SpaceKickerExit",
+    "speed": 1
+   },
+   "SpaceKickerExitFast": {
+    "clip": "Animations/SpaceKickerExitFast",
+    "speed": 1
+   },
+   "SpaceKickerExited": {
+    "clip": "Animations/SpaceKickerExited",
+    "speed": 1
+   },
+   "SpaceKickerFloat": {
+    "clip": "Animations/SpaceKickerFloat",
+    "speed": 0.69
+   }
+  }
+ }
+}

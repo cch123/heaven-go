@@ -1,0 +1,215 @@
+{
+ "refArrays": {
+  "kickers": [
+   "SpaceKickerHolder/Space Kicker"
+  ]
+ },
+ "refArrayIdx": {
+  "kickers": [
+   4
+  ]
+ },
+ "components": {
+  "ball": {
+   "path": "BallHolder",
+   "nums": {
+    "canKick": 0,
+    "highKickSwing": 0,
+    "nextAnimBeat": 0,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0,
+    "startBeat": 0,
+    "state": 0,
+    "waitKickRelease": 0
+   },
+   "refs": {
+    "holder": "BallHolder",
+    "spriteHolder": "BallHolder/Sprite"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "ballDispensed": 0,
+    "xBaseSpeed": 1,
+    "yBaseSpeed": 1
+   },
+   "refs": {
+    "ballRef": "BallHolder",
+    "bg": "Square",
+    "bgImage": "Canvas/BG",
+    "fireMat": "platform_fire",
+    "kickerMat": "kicker_main",
+    "kickerPrefab": "KickerPrefab",
+    "mouthMat": "kicker_mouth",
+    "platMat": "platform_main"
+   },
+   "refArrays": {
+    "kickers": [
+     "SpaceKickerHolder/Space Kicker"
+    ]
+   },
+   "lists": {
+    "ballPaths": [
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "Kick"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.4,
+          "height": 5,
+          "pos.x": 1.5724581,
+          "pos.y": -1.3358305,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 3.77,
+          "pos.y": -6.480046,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "Dispense"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.35,
+          "height": 10,
+          "pos.x": -6,
+          "pos.y": -6,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -1,
+          "pos.y": -6,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "HighKick"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2.3,
+          "height": 5.7,
+          "pos.x": 2.544168,
+          "pos.y": -1.382243,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -3.5,
+          "pos.y": -6,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "Toe"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.35,
+          "height": 7.5,
+          "pos.x": -1.615356,
+          "pos.y": -1.698554,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 2.61,
+          "pos.y": -6.08,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "kicker0": {
+   "path": "KickerPrefab/Space Kicker",
+   "nums": {
+    "canHighKick": 0,
+    "canKick": 0,
+    "dispenserBeat": 0,
+    "kickLeft": 0,
+    "kickTimes": 0,
+    "player": 0
+   },
+   "refs": {
+    "enterExitAnim": "KickerPrefab/Space Kicker/Holder"
+   }
+  },
+  "kicker1": {
+   "path": "SpaceKickerHolder/Space Kicker",
+   "nums": {
+    "canHighKick": 0,
+    "canKick": 0,
+    "dispenserBeat": 0,
+    "kickLeft": 0,
+    "kickTimes": 0,
+    "player": 1
+   },
+   "refs": {
+    "enterExitAnim": "SpaceKickerHolder/Space Kicker/Holder"
+   }
+  }
+ }
+}

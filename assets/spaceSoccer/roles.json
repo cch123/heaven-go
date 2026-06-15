@@ -1,0 +1,7 @@
+{
+ "backgroundSprite": "",
+ "ballRef": "BallHolder",
+ "bg": "Square",
+ "bgImage": "Canvas/BG",
+ "kickerPrefab": "KickerPrefab"
+}

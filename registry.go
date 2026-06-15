@@ -78,6 +78,7 @@ import (
 	"hsdemo/games/somen"
 	"hsdemo/games/spaceball"
 	"hsdemo/games/spacedance"
+	"hsdemo/games/spacesoccer"
 	"hsdemo/games/splashdown"
 	"hsdemo/games/tambourine"
 	"hsdemo/games/taptrial"
@@ -153,6 +154,7 @@ func registerGames() {
 	engine.Register("mannequinFactory", mannequinfactory.New)
 	engine.Register("moaiDooWop", moaidoowop.New)
 	engine.Register("spaceball", spaceball.New)
+	engine.Register("spaceSoccer", spacesoccer.New)
 	engine.Register("spaceDance", spacedance.New)
 	engine.Register("splashdown", splashdown.New)
 	engine.Register("mrUpbeat", mrupbeat.New)
