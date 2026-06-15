@@ -1,7 +1,5 @@
 package engine
 
-import "github.com/hajimehoshi/ebiten/v2"
-
 // ScheduleInput 注册一次输入判定（HS Minigame.ScheduleInput 等价物）。
 // onHit 的 state：just 窗归一化偏移，|state|<=1 = just，1<|state|<=2 = NG，负 = 早。
 func (c *Ctx) ScheduleInput(beat float64, onHit func(state float64, j Judgment), onMiss func()) *Input {
@@ -82,47 +80,4 @@ func (c *Ctx) ScheduleInputReleaseCond(beat float64, canHit func() bool, onHit f
 // missed release input.
 func (c *Ctx) AutoHitRelease(beat float64) {
 	c.App.judgePress(c.BeatToTime(beat), c.App.cond.Beat(), true, 0)
-}
-
-// PressedNow / ReleasedNow 报告本逻辑帧是否有按下/抬起（HoldCo 式轮询用）。
-func (c *Ctx) PressedNow() bool  { return c.App.pressedNow }
-func (c *Ctx) ReleasedNow() bool { return c.App.releasedNow }
-
-// PressingNow 报告主键当前是否保持按下（HS InputAction_BasicPressing）。
-func (c *Ctx) PressingNow() bool {
-	return ebiten.IsKeyPressed(ebiten.KeySpace) ||
-		ebiten.IsKeyPressed(ebiten.KeyJ) ||
-		ebiten.IsMouseButtonPressed(ebiten.MouseButtonLeft)
-}
-
-// ExpectingReleaseNow 报告当前时刻是否在某个未判定 release 输入的 NG 窗口内
-// （IsExpectingInputNow(InputAction_FlickRelease) 等价物）。
-func (c *Ctx) ExpectingReleaseNow() bool {
-	t := c.App.cond.Time()
-	for _, in := range c.App.inputs {
-		if in.Release && !in.judged && t >= in.hitT-WinNG && t <= in.hitT+WinNG {
-			return true
-		}
-	}
-	return false
-}
-
-// ExpectingPressNow 报告当前时刻是否在某个未判定主键按下的 NG 窗口内
-// （Glee Club 的空按闭嘴判定用）。
-func (c *Ctx) ExpectingPressNow() bool {
-	t := c.App.cond.Time()
-	for _, in := range c.App.inputs {
-		if !in.Release && in.Action == 0 && !in.judged && t >= in.hitT-WinNG && t <= in.hitT+WinNG {
-			return true
-		}
-	}
-	return false
-}
-
-// ScoreMiss 记一次 miss（HS Minigame.ScoreMiss：无对应判定窗的扣分，
-// 如 totemClimb 高跳保持期提前松手）。
-func (c *Ctx) ScoreMiss() {
-	c.App.misses++
-	c.App.recordMissScore(c.App.cond.Beat())
-	c.App.setMsg("MISS...")
 }
