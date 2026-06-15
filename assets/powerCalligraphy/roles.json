@@ -1,0 +1,10 @@
+{
+ "BGPlane": "BGPlane",
+ "endPaper": "PaperHolder/paper",
+ "fudeAnim": "shift/fude/sprite",
+ "fudePosAnim": "shift/fude",
+ "paperHolder": "PaperHolder",
+ "playerFude": "shift/fude/sprite",
+ "shiftAnim": "shift",
+ "shiftHolder": "shift"
+}

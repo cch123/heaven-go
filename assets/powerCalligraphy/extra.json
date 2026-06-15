@@ -1,0 +1,1064 @@
+{
+ "refArrays": {
+  "Chounin": [
+   "chounin_left",
+   "chounin_right"
+  ],
+  "basePapers": [
+   "paper_re",
+   "paper_comma",
+   "paper_chikara",
+   "paper_onore",
+   "paper_sun",
+   "paper_kokoro",
+   "paper_face",
+   "paper_face_kr"
+  ]
+ },
+ "refArrayIdx": {
+  "Chounin": [
+   15,
+   46
+  ],
+  "basePapers": [
+   77,
+   81,
+   85,
+   90,
+   95,
+   101,
+   106,
+   119
+  ]
+ },
+ "components": {
+  "fude": {
+   "path": "shift/fude/sprite",
+   "nums": {
+    "REDRATE_1": 0.1,
+    "REDRATE_2": 0.25,
+    "redRate": 0
+   },
+   "refs": {
+    "ballRenderer": "shift/fude/sprite/blush/ball",
+    "handRenderer": "shift/fude/sprite/arm/hand",
+    "stickRenderer": "shift/fude/sprite/blush/stick",
+    "thumbRenderer": "shift/fude/sprite/arm/thumb",
+    "tipRenderer": "shift/fude/sprite/blush/tip"
+   },
+   "spriteArrays": {
+    "sprites": [
+     "end",
+     "fude_ball_0",
+     "fude_ball_1",
+     "fude_ball_2",
+     "fude_stick_0_0",
+     "fude_stick_0_1",
+     "fude_stick_0_2",
+     "fude_stick_1_0",
+     "fude_stick_1_1",
+     "fude_stick_1_2",
+     "fude_stick_2_0",
+     "fude_stick_2_1",
+     "fude_stick_2_2",
+     "fude_stick_3_0",
+     "fude_stick_3_1",
+     "fude_stick_3_2",
+     "fude_stick_4_0",
+     "fude_stick_4_1",
+     "fude_stick_4_2",
+     "fude_stick_5_0",
+     "fude_stick_5_1",
+     "fude_stick_5_2",
+     "fude_stick_6_0",
+     "fude_stick_6_1",
+     "fude_stick_6_2",
+     "fude_tip_0_0",
+     "fude_tip_0_1",
+     "fude_tip_0_2",
+     "fude_tip_1_0",
+     "fude_tip_1_1",
+     "fude_tip_1_2",
+     "fude_tip_2_0",
+     "fude_tip_2_1",
+     "fude_tip_2_2",
+     "fude_tip_3_0",
+     "fude_tip_3_1",
+     "fude_tip_3_2",
+     "fude_tip_4_0",
+     "fude_tip_4_1",
+     "fude_tip_4_2",
+     "fude_tip_5_0",
+     "fude_tip_5_1",
+     "fude_tip_5_2",
+     "fude_tip_6_0",
+     "fude_tip_6_1",
+     "fude_tip_6_2",
+     "fude_tip_7_0",
+     "fude_tip_7_1",
+     "fude_tip_7_2",
+     "fude_tip_8_0",
+     "fude_tip_8_1",
+     "fude_tip_8_2",
+     "fude_tip_9_0",
+     "fude_tip_9_1",
+     "fude_tip_9_2",
+     "fude_tip_10_0",
+     "fude_tip_10_1",
+     "fude_tip_10_2",
+     "fude_tip_11_0",
+     "fude_tip_11_1",
+     "fude_tip_11_2",
+     "fude_tip_12_0",
+     "fude_tip_12_1",
+     "fude_tip_12_2",
+     "hand_0",
+     "hand_1",
+     "hand_2",
+     "thumb_0",
+     "thumb_1",
+     "thumb_2"
+    ]
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "chouninSpeed": 0.6,
+    "scrollSpeed.x": 6,
+    "scrollSpeed.y": -10,
+    "scrollSpeed.z": 0
+   },
+   "refs": {
+    "BGPlane": "BGPlane",
+    "endPaper": "PaperHolder/paper",
+    "fudeAnim": "shift/fude/sprite",
+    "fudePosAnim": "shift/fude",
+    "paperHolder": "PaperHolder",
+    "playerFude": "shift/fude/sprite",
+    "shiftAnim": "shift",
+    "shiftHolder": "shift"
+   },
+   "refArrays": {
+    "Chounin": [
+     "chounin_left",
+     "chounin_right"
+    ],
+    "basePapers": [
+     "paper_re",
+     "paper_comma",
+     "paper_chikara",
+     "paper_onore",
+     "paper_sun",
+     "paper_kokoro",
+     "paper_face",
+     "paper_face_kr"
+    ],
+    "fudePosCntls": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ],
+    "shiftCntls": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  },
+  "writing0": {
+   "path": "PaperHolder/paper",
+   "nums": {
+    "nextBeat": 0,
+    "onGoing": 0,
+    "ongoingBeat": 0,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   }
+  },
+  "writing1": {
+   "path": "paper_chikara",
+   "nums": {
+    "onGoing": 0,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   },
+   "lists": {
+    "AnimPattern": [
+     {
+      "nums": {
+       "beat": 0,
+       "fudeAnim": 2,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 0.5,
+       "fudeAnim": 2,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1,
+       "fudeAnim": 2,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2.5,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 3,
+       "fudeAnim": 2,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 3
+      }
+     },
+     {
+      "nums": {
+       "beat": 7,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     }
+    ]
+   }
+  },
+  "writing2": {
+   "path": "paper_comma",
+   "nums": {
+    "onGoing": 0,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   },
+   "lists": {
+    "AnimPattern": [
+     {
+      "nums": {
+       "beat": 0,
+       "fudeAnim": 3,
+       "soundType": 6,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2,
+       "fudeAnim": 3,
+       "soundType": 7,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 3,
+       "fudeAnim": 3,
+       "soundType": 7,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4,
+       "fudeAnim": 1,
+       "soundType": 8,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 5,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 1
+      }
+     },
+     {
+      "nums": {
+       "beat": 7,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     }
+    ]
+   }
+  },
+  "writing3": {
+   "path": "paper_face",
+   "nums": {
+    "onGoing": 0,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   },
+   "lists": {
+    "AnimPattern": [
+     {
+      "nums": {
+       "beat": 0,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1,
+       "fudeAnim": 1,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1.5,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2.5,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 3,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 3.5,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4.5,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4.75,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 5,
+       "fudeAnim": 1,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 5.25,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 5.5,
+       "fudeAnim": 1,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 6,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 6.5,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 7,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 7.25,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 7.5,
+       "fudeAnim": 1,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 7.75,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 8,
+       "fudeAnim": 2,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 3
+      }
+     },
+     {
+      "nums": {
+       "beat": 11,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     }
+    ]
+   }
+  },
+  "writing4": {
+   "path": "paper_face_kr",
+   "nums": {
+    "nextBeat": 0,
+    "onGoing": 0,
+    "ongoingBeat": -1.7976931348623157e+308,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   },
+   "lists": {
+    "AnimPattern": [
+     {
+      "nums": {
+       "beat": 0,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1,
+       "fudeAnim": 1,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1.5,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2,
+       "fudeAnim": 1,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2.5,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 3.25,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 3.75,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4.5,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4.75,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 5,
+       "fudeAnim": 1,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 5.25,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 5.5,
+       "fudeAnim": 1,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 6,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 6.5,
+       "fudeAnim": 1,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 7,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 7.25,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 7.5,
+       "fudeAnim": 1,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 7.75,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 8,
+       "fudeAnim": 2,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 3
+      }
+     },
+     {
+      "nums": {
+       "beat": 11,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     }
+    ]
+   }
+  },
+  "writing5": {
+   "path": "paper_kokoro",
+   "nums": {
+    "onGoing": 0,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   },
+   "lists": {
+    "AnimPattern": [
+     {
+      "nums": {
+       "beat": 0,
+       "fudeAnim": 2,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 0.5,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1,
+       "fudeAnim": 2,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 2
+      }
+     },
+     {
+      "nums": {
+       "beat": 3.5,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4,
+       "fudeAnim": 2,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4.5,
+       "fudeAnim": 1,
+       "soundType": 4,
+       "soundVolume": 0.3,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 5,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 1
+      }
+     },
+     {
+      "nums": {
+       "beat": 7,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     }
+    ]
+   }
+  },
+  "writing6": {
+   "path": "paper_onore",
+   "nums": {
+    "onGoing": 0,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   },
+   "lists": {
+    "AnimPattern": [
+     {
+      "nums": {
+       "beat": 0,
+       "fudeAnim": 2,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1,
+       "fudeAnim": 2,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1.5,
+       "fudeAnim": 2,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2,
+       "fudeAnim": 2,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 3,
+       "fudeAnim": 2,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4,
+       "fudeAnim": 2,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 2
+      }
+     },
+     {
+      "nums": {
+       "beat": 7,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     }
+    ]
+   }
+  },
+  "writing7": {
+   "path": "paper_re",
+   "nums": {
+    "onGoing": 0,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   },
+   "lists": {
+    "AnimPattern": [
+     {
+      "nums": {
+       "beat": 0,
+       "fudeAnim": 3,
+       "soundType": 5,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2,
+       "fudeAnim": 2,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 3,
+       "fudeAnim": 2,
+       "soundType": 2,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 4,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 2
+      }
+     },
+     {
+      "nums": {
+       "beat": 7,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     }
+    ]
+   }
+  },
+  "writing8": {
+   "path": "paper_sun",
+   "nums": {
+    "onGoing": 0,
+    "scrollSpeed.x": 0,
+    "scrollSpeed.y": 0,
+    "scrollSpeed.z": 0,
+    "startBeat": 0
+   },
+   "lists": {
+    "AnimPattern": [
+     {
+      "nums": {
+       "beat": 0,
+       "fudeAnim": 2,
+       "soundType": 1,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 0.5,
+       "fudeAnim": 2,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1,
+       "fudeAnim": 2,
+       "soundType": 3,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 1.5,
+       "fudeAnim": 2,
+       "soundType": 4,
+       "soundVolume": 1,
+       "stroke": 0
+      }
+     },
+     {
+      "nums": {
+       "beat": 2,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 2
+      }
+     },
+     {
+      "nums": {
+       "beat": 5,
+       "fudeAnim": 1,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 1
+      }
+     },
+     {
+      "nums": {
+       "beat": 7,
+       "fudeAnim": 0,
+       "soundType": 0,
+       "soundVolume": 0,
+       "stroke": 0
+      }
+     }
+    ]
+   }
+  }
+ }
+}
