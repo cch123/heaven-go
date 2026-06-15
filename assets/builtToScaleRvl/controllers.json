@@ -1,0 +1,128 @@
+{
+ "assembled": {
+  "default": "assembled",
+  "states": {
+   "assembled": {
+    "clip": "Animations/assembled",
+    "speed": 2
+   }
+  }
+ },
+ "rod": {
+  "default": "rotate",
+  "states": {
+   "rotate": {
+    "clip": "Animations/rod_rotate",
+    "speed": 1
+   }
+  }
+ },
+ "square": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "speed": 1
+   },
+   "left": {
+    "clip": "Animations/square_left",
+    "speed": 2
+   },
+   "right": {
+    "clip": "Animations/square_right",
+    "speed": 2
+   },
+   "rotate": {
+    "clip": "Animations/square_rotate",
+    "speed": 2
+   }
+  }
+ },
+ "whiteblock": {
+  "default": "idle",
+  "states": {
+   "bounce": {
+    "clip": "Animations/block_bounce",
+    "speed": 2
+   },
+   "idle": {
+    "clip": "Animations/block_idle",
+    "speed": 1
+   },
+   "miss": {
+    "clip": "Animations/block_miss",
+    "speed": 2
+   },
+   "miss_open": {
+    "clip": "Animations/block_miss_open",
+    "speed": 2
+   },
+   "open": {
+    "clip": "Animations/block_open",
+    "speed": 2
+   },
+   "prepare AB": {
+    "clip": "Animations/block_prepare0AB",
+    "speed": 2,
+    "transitions": [
+     {
+      "dst": "prepare AB 1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "prepare AB 1": {
+    "clip": "Animations/block_prepare1AB",
+    "speed": 1
+   },
+   "prepare B": {
+    "clip": "Animations/block_prepare0B",
+    "speed": 2,
+    "transitions": [
+     {
+      "dst": "prepare B 1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "prepare B 1": {
+    "clip": "Animations/block_prepare1B",
+    "speed": 1
+   },
+   "shoot": {
+    "clip": "Animations/block_shoot",
+    "speed": 2,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "shoot miss AB": {
+    "clip": "Animations/block_shoot_missAB",
+    "speed": 2,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "shoot miss B": {
+    "clip": "Animations/block_shoot_missB",
+    "speed": 2,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

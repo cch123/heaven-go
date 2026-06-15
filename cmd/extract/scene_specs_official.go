@@ -17,7 +17,29 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 	"bossaNova":       basicOfficialSceneSpec("BossaNova", "bossaNova.prefab"),
 	"bouncyRoad":      basicOfficialSceneSpec("BouncyRoad", "bouncyRoad.prefab"),
 	"builtToScaleDS":  basicOfficialSceneSpec("BuiltToScaleDS", "builtToScaleDS.prefab"),
-	"builtToScaleRvl": basicOfficialSceneSpec("BuiltToScaleRvl", "builtToScaleRvl.prefab"),
+	"builtToScaleRvl": {
+		dir:    "BuiltToScaleRvl",
+		prefab: "builtToScaleRvl.prefab",
+		roleFields: []string{
+			"baseRod", "baseLeftSquare", "baseRightSquare", "baseAssembled", "widgetHolder",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"blocks", "baseRod", "baseLeftSquare", "baseRightSquare",
+				"baseAssembled", "widgetHolder", "curve", "missCurve",
+			}, curveArrayFields: []string{"curve", "missCurve"}},
+			{name: "block", markers: []string{
+				"position", "_slideOffset",
+			}, multi: true},
+			{name: "rod", markers: []string{
+				"missAngle", "fallingAngle",
+			}, atPath: "prefabs/rod"},
+			{name: "square", markers: []string{
+				"anim", "CorrectionPos",
+			}, multi: true},
+		},
+	},
 	"cannery":         basicOfficialSceneSpec("Cannery", "cannery.prefab"),
 	"catchOfTheDay": {
 		dir:    "CatchOfTheDay",

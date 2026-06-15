@@ -1,0 +1,7 @@
+{
+ "baseAssembled": "prefabs/assembled",
+ "baseLeftSquare": "prefabs/squareLeft",
+ "baseRightSquare": "prefabs/squareRight",
+ "baseRod": "prefabs/rod",
+ "widgetHolder": "widgetHolder"
+}

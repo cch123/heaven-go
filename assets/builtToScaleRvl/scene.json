@@ -1,0 +1,7159 @@
+{
+ "nodes": [
+  {
+   "name": "builtToScaleRvl",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0.0096579,
+    -0.021217
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.97348,
+    0.97348
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "back",
+   "path": "BG/back",
+   "parent": 1,
+   "pos": [
+    -3.67,
+    3.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25246894,
+    0.25246894
+   ],
+   "sprite": "bts_bg_2",
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    45.833336,
+    18.055557
+   ]
+  },
+  {
+   "name": "middle",
+   "path": "BG/middle",
+   "parent": 1,
+   "pos": [
+    0,
+    -0.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2523,
+    0.2523
+   ],
+   "sprite": "bts_bg_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    75.69445,
+    42.62153
+   ]
+  },
+  {
+   "name": "front",
+   "path": "BG/front",
+   "parent": 1,
+   "pos": [
+    4.65,
+    -4.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.252,
+    0.252
+   ],
+   "sprite": "bts_bg_1",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    44.444447,
+    15.885417
+   ]
+  },
+  {
+   "name": "blocks",
+   "path": "blocks",
+   "parent": 0,
+   "pos": [
+    0.0096579,
+    -0.021217
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.97348,
+    0.97348
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "whiteblock (1)",
+   "path": "blocks/whiteblock (1)",
+   "parent": 5,
+   "pos": [
+    -4.85,
+    -3.38
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "line",
+   "path": "blocks/whiteblock (1)/line",
+   "parent": 6,
+   "pos": [
+    -0.02899981,
+    0.049
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "sprite (1)",
+   "path": "blocks/whiteblock (1)/line/sprite (1)",
+   "parent": 7,
+   "pos": [
+    0.51,
+    -1.69
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (2)",
+   "path": "blocks/whiteblock (1)/line/sprite (2)",
+   "parent": 7,
+   "pos": [
+    1.75,
+    -0.71
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "bts_white_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (3)",
+   "path": "blocks/whiteblock (1)/line/sprite (3)",
+   "parent": 7,
+   "pos": [
+    0.95,
+    -1.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bts_white_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (4)",
+   "path": "blocks/whiteblock (1)/line/sprite (4)",
+   "parent": 7,
+   "pos": [
+    1.54,
+    -0.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bts_white_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (5)",
+   "path": "blocks/whiteblock (1)/line/sprite (5)",
+   "parent": 7,
+   "pos": [
+    0.5,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (6)",
+   "path": "blocks/whiteblock (1)/line/sprite (6)",
+   "parent": 7,
+   "pos": [
+    0.195,
+    -0.324
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2904,
+    0.2904
+   ],
+   "sprite": "bts_white_8",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "box",
+   "path": "blocks/whiteblock (1)/box",
+   "parent": 6,
+   "pos": [
+    -0.02,
+    0.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "shock (1)",
+   "path": "blocks/whiteblock (1)/box/shock (1)",
+   "parent": 14,
+   "pos": [
+    -0.03,
+    0.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.04,
+    0.04
+   ],
+   "sprite": "bts_white_4",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    9.88,
+    8
+   ]
+  },
+  {
+   "name": "shock (2)",
+   "path": "blocks/whiteblock (1)/box/shock (2)",
+   "parent": 14,
+   "pos": [
+    -0.38,
+    0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_5",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.12,
+    8.47
+   ]
+  },
+  {
+   "name": "top",
+   "path": "blocks/whiteblock (1)/box/top",
+   "parent": 14,
+   "pos": [
+    0.016,
+    0.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7,
+    5.7
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "blocks/whiteblock (1)/box/top/shadow",
+   "parent": 17,
+   "pos": [
+    0.16,
+    0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95,
+    0.95
+   ],
+   "sprite": "bts_white_6",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8
+   ],
+   "size": [
+    3.71,
+    3.25
+   ]
+  },
+  {
+   "name": "bottom",
+   "path": "blocks/whiteblock (1)/box/bottom",
+   "parent": 14,
+   "pos": [
+    0,
+    -0.20000005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.0399995,
+    6.42
+   ]
+  },
+  {
+   "name": "spring",
+   "path": "blocks/whiteblock (1)/box/spring",
+   "parent": 14,
+   "pos": [
+    0.41,
+    -0.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "ring (1)",
+   "path": "blocks/whiteblock (1)/box/spring/ring (1)",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "spring",
+   "path": "blocks/whiteblock (1)/spring",
+   "parent": 6,
+   "pos": [
+    0.494,
+    -0.539
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "ring (1)",
+   "path": "blocks/whiteblock (1)/spring/ring (1)",
+   "parent": 22,
+   "pos": [
+    -0.021,
+    -0.014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (2)",
+   "path": "blocks/whiteblock (1)/spring/ring (2)",
+   "parent": 22,
+   "pos": [
+    0.083,
+    -0.124
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (3)",
+   "path": "blocks/whiteblock (1)/spring/ring (3)",
+   "parent": 22,
+   "pos": [
+    0.195,
+    -0.236
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (4)",
+   "path": "blocks/whiteblock (1)/spring/ring (4)",
+   "parent": 22,
+   "pos": [
+    0.315,
+    -0.359
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (5)",
+   "path": "blocks/whiteblock (1)/spring/ring (5)",
+   "parent": 22,
+   "pos": [
+    0.429,
+    -0.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (6)",
+   "path": "blocks/whiteblock (1)/spring/ring (6)",
+   "parent": 22,
+   "pos": [
+    0.531,
+    -0.568
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (7)",
+   "path": "blocks/whiteblock (1)/spring/ring (7)",
+   "parent": 22,
+   "pos": [
+    0.646,
+    -0.688
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (8)",
+   "path": "blocks/whiteblock (1)/spring/ring (8)",
+   "parent": 22,
+   "pos": [
+    0.761,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (9)",
+   "path": "blocks/whiteblock (1)/spring/ring (9)",
+   "parent": 22,
+   "pos": [
+    0.87,
+    -0.906
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (10)",
+   "path": "blocks/whiteblock (1)/spring/ring (10)",
+   "parent": 22,
+   "pos": [
+    0.979,
+    -1.008
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (11)",
+   "path": "blocks/whiteblock (1)/spring/ring (11)",
+   "parent": 22,
+   "pos": [
+    1.088,
+    -1.137
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "extrarings",
+   "path": "blocks/whiteblock (1)/spring/extrarings",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ring (9)",
+   "path": "blocks/whiteblock (1)/spring/extrarings/ring (9)",
+   "parent": 34,
+   "pos": [
+    0.784,
+    -0.807
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (10)",
+   "path": "blocks/whiteblock (1)/spring/extrarings/ring (10)",
+   "parent": 34,
+   "pos": [
+    0.853,
+    -0.862
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (11)",
+   "path": "blocks/whiteblock (1)/spring/extrarings/ring (11)",
+   "parent": 34,
+   "pos": [
+    0.915,
+    -0.926
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (12)",
+   "path": "blocks/whiteblock (1)/spring/extrarings/ring (12)",
+   "parent": 34,
+   "pos": [
+    0.784,
+    -0.807
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (13)",
+   "path": "blocks/whiteblock (1)/spring/extrarings/ring (13)",
+   "parent": 34,
+   "pos": [
+    1.631,
+    -1.643
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (12)",
+   "path": "blocks/whiteblock (1)/spring/ring (12)",
+   "parent": 22,
+   "pos": [
+    1.2,
+    -1.235
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (13)",
+   "path": "blocks/whiteblock (1)/spring/ring (13)",
+   "parent": 22,
+   "pos": [
+    1.312,
+    -1.347
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (14)",
+   "path": "blocks/whiteblock (1)/spring/ring (14)",
+   "parent": 22,
+   "pos": [
+    1.435,
+    -1.465
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "root",
+   "path": "blocks/whiteblock (1)/root",
+   "parent": 6,
+   "pos": [
+    3.19,
+    -2.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_2",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.74,
+    8.49
+   ]
+  },
+  {
+   "name": "whiteblock (2)",
+   "path": "blocks/whiteblock (2)",
+   "parent": 5,
+   "pos": [
+    -1.7,
+    -2.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "line",
+   "path": "blocks/whiteblock (2)/line",
+   "parent": 44,
+   "pos": [
+    -0.02899981,
+    0.049
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "sprite (1)",
+   "path": "blocks/whiteblock (2)/line/sprite (1)",
+   "parent": 45,
+   "pos": [
+    0.51,
+    -1.69
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (2)",
+   "path": "blocks/whiteblock (2)/line/sprite (2)",
+   "parent": 45,
+   "pos": [
+    1.75,
+    -0.71
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "bts_white_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (3)",
+   "path": "blocks/whiteblock (2)/line/sprite (3)",
+   "parent": 45,
+   "pos": [
+    0.95,
+    -1.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bts_white_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (4)",
+   "path": "blocks/whiteblock (2)/line/sprite (4)",
+   "parent": 45,
+   "pos": [
+    1.54,
+    -0.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bts_white_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (5)",
+   "path": "blocks/whiteblock (2)/line/sprite (5)",
+   "parent": 45,
+   "pos": [
+    0.5,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (6)",
+   "path": "blocks/whiteblock (2)/line/sprite (6)",
+   "parent": 45,
+   "pos": [
+    0.195,
+    -0.324
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2904,
+    0.2904
+   ],
+   "sprite": "bts_white_8",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "box",
+   "path": "blocks/whiteblock (2)/box",
+   "parent": 44,
+   "pos": [
+    -0.02,
+    0.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "shock (1)",
+   "path": "blocks/whiteblock (2)/box/shock (1)",
+   "parent": 52,
+   "pos": [
+    -0.03,
+    0.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.04,
+    0.04
+   ],
+   "sprite": "bts_white_4",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    9.88,
+    8
+   ]
+  },
+  {
+   "name": "shock (2)",
+   "path": "blocks/whiteblock (2)/box/shock (2)",
+   "parent": 52,
+   "pos": [
+    -0.38,
+    0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_5",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.12,
+    8.47
+   ]
+  },
+  {
+   "name": "top",
+   "path": "blocks/whiteblock (2)/box/top",
+   "parent": 52,
+   "pos": [
+    0.016,
+    0.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7,
+    5.7
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "blocks/whiteblock (2)/box/top/shadow",
+   "parent": 55,
+   "pos": [
+    0.16,
+    0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95,
+    0.95
+   ],
+   "sprite": "bts_white_6",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8
+   ],
+   "size": [
+    3.71,
+    3.25
+   ]
+  },
+  {
+   "name": "bottom",
+   "path": "blocks/whiteblock (2)/box/bottom",
+   "parent": 52,
+   "pos": [
+    0,
+    -0.20000005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.0399995,
+    6.42
+   ]
+  },
+  {
+   "name": "spring",
+   "path": "blocks/whiteblock (2)/box/spring",
+   "parent": 52,
+   "pos": [
+    0.41,
+    -0.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "ring (1)",
+   "path": "blocks/whiteblock (2)/box/spring/ring (1)",
+   "parent": 58,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "spring",
+   "path": "blocks/whiteblock (2)/spring",
+   "parent": 44,
+   "pos": [
+    0.494,
+    -0.539
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "ring (1)",
+   "path": "blocks/whiteblock (2)/spring/ring (1)",
+   "parent": 60,
+   "pos": [
+    -0.021,
+    -0.014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (2)",
+   "path": "blocks/whiteblock (2)/spring/ring (2)",
+   "parent": 60,
+   "pos": [
+    0.083,
+    -0.124
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (3)",
+   "path": "blocks/whiteblock (2)/spring/ring (3)",
+   "parent": 60,
+   "pos": [
+    0.195,
+    -0.236
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (4)",
+   "path": "blocks/whiteblock (2)/spring/ring (4)",
+   "parent": 60,
+   "pos": [
+    0.315,
+    -0.359
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (5)",
+   "path": "blocks/whiteblock (2)/spring/ring (5)",
+   "parent": 60,
+   "pos": [
+    0.429,
+    -0.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (6)",
+   "path": "blocks/whiteblock (2)/spring/ring (6)",
+   "parent": 60,
+   "pos": [
+    0.531,
+    -0.568
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (7)",
+   "path": "blocks/whiteblock (2)/spring/ring (7)",
+   "parent": 60,
+   "pos": [
+    0.646,
+    -0.688
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (8)",
+   "path": "blocks/whiteblock (2)/spring/ring (8)",
+   "parent": 60,
+   "pos": [
+    0.761,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (9)",
+   "path": "blocks/whiteblock (2)/spring/ring (9)",
+   "parent": 60,
+   "pos": [
+    0.87,
+    -0.906
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (10)",
+   "path": "blocks/whiteblock (2)/spring/ring (10)",
+   "parent": 60,
+   "pos": [
+    0.979,
+    -1.008
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (11)",
+   "path": "blocks/whiteblock (2)/spring/ring (11)",
+   "parent": 60,
+   "pos": [
+    1.088,
+    -1.137
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "extrarings",
+   "path": "blocks/whiteblock (2)/spring/extrarings",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ring (9)",
+   "path": "blocks/whiteblock (2)/spring/extrarings/ring (9)",
+   "parent": 72,
+   "pos": [
+    0.784,
+    -0.807
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (10)",
+   "path": "blocks/whiteblock (2)/spring/extrarings/ring (10)",
+   "parent": 72,
+   "pos": [
+    0.853,
+    -0.862
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (11)",
+   "path": "blocks/whiteblock (2)/spring/extrarings/ring (11)",
+   "parent": 72,
+   "pos": [
+    0.915,
+    -0.926
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (12)",
+   "path": "blocks/whiteblock (2)/spring/extrarings/ring (12)",
+   "parent": 72,
+   "pos": [
+    0.784,
+    -0.807
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (13)",
+   "path": "blocks/whiteblock (2)/spring/extrarings/ring (13)",
+   "parent": 72,
+   "pos": [
+    1.631,
+    -1.643
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (12)",
+   "path": "blocks/whiteblock (2)/spring/ring (12)",
+   "parent": 60,
+   "pos": [
+    1.2,
+    -1.235
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (13)",
+   "path": "blocks/whiteblock (2)/spring/ring (13)",
+   "parent": 60,
+   "pos": [
+    1.312,
+    -1.347
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (14)",
+   "path": "blocks/whiteblock (2)/spring/ring (14)",
+   "parent": 60,
+   "pos": [
+    1.435,
+    -1.465
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "root",
+   "path": "blocks/whiteblock (2)/root",
+   "parent": 44,
+   "pos": [
+    3.19,
+    -2.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_2",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.74,
+    8.49
+   ]
+  },
+  {
+   "name": "whiteblock (4)",
+   "path": "blocks/whiteblock (4)",
+   "parent": 5,
+   "pos": [
+    4.6,
+    -0.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "line",
+   "path": "blocks/whiteblock (4)/line",
+   "parent": 82,
+   "pos": [
+    -0.02899981,
+    0.049
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "sprite (1)",
+   "path": "blocks/whiteblock (4)/line/sprite (1)",
+   "parent": 83,
+   "pos": [
+    0.51,
+    -1.69
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (2)",
+   "path": "blocks/whiteblock (4)/line/sprite (2)",
+   "parent": 83,
+   "pos": [
+    1.75,
+    -0.71
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "bts_white_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (3)",
+   "path": "blocks/whiteblock (4)/line/sprite (3)",
+   "parent": 83,
+   "pos": [
+    0.95,
+    -1.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bts_white_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (4)",
+   "path": "blocks/whiteblock (4)/line/sprite (4)",
+   "parent": 83,
+   "pos": [
+    1.54,
+    -0.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bts_white_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (5)",
+   "path": "blocks/whiteblock (4)/line/sprite (5)",
+   "parent": 83,
+   "pos": [
+    0.5,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (6)",
+   "path": "blocks/whiteblock (4)/line/sprite (6)",
+   "parent": 83,
+   "pos": [
+    0.195,
+    -0.324
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2904,
+    0.2904
+   ],
+   "sprite": "bts_white_8",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "box",
+   "path": "blocks/whiteblock (4)/box",
+   "parent": 82,
+   "pos": [
+    -0.02,
+    0.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "shock (1)",
+   "path": "blocks/whiteblock (4)/box/shock (1)",
+   "parent": 90,
+   "pos": [
+    -0.03,
+    0.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.04,
+    0.04
+   ],
+   "sprite": "bts_white_4",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    9.88,
+    8
+   ]
+  },
+  {
+   "name": "shock (2)",
+   "path": "blocks/whiteblock (4)/box/shock (2)",
+   "parent": 90,
+   "pos": [
+    -0.38,
+    0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_5",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.12,
+    8.47
+   ]
+  },
+  {
+   "name": "top",
+   "path": "blocks/whiteblock (4)/box/top",
+   "parent": 90,
+   "pos": [
+    0.016,
+    0.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7,
+    5.7
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "blocks/whiteblock (4)/box/top/shadow",
+   "parent": 93,
+   "pos": [
+    0.16,
+    0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95,
+    0.95
+   ],
+   "sprite": "bts_white_6",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8
+   ],
+   "size": [
+    3.71,
+    3.25
+   ]
+  },
+  {
+   "name": "bottom",
+   "path": "blocks/whiteblock (4)/box/bottom",
+   "parent": 90,
+   "pos": [
+    0,
+    -0.20000005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.0399995,
+    6.42
+   ]
+  },
+  {
+   "name": "spring",
+   "path": "blocks/whiteblock (4)/box/spring",
+   "parent": 90,
+   "pos": [
+    0.41,
+    -0.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "ring (1)",
+   "path": "blocks/whiteblock (4)/box/spring/ring (1)",
+   "parent": 96,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "spring",
+   "path": "blocks/whiteblock (4)/spring",
+   "parent": 82,
+   "pos": [
+    0.494,
+    -0.539
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "ring (1)",
+   "path": "blocks/whiteblock (4)/spring/ring (1)",
+   "parent": 98,
+   "pos": [
+    -0.021,
+    -0.014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (2)",
+   "path": "blocks/whiteblock (4)/spring/ring (2)",
+   "parent": 98,
+   "pos": [
+    0.083,
+    -0.124
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (3)",
+   "path": "blocks/whiteblock (4)/spring/ring (3)",
+   "parent": 98,
+   "pos": [
+    0.195,
+    -0.236
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (4)",
+   "path": "blocks/whiteblock (4)/spring/ring (4)",
+   "parent": 98,
+   "pos": [
+    0.315,
+    -0.359
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (5)",
+   "path": "blocks/whiteblock (4)/spring/ring (5)",
+   "parent": 98,
+   "pos": [
+    0.429,
+    -0.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (6)",
+   "path": "blocks/whiteblock (4)/spring/ring (6)",
+   "parent": 98,
+   "pos": [
+    0.531,
+    -0.568
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (7)",
+   "path": "blocks/whiteblock (4)/spring/ring (7)",
+   "parent": 98,
+   "pos": [
+    0.646,
+    -0.688
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (8)",
+   "path": "blocks/whiteblock (4)/spring/ring (8)",
+   "parent": 98,
+   "pos": [
+    0.761,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (9)",
+   "path": "blocks/whiteblock (4)/spring/ring (9)",
+   "parent": 98,
+   "pos": [
+    0.87,
+    -0.906
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (10)",
+   "path": "blocks/whiteblock (4)/spring/ring (10)",
+   "parent": 98,
+   "pos": [
+    0.979,
+    -1.008
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (11)",
+   "path": "blocks/whiteblock (4)/spring/ring (11)",
+   "parent": 98,
+   "pos": [
+    1.088,
+    -1.137
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "extrarings",
+   "path": "blocks/whiteblock (4)/spring/extrarings",
+   "parent": 98,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ring (9)",
+   "path": "blocks/whiteblock (4)/spring/extrarings/ring (9)",
+   "parent": 110,
+   "pos": [
+    0.784,
+    -0.807
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (10)",
+   "path": "blocks/whiteblock (4)/spring/extrarings/ring (10)",
+   "parent": 110,
+   "pos": [
+    0.853,
+    -0.862
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (11)",
+   "path": "blocks/whiteblock (4)/spring/extrarings/ring (11)",
+   "parent": 110,
+   "pos": [
+    0.915,
+    -0.926
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (12)",
+   "path": "blocks/whiteblock (4)/spring/extrarings/ring (12)",
+   "parent": 110,
+   "pos": [
+    0.784,
+    -0.807
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (13)",
+   "path": "blocks/whiteblock (4)/spring/extrarings/ring (13)",
+   "parent": 110,
+   "pos": [
+    1.631,
+    -1.643
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (12)",
+   "path": "blocks/whiteblock (4)/spring/ring (12)",
+   "parent": 98,
+   "pos": [
+    1.2,
+    -1.235
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (13)",
+   "path": "blocks/whiteblock (4)/spring/ring (13)",
+   "parent": 98,
+   "pos": [
+    1.312,
+    -1.347
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (14)",
+   "path": "blocks/whiteblock (4)/spring/ring (14)",
+   "parent": 98,
+   "pos": [
+    1.435,
+    -1.465
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "root",
+   "path": "blocks/whiteblock (4)/root",
+   "parent": 82,
+   "pos": [
+    3.19,
+    -2.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_2",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.74,
+    8.49
+   ]
+  },
+  {
+   "name": "redblock",
+   "path": "blocks/redblock",
+   "parent": 5,
+   "pos": [
+    1.45,
+    -1.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "line",
+   "path": "blocks/redblock/line",
+   "parent": 120,
+   "pos": [
+    -0.02899981,
+    0.049
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "sprite (1)",
+   "path": "blocks/redblock/line/sprite (1)",
+   "parent": 121,
+   "pos": [
+    0.51,
+    -1.69
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_red_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (2)",
+   "path": "blocks/redblock/line/sprite (2)",
+   "parent": 121,
+   "pos": [
+    1.75,
+    -0.71
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "bts_red_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (3)",
+   "path": "blocks/redblock/line/sprite (3)",
+   "parent": 121,
+   "pos": [
+    0.95,
+    -1.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bts_red_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (4)",
+   "path": "blocks/redblock/line/sprite (4)",
+   "parent": 121,
+   "pos": [
+    1.54,
+    -0.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "bts_red_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (5)",
+   "path": "blocks/redblock/line/sprite (5)",
+   "parent": 121,
+   "pos": [
+    0.5,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "sprite (6)",
+   "path": "blocks/redblock/line/sprite (6)",
+   "parent": 121,
+   "pos": [
+    0.195,
+    -0.324
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2904,
+    0.2904
+   ],
+   "sprite": "bts_red_8",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.45,
+    5.73
+   ]
+  },
+  {
+   "name": "box",
+   "path": "blocks/redblock/box",
+   "parent": 120,
+   "pos": [
+    -0.02,
+    0.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "shock (1)",
+   "path": "blocks/redblock/box/shock (1)",
+   "parent": 128,
+   "pos": [
+    -0.03,
+    0.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.04,
+    0.04
+   ],
+   "sprite": "bts_red_4",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    9.88,
+    8
+   ]
+  },
+  {
+   "name": "shock (2)",
+   "path": "blocks/redblock/box/shock (2)",
+   "parent": 128,
+   "pos": [
+    -0.38,
+    0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_red_5",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.12,
+    8.47
+   ]
+  },
+  {
+   "name": "top",
+   "path": "blocks/redblock/box/top",
+   "parent": 128,
+   "pos": [
+    0.016,
+    0.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_red_0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7,
+    5.7
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "blocks/redblock/box/top/shadow",
+   "parent": 131,
+   "pos": [
+    0.16,
+    0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95,
+    0.95
+   ],
+   "sprite": "bts_red_6",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.8
+   ],
+   "size": [
+    3.71,
+    3.25
+   ]
+  },
+  {
+   "name": "bottom",
+   "path": "blocks/redblock/box/bottom",
+   "parent": 128,
+   "pos": [
+    0,
+    -0.20000005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_red_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.0399995,
+    6.42
+   ]
+  },
+  {
+   "name": "spring",
+   "path": "blocks/redblock/box/spring",
+   "parent": 128,
+   "pos": [
+    0.41,
+    -0.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "ring (1)",
+   "path": "blocks/redblock/box/spring/ring (1)",
+   "parent": 134,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_red_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "spring",
+   "path": "blocks/redblock/spring",
+   "parent": 120,
+   "pos": [
+    0.494,
+    -0.539
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "ring (1)",
+   "path": "blocks/redblock/spring/ring (1)",
+   "parent": 136,
+   "pos": [
+    -0.021,
+    -0.014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (2)",
+   "path": "blocks/redblock/spring/ring (2)",
+   "parent": 136,
+   "pos": [
+    0.083,
+    -0.124
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (3)",
+   "path": "blocks/redblock/spring/ring (3)",
+   "parent": 136,
+   "pos": [
+    0.195,
+    -0.236
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (4)",
+   "path": "blocks/redblock/spring/ring (4)",
+   "parent": 136,
+   "pos": [
+    0.315,
+    -0.359
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (5)",
+   "path": "blocks/redblock/spring/ring (5)",
+   "parent": 136,
+   "pos": [
+    0.429,
+    -0.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (6)",
+   "path": "blocks/redblock/spring/ring (6)",
+   "parent": 136,
+   "pos": [
+    0.531,
+    -0.568
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (7)",
+   "path": "blocks/redblock/spring/ring (7)",
+   "parent": 136,
+   "pos": [
+    0.646,
+    -0.688
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (8)",
+   "path": "blocks/redblock/spring/ring (8)",
+   "parent": 136,
+   "pos": [
+    0.761,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (9)",
+   "path": "blocks/redblock/spring/ring (9)",
+   "parent": 136,
+   "pos": [
+    0.87,
+    -0.906
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (10)",
+   "path": "blocks/redblock/spring/ring (10)",
+   "parent": 136,
+   "pos": [
+    0.979,
+    -1.008
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (11)",
+   "path": "blocks/redblock/spring/ring (11)",
+   "parent": 136,
+   "pos": [
+    1.088,
+    -1.137
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "extrarings",
+   "path": "blocks/redblock/spring/extrarings",
+   "parent": 136,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ring (9)",
+   "path": "blocks/redblock/spring/extrarings/ring (9)",
+   "parent": 148,
+   "pos": [
+    0.784,
+    -0.807
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (10)",
+   "path": "blocks/redblock/spring/extrarings/ring (10)",
+   "parent": 148,
+   "pos": [
+    0.853,
+    -0.862
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (11)",
+   "path": "blocks/redblock/spring/extrarings/ring (11)",
+   "parent": 148,
+   "pos": [
+    0.915,
+    -0.926
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (12)",
+   "path": "blocks/redblock/spring/extrarings/ring (12)",
+   "parent": 148,
+   "pos": [
+    0.784,
+    -0.807
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (13)",
+   "path": "blocks/redblock/spring/extrarings/ring (13)",
+   "parent": 148,
+   "pos": [
+    1.631,
+    -1.643
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (12)",
+   "path": "blocks/redblock/spring/ring (12)",
+   "parent": 136,
+   "pos": [
+    1.2,
+    -1.235
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (13)",
+   "path": "blocks/redblock/spring/ring (13)",
+   "parent": 136,
+   "pos": [
+    1.312,
+    -1.347
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "ring (14)",
+   "path": "blocks/redblock/spring/ring (14)",
+   "parent": 136,
+   "pos": [
+    1.435,
+    -1.465
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_white_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    2.1299999
+   ]
+  },
+  {
+   "name": "root",
+   "path": "blocks/redblock/root",
+   "parent": 120,
+   "pos": [
+    3.19,
+    -2.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_red_2",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.74,
+    8.49
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Curves",
+   "parent": 0,
+   "pos": [
+    -10.854,
+    -4.4019
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.97348,
+    0.97348
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "normalCurve",
+   "path": "Curves/normalCurve",
+   "parent": 158,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "01curveIn",
+   "path": "Curves/normalCurve/01curveIn",
+   "parent": 159,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/01curveIn/Point 0",
+   "parent": 160,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/01curveIn/Point 1",
+   "parent": 160,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "01curveOut",
+   "path": "Curves/normalCurve/01curveOut",
+   "parent": 159,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/01curveOut/Point 0",
+   "parent": 163,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/01curveOut/Point 1",
+   "parent": 163,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "12curve",
+   "path": "Curves/normalCurve/12curve",
+   "parent": 159,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/12curve/Point 0",
+   "parent": 166,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/12curve/Point 1",
+   "parent": 166,
+   "pos": [
+    3,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "23curve",
+   "path": "Curves/normalCurve/23curve",
+   "parent": 159,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/23curve/Point 0",
+   "parent": 169,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/23curve/Point 1",
+   "parent": 169,
+   "pos": [
+    3,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "23curveHigh",
+   "path": "Curves/normalCurve/23curveHigh",
+   "parent": 159,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/23curveHigh/Point 0",
+   "parent": 172,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/23curveHigh/Point 1",
+   "parent": 172,
+   "pos": [
+    3,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "34curve",
+   "path": "Curves/normalCurve/34curve",
+   "parent": 159,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/34curve/Point 0",
+   "parent": 175,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/34curve/Point 1",
+   "parent": 175,
+   "pos": [
+    3,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "34curveHigh",
+   "path": "Curves/normalCurve/34curveHigh",
+   "parent": 159,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/34curveHigh/Point 0",
+   "parent": 178,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/34curveHigh/Point 1",
+   "parent": 178,
+   "pos": [
+    3,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "45curveIn",
+   "path": "Curves/normalCurve/45curveIn",
+   "parent": 159,
+   "pos": [
+    15,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/45curveIn/Point 0",
+   "parent": 181,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/45curveIn/Point 1",
+   "parent": 181,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "45curveOut",
+   "path": "Curves/normalCurve/45curveOut",
+   "parent": 159,
+   "pos": [
+    15,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/normalCurve/45curveOut/Point 0",
+   "parent": 184,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/normalCurve/45curveOut/Point 1",
+   "parent": 184,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "missCurve",
+   "path": "Curves/missCurve",
+   "parent": 158,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0500001,
+    1.0500001
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "misscurveFallRight",
+   "path": "Curves/missCurve/misscurveFallRight",
+   "parent": 187,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/missCurve/misscurveFallRight/Point 0",
+   "parent": 188,
+   "pos": [
+    0.32439613,
+    -0.69698596
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/missCurve/misscurveFallRight/Point 1",
+   "parent": 188,
+   "pos": [
+    2.5918388,
+    -4.2095757
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "misscurveFallLeft",
+   "path": "Curves/missCurve/misscurveFallLeft",
+   "parent": 187,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/missCurve/misscurveFallLeft/Point 0",
+   "parent": 191,
+   "pos": [
+    -0.6,
+    -0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/missCurve/misscurveFallLeft/Point 1",
+   "parent": 191,
+   "pos": [
+    -1.7,
+    -5.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "customCurve (0)",
+   "path": "Curves/customCurve (0)",
+   "parent": 158,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "11curve",
+   "path": "Curves/customCurve (0)/11curve",
+   "parent": 194,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (0)/11curve/Point 0",
+   "parent": 195,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (0)/11curve/Point 1",
+   "parent": 195,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "22curve",
+   "path": "Curves/customCurve (0)/22curve",
+   "parent": 194,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (0)/22curve/Point 0",
+   "parent": 198,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (0)/22curve/Point 1",
+   "parent": 198,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "33curve",
+   "path": "Curves/customCurve (0)/33curve",
+   "parent": 194,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (0)/33curve/Point 0",
+   "parent": 201,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (0)/33curve/Point 1",
+   "parent": 201,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "33curveHigh",
+   "path": "Curves/customCurve (0)/33curveHigh",
+   "parent": 194,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (0)/33curveHigh/Point 0",
+   "parent": 204,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (0)/33curveHigh/Point 1",
+   "parent": 204,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "44curve",
+   "path": "Curves/customCurve (0)/44curve",
+   "parent": 194,
+   "pos": [
+    15,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (0)/44curve/Point 0",
+   "parent": 207,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (0)/44curve/Point 1",
+   "parent": 207,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "customCurve (2)",
+   "path": "Curves/customCurve (2)",
+   "parent": 158,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "02curveIn",
+   "path": "Curves/customCurve (2)/02curveIn",
+   "parent": 210,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (2)/02curveIn/Point 0",
+   "parent": 211,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (2)/02curveIn/Point 1",
+   "parent": 211,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "02curveOut",
+   "path": "Curves/customCurve (2)/02curveOut",
+   "parent": 210,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (2)/02curveOut/Point 0",
+   "parent": 214,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (2)/02curveOut/Point 1",
+   "parent": 214,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "13curve",
+   "path": "Curves/customCurve (2)/13curve",
+   "parent": 210,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (2)/13curve/Point 0",
+   "parent": 217,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (2)/13curve/Point 1",
+   "parent": 217,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "13curveHigh",
+   "path": "Curves/customCurve (2)/13curveHigh",
+   "parent": 210,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (2)/13curveHigh/Point 0",
+   "parent": 220,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (2)/13curveHigh/Point 1",
+   "parent": 220,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "24curve",
+   "path": "Curves/customCurve (2)/24curve",
+   "parent": 210,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (2)/24curve/Point 0",
+   "parent": 223,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (2)/24curve/Point 1",
+   "parent": 223,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "35curveIn",
+   "path": "Curves/customCurve (2)/35curveIn",
+   "parent": 210,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (2)/35curveIn/Point 0",
+   "parent": 226,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (2)/35curveIn/Point 1",
+   "parent": 226,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "35curveOut",
+   "path": "Curves/customCurve (2)/35curveOut",
+   "parent": 210,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (2)/35curveOut/Point 0",
+   "parent": 229,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (2)/35curveOut/Point 1",
+   "parent": 229,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "customCurve (3)",
+   "path": "Curves/customCurve (3)",
+   "parent": 158,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "03curveIn",
+   "path": "Curves/customCurve (3)/03curveIn",
+   "parent": 232,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (3)/03curveIn/Point 0",
+   "parent": 233,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (3)/03curveIn/Point 1",
+   "parent": 233,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "03curveOut",
+   "path": "Curves/customCurve (3)/03curveOut",
+   "parent": 232,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (3)/03curveOut/Point 0",
+   "parent": 236,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (3)/03curveOut/Point 1",
+   "parent": 236,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "14curve",
+   "path": "Curves/customCurve (3)/14curve",
+   "parent": 232,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (3)/14curve/Point 0",
+   "parent": 239,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (3)/14curve/Point 1",
+   "parent": 239,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "25curveIn",
+   "path": "Curves/customCurve (3)/25curveIn",
+   "parent": 232,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (3)/25curveIn/Point 0",
+   "parent": 242,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (3)/25curveIn/Point 1",
+   "parent": 242,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "25curveOut",
+   "path": "Curves/customCurve (3)/25curveOut",
+   "parent": 232,
+   "pos": [
+    9,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (3)/25curveOut/Point 0",
+   "parent": 245,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (3)/25curveOut/Point 1",
+   "parent": 245,
+   "pos": [
+    12,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "customCurve (4)",
+   "path": "Curves/customCurve (4)",
+   "parent": 158,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.05,
+    1.05
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "04curveIn",
+   "path": "Curves/customCurve (4)/04curveIn",
+   "parent": 248,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (4)/04curveIn/Point 0",
+   "parent": 249,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (4)/04curveIn/Point 1",
+   "parent": 249,
+   "pos": [
+    15,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "04curveOut",
+   "path": "Curves/customCurve (4)/04curveOut",
+   "parent": 248,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (4)/04curveOut/Point 0",
+   "parent": 252,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (4)/04curveOut/Point 1",
+   "parent": 252,
+   "pos": [
+    15,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "15curveIn",
+   "path": "Curves/customCurve (4)/15curveIn",
+   "parent": 248,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (4)/15curveIn/Point 0",
+   "parent": 255,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (4)/15curveIn/Point 1",
+   "parent": 255,
+   "pos": [
+    15,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "15curveOut",
+   "path": "Curves/customCurve (4)/15curveOut",
+   "parent": 248,
+   "pos": [
+    6,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/customCurve (4)/15curveOut/Point 0",
+   "parent": 258,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/customCurve (4)/15curveOut/Point 1",
+   "parent": 258,
+   "pos": [
+    15,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "prefabs",
+   "path": "prefabs",
+   "parent": 0,
+   "pos": [
+    0.0096579,
+    -0.021217
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.97348,
+    0.97348
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rod",
+   "path": "prefabs/rod",
+   "parent": 261,
+   "pos": [
+    8.33,
+    -4.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_rod_0",
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.25,
+    4.21
+   ]
+  },
+  {
+   "name": "assembled",
+   "path": "prefabs/assembled",
+   "parent": 261,
+   "pos": [
+    -0.072,
+    0.064
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "shock",
+   "path": "prefabs/assembled/shock",
+   "parent": 263,
+   "pos": [
+    -2.57,
+    3.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_widget_38",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    9.12,
+    8.4800005
+   ]
+  },
+  {
+   "name": "back",
+   "path": "prefabs/assembled/back",
+   "parent": 263,
+   "pos": [
+    -2.71,
+    2.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_square_14",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8,
+    8
+   ]
+  },
+  {
+   "name": "front",
+   "path": "prefabs/assembled/front",
+   "parent": 263,
+   "pos": [
+    -2.454,
+    2.658
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_square_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8,
+    8
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "prefabs/assembled/shadow",
+   "parent": 263,
+   "pos": [
+    -2.5,
+    2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_widget_9",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.7058824
+   ],
+   "size": [
+    4.67,
+    2.25
+   ]
+  },
+  {
+   "name": "rod",
+   "path": "prefabs/assembled/rod",
+   "parent": 263,
+   "pos": [
+    -2.894,
+    3.644
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_widget_37",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3799999,
+    1.78
+   ]
+  },
+  {
+   "name": "squareRight",
+   "path": "prefabs/squareRight",
+   "parent": 261,
+   "pos": [
+    -2.675,
+    2.908333
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "prefabs/squareRight/sprite",
+   "parent": 269,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_square_6",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8,
+    8
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "prefabs/squareRight/shadow",
+   "parent": 269,
+   "pos": [
+    0.03,
+    -0.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_widget_30",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.67,
+    2.25
+   ]
+  },
+  {
+   "name": "squareLeft",
+   "path": "prefabs/squareLeft",
+   "parent": 261,
+   "pos": [
+    -2.425,
+    2.661667
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    11
+   ]
+  },
+  {
+   "name": "sprite",
+   "path": "prefabs/squareLeft/sprite",
+   "parent": 272,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_square_6",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8,
+    8
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "prefabs/squareLeft/shadow",
+   "parent": 272,
+   "pos": [
+    0.03,
+    -0.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2625,
+    0.2625
+   ],
+   "sprite": "bts_widget_30",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.67,
+    2.25
+   ]
+  },
+  {
+   "name": "widgetHolder",
+   "path": "widgetHolder",
+   "parent": 0,
+   "pos": [
+    0.0096579,
+    -0.021217
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.97348,
+    0.97348
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

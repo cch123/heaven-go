@@ -1,0 +1,10 @@
+{
+ "blocks/redblock": "whiteblock",
+ "blocks/whiteblock (1)": "whiteblock",
+ "blocks/whiteblock (2)": "whiteblock",
+ "blocks/whiteblock (4)": "whiteblock",
+ "prefabs/assembled": "assembled",
+ "prefabs/rod": "rod",
+ "prefabs/squareLeft": "square",
+ "prefabs/squareRight": "square"
+}
