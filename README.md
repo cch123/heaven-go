@@ -179,10 +179,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   snapshot（唱片摩擦滤波）；当前运行时先按同拍位做音乐 ducking，recordStop/
   recordSwipe/voice/cheer/boo 与动画状态已按 C# 时序接入，后续需补 live music
   filter 才能清掉此项。
-- cheerReaders：字幕（toggleCaption 启用路径）未实现——官方非 PRACTICE 关
-  均为 version=0 旧谱面且无 toggleCaption 块，按 CheckCaptions 语义自动禁
-  用，行为一致；若自制谱启用会打日志提示。yay 纸花粒子为等价手写实现
-  （白/黑方片爆散），未逐参数复刻 ParticleSystem。
+- cheerReaders：toggleCaption 已接原 TMP caption/underlay 节点、StickyCanvas
+  跟随相机语义和旧谱面 CheckCaptions 自动禁用路径；yay 纸花粒子仍为等价手写
+  实现（白/黑方片爆散），未逐参数复刻 ParticleSystem。
 - ninjaBodyguard：HitParticle 的 ParticleSystemRenderer 未由提取器通用导出，
   运行时用同一 prefab 节点位置发射短促白色斩击线，时序与命中触发一致，但
   未逐参数复刻 Unity 粒子大小/速度随机曲线。

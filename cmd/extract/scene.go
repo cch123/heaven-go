@@ -952,11 +952,14 @@ var sceneSpecs = map[string]sceneSpec{
 		roleFields: []string{
 			"playerMask", "missPoster", "topPoster", "middlePoster", "bottomPoster",
 			"player", "whiteYayParticle", "blackYayParticle",
+			"CheerCaption0", "CheerCaption1", "CheerUnderlay0", "CheerUnderlay1",
+			"StickyCaptions",
 		},
 		refArrayFields: []string{
 			"firstRow", "secondRow", "thirdRow", "topMasks", "middleMasks", "bottomMasks",
 		},
 		wantControllers: true,
+		wantTexts:       true,
 		commonSounds:    []string{"miss.wav"},
 		components: []componentSpec{
 			{name: "game", markers: []string{"posters", "topMasks"}},

@@ -274,9 +274,14 @@ func parseController(path, animRoot string, animGUIDs map[string]string, importe
 
 func exportTexts(dt *docTable, paths map[int64]string) {
 	fontsRoot := filepath.Join(*hsRoot, "Assets", "Resources", "Fonts")
-	assetGUIDs := scanGUIDs(fontsRoot, ".asset")
-	otfGUIDs := scanGUIDs(fontsRoot, ".otf")
-	ttfGUIDs := scanGUIDs(fontsRoot, ".ttf")
+	assetsRoot := filepath.Join(*hsRoot, "Assets")
+	// Most TMP assets live under Resources/Fonts, but several minigames bundle
+	// their own font asset/source font beside the prefab (Cheer Readers'
+	// SeuratBHoleless is one). Scan the full Assets tree so text extraction is
+	// driven by serialized GUIDs instead of per-game path exceptions.
+	assetGUIDs := scanGUIDs(assetsRoot, ".asset")
+	otfGUIDs := scanGUIDs(assetsRoot, ".otf")
+	ttfGUIDs := scanGUIDs(assetsRoot, ".ttf")
 
 	// MeshRenderer（classID 23）按 GameObject 索引（TMP 文本的排序来自它）
 	meshRend := map[int64]map[string]any{}
@@ -331,7 +336,7 @@ func exportTexts(dt *docTable, paths map[int64]string) {
 		fontGUID := uy.S(uy.Get(uy.M(d.content["m_fontAsset"]), "guid"))
 		assetPath, ok := assetGUIDs[fontGUID]
 		if !ok {
-			log.Fatalf("TMP 字体资产 guid %s 未在 %s 找到", fontGUID, fontsRoot)
+			log.Fatalf("TMP 字体资产 guid %s 未在 %s 找到", fontGUID, assetsRoot)
 		}
 		raw, err := os.ReadFile(assetPath)
 		must(err)

@@ -82,9 +82,47 @@ func TestRowsAndMasks(t *testing.T) {
 	if maskCnt < 24 {
 		t.Errorf("SpriteMask 节点 = %d, want >= 24", maskCnt)
 	}
-	for _, role := range []string{"playerMask", "missPoster", "topPoster", "middlePoster", "bottomPoster", "player"} {
+	for _, role := range []string{
+		"playerMask", "missPoster", "topPoster", "middlePoster", "bottomPoster", "player",
+		"CheerCaption0", "CheerCaption1", "CheerUnderlay0", "CheerUnderlay1", "StickyCaptions",
+	} {
 		if p := as.Roles[role]; p == "" || !nodeSet[p] {
 			t.Errorf("role %s = %q 未解析", role, p)
+		}
+	}
+}
+
+// TestCaptionTextNodes：toggleCaption 使用原 prefab 的 TMP 文本/underlay 节点；
+// 这些节点必须能被运行时 SetText 动态改字，不能退回手写 HUD。
+func TestCaptionTextNodes(t *testing.T) {
+	as := loadAssets(t)
+	if len(as.Texts) != 4 {
+		t.Fatalf("texts = %d, want 4 caption/underlay nodes", len(as.Texts))
+	}
+	texts := map[string]bool{}
+	for _, tn := range as.Texts {
+		texts[tn.Path] = true
+		if tn.HAlign != 2 {
+			t.Errorf("%s hAlign = %d, want center", tn.Path, tn.HAlign)
+		}
+	}
+	for _, font := range []string{"Seurat B.otf", "SeuratBHolelessM.ttf"} {
+		if _, ok := as.Fonts[font]; !ok {
+			t.Errorf("font %q not extracted", font)
+		}
+	}
+	for _, role := range []string{"CheerCaption0", "CheerCaption1", "CheerUnderlay0", "CheerUnderlay1"} {
+		p := as.Roles[role]
+		if !texts[p] {
+			t.Errorf("%s role path %q not in texts.json", role, p)
+		}
+	}
+	if err := as.ApplyTexts(); err != nil {
+		t.Fatalf("ApplyTexts: %v", err)
+	}
+	for _, role := range []string{"CheerCaption0", "CheerUnderlay0"} {
+		if err := as.SetText(as.Roles[role], "One! Two! Three!"); err != nil {
+			t.Fatalf("SetText(%s): %v", role, err)
 		}
 	}
 }

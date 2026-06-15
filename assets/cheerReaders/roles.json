@@ -1,4 +1,9 @@
 {
+ "CheerCaption0": "StickyText/CheerCaption0",
+ "CheerCaption1": "StickyText/CheerCaption1",
+ "CheerUnderlay0": "StickyText/CheerCaption0/CheerCaption0 Underlay",
+ "CheerUnderlay1": "StickyText/CheerCaption1/CheerCaption1 Underlay",
+ "StickyCaptions": "StickyText",
  "blackYayParticle": "NerdsHolder/BlackParticle",
  "bottomPoster": "NerdsHolder/ThirdRow/Poster",
  "middlePoster": "NerdsHolder/SecondRow/Poster",

@@ -11,12 +11,11 @@
 //	bop/resetPose/toggleCaption：区间 bop / 姿势复位 / 字幕开关
 //
 // 黑白交替：每个 cue 中点翻转 shouldBeBlack，全员书色随之轮换。
-// 字幕：Code Remix 等 version=0 旧谱面无 toggleCaption 块时自动禁用
-// （CheckCaptions 语义），启用路径未实现（官方非 PRACTICE 关卡未用到）。
+// 字幕：复刻 CheckCaptions/ToggleCaption；旧谱面无 toggleCaption 块时首次 cue
+// 自动禁用，有 toggle block 时用原 TMP 节点显示并按 StickyCanvas 抵消相机。
 package cheerreaders
 
 import (
-	"log"
 	"math"
 	"math/rand"
 
@@ -39,6 +38,18 @@ var posterFiles = []string{
 type cueEvt struct {
 	beat, length float64
 	kind         string
+}
+
+type captionTextSet struct {
+	ott, hycd, okdm, evbdygo, rrsbbb string
+}
+
+var defaultCaptions = captionTextSet{
+	ott:     "One! Two! Three!",
+	hycd:    "It's up to you!",
+	okdm:    "OK, it's on!",
+	evbdygo: "Let's go read a buncha books!",
+	rrsbbb:  "Rah-rah sis boom bah-BOOM!",
 }
 
 type girl struct {
@@ -85,6 +96,17 @@ type Module struct {
 	lastT     float64
 	particles []confetti
 	lastBop   float64
+
+	captionEnabled   bool
+	captionSticky    bool
+	captionsChecked  bool
+	hasCaptionToggle bool
+	captionTexts     captionTextSet
+	captionRoot      string
+	captionPaths     [2]string
+	underlayPaths    [2]string
+	captionSlots     [2]string
+	captionOrders    map[string]int
 }
 
 type confetti struct {
@@ -101,7 +123,11 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	if err := ctx.LoadAssets("cheerReaders"); err != nil {
 		return err
 	}
+	if err := ctx.Assets.ApplyTexts(); err != nil {
+		return err
+	}
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
+	m.initCaptions()
 	mk := func(path string, isPlayer bool) *girl {
 		return &girl{path: path, face: path + "/Head/faceSprites", white: true,
 			isPlayer: isPlayer, blushBeat: -10}
@@ -131,6 +157,26 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 }
 
 func (m *Module) all() []*girl { return append(append([]*girl{}, m.girls...), m.player) }
+
+func (m *Module) initCaptions() {
+	m.captionEnabled = true
+	m.captionSticky = true
+	m.captionTexts = defaultCaptions
+	m.captionRoot = m.ctx.Role("StickyCaptions")
+	m.captionPaths = [2]string{m.ctx.Role("CheerCaption0"), m.ctx.Role("CheerCaption1")}
+	m.underlayPaths = [2]string{m.ctx.Role("CheerUnderlay0"), m.ctx.Role("CheerUnderlay1")}
+	m.captionOrders = map[string]int{}
+	for _, n := range m.ctx.Assets.Rig.Nodes {
+		for _, p := range []string{m.captionPaths[0], m.captionPaths[1], m.underlayPaths[0], m.underlayPaths[1]} {
+			if n.Path == p {
+				m.captionOrders[p] = n.Order
+			}
+		}
+	}
+	for i := range m.captionPaths {
+		m.setCaptionSlot(i, "")
+	}
+}
 
 func (m *Module) hideMasks() {
 	sc := m.ctx.Scene
@@ -291,9 +337,21 @@ func (m *Module) OnEvent(e *riq.Entity) {
 	case "cheerReaders/resetPose":
 		ctx.At(b, func() { m.resetPose() })
 	case "cheerReaders/toggleCaption":
-		if boolParam(e, "captions") {
-			log.Printf("cheerReaders: toggleCaption 启用字幕未实现（官方非 PRACTICE 关未用）")
+		m.hasCaptionToggle = true
+		ev := captionToggleEvent{
+			enabled: boolParamDefault(e, "captions", true),
+			custom:  boolParam(e, "custom"),
+			sticky:  boolParamDefault(e, "sticky", true),
+			vfx:     boolParam(e, "vfx"),
+			texts: captionTextSet{
+				ott:     e.Str("ott", defaultCaptions.ott),
+				hycd:    e.Str("hycd", defaultCaptions.hycd),
+				okdm:    e.Str("okdm", defaultCaptions.okdm),
+				evbdygo: e.Str("evbdygo", defaultCaptions.evbdygo),
+				rrsbbb:  e.Str("rrsbbb", defaultCaptions.rrsbbb),
+			},
 		}
+		ctx.At(b, func() { m.applyCaptionToggle(ev) })
 	}
 }
 
@@ -360,6 +418,100 @@ func (m *Module) soloOf(c cueEvt, win float64, raw int) int {
 
 func boolParam(e *riq.Entity, key string) bool { return e.Float(key, 0) != 0 }
 
+func boolParamDefault(e *riq.Entity, key string, def bool) bool {
+	if _, ok := e.Data[key]; !ok {
+		return def
+	}
+	return boolParam(e, key)
+}
+
+type captionToggleEvent struct {
+	enabled, custom, sticky, vfx bool
+	texts                        captionTextSet
+}
+
+func (m *Module) applyCaptionToggle(e captionToggleEvent) {
+	m.captionEnabled = e.enabled
+	m.captionSticky = e.sticky
+	if e.vfx {
+		m.captionSticky = false
+	}
+	if e.custom {
+		m.captionTexts = e.texts
+	}
+	for _, p := range m.captionPaths {
+		m.ctx.Scene.SetActive(p, e.enabled)
+		if e.vfx {
+			// Unity 用 layer 13 让字幕避开滤镜；Go 的 postfx 已不覆盖叠层，
+			// 这里用高 sortingOrder 保证字幕压在游戏 VFX 之上。
+			m.ctx.Scene.SetOrderOver(p, 10000)
+		} else if order, ok := m.captionOrders[p]; ok {
+			m.ctx.Scene.SetOrderOver(p, order)
+		} else {
+			m.ctx.Scene.ClearOrderOver(p)
+		}
+	}
+	for _, p := range m.underlayPaths {
+		if e.vfx {
+			m.ctx.Scene.SetOrderOver(p, 9999)
+		} else if order, ok := m.captionOrders[p]; ok {
+			m.ctx.Scene.SetOrderOver(p, order)
+		} else {
+			m.ctx.Scene.ClearOrderOver(p)
+		}
+	}
+}
+
+func (m *Module) checkCaptions(beat float64) {
+	if m.captionsChecked {
+		return
+	}
+	m.captionsChecked = true
+	if !m.hasCaptionToggle {
+		m.ctx.At(beat, func() {
+			m.applyCaptionToggle(captionToggleEvent{enabled: false})
+		})
+	}
+}
+
+func (m *Module) scheduleCaption(beat, length float64, text func() string) {
+	m.ctx.At(beat, func() {
+		slot := 1
+		if m.captionSlots[1] != "" {
+			slot = 0
+		}
+		m.setCaptionSlot(slot, text())
+		m.ctx.At(beat+length, func() {
+			m.setCaptionSlot(slot, "")
+		})
+	})
+}
+
+func (m *Module) setCaptionSlot(slot int, text string) {
+	if slot < 0 || slot >= len(m.captionPaths) {
+		return
+	}
+	m.captionSlots[slot] = text
+	_ = m.ctx.Assets.SetText(m.captionPaths[slot], text)
+	_ = m.ctx.Assets.SetText(m.underlayPaths[slot], text)
+	m.ctx.Scene.SetActive(m.captionPaths[slot], m.captionEnabled)
+}
+
+func (m *Module) updateCaptionSticky(beat float64) {
+	if m.captionRoot == "" {
+		return
+	}
+	if !m.captionSticky {
+		m.ctx.Scene.ClearPosOver(m.captionRoot)
+		m.ctx.Scene.ClearZOver(m.captionRoot)
+		return
+	}
+	cam := m.ctx.CameraAt(beat)
+	cam[2] += m.zoomAdd
+	m.ctx.Scene.SetPosOver(m.captionRoot, cam[0], cam[1])
+	m.ctx.Scene.SetZOver(m.captionRoot, cam[2]+kart.CamDist)
+}
+
 // setIsDoingCue：表情复位 + cue 区间 + 中点翻转黑白。
 func (m *Module) setCue(c cueEvt, switchColor bool) {
 	ctx := m.ctx
@@ -376,6 +528,7 @@ func (m *Module) setCue(c cueEvt, switchColor bool) {
 	if switchColor {
 		ctx.At(c.beat+c.length*0.5, func() { m.black = !m.black })
 	}
+	m.checkCaptions(c.beat)
 }
 
 func (m *Module) faceAll(solo int, anim string) {
@@ -414,6 +567,7 @@ func (m *Module) cue123(c cueEvt) {
 	b := c.beat
 	solo := m.soloOf(c, 3, m.soloRaw(c))
 	m.setCue(c, true)
+	m.scheduleCaption(b, 3.5, func() string { return m.captionTexts.ott })
 	ctx.SoundAt(b, "bookHorizontal", 1)
 	ctx.SoundAt(b+1, "bookHorizontal", 1)
 	voice := [3]string{"oneTwoThreeS1", "oneTwoThreeS2", "oneTwoThreeS3"}
@@ -449,6 +603,7 @@ func (m *Module) cueUpToYou(c cueEvt) {
 	b := c.beat
 	solo := m.soloOf(c, 3, m.soloRaw(c))
 	m.setCue(c, true)
+	m.scheduleCaption(b, 3.5, func() string { return m.captionTexts.hycd })
 	for _, t := range []float64{0, 0.75, 1.5} {
 		ctx.SoundAt(b+t, "bookVertical", 1)
 	}
@@ -504,6 +659,7 @@ func (m *Module) cueBooks(c cueEvt) {
 	b := c.beat
 	solo := m.soloOf(c, 3, m.soloRaw(c))
 	m.setCue(c, true)
+	m.scheduleCaption(b, 3.5, func() string { return m.captionTexts.evbdygo })
 	ctx.SoundAt(b, "letsGoRead", 1)
 	for _, t := range []float64{0.75, 1, 1.25, 1.5, 1.75} {
 		ctx.SoundAt(b+t, "bookDiagonal", 1)
@@ -564,6 +720,7 @@ func (m *Module) cueRah(c cueEvt) {
 	b := c.beat
 	solo := m.soloOf(c, 4, m.soloRaw(c))
 	m.setCue(c, true)
+	m.scheduleCaption(b, 3.5, func() string { return m.captionTexts.rrsbbb })
 	consecutive := false
 	for i := range m.ctx.Entities() {
 		e := &m.ctx.Entities()[i]
@@ -646,6 +803,7 @@ func (m *Module) cueOkItsOn(c cueEvt) {
 	b := c.beat
 	solo := m.soloOf(c, c.length, m.soloRaw(c))
 	m.setCue(c, false)
+	m.scheduleCaption(b, c.length-0.5, func() string { return m.captionTexts.okdm })
 	q := c.length * 0.25
 	whistle, happy := true, true
 	poster := 14
@@ -1008,6 +1166,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(bgColor)
 	sc := m.ctx.Scene
 	// GameCamera.AdditionalPosition.z（冲击变焦）
+	m.updateCaptionSticky(beat)
 	m.ctx.SampleSceneZ(beat, m.zoomAdd)
 	sc.Draw(screen, m.proj)
 	m.drawConfetti(screen, t)

@@ -1,0 +1,82 @@
+[
+ {
+  "path": "StickyText/CheerCaption0",
+  "text": "\u003calign=center\u003eRah-rah-sis-boom-bah-BOOM!",
+  "size": 0.85,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 500,
+  "layer": 0,
+  "font": "Seurat B.otf",
+  "rect": [
+   4,
+   0.1659
+  ],
+  "hAlign": 2,
+  "vAlign": 256
+ },
+ {
+  "path": "StickyText/CheerCaption0/CheerCaption0 Underlay",
+  "text": "\u003calign=center\u003eRah-rah-sis-boom-bah-BOOM!",
+  "size": 0.85,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 499,
+  "layer": 0,
+  "font": "SeuratBHolelessM.ttf",
+  "rect": [
+   4,
+   0.1659
+  ],
+  "hAlign": 2,
+  "vAlign": 256
+ },
+ {
+  "path": "StickyText/CheerCaption1",
+  "text": "\u003calign=center\u003eOK, it's on!",
+  "size": 0.85,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 500,
+  "layer": 0,
+  "font": "Seurat B.otf",
+  "rect": [
+   4,
+   0.1659
+  ],
+  "hAlign": 2,
+  "vAlign": 256
+ },
+ {
+  "path": "StickyText/CheerCaption1/CheerCaption1 Underlay",
+  "text": "\u003calign=center\u003eOK, it's on!",
+  "size": 0.85,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 499,
+  "layer": 0,
+  "font": "SeuratBHolelessM.ttf",
+  "rect": [
+   4,
+   0.1659
+  ],
+  "hAlign": 2,
+  "vAlign": 256
+ }
+]

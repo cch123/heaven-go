@@ -580,6 +580,13 @@ func (s *SceneInst) SetOrderOver(path string, order int) {
 	}
 }
 
+// ClearOrderOver 撤销 sortingOrder 覆盖，恢复 prefab/动画曲线给出的顺序。
+func (s *SceneInst) ClearOrderOver(path string) {
+	if i, ok := s.byPath[path]; ok {
+		delete(s.orderOver, i)
+	}
+}
+
 // ClearPosOver 撤销 localPosition 覆盖。
 func (s *SceneInst) ClearPosOver(path string) {
 	if i, ok := s.byPath[path]; ok {
@@ -604,6 +611,13 @@ func (s *SceneInst) SetSpriteOver(path, sprite string) {
 func (s *SceneInst) SetZOver(path string, z float64) {
 	if i, ok := s.byPath[path]; ok {
 		s.zOver[i] = z
+	}
+}
+
+// ClearZOver 撤销世界 z 覆盖。
+func (s *SceneInst) ClearZOver(path string) {
+	if i, ok := s.byPath[path]; ok {
+		delete(s.zOver, i)
 	}
 }
 
