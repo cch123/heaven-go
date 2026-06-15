@@ -1,12 +1,14 @@
 package rockers
 
+import "hsdemo/engine"
+
 type rocker struct {
 	mod    *Module
 	path   string
 	fxPath string
 	jj     bool
 
-	stops          []func()
+	loops          []*engine.SoundLoopHandle
 	lastPitches    [6]int
 	lastGleeClub   bool
 	lastSample     noteSample
@@ -46,18 +48,18 @@ func (r *rocker) playFX(state string, beat float64) {
 }
 
 func (r *rocker) stopSounds() {
-	for _, stop := range r.stops {
-		if stop != nil {
-			stop()
+	for _, loop := range r.loops {
+		if loop != nil {
+			loop.Stop()
 		}
 	}
-	r.stops = nil
+	r.loops = nil
 }
 
 func (r *rocker) startLoops() {
 	r.stopSounds()
 	if r.lastSample.key != "" {
-		r.stops = append(r.stops, r.mod.ctx.SoundLoopPitchVol(r.lastSample.key, semitonePitch(r.lastSampleTone+r.bendSemi), 1))
+		r.loops = append(r.loops, r.mod.ctx.SoundLoopPitchHandle(r.lastSample.key, semitonePitch(r.lastSampleTone+r.bendSemi), 1))
 	} else {
 		dir := "normal"
 		if r.lastGleeClub {
@@ -68,9 +70,32 @@ func (r *rocker) startLoops() {
 				continue
 			}
 			name := "strings/" + dir + "/" + dir + itoa1(i+1)
-			r.stops = append(r.stops, r.mod.ctx.SoundLoopPitchVol(name, semitonePitch(semi+r.bendSemi), stringVolume(len(r.lastPitches))))
+			r.loops = append(r.loops, r.mod.ctx.SoundLoopPitchHandle(name, semitonePitch(semi+r.bendSemi), stringVolume(len(r.lastPitches))))
 		}
 	}
+}
+
+func (r *rocker) bendLoopsTo(semi int, seconds float64) bool {
+	idx := 0
+	if r.lastSample.key != "" {
+		if len(r.loops) == 0 || r.loops[0] == nil {
+			return false
+		}
+		r.loops[0].RampPitch(semitonePitch(r.lastSampleTone+semi), seconds)
+		return true
+	}
+	ok := false
+	for _, base := range r.lastPitches {
+		if base < 0 {
+			continue
+		}
+		if idx < len(r.loops) && r.loops[idx] != nil {
+			r.loops[idx].RampPitch(semitonePitch(base+semi), seconds)
+			ok = true
+		}
+		idx++
+	}
+	return ok
 }
 
 func (r *rocker) strumStrings(gleeClub bool, pitches [6]int, sample noteSample, sampleTone int, disableFX, jump bool) {
@@ -116,7 +141,9 @@ func (r *rocker) bendUp(pitch int) {
 	r.bending = true
 	r.lastBendPitch = pitch
 	r.bendSemi = pitch
-	r.startLoops()
+	if !r.bendLoopsTo(pitch, 0.05) {
+		r.startLoops()
+	}
 	r.mod.ctx.Sound("bendUp")
 	r.play("Bend", r.mod.ctx.Beat())
 }
@@ -127,7 +154,9 @@ func (r *rocker) bendDown() {
 	}
 	r.bending = false
 	r.bendSemi = 0
-	r.startLoops()
+	if !r.bendLoopsTo(0, 0.05) {
+		r.startLoops()
+	}
 	r.mod.ctx.Sound("bendDown")
 	r.play("Unbend", r.mod.ctx.Beat())
 }

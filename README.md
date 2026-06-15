@@ -116,9 +116,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   `SetLoopParams` 持续尾音先按准确音高的一次性触发处理。
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/
   `cmon`/`lastOne`/together riff 的事件流、JJ/Soshi 动画、循环和弦/逐弦音色、
-  premade sample enum、mute 收尾与摄像机 pass-turn 已接入；`bend` 会重启当前
-  loop 到弯音后的 pitch，但尚未复刻 C# `BendUp/BendDown(0.05f)` 的连续滑音；
-  barely 命中时 Soshi 闪电颜色随机化仍待补。
+  premade sample enum、mute 收尾、摄像机 pass-turn 与 C# `BendUp/BendDown(0.05f)`
+  的连续滑音已接入；barely 命中时 Soshi 闪电颜色随机化仍待补。
 - superSamuraiSlice：`bop`/小恶魔/大恶魔/平台滚动/环境开关的事件流、输入、
   主要动画、平台 guard、爆炸音效与鸟叫已接入；`Explode1/2/3`、`lightning`、
   `waterL/waterR` 仍是手写瞬时效果，尚未按 Unity ParticleSystem 序列化参数
@@ -139,8 +138,7 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   release whiff、explosion、fillErUp 和 OK/miss/arm/water/beep 音效按 C# 时序
   移植；controller、模板 prefab、FullBody/limb/filler/meter/conveyer 动画已
   接入。当前模板实例还不能进入 `SceneInst` 的 SpriteMask 合成 pass，因此燃料
-  Fill 用同一 Fill 曲线手写色块近似；`SoundByte.BendUp` 的 water loop 连续升调
-  尚无运行时支持，先保留初始 pitch 循环；FullBody 动画事件驱动的灯罩 mask sprite
+  Fill 用同一 Fill 曲线手写色块近似；FullBody 动画事件驱动的灯罩 mask sprite
   切换仍待补到模板实例事件系统。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与

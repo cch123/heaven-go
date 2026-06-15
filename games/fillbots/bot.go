@@ -236,10 +236,12 @@ func (b *bot) justHold(state float64, beat float64) {
 	b.inst.PlayState("FullBody", "Hold", beat, 1)
 	m.ctx.Sound("beep")
 	pitch := 3/(b.holdLength+3) + 0.5
-	// Unity bends this looping SoundByte upward through the hold. The current
-	// audio runtime only supports fixed-pitch loops, so the initial authored
-	// pitch is preserved and the missing bend is tracked in README.
-	b.stopWater = m.ctx.SoundLoopPitchVol("water", pitch, 1)
+	water := m.ctx.SoundLoopPitchHandle("water", pitch, 1)
+	// Heaven Studio uses holdLength * pitchedSecPerBeat / 0.5 and bends the
+	// water loop to 2x its starting pitch; keeping the same time-domain ramp is
+	// what makes long Fillbots holds sound like the original rising stream.
+	water.RampPitch(2*pitch, b.holdLength*m.ctx.SecPerBeat(beat)/0.5)
+	b.stopWater = water.StopFunc()
 	b.beepNext = b.startBeat + 5
 	releaseBeat := b.startBeat + 4 + b.holdLength
 	m.ctx.ScheduleInputReleaseCond(releaseBeat, func() bool {

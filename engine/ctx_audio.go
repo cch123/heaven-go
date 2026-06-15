@@ -1,12 +1,6 @@
 package engine
 
-import (
-	"bytes"
-
-	"github.com/hajimehoshi/ebiten/v2/audio"
-
-	"hsdemo/kart"
-)
+import "hsdemo/kart"
 
 // Sound 立即播放音效。
 func (c *Ctx) Sound(name string) { c.SoundVol(name, 1) }
@@ -131,20 +125,26 @@ func (c *Ctx) SoundLoopVol(name string, vol float64) func() {
 	return c.SoundLoopPitchVol(name, 1, vol)
 }
 
-// SoundLoopPitchVol 带音高与音量的循环播放。Glee Club 的 WailLoop
-// 用 SoundByte.GetPitchFromSemiTones 变调后循环，必须在创建 loop 前重采样。
+// SoundLoopPitchVol 带音高与音量的循环播放，返回停止函数。
+// 需要播放中变调的调用点应使用 SoundLoopPitchHandle。
 func (c *Ctx) SoundLoopPitchVol(name string, pitch, vol float64) func() {
+	return c.SoundLoopPitchHandle(name, pitch, vol).StopFunc()
+}
+
+// SoundLoopPitchHandle 创建可在播放期间变更 pitch 的循环音效。
+// Rockers 的 BendUp/BendDown 与 Fillbots 的 water loop 都依赖 Unity
+// AudioSource.pitch 连续变化，因此这里不能再预先重采样成固定 pitch。
+func (c *Ctx) SoundLoopPitchHandle(name string, pitch, vol float64) *SoundLoopHandle {
 	pcm, ok := c.Assets.Sounds[name]
 	if !ok {
-		return func() {}
+		return &SoundLoopHandle{}
 	}
-	pcm = kart.ResamplePCM(pcm, pitch)
-	loop := audio.NewInfiniteLoop(bytes.NewReader(pcm), int64(len(pcm)))
-	p, err := audioCtx.NewPlayer(loop)
+	reader := newPitchLoopReader(pcm, pitch)
+	p, err := audioCtx.NewPlayer(reader)
 	if err != nil {
-		return func() {}
+		return &SoundLoopHandle{}
 	}
 	p.SetVolume(vol)
 	p.Play()
-	return func() { p.Pause() }
+	return &SoundLoopHandle{player: p, reader: reader}
 }
