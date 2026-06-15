@@ -1,0 +1,883 @@
+{
+ "nodes": [
+  {
+   "name": "nailCarpenter",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Carpenter",
+   "path": "Carpenter",
+   "parent": 0,
+   "pos": [
+    -5.5,
+    -6.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ExclamRed",
+   "path": "Carpenter/ExclamRed",
+   "parent": 1,
+   "pos": [
+    4.57,
+    5.909999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39999998,
+    0.39999998
+   ],
+   "sprite": "nail_exclam",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "ExclamRedMap"
+  },
+  {
+   "name": "ExclamBlue",
+   "path": "Carpenter/ExclamBlue",
+   "parent": 1,
+   "pos": [
+    4.57,
+    5.9099994
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.39999998,
+    0.39999998
+   ],
+   "sprite": "nail_exclam",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "ExclamBlueMap"
+  },
+  {
+   "name": "Head",
+   "path": "Carpenter/Head",
+   "parent": 1,
+   "pos": [
+    0,
+    3.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Carpenter/Head/Face",
+   "parent": 4,
+   "pos": [
+    1.08,
+    2.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "nail_chara_face",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.9800005,
+    7.75
+   ]
+  },
+  {
+   "name": "eye",
+   "path": "Carpenter/Head/Face/eye",
+   "parent": 5,
+   "pos": [
+    0.78,
+    1.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "nail_chara_eye_open",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.9800005,
+    7.75
+   ]
+  },
+  {
+   "name": "mouth",
+   "path": "Carpenter/Head/Face/mouth",
+   "parent": 5,
+   "pos": [
+    0.65,
+    -1.89
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "nail_chara_nose_mouth",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.9800005,
+    7.75
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "Carpenter/Head/Hair",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "back",
+   "path": "Carpenter/Head/Hair/back",
+   "parent": 8,
+   "pos": [
+    -1.32,
+    -1.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "nail_chara_hair_back",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.9800005,
+    7.75
+   ]
+  },
+  {
+   "name": "right",
+   "path": "Carpenter/Head/Hair/right",
+   "parent": 8,
+   "pos": [
+    4.6499996,
+    -0.09999931
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "nail_chara_hair_right",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.9800005,
+    7.75
+   ]
+  },
+  {
+   "name": "front",
+   "path": "Carpenter/Head/Hair/front",
+   "parent": 8,
+   "pos": [
+    -0.01,
+    6.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.97,
+    1
+   ],
+   "sprite": "nail_chara_hair_front",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.9800005,
+    7.75
+   ]
+  },
+  {
+   "name": "left",
+   "path": "Carpenter/Head/Hair/left",
+   "parent": 8,
+   "pos": [
+    -2.0799994,
+    0.83000004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "nail_chara_hair_left",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.9800005,
+    7.75
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Carpenter/Body",
+   "parent": 1,
+   "pos": [
+    0,
+    1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "nail_chara_body",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.89,
+    13.360001
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "Carpenter/Arm",
+   "parent": 1,
+   "pos": [
+    -1.62,
+    2.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "nail_chara_arm_0",
+   "order": 23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.55,
+    16.59
+   ]
+  },
+  {
+   "name": "Board",
+   "path": "Board",
+   "parent": 0,
+   "pos": [
+    0,
+    -8.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "board",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    126.19786,
+    5.7000003
+   ]
+  },
+  {
+   "name": "ScrollingItems",
+   "path": "ScrollingItems",
+   "parent": 0,
+   "pos": [
+    -6,
+    -4.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Prefabs",
+   "path": "ScrollingItems/Prefabs",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Nail",
+   "path": "ScrollingItems/Prefabs/Nail",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.85,
+    0.85
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pivot",
+   "path": "ScrollingItems/Prefabs/Nail/Pivot",
+   "parent": 18,
+   "pos": [
+    0,
+    -0.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "ScrollingItems/Prefabs/Nail/Pivot/Sprite",
+   "parent": 19,
+   "pos": [
+    0,
+    -2.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "nail_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    5.1213555
+   ]
+  },
+  {
+   "name": "Crack",
+   "path": "ScrollingItems/Prefabs/Nail/Pivot/Sprite/Crack",
+   "parent": 20,
+   "pos": [
+    0,
+    -3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "nail_crack",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    4.001059
+   ]
+  },
+  {
+   "name": "LongNail",
+   "path": "ScrollingItems/Prefabs/LongNail",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.85,
+    0.85
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pivot",
+   "path": "ScrollingItems/Prefabs/LongNail/Pivot",
+   "parent": 22,
+   "pos": [
+    0,
+    -0.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "ScrollingItems/Prefabs/LongNail/Pivot/Sprite",
+   "parent": 23,
+   "pos": [
+    0,
+    -2.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "nail_1",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    5.1213555
+   ]
+  },
+  {
+   "name": "Crack",
+   "path": "ScrollingItems/Prefabs/LongNail/Pivot/Sprite/Crack",
+   "parent": 24,
+   "pos": [
+    0,
+    -3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "nail_crack",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.42,
+    4.001059
+   ]
+  },
+  {
+   "name": "Sweet",
+   "path": "ScrollingItems/Prefabs/Sweet",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.85,
+    0.85
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pivot",
+   "path": "ScrollingItems/Prefabs/Sweet/Pivot",
+   "parent": 26,
+   "pos": [
+    0,
+    -0.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "ScrollingItems/Prefabs/Sweet/Pivot/Sprite",
+   "parent": 27,
+   "pos": [
+    0,
+    -2.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "nail_sweat0",
+   "order": 131,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.6800003,
+    4.39
+   ]
+  },
+  {
+   "name": "NailHolder",
+   "path": "ScrollingItems/NailHolder",
+   "parent": 16,
+   "pos": [
+    1.9,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BGContainer",
+   "path": "BGContainer",
+   "parent": 0,
+   "pos": [
+    0,
+    -5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BGContainer/BG",
+   "parent": 30,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.49999997,
+    0.49999997
+   ],
+   "sprite": "nail_bg",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "FusumaContainer",
+   "path": "FusumaContainer",
+   "parent": 0,
+   "pos": [
+    17.8,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Fusuma",
+   "path": "FusumaContainer/Fusuma",
+   "parent": 32,
+   "pos": [
+    1.3400002,
+    -5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "nail_fusuma",
+   "order": 308,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    43.11579,
+    26.4
+   ]
+  }
+ ]
+}

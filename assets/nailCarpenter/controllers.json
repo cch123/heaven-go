@@ -1,0 +1,220 @@
+{
+ "Carpenter": {
+  "default": "eyeOpen",
+  "states": {
+   "carpenterArmUp": {
+    "clip": "Animations/carpenterArmUp",
+    "speed": 1
+   },
+   "carpenterHit": {
+    "clip": "Animations/carpenterHit",
+    "speed": 1
+   },
+   "carpenterHitLong": {
+    "clip": "Animations/carpenterHitLong",
+    "speed": 1
+   },
+   "carpenterIdle": {
+    "clip": "Animations/carpenterIdle",
+    "speed": 1
+   },
+   "eyeBlink": {
+    "clip": "Animations/eyeBlink",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "eyeOpen",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "eyeBlinkFast": {
+    "clip": "Animations/eyeBlinkFast",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "eyeOpen",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "eyeOpen": {
+    "clip": "Animations/eyeOpen",
+    "speed": 1
+   },
+   "eyeSmile": {
+    "clip": "Animations/eyeSmile",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "eyeOpen",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Exclam": {
+  "default": "exclamNothing",
+  "states": {
+   "exclamAppear": {
+    "clip": "Animations/exclamAppear",
+    "speed": 1
+   },
+   "exclamNothing": {
+    "clip": "Animations/exclamNothing",
+    "speed": 1
+   }
+  }
+ },
+ "LongNail": {
+  "default": "longNailIdle",
+  "states": {
+   "longNailBendLeft": {
+    "clip": "Animations/longNailBendLeft",
+    "speed": 1
+   },
+   "longNailBendRight": {
+    "clip": "Animations/longNailBendRight",
+    "speed": 1
+   },
+   "longNailHammered": {
+    "clip": "Animations/longNailHammered",
+    "speed": 1
+   },
+   "longNailIdle": {
+    "clip": "Animations/longNailIdle",
+    "speed": 1
+   },
+   "longNailMiss": {
+    "clip": "Animations/longNailMiss",
+    "speed": 1
+   },
+   "longNailWeakHammered": {
+    "clip": "Animations/longNailWeakHammered",
+    "speed": 1
+   }
+  }
+ },
+ "Nail": {
+  "default": "nailIdle",
+  "states": {
+   "nailBendLeft": {
+    "clip": "Animations/nailBendLeft",
+    "speed": 1
+   },
+   "nailBendRight": {
+    "clip": "Animations/nailBendRight",
+    "speed": 1
+   },
+   "nailHammered": {
+    "clip": "Animations/nailHammered",
+    "speed": 1
+   },
+   "nailIdle": {
+    "clip": "Animations/nailIdle",
+    "speed": 1
+   },
+   "nailMiss": {
+    "clip": "Animations/nailMiss",
+    "speed": 1
+   },
+   "nailStrongHammered": {
+    "clip": "Animations/nailStrongHammered",
+    "speed": 1
+   }
+  }
+ },
+ "Sweet": {
+  "default": "puddingIdle",
+  "states": {
+   "cherryBreak": {
+    "clip": "Sweet/cherryBreak",
+    "speed": 1
+   },
+   "cherryIdle": {
+    "clip": "Sweet/cherryIdle",
+    "speed": 1
+   },
+   "cherryPuddingBeat": {
+    "clip": "Sweet/cherryPuddingBeat",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "cherryPuddingIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "cherryPuddingBreak": {
+    "clip": "Sweet/cherryPuddingBreak",
+    "speed": 1
+   },
+   "cherryPuddingIdle": {
+    "clip": "Sweet/cherryPuddingIdle",
+    "speed": 1
+   },
+   "layerCakeBeat": {
+    "clip": "Sweet/layerCakeBeat",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "layerCakeIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "layerCakeBreak": {
+    "clip": "Sweet/layerCakeBreak",
+    "speed": 1
+   },
+   "layerCakeIdle": {
+    "clip": "Sweet/layerCakeIdle",
+    "speed": 1
+   },
+   "puddingBeat": {
+    "clip": "Sweet/puddingBeat",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "puddingIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "puddingBreak": {
+    "clip": "Sweet/puddingBreak",
+    "speed": 1
+   },
+   "puddingIdle": {
+    "clip": "Sweet/puddingIdle",
+    "speed": 1
+   },
+   "shortCakeBeat": {
+    "clip": "Sweet/shortCakeBeat",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "shortCakeIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "shortCakeBreak": {
+    "clip": "Sweet/shortCakeBreak",
+    "speed": 1
+   },
+   "shortCakeIdle": {
+    "clip": "Sweet/shortCakeIdle",
+    "speed": 1
+   }
+  }
+ }
+}
