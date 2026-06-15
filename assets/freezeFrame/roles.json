@@ -1,0 +1,22 @@
+{
+ "Billboards": "Main/Billboards",
+ "CameraMan": "HUD/Canvas/CameraMan",
+ "Crosshair": "HUD/Canvas/LensOverlay/Crosshair",
+ "Crowd": "Main/Crowd",
+ "CrowdFarLeft": "Main/Crowd/CrowdLeft2",
+ "CrowdFarRight": "Main/Crowd/CrowdRight2",
+ "CrowdLeft": "Main/Crowd/CrowdLeft1",
+ "CrowdRight": "Main/Crowd/CrowdRight1",
+ "DimRect": "HUD/Canvas/DimRect",
+ "FarCarSpawn": "Main/Background/FarCarSpawn",
+ "IntroSign": "Main/IntroSign",
+ "NearCarSpawn": "Main/NearCarSpawn",
+ "Overlay": "HUD/Canvas/LensOverlay",
+ "Photograph1": "HUD/Canvas/Photos/Photograph1",
+ "Photograph2": "HUD/Canvas/Photos/Photograph2",
+ "Photograph3": "HUD/Canvas/Photos/Photograph3",
+ "Results": "HUD/Canvas/Results",
+ "Shutter": "HUD/Canvas/Shutter",
+ "StickyLayer": "HUD",
+ "WalkerSpawn": "Main/WalkerSpawn"
+}

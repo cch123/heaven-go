@@ -41,6 +41,7 @@ import (
 	"hsdemo/games/firstcontact"
 	"hsdemo/games/flipperflop"
 	"hsdemo/games/forklifter"
+	"hsdemo/games/freezeframe"
 	"hsdemo/games/froghop"
 	"hsdemo/games/frogprincess"
 	"hsdemo/games/fruitbasket"
@@ -145,6 +146,7 @@ func registerGames() {
 	engine.Register("firstContact", firstcontact.New)
 	engine.Register("flipperFlop", flipperflop.New)
 	engine.Register("forkLifter", forklifter.New)
+	engine.Register("freezeFrame", freezeframe.New)
 	engine.Register("frogHop", froghop.New)
 	engine.Register("fruitBasket", fruitbasket.New)
 	engine.Register("frogPrincess", frogprincess.New)

@@ -1,0 +1,343 @@
+{
+ "CameraMan": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/CameraMan/Bop",
+    "speed": 1
+   },
+   "Cry": {
+    "clip": "Animations/CameraMan/Cry",
+    "speed": 1
+   },
+   "Flash": {
+    "clip": "Animations/CameraMan/Flash",
+    "speed": 1
+   },
+   "Happy": {
+    "clip": "Animations/CameraMan/Happy",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/CameraMan/Idle",
+    "speed": 1
+   },
+   "Oops": {
+    "clip": "Animations/CameraMan/Oops",
+    "speed": 1
+   }
+  }
+ },
+ "Crowd": {
+  "default": "Hide",
+  "states": {
+   "Hide": {
+    "clip": "Animations/Crowd/Hide",
+    "speed": 1
+   },
+   "Show": {
+    "clip": "Animations/Crowd/Show",
+    "speed": 1
+   }
+  }
+ },
+ "FarCar": {
+  "default": "Idle",
+  "states": {
+   "FastCarGo": {
+    "clip": "Animations/FarCar/FastCarGo",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/FarCar/Idle",
+    "speed": 1
+   },
+   "Idle 0": {
+    "clip": "Animations/FarCar/Idle",
+    "speed": 1
+   },
+   "SlowCarGo": {
+    "clip": "Animations/FarCar/SlowCarGo",
+    "speed": 1
+   },
+   "Wait": {
+    "clip": "Animations/FarCar/Wait",
+    "speed": 1
+   }
+  }
+ },
+ "Intro": {
+  "default": "Wait",
+  "states": {
+   "Enter": {
+    "clip": "Animations/Intro/Enter",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Animations/Intro/Exit",
+    "speed": 1
+   },
+   "Light01": {
+    "clip": "Animations/Intro/Light01",
+    "speed": 1
+   },
+   "Light02": {
+    "clip": "Animations/Intro/Light02",
+    "speed": 1
+   },
+   "Light03": {
+    "clip": "Animations/Intro/Light03",
+    "speed": 1
+   },
+   "LightsOff": {
+    "clip": "Animations/Intro/LightsOff",
+    "speed": 1
+   },
+   "Wait": {
+    "clip": "Animations/Intro/Wait",
+    "speed": 1
+   }
+  }
+ },
+ "NearCar": {
+  "default": "Wait",
+  "states": {
+   "FastCarGo": {
+    "clip": "Animations/NearCar/FastCarGo",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/NearCar/Idle",
+    "speed": 1
+   },
+   "SlowCarGo": {
+    "clip": "Animations/NearCar/SlowCarGo",
+    "speed": 1
+   },
+   "Wait": {
+    "clip": "Animations/NearCar/Wait",
+    "speed": 1
+   }
+  }
+ },
+ "Photograph": {
+  "default": "Hide",
+  "states": {
+   "Cameo_Dude1_Left_Early": {
+    "clip": "Animations/Photograph/Cameo_Dude1_Left_Early",
+    "speed": 1
+   },
+   "Cameo_Dude1_Left_Late": {
+    "clip": "Animations/Photograph/Cameo_Dude1_Left_Late",
+    "speed": 1
+   },
+   "Cameo_Dude1_Left_Perfect": {
+    "clip": "Animations/Photograph/Cameo_Dude1_Left_Perfect",
+    "speed": 1
+   },
+   "Cameo_Dude1_Right_Early": {
+    "clip": "Animations/Photograph/Cameo_Dude1_Right_Early",
+    "speed": 1
+   },
+   "Cameo_Dude1_Right_Late": {
+    "clip": "Animations/Photograph/Cameo_Dude1_Right_Late",
+    "speed": 1
+   },
+   "Cameo_Dude1_Right_Perfect": {
+    "clip": "Animations/Photograph/Cameo_Dude1_Right_Perfect",
+    "speed": 1
+   },
+   "Cameo_Dude2_Left_Early": {
+    "clip": "Animations/Photograph/Cameo_Dude2_Left_Early",
+    "speed": 1
+   },
+   "Cameo_Dude2_Left_Late": {
+    "clip": "Animations/Photograph/Cameo_Dude2_Left_Late",
+    "speed": 1
+   },
+   "Cameo_Dude2_Left_Perfect": {
+    "clip": "Animations/Photograph/Cameo_Dude2_Left_Perfect",
+    "speed": 1
+   },
+   "Cameo_Dude2_Right_Early": {
+    "clip": "Animations/Photograph/Cameo_Dude2_Right_Early",
+    "speed": 1
+   },
+   "Cameo_Dude2_Right_Late": {
+    "clip": "Animations/Photograph/Cameo_Dude2_Right_Late",
+    "speed": 1
+   },
+   "Cameo_Dude2_Right_Perfect": {
+    "clip": "Animations/Photograph/Cameo_Dude2_Right_Perfect",
+    "speed": 1
+   },
+   "Cameo_Ghost": {
+    "clip": "Animations/Photograph/Cameo_Ghost",
+    "speed": 1
+   },
+   "Cameo_Girlfriend_Left_Early": {
+    "clip": "Animations/Photograph/Cameo_Girlfriend_Left_Early",
+    "speed": 1
+   },
+   "Cameo_Girlfriend_Left_Late": {
+    "clip": "Animations/Photograph/Cameo_Girlfriend_Left_Late",
+    "speed": 1
+   },
+   "Cameo_Girlfriend_Left_Perfect": {
+    "clip": "Animations/Photograph/Cameo_Girlfriend_Left_Perfect",
+    "speed": 1
+   },
+   "Cameo_Girlfriend_Right_Early": {
+    "clip": "Animations/Photograph/Cameo_Girlfriend_Right_Early",
+    "speed": 1
+   },
+   "Cameo_Girlfriend_Right_Late": {
+    "clip": "Animations/Photograph/Cameo_Girlfriend_Right_Late",
+    "speed": 1
+   },
+   "Cameo_Girlfriend_Right_Perfect": {
+    "clip": "Animations/Photograph/Cameo_Girlfriend_Right_Perfect",
+    "speed": 1
+   },
+   "Cameo_Ninja": {
+    "clip": "Animations/Photograph/Cameo_Ninja",
+    "speed": 1
+   },
+   "Cameo_None": {
+    "clip": "Animations/Photograph/Cameo_None",
+    "speed": 1
+   },
+   "Cameo_PeaceFast": {
+    "clip": "Animations/Photograph/Cameo_PeaceFast",
+    "speed": 1
+   },
+   "Cameo_PeaceSlow": {
+    "clip": "Animations/Photograph/Cameo_PeaceSlow",
+    "speed": 1
+   },
+   "Cameo_Rats": {
+    "clip": "Animations/Photograph/Cameo_Rats",
+    "speed": 1
+   },
+   "FastCar_Early": {
+    "clip": "Animations/Photograph/FastCar_Early",
+    "speed": 1
+   },
+   "FastCar_Late": {
+    "clip": "Animations/Photograph/FastCar_Late",
+    "speed": 1
+   },
+   "FastCar_Perfect": {
+    "clip": "Animations/Photograph/FastCar_Perfect",
+    "speed": 1
+   },
+   "Hide": {
+    "clip": "Animations/Photograph/Hide",
+    "speed": 1
+   },
+   "NoCar": {
+    "clip": "Animations/Photograph/NoCar",
+    "speed": 1
+   },
+   "Show": {
+    "clip": "Animations/Photograph/Show",
+    "speed": 1
+   },
+   "SlowCar_Early": {
+    "clip": "Animations/Photograph/SlowCar_Early",
+    "speed": 1
+   },
+   "SlowCar_Late": {
+    "clip": "Animations/Photograph/SlowCar_Late",
+    "speed": 1
+   },
+   "SlowCar_Perfect": {
+    "clip": "Animations/Photograph/SlowCar_Perfect",
+    "speed": 1
+   }
+  }
+ },
+ "Result": {
+  "default": "None",
+  "states": {
+   "Batsu": {
+    "clip": "Animations/Result/Batsu",
+    "speed": 1
+   },
+   "Maru": {
+    "clip": "Animations/Result/Maru",
+    "speed": 1
+   },
+   "None": {
+    "clip": "Animations/Result/None",
+    "speed": 1
+   },
+   "Sankaku": {
+    "clip": "Animations/Result/Sankaku",
+    "speed": 1
+   },
+   "ThumbsDown": {
+    "clip": "Animations/Result/ThumbsDown",
+    "speed": 1
+   },
+   "ThumbsSide": {
+    "clip": "Animations/Result/ThumbsSide",
+    "speed": 1
+   },
+   "ThumbsUp": {
+    "clip": "Animations/Result/ThumbsUp",
+    "speed": 1
+   }
+  }
+ },
+ "Shutter": {
+  "default": "Hold",
+  "states": {
+   "Hold": {
+    "clip": "Animations/Shutter/Hold",
+    "speed": 1
+   },
+   "Shut": {
+    "clip": "Animations/Shutter/Shut",
+    "speed": 1
+   }
+  }
+ },
+ "Walker": {
+  "default": "Dude1",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Walker/Bop",
+    "speed": 1
+   },
+   "Dude1": {
+    "clip": "Animations/Walker/Dude1",
+    "speed": 1
+   },
+   "Dude2": {
+    "clip": "Animations/Walker/Dude2",
+    "speed": 1
+   },
+   "EnterLeft": {
+    "clip": "Animations/Walker/EnterLeft",
+    "speed": 1
+   },
+   "EnterRight": {
+    "clip": "Animations/Walker/EnterRight",
+    "speed": 1
+   },
+   "Girlfriend": {
+    "clip": "Animations/Walker/Girlfriend",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Walker/Idle",
+    "speed": 1
+   },
+   "Stay": {
+    "clip": "Animations/Walker/Stay",
+    "speed": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,6797 @@
+{
+ "nodes": [
+  {
+   "name": "freezeFrame",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "Main",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.175,
+    4.175
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Main/Background",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "Main/Background/Sky",
+   "parent": 2,
+   "pos": [
+    0.0030021667,
+    0.80399996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_BG_Sky",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.47,
+    1.11
+   ]
+  },
+  {
+   "name": "TrackFar",
+   "path": "Main/Background/TrackFar",
+   "parent": 2,
+   "pos": [
+    0.004299164,
+    0.272
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_BG_trackFar",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.47,
+    0.39
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "Main/Background/Grass",
+   "parent": 2,
+   "pos": [
+    0.0040016174,
+    -0.033
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_BG_Grass",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.47,
+    0.71
+   ]
+  },
+  {
+   "name": "TrackNear",
+   "path": "Main/Background/TrackNear",
+   "parent": 2,
+   "pos": [
+    -0.0009994508,
+    -0.755
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_BG_trackNear",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.46,
+    1.19
+   ]
+  },
+  {
+   "name": "Clouds",
+   "path": "Main/Background/Clouds",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CloudLarge1",
+   "path": "Main/Background/Clouds/CloudLarge1",
+   "parent": 7,
+   "pos": [
+    -1.552,
+    1.064
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_cloudLarge",
+   "order": -45,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.63
+   ]
+  },
+  {
+   "name": "CloudLarge2",
+   "path": "Main/Background/Clouds/CloudLarge2",
+   "parent": 7,
+   "pos": [
+    0.3600006,
+    0.824
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_cloudLarge",
+   "order": -45,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.63
+   ]
+  },
+  {
+   "name": "CloudLarge3",
+   "path": "Main/Background/Clouds/CloudLarge3",
+   "parent": 7,
+   "pos": [
+    1.9720001,
+    1.0146
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_cloudLarge",
+   "order": -45,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.63
+   ]
+  },
+  {
+   "name": "CloudSmall1",
+   "path": "Main/Background/Clouds/CloudSmall1",
+   "parent": 7,
+   "pos": [
+    1.2304994,
+    1.1140001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_cloudSmall",
+   "order": -45,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.47
+   ]
+  },
+  {
+   "name": "CloudSmall2",
+   "path": "Main/Background/Clouds/CloudSmall2",
+   "parent": 7,
+   "pos": [
+    -0.72999966,
+    0.9150001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_cloudSmall",
+   "order": -45,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.47
+   ]
+  },
+  {
+   "name": "FarCarSpawn",
+   "path": "Main/Background/FarCarSpawn",
+   "parent": 2,
+   "pos": [
+    2.417,
+    0.22900002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    4
+   ]
+  },
+  {
+   "name": "FarCar",
+   "path": "Main/Background/FarCarSpawn/FarCar",
+   "parent": 13,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SlowCarFar",
+   "path": "Main/Background/FarCarSpawn/FarCar/SlowCarFar",
+   "parent": 14,
+   "pos": [
+    -0.0047,
+    0.0947
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_shortCarFar01",
+   "order": 55,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.39,
+    0.47
+   ]
+  },
+  {
+   "name": "FastCarFar",
+   "path": "Main/Background/FarCarSpawn/FarCar/FastCarFar",
+   "parent": 14,
+   "pos": [
+    0.0934,
+    0.0947
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_longCarFar",
+   "order": 55,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.95,
+    0.47
+   ]
+  },
+  {
+   "name": "WheelFar01",
+   "path": "Main/Background/FarCarSpawn/FarCar/FastCarFar/WheelFar01",
+   "parent": 16,
+   "pos": [
+    0.079,
+    -0.0585
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheelFar02",
+   "order": 56,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "WheelFar02",
+   "path": "Main/Background/FarCarSpawn/FarCar/FastCarFar/WheelFar02",
+   "parent": 16,
+   "pos": [
+    -0.1568,
+    -0.0585
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheelFar02",
+   "order": 56,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "Particle System",
+   "path": "Main/Background/FarCarSpawn/FarCar/Particle System",
+   "parent": 14,
+   "pos": [
+    0.106,
+    -0.109
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Crowd",
+   "path": "Main/Crowd",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "CrowdMiddle",
+   "path": "Main/Crowd/CrowdMiddle",
+   "parent": 20,
+   "pos": [
+    -0.026901245,
+    0.21490002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_crowd01",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.07,
+    0.63
+   ]
+  },
+  {
+   "name": "CrowdRight1",
+   "path": "Main/Crowd/CrowdRight1",
+   "parent": 20,
+   "pos": [
+    1.2509995,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_crowd02b",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.22,
+    0.78
+   ],
+   "mapped": true,
+   "mat": "CrowdMat2"
+  },
+  {
+   "name": "CrowdRight2",
+   "path": "Main/Crowd/CrowdRight2",
+   "parent": 20,
+   "pos": [
+    2.049,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_crowd02b",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.22,
+    0.78
+   ],
+   "mapped": true,
+   "mat": "CrowdMat3"
+  },
+  {
+   "name": "CrowdLeft1",
+   "path": "Main/Crowd/CrowdLeft1",
+   "parent": 20,
+   "pos": [
+    -1.2549,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_crowd02b",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.15,
+    0.78
+   ],
+   "mapped": true,
+   "mat": "CrowdMat1"
+  },
+  {
+   "name": "CrowdLeft2",
+   "path": "Main/Crowd/CrowdLeft2",
+   "parent": 20,
+   "pos": [
+    -2.0501997,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_crowd02b",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.22,
+    0.78
+   ],
+   "mapped": true,
+   "mat": "CrowdMat3"
+  },
+  {
+   "name": "Billboards",
+   "path": "Main/Billboards",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "Board01",
+   "path": "Main/Billboards/Board01",
+   "parent": 26,
+   "pos": [
+    1.45,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_billboard01",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    1.35
+   ]
+  },
+  {
+   "name": "Board02",
+   "path": "Main/Billboards/Board02",
+   "parent": 26,
+   "pos": [
+    -1.45,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_billboard02",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    1.35
+   ]
+  },
+  {
+   "name": "IntroSign",
+   "path": "Main/IntroSign",
+   "parent": 1,
+   "pos": [
+    -0.01599884,
+    -3.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.01,
+    1.01
+   ],
+   "sprite": "freezeFrame_introSign",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.47,
+    4.15
+   ],
+   "sortGroup": [
+    0,
+    20
+   ]
+  },
+  {
+   "name": "IntroLights",
+   "path": "Main/IntroSign/IntroLights",
+   "parent": 29,
+   "pos": [
+    0.022701263,
+    -1.4884001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_introLights00",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.75,
+    1.11
+   ]
+  },
+  {
+   "name": "NearCarSpawn",
+   "path": "Main/NearCarSpawn",
+   "parent": 1,
+   "pos": [
+    -4.154,
+    -0.7992
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    15
+   ]
+  },
+  {
+   "name": "NearCar",
+   "path": "Main/NearCarSpawn/NearCar",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SlowCar",
+   "path": "Main/NearCarSpawn/NearCar/SlowCar",
+   "parent": 32,
+   "pos": [
+    0,
+    0.455
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_shortCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.11
+   ]
+  },
+  {
+   "name": "Wheel1",
+   "path": "Main/NearCarSpawn/NearCar/SlowCar/Wheel1",
+   "parent": 33,
+   "pos": [
+    -0.2339,
+    -0.2996
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ]
+  },
+  {
+   "name": "Wheel2",
+   "path": "Main/NearCarSpawn/NearCar/SlowCar/Wheel2",
+   "parent": 33,
+   "pos": [
+    0.2254,
+    -0.2996
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ]
+  },
+  {
+   "name": "LongCar",
+   "path": "Main/NearCarSpawn/NearCar/LongCar",
+   "parent": 32,
+   "pos": [
+    -0.0051,
+    0.5551
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_longCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.15,
+    1.11
+   ]
+  },
+  {
+   "name": "Wheel1",
+   "path": "Main/NearCarSpawn/NearCar/LongCar/Wheel1",
+   "parent": 36,
+   "pos": [
+    -0.6049,
+    -0.39
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ]
+  },
+  {
+   "name": "Wheel2",
+   "path": "Main/NearCarSpawn/NearCar/LongCar/Wheel2",
+   "parent": 36,
+   "pos": [
+    0.6071,
+    -0.39
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ]
+  },
+  {
+   "name": "Particle System",
+   "path": "Main/NearCarSpawn/NearCar/Particle System",
+   "parent": 32,
+   "pos": [
+    -0.43,
+    -0.172
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WalkerSpawn",
+   "path": "Main/WalkerSpawn",
+   "parent": 1,
+   "pos": [
+    3.307,
+    -0.0004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    19
+   ]
+  },
+  {
+   "name": "Walker",
+   "path": "Main/WalkerSpawn/Walker",
+   "parent": 40,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dude",
+   "path": "Main/WalkerSpawn/Walker/Dude",
+   "parent": 41,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DudeHead",
+   "path": "Main/WalkerSpawn/Walker/Dude/DudeHead",
+   "parent": 42,
+   "pos": [
+    -0.1,
+    0.6301
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachHead01",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.42
+   ]
+  },
+  {
+   "name": "DudeTorso",
+   "path": "Main/WalkerSpawn/Walker/Dude/DudeTorso",
+   "parent": 42,
+   "pos": [
+    -0.2603,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachTorso02",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.3
+   ]
+  },
+  {
+   "name": "Girlfriend",
+   "path": "Main/WalkerSpawn/Walker/Girlfriend",
+   "parent": 41,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LadyFace",
+   "path": "Main/WalkerSpawn/Walker/Girlfriend/LadyFace",
+   "parent": 45,
+   "pos": [
+    -0.0403,
+    0.17506
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyFace",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    2.31
+   ]
+  },
+  {
+   "name": "LadyBosom",
+   "path": "Main/WalkerSpawn/Walker/Girlfriend/LadyBosom",
+   "parent": 45,
+   "pos": [
+    -0.1553,
+    -0.23987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyBosom",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.18
+   ]
+  },
+  {
+   "name": "LadyWaist",
+   "path": "Main/WalkerSpawn/Walker/Girlfriend/LadyWaist",
+   "parent": 45,
+   "pos": [
+    -0.1249,
+    -1.1201
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyWaist",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.58
+   ]
+  },
+  {
+   "name": "LadyArm",
+   "path": "Main/WalkerSpawn/Walker/Girlfriend/LadyArm",
+   "parent": 45,
+   "pos": [
+    -0.086,
+    -0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girlarm",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    2.06
+   ]
+  },
+  {
+   "name": "HUD",
+   "path": "HUD",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Canvas",
+   "path": "HUD/Canvas",
+   "parent": 50,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.175,
+    4.175
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    50
+   ]
+  },
+  {
+   "name": "Results",
+   "path": "HUD/Canvas/Results",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "Thumbs",
+   "path": "HUD/Canvas/Results/Thumbs",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ThumbsUp",
+   "path": "HUD/Canvas/Results/Thumbs/ThumbsUp",
+   "parent": 53,
+   "pos": [
+    -1.225,
+    0.211
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1052563,
+    1.1052563
+   ],
+   "sprite": "up",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    1.92
+   ]
+  },
+  {
+   "name": "ThumbsDown",
+   "path": "HUD/Canvas/Results/Thumbs/ThumbsDown",
+   "parent": 53,
+   "pos": [
+    -1.339,
+    0.27
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.078771,
+    1.078771
+   ],
+   "sprite": "down",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.92,
+    1.92
+   ]
+  },
+  {
+   "name": "ThumbsSide",
+   "path": "HUD/Canvas/Results/Thumbs/ThumbsSide",
+   "parent": 53,
+   "pos": [
+    -1.1210003,
+    0.45200008
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0986724,
+    1.0986724
+   ],
+   "sprite": "mid",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.92
+   ]
+  },
+  {
+   "name": "Symbols",
+   "path": "HUD/Canvas/Results/Symbols",
+   "parent": 52,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Maru",
+   "path": "HUD/Canvas/Results/Symbols/Maru",
+   "parent": 57,
+   "pos": [
+    -0.0013008118,
+    -0.0040000007
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_maru",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    1.91
+   ]
+  },
+  {
+   "name": "Batsu",
+   "path": "HUD/Canvas/Results/Symbols/Batsu",
+   "parent": 57,
+   "pos": [
+    -0.006000519,
+    -0.0059999973
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_batsu",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.91,
+    1.91
+   ]
+  },
+  {
+   "name": "Sankaku",
+   "path": "HUD/Canvas/Results/Symbols/Sankaku",
+   "parent": 57,
+   "pos": [
+    0.006000519,
+    -0.009
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_sankaku",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.99,
+    1.91
+   ]
+  },
+  {
+   "name": "LensOverlay",
+   "path": "HUD/Canvas/LensOverlay",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Lens",
+   "path": "HUD/Canvas/LensOverlay/Lens",
+   "parent": 61,
+   "pos": [
+    0.0061,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.989773,
+    0.989773
+   ],
+   "sprite": "freezeFrame_overlay",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.32,
+    2.71
+   ]
+  },
+  {
+   "name": "Crosshair",
+   "path": "HUD/Canvas/LensOverlay/Crosshair",
+   "parent": 61,
+   "pos": [
+    0.011,
+    0.005
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_overlayCrosshair",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    0.47
+   ]
+  },
+  {
+   "name": "CameraMan",
+   "path": "HUD/Canvas/CameraMan",
+   "parent": 51,
+   "pos": [
+    1.602,
+    -0.72646713
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "CameraManBox",
+   "path": "HUD/Canvas/CameraMan/CameraManBox",
+   "parent": 64,
+   "pos": [
+    0.055999756,
+    -0.0059999973
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_playerBox",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.11
+   ]
+  },
+  {
+   "name": "CameraManHead",
+   "path": "HUD/Canvas/CameraMan/CameraManHead",
+   "parent": 64,
+   "pos": [
+    0.1350021,
+    0.0949
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_playerIdle",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.63,
+    0.63
+   ]
+  },
+  {
+   "name": "CameraManArm",
+   "path": "HUD/Canvas/CameraMan/CameraManArm",
+   "parent": 64,
+   "pos": [
+    0.04019928,
+    0.1049
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_camera01",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.88,
+    0.71
+   ]
+  },
+  {
+   "name": "CameraManTorso",
+   "path": "HUD/Canvas/CameraMan/CameraManTorso",
+   "parent": 64,
+   "pos": [
+    0.2649002,
+    -0.0348
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_playerTorso",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    0.71
+   ]
+  },
+  {
+   "name": "CameraManLegs",
+   "path": "HUD/Canvas/CameraMan/CameraManLegs",
+   "parent": 64,
+   "pos": [
+    0.15520096,
+    -0.2755
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_playerLegs02",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.63,
+    0.63
+   ]
+  },
+  {
+   "name": "CameraFlash",
+   "path": "HUD/Canvas/CameraMan/CameraFlash",
+   "parent": 64,
+   "pos": [
+    0.13,
+    -0.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_cameraFlash01",
+   "order": 30,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.39,
+    0.39
+   ]
+  },
+  {
+   "name": "Photos",
+   "path": "HUD/Canvas/Photos",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Photograph1",
+   "path": "HUD/Canvas/Photos/Photograph1",
+   "parent": 71,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.087266490994371,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "HUD/Canvas/Photos/Photograph1/Main",
+   "parent": 72,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Mask",
+   "parent": 73,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7500001,
+    1.2943751
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Border",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Border",
+   "parent": 73,
+   "pos": [
+    -0.0062,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoBorder",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.74
+   ]
+  },
+  {
+   "name": "TrackEdge",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/TrackEdge",
+   "parent": 73,
+   "pos": [
+    -0.004899999,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_PhotoTrackEdge",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    0.46
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Grass",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Grass",
+   "parent": 73,
+   "pos": [
+    -0.027500004,
+    0.28920004
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.967048,
+    0.6699471
+   ],
+   "sprite": "freezeFrame_photoGrass",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Track",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Track",
+   "parent": 73,
+   "pos": [
+    -0.016899992,
+    -0.38520005
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.6910086,
+    0.60373557
+   ],
+   "sprite": "freezeFrame_photoTrack",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.1
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "SlowCar",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/SlowCar",
+   "parent": 73,
+   "pos": [
+    0,
+    -0.161
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_shortCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/SlowCar/Wheel1",
+   "parent": 79,
+   "pos": [
+    -0.2416,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/SlowCar/Wheel2",
+   "parent": 79,
+   "pos": [
+    0.2382,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "FastCar",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/FastCar",
+   "parent": 73,
+   "pos": [
+    0.0881,
+    -0.1727
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_longCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.15,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/FastCar/Wheel1",
+   "parent": 82,
+   "pos": [
+    -0.5196,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/FastCar/Wheel2",
+   "parent": 82,
+   "pos": [
+    1.003,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Cameos",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos",
+   "parent": 73,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ninjas",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Ninjas",
+   "parent": 85,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NinjaWhite",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Ninjas/NinjaWhite",
+   "parent": 86,
+   "pos": [
+    0.475,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaWhite",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "NinjaBlack",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Ninjas/NinjaBlack",
+   "parent": 86,
+   "pos": [
+    -0.565,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaBlack",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Ghost",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Ghost",
+   "parent": 85,
+   "pos": [
+    -0.11,
+    0.4249
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ghost",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    1.26
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Rats",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Rats",
+   "parent": 85,
+   "pos": [
+    -0.055,
+    -0.5199
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_rats",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    0.7
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Lady",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Lady",
+   "parent": 85,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LadyFace",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Lady/LadyFace",
+   "parent": 91,
+   "pos": [
+    0.7151,
+    -0.36506
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyLook",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    2.31
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "LadyBosom",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Lady/LadyBosom",
+   "parent": 91,
+   "pos": [
+    0.565,
+    -0.7601
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyBosom",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Peace",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Peace",
+   "parent": 85,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_peaceSign",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.62
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Dude",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Dude",
+   "parent": 85,
+   "pos": [
+    0.059,
+    0.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DudeHead",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Dude/DudeHead",
+   "parent": 95,
+   "pos": [
+    0.598,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachHead01",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.42
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "DudeTorso",
+   "path": "HUD/Canvas/Photos/Photograph1/Main/Cameos/Dude/DudeTorso",
+   "parent": 95,
+   "pos": [
+    0.495,
+    -1.584
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachTorso02",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.3
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Photograph2",
+   "path": "HUD/Canvas/Photos/Photograph2",
+   "parent": 71,
+   "pos": [
+    -1.1979,
+    -0.2992
+   ],
+   "rotZ": 0.087266490994371,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    7
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "HUD/Canvas/Photos/Photograph2/Main",
+   "parent": 98,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Mask",
+   "parent": 99,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7500001,
+    1.2943751
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Border",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Border",
+   "parent": 99,
+   "pos": [
+    -0.0062,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoBorder",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.74
+   ]
+  },
+  {
+   "name": "TrackEdge",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/TrackEdge",
+   "parent": 99,
+   "pos": [
+    -0.004899999,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_PhotoTrackEdge",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    0.46
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Grass",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Grass",
+   "parent": 99,
+   "pos": [
+    -0.027500004,
+    0.28920004
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.967048,
+    0.6699471
+   ],
+   "sprite": "freezeFrame_photoGrass",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Track",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Track",
+   "parent": 99,
+   "pos": [
+    -0.016899992,
+    -0.38520005
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.6910086,
+    0.60373557
+   ],
+   "sprite": "freezeFrame_photoTrack",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.1
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "SlowCar",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/SlowCar",
+   "parent": 99,
+   "pos": [
+    0,
+    -0.161
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_shortCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/SlowCar/Wheel1",
+   "parent": 105,
+   "pos": [
+    -0.2416,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/SlowCar/Wheel2",
+   "parent": 105,
+   "pos": [
+    0.2382,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "FastCar",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/FastCar",
+   "parent": 99,
+   "pos": [
+    0.0881,
+    -0.1727
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_longCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.15,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/FastCar/Wheel1",
+   "parent": 108,
+   "pos": [
+    -0.5196,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/FastCar/Wheel2",
+   "parent": 108,
+   "pos": [
+    1.003,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Cameos",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos",
+   "parent": 99,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ninjas",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Ninjas",
+   "parent": 111,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NinjaWhite",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Ninjas/NinjaWhite",
+   "parent": 112,
+   "pos": [
+    0.475,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaWhite",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "NinjaBlack",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Ninjas/NinjaBlack",
+   "parent": 112,
+   "pos": [
+    -0.565,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaBlack",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Ghost",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Ghost",
+   "parent": 111,
+   "pos": [
+    -0.11,
+    0.4249
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ghost",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    1.26
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Rats",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Rats",
+   "parent": 111,
+   "pos": [
+    -0.055,
+    -0.5199
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_rats",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    0.7
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Lady",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Lady",
+   "parent": 111,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LadyFace",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Lady/LadyFace",
+   "parent": 117,
+   "pos": [
+    0.7151,
+    -0.36506
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyLook",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    2.31
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "LadyBosom",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Lady/LadyBosom",
+   "parent": 117,
+   "pos": [
+    0.565,
+    -0.7601
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyBosom",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Peace",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Peace",
+   "parent": 111,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_peaceSign",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.62
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Dude",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Dude",
+   "parent": 111,
+   "pos": [
+    0.059,
+    0.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DudeHead",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Dude/DudeHead",
+   "parent": 121,
+   "pos": [
+    0.598,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachHead01",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.42
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "DudeTorso",
+   "path": "HUD/Canvas/Photos/Photograph2/Main/Cameos/Dude/DudeTorso",
+   "parent": 121,
+   "pos": [
+    0.495,
+    -1.584
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachTorso02",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.3
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Photograph3",
+   "path": "HUD/Canvas/Photos/Photograph3",
+   "parent": 71,
+   "pos": [
+    1.3971,
+    0.3496
+   ],
+   "rotZ": 0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    7
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "HUD/Canvas/Photos/Photograph3/Main",
+   "parent": 124,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Mask",
+   "parent": 125,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7500001,
+    1.2943751
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Border",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Border",
+   "parent": 125,
+   "pos": [
+    -0.0062,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoBorder",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.74
+   ]
+  },
+  {
+   "name": "TrackEdge",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/TrackEdge",
+   "parent": 125,
+   "pos": [
+    -0.004899999,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_PhotoTrackEdge",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    0.46
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Grass",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Grass",
+   "parent": 125,
+   "pos": [
+    -0.027500004,
+    0.28920004
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.967048,
+    0.6699471
+   ],
+   "sprite": "freezeFrame_photoGrass",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Track",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Track",
+   "parent": 125,
+   "pos": [
+    -0.016899992,
+    -0.38520005
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.6910086,
+    0.60373557
+   ],
+   "sprite": "freezeFrame_photoTrack",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.1
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "SlowCar",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/SlowCar",
+   "parent": 125,
+   "pos": [
+    0,
+    -0.161
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_shortCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/SlowCar/Wheel1",
+   "parent": 131,
+   "pos": [
+    -0.2416,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/SlowCar/Wheel2",
+   "parent": 131,
+   "pos": [
+    0.2382,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "FastCar",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/FastCar",
+   "parent": 125,
+   "pos": [
+    0.0881,
+    -0.1727
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_longCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.15,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/FastCar/Wheel1",
+   "parent": 134,
+   "pos": [
+    -0.5196,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/FastCar/Wheel2",
+   "parent": 134,
+   "pos": [
+    1.003,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Cameos",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos",
+   "parent": 125,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ninjas",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Ninjas",
+   "parent": 137,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NinjaWhite",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Ninjas/NinjaWhite",
+   "parent": 138,
+   "pos": [
+    0.475,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaWhite",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "NinjaBlack",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Ninjas/NinjaBlack",
+   "parent": 138,
+   "pos": [
+    -0.565,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaBlack",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Ghost",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Ghost",
+   "parent": 137,
+   "pos": [
+    -0.11,
+    0.4249
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ghost",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    1.26
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Rats",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Rats",
+   "parent": 137,
+   "pos": [
+    -0.055,
+    -0.5199
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_rats",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    0.7
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Lady",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Lady",
+   "parent": 137,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LadyFace",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Lady/LadyFace",
+   "parent": 143,
+   "pos": [
+    0.7151,
+    -0.36506
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyLook",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    2.31
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "LadyBosom",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Lady/LadyBosom",
+   "parent": 143,
+   "pos": [
+    0.565,
+    -0.7601
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyBosom",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Peace",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Peace",
+   "parent": 137,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_peaceSign",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.62
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Dude",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Dude",
+   "parent": 137,
+   "pos": [
+    0.059,
+    0.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DudeHead",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Dude/DudeHead",
+   "parent": 147,
+   "pos": [
+    0.598,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachHead01",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.42
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "DudeTorso",
+   "path": "HUD/Canvas/Photos/Photograph3/Main/Cameos/Dude/DudeTorso",
+   "parent": 147,
+   "pos": [
+    0.495,
+    -1.584
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachTorso02",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.3
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Photograph4",
+   "path": "HUD/Canvas/Photos/Photograph4",
+   "parent": 71,
+   "pos": [
+    -1.18,
+    0.524
+   ],
+   "rotZ": -0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    4
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "HUD/Canvas/Photos/Photograph4/Main",
+   "parent": 150,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Mask",
+   "parent": 151,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7500001,
+    1.2943751
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Border",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Border",
+   "parent": 151,
+   "pos": [
+    -0.0062,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoBorder",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.74
+   ]
+  },
+  {
+   "name": "TrackEdge",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/TrackEdge",
+   "parent": 151,
+   "pos": [
+    -0.004899999,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_PhotoTrackEdge",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    0.46
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Grass",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Grass",
+   "parent": 151,
+   "pos": [
+    -0.027500004,
+    0.28920004
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.967048,
+    0.6699471
+   ],
+   "sprite": "freezeFrame_photoGrass",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Track",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Track",
+   "parent": 151,
+   "pos": [
+    -0.016899992,
+    -0.38520005
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.6910086,
+    0.60373557
+   ],
+   "sprite": "freezeFrame_photoTrack",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.1
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "SlowCar",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/SlowCar",
+   "parent": 151,
+   "pos": [
+    0,
+    -0.161
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_shortCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/SlowCar/Wheel1",
+   "parent": 157,
+   "pos": [
+    -0.2416,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/SlowCar/Wheel2",
+   "parent": 157,
+   "pos": [
+    0.2382,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "FastCar",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/FastCar",
+   "parent": 151,
+   "pos": [
+    0.0881,
+    -0.1727
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_longCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.15,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/FastCar/Wheel1",
+   "parent": 160,
+   "pos": [
+    -0.5196,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/FastCar/Wheel2",
+   "parent": 160,
+   "pos": [
+    1.003,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Cameos",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos",
+   "parent": 151,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ninjas",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Ninjas",
+   "parent": 163,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NinjaWhite",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Ninjas/NinjaWhite",
+   "parent": 164,
+   "pos": [
+    0.475,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaWhite",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "NinjaBlack",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Ninjas/NinjaBlack",
+   "parent": 164,
+   "pos": [
+    -0.565,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaBlack",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Ghost",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Ghost",
+   "parent": 163,
+   "pos": [
+    -0.11,
+    0.4249
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ghost",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    1.26
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Rats",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Rats",
+   "parent": 163,
+   "pos": [
+    -0.055,
+    -0.5199
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_rats",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    0.7
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Lady",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Lady",
+   "parent": 163,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LadyFace",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Lady/LadyFace",
+   "parent": 169,
+   "pos": [
+    0.7151,
+    -0.36506
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyLook",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    2.31
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "LadyBosom",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Lady/LadyBosom",
+   "parent": 169,
+   "pos": [
+    0.565,
+    -0.7601
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyBosom",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Peace",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Peace",
+   "parent": 163,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_peaceSign",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.62
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Dude",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Dude",
+   "parent": 163,
+   "pos": [
+    0.059,
+    0.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DudeHead",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Dude/DudeHead",
+   "parent": 173,
+   "pos": [
+    0.598,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachHead01",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.42
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "DudeTorso",
+   "path": "HUD/Canvas/Photos/Photograph4/Main/Cameos/Dude/DudeTorso",
+   "parent": 173,
+   "pos": [
+    0.495,
+    -1.584
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachTorso02",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.3
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Photograph5",
+   "path": "HUD/Canvas/Photos/Photograph5",
+   "parent": 71,
+   "pos": [
+    0.298,
+    0.855
+   ],
+   "rotZ": 0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "HUD/Canvas/Photos/Photograph5/Main",
+   "parent": 176,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Mask",
+   "parent": 177,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7500001,
+    1.2943751
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Border",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Border",
+   "parent": 177,
+   "pos": [
+    -0.0062,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoBorder",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.74
+   ]
+  },
+  {
+   "name": "TrackEdge",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/TrackEdge",
+   "parent": 177,
+   "pos": [
+    -0.004899999,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_PhotoTrackEdge",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    0.46
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Grass",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Grass",
+   "parent": 177,
+   "pos": [
+    -0.027500004,
+    0.28920004
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.967048,
+    0.6699471
+   ],
+   "sprite": "freezeFrame_photoGrass",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Track",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Track",
+   "parent": 177,
+   "pos": [
+    -0.016899992,
+    -0.38520005
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.6910086,
+    0.60373557
+   ],
+   "sprite": "freezeFrame_photoTrack",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.1
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "SlowCar",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/SlowCar",
+   "parent": 177,
+   "pos": [
+    0,
+    -0.161
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_shortCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/SlowCar/Wheel1",
+   "parent": 183,
+   "pos": [
+    -0.2416,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/SlowCar/Wheel2",
+   "parent": 183,
+   "pos": [
+    0.2382,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "FastCar",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/FastCar",
+   "parent": 177,
+   "pos": [
+    0.0881,
+    -0.1727
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_longCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.15,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/FastCar/Wheel1",
+   "parent": 186,
+   "pos": [
+    -0.5196,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/FastCar/Wheel2",
+   "parent": 186,
+   "pos": [
+    1.003,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Cameos",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos",
+   "parent": 177,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ninjas",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Ninjas",
+   "parent": 189,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NinjaWhite",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Ninjas/NinjaWhite",
+   "parent": 190,
+   "pos": [
+    0.475,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaWhite",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "NinjaBlack",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Ninjas/NinjaBlack",
+   "parent": 190,
+   "pos": [
+    -0.565,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaBlack",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Ghost",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Ghost",
+   "parent": 189,
+   "pos": [
+    -0.11,
+    0.4249
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ghost",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    1.26
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Rats",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Rats",
+   "parent": 189,
+   "pos": [
+    -0.055,
+    -0.5199
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_rats",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    0.7
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Lady",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Lady",
+   "parent": 189,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LadyFace",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Lady/LadyFace",
+   "parent": 195,
+   "pos": [
+    0.7151,
+    -0.36506
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyLook",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    2.31
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "LadyBosom",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Lady/LadyBosom",
+   "parent": 195,
+   "pos": [
+    0.565,
+    -0.7601
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyBosom",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Peace",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Peace",
+   "parent": 189,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_peaceSign",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.62
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Dude",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Dude",
+   "parent": 189,
+   "pos": [
+    0.059,
+    0.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DudeHead",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Dude/DudeHead",
+   "parent": 199,
+   "pos": [
+    0.598,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachHead01",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.42
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "DudeTorso",
+   "path": "HUD/Canvas/Photos/Photograph5/Main/Cameos/Dude/DudeTorso",
+   "parent": 199,
+   "pos": [
+    0.495,
+    -1.584
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachTorso02",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.3
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Photograph6",
+   "path": "HUD/Canvas/Photos/Photograph6",
+   "parent": 71,
+   "pos": [
+    0.292,
+    -0.895
+   ],
+   "rotZ": -0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    4
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "HUD/Canvas/Photos/Photograph6/Main",
+   "parent": 202,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Mask",
+   "parent": 203,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7500001,
+    1.2943751
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Border",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Border",
+   "parent": 203,
+   "pos": [
+    -0.0062,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoBorder",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.74
+   ]
+  },
+  {
+   "name": "TrackEdge",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/TrackEdge",
+   "parent": 203,
+   "pos": [
+    -0.004899999,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_PhotoTrackEdge",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    0.46
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Grass",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Grass",
+   "parent": 203,
+   "pos": [
+    -0.027500004,
+    0.28920004
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.967048,
+    0.6699471
+   ],
+   "sprite": "freezeFrame_photoGrass",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Track",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Track",
+   "parent": 203,
+   "pos": [
+    -0.016899992,
+    -0.38520005
+   ],
+   "rotZ": 0,
+   "scale": [
+    5.6910086,
+    0.60373557
+   ],
+   "sprite": "freezeFrame_photoTrack",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.1
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "SlowCar",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/SlowCar",
+   "parent": 203,
+   "pos": [
+    0,
+    -0.161
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_shortCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/SlowCar/Wheel1",
+   "parent": 209,
+   "pos": [
+    -0.2416,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/SlowCar/Wheel2",
+   "parent": 209,
+   "pos": [
+    0.2382,
+    -0.36600003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "FastCar",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/FastCar",
+   "parent": 203,
+   "pos": [
+    0.0881,
+    -0.1727
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_longCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.15,
+    1.11
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel1",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/FastCar/Wheel1",
+   "parent": 212,
+   "pos": [
+    -0.5196,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Wheel2",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/FastCar/Wheel2",
+   "parent": 212,
+   "pos": [
+    1.003,
+    -0.363
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Cameos",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos",
+   "parent": 203,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ninjas",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Ninjas",
+   "parent": 215,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NinjaWhite",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Ninjas/NinjaWhite",
+   "parent": 216,
+   "pos": [
+    0.475,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaWhite",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "NinjaBlack",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Ninjas/NinjaBlack",
+   "parent": 216,
+   "pos": [
+    -0.565,
+    0.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ninjaBlack",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    0.94
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Ghost",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Ghost",
+   "parent": 215,
+   "pos": [
+    -0.11,
+    0.4249
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_ghost",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    1.26
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Rats",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Rats",
+   "parent": 215,
+   "pos": [
+    -0.055,
+    -0.5199
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_photoCameo_rats",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.51,
+    0.7
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Lady",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Lady",
+   "parent": 215,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LadyFace",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Lady/LadyFace",
+   "parent": 221,
+   "pos": [
+    0.7151,
+    -0.36506
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyLook",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    2.31
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "LadyBosom",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Lady/LadyBosom",
+   "parent": 221,
+   "pos": [
+    0.565,
+    -0.7601
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyBosom",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.18
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Peace",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Peace",
+   "parent": 215,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "freezeFrame_peaceSign",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.62
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Dude",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Dude",
+   "parent": 215,
+   "pos": [
+    0.059,
+    0.275
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DudeHead",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Dude/DudeHead",
+   "parent": 225,
+   "pos": [
+    0.598,
+    -0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachHead01",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.42
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "DudeTorso",
+   "path": "HUD/Canvas/Photos/Photograph6/Main/Cameos/Dude/DudeTorso",
+   "parent": 225,
+   "pos": [
+    0.495,
+    -1.584
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachTorso02",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.3
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "Shutter",
+   "path": "HUD/Canvas/Shutter",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "Fill",
+   "path": "HUD/Canvas/Shutter/Fill",
+   "parent": 228,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    28.4476,
+    28.31763
+   ],
+   "sprite": "CameraMan_shutterFill",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.19,
+    0.19
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "Mask",
+   "path": "HUD/Canvas/Shutter/Mask",
+   "parent": 228,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "DimRect",
+   "path": "HUD/Canvas/DimRect",
+   "parent": 51,
+   "pos": [
+    0.0002,
+    -0.0246
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.4924,
+    2.6532
+   ],
+   "order": -10,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.5019608
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "FarCar",
+   "path": "FarCar",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SlowCarFar",
+   "path": "FarCar/SlowCarFar",
+   "parent": 232,
+   "pos": [
+    -0.0047,
+    0.0947
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_shortCarFar01",
+   "order": 55,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.39,
+    0.47
+   ]
+  },
+  {
+   "name": "FastCarFar",
+   "path": "FarCar/FastCarFar",
+   "parent": 232,
+   "pos": [
+    0.0934,
+    0.0947
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_longCarFar",
+   "order": 55,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.95,
+    0.47
+   ]
+  },
+  {
+   "name": "WheelFar01",
+   "path": "FarCar/FastCarFar/WheelFar01",
+   "parent": 234,
+   "pos": [
+    0.079,
+    -0.0585
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheelFar02",
+   "order": 56,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "WheelFar02",
+   "path": "FarCar/FastCarFar/WheelFar02",
+   "parent": 234,
+   "pos": [
+    -0.1568,
+    -0.0585
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheelFar02",
+   "order": 56,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.21,
+    0.21
+   ]
+  },
+  {
+   "name": "Particle System",
+   "path": "FarCar/Particle System",
+   "parent": 232,
+   "pos": [
+    0.106,
+    -0.109
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NearCar",
+   "path": "NearCar",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SlowCar",
+   "path": "NearCar/SlowCar",
+   "parent": 238,
+   "pos": [
+    0,
+    0.455
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_shortCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.11
+   ]
+  },
+  {
+   "name": "Wheel1",
+   "path": "NearCar/SlowCar/Wheel1",
+   "parent": 239,
+   "pos": [
+    -0.2339,
+    -0.2996
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ]
+  },
+  {
+   "name": "Wheel2",
+   "path": "NearCar/SlowCar/Wheel2",
+   "parent": 239,
+   "pos": [
+    0.2254,
+    -0.2996
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ]
+  },
+  {
+   "name": "LongCar",
+   "path": "NearCar/LongCar",
+   "parent": 238,
+   "pos": [
+    -0.0051,
+    0.5551
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_longCar",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.15,
+    1.11
+   ]
+  },
+  {
+   "name": "Wheel1",
+   "path": "NearCar/LongCar/Wheel1",
+   "parent": 242,
+   "pos": [
+    -0.6049,
+    -0.39
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ]
+  },
+  {
+   "name": "Wheel2",
+   "path": "NearCar/LongCar/Wheel2",
+   "parent": 242,
+   "pos": [
+    0.6071,
+    -0.39
+   ],
+   "rotZ": -0.43633210235632686,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_wheel",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.55
+   ]
+  },
+  {
+   "name": "Particle System",
+   "path": "NearCar/Particle System",
+   "parent": 238,
+   "pos": [
+    -0.43,
+    -0.172
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Walker",
+   "path": "Walker",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dude",
+   "path": "Walker/Dude",
+   "parent": 246,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DudeHead",
+   "path": "Walker/Dude/DudeHead",
+   "parent": 247,
+   "pos": [
+    -0.1,
+    0.6301
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachHead01",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.42
+   ]
+  },
+  {
+   "name": "DudeTorso",
+   "path": "Walker/Dude/DudeTorso",
+   "parent": 247,
+   "pos": [
+    -0.2603,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_coachTorso02",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.3
+   ]
+  },
+  {
+   "name": "Girlfriend",
+   "path": "Walker/Girlfriend",
+   "parent": 246,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LadyFace",
+   "path": "Walker/Girlfriend/LadyFace",
+   "parent": 250,
+   "pos": [
+    -0.0403,
+    0.17506
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyFace",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    2.31
+   ]
+  },
+  {
+   "name": "LadyBosom",
+   "path": "Walker/Girlfriend/LadyBosom",
+   "parent": 250,
+   "pos": [
+    -0.1553,
+    -0.23987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyBosom",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.18
+   ]
+  },
+  {
+   "name": "LadyWaist",
+   "path": "Walker/Girlfriend/LadyWaist",
+   "parent": 250,
+   "pos": [
+    -0.1249,
+    -1.1201
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "freezeFrame_ladyWaist",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.58
+   ]
+  },
+  {
+   "name": "LadyArm",
+   "path": "Walker/Girlfriend/LadyArm",
+   "parent": 250,
+   "pos": [
+    -0.086,
+    -0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "girlarm",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    2.06
+   ]
+  }
+ ]
+}

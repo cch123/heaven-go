@@ -1,0 +1,114 @@
+{
+ "refArrays": {
+  "Photographs": [
+   "HUD/Canvas/Photos/Photograph1",
+   "HUD/Canvas/Photos/Photograph2",
+   "HUD/Canvas/Photos/Photograph3",
+   "HUD/Canvas/Photos/Photograph4",
+   "HUD/Canvas/Photos/Photograph5",
+   "HUD/Canvas/Photos/Photograph6"
+  ]
+ },
+ "refArrayIdx": {
+  "Photographs": [
+   72,
+   98,
+   124,
+   150,
+   176,
+   202
+  ]
+ },
+ "components": {
+  "car0": {
+   "path": "FarCar",
+   "nums": {
+    "Beat": 0,
+    "Length": 0
+   },
+   "refs": {
+    "_Animator": "FarCar",
+    "_ParticleSystem": "FarCar/Particle System"
+   }
+  },
+  "car1": {
+   "path": "Main/Background/FarCarSpawn/FarCar",
+   "nums": {
+    "Beat": 0,
+    "Length": 0
+   },
+   "refs": {
+    "_Animator": "Main/Background/FarCarSpawn/FarCar",
+    "_ParticleSystem": "Main/Background/FarCarSpawn/FarCar/Particle System"
+   }
+  },
+  "car2": {
+   "path": "Main/NearCarSpawn/NearCar",
+   "nums": {
+    "Beat": 0,
+    "Length": 0
+   },
+   "refs": {
+    "_Animator": "Main/NearCarSpawn/NearCar",
+    "_ParticleSystem": "Main/NearCarSpawn/NearCar/Particle System"
+   }
+  },
+  "car3": {
+   "path": "NearCar",
+   "nums": {
+    "Beat": 0,
+    "Length": 0
+   },
+   "refs": {
+    "_Animator": "NearCar",
+    "_ParticleSystem": "NearCar/Particle System"
+   }
+  },
+  "game": {
+   "path": "",
+   "refs": {
+    "Billboards": "Main/Billboards",
+    "CameraMan": "HUD/Canvas/CameraMan",
+    "Crosshair": "HUD/Canvas/LensOverlay/Crosshair",
+    "Crowd": "Main/Crowd",
+    "CrowdFarLeft": "Main/Crowd/CrowdLeft2",
+    "CrowdFarRight": "Main/Crowd/CrowdRight2",
+    "CrowdLeft": "Main/Crowd/CrowdLeft1",
+    "CrowdRight": "Main/Crowd/CrowdRight1",
+    "DimRect": "HUD/Canvas/DimRect",
+    "FarCarPrefab": "FarCar",
+    "FarCarSpawn": "Main/Background/FarCarSpawn",
+    "IntroSign": "Main/IntroSign",
+    "NearCarPrefab": "NearCar",
+    "NearCarSpawn": "Main/NearCarSpawn",
+    "Overlay": "HUD/Canvas/LensOverlay",
+    "Photograph1": "HUD/Canvas/Photos/Photograph1",
+    "Photograph2": "HUD/Canvas/Photos/Photograph2",
+    "Photograph3": "HUD/Canvas/Photos/Photograph3",
+    "Results": "HUD/Canvas/Results",
+    "Shutter": "HUD/Canvas/Shutter",
+    "StickyLayer": "HUD",
+    "WalkerPrefab": "Walker",
+    "WalkerSpawn": "Main/WalkerSpawn"
+   },
+   "refArrays": {
+    "Photographs": [
+     "HUD/Canvas/Photos/Photograph1",
+     "HUD/Canvas/Photos/Photograph2",
+     "HUD/Canvas/Photos/Photograph3",
+     "HUD/Canvas/Photos/Photograph4",
+     "HUD/Canvas/Photos/Photograph5",
+     "HUD/Canvas/Photos/Photograph6"
+    ]
+   },
+   "spriteArrays": {
+    "CrowdSprites": [
+     "freezeFrame_crowd02b",
+     "freezeFrame_crowd02b",
+     "freezeFrame_crowd02b",
+     "freezeFrame_crowd02b"
+    ]
+   }
+  }
+ }
+}

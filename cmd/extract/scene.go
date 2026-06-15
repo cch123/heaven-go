@@ -187,6 +187,35 @@ var sceneSpecs = map[string]sceneSpec{
 			}, multi: true},
 		},
 	},
+	"freezeFrame": {
+		dir:    "FreezeFrame",
+		prefab: "freezeFrame.prefab",
+		roleFields: []string{
+			"CameraMan", "Photograph1", "Photograph2", "Photograph3", "Results",
+			"IntroSign", "Overlay", "Crosshair", "Shutter", "DimRect",
+			"StickyLayer", "FarCarSpawn", "NearCarSpawn", "WalkerSpawn",
+			"Crowd", "CrowdFarLeft", "CrowdLeft", "CrowdRight", "CrowdFarRight",
+			"Billboards",
+		},
+		refArrayFields:  []string{"Photographs"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav", "applause.ogg"},
+		templatePrefabs: []string{
+			"Prefabs/FarCar.prefab",
+			"Prefabs/NearCar.prefab",
+			"Prefabs/Walker.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"CameraMan", "Photographs", "Photograph1", "Photograph2", "Photograph3", "Results",
+				"IntroSign", "Overlay", "Crosshair", "Shutter", "DimRect", "StickyLayer",
+				"FarCarSpawn", "FarCarPrefab", "NearCarSpawn", "NearCarPrefab",
+				"WalkerSpawn", "WalkerPrefab", "Crowd", "CrowdFarLeft", "CrowdLeft",
+				"CrowdRight", "CrowdFarRight", "CrowdSprites", "Billboards",
+			}},
+			{name: "car", markers: []string{"_Animator", "_ParticleSystem"}, multi: true},
+		},
+	},
 	"moaiDooWop": {
 		dir:    "MoaiDooWop",
 		prefab: "moaiDooWop.prefab",

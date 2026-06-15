@@ -1,0 +1,19 @@
+{
+ "FarCar": "FarCar",
+ "HUD/Canvas/CameraMan": "CameraMan",
+ "HUD/Canvas/Photos/Photograph1": "Photograph",
+ "HUD/Canvas/Photos/Photograph2": "Photograph",
+ "HUD/Canvas/Photos/Photograph3": "Photograph",
+ "HUD/Canvas/Photos/Photograph4": "Photograph",
+ "HUD/Canvas/Photos/Photograph5": "Photograph",
+ "HUD/Canvas/Photos/Photograph6": "Photograph",
+ "HUD/Canvas/Results": "Result",
+ "HUD/Canvas/Shutter": "Shutter",
+ "Main/Background/FarCarSpawn/FarCar": "FarCar",
+ "Main/Crowd": "Crowd",
+ "Main/IntroSign": "Intro",
+ "Main/NearCarSpawn/NearCar": "NearCar",
+ "Main/WalkerSpawn/Walker": "Walker",
+ "NearCar": "NearCar",
+ "Walker": "Walker"
+}
