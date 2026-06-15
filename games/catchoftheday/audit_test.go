@@ -89,7 +89,7 @@ func TestControllersAndAnimationPaths(t *testing.T) {
 	for ctrl, states := range map[string][]string{
 		"Angler":       {"Idle", "Pick", "Just", "Miss", "Through"},
 		"Background":   {"LayoutA", "LayoutB", "LayoutC"},
-		"BigManta":     {"Idle", "Swim"},
+		"BigManta":     {"Idle"},
 		"SmallManta":   {"Idle"},
 		"SchoolFish":   {"Idle"},
 		"BGFish":       {"BGFishIdle", "BGFishOut_E", "BGFishOut_W", "BGFishOut_NE", "BGFishOut_SW"},
@@ -126,6 +126,11 @@ func TestControllersAndAnimationPaths(t *testing.T) {
 			assertClipPaths(t, as, st.Clip, root, ctrl+"/"+state)
 		}
 	}
+	// Unity ships BigManta/Swim.anim as an empty looping legacy clip, but
+	// BigManta.controller only contains Idle and CatchOfTheDay never plays Swim.
+	// Keep the loose clip audited so a future extractor change cannot silently
+	// drop or remap it.
+	assertClipPaths(t, as, "BigManta/Swim", "LakeScene/Renderer/BigManta", "BigManta/Swim legacy")
 }
 
 func TestTimingAndStateHelpers(t *testing.T) {
