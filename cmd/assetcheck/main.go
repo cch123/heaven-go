@@ -157,6 +157,47 @@ func resolveAnimPath(game, root, rel string, nodes map[string]bool) string {
 			return "sumoBrotherP/effects/stompEffect2"
 		}
 	}
+	if game == "showtime" && root == "WaterHolder" && rel == "Water (1)" {
+		// Showtime's Move.anim still contains a stale binding to Water (1), but
+		// the shipped prefab has only Water under WaterHolder. Unity therefore
+		// ignores this curve; returning the root marks it as intentionally audited
+		// rather than a missing extracted node.
+		return root
+	}
+	if game == "shootEmUp" && root == "prefabs/trajectory/sprite" && rel == "sprite" {
+		// The trajectory prefab has an unused child Animator carrying the same
+		// controller as the prefab root. Its clips target a child named "sprite",
+		// which does not exist below that child Animator; ShootEmUp's C# only
+		// plays trajectory.GetComponent<Animator>() on the prefab root.
+		return root
+	}
+	if game == "loveRap" {
+		switch {
+		case root == "GirlHolder/Legs/Body" && rel == "animation_44.017":
+			// HB.anim has a leftover empty-sprite binding to an importer-generated
+			// child that is not present in the shipped prefab. Unity ignores this
+			// missing binding; the visible girl body curves are bound to real limbs.
+			return root
+		case strings.HasSuffix(root, "/OtherRapper/rap_body") && rel == "animation_01.000":
+			// The male rapper S.anim files carry the same stale empty-sprite
+			// binding on both left and right rappers. The prefab has no matching
+			// child, so there is no runtime object to drive in Unity either.
+			return root
+		}
+	}
+	if game == "rhythmTestGBA" && root == "Countdown/BG/Left" {
+		// The Left sprite carries a duplicate BG Animator component, but the BG
+		// clips are authored against the parent Countdown/BG children. Gameplay
+		// drives the parent animator; resolving here keeps the duplicate Unity
+		// component audited without pretending it owns sibling curves.
+		alt := "Countdown/BG"
+		if rel != "" {
+			alt += "/" + rel
+		}
+		if nodes[alt] {
+			return alt
+		}
+	}
 	if game != "nightWalkAgb" || !strings.HasPrefix(root, "JumpPlatform/rollPlatform/RodHolder") {
 		return full
 	}

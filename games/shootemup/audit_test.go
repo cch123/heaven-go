@@ -133,6 +133,12 @@ func TestShootEmUpPlacementPatternsAndEnemyPalette(t *testing.T) {
 func checkAnimPaths(t *testing.T, root, clip string, anim *kmdata.Anim, nodes map[string]bool) {
 	t.Helper()
 	for p := range animPathSet(anim) {
+		if root == "prefabs/trajectory/sprite" && p == "sprite" {
+			// The prefab includes an unused child Animator on sprite with the
+			// same controller as the trajectory root. Unity cannot resolve this
+			// self-recursive binding either, and C# only drives the root Animator.
+			continue
+		}
 		full := root
 		if p != "" {
 			full += "/" + p

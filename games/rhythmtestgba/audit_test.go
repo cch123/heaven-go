@@ -102,6 +102,12 @@ func TestRhythmTestGBAClipPathCoverageAndProperties(t *testing.T) {
 				if path == "" {
 					return scenePaths[root]
 				}
+				if root == "Countdown/BG/Left" && scenePaths["Countdown/BG/"+path] {
+					// Left has a duplicate BG Animator in the Unity prefab, while
+					// the shared BG clips target the parent Countdown/BG children.
+					// Runtime playback uses Countdown/BG, so audit the real target.
+					return true
+				}
 				return scenePaths[root+"/"+path]
 			})
 			if as.Anims[st.Clip] == nil {

@@ -102,6 +102,16 @@ func TestLoveRapClipPathCoverageAndProperties(t *testing.T) {
 				if path == "" {
 					return scenePaths[root]
 				}
+				if root == "GirlHolder/Legs/Body" && path == "animation_44.017" {
+					// HB.anim keeps a stale empty-sprite binding to a generated
+					// child that is absent from the shipped prefab; Unity skips it.
+					return true
+				}
+				if strings.HasSuffix(root, "/OtherRapper/rap_body") && path == "animation_01.000" {
+					// The left/right rapper S.anim clips contain the same stale
+					// empty-sprite binding and no prefab node exists to receive it.
+					return true
+				}
 				return scenePaths[root+"/"+path]
 			})
 		}

@@ -114,6 +114,12 @@ func TestShowtimeClipPathCoverageAndProperties(t *testing.T) {
 				continue
 			}
 			checkAnimPaths(t, as.Anims[st.Clip], st.Clip, func(path string) bool {
+				if root == "WaterHolder" && path == "Water (1)" {
+					// Move.anim has a stale Unity binding to Water (1). The
+					// shipped prefab only has Water under WaterHolder, so the
+					// original runtime ignores this curve too.
+					return true
+				}
 				if path == "" {
 					return scenePaths[root]
 				}
