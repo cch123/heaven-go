@@ -1,0 +1,20 @@
+{
+ "Assistant": "Assistant",
+ "Assistant/ArmHolder/Arm": "Arm",
+ "Assistant/Head/HeadHolder": "HeadHolder 1",
+ "CompleteHearts/Heart/HeartHolder": "HeartHolder",
+ "DayBg/BoxPerson": "BoxPerson",
+ "Girl": "Girl",
+ "Girl/ArmHolder/Arm": "Arm",
+ "Girl/Head/HeadHolder": "HeadHolder 1",
+ "GirlHearts/Heart/HeartHolder": "HeartHolder",
+ "Guy": "Guy",
+ "Guy/ArmHolder/Arm": "Arm",
+ "Guy/Head/HeadHolder": "HeadHolder 1",
+ "HeartBox": "HeartBox",
+ "Hearts/Heart (1)/HeartHolder": "HeartHolder",
+ "Hearts/Heart (2)/HeartHolder": "HeartHolder",
+ "Hearts/Heart (3)/HeartHolder": "HeartHolder",
+ "Hearts/Heart/HeartHolder": "HeartHolder",
+ "SunsetBg/BoxPerson": "BoxPerson"
+}

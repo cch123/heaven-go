@@ -1,0 +1,611 @@
+{
+ "strings": {
+  "flaskArcToBoy": [
+   "GuyFlaskFastIn",
+   "GuyFlaskSlowIn"
+  ],
+  "flaskArcToGirl": [
+   "GirlFastFlaskIn",
+   "GirlSlowFlaskIn",
+   "GirlMidSlowFlaskIn"
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "bopRight": 0,
+    "boyLiquidColor.a": 1,
+    "boyLiquidColor.b": 0.97,
+    "boyLiquidColor.g": 0.4054601,
+    "boyLiquidColor.r": 0.02909997,
+    "canCallForFlask": 1,
+    "cloudDistance": 30,
+    "cloudSpeed": 0.06,
+    "counter": 0,
+    "girlLiquidColor.a": 1,
+    "girlLiquidColor.b": 0.03137255,
+    "girlLiquidColor.g": 0.3764706,
+    "girlLiquidColor.r": 0.972549,
+    "hasMissed": 0,
+    "isHolding": 0,
+    "isHoldingFlask": 0,
+    "isHoldingWhiff": 0,
+    "spawnPoint.x": 2.7,
+    "spawnPoint.y": 0,
+    "spawnPoint.z": 0,
+    "speedForHearts": 0.0007,
+    "speedForHeartsMinimizer": 0.05,
+    "speedForHeartsMultiplier": 1.4,
+    "startBeat": 0,
+    "weirdLiquidColor.a": 1,
+    "weirdLiquidColor.b": 0.5058824,
+    "weirdLiquidColor.g": 0.2039216,
+    "weirdLiquidColor.r": 0.8313726
+   },
+   "refs": {
+    "boxPerson": "SunsetBg/BoxPerson",
+    "boxPersonDay": "DayBg/BoxPerson",
+    "boyFlaskBreak": "BoyFlaskBreak/FlaskBreak",
+    "boyHeaderShader": "Guy/Head/HeadHolder/Shading",
+    "boyShader": "GuyShading",
+    "clouds": "SunsetBg/CloudHolder",
+    "completeHeartObj": "Hearts",
+    "dayBG": "DayBg",
+    "endPoint": "HeartBox/EndPoint",
+    "flaskMatForBoy": "Flask",
+    "flaskMatForGirl": "GirlFlask",
+    "flaskMatForWeird": "WeirdFlask",
+    "flaskSpriteRend": "Guy/ArmHolder/Arm/Flask",
+    "girlFlaskBreak": "GirlFlaskBreak/FlaskBreak",
+    "girlFlaskSpriteRend": "Girl/ArmHolder/Arm/Flask",
+    "girlHeaderShader": "Girl/Head/HeadHolder/Shading",
+    "girlHeartObj": "Hearts",
+    "girlShader": "GirlShading",
+    "guyHeartObj": "Hearts",
+    "heartBox": "HeartBox",
+    "heartContainer": "Hearts",
+    "heartHolder": "Hearts",
+    "labAssistant": "Assistant",
+    "labAssistantArm": "Assistant/ArmHolder/Arm",
+    "labAssistantHead": "Assistant/Head/HeadHolder",
+    "labFlaskObj": "Flask",
+    "labGirl": "Girl",
+    "labGirlArm": "Girl/ArmHolder/Arm",
+    "labGirlFlask": "Girl/ArmHolder/Arm/Flask",
+    "labGirlFlaskObj": "Flask",
+    "labGirlHead": "Girl/Head/HeadHolder",
+    "labGuy": "Guy",
+    "labGuyArm": "Guy/ArmHolder/Arm",
+    "labGuyFlask": "Guy/ArmHolder/Arm/Flask",
+    "labGuyHead": "Guy/Head/HeadHolder",
+    "labHeartBox": "HeartBox",
+    "spotlightCone": "Shaders (spot)/spotlight",
+    "spotlightShader": "Shaders",
+    "spotlightShaderCone": "Shaders (spot)",
+    "sunsetBG": "SunsetBg",
+    "weirdFlaskSpriteRend": "Assistant/ArmHolder/Arm/Flask",
+    "weirdHeaderShader": "Assistant/Head/HeadHolder/Shading",
+    "weirdShader": "WeirdShading"
+   },
+   "lists": {
+    "flaskBouncePath": [
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "GuyFlaskIn (orig)"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 5.5,
+          "pos.x": -10.5,
+          "pos.y": -0.5,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 360
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -5.1,
+          "pos.y": -0.5,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "GuyFlaskFastIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.8,
+          "pos.x": -10.5,
+          "pos.y": -0.5,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 360
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -5.1,
+          "pos.y": -0.5,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "GuyFlaskSlowIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 5.3,
+          "pos.x": -10.5,
+          "pos.y": -0.5,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 360
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -5.1,
+          "pos.y": -0.5,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "GirlFastFlaskIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.5,
+          "pos.x": -4.9,
+          "pos.y": 0.7,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 360
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.05,
+          "height": 4,
+          "pos.x": -0.7,
+          "pos.y": -1,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 360
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "GirlSlowFlaskIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.95,
+          "height": 5,
+          "pos.x": -4.9,
+          "pos.y": 0.7,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.05,
+          "height": 0,
+          "pos.x": -0.7,
+          "pos.y": -1,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "GirlMidSlowFlaskIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.5,
+          "height": 4.5,
+          "pos.x": -4.9,
+          "pos.y": 0.7,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 240
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.05,
+          "height": 4,
+          "pos.x": -0.7,
+          "pos.y": -1,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "GirlFlaskMiss"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0.6,
+          "pos.x": -0.7,
+          "pos.y": -1,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 120
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -1,
+          "pos.y": -3.45,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 360
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "WeirdFlaskIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 6,
+          "pos.x": -0.7,
+          "pos.y": 0.7,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.05,
+          "height": 0,
+          "pos.x": 3.5,
+          "pos.y": -1,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "heart0": {
+   "path": "Hearts",
+   "nums": {
+    "_step": 0,
+    "addPos": 0,
+    "hasChecked": 0,
+    "heartBeat": 0,
+    "heartCount": 0,
+    "intervalSpeed": 0,
+    "length": 0,
+    "nextHeartBeat": 0,
+    "onlyOne": 1,
+    "prevHeartBeat": 0,
+    "startPos": 0,
+    "stop": 0,
+    "tweenComplete": 0,
+    "whatHeartType": 0
+   },
+   "refs": {
+    "death": "Hearts/Heart/HeartHolder/MissParticle",
+    "fill": "Hearts/Heart/HeartHolder/Fill",
+    "heartAnim": "Hearts/Heart/HeartHolder",
+    "outline": "Hearts/Heart/HeartHolder/Outline"
+   }
+  },
+  "heart1": {
+   "path": "GirlHearts",
+   "nums": {
+    "_step": 0,
+    "addPos": 0,
+    "hasChecked": 0,
+    "heartBeat": 0,
+    "heartCount": 0,
+    "intervalSpeed": 0,
+    "length": 0,
+    "nextHeartBeat": 0,
+    "onlyOne": 1,
+    "prevHeartBeat": 0,
+    "startPos": 0,
+    "stop": 0,
+    "tweenComplete": 0,
+    "whatHeartType": 1
+   },
+   "refs": {
+    "death": "GirlHearts/Heart/HeartHolder/MissParticle",
+    "fill": "GirlHearts/Heart/HeartHolder/Fill",
+    "heartAnim": "GirlHearts/Heart/HeartHolder",
+    "outline": "GirlHearts/Heart/HeartHolder/Outline"
+   }
+  },
+  "heart2": {
+   "path": "CompleteHearts",
+   "nums": {
+    "addPos": 0,
+    "heartBeat": 0,
+    "heartCount": 0,
+    "length": 0,
+    "nextHeartBeat": 0,
+    "startPos": 0,
+    "stop": 0,
+    "whatHeartType": 2
+   },
+   "refs": {
+    "heartAnim": "CompleteHearts/Heart/HeartHolder"
+   }
+  }
+ }
+}

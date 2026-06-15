@@ -1,0 +1,190 @@
+{
+ "Arm": {
+  "default": "ArmIdle",
+  "states": {
+   "ArmIdle": {
+    "clip": "Animations/ArmIdle",
+    "speed": 1
+   },
+   "GrabFlask": {
+    "clip": "Animations/GrabFlask",
+    "speed": 1
+   },
+   "MittenGrab": {
+    "clip": "Animations/MittenGrab",
+    "speed": 1
+   },
+   "MittenGrabStart": {
+    "clip": "Animations/MittenGrabStart",
+    "speed": 1
+   },
+   "MittenIdle": {
+    "clip": "Animations/MittenIdle",
+    "speed": 1
+   },
+   "MittenLetGo": {
+    "clip": "Animations/MittenLetGo",
+    "speed": 1
+   },
+   "ShakeFlaskDown": {
+    "clip": "Animations/ShakeFlaskDown",
+    "speed": 1
+   },
+   "ShakeFlaskUp": {
+    "clip": "Animations/ShakeFlaskUp",
+    "speed": 1
+   },
+   "ThrowFlask": {
+    "clip": "Animations/ThrowFlask",
+    "speed": 1
+   },
+   "WhiffDown": {
+    "clip": "Animations/WhiffDown",
+    "speed": 1
+   },
+   "WhiffGrab": {
+    "clip": "Animations/WhiffGrab",
+    "speed": 1
+   },
+   "WhiffUp": {
+    "clip": "Animations/WhiffUp",
+    "speed": 1
+   }
+  }
+ },
+ "Assistant": {
+  "default": "AssistantIdle",
+  "states": {
+   "AssistantBopLeft": {
+    "clip": "Animations/AssistantBopLeft",
+    "speed": 1
+   },
+   "AssistantBopRight": {
+    "clip": "Animations/AssistantBopRight",
+    "speed": 1
+   },
+   "AssistantIdle": {
+    "clip": "Animations/AssistantIdle",
+    "speed": 1
+   }
+  }
+ },
+ "BoxPerson": {
+  "default": "BoxIdle",
+  "states": {
+   "BoxIdle": {
+    "clip": "Animations/BoxIdle",
+    "speed": 1
+   },
+   "BoxPutBack": {
+    "clip": "Animations/BoxPutBack",
+    "speed": 1
+   },
+   "BoxTakeAway": {
+    "clip": "Animations/BoxTakeAway",
+    "speed": 1
+   },
+   "NoBox": {
+    "clip": "Animations/NoBox",
+    "speed": 1
+   }
+  }
+ },
+ "Girl": {
+  "default": "GirlIdle",
+  "states": {
+   "GirlBopLeft": {
+    "clip": "Animations/GirlBopLeft",
+    "speed": 1
+   },
+   "GirlBopRight": {
+    "clip": "Animations/GirlBopRight",
+    "speed": 1
+   },
+   "GirlIdle": {
+    "clip": "Animations/GirlIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Guy": {
+  "default": "GuyIdle",
+  "states": {
+   "GuyBopLeft": {
+    "clip": "Animations/GuyBopLeft",
+    "speed": 1
+   },
+   "GuyBopRight": {
+    "clip": "Animations/GuyBopRight",
+    "speed": 1
+   },
+   "GuyIdle": {
+    "clip": "Animations/GuyIdle",
+    "speed": 1
+   }
+  }
+ },
+ "HeadHolder": {
+  "default": "",
+  "states": {}
+ },
+ "HeadHolder 1": {
+  "default": "GirlIdleFace",
+  "states": {
+   "GirlBlushFace": {
+    "clip": "Animations/GirlBlushFace",
+    "speed": 1
+   },
+   "GirlIdleFace": {
+    "clip": "Animations/GirlIdleFace",
+    "speed": 1
+   },
+   "GirlLeftFace": {
+    "clip": "Animations/GirlLeftFace",
+    "speed": 1
+   },
+   "GuyFaceIdle": {
+    "clip": "Animations/GuyFaceIdle",
+    "speed": 1
+   },
+   "GuyRightFace": {
+    "clip": "Animations/GuyRightFace",
+    "speed": 1
+   },
+   "WeirdFaceIdle": {
+    "clip": "Animations/WeirdFaceIdle",
+    "speed": 1
+   }
+  }
+ },
+ "HeartBox": {
+  "default": "HeartBoxIdle",
+  "states": {
+   "HeartBoxIdle": {
+    "clip": "Animations/HeartBoxIdle",
+    "speed": 1
+   },
+   "HeartBoxSquish": {
+    "clip": "Animations/HeartBoxSquish",
+    "speed": 1
+   }
+  }
+ },
+ "HeartHolder": {
+  "default": "HeartIdle",
+  "states": {
+   "HeartGirlMerge": {
+    "clip": "Animations/HeartGirlMerge",
+    "speed": 1
+   },
+   "HeartIdle": {
+    "clip": "Animations/HeartIdle",
+    "speed": 1
+   },
+   "HeartMerge": {
+    "clip": "Animations/HeartMerge",
+    "speed": 1
+   }
+  }
+ }
+}
