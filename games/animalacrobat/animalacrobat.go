@@ -242,6 +242,7 @@ func (m *Module) OnSwitch(beat float64) {
 	m.lastBop = int(math.Floor(beat)) - 1
 	m.holding = nil
 	m.drumrollStop = nil
+	m.resetCamera(beat)
 	m.ctx.Scene.SetActive(m.partyPoppers, false)
 	m.ctx.Scene.SetActive(m.player, true)
 	m.ctx.Scene.PlayDefaultState(m.player, beat, m.ctx.SecPerBeat(beat))
@@ -258,11 +259,11 @@ func (m *Module) Update(t, beat float64) {
 	m.updateEarlyRelease(beat)
 	m.updatePlayer(beat)
 	m.updateAutoBop(beat)
-	m.updateCamera(beat)
+	m.updateCamera(t, beat)
 	m.updateBGTiles()
 	cam := m.ctx.SampleScene(beat)
-	m.cameraWX, m.cameraWY = cam[0]+m.cameraX, cam[1]
-	m.ctx.Scene.SetCamera(m.cameraWX, m.cameraWY, cam[2])
+	m.cameraWX, m.cameraWY = cam[0]+m.cameraX, cam[1]+m.cameraY
+	m.ctx.Scene.SetCamera(m.cameraWX, m.cameraWY, cam[2]+m.cameraZ)
 }
 
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {

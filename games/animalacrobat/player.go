@@ -83,22 +83,6 @@ func (m *Module) updatePlayer(beat float64) {
 	}
 }
 
-func (m *Module) updateCamera(beat float64) {
-	target := m.playerX - num(m.gameNums, "_jumpStartCameraDistance", defaultJumpStartCameraDelta)
-	if len(m.animals) > 0 && beat < m.animals[0].beat-1 {
-		target = 0
-	}
-	// TODO(animalAcrobat): this follows the player using AnimalAcrobat's
-	// serialized smooth speed; AnimalAcrobat.CameraUpdate's per-animal hold,
-	// release and giraffe zoom coroutine still need a dedicated parity pass.
-	speed := num(m.gameNums, "_cameraSmoothSpeed", 10)
-	if speed <= 0 {
-		m.cameraX = target
-		return
-	}
-	m.cameraX += (target - m.cameraX) * math.Min(1, speed/60)
-}
-
 func (m *Module) updateAutoBop(beat float64) {
 	cur := int(math.Floor(beat))
 	if cur == m.lastBop || m.holding != nil || m.jumpActive {

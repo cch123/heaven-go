@@ -33,6 +33,9 @@ const (
 	defaultJumpHeightInitial    = 1.3
 	defaultJumpStartDistance    = -1.68
 	defaultJumpStartCameraDelta = 3
+	defaultCameraJumpDistance   = 6.5
+	defaultCameraJumpGiraffe    = 32
+	defaultGiraffeCameraZoom    = 6.6
 )
 
 var (
@@ -153,8 +156,12 @@ type Module struct {
 	playerX    float64
 	playerY    float64
 	cameraX    float64
+	cameraY    float64
+	cameraZ    float64
 	cameraWX   float64
 	cameraWY   float64
+	cameraT    float64
+	cameraTSet bool
 
 	holding      *acrobatObstacle
 	monkeyMissed bool

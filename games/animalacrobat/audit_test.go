@@ -159,3 +159,79 @@ func TestAnimalAcrobatBGTilePositionsMatchUnityRecycle(t *testing.T) {
 		}
 	}
 }
+
+func TestAnimalAcrobatCameraTargetFollowsUnityAnimalPhases(t *testing.T) {
+	elephant := &acrobatObstacle{
+		kind: kindElephant,
+		beat: 10, length: 4,
+		spec:  obstacleSpec{holdPadding: 1, fullRotRange: 160, ease: 0},
+		gripY: -2,
+	}
+	gorilla := &acrobatObstacle{
+		kind: kindGorilla,
+		beat: 14, length: 4,
+		spec: obstacleSpec{},
+	}
+	m := &Module{
+		gameNums: map[string]float64{
+			"_jumpStartCameraDistance": 3,
+			"_jumpDistance":            6.5,
+		},
+		animals: []*acrobatObstacle{elephant, gorilla},
+	}
+
+	if _, ok := m.cameraTargetAt(8.99); ok {
+		t.Fatal("camera should wait until first animal pre-travel window")
+	}
+	assertCameraTarget(t, m, 9, 0, 0, 0)
+	assertCameraTarget(t, m, 9.5, 1.5, 0, 0)
+
+	rotDist := cameraRotationDistance(elephant)
+	assertCameraTarget(t, m, 11.5, 3+rotDist*0.5, -2, 0)
+	assertCameraTarget(t, m, 14, 3+rotDist+6.5, 0, 0)
+}
+
+func TestAnimalAcrobatCameraTargetGiraffeZoom(t *testing.T) {
+	giraffe := &acrobatObstacle{
+		kind: kindGiraffe,
+		beat: 10, length: 8,
+		spec:  obstacleSpec{holdPadding: 2, fullRotRange: 160, ease: 0},
+		gripY: -11.27,
+	}
+	gorilla := &acrobatObstacle{kind: kindGorilla, beat: 18, length: 4}
+	m := &Module{
+		gameNums: map[string]float64{
+			"_jumpStartCameraDistance": 3,
+			"_jumpDistanceGiraffe":     32,
+			"_giraffeCameraZoom":       6.6,
+		},
+		animals: []*acrobatObstacle{giraffe, gorilla},
+	}
+
+	_, ok := m.cameraTargetAt(14.4)
+	if !ok {
+		t.Fatal("expected giraffe release camera target")
+	}
+	target, _ := m.cameraTargetAt(14.4)
+	wantZ := -6.6 * 0.5 * 0.5
+	if math.Abs(target.z-wantZ) > 1e-6 {
+		t.Fatalf("giraffe zoom z=%v, want %v", target.z, wantZ)
+	}
+
+	m.monkeyMissed = true
+	target, _ = m.cameraTargetAt(14.4)
+	if target.z != 0 {
+		t.Fatalf("giraffe miss should suppress zoom, got z=%v", target.z)
+	}
+}
+
+func assertCameraTarget(t *testing.T, m *Module, beat, wantX, wantY, wantZ float64) {
+	t.Helper()
+	got, ok := m.cameraTargetAt(beat)
+	if !ok {
+		t.Fatalf("beat %v: missing camera target", beat)
+	}
+	if math.Abs(got.x-wantX) > 1e-6 || math.Abs(got.y-wantY) > 1e-6 || math.Abs(got.z-wantZ) > 1e-6 {
+		t.Fatalf("beat %v: camera target=(%v,%v,%v), want (%v,%v,%v)", beat, got.x, got.y, got.z, wantX, wantY, wantZ)
+	}
+}
