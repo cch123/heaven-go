@@ -97,3 +97,24 @@ func TestForkLifterRuntimeSemantics(t *testing.T) {
 		t.Fatalf("legacy colorGrad default = %d, want Classic", m.grads[0].typ)
 	}
 }
+
+func TestForkLifterLegacyEmptySpriteBindings(t *testing.T) {
+	as, err := kart.Load("../../assets/forkLifter", 44100)
+	if err != nil {
+		t.Skipf("assets not extracted: %v", err)
+	}
+	for clip, path := range map[string]string{
+		"Animations/Flicked_Object": "Fork_Lifter_Gameplay (1)",
+		"Animations/Player_Eat":     "Fork_Lifter_Gameplay",
+	} {
+		keys := as.Anims[clip].Sprites[path]
+		if len(keys) == 0 {
+			t.Fatalf("%s missing legacy sprite binding %s", clip, path)
+		}
+		for _, k := range keys {
+			if k.Name != "" {
+				t.Fatalf("%s %s has non-empty legacy sprite %q", clip, path, k.Name)
+			}
+		}
+	}
+}

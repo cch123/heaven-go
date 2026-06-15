@@ -780,6 +780,23 @@ func (s *SceneInst) node(p *scenePlayer, curvePath string) (int, bool) {
 			return i, true
 		}
 	}
+	if strings.Contains(full, "/Body/Head/Cork") {
+		// Octopus Machine's clips were authored before Cork moved under Mouth.
+		// Keep the serialized clip path compatible so Prepare/Pop still animate
+		// the cork instead of dropping those curves.
+		alt := strings.Replace(full, "/Body/Head/Cork", "/Body/Head/Mouth/Cork", 1)
+		if i, ok := s.byPath[alt]; ok {
+			return i, true
+		}
+	}
+	if curvePath == "CorkString" && p.rootPath != "" {
+		// The same Octopus prefab keeps a bare CorkString binding in Pop.anim,
+		// but the scene hierarchy stores it under Body/Head.
+		alt := p.rootPath + "/Body/Head/CorkString"
+		if i, ok := s.byPath[alt]; ok {
+			return i, true
+		}
+	}
 	return 0, false
 }
 

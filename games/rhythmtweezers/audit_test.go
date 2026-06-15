@@ -59,3 +59,27 @@ func TestHairRotationMatchesIntervalArc(t *testing.T) {
 		t.Fatalf("end rotation = %v, want 58", got)
 	}
 }
+
+func TestHairTemplatesSplitShortAndLongStates(t *testing.T) {
+	as, err := kart.Load("../../assets/rhythmTweezers", 44100)
+	if err != nil {
+		t.Skipf("assets not extracted: %v", err)
+	}
+	shortT := kart.NewTemplate(as, "VegetableHolder/Vegetable/HairPrefabs/HairHolder")
+	longT := kart.NewTemplate(as, "VegetableHolder/Vegetable/HairPrefabs/LongHairHolder")
+	if shortT == nil || longT == nil {
+		t.Fatal("missing short or long hair template")
+	}
+	if shortT.NewInstance().CurrentState("") != "" || longT.NewInstance().CurrentState("") != "" {
+		t.Fatal("new hair instances should not auto-play controller states")
+	}
+	if as.Anims["Hairs/SmallAppear"].Sprites["Hair"] == nil {
+		t.Fatal("SmallAppear should target short HairHolder/Hair")
+	}
+	if as.Anims["Hairs/LongAppear"].Sprites["LongHairHolder/Hair"] == nil {
+		t.Fatal("LongAppear should target nested long-hair prefab")
+	}
+	if as.Anims["Hairs/LoopPull"].Sprites["LongHairHolder/Loop"] == nil {
+		t.Fatal("LoopPull should target nested long-hair loop")
+	}
+}

@@ -101,6 +101,12 @@ func TestAllAnimationClipsControllersAndAnimators(t *testing.T) {
 			t.Fatalf("Blue Bird controller missing state %s", st)
 		}
 	}
+	for _, st := range []string{"Attack", "Miss"} {
+		trans := as.Controllers["Effect"].States[st].Transitions
+		if len(trans) != 1 || trans[0].Dst != "" {
+			t.Fatalf("Effect %s transition = %#v, want Unity Exit transition", st, trans)
+		}
+	}
 	wantAnimators := map[string]string{
 		"Birds/CPUBirdLeft/BlueBird":               "Blue Bird",
 		"Birds/CPUBirdMiddle/BlueBird":             "Blue Bird",

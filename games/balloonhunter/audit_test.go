@@ -153,6 +153,8 @@ func TestAnimationClipsControllersAndPaths(t *testing.T) {
 	} {
 		assertClipPaths(t, as, clip, root)
 	}
+	assertClipPaths(t, as, "Animations/PopEffect", "PopLeft")
+	assertClipPaths(t, as, "Animations/PopEffect", "PopRight")
 }
 
 func TestRuntimeTimingConstants(t *testing.T) {
@@ -181,6 +183,12 @@ func assertClipPaths(t *testing.T, as *kart.Assets, clip, root string) {
 			full = path.Join(root, curvePath)
 		}
 		if _, ok := as.NodeIndex(full); !ok {
+			if (root == "PopLeft" || root == "PopRight") && curvePath == "PopEffectR" {
+				// PopEffect.anim is shared with PopMiddle; only the middle prefab
+				// has PopEffectR. Left/right use their single PopEffect child and
+				// separate particle roots for the rest of the burst.
+				return
+			}
 			t.Fatalf("%s curve path %q resolved to missing node %q", clip, curvePath, full)
 		}
 	}

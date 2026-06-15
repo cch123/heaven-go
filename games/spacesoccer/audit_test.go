@@ -124,6 +124,29 @@ func TestSpaceSoccerColorsAndFormationDefaults(t *testing.T) {
 	}
 }
 
+func TestSpaceSoccerLegacyCellAnimBindingsAreEmpty(t *testing.T) {
+	as := loadAssets(t)
+	for clip, paths := range map[string][]string{
+		"Animations/HighKickLeft_0":  {"Square (3)"},
+		"Animations/HighKickRight_0": {"Square (3)"},
+		"Animations/Idle":            {"lifting.NCER_21"},
+		"Animations/MissLeft":        {"lifting.NCER_21"},
+		"Animations/MissRight":       {"lifting.NCER_21"},
+	} {
+		for _, path := range paths {
+			keys := as.Anims[clip].Sprites[path]
+			if len(keys) == 0 {
+				t.Fatalf("%s missing legacy binding %s", clip, path)
+			}
+			for _, k := range keys {
+				if k.Name != "" {
+					t.Fatalf("%s %s has non-empty legacy sprite %q", clip, path, k.Name)
+				}
+			}
+		}
+	}
+}
+
 func dist3(a, b [3]float64) float64 {
 	dx, dy, dz := a[0]-b[0], a[1]-b[1], a[2]-b[2]
 	return math.Sqrt(dx*dx + dy*dy + dz*dz)

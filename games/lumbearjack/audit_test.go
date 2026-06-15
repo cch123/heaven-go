@@ -72,6 +72,21 @@ func TestLumbearjackControllersAndSounds(t *testing.T) {
 	}
 }
 
+func TestLumbearjackBareCatHolderIsNotScriptDriven(t *testing.T) {
+	as := loadAssets(t)
+	if _, ok := as.NodeIndex("CatHolder/Arms"); ok {
+		t.Fatal("bare CatHolder unexpectedly grew full cat Arms branch; re-audit CatDance")
+	}
+	if as.Roles["_catRight"] == "CatHolder" || as.Roles["_catLeft"] == "CatHolder" {
+		t.Fatalf("bare CatHolder must not be used as a main cat role: %#v", as.Roles)
+	}
+	for _, bg := range as.Extra.Components["game"].RefArrays["_bgCats"] {
+		if bg == "CatHolder" {
+			t.Fatal("bare CatHolder must not be used as a background cat")
+		}
+	}
+}
+
 func TestLumbearjackCatSideSemantics(t *testing.T) {
 	m := &Module{
 		cats: []catPresenceEvt{

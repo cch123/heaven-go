@@ -92,6 +92,37 @@ func TestRowsAndMasks(t *testing.T) {
 	}
 }
 
+// TestPlayableGirlsUsePepSquadPrefab：根部 GirlHolder 是不参与脚本播放的
+// authoring 模板；真正会 PlayState 的 NPC/player 都是 pepSquad 实例，必须带有
+// BaseAnim 翻书剪辑引用的 Body (1) 与 OpenBook 页面。
+func TestPlayableGirlsUsePepSquadPrefab(t *testing.T) {
+	as := loadAssets(t)
+	nodeSet := map[string]bool{}
+	for _, n := range as.Rig.Nodes {
+		nodeSet[n.Path] = true
+	}
+	for _, missing := range []string{"GirlHolder/Body (1)", "GirlHolder/OpenBook1", "GirlHolder/OpenBook2"} {
+		if nodeSet[missing] {
+			t.Fatalf("authoring template unexpectedly gained runtime-only node %q", missing)
+		}
+	}
+	for _, key := range []string{"firstRow", "secondRow", "thirdRow"} {
+		for _, p := range as.Extra.RefArrays[key] {
+			assertPepSquadBookNodes(t, nodeSet, p)
+		}
+	}
+	assertPepSquadBookNodes(t, nodeSet, as.Roles["player"])
+}
+
+func assertPepSquadBookNodes(t *testing.T, nodeSet map[string]bool, root string) {
+	t.Helper()
+	for _, sub := range []string{"/Body (1)", "/OpenBook1", "/OpenBook2"} {
+		if !nodeSet[root+sub] {
+			t.Fatalf("%s missing required BaseAnim node %s", root, sub)
+		}
+	}
+}
+
 // TestCaptionTextNodes：toggleCaption 使用原 prefab 的 TMP 文本/underlay 节点；
 // 这些节点必须能被运行时 SetText 动态改字，不能退回手写 HUD。
 func TestCaptionTextNodes(t *testing.T) {

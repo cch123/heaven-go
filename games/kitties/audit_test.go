@@ -86,3 +86,22 @@ func TestCatsAndSounds(t *testing.T) {
 		}
 	}
 }
+
+func TestFaceClapFailKeepsOnlyPrefabMissingHelperPath(t *testing.T) {
+	as := loadAssets(t)
+	for _, cat := range []string{"Kitty1", "Kitty2", "KittyPlayer"} {
+		if _, ok := as.NodeIndex(cat + "/Effects/GameObject"); ok {
+			t.Fatalf("%s unexpectedly has stale Effects/GameObject helper", cat)
+		}
+	}
+	anim := as.Anims["Animations/FaceClapFail"]
+	if anim == nil {
+		t.Fatal("missing FaceClapFail clip")
+	}
+	if len(anim.Sprites["Kitty"]) == 0 {
+		t.Fatal("FaceClapFail must still drive the visible Kitty face sprite")
+	}
+	if len(anim.Pos["Effects/GameObject"].X) == 0 || len(anim.Floats["Effects/GameObject"]["m_IsActive"]) == 0 {
+		t.Fatal("FaceClapFail stale helper binding changed; re-audit path handling")
+	}
+}

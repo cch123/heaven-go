@@ -60,3 +60,21 @@ func TestNinjaBodyguardControllersCoverScriptedStates(t *testing.T) {
 		}
 	}
 }
+
+func TestNinjaBodyguardLegacyCutBindingsAreEmpty(t *testing.T) {
+	as, err := kart.Load("../../assets/ninjaBodyguard", synth.SampleRate)
+	if err != nil {
+		t.Fatal(err)
+	}
+	for _, clip := range []string{"Player/NinjaApology", "Player/NinjaHold", "Player/NinjaStay"} {
+		keys := as.Anims[clip].Sprites["NinjaCutL.001"]
+		if len(keys) == 0 {
+			t.Fatalf("%s missing legacy NinjaCutL.001 binding", clip)
+		}
+		for _, k := range keys {
+			if k.Name != "" {
+				t.Fatalf("%s legacy NinjaCutL.001 has non-empty sprite %q", clip, k.Name)
+			}
+		}
+	}
+}
