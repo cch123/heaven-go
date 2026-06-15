@@ -1,0 +1,115 @@
+{
+ "DazzlesGirl": {
+  "default": "Idle",
+  "states": {
+   "EndPose": {
+    "clip": "Animations/EndPose",
+    "speed": 1
+   },
+   "EndPrepare": {
+    "clip": "Animations/EndPrepare",
+    "speed": 1
+   },
+   "HappyBop": {
+    "clip": "Animations/HappyBop",
+    "speed": 1
+   },
+   "Hold": {
+    "clip": "Animations/Hold",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Shake",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "IdleBop": {
+    "clip": "Animations/IdleBop",
+    "speed": 1
+   },
+   "MissEndPose": {
+    "clip": "Animations/MissEndPose",
+    "speed": 1
+   },
+   "MissPose": {
+    "clip": "Animations/MissPose",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MissEndPose",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Ouch": {
+    "clip": "Animations/Ouch",
+    "speed": 1
+   },
+   "OuchBop": {
+    "clip": "Animations/OuchBop",
+    "speed": 1
+   },
+   "Pose": {
+    "clip": "Animations/Pose",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Animations/Prepare",
+    "speed": 1
+   },
+   "Shake": {
+    "clip": "Animations/Shake",
+    "speed": 1
+   },
+   "StopHold": {
+    "clip": "Animations/StopHold",
+    "speed": 1
+   }
+  }
+ },
+ "GirlHolder": {
+  "default": "Lit",
+  "states": {
+   "Dark": {
+    "clip": "Animations/Dark",
+    "speed": 1
+   },
+   "Lit": {
+    "clip": "Animations/Lit",
+    "speed": 1
+   },
+   "MissFlash": {
+    "clip": "Animations/MissFlash",
+    "speed": 1
+   },
+   "PoseFlash": {
+    "clip": "Animations/PoseFlash",
+    "speed": 1
+   }
+  }
+ },
+ "HoldEffect": {
+  "default": "HoldNothing",
+  "states": {
+   "HoldBox": {
+    "clip": "Animations/HoldBox",
+    "speed": 1
+   },
+   "HoldNothing": {
+    "clip": "Animations/HoldNothing",
+    "speed": 1
+   },
+   "ReleaseBox": {
+    "clip": "Animations/ReleaseBox",
+    "speed": 1
+   }
+  }
+ }
+}

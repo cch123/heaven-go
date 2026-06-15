@@ -1,0 +1,22 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "refs": {
+    "interiorMat": "boxinterior",
+    "player": "PlayerHolder/Girl",
+    "poseEffect": "PoseParticle",
+    "starsEffect": "NightWalkStars"
+   },
+   "refArrays": {
+    "npcGirls": [
+     "NpcHolder/Girl",
+     "NpcHolder (1)/Girl",
+     "NpcHolder (2)/Girl",
+     "NpcHolder (3)/Girl",
+     "NpcHolder (4)/Girl"
+    ]
+   }
+  }
+ }
+}

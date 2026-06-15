@@ -1,0 +1,20 @@
+{
+ "NpcHolder": "GirlHolder",
+ "NpcHolder (1)": "GirlHolder",
+ "NpcHolder (1)/Girl": "DazzlesGirl",
+ "NpcHolder (1)/Girl/HoldEffect": "HoldEffect",
+ "NpcHolder (2)": "GirlHolder",
+ "NpcHolder (2)/Girl": "DazzlesGirl",
+ "NpcHolder (2)/Girl/HoldEffect": "HoldEffect",
+ "NpcHolder (3)": "GirlHolder",
+ "NpcHolder (3)/Girl": "DazzlesGirl",
+ "NpcHolder (3)/Girl/HoldEffect": "HoldEffect",
+ "NpcHolder (4)": "GirlHolder",
+ "NpcHolder (4)/Girl": "DazzlesGirl",
+ "NpcHolder (4)/Girl/HoldEffect": "HoldEffect",
+ "NpcHolder/Girl": "DazzlesGirl",
+ "NpcHolder/Girl/HoldEffect": "HoldEffect",
+ "PlayerHolder": "GirlHolder",
+ "PlayerHolder/Girl": "DazzlesGirl",
+ "PlayerHolder/Girl/HoldEffect": "HoldEffect"
+}

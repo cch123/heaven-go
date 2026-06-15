@@ -1,0 +1,3914 @@
+{
+ "nodes": [
+  {
+   "name": "theDazzles",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "NightWalkStars",
+   "path": "NightWalkStars",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.816,
+    2.816
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dots",
+   "path": "NightWalkStars/Dots",
+   "parent": 1,
+   "pos": [
+    0.707,
+    -0.079
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PlayYan",
+   "path": "NightWalkStars/PlayYan",
+   "parent": 1,
+   "pos": [
+    -0.973,
+    0.357
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.816,
+    2.816
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "OtherColorStars",
+   "path": "NightWalkStars/OtherColorStars",
+   "parent": 1,
+   "pos": [
+    0.005,
+    0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.816,
+    2.816
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dots",
+   "path": "NightWalkStars/OtherColorStars/Dots",
+   "parent": 4,
+   "pos": [
+    0.707,
+    -0.079
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PoseParticle",
+   "path": "PoseParticle",
+   "parent": 0,
+   "pos": [
+    3.766,
+    -1.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallStars",
+   "path": "PoseParticle/SmallStars",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dot",
+   "path": "PoseParticle/Dot",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sparkle",
+   "path": "PoseParticle/Sparkle",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ring",
+   "path": "PoseParticle/Ring",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dividers",
+   "path": "Dividers",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Divider",
+   "path": "Dividers/Divider",
+   "parent": 11,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    15,
+    0.36
+   ],
+   "sprite": "dazzles_68",
+   "order": 60,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.39,
+    1.39
+   ]
+  },
+  {
+   "name": "Divider (1)",
+   "path": "Dividers/Divider (1)",
+   "parent": 11,
+   "pos": [
+    2.675,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.56,
+    9
+   ],
+   "sprite": "dazzles_68",
+   "order": 60,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.39,
+    1.39
+   ]
+  },
+  {
+   "name": "Divider (2)",
+   "path": "Dividers/Divider (2)",
+   "parent": 11,
+   "pos": [
+    8.95,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    9
+   ],
+   "sprite": "dazzles_68",
+   "order": 60,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.39,
+    1.39
+   ]
+  },
+  {
+   "name": "Divider (3)",
+   "path": "Dividers/Divider (3)",
+   "parent": 11,
+   "pos": [
+    -2.675,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.56,
+    9
+   ],
+   "sprite": "dazzles_68",
+   "order": 60,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.39,
+    1.39
+   ]
+  },
+  {
+   "name": "Divider (4)",
+   "path": "Dividers/Divider (4)",
+   "parent": 11,
+   "pos": [
+    -8.95,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    9
+   ],
+   "sprite": "dazzles_68",
+   "order": 60,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.39,
+    1.39
+   ]
+  },
+  {
+   "name": "Divider (5)",
+   "path": "Dividers/Divider (5)",
+   "parent": 11,
+   "pos": [
+    0,
+    5.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    15,
+    1
+   ],
+   "sprite": "dazzles_68",
+   "order": 60,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.39,
+    1.39
+   ]
+  },
+  {
+   "name": "Divider (6)",
+   "path": "Dividers/Divider (6)",
+   "parent": 11,
+   "pos": [
+    0,
+    -5.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    15,
+    1
+   ],
+   "sprite": "dazzles_68",
+   "order": 60,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.39,
+    1.39
+   ]
+  },
+  {
+   "name": "Box",
+   "path": "Dividers/Box",
+   "parent": 11,
+   "pos": [
+    -5.35,
+    2.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77,
+    0.77
+   ],
+   "sprite": "dazzles_65",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.75,
+    6.78
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box",
+   "path": "Dividers/Box/Box",
+   "parent": 19,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5.2
+   ],
+   "sprite": "dazzles_67",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1.31
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box (1)",
+   "path": "Dividers/Box (1)",
+   "parent": 11,
+   "pos": [
+    0,
+    2.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77,
+    0.77
+   ],
+   "sprite": "dazzles_65",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.75,
+    6.78
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box",
+   "path": "Dividers/Box (1)/Box",
+   "parent": 21,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5.2
+   ],
+   "sprite": "dazzles_67",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1.31
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box (2)",
+   "path": "Dividers/Box (2)",
+   "parent": 11,
+   "pos": [
+    5.35,
+    2.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77,
+    0.77
+   ],
+   "sprite": "dazzles_65",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.75,
+    6.78
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box",
+   "path": "Dividers/Box (2)/Box",
+   "parent": 23,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5.2
+   ],
+   "sprite": "dazzles_67",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1.31
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box (3)",
+   "path": "Dividers/Box (3)",
+   "parent": 11,
+   "pos": [
+    -5.35,
+    -2.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77,
+    0.77
+   ],
+   "sprite": "dazzles_65",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.75,
+    6.78
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box",
+   "path": "Dividers/Box (3)/Box",
+   "parent": 25,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5.2
+   ],
+   "sprite": "dazzles_67",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1.31
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box (4)",
+   "path": "Dividers/Box (4)",
+   "parent": 11,
+   "pos": [
+    0,
+    -2.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77,
+    0.77
+   ],
+   "sprite": "dazzles_65",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.75,
+    6.78
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box",
+   "path": "Dividers/Box (4)/Box",
+   "parent": 27,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5.2
+   ],
+   "sprite": "dazzles_67",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1.31
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box (5)",
+   "path": "Dividers/Box (5)",
+   "parent": 11,
+   "pos": [
+    5.35,
+    -2.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77,
+    0.77
+   ],
+   "sprite": "dazzles_65",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.75,
+    6.78
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Box",
+   "path": "Dividers/Box (5)/Box",
+   "parent": 29,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    5.2
+   ],
+   "sprite": "dazzles_67",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1.31
+   ],
+   "mapped": true,
+   "mat": "boxinterior"
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    86,
+    51
+   ],
+   "sprite": "dazzles_68",
+   "order": -100,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.39,
+    1.39
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "Girl",
+   "parent": 0,
+   "pos": [
+    1.278,
+    -0.865
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.11,
+    1.11
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Girl/Head",
+   "parent": 32,
+   "pos": [
+    0.057,
+    0.511
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.26924062,
+    0.26924062
+   ],
+   "sprite": "PlayerNeutral",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.24,
+    3.11
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Girl/Body",
+   "parent": 32,
+   "pos": [
+    0.06,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.23323272,
+    0.23323272
+   ],
+   "sprite": "dazzles_9",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "Girl/Body/Neck",
+   "parent": 34,
+   "pos": [
+    0,
+    0.9346891
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9922998,
+    0.9922998
+   ],
+   "sprite": "dazzles_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.42,
+    0.58
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "Girl/Body/ArmRight",
+   "parent": 34,
+   "pos": [
+    1.029015,
+    -0.072888084
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.94773275,
+    0.94773275
+   ],
+   "sprite": "dazzles_26",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    2.19
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "Girl/Body/ArmLeft",
+   "parent": 34,
+   "pos": [
+    -1.02044,
+    -0.07288853
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.94773275,
+    0.94773275
+   ],
+   "sprite": "dazzles_26",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.15,
+    2.19
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "Girl/LegLeft",
+   "parent": 32,
+   "pos": [
+    -0.025,
+    -0.605
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    2.58
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "Girl/LegRight",
+   "parent": 32,
+   "pos": [
+    0.13999987,
+    -0.60500014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    2.58
+   ]
+  },
+  {
+   "name": "PlayerHolder",
+   "path": "PlayerHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "PlayerHolder/Girl",
+   "parent": 40,
+   "pos": [
+    5.19,
+    -2.942
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.65,
+    2.65
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlackFlash",
+   "path": "PlayerHolder/Girl/BlackFlash",
+   "parent": 41,
+   "pos": [
+    0.05,
+    0.151
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4607452,
+    1.4607452
+   ],
+   "sprite": "dazzles_66",
+   "order": -5,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.74509805
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "HoldEffect",
+   "path": "PlayerHolder/Girl/HoldEffect",
+   "parent": 41,
+   "pos": [
+    -0.07099998,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "YellowBox",
+   "path": "PlayerHolder/Girl/HoldEffect/YellowBox",
+   "parent": 43,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "YellowBox (1)",
+   "path": "PlayerHolder/Girl/HoldEffect/YellowBox (1)",
+   "parent": 43,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "PlayerHolder/Girl/Head",
+   "parent": 41,
+   "pos": [
+    0.057,
+    0.511
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.26924062,
+    0.26924062
+   ],
+   "sprite": "PlayerNeutral",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "PlayerHolder/Girl/Head/Mouth",
+   "parent": 46,
+   "pos": [
+    0.012,
+    -1.163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1045011,
+    1.0645794
+   ],
+   "sprite": "dazzles_11",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "PlayerHolder/Girl/ArmRight",
+   "parent": 41,
+   "pos": [
+    0.3,
+    -0.12699988
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "PlayerHolder/Girl/ArmLeft",
+   "parent": 41,
+   "pos": [
+    -0.178,
+    -0.12699997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "PlayerHolder/Girl/Body",
+   "parent": 41,
+   "pos": [
+    0.06,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.23323272,
+    0.23323272
+   ],
+   "sprite": "dazzles_9",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "PlayerHolder/Girl/Body/Neck",
+   "parent": 50,
+   "pos": [
+    0,
+    0.9346891
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9922998,
+    0.9922998
+   ],
+   "sprite": "dazzles_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "PlayerHolder/Girl/LegLeft",
+   "parent": 41,
+   "pos": [
+    -0.025,
+    -0.605
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "PlayerHolder/Girl/LegRight",
+   "parent": 41,
+   "pos": [
+    0.13999987,
+    -0.60500014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece1",
+   "path": "PlayerHolder/Girl/ArmPiece1",
+   "parent": 41,
+   "pos": [
+    0.186,
+    -0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    0.52156866,
+    0.52156866,
+    0.52156866,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece2",
+   "path": "PlayerHolder/Girl/ArmPiece2",
+   "parent": 41,
+   "pos": [
+    -0.071,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    0.52156866,
+    0.52156866,
+    0.52156866,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "PlayerHolder/Girl/Star",
+   "parent": 41,
+   "pos": [
+    -0.718,
+    0.914
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25615504,
+    0.25615504
+   ],
+   "sprite": "dazzles_6",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "WhiteFlash",
+   "path": "PlayerHolder/Girl/WhiteFlash",
+   "parent": 41,
+   "pos": [
+    0.072,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5433847,
+    1.5433847
+   ],
+   "sprite": "dazzles_66",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "NpcHolder",
+   "path": "NpcHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "NpcHolder/Girl",
+   "parent": 58,
+   "pos": [
+    -0.16,
+    -2.942
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.65,
+    2.65
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlackFlash",
+   "path": "NpcHolder/Girl/BlackFlash",
+   "parent": 59,
+   "pos": [
+    0.05400002,
+    0.15799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6002461,
+    1.6002461
+   ],
+   "sprite": "dazzles_66",
+   "order": -5,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.74509805
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "HoldEffect",
+   "path": "NpcHolder/Girl/HoldEffect",
+   "parent": 59,
+   "pos": [
+    -0.07099998,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "YellowBox",
+   "path": "NpcHolder/Girl/HoldEffect/YellowBox",
+   "parent": 61,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "YellowBox (1)",
+   "path": "NpcHolder/Girl/HoldEffect/YellowBox (1)",
+   "parent": 61,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NpcHolder/Girl/Head",
+   "parent": 59,
+   "pos": [
+    0.057,
+    0.511
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.26924062,
+    0.26924062
+   ],
+   "sprite": "BottomMiddleNeutral",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.12,
+    4.43
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NpcHolder/Girl/Head/Mouth",
+   "parent": 64,
+   "pos": [
+    0.012,
+    -1.163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1045011,
+    1.0645794
+   ],
+   "sprite": "dazzles_11",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "NpcHolder/Girl/ArmRight",
+   "parent": 59,
+   "pos": [
+    0.29999995,
+    -0.12699988
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "NpcHolder/Girl/ArmLeft",
+   "parent": 59,
+   "pos": [
+    -0.17799997,
+    -0.12699997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "NpcHolder/Girl/Body",
+   "parent": 59,
+   "pos": [
+    0.06,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.23323272,
+    0.23323272
+   ],
+   "sprite": "dazzles_9",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NpcHolder/Girl/Body/Neck",
+   "parent": 68,
+   "pos": [
+    0,
+    0.9346891
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9922998,
+    0.9922998
+   ],
+   "sprite": "dazzles_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "NpcHolder/Girl/LegLeft",
+   "parent": 59,
+   "pos": [
+    -0.025,
+    -0.605
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "NpcHolder/Girl/LegRight",
+   "parent": 59,
+   "pos": [
+    0.13999987,
+    -0.60500014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece1",
+   "path": "NpcHolder/Girl/ArmPiece1",
+   "parent": 59,
+   "pos": [
+    0.186,
+    -0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece2",
+   "path": "NpcHolder/Girl/ArmPiece2",
+   "parent": 59,
+   "pos": [
+    -0.071,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "NpcHolder/Girl/Star",
+   "parent": 59,
+   "pos": [
+    -0.718,
+    0.914
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25615504,
+    0.25615504
+   ],
+   "sprite": "dazzles_6",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "WhiteFlash",
+   "path": "NpcHolder/Girl/WhiteFlash",
+   "parent": 59,
+   "pos": [
+    0.072,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5433847,
+    1.5433847
+   ],
+   "sprite": "dazzles_66",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "NpcHolder (1)",
+   "path": "NpcHolder (1)",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "NpcHolder (1)/Girl",
+   "parent": 76,
+   "pos": [
+    -5.51,
+    -2.942
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.65,
+    2.65
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlackFlash",
+   "path": "NpcHolder (1)/Girl/BlackFlash",
+   "parent": 77,
+   "pos": [
+    0.05400002,
+    0.15799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6002461,
+    1.6002461
+   ],
+   "sprite": "dazzles_66",
+   "order": -5,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.74509805
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "HoldEffect",
+   "path": "NpcHolder (1)/Girl/HoldEffect",
+   "parent": 77,
+   "pos": [
+    -0.07099998,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "YellowBox",
+   "path": "NpcHolder (1)/Girl/HoldEffect/YellowBox",
+   "parent": 79,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "YellowBox (1)",
+   "path": "NpcHolder (1)/Girl/HoldEffect/YellowBox (1)",
+   "parent": 79,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NpcHolder (1)/Girl/Head",
+   "parent": 77,
+   "pos": [
+    0.057,
+    0.511
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.26924062,
+    0.26924062
+   ],
+   "sprite": "BottomLeftNeutral",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.97,
+    4.33
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NpcHolder (1)/Girl/Head/Mouth",
+   "parent": 82,
+   "pos": [
+    0.012,
+    -1.163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1045011,
+    1.0645794
+   ],
+   "sprite": "dazzles_11",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "NpcHolder (1)/Girl/ArmRight",
+   "parent": 77,
+   "pos": [
+    0.29999995,
+    -0.12699988
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "NpcHolder (1)/Girl/ArmLeft",
+   "parent": 77,
+   "pos": [
+    -0.17799997,
+    -0.12699997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "NpcHolder (1)/Girl/Body",
+   "parent": 77,
+   "pos": [
+    0.06,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.23323272,
+    0.23323272
+   ],
+   "sprite": "dazzles_9",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NpcHolder (1)/Girl/Body/Neck",
+   "parent": 86,
+   "pos": [
+    0,
+    0.9346891
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9922998,
+    0.9922998
+   ],
+   "sprite": "dazzles_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "NpcHolder (1)/Girl/LegLeft",
+   "parent": 77,
+   "pos": [
+    -0.025,
+    -0.605
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "NpcHolder (1)/Girl/LegRight",
+   "parent": 77,
+   "pos": [
+    0.13999987,
+    -0.60500014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece1",
+   "path": "NpcHolder (1)/Girl/ArmPiece1",
+   "parent": 77,
+   "pos": [
+    0.186,
+    -0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece2",
+   "path": "NpcHolder (1)/Girl/ArmPiece2",
+   "parent": 77,
+   "pos": [
+    -0.071,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "NpcHolder (1)/Girl/Star",
+   "parent": 77,
+   "pos": [
+    -0.718,
+    0.914
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25615504,
+    0.25615504
+   ],
+   "sprite": "dazzles_6",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "WhiteFlash",
+   "path": "NpcHolder (1)/Girl/WhiteFlash",
+   "parent": 77,
+   "pos": [
+    0.072,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5433847,
+    1.5433847
+   ],
+   "sprite": "dazzles_66",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "NpcHolder (2)",
+   "path": "NpcHolder (2)",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "NpcHolder (2)/Girl",
+   "parent": 94,
+   "pos": [
+    5.19,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.65,
+    2.65
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlackFlash",
+   "path": "NpcHolder (2)/Girl/BlackFlash",
+   "parent": 95,
+   "pos": [
+    0.05400002,
+    0.15799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6002461,
+    1.6002461
+   ],
+   "sprite": "dazzles_66",
+   "order": -5,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.74509805
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "HoldEffect",
+   "path": "NpcHolder (2)/Girl/HoldEffect",
+   "parent": 95,
+   "pos": [
+    -0.07099998,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "YellowBox",
+   "path": "NpcHolder (2)/Girl/HoldEffect/YellowBox",
+   "parent": 97,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "YellowBox (1)",
+   "path": "NpcHolder (2)/Girl/HoldEffect/YellowBox (1)",
+   "parent": 97,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NpcHolder (2)/Girl/Head",
+   "parent": 95,
+   "pos": [
+    0.057,
+    0.511
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.26924062,
+    0.26924062
+   ],
+   "sprite": "RightUpNeutral",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.2,
+    3.32
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NpcHolder (2)/Girl/Head/Mouth",
+   "parent": 100,
+   "pos": [
+    0.012,
+    -1.163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1045011,
+    1.0645794
+   ],
+   "sprite": "dazzles_11",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "NpcHolder (2)/Girl/ArmRight",
+   "parent": 95,
+   "pos": [
+    0.29999995,
+    -0.12699988
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "NpcHolder (2)/Girl/ArmLeft",
+   "parent": 95,
+   "pos": [
+    -0.17799997,
+    -0.12699997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "NpcHolder (2)/Girl/Body",
+   "parent": 95,
+   "pos": [
+    0.06,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.23323272,
+    0.23323272
+   ],
+   "sprite": "dazzles_9",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NpcHolder (2)/Girl/Body/Neck",
+   "parent": 104,
+   "pos": [
+    0,
+    0.9346891
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9922998,
+    0.9922998
+   ],
+   "sprite": "dazzles_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "NpcHolder (2)/Girl/LegLeft",
+   "parent": 95,
+   "pos": [
+    -0.025,
+    -0.605
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "NpcHolder (2)/Girl/LegRight",
+   "parent": 95,
+   "pos": [
+    0.13999987,
+    -0.60500014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece1",
+   "path": "NpcHolder (2)/Girl/ArmPiece1",
+   "parent": 95,
+   "pos": [
+    0.186,
+    -0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece2",
+   "path": "NpcHolder (2)/Girl/ArmPiece2",
+   "parent": 95,
+   "pos": [
+    -0.071,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "NpcHolder (2)/Girl/Star",
+   "parent": 95,
+   "pos": [
+    -0.718,
+    0.914
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25615504,
+    0.25615504
+   ],
+   "sprite": "dazzles_6",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "WhiteFlash",
+   "path": "NpcHolder (2)/Girl/WhiteFlash",
+   "parent": 95,
+   "pos": [
+    0.072,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5433847,
+    1.5433847
+   ],
+   "sprite": "dazzles_66",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "NpcHolder (3)",
+   "path": "NpcHolder (3)",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "NpcHolder (3)/Girl",
+   "parent": 112,
+   "pos": [
+    -0.16,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.65,
+    2.65
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlackFlash",
+   "path": "NpcHolder (3)/Girl/BlackFlash",
+   "parent": 113,
+   "pos": [
+    0.05400002,
+    0.15799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6002461,
+    1.6002461
+   ],
+   "sprite": "dazzles_66",
+   "order": -5,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.74509805
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "HoldEffect",
+   "path": "NpcHolder (3)/Girl/HoldEffect",
+   "parent": 113,
+   "pos": [
+    -0.07099998,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "YellowBox",
+   "path": "NpcHolder (3)/Girl/HoldEffect/YellowBox",
+   "parent": 115,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "YellowBox (1)",
+   "path": "NpcHolder (3)/Girl/HoldEffect/YellowBox (1)",
+   "parent": 115,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NpcHolder (3)/Girl/Head",
+   "parent": 113,
+   "pos": [
+    0.057,
+    0.511
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.26924062,
+    0.26924062
+   ],
+   "sprite": "MiddleUpNeutral",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.22,
+    4.27
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NpcHolder (3)/Girl/Head/Mouth",
+   "parent": 118,
+   "pos": [
+    0.012,
+    -1.163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1045011,
+    1.0645794
+   ],
+   "sprite": "dazzles_11",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "NpcHolder (3)/Girl/ArmRight",
+   "parent": 113,
+   "pos": [
+    0.29999995,
+    -0.12699988
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "NpcHolder (3)/Girl/ArmLeft",
+   "parent": 113,
+   "pos": [
+    -0.17799997,
+    -0.12699997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "NpcHolder (3)/Girl/Body",
+   "parent": 113,
+   "pos": [
+    0.06,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.23323272,
+    0.23323272
+   ],
+   "sprite": "dazzles_9",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NpcHolder (3)/Girl/Body/Neck",
+   "parent": 122,
+   "pos": [
+    0,
+    0.9346891
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9922998,
+    0.9922998
+   ],
+   "sprite": "dazzles_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "NpcHolder (3)/Girl/LegLeft",
+   "parent": 113,
+   "pos": [
+    -0.025,
+    -0.605
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "NpcHolder (3)/Girl/LegRight",
+   "parent": 113,
+   "pos": [
+    0.13999987,
+    -0.60500014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece1",
+   "path": "NpcHolder (3)/Girl/ArmPiece1",
+   "parent": 113,
+   "pos": [
+    0.186,
+    -0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece2",
+   "path": "NpcHolder (3)/Girl/ArmPiece2",
+   "parent": 113,
+   "pos": [
+    -0.071,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "NpcHolder (3)/Girl/Star",
+   "parent": 113,
+   "pos": [
+    -0.718,
+    0.914
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25615504,
+    0.25615504
+   ],
+   "sprite": "dazzles_6",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "WhiteFlash",
+   "path": "NpcHolder (3)/Girl/WhiteFlash",
+   "parent": 113,
+   "pos": [
+    0.072,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5433847,
+    1.5433847
+   ],
+   "sprite": "dazzles_66",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "NpcHolder (4)",
+   "path": "NpcHolder (4)",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "NpcHolder (4)/Girl",
+   "parent": 130,
+   "pos": [
+    -5.51,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.65,
+    2.65
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlackFlash",
+   "path": "NpcHolder (4)/Girl/BlackFlash",
+   "parent": 131,
+   "pos": [
+    0.05400002,
+    0.15799999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6002461,
+    1.6002461
+   ],
+   "sprite": "dazzles_66",
+   "order": -5,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.74509805
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "HoldEffect",
+   "path": "NpcHolder (4)/Girl/HoldEffect",
+   "parent": 131,
+   "pos": [
+    -0.07099998,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "YellowBox",
+   "path": "NpcHolder (4)/Girl/HoldEffect/YellowBox",
+   "parent": 133,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "YellowBox (1)",
+   "path": "NpcHolder (4)/Girl/HoldEffect/YellowBox (1)",
+   "parent": 133,
+   "pos": [
+    0.58359843,
+    1.0767169
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1973375,
+    1.1973375
+   ],
+   "sprite": "dazzleseffects_8",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "NpcHolder (4)/Girl/Head",
+   "parent": 131,
+   "pos": [
+    0.057,
+    0.511
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.26924062,
+    0.26924062
+   ],
+   "sprite": "LeftUpNeutral",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.15,
+    3.65
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "NpcHolder (4)/Girl/Head/Mouth",
+   "parent": 136,
+   "pos": [
+    0.012,
+    -1.163
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1045011,
+    1.0645794
+   ],
+   "sprite": "dazzles_11",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmRight",
+   "path": "NpcHolder (4)/Girl/ArmRight",
+   "parent": 131,
+   "pos": [
+    0.29999995,
+    -0.12699988
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmLeft",
+   "path": "NpcHolder (4)/Girl/ArmLeft",
+   "parent": 131,
+   "pos": [
+    -0.17799997,
+    -0.12699997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_26",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "NpcHolder (4)/Girl/Body",
+   "parent": 131,
+   "pos": [
+    0.06,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.23323272,
+    0.23323272
+   ],
+   "sprite": "dazzles_9",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "NpcHolder (4)/Girl/Body/Neck",
+   "parent": 140,
+   "pos": [
+    0,
+    0.9346891
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9922998,
+    0.9922998
+   ],
+   "sprite": "dazzles_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegLeft",
+   "path": "NpcHolder (4)/Girl/LegLeft",
+   "parent": 131,
+   "pos": [
+    -0.025,
+    -0.605
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "LegRight",
+   "path": "NpcHolder (4)/Girl/LegRight",
+   "parent": 131,
+   "pos": [
+    0.13999987,
+    -0.60500014
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25576627,
+    0.25576627
+   ],
+   "sprite": "dazzles_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece1",
+   "path": "NpcHolder (4)/Girl/ArmPiece1",
+   "parent": 131,
+   "pos": [
+    0.186,
+    -0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "ArmPiece2",
+   "path": "NpcHolder (4)/Girl/ArmPiece2",
+   "parent": 131,
+   "pos": [
+    -0.071,
+    -0.095
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.22104229,
+    0.22104229
+   ],
+   "sprite": "dazzles_38",
+   "order": 6,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "NpcHolder (4)/Girl/Star",
+   "parent": 131,
+   "pos": [
+    -0.718,
+    0.914
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25615504,
+    0.25615504
+   ],
+   "sprite": "dazzles_6",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  },
+  {
+   "name": "WhiteFlash",
+   "path": "NpcHolder (4)/Girl/WhiteFlash",
+   "parent": 131,
+   "pos": [
+    0.072,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5433847,
+    1.5433847
+   ],
+   "sprite": "dazzles_66",
+   "order": -4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    2.01
+   ]
+  }
+ ]
+}

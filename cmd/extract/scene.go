@@ -124,6 +124,19 @@ var sceneSpecs = map[string]sceneSpec{
 			}},
 		},
 	},
+	"theDazzles": {
+		dir:    "TheDazzles",
+		prefab: "theDazzles.prefab",
+		roleFields: []string{
+			"player", "poseEffect", "starsEffect",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"npcGirls", "player", "poseEffect", "starsEffect", "interiorMat", "exteriorMat",
+			}},
+		},
+	},
 	"quizShow": {
 		dir:    "QuizShow",
 		prefab: "quizShow.prefab",
