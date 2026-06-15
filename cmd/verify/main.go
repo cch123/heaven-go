@@ -81,6 +81,7 @@ import (
 	"hsdemo/games/seesaw"
 	"hsdemo/games/shootemup"
 	"hsdemo/games/showtime"
+	"hsdemo/games/sickbeats"
 	"hsdemo/games/slotmonster"
 	"hsdemo/games/sneakyspirits"
 	"hsdemo/games/somen"
@@ -227,6 +228,7 @@ func main() {
 	engine.Register("samuraiSliceNtr", samuraislicentr.New)
 	engine.Register("shootEmUp", shootemup.New)
 	engine.Register("showtime", showtime.New)
+	engine.Register("sickBeats", sickbeats.New)
 	engine.Register("tramAndPauline", tramandpauline.New)
 	engine.Register("tunnel", tunnel.New)
 	engine.Register("valiantVolley", valiantvolley.New)

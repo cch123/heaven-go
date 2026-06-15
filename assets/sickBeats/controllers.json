@@ -1,0 +1,444 @@
+{
+ "doctor": {
+  "default": "idle",
+  "states": {
+   "Vsign": {
+    "clip": "Animations/doctorVsign",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "bop": {
+    "clip": "Animations/doctorBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "idle": {
+    "speed": 1
+   },
+   "shock0": {
+    "clip": "Animations/doctorShock0",
+    "speed": 1
+   },
+   "shock1": {
+    "clip": "Animations/doctorShock1",
+    "speed": 0.2
+   }
+  }
+ },
+ "fork": {
+  "default": "idle",
+  "states": {
+   "forkResist1": {
+    "clip": "Animations/fork/forkResist-h1",
+    "speed": 1
+   },
+   "forkResist1-1": {
+    "clip": "Animations/fork/forkResist-v1",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/fork/forkIdle",
+    "speed": 1
+   },
+   "out": {
+    "clip": "Animations/fork/forkOut",
+    "speed": 1
+   },
+   "repop": {
+    "clip": "Animations/fork/forkRepop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "resist0": {
+    "clip": "Animations/fork/forkResist-h0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "forkResist1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "resist1": {
+    "clip": "Animations/fork/forkResist-v0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "forkResist1-1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "resist2": {
+    "clip": "Animations/fork/forkResist-h0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "forkResist1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "resist3": {
+    "clip": "Animations/fork/forkResist-v0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "forkResist1-1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "stab0": {
+    "clip": "Animations/fork/forkStab-h",
+    "speed": 1
+   },
+   "stab1": {
+    "clip": "Animations/fork/forkStab-v",
+    "speed": 1
+   },
+   "stab2": {
+    "clip": "Animations/fork/forkStab-h",
+    "speed": 1
+   },
+   "stab3": {
+    "clip": "Animations/fork/forkStab-v",
+    "speed": 1
+   },
+   "stabFast0": {
+    "clip": "Animations/fork/forkStabFast-h",
+    "speed": 1
+   },
+   "stabFast1": {
+    "clip": "Animations/fork/forkStabFast-v",
+    "speed": 1
+   },
+   "stabFast2": {
+    "clip": "Animations/fork/forkStabFast-h",
+    "speed": 1
+   },
+   "stabFast3": {
+    "clip": "Animations/fork/forkStabFast-v",
+    "speed": 1
+   },
+   "stabLate0": {
+    "clip": "Animations/fork/forkStabLate-h",
+    "speed": 1
+   },
+   "stabLate1": {
+    "clip": "Animations/fork/forkStabLate-v",
+    "speed": 1
+   },
+   "stabLate2": {
+    "clip": "Animations/fork/forkStabLate-h",
+    "speed": 1
+   },
+   "stabLate3": {
+    "clip": "Animations/fork/forkStabLate-v",
+    "speed": 1
+   }
+  }
+ },
+ "key": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "speed": 1
+   },
+   "keep": {
+    "clip": "Animations/keyKeep",
+    "speed": 1
+   },
+   "push": {
+    "clip": "Animations/keyPush",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "up": {
+    "clip": "Animations/keyUp",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   }
+  }
+ },
+ "organism": {
+  "default": "idleAdd",
+  "states": {
+   "appear": {
+    "clip": "Animations/orgAppear",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "bop": {
+    "clip": "Animations/orgBop",
+    "speed": 1
+   },
+   "damage": {
+    "clip": "Animations/orgDamage",
+    "speed": 1
+   },
+   "idle": {
+    "speed": 1
+   },
+   "idleAdd": {
+    "speed": 1
+   },
+   "vanish": {
+    "clip": "Animations/orgVanish",
+    "speed": 1
+   }
+  }
+ },
+ "radio": {
+  "default": "idle",
+  "states": {
+   "bop": {
+    "clip": "Animations/radioBop",
+    "speed": 1
+   },
+   "idle": {
+    "speed": 1
+   }
+  }
+ },
+ "virus": {
+  "default": "idle",
+  "states": {
+   "appear": {
+    "clip": "Animations/virus/virusAppear",
+    "speed": 0.5
+   },
+   "appear0": {
+    "clip": "Animations/virus/virusAppearRight",
+    "speed": 1
+   },
+   "appear1": {
+    "clip": "Animations/virus/virusAppearUp",
+    "speed": 1
+   },
+   "appear2": {
+    "clip": "Animations/virus/virusAppearLeft",
+    "speed": 1
+   },
+   "appear3": {
+    "clip": "Animations/virus/virusAppearDown",
+    "speed": 1
+   },
+   "dash": {
+    "clip": "Animations/virus/virusDash",
+    "speed": 1
+   },
+   "dash0": {
+    "clip": "Animations/virus/virusDashRight",
+    "speed": 1
+   },
+   "dash1": {
+    "clip": "Animations/virus/virusDashUp",
+    "speed": 1
+   },
+   "dash2": {
+    "clip": "Animations/virus/virusDashLeft",
+    "speed": 1
+   },
+   "dash3": {
+    "clip": "Animations/virus/virusDashDown",
+    "speed": 1
+   },
+   "enter": {
+    "clip": "Animations/virus/virusEnter",
+    "speed": 1
+   },
+   "hide": {
+    "clip": "Animations/virus/virusHide",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/virus/virusIdle",
+    "speed": 1
+   },
+   "laugh": {
+    "clip": "Animations/virus/virusLaugh",
+    "speed": 0.5
+   },
+   "resist": {
+    "clip": "Animations/virus/virusResist0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "virusResist1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "resist0": {
+    "clip": "Animations/virus/virusResistRight0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "virusResistRight1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "resist1": {
+    "clip": "Animations/virus/virusResistUp0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "virusResistUp1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "resist2": {
+    "clip": "Animations/virus/virusResistLeft0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "virusResistLeft1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "resist3": {
+    "clip": "Animations/virus/virusResistDown0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "virusResistDown1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "stab": {
+    "clip": "Animations/virus/virusStab",
+    "speed": 1
+   },
+   "stab0": {
+    "clip": "Animations/virus/virusStabRight",
+    "speed": 1
+   },
+   "stab1": {
+    "clip": "Animations/virus/virusStabUp",
+    "speed": 1
+   },
+   "stab2": {
+    "clip": "Animations/virus/virusStabLeft",
+    "speed": 1
+   },
+   "stab3": {
+    "clip": "Animations/virus/virusStabDown",
+    "speed": 1
+   },
+   "stabFast": {
+    "clip": "Animations/virus/virusStabFast",
+    "speed": 1
+   },
+   "stabFast0": {
+    "clip": "Animations/virus/virusStabFastRight",
+    "speed": 1
+   },
+   "stabFast1": {
+    "clip": "Animations/virus/virusStabFastUp",
+    "speed": 1
+   },
+   "stabFast2": {
+    "clip": "Animations/virus/virusStabFastLeft",
+    "speed": 1
+   },
+   "stabFast3": {
+    "clip": "Animations/virus/virusStabFastDown",
+    "speed": 1
+   },
+   "stabLate": {
+    "clip": "Animations/virus/virusStabLate",
+    "speed": 1
+   },
+   "stabLate0": {
+    "clip": "Animations/virus/virusStabLateRight",
+    "speed": 1
+   },
+   "stabLate1": {
+    "clip": "Animations/virus/virusStabLateUp",
+    "speed": 1
+   },
+   "stabLate2": {
+    "clip": "Animations/virus/virusStabLateLeft",
+    "speed": 1
+   },
+   "stabLate3": {
+    "clip": "Animations/virus/virusStabLateDown",
+    "speed": 1
+   },
+   "summon": {
+    "clip": "Animations/virus/virusSummon",
+    "speed": 1
+   },
+   "virusResist1": {
+    "clip": "Animations/virus/virusResist1",
+    "speed": 1
+   },
+   "virusResistDown1": {
+    "clip": "Animations/virus/virusResistDown1",
+    "speed": 1
+   },
+   "virusResistLeft1": {
+    "clip": "Animations/virus/virusResistLeft1",
+    "speed": 1
+   },
+   "virusResistRight1": {
+    "clip": "Animations/virus/virusResistRight1",
+    "speed": 1
+   },
+   "virusResistUp1": {
+    "clip": "Animations/virus/virusResistUp1",
+    "speed": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "Prefabs/virus": "virus",
+ "StickyBG/Docholder/doctor": "doctor",
+ "StickyBG/Docholder/radio": "radio",
+ "fork/fork_down": "fork",
+ "fork/fork_left": "fork",
+ "fork/fork_right": "fork",
+ "fork/fork_up": "fork",
+ "key": "key",
+ "organism": "organism"
+}

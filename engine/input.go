@@ -10,7 +10,7 @@ type Input struct {
 	// totemClimb 高跳的甩出）；否则按下判定。
 	Release bool
 	// Action 是输入动作通道：-1=任意按下，0=主键（Space/J/左键）
-	// 1=左（F/←/↑）2=右（K/→）3=替代键（L/↓/X，HS 的 South/Alt）。
+	// 1=左（F/A/←）2=右（K/D/→）3=下/替代键（L/S/↓/X）4=上（W/↑）。
 	Action int
 	// Weight/Category 来自当前 SectionMarker；Judgement 场景用它们做加权总评
 	// 和分类评价消息。

@@ -30,7 +30,7 @@ func (a *App) judgeRealtimeInputs(t, beat float64) {
 	if a.pressedNow {
 		a.judgePress(adjustedT, beat, false, 0)
 	}
-	for act := 1; act <= 3; act++ {
+	for act := 1; act <= 4; act++ {
 		if pressedN(act) {
 			a.judgePress(adjustedT, beat, false, act)
 		}
@@ -38,7 +38,7 @@ func (a *App) judgeRealtimeInputs(t, beat float64) {
 	if a.releasedNow {
 		a.judgePress(adjustedT, beat, true, 0)
 	}
-	for act := 1; act <= 3; act++ {
+	for act := 1; act <= 4; act++ {
 		if releasedN(act) {
 			a.judgePress(adjustedT, beat, true, act)
 		}
