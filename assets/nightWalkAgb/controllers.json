@@ -1,0 +1,226 @@
+{
+ "Animations/PlayYan/Star.controller": {
+  "default": "Blink",
+  "states": {
+   "Blink": {
+    "clip": "Animations/PlayYan/Blink",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Star/Star.controller": {
+  "default": "Small",
+  "states": {
+   "Blink1": {
+    "clip": "Animations/Star/Blink1",
+    "speed": 1
+   },
+   "Blink2": {
+    "clip": "Animations/Star/Blink2",
+    "speed": 1
+   },
+   "Blink3": {
+    "clip": "Animations/Star/Blink3",
+    "speed": 1
+   },
+   "Blink4": {
+    "clip": "Animations/Star/Blink4",
+    "speed": 1
+   },
+   "Blink5": {
+    "clip": "Animations/Star/Blink5",
+    "speed": 1
+   },
+   "Devolve1": {
+    "clip": "Animations/Star/Devolve1",
+    "speed": 1
+   },
+   "Devolve2": {
+    "clip": "Animations/Star/Devolve2",
+    "speed": 1
+   },
+   "Devolve3": {
+    "clip": "Animations/Star/Devolve3",
+    "speed": 1
+   },
+   "Devolve4": {
+    "clip": "Animations/Star/Devolve4",
+    "speed": 1
+   },
+   "Devolve5": {
+    "clip": "Animations/Star/Devolve5",
+    "speed": 1
+   },
+   "Evolve1": {
+    "clip": "Animations/Star/Evolve1",
+    "speed": 1
+   },
+   "Evolve2": {
+    "clip": "Animations/Star/Evolve2",
+    "speed": 1
+   },
+   "Evolve3": {
+    "clip": "Animations/Star/Evolve3",
+    "speed": 1
+   },
+   "Evolve4": {
+    "clip": "Animations/Star/Evolve4",
+    "speed": 1
+   },
+   "Small": {
+    "clip": "Animations/Star/Small",
+    "speed": 1
+   }
+  }
+ },
+ "BallonNW": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animations/Balloon/Idle",
+    "speed": 1
+   },
+   "Pop": {
+    "clip": "Animations/Balloon/Pop",
+    "speed": 1
+   }
+  }
+ },
+ "Fish": {
+  "default": "FishIdle",
+  "states": {
+   "FishIdle": {
+    "clip": "Animations/Platform/FishIdle",
+    "speed": 1
+   },
+   "Shock": {
+    "clip": "Animations/Platform/Shock",
+    "speed": 1
+   }
+  }
+ },
+ "JumpPlatform": {
+  "default": "Idle",
+  "states": {
+   "Destroy": {
+    "clip": "Animations/Platform/Destroy",
+    "speed": 1
+   },
+   "EndGlow": {
+    "clip": "Animations/Platform/EndGlow",
+    "speed": 1
+   },
+   "EndIdle": {
+    "clip": "Animations/Platform/EndIdle",
+    "speed": 1
+   },
+   "EndPop": {
+    "clip": "Animations/Platform/EndPop",
+    "speed": 1
+   },
+   "Flower": {
+    "clip": "Animations/Platform/Flower",
+    "speed": 1
+   },
+   "FlowerBarely": {
+    "clip": "Animations/Platform/FlowerBarely",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Platform/Idle",
+    "speed": 1
+   },
+   "Kick": {
+    "clip": "Animations/Platform/Kick",
+    "speed": 1
+   },
+   "Lollipop": {
+    "clip": "Animations/Platform/Lollipop",
+    "speed": 1
+   },
+   "LollipopBarely": {
+    "clip": "Animations/Platform/LollipopBarely",
+    "speed": 1
+   },
+   "Note": {
+    "clip": "Animations/Platform/Note",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NoteIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NoteIdle": {
+    "clip": "Animations/Platform/NoteIdle",
+    "speed": 1
+   },
+   "Umbrella": {
+    "clip": "Animations/Platform/Umbrella",
+    "speed": 1
+   },
+   "UmbrellaBarely": {
+    "clip": "Animations/Platform/UmbrellaBarely",
+    "speed": 1
+   }
+  }
+ },
+ "Player": {
+  "default": "Jump",
+  "states": {
+   "HighJump": {
+    "clip": "Animations/PlayYan/HighJump",
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Animations/PlayYan/Jump",
+    "speed": 1
+   },
+   "Roll": {
+    "clip": "Animations/PlayYan/Roll",
+    "speed": 1
+   },
+   "RollShock": {
+    "clip": "Animations/PlayYan/RollShock",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Shock",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Shock": {
+    "clip": "Animations/PlayYan/Shock",
+    "speed": 1
+   },
+   "Walk": {
+    "clip": "Animations/PlayYan/Walk",
+    "speed": 1
+   }
+  }
+ },
+ "playYanFall": {
+  "default": "FallIdle",
+  "states": {
+   "FallIdle": {
+    "clip": "Animations/PlayYan/FallIdle",
+    "speed": 1
+   },
+   "FallSmear": {
+    "clip": "Animations/PlayYan/FallSmear",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FallIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

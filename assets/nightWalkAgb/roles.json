@@ -1,0 +1,9 @@
+{
+ "Text": "Textbox/textbox/Text (TMP)",
+ "TextboxGO": "Textbox",
+ "TextboxSprite": "Textbox/textbox",
+ "TextboxTransform": "Textbox/textbox",
+ "platformHandler": "JumpPlatformHolder",
+ "playYan": "Player",
+ "starHandler": "StarsHolder"
+}

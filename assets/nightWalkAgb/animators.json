@@ -1,0 +1,17 @@
+{
+ "JumpPlatform": "JumpPlatform",
+ "JumpPlatform/Fish": "Fish",
+ "JumpPlatform/playYanFall": "playYanFall",
+ "JumpPlatform/playYanFallRoll": "playYanFall",
+ "JumpPlatform/rollPlatform/RodHolder": "JumpPlatform",
+ "Player": "Player",
+ "Player/Balloons/1Hold/1": "BallonNW",
+ "Player/Balloons/2Hold/2": "BallonNW",
+ "Player/Balloons/3Hold/3": "BallonNW",
+ "Player/Balloons/4Hold/4": "BallonNW",
+ "Player/Balloons/5Hold/5": "BallonNW",
+ "Player/Balloons/6Hold/6": "BallonNW",
+ "Player/Balloons/7Hold/7": "BallonNW",
+ "Player/Star": "Animations/PlayYan/Star.controller",
+ "Star": "Animations/Star/Star.controller"
+}

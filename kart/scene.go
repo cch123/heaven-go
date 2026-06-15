@@ -19,20 +19,22 @@ import (
 )
 
 type sceneNodeState struct {
-	pos      [2]float64
-	rot      float64
-	scale    [2]float64
-	sprite   string
-	flipX    bool
-	flipY    bool
-	active   bool // GameObject m_IsActive（沿层级传播）
-	renderOn bool // SpriteRenderer m_Enabled（仅本节点，不传播）
-	color    [4]float64
-	matColor [4]float64
-	matAdd   [4]float64
-	matBlend [4]float64
-	size     [2]float64 // drawMode != 0 时生效
-	order    int        // sortingOrder（可被动画驱动）
+	pos             [2]float64
+	rot             float64
+	scale           [2]float64
+	sprite          string
+	flipX           bool
+	flipY           bool
+	active          bool // GameObject m_IsActive（沿层级传播）
+	renderOn        bool // SpriteRenderer m_Enabled（仅本节点，不传播）
+	color           [4]float64
+	matColor        [4]float64
+	matAdd          [4]float64
+	matBlend        [4]float64
+	matThreshold    float64
+	hasMatThreshold bool
+	size            [2]float64 // drawMode != 0 时生效
+	order           int        // sortingOrder（可被动画驱动）
 }
 
 // scenePlayer 是绑定到某个子树根的剪辑播放器。
@@ -632,9 +634,11 @@ type ExtraSprite struct {
 	MatColor     [4]float64 // material._Color for queued sprites
 	Add          [4]float64 // material._AddColor for mapped queued sprites
 	Blend        [4]float64 // material._BlendColor for queued sprites
-	Mapped       bool       // 调色板映射材质（SceneInst.SetPalette）
-	Mat          string     // 映射材质名（按名调色板）
-	HasPalette   bool       // true 时 Palette 为实例级 mapped 材质参数
+	Threshold    float64    // material._Threshold for mapped queued sprites
+	HasThreshold bool
+	Mapped       bool   // 调色板映射材质（SceneInst.SetPalette）
+	Mat          string // 映射材质名（按名调色板）
+	HasPalette   bool   // true 时 Palette 为实例级 mapped 材质参数
 	Palette      Palette
 }
 
@@ -870,6 +874,9 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				case "a":
 					s.state[i].matBlend[3] = v
 				}
+			case attr == "material._Threshold":
+				s.state[i].matThreshold = v
+				s.state[i].hasMatThreshold = true
 			}
 		}
 	}
@@ -967,6 +974,9 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 				if q.HasPalette {
 					pal = q.Palette
 				}
+				if q.HasThreshold {
+					pal.Threshold = q.Threshold
+				}
 				s.as.DrawSpriteMapped(dst, q.Sprite, view.Mul(q.World), proj, qo, pal)
 			} else {
 				s.as.DrawSpriteOpts(dst, q.Sprite, view.Mul(q.World), proj, qo)
@@ -1001,7 +1011,11 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			}
 			s.scratch.Clear()
 			if s.as.Rig.Nodes[i].Mapped {
-				s.as.DrawSpriteMapped(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteForNode(i))
+				pal := s.paletteForNode(i)
+				if st.hasMatThreshold {
+					pal.Threshold = st.matThreshold
+				}
+				s.as.DrawSpriteMapped(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts, pal)
 			} else {
 				s.as.DrawSpriteOpts(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts)
 			}
@@ -1021,7 +1035,11 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			continue
 		}
 		if s.as.Rig.Nodes[i].Mapped {
-			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, s.paletteForNode(i))
+			pal := s.paletteForNode(i)
+			if st.hasMatThreshold {
+				pal.Threshold = st.matThreshold
+			}
+			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, pal)
 		} else {
 			s.as.DrawSpriteOpts(dst, st.sprite, view.Mul(s.world[i]), proj, opts)
 		}

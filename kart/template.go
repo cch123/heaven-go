@@ -467,19 +467,21 @@ func (in *Instance) stepMachine(p *instPlayer, beat float64) {
 
 // instNodeState 是实例采样后的节点状态。
 type instNodeState struct {
-	pos      [2]float64
-	rot      float64
-	scale    [2]float64
-	sprite   string
-	flipX    bool
-	flipY    bool
-	active   bool
-	renderOn bool
-	color    [4]float64
-	matColor [4]float64
-	matAdd   [4]float64
-	matBlend [4]float64
-	order    int
+	pos             [2]float64
+	rot             float64
+	scale           [2]float64
+	sprite          string
+	flipX           bool
+	flipY           bool
+	active          bool
+	renderOn        bool
+	color           [4]float64
+	matColor        [4]float64
+	matAdd          [4]float64
+	matBlend        [4]float64
+	matThreshold    float64
+	hasMatThreshold bool
+	order           int
 }
 
 // Queue 采样实例并把可见节点注入 scene 的统一排序绘制。
@@ -562,6 +564,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor,
 			Mapped: n.Mapped, Mat: n.Mat,
 			Add: st.matAdd, Blend: st.matBlend,
+			Threshold: st.matThreshold, HasThreshold: st.hasMatThreshold,
 		}
 		if pal, ok := in.palettes[ti]; ok {
 			e.HasPalette = true
@@ -750,6 +753,9 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 				case "a":
 					states[ti].matBlend[3] = v
 				}
+			case attr == "material._Threshold":
+				states[ti].matThreshold = v
+				states[ti].hasMatThreshold = true
 			}
 		}
 	}

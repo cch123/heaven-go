@@ -1,0 +1,162 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "refs": {
+    "BGMat": "BGMaterial",
+    "FishMat": "NightWalkFishColor",
+    "PlatLightMat": "PlatformLight",
+    "PlatformMat": "NightWalkPlatformColor",
+    "StarMat": "NightWalkStarColor",
+    "Text": "Textbox/textbox/Text (TMP)",
+    "TextboxGO": "Textbox",
+    "TextboxSprite": "Textbox/textbox",
+    "TextboxTransform": "Textbox/textbox",
+    "platformHandler": "JumpPlatformHolder",
+    "playYan": "Player",
+    "starHandler": "StarsHolder"
+   },
+   "lists": {
+    "jumpPaths": [
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "Jump"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "Whiff"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 0.5,
+          "height": 0.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "highJump"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.5,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 2,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "platform": {
+   "path": "JumpPlatform",
+   "refs": {
+    "fallYan": "JumpPlatform/playYanFall",
+    "fallYanRoll": "JumpPlatform/playYanFallRoll",
+    "fish": "JumpPlatform/Fish",
+    "platform": "JumpPlatform/platform",
+    "rollPlatform": "JumpPlatform/rollPlatform/RodHolder",
+    "rollPlatformLong": "JumpPlatform/rollPlatform/platform (1)",
+    "rollPlatformLong2": "JumpPlatform/rollPlatform/platform (3)"
+   }
+  },
+  "platformHandler": {
+   "path": "JumpPlatformHolder",
+   "nums": {
+    "defaultYPos": -11.76,
+    "heightAmount": 2,
+    "platformCount": 24,
+    "platformDistance": 3.8,
+    "playerXPos": -6.78,
+    "starHeight": 0.0625,
+    "starLength": 18
+   },
+   "refs": {
+    "platformRef": "JumpPlatform",
+    "starHandler": "StarsHolder"
+   }
+  },
+  "starHandler": {
+   "path": "StarsHolder",
+   "nums": {
+    "blinkAmount": 3,
+    "blinkFrequency": 0.125,
+    "boundaryX": 10,
+    "boundaryY": 6,
+    "starCount": 32
+   },
+   "refs": {
+    "starRef": "Star"
+   }
+  }
+ }
+}

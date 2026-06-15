@@ -124,10 +124,7 @@ func auditGame(dir, game string) report {
 				continue
 			}
 			for _, rel := range animatedPaths(clip) {
-				full := root
-				if rel != "" {
-					full = root + "/" + rel
-				}
+				full := resolveAnimPath(game, root, rel, nodes)
 				r.checkedPaths++
 				if !nodes[full] {
 					r.errs = append(r.errs, fmt.Sprintf(
@@ -140,6 +137,28 @@ func auditGame(dir, game string) report {
 	}
 	sort.Strings(r.errs)
 	return r
+}
+
+func resolveAnimPath(game, root, rel string, nodes map[string]bool) string {
+	full := root
+	if rel != "" {
+		full = root + "/" + rel
+	}
+	if nodes[full] || game != "nightWalkAgb" || !strings.HasPrefix(root, "JumpPlatform/rollPlatform/RodHolder") {
+		return full
+	}
+	// Night Walk GBA reuses JumpPlatform.controller on the roll RodHolder.
+	// Several clips bind sibling paths under JumpPlatform/rollPlatform while
+	// Rod-only curves still resolve below RodHolder, so try the prefab root only
+	// after the normal Animator-root resolution fails.
+	alt := "JumpPlatform"
+	if rel != "" {
+		alt += "/" + rel
+	}
+	if nodes[alt] {
+		return alt
+	}
+	return full
 }
 
 func readJSON(path string, v any) error {

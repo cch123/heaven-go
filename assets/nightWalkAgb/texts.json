@@ -1,0 +1,22 @@
+[
+ {
+  "path": "Textbox/textbox/Text (TMP)",
+  "text": "Let's try to reach the stars before the music ends!",
+  "size": 36,
+  "color": [
+   0.4627451,
+   0.88235295,
+   1,
+   1
+  ],
+  "order": 501,
+  "layer": 0,
+  "font": "FOT-Rodin Pro DB.otf",
+  "rect": [
+   20,
+   5
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]

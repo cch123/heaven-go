@@ -317,6 +317,49 @@ var sceneSpecs = map[string]sceneSpec{
 			}},
 		},
 	},
+	"nightWalkAgb": {
+		dir:       "NightWalkAgb",
+		prefab:    "nightWalkAgb.prefab",
+		wantTexts: true,
+		roleFields: []string{
+			"playYan", "platformHandler", "starHandler",
+			"Text", "TextboxTransform", "TextboxGO", "TextboxSprite",
+		},
+		templatePrefabs: []string{
+			"Prefabs/JumpPlatform.prefab",
+			"Prefabs/Star.prefab",
+		},
+		wantControllers: true,
+		commonSounds: []string{
+			"count-ins/cowbell.wav",
+			"games/nightWalkRvl/highJump1.ogg",
+			"games/nightWalkRvl/highJump2.ogg",
+			"games/nightWalkRvl/highJump3.ogg",
+			"games/nightWalkRvl/highJump4.ogg",
+			"games/nightWalkRvl/highJump5.ogg",
+			"games/nightWalkRvl/highJump6.ogg",
+			"games/nightWalkRvl/highJump7.ogg",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"playYan", "platformHandler", "starHandler",
+				"Text", "TextboxTransform", "TextboxGO", "TextboxSprite",
+				"StarMat", "PlatformMat", "PlatLightMat", "FishMat", "BGMat",
+				"jumpPaths",
+			}},
+			{name: "platformHandler", markers: []string{
+				"platformRef", "starHandler", "defaultYPos", "heightAmount",
+				"platformDistance", "playerXPos", "starLength", "starHeight", "platformCount",
+			}},
+			{name: "platform", markers: []string{
+				"platform", "fallYan", "fallYanRoll", "fish",
+				"rollPlatform", "rollPlatformLong", "rollPlatformLong2",
+			}, atPath: "JumpPlatform"},
+			{name: "starHandler", markers: []string{
+				"starRef", "boundaryX", "boundaryY", "starCount", "blinkFrequency", "blinkAmount",
+			}},
+		},
+	},
 	"samuraiSliceNtr": {
 		dir:    "SamuraiSliceNtr",
 		prefab: "samuraiSliceNtr.prefab",
