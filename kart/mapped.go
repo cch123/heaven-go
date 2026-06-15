@@ -43,6 +43,7 @@ var Outline vec4
 var Add vec4
 var Threshold float
 var Tint vec4
+var Blend vec4
 
 func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	c := imageSrc0At(src)
@@ -54,6 +55,7 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	out.r = abs(Threshold - out.r)
 	out.g = abs(Threshold - out.g)
 	out.b = abs(Threshold - out.b)
+	out.rgb = out.rgb*(1.0-Blend.a) + Blend.rgb*Blend.a
 	out.r *= out.a
 	out.g *= out.a
 	out.b *= out.a
@@ -105,7 +107,7 @@ func (a *Assets) DrawSpriteMapped(dst *ebiten.Image, name string, world, proj Af
 	op.Uniforms = map[string]any{
 		"Alpha": v4(pal.Alpha), "Fill": v4(pal.Fill), "Outline": v4(pal.Outline),
 		"Add": v4(pal.Add), "Threshold": float32(pal.Threshold),
-		"Tint": v4(tint),
+		"Tint": v4(tint), "Blend": v4(o.Blend),
 	}
 	dst.DrawRectShader(sp.W, sp.H, sh, op)
 }

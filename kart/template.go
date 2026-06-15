@@ -476,7 +476,9 @@ type instNodeState struct {
 	active   bool
 	renderOn bool
 	color    [4]float64
+	matColor [4]float64
 	matAdd   [4]float64
+	matBlend [4]float64
 	order    int
 }
 
@@ -557,9 +559,9 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 		e := ExtraSprite{
 			Sprite: st.sprite, World: world[ti], Z: z,
 			Layer: n.Layer, Order: st.order,
-			FlipX: st.flipX, FlipY: st.flipY, Tint: st.color,
+			FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor,
 			Mapped: n.Mapped, Mat: n.Mat,
-			Add: st.matAdd,
+			Add: st.matAdd, Blend: st.matBlend,
 		}
 		if pal, ok := in.palettes[ti]; ok {
 			e.HasPalette = true
@@ -723,6 +725,30 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 					states[ti].matAdd[2] = v
 				case "a":
 					states[ti].matAdd[3] = v
+				}
+			case strings.HasPrefix(attr, "material._Color."):
+				ch := strings.TrimPrefix(attr, "material._Color.")
+				switch ch {
+				case "r":
+					states[ti].matColor[0] = v
+				case "g":
+					states[ti].matColor[1] = v
+				case "b":
+					states[ti].matColor[2] = v
+				case "a":
+					states[ti].matColor[3] = v
+				}
+			case strings.HasPrefix(attr, "material._BlendColor."):
+				ch := strings.TrimPrefix(attr, "material._BlendColor.")
+				switch ch {
+				case "r":
+					states[ti].matBlend[0] = v
+				case "g":
+					states[ti].matBlend[1] = v
+				case "b":
+					states[ti].matBlend[2] = v
+				case "a":
+					states[ti].matBlend[3] = v
 				}
 			}
 		}

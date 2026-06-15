@@ -1,0 +1,73 @@
+{
+ "refArrays": {
+  "justParticles": [
+   "particles/smoke",
+   "particles/smoke (1)",
+   "particles/stars",
+   "particles/stars (1)",
+   "particles/stars (2)",
+   "particles/stars (3)",
+   "particles/smoke (2)",
+   "particles/dust",
+   "particles/dust (1)"
+  ]
+ },
+ "refArrayIdx": {
+  "justParticles": [
+   109,
+   110,
+   114,
+   115,
+   116,
+   117,
+   111,
+   112,
+   113
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "cymbalPitch": 0.98,
+    "cymbalVolume": 0.35,
+    "drumPitch": 1.05,
+    "drumVolume": 0.85
+   },
+   "refs": {
+    "background": "Background/background",
+    "backgroundMaterial": "Background",
+    "rapText": "RapLyrics",
+    "rapperBlue": "BlueWoman",
+    "rapperBlueObj": "BlueWoman",
+    "rapperCherry": "RedWoman",
+    "rapperCherryObj": "RedWoman",
+    "rapperRed": "RedMan",
+    "rapperRedObj": "RedMan",
+    "rapperYellow": "YellowMan",
+    "rapperYellowObj": "YellowMan",
+    "speakerMaterial": "Speaker",
+    "uhnParticle": "particles/UH"
+   },
+   "refArrays": {
+    "gradients": [
+     "",
+     "",
+     "",
+     ""
+    ],
+    "justParticles": [
+     "particles/smoke",
+     "particles/smoke (1)",
+     "particles/stars",
+     "particles/stars (1)",
+     "particles/stars (2)",
+     "particles/stars (3)",
+     "particles/smoke (2)",
+     "particles/dust",
+     "particles/dust (1)"
+    ]
+   }
+  }
+ }
+}

@@ -1,0 +1,22 @@
+[
+ {
+  "path": "RapLyrics",
+  "text": "Yo, oyatsu desu\u003csize=135%\u003eka?",
+  "size": 0.8,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 500,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   4,
+   0.1697
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]

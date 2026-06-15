@@ -297,6 +297,26 @@ var sceneSpecs = map[string]sceneSpec{
 			}},
 		},
 	},
+	"rapMen": {
+		dir:       "RapMen",
+		prefab:    "rapMen.prefab",
+		wantTexts: true,
+		roleFields: []string{
+			"rapperRed", "rapperYellow", "rapperCherry", "rapperBlue",
+			"rapperRedObj", "rapperYellowObj", "rapperCherryObj", "rapperBlueObj",
+			"rapText", "uhnParticle", "background",
+		},
+		refArrayFields:  []string{"justParticles"},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"rapperRed", "rapperYellow", "rapperCherry", "rapperBlue",
+				"rapperRedObj", "rapperYellowObj", "rapperCherryObj", "rapperBlueObj",
+				"rapText", "gradients", "justParticles", "uhnParticle",
+				"backgroundMaterial", "speakerMaterial", "background",
+			}},
+		},
+	},
 	"samuraiSliceNtr": {
 		dir:    "SamuraiSliceNtr",
 		prefab: "samuraiSliceNtr.prefab",

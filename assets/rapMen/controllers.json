@@ -1,0 +1,145 @@
+{
+ "BlueWoman": {
+  "default": "idle",
+  "states": {
+   "bop": {
+    "clip": "Animations/blueWoman/bop",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/blueWoman/idle",
+    "speed": 1
+   },
+   "just": {
+    "clip": "Animations/blueWoman/just",
+    "speed": 1
+   },
+   "miss": {
+    "clip": "Animations/blueWoman/miss",
+    "speed": 1
+   },
+   "prepare": {
+    "clip": "Animations/blueWoman/prepare",
+    "speed": 1
+   }
+  }
+ },
+ "RedRapper": {
+  "default": "idle",
+  "states": {
+   "bop": {
+    "clip": "Animations/red/bop",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/red/idle",
+    "speed": 1
+   },
+   "just": {
+    "clip": "Animations/red/just",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "justEnd",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "justEnd": {
+    "clip": "Animations/red/just",
+    "speed": 1
+   },
+   "kamone": {
+    "clip": "Animations/red/kamone",
+    "speed": 1
+   },
+   "saiko": {
+    "clip": "Animations/red/saiko",
+    "speed": 1
+   },
+   "yo": {
+    "clip": "Animations/red/yo",
+    "speed": 1
+   }
+  }
+ },
+ "RedWoman": {
+  "default": "idle",
+  "states": {
+   "bop": {
+    "clip": "Animations/redWoman/bop",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/redWoman/idle",
+    "speed": 1
+   },
+   "just": {
+    "clip": "Animations/redWoman/just",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "justEnd",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "justEnd": {
+    "clip": "Animations/redWoman/just",
+    "speed": 1
+   },
+   "kamone": {
+    "clip": "Animations/redWoman/kamone",
+    "speed": 1
+   },
+   "saiko": {
+    "clip": "Animations/redWoman/saiko",
+    "speed": 1
+   },
+   "yo": {
+    "clip": "Animations/redWoman/yo",
+    "speed": 1
+   }
+  }
+ },
+ "YellowRapper": {
+  "default": "idle",
+  "states": {
+   "bop": {
+    "clip": "Animations/yellow/bop",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/yellow/idle",
+    "speed": 1
+   },
+   "just": {
+    "clip": "Animations/yellow/just",
+    "speed": 1
+   },
+   "miss": {
+    "clip": "Animations/yellow/miss",
+    "speed": 1
+   },
+   "prepare": {
+    "clip": "Animations/yellow/prepare",
+    "speed": 1
+   }
+  }
+ },
+ "background": {
+  "default": "backgroundMen",
+  "states": {
+   "backgroundMen": {
+    "clip": "Animations/backgroundMen",
+    "speed": 1
+   },
+   "backgroundWomen": {
+    "clip": "Animations/backgroundWomen",
+    "speed": 1
+   }
+  }
+ }
+}

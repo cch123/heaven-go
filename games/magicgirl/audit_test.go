@@ -153,6 +153,7 @@ func checkSupportedAttrs(t *testing.T, clip string, anim *kmdata.Anim) {
 			case "m_Color.r", "m_Color.g", "m_Color.b", "m_Color.a",
 				"material._Color.r", "material._Color.g", "material._Color.b", "material._Color.a",
 				"material._AddColor.r", "material._AddColor.g", "material._AddColor.b", "material._AddColor.a",
+				"material._BlendColor.r", "material._BlendColor.g", "material._BlendColor.b", "material._BlendColor.a",
 				"m_Size.x", "m_Size.y", "m_FlipX", "m_FlipY",
 				"m_SortingOrder", "m_IsActive", "m_Enabled":
 			default:

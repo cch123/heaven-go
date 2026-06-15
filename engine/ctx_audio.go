@@ -40,6 +40,24 @@ func (c *Ctx) SoundPitchPan(name string, vol, pitch, pan float64) {
 	p.Play()
 }
 
+// SoundPitchPanOff 立即播放带音高、声像并跳过开头 offset 秒的音效。
+// Rap Men 的 MultiSound 声线同时依赖 offset 和 panning，不能降级成只支持其一。
+func (c *Ctx) SoundPitchPanOff(name string, vol, pitch, pan, offsetSec float64) {
+	pcm, ok := c.Assets.Sounds[name]
+	if !ok {
+		return
+	}
+	skip := int(offsetSec*float64(SampleRate)) * 4
+	if skip < 0 || skip >= len(pcm) {
+		skip = 0
+	}
+	pcm = kart.ResamplePCM(pcm[skip:], pitch)
+	pcm = kart.PanPCM(pcm, pan)
+	p := audioCtx.NewPlayerFromBytes(pcm)
+	p.SetVolume(vol)
+	p.Play()
+}
+
 // SoundPitchOff 立即播放带音高并跳过开头 offset 秒的音效。
 func (c *Ctx) SoundPitchOff(name string, vol, pitch, offsetSec float64) {
 	pcm, ok := c.Assets.Sounds[name]
@@ -86,6 +104,11 @@ func (c *Ctx) SoundAt(beat float64, name string, vol float64) {
 // SoundAtPitchPan 在指定拍播放带音高和声像的音效。
 func (c *Ctx) SoundAtPitchPan(beat float64, name string, vol, pitch, pan float64) {
 	c.At(beat, func() { c.SoundPitchPan(name, vol, pitch, pan) })
+}
+
+// SoundAtPitchPanOff 在指定拍播放带音高、声像和开头 offset 的音效。
+func (c *Ctx) SoundAtPitchPanOff(beat float64, name string, vol, pitch, pan, offsetSec float64) {
+	c.At(beat, func() { c.SoundPitchPanOff(name, vol, pitch, pan, offsetSec) })
 }
 
 // PlayCommon 播放公共音效（assets/common：miss/nearMiss/count-ins 等）。

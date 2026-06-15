@@ -30,6 +30,7 @@ type sceneNodeState struct {
 	color    [4]float64
 	matColor [4]float64
 	matAdd   [4]float64
+	matBlend [4]float64
 	size     [2]float64 // drawMode != 0 时生效
 	order    int        // sortingOrder（可被动画驱动）
 }
@@ -628,7 +629,9 @@ type ExtraSprite struct {
 	Layer, Order int
 	FlipX, FlipY bool
 	Tint         [4]float64 // 零值视为白色
+	MatColor     [4]float64 // material._Color for queued sprites
 	Add          [4]float64 // material._AddColor for mapped queued sprites
+	Blend        [4]float64 // material._BlendColor for queued sprites
 	Mapped       bool       // 调色板映射材质（SceneInst.SetPalette）
 	Mat          string     // 映射材质名（按名调色板）
 	HasPalette   bool       // true 时 Palette 为实例级 mapped 材质参数
@@ -843,6 +846,30 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				case "a":
 					s.state[i].matAdd[3] = v
 				}
+			case strings.HasPrefix(attr, "material._Color."):
+				ch := strings.TrimPrefix(attr, "material._Color.")
+				switch ch {
+				case "r":
+					s.state[i].matColor[0] = v
+				case "g":
+					s.state[i].matColor[1] = v
+				case "b":
+					s.state[i].matColor[2] = v
+				case "a":
+					s.state[i].matColor[3] = v
+				}
+			case strings.HasPrefix(attr, "material._BlendColor."):
+				ch := strings.TrimPrefix(attr, "material._BlendColor.")
+				switch ch {
+				case "r":
+					s.state[i].matBlend[0] = v
+				case "g":
+					s.state[i].matBlend[1] = v
+				case "b":
+					s.state[i].matBlend[2] = v
+				case "a":
+					s.state[i].matBlend[3] = v
+				}
 			}
 		}
 	}
@@ -934,7 +961,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			if !ok {
 				continue
 			}
-			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint, Add: q.Add}
+			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint, MatColor: q.MatColor, Add: q.Add, Blend: q.Blend}
 			if q.Mapped {
 				pal := s.paletteOf(q.Mat)
 				if q.HasPalette {
@@ -948,7 +975,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		i := it.idx
 		st := &s.state[i]
-		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor, Add: st.matAdd}
+		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend}
 		if s.as.Rig.Nodes[i].DrawMode != 0 {
 			// sliced/tiled：m_Size 是权威尺寸——动画把它压到 0 即等于隐藏
 			//（原版光束收束就是 size.y→0），不能退化成"按原始尺寸绘制"

@@ -544,6 +544,7 @@ type SpriteOpts struct {
 	Tint         [4]float64 // 零值视为白色
 	MatColor     [4]float64 // CellAnime _Color；零值视为白色
 	Add          [4]float64 // CellAnime _AddColor（screen 混合）
+	Blend        [4]float64 // material._BlendColor（命中白闪等 overlay 混色）
 	Stretch      [2]float64 // 非零时拉伸到该尺寸（unit，对应 SpriteRenderer sliced/tiled 的 m_Size）
 }
 
@@ -577,7 +578,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 	if !stretch {
 		local := Scale(fx/ppu, -fy/ppu).
 			Mul(Translate(-sp.PivotX*float64(sp.W), -(1-sp.PivotY)*float64(sp.H)))
-		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add)
+		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend)
 		return
 	}
 
@@ -589,7 +590,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 	bl, bb, br, bt := sp.Border[0], sp.Border[1], sp.Border[2], sp.Border[3]
 	if bl+bb+br+bt == 0 { // 无 border：整体拉伸
 		local := base.Mul(Scale(tw/float64(sp.W), th/float64(sp.H)))
-		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add)
+		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend)
 		return
 	}
 	// 端帽超过目标尺寸时按比例压缩（Unity 同语义）
@@ -620,7 +621,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 			local := base.
 				Mul(Translate(txs[ix], tys[iy])).
 				Mul(Scale(dw/sw, dh/sh))
-			drawCellAnime(dst, sub, proj.Mul(world).Mul(local), tint, matColor, o.Add)
+			drawCellAnime(dst, sub, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend)
 		}
 	}
 }
@@ -633,6 +634,7 @@ package main
 var Tint vec4
 var MatColor vec4
 var Add vec4
+var Blend vec4
 
 func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	tex := imageSrc0At(src)
@@ -640,6 +642,7 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	a := base.a
 	scr := 1.0 - (1.0-Add)*(1.0-base)
 	out := scr * MatColor
+	out.rgb = out.rgb*(1.0-Blend.a) + Blend.rgb*Blend.a
 	out.a = a
 	out.r *= out.a
 	out.g *= out.a
@@ -670,8 +673,8 @@ func drawTinted(dst, img *ebiten.Image, m Aff, tint [4]float64) {
 	dst.DrawImage(img, op)
 }
 
-func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add [4]float64) {
-	if add == [4]float64{} && isWhite(matColor) {
+func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add, blend [4]float64) {
+	if add == [4]float64{} && blend == [4]float64{} && isWhite(matColor) {
 		drawTinted(dst, img, m, tint)
 		return
 	}
@@ -685,6 +688,7 @@ func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add [4]float64
 		"Tint":     v4(tint),
 		"MatColor": v4(matColor),
 		"Add":      v4(add),
+		"Blend":    v4(blend),
 	}
 	b := img.Bounds()
 	dst.DrawRectShader(b.Dx(), b.Dy(), ensureCellAnimeShader(), op)

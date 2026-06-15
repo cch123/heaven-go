@@ -1,0 +1,13 @@
+{
+ "background": "Background/background",
+ "rapText": "RapLyrics",
+ "rapperBlue": "BlueWoman",
+ "rapperBlueObj": "BlueWoman",
+ "rapperCherry": "RedWoman",
+ "rapperCherryObj": "RedWoman",
+ "rapperRed": "RedMan",
+ "rapperRedObj": "RedMan",
+ "rapperYellow": "YellowMan",
+ "rapperYellowObj": "YellowMan",
+ "uhnParticle": "particles/UH"
+}
