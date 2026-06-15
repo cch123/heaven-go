@@ -1,0 +1,76 @@
+{
+ "Elevator": {
+  "default": "Idle",
+  "states": {
+   "Down": {
+    "clip": "Models/ElevatorWithRod/elevator_down",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Models/ElevatorWithRod/elevator_wait",
+    "speed": 1
+   },
+   "MakeRod": {
+    "clip": "Models/ElevatorWithRod/elevator_up",
+    "speed": 1
+   }
+  }
+ },
+ "FlyingRod": {
+  "default": "Fly",
+  "states": {
+   "Fly": {
+    "clip": "Models/FlyingRod/parts_airshot",
+    "speed": 1
+   }
+  }
+ },
+ "HitParts": {
+  "default": "PartsHit",
+  "states": {
+   "PartsHit": {
+    "clip": "PartsHit",
+    "speed": 1
+   }
+  }
+ },
+ "MissParts": {
+  "default": "PartsMiss",
+  "states": {
+   "PartsMiss": {
+    "clip": "Models/MissParts/parts_ng",
+    "speed": 1
+   }
+  }
+ },
+ "MovingBlocks": {
+  "default": "Move",
+  "states": {
+   "Move": {
+    "clip": "Models/MovingBlocks/piece_LR",
+    "speed": 1
+   }
+  }
+ },
+ "Shooter": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Models/Shooter/machine_wait_machine",
+    "speed": 1
+   },
+   "Shoot": {
+    "clip": "Models/Shooter/machine_shot_machine",
+    "speed": 1
+   },
+   "WindDown": {
+    "clip": "Models/Shooter/machine_touch_machine",
+    "speed": -1
+   },
+   "Windup": {
+    "clip": "Models/Shooter/machine_touch_machine",
+    "speed": 1
+   }
+  }
+ }
+}

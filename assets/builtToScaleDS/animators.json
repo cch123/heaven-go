@@ -1,0 +1,8 @@
+{
+ "Game/Models/ElevatorWithRod": "Elevator",
+ "Game/Models/Prefabs/FlyingRod": "FlyingRod",
+ "Game/Models/Prefabs/HitParts": "HitParts",
+ "Game/Models/Prefabs/MissParts": "MissParts",
+ "Game/Models/Prefabs/MovingBlocks": "MovingBlocks",
+ "Game/Models/Shooter": "Shooter"
+}

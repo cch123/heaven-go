@@ -102,6 +102,7 @@ func animNSKey(animRoot, animPath string) string {
 func exportControllers(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64]string) {
 	animDir := spec.animRoot()
 	animGUIDs := scanGUIDs(animDir, ".anim")
+	importedClips := scanImportedClips(bundlePath(spec.dir), spec.importedAnimFPS)
 	ctrlGUIDs := scanGUIDs(animDir, ".controller")
 
 	type ctrlFile struct {
@@ -135,7 +136,7 @@ func exportControllers(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map
 
 	ctrls := map[string]kmdata.Controller{}
 	for _, c := range ctrlFiles {
-		ctrls[ctrlName[c.guid]] = parseController(c.path, animDir, animGUIDs)
+		ctrls[ctrlName[c.guid]] = parseController(c.path, animDir, animGUIDs, importedClips)
 	}
 	writeJSON("controllers.json", ctrls)
 
@@ -165,7 +166,7 @@ func exportControllers(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map
 	fmt.Printf("controllers: %d 个，animator 绑定 %d 处\n", len(ctrls), len(animators))
 }
 
-func parseController(path, animRoot string, animGUIDs map[string]string) kmdata.Controller {
+func parseController(path, animRoot string, animGUIDs map[string]string, importedClips map[string]map[int64]importedClip) kmdata.Controller {
 	raw, err := os.ReadFile(path)
 	must(err)
 	docs, err := uy.Parse(raw)
@@ -212,9 +213,12 @@ func parseController(path, animRoot string, animGUIDs map[string]string) kmdata.
 		case 1102: // AnimatorState
 			name := uy.S(d.content["m_Name"])
 			st := kmdata.CtrlState{Speed: uy.F(d.content["m_Speed"])}
-			if g := uy.S(uy.Get(uy.M(d.content["m_Motion"]), "guid")); g != "" {
+			motion := uy.M(d.content["m_Motion"])
+			if g := uy.S(uy.Get(motion, "guid")); g != "" {
 				if ap, ok := animGUIDs[g]; ok {
 					st.Clip = animNSKey(animRoot, ap)
+				} else if c, ok := importedClips[g][uy.I(motion["fileID"])]; ok {
+					st.Clip = c.Key
 				} else {
 					log.Printf("warn: 状态 %s 的 motion guid %s 无对应 .anim", name, g)
 				}

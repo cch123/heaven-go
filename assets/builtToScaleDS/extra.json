@@ -1,0 +1,69 @@
+{
+ "components": {
+  "blocks": {
+   "path": "Game/Models/Prefabs/MovingBlocks",
+   "nums": {
+    "createBeat": 0,
+    "createLength": 0
+   },
+   "refs": {
+    "anim": "Game/Models/Prefabs/MovingBlocks"
+   }
+  },
+  "flyingRodPiece": {
+   "path": "Game/Models/Prefabs/FlyingRod",
+   "refs": {
+    "anim": "Game/Models/Prefabs/FlyingRod"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "beltSpeed": 4.33,
+    "cameraFoV": 13
+   },
+   "refs": {
+    "beltMaterial": "Belt",
+    "blocksHolder": "Game/Models/BlocksHolder",
+    "camPos": "CameraPivot/CameraPos",
+    "cameraPivot": "CameraPivot",
+    "elevatorAnim": "Game/Models/ElevatorWithRod",
+    "elevatorMaterial": "Grid",
+    "elevatorRenderer": "Game/Models/ElevatorWithRod",
+    "environmentRenderer": "Game/Models/Environment",
+    "flyingRodBase": "Game/Models/Prefabs/FlyingRod",
+    "gridPlaneMaterial": "GridPlane",
+    "hitPartsBase": "Game/Models/Prefabs/HitParts",
+    "missPartsBase": "Game/Models/Prefabs/MissParts",
+    "movingBlocksBase": "Game/Models/Prefabs/MovingBlocks",
+    "objectMaterial": "Object",
+    "partsHolder": "Game/Models/PartsHolder",
+    "shooterAnim": "Game/Models/Shooter",
+    "shooterMaterial": "Shooter"
+   },
+   "refArrays": {
+    "firstPatternLights": [
+     "Lights 3",
+     "Lights 4",
+     "Lights"
+    ],
+    "secondPatternLights": [
+     "Lights 1",
+     "Lights 2"
+    ]
+   }
+  },
+  "hitPartsPiece": {
+   "path": "Game/Models/Prefabs/HitParts",
+   "refs": {
+    "anim": "Game/Models/Prefabs/HitParts"
+   }
+  },
+  "missPartsPiece": {
+   "path": "Game/Models/Prefabs/MissParts",
+   "refs": {
+    "anim": "Game/Models/Prefabs/MissParts"
+   }
+  }
+ }
+}

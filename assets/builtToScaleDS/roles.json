@@ -1,0 +1,12 @@
+{
+ "blocksHolder": "Game/Models/BlocksHolder",
+ "camPos": "CameraPivot/CameraPos",
+ "cameraPivot": "CameraPivot",
+ "elevatorAnim": "Game/Models/ElevatorWithRod",
+ "flyingRodBase": "Game/Models/Prefabs/FlyingRod",
+ "hitPartsBase": "Game/Models/Prefabs/HitParts",
+ "missPartsBase": "Game/Models/Prefabs/MissParts",
+ "movingBlocksBase": "Game/Models/Prefabs/MovingBlocks",
+ "partsHolder": "Game/Models/PartsHolder",
+ "shooterAnim": "Game/Models/Shooter"
+}

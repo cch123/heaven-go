@@ -17,16 +17,19 @@ import (
 )
 
 type sceneSpec struct {
-	dir           string            // Assets/Bundled/Games/<dir>
-	prefab        string            // prefab 文件名
-	spritesDir    string            // 可选：贴图根（默认 Sprites）
-	animsDir      string            // 可选：动画/controller 根（默认 spritesDir）
-	roleFields    []string          // 游戏 MonoBehaviour 中需要解析的 Animator/GameObject 引用字段
-	roleFallbacks map[string]string // stripped prefab 引用无法唯一解析时的显式 path 兜底
+	dir             string            // Assets/Bundled/Games/<dir>
+	prefab          string            // prefab 文件名
+	spritesDir      string            // 可选：贴图根（默认 Sprites）
+	noSprites       bool              // 3D-only 游戏没有 Sprites 目录；仍导出空 sprites.json
+	animsDir        string            // 可选：动画/controller 根（默认 spritesDir）
+	importedAnimFPS float64           // FBX import clip 帧率；0 表示按 Unity 常见 60fps 估算
+	roleFields      []string          // 游戏 MonoBehaviour 中需要解析的 Animator/GameObject 引用字段
+	roleFallbacks   map[string]string // stripped prefab 引用无法唯一解析时的显式 path 兜底
 
 	refArrayFields  []string // 引用数组字段（如对象模板表）
 	strArrayFields  []string // 字符串数组字段（如动画名表）
 	curveFields     []string // BezierCurve3D 引用字段
+	extraScenePaths []string // FBX 内部动画 path 等无法从 YAML hierarchy 暴露的显式补点
 	objMarkers      []string // 识别"对象模板组件"的字段集合（如 MobTrickObj）
 	objRefFields    []string // 模板组件上的单引用字段（→ 节点 path，如 Meat.startPosition）
 	objSpriteFields []string // 模板组件上的 sprite 引用数组字段（→ 切片名，如 Meat.meats）
@@ -971,6 +974,14 @@ func scanMappedMats(root string) map[string]string {
 	return out
 }
 
+func scanMaterialNames(root string) map[string]string {
+	out := map[string]string{}
+	for guid, p := range scanGUIDs(root, ".mat") {
+		out[guid] = strings.TrimSuffix(filepath.Base(p), ".mat")
+	}
+	return out
+}
+
 func extractScene(game string) {
 	spec, ok := sceneSpecs[game]
 	if !ok {
@@ -978,14 +989,15 @@ func extractScene(game string) {
 	}
 	must(os.MkdirAll(filepath.Join(*outDir, "sounds"), 0o755))
 
-	tables := scanSpriteMetas(spec.spriteRoot())
+	tables := scanSceneSpriteMetas(spec)
 	exportSheetMulti(tables)
 	idx, docs := buildPrefabIndex(bundlePath(spec.dir, spec.prefab), spec.templatePrefabs)
 	idx.mappedMats = scanMappedMats(bundlePath(spec.dir))
-	paths, nodeIdx := exportScene(idx, tables)
+	idx.matNames = scanMaterialNames(bundlePath(spec.dir))
+	paths, nodeIdx := exportScene(spec, idx, tables)
 	exportRoles(spec, docs, idx, paths)
 	exportExtra(spec, docs, idx, paths, nodeIdx, tables)
-	exportAnimDir(spec.animRoot(), tables)
+	exportAnimDir(spec, tables)
 	if spec.wantControllers {
 		exportControllers(spec, docs, idx, paths)
 	}
@@ -1012,6 +1024,17 @@ func extractScene(game string) {
 		must(os.WriteFile(dst, b, 0o644))
 	}
 	fmt.Println("done.")
+}
+
+func scanSceneSpriteMetas(spec sceneSpec) map[string]*spriteTable {
+	root := spec.spriteRoot()
+	if spec.noSprites {
+		if _, err := os.Stat(root); os.IsNotExist(err) {
+			fmt.Printf("scanned 0 sprite metas (no Sprites directory for %s)\n", spec.dir)
+			return map[string]*spriteTable{}
+		}
+	}
+	return scanSpriteMetas(root)
 }
 
 func (s sceneSpec) spriteRoot() string {
@@ -1136,7 +1159,32 @@ func buildPrefabIndex(prefabPath string, templatePrefabs []string) (*prefabIndex
 			idx.maskByGO[gid] = c
 		}
 	}
+	idx.rebuildChildren()
 	return idx, dt
+}
+
+func (idx *prefabIndex) rebuildChildren() {
+	for childID, tf := range idx.tfByID {
+		parentID := uy.I(uy.Get(tf, "m_Father", "fileID"))
+		if parentID == 0 {
+			continue
+		}
+		parent := idx.tfByID[parentID]
+		if parent == nil {
+			continue
+		}
+		kids := uy.L(parent["m_Children"])
+		found := false
+		for _, kv := range kids {
+			if uy.I(uy.Get(uy.M(kv), "fileID")) == childID {
+				found = true
+				break
+			}
+		}
+		if !found {
+			parent["m_Children"] = append(kids, map[string]any{"fileID": childID})
+		}
+	}
 }
 
 func appendTemplatePrefabs(mainDocs []uy.Doc, gameDir string, rels []string, prefabGUIDs map[string]string) []uy.Doc {
@@ -1245,17 +1293,29 @@ func findSceneRootTF(docs []uy.Doc) int64 {
 
 // exportScene 导出整棵节点树，返回 GameObject fileID → 节点 path（供 roles 解析）
 // 与 GameObject fileID → 节点下标（path 重名时按下标寻址）。
-func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]string, map[int64]int) {
+func exportScene(spec sceneSpec, idx *prefabIndex, tables map[string]*spriteTable) (map[int64]string, map[int64]int) {
 	// 根 Transform：m_Father 不在本 prefab 内
 	var rootTF map[string]any
 	for tfID, tf := range idx.tfByID {
 		father := uy.I(uy.Get(tf, "m_Father", "fileID"))
-		if father == 0 || idx.tfByID[father] == nil {
+		if father == 0 {
 			if rootTF != nil {
 				log.Printf("warn: multiple root transforms, keeping first (extra &%d)", tfID)
 				continue
 			}
 			rootTF = tf
+		}
+	}
+	if rootTF == nil {
+		for tfID, tf := range idx.tfByID {
+			father := uy.I(uy.Get(tf, "m_Father", "fileID"))
+			if father != 0 && idx.tfByID[father] == nil {
+				if rootTF != nil {
+					log.Printf("warn: multiple missing-parent root transforms, keeping first (extra &%d)", tfID)
+					continue
+				}
+				rootTF = tf
+			}
 		}
 	}
 	if rootTF == nil {
@@ -1265,6 +1325,7 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]st
 	scene := &kmdata.Rig{}
 	paths := map[int64]string{}
 	nodeIdx := map[int64]int{}
+	pathIdx := map[string]int{}
 	var walk func(tf map[string]any, parent int, path string)
 	walk = func(tf map[string]any, parent int, path string) {
 		gid := uy.I(uy.Get(tf, "m_GameObject", "fileID"))
@@ -1325,6 +1386,7 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]st
 		}
 		self := len(scene.Nodes)
 		nodeIdx[gid] = self
+		pathIdx[path] = self
 		scene.Nodes = append(scene.Nodes, n)
 
 		for _, cv := range uy.L(tf["m_Children"]) {
@@ -1342,9 +1404,37 @@ func exportScene(idx *prefabIndex, tables map[string]*spriteTable) (map[int64]st
 		}
 	}
 	walk(rootTF, -1, "")
+	for _, p := range spec.extraScenePaths {
+		ensureSyntheticScenePath(scene, pathIdx, p)
+	}
 	writeJSON("scene.json", scene)
 	fmt.Printf("scene: %d nodes\n", len(scene.Nodes))
 	return paths, nodeIdx
+}
+
+func ensureSyntheticScenePath(scene *kmdata.Rig, pathIdx map[string]int, path string) int {
+	if i, ok := pathIdx[path]; ok {
+		return i
+	}
+	parentPath := ""
+	name := path
+	if cut := strings.LastIndex(path, "/"); cut >= 0 {
+		parentPath = path[:cut]
+		name = path[cut+1:]
+	}
+	parent := -1
+	if parentPath != "" {
+		parent = ensureSyntheticScenePath(scene, pathIdx, parentPath)
+	}
+	i := len(scene.Nodes)
+	scene.Nodes = append(scene.Nodes, kmdata.Node{
+		Name:   name,
+		Path:   path,
+		Parent: parent,
+		Scale:  [2]float64{1, 1},
+	})
+	pathIdx[path] = i
+	return i
 }
 
 // ---------- roles ----------
@@ -1556,7 +1646,7 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 	for _, f := range spec.refArrayFields {
 		for _, rv := range uy.L(script[f]) {
 			fid := uy.I(uy.Get(uy.M(rv), "fileID"))
-			if mname, isMat := idx.mappedMats[uy.S(uy.Get(uy.M(rv), "guid"))]; isMat {
+			if mname, isMat := idx.matNames[uy.S(uy.Get(uy.M(rv), "guid"))]; isMat {
 				extra.RefArrays[f] = append(extra.RefArrays[f], mname)
 				extra.RefArrayIdx[f] = append(extra.RefArrayIdx[f], -1)
 				continue
@@ -1701,14 +1791,14 @@ func exportExtra(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int64
 			case cs.multi:
 				for i, h := range hits {
 					key := fmt.Sprintf("%s%d", cs.name, i)
-					extra.Components[key] = dumpComponent(dt, paths, tables, idx.mappedMats, h.p, h.content)
+					extra.Components[key] = dumpComponent(dt, paths, tables, idx.matNames, h.p, h.content)
 					exportComponentCurves(extra, dt, idx, key, cs.curveFields, cs.curveArrayFields, h.content)
 				}
 			default:
 				if len(hits) > 1 {
 					log.Printf("warn: 组件 %s 匹配 %d 个，保留 path 最小者 %q（用 atPath/multi 限定）", cs.name, len(hits), hits[0].p)
 				}
-				extra.Components[cs.name] = dumpComponent(dt, paths, tables, idx.mappedMats, hits[0].p, hits[0].content)
+				extra.Components[cs.name] = dumpComponent(dt, paths, tables, idx.matNames, hits[0].p, hits[0].content)
 				exportComponentCurves(extra, dt, idx, cs.name, cs.curveFields, cs.curveArrayFields, hits[0].content)
 			}
 		}
@@ -1934,7 +2024,69 @@ func scalarStructArray(items []any) bool {
 // Arisa/FacePoser/MouthA 与 BackDancers/FacePoser/MouthA），因此每个剪辑
 // 都以动画根相对路径为命名空间 key；文件名全局唯一时再额外写裸名 key
 // （向后兼容只有单 Animator 的游戏）。
-func exportAnimDir(dir string, tables map[string]*spriteTable) {
+type importedClip struct {
+	Key      string
+	Duration float64
+	Loop     bool
+}
+
+func scanImportedClips(root string, fps float64) map[string]map[int64]importedClip {
+	if fps <= 0 {
+		fps = 60
+	}
+	out := map[string]map[int64]importedClip{}
+	_ = filepath.WalkDir(root, func(p string, d os.DirEntry, err error) error {
+		if err != nil || d.IsDir() || !strings.HasSuffix(p, ".fbx.meta") {
+			return err
+		}
+		raw, err := os.ReadFile(p)
+		if err != nil {
+			return err
+		}
+		m, err := uy.ParseSingle(raw)
+		if err != nil {
+			return fmt.Errorf("%s: %w", p, err)
+		}
+		guid := uy.S(m["guid"])
+		if guid == "" {
+			return nil
+		}
+		fbxPath := strings.TrimSuffix(p, ".meta")
+		rel, err := filepath.Rel(root, fbxPath)
+		if err != nil {
+			rel = filepath.Base(fbxPath)
+		}
+		rel = strings.TrimSuffix(filepath.ToSlash(rel), ".fbx")
+		for _, cv := range uy.L(uy.Get(m, "ModelImporter", "animations", "clipAnimations")) {
+			c := uy.M(cv)
+			id := uy.I(c["internalID"])
+			if id == 0 {
+				continue
+			}
+			name := uy.S(c["name"])
+			if name == "" {
+				name = fmt.Sprintf("clip_%d", id)
+			}
+			dur := (uy.F(c["lastFrame"]) - uy.F(c["firstFrame"])) / fps
+			if dur < 0 {
+				dur = 0
+			}
+			if out[guid] == nil {
+				out[guid] = map[int64]importedClip{}
+			}
+			out[guid][id] = importedClip{
+				Key:      rel + "/" + name,
+				Duration: dur,
+				Loop:     uy.I(c["loopTime"]) != 0,
+			}
+		}
+		return nil
+	})
+	return out
+}
+
+func exportAnimDir(spec sceneSpec, tables map[string]*spriteTable) {
+	dir := spec.animRoot()
 	type clipFile struct {
 		base, nsKey string
 		clip        *kmdata.Anim
@@ -1973,11 +2125,19 @@ func exportAnimDir(dir string, tables map[string]*spriteTable) {
 			fmt.Printf("anim %q 有 %d 个同名文件，仅按命名空间 key 导出（如 %q）\n", c.base, baseCount[c.base], c.nsKey)
 		}
 	}
+	imported := scanImportedClips(bundlePath(spec.dir), spec.importedAnimFPS)
+	importedCount := 0
+	for _, byID := range imported {
+		for _, c := range byID {
+			anims[c.Key] = &kmdata.Anim{Duration: c.Duration, Loop: c.Loop}
+			importedCount++
+		}
+	}
 	if *game == "bossaNova" {
 		fixBossaNovaAnimPaths(anims)
 	}
 	writeJSON("anims.json", anims)
-	fmt.Printf("anims: %d clip files\n", len(clips))
+	fmt.Printf("anims: %d clip files, %d imported clips\n", len(clips), importedCount)
 }
 
 func fixBossaNovaAnimPaths(anims map[string]*kmdata.Anim) {

@@ -1,0 +1,949 @@
+{
+ "nodes": [
+  {
+   "name": "builtToScaleDS",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Game",
+   "path": "Game",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Models",
+   "path": "Game/Models",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.01,
+    0.01
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ElevatorWithRod",
+   "path": "Game/Models/ElevatorWithRod",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Divider",
+   "path": "Game/Models/ElevatorWithRod/Divider",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -0.045,
+   "rotZ": 0,
+   "scale": [
+    0.092,
+    0.003
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Environment",
+   "path": "Game/Models/Environment",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Planes",
+   "path": "Game/Models/Environment/Planes",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane",
+   "path": "Game/Models/Environment/Planes/Plane",
+   "parent": 6,
+   "pos": [
+    672,
+    96
+   ],
+   "z": -216,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (1)",
+   "path": "Game/Models/Environment/Planes/Plane (1)",
+   "parent": 6,
+   "pos": [
+    672,
+    96
+   ],
+   "z": 432,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (2)",
+   "path": "Game/Models/Environment/Planes/Plane (2)",
+   "parent": 6,
+   "pos": [
+    -672,
+    96
+   ],
+   "z": -216,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (3)",
+   "path": "Game/Models/Environment/Planes/Plane (3)",
+   "parent": 6,
+   "pos": [
+    -672,
+    96
+   ],
+   "z": 432,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (4)",
+   "path": "Game/Models/Environment/Planes/Plane (4)",
+   "parent": 6,
+   "pos": [
+    672,
+    96
+   ],
+   "z": 864,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (5)",
+   "path": "Game/Models/Environment/Planes/Plane (5)",
+   "parent": 6,
+   "pos": [
+    -672,
+    96
+   ],
+   "z": 864,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (6)",
+   "path": "Game/Models/Environment/Planes/Plane (6)",
+   "parent": 6,
+   "pos": [
+    0,
+    96
+   ],
+   "z": 864,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (7)",
+   "path": "Game/Models/Environment/Planes/Plane (7)",
+   "parent": 6,
+   "pos": [
+    672,
+    96
+   ],
+   "z": -888,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (8)",
+   "path": "Game/Models/Environment/Planes/Plane (8)",
+   "parent": 6,
+   "pos": [
+    -672,
+    96
+   ],
+   "z": -888,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane (9)",
+   "path": "Game/Models/Environment/Planes/Plane (9)",
+   "parent": 6,
+   "pos": [
+    0,
+    96
+   ],
+   "z": -888,
+   "rotZ": 0,
+   "scale": [
+    67.2,
+    100
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shooter",
+   "path": "Game/Models/Shooter",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Prefabs",
+   "path": "Game/Models/Prefabs",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MovingBlocks",
+   "path": "Game/Models/Prefabs/MovingBlocks",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FlyingRod",
+   "path": "Game/Models/Prefabs/FlyingRod",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Divider",
+   "path": "Game/Models/Prefabs/FlyingRod/Divider",
+   "parent": 20,
+   "pos": [
+    0,
+    0.06
+   ],
+   "z": -0.119999915,
+   "rotZ": 3.141592651967699,
+   "scale": [
+    0.09199999,
+    0.0030000003
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HitParts",
+   "path": "Game/Models/Prefabs/HitParts",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pings",
+   "path": "Game/Models/Prefabs/HitParts/Pings",
+   "parent": 22,
+   "pos": [
+    0,
+    65
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PingEffect",
+   "path": "Game/Models/Prefabs/HitParts/Pings/PingEffect",
+   "parent": 23,
+   "pos": [
+    -8.5,
+    5.199997
+   ],
+   "rotZ": 0,
+   "scale": [
+    85,
+    85
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PingEffect (1)",
+   "path": "Game/Models/Prefabs/HitParts/Pings/PingEffect (1)",
+   "parent": 23,
+   "pos": [
+    8.5,
+    5.199997
+   ],
+   "rotZ": 0,
+   "scale": [
+    -85,
+    85
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Divider",
+   "path": "Game/Models/Prefabs/HitParts/Divider",
+   "parent": 22,
+   "pos": [
+    0,
+    0.06
+   ],
+   "z": -0.119999915,
+   "rotZ": 3.141592651967699,
+   "scale": [
+    0.24499999,
+    0.007000001
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MissParts",
+   "path": "Game/Models/Prefabs/MissParts",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PartsHolder",
+   "path": "Game/Models/PartsHolder",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlocksHolder",
+   "path": "Game/Models/BlocksHolder",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraPivot",
+   "path": "CameraPivot",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraPos",
+   "path": "CameraPivot/CameraPos",
+   "parent": 30,
+   "pos": [
+    3.35,
+    5.205
+   ],
+   "z": 5.75,
+   "rotZ": 1.7328060068474191,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Directional Light",
+   "path": "CameraPivot/CameraPos/Directional Light",
+   "parent": 31,
+   "pos": [
+    -1.0356874,
+    3.4682605
+   ],
+   "z": 6.327768,
+   "rotZ": -2.4499182661281074,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "parts_ok",
+   "path": "Game/Models/Prefabs/HitParts/parts_ok",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "parts",
+   "path": "Game/Models/Prefabs/HitParts/parts_ok/parts",
+   "parent": 33,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "effect00",
+   "path": "Game/Models/Prefabs/HitParts/parts_ok/parts/effect00",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "effect03",
+   "path": "Game/Models/Prefabs/HitParts/parts_ok/parts/effect03",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

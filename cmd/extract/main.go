@@ -239,6 +239,7 @@ type prefabIndex struct {
 	maskByGO  map[int64]map[string]any // GameObject → SpriteMask（classID 331）          // GameObject fileID → SortingGroup [layer, order]
 
 	mappedMats map[string]string // 调色板映射材质 guid → 文件主名（scene 模式填充）
+	matNames   map[string]string // 所有材质 guid → 文件主名（组件字段/数组引用用）
 }
 
 // xAff 是提取器内部的 2D 仿射（与 kart.Aff 同布局）。

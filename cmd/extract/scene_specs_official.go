@@ -77,7 +77,41 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 	"bonOdori":        basicOfficialSceneSpec("BonOdori", "bonOdori.prefab"),
 	"bossaNova":       basicOfficialSceneSpec("BossaNova", "bossaNova.prefab"),
 	"bouncyRoad":      basicOfficialSceneSpec("BouncyRoad", "bouncyRoad.prefab"),
-	"builtToScaleDS":  basicOfficialSceneSpec("BuiltToScaleDS", "builtToScaleDS.prefab"),
+	"builtToScaleDS": {
+		dir:             "BuiltToScaleDS",
+		prefab:          "builtToScaleDS.prefab",
+		noSprites:       true,
+		animsDir:        "Models/Animations",
+		importedAnimFPS: 24,
+		roleFields: []string{
+			"camPos", "cameraPivot", "flyingRodBase", "movingBlocksBase",
+			"hitPartsBase", "missPartsBase", "partsHolder", "blocksHolder",
+			"shooterAnim", "elevatorAnim",
+		},
+		extraScenePaths: []string{
+			"Game/Models/Prefabs/HitParts/parts_ok",
+			"Game/Models/Prefabs/HitParts/parts_ok/parts",
+			"Game/Models/Prefabs/HitParts/parts_ok/parts/effect00",
+			"Game/Models/Prefabs/HitParts/parts_ok/parts/effect03",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"camPos", "cameraFoV", "cameraPivot", "environmentRenderer",
+				"elevatorRenderer", "flyingRodBase", "movingBlocksBase",
+				"hitPartsBase", "missPartsBase", "partsHolder", "blocksHolder",
+				"shooterAnim", "elevatorAnim", "shooterMaterial", "objectMaterial",
+				"gridPlaneMaterial", "elevatorMaterial", "beltMaterial",
+				"firstPatternLights", "secondPatternLights", "beltSpeed",
+			}},
+			{name: "blocks", markers: []string{
+				"createBeat", "createLength", "anim",
+			}, atPath: "Game/Models/Prefabs/MovingBlocks"},
+			{name: "flyingRodPiece", markers: []string{"anim"}, atPath: "Game/Models/Prefabs/FlyingRod"},
+			{name: "hitPartsPiece", markers: []string{"anim"}, atPath: "Game/Models/Prefabs/HitParts"},
+			{name: "missPartsPiece", markers: []string{"anim"}, atPath: "Game/Models/Prefabs/MissParts"},
+		},
+	},
 	"builtToScaleRvl": {
 		dir:    "BuiltToScaleRvl",
 		prefab: "builtToScaleRvl.prefab",
