@@ -1,0 +1,27 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "HighCameraHeight": 11,
+    "monkeyHighColour.a": 1,
+    "monkeyHighColour.b": 1,
+    "monkeyHighColour.g": 0.9843137,
+    "monkeyHighColour.r": 0.6666667,
+    "monkeyNrmColour.a": 1,
+    "monkeyNrmColour.b": 0.07450981,
+    "monkeyNrmColour.g": 0.91764706,
+    "monkeyNrmColour.r": 0.9137255
+   },
+   "refs": {
+    "BalloonsEffect": "Balloons",
+    "Bed": "Bed",
+    "BgAnimator": "Bg",
+    "Castle": "Bg/castle",
+    "Mako": "Mako_Root",
+    "MonkeyPrefab": "Monkey",
+    "SpawnRoot": "Spawn_Root"
+   }
+  }
+ }
+}

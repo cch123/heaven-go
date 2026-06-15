@@ -1,0 +1,2235 @@
+{
+ "nodes": [
+  {
+   "name": "pajamaParty",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraPos",
+   "path": "CameraPos",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -10,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Spawn_Root",
+   "path": "Spawn_Root",
+   "parent": 0,
+   "pos": [
+    0,
+    -2.582
+   ],
+   "z": -2.5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ref",
+   "path": "Ref",
+   "parent": 0,
+   "pos": [
+    0.031,
+    -1.306
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj02_45",
+   "order": 80,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.62352943
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "Balloons",
+   "path": "Balloons",
+   "parent": 0,
+   "pos": [
+    8.5,
+    -15
+   ],
+   "z": -3,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mako_Root",
+   "path": "Mako_Root",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.4
+   ],
+   "z": -2.5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    10
+   ]
+  },
+  {
+   "name": "Mako",
+   "path": "Mako_Root/Mako",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Mako_Root/Mako/Head",
+   "parent": 6,
+   "pos": [
+    -0.048,
+    1.042
+   ],
+   "rotZ": 0.2513273209507615,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_2",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    1.54
+   ]
+  },
+  {
+   "name": "HeadAttach",
+   "path": "Mako_Root/Mako/Head/HeadAttach",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.045,
+    0.76
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "Mako_Root/Mako/ArmL",
+   "parent": 6,
+   "pos": [
+    0.573,
+    0.194
+   ],
+   "rotZ": 0.05550138190838541,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_5",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    0.99
+   ]
+  },
+  {
+   "name": "ArmAttatch",
+   "path": "Mako_Root/Mako/ArmL/ArmAttatch",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    0.54
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "Mako_Root/Mako/ArmR",
+   "parent": 6,
+   "pos": [
+    -0.16,
+    0.081
+   ],
+   "rotZ": -0.3124137619245322,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_4",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    0.92
+   ]
+  },
+  {
+   "name": "ArmAttatch",
+   "path": "Mako_Root/Mako/ArmR/ArmAttatch",
+   "parent": 11,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.63,
+    0.92
+   ]
+  },
+  {
+   "name": "BodyNoStretch",
+   "path": "Mako_Root/Mako/BodyNoStretch",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.39,
+    1.64
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Mako_Root/Mako/Body",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 1,
+   "size": [
+    1.39,
+    1.64
+   ]
+  },
+  {
+   "name": "BodyAttatch",
+   "path": "Mako_Root/Mako/Body/BodyAttatch",
+   "parent": 14,
+   "pos": [
+    0.158,
+    0.2
+   ],
+   "rotZ": -0.9948374843742102,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_3",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.86
+   ]
+  },
+  {
+   "name": "Leg",
+   "path": "Mako_Root/Mako/Leg",
+   "parent": 6,
+   "pos": [
+    -0.02,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_8",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    1.2
+   ]
+  },
+  {
+   "name": "LegOther",
+   "path": "Mako_Root/Mako/LegOther",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.59
+   ]
+  },
+  {
+   "name": "FootR",
+   "path": "Mako_Root/Mako/FootR",
+   "parent": 6,
+   "pos": [
+    -0.6753,
+    -1.189
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_9",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.67,
+    0.64
+   ]
+  },
+  {
+   "name": "FootAttatch",
+   "path": "Mako_Root/Mako/FootR/FootAttatch",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.39,
+    0.78
+   ]
+  },
+  {
+   "name": "FootL",
+   "path": "Mako_Root/Mako/FootL",
+   "parent": 6,
+   "pos": [
+    0.6753,
+    -1.189
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_9",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.67,
+    0.64
+   ]
+  },
+  {
+   "name": "FootAttatch",
+   "path": "Mako_Root/Mako/FootL/FootAttatch",
+   "parent": 20,
+   "pos": [
+    -1.3506,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.29,
+    1.23
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Mako_Root/Shadow",
+   "parent": 5,
+   "pos": [
+    0,
+    -1.1820002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.65,
+    1
+   ],
+   "sprite": "pillow_obj_1",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    0.3137255
+   ],
+   "size": [
+    1.07,
+    0.46
+   ]
+  },
+  {
+   "name": "Pillow_Root",
+   "path": "Mako_Root/Pillow_Root",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mako_Pillow",
+   "path": "Mako_Root/Pillow_Root/Mako_Pillow",
+   "parent": 23,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_0",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.16,
+    0.85
+   ]
+  },
+  {
+   "name": "Bg",
+   "path": "Bg",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -2
+   ]
+  },
+  {
+   "name": "Clouds",
+   "path": "Bg/Clouds",
+   "parent": 25,
+   "pos": [
+    20,
+    2
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "castle",
+   "path": "Bg/castle",
+   "parent": 25,
+   "pos": [
+    0,
+    2.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.25,
+    2.25
+   ],
+   "sprite": "pillow_half_half_16",
+   "order": -10,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.82,
+    2.55
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Bg/castle/Square",
+   "parent": 27,
+   "pos": [
+    0,
+    -2
+   ],
+   "rotZ": 0,
+   "scale": [
+    10,
+    2
+   ],
+   "order": -10,
+   "hidden": true,
+   "color": [
+    0.8078432,
+    1,
+    0.5921569,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "DV",
+   "path": "Bg/DV",
+   "parent": 25,
+   "pos": [
+    0,
+    8.8
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    50,
+    6
+   ],
+   "sprite": "pillow_half_half_22",
+   "order": -200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "DV (1)",
+   "path": "Bg/DV/DV (1)",
+   "parent": 29,
+   "pos": [
+    0,
+    3.739
+   ],
+   "z": -18.813,
+   "rotZ": 0,
+   "scale": [
+    1,
+    -5
+   ],
+   "sprite": "pillow_half_half_22",
+   "order": -200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "DV (2)",
+   "path": "Bg/DV/DV (2)",
+   "parent": 29,
+   "pos": [
+    0,
+    -3.75835
+   ],
+   "z": -75,
+   "rotZ": 0,
+   "scale": [
+    1,
+    20
+   ],
+   "sprite": "pillow_half_half_22",
+   "order": -200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Bound",
+   "path": "Bg/Bound",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    18,
+    10.8
+   ],
+   "order": -3000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "SlideL",
+   "path": "Bg/SlideL",
+   "parent": 25,
+   "pos": [
+    -26.6,
+    5.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "pillow_half_half_4",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    27,
+    12
+   ]
+  },
+  {
+   "name": "pillow_half_half_5",
+   "path": "Bg/SlideL/pillow_half_half_5",
+   "parent": 33,
+   "pos": [
+    0,
+    -4.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.14,
+    1.14
+   ],
+   "sprite": "pillow_half_half_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    23.69,
+    0.5
+   ]
+  },
+  {
+   "name": "SlideR",
+   "path": "Bg/SlideR",
+   "parent": 25,
+   "pos": [
+    26.6,
+    5.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "pillow_half_half_4",
+   "order": -5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    27,
+    12
+   ]
+  },
+  {
+   "name": "pillow_half_half_5",
+   "path": "Bg/SlideR/pillow_half_half_5",
+   "parent": 35,
+   "pos": [
+    0,
+    -4.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.14,
+    1.14
+   ],
+   "sprite": "pillow_half_half_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    23.69,
+    0.5
+   ]
+  },
+  {
+   "name": "Ground",
+   "path": "Bg/Ground",
+   "parent": 25,
+   "pos": [
+    0,
+    -22.11
+   ],
+   "z": -17.68,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "pillow_half_half_2",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    53.5,
+    25
+   ]
+  },
+  {
+   "name": "Carpet",
+   "path": "Bg/Carpet",
+   "parent": 25,
+   "pos": [
+    0.29,
+    -9
+   ],
+   "z": -3.65,
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    3,
+    3
+   ],
+   "sprite": "pillow_half_half_23",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.14,
+    5.79
+   ]
+  },
+  {
+   "name": "pillow_half_half_23 (1)",
+   "path": "Bg/Carpet/pillow_half_half_23 (1)",
+   "parent": 38,
+   "pos": [
+    0,
+    -0.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_half_half_23",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    3.14,
+    5.3
+   ]
+  },
+  {
+   "name": "GroundPillow",
+   "path": "Bg/GroundPillow",
+   "parent": 25,
+   "pos": [
+    20,
+    -5
+   ],
+   "z": -3,
+   "rotZ": 0,
+   "scale": [
+    2.67,
+    2.67
+   ],
+   "sprite": "pillow_half_half_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.04,
+    2.16
+   ]
+  },
+  {
+   "name": "Door",
+   "path": "Bg/Door",
+   "parent": 25,
+   "pos": [
+    17.8,
+    4.9677
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.24,
+    2.24
+   ],
+   "sprite": "pillow_half_half_15",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.74,
+    8.42
+   ]
+  },
+  {
+   "name": "Lamp",
+   "path": "Bg/Lamp",
+   "parent": 25,
+   "pos": [
+    10.59,
+    1.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "pillow_half_half_14",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.51,
+    6.59
+   ]
+  },
+  {
+   "name": "Paintings",
+   "path": "Bg/Paintings",
+   "parent": 25,
+   "pos": [
+    8.334443,
+    6.9705977
+   ],
+   "z": -186.51025,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mid",
+   "path": "Bg/Paintings/Mid",
+   "parent": 43,
+   "pos": [
+    -11.76644,
+    0.1434021
+   ],
+   "z": 186.5103,
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "pillow_half_half_30",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.23,
+    3.07
+   ]
+  },
+  {
+   "name": "RUp",
+   "path": "Bg/Paintings/RUp",
+   "parent": 43,
+   "pos": [
+    -4.867443,
+    3.513402
+   ],
+   "z": 186.5103,
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "pillow_half_half_29",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.47,
+    1.88
+   ]
+  },
+  {
+   "name": "RDown",
+   "path": "Bg/Paintings/RDown",
+   "parent": 43,
+   "pos": [
+    -2.32,
+    -3.265
+   ],
+   "z": 186.5103,
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1.76,
+    -1.1
+   ],
+   "sprite": "pillow_half_half_29",
+   "order": -2,
+   "color": [
+    1,
+    0.9009434,
+    1,
+    1
+   ],
+   "size": [
+    1.47,
+    1.88
+   ]
+  },
+  {
+   "name": "Left",
+   "path": "Bg/Paintings/Left",
+   "parent": 43,
+   "pos": [
+    -17.55,
+    -3.04
+   ],
+   "z": 186.5103,
+   "rotZ": 0,
+   "scale": [
+    1.76,
+    1.32
+   ],
+   "sprite": "pillow_half_half_29",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    0.6666667,
+    1
+   ],
+   "size": [
+    1.47,
+    1.88
+   ]
+  },
+  {
+   "name": "Cabinet",
+   "path": "Bg/Cabinet",
+   "parent": 25,
+   "pos": [
+    -17,
+    4.75
+   ],
+   "z": -1,
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "pillow_half_half_3",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.55,
+    6.06
+   ]
+  },
+  {
+   "name": "Clock",
+   "path": "Bg/Clock",
+   "parent": 25,
+   "pos": [
+    -13,
+    -1.5
+   ],
+   "z": -2.5,
+   "rotZ": 0,
+   "scale": [
+    2.4312623,
+    2.4312623
+   ],
+   "sprite": "pillow_half_half_0",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.67,
+    2.67
+   ]
+  },
+  {
+   "name": "WallL",
+   "path": "Bg/WallL",
+   "parent": 25,
+   "pos": [
+    -53.5,
+    5.5
+   ],
+   "z": -30,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "pillow_half_half_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    30,
+    12
+   ]
+  },
+  {
+   "name": "pillow_half_half_5",
+   "path": "Bg/WallL/pillow_half_half_5",
+   "parent": 50,
+   "pos": [
+    -2.1,
+    -4.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.14,
+    1.14
+   ],
+   "sprite": "pillow_half_half_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    30,
+    0.5
+   ]
+  },
+  {
+   "name": "WallR",
+   "path": "Bg/WallR",
+   "parent": 25,
+   "pos": [
+    53.5,
+    5.5
+   ],
+   "z": -30,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "pillow_half_half_4",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    30,
+    12
+   ]
+  },
+  {
+   "name": "pillow_half_half_5",
+   "path": "Bg/WallR/pillow_half_half_5",
+   "parent": 52,
+   "pos": [
+    2.1,
+    -4.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.14,
+    1.14
+   ],
+   "sprite": "pillow_half_half_5",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    30,
+    0.5
+   ]
+  },
+  {
+   "name": "Floats",
+   "path": "Bg/Floats",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -55
+   ]
+  },
+  {
+   "name": "pillow_half_half_13",
+   "path": "Bg/Floats/pillow_half_half_13",
+   "parent": 54,
+   "pos": [
+    -4,
+    11.5
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    1.25,
+    1.25
+   ],
+   "sprite": "pillow_half_half_13",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.68,
+    0.87
+   ]
+  },
+  {
+   "name": "pillow_half_half_6",
+   "path": "Bg/Floats/pillow_half_half_6",
+   "parent": 54,
+   "pos": [
+    -2.5,
+    12
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "pillow_half_half_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.87
+   ]
+  },
+  {
+   "name": "pillow_half_half_11",
+   "path": "Bg/Floats/pillow_half_half_11",
+   "parent": 54,
+   "pos": [
+    -1,
+    11.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "pillow_half_half_11",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.87
+   ]
+  },
+  {
+   "name": "pillow_half_half_24",
+   "path": "Bg/Floats/pillow_half_half_24",
+   "parent": 54,
+   "pos": [
+    2.5,
+    12.5
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "pillow_half_half_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.66,
+    1.85
+   ]
+  },
+  {
+   "name": "Boats",
+   "path": "Bg/Boats",
+   "parent": 25,
+   "pos": [
+    12,
+    0
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -51
+   ]
+  },
+  {
+   "name": "boatM",
+   "path": "Bg/Boats/boatM",
+   "parent": 59,
+   "pos": [
+    0,
+    2.5
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_half_half_8",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    2.86,
+    2.34
+   ]
+  },
+  {
+   "name": "boatY",
+   "path": "Bg/Boats/boatY",
+   "parent": 59,
+   "pos": [
+    4,
+    4
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_half_half_8",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    2.86,
+    2.34
+   ]
+  },
+  {
+   "name": "boatC",
+   "path": "Bg/Boats/boatC",
+   "parent": 59,
+   "pos": [
+    8,
+    2.5
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_half_half_8",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    0,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.86,
+    2.34
+   ]
+  },
+  {
+   "name": "Bed",
+   "path": "Bed",
+   "parent": 0,
+   "pos": [
+    0,
+    0.25
+   ],
+   "z": -3,
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "pillow_half_half_31",
+   "path": "Bed/pillow_half_half_31",
+   "parent": 63,
+   "pos": [
+    0,
+    -7.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.4,
+    2.4
+   ],
+   "sprite": "pillow_half_half_31",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.44,
+    3.42
+   ]
+  },
+  {
+   "name": "pillow_half_half_25",
+   "path": "Bed/pillow_half_half_25",
+   "parent": 63,
+   "pos": [
+    0,
+    -1.65
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    2.45,
+    5.52
+   ],
+   "sprite": "pillow_half_half_25",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.76,
+    0.92
+   ]
+  },
+  {
+   "name": "pillow_half_half_25 (1)",
+   "path": "Bed/pillow_half_half_25 (1)",
+   "parent": 63,
+   "pos": [
+    0,
+    -5.785
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.45,
+    5.52
+   ],
+   "sprite": "pillow_half_half_25",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.76,
+    0.92
+   ]
+  },
+  {
+   "name": "Monkey",
+   "path": "Monkey",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pillow",
+   "path": "Monkey/Pillow",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_0",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.16,
+    0.85
+   ]
+  },
+  {
+   "name": "Monkey",
+   "path": "Monkey/Monkey",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Monkey/Monkey/Head",
+   "parent": 69,
+   "pos": [
+    -0.12,
+    1.47
+   ],
+   "rotZ": 0.23352495526986738,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_66",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.48,
+    1.06
+   ]
+  },
+  {
+   "name": "HeadAttatchL",
+   "path": "Monkey/Monkey/Head/HeadAttatchL",
+   "parent": 70,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.51,
+    0.51
+   ]
+  },
+  {
+   "name": "HeadAttatchR",
+   "path": "Monkey/Monkey/Head/HeadAttatchR",
+   "parent": 70,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.51,
+    0.51
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "Monkey/Monkey/ArmL",
+   "parent": 69,
+   "pos": [
+    0.4,
+    0.7
+   ],
+   "rotZ": 0.42568566435101,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_76",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.39
+   ]
+  },
+  {
+   "name": "ArmAttatch",
+   "path": "Monkey/Monkey/ArmL/ArmAttatch",
+   "parent": 73,
+   "pos": [
+    -0.12,
+    0.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_77",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    0.6
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "Monkey/Monkey/ArmR",
+   "parent": 69,
+   "pos": [
+    -0.24,
+    0.69
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_75",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.39,
+    0.65
+   ]
+  },
+  {
+   "name": "ArmAttatch",
+   "path": "Monkey/Monkey/ArmR/ArmAttatch",
+   "parent": 75,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    0.6
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Monkey/Monkey/Body",
+   "parent": 69,
+   "pos": [
+    0,
+    0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_78",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.95
+   ]
+  },
+  {
+   "name": "BodyOther",
+   "path": "Monkey/Monkey/BodyOther",
+   "parent": 69,
+   "pos": [
+    0.07,
+    0.71
+   ],
+   "rotZ": 0.05532685389573023,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_69",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.67,
+    1.55
+   ]
+  },
+  {
+   "name": "Leg",
+   "path": "Monkey/Monkey/Leg",
+   "parent": 69,
+   "pos": [
+    0,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pillow_obj_72",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.53,
+    0.79
+   ]
+  },
+  {
+   "name": "LegAttatch",
+   "path": "Monkey/Monkey/Leg/LegAttatch",
+   "parent": 79,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.39,
+    0.78
+   ]
+  },
+  {
+   "name": "LegOther",
+   "path": "Monkey/Monkey/LegOther",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.53,
+    0.79
+   ]
+  },
+  {
+   "name": "LegAttatch",
+   "path": "Monkey/Monkey/LegOther/LegAttatch",
+   "parent": 81,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69,
+    0.71
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Monkey/Shadow",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.23,
+    0.8
+   ],
+   "sprite": "pillow_obj_1",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    0.3137255
+   ],
+   "size": [
+    1.07,
+    0.46
+   ]
+  }
+ ]
+}

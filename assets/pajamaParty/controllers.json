@@ -1,0 +1,349 @@
+{
+ "Bed": {
+  "default": "NoPose",
+  "states": {
+   "BedImpact": {
+    "clip": "Anime/Bed/BedImpact",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Anime/Bed/NoPose",
+    "speed": 1
+   }
+  }
+ },
+ "Bg": {
+  "default": "NoPose",
+  "states": {
+   "BoatsAppear": {
+    "clip": "Anime/BG/BoatsAppear",
+    "speed": 1
+   },
+   "BoatsNoPose": {
+    "clip": "Anime/BG/BoatsNoPose",
+    "speed": 1
+   },
+   "CastleAppear": {
+    "clip": "Anime/BG/CastleAppear",
+    "speed": 1
+   },
+   "CastleHide": {
+    "clip": "Anime/BG/CastleAppear",
+    "speed": -1
+   },
+   "CastleNoPose": {
+    "clip": "Anime/BG/CastleNoPose",
+    "speed": 1
+   },
+   "FloatsFar": {
+    "clip": "Anime/BG/FloatsFar",
+    "speed": 1
+   },
+   "FloatsNear": {
+    "clip": "Anime/BG/FloatsNear",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Anime/BG/NoPose",
+    "speed": 1
+   },
+   "SlideClose": {
+    "clip": "Anime/BG/SlideOpen",
+    "speed": -1
+   },
+   "SlideOpen": {
+    "clip": "Anime/BG/SlideOpen",
+    "speed": 1
+   }
+  }
+ },
+ "Mako": {
+  "default": "NoPose",
+  "states": {
+   "MakoAwake": {
+    "clip": "Anime/Mako/MakoAwake",
+    "speed": 1
+   },
+   "MakoAwake_H": {
+    "clip": "Anime/Mako/MakoAwake_H",
+    "speed": 1
+   },
+   "MakoBeat": {
+    "clip": "Anime/Mako/MakoBeat",
+    "speed": 1
+   },
+   "MakoBeat_H": {
+    "clip": "Anime/Mako/MakoBeat_H",
+    "speed": 1
+   },
+   "MakoCatch": {
+    "clip": "Anime/Mako/MakoCatch",
+    "speed": 1
+   },
+   "MakoCatchNg": {
+    "clip": "Anime/Mako/MakoCatchNg",
+    "speed": 1
+   },
+   "MakoCatchNg_H": {
+    "clip": "Anime/Mako/MakoCatchNg_H",
+    "speed": 1
+   },
+   "MakoCatch_H": {
+    "clip": "Anime/Mako/MakoCatch_H",
+    "speed": 1
+   },
+   "MakoJump": {
+    "speed": 1
+   },
+   "MakoJump 0": {
+    "speed": 1
+   },
+   "MakoJump_H": {
+    "clip": "Anime/Mako/MakoJump_H",
+    "speed": 1
+   },
+   "MakoLand": {
+    "clip": "Anime/Mako/MakoLand",
+    "speed": 1
+   },
+   "MakoLand_H": {
+    "clip": "Anime/Mako/MakoLand_H",
+    "speed": 1
+   },
+   "MakoPickUp": {
+    "clip": "Anime/Mako/MakoPickUp",
+    "speed": 1
+   },
+   "MakoPickUp_H": {
+    "clip": "Anime/Mako/MakoPickUp_H",
+    "speed": 1
+   },
+   "MakoReady": {
+    "clip": "Anime/Mako/MakoReady",
+    "speed": 1
+   },
+   "MakoReadySleep": {
+    "clip": "Anime/Mako/MakoReadySleep",
+    "speed": 1
+   },
+   "MakoReadySleep01": {
+    "clip": "Anime/Mako/MakoReadySleep01",
+    "speed": 1
+   },
+   "MakoReadySleep01_H": {
+    "clip": "Anime/Mako/MakoReadySleep01_H",
+    "speed": 1
+   },
+   "MakoReadySleep_H": {
+    "clip": "Anime/Mako/MakoReadySleep_H",
+    "speed": 1
+   },
+   "MakoReady_H": {
+    "clip": "Anime/Mako/MakoReady_H",
+    "speed": 1
+   },
+   "MakoSleep00": {
+    "clip": "Anime/Mako/MakoSleep00",
+    "speed": 1
+   },
+   "MakoSleep00_H": {
+    "clip": "Anime/Mako/MakoSleep00_H",
+    "speed": 1
+   },
+   "MakoSleep01": {
+    "clip": "Anime/Mako/MakoSleep01",
+    "speed": 1
+   },
+   "MakoSleep01_H": {
+    "clip": "Anime/Mako/MakoSleep01_H",
+    "speed": 1
+   },
+   "MakoSleepJust": {
+    "clip": "Anime/Mako/MakoSleepJust",
+    "speed": 1
+   },
+   "MakoSleepJust_H": {
+    "clip": "Anime/Mako/MakoSleepJust_H",
+    "speed": 1
+   },
+   "MakoSleepNg": {
+    "clip": "Anime/Mako/MakoSleepNg",
+    "speed": 1
+   },
+   "MakoSleepNg_H": {
+    "clip": "Anime/Mako/MakoSleepNg_H",
+    "speed": 1
+   },
+   "MakoSleepOut": {
+    "clip": "Anime/Mako/MakoSleepOut",
+    "speed": 1
+   },
+   "MakoSleepOut_H": {
+    "clip": "Anime/Mako/MakoSleepOut_H",
+    "speed": 1
+   },
+   "MakoSleepThrough": {
+    "clip": "Anime/Mako/MakoSleepThrough",
+    "speed": 1
+   },
+   "MakoSleepThrough_H": {
+    "clip": "Anime/Mako/MakoSleepThrough_H",
+    "speed": 1
+   },
+   "MakoThrough": {
+    "clip": "Anime/Mako/MakoThrough",
+    "speed": 1
+   },
+   "MakoThrough_H": {
+    "clip": "Anime/Mako/MakoThrough_H",
+    "speed": 1
+   },
+   "MakoThrow": {
+    "clip": "Anime/Mako/MakoThrow",
+    "speed": 1
+   },
+   "MakoThrowOut": {
+    "clip": "Anime/Mako/MakoThrowOut",
+    "speed": 1
+   },
+   "MakoThrowOut_H": {
+    "clip": "Anime/Mako/MakoThrowOut_H",
+    "speed": 1
+   },
+   "MakoThrow_H": {
+    "clip": "Anime/Mako/MakoThrow_H",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Anime/Mako/NoPose",
+    "speed": 1
+   },
+   "NoPose_H": {
+    "clip": "Anime/Mako/NoPose_H",
+    "speed": 1
+   }
+  }
+ },
+ "Mako_Pillow": {
+  "default": "NoPose",
+  "states": {
+   "NoPose": {
+    "clip": "Anime/MakoPillow/NoPose",
+    "speed": 1
+   },
+   "ThrowOut": {
+    "clip": "Anime/MakoPillow/ThrowOut",
+    "speed": 1
+   }
+  }
+ },
+ "Monkey": {
+  "default": "NoPose",
+  "states": {
+   "MonkeyAwake": {
+    "clip": "Anime/Monkey/MonkeyAwake",
+    "speed": 1
+   },
+   "MonkeyAwake_H": {
+    "clip": "Anime/Monkey/MonkeyAwake_H",
+    "speed": 1
+   },
+   "MonkeyBeat": {
+    "clip": "Anime/Monkey/MonkeyBeat",
+    "speed": 1
+   },
+   "MonkeyBeat_H": {
+    "clip": "Anime/Monkey/MonkeyBeat_H",
+    "speed": 1
+   },
+   "MonkeyJump": {
+    "clip": "Anime/Monkey/MonkeyJump",
+    "speed": 1
+   },
+   "MonkeyJump02": {
+    "clip": "Anime/Monkey/MonkeyJump02",
+    "speed": 1
+   },
+   "MonkeyJump02_H": {
+    "clip": "Anime/Monkey/MonkeyJump02_H",
+    "speed": 1
+   },
+   "MonkeyJump03": {
+    "clip": "Anime/Monkey/MonkeyJump03",
+    "speed": 1
+   },
+   "MonkeyJump03_H": {
+    "clip": "Anime/Monkey/MonkeyJump03_H",
+    "speed": 1
+   },
+   "MonkeyJump_H": {
+    "clip": "Anime/Monkey/MonkeyJump_H",
+    "speed": 1
+   },
+   "MonkeyLand": {
+    "clip": "Anime/Monkey/MonkeyLand",
+    "speed": 1
+   },
+   "MonkeyLand_H": {
+    "clip": "Anime/Monkey/MonkeyLand_H",
+    "speed": 1
+   },
+   "MonkeyReady": {
+    "clip": "Anime/Monkey/MonkeyReady",
+    "speed": 1
+   },
+   "MonkeyReadySleep": {
+    "clip": "Anime/Monkey/MonkeyReadySleep",
+    "speed": 1
+   },
+   "MonkeyReadySleep_H": {
+    "clip": "Anime/Monkey/MonkeyReadySleep_H",
+    "speed": 1
+   },
+   "MonkeyReady_H": {
+    "clip": "Anime/Monkey/MonkeyReady_H",
+    "speed": 1
+   },
+   "MonkeySleep00": {
+    "clip": "Anime/Monkey/MonkeySleep00",
+    "speed": 1
+   },
+   "MonkeySleep00_H": {
+    "clip": "Anime/Monkey/MonkeySleep00_H",
+    "speed": 1
+   },
+   "MonkeySleep01": {
+    "clip": "Anime/Monkey/MonkeySleep01",
+    "speed": 1
+   },
+   "MonkeySleep01_H": {
+    "clip": "Anime/Monkey/MonkeySleep01_H",
+    "speed": 1
+   },
+   "MonkeySleep02": {
+    "clip": "Anime/Monkey/MonkeySleep02",
+    "speed": 1
+   },
+   "MonkeySleep02_H": {
+    "clip": "Anime/Monkey/MonkeySleep02_H",
+    "speed": 1
+   },
+   "MonkeyThrow": {
+    "clip": "Anime/Monkey/MonkeyThrow",
+    "speed": 1
+   },
+   "MonkeyThrow_H": {
+    "clip": "Anime/Monkey/MonkeyThrow_H",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Anime/Monkey/NoPose",
+    "speed": 1
+   },
+   "NoPose_H": {
+    "clip": "Anime/Monkey/NoPose_H",
+    "speed": 1
+   }
+  }
+ }
+}

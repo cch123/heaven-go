@@ -1,0 +1,9 @@
+{
+ "BalloonsEffect": "Balloons",
+ "Bed": "Bed",
+ "BgAnimator": "Bg",
+ "Castle": "Bg/castle",
+ "Mako": "Mako_Root",
+ "MonkeyPrefab": "Monkey",
+ "SpawnRoot": "Spawn_Root"
+}

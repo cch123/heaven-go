@@ -53,6 +53,13 @@ func (c *Ctx) ScheduleInputActionRelease(beat float64, action int, onHit func(st
 	return c.App.scheduleInput(beat, true, action, onHit, onMiss)
 }
 
+// ScheduleInputActionReleaseCond is the action-channel release variant used by
+// games with a hold/release sub-action. Pajama Party's throw release should be
+// ignored if the charge never started, matching CtrPillowPlayer.CanThrow.
+func (c *Ctx) ScheduleInputActionReleaseCond(beat float64, action int, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) *Input {
+	return c.App.scheduleInputCond(beat, true, action, canHit, onHit, onMiss)
+}
+
 // ScheduleInputReleaseCond is the release-channel equivalent of
 // ScheduleInputCond. Rhythm Tweezers needs this because a long hair release
 // window is cancelled if the player lets go early and the game has already

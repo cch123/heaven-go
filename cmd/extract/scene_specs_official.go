@@ -190,7 +190,32 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 	"nipInTheBud":      basicOfficialSceneSpec("NipInTheBud", "nipInTheBud.prefab"),
 	"octopusMachine":   basicOfficialSceneSpec("OctopusMachine", "octopusMachine.prefab"),
 	"packingPests":     basicOfficialSceneSpec("PackingPests", "packingPests.prefab"),
-	"pajamaParty":      basicOfficialSceneSpec("PajamaParty", "pajamaParty.prefab"),
+	"pajamaParty": {
+		dir:    "PajamaParty",
+		prefab: "pajamaParty.prefab",
+		roleFields: []string{
+			"Mako", "Bed", "MonkeyPrefab", "Castle", "BgAnimator", "BalloonsEffect",
+			"SpawnRoot",
+		},
+		roleFallbacks: map[string]string{
+			"Mako":       "Mako_Root",
+			"Bed":        "Bed",
+			"BgAnimator": "Bg",
+			"SpawnRoot":  "Spawn_Root",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		templatePrefabs: []string{
+			"Prefab/Monkey.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"Mako", "Bed", "MonkeyPrefab", "Castle", "BgAnimator",
+				"BalloonsEffect", "SpawnRoot", "HighCameraHeight",
+				"monkeyNrmColour", "monkeyHighColour", "monkeyColMat",
+			}},
+		},
+	},
 	"powerCalligraphy": basicOfficialSceneSpec("PowerCalligraphy", "powerCalligraphy.prefab"),
 	"quizShow":         basicOfficialSceneSpec("QuizShow", "quizShow.prefab"),
 	"rapMen":           basicOfficialSceneSpec("RapMen", "rapMen.prefab"),

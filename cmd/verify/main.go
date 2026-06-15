@@ -69,6 +69,7 @@ import (
 	"hsdemo/games/nogame"
 	"hsdemo/games/octopusmachine"
 	"hsdemo/games/packingpests"
+	"hsdemo/games/pajamaparty"
 	"hsdemo/games/quizshow"
 	"hsdemo/games/rhythmfighter"
 	"hsdemo/games/rhythmsheriff"
@@ -213,6 +214,7 @@ func main() {
 	engine.Register("noGame", nogame.New)
 	engine.Register("octopusMachine", octopusmachine.New)
 	engine.Register("packingPests", packingpests.New)
+	engine.Register("pajamaParty", pajamaparty.New)
 	engine.Register("quizShow", quizshow.New)
 	engine.Register("rhythmFighter", rhythmfighter.New)
 	engine.Register("rhythmTestGBA", rhythmtestgba.New)
