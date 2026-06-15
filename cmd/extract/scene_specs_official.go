@@ -7,7 +7,68 @@ package main
 var officialBaseSceneSpecs = map[string]sceneSpec{
 	"agbSamuraiSlice": basicOfficialSceneSpec("SamuraiSliceAgb", "agbSamuraiSlice.prefab"),
 	"airboarder":      basicOfficialSceneSpec("Airboarder", "airboarder.prefab"),
-	"animalAcrobat":   basicOfficialSceneSpec("AnimalAcrobat", "animalAcrobat.prefab"),
+	"animalAcrobat": {
+		dir:    "AnimalAcrobat",
+		prefab: "animalAcrobat.prefab",
+		roleFields: []string{
+			"_elephant", "_giraffe", "_monkeysLong", "_monkeysShort", "_gorilla",
+			"_scroll", "_playerMonkey", "_spotlightMain", "_partyPoppers",
+		},
+		wantControllers: true,
+		commonSounds: []string{
+			"nearMiss.ogg",
+			"count-ins/three1.wav",
+			"count-ins/three2.wav",
+			"count-ins/go1.wav",
+			"count-ins/go2.wav",
+		},
+		templatePrefabs: []string{
+			"Prefabs/Elephant.prefab",
+			"Prefabs/Giraffe.prefab",
+			"Prefabs/WhiteMonkeys.prefab",
+			"Prefabs/WhiteMonkey.prefab",
+			"Prefabs/Gorilla.prefab",
+			"Prefabs/FireHoop.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"_elephant", "_giraffe", "_monkeysLong", "_monkeysShort", "_gorilla",
+				"_scroll", "_playerMonkey", "_spotlightMain", "_bgMat", "_partyPoppers",
+				"_jumpDistance", "_jumpDistanceGiraffe", "_jumpStartCameraDistance",
+				"_jumpStartDistance", "_giraffeCameraZoom", "_cameraSmoothSpeed",
+			}},
+			{name: "obstacle", markers: []string{
+				"_fullRotRange", "_holdLength", "_ease", "_holdPadding", "_holdPaddingStart",
+				"_rotateRoot", "_gripPoint", "_endPoint",
+			}, multi: true},
+			{name: "player", markers: []string{
+				"_scroll", "_shadow", "_releaseParticle", "_trailParticle", "sweatParticle",
+				"_jumpDistanceStart", "_jumpDistance", "_jumpHeight", "_jumpHeightInitial",
+				"_jumpDistanceGiraffe", "_jumpHeightGiraffe", "_jumpStartAngle",
+			}},
+			{name: "obstacleInput", markers: []string{
+				"animalType", "_monkey", "_gripShadow", "_endShadow",
+				"_holdLength", "_holdParticle", "_sweatParticle",
+			}, multi: true},
+			{name: "giraffeInput", markers: []string{
+				"animalType", "_monkey", "_holdParticle", "_sweatParticle",
+				"_gripShadow", "_endShadow", "_fireHoopAnim", "_fireHoopSparkle",
+			}, multi: true},
+			{name: "whiteMonkeysSwing", markers: []string{
+				"_anim", "_animLength", "_beatLength", "_ease",
+			}, multi: true},
+			{name: "earFlap", markers: []string{
+				"_anim", "_animName", "_holdLength",
+			}, multi: true},
+			{name: "bgTileManager", markers: []string{
+				"_bgTileFirst", "_bgTileSecond", "_scroll",
+			}, multi: true},
+			{name: "spotlightShadows", markers: []string{
+				"_perspectiveStrength", "_flatOffset", "_shadowColor",
+				"_sortingOrderOffset", "_ignoreList",
+			}, multi: true},
+		},
+	},
 	"balloonHunter":   basicOfficialSceneSpec("BalloonHunter", "balloonHunter.prefab"),
 	"basketballGirls": basicOfficialSceneSpec("BasketballGirls", "basketballGirls.prefab"),
 	"bigRockFinish":   basicOfficialSceneSpec("BigRockFinish", "bigRockFinish.prefab"),

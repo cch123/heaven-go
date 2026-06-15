@@ -1,0 +1,15 @@
+{
+ "Elephant": "Elephant",
+ "Elephant/TrunkRoot/PlayerMonkey": "PlayerMonkey",
+ "FireHoop": "FireHoop",
+ "Giraffe/FireHoop": "FireHoop",
+ "Giraffe/GiraffeRoot": "GiraffeRoot",
+ "Giraffe/GiraffeRoot/PlayerMonkey": "PlayerMonkey",
+ "Gorilla": "Gorilla",
+ "PartyPoppers/ConfettiL": "ConfettiPop",
+ "PartyPoppers/ConfettiR": "ConfettiPop",
+ "Scroll/PlayerMonkey": "PlayerMonkey",
+ "WhiteMonkey/MonkeyPivot/PlayerMonkey": "PlayerMonkey",
+ "WhiteMonkeys/WhiteMonkeysPivot": "WhiteMonkeysPivot",
+ "WhiteMonkeys/WhiteMonkeysPivot/WhiteMonkey (3)/PlayerMonkey": "PlayerMonkey"
+}

@@ -1,0 +1,336 @@
+{
+ "components": {
+  "bgTileManager0": {
+   "path": "Scroll/BgManager",
+   "refs": {
+    "_bgTileFirst": "Scroll/BgManager/BgTiles_1",
+    "_bgTileSecond": "Scroll/BgManager/BgTiles_2",
+    "_scroll": "Scroll"
+   }
+  },
+  "earFlap0": {
+   "path": "Elephant",
+   "nums": {
+    "_holdLength": 2
+   },
+   "strs": {
+    "_animName": "ElephantEar"
+   },
+   "refs": {
+    "_anim": "Elephant"
+   }
+  },
+  "earFlap1": {
+   "path": "Giraffe",
+   "nums": {
+    "_holdLength": 4
+   },
+   "strs": {
+    "_animName": "GiraffeEar"
+   },
+   "refs": {
+    "_anim": "Giraffe/GiraffeRoot"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "LastMissBeat": 0,
+    "MonkeyMissed": 0,
+    "RecoverStartBeat": 0,
+    "_cameraSmoothSpeed": 10,
+    "_giraffeCameraZoom": 6.6,
+    "_jumpDistance": 6.5,
+    "_jumpDistanceGiraffe": 32,
+    "_jumpStartCameraDistance": 3,
+    "_jumpStartDistance": -1.68
+   },
+   "refs": {
+    "_bgMat": "bg",
+    "_elephant": "Elephant",
+    "_giraffe": "Giraffe",
+    "_gorilla": "Gorilla",
+    "_monkeysLong": "WhiteMonkeys",
+    "_monkeysShort": "WhiteMonkey",
+    "_partyPoppers": "PartyPoppers",
+    "_playerMonkey": "Scroll/PlayerMonkey",
+    "_scroll": "Scroll",
+    "_spotlightMain": "SpotlightMain"
+   }
+  },
+  "giraffeInput0": {
+   "path": "Giraffe",
+   "nums": {
+    "animalType": 1
+   },
+   "refs": {
+    "_endShadow": "Giraffe/End/Shadow",
+    "_fireHoopAnim": "Giraffe/FireHoop",
+    "_fireHoopSparkle": "Giraffe/FireHoop/Particles/Sparkle",
+    "_gripShadow": "Giraffe/GiraffeRoot/Grip/Shadow",
+    "_holdParticle": "Giraffe/GiraffeRoot/PlayerMonkey/Particles/Sparkle",
+    "_monkey": "Giraffe/GiraffeRoot/PlayerMonkey",
+    "_sweatParticle": "Giraffe/GiraffeRoot/PlayerMonkey/Particles/Sweat"
+   }
+  },
+  "obstacle0": {
+   "path": "Elephant",
+   "nums": {
+    "_ease": 7,
+    "_fullRotRange": 160,
+    "_holdLength": 2,
+    "_holdPadding": 1,
+    "_holdPaddingStart": 0
+   },
+   "refs": {
+    "_endPoint": "Elephant/End",
+    "_gripPoint": "Elephant/TrunkRoot/Grip",
+    "_rotateRoot": "Elephant/TrunkRoot"
+   }
+  },
+  "obstacle1": {
+   "path": "Giraffe",
+   "nums": {
+    "_ease": 7,
+    "_fullRotRange": 160,
+    "_holdLength": 4,
+    "_holdPadding": 2,
+    "_holdPaddingStart": 0
+   },
+   "refs": {
+    "_endPoint": "Giraffe/End",
+    "_gripPoint": "Giraffe/GiraffeRoot/Grip",
+    "_rotateRoot": "Giraffe/GiraffeRoot"
+   }
+  },
+  "obstacle2": {
+   "path": "Gorilla",
+   "nums": {
+    "_ease": 7,
+    "_fullRotRange": 180,
+    "_holdLength": 0,
+    "_holdPadding": 0.5,
+    "_holdPaddingStart": 0
+   },
+   "refs": {
+    "_endPoint": "Gorilla/Land",
+    "_gripPoint": "Gorilla/Land",
+    "_rotateRoot": "Gorilla/Um"
+   }
+  },
+  "obstacle3": {
+   "path": "WhiteMonkey",
+   "nums": {
+    "_ease": 10,
+    "_fullRotRange": 160,
+    "_holdLength": 1,
+    "_holdPadding": 0.6,
+    "_holdPaddingStart": 0
+   },
+   "refs": {
+    "_endPoint": "WhiteMonkey/End",
+    "_gripPoint": "WhiteMonkey/MonkeyPivot/Grip",
+    "_rotateRoot": "WhiteMonkey/MonkeyPivot"
+   }
+  },
+  "obstacle4": {
+   "path": "WhiteMonkeys",
+   "nums": {
+    "_ease": 10,
+    "_fullRotRange": 170,
+    "_holdLength": 3,
+    "_holdPadding": 1,
+    "_holdPaddingStart": 0
+   },
+   "refs": {
+    "_endPoint": "WhiteMonkeys/End",
+    "_gripPoint": "WhiteMonkeys/WhiteMonkeysPivot/Grip",
+    "_rotateRoot": "WhiteMonkeys/WhiteMonkeysPivot"
+   }
+  },
+  "obstacleInput0": {
+   "path": "Elephant",
+   "nums": {
+    "_holdLength": 2,
+    "animalType": 0
+   },
+   "refs": {
+    "_endShadow": "Elephant/End/Shadow",
+    "_gripShadow": "Elephant/TrunkRoot/Grip/Shadow",
+    "_holdParticle": "Elephant/TrunkRoot/PlayerMonkey/Particles/Sparkle",
+    "_monkey": "Elephant/TrunkRoot/PlayerMonkey",
+    "_sweatParticle": "Elephant/TrunkRoot/PlayerMonkey/Particles/Sweat"
+   }
+  },
+  "obstacleInput1": {
+   "path": "WhiteMonkey",
+   "nums": {
+    "_holdLength": 1,
+    "animalType": 3
+   },
+   "refs": {
+    "_endShadow": "WhiteMonkey/End/Shadow",
+    "_gripShadow": "WhiteMonkey/MonkeyPivot/Grip/Shadow",
+    "_holdParticle": "WhiteMonkey/MonkeyPivot/PlayerMonkey/Particles/Sparkle",
+    "_monkey": "WhiteMonkey/MonkeyPivot/PlayerMonkey",
+    "_sweatParticle": "WhiteMonkey/MonkeyPivot/PlayerMonkey/Particles/Sweat"
+   }
+  },
+  "obstacleInput2": {
+   "path": "WhiteMonkeys",
+   "nums": {
+    "_holdLength": 3,
+    "animalType": 2
+   },
+   "refs": {
+    "_endShadow": "WhiteMonkeys/End/Shadow",
+    "_gripShadow": "WhiteMonkeys/WhiteMonkeysPivot/Grip/Shadow",
+    "_holdParticle": "WhiteMonkeys/WhiteMonkeysPivot/WhiteMonkey (3)/PlayerMonkey/Particles/Sparkle",
+    "_monkey": "WhiteMonkeys/WhiteMonkeysPivot/WhiteMonkey (3)/PlayerMonkey",
+    "_sweatParticle": "WhiteMonkeys/WhiteMonkeysPivot/WhiteMonkey (3)/PlayerMonkey/Particles/Sweat"
+   }
+  },
+  "player": {
+   "path": "Scroll/PlayerMonkey",
+   "nums": {
+    "_jumpDistance": 3,
+    "_jumpDistanceGiraffe": 29,
+    "_jumpDistanceStart": 6,
+    "_jumpHeight": 3.6,
+    "_jumpHeightGiraffe": 5.8,
+    "_jumpHeightInitial": 1.3,
+    "_jumpStartAngle": 120,
+    "muteNextReleaseParticle": 0,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0
+   },
+   "refs": {
+    "_releaseParticle": "Scroll/PlayerMonkey/Particles/GreySparkle",
+    "_scroll": "Scroll",
+    "_shadow": "Scroll/PlayerMonkey/Shadow",
+    "_trailParticle": "Scroll/PlayerMonkey/SparkleTrail",
+    "sweatParticle": "Scroll/PlayerMonkey/Particles/Sweat"
+   }
+  },
+  "spotlightShadows0": {
+   "path": "Elephant",
+   "nums": {
+    "_flatOffset.x": 0,
+    "_flatOffset.y": -0.1,
+    "_perspectiveStrength.x": 0.1,
+    "_perspectiveStrength.y": 0,
+    "_shadowColor.a": 1,
+    "_shadowColor.b": 0,
+    "_shadowColor.g": 0,
+    "_shadowColor.r": 0,
+    "_sortingOrderOffset": -555
+   },
+   "refArrays": {
+    "_ignoreList": [
+     "Elephant/Hole",
+     "Elephant/Head",
+     "Elephant/Body",
+     "Elephant/Head/EarL",
+     "Elephant/Head/EarR",
+     "Elephant/Head/EyeL",
+     "Elephant/Head/EyeR"
+    ]
+   }
+  },
+  "spotlightShadows1": {
+   "path": "Giraffe",
+   "nums": {
+    "_flatOffset.x": 0,
+    "_flatOffset.y": -0.2,
+    "_perspectiveStrength.x": 0.1,
+    "_perspectiveStrength.y": 0,
+    "_shadowColor.a": 1,
+    "_shadowColor.b": 0,
+    "_shadowColor.g": 0,
+    "_shadowColor.r": 0,
+    "_sortingOrderOffset": -555
+   },
+   "refArrays": {
+    "_ignoreList": [
+     "Giraffe/FireHoop/FireFront",
+     "Giraffe/FireHoop/FireBack",
+     "Giraffe/Hole"
+    ]
+   }
+  },
+  "spotlightShadows2": {
+   "path": "Scroll/Branch",
+   "nums": {
+    "_flatOffset.x": 0,
+    "_flatOffset.y": -0.1,
+    "_perspectiveStrength.x": 0.1,
+    "_perspectiveStrength.y": 0,
+    "_shadowColor.a": 1,
+    "_shadowColor.b": 0,
+    "_shadowColor.g": 0,
+    "_shadowColor.r": 0,
+    "_sortingOrderOffset": -555
+   }
+  },
+  "spotlightShadows3": {
+   "path": "Scroll/PlayerMonkey",
+   "nums": {
+    "_flatOffset.x": 0,
+    "_flatOffset.y": -0.08,
+    "_perspectiveStrength.x": 0.1,
+    "_perspectiveStrength.y": 0.1,
+    "_shadowColor.a": 1,
+    "_shadowColor.b": 0,
+    "_shadowColor.g": 0,
+    "_shadowColor.r": 0,
+    "_sortingOrderOffset": -555
+   }
+  },
+  "spotlightShadows4": {
+   "path": "WhiteMonkey",
+   "nums": {
+    "_flatOffset.x": 0,
+    "_flatOffset.y": -0.1,
+    "_perspectiveStrength.x": 0.04,
+    "_perspectiveStrength.y": 0,
+    "_shadowColor.a": 1,
+    "_shadowColor.b": 0,
+    "_shadowColor.g": 0,
+    "_shadowColor.r": 0,
+    "_sortingOrderOffset": -555
+   }
+  },
+  "spotlightShadows5": {
+   "path": "WhiteMonkeys",
+   "nums": {
+    "_flatOffset.x": 0,
+    "_flatOffset.y": -0.2,
+    "_perspectiveStrength.x": 0.1,
+    "_perspectiveStrength.y": 0,
+    "_shadowColor.a": 1,
+    "_shadowColor.b": 0,
+    "_shadowColor.g": 0,
+    "_shadowColor.r": 0,
+    "_sortingOrderOffset": -555
+   },
+   "refArrays": {
+    "_ignoreList": [
+     "WhiteMonkeys/Hole",
+     "WhiteMonkeys/Branch"
+    ]
+   }
+  },
+  "whiteMonkeysSwing0": {
+   "path": "WhiteMonkeys",
+   "nums": {
+    "_animLength": 0.6785714,
+    "_beatLength": 2.5,
+    "_ease": 0
+   },
+   "refs": {
+    "_anim": "WhiteMonkeys/WhiteMonkeysPivot"
+   }
+  }
+ }
+}

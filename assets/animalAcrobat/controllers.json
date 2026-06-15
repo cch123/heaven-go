@@ -1,0 +1,116 @@
+{
+ "ConfettiPop": {
+  "default": "PopIntro",
+  "states": {
+   "PopIntro": {
+    "clip": "Animations/PopIntro",
+    "speed": 1
+   }
+  }
+ },
+ "Elephant": {
+  "default": "ElephantIdle",
+  "states": {
+   "ElephantEar": {
+    "clip": "Animations/ElephantEar",
+    "speed": 1
+   },
+   "ElephantIdle": {
+    "clip": "Animations/ElephantIdle",
+    "speed": 1
+   }
+  }
+ },
+ "FireHoop": {
+  "default": "FireIdle",
+  "states": {
+   "FireClose": {
+    "clip": "Animations/FireClose",
+    "speed": 1
+   },
+   "FireIdle": {
+    "clip": "Animations/FireIdle",
+    "speed": 1
+   }
+  }
+ },
+ "GiraffeRoot": {
+  "default": "GiraffeIdle",
+  "states": {
+   "GiraffeEar": {
+    "clip": "Animations/GiraffeEar",
+    "speed": 1
+   },
+   "GiraffeIdle": {
+    "clip": "Animations/GiraffeIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Gorilla": {
+  "default": "GorillaIdle",
+  "states": {
+   "GorillaIdle": {
+    "clip": "Animations/GorillaIdle",
+    "speed": 1
+   },
+   "GorillaMiss": {
+    "clip": "Animations/GorillaMiss",
+    "speed": 1
+   }
+  }
+ },
+ "PlayerMonkey": {
+  "default": "PlayerIdle",
+  "states": {
+   "MonkeyLand": {
+    "speed": 1
+   },
+   "PlayerAir": {
+    "clip": "Animations/PlayerAir",
+    "speed": 1
+   },
+   "PlayerBop": {
+    "clip": "Animations/PlayerBop",
+    "speed": 1
+   },
+   "PlayerCloudBop": {
+    "clip": "Animations/PlayerCloudBop",
+    "speed": 1
+   },
+   "PlayerHang": {
+    "clip": "Animations/PlayerHang",
+    "speed": 1
+   },
+   "PlayerHanging": {
+    "clip": "Animations/PlayerHanging",
+    "speed": 1
+   },
+   "PlayerIdle": {
+    "clip": "Animations/PlayerIdle",
+    "speed": 1
+   },
+   "PlayerJump": {
+    "clip": "Animations/PlayerJump",
+    "speed": 1
+   },
+   "PlayerLand": {
+    "clip": "Animations/PlayerLand",
+    "speed": 1
+   }
+  }
+ },
+ "WhiteMonkeysPivot": {
+  "default": "WhiteMonkeysIdle",
+  "states": {
+   "WhiteMonkeysIdle": {
+    "clip": "Animations/WhiteMonkeysIdle",
+    "speed": 1
+   },
+   "WhiteMonkeysSwing": {
+    "clip": "Animations/WhiteMonkeysSwing",
+    "speed": 1
+   }
+  }
+ }
+}
