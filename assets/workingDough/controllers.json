@@ -1,0 +1,346 @@
+{
+ "Alarm": {
+  "default": "AlarmIdle",
+  "states": {
+   "AlarmIdle": {
+    "clip": "Animations/AlarmIdle",
+    "speed": 1
+   }
+  }
+ },
+ "BallTransporterLeft": {
+  "default": "BallTransporterLeftClosed",
+  "states": {
+   "BallTransporterLeftClose": {
+    "clip": "Animations/BallTransporterLeftClose",
+    "speed": 4,
+    "transitions": [
+     {
+      "dst": "BallTransporterLeftClosed",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BallTransporterLeftClosed": {
+    "clip": "Animations/BallTransporterLeftClosed",
+    "speed": 1
+   },
+   "BallTransporterLeftOpen": {
+    "clip": "Animations/BallTransporterLeftOpen",
+    "speed": 4,
+    "transitions": [
+     {
+      "dst": "BallTransporterLeftOpened",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BallTransporterLeftOpened": {
+    "clip": "Animations/BallTransporterLeftOpened",
+    "speed": 1
+   }
+  }
+ },
+ "BallTransporterRight": {
+  "default": "BallTransporterRightClosed",
+  "states": {
+   "BallTransporterRightClose": {
+    "clip": "Animations/BallTransporterRightClose",
+    "speed": 4,
+    "transitions": [
+     {
+      "dst": "BallTransporterRightClosed",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BallTransporterRightClosed": {
+    "clip": "Animations/BallTransporterRightClosed",
+    "speed": 1
+   },
+   "BallTransporterRightOpen": {
+    "clip": "Animations/BallTransporterRightOpen",
+    "speed": 4,
+    "transitions": [
+     {
+      "dst": "BallTransporterRightOpened",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BallTransporterRightOpened": {
+    "clip": "Animations/BallTransporterRightOpened",
+    "speed": 1
+   }
+  }
+ },
+ "BigDoughDude": {
+  "default": "BigDoughDudeIdle",
+  "states": {
+   "BigDoughDudeIdle": {
+    "clip": "Animations/BigDoughDudeIdle",
+    "speed": 1
+   }
+  }
+ },
+ "ConveyerBelt": {
+  "default": "ConveyerBelt",
+  "states": {
+   "ConveyerBelt": {
+    "clip": "Animations/ConveyerBelt",
+    "speed": 1
+   }
+  }
+ },
+ "DoughDudes": {
+  "default": "NoJumping",
+  "states": {
+   "BigDoughJump": {
+    "clip": "Animations/BigDoughJump",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NoJumping",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NoJumping": {
+    "clip": "Animations/NoJumping",
+    "speed": 1
+   },
+   "SmallDoughJump": {
+    "clip": "Animations/SmallDoughJump",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NoJumping",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "DoughDudesHolder": {
+  "default": "OnGround",
+  "states": {
+   "InAir": {
+    "clip": "Animations/InAir",
+    "speed": 1
+   },
+   "LiftDown": {
+    "clip": "Animations/LiftDown",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "OnGround",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "LiftUp": {
+    "clip": "Animations/LiftUp",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "InAir",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "OnGround": {
+    "clip": "Animations/OnGround",
+    "speed": 1
+   }
+  }
+ },
+ "Lights": {
+  "default": "SpaceshipLights",
+  "states": {
+   "SpaceshipLights": {
+    "clip": "Animations/SpaceshipLights",
+    "speed": 1
+   }
+  }
+ },
+ "MrGameAndWatch": {
+  "default": "MrGameAndWatchLeverDown",
+  "states": {
+   "GANDWEnter": {
+    "clip": "Animations/GANDWEnter",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MrGameAndWatchLeverDown",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "GANDWLeave": {
+    "clip": "Animations/GANDWLeave",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "GANDWLeft",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "GANDWLeft": {
+    "clip": "Animations/GANDWLeft",
+    "speed": 1
+   },
+   "GANDWLeverUp": {
+    "clip": "Animations/GANDWLeverUp",
+    "speed": 1
+   },
+   "MrGameAndWatchLeverDown": {
+    "clip": "Animations/MrGameAndWatchLeverDown",
+    "speed": 1
+   }
+  }
+ },
+ "NPCBallTransporters": {
+  "default": "SmallMode",
+  "states": {
+   "BigMode": {
+    "clip": "Animations/BigMode",
+    "speed": 1
+   },
+   "NPCExitBigMode": {
+    "clip": "Animations/NPCExitBigMode",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "SmallMode",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NPCGoBigMode": {
+    "clip": "Animations/NPCGoBigMode",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BigMode",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "SmallMode": {
+    "clip": "Animations/SmallMode",
+    "speed": 1
+   }
+  }
+ },
+ "PlayerBallTransporters": {
+  "default": "PlayerNoBigMode",
+  "states": {
+   "PlayerBigMode": {
+    "clip": "Animations/PlayerBigMode",
+    "speed": 1
+   },
+   "PlayerExitBigMode": {
+    "clip": "Animations/PlayerExitBigMode",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "PlayerNoBigMode",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "PlayerGoBigMode": {
+    "clip": "Animations/PlayerGoBigMode",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "PlayerBigMode",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "PlayerNoBigMode": {
+    "clip": "Animations/PlayerNoBigMode",
+    "speed": 1
+   }
+  }
+ },
+ "SmallDoughDude": {
+  "default": "SmallDoughDudeIdle",
+  "states": {
+   "SmallDoughDudeIdle": {
+    "clip": "Animations/SmallDoughDudeIdle",
+    "speed": 1
+   }
+  }
+ },
+ "SpaceshipParts": {
+  "default": "SpaceShipParts",
+  "states": {
+   "AbsorbBall": {
+    "clip": "Animations/AbsorbBall",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "SpaceShipParts",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "RiseSpaceship": {
+    "clip": "Animations/RiseSpaceship",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Risen",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Risen": {
+    "clip": "Animations/Risen",
+    "speed": 1
+   },
+   "SpaceShipParts": {
+    "clip": "Animations/SpaceShipParts",
+    "speed": 1
+   },
+   "SpaceshipLaunch": {
+    "clip": "Animations/SpaceshipLaunch",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "SpaceshipLaunched",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "SpaceshipLaunched": {
+    "clip": "Animations/SpaceshipLaunched",
+    "speed": 1
+   },
+   "SpaceshipShake": {
+    "clip": "Animations/SpaceshipShake",
+    "speed": 1
+   }
+  }
+ }
+}

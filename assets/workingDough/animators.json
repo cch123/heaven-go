@@ -1,0 +1,21 @@
+{
+ "ConveyerBelt": "ConveyerBelt",
+ "DoughDudesHolder": "DoughDudesHolder",
+ "DoughDudesHolder/DoughDudesNPC": "DoughDudes",
+ "DoughDudesHolder/DoughDudesNPC/BigDoughHolder/BigDoughDudeIdle": "BigDoughDude",
+ "DoughDudesHolder/DoughDudesNPC/SmallDoughHolder/SmallDoughDudeIdle": "SmallDoughDude",
+ "DoughDudesHolder/DoughDudesPlayer": "DoughDudes",
+ "DoughDudesHolder/DoughDudesPlayer/BigDoughHolder/BigDoughDudeIdle": "BigDoughDude",
+ "DoughDudesHolder/DoughDudesPlayer/SmallDoughHolder/SmallDoughDudeIdle": "SmallDoughDude",
+ "DoughDudesHolder/NPCLift/Alarm": "Alarm",
+ "DoughDudesHolder/PlayerLift/Alarm": "Alarm",
+ "MrGameAndWatch": "MrGameAndWatch",
+ "NPCBallTransporters": "NPCBallTransporters",
+ "NPCBallTransporters/BallTransporterLeftNPC": "BallTransporterLeft",
+ "NPCBallTransporters/BallTransporterRightNPC": "BallTransporterRight",
+ "PlayerBallTransporters": "PlayerBallTransporters",
+ "PlayerBallTransporters/BallTransporterLeftPlayer": "BallTransporterLeft",
+ "PlayerBallTransporters/BallTransporterRightPlayer": "BallTransporterRight",
+ "SpaceshipParts": "SpaceshipParts",
+ "SpaceshipParts/Spaceship/Lights": "Lights"
+}

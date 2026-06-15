@@ -40,6 +40,14 @@ func (c *Ctx) ScheduleInputNoScore(beat float64, onHit func(state float64, j Jud
 	return c.App.scheduleInputNoScore(beat, false, 0, onHit, onMiss)
 }
 
+// ScheduleInputActionNoScore is the action-channel form of ScheduleInputNoScore.
+// Working Dough registers the wrong button on the same beat as the correct
+// button; that wrong-button window must suppress whiffs while leaving scoring
+// entirely to the minigame script.
+func (c *Ctx) ScheduleInputActionNoScore(beat float64, action int, onHit func(state float64, j Judgment), onMiss func()) *Input {
+	return c.App.scheduleInputNoScore(beat, false, action, onHit, onMiss)
+}
+
 // ScheduleInputRelease 注册一次"抬起"判定（InputAction_FlickRelease，
 // totemClimb 高跳甩出等）。空抬不触发 Whiff。
 func (c *Ctx) ScheduleInputRelease(beat float64, onHit func(state float64, j Judgment), onMiss func()) *Input {

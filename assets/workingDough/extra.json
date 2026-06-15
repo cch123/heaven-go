@@ -1,0 +1,379 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "bigMode": 0,
+    "bigModePlayer": 0,
+    "spaceshipRisen": 0,
+    "spaceshipRising": 0
+   },
+   "refs": {
+    "NPCBallTransporters": "NPCBallTransporters",
+    "PlayerBallTransporters": "PlayerBallTransporters",
+    "arrowSRLeftNPC": "NPCBallTransporters/BallTransporterLeftNPC/Arrow/Arrow_Fill",
+    "arrowSRLeftPlayer": "PlayerBallTransporters/BallTransporterLeftPlayer/Arrow/Arrow_Fill",
+    "arrowSRRightNPC": "NPCBallTransporters/BallTransporterRightNPC/Arrow/Arrow_Fill",
+    "arrowSRRightPlayer": "PlayerBallTransporters/BallTransporterRightPlayer/Arrow/Arrow_Fill",
+    "backgroundSR": "Background",
+    "ballHolder": "BallHolder",
+    "ballTransporterLeftNPC": "NPCBallTransporters/BallTransporterLeftNPC",
+    "ballTransporterLeftPlayer": "PlayerBallTransporters/BallTransporterLeftPlayer",
+    "ballTransporterRightNPC": "NPCBallTransporters/BallTransporterRightNPC",
+    "ballTransporterRightPlayer": "PlayerBallTransporters/BallTransporterRightPlayer",
+    "bigBGBall": "BGBigBall",
+    "bigBallNPC": "Big_Ball",
+    "breakParticleEffect": "BreakingParticle",
+    "breakParticleHolder": "BreakParticleHolder",
+    "conveyerAnimator": "ConveyerBelt",
+    "doughDudesHolderAnim": "DoughDudesHolder",
+    "doughDudesNPC": "DoughDudesHolder/DoughDudesNPC",
+    "doughDudesPlayer": "DoughDudesHolder/DoughDudesPlayer",
+    "flashSR": "Flash",
+    "gandwAnim": "MrGameAndWatch",
+    "missImpact": "PlayerMissImpact",
+    "npcImpact": "DoughDudesHolder/DoughDudesNPC/Impact",
+    "playerEnterBigBall": "PlayerEnterBigBall",
+    "playerEnterSmallBall": "PlayerEnterSmallBall",
+    "playerImpact": "DoughDudesHolder/DoughDudesPlayer/Impact",
+    "shipObject": "SpaceshipParts",
+    "smallBGBall": "BGSmallBall",
+    "smallBallNPC": "Small_Ball",
+    "spaceshipAnimator": "SpaceshipParts",
+    "spaceshipLights": "SpaceshipParts/Spaceship/Lights"
+   },
+   "sprites": {
+    "redArrowSprite": "RedArrow",
+    "whiteArrowSprite": "WhiteArrow"
+   },
+   "refArrays": {
+    "bgObjects": [
+     "Background/Disable",
+     "MrGameAndWatch"
+    ]
+   },
+   "lists": {
+    "ballBouncePaths": [
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "NPCBall"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.75,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/NPCBallStart"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.75,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/NPCBallHit"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/NPCBallEnd"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BGBall"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 8,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/BGBallStart"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.55,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/BGBallFall"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/BGBallEnd"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "PlayerEnter"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.75,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallStart"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallHit"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "PlayerHit"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.75,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallHit"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallEnd"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "PlayerBarely"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2.25,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallHit"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallEndBarely"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallEndBarelyFall"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "PlayerWeak"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallHit"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/WrongInputWeak"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "PlayerMiss"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 0.25,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/PlayerBallHit"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.75,
+          "height": 2.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/MissImpact"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BallHolder/CurvePoints/MissFall"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

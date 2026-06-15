@@ -96,6 +96,7 @@ import (
 	"hsdemo/games/tunnel"
 	"hsdemo/games/valiantvolley"
 	"hsdemo/games/wizardswaltz"
+	"hsdemo/games/workingdough"
 )
 
 type recorder struct {
@@ -227,6 +228,7 @@ func main() {
 	engine.Register("tramAndPauline", tramandpauline.New)
 	engine.Register("tunnel", tunnel.New)
 	engine.Register("valiantVolley", valiantvolley.New)
+	engine.Register("workingDough", workingdough.New)
 	engine.Register("wizardsWaltz", wizardswaltz.New)
 
 	app, err := engine.New(*assetsRoot, *path)
