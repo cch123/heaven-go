@@ -21,37 +21,12 @@ func (a *App) Update() error {
 
 	switch a.state {
 	case stateTitle:
-		if a.bm == nil {
-			a.updateLevelSelect()
-			return nil
-		}
-		if a.bm != nil && (titlePressed() || a.Autoplay) {
-			a.cond.Play()
-			a.state = statePlay
-		}
+		a.updateTitle()
 	case statePlay:
 		a.cond.Update()
 		a.updatePlay()
 	case stateResult:
-		a.resultT += 1 / float64(ebiten.TPS())
-		if inpututil.IsKeyJustPressed(ebiten.KeyR) {
-			a.stopResultAudio()
-			return a.restart()
-		}
-		if titlePressed() {
-			if !a.resultEpilogue {
-				if a.resultT < resultRankTime {
-					a.resultT = resultRankTime
-					a.skipResultAudioToRank()
-				} else {
-					a.enterResultEpilogue()
-				}
-			} else if a.resultT > 1.5 {
-				a.returnToLevelSelect()
-				return nil
-			}
-		}
-		a.updateResultAudio()
+		return a.updateResult()
 	}
 	return nil
 }

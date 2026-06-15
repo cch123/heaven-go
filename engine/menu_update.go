@@ -9,6 +9,17 @@ import (
 	"hsdemo/riq"
 )
 
+func (a *App) updateTitle() {
+	if a.bm == nil {
+		a.updateLevelSelect()
+		return
+	}
+	if titlePressed() || a.Autoplay {
+		a.cond.Play()
+		a.state = statePlay
+	}
+}
+
 func (a *App) updateLevelSelect() {
 	if len(a.levels) == 0 {
 		return
