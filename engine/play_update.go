@@ -52,6 +52,11 @@ func (a *App) updatePlay() {
 	if a.releasedNow && a.inputOn {
 		a.judgePress(t-a.LatencyMS/1000, beat, true, 0)
 	}
+	for act := 1; act <= 3; act++ {
+		if releasedN(act) && a.inputOn {
+			a.judgePress(t-a.LatencyMS/1000, beat, true, act)
+		}
+	}
 	if a.Autoplay {
 		for _, in := range a.inputs {
 			if !in.judged && !in.NoAutoplay && t >= in.hitT {

@@ -1,0 +1,173 @@
+{
+ "Child": {
+  "default": "NoPose",
+  "states": {
+   "ChildBeat": {
+    "clip": "Child/ChildBeat",
+    "speed": 1
+   },
+   "ChildWalk": {
+    "clip": "Child/ChildWalk",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Child/NoPose",
+    "speed": 1
+   }
+  }
+ },
+ "Faster": {
+  "default": "NoPose",
+  "states": {
+   "Enter": {
+    "clip": "Faster/Enter",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Faster/Exit",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Faster/NoPose",
+    "speed": 1
+   }
+  }
+ },
+ "Moon": {
+  "default": "NoPose",
+  "states": {
+   "Enter": {
+    "clip": "Moon/Enter",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Moon/Exit",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Moon/NoPose",
+    "speed": 1
+   }
+  }
+ },
+ "Object": {
+  "default": "ObjMelon",
+  "states": {
+   "ObjDemon": {
+    "clip": "Object/ObjDemon",
+    "speed": 1
+   },
+   "ObjDemonDebris01": {
+    "clip": "Object/ObjDemonDebris01",
+    "speed": 1
+   },
+   "ObjDemonDebris02": {
+    "clip": "Object/ObjDemonDebris02",
+    "speed": 1
+   },
+   "ObjDemonSplat": {
+    "clip": "Object/ObjDemonSplat",
+    "speed": 1
+   },
+   "ObjFish": {
+    "clip": "Object/ObjFish",
+    "speed": 1
+   },
+   "ObjFishDebris": {
+    "clip": "Object/ObjFishDebris",
+    "speed": 1
+   },
+   "ObjFishGold": {
+    "speed": 1
+   },
+   "ObjFishSplat": {
+    "clip": "Object/ObjFishSplat",
+    "speed": 1
+   },
+   "ObjMelon": {
+    "clip": "Object/ObjMelon",
+    "speed": 1
+   },
+   "ObjMelonDebris": {
+    "clip": "Object/ObjMelonDebris",
+    "speed": 1
+   },
+   "ObjMelonPickel": {
+    "clip": "Object/ObjMelonPickel",
+    "speed": 1
+   },
+   "ObjMelonPickelDebris01": {
+    "clip": "Object/ObjMelonPickelDebris01",
+    "speed": 1
+   },
+   "ObjMelonPickelDebris02": {
+    "clip": "Object/ObjMelonPickelDebris02",
+    "speed": 1
+   },
+   "ObjMelonPickelSplat": {
+    "clip": "Object/ObjMelonPickelSplat",
+    "speed": 1
+   },
+   "ObjMelonSplat": {
+    "clip": "Object/ObjMelonSplat",
+    "speed": 1
+   }
+  }
+ },
+ "Samurai": {
+  "default": "NoPose",
+  "states": {
+   "Beat": {
+    "clip": "Samurai/Beat",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Samurai/NoPose",
+    "speed": 1
+   },
+   "Slash": {
+    "clip": "Samurai/Slash",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NoPose",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Step": {
+    "clip": "Samurai/Step",
+    "speed": 1
+   },
+   "Unstep": {
+    "clip": "Samurai/Unstep",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NoPose",
+      "exitTime": 0.06250006,
+      "duration": 0.25
+     }
+    ]
+   }
+  }
+ },
+ "SamuraiLauncher": {
+  "default": "NoPose",
+  "states": {
+   "Launch": {
+    "clip": "Launcher/Launch",
+    "speed": 1
+   },
+   "NoPose": {
+    "clip": "Launcher/NoPose",
+    "speed": 1
+   },
+   "UnStep": {
+    "clip": "Launcher/UnStep",
+    "speed": 1
+   }
+  }
+ }
+}

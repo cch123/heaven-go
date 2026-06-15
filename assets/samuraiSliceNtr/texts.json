@@ -1,0 +1,22 @@
+[
+ {
+  "path": "BG/Moon/moon/text",
+  "text": "555\nSAMU\nRAI",
+  "size": 9.9,
+  "color": [
+   0.759,
+   0.759,
+   0.13394117,
+   1
+  ],
+  "order": -998,
+  "layer": 0,
+  "font": "FOT-SlumpStd-DB.otf",
+  "rect": [
+   2.6169,
+   3.2383
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]

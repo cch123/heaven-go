@@ -47,3 +47,20 @@ func released() bool {
 		inpututil.IsKeyJustReleased(ebiten.KeyJ) ||
 		inpututil.IsMouseButtonJustReleased(ebiten.MouseButtonLeft)
 }
+
+func releasedN(action int) bool {
+	switch action {
+	case 1:
+		return inpututil.IsKeyJustReleased(ebiten.KeyF) ||
+			inpututil.IsKeyJustReleased(ebiten.KeyLeft) ||
+			inpututil.IsKeyJustReleased(ebiten.KeyUp)
+	case 2:
+		return inpututil.IsKeyJustReleased(ebiten.KeyK) ||
+			inpututil.IsKeyJustReleased(ebiten.KeyRight)
+	case 3:
+		return inpututil.IsKeyJustReleased(ebiten.KeyL) ||
+			inpututil.IsKeyJustReleased(ebiten.KeyDown) ||
+			inpututil.IsKeyJustReleased(ebiten.KeyX)
+	}
+	return false
+}

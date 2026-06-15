@@ -82,6 +82,23 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "maya", markers: []string{"enterCurves", "flyingCurves", "missCurve", "bigYokaiStartPosition", "bigYokaiXDistance", "shadowOffsetX"}, atPath: "AA1_Maya_0", curveFields: []string{"missCurve"}, curveArrayFields: []string{"enterCurves", "flyingCurves"}},
 		},
 	},
+	"samuraiSliceNtr": {
+		dir:    "SamuraiSliceNtr",
+		prefab: "samuraiSliceNtr.prefab",
+		roleFields: []string{
+			"player", "launcher", "objectPrefab", "childParent", "objectHolder",
+			"background", "fasterWarning", "darknessOverlay", "theMoon", "moonText",
+		},
+		refArrayFields:  []string{"Effects"},
+		curveFields:     []string{"InCurve", "LaunchCurve", "LaunchHighCurve", "NgLaunchCurve", "DebrisLeftCurve", "DebrisRightCurve", "NgDebrisCurve"},
+		wantControllers: true,
+		wantTexts:       true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"player", "launcher", "objectPrefab", "childParent", "objectHolder", "InCurve", "LaunchCurve", "LaunchHighCurve", "NgLaunchCurve", "DebrisLeftCurve", "DebrisRightCurve", "NgDebrisCurve", "background", "fasterWarning", "theMoon"}, curveFields: []string{"InCurve", "LaunchCurve", "LaunchHighCurve", "NgLaunchCurve", "DebrisLeftCurve", "DebrisRightCurve", "NgDebrisCurve"}},
+			{name: "object", markers: []string{"moneyBurst", "pickelBurst", "pickelBurstSplat", "doubleLaunchPos"}, atPath: "ObjectRoot"},
+			{name: "child", markers: []string{"DebrisPosL", "DebrisPosR", "WalkPos0", "WalkPos1"}, atPath: "Child"},
+		},
+	},
 	"rhythmTestGBA": {
 		dir:    "RhythmTestGBA",
 		prefab: "rhythmTestGBA.prefab",

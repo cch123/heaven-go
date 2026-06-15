@@ -1,0 +1,3563 @@
+{
+ "nodes": [
+  {
+   "name": "samuraiSliceNtr",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.85,
+    0.85
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Moon",
+   "path": "BG/Moon",
+   "parent": 1,
+   "pos": [
+    0,
+    -16
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "moon",
+   "path": "BG/Moon/moon",
+   "parent": 2,
+   "pos": [
+    0,
+    19.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    4,
+    4
+   ],
+   "order": -9999,
+   "color": [
+    1,
+    1,
+    0.1764706,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "text",
+   "path": "BG/Moon/moon/text",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2588235,
+    0.2588235
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wall",
+   "path": "BG/wall",
+   "parent": 1,
+   "pos": [
+    -0.08,
+    -3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    22.720001,
+    5.2400002
+   ]
+  },
+  {
+   "name": "funnyfloor",
+   "path": "BG/wall/funnyfloor",
+   "parent": 5,
+   "pos": [
+    0.4603,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    62.85951,
+    0.7
+   ],
+   "sprite": "samurainew_20",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    8.94
+   ]
+  },
+  {
+   "name": "the color white",
+   "path": "BG/wall/funnyfloor/the color white",
+   "parent": 6,
+   "pos": [
+    0.01739,
+    -11.0388
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8389803,
+    40.210255
+   ],
+   "sprite": "the color white",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.37,
+    0.33
+   ]
+  },
+  {
+   "name": "funnydoor",
+   "path": "BG/wall/funnydoor",
+   "parent": 5,
+   "pos": [
+    0.089,
+    -0.662
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.68,
+    0.68
+   ],
+   "sprite": "samurainew_22",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.86,
+    3.44
+   ]
+  },
+  {
+   "name": "background",
+   "path": "BG/background",
+   "parent": 1,
+   "pos": [
+    1.3251,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    42.74,
+    28.660812
+   ],
+   "order": -10000,
+   "color": [
+    0.75294125,
+    0.75294125,
+    0.75294125,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "clouds",
+   "path": "BG/clouds",
+   "parent": 1,
+   "pos": [
+    1.3251,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    14.912348,
+    10
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cloud",
+   "path": "BG/clouds/cloud",
+   "parent": 10,
+   "pos": [
+    0.43500003,
+    0.205
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0455998,
+    0.06800002
+   ],
+   "sprite": "samurainew_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.02,
+    1.7
+   ]
+  },
+  {
+   "name": "cloud (1)",
+   "path": "BG/clouds/cloud (1)",
+   "parent": 10,
+   "pos": [
+    0.5389408,
+    0.30500004
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0455998,
+    0.06800002
+   ],
+   "sprite": "samurainew_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.02,
+    1.7
+   ]
+  },
+  {
+   "name": "cloud (2)",
+   "path": "BG/clouds/cloud (2)",
+   "parent": 10,
+   "pos": [
+    0.45700005,
+    0.677
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0455998,
+    0.06800002
+   ],
+   "sprite": "samurainew_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.02,
+    1.7
+   ]
+  },
+  {
+   "name": "cloud (3)",
+   "path": "BG/clouds/cloud (3)",
+   "parent": 10,
+   "pos": [
+    -0.49308306,
+    0.5609999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0455998,
+    0.06800002
+   ],
+   "sprite": "samurainew_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.02,
+    1.7
+   ]
+  },
+  {
+   "name": "cloud (4)",
+   "path": "BG/clouds/cloud (4)",
+   "parent": 10,
+   "pos": [
+    -0.65000004,
+    0.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0455998,
+    0.06800002
+   ],
+   "sprite": "samurainew_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.02,
+    1.7
+   ]
+  },
+  {
+   "name": "cloud (5)",
+   "path": "BG/clouds/cloud (5)",
+   "parent": 10,
+   "pos": [
+    -0.7844703,
+    0.24399999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0455998,
+    0.06800002
+   ],
+   "sprite": "samurainew_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.02,
+    1.7
+   ]
+  },
+  {
+   "name": "cloud (6)",
+   "path": "BG/clouds/cloud (6)",
+   "parent": 10,
+   "pos": [
+    -0.704,
+    0.14100002
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0455998,
+    0.06800002
+   ],
+   "sprite": "samurainew_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.02,
+    1.7
+   ]
+  },
+  {
+   "name": "cloud (7)",
+   "path": "BG/clouds/cloud (7)",
+   "parent": 10,
+   "pos": [
+    0.39597678,
+    0.5709999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0455998,
+    0.06800002
+   ],
+   "sprite": "samurainew_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.02,
+    1.7
+   ]
+  },
+  {
+   "name": "treeBranch",
+   "path": "BG/treeBranch",
+   "parent": 1,
+   "pos": [
+    -4.99,
+    2.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1.5,
+    1.5
+   ],
+   "sprite": "samurainew_17",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.2,
+    3.27
+   ]
+  },
+  {
+   "name": "tiles",
+   "path": "BG/tiles",
+   "parent": 1,
+   "pos": [
+    -19.5,
+    -0.825
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "funnytile",
+   "path": "BG/tiles/funnytile",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (1)",
+   "path": "BG/tiles/funnytile (1)",
+   "parent": 20,
+   "pos": [
+    1.7333333,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (2)",
+   "path": "BG/tiles/funnytile (2)",
+   "parent": 20,
+   "pos": [
+    3.4666667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (3)",
+   "path": "BG/tiles/funnytile (3)",
+   "parent": 20,
+   "pos": [
+    3.4666667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (4)",
+   "path": "BG/tiles/funnytile (4)",
+   "parent": 20,
+   "pos": [
+    5.266667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (5)",
+   "path": "BG/tiles/funnytile (5)",
+   "parent": 20,
+   "pos": [
+    7.066667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (6)",
+   "path": "BG/tiles/funnytile (6)",
+   "parent": 20,
+   "pos": [
+    8.866667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (7)",
+   "path": "BG/tiles/funnytile (7)",
+   "parent": 20,
+   "pos": [
+    10.666667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (8)",
+   "path": "BG/tiles/funnytile (8)",
+   "parent": 20,
+   "pos": [
+    12.46667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (9)",
+   "path": "BG/tiles/funnytile (9)",
+   "parent": 20,
+   "pos": [
+    14.26667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (10)",
+   "path": "BG/tiles/funnytile (10)",
+   "parent": 20,
+   "pos": [
+    16.06667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (11)",
+   "path": "BG/tiles/funnytile (11)",
+   "parent": 20,
+   "pos": [
+    17.86667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (12)",
+   "path": "BG/tiles/funnytile (12)",
+   "parent": 20,
+   "pos": [
+    19.66667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (13)",
+   "path": "BG/tiles/funnytile (13)",
+   "parent": 20,
+   "pos": [
+    21.46667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (14)",
+   "path": "BG/tiles/funnytile (14)",
+   "parent": 20,
+   "pos": [
+    23.26667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (15)",
+   "path": "BG/tiles/funnytile (15)",
+   "parent": 20,
+   "pos": [
+    25.06667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (16)",
+   "path": "BG/tiles/funnytile (16)",
+   "parent": 20,
+   "pos": [
+    26.86667,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (17)",
+   "path": "BG/tiles/funnytile (17)",
+   "parent": 20,
+   "pos": [
+    28.603333,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (18)",
+   "path": "BG/tiles/funnytile (18)",
+   "parent": 20,
+   "pos": [
+    30.336666,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (19)",
+   "path": "BG/tiles/funnytile (19)",
+   "parent": 20,
+   "pos": [
+    32.07,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (20)",
+   "path": "BG/tiles/funnytile (20)",
+   "parent": 20,
+   "pos": [
+    32.07,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (21)",
+   "path": "BG/tiles/funnytile (21)",
+   "parent": 20,
+   "pos": [
+    33.87,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (22)",
+   "path": "BG/tiles/funnytile (22)",
+   "parent": 20,
+   "pos": [
+    35.67,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (23)",
+   "path": "BG/tiles/funnytile (23)",
+   "parent": 20,
+   "pos": [
+    37.47,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (24)",
+   "path": "BG/tiles/funnytile (24)",
+   "parent": 20,
+   "pos": [
+    39.27,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (25)",
+   "path": "BG/tiles/funnytile (25)",
+   "parent": 20,
+   "pos": [
+    41.070004,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (26)",
+   "path": "BG/tiles/funnytile (26)",
+   "parent": 20,
+   "pos": [
+    42.870003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (27)",
+   "path": "BG/tiles/funnytile (27)",
+   "parent": 20,
+   "pos": [
+    44.670002,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (28)",
+   "path": "BG/tiles/funnytile (28)",
+   "parent": 20,
+   "pos": [
+    46.47,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (29)",
+   "path": "BG/tiles/funnytile (29)",
+   "parent": 20,
+   "pos": [
+    48.270004,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (30)",
+   "path": "BG/tiles/funnytile (30)",
+   "parent": 20,
+   "pos": [
+    50.07,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (31)",
+   "path": "BG/tiles/funnytile (31)",
+   "parent": 20,
+   "pos": [
+    51.870003,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (32)",
+   "path": "BG/tiles/funnytile (32)",
+   "parent": 20,
+   "pos": [
+    53.670002,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "funnytile (33)",
+   "path": "BG/tiles/funnytile (33)",
+   "parent": 20,
+   "pos": [
+    55.47,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_19",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1,
+    3.04
+   ]
+  },
+  {
+   "name": "pebble",
+   "path": "BG/pebble",
+   "parent": 1,
+   "pos": [
+    -3.245,
+    -5.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "pebble (1)",
+   "path": "BG/pebble (1)",
+   "parent": 1,
+   "pos": [
+    -4.526,
+    -5.289
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "pebble (2)",
+   "path": "BG/pebble (2)",
+   "parent": 1,
+   "pos": [
+    4.63,
+    -5.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "Rock",
+   "path": "BG/Rock",
+   "parent": 1,
+   "pos": [
+    -3.29,
+    -4.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_76",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.71,
+    1.56
+   ]
+  },
+  {
+   "name": "pebble (3)",
+   "path": "BG/pebble (3)",
+   "parent": 1,
+   "pos": [
+    5.92,
+    -5.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "pebble (4)",
+   "path": "BG/pebble (4)",
+   "parent": 1,
+   "pos": [
+    9.24,
+    -6.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "pebble (5)",
+   "path": "BG/pebble (5)",
+   "parent": 1,
+   "pos": [
+    -8.63,
+    -5.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "pebble (6)",
+   "path": "BG/pebble (6)",
+   "parent": 1,
+   "pos": [
+    -11.82,
+    -5.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "pebble (7)",
+   "path": "BG/pebble (7)",
+   "parent": 1,
+   "pos": [
+    11.72,
+    -5.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "pebble (8)",
+   "path": "BG/pebble (8)",
+   "parent": 1,
+   "pos": [
+    15.4,
+    -6.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "pebble (9)",
+   "path": "BG/pebble (9)",
+   "parent": 1,
+   "pos": [
+    -15.71,
+    -6.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_75",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.35,
+    0.34
+   ]
+  },
+  {
+   "name": "Samurai",
+   "path": "Samurai",
+   "parent": 0,
+   "pos": [
+    -2.64,
+    -0.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    5
+   ]
+  },
+  {
+   "name": "legL",
+   "path": "Samurai/legL",
+   "parent": 66,
+   "pos": [
+    -0.949,
+    0.695
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "samurainew_4",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.31
+   ]
+  },
+  {
+   "name": "legR",
+   "path": "Samurai/legR",
+   "parent": 66,
+   "pos": [
+    0.34,
+    1.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "samurainew_5",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    1.92
+   ]
+  },
+  {
+   "name": "footR00",
+   "path": "Samurai/legR/footR00",
+   "parent": 68,
+   "pos": [
+    0.6,
+    -0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_6",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.77,
+    0.59000003
+   ]
+  },
+  {
+   "name": "body",
+   "path": "Samurai/body",
+   "parent": 66,
+   "pos": [
+    -0.398,
+    2.277
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "samurainew_3",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.5,
+    2.29
+   ]
+  },
+  {
+   "name": "hand01",
+   "path": "Samurai/body/hand01",
+   "parent": 70,
+   "pos": [
+    1.75,
+    -0.33
+   ],
+   "rotZ": 0.785398051940941,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_8",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.72,
+    0.61
+   ]
+  },
+  {
+   "name": "hand00",
+   "path": "Samurai/body/hand00",
+   "parent": 70,
+   "pos": [
+    1.336,
+    -0.758
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_7",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    0.65
+   ]
+  },
+  {
+   "name": "seathe",
+   "path": "Samurai/body/seathe",
+   "parent": 70,
+   "pos": [
+    -0.18,
+    -2.18
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_9",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.3000002,
+    1.84
+   ]
+  },
+  {
+   "name": "seathe (1)",
+   "path": "Samurai/body/seathe (1)",
+   "parent": 70,
+   "pos": [
+    0.99,
+    -0.99
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_9",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.3000002,
+    1.84
+   ]
+  },
+  {
+   "name": "the funny",
+   "path": "Samurai/body/the funny",
+   "parent": 70,
+   "pos": [
+    1.95,
+    2.89
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_16",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.06,
+    7.06
+   ]
+  },
+  {
+   "name": "evil arm",
+   "path": "Samurai/body/evil arm",
+   "parent": 70,
+   "pos": [
+    4.261778,
+    -3.318963
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4814816,
+    1.481482
+   ],
+   "sprite": "samurainew_0",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    3.64
+   ]
+  },
+  {
+   "name": "sord",
+   "path": "Samurai/body/sord",
+   "parent": 70,
+   "pos": [
+    1.62,
+    4.18
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_10",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.01,
+    3.37
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Samurai/head",
+   "parent": 66,
+   "pos": [
+    0.561,
+    3.233
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "samurainew_2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    1.2600001
+   ]
+  },
+  {
+   "name": "neck",
+   "path": "Samurai/head/neck",
+   "parent": 78,
+   "pos": [
+    -0.68,
+    -0.418
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    1.11
+   ]
+  },
+  {
+   "name": "Launcher",
+   "path": "Launcher",
+   "parent": 0,
+   "pos": [
+    -0.43,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "launcherPivot",
+   "path": "Launcher/launcherPivot",
+   "parent": 80,
+   "pos": [
+    0.014,
+    -0.022
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "samurainew_15",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.73,
+    0.69
+   ]
+  },
+  {
+   "name": "board00",
+   "path": "Launcher/board00",
+   "parent": 80,
+   "pos": [
+    1.48,
+    0.14
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.625,
+    0.625
+   ],
+   "sprite": "samurainew_11",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.13,
+    0.32
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Curves",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ObjectIn",
+   "path": "Curves/ObjectIn",
+   "parent": 83,
+   "pos": [
+    0,
+    -1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/ObjectIn/Point 0",
+   "parent": 84,
+   "pos": [
+    -12.5,
+    -3
+   ],
+   "z": -5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/ObjectIn/Point 1",
+   "parent": 84,
+   "pos": [
+    5.91,
+    -3.6
+   ],
+   "z": 0.1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ObjectLaunch",
+   "path": "Curves/ObjectLaunch",
+   "parent": 83,
+   "pos": [
+    0,
+    -1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/ObjectLaunch/Point 0",
+   "parent": 87,
+   "pos": [
+    2.98,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/ObjectLaunch/Point 1",
+   "parent": 87,
+   "pos": [
+    -1.55,
+    -3.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ObjectLaunchHigh",
+   "path": "Curves/ObjectLaunchHigh",
+   "parent": 83,
+   "pos": [
+    0,
+    -1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/ObjectLaunchHigh/Point 0",
+   "parent": 90,
+   "pos": [
+    2.96,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/ObjectLaunchHigh/Point 1",
+   "parent": 90,
+   "pos": [
+    -1.58,
+    -3.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DebrisLeft",
+   "path": "Curves/DebrisLeft",
+   "parent": 83,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/DebrisLeft/Point 0",
+   "parent": 93,
+   "pos": [
+    -0.75514185,
+    1.4763501
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/DebrisLeft/Point 1",
+   "parent": 93,
+   "pos": [
+    -1.12,
+    -3.6999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DebrisRight",
+   "path": "Curves/DebrisRight",
+   "parent": 83,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/DebrisRight/Point 0",
+   "parent": 96,
+   "pos": [
+    -0.75514185,
+    1.4763501
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/DebrisRight/Point 1",
+   "parent": 96,
+   "pos": [
+    1.12,
+    -3.6999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ObjectLaunchNG",
+   "path": "Curves/ObjectLaunchNG",
+   "parent": 83,
+   "pos": [
+    0,
+    -1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/ObjectLaunchNG/Point 0",
+   "parent": 99,
+   "pos": [
+    1.69,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/ObjectLaunchNG/Point 1",
+   "parent": 99,
+   "pos": [
+    4.19,
+    -3.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DebrisNG",
+   "path": "Curves/DebrisNG",
+   "parent": 83,
+   "pos": [
+    -2.45,
+    -0.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/DebrisNG/Point 0",
+   "parent": 102,
+   "pos": [
+    1.69,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/DebrisNG/Point 1",
+   "parent": 102,
+   "pos": [
+    2.4470143,
+    -4.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ObjHolder",
+   "path": "ObjHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ObjectRoot",
+   "path": "ObjectRoot",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Object",
+   "path": "ObjectRoot/Object",
+   "parent": 106,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_59",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.75,
+    1.61
+   ]
+  },
+  {
+   "name": "MoneyBurst",
+   "path": "MoneyBurst",
+   "parent": 0,
+   "pos": [
+    -0.75514185,
+    1.4763501
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PickelBurst",
+   "path": "PickelBurst",
+   "parent": 0,
+   "pos": [
+    -0.75514185,
+    1.4763501
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PickelBurstSplat",
+   "path": "PickelBurstSplat",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Child",
+   "path": "Child",
+   "parent": 0,
+   "pos": [
+    0,
+    -5.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "child_body",
+   "path": "Child/child_body",
+   "parent": 111,
+   "pos": [
+    0,
+    1.14
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.96,
+    0.91
+   ]
+  },
+  {
+   "name": "child_bodylower",
+   "path": "Child/child_body/child_bodylower",
+   "parent": 112,
+   "pos": [
+    0,
+    -0.476
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "samurainew_46",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.99
+   ]
+  },
+  {
+   "name": "child_bodyupper",
+   "path": "Child/child_body/child_bodyupper",
+   "parent": 112,
+   "pos": [
+    0,
+    -0.218
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "samurainew_49",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.97,
+    0.92
+   ]
+  },
+  {
+   "name": "child_legR",
+   "path": "Child/child_legR",
+   "parent": 111,
+   "pos": [
+    0.3,
+    0.379
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.75,
+    0.75
+   ],
+   "sprite": "samurainew_53",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.79
+   ]
+  },
+  {
+   "name": "child_legL",
+   "path": "Child/child_legL",
+   "parent": 111,
+   "pos": [
+    -0.3,
+    0.525
+   ],
+   "rotZ": -0.87606774120302,
+   "scale": [
+    -0.75,
+    0.75
+   ],
+   "sprite": "samurainew_53",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.79
+   ]
+  },
+  {
+   "name": "child_armL",
+   "path": "Child/child_armL",
+   "parent": 111,
+   "pos": [
+    -0.45,
+    1.244
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.75,
+    0.75
+   ],
+   "sprite": "samurainew_55",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.03,
+    0.98
+   ]
+  },
+  {
+   "name": "hold_pos",
+   "path": "Child/child_armL/hold_pos",
+   "parent": 117,
+   "pos": [
+    0.537,
+    0.537
+   ],
+   "z": -0.001,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "child_armR",
+   "path": "Child/child_armR",
+   "parent": 111,
+   "pos": [
+    0.45,
+    1.244
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.75,
+    0.75
+   ],
+   "sprite": "samurainew_55",
+   "order": -2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.03,
+    0.98
+   ]
+  },
+  {
+   "name": "hold_pos",
+   "path": "Child/child_armR/hold_pos",
+   "parent": 119,
+   "pos": [
+    -0.537,
+    0.537
+   ],
+   "z": -0.001,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "child_head",
+   "path": "Child/child_head",
+   "parent": 111,
+   "pos": [
+    0,
+    1.497
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.73,
+    0.73
+   ],
+   "sprite": "samurainew_43",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.35,
+    1.03
+   ]
+  },
+  {
+   "name": "ChildTargetPos",
+   "path": "ChildTargetPos",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pos0",
+   "path": "ChildTargetPos/Pos0",
+   "parent": 122,
+   "pos": [
+    0,
+    -5.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Pos1",
+   "path": "ChildTargetPos/Pos1",
+   "parent": 122,
+   "pos": [
+    2.45,
+    -5.5
+   ],
+   "z": -9,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EffectWind",
+   "path": "EffectWind",
+   "parent": 0,
+   "pos": [
+    50,
+    -10
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1764702,
+    1.1764704
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cherry",
+   "path": "Cherry",
+   "parent": 0,
+   "pos": [
+    -4,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "Leaf",
+   "path": "Leaf",
+   "parent": 0,
+   "pos": [
+    -4,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "leafBroken",
+   "path": "leafBroken",
+   "parent": 0,
+   "pos": [
+    -4,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "Snow",
+   "path": "Snow",
+   "parent": 0,
+   "pos": [
+    -15,
+    -4
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    6
+   ]
+  },
+  {
+   "name": "Faster",
+   "path": "Faster",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "faster",
+   "path": "Faster/faster",
+   "parent": 130,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "samurainew_30",
+   "order": 500,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.901218,
+    2.3600001
+   ]
+  },
+  {
+   "name": "afterimage",
+   "path": "Faster/faster/afterimage",
+   "parent": 131,
+   "pos": [
+    -0.62,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_30",
+   "order": 499,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.901218,
+    2.3600001
+   ]
+  },
+  {
+   "name": "afterimage",
+   "path": "Faster/faster/afterimage/afterimage",
+   "parent": 132,
+   "pos": [
+    -0.62,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_30",
+   "order": 498,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.901218,
+    2.3600001
+   ]
+  },
+  {
+   "name": "afterimage",
+   "path": "Faster/faster/afterimage/afterimage/afterimage",
+   "parent": 133,
+   "pos": [
+    -0.62,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_30",
+   "order": 497,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.901218,
+    2.3600001
+   ]
+  },
+  {
+   "name": "afterimage",
+   "path": "Faster/faster/afterimage/afterimage/afterimage/afterimage",
+   "parent": 134,
+   "pos": [
+    -0.62,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurainew_30",
+   "order": 496,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.901218,
+    2.3600001
+   ]
+  },
+  {
+   "name": "overlay",
+   "path": "Faster/overlay",
+   "parent": 130,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    50,
+    50
+   ],
+   "order": 450,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.4117647
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

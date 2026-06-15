@@ -1,0 +1,12 @@
+{
+ "background": "BG/background",
+ "childParent": "Child",
+ "darknessOverlay": "Faster/overlay",
+ "fasterWarning": "Faster",
+ "launcher": "Launcher",
+ "moonText": "BG/Moon/moon/text",
+ "objectHolder": "ObjHolder",
+ "objectPrefab": "ObjectRoot",
+ "player": "Samurai",
+ "theMoon": "BG/Moon"
+}

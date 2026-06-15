@@ -46,6 +46,13 @@ func (c *Ctx) ScheduleInputRelease(beat float64, onHit func(state float64, j Jud
 	return c.App.scheduleInput(beat, true, 0, onHit, onMiss)
 }
 
+// ScheduleInputActionRelease registers a release window for a non-primary
+// action channel. Samurai Slice Ntr's AltUp uses this for the South-button
+// unstep cue; empty releases intentionally do not whiff, matching base release.
+func (c *Ctx) ScheduleInputActionRelease(beat float64, action int, onHit func(state float64, j Judgment), onMiss func()) *Input {
+	return c.App.scheduleInput(beat, true, action, onHit, onMiss)
+}
+
 // ScheduleInputReleaseCond is the release-channel equivalent of
 // ScheduleInputCond. Rhythm Tweezers needs this because a long hair release
 // window is cancelled if the player lets go early and the game has already
