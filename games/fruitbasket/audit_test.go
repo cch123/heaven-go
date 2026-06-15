@@ -161,12 +161,14 @@ func TestFruitBasketControllersClipsAndPaths(t *testing.T) {
 
 	// These clips are not reachable from controller motions but are still
 	// intentionally accounted for: hoopShake is driven directly from Melon.cs,
-	// test has an empty controller state plus a raw clip, and the last two are
-	// legacy clips shipped with the prefab but not referenced by FruitBasket.cs.
+	// test has an empty controller state plus a raw clip, and the Courtney/Mouth
+	// controller clips ship in the asset folder without a prefab Animator binding
+	// or FruitBasket.cs call site.
 	rawOrLegacy := map[string]string{
 		"Animations/hoop/hoopShake":                  "HoopL",
 		"Animations/Courtney/test":                   "Courtney",
 		"Animations/Courtney/hitFruit":               "Courtney",
+		"Animations/Courtney/face_just":              "Courtney",
 		"Animations/thoughtBubble/thoughtBubbleIdle": "ThoughtBubble",
 	}
 	for clip, root := range rawOrLegacy {
