@@ -1,6 +1,24 @@
 package rockers
 
-import "hsdemo/engine"
+import (
+	"math/rand"
+
+	"hsdemo/engine"
+)
+
+const (
+	rockerLightningNormal = iota
+	rockerLightningYellow
+	rockerLightningBlue
+)
+
+var rockerLightningSprites = [3][3]string{
+	rockerLightningNormal: {"rockersmain_22", "rockersmain_23", "rockersmain_24"},
+	rockerLightningYellow: {"yel", "yel1", "yel2"},
+	rockerLightningBlue:   {"blu", "blu1", "blu2"},
+}
+
+var rockerLightningNodes = [3]string{"Lightning", "Lightning (1)", "Lightning (2)"}
 
 type rocker struct {
 	mod    *Module
@@ -98,7 +116,7 @@ func (r *rocker) bendLoopsTo(semi int, seconds float64) bool {
 	return ok
 }
 
-func (r *rocker) strumStrings(gleeClub bool, pitches [6]int, sample noteSample, sampleTone int, disableFX, jump bool) {
+func (r *rocker) strumStrings(gleeClub bool, pitches [6]int, sample noteSample, sampleTone int, disableFX, jump, barely bool) {
 	if r.strum {
 		return
 	}
@@ -122,16 +140,41 @@ func (r *rocker) strumStrings(gleeClub bool, pitches [6]int, sample noteSample, 
 			}
 			r.playFX(state, beat)
 		}
-		return
+	} else {
+		r.play("Strum", beat)
+		if !disableFX {
+			r.playFX("StrumStart", beat)
+		}
 	}
-	r.play("Strum", beat)
 	if !disableFX {
-		r.playFX("StrumStart", beat)
+		r.applyLightningSprites(barely)
 	}
 }
 
-func (r *rocker) strumLast(disableFX, jump bool) {
-	r.strumStrings(r.lastGleeClub, r.lastPitches, r.lastSample, r.lastSampleTone, disableFX, jump)
+func (r *rocker) strumLast(disableFX, jump, barely bool) {
+	r.strumStrings(r.lastGleeClub, r.lastPitches, r.lastSample, r.lastSampleTone, disableFX, jump, barely)
+}
+
+func (r *rocker) applyLightningSprites(barely bool) {
+	if r.jj || r.mod == nil || r.mod.ctx == nil || r.mod.ctx.Scene == nil || r.fxPath == "" {
+		return
+	}
+	palette := rockerLightningNormal
+	if barely {
+		palette = rockerLightningBlue
+		if rand.Intn(2) == 0 {
+			palette = rockerLightningYellow
+		}
+	}
+	// Unity changes SpriteRenderer.sprite after the FX animator picks which
+	// lightning children are active. SceneInst sprite overrides reproduce that
+	// runtime write while leaving the animation's active flags in charge.
+	sprites := rockerLightningSprites[palette]
+	for _, side := range []string{"LightningRight", "LightningLeft"} {
+		for i, node := range rockerLightningNodes {
+			r.mod.ctx.Scene.SetSpriteOver(r.fxPath+"/"+side+"/"+node, sprites[i])
+		}
+	}
 }
 
 func (r *rocker) bendUp(pitch int) {

@@ -117,7 +117,7 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/
   `cmon`/`lastOne`/together riff 的事件流、JJ/Soshi 动画、循环和弦/逐弦音色、
   premade sample enum、mute 收尾、摄像机 pass-turn 与 C# `BendUp/BendDown(0.05f)`
-  的连续滑音已接入；barely 命中时 Soshi 闪电颜色随机化仍待补。
+  的连续滑音、barely 命中时 Soshi 闪电黄/蓝随机换色已接入。
 - superSamuraiSlice：`bop`/小恶魔/大恶魔/平台滚动/环境开关的事件流、输入、
   主要动画、平台 guard、爆炸音效与鸟叫已接入；`Explode1/2/3`、`lightning`、
   `waterL/waterR` 仍是手写瞬时效果，尚未按 Unity ParticleSystem 序列化参数

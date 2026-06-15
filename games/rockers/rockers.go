@@ -239,7 +239,7 @@ func (m *Module) startInterval(iv intervalEvent) {
 		r := r
 		m.ctx.At(r.beat, func() {
 			if m.ctx.GameAt(r.beat) == m.ID() {
-				m.jj.strumStrings(r.jj.gleeClub, r.jj.pitches, sampleAt(r.jj.sample), r.jj.sampleTone, !r.respond, false)
+				m.jj.strumStrings(r.jj.gleeClub, r.jj.pitches, sampleAt(r.jj.sample), r.jj.sampleTone, !r.respond, false, false)
 			}
 		})
 		m.ctx.At(r.beat+r.length, func() {
@@ -299,8 +299,8 @@ func (m *Module) passTurn(passBeat float64, moveCamera bool, iv intervalEvent) {
 func (m *Module) scheduleSoshiRiff(target, length float64, part riffPart, jump bool) {
 	m.ctx.ScheduleInputReleaseCond(target,
 		func() bool { return m.ctx.GameAt(target) == m.ID() },
-		func(_ float64, _ engine.Judgment) {
-			m.soshi.strumStrings(part.gleeClub, part.pitches, sampleAt(part.sample), part.sampleTone, false, jump)
+		func(_ float64, j engine.Judgment) {
+			m.soshi.strumStrings(part.gleeClub, part.pitches, sampleAt(part.sample), part.sampleTone, false, jump, j == engine.JudgeNG)
 		},
 		func() { m.jj.miss() },
 	)
@@ -357,7 +357,7 @@ func (m *Module) defaultCmon(e *riq.Entity) {
 		i, off := i, off
 		m.ctx.At(beat+off.start, func() {
 			var p [6]int
-			m.jj.strumStrings(false, p, sampleAt(jjSamples[i]), jjPitch[i], false, i == 3)
+			m.jj.strumStrings(false, p, sampleAt(jjSamples[i]), jjPitch[i], false, i == 3, false)
 		})
 		m.ctx.At(beat+off.mute, func() { m.jj.mute(true, false) })
 		part := riffPart{sample: sSamples[i], sampleTone: sPitch[i]}
@@ -381,7 +381,7 @@ func (m *Module) defaultLastOne(e *riq.Entity) {
 		i, off := i, off
 		m.ctx.At(beat+off.start, func() {
 			var p [6]int
-			m.jj.strumStrings(false, p, sampleAt(jjSamples[i]), jjPitch[i], false, false)
+			m.jj.strumStrings(false, p, sampleAt(jjSamples[i]), jjPitch[i], false, false, false)
 		})
 		m.ctx.At(beat+off.mute, func() { m.jj.mute(true, false) })
 		part := riffPart{sample: sSamples[i], sampleTone: sPitch[i]}
@@ -408,7 +408,7 @@ func (m *Module) prepareTogether(ev togetherPrepare) {
 	for _, r := range m.togetherBetween(ev.beat, m.ctx.NextSwitchBeat(ev.beat)) {
 		r := r
 		m.ctx.At(r.beat, func() {
-			m.jj.strumStrings(r.jj.gleeClub, r.jj.pitches, sampleAt(r.jj.sample), r.jj.sampleTone, false, r.togetherEnd)
+			m.jj.strumStrings(r.jj.gleeClub, r.jj.pitches, sampleAt(r.jj.sample), r.jj.sampleTone, false, r.togetherEnd, false)
 		})
 		m.ctx.At(r.beat+r.length, func() { m.jj.mute(true, false) })
 		m.scheduleSoshiRiff(r.beat, r.length, r.soshi, r.togetherEnd)

@@ -47,6 +47,42 @@ func TestRockersExtractedAssetCoverage(t *testing.T) {
 		}
 	}
 
+	var sprites struct {
+		Sprites map[string]any `json:"sprites"`
+	}
+	readJSON(t, filepath.Join(root, "sprites.json"), &sprites)
+	for _, palette := range rockerLightningSprites {
+		for _, sprite := range palette {
+			if _, ok := sprites.Sprites[sprite]; !ok {
+				t.Fatalf("missing lightning sprite %s", sprite)
+			}
+		}
+	}
+
+	var scene struct {
+		Nodes []struct {
+			Path   string `json:"path"`
+			Sprite string `json:"sprite"`
+		} `json:"nodes"`
+	}
+	readJSON(t, filepath.Join(root, "scene.json"), &scene)
+	sceneSprites := map[string]string{}
+	for _, n := range scene.Nodes {
+		sceneSprites[n.Path] = n.Sprite
+	}
+	for _, holder := range []string{"StudentHolder", "JJHolder"} {
+		for _, side := range []string{"LightningRight", "LightningLeft"} {
+			for i, node := range rockerLightningNodes {
+				path := holder + "/StrumEffects/" + side + "/" + node
+				if got, ok := sceneSprites[path]; !ok {
+					t.Fatalf("missing lightning node %s", path)
+				} else if want := rockerLightningSprites[rockerLightningNormal][i]; got != want {
+					t.Fatalf("lightning node %s sprite = %s, want %s", path, got, want)
+				}
+			}
+		}
+	}
+
 	for _, sound := range []string{
 		"mute.wav", "bendUp.wav", "bendDown.wav", "Cmon.wav", "LastOne.wav",
 		"rocker/rockerChordA.wav", "rocker/rockerChordG.wav", "rocker/rockerRemix6ChordA.wav", "rocker/rockerRemix10ChordD.wav",
