@@ -1,0 +1,152 @@
+{
+ "components": {
+  "background": {
+   "path": "CameraMoveable/Background",
+   "refs": {
+    "anchorHour": "CameraMoveable/Background/ZoomOutBg/HourArrowAnchor",
+    "anchorMinute": "CameraMoveable/Background/ZoomOutBg/MinuteArrowAnchor"
+   },
+   "refArrays": {
+    "srsIn": [
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline1",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline2",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline3",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline4",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline5",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline6",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline7",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline8",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline9",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline10",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline11",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline12",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchExtrude",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchEnd",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchEnd (1)",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchEnd (2)",
+     "CameraMoveable/Background/ZoomInBg/WatchParts/WatchEnd (3)",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow1",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow2_2",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow3",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow4",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow5",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow6",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow7",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow8",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow9",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow10",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow11",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow12",
+     "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow2_1",
+     "CameraMoveable/Background/ZoomInBg/WatchMiddleBg",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline1",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline2",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline3",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline4",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline5",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline6",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline7",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline8",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline9",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline10",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline11",
+     "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline12"
+    ],
+    "srsOut": [
+     "CameraMoveable/Background/ZoomOutBg/ZoomOutHand",
+     "CameraMoveable/Background/ZoomOutBg/ZoomOutHandAfterEffect",
+     "CameraMoveable/Background/ZoomOutBg/TopGradient",
+     "CameraMoveable/Background/ZoomOutBg/Gradient",
+     "CameraMoveable/Background/ZoomOutBg/BottomGradient",
+     "CameraMoveable/Background/ZoomOutBg/MiddleMonkey",
+     "CameraMoveable/Background/ZoomOutBg/MinuteArrowAnchor/arrow",
+     "CameraMoveable/Background/ZoomOutBg/HourArrowAnchor/arrow"
+    ]
+   }
+  },
+  "balloon": {
+   "path": "CameraMoveable/BalloonAnchor",
+   "nums": {
+    "xOffset": -2.962,
+    "yOffset": -14.204
+   },
+   "refs": {
+    "anchor": "CameraMoveable/BalloonAnchor",
+    "balloonTrans": "CameraMoveable/HotAirBalloon",
+    "shadow": "CameraMoveable/HotAirBalloon/Shadow",
+    "target": "CameraMoveable/BalloonAnchor/Target"
+   },
+   "refArrays": {
+    "srs": [
+     "CameraMoveable/HotAirBalloon/Head",
+     "CameraMoveable/HotAirBalloon/Body",
+     "CameraMoveable/HotAirBalloon/Arm",
+     "CameraMoveable/HotAirBalloon/Hand",
+     "CameraMoveable/HotAirBalloon/Hand2",
+     "CameraMoveable/HotAirBalloon/Basket",
+     "CameraMoveable/HotAirBalloon/Balloon",
+     "CameraMoveable/HotAirBalloon/BehindBasket"
+    ]
+   }
+  },
+  "clockArrow": {
+   "path": "CameraMoveable/WatchHand",
+   "nums": {
+    "shadowXRange": -0.5,
+    "shadowYRange": 0.45
+   },
+   "refs": {
+    "anchorRotateTransform": "CameraMoveable/WatchHand/Clicker",
+    "anim": "CameraMoveable/WatchHand",
+    "camMoveTrans": "CameraMoveable",
+    "pinkClap": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/ClapParticles/PinkClap",
+    "playerMonkeyAnim": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey",
+    "shadowTrans": "CameraMoveable/WatchHand/Clicker/Clicker/Shadow",
+    "yellowClap": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/ClapParticles/YellowClap"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "fullZoomOut": 80,
+    "zoomInBeatLength": 2,
+    "zoomInEase": 9,
+    "zoomOutBeatLength": 2,
+    "zoomOutEase": 3
+   },
+   "refs": {
+    "backgroundHandler": "CameraMoveable/Background",
+    "balloonHandler": "CameraMoveable/BalloonAnchor",
+    "cameraAnchor": "CameraAnchor",
+    "cameraMoveable": "CameraMoveable",
+    "cameraTransform": "CameraAnchor/Transform",
+    "middleMonkey": "CameraMoveable/Background/ZoomOutBg/MiddleMonkey",
+    "monkeyClockArrow": "CameraMoveable/WatchHand",
+    "monkeyHandler": "CameraMoveable/MonkeyHandler"
+   }
+  },
+  "monkey0": {
+   "path": "PinkMonkey",
+   "nums": {
+    "isPink": 1,
+    "monkeyBeat": 0
+   }
+  },
+  "monkey1": {
+   "path": "YellowMonkey",
+   "nums": {
+    "isPink": 0,
+    "monkeyBeat": 0
+   }
+  },
+  "monkeyHandler": {
+   "path": "CameraMoveable/MonkeyHandler",
+   "nums": {
+    "maxMonkeys": 30
+   },
+   "refs": {
+    "yellowMonkeyRef": "YellowMonkey"
+   }
+  }
+ }
+}

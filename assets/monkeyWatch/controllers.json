@@ -1,0 +1,253 @@
+{
+ "HotAirBalloon": {
+  "default": "HotAirBalloon",
+  "states": {
+   "HotAirBalloon": {
+    "clip": "Animations/HotAirBalloon",
+    "speed": 1
+   }
+  }
+ },
+ "MiddleMonkey": {
+  "default": "Nothing",
+  "states": {
+   "MiddleMonkeyBop": {
+    "clip": "Animations/MiddleMonkeyBop",
+    "speed": 1
+   },
+   "MiddleMonkeyMiss": {
+    "clip": "Animations/MiddleMonkeyMiss",
+    "speed": 1
+   },
+   "Nothing": {
+    "speed": 1
+   }
+  }
+ },
+ "MonkeyClickerAnim": {
+  "default": "Nothing",
+  "states": {
+   "Click": {
+    "clip": "Animations/MonkeyClicker/Click",
+    "speed": 1
+   },
+   "Nothing": {
+    "speed": 1
+   }
+  }
+ },
+ "PlayerMonkey": {
+  "default": "PlayerIdle",
+  "states": {
+   "PlayerClap": {
+    "clip": "Animations/PlayerMonkey/PlayerClap",
+    "speed": 1
+   },
+   "PlayerClapBarely": {
+    "clip": "Animations/PlayerMonkey/PlayerClapBarely",
+    "speed": 1
+   },
+   "PlayerClapBig": {
+    "clip": "Animations/PlayerMonkey/PlayerClapBig",
+    "speed": 1
+   },
+   "PlayerIdle": {
+    "clip": "Animations/PlayerMonkey/PlayerIdle",
+    "speed": 1
+   }
+  }
+ },
+ "WatchHoleAnim": {
+  "default": "Nothing",
+  "states": {
+   "HoleClose": {
+    "clip": "Animations/WatchHole/HoleOpen",
+    "speed": -1
+   },
+   "HoleClose 0": {
+    "clip": "Animations/WatchHole/HoleClose",
+    "speed": 1
+   },
+   "HoleOpen": {
+    "clip": "Animations/WatchHole/HoleOpen",
+    "speed": 1
+   },
+   "Nothing": {
+    "speed": 1
+   }
+  }
+ },
+ "YellowMonkey": {
+  "default": "YellowIdle",
+  "states": {
+   "Appear": {
+    "clip": "Animations/YellowAppear",
+    "speed": 1
+   },
+   "Barely": {
+    "clip": "Animations/YellowFrown",
+    "speed": 1
+   },
+   "Clap1": {
+    "clip": "Animations/YellowClapDown",
+    "speed": 1
+   },
+   "Clap2": {
+    "clip": "Animations/YellowClapCorner",
+    "speed": 1
+   },
+   "Clap3": {
+    "clip": "Animations/YellowClapSide",
+    "speed": 1
+   },
+   "Clap4": {
+    "clip": "Animations/YellowClapCornerUp",
+    "speed": 1
+   },
+   "Clap5": {
+    "clip": "Animations/YellowClapUp",
+    "speed": 1
+   },
+   "Clap6": {
+    "clip": "Animations/YellowClapCornerRIght",
+    "speed": 1
+   },
+   "Clap7": {
+    "clip": "Animations/YellowClapSideFlip",
+    "speed": 1
+   },
+   "Clap8": {
+    "clip": "Animations/YellowClapCornerDown",
+    "speed": 1
+   },
+   "Just": {
+    "clip": "Animations/YellowDance",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Animations/YellowAshamed",
+    "speed": 1
+   },
+   "PinkAppear": {
+    "clip": "Animations/Pink/PinkAppear",
+    "speed": 1
+   },
+   "PinkBarely": {
+    "clip": "Animations/Pink/PinkFrown",
+    "speed": 1
+   },
+   "PinkClap1": {
+    "clip": "Animations/Pink/PinkClapDown",
+    "speed": 1
+   },
+   "PinkClap2": {
+    "clip": "Animations/Pink/PinkClapCorner",
+    "speed": 1
+   },
+   "PinkClap3": {
+    "clip": "Animations/Pink/PinkClapSide",
+    "speed": 1
+   },
+   "PinkClap4": {
+    "clip": "Animations/Pink/PinkClapCornerUp",
+    "speed": 1
+   },
+   "PinkClap5": {
+    "clip": "Animations/Pink/PinkClapUp",
+    "speed": 1
+   },
+   "PinkClap6": {
+    "clip": "Animations/Pink/PinkClapCornerRight",
+    "speed": 1
+   },
+   "PinkClap7": {
+    "clip": "Animations/Pink/PinkClapSideFlip",
+    "speed": 1
+   },
+   "PinkClap8": {
+    "clip": "Animations/Pink/PinkClapCornerDown",
+    "speed": 1
+   },
+   "PinkIdle": {
+    "clip": "Animations/Pink/PinkIdle",
+    "speed": 1
+   },
+   "PinkJust": {
+    "clip": "Animations/Pink/PinkDance",
+    "speed": 1
+   },
+   "PinkMiss": {
+    "clip": "Animations/Pink/PinkAshamed",
+    "speed": 1
+   },
+   "PinkPrepare1": {
+    "clip": "Animations/Pink/PinkPrepareDown",
+    "speed": 1
+   },
+   "PinkPrepare2": {
+    "clip": "Animations/Pink/PinkPrepareCorner",
+    "speed": 1
+   },
+   "PinkPrepare3": {
+    "clip": "Animations/Pink/PinkPrepareSide",
+    "speed": 1
+   },
+   "PinkPrepare4": {
+    "clip": "Animations/Pink/PinkPrepareCornerUp",
+    "speed": 1
+   },
+   "PinkPrepare5": {
+    "clip": "Animations/Pink/PinkPrepareUp",
+    "speed": 1
+   },
+   "PinkPrepare6": {
+    "clip": "Animations/Pink/PinkPrepareCornerRight",
+    "speed": 1
+   },
+   "PinkPrepare7": {
+    "clip": "Animations/Pink/PinkPrepareSideFlip",
+    "speed": 1
+   },
+   "PinkPrepare8": {
+    "clip": "Animations/Pink/PinkPrepareCornerDown",
+    "speed": 1
+   },
+   "Prepare1": {
+    "clip": "Animations/YellowPrepareDown",
+    "speed": 1
+   },
+   "Prepare2": {
+    "clip": "Animations/YellowPrepareCorner",
+    "speed": 1
+   },
+   "Prepare3": {
+    "clip": "Animations/YellowPrepareSide",
+    "speed": 1
+   },
+   "Prepare4": {
+    "clip": "Animations/YellowPrepareCornerUp",
+    "speed": 1
+   },
+   "Prepare5": {
+    "clip": "Animations/YellowPrepareUp",
+    "speed": 1
+   },
+   "Prepare6": {
+    "clip": "Animations/YellowPrepareCornerRight",
+    "speed": 1
+   },
+   "Prepare7": {
+    "clip": "Animations/YellowPrepareSideFlip",
+    "speed": 1
+   },
+   "Prepare8": {
+    "clip": "Animations/YellowPrepareCornerDown",
+    "speed": 1
+   },
+   "YellowIdle": {
+    "clip": "Animations/YellowIdle",
+    "speed": 1
+   }
+  }
+ }
+}

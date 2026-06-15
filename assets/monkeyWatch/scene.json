@@ -1,0 +1,10860 @@
+{
+ "nodes": [
+  {
+   "name": "monkeyWatch",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3031,
+    1.3031
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraAnchor",
+   "path": "CameraAnchor",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Transform",
+   "path": "CameraAnchor/Transform",
+   "parent": 1,
+   "pos": [
+    0,
+    13.582999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraMoveable",
+   "path": "CameraMoveable",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "CameraMoveable/Background",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BGColor",
+   "path": "CameraMoveable/Background/BGColor",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    320,
+    180
+   ],
+   "order": -20000,
+   "color": [
+    1,
+    0.8745098,
+    0.80784315,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "ZoomOutBg",
+   "path": "CameraMoveable/Background/ZoomOutBg",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ZoomOutHand",
+   "path": "CameraMoveable/Background/ZoomOutBg/ZoomOutHand",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    14.3,
+    14.3
+   ],
+   "sprite": "MonkeyWatch_13",
+   "order": -6000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8575,
+    0.4875
+   ]
+  },
+  {
+   "name": "ZoomOutHandAfterEffect",
+   "path": "CameraMoveable/Background/ZoomOutBg/ZoomOutHandAfterEffect",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    14.3,
+    14.3
+   ],
+   "sprite": "MonkeyWatch_13",
+   "order": -5000,
+   "color": [
+    1,
+    1,
+    1,
+    0.3137255
+   ],
+   "size": [
+    1.8575,
+    0.4875
+   ]
+  },
+  {
+   "name": "TopGradient",
+   "path": "CameraMoveable/Background/ZoomOutBg/TopGradient",
+   "parent": 6,
+   "pos": [
+    0,
+    45
+   ],
+   "rotZ": 0,
+   "scale": [
+    320,
+    90
+   ],
+   "order": -9000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.315,
+    4.74
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "CameraMoveable/Background/ZoomOutBg/Gradient",
+   "parent": 6,
+   "pos": [
+    0,
+    11.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1015,
+    10
+   ],
+   "sprite": "MonkeyWatch_12",
+   "order": -8000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.315,
+    4.74
+   ]
+  },
+  {
+   "name": "BottomGradient",
+   "path": "CameraMoveable/Background/ZoomOutBg/BottomGradient",
+   "parent": 6,
+   "pos": [
+    0,
+    -45
+   ],
+   "rotZ": 0,
+   "scale": [
+    320,
+    90
+   ],
+   "order": -9000,
+   "color": [
+    0.98823535,
+    0.9686275,
+    0.21568629,
+    1
+   ],
+   "size": [
+    0.315,
+    4.74
+   ]
+  },
+  {
+   "name": "MiddleMonkey",
+   "path": "CameraMoveable/Background/ZoomOutBg/MiddleMonkey",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    11.149,
+    11.149
+   ],
+   "sprite": "MonkeyWatch_8",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.375
+   ]
+  },
+  {
+   "name": "ShakeLines",
+   "path": "CameraMoveable/Background/ZoomOutBg/MiddleMonkey/ShakeLines",
+   "parent": 12,
+   "pos": [
+    0.008,
+    0.006
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0295839,
+    1.0295839
+   ],
+   "sprite": "MonkeyWatch_6",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.375
+   ]
+  },
+  {
+   "name": "MinuteArrowAnchor",
+   "path": "CameraMoveable/Background/ZoomOutBg/MinuteArrowAnchor",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arrow",
+   "path": "CameraMoveable/Background/ZoomOutBg/MinuteArrowAnchor/arrow",
+   "parent": 14,
+   "pos": [
+    -0.14,
+    4.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    15,
+    15
+   ],
+   "sprite": "MonkeyWatch_10",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.385,
+    0.7825
+   ]
+  },
+  {
+   "name": "HourArrowAnchor",
+   "path": "CameraMoveable/Background/ZoomOutBg/HourArrowAnchor",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "arrow",
+   "path": "CameraMoveable/Background/ZoomOutBg/HourArrowAnchor/arrow",
+   "parent": 16,
+   "pos": [
+    0,
+    4.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    15,
+    15
+   ],
+   "sprite": "MonkeyWatch_11",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.385,
+    0.7825
+   ]
+  },
+  {
+   "name": "ZoomInBg",
+   "path": "CameraMoveable/Background/ZoomInBg",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WatchParts",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WatchOutline1",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline1",
+   "parent": 19,
+   "pos": [
+    3.92,
+    15.09
+   ],
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline2",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline2",
+   "parent": 19,
+   "pos": [
+    11.059,
+    11.07
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline3",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline3",
+   "parent": 19,
+   "pos": [
+    15.06,
+    4.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline4",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline4",
+   "parent": 19,
+   "pos": [
+    15.0641,
+    -4.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline5",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline5",
+   "parent": 19,
+   "pos": [
+    11.052,
+    -11.089
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline6",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline6",
+   "parent": 19,
+   "pos": [
+    3.92,
+    -15.11
+   ],
+   "rotZ": -1.0471975549810364,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline7",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline7",
+   "parent": 19,
+   "pos": [
+    -3.92,
+    -15.11
+   ],
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline8",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline8",
+   "parent": 19,
+   "pos": [
+    -11.059,
+    -11.09
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline9",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline9",
+   "parent": 19,
+   "pos": [
+    -15.07,
+    -4.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline10",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline10",
+   "parent": 19,
+   "pos": [
+    -15.07,
+    4.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline11",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline11",
+   "parent": 19,
+   "pos": [
+    -11.07,
+    11.07
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline12",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchOutline12",
+   "parent": 19,
+   "pos": [
+    -3.93,
+    15.09
+   ],
+   "rotZ": -1.0471975549810364,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_0",
+   "order": -100,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchExtrude",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchExtrude",
+   "parent": 19,
+   "pos": [
+    17.13,
+    -0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_4",
+   "order": -4500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchEnd",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchEnd",
+   "parent": 19,
+   "pos": [
+    4.8263,
+    -17.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8552,
+    1.8552
+   ],
+   "sprite": "WatchParts_3",
+   "order": -4500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchEnd (1)",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchEnd (1)",
+   "parent": 19,
+   "pos": [
+    -4.8263,
+    -17.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8552,
+    1.8552
+   ],
+   "sprite": "WatchParts_3",
+   "order": -4500,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchEnd (2)",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchEnd (2)",
+   "parent": 19,
+   "pos": [
+    4.8263,
+    17.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8552,
+    1.8552
+   ],
+   "sprite": "WatchParts_3",
+   "order": -4500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchEnd (3)",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchParts/WatchEnd (3)",
+   "parent": 19,
+   "pos": [
+    -4.8263,
+    17.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8552,
+    1.8552
+   ],
+   "sprite": "WatchParts_3",
+   "order": -4500,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchShadow",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow",
+   "parent": 18,
+   "pos": [
+    22.69,
+    -3.8
+   ],
+   "rotZ": 0.9551432123785608,
+   "scale": [
+    1.0056759,
+    1.0314623
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "InnerShadow1",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow1",
+   "parent": 37,
+   "pos": [
+    -6.4380674,
+    33.80588
+   ],
+   "rotZ": 1.0618676623477976,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow2_2",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow2_2",
+   "parent": 37,
+   "pos": [
+    0.3,
+    30.14
+   ],
+   "rotZ": 0.5495816459638597,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow3",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow3",
+   "parent": 37,
+   "pos": [
+    4.24,
+    23.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow4",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow4",
+   "parent": 37,
+   "pos": [
+    4.47,
+    15.86
+   ],
+   "rotZ": 5.8172759468472925,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow5",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow5",
+   "parent": 37,
+   "pos": [
+    1.26,
+    9.49
+   ],
+   "rotZ": 5.267695497435287,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow6",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow6",
+   "parent": 37,
+   "pos": [
+    -5.573621,
+    5.584691
+   ],
+   "rotZ": 4.7528746394665,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow7",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow7",
+   "parent": 37,
+   "pos": [
+    -13.23438,
+    5.3601704
+   ],
+   "rotZ": 4.203295087190005,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow8",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow8",
+   "parent": 37,
+   "pos": [
+    -19.971773,
+    9.027043
+   ],
+   "rotZ": 3.6910083806314935,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow9",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow9",
+   "parent": 37,
+   "pos": [
+    -23.91,
+    15.58
+   ],
+   "rotZ": 3.141426398890176,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow10",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow10",
+   "parent": 37,
+   "pos": [
+    -24.12,
+    22.73
+   ],
+   "rotZ": 2.6758489309103948,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow11",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow11",
+   "parent": 37,
+   "pos": [
+    -20.65,
+    29.49
+   ],
+   "rotZ": 2.126267723556941,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow12",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow12",
+   "parent": 37,
+   "pos": [
+    -14.17,
+    33.55
+   ],
+   "rotZ": 1.6114483752955195,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "InnerShadow2_1",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadow/InnerShadow2_1",
+   "parent": 37,
+   "pos": [
+    -0.15,
+    30.58
+   ],
+   "rotZ": -5.687225611142619,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchShadowBack",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack",
+   "parent": 18,
+   "pos": [
+    0.03,
+    -0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0883431,
+    1.0611343
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WatchOutline1",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline1",
+   "parent": 51,
+   "pos": [
+    3.9977992,
+    15.02
+   ],
+   "rotZ": 1.0297442022766277,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline2",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline2",
+   "parent": 51,
+   "pos": [
+    10.9928,
+    10.774999
+   ],
+   "rotZ": 0.4936654652318392,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline3",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline3",
+   "parent": 51,
+   "pos": [
+    14.5778,
+    4.3556
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline4",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline4",
+   "parent": 51,
+   "pos": [
+    14.667799,
+    -3.86
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline5",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline5",
+   "parent": 51,
+   "pos": [
+    10.761,
+    -10.886
+   ],
+   "rotZ": -1.040216081924557,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline6",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline6",
+   "parent": 51,
+   "pos": [
+    4.087799,
+    -14.88
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline7",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline7",
+   "parent": 51,
+   "pos": [
+    -3.6483045,
+    -14.959
+   ],
+   "rotZ": -2.095467189851555,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline8",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline8",
+   "parent": 51,
+   "pos": [
+    -10.5,
+    -10.86
+   ],
+   "rotZ": -2.611250352874483,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline9",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline9",
+   "parent": 51,
+   "pos": [
+    -14.401498,
+    -4.4694595
+   ],
+   "rotZ": -3.1252139850481573,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline10",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline10",
+   "parent": 51,
+   "pos": [
+    -14.626072,
+    3.7434368
+   ],
+   "rotZ": -3.6488127153476606,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline11",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline11",
+   "parent": 51,
+   "pos": [
+    -10.831672,
+    10.826506
+   ],
+   "rotZ": -4.1654315647440106,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchOutline12",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchShadowBack/WatchOutline12",
+   "parent": 51,
+   "pos": [
+    -4.225,
+    14.931
+   ],
+   "rotZ": -4.696005839981092,
+   "scale": [
+    1.6764871,
+    1.6764871
+   ],
+   "sprite": "WatchParts_2",
+   "order": -8999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchMiddleBg",
+   "path": "CameraMoveable/Background/ZoomInBg/WatchMiddleBg",
+   "parent": 18,
+   "pos": [
+    -0.11,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    13.669163,
+    14.029906
+   ],
+   "sprite": "MonkeyWatch_4",
+   "order": -4000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8575,
+    0.4875
+   ]
+  },
+  {
+   "name": "BigTicks",
+   "path": "CameraMoveable/Background/BigTicks",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BigTick",
+   "path": "CameraMoveable/Background/BigTicks/BigTick",
+   "parent": 65,
+   "pos": [
+    -5.76,
+    9.97
+   ],
+   "rotZ": -5.75958629600818,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick/Shadow",
+   "parent": 66,
+   "pos": [
+    0.041,
+    -0.062
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (1)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (1)",
+   "parent": 65,
+   "pos": [
+    0,
+    11.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (1)/Shadow",
+   "parent": 68,
+   "pos": [
+    0.041,
+    -0.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (2)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (2)",
+   "parent": 65,
+   "pos": [
+    5.76,
+    9.97
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (2)/Shadow",
+   "parent": 70,
+   "pos": [
+    0.069,
+    -0.009
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (3)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (3)",
+   "parent": 65,
+   "pos": [
+    9.955,
+    5.748
+   ],
+   "rotZ": -1.0471975549810364,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (3)/Shadow",
+   "parent": 72,
+   "pos": [
+    0.07,
+    0.019
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (4)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (4)",
+   "parent": 65,
+   "pos": [
+    11.479,
+    0
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (4)/Shadow",
+   "parent": 74,
+   "pos": [
+    0.044,
+    0.031
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (5)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (5)",
+   "parent": 65,
+   "pos": [
+    9.908,
+    -5.724
+   ],
+   "rotZ": -2.094395252531804,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (5)/Shadow",
+   "parent": 76,
+   "pos": [
+    0,
+    0.115
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.9097888,
+    0.9097888
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (6)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (6)",
+   "parent": 65,
+   "pos": [
+    5.759,
+    -9.973
+   ],
+   "rotZ": -2.617993758329484,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (6)/Shadow",
+   "parent": 78,
+   "pos": [
+    -0.037,
+    0.061
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.975342,
+    0.975342
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (7)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (7)",
+   "parent": 65,
+   "pos": [
+    0.009,
+    -11.441
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (7)/Shadow",
+   "parent": 80,
+   "pos": [
+    -0.045,
+    0.053
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.975342,
+    0.975342
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (8)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (8)",
+   "parent": 65,
+   "pos": [
+    -5.75,
+    -9.94
+   ],
+   "rotZ": -3.665191249734966,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (8)/Shadow",
+   "parent": 82,
+   "pos": [
+    -0.072,
+    -0.003
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.975342,
+    0.975342
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (9)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (9)",
+   "parent": 65,
+   "pos": [
+    -9.899,
+    -5.714
+   ],
+   "rotZ": -4.188790312493875,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (9)/Shadow",
+   "parent": 84,
+   "pos": [
+    -0.062,
+    -0.043
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.975342,
+    0.975342
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (10)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (10)",
+   "parent": 65,
+   "pos": [
+    -11.461,
+    0
+   ],
+   "rotZ": -4.71238898038469,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (10)/Shadow",
+   "parent": 86,
+   "pos": [
+    -0.036,
+    -0.058
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.975342,
+    0.975342
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "BigTick (11)",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (11)",
+   "parent": 65,
+   "pos": [
+    -9.955,
+    5.748
+   ],
+   "rotZ": -5.235987448993449,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_41",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/BigTicks/BigTick (11)/Shadow",
+   "parent": 88,
+   "pos": [
+    -0.003,
+    -0.164
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.86569065,
+    0.86569065
+   ],
+   "sprite": "YellowMonkey_68",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTicks",
+   "path": "CameraMoveable/Background/SmallTicks",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallTick1",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick1",
+   "parent": 90,
+   "pos": [
+    1.229,
+    11.723
+   ],
+   "rotZ": -0.10471963843671714,
+   "scale": [
+    1.7505875,
+    1.7505875
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick1/Shadow",
+   "parent": 91,
+   "pos": [
+    0.045,
+    -0.026
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick2",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick2",
+   "parent": 90,
+   "pos": [
+    2.448,
+    11.526
+   ],
+   "rotZ": -0.209439323757577,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick2/Shadow",
+   "parent": 93,
+   "pos": [
+    0.04899987,
+    -0.015000198
+   ],
+   "rotZ": 0.004445004749289282,
+   "scale": [
+    0.9884174,
+    0.9884174
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick3",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick3",
+   "parent": 90,
+   "pos": [
+    3.632,
+    11.176
+   ],
+   "rotZ": -0.314159328346512,
+   "scale": [
+    1.7505879,
+    1.7505879
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick3/Shadow",
+   "parent": 95,
+   "pos": [
+    0.048999917,
+    -0.012999984
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98841757,
+    0.98841757
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick4",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick4",
+   "parent": 90,
+   "pos": [
+    4.77,
+    10.68
+   ],
+   "rotZ": -0.418879019183994,
+   "scale": [
+    1.7505875,
+    1.7505875
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick4/Shadow",
+   "parent": 97,
+   "pos": [
+    0.053990673,
+    -0.0031627645
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9884174,
+    0.9884174
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick5",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick5",
+   "parent": 90,
+   "pos": [
+    6.86,
+    9.429
+   ],
+   "rotZ": -0.6283187169783366,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick5/Shadow",
+   "parent": 99,
+   "pos": [
+    0.055136383,
+    -0.0081239175
+   ],
+   "rotZ": 0.02035652829518067,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick6",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick6",
+   "parent": 90,
+   "pos": [
+    7.783,
+    8.632
+   ],
+   "rotZ": -0.7330383186887819,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick6/Shadow",
+   "parent": 101,
+   "pos": [
+    0.064999975,
+    0.001999709
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98841757,
+    0.98841757
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick7",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick7",
+   "parent": 90,
+   "pos": [
+    8.638,
+    7.744
+   ],
+   "rotZ": -0.8377580008809005,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick7/Shadow",
+   "parent": 103,
+   "pos": [
+    0.06400009,
+    0.002999793
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9884176,
+    0.9884176
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick",
+   "parent": 90,
+   "pos": [
+    -2.448,
+    11.526
+   ],
+   "rotZ": -6.073746003312447,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick/Shadow",
+   "parent": 105,
+   "pos": [
+    0.043,
+    -0.065
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (1)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (1)",
+   "parent": 90,
+   "pos": [
+    -3.632,
+    11.176
+   ],
+   "rotZ": -5.969026354154644,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (1)/Shadow",
+   "parent": 107,
+   "pos": [
+    0.045999847,
+    -0.045000788
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (2)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (2)",
+   "parent": 90,
+   "pos": [
+    -4.77,
+    10.68
+   ],
+   "rotZ": -5.864306679254649,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (2)/Shadow",
+   "parent": 109,
+   "pos": [
+    0.045000084,
+    -0.052999783
+   ],
+   "rotZ": 0.004444960327200798,
+   "scale": [
+    0.98841757,
+    0.98841757
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (11)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (11)",
+   "parent": 90,
+   "pos": [
+    9.383,
+    6.802
+   ],
+   "rotZ": -0.942477602964641,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (11)/Shadow",
+   "parent": 111,
+   "pos": [
+    0.056000262,
+    0.020999905
+   ],
+   "rotZ": 0.004444960149402543,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (12)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (12)",
+   "parent": 90,
+   "pos": [
+    -7.783,
+    8.632
+   ],
+   "rotZ": -5.550146988490805,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (12)/Shadow",
+   "parent": 113,
+   "pos": [
+    0.01899999,
+    -0.07300034
+   ],
+   "rotZ": 0.00444501974925119,
+   "scale": [
+    0.9884173,
+    0.9884173
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (13)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (13)",
+   "parent": 90,
+   "pos": [
+    -8.638,
+    7.744
+   ],
+   "rotZ": -5.4454273062986855,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (13)/Shadow",
+   "parent": 115,
+   "pos": [
+    0.018999852,
+    -0.06899979
+   ],
+   "rotZ": 0.004445019927051828,
+   "scale": [
+    0.98841757,
+    0.98841757
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (14)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (14)",
+   "parent": 90,
+   "pos": [
+    -9.383,
+    6.802
+   ],
+   "rotZ": -5.340706988014834,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (14)/Shadow",
+   "parent": 117,
+   "pos": [
+    0.0009998132,
+    -0.192
+   ],
+   "rotZ": 0.004444960327200798,
+   "scale": [
+    0.762261,
+    0.762261
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (15)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (15)",
+   "parent": 90,
+   "pos": [
+    -6.86,
+    9.429
+   ],
+   "rotZ": -5.654866666285765,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (15)/Shadow",
+   "parent": 119,
+   "pos": [
+    0.03799998,
+    -0.06599994
+   ],
+   "rotZ": 0.004445020327050828,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (16)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (16)",
+   "parent": 90,
+   "pos": [
+    -11.117,
+    3.627
+   ],
+   "rotZ": -5.026548057606855,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (16)/Shadow",
+   "parent": 121,
+   "pos": [
+    -0.02300007,
+    -0.06700007
+   ],
+   "rotZ": 0.004445079926901852,
+   "scale": [
+    0.94473934,
+    0.94473934
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (17)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (17)",
+   "parent": 90,
+   "pos": [
+    -11.402,
+    2.412
+   ],
+   "rotZ": -4.9218281935857675,
+   "scale": [
+    1.7505879,
+    1.7505879
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (17)/Shadow",
+   "parent": 123,
+   "pos": [
+    -0.01900002,
+    -0.056000147
+   ],
+   "rotZ": 0.004444960149402543,
+   "scale": [
+    0.9884177,
+    0.9884177
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (18)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (18)",
+   "parent": 90,
+   "pos": [
+    -11.58,
+    1.19
+   ],
+   "rotZ": -4.817108435866444,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (18)/Shadow",
+   "parent": 125,
+   "pos": [
+    -0.029999971,
+    -0.03700023
+   ],
+   "rotZ": 0.004445020327050828,
+   "scale": [
+    0.9884174,
+    0.9884174
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (19)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (19)",
+   "parent": 90,
+   "pos": [
+    -10.68,
+    4.76
+   ],
+   "rotZ": -5.131267754899938,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (19)/Shadow",
+   "parent": 127,
+   "pos": [
+    -0.028000083,
+    -0.050000034
+   ],
+   "rotZ": 0.004444960327200798,
+   "scale": [
+    0.89231354,
+    0.9624495
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (20)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (20)",
+   "parent": 90,
+   "pos": [
+    11.32,
+    2.4
+   ],
+   "rotZ": -1.3613569699906718,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/Shadow",
+   "parent": 90,
+   "pos": [
+    11.391,
+    2.37
+   ],
+   "rotZ": -1.3416784244810445,
+   "scale": [
+    1.7303112,
+    1.7303112
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (21)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (21)",
+   "parent": 90,
+   "pos": [
+    10.976,
+    3.551
+   ],
+   "rotZ": -1.256637034933632,
+   "scale": [
+    1.7505879,
+    1.7505879
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/Shadow",
+   "parent": 90,
+   "pos": [
+    11.018,
+    3.512
+   ],
+   "rotZ": -1.2371515710280696,
+   "scale": [
+    1.7303115,
+    1.7303115
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (22)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (22)",
+   "parent": 90,
+   "pos": [
+    10.618,
+    4.718
+   ],
+   "rotZ": -1.1519172965348226,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (22)/Shadow",
+   "parent": 133,
+   "pos": [
+    0.033683226,
+    0.0062715644
+   ],
+   "rotZ": 0.004444960727199798,
+   "scale": [
+    0.98841757,
+    0.98841757
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (23)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (23)",
+   "parent": 90,
+   "pos": [
+    11.489,
+    1.2
+   ],
+   "rotZ": -1.4660767449484975,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (23)/Shadow",
+   "parent": 135,
+   "pos": [
+    0.059000008,
+    0.07899952
+   ],
+   "rotZ": 0.00444490112734876,
+   "scale": [
+    0.98841757,
+    0.98841757
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (24)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (24)",
+   "parent": 90,
+   "pos": [
+    2.414,
+    -11.415
+   ],
+   "rotZ": -2.9321531707087116,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (24)/Shadow",
+   "parent": 137,
+   "pos": [
+    -0.042000066,
+    0.04999961
+   ],
+   "rotZ": 0.004444989349328391,
+   "scale": [
+    0.9884173,
+    0.9884173
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (25)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (25)",
+   "parent": 90,
+   "pos": [
+    3.62,
+    -11.16
+   ],
+   "rotZ": -2.8274333252432813,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (25)/Shadow",
+   "parent": 139,
+   "pos": [
+    -0.04000023,
+    0.050999455
+   ],
+   "rotZ": 0.004445019927051828,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (26)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (26)",
+   "parent": 90,
+   "pos": [
+    4.76,
+    -10.701
+   ],
+   "rotZ": -2.722713634405799,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (26)/Shadow",
+   "parent": 141,
+   "pos": [
+    -0.037000265,
+    0.061999545
+   ],
+   "rotZ": 0.004444990127126315,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (27)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (27)",
+   "parent": 90,
+   "pos": [
+    1.203,
+    -11.575
+   ],
+   "rotZ": -3.0368728274107166,
+   "scale": [
+    1.7505875,
+    1.7505875
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (27)/Shadow",
+   "parent": 143,
+   "pos": [
+    -0.052000098,
+    0.05699922
+   ],
+   "rotZ": 0.004444997527107818,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (28)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (28)",
+   "parent": 90,
+   "pos": [
+    -3.575,
+    -11.06
+   ],
+   "rotZ": -3.45575164612227,
+   "scale": [
+    1.7505875,
+    1.7505875
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (28)/Shadow",
+   "parent": 145,
+   "pos": [
+    -0.054000095,
+    0.042999648
+   ],
+   "rotZ": 0.00444501974925119,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (29)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (29)",
+   "parent": 90,
+   "pos": [
+    -2.427,
+    -11.414
+   ],
+   "rotZ": -3.351031957456932,
+   "scale": [
+    1.7505879,
+    1.7505879
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (29)/Shadow",
+   "parent": 147,
+   "pos": [
+    -0.053000003,
+    0.027000064
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (30)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (30)",
+   "parent": 90,
+   "pos": [
+    -1.21,
+    -11.596
+   ],
+   "rotZ": -3.24631229202651,
+   "scale": [
+    1.7505872,
+    1.7505872
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (30)/Shadow",
+   "parent": 149,
+   "pos": [
+    -0.04700021,
+    0.024999913
+   ],
+   "rotZ": 0.004445011927071826,
+   "scale": [
+    0.98841727,
+    0.98841727
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (31)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (31)",
+   "parent": 90,
+   "pos": [
+    -4.73,
+    -10.641999
+   ],
+   "rotZ": -3.5604711995783362,
+   "scale": [
+    1.7505879,
+    1.7505879
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (31)/Shadow",
+   "parent": 151,
+   "pos": [
+    -0.05000008,
+    0.015000207
+   ],
+   "rotZ": 0.004444989949326867,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (32)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (32)",
+   "parent": 90,
+   "pos": [
+    -8.63,
+    -7.7459993
+   ],
+   "rotZ": -3.9793502301079346,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (32)/Shadow",
+   "parent": 153,
+   "pos": [
+    -0.044999886,
+    0.0030002398
+   ],
+   "rotZ": 0.004444960727199798,
+   "scale": [
+    0.9884173,
+    0.9884173
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (33)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (33)",
+   "parent": 90,
+   "pos": [
+    -7.79,
+    -8.628
+   ],
+   "rotZ": -3.874630551505363,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (33)/Shadow",
+   "parent": 155,
+   "pos": [
+    -0.056999978,
+    -0.0019998392
+   ],
+   "rotZ": 0.00444501974925119,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (34)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (34)",
+   "parent": 90,
+   "pos": [
+    -6.894,
+    -9.472
+   ],
+   "rotZ": -3.769910857957854,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (34)/Shadow",
+   "parent": 157,
+   "pos": [
+    -0.057000365,
+    0.005999569
+   ],
+   "rotZ": 0.004444960327200798,
+   "scale": [
+    0.9884177,
+    0.9884177
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (35)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (35)",
+   "parent": 90,
+   "pos": [
+    -9.45,
+    -6.852
+   ],
+   "rotZ": -4.084069727974984,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (35)/Shadow",
+   "parent": 159,
+   "pos": [
+    -0.042999767,
+    -0.0040002405
+   ],
+   "rotZ": 0.00444501974925119,
+   "scale": [
+    0.9884176,
+    0.9884176
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (36)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (36)",
+   "parent": 90,
+   "pos": [
+    7.771,
+    -8.653
+   ],
+   "rotZ": -2.408554179867206,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (36)/Shadow",
+   "parent": 161,
+   "pos": [
+    -0.0020000096,
+    0.20699973
+   ],
+   "rotZ": 0.004444960327200798,
+   "scale": [
+    0.7263189,
+    0.7263189
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (37)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (37)",
+   "parent": 90,
+   "pos": [
+    8.6,
+    -7.76
+   ],
+   "rotZ": -2.303834652708893,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (37)/Shadow",
+   "parent": 163,
+   "pos": [
+    -0.0039999424,
+    0.25500032
+   ],
+   "rotZ": 0.004444960327200798,
+   "scale": [
+    0.66433203,
+    0.66433203
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (38)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (38)",
+   "parent": 90,
+   "pos": [
+    9.43,
+    -6.852973
+   ],
+   "rotZ": -2.199114656884846,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (38)/Shadow",
+   "parent": 165,
+   "pos": [
+    0.0020000436,
+    0.27099988
+   ],
+   "rotZ": 0.00444501974925119,
+   "scale": [
+    0.62471884,
+    0.62471884
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (39)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (39)",
+   "parent": 90,
+   "pos": [
+    6.854,
+    -9.452
+   ],
+   "rotZ": -2.513274183886139,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (39)/Shadow",
+   "parent": 167,
+   "pos": [
+    -0.008999688,
+    0.10499982
+   ],
+   "rotZ": 0.004445079526902852,
+   "scale": [
+    0.91852653,
+    0.91852653
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (40)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (40)",
+   "parent": 90,
+   "pos": [
+    10.99,
+    -3.57
+   ],
+   "rotZ": -1.8849553539578567,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (40)/Shadow",
+   "parent": 169,
+   "pos": [
+    0.05599988,
+    0.0480001
+   ],
+   "rotZ": 0.004445079526902852,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (41)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (41)",
+   "parent": 90,
+   "pos": [
+    11.342,
+    -2.398
+   ],
+   "rotZ": -1.7802356835991213,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (41)/Shadow",
+   "parent": 171,
+   "pos": [
+    0.04800011,
+    0.07099936
+   ],
+   "rotZ": 0.004444960327200798,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (42)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (42)",
+   "parent": 90,
+   "pos": [
+    11.554,
+    -1.226
+   ],
+   "rotZ": -1.6755159086412956,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (42)/Shadow",
+   "parent": 173,
+   "pos": [
+    0.03900008,
+    0.050999496
+   ],
+   "rotZ": 0.00444501974925119,
+   "scale": [
+    0.9884177,
+    0.9884177
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (43)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (43)",
+   "parent": 90,
+   "pos": [
+    10.57,
+    -4.7
+   ],
+   "rotZ": -1.9896751013101455,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (43)/Shadow",
+   "parent": 175,
+   "pos": [
+    0.044000104,
+    0.058999952
+   ],
+   "rotZ": 0.004444960149402543,
+   "scale": [
+    0.9884174,
+    0.9884174
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (44)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (44)",
+   "parent": 90,
+   "pos": [
+    -11.368,
+    -2.423
+   ],
+   "rotZ": -4.502948923303816,
+   "scale": [
+    1.7505879,
+    1.7505879
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (44)/Shadow",
+   "parent": 177,
+   "pos": [
+    -0.049999926,
+    -0.011999874
+   ],
+   "rotZ": 0.004445019927051828,
+   "scale": [
+    0.98841727,
+    0.98841727
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (45)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (45)",
+   "parent": 90,
+   "pos": [
+    -11.082,
+    -3.577
+   ],
+   "rotZ": -4.3982293444416145,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (45)/Shadow",
+   "parent": 179,
+   "pos": [
+    -0.04099991,
+    -0.016999852
+   ],
+   "rotZ": 0.004444960149402543,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (46)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (46)",
+   "parent": 90,
+   "pos": [
+    -10.6,
+    -4.709
+   ],
+   "rotZ": -4.293509589595652,
+   "scale": [
+    1.7505878,
+    1.7505878
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (46)/Shadow",
+   "parent": 181,
+   "pos": [
+    -0.031000137,
+    -0.0030002478
+   ],
+   "rotZ": 0.00444501974925119,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick (47)",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (47)",
+   "parent": 90,
+   "pos": [
+    -11.601,
+    -1.23
+   ],
+   "rotZ": -4.607669398538291,
+   "scale": [
+    1.7505876,
+    1.7505876
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick (47)/Shadow",
+   "parent": 183,
+   "pos": [
+    -0.045999996,
+    -0.03500006
+   ],
+   "rotZ": 0.004444960727199798,
+   "scale": [
+    0.9884175,
+    0.9884175
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "SmallTick48",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick48",
+   "parent": 90,
+   "pos": [
+    -1.229,
+    11.723
+   ],
+   "rotZ": -6.178465668742869,
+   "scale": [
+    1.7505877,
+    1.7505877
+   ],
+   "sprite": "YellowMonkey_40",
+   "order": -58,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/Background/SmallTicks/SmallTick48/Shadow",
+   "parent": 185,
+   "pos": [
+    0.041,
+    -0.062
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.98841745,
+    0.98841745
+   ],
+   "sprite": "YellowMonkey_67",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.31,
+    5.18
+   ]
+  },
+  {
+   "name": "WatchHand",
+   "path": "CameraMoveable/WatchHand",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Clicker",
+   "path": "CameraMoveable/WatchHand/Clicker",
+   "parent": 187,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Clicker",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker",
+   "parent": 188,
+   "pos": [
+    0,
+    7.264
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7000002,
+    1.7500001
+   ],
+   "sprite": "YellowMonkey_29",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    1.3632327,
+    8.298407
+   ]
+  },
+  {
+   "name": "PlayerMonkey",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey",
+   "parent": 189,
+   "pos": [
+    0,
+    3.725142
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.58823526,
+    0.57142854
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PlayerHead",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/PlayerHead",
+   "parent": 190,
+   "pos": [
+    -0.04619994,
+    0.3635979
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7449336,
+    1.7449336
+   ],
+   "sprite": "YellowMonkey_9",
+   "order": 500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69431055,
+    0.44358727
+   ]
+  },
+  {
+   "name": "PlayerHand",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/PlayerHand",
+   "parent": 190,
+   "pos": [
+    -0.8909999,
+    0.8739996
+   ],
+   "rotZ": 1.2029826709232496,
+   "scale": [
+    1.7237737,
+    1.7237737
+   ],
+   "sprite": "YellowMonkey_18",
+   "order": 300,
+   "color": [
+    1,
+    0.96862745,
+    0.7764706,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.28929606
+   ]
+  },
+  {
+   "name": "PlayerBody",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/PlayerBody",
+   "parent": 190,
+   "pos": [
+    -0.02779994,
+    -0.2134018
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7306179,
+    1.7306179
+   ],
+   "sprite": "YellowMonkey_50",
+   "order": 100,
+   "color": [
+    1,
+    0.90588236,
+    0,
+    1
+   ],
+   "size": [
+    0.42430088,
+    0.38572806
+   ]
+  },
+  {
+   "name": "PlayerTail",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/PlayerTail",
+   "parent": 190,
+   "pos": [
+    -0.57789993,
+    -0.1583023
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6557397,
+    1.794776
+   ],
+   "sprite": "YellowMonkey_59",
+   "order": 200,
+   "color": [
+    1,
+    0.90588236,
+    0,
+    1
+   ],
+   "size": [
+    0.4050145,
+    0.36644167
+   ]
+  },
+  {
+   "name": "PlayerArm",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/PlayerArm",
+   "parent": 190,
+   "pos": [
+    -0.52259994,
+    0.4769983
+   ],
+   "rotZ": -0.8307764667865097,
+   "scale": [
+    1.723774,
+    1.723774
+   ],
+   "sprite": "YellowMonkey_60",
+   "order": 150,
+   "flipX": true,
+   "color": [
+    1,
+    0.90588236,
+    0,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.5400193,
+    0.17357764
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/Smear",
+   "parent": 190,
+   "pos": [
+    0.08,
+    1.024
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7449336,
+    1.7449336
+   ],
+   "sprite": "YellowMonkey_21",
+   "order": 299,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.69431055,
+    0.44358727
+   ]
+  },
+  {
+   "name": "ClapParticles",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/ClapParticles",
+   "parent": 190,
+   "pos": [
+    -0.70658,
+    1.0893
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1945,
+    1.1945
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "YellowClap",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/ClapParticles/YellowClap",
+   "parent": 197,
+   "pos": [
+    0.006,
+    0.007
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.36688873,
+    0.36688873
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/ClapParticles/YellowClap/Stars",
+   "parent": 198,
+   "pos": [
+    -0.016353734,
+    -0.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.725622,
+    2.725622
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PinkClap",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/ClapParticles/PinkClap",
+   "parent": 197,
+   "pos": [
+    0.006,
+    0.007
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.36688873,
+    0.36688873
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/PlayerMonkey/ClapParticles/PinkClap/Stars",
+   "parent": 200,
+   "pos": [
+    -0.016353734,
+    -0.33000052
+   ],
+   "rotZ": 0.19955524797660681,
+   "scale": [
+    2.725622,
+    2.725622
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ClickerBase",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/ClickerBase",
+   "parent": 189,
+   "pos": [
+    0,
+    -4.150857
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9050414,
+    0.8791831
+   ],
+   "sprite": "YellowMonkey_28",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4821601,
+    0.4821601
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/Shadow",
+   "parent": 189,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow1",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/Shadow/Shadow1",
+   "parent": 203,
+   "pos": [
+    0.25123522,
+    -0.18651444
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_69",
+   "order": -59,
+   "color": [
+    1,
+    1,
+    1,
+    0.48235294
+   ],
+   "drawMode": 2,
+   "size": [
+    1.3360491,
+    8.265193
+   ]
+  },
+  {
+   "name": "BaseShadow",
+   "path": "CameraMoveable/WatchHand/Clicker/Clicker/Shadow/BaseShadow",
+   "parent": 203,
+   "pos": [
+    0.2411764,
+    -4.243428
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1215005,
+    1.0894576
+   ],
+   "sprite": "YellowMonkey_27",
+   "order": -60,
+   "color": [
+    0.8679245,
+    0.8511764,
+    0.76557493,
+    0.3137255
+   ],
+   "size": [
+    0.4821601,
+    0.4821601
+   ]
+  },
+  {
+   "name": "MonkeyHandler",
+   "path": "CameraMoveable/MonkeyHandler",
+   "parent": 3,
+   "pos": [
+    0,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.68,
+    1.71
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WatchHole1",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole1",
+   "parent": 206,
+   "pos": [
+    0.48482013,
+    9.402921
+   ],
+   "rotZ": 0.4342188081026905,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole1/Hole",
+   "parent": 207,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole1/Cover",
+   "parent": 207,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole2",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole2",
+   "parent": 206,
+   "pos": [
+    1.4638153,
+    9.329947
+   ],
+   "rotZ": 0.44664576061651334,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole2/Hole",
+   "parent": 210,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole2/Cover",
+   "parent": 210,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole3",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole3",
+   "parent": 206,
+   "pos": [
+    2.3938594,
+    9.10997
+   ],
+   "rotZ": 0.3287650246123228,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole3/Hole",
+   "parent": 213,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole3/Cover",
+   "parent": 213,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole4",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole4",
+   "parent": 206,
+   "pos": [
+    3.305872,
+    8.811971
+   ],
+   "rotZ": 0.26660872005157216,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole4/Hole",
+   "parent": 216,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole4/Cover",
+   "parent": 216,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole5",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole5",
+   "parent": 206,
+   "pos": [
+    4.2828927,
+    8.407977
+   ],
+   "rotZ": 0.2081284470952642,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole5/Hole",
+   "parent": 219,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole5/Cover",
+   "parent": 219,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole6",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole6",
+   "parent": 206,
+   "pos": [
+    5.1689754,
+    7.9349995
+   ],
+   "rotZ": 0.05406664486273651,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole6/Hole",
+   "parent": 222,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole6/Cover",
+   "parent": 222,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole7",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole7",
+   "parent": 206,
+   "pos": [
+    6.019994,
+    7.340998
+   ],
+   "rotZ": 0.007293709804171713,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole7/Hole",
+   "parent": 225,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole7/Cover",
+   "parent": 225,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole8",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole8",
+   "parent": 206,
+   "pos": [
+    6.781004,
+    6.69
+   ],
+   "rotZ": -0.015777231400203193,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole8/Hole",
+   "parent": 228,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole8/Cover",
+   "parent": 228,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole9",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole9",
+   "parent": 206,
+   "pos": [
+    7.5059943,
+    5.9199996
+   ],
+   "rotZ": -0.054724450953017506,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole9/Hole",
+   "parent": 231,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole9/Cover",
+   "parent": 231,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole10",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole10",
+   "parent": 206,
+   "pos": [
+    8.072072,
+    5.129982
+   ],
+   "rotZ": -0.26275614034518247,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole10/Hole",
+   "parent": 234,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole10/Cover",
+   "parent": 234,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole11",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole11",
+   "parent": 206,
+   "pos": [
+    8.563092,
+    4.30199
+   ],
+   "rotZ": -0.36702801316801115,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole11/Hole",
+   "parent": 237,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole11/Cover",
+   "parent": 237,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole12",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole12",
+   "parent": 206,
+   "pos": [
+    8.97711,
+    3.3819592
+   ],
+   "rotZ": -0.4116884617634991,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole12/Hole",
+   "parent": 240,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole12/Cover",
+   "parent": 240,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole13",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole13",
+   "parent": 206,
+   "pos": [
+    9.284169,
+    2.4469368
+   ],
+   "rotZ": -0.5941509215300144,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole13/Hole",
+   "parent": 243,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole13/Cover",
+   "parent": 243,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole14",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole14",
+   "parent": 206,
+   "pos": [
+    9.476235,
+    1.4859083
+   ],
+   "rotZ": -0.7268220626926193,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole14/Hole",
+   "parent": 246,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole14/Cover",
+   "parent": 246,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole15",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole15",
+   "parent": 206,
+   "pos": [
+    9.557256,
+    0.5138408
+   ],
+   "rotZ": -0.9481005072016584,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole15/Hole",
+   "parent": 249,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole15/Cover",
+   "parent": 249,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole16",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole16",
+   "parent": 206,
+   "pos": [
+    9.55001,
+    -0.46907085
+   ],
+   "rotZ": -1.0609197969030042,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole16/Hole",
+   "parent": 252,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole16/Cover",
+   "parent": 252,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole17",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole17",
+   "parent": 206,
+   "pos": [
+    9.47601,
+    -1.4530684
+   ],
+   "rotZ": -1.150536237011272,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole17/Hole",
+   "parent": 255,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole17/Cover",
+   "parent": 255,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole18",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole18",
+   "parent": 206,
+   "pos": [
+    9.272997,
+    -2.409059
+   ],
+   "rotZ": -1.2085562283940154,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole18/Hole",
+   "parent": 258,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole18/Cover",
+   "parent": 258,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole19",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole19",
+   "parent": 206,
+   "pos": [
+    8.974002,
+    -3.3430705
+   ],
+   "rotZ": -1.3560556057405135,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole19/Hole",
+   "parent": 261,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole19/Cover",
+   "parent": 261,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole20",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole20",
+   "parent": 206,
+   "pos": [
+    8.557,
+    -4.236079
+   ],
+   "rotZ": -1.475974926931431,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole20/Hole",
+   "parent": 264,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole20/Cover",
+   "parent": 264,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole21",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole21",
+   "parent": 206,
+   "pos": [
+    8.0553875,
+    -5.0773673
+   ],
+   "rotZ": -1.5813326911156609,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole21/Hole",
+   "parent": 267,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole21/Cover",
+   "parent": 267,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole22",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole22",
+   "parent": 206,
+   "pos": [
+    7.4713616,
+    -5.8834286
+   ],
+   "rotZ": -1.7364757506413264,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole22/Hole",
+   "parent": 270,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole22/Cover",
+   "parent": 270,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole23",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole23",
+   "parent": 206,
+   "pos": [
+    6.7863784,
+    -6.6124444
+   ],
+   "rotZ": -1.8533259159441091,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole23/Hole",
+   "parent": 273,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole23/Cover",
+   "parent": 273,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole24",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole24",
+   "parent": 206,
+   "pos": [
+    6.062338,
+    -7.259576
+   ],
+   "rotZ": -2.08010224565466,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole24/Hole",
+   "parent": 276,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole24/Cover",
+   "parent": 276,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole25",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole25",
+   "parent": 206,
+   "pos": [
+    5.232296,
+    -7.8646183
+   ],
+   "rotZ": -2.2284217208865034,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole25/Hole",
+   "parent": 279,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole25/Cover",
+   "parent": 279,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole26",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole26",
+   "parent": 206,
+   "pos": [
+    4.310304,
+    -8.350639
+   ],
+   "rotZ": -2.2785016556136592,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole26/Hole",
+   "parent": 282,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole26/Cover",
+   "parent": 282,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole27",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole27",
+   "parent": 206,
+   "pos": [
+    3.4212759,
+    -8.747644
+   ],
+   "rotZ": -2.4574753803109406,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole27/Hole",
+   "parent": 285,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole27/Cover",
+   "parent": 285,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole28",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole28",
+   "parent": 206,
+   "pos": [
+    2.475225,
+    -9.0466795
+   ],
+   "rotZ": -2.628362936704952,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole28/Hole",
+   "parent": 288,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole28/Cover",
+   "parent": 288,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole29",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole29",
+   "parent": 206,
+   "pos": [
+    1.4841696,
+    -9.264737
+   ],
+   "rotZ": -2.776917461799266,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole29/Hole",
+   "parent": 291,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole29/Cover",
+   "parent": 291,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole30",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole30",
+   "parent": 206,
+   "pos": [
+    0.5000971,
+    -9.360745
+   ],
+   "rotZ": -2.939121358457478,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole30/Hole",
+   "parent": 294,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole30/Cover",
+   "parent": 294,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole31",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole31",
+   "parent": 206,
+   "pos": [
+    -0.49992236,
+    -9.3607645
+   ],
+   "rotZ": -3.0155423609627756,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole31/Hole",
+   "parent": 297,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole31/Cover",
+   "parent": 297,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole32",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole32",
+   "parent": 206,
+   "pos": [
+    -1.5109396,
+    -9.251767
+   ],
+   "rotZ": -3.079591313991062,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole32/Hole",
+   "parent": 300,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole32/Cover",
+   "parent": 300,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole33",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole33",
+   "parent": 206,
+   "pos": [
+    -2.5149655,
+    -9.05081
+   ],
+   "rotZ": -3.1322297592775916,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole33/Hole",
+   "parent": 303,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole33/Cover",
+   "parent": 303,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole34",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole34",
+   "parent": 206,
+   "pos": [
+    -3.478929,
+    -8.727796
+   ],
+   "rotZ": -3.1862635725193056,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole34/Hole",
+   "parent": 306,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole34/Cover",
+   "parent": 306,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole35",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole35",
+   "parent": 206,
+   "pos": [
+    -4.350049,
+    -8.32682
+   ],
+   "rotZ": -3.3600713504657587,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole35/Hole",
+   "parent": 309,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole35/Cover",
+   "parent": 309,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole36",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole36",
+   "parent": 206,
+   "pos": [
+    -5.1731715,
+    -7.8487163
+   ],
+   "rotZ": 2.678576309365226,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole36/Hole",
+   "parent": 312,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole36/Cover",
+   "parent": 312,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole37",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole37",
+   "parent": 206,
+   "pos": [
+    -6.0301766,
+    -7.260713
+   ],
+   "rotZ": 2.628240167044865,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole37/Hole",
+   "parent": 315,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole37/Cover",
+   "parent": 315,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole38",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole38",
+   "parent": 206,
+   "pos": [
+    -6.7872014,
+    -6.6136546
+   ],
+   "rotZ": 2.507335383219555,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole38/Hole",
+   "parent": 318,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole38/Cover",
+   "parent": 318,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole39",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole39",
+   "parent": 206,
+   "pos": [
+    -7.4493194,
+    -5.8766093
+   ],
+   "rotZ": 2.251930639279251,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole39/Hole",
+   "parent": 321,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole39/Cover",
+   "parent": 321,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole40",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole40",
+   "parent": 206,
+   "pos": [
+    -8.060327,
+    -5.070578
+   ],
+   "rotZ": 2.093983547153541,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole40/Hole",
+   "parent": 324,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole40/Cover",
+   "parent": 324,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole41",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole41",
+   "parent": 206,
+   "pos": [
+    -8.580359,
+    -4.26053
+   ],
+   "rotZ": 1.9336780939948908,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole41/Hole",
+   "parent": 327,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole41/Cover",
+   "parent": 327,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole42",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole42",
+   "parent": 206,
+   "pos": [
+    -8.970372,
+    -3.3504324
+   ],
+   "rotZ": 1.74365104599077,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole42/Hole",
+   "parent": 330,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole42/Cover",
+   "parent": 330,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole43",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole43",
+   "parent": 206,
+   "pos": [
+    -9.2703905,
+    -2.396397
+   ],
+   "rotZ": 1.6506284803643463,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole43/Hole",
+   "parent": 333,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole43/Cover",
+   "parent": 333,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole44",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole44",
+   "parent": 206,
+   "pos": [
+    -9.4903755,
+    -1.4203591
+   ],
+   "rotZ": 1.518420103063479,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole44/Hole",
+   "parent": 336,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole44/Cover",
+   "parent": 336,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole45",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole45",
+   "parent": 206,
+   "pos": [
+    -9.540374,
+    -0.4563405
+   ],
+   "rotZ": 1.4506110313833966,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole45/Hole",
+   "parent": 339,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole45/Cover",
+   "parent": 339,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole46",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole46",
+   "parent": 206,
+   "pos": [
+    -9.540321,
+    0.5097547
+   ],
+   "rotZ": 1.2177221277764034,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole46/Hole",
+   "parent": 342,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole46/Cover",
+   "parent": 342,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole47",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole47",
+   "parent": 206,
+   "pos": [
+    -9.4803095,
+    1.5028095
+   ],
+   "z": 0.000041770705,
+   "rotZ": 1.0429023077502937,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole47/Hole",
+   "parent": 345,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole47/Cover",
+   "parent": 345,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole48",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole48",
+   "parent": 206,
+   "pos": [
+    -9.240274,
+    2.4668255
+   ],
+   "rotZ": 0.9485692927127474,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole48/Hole",
+   "parent": 348,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole48/Cover",
+   "parent": 348,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole49",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole49",
+   "parent": 206,
+   "pos": [
+    -8.971241,
+    3.4088755
+   ],
+   "rotZ": 0.7846781899569797,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole49/Hole",
+   "parent": 351,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole49/Cover",
+   "parent": 351,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole50",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole50",
+   "parent": 206,
+   "pos": [
+    -8.547214,
+    4.319891
+   ],
+   "rotZ": 0.7172376562219706,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole50/Hole",
+   "parent": 354,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole50/Cover",
+   "parent": 354,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole51",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole51",
+   "parent": 206,
+   "pos": [
+    -8.062136,
+    5.1659126
+   ],
+   "rotZ": 0.5765909288093332,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole51/Hole",
+   "parent": 357,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole51/Cover",
+   "parent": 357,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole52",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole52",
+   "parent": 206,
+   "pos": [
+    -7.482104,
+    5.9449534
+   ],
+   "rotZ": 0.4088962455151777,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole52/Hole",
+   "parent": 360,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole52/Cover",
+   "parent": 360,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole53",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole53",
+   "parent": 206,
+   "pos": [
+    -6.7771144,
+    6.712964
+   ],
+   "rotZ": 0.3499383892859261,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole53/Hole",
+   "parent": 363,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole53/Cover",
+   "parent": 363,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole54",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole54",
+   "parent": 206,
+   "pos": [
+    -5.9840627,
+    7.3789196
+   ],
+   "rotZ": 0.3637022274369681,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole54/Hole",
+   "parent": 366,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole54/Cover",
+   "parent": 366,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole55",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole55",
+   "parent": 206,
+   "pos": [
+    -5.157031,
+    7.934911
+   ],
+   "rotZ": 0.23745429341123644,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole55/Hole",
+   "parent": 369,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole55/Cover",
+   "parent": 369,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole56",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole56",
+   "parent": 206,
+   "pos": [
+    -4.233083,
+    8.407935
+   ],
+   "rotZ": 0.30037622953620174,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole56/Hole",
+   "parent": 372,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole56/Cover",
+   "parent": 372,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole57",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole57",
+   "parent": 206,
+   "pos": [
+    -3.354101,
+    8.811899
+   ],
+   "rotZ": 0.3301564648966642,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole57/Hole",
+   "parent": 375,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole57/Cover",
+   "parent": 375,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole58",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole58",
+   "parent": 206,
+   "pos": [
+    -2.40314,
+    9.118903
+   ],
+   "rotZ": 0.4064316589141717,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole58/Hole",
+   "parent": 378,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole58/Cover",
+   "parent": 378,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole59",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole59",
+   "parent": 206,
+   "pos": [
+    -1.4451705,
+    9.329879
+   ],
+   "rotZ": 0.4631857738529744,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole59/Hole",
+   "parent": 381,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole59/Cover",
+   "parent": 381,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "WatchHole60",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole60",
+   "parent": 206,
+   "pos": [
+    -0.47717786,
+    9.400916
+   ],
+   "rotZ": 0.45255817951676547,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole60/Hole",
+   "parent": 384,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_15",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "Cover",
+   "path": "CameraMoveable/MonkeyHandler/WatchHole60/Cover",
+   "parent": 384,
+   "pos": [
+    0,
+    0.28642
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6364513,
+    0.6364513
+   ]
+  },
+  {
+   "name": "HotAirBalloon",
+   "path": "CameraMoveable/HotAirBalloon",
+   "parent": 3,
+   "pos": [
+    5.11,
+    5.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "CameraMoveable/HotAirBalloon/Head",
+   "parent": 387,
+   "pos": [
+    2.962,
+    14.204
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7449336,
+    1.7449336
+   ],
+   "sprite": "YellowMonkey_2",
+   "order": 999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.69431055,
+    0.44358727
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "CameraMoveable/HotAirBalloon/Body",
+   "parent": 387,
+   "pos": [
+    3.003,
+    13.698
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7449336,
+    1.7449336
+   ],
+   "sprite": "YellowMonkey_36",
+   "order": 800,
+   "color": [
+    1,
+    0.9058824,
+    0,
+    1
+   ],
+   "size": [
+    0.69431055,
+    0.44358727
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "CameraMoveable/HotAirBalloon/Arm",
+   "parent": 387,
+   "pos": [
+    3.478,
+    14.04
+   ],
+   "rotZ": 0.6828761265039623,
+   "scale": [
+    1.7449336,
+    1.7449336
+   ],
+   "sprite": "YellowMonkey_46",
+   "order": 855,
+   "color": [
+    1,
+    0.9058824,
+    0,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.69431055,
+    0.44358727
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "CameraMoveable/HotAirBalloon/Hand",
+   "parent": 387,
+   "pos": [
+    3.713,
+    14.465
+   ],
+   "rotZ": 0.04551995604484557,
+   "scale": [
+    1.7449336,
+    1.7449336
+   ],
+   "sprite": "YellowMonkey_25",
+   "order": 1000,
+   "color": [
+    0.9607844,
+    0.9333334,
+    0.74509805,
+    1
+   ],
+   "size": [
+    0.69431055,
+    0.44358727
+   ]
+  },
+  {
+   "name": "Hand2",
+   "path": "CameraMoveable/HotAirBalloon/Hand2",
+   "parent": 387,
+   "pos": [
+    2.654,
+    13.727
+   ],
+   "rotZ": 0.04551995604484557,
+   "scale": [
+    1.7449336,
+    1.8103687
+   ],
+   "sprite": "YellowMonkey_20",
+   "order": 1001,
+   "flipX": true,
+   "color": [
+    0.9607844,
+    0.9333334,
+    0.74509805,
+    1
+   ],
+   "size": [
+    0.69431055,
+    0.44358727
+   ]
+  },
+  {
+   "name": "Basket",
+   "path": "CameraMoveable/HotAirBalloon/Basket",
+   "parent": 387,
+   "pos": [
+    2.939,
+    13.083
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.42565238,
+    0.42565238
+   ],
+   "sprite": "MonkeyBalloon_2",
+   "order": 999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.76,
+    4.26
+   ]
+  },
+  {
+   "name": "Balloon",
+   "path": "CameraMoveable/HotAirBalloon/Balloon",
+   "parent": 387,
+   "pos": [
+    2.957,
+    15.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.42565238,
+    0.42565238
+   ],
+   "sprite": "MonkeyBalloon_0",
+   "order": 700,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.76,
+    4.26
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CameraMoveable/HotAirBalloon/Shadow",
+   "parent": 387,
+   "pos": [
+    3.617,
+    14.022
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.42565238,
+    0.42565238
+   ],
+   "sprite": "MonkeyBalloon_1",
+   "order": 400,
+   "color": [
+    1,
+    1,
+    1,
+    0.3019608
+   ],
+   "size": [
+    5.76,
+    4.26
+   ]
+  },
+  {
+   "name": "BehindBasket",
+   "path": "CameraMoveable/HotAirBalloon/BehindBasket",
+   "parent": 387,
+   "pos": [
+    2.939,
+    13.583
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.42565238,
+    0.42565238
+   ],
+   "sprite": "MonkeyBalloon_5",
+   "order": 600,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.76,
+    4.26
+   ]
+  },
+  {
+   "name": "BalloonAnchor",
+   "path": "CameraMoveable/BalloonAnchor",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Target",
+   "path": "CameraMoveable/BalloonAnchor/Target",
+   "parent": 397,
+   "pos": [
+    0,
+    12.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "YellowMonkey",
+   "path": "YellowMonkey",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    50
+   ]
+  },
+  {
+   "name": "MonkeyHeadFull",
+   "path": "YellowMonkey/MonkeyHeadFull",
+   "parent": 399,
+   "pos": [
+    0,
+    0.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_0",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7714561,
+    0.44358727
+   ]
+  },
+  {
+   "name": "MonkeyHead",
+   "path": "YellowMonkey/MonkeyHead",
+   "parent": 399,
+   "pos": [
+    0,
+    0.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_0",
+   "order": 200,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7714561,
+    0.44358727
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "MonkeyBody",
+   "path": "YellowMonkey/MonkeyBody",
+   "parent": 399,
+   "pos": [
+    0,
+    -0.129
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_35",
+   "order": 100,
+   "color": [
+    1,
+    0.9058824,
+    0,
+    1
+   ],
+   "size": [
+    0.28929606,
+    0.38572806
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "LeftHand",
+   "path": "YellowMonkey/LeftHand",
+   "parent": 399,
+   "pos": [
+    0.144,
+    -0.2833
+   ],
+   "rotZ": 0.19198612921912406,
+   "scale": [
+    0.94,
+    0.73
+   ],
+   "sprite": "YellowMonkey_20",
+   "order": 500,
+   "color": [
+    1,
+    0.9686275,
+    0.77647066,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "YellowMonkey/LeftArm",
+   "parent": 399,
+   "pos": [
+    0.288,
+    -0.324
+   ],
+   "rotZ": -0.82801708021005,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_46",
+   "order": 150,
+   "inactive": true,
+   "color": [
+    1,
+    0.9058824,
+    0,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "YellowMonkey/RightArm",
+   "parent": 399,
+   "pos": [
+    -0.249,
+    -0.186
+   ],
+   "rotZ": -0.82801708021005,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_46",
+   "order": 150,
+   "inactive": true,
+   "color": [
+    1,
+    0.9058824,
+    0,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "YellowMonkey/RightHand",
+   "parent": 399,
+   "pos": [
+    -0.149,
+    -0.276
+   ],
+   "rotZ": -0.19198612921912406,
+   "scale": [
+    0.94,
+    0.73
+   ],
+   "sprite": "YellowMonkey_20",
+   "order": 500,
+   "flipX": true,
+   "color": [
+    1,
+    0.9686275,
+    0.77647066,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "YellowMonkey/Mask",
+   "parent": 399,
+   "pos": [
+    0,
+    0.109
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.30017,
+    0.30017
+   ],
+   "sprite": "MonkeyMask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Smear",
+   "path": "YellowMonkey/Smear",
+   "parent": 399,
+   "pos": [
+    -0.011,
+    -0.629
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_21",
+   "order": 150,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "PinkMonkey",
+   "path": "PinkMonkey",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.02,
+    1.02
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    50
+   ]
+  },
+  {
+   "name": "MonkeyHeadFull",
+   "path": "PinkMonkey/MonkeyHeadFull",
+   "parent": 409,
+   "pos": [
+    0,
+    0.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "WatchMonkeys_1",
+   "order": 200,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7714561,
+    0.44358727
+   ]
+  },
+  {
+   "name": "MonkeyHead",
+   "path": "PinkMonkey/MonkeyHead",
+   "parent": 409,
+   "pos": [
+    0,
+    0.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "WatchMonkeys_1",
+   "order": 200,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7666345,
+    0.5376085
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "MonkeyBody",
+   "path": "PinkMonkey/MonkeyBody",
+   "parent": 409,
+   "pos": [
+    0,
+    -0.129
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_35",
+   "order": 100,
+   "color": [
+    1,
+    0.41960785,
+    0.8666667,
+    1
+   ],
+   "size": [
+    0.28929606,
+    0.38572806
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "LeftHand",
+   "path": "PinkMonkey/LeftHand",
+   "parent": 409,
+   "pos": [
+    0.144,
+    -0.2833
+   ],
+   "rotZ": 0.19198612921912406,
+   "scale": [
+    0.94,
+    0.73
+   ],
+   "sprite": "YellowMonkey_20",
+   "order": 500,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "PinkMonkey/LeftArm",
+   "parent": 409,
+   "pos": [
+    0.288,
+    -0.324
+   ],
+   "rotZ": -0.82801708021005,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_46",
+   "order": 150,
+   "inactive": true,
+   "color": [
+    1,
+    0.41960788,
+    0.86666673,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "PinkMonkey/RightArm",
+   "parent": 409,
+   "pos": [
+    -0.249,
+    -0.186
+   ],
+   "rotZ": -0.82801708021005,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_46",
+   "order": 150,
+   "inactive": true,
+   "color": [
+    1,
+    0.41960788,
+    0.86666673,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "RightHand",
+   "path": "PinkMonkey/RightHand",
+   "parent": 409,
+   "pos": [
+    -0.149,
+    -0.276
+   ],
+   "rotZ": -0.19198612921912406,
+   "scale": [
+    0.94,
+    0.73
+   ],
+   "sprite": "YellowMonkey_20",
+   "order": 500,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  },
+  {
+   "name": "Mask",
+   "path": "PinkMonkey/Mask",
+   "parent": 409,
+   "pos": [
+    0,
+    0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.30017,
+    0.30017
+   ],
+   "sprite": "MonkeyMask",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "Smear",
+   "path": "PinkMonkey/Smear",
+   "parent": 409,
+   "pos": [
+    -0.011,
+    -0.629
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YellowMonkey_21",
+   "order": 150,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    0.23143685,
+    0.21215044
+   ]
+  }
+ ]
+}

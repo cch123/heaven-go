@@ -1,0 +1,10 @@
+{
+ "backgroundHandler": "CameraMoveable/Background",
+ "balloonHandler": "CameraMoveable/BalloonAnchor",
+ "cameraAnchor": "CameraAnchor",
+ "cameraMoveable": "CameraMoveable",
+ "cameraTransform": "CameraAnchor/Transform",
+ "middleMonkey": "CameraMoveable/Background/ZoomOutBg/MiddleMonkey",
+ "monkeyClockArrow": "CameraMoveable/WatchHand",
+ "monkeyHandler": "CameraMoveable/MonkeyHandler"
+}

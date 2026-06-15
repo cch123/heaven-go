@@ -176,6 +176,36 @@ var sceneSpecs = map[string]sceneSpec{
 			}},
 		},
 	},
+	"monkeyWatch": {
+		dir:    "MonkeyWatch",
+		prefab: "monkeyWatch.prefab",
+		roleFields: []string{
+			"cameraAnchor", "cameraTransform", "cameraMoveable", "monkeyClockArrow",
+			"monkeyHandler", "backgroundHandler", "balloonHandler", "middleMonkey",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav", "nearMiss.ogg"},
+		templatePrefabs: []string{
+			"Prefabs/YellowMonkey.prefab",
+			"Prefabs/PinkMonkey.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"cameraAnchor", "cameraTransform", "cameraMoveable", "monkeyClockArrow",
+				"monkeyHandler", "backgroundHandler", "balloonHandler", "middleMonkey",
+				"fullZoomOut", "zoomOutBeatLength", "zoomInBeatLength",
+			}},
+			{name: "clockArrow", markers: []string{
+				"anim", "anchorRotateTransform", "playerMonkeyAnim",
+				"yellowClap", "pinkClap", "shadowTrans", "camMoveTrans",
+				"shadowXRange", "shadowYRange",
+			}},
+			{name: "monkeyHandler", markers: []string{"yellowMonkeyRef", "pinkMonkeyRef", "maxMonkeys"}},
+			{name: "background", markers: []string{"srsIn", "srsOut", "anchorHour", "anchorMinute"}},
+			{name: "balloon", markers: []string{"anchor", "target", "balloonTrans", "srs", "shadow", "xOffset", "yOffset"}},
+			{name: "monkey", markers: []string{"isPink"}, multi: true},
+		},
+	},
 	"theDazzles": {
 		dir:    "TheDazzles",
 		prefab: "theDazzles.prefab",

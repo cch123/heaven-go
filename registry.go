@@ -59,6 +59,7 @@ import (
 	"hsdemo/games/marchingorders"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/moaidoowop"
+	"hsdemo/games/monkeywatch"
 	"hsdemo/games/mrupbeat"
 	"hsdemo/games/munchymonk"
 	"hsdemo/games/nailcarpenter"
@@ -174,6 +175,7 @@ func registerGames() {
 	engine.Register("manzai", manzai.New)
 	engine.Register("mannequinFactory", mannequinfactory.New)
 	engine.Register("moaiDooWop", moaidoowop.New)
+	engine.Register("monkeyWatch", monkeywatch.New)
 	engine.Register("spaceball", spaceball.New)
 	engine.Register("spaceSoccer", spacesoccer.New)
 	engine.Register("spaceDance", spacedance.New)
