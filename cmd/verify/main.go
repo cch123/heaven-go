@@ -20,6 +20,7 @@ import (
 
 	// 已移植模块（与主程序保持同步）
 	"hsdemo/games/agbsamuraislice"
+	"hsdemo/games/airboarder"
 	"hsdemo/games/airrally"
 	"hsdemo/games/balloonhunter"
 	"hsdemo/games/basketballgirls"
@@ -166,6 +167,7 @@ func main() {
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("agbSamuraiSlice", agbsamuraislice.New)
 	engine.Register("airRally", airrally.New)
+	engine.Register("airboarder", airboarder.New)
 	engine.Register("basketballGirls", basketballgirls.New)
 	engine.Register("balloonHunter", balloonhunter.New)
 	engine.Register("bigRockFinish", bigrockfinish.New)

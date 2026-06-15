@@ -1,0 +1,37 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "cameraFOV": 27,
+    "cpu1CantBop": 0,
+    "cpu2CantBop": 0,
+    "playerCantBop": 0,
+    "startBeat": 0,
+    "startFloor": 1,
+    "switchBeat": 0,
+    "wantsCrouch": 0
+   },
+   "refs": {
+    "CPU1": "MovingObjects/airboarders/CPU1/neo_airboy",
+    "CPU2": "MovingObjects/airboarders/CPU2/neo_airboy",
+    "Dog": "MovingObjects/dog",
+    "Floor": "Environment/floor_model",
+    "Player": "MovingObjects/airboarders/Player/neo_airboy",
+    "Tail": "MovingObjects/dog",
+    "archBasic": "Environment/ArchFinePosition/Arch",
+    "bgMaterial": "sky",
+    "cameraPivot": "CameraPivot",
+    "cameraPos": "CameraPivot/CameraAngle",
+    "cameraPosLegacy": "CameraPivot/LegacyCameraAngle",
+    "cameraPosPrac": "CameraPivot/PracticeCameraAngle",
+    "cloudMaterial": "clouds",
+    "currentCamPos": "CameraPivot/CameraAngle",
+    "fadeMaterial": "fade",
+    "floor": "Environment/floor_model",
+    "floorMaterial": "floorspecular",
+    "wallBasic": "Environment/WallFinePosition/Wall"
+   }
+  }
+ }
+}

@@ -1,0 +1,1050 @@
+{
+ "nodes": [
+  {
+   "name": "airboarder",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    3.93,
+    -2.8
+   ],
+   "z": 8.54,
+   "rotZ": 0,
+   "scale": [
+    2.0592587,
+    2.0592587
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MovingObjects",
+   "path": "MovingObjects",
+   "parent": 0,
+   "pos": [
+    -0.87,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "airboarders",
+   "path": "MovingObjects/airboarders",
+   "parent": 1,
+   "pos": [
+    -1,
+    0
+   ],
+   "z": 0.78,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CPU1",
+   "path": "MovingObjects/airboarders/CPU1",
+   "parent": 2,
+   "pos": [
+    -4.6,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neo_airboy",
+   "path": "MovingObjects/airboarders/CPU1/neo_airboy",
+   "parent": 3,
+   "pos": [
+    0,
+    -0.4
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fireparticle",
+   "path": "MovingObjects/airboarders/CPU1/neo_airboy/fireparticle",
+   "parent": 4,
+   "pos": [
+    -0.000440008,
+    0
+   ],
+   "rotZ": 1.6308195593650068e-13,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fireparticle",
+   "path": "MovingObjects/airboarders/CPU1/neo_airboy/fireparticle",
+   "parent": 4,
+   "pos": [
+    -0.000440008,
+    0
+   ],
+   "rotZ": 1.6308195593650068e-13,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "airboy_shadow_model",
+   "path": "MovingObjects/airboarders/CPU1/airboy_shadow_model",
+   "parent": 3,
+   "pos": [
+    -0.49999952,
+    -0.9800001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CPU2",
+   "path": "MovingObjects/airboarders/CPU2",
+   "parent": 2,
+   "pos": [
+    -0.25,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neo_airboy",
+   "path": "MovingObjects/airboarders/CPU2/neo_airboy",
+   "parent": 8,
+   "pos": [
+    0,
+    -0.55
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fireparticle",
+   "path": "MovingObjects/airboarders/CPU2/neo_airboy/fireparticle",
+   "parent": 9,
+   "pos": [
+    -0.000440008,
+    0
+   ],
+   "rotZ": 1.6308195593650068e-13,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fireparticle",
+   "path": "MovingObjects/airboarders/CPU2/neo_airboy/fireparticle",
+   "parent": 9,
+   "pos": [
+    -0.000440008,
+    0
+   ],
+   "rotZ": 1.6308195593650068e-13,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "airboy_shadow_model",
+   "path": "MovingObjects/airboarders/CPU2/airboy_shadow_model",
+   "parent": 8,
+   "pos": [
+    -0.33,
+    -0.9800001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Player",
+   "path": "MovingObjects/airboarders/Player",
+   "parent": 2,
+   "pos": [
+    4.2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neo_airboy",
+   "path": "MovingObjects/airboarders/Player/neo_airboy",
+   "parent": 13,
+   "pos": [
+    0,
+    -0.55
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fireparticle",
+   "path": "MovingObjects/airboarders/Player/neo_airboy/fireparticle",
+   "parent": 14,
+   "pos": [
+    -0.000440008,
+    0
+   ],
+   "rotZ": 1.6308195593650068e-13,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fireparticle",
+   "path": "MovingObjects/airboarders/Player/neo_airboy/fireparticle",
+   "parent": 14,
+   "pos": [
+    -0.000440008,
+    0
+   ],
+   "rotZ": 1.6308195593650068e-13,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "airboy_shadow_model",
+   "path": "MovingObjects/airboarders/Player/airboy_shadow_model",
+   "parent": 13,
+   "pos": [
+    -0.04,
+    -0.9800001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dog",
+   "path": "MovingObjects/dog",
+   "parent": 1,
+   "pos": [
+    1.58,
+    1.25
+   ],
+   "z": 6.76,
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Environment",
+   "path": "Environment",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "floor_model",
+   "path": "Environment/floor_model",
+   "parent": 19,
+   "pos": [
+    -4.946726,
+    -0.93000007
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.79999995,
+    0.79999995
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WallFinePosition",
+   "path": "Environment/WallFinePosition",
+   "parent": 19,
+   "pos": [
+    0.25,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "Environment/WallFinePosition/Wall",
+   "parent": 21,
+   "pos": [
+    -140.99988,
+    -1
+   ],
+   "z": 0.7999998,
+   "rotZ": -3.141592653589793,
+   "scale": [
+    0.9,
+    0.8999999
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArchFinePosition",
+   "path": "Environment/ArchFinePosition",
+   "parent": 19,
+   "pos": [
+    0.53,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arch",
+   "path": "Environment/ArchFinePosition/Arch",
+   "parent": 23,
+   "pos": [
+    -139.99998,
+    -1
+   ],
+   "z": 0.7999998,
+   "rotZ": -3.141592653589793,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "Sky",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "floor_model",
+   "path": "Sky/floor_model",
+   "parent": 25,
+   "pos": [
+    -283.4,
+    -0.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.21153791,
+    0.79999995
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fade",
+   "path": "Sky/fade",
+   "parent": 25,
+   "pos": [
+    -26,
+    0
+   ],
+   "z": -26.9,
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    4.0466557,
+    116.84518
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8,
+    6
+   ]
+  },
+  {
+   "name": "vsn_mesh_1_",
+   "path": "Sky/vsn_mesh_1_",
+   "parent": 25,
+   "pos": [
+    -0.00029361,
+    0.000028945
+   ],
+   "z": 1.999,
+   "rotZ": 0,
+   "scale": [
+    209.80533,
+    209.80533
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Directional Light",
+   "path": "Sky/vsn_mesh_1_/Directional Light",
+   "parent": 28,
+   "pos": [
+    0,
+    0.302
+   ],
+   "z": -2.54,
+   "rotZ": 0.4173094631639377,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mothership_model",
+   "path": "Sky/mothership_model",
+   "parent": 25,
+   "pos": [
+    -167.6,
+    17.9
+   ],
+   "z": 14.6,
+   "rotZ": 0,
+   "scale": [
+    1.9483035,
+    1.9483035
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "floor_model (1)",
+   "path": "Sky/floor_model (1)",
+   "parent": 25,
+   "pos": [
+    293.1,
+    -0.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2115379,
+    0.79999995
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cloud_model",
+   "path": "Sky/cloud_model",
+   "parent": 25,
+   "pos": [
+    -43.1,
+    -5
+   ],
+   "z": 10,
+   "rotZ": 0,
+   "scale": [
+    62.873688,
+    62.873688
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "airCam",
+   "path": "airCam",
+   "parent": 0,
+   "pos": [
+    15,
+    4
+   ],
+   "z": -10,
+   "rotZ": 0.08903771674684426,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BackgroundPlane",
+   "path": "airCam/BackgroundPlane",
+   "parent": 33,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 10,
+   "rotZ": 0,
+   "scale": [
+    8000,
+    8000
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Directional Light",
+   "path": "airCam/Directional Light",
+   "parent": 33,
+   "pos": [
+    0,
+    5
+   ],
+   "rotZ": -0.015396910972216645,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Camera",
+   "path": "airCam/Camera",
+   "parent": 33,
+   "pos": [
+    3.104017,
+    -0.07599574
+   ],
+   "z": 6.1470175,
+   "rotZ": -0.020095283460304536,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraPivot",
+   "path": "CameraPivot",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraAngle",
+   "path": "CameraPivot/CameraAngle",
+   "parent": 37,
+   "pos": [
+    10.356,
+    2.853
+   ],
+   "z": -4.571,
+   "rotZ": 0.06270496937122003,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LegacyCameraAngle",
+   "path": "CameraPivot/LegacyCameraAngle",
+   "parent": 37,
+   "pos": [
+    15,
+    4
+   ],
+   "z": -10,
+   "rotZ": 0.08903771674684426,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PracticeCameraAngle",
+   "path": "CameraPivot/PracticeCameraAngle",
+   "parent": 37,
+   "pos": [
+    -2,
+    2.5
+   ],
+   "z": -20,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

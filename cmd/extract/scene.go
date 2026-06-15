@@ -86,6 +86,25 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "maya", markers: []string{"enterCurves", "flyingCurves", "missCurve", "bigYokaiStartPosition", "bigYokaiXDistance", "shadowOffsetX"}, atPath: "AA1_Maya_0", curveFields: []string{"missCurve"}, curveArrayFields: []string{"enterCurves", "flyingCurves"}},
 		},
 	},
+	"airboarder": {
+		dir:      "Airboarder",
+		prefab:   "airboarder.prefab",
+		animsDir: "Models",
+		roleFields: []string{
+			"cameraPivot", "cameraPos", "cameraPosLegacy", "cameraPosPrac",
+			"archBasic", "wallBasic", "floor",
+			"CPU1", "CPU2", "Player", "Dog", "Tail", "Floor",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"bgMaterial", "fadeMaterial", "floorMaterial", "cloudMaterial",
+				"cameraPivot", "cameraPos", "cameraPosLegacy", "cameraPosPrac", "cameraFOV",
+				"archBasic", "wallBasic", "floor", "CPU1", "CPU2", "Player", "Dog", "Tail", "Floor",
+				"startFloor",
+			}},
+		},
+	},
 	"bonOdori": {
 		dir:    "BonOdori",
 		prefab: "bonOdori.prefab",

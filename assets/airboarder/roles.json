@@ -1,0 +1,15 @@
+{
+ "CPU1": "MovingObjects/airboarders/CPU1/neo_airboy",
+ "CPU2": "MovingObjects/airboarders/CPU2/neo_airboy",
+ "Dog": "MovingObjects/dog",
+ "Floor": "Environment/floor_model",
+ "Player": "MovingObjects/airboarders/Player/neo_airboy",
+ "Tail": "MovingObjects/dog",
+ "archBasic": "Environment/ArchFinePosition/Arch",
+ "cameraPivot": "CameraPivot",
+ "cameraPos": "CameraPivot/CameraAngle",
+ "cameraPosLegacy": "CameraPivot/LegacyCameraAngle",
+ "cameraPosPrac": "CameraPivot/PracticeCameraAngle",
+ "floor": "Environment/floor_model",
+ "wallBasic": "Environment/WallFinePosition/Wall"
+}

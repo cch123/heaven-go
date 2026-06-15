@@ -1,0 +1,10 @@
+{
+ "Environment/ArchFinePosition/Arch": "arch",
+ "Environment/WallFinePosition/Wall": "Wall",
+ "Environment/floor_model": "floor_model",
+ "MovingObjects/airboarders/CPU1/neo_airboy": "airboy",
+ "MovingObjects/airboarders/CPU2/neo_airboy": "airboy",
+ "MovingObjects/airboarders/Player/neo_airboy": "airboy",
+ "MovingObjects/dog": "dog",
+ "Sky/mothership_model": "mothership_model"
+}

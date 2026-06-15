@@ -3,6 +3,7 @@ package main
 import (
 	"hsdemo/engine"
 	"hsdemo/games/agbsamuraislice"
+	"hsdemo/games/airboarder"
 	"hsdemo/games/airrally"
 	"hsdemo/games/animalacrobat"
 	"hsdemo/games/balloonhunter"
@@ -106,6 +107,7 @@ func registerGames() {
 	engine.Register("rhythmSomen", somen.New)
 	engine.Register("agbSamuraiSlice", agbsamuraislice.New)
 	engine.Register("airRally", airrally.New)
+	engine.Register("airboarder", airboarder.New)
 	engine.Register("animalAcrobat", animalacrobat.New)
 	engine.Register("basketballGirls", basketballgirls.New)
 	engine.Register("balloonHunter", balloonhunter.New)

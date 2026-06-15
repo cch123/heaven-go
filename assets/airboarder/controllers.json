@@ -1,0 +1,120 @@
+{
+ "Wall": {
+  "default": "move",
+  "states": {
+   "break": {
+    "clip": "Animations/wall/break",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/wall/idle",
+    "speed": 1
+   },
+   "move": {
+    "clip": "Animations/wall/move",
+    "speed": 1
+   },
+   "shake": {
+    "clip": "Animations/wall/shake",
+    "speed": 1
+   }
+  }
+ },
+ "airboy": {
+  "default": "hover",
+  "states": {
+   "bop": {
+    "clip": "Animations/bop",
+    "speed": 1
+   },
+   "charge": {
+    "clip": "Animations/charge",
+    "speed": 1
+   },
+   "duck": {
+    "clip": "Animations/duck",
+    "speed": 1
+   },
+   "hit1": {
+    "clip": "Animations/hit1",
+    "speed": 1
+   },
+   "hit2": {
+    "clip": "Animations/hit2fix",
+    "speed": 1
+   },
+   "hold": {
+    "clip": "Animations/hold",
+    "speed": 1
+   },
+   "hover": {
+    "clip": "Animations/hover",
+    "speed": 1
+   },
+   "jump": {
+    "clip": "Animations/jumpfix",
+    "speed": 1
+   },
+   "letsgo": {
+    "clip": "Animations/letsgo",
+    "speed": 1
+   }
+  }
+ },
+ "arch": {
+  "default": "idle",
+  "states": {
+   "break": {
+    "clip": "Animations/arch/break",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/arch/idle",
+    "speed": 1
+   },
+   "move": {
+    "clip": "Animations/arch/move",
+    "speed": 1
+   },
+   "shake": {
+    "clip": "Animations/arch/shake",
+    "speed": 1
+   }
+  }
+ },
+ "dog": {
+  "default": "run",
+  "states": {
+   "run": {
+    "clip": "Animations/dog/run",
+    "speed": 1
+   },
+   "wag": {
+    "clip": "Animations/dog/wag",
+    "speed": 1
+   }
+  }
+ },
+ "floor_model": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "clip": "Animations/floor/idle",
+    "speed": 1
+   },
+   "moving": {
+    "clip": "Animations/floor/move",
+    "speed": 1
+   }
+  }
+ },
+ "mothership_model": {
+  "default": "spin",
+  "states": {
+   "spin": {
+    "clip": "Animations/mothership/spin",
+    "speed": 1
+   }
+  }
+ }
+}

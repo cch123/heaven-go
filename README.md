@@ -128,6 +128,12 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   主 charge、release、blastoff、鼓点 loop、岛实例入场和主要动画可运行；岛屿
   Collapse/StonePlatform/水花/草屑等 ParticleSystem 与逐石块实例、车材质
   `_Progress` 连续充能、精确落水/复位物理仍待按 Unity 序列化参数补齐。
+- airboarder：`bop`/`duck`/`crouch`/`jump`/`forceCharge`/`letsGo`/背景地板
+  颜色/相机事件、arch/wall 判定窗口、CPU/玩家编舞、ready/yeah/miss/barely
+  音效序列已按 C# 时序接入；提取器已导出 `Models` 下的 airboy、arch、
+  wall、dog、floor controller 和所有 `.anim`。原版主体是 MeshRenderer/材质贴图
+  的 3D 场景，当前暂用手写 2D billboard 渲染，仍待补 MeshRenderer、材质纹理、
+  CameraPivot/FOV 与 ScrollingFloor 材质滚动的完整运行时支持。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
