@@ -1,0 +1,6226 @@
+{
+ "nodes": [
+  {
+   "name": "drummerDuel",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bgGradient",
+   "path": "Background/bgGradient",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    20
+   ],
+   "sprite": "bg_Gradient",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.145,
+    1.855
+   ],
+   "mapped": true,
+   "mat": "bgGradient"
+  },
+  {
+   "name": "bgLeft",
+   "path": "Background/bgLeft",
+   "parent": 1,
+   "pos": [
+    -20.345001,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    40.25,
+    37.1
+   ],
+   "order": -100,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "bgGradient"
+  },
+  {
+   "name": "bgRight",
+   "path": "Background/bgRight",
+   "parent": 1,
+   "pos": [
+    20.344997,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    40.25,
+    37.1
+   ],
+   "order": -100,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "bgGradient"
+  },
+  {
+   "name": "groundGradient",
+   "path": "Background/groundGradient",
+   "parent": 1,
+   "pos": [
+    0,
+    -9.5918
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    9.662454
+   ],
+   "sprite": "bg_Gradient",
+   "order": -97,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.145,
+    1.855
+   ],
+   "mapped": true,
+   "mat": "groundGradient"
+  },
+  {
+   "name": "groundLeft",
+   "path": "Background/groundLeft",
+   "parent": 1,
+   "pos": [
+    -20.345001,
+    -9.592
+   ],
+   "rotZ": 0,
+   "scale": [
+    40.25,
+    17.91526
+   ],
+   "order": -98,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "groundGradient"
+  },
+  {
+   "name": "groundRight",
+   "path": "Background/groundRight",
+   "parent": 1,
+   "pos": [
+    20.344997,
+    -9.592
+   ],
+   "rotZ": 0,
+   "scale": [
+    40.25,
+    17.91526
+   ],
+   "order": -98,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "groundGradient"
+  },
+  {
+   "name": "Platforms",
+   "path": "Platforms",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Left",
+   "path": "Platforms/Left",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "platform",
+   "path": "Platforms/Left/platform",
+   "parent": 9,
+   "pos": [
+    0,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    460,
+    0.72
+   ],
+   "sprite": "platform",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.015,
+    7.47
+   ],
+   "mapped": true,
+   "mat": "areaLeft"
+  },
+  {
+   "name": "platformEnd",
+   "path": "Platforms/Left/platformEnd",
+   "parent": 9,
+   "pos": [
+    -6.8,
+    -1.1036
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.72
+   ],
+   "sprite": "platform_end",
+   "order": -51,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.745,
+    7.48
+   ],
+   "mapped": true,
+   "mat": "areaLeft"
+  },
+  {
+   "name": "Right",
+   "path": "Platforms/Right",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "platform",
+   "path": "Platforms/Right/platform",
+   "parent": 12,
+   "pos": [
+    0,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    460,
+    0.72
+   ],
+   "sprite": "platform",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.015,
+    7.47
+   ],
+   "mapped": true,
+   "mat": "areaRight"
+  },
+  {
+   "name": "platformEnd",
+   "path": "Platforms/Right/platformEnd",
+   "parent": 12,
+   "pos": [
+    -6.8,
+    -1.1036
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.72
+   ],
+   "sprite": "platform_end",
+   "order": -51,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.745,
+    7.48
+   ],
+   "mapped": true,
+   "mat": "areaRight"
+  },
+  {
+   "name": "Center",
+   "path": "Platforms/Center",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "platform",
+   "path": "Platforms/Center/platform",
+   "parent": 15,
+   "pos": [
+    0,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    200,
+    0.72
+   ],
+   "sprite": "platform_center",
+   "order": -49,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.015,
+    7.47
+   ],
+   "mapped": true,
+   "mat": "areaMiddle"
+  },
+  {
+   "name": "bottom",
+   "path": "Platforms/Center/bottom",
+   "parent": 15,
+   "pos": [
+    0,
+    -3.2892
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.0000107,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "areaMiddle"
+  },
+  {
+   "name": "left",
+   "path": "Platforms/Center/left",
+   "parent": 15,
+   "pos": [
+    -1.35,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    1.8
+   ],
+   "order": 0,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "areaMiddle"
+  },
+  {
+   "name": "right",
+   "path": "Platforms/Center/right",
+   "parent": 15,
+   "pos": [
+    1.35,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    1.8
+   ],
+   "order": 0,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "areaMiddle"
+  },
+  {
+   "name": "Referee",
+   "path": "Referee",
+   "parent": 0,
+   "pos": [
+    0,
+    0.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Referee/Head",
+   "parent": 20,
+   "pos": [
+    0,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_head",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.75,
+    1.75
+   ],
+   "mapped": true,
+   "mat": "referee"
+  },
+  {
+   "name": "headband",
+   "path": "Referee/Head/headband",
+   "parent": 21,
+   "pos": [
+    -0.845,
+    0.167
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_knot",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ],
+   "mapped": true,
+   "mat": "referee"
+  },
+  {
+   "name": "face",
+   "path": "Referee/Head/face",
+   "parent": 21,
+   "pos": [
+    0.005,
+    -0.406
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_face",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.75
+   ]
+  },
+  {
+   "name": "mouth",
+   "path": "Referee/Head/face/mouth",
+   "parent": 23,
+   "pos": [
+    0,
+    -0.111
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.28,
+    0.06
+   ],
+   "order": 2,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "blur",
+   "path": "Referee/Head/face/mouth/blur",
+   "parent": 24,
+   "pos": [
+    -0.01014,
+    0.438
+   ],
+   "rotZ": 0,
+   "scale": [
+    16.128641,
+    16
+   ],
+   "sprite": "referee_mouthBlur",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.06,
+    0.04
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Referee/Body",
+   "parent": 20,
+   "pos": [
+    0.01,
+    1.578
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_body",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.25,
+    1.75
+   ],
+   "mapped": true,
+   "mat": "referee"
+  },
+  {
+   "name": "armLeft",
+   "path": "Referee/Body/armLeft",
+   "parent": 26,
+   "pos": [
+    -0.554,
+    0.086
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_arm1",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    1.5
+   ]
+  },
+  {
+   "name": "hand",
+   "path": "Referee/Body/armLeft/hand",
+   "parent": 27,
+   "pos": [
+    -0.702,
+    0.777
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_hand",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ],
+   "mapped": true,
+   "mat": "referee"
+  },
+  {
+   "name": "armRight",
+   "path": "Referee/Body/armRight",
+   "parent": 26,
+   "pos": [
+    0.584,
+    0.086
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_arm1",
+   "order": -3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    1.5
+   ]
+  },
+  {
+   "name": "patch",
+   "path": "Referee/Body/armRight/patch",
+   "parent": 29,
+   "pos": [
+    -0.038,
+    0.2271
+   ],
+   "rotZ": 0.9599310566285696,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_patch",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "referee"
+  },
+  {
+   "name": "hand",
+   "path": "Referee/Body/armRight/hand",
+   "parent": 29,
+   "pos": [
+    0.702,
+    0.777
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_hand",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ],
+   "mapped": true,
+   "mat": "referee"
+  },
+  {
+   "name": "Legs",
+   "path": "Referee/Legs",
+   "parent": 20,
+   "pos": [
+    0,
+    0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "legLeft",
+   "path": "Referee/Legs/legLeft",
+   "parent": 32,
+   "pos": [
+    -0.28,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_foot1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "legRight",
+   "path": "Referee/Legs/legRight",
+   "parent": 32,
+   "pos": [
+    0.31,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "referee_foot1",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Referee/shadow",
+   "parent": 20,
+   "pos": [
+    0,
+    0.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.83,
+    0.58
+   ],
+   "sprite": "shadow",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "Cheerleaders",
+   "path": "Cheerleaders",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Left",
+   "path": "Cheerleaders/Left",
+   "parent": 36,
+   "pos": [
+    -7.4,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.86,
+    0.86
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CheerleaderL",
+   "path": "Cheerleaders/Left/CheerleaderL",
+   "parent": 37,
+   "pos": [
+    -4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Cheerleaders/Left/CheerleaderL/Head",
+   "parent": 38,
+   "pos": [
+    0,
+    2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Cheerleaders/Left/CheerleaderL/Head/head",
+   "parent": 39,
+   "pos": [
+    0,
+    -0.6823145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ai",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.07,
+    2.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "hair",
+   "path": "Cheerleaders/Left/CheerleaderL/Head/hair",
+   "parent": 39,
+   "pos": [
+    -0.65,
+    -0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "al",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.87
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "face",
+   "path": "Cheerleaders/Left/CheerleaderL/Head/face",
+   "parent": 39,
+   "pos": [
+    0,
+    -1.0073144
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ac",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    0.85
+   ]
+  },
+  {
+   "name": "hairclip",
+   "path": "Cheerleaders/Left/CheerleaderL/Head/hairclip",
+   "parent": 39,
+   "pos": [
+    0.075,
+    -0.5473145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "hairclip (1)",
+   "path": "Cheerleaders/Left/CheerleaderL/Head/hairclip (1)",
+   "parent": 39,
+   "pos": [
+    0.27,
+    -0.6223145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "leg",
+   "path": "Cheerleaders/Left/CheerleaderL/leg",
+   "parent": 38,
+   "pos": [
+    -0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "leg (1)",
+   "path": "Cheerleaders/Left/CheerleaderL/leg (1)",
+   "parent": 38,
+   "pos": [
+    0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "torso",
+   "path": "Cheerleaders/Left/CheerleaderL/torso",
+   "parent": 38,
+   "pos": [
+    0,
+    0.325
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "af",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.77,
+    2.59
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "pompom",
+   "path": "Cheerleaders/Left/CheerleaderL/pompom",
+   "parent": 38,
+   "pos": [
+    0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomLeft"
+  },
+  {
+   "name": "pompom (1)",
+   "path": "Cheerleaders/Left/CheerleaderL/pompom (1)",
+   "parent": 38,
+   "pos": [
+    -0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomLeft"
+  },
+  {
+   "name": "arm",
+   "path": "Cheerleaders/Left/CheerleaderL/arm",
+   "parent": 38,
+   "pos": [
+    0.61,
+    1.425
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "arm (1)",
+   "path": "Cheerleaders/Left/CheerleaderL/arm (1)",
+   "parent": 38,
+   "pos": [
+    -0.61,
+    1.425
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 5,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "shadow",
+   "path": "Cheerleaders/Left/CheerleaderL/shadow",
+   "parent": 38,
+   "pos": [
+    0,
+    -1.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.6
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "CheerleaderM",
+   "path": "Cheerleaders/Left/CheerleaderM",
+   "parent": 37,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Cheerleaders/Left/CheerleaderM/Head",
+   "parent": 53,
+   "pos": [
+    0,
+    2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Cheerleaders/Left/CheerleaderM/Head/head",
+   "parent": 54,
+   "pos": [
+    0,
+    -0.6823145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ai",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.07,
+    2.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "hair",
+   "path": "Cheerleaders/Left/CheerleaderM/Head/hair",
+   "parent": 54,
+   "pos": [
+    -0.65,
+    -0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "al",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.87
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "face",
+   "path": "Cheerleaders/Left/CheerleaderM/Head/face",
+   "parent": 54,
+   "pos": [
+    0,
+    -1.0073144
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ac",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    0.85
+   ]
+  },
+  {
+   "name": "hairclip",
+   "path": "Cheerleaders/Left/CheerleaderM/Head/hairclip",
+   "parent": 54,
+   "pos": [
+    0.075,
+    -0.5473145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "hairclip (1)",
+   "path": "Cheerleaders/Left/CheerleaderM/Head/hairclip (1)",
+   "parent": 54,
+   "pos": [
+    0.27,
+    -0.6223145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "leg",
+   "path": "Cheerleaders/Left/CheerleaderM/leg",
+   "parent": 53,
+   "pos": [
+    -0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "leg (1)",
+   "path": "Cheerleaders/Left/CheerleaderM/leg (1)",
+   "parent": 53,
+   "pos": [
+    0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "torso",
+   "path": "Cheerleaders/Left/CheerleaderM/torso",
+   "parent": 53,
+   "pos": [
+    0,
+    0.325
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "af",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.77,
+    2.59
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "pompom",
+   "path": "Cheerleaders/Left/CheerleaderM/pompom",
+   "parent": 53,
+   "pos": [
+    0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomLeft"
+  },
+  {
+   "name": "pompom (1)",
+   "path": "Cheerleaders/Left/CheerleaderM/pompom (1)",
+   "parent": 53,
+   "pos": [
+    -0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomLeft"
+  },
+  {
+   "name": "arm",
+   "path": "Cheerleaders/Left/CheerleaderM/arm",
+   "parent": 53,
+   "pos": [
+    0.61,
+    1.425
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "arm (1)",
+   "path": "Cheerleaders/Left/CheerleaderM/arm (1)",
+   "parent": 53,
+   "pos": [
+    -0.61,
+    1.425
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 5,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "shadow",
+   "path": "Cheerleaders/Left/CheerleaderM/shadow",
+   "parent": 53,
+   "pos": [
+    0,
+    -1.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.6
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "CheerleaderR",
+   "path": "Cheerleaders/Left/CheerleaderR",
+   "parent": 37,
+   "pos": [
+    4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Cheerleaders/Left/CheerleaderR/Head",
+   "parent": 68,
+   "pos": [
+    0,
+    2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Cheerleaders/Left/CheerleaderR/Head/head",
+   "parent": 69,
+   "pos": [
+    0,
+    -0.6823145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ai",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.07,
+    2.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "hair",
+   "path": "Cheerleaders/Left/CheerleaderR/Head/hair",
+   "parent": 69,
+   "pos": [
+    -0.65,
+    -0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "al",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.87
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "face",
+   "path": "Cheerleaders/Left/CheerleaderR/Head/face",
+   "parent": 69,
+   "pos": [
+    0,
+    -1.0073144
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ac",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    0.85
+   ]
+  },
+  {
+   "name": "hairclip",
+   "path": "Cheerleaders/Left/CheerleaderR/Head/hairclip",
+   "parent": 69,
+   "pos": [
+    0.075,
+    -0.5473145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "hairclip (1)",
+   "path": "Cheerleaders/Left/CheerleaderR/Head/hairclip (1)",
+   "parent": 69,
+   "pos": [
+    0.27,
+    -0.6223145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "leg",
+   "path": "Cheerleaders/Left/CheerleaderR/leg",
+   "parent": 68,
+   "pos": [
+    -0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "leg (1)",
+   "path": "Cheerleaders/Left/CheerleaderR/leg (1)",
+   "parent": 68,
+   "pos": [
+    0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "torso",
+   "path": "Cheerleaders/Left/CheerleaderR/torso",
+   "parent": 68,
+   "pos": [
+    0,
+    0.325
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "af",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.77,
+    2.59
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "pompom",
+   "path": "Cheerleaders/Left/CheerleaderR/pompom",
+   "parent": 68,
+   "pos": [
+    0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomLeft"
+  },
+  {
+   "name": "pompom (1)",
+   "path": "Cheerleaders/Left/CheerleaderR/pompom (1)",
+   "parent": 68,
+   "pos": [
+    -0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomLeft"
+  },
+  {
+   "name": "arm",
+   "path": "Cheerleaders/Left/CheerleaderR/arm",
+   "parent": 68,
+   "pos": [
+    0.61,
+    1.425
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "arm (1)",
+   "path": "Cheerleaders/Left/CheerleaderR/arm (1)",
+   "parent": 68,
+   "pos": [
+    -0.61,
+    1.425
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 5,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "shadow",
+   "path": "Cheerleaders/Left/CheerleaderR/shadow",
+   "parent": 68,
+   "pos": [
+    0,
+    -1.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.6
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "Right",
+   "path": "Cheerleaders/Right",
+   "parent": 36,
+   "pos": [
+    7.4,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.86,
+    0.86
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CheerleaderL",
+   "path": "Cheerleaders/Right/CheerleaderL",
+   "parent": 83,
+   "pos": [
+    -4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Cheerleaders/Right/CheerleaderL/Head",
+   "parent": 84,
+   "pos": [
+    0,
+    2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Cheerleaders/Right/CheerleaderL/Head/head",
+   "parent": 85,
+   "pos": [
+    0,
+    -0.6823145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ai",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.07,
+    2.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "hair",
+   "path": "Cheerleaders/Right/CheerleaderL/Head/hair",
+   "parent": 85,
+   "pos": [
+    -0.65,
+    -0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "al",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.87
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "face",
+   "path": "Cheerleaders/Right/CheerleaderL/Head/face",
+   "parent": 85,
+   "pos": [
+    0,
+    -1.0073144
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ac",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    0.85
+   ]
+  },
+  {
+   "name": "hairclip",
+   "path": "Cheerleaders/Right/CheerleaderL/Head/hairclip",
+   "parent": 85,
+   "pos": [
+    0.075,
+    -0.5473145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "hairclip (1)",
+   "path": "Cheerleaders/Right/CheerleaderL/Head/hairclip (1)",
+   "parent": 85,
+   "pos": [
+    0.27,
+    -0.6223145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "leg",
+   "path": "Cheerleaders/Right/CheerleaderL/leg",
+   "parent": 84,
+   "pos": [
+    -0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "leg (1)",
+   "path": "Cheerleaders/Right/CheerleaderL/leg (1)",
+   "parent": 84,
+   "pos": [
+    0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "torso",
+   "path": "Cheerleaders/Right/CheerleaderL/torso",
+   "parent": 84,
+   "pos": [
+    0,
+    0.325
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "af",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.77,
+    2.59
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "pompom",
+   "path": "Cheerleaders/Right/CheerleaderL/pompom",
+   "parent": 84,
+   "pos": [
+    0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomRight"
+  },
+  {
+   "name": "pompom (1)",
+   "path": "Cheerleaders/Right/CheerleaderL/pompom (1)",
+   "parent": 84,
+   "pos": [
+    -0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomRight"
+  },
+  {
+   "name": "arm",
+   "path": "Cheerleaders/Right/CheerleaderL/arm",
+   "parent": 84,
+   "pos": [
+    0.61,
+    1.425
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "arm (1)",
+   "path": "Cheerleaders/Right/CheerleaderL/arm (1)",
+   "parent": 84,
+   "pos": [
+    -0.61,
+    1.425
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 5,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "shadow",
+   "path": "Cheerleaders/Right/CheerleaderL/shadow",
+   "parent": 84,
+   "pos": [
+    0,
+    -1.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.6
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "CheerleaderM",
+   "path": "Cheerleaders/Right/CheerleaderM",
+   "parent": 83,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Cheerleaders/Right/CheerleaderM/Head",
+   "parent": 99,
+   "pos": [
+    0,
+    2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Cheerleaders/Right/CheerleaderM/Head/head",
+   "parent": 100,
+   "pos": [
+    0,
+    -0.6823145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ai",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.07,
+    2.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "hair",
+   "path": "Cheerleaders/Right/CheerleaderM/Head/hair",
+   "parent": 100,
+   "pos": [
+    -0.65,
+    -0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "al",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.87
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "face",
+   "path": "Cheerleaders/Right/CheerleaderM/Head/face",
+   "parent": 100,
+   "pos": [
+    0,
+    -1.0073144
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ac",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    0.85
+   ]
+  },
+  {
+   "name": "hairclip",
+   "path": "Cheerleaders/Right/CheerleaderM/Head/hairclip",
+   "parent": 100,
+   "pos": [
+    0.075,
+    -0.5473145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "hairclip (1)",
+   "path": "Cheerleaders/Right/CheerleaderM/Head/hairclip (1)",
+   "parent": 100,
+   "pos": [
+    0.27,
+    -0.6223145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "leg",
+   "path": "Cheerleaders/Right/CheerleaderM/leg",
+   "parent": 99,
+   "pos": [
+    -0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "leg (1)",
+   "path": "Cheerleaders/Right/CheerleaderM/leg (1)",
+   "parent": 99,
+   "pos": [
+    0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "torso",
+   "path": "Cheerleaders/Right/CheerleaderM/torso",
+   "parent": 99,
+   "pos": [
+    0,
+    0.325
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "af",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.77,
+    2.59
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "pompom",
+   "path": "Cheerleaders/Right/CheerleaderM/pompom",
+   "parent": 99,
+   "pos": [
+    0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomRight"
+  },
+  {
+   "name": "pompom (1)",
+   "path": "Cheerleaders/Right/CheerleaderM/pompom (1)",
+   "parent": 99,
+   "pos": [
+    -0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomRight"
+  },
+  {
+   "name": "arm",
+   "path": "Cheerleaders/Right/CheerleaderM/arm",
+   "parent": 99,
+   "pos": [
+    0.61,
+    1.425
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "arm (1)",
+   "path": "Cheerleaders/Right/CheerleaderM/arm (1)",
+   "parent": 99,
+   "pos": [
+    -0.61,
+    1.425
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 5,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "shadow",
+   "path": "Cheerleaders/Right/CheerleaderM/shadow",
+   "parent": 99,
+   "pos": [
+    0,
+    -1.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.6
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "CheerleaderR",
+   "path": "Cheerleaders/Right/CheerleaderR",
+   "parent": 83,
+   "pos": [
+    4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Cheerleaders/Right/CheerleaderR/Head",
+   "parent": 114,
+   "pos": [
+    0,
+    2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "Cheerleaders/Right/CheerleaderR/Head/head",
+   "parent": 115,
+   "pos": [
+    0,
+    -0.6823145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ai",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.07,
+    2.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "hair",
+   "path": "Cheerleaders/Right/CheerleaderR/Head/hair",
+   "parent": 115,
+   "pos": [
+    -0.65,
+    -0.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "al",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.87
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "face",
+   "path": "Cheerleaders/Right/CheerleaderR/Head/face",
+   "parent": 115,
+   "pos": [
+    0,
+    -1.0073144
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ac",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    0.85
+   ]
+  },
+  {
+   "name": "hairclip",
+   "path": "Cheerleaders/Right/CheerleaderR/Head/hairclip",
+   "parent": 115,
+   "pos": [
+    0.075,
+    -0.5473145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "hairclip (1)",
+   "path": "Cheerleaders/Right/CheerleaderR/Head/hairclip (1)",
+   "parent": 115,
+   "pos": [
+    0.27,
+    -0.6223145
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ae",
+   "order": 25,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.69
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "leg",
+   "path": "Cheerleaders/Right/CheerleaderR/leg",
+   "parent": 114,
+   "pos": [
+    -0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "leg (1)",
+   "path": "Cheerleaders/Right/CheerleaderR/leg (1)",
+   "parent": 114,
+   "pos": [
+    0.335,
+    -0.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aa",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    4.64
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "torso",
+   "path": "Cheerleaders/Right/CheerleaderR/torso",
+   "parent": 114,
+   "pos": [
+    0,
+    0.325
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "af",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.77,
+    2.59
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "pompom",
+   "path": "Cheerleaders/Right/CheerleaderR/pompom",
+   "parent": 114,
+   "pos": [
+    0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomRight"
+  },
+  {
+   "name": "pompom (1)",
+   "path": "Cheerleaders/Right/CheerleaderR/pompom (1)",
+   "parent": 114,
+   "pos": [
+    -0.7,
+    0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "am",
+   "order": 51,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.74,
+    2.75
+   ],
+   "mapped": true,
+   "mat": "pompomRight"
+  },
+  {
+   "name": "arm",
+   "path": "Cheerleaders/Right/CheerleaderR/arm",
+   "parent": 114,
+   "pos": [
+    0.61,
+    1.425
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "arm (1)",
+   "path": "Cheerleaders/Right/CheerleaderR/arm (1)",
+   "parent": 114,
+   "pos": [
+    -0.61,
+    1.425
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "aj",
+   "order": 5,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    3.27,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "shadow",
+   "path": "Cheerleaders/Right/CheerleaderR/shadow",
+   "parent": 114,
+   "pos": [
+    0,
+    -1.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    0.6
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "Drummers",
+   "path": "Drummers",
+   "parent": 0,
+   "pos": [
+    0,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DrummerL",
+   "path": "Drummers/DrummerL",
+   "parent": 129,
+   "pos": [
+    -7.2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Drummers/DrummerL/Body",
+   "parent": 130,
+   "pos": [
+    0.22,
+    1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_body3",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.03,
+    1.21
+   ],
+   "mapped": true,
+   "mat": "drummerLeft"
+  },
+  {
+   "name": "Head",
+   "path": "Drummers/DrummerL/Body/Head",
+   "parent": 131,
+   "pos": [
+    0.25,
+    1.07
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_head",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.715,
+    1.475
+   ],
+   "mapped": true,
+   "mat": "faceLeft"
+  },
+  {
+   "name": "Face",
+   "path": "Drummers/DrummerL/Body/Head/Face",
+   "parent": 132,
+   "pos": [
+    -0.31,
+    -0.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_face",
+   "order": 24,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.75
+   ]
+  },
+  {
+   "name": "HeadBand",
+   "path": "Drummers/DrummerL/Body/Head/HeadBand",
+   "parent": 132,
+   "pos": [
+    0.72,
+    -0.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_headBand1",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.425,
+    1.365
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "sweat",
+   "path": "Drummers/DrummerL/Body/Head/sweat",
+   "parent": 132,
+   "pos": [
+    -0.134,
+    0.067
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sweat",
+   "order": 24,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.415,
+    0.75
+   ],
+   "mapped": true,
+   "mat": "sweat"
+  },
+  {
+   "name": "ArmF",
+   "path": "Drummers/DrummerL/Body/ArmF",
+   "parent": 131,
+   "pos": [
+    0.913,
+    1.13
+   ],
+   "rotZ": -0.10471963843671714,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_arm10",
+   "order": 26,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    1.615,
+    2.42
+   ],
+   "mapped": true,
+   "mat": "drummerLeft"
+  },
+  {
+   "name": "Hand",
+   "path": "Drummers/DrummerL/Body/ArmF/Hand",
+   "parent": 136,
+   "pos": [
+    0.529,
+    0.932
+   ],
+   "rotZ": 0.8901177844416207,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_hand",
+   "order": 28,
+   "color": [
+    1,
+    0.9372549,
+    0.78039217,
+    1
+   ],
+   "size": [
+    0.745,
+    0.75
+   ]
+  },
+  {
+   "name": "Stick",
+   "path": "Drummers/DrummerL/Body/ArmF/Hand/Stick",
+   "parent": 137,
+   "pos": [
+    -0.03,
+    -0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "taikoDrum_leg1",
+   "order": 26,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.43,
+    2.245
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "swoosh",
+   "path": "Drummers/DrummerL/Body/ArmF/Hand/Stick/swoosh",
+   "parent": 138,
+   "pos": [
+    -1.665,
+    0.024
+   ],
+   "rotZ": 2.8064894219943626,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "swoosh",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    3.98,
+    1.68
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "swoosh2",
+   "path": "Drummers/DrummerL/Body/ArmF/Hand/Stick/swoosh2",
+   "parent": 138,
+   "pos": [
+    -0.884,
+    -0.607
+   ],
+   "rotZ": 3.0717792979347474,
+   "scale": [
+    0.55,
+    1
+   ],
+   "sprite": "swoosh",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    3.98,
+    1.68
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "ArmB",
+   "path": "Drummers/DrummerL/Body/ArmB",
+   "parent": 131,
+   "pos": [
+    0.402,
+    0.625
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_arm10Alt",
+   "order": 19,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1.615,
+    2.42
+   ],
+   "mapped": true,
+   "mat": "charBgArms"
+  },
+  {
+   "name": "Hand",
+   "path": "Drummers/DrummerL/Body/ArmB/Hand",
+   "parent": 141,
+   "pos": [
+    0.789,
+    1.022
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_hand",
+   "order": 20,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.745,
+    0.75
+   ],
+   "mapped": true,
+   "mat": "charBgArms"
+  },
+  {
+   "name": "Stick",
+   "path": "Drummers/DrummerL/Body/ArmB/Hand/Stick",
+   "parent": 142,
+   "pos": [
+    -0.04,
+    -0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "taikoDrum_leg1",
+   "order": 19,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.43,
+    2.245
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "swoosh",
+   "path": "Drummers/DrummerL/Body/ArmB/Hand/Stick/swoosh",
+   "parent": 143,
+   "pos": [
+    -1.66,
+    0.03
+   ],
+   "rotZ": 2.8064894219943626,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "swoosh",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    3.98,
+    1.68
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "swoosh2",
+   "path": "Drummers/DrummerL/Body/ArmB/Hand/Stick/swoosh2",
+   "parent": 143,
+   "pos": [
+    -0.884,
+    -0.607
+   ],
+   "rotZ": 3.0717792979347474,
+   "scale": [
+    0.55,
+    1
+   ],
+   "sprite": "swoosh",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    3.98,
+    1.68
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "Legs",
+   "path": "Drummers/DrummerL/Legs",
+   "parent": 130,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_legs",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.265,
+    1.35
+   ],
+   "mapped": true,
+   "mat": "pantsLeft"
+  },
+  {
+   "name": "shadow",
+   "path": "Drummers/DrummerL/shadow",
+   "parent": 130,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    0.7
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "assembly (1)",
+   "path": "Drummers/DrummerL/assembly (1)",
+   "parent": 130,
+   "pos": [
+    -4.069,
+    -1.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.64,
+    1.64
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.39,
+    7.61
+   ]
+  },
+  {
+   "name": "FrictionCoefficient - Drummer Duel widescreen [u1IwG7SUTdQ - 720x480 - 0m03s] (1)",
+   "path": "Drummers/DrummerL/FrictionCoefficient - Drummer Duel widescreen [u1IwG7SUTdQ - 720x480 - 0m03s] (1)",
+   "parent": 130,
+   "pos": [
+    -6.963,
+    -1.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.55,
+    2.55
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6745098
+   ],
+   "size": [
+    7.71,
+    5.14
+   ]
+  },
+  {
+   "name": "Snapshot_38",
+   "path": "Drummers/DrummerL/Snapshot_38",
+   "parent": 130,
+   "pos": [
+    2.78,
+    -1.0398662
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7999631,
+    1.7999631
+   ],
+   "order": 420,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.8,
+    7.2
+   ]
+  },
+  {
+   "name": "DrummerR",
+   "path": "Drummers/DrummerR",
+   "parent": 129,
+   "pos": [
+    7.2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Drummers/DrummerR/Body",
+   "parent": 151,
+   "pos": [
+    0.22,
+    1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_body3",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.03,
+    1.21
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "Head",
+   "path": "Drummers/DrummerR/Body/Head",
+   "parent": 152,
+   "pos": [
+    0.25,
+    1.07
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_head",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.715,
+    1.475
+   ],
+   "mapped": true,
+   "mat": "faceRight"
+  },
+  {
+   "name": "Face",
+   "path": "Drummers/DrummerR/Body/Head/Face",
+   "parent": 153,
+   "pos": [
+    -0.31,
+    -0.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_face",
+   "order": 24,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.75
+   ]
+  },
+  {
+   "name": "HeadBand",
+   "path": "Drummers/DrummerR/Body/Head/HeadBand",
+   "parent": 153,
+   "pos": [
+    0.72,
+    -0.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_headBand1",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.425,
+    1.365
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "sweat",
+   "path": "Drummers/DrummerR/Body/Head/sweat",
+   "parent": 153,
+   "pos": [
+    -0.134,
+    0.067
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sweat",
+   "order": 24,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.415,
+    0.75
+   ],
+   "mapped": true,
+   "mat": "sweat"
+  },
+  {
+   "name": "ArmF",
+   "path": "Drummers/DrummerR/Body/ArmF",
+   "parent": 152,
+   "pos": [
+    0.913,
+    1.13
+   ],
+   "rotZ": -0.10471963843671714,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_arm10",
+   "order": 26,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    1.615,
+    2.42
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "Hand",
+   "path": "Drummers/DrummerR/Body/ArmF/Hand",
+   "parent": 157,
+   "pos": [
+    0.529,
+    0.932
+   ],
+   "rotZ": 0.8901177844416207,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_hand",
+   "order": 28,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.745,
+    0.75
+   ]
+  },
+  {
+   "name": "Stick",
+   "path": "Drummers/DrummerR/Body/ArmF/Hand/Stick",
+   "parent": 158,
+   "pos": [
+    -0.03,
+    -0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "taikoDrum_leg1",
+   "order": 26,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.43,
+    2.245
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "swoosh",
+   "path": "Drummers/DrummerR/Body/ArmF/Hand/Stick/swoosh",
+   "parent": 159,
+   "pos": [
+    -1.665,
+    0.024
+   ],
+   "rotZ": 2.8064894219943626,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "swoosh",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    3.98,
+    1.68
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "swoosh2",
+   "path": "Drummers/DrummerR/Body/ArmF/Hand/Stick/swoosh2",
+   "parent": 159,
+   "pos": [
+    -0.884,
+    -0.607
+   ],
+   "rotZ": 3.0717792979347474,
+   "scale": [
+    0.55,
+    1
+   ],
+   "sprite": "swoosh",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    3.98,
+    1.68
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "ArmB",
+   "path": "Drummers/DrummerR/Body/ArmB",
+   "parent": 152,
+   "pos": [
+    0.402,
+    0.625
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_arm10Alt",
+   "order": 19,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1.615,
+    2.42
+   ],
+   "mapped": true,
+   "mat": "charBgArms"
+  },
+  {
+   "name": "Hand",
+   "path": "Drummers/DrummerR/Body/ArmB/Hand",
+   "parent": 162,
+   "pos": [
+    0.789,
+    1.022
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_hand",
+   "order": 20,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.745,
+    0.75
+   ],
+   "mapped": true,
+   "mat": "charBgArms"
+  },
+  {
+   "name": "Stick",
+   "path": "Drummers/DrummerR/Body/ArmB/Hand/Stick",
+   "parent": 163,
+   "pos": [
+    -0.04,
+    -0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "taikoDrum_leg1",
+   "order": 19,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.43,
+    2.245
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "swoosh",
+   "path": "Drummers/DrummerR/Body/ArmB/Hand/Stick/swoosh",
+   "parent": 164,
+   "pos": [
+    -1.66,
+    0.03
+   ],
+   "rotZ": 2.8064894219943626,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "swoosh",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    3.98,
+    1.68
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "swoosh2",
+   "path": "Drummers/DrummerR/Body/ArmB/Hand/Stick/swoosh2",
+   "parent": 164,
+   "pos": [
+    -0.884,
+    -0.607
+   ],
+   "rotZ": 3.0717792979347474,
+   "scale": [
+    0.55,
+    1
+   ],
+   "sprite": "swoosh",
+   "order": 30,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    3.98,
+    1.68
+   ],
+   "mapped": true,
+   "mat": "drumsticks"
+  },
+  {
+   "name": "Legs",
+   "path": "Drummers/DrummerR/Legs",
+   "parent": 151,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "drummer_legs",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.265,
+    1.35
+   ],
+   "mapped": true,
+   "mat": "pantsRight"
+  },
+  {
+   "name": "shadow",
+   "path": "Drummers/DrummerR/shadow",
+   "parent": 151,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    0.7
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "assembly (1)",
+   "path": "Drummers/DrummerR/assembly (1)",
+   "parent": 151,
+   "pos": [
+    -4.069,
+    -1.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.64,
+    1.64
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.39,
+    7.61
+   ]
+  },
+  {
+   "name": "FrictionCoefficient - Drummer Duel widescreen [u1IwG7SUTdQ - 720x480 - 0m03s] (1)",
+   "path": "Drummers/DrummerR/FrictionCoefficient - Drummer Duel widescreen [u1IwG7SUTdQ - 720x480 - 0m03s] (1)",
+   "parent": 151,
+   "pos": [
+    -6.963,
+    -1.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.55,
+    2.55
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.71,
+    5.14
+   ]
+  },
+  {
+   "name": "Snapshot_38",
+   "path": "Drummers/DrummerR/Snapshot_38",
+   "parent": 151,
+   "pos": [
+    2.78,
+    -1.0398662
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7999631,
+    1.7999631
+   ],
+   "order": 420,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.8,
+    7.2
+   ]
+  },
+  {
+   "name": "Taikos",
+   "path": "Taikos",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TaikoL",
+   "path": "Taikos/TaikoL",
+   "parent": 172,
+   "pos": [
+    -4.8,
+    3.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Taiko",
+   "path": "Taikos/TaikoL/Taiko",
+   "parent": 173,
+   "pos": [
+    0,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ao",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.15,
+    7.25
+   ],
+   "mapped": true,
+   "mat": "drummerLeft"
+  },
+  {
+   "name": "DrumStand",
+   "path": "Taikos/TaikoL/DrumStand",
+   "parent": 173,
+   "pos": [
+    0,
+    -2.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "drumstand",
+   "path": "Taikos/TaikoL/DrumStand/drumstand",
+   "parent": 175,
+   "pos": [
+    -1,
+    0
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ap",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.92,
+    1.8
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "drumstand",
+   "path": "Taikos/TaikoL/DrumStand/drumstand",
+   "parent": 175,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ap",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.92,
+    1.8
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "drumstand3",
+   "path": "Taikos/TaikoL/DrumStand/drumstand3",
+   "parent": 175,
+   "pos": [
+    0,
+    -0.049999952
+   ],
+   "rotZ": 0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ap",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.92,
+    1.8
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "Impact",
+   "path": "Taikos/TaikoL/Impact",
+   "parent": 173,
+   "pos": [
+    -0.325,
+    0.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "impactT",
+   "path": "Taikos/TaikoL/Impact/impactT",
+   "parent": 179,
+   "pos": [
+    3.14,
+    2.18
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "impact1",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    1.6
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "impactB",
+   "path": "Taikos/TaikoL/Impact/impactB",
+   "parent": 179,
+   "pos": [
+    3.14,
+    -2.18
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "sprite": "impact1",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    1.6
+   ],
+   "mapped": true,
+   "mat": "charLeft"
+  },
+  {
+   "name": "Squiggles",
+   "path": "Taikos/TaikoL/Squiggles",
+   "parent": 173,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "squiggles1",
+   "path": "Taikos/TaikoL/Squiggles/squiggles1",
+   "parent": 182,
+   "pos": [
+    2.12,
+    -1.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "squiggle1",
+   "path": "Taikos/TaikoL/Squiggles/squiggles1/squiggle1",
+   "parent": 183,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggle2",
+   "path": "Taikos/TaikoL/Squiggles/squiggles1/squiggle2",
+   "parent": 183,
+   "pos": [
+    0.343,
+    0.694
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    0.65
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggles2",
+   "path": "Taikos/TaikoL/Squiggles/squiggles2",
+   "parent": 182,
+   "pos": [
+    2.12,
+    2.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "squiggle1",
+   "path": "Taikos/TaikoL/Squiggles/squiggles2/squiggle1",
+   "parent": 186,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggle2",
+   "path": "Taikos/TaikoL/Squiggles/squiggles2/squiggle2",
+   "parent": 186,
+   "pos": [
+    0.343,
+    0.694
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    0.65
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggles3",
+   "path": "Taikos/TaikoL/Squiggles/squiggles3",
+   "parent": 182,
+   "pos": [
+    2.59,
+    0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "squiggle1",
+   "path": "Taikos/TaikoL/Squiggles/squiggles3/squiggle1",
+   "parent": 189,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    0.7,
+    0.6
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggle2",
+   "path": "Taikos/TaikoL/Squiggles/squiggles3/squiggle2",
+   "parent": 189,
+   "pos": [
+    0,
+    0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.6
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Taikos/TaikoL/shadow",
+   "parent": 173,
+   "pos": [
+    0,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    1
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "alternate",
+   "path": "Taikos/TaikoL/alternate",
+   "parent": 173,
+   "pos": [
+    -2.4500003,
+    -3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.875,
+    2.875
+   ],
+   "order": 55,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6431373
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "stars",
+   "path": "Taikos/TaikoL/stars",
+   "parent": 173,
+   "pos": [
+    0.28,
+    0.29
+   ],
+   "rotZ": -1.0471975549810364,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tap_effectRL",
+   "path": "Taikos/TaikoL/tap_effectRL",
+   "parent": 173,
+   "pos": [
+    -0.45000005,
+    -2.4620001
+   ],
+   "z": -0.66,
+   "rotZ": 3.4578261375956916,
+   "scale": [
+    1.1000001,
+    1.1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "Snapshot_38",
+   "path": "Taikos/TaikoL/Snapshot_38",
+   "parent": 173,
+   "pos": [
+    7.91,
+    -3.500001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.9166665,
+    1.9166665
+   ],
+   "order": 420,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.65882355
+   ],
+   "size": [
+    10.8,
+    7.2
+   ]
+  },
+  {
+   "name": "TaikoR",
+   "path": "Taikos/TaikoR",
+   "parent": 172,
+   "pos": [
+    4.8,
+    3.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Taiko",
+   "path": "Taikos/TaikoR/Taiko",
+   "parent": 197,
+   "pos": [
+    0,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ao",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.15,
+    7.25
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "DrumStand",
+   "path": "Taikos/TaikoR/DrumStand",
+   "parent": 197,
+   "pos": [
+    0,
+    -2.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "drumstand",
+   "path": "Taikos/TaikoR/DrumStand/drumstand",
+   "parent": 199,
+   "pos": [
+    -1,
+    0
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ap",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.92,
+    1.8
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "drumstand",
+   "path": "Taikos/TaikoR/DrumStand/drumstand",
+   "parent": 199,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ap",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.92,
+    1.8
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "drumstand3",
+   "path": "Taikos/TaikoR/DrumStand/drumstand3",
+   "parent": 199,
+   "pos": [
+    0,
+    -0.049999952
+   ],
+   "rotZ": 0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ap",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.92,
+    1.8
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "Impact",
+   "path": "Taikos/TaikoR/Impact",
+   "parent": 197,
+   "pos": [
+    -0.325,
+    0.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "impactT",
+   "path": "Taikos/TaikoR/Impact/impactT",
+   "parent": 203,
+   "pos": [
+    3.14,
+    2.18
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "impact1",
+   "order": 0,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    1.5,
+    1.6
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "impactB",
+   "path": "Taikos/TaikoR/Impact/impactB",
+   "parent": 203,
+   "pos": [
+    3.14,
+    -2.18
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "sprite": "impact1",
+   "order": 0,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    1.5,
+    1.6
+   ],
+   "mapped": true,
+   "mat": "charRight"
+  },
+  {
+   "name": "Squiggles",
+   "path": "Taikos/TaikoR/Squiggles",
+   "parent": 197,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "squiggles1",
+   "path": "Taikos/TaikoR/Squiggles/squiggles1",
+   "parent": 206,
+   "pos": [
+    2.12,
+    -1.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "squiggle1",
+   "path": "Taikos/TaikoR/Squiggles/squiggles1/squiggle1",
+   "parent": 207,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggle2",
+   "path": "Taikos/TaikoR/Squiggles/squiggles1/squiggle2",
+   "parent": 207,
+   "pos": [
+    0.343,
+    0.694
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    0.65
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggles2",
+   "path": "Taikos/TaikoR/Squiggles/squiggles2",
+   "parent": 206,
+   "pos": [
+    2.12,
+    2.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "squiggle1",
+   "path": "Taikos/TaikoR/Squiggles/squiggles2/squiggle1",
+   "parent": 210,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggle2",
+   "path": "Taikos/TaikoR/Squiggles/squiggles2/squiggle2",
+   "parent": 210,
+   "pos": [
+    0.343,
+    0.694
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    0.65
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggles3",
+   "path": "Taikos/TaikoR/Squiggles/squiggles3",
+   "parent": 206,
+   "pos": [
+    2.59,
+    0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "squiggle1",
+   "path": "Taikos/TaikoR/Squiggles/squiggles3/squiggle1",
+   "parent": 213,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    0.7,
+    0.6
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "squiggle2",
+   "path": "Taikos/TaikoR/Squiggles/squiggles3/squiggle2",
+   "parent": 213,
+   "pos": [
+    0,
+    0.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.6
+   ],
+   "sprite": "stroke",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.525,
+    0.685
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "Taikos/TaikoR/shadow",
+   "parent": 197,
+   "pos": [
+    0,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    1
+   ],
+   "sprite": "shadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.2509804
+   ],
+   "size": [
+    1.69,
+    0.915
+   ]
+  },
+  {
+   "name": "alternate",
+   "path": "Taikos/TaikoR/alternate",
+   "parent": 197,
+   "pos": [
+    -2.4500003,
+    -3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.875,
+    2.875
+   ],
+   "order": 55,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6431373
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "stars",
+   "path": "Taikos/TaikoR/stars",
+   "parent": 197,
+   "pos": [
+    0.28,
+    0.29
+   ],
+   "rotZ": -1.0471975549810364,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tap_effectRL",
+   "path": "Taikos/TaikoR/tap_effectRL",
+   "parent": 197,
+   "pos": [
+    -0.45000005,
+    -2.4620001
+   ],
+   "z": -0.66,
+   "rotZ": 3.4578261375956916,
+   "scale": [
+    1.1000001,
+    1.1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "Snapshot_38",
+   "path": "Taikos/TaikoR/Snapshot_38",
+   "parent": 197,
+   "pos": [
+    7.91,
+    -3.500001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.9166665,
+    1.9166665
+   ],
+   "order": 420,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.65882355
+   ],
+   "size": [
+    10.8,
+    7.2
+   ]
+  },
+  {
+   "name": "stars",
+   "path": "Taikos/stars",
+   "parent": 172,
+   "pos": [
+    5.08,
+    4.08
+   ],
+   "rotZ": -1.0471975549810364,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "reference",
+   "path": "reference",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dumbduel",
+   "path": "reference/dumbduel",
+   "parent": 222,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.389375,
+    2.016129
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.44,
+    4.96
+   ]
+  },
+  {
+   "name": "assembly",
+   "path": "reference/assembly",
+   "parent": 222,
+   "pos": [
+    0.4037485,
+    -0.0065398896
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3,
+    1.3
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.39,
+    7.61
+   ]
+  },
+  {
+   "name": "reffy",
+   "path": "reference/reffy",
+   "parent": 222,
+   "pos": [
+    0,
+    1.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    6.6,
+    6.6
+   ],
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.7607843
+   ],
+   "size": [
+    0.34,
+    0.4
+   ]
+  },
+  {
+   "name": "plain",
+   "path": "reference/plain",
+   "parent": 222,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.0833364,
+    2.0833364
+   ],
+   "order": 59,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.53,
+    4.8
+   ]
+  },
+  {
+   "name": "FrictionCoefficient - Drummer Duel widescreen [u1IwG7SUTdQ - 720x480 - 0m07s] (1)",
+   "path": "reference/FrictionCoefficient - Drummer Duel widescreen [u1IwG7SUTdQ - 720x480 - 0m07s] (1)",
+   "parent": 222,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.469021,
+    2.0833333
+   ],
+   "order": 55,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "alternate",
+   "path": "reference/alternate",
+   "parent": 222,
+   "pos": [
+    -1.88,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3,
+    2.3
+   ],
+   "order": 55,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6431373
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  }
+ ]
+}

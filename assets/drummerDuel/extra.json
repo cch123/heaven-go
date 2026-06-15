@@ -1,0 +1,68 @@
+{
+ "refArrays": {
+  "cheerLeadersLeft": [
+   "Cheerleaders/Left/CheerleaderL",
+   "Cheerleaders/Left/CheerleaderM",
+   "Cheerleaders/Left/CheerleaderR"
+  ],
+  "cheerLeadersRight": [
+   "Cheerleaders/Right/CheerleaderL",
+   "Cheerleaders/Right/CheerleaderM",
+   "Cheerleaders/Right/CheerleaderR"
+  ]
+ },
+ "refArrayIdx": {
+  "cheerLeadersLeft": [
+   38,
+   53,
+   68
+  ],
+  "cheerLeadersRight": [
+   84,
+   99,
+   114
+  ]
+ },
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "allDon": 1,
+    "cameraCenter": 0,
+    "cameraLeft": 7.538475,
+    "cameraLoc": 1,
+    "cameraRight": -7.538475,
+    "currCamLength": 0,
+    "isAutoCamCurrMoving": 0,
+    "isAutoCamEnabled": 1,
+    "isInitialload": 0,
+    "isManualCamCurrMoving": 0,
+    "isRight": 1
+   },
+   "refs": {
+    "cheerLeadersObj": "Cheerleaders",
+    "drummerLeft": "Drummers/DrummerL",
+    "drummerLeftFaceMaterial": "faceLeft",
+    "drummerRight": "Drummers/DrummerR",
+    "drummerRightFaceMaterial": "faceRight",
+    "referee": "Referee",
+    "refereeObj": "Referee",
+    "refereePlatformObj": "Platforms/Center",
+    "taikoLeft": "Taikos/TaikoL",
+    "taikoRight": "Taikos/TaikoR"
+   },
+   "refArrays": {
+    "cheerLeadersLeft": [
+     "Cheerleaders/Left/CheerleaderL",
+     "Cheerleaders/Left/CheerleaderM",
+     "Cheerleaders/Left/CheerleaderR"
+    ],
+    "cheerLeadersRight": [
+     "Cheerleaders/Right/CheerleaderL",
+     "Cheerleaders/Right/CheerleaderM",
+     "Cheerleaders/Right/CheerleaderR"
+    ]
+   }
+  }
+ }
+}

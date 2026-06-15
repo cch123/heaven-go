@@ -1,0 +1,13 @@
+{
+ "Cheerleaders/Left/CheerleaderL": "Cheerleader",
+ "Cheerleaders/Left/CheerleaderM": "Cheerleader",
+ "Cheerleaders/Left/CheerleaderR": "Cheerleader",
+ "Cheerleaders/Right/CheerleaderL": "Cheerleader",
+ "Cheerleaders/Right/CheerleaderM": "Cheerleader",
+ "Cheerleaders/Right/CheerleaderR": "Cheerleader",
+ "Drummers/DrummerL": "Drummer",
+ "Drummers/DrummerR": "Drummer",
+ "Referee": "Referee",
+ "Taikos/TaikoL": "drumAnim",
+ "Taikos/TaikoR": "drumAnim"
+}

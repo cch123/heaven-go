@@ -1,0 +1,284 @@
+{
+ "Cheerleader": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Cheerleader/Bop",
+    "speed": 1
+   },
+   "Cheer1L": {
+    "clip": "Animations/Cheerleader/Cheer1L",
+    "speed": 1
+   },
+   "Cheer1M": {
+    "clip": "Animations/Cheerleader/Cheer1M",
+    "speed": 1
+   },
+   "Cheer1R": {
+    "clip": "Animations/Cheerleader/Cheer1R",
+    "speed": 1
+   },
+   "Cheer2": {
+    "clip": "Animations/Cheerleader/Cheer2",
+    "speed": 1
+   },
+   "Cheer2La": {
+    "clip": "Animations/Cheerleader/Cheer2La",
+    "speed": 1
+   },
+   "Cheer2Lb": {
+    "clip": "Animations/Cheerleader/Cheer2Lb",
+    "speed": 1
+   },
+   "Cheer2Ra": {
+    "clip": "Animations/Cheerleader/Cheer2Ra",
+    "speed": 1
+   },
+   "Cheer2Rb": {
+    "clip": "Animations/Cheerleader/Cheer2Rb",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Cheerleader/Idle",
+    "speed": 1
+   },
+   "Just": {
+    "clip": "Animations/Cheerleader/Just",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Animations/Cheerleader/Miss",
+    "speed": 1
+   }
+  }
+ },
+ "Drummer": {
+  "default": "Idle",
+  "states": {
+   "ArmB": {
+    "clip": "Animations/Drummer/ArmB",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ArmF": {
+    "clip": "Animations/Drummer/ArmF",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ArmMadB": {
+    "clip": "Animations/Drummer/ArmMadB",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ArmMadF": {
+    "clip": "Animations/Drummer/ArmMadF",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Bop": {
+    "clip": "Animations/Drummer/Bop",
+    "speed": 1
+   },
+   "FaceAngry": {
+    "clip": "Animations/Drummer/FaceAngry",
+    "speed": 1
+   },
+   "FaceIdle": {
+    "clip": "Animations/Drummer/Idle",
+    "speed": 1
+   },
+   "FaceWhiff": {
+    "clip": "Animations/Drummer/FaceWhiff",
+    "speed": 1
+   },
+   "Hit": {
+    "clip": "Animations/Drummer/Hit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HitArmB": {
+    "clip": "Animations/Drummer/HitArmB",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HitArmF": {
+    "clip": "Animations/Drummer/HitArmF",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HitB": {
+    "clip": "Animations/Drummer/HitB",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   },
+   "HitF": {
+    "clip": "Animations/Drummer/HitF",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   },
+   "HitMadB": {
+    "clip": "Animations/Drummer/HitMadB",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HitMadF": {
+    "clip": "Animations/Drummer/HitMadF",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/Drummer/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Referee": {
+  "default": "HeadNormal",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Referee/Bop",
+    "speed": 1
+   },
+   "Fail": {
+    "clip": "Animations/Referee/Fail",
+    "speed": 1
+   },
+   "Finish": {
+    "clip": "Animations/Referee/Finish",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HeadBad": {
+    "clip": "Animations/Referee/HeadBad",
+    "speed": 1
+   },
+   "HeadGood": {
+    "clip": "Animations/Referee/HeadGood",
+    "speed": 1
+   },
+   "HeadNormal": {
+    "clip": "Animations/Referee/HeadNormal",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Referee/Idle",
+    "speed": 1
+   },
+   "Left": {
+    "clip": "Animations/Referee/Left",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Prepare": {
+    "clip": "Animations/Referee/Prepare",
+    "speed": 1
+   },
+   "Right": {
+    "clip": "Animations/Referee/Right",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "drumAnim": {
+  "default": "Idle",
+  "states": {
+   "Hit": {
+    "clip": "Animations/Drum/Hit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Drum/Idle",
+    "speed": 1
+   },
+   "Whiff": {
+    "clip": "Animations/Drum/Whiff",
+    "speed": 1
+   }
+  }
+ }
+}

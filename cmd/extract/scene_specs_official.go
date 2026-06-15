@@ -173,8 +173,26 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 			}},
 		},
 	},
-	"dressYourBest":    basicOfficialSceneSpec("DressYourBest", "dressYourBest.prefab"),
-	"drummerDuel":      basicOfficialSceneSpec("DrummerDuel", "drummerDuel.prefab"),
+	"dressYourBest": basicOfficialSceneSpec("DressYourBest", "dressYourBest.prefab"),
+	"drummerDuel": {
+		dir:    "DrummerDuel",
+		prefab: "drummerDuel.prefab",
+		roleFields: []string{
+			"referee", "taikoLeft", "taikoRight", "drummerLeft", "drummerRight",
+			"refereeObj", "refereePlatformObj", "cheerLeadersObj",
+		},
+		refArrayFields:  []string{"cheerLeadersLeft", "cheerLeadersRight"},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"referee", "cheerLeadersLeft", "cheerLeadersRight",
+				"taikoLeft", "taikoRight", "drummerLeft", "drummerRight",
+				"taikoRightStars", "drummerLeftFaceMaterial", "drummerRightFaceMaterial",
+				"camera", "cameraLeft", "cameraCenter", "cameraRight",
+				"refereeObj", "refereePlatformObj", "cheerLeadersObj",
+			}},
+		},
+	},
 	"drummingPractice": basicOfficialSceneSpec("DrummingPractice", "drummingPractice.prefab"),
 	"fallingWaffle":    basicOfficialSceneSpec("FallingWaffle", "fallingWaffle.prefab"),
 	"fanClub": {
