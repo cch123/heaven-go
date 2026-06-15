@@ -8,6 +8,7 @@ import (
 	"math"
 
 	"github.com/hajimehoshi/ebiten/v2"
+	"github.com/hajimehoshi/ebiten/v2/text/v2"
 	"github.com/hajimehoshi/ebiten/v2/vector"
 )
 
@@ -18,7 +19,25 @@ const (
 	timingBarOKNorm         = 0.5714286    // barOKTransform.localScale.y.
 )
 
-func (a *App) drawTimingBar(screen *ebiten.Image, t float64) {
+type timingTextDrawer func(screen *ebiten.Image, s string, face *text.GoTextFace, x, y float64, c color.Color, center bool)
+
+func (td *timingDisplayState) reset() {
+	td.arrow, td.target = 0, 0
+	td.hits = nil
+}
+
+func (td *timingDisplayState) update(dt float64) {
+	td.arrow += (td.target - td.arrow) * math.Min(4*dt, 1)
+}
+
+func (td *timingDisplayState) push(signed float64, j Judgment, now float64) {
+	signed = math.Max(-WinNG, math.Min(WinNG, signed))
+	y := timingBarNorm(signed)
+	td.target = (td.target + y) * 0.5
+	td.hits = append(td.hits, timingHit{y: y, signed: signed, rating: j, t: now})
+}
+
+func (td *timingDisplayState) draw(screen *ebiten.Image, t float64, assetsRoot string, face *text.GoTextFace, drawText timingTextDrawer) {
 	const (
 		cx    = float32(ScreenW / 2)
 		cy    = float32(508)
@@ -35,16 +54,16 @@ func (a *App) drawTimingBar(screen *ebiten.Image, t float64) {
 	vector.StrokeLine(screen, cx, cy-bh/2-2, cx, cy+bh/2+2, 1, color.RGBA{255, 255, 255, 200}, false)
 
 	dim := color.RGBA{230, 230, 235, 150}
-	a.text(screen, "fast", a.faceSmall, float64(cx-halfW-14)-32, float64(cy)-9, dim, false)
-	a.text(screen, "slow", a.faceSmall, float64(cx+halfW+14)+6, float64(cy)-9, dim, false)
+	drawText(screen, "fast", face, float64(cx-halfW-14)-32, float64(cy)-9, dim, false)
+	drawText(screen, "slow", face, float64(cx+halfW+14)+6, float64(cy)-9, dim, false)
 
-	for i, h := range a.tdHits {
+	for i, h := range td.hits {
 		age := t - h.t
 		if age > 1.2 {
 			continue
 		}
 		x := cx + float32(h.y)*halfW
-		a.drawTimingHitStars(screen, x, cy, h, i, age)
+		td.drawHitStars(screen, x, cy, h, i, age, assetsRoot)
 
 		al := 1 - age/1.2
 		var c color.RGBA
@@ -63,17 +82,17 @@ func (a *App) drawTimingBar(screen *ebiten.Image, t float64) {
 			if h.y < 0 {
 				label = "EARLY"
 			}
-			a.text(screen, label, a.faceSmall, float64(x)-18, float64(cy)-36, c, false)
+			drawText(screen, label, face, float64(x)-18, float64(cy)-36, c, false)
 		}
 	}
 
-	ax := cx + float32(a.tdArrow)*halfW
+	ax := cx + float32(td.arrow)*halfW
 	drawTri(screen, ax, cy-bh/2-5, 5, true)
 	drawTri(screen, ax, cy+bh/2+5, 5, false)
 }
 
-func (a *App) drawTimingHitStars(dst *ebiten.Image, x, y float32, h timingHit, idx int, age float64) {
-	assets := timingAccuracyImages(a.assetsRoot)
+func (td *timingDisplayState) drawHitStars(dst *ebiten.Image, x, y float32, h timingHit, idx int, age float64, assetsRoot string) {
+	assets := timingAccuracyImages(assetsRoot)
 	unitPx := float64(timingBarHalfW) / timingUnityBarHalfUnits
 	scale := timingRatingBaseScale(h.rating)
 	if h.rating == JudgeJust {

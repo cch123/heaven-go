@@ -79,8 +79,3 @@ type appFlowState struct {
 	debug   bool
 	loadErr string
 }
-
-type timingDisplayState struct {
-	tdArrow, tdTarget float64
-	tdHits            []timingHit
-}

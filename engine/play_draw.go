@@ -22,7 +22,7 @@ func (a *App) drawPlayHUD(screen *ebiten.Image, t, beat float64, white color.RGB
 		prog := math.Min(beat/a.endBeat, 1)
 		vector.DrawFilledRect(screen, 0, 0, float32(ScreenW*prog), 4, white, false)
 	}
-	a.drawTimingBar(screen, t)
+	a.timingDisplayState.draw(screen, t, a.assetsRoot, a.faceSmall, a.text)
 }
 
 func isTimingFeedbackMsg(s string) bool {

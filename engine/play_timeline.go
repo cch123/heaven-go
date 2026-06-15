@@ -1,10 +1,6 @@
 package engine
 
-import (
-	"math"
-
-	"github.com/hajimehoshi/ebiten/v2"
-)
+import "github.com/hajimehoshi/ebiten/v2"
 
 func (a *App) advancePlayTimeline(beat float64) {
 	for a.swIdx < len(a.switches) && a.switches[a.swIdx].beat <= beat {
@@ -19,7 +15,7 @@ func (a *App) advancePlayTimeline(beat float64) {
 
 func (a *App) updateTimingArrow() {
 	dt := 1.0 / float64(ebiten.TPS())
-	a.tdArrow += (a.tdTarget - a.tdArrow) * math.Min(4*dt, 1)
+	a.timingDisplayState.update(dt)
 }
 
 func (a *App) updatePlayMusicVolume(beat float64) {

@@ -15,7 +15,7 @@ func (a *App) resetRunState() {
 	a.starGot = false
 	a.aces, a.justs, a.ngs, a.misses, a.whiffs = 0, 0, 0, 0, 0
 	a.lastMsg, a.msgT = "", 0
-	a.tdArrow, a.tdTarget, a.tdHits = 0, 0, nil
+	a.timingDisplayState.reset()
 	a.scores = nil
 	a.result, a.resultT, a.resultEpilogue = resultSummary{}, 0, false
 	a.stopResultAudio()
