@@ -63,6 +63,7 @@ import (
 	"hsdemo/games/fallingwaffle"
 	"hsdemo/games/figurefighter"
 	"hsdemo/games/fireworks"
+	"hsdemo/games/firstcontact"
 	"hsdemo/games/flipperflop"
 	"hsdemo/games/forklifter"
 	"hsdemo/games/frogprincess"
@@ -708,6 +709,7 @@ func main() {
 	engine.Register("figureFighter", figurefighter.New)
 	engine.Register("fireworks", fireworks.New)
 	engine.Register("fallingWaffle", fallingwaffle.New)
+	engine.Register("firstContact", firstcontact.New)
 	engine.Register("flipperFlop", flipperflop.New)
 	engine.Register("forkLifter", forklifter.New)
 	engine.Register("frogPrincess", frogprincess.New)

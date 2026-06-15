@@ -1,0 +1,117 @@
+{
+ "Alien": {
+  "default": "alien_idle",
+  "states": {
+   "alienNoHit": {
+    "speed": 1
+   },
+   "alien_fail": {
+    "clip": "alien_bad/alien_fail",
+    "speed": 1
+   },
+   "alien_fail2": {
+    "speed": 1
+   },
+   "alien_idle": {
+    "clip": "alien_idle/alien_idle",
+    "speed": 1
+   },
+   "alien_lookAt": {
+    "clip": "alien_lookAt/alien_lookAt",
+    "speed": 1
+   },
+   "alien_lookoAt": {
+    "speed": 1
+   },
+   "alien_noHit": {
+    "clip": "alien_bad/alien_noHit",
+    "speed": 1
+   },
+   "alien_point": {
+    "clip": "alien_point/alien_point",
+    "speed": 1
+   },
+   "alien_success": {
+    "clip": "alien_good/alien_success",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "alien_idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "alien_talk": {
+    "clip": "alien_talk/alien_talk",
+    "speed": 1
+   }
+  }
+ },
+ "CrowdOfAliens": {
+  "default": "crowdIdle",
+  "states": {
+   "crowdIdle": {
+    "clip": "Animations/crowdIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Live": {
+  "default": "New State",
+  "states": {
+   "New State": {
+    "speed": 1
+   },
+   "liveBar": {
+    "clip": "Animations/liveBar",
+    "speed": 1
+   }
+  }
+ },
+ "MissionControl": {
+  "default": "missionControl_success",
+  "states": {
+   "missionControl_fail": {
+    "clip": "mission_control_anim/missionControl_fail",
+    "speed": 1
+   },
+   "missionControl_success": {
+    "clip": "mission_control_anim/missionControl_success",
+    "speed": 1
+   }
+  }
+ },
+ "Translator": {
+  "default": "New State",
+  "states": {
+   "New State": {
+    "speed": 1
+   },
+   "translator_eh": {
+    "clip": "interpret_talk_alt/translator_eh",
+    "speed": 1
+   },
+   "translator_idle": {
+    "clip": "translator_anim/translator_idle",
+    "speed": 1
+   },
+   "translator_lookAtAlien": {
+    "clip": "interpret_look/translator_lookAtAlien",
+    "speed": 1
+   },
+   "translator_lookAtAlien_nod": {
+    "clip": "interpret_nod/translator_lookAtAlien_nod",
+    "speed": 1
+   },
+   "translator_speak": {
+    "clip": "interpret_talk/translator_speak",
+    "speed": 1
+   },
+   "translator_speakidle": {
+    "clip": "translator_anim/translator_speakidle",
+    "speed": 1
+   }
+  }
+ }
+}

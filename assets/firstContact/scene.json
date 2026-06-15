@@ -1,0 +1,1579 @@
+{
+ "nodes": [
+  {
+   "name": "firstContact",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    -0.21906853,
+    -1.0836662
+   ],
+   "z": -0.51148534,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Translator",
+   "path": "Translator",
+   "parent": 0,
+   "pos": [
+    -0.244,
+    -1.638
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.87014234,
+    0.87014234
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Translator/Head",
+   "parent": 1,
+   "pos": [
+    -2,
+    2.865
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.9085529,
+    1.7824374
+   ],
+   "sprite": "interpreter_obj_rot_8",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4879999,
+    1.031
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "Translator/Head/Mouth",
+   "parent": 2,
+   "pos": [
+    -0.0009998849,
+    -0.041
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.99929404,
+    1.0367676
+   ],
+   "sprite": "interpreter_obj_rot_19",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.395,
+    0.34002858
+   ]
+  },
+  {
+   "name": "MouthAdditional",
+   "path": "Translator/Head/MouthAdditional",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "interpreter_obj_rot_30",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.38
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "Translator/Head/Eyes",
+   "parent": 2,
+   "pos": [
+    -0.222,
+    0.248
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.96903,
+    1.09998
+   ],
+   "sprite": "interpreter_obj_rot_23",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.38
+   ]
+  },
+  {
+   "name": "Eyes2",
+   "path": "Translator/Head/Eyes2",
+   "parent": 2,
+   "pos": [
+    0.231,
+    0.249
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.96903,
+    1.09998
+   ],
+   "sprite": "interpreter_obj_rot_23",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    0.38
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Translator/Body",
+   "parent": 1,
+   "pos": [
+    -2.11,
+    0.619
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.716137,
+    2.0422919
+   ],
+   "sprite": "interpreter_obj_rot_14",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    3.9
+   ]
+  },
+  {
+   "name": "Arms",
+   "path": "Translator/Arms",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Right",
+   "path": "Translator/Arms/Right",
+   "parent": 8,
+   "pos": [
+    -1.315,
+    1.264
+   ],
+   "rotZ": 1.389981130341153,
+   "scale": [
+    1.86186,
+    1.8618599
+   ],
+   "sprite": "interpreter_obj_rot_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    1.5
+   ]
+  },
+  {
+   "name": "Left",
+   "path": "Translator/Arms/Left",
+   "parent": 8,
+   "pos": [
+    -2.75,
+    1.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8623865,
+    1.8851073
+   ],
+   "sprite": "interpreter_obj_rot_7",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    1.5
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "Translator/GameObject",
+   "parent": 1,
+   "pos": [
+    -1.9071,
+    0.2174
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.0787864,
+    2.0014155
+   ],
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0.24,
+    1.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.0776971,
+    0.0776971
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Frame",
+   "path": "Background/Frame",
+   "parent": 12,
+   "pos": [
+    0.2059,
+    1.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2465563,
+    4.213892
+   ],
+   "sprite": "interpreter_bg_00_rot_0",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.66,
+    3.35
+   ]
+  },
+  {
+   "name": "LowerFrame",
+   "path": "Background/LowerFrame",
+   "parent": 12,
+   "pos": [
+    0.2108,
+    -75.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2078214,
+    4.09103
+   ],
+   "sprite": "interpreter_bg_00_rot_19",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.86,
+    1.19
+   ]
+  },
+  {
+   "name": "Clouds",
+   "path": "Background/Clouds",
+   "parent": 12,
+   "pos": [
+    0.4904,
+    -3.5023
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.3854513,
+    3.1628177
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cloud5",
+   "path": "Background/Clouds/Cloud5",
+   "parent": 15,
+   "pos": [
+    -7.12,
+    4.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1337781,
+    1.2434038
+   ],
+   "sprite": "interpreter_bg_00_rot_6",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.13,
+    8.012208
+   ]
+  },
+  {
+   "name": "Cloud4",
+   "path": "Background/Clouds/Cloud4",
+   "parent": 15,
+   "pos": [
+    10.931954,
+    14.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0199028,
+    1.0153344
+   ],
+   "sprite": "interpreter_bg_00_rot_2",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    66.78,
+    26.177214
+   ]
+  },
+  {
+   "name": "Cloud3",
+   "path": "Background/Clouds/Cloud3",
+   "parent": 15,
+   "pos": [
+    -30.45,
+    2.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2121918,
+    1.2434038
+   ],
+   "sprite": "interpreter_bg_00_rot_6",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.13,
+    8.012208
+   ]
+  },
+  {
+   "name": "Cloud2",
+   "path": "Background/Clouds/Cloud2",
+   "parent": 15,
+   "pos": [
+    29.73,
+    9.79
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.243784,
+    1.2691679
+   ],
+   "sprite": "interpreter_bg_00_rot_3",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.42,
+    6.831883
+   ]
+  },
+  {
+   "name": "Cloud",
+   "path": "Background/Clouds/Cloud",
+   "parent": 15,
+   "pos": [
+    -23.952608,
+    10.181521
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9950272,
+    1.0153344
+   ],
+   "sprite": "interpreter_bg_00_rot_1",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    66.78,
+    26.177214
+   ]
+  },
+  {
+   "name": "Bg",
+   "path": "Background/Bg",
+   "parent": 12,
+   "pos": [
+    -1.3,
+    0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.8579333,
+    2.827501
+   ],
+   "sprite": "interpreter_bg_00_rot_20",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    69.08,
+    31.30863
+   ]
+  },
+  {
+   "name": "CrowdOfAliens",
+   "path": "Background/CrowdOfAliens",
+   "parent": 12,
+   "pos": [
+    1.4,
+    -36.6
+   ],
+   "z": -60.6,
+   "rotZ": 0,
+   "scale": [
+    1.7819072,
+    1.6647261
+   ],
+   "sprite": "interpreter_bg_01_rot_1",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.26,
+    2.22
+   ]
+  },
+  {
+   "name": "WhiteLines",
+   "path": "Background/WhiteLines",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    12.331614,
+    12.331614
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "thinLine",
+   "path": "Background/WhiteLines/thinLine",
+   "parent": 23,
+   "pos": [
+    -0.208,
+    6.52
+   ],
+   "rotZ": 0,
+   "scale": [
+    16.17964,
+    0.058749434
+   ],
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    0.09803922
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "line",
+   "path": "Background/WhiteLines/line",
+   "parent": 23,
+   "pos": [
+    -0.208,
+    5.9000006
+   ],
+   "rotZ": 0,
+   "scale": [
+    16.17964,
+    0.09110862
+   ],
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    0.09803922
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "line (2)",
+   "path": "Background/WhiteLines/line (2)",
+   "parent": 23,
+   "pos": [
+    -0.208,
+    5
+   ],
+   "rotZ": 0,
+   "scale": [
+    16.17964,
+    0.09112303
+   ],
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    0.09803922
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "line (3)",
+   "path": "Background/WhiteLines/line (3)",
+   "parent": 23,
+   "pos": [
+    -0.208,
+    2.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    16.17964,
+    0.09112303
+   ],
+   "order": 9,
+   "color": [
+    0,
+    1,
+    0.844939,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Alien",
+   "path": "Alien",
+   "parent": 0,
+   "pos": [
+    -0.21,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0035018,
+    1.0035018
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "Alien/GameObject",
+   "parent": 28,
+   "pos": [
+    2.09,
+    0.6306
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.0990343,
+    1.9944687
+   ],
+   "order": 6,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Alien/Body",
+   "parent": 28,
+   "pos": [
+    2.16,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "Alien/Body/Legs",
+   "parent": 30,
+   "pos": [
+    -0.03,
+    -1.067
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6151199,
+    1.6151199
+   ],
+   "sprite": "interpreter_obj_rot_33",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.576,
+    2.1571813
+   ]
+  },
+  {
+   "name": "Cloth",
+   "path": "Alien/Body/Legs/Cloth",
+   "parent": 31,
+   "pos": [
+    -0.746,
+    0.112
+   ],
+   "rotZ": -0.02917409788480043,
+   "scale": [
+    1.0484492,
+    1.0484492
+   ],
+   "sprite": "interpreter_obj_rot_46",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.576,
+    2.1571813
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "Alien/Body/Torso",
+   "parent": 30,
+   "pos": [
+    0.12,
+    1.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6313753,
+    1.6313753
+   ],
+   "sprite": "interpreter_obj_rot_37",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.576,
+    2.1571813
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "Alien/Body/Torso/Arm",
+   "parent": 33,
+   "pos": [
+    -0.688,
+    -0.841
+   ],
+   "rotZ": 0.028042711917069113,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "interpreter_obj_rot_55",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.576,
+    2.1571813
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Alien/Body/Torso/Head",
+   "parent": 33,
+   "pos": [
+    -0.101570785,
+    0.69879687
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9767563,
+    0.9523374
+   ],
+   "sprite": "interpreter_obj_rot_17",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8569999,
+    1.8841585
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "Alien/Body/Torso/Head/Eyes",
+   "parent": 35,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Alien/Body/Torso/Head/Eyes/Face",
+   "parent": 36,
+   "pos": [
+    -0.14,
+    0.196
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "interpreter_obj_rot_23",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.54
+   ]
+  },
+  {
+   "name": "Whosh",
+   "path": "Alien/Body/Torso/Head/Eyes/Whosh",
+   "parent": 36,
+   "pos": [
+    -0.4883,
+    0.2561
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.99552566,
+    1.048124
+   ],
+   "sprite": "interpreter_obj_rot_34",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    0.78
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "Alien/Body/Torso/Head/Mouth",
+   "parent": 35,
+   "pos": [
+    0.009,
+    -0.447
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2683194,
+    1.2683194
+   ],
+   "sprite": "interpreter_obj_rot_52",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.62
+   ]
+  },
+  {
+   "name": "MissionControl",
+   "path": "MissionControl",
+   "parent": 0,
+   "pos": [
+    2.7739,
+    0.07210004
+   ],
+   "z": 0.49,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG_Holder",
+   "path": "MissionControl/BG_Holder",
+   "parent": 40,
+   "pos": [
+    -3.52,
+    0.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.088477686,
+    0.088477686
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "MissionControl/BG_Holder/BG",
+   "parent": 41,
+   "pos": [
+    13.4,
+    -1.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.3716154,
+    4.247704
+   ],
+   "sprite": "interpreter_bg_01_rot_3",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.39,
+    2.55
+   ]
+  },
+  {
+   "name": "bg_people_light",
+   "path": "MissionControl/BG_Holder/bg_people_light",
+   "parent": 41,
+   "pos": [
+    -2.6,
+    -1.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.048639,
+    3.9338822
+   ],
+   "sprite": "interpreter_bg_01_rot_6",
+   "order": 18,
+   "color": [
+    1,
+    1,
+    1,
+    0.5372549
+   ],
+   "size": [
+    4.39,
+    2.55
+   ]
+  },
+  {
+   "name": "bg_people",
+   "path": "MissionControl/BG_Holder/bg_people",
+   "parent": 41,
+   "pos": [
+    -2.5594,
+    0.58
+   ],
+   "z": -0.09,
+   "rotZ": 0,
+   "scale": [
+    4.048639,
+    3.9338822
+   ],
+   "sprite": "interpreter_bg_01_rot_4",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.39,
+    2.55
+   ]
+  },
+  {
+   "name": "Live",
+   "path": "Live",
+   "parent": 0,
+   "pos": [
+    0.19,
+    1.09
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    -0.015566288,
+    -0.015566288
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Text",
+   "path": "Live/Text",
+   "parent": 45,
+   "pos": [
+    -311.6,
+    166.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    7.042357,
+    7.042356
+   ],
+   "sprite": "bar_0",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    0.6392157
+   ],
+   "size": [
+    0.94,
+    1.5
+   ]
+  },
+  {
+   "name": "sideBar",
+   "path": "Live/sideBar",
+   "parent": 45,
+   "pos": [
+    -0.7,
+    5.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble",
+   "path": "Live/sideBar/Bubble",
+   "parent": 47,
+   "pos": [
+    -227.6,
+    155.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    7.042357,
+    7.042356
+   ],
+   "sprite": "bar_1",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6392157
+   ],
+   "size": [
+    0.94,
+    1.5
+   ]
+  },
+  {
+   "name": "Bubble (1)",
+   "path": "Live/sideBar/Bubble (1)",
+   "parent": 47,
+   "pos": [
+    -217.4,
+    168
+   ],
+   "rotZ": 0,
+   "scale": [
+    8.169134,
+    8.169133
+   ],
+   "sprite": "bar_1",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6392157
+   ],
+   "size": [
+    0.94,
+    1.5
+   ]
+  },
+  {
+   "name": "Bubble (2)",
+   "path": "Live/sideBar/Bubble (2)",
+   "parent": 47,
+   "pos": [
+    -206,
+    182.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    10.653368,
+    10.653367
+   ],
+   "sprite": "bar_1",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6392157
+   ],
+   "size": [
+    0.94,
+    1.5
+   ]
+  },
+  {
+   "name": "Textboxes",
+   "path": "Textboxes",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "AlienTextbox",
+   "path": "Textboxes/AlienTextbox",
+   "parent": 51,
+   "pos": [
+    0.77,
+    -2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Text (TMP)",
+   "path": "Textboxes/AlienTextbox/Text (TMP)",
+   "parent": 52,
+   "pos": [
+    -0.5,
+    0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TranslateTextbox",
+   "path": "Textboxes/TranslateTextbox",
+   "parent": 51,
+   "pos": [
+    0.77,
+    -2.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Text (TMP)",
+   "path": "Textboxes/TranslateTextbox/Text (TMP)",
+   "parent": 54,
+   "pos": [
+    -0.25,
+    0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Effect",
+   "path": "Textboxes/TranslateTextbox/Effect",
+   "parent": 54,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TranslateTextboxFail",
+   "path": "Textboxes/TranslateTextboxFail",
+   "parent": 51,
+   "pos": [
+    0.77,
+    -2.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Text (TMP)",
+   "path": "Textboxes/TranslateTextboxFail/Text (TMP)",
+   "parent": 57,
+   "pos": [
+    -0.25,
+    0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    -1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Effect",
+   "path": "Textboxes/TranslateTextboxFail/Effect",
+   "parent": 57,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Camera",
+   "path": "Camera",
+   "parent": 0,
+   "pos": [
+    0.2190685,
+    1.083666
+   ],
+   "z": -9.48851,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

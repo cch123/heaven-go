@@ -138,6 +138,11 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   的逐信号精确定时尚未完整移植，当前用等价状态推进。
 - kitties：roll 成功后的 spinnya 循环音未实现随机变调（±5%，循环重采样
   不支持）；音量 0.85 与起止时序一致。
+- firstContact：`FirstContact.cs` 的 trailing mistranslation 分支引用
+  `firstContact/slightlyFail`，但 HeavenStudio-master 的
+  `Assets/Bundled/Games/FirstContact/Sounds` 未包含该音频文件；当前不播放
+  替代音效，只保留 translator_eh 动画与红色 `..?` 文本，并用审计测试锁定
+  该资源缺口，后续补到官方音频后移除此项。
 - djSchool：hold 期间的 `sound FX` 原版切到 `DJSchool_Hold` AudioMixer
   snapshot（唱片摩擦滤波）；当前运行时先按同拍位做音乐 ducking，recordStop/
   recordSwipe/voice/cheer/boo 与动画状态已按 C# 时序接入，后续需补 live music

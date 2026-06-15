@@ -27,6 +27,12 @@ func (c *Ctx) LoadAssets(id string) error {
 	return nil
 }
 
+// AssetsRoot returns the app's configured assets directory. Most modules only
+// need their own extracted bundle via LoadAssets; games that share common
+// runtime resources, such as the Heaven Studio textbox font, use this to avoid
+// hard-coding "assets/".
+func (c *Ctx) AssetsRoot() string { return c.App.assetsRoot }
+
 // Role 取脚本字段绑定的节点 path（roles.json）。
 func (c *Ctx) Role(field string) string { return c.Assets.Roles[field] }
 
