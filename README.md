@@ -154,6 +154,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - ninjaBodyguard：HitParticle 的 ParticleSystemRenderer 未由提取器通用导出，
   运行时用同一 prefab 节点位置发射短促白色斩击线，时序与命中触发一致，但
   未逐参数复刻 Unity 粒子大小/速度随机曲线。
+- animalAcrobat：动物模板、摆动、hold/release 判定与音效已接入；catch/
+  release/confetti 粒子暂用同拍位星形闪光表示，未逐 ParticleSystem 参数复刻。
+  玩家跳跃和本地跟随相机先按 C# 序列化距离/高度做抛物线插值，后续需对齐
+  PlayerAcrobat/AnimalAcrobat 的完整曲线和回收逻辑。
 - lockstep：人群渲染将原版"3 台正交相机 → RenderTexture → 平铺 quad"等价
   实现为同尺度无限棋盘格直绘（几何/相位/缩放一致）。
 - ppe 后处理（engine/postfx.go）：colorGrading/vignette/cabb/lensD/pixelQuad 按
