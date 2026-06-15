@@ -1,0 +1,20 @@
+{
+ "BG/Background": "Background",
+ "BG/Background/BGBirds/BirdBG1/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBG2/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBG3/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBG4/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBG5/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBG6/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBG7/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBGBig1/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBGBig2/BirdBG": "BirdBG",
+ "BG/Background/BGBirds/BirdBGBig3/BirdBG": "BirdBG",
+ "Objects/FGBirds/Bird1": "Bird",
+ "Objects/FGBirds/Bird2": "Bird",
+ "Objects/Moais/Moaiko": "Moaiko",
+ "Objects/Moais/Moaiko/Moaio": "Moai",
+ "Objects/Moais/Moaio": "Moaio",
+ "Objects/Moais/Moaio/Moai": "Moai",
+ "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai": "Bird"
+}

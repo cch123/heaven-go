@@ -1,0 +1,47 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "refs": {
+    "FFlower": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Flower",
+    "FRibbon": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Ribbon",
+    "GlassesF": "Objects/Moais/Moaiko/Moaio/moai_Head/Moai_Glasses",
+    "GlassesM": "Objects/Moais/Moaio/Moai/moai_Head/Moai_Glasses",
+    "MFlower": "Objects/Moais/Moaio/Moai/moai_Head/moai_Flower",
+    "MoaiColorF": "MoaiFemaleMaterial",
+    "MoaiColorM": "MoaiMaleMaterial",
+    "bgAnim": "BG/Background",
+    "cpuMoaiAnim": "Objects/Moais/Moaio/Moai",
+    "cpuMoaiMoveAnim": "Objects/Moais/Moaio",
+    "playerMoaiAnim": "Objects/Moais/Moaiko/Moaio",
+    "playerMoaiMoveAnim": "Objects/Moais/Moaiko"
+   },
+   "refArrays": {
+    "bgBirdAnims": [
+     "BG/Background/BGBirds/BirdBG1/BirdBG",
+     "BG/Background/BGBirds/BirdBG2/BirdBG",
+     "BG/Background/BGBirds/BirdBG3/BirdBG",
+     "BG/Background/BGBirds/BirdBG4/BirdBG",
+     "BG/Background/BGBirds/BirdBG5/BirdBG",
+     "BG/Background/BGBirds/BirdBG6/BirdBG",
+     "BG/Background/BGBirds/BirdBG7/BirdBG",
+     "BG/Background/BGBirds/BirdBGBig1/BirdBG",
+     "BG/Background/BGBirds/BirdBGBig2/BirdBG",
+     "BG/Background/BGBirds/BirdBGBig3/BirdBG"
+    ],
+    "birdAnims": [
+     "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai",
+     "Objects/FGBirds/Bird1",
+     "Objects/FGBirds/Bird2"
+    ],
+    "poopAnims": [
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  }
+ }
+}

@@ -108,6 +108,22 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"dollAnim", "crowdAnim", "bagAnim", "bagCopyAnim", "buttonAnim", "lightsAnim", "topAnim", "barsAnim", "fartAnim", "bagObject"}},
 		},
 	},
+	"moaiDooWop": {
+		dir:    "MoaiDooWop",
+		prefab: "moaiDooWop.prefab",
+		roleFields: []string{
+			"cpuMoaiAnim", "playerMoaiAnim", "cpuMoaiMoveAnim", "playerMoaiMoveAnim", "bgAnim",
+			"GlassesM", "GlassesF", "MRibbon", "FRibbon", "MFlower", "FFlower",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"cpuMoaiAnim", "playerMoaiAnim", "cpuMoaiMoveAnim", "playerMoaiMoveAnim", "bgAnim",
+				"GlassesM", "GlassesF", "MRibbon", "FRibbon", "MFlower", "FFlower",
+				"birdAnims", "bgBirdAnims", "poopAnims",
+			}},
+		},
+	},
 	"quizShow": {
 		dir:    "QuizShow",
 		prefab: "quizShow.prefab",

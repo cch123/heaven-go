@@ -1,0 +1,2705 @@
+{
+ "nodes": [
+  {
+   "name": "moaiDooWop",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    -0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "BG/Background",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "moai_bg_day",
+   "path": "BG/Background/moai_bg_day",
+   "parent": 2,
+   "pos": [
+    0,
+    2.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7061829,
+    0.7061829
+   ],
+   "sprite": "moai_bg_day",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.23111,
+    15.879999
+   ]
+  },
+  {
+   "name": "moai_bg_transition",
+   "path": "BG/Background/moai_bg_transition",
+   "parent": 2,
+   "pos": [
+    0,
+    10.189999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75773436,
+    0.7061829
+   ],
+   "sprite": "BackgroundGradient",
+   "order": -8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    26.4,
+    7.18
+   ]
+  },
+  {
+   "name": "moai_bg_night",
+   "path": "BG/Background/moai_bg_night",
+   "parent": 2,
+   "pos": [
+    0,
+    18.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7061829,
+    0.7061829
+   ],
+   "sprite": "moai_bg_night",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    28.23111,
+    15.879999
+   ]
+  },
+  {
+   "name": "BGBirds",
+   "path": "BG/Background/BGBirds",
+   "parent": 2,
+   "pos": [
+    -0.89,
+    1.8600001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG1",
+   "path": "BG/Background/BGBirds/BirdBG1",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG1/BirdBG",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG1/BirdBG/BirdBG",
+   "parent": 8,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBG2",
+   "path": "BG/Background/BGBirds/BirdBG2",
+   "parent": 6,
+   "pos": [
+    -4.599999,
+    1.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG2/BirdBG",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG2/BirdBG/BirdBG",
+   "parent": 11,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBG3",
+   "path": "BG/Background/BGBirds/BirdBG3",
+   "parent": 6,
+   "pos": [
+    4.31,
+    -1.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG3/BirdBG",
+   "parent": 13,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG3/BirdBG/BirdBG",
+   "parent": 14,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBG4",
+   "path": "BG/Background/BGBirds/BirdBG4",
+   "parent": 6,
+   "pos": [
+    6.87,
+    9.21
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG4/BirdBG",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG4/BirdBG/BirdBG",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBG5",
+   "path": "BG/Background/BGBirds/BirdBG5",
+   "parent": 6,
+   "pos": [
+    -12.12,
+    11.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG5/BirdBG",
+   "parent": 19,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG5/BirdBG/BirdBG",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBG6",
+   "path": "BG/Background/BGBirds/BirdBG6",
+   "parent": 6,
+   "pos": [
+    10.56,
+    1.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG6/BirdBG",
+   "parent": 22,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG6/BirdBG/BirdBG",
+   "parent": 23,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBG7",
+   "path": "BG/Background/BGBirds/BirdBG7",
+   "parent": 6,
+   "pos": [
+    19.16,
+    10.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG7/BirdBG",
+   "parent": 25,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBG7/BirdBG/BirdBG",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBGBig1",
+   "path": "BG/Background/BGBirds/BirdBGBig1",
+   "parent": 6,
+   "pos": [
+    -4.2,
+    8.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBGBig1/BirdBG",
+   "parent": 28,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBGBig1/BirdBG/BirdBG",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBGBig2",
+   "path": "BG/Background/BGBirds/BirdBGBig2",
+   "parent": 6,
+   "pos": [
+    16.41,
+    5.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBGBig2/BirdBG",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBGBig2/BirdBG/BirdBG",
+   "parent": 32,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "BirdBGBig3",
+   "path": "BG/Background/BGBirds/BirdBGBig3",
+   "parent": 6,
+   "pos": [
+    -8.78,
+    4.84
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBGBig3/BirdBG",
+   "parent": 34,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BirdBG",
+   "path": "BG/Background/BGBirds/BirdBGBig3/BirdBG/BirdBG",
+   "parent": 35,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Birds_Wings1",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.88,
+    1.24
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "BG/Grass",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.003,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Grass_BGLeft",
+   "path": "BG/Grass/Grass_BGLeft",
+   "parent": 37,
+   "pos": [
+    -4.44,
+    -2.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.70898,
+    0.7089
+   ],
+   "sprite": "Grass_BG",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.6,
+    6.96
+   ]
+  },
+  {
+   "name": "Grass_BGRight",
+   "path": "BG/Grass/Grass_BGRight",
+   "parent": 37,
+   "pos": [
+    4.44,
+    -2.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.70898,
+    0.70898
+   ],
+   "sprite": "Grass_BG",
+   "order": -4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.6,
+    6.96
+   ]
+  },
+  {
+   "name": "MoaiHole",
+   "path": "BG/Grass/MoaiHole",
+   "parent": 37,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Grass_HoleLeft",
+   "path": "BG/Grass/MoaiHole/Grass_HoleLeft",
+   "parent": 40,
+   "pos": [
+    -4.42,
+    -2.2300003
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9484575,
+    0.9484575
+   ],
+   "sprite": "Grass_Hole",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.38,
+    2
+   ]
+  },
+  {
+   "name": "Grass_HoleRight",
+   "path": "BG/Grass/MoaiHole/Grass_HoleRight",
+   "parent": 40,
+   "pos": [
+    4.42,
+    -2.2300003
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9484575,
+    0.9484575
+   ],
+   "sprite": "Grass_Hole",
+   "order": -3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.38,
+    2
+   ]
+  },
+  {
+   "name": "Grass_CoverLeft",
+   "path": "BG/Grass/MoaiHole/Grass_CoverLeft",
+   "parent": 40,
+   "pos": [
+    -4.44,
+    -3.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.96,
+    0.96
+   ],
+   "sprite": "Grass_Cover",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.38,
+    2.82
+   ]
+  },
+  {
+   "name": "Grass_CoverRight",
+   "path": "BG/Grass/MoaiHole/Grass_CoverRight",
+   "parent": 40,
+   "pos": [
+    4.44,
+    -3.49
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.96,
+    0.96
+   ],
+   "sprite": "Grass_Cover",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.38,
+    2.82
+   ]
+  },
+  {
+   "name": "Grass_FGLeft",
+   "path": "BG/Grass/Grass_FGLeft",
+   "parent": 37,
+   "pos": [
+    -4.443,
+    -4.038
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7089,
+    0.7089
+   ],
+   "sprite": "Grass_FG",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.6,
+    2.9
+   ]
+  },
+  {
+   "name": "Grass_FGRight",
+   "path": "BG/Grass/Grass_FGRight",
+   "parent": 37,
+   "pos": [
+    4.443,
+    -4.038
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7089,
+    0.7089
+   ],
+   "sprite": "Grass_FG",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.6,
+    2.9
+   ]
+  },
+  {
+   "name": "Objects",
+   "path": "Objects",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FGBirds",
+   "path": "Objects/FGBirds",
+   "parent": 47,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bird1",
+   "path": "Objects/FGBirds/Bird1",
+   "parent": 48,
+   "pos": [
+    6.99,
+    -3.474
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6,
+    0.6
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "Objects/FGBirds/Bird1/Bird",
+   "parent": 49,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bird_Stand",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.3,
+    2.46
+   ]
+  },
+  {
+   "name": "Bird (Placement Test)",
+   "path": "Objects/FGBirds/Bird1/Bird (Placement Test)",
+   "parent": 49,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bird_Stand",
+   "order": 999,
+   "color": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    3.3,
+    2.46
+   ]
+  },
+  {
+   "name": "FallEffect",
+   "path": "Objects/FGBirds/Bird1/FallEffect",
+   "parent": 49,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FallLines1",
+   "path": "Objects/FGBirds/Bird1/FallEffect/FallLines1",
+   "parent": 52,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 9,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines2",
+   "path": "Objects/FGBirds/Bird1/FallEffect/FallLines2",
+   "parent": 52,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 9,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines3",
+   "path": "Objects/FGBirds/Bird1/FallEffect/FallLines3",
+   "parent": 52,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 9,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines4",
+   "path": "Objects/FGBirds/Bird1/FallEffect/FallLines4",
+   "parent": 52,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 9,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "BirdShadowGrass",
+   "path": "Objects/FGBirds/Bird1/BirdShadowGrass",
+   "parent": 49,
+   "pos": [
+    0.116,
+    -1.059
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BirdShadow",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7,
+    0.74
+   ]
+  },
+  {
+   "name": "Bird_Shadow_Moai",
+   "path": "Objects/FGBirds/Bird1/Bird_Shadow_Moai",
+   "parent": 49,
+   "pos": [
+    0.19,
+    -1.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53532827,
+    0.53532827
+   ],
+   "sprite": "Bird_Shadow_Moai",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.34
+   ]
+  },
+  {
+   "name": "Bird2",
+   "path": "Objects/FGBirds/Bird2",
+   "parent": 48,
+   "pos": [
+    -2.99,
+    -2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.6,
+    0.6
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "Objects/FGBirds/Bird2/Bird",
+   "parent": 59,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bird_Stand",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.3,
+    2.46
+   ]
+  },
+  {
+   "name": "Bird (Placement Test)",
+   "path": "Objects/FGBirds/Bird2/Bird (Placement Test)",
+   "parent": 59,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bird_Stand",
+   "order": 999,
+   "color": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    3.3,
+    2.46
+   ]
+  },
+  {
+   "name": "FallEffect",
+   "path": "Objects/FGBirds/Bird2/FallEffect",
+   "parent": 59,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FallLines1",
+   "path": "Objects/FGBirds/Bird2/FallEffect/FallLines1",
+   "parent": 62,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 9,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines2",
+   "path": "Objects/FGBirds/Bird2/FallEffect/FallLines2",
+   "parent": 62,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 9,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines3",
+   "path": "Objects/FGBirds/Bird2/FallEffect/FallLines3",
+   "parent": 62,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 9,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines4",
+   "path": "Objects/FGBirds/Bird2/FallEffect/FallLines4",
+   "parent": 62,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 9,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "BirdShadowGrass",
+   "path": "Objects/FGBirds/Bird2/BirdShadowGrass",
+   "parent": 59,
+   "pos": [
+    0.116,
+    -1.059
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BirdShadow",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7,
+    0.74
+   ]
+  },
+  {
+   "name": "Bird_Shadow_Moai",
+   "path": "Objects/FGBirds/Bird2/Bird_Shadow_Moai",
+   "parent": 59,
+   "pos": [
+    0.19,
+    -1.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53532827,
+    0.53532827
+   ],
+   "sprite": "Bird_Shadow_Moai",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.34
+   ]
+  },
+  {
+   "name": "Moais",
+   "path": "Objects/Moais",
+   "parent": 47,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Moaio",
+   "path": "Objects/Moais/Moaio",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Moai",
+   "path": "Objects/Moais/Moaio/Moai",
+   "parent": 70,
+   "pos": [
+    -3.2,
+    0.19199997
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.31277415,
+    0.31277415
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "moai_Pedestal",
+   "path": "Objects/Moais/Moaio/Moai/moai_Pedestal",
+   "parent": 71,
+   "pos": [
+    5.79,
+    -6.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Pedestal",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.58,
+    10.92
+   ],
+   "mapped": true,
+   "mat": "MoaiMaleMaterial"
+  },
+  {
+   "name": "moai_Head",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head",
+   "parent": 71,
+   "pos": [
+    3.759567,
+    1.356355
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Face_Chin",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.1,
+    13.54
+   ],
+   "mapped": true,
+   "mat": "MoaiMaleMaterial"
+  },
+  {
+   "name": "moai_Ribbon",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/moai_Ribbon",
+   "parent": 73,
+   "pos": [
+    3.37,
+    5.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Ribbon",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.22,
+    4.46
+   ],
+   "mapped": true,
+   "mat": "MoaiFemaleMaterial"
+  },
+  {
+   "name": "moai_Flower",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/moai_Flower",
+   "parent": 73,
+   "pos": [
+    3.37,
+    5.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Main_1",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.22,
+    4.46
+   ],
+   "mapped": true,
+   "mat": "MoaiMaleMaterial"
+  },
+  {
+   "name": "Moai_Mouth",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/Moai_Mouth",
+   "parent": 73,
+   "pos": [
+    -1.189567,
+    -2.906354
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Moai_Neutral",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.74,
+    2.82
+   ],
+   "mapped": true,
+   "mat": "MoaiMaleMaterial"
+  },
+  {
+   "name": "moai_Ear",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/moai_Ear",
+   "parent": 73,
+   "pos": [
+    4.4404335,
+    0.6436454
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Ears",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.34,
+    7.4
+   ],
+   "mapped": true,
+   "mat": "MoaiMaleMaterial"
+  },
+  {
+   "name": "moai_Eyes_Left",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/moai_Eyes_Left",
+   "parent": 73,
+   "pos": [
+    -1.37,
+    2.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Eyes_Left",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.09,
+    1.13
+   ]
+  },
+  {
+   "name": "moai_Eyes_Right",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/moai_Eyes_Right",
+   "parent": 73,
+   "pos": [
+    0.661,
+    2.550645
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Eyes_Right",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.18,
+    1.09
+   ]
+  },
+  {
+   "name": "EyeFlames",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/EyeFlames",
+   "parent": 73,
+   "pos": [
+    10.64794,
+    -5.322421
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "Moai_Glasses",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/Moai_Glasses",
+   "parent": 73,
+   "pos": [
+    -0.2037,
+    2.475
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0553799,
+    1.1
+   ],
+   "sprite": "moai_Main_0",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.74,
+    2.82
+   ],
+   "mapped": true,
+   "mat": "MoaiMaleMaterial"
+  },
+  {
+   "name": "BirdMoai",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai",
+   "parent": 73,
+   "pos": [
+    1.86,
+    8.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.9183171,
+    1.9183171
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bird",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/Bird",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bird_Stand",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.3,
+    2.46
+   ]
+  },
+  {
+   "name": "Bird (Placement Test)",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/Bird (Placement Test)",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bird_Stand",
+   "order": 999,
+   "color": [
+    1,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    3.3,
+    2.46
+   ]
+  },
+  {
+   "name": "FallEffect",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/FallEffect",
+   "parent": 82,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FallLines1",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/FallEffect/FallLines1",
+   "parent": 85,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 4,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines2",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/FallEffect/FallLines2",
+   "parent": 85,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 4,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines3",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/FallEffect/FallLines3",
+   "parent": 85,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 4,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "FallLines4",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/FallEffect/FallLines4",
+   "parent": 85,
+   "pos": [
+    -0.06,
+    4.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 4,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "BirdShadowGrass",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/BirdShadowGrass",
+   "parent": 82,
+   "pos": [
+    0.116,
+    -1.059
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BirdShadow",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7,
+    0.74
+   ]
+  },
+  {
+   "name": "Bird_Shadow_Moai",
+   "path": "Objects/Moais/Moaio/Moai/moai_Head/BirdMoai/Bird_Shadow_Moai",
+   "parent": 82,
+   "pos": [
+    0.22,
+    -1.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.53532827,
+    0.53532827
+   ],
+   "sprite": "Bird_Shadow_Moai",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.65,
+    1.34
+   ]
+  },
+  {
+   "name": "Moaiko",
+   "path": "Objects/Moais/Moaiko",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Moaio",
+   "path": "Objects/Moais/Moaiko/Moaio",
+   "parent": 92,
+   "pos": [
+    4,
+    0.23999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3909677,
+    0.3909677
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "moai_Pedestal",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Pedestal",
+   "parent": 93,
+   "pos": [
+    5.79,
+    -6.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Pedestal",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.58,
+    10.92
+   ],
+   "mapped": true,
+   "mat": "MoaiFemaleMaterial"
+  },
+  {
+   "name": "moai_Head",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head",
+   "parent": 93,
+   "pos": [
+    3.759567,
+    1.356355
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Face_Chin",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.1,
+    13.54
+   ],
+   "mapped": true,
+   "mat": "MoaiFemaleMaterial"
+  },
+  {
+   "name": "moai_Ribbon",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Ribbon",
+   "parent": 95,
+   "pos": [
+    3.37,
+    5.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Ribbon",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.22,
+    4.46
+   ],
+   "mapped": true,
+   "mat": "MoaiFemaleMaterial"
+  },
+  {
+   "name": "moai_Flower",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Flower",
+   "parent": 95,
+   "pos": [
+    3.37,
+    5.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Main_1",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.22,
+    4.46
+   ],
+   "mapped": true,
+   "mat": "MoaiFemaleMaterial"
+  },
+  {
+   "name": "Moai_Mouth",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head/Moai_Mouth",
+   "parent": 95,
+   "pos": [
+    -1.189567,
+    -2.906354
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Moai_Neutral",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.74,
+    2.82
+   ],
+   "mapped": true,
+   "mat": "MoaiFemaleMaterial"
+  },
+  {
+   "name": "moai_Ear",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Ear",
+   "parent": 95,
+   "pos": [
+    4.4404335,
+    0.6436454
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Ears",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.34,
+    7.4
+   ],
+   "mapped": true,
+   "mat": "MoaiFemaleMaterial"
+  },
+  {
+   "name": "moai_Eyes_Left",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Eyes_Left",
+   "parent": 95,
+   "pos": [
+    -1.37,
+    2.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Eyes_Left",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.09,
+    1.13
+   ]
+  },
+  {
+   "name": "moai_Eyes_Right",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Eyes_Right",
+   "parent": 95,
+   "pos": [
+    0.661,
+    2.550645
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "moai_Eyes_Right",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.18,
+    1.09
+   ]
+  },
+  {
+   "name": "EyeFlames",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head/EyeFlames",
+   "parent": 95,
+   "pos": [
+    10.64794,
+    -5.322421
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "PoopLines",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    0.85,
+    5.77
+   ]
+  },
+  {
+   "name": "Moai_Glasses",
+   "path": "Objects/Moais/Moaiko/Moaio/moai_Head/Moai_Glasses",
+   "parent": 95,
+   "pos": [
+    -0.2037,
+    2.475
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0553799,
+    1.1
+   ],
+   "sprite": "moai_Main_0",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.74,
+    2.82
+   ],
+   "mapped": true,
+   "mat": "MoaiFemaleMaterial"
+  }
+ ]
+}

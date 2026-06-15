@@ -76,6 +76,7 @@ import (
 	"hsdemo/games/mannequinfactory"
 	"hsdemo/games/marchingorders"
 	"hsdemo/games/meatgrinder"
+	"hsdemo/games/moaidoowop"
 	"hsdemo/games/mrupbeat"
 	"hsdemo/games/munchymonk"
 	"hsdemo/games/ninjabodyguard"
@@ -728,6 +729,7 @@ func main() {
 	engine.Register("loveLizards", lovelizards.New)
 	engine.Register("loveRap", loverap.New)
 	engine.Register("mannequinFactory", mannequinfactory.New)
+	engine.Register("moaiDooWop", moaidoowop.New)
 	engine.Register("spaceball", spaceball.New)
 	engine.Register("spaceDance", spacedance.New)
 	engine.Register("splashdown", splashdown.New)

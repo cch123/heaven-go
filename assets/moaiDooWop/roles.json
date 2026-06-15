@@ -1,0 +1,12 @@
+{
+ "FFlower": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Flower",
+ "FRibbon": "Objects/Moais/Moaiko/Moaio/moai_Head/moai_Ribbon",
+ "GlassesF": "Objects/Moais/Moaiko/Moaio/moai_Head/Moai_Glasses",
+ "GlassesM": "Objects/Moais/Moaio/Moai/moai_Head/Moai_Glasses",
+ "MFlower": "Objects/Moais/Moaio/Moai/moai_Head/moai_Flower",
+ "bgAnim": "BG/Background",
+ "cpuMoaiAnim": "Objects/Moais/Moaio/Moai",
+ "cpuMoaiMoveAnim": "Objects/Moais/Moaio",
+ "playerMoaiAnim": "Objects/Moais/Moaiko/Moaio",
+ "playerMoaiMoveAnim": "Objects/Moais/Moaiko"
+}

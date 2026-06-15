@@ -1,0 +1,185 @@
+{
+ "Background": {
+  "default": "BGIdle",
+  "states": {
+   "BGBirdsFlyIn": {
+    "clip": "Background/BGBirdsFlyIn",
+    "speed": 1
+   },
+   "BGDayToNight": {
+    "clip": "Background/BGDayToNight",
+    "speed": 0.5,
+    "transitions": [
+     {
+      "dst": "BGNightHold",
+      "exitTime": 0.875,
+      "duration": 0.25
+     }
+    ]
+   },
+   "BGIdle": {
+    "clip": "Background/BGIdle",
+    "speed": 1
+   },
+   "BGNightHold": {
+    "clip": "Background/BGNightHold",
+    "speed": 1
+   },
+   "BGNightToDay": {
+    "clip": "Background/BGNightToDay",
+    "speed": 0.5,
+    "transitions": [
+     {
+      "dst": "BGIdle",
+      "exitTime": 0.875,
+      "duration": 0.25
+     }
+    ]
+   }
+  }
+ },
+ "Bird": {
+  "default": "Bird_Idle",
+  "states": {
+   "Bird_Bop": {
+    "clip": "FGBirds/Bird_Bop",
+    "speed": 1
+   },
+   "Bird_Drop_In": {
+    "clip": "FGBirds/Bird_Down",
+    "speed": 1
+   },
+   "Bird_Idle": {
+    "clip": "FGBirds/Bird_Idle",
+    "speed": 1
+   }
+  }
+ },
+ "BirdBG": {
+  "default": "BirdBG",
+  "states": {
+   "BirdBG": {
+    "clip": "BGBirds/BirdBG",
+    "speed": 0.75
+   },
+   "BirdStatic": {
+    "clip": "BGBirds/BirdStatic",
+    "speed": 1
+   }
+  }
+ },
+ "Moai": {
+  "default": "Moai_Idle",
+  "states": {
+   "Moai_Bop": {
+    "clip": "Moai/Moai_Bop",
+    "speed": 1
+   },
+   "Moai_Idle": {
+    "clip": "Moai/Moai_Idle",
+    "speed": 1
+   },
+   "Moai_Miss": {
+    "clip": "Moai/Moai_Miss",
+    "speed": 1
+   },
+   "Moai_Open": {
+    "speed": 1
+   },
+   "Moai_Sans": {
+    "clip": "Moai/Moai_Sans_Right",
+    "speed": 1
+   },
+   "Moai_Sans_Left": {
+    "clip": "Moai/Moai_Sans_Left",
+    "speed": 1
+   },
+   "Moai_Shout": {
+    "clip": "Moai/Moai_Shout",
+    "speed": 1
+   },
+   "Moai_Shout_Hold": {
+    "clip": "Moai/Moai_Speak_Hold",
+    "speed": 1
+   },
+   "Moai_Shout_Open": {
+    "clip": "Moai/Moai_Speak_Open",
+    "speed": 1
+   },
+   "Moai_Shout_Org": {
+    "clip": "Moai/Moai_Shout_Org",
+    "speed": 1
+   },
+   "moai_Shout_Close": {
+    "clip": "Moai/Moai_Speak_Close",
+    "speed": 1
+   },
+   "moai_Shout_Open": {
+    "speed": 1
+   }
+  }
+ },
+ "Moaiko": {
+  "default": "MoaikoIdle",
+  "states": {
+   "MoaikoDown": {
+    "clip": "Moai/MoaikoDown",
+    "speed": 1
+   },
+   "MoaikoIdle": {
+    "clip": "Moai/MoaikoIdle",
+    "speed": 1
+   },
+   "MoaikoUp": {
+    "clip": "Moai/MoaikoUp",
+    "speed": 1
+   }
+  }
+ },
+ "Moaio": {
+  "default": "MoaioIdle",
+  "states": {
+   "MoaioDown": {
+    "clip": "Moai/MoaioDown",
+    "speed": 1
+   },
+   "MoaioIdle": {
+    "clip": "Moai/MoaioIdle",
+    "speed": 1
+   },
+   "MoaioUp": {
+    "clip": "Moai/MoaioUp",
+    "speed": 1
+   }
+  }
+ },
+ "Poop": {
+  "default": "PoopIdle",
+  "states": {
+   "PoopFall1": {
+    "clip": "Poop/PoopFall1",
+    "speed": 1
+   },
+   "PoopFall2": {
+    "clip": "Poop/PoopFall2",
+    "speed": 1
+   },
+   "PoopFall3": {
+    "clip": "Poop/PoopFall3",
+    "speed": 1
+   },
+   "PoopFall4": {
+    "clip": "Poop/PoopFall4",
+    "speed": 1
+   },
+   "PoopFall5": {
+    "clip": "Poop/PoopFall5",
+    "speed": 1
+   },
+   "PoopIdle": {
+    "clip": "Poop/PoopIdle",
+    "speed": 1
+   }
+  }
+ }
+}
