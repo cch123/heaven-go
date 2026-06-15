@@ -42,6 +42,7 @@ import (
 	"hsdemo/games/gardendance"
 	"hsdemo/games/gleeclub"
 	"hsdemo/games/holeinone"
+	"hsdemo/games/karateman"
 	"hsdemo/games/kitties"
 	"hsdemo/games/launchparty"
 	"hsdemo/games/lockstep"
@@ -136,6 +137,7 @@ func registerGames() {
 	engine.Register("gardenDance", gardendance.New)
 	engine.Register("gleeClub", gleeclub.New)
 	engine.Register("holeInOne", holeinone.New)
+	engine.Register("karateman", karateman.New)
 	engine.Register("tambourine", tambourine.New)
 	engine.Register("tapTrial", taptrial.New)
 	engine.Register("tapTroupe", taptroupe.New)

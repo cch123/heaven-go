@@ -26,10 +26,11 @@ import (
 	"hsdemo/synth"
 )
 
-// legacy_karateman.go keeps the original single-game prototype alive for
-// karateman .riq files while the production runtime moves through engine.App.
-// It intentionally stays isolated so normal module registration and menu flow
-// do not inherit the prototype's bespoke scoring, camera, and draw path.
+// legacy_karateman.go keeps the original single-game prototype available as a
+// historical reference while the playable Karate Man path runs through
+// engine.App. It intentionally stays isolated so normal module registration and
+// menu flow do not inherit the prototype's bespoke scoring, camera, and draw
+// path.
 
 const (
 	screenW = 960

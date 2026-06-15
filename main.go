@@ -5,12 +5,10 @@ import (
 	"fmt"
 	"log"
 	"os"
-	"path/filepath"
 
 	"github.com/hajimehoshi/ebiten/v2"
 
 	"hsdemo/engine"
-	"hsdemo/riq"
 )
 
 func main() {
@@ -22,10 +20,6 @@ func main() {
 	flag.Parse()
 
 	registerGames()
-
-	if *path != "" && runLegacyKarateMan(*path, *assetsRoot, *fullscreen) {
-		return
-	}
 
 	app, err := engine.New(*assetsRoot, *path)
 	if err != nil {
@@ -42,42 +36,4 @@ func main() {
 	if err := ebiten.RunGame(app); err != nil && err != ebiten.Termination {
 		log.Fatal(err)
 	}
-}
-
-func runLegacyKarateMan(path, assetsRoot string, fullscreen bool) bool {
-	r, err := riq.Load(path)
-	if err != nil || detectGame(r.Beatmap) != "karateman" {
-		return false
-	}
-
-	g, err := newGame(r, filepath.Join(assetsRoot, "karateman"))
-	if err != nil {
-		log.Fatal(err)
-	}
-	engine.ConfigureWindow("Heaven Go — Karate Man (legacy)", fullscreen)
-	ebiten.SetTPS(240)
-	if err := ebiten.RunGame(g); err != nil && err != ebiten.Termination {
-		log.Fatal(err)
-	}
-	return true
-}
-
-// detectGame 根据谱面实体推断主 minigame（取出现次数最多的游戏前缀）。
-func detectGame(bm *riq.Beatmap) string {
-	counts := map[string]int{}
-	for i := range bm.Entities {
-		game := bm.Entities[i].Game()
-		switch game {
-		case "gameManager", "vfx", "countIn", "global":
-			continue
-		}
-		counts[game]++
-	}
-	best, n := "", 0
-	for g, c := range counts {
-		if c > n {
-			best, n = g, c
-		}
-	}
-	return best
 }

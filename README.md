@@ -2,7 +2,7 @@
 
 Heaven Studio 游玩部分（play-only，无编辑器）的 Go + Ebitengine 移植。引擎层（判定/调度/切游戏/HUD）与游戏模块解耦，资产经导出管线从 Heaven Studio Unity 工程提取，支持加载任意用户 `.riq` 谱面。
 
-**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Crop Stomp、Dog Ninja、Drumming Practice、Fireworks、Fork Lifter、Frog Princess、Glee Club、Kitties!、Lockstep、Marching Orders、Meat Grinder、Mr. Upbeat、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Spaceball、Space Dance、Tambourine、Tap Trial、Tap Troupe、The Clappy Trio、Totem Climb、Tram & Pauline、Trick on the Class、Tunnel、Wizard's Waltz（karateman 仍走旧 demo 路径）。
+**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Crop Stomp、Dog Ninja、Drumming Practice、Fireworks、Fork Lifter、Frog Princess、Glee Club、Karate Man、Kitties!、Lockstep、Marching Orders、Meat Grinder、Mr. Upbeat、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Spaceball、Space Dance、Tambourine、Tap Trial、Tap Troupe、The Clappy Trio、Totem Climb、Tram & Pauline、Trick on the Class、Tunnel、Wizard's Waltz。
 谱面中未移植的 minigame 显示占位画面，乐曲与其余游戏照常进行。
 
 ## 运行
@@ -89,7 +89,7 @@ demo.riq (ZIP)                                                                  
 | `synth` | 程序化 PCM 合成（karateman demo 音轨鼓点） | —（替代版权音乐） |
 | `cmd/genriq` | 生成 v2 布局测试谱面 | —（替代关卡编辑器） |
 | `somen.go` | Rhythm Sōmen 完整玩法：吊臂时序、判定（ace ±10ms / just ±50ms / ng ±100ms）、bop 区间、slurp 打断逻辑、技能星、flash、结算 | RhythmSomen.cs + GameManager 事件调度 |
-| `main.go` | 谱面路由（按实体推断 minigame）+ Karate Man 旧 demo | GameManager |
+| `main.go` | 启动参数、注册模块、创建 engine.App | GameManager |
 
 ## 设计要点
 
@@ -103,11 +103,13 @@ demo.riq (ZIP)                                                                  
 
 ## 已知简化（demo 范围外）
 
-karateman 旧 demo 路径：
-- 未实现：swing、`karateman/hit` 的 `type` 参数（石头/灯泡等变体）、表情/特殊镜头。
-- 背景为纯色 + 节拍脉冲（原版背景色 `#fbca3e`），未接入背景贴图层与后处理。
-
 engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally 等）：
+- karateman：Pack-In 使用路径已接入 engine（hit/bop/prepare/warnings/background/
+  set object colors/particle effects/force facial expression）。普通 pot 与 rock 的
+  轨迹、判定、throw/hit/through/voice 音效按 C# 时序移植；背景颜色和物体颜色已接入。
+  仍缺完整项：Joe 的 MappingMaterial 换色、Word prefab 的原版字形动画、背景纹理/
+  Sunburst/Rings 精确材质、ParticleSystem 参数级复刻、face clip 与 body clip 的层叠
+  播放（当前为单 RigInst clip），这些作为显式简化保留。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
