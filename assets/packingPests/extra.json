@@ -1,0 +1,336 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "refs": {
+    "Candy": "BackgroundHolder/Gameplay/ObjectHolder/Candy",
+    "HandAnim1": "BackgroundHolder/Layer1/WorkerHands",
+    "HandAnim2": "BackgroundHolder/Layer2/WorkerHands",
+    "HandAnim3": "BackgroundHolder/Layer3/WorkerHands",
+    "HandAnim4": "BackgroundHolder/Layer4/WorkerHands",
+    "HandAnim5": "BackgroundHolder/Layer5/WorkerHands",
+    "HandAnim6": "BackgroundHolder/Layer6/WorkerHands",
+    "HandAnim7": "BackgroundHolder/Layer7/WorkerHands",
+    "HandAnim8": "BackgroundHolder/Layer8/WorkerHands",
+    "HandAnimPlayer": "BackgroundHolder/Gameplay/WorkerHands",
+    "Spider": "BackgroundHolder/Gameplay/ObjectHolder/Spider",
+    "boxfront": "BackgroundHolder/Gameplay/Box/Front",
+    "curtainAnim": "Curtains",
+    "handAnim": "BackgroundHolder/Gameplay/WorkerHands/Holder",
+    "lowerHandAnim": "BackgroundHolder/Gameplay/WorkerHands/Holder/Lower",
+    "signAnim": "MessageHolder",
+    "spiderAnim": "BackgroundHolder/Gameplay/ObjectHolder/Spider/Bug",
+    "spiderCrawlAnim": "BackgroundHolder/Gameplay/SpiderSwat",
+    "upperHandAnim": "BackgroundHolder/Gameplay/WorkerHands/Holder/Upper"
+   },
+   "lists": {
+    "objectPaths": [
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "candyThrow"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2.4,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/CandyCurve/Throw/1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/CandyCurve/Throw/2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "spiderThrow"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.6,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/SpiderCurve/Throw/1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/SpiderCurve/Throw/2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "candyCatch"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.4,
+          "height": 1.6,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/CandyCurve/Drop/1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/CandyCurve/Drop/2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "None"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/None/1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/None/2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "candyBarely"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.4,
+          "height": 3,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/CandyCurve/Barely/1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/CandyCurve/Barely/2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "candyWrong"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/CandyCurve/Wrong/1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/CandyCurve/Wrong/2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "spiderBarely"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1.4,
+          "height": 3.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/SpiderCurve/Barely/1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/SpiderCurve/Barely/2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "spiderWrong"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/SpiderCurve/Wrong/1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "BackgroundHolder/Gameplay/Curves/SpiderCurve/Wrong/2"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

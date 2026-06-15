@@ -80,6 +80,7 @@ type SceneInst struct {
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
 	scaleOver  map[int][2]float64 // 节点下标 → localScale 覆盖（脚本瞬时 squash/pose）
 	sizeOver   map[int][2]float64 // 节点下标 → SpriteRenderer.size 覆盖（sliced/tiled）
+	orderOver  map[int]int        // 节点下标 → SpriteRenderer.sortingOrder 覆盖
 	zOver      map[int]float64    // 节点下标 → 世界 z 覆盖（kitties 斜列生成等，根节点语义）
 	spriteOver map[int]string     // 节点下标 → 切片覆盖（sr.sprite 直写，如海报换图）
 
@@ -190,6 +191,7 @@ func NewScene(as *Assets) *SceneInst {
 		posOver:    map[int][2]float64{},
 		scaleOver:  map[int][2]float64{},
 		sizeOver:   map[int][2]float64{},
+		orderOver:  map[int]int{},
 		zOver:      map[int]float64{},
 		spriteOver: map[int]string{},
 	}
@@ -535,6 +537,15 @@ func (s *SceneInst) SetSizeOver(path string, w, h float64) {
 	}
 }
 
+// SetOrderOver 覆盖 SpriteRenderer.sortingOrder。少数 HS 脚本直接改
+// Renderer.sortingOrder（例如 Packing Pests 盒子前板压住/让出物体），这
+// 和动画曲线驱动的 m_SortingOrder 一样必须进入统一排序。
+func (s *SceneInst) SetOrderOver(path string, order int) {
+	if i, ok := s.byPath[path]; ok {
+		s.orderOver[i] = order
+	}
+}
+
 // ClearPosOver 撤销 localPosition 覆盖。
 func (s *SceneInst) ClearPosOver(path string) {
 	if i, ok := s.byPath[path]; ok {
@@ -650,6 +661,9 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, sz := range s.sizeOver {
 		s.state[i].size = sz
+	}
+	for i, o := range s.orderOver {
+		s.state[i].order = o
 	}
 	for i, rad := range s.spinOver {
 		s.state[i].rot += rad

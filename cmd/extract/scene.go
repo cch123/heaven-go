@@ -203,6 +203,26 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "octopus", markers: []string{"sr", "srAll", "octoNum", "anim"}, multi: true},
 		},
 	},
+	"packingPests": {
+		dir:    "PackingPests",
+		prefab: "packingPests.prefab",
+		roleFields: []string{
+			"Candy", "Spider", "boxfront",
+			"handAnim", "lowerHandAnim", "upperHandAnim", "signAnim",
+			"spiderCrawlAnim", "spiderAnim", "curtainAnim",
+			"HandAnimPlayer", "HandAnim1", "HandAnim2", "HandAnim3", "HandAnim4",
+			"HandAnim5", "HandAnim6", "HandAnim7", "HandAnim8",
+		},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		templatePrefabs: []string{
+			"Prefabs/Objects/Candy.prefab",
+			"Prefabs/Objects/Spider.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{"Candy", "Spider", "boxfront", "objectPaths", "HandAnimPlayer"}},
+		},
+	},
 	"bouncyRoad": {
 		dir:    "BouncyRoad",
 		prefab: "bouncyRoad.prefab",

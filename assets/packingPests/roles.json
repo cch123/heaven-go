@@ -1,0 +1,21 @@
+{
+ "Candy": "BackgroundHolder/Gameplay/ObjectHolder/Candy",
+ "HandAnim1": "BackgroundHolder/Layer1/WorkerHands",
+ "HandAnim2": "BackgroundHolder/Layer2/WorkerHands",
+ "HandAnim3": "BackgroundHolder/Layer3/WorkerHands",
+ "HandAnim4": "BackgroundHolder/Layer4/WorkerHands",
+ "HandAnim5": "BackgroundHolder/Layer5/WorkerHands",
+ "HandAnim6": "BackgroundHolder/Layer6/WorkerHands",
+ "HandAnim7": "BackgroundHolder/Layer7/WorkerHands",
+ "HandAnim8": "BackgroundHolder/Layer8/WorkerHands",
+ "HandAnimPlayer": "BackgroundHolder/Gameplay/WorkerHands",
+ "Spider": "BackgroundHolder/Gameplay/ObjectHolder/Spider",
+ "boxfront": "BackgroundHolder/Gameplay/Box/Front",
+ "curtainAnim": "Curtains",
+ "handAnim": "BackgroundHolder/Gameplay/WorkerHands/Holder",
+ "lowerHandAnim": "BackgroundHolder/Gameplay/WorkerHands/Holder/Lower",
+ "signAnim": "MessageHolder",
+ "spiderAnim": "BackgroundHolder/Gameplay/ObjectHolder/Spider/Bug",
+ "spiderCrawlAnim": "BackgroundHolder/Gameplay/SpiderSwat",
+ "upperHandAnim": "BackgroundHolder/Gameplay/WorkerHands/Holder/Upper"
+}

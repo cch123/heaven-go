@@ -1,0 +1,219 @@
+{
+ "Curtains": {
+  "default": "idle",
+  "states": {
+   "Enter": {
+    "clip": "Curtain/Enter",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Curtain/Exit",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Curtain/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Head": {
+  "default": "idle",
+  "states": {
+   "Catch": {
+    "clip": "Head/Catch",
+    "speed": 1
+   },
+   "Damage": {
+    "clip": "Head/Damage",
+    "speed": 1
+   },
+   "Double": {
+    "clip": "Head/Double",
+    "speed": 1
+   },
+   "Hit": {
+    "clip": "Head/Hit",
+    "speed": 1
+   },
+   "Through": {
+    "clip": "Head/Through",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Head/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Lower": {
+  "default": "idle",
+  "states": {
+   "CatchBug": {
+    "clip": "LowerArm/CatchBug",
+    "speed": 1
+   },
+   "CatchJust00": {
+    "clip": "LowerArm/CatchJust00",
+    "speed": 1
+   },
+   "CatchJust01": {
+    "clip": "LowerArm/CatchJust01",
+    "speed": 1
+   },
+   "CatchMiss": {
+    "clip": "LowerArm/CatchMiss",
+    "speed": 1
+   },
+   "CatchOut": {
+    "clip": "LowerArm/CatchOut",
+    "speed": 1
+   },
+   "Clap": {
+    "clip": "LowerArm/Clap",
+    "speed": 1
+   },
+   "Damage": {
+    "clip": "LowerArm/Damage",
+    "speed": 1
+   },
+   "Through": {
+    "clip": "LowerArm/Through",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "LowerArm/idle",
+    "speed": 1
+   }
+  }
+ },
+ "MessageHolder": {
+  "default": "idle",
+  "states": {
+   "Message00": {
+    "clip": "Message/Message00",
+    "speed": 1
+   },
+   "Message01": {
+    "clip": "Message/Message01",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Message/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Spider": {
+  "default": "idle",
+  "states": {
+   "Enter": {
+    "clip": "Object/Enter",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Object/idle",
+    "speed": 1
+   }
+  }
+ },
+ "SpiderSwat": {
+  "default": "idle",
+  "states": {
+   "Hit": {
+    "clip": "Spider/Hit",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Spider/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Upper": {
+  "default": "idle",
+  "states": {
+   "CatchBug": {
+    "clip": "UpperArm/CatchBug",
+    "speed": 1
+   },
+   "CatchCandy": {
+    "clip": "UpperArm/CatchCandy",
+    "speed": 1
+   },
+   "CatchJust01": {
+    "clip": "UpperArm/CatchJust01",
+    "speed": 1
+   },
+   "CatchJust02": {
+    "clip": "UpperArm/CatchJust02",
+    "speed": 1
+   },
+   "CatchMiss": {
+    "clip": "UpperArm/CatchMiss",
+    "speed": 1
+   },
+   "CatchOut": {
+    "clip": "UpperArm/catchOut",
+    "speed": 1
+   },
+   "Clap": {
+    "clip": "UpperArm/Clap",
+    "speed": 1
+   },
+   "Damage": {
+    "clip": "UpperArm/Damage",
+    "speed": 1
+   },
+   "HitJust": {
+    "clip": "UpperArm/HitJust",
+    "speed": 1
+   },
+   "HitOut": {
+    "clip": "UpperArm/HitOut",
+    "speed": 1
+   },
+   "Through": {
+    "clip": "UpperArm/Through",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "UpperArm/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Worker": {
+  "default": "idle",
+  "states": {
+   "Beat": {
+    "clip": "Animations/Beat",
+    "speed": 1
+   },
+   "Through": {
+    "clip": "Animations/Through",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/idle",
+    "speed": 1
+   }
+  }
+ },
+ "WorkerHands": {
+  "default": "idle",
+  "states": {
+   "Enter": {
+    "clip": "Worker/Enter",
+    "speed": 1
+   },
+   "Exit": {
+    "clip": "Worker/Exit",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Worker/idle",
+    "speed": 1
+   }
+  }
+ }
+}
