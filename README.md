@@ -119,6 +119,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   premade sample enum、mute 收尾与摄像机 pass-turn 已接入；`bend` 会重启当前
   loop 到弯音后的 pitch，但尚未复刻 C# `BendUp/BendDown(0.05f)` 的连续滑音；
   barely 命中时 Soshi 闪电颜色随机化仍待补。
+- superSamuraiSlice：`bop`/小恶魔/大恶魔/平台滚动/环境开关的事件流、输入、
+  主要动画、平台 guard、爆炸音效与鸟叫已接入；`Explode1/2/3`、`lightning`、
+  `waterL/waterR` 仍是手写瞬时效果，尚未按 Unity ParticleSystem 序列化参数
+  做逐项复刻。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
