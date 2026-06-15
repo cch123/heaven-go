@@ -2,6 +2,7 @@ package engine
 
 import (
 	"encoding/binary"
+	"io"
 	"math"
 	"testing"
 )
@@ -39,6 +40,47 @@ func TestPitchLoopReaderRampPitch(t *testing.T) {
 	}
 	if math.Abs(got-2) > 1e-9 {
 		t.Fatalf("pitch = %.6f, want 2", got)
+	}
+}
+
+func TestPitchPCMReaderResamplesAndTracksSourcePosition(t *testing.T) {
+	r := newPitchPCMReader(makeTestPCM([]int16{0, 1000, 2000, 3000}), 0.5)
+	out := make([]byte, 4*4)
+	n, err := r.Read(out)
+	if err != nil || n != len(out) {
+		t.Fatalf("Read = %d, %v", n, err)
+	}
+	got := framesFromPCM(out)
+	want := []int16{0, 500, 1000, 1500}
+	for i := range want {
+		if got[i] != want[i] {
+			t.Fatalf("frame %d = %d, want %d", i, got[i], want[i])
+		}
+	}
+	if got := r.PositionSeconds(); math.Abs(got-2/float64(SampleRate)) > 1e-9 {
+		t.Fatalf("PositionSeconds = %.12f, want %.12f", got, 2/float64(SampleRate))
+	}
+}
+
+func TestPitchPCMReaderSeekAndEOF(t *testing.T) {
+	r := newPitchPCMReader(makeTestPCM([]int16{100, 200, 300}), 1)
+	if pos, err := r.Seek(4, io.SeekStart); err != nil || pos != 4 {
+		t.Fatalf("Seek = %d, %v; want 4, nil", pos, err)
+	}
+	out := make([]byte, 2*4)
+	n, err := r.Read(out)
+	if err != nil || n != len(out) {
+		t.Fatalf("Read = %d, %v", n, err)
+	}
+	got := framesFromPCM(out)
+	want := []int16{200, 300}
+	for i := range want {
+		if got[i] != want[i] {
+			t.Fatalf("frame %d = %d, want %d", i, got[i], want[i])
+		}
+	}
+	if n, err := r.Read(out[:4]); n != 0 || err != io.EOF {
+		t.Fatalf("EOF Read = %d, %v; want 0, EOF", n, err)
 	}
 }
 

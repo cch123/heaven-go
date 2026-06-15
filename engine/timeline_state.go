@@ -7,12 +7,16 @@ import (
 	"hsdemo/riq"
 )
 
-func (a *App) resetLoadedRiq(r *riq.Riq, player *audio.Player) {
+func (a *App) resetLoadedRiq(r *riq.Riq, player *audio.Player, music *pitchPCMReader) {
 	a.unloadLoadedRiq()
 
 	a.r, a.bm = r, r.Beatmap
 	a.player = player
+	a.music = music
 	a.cond = conductor.New(r.Beatmap, player)
+	if music != nil {
+		a.cond.SetClock(music.PositionSeconds)
+	}
 	a.modules = map[string]Module{}
 }
 
@@ -33,6 +37,7 @@ func (a *App) closeChartPlayer() {
 	}
 	a.player.Close()
 	a.player = nil
+	a.music = nil
 }
 
 func (a *App) clearTimelineState() {

@@ -10,11 +10,11 @@ import (
 // ---------- 谱面装载 ----------
 
 func (a *App) loadRiq(r *riq.Riq) error {
-	player, err := decodeMusicPlayer(r)
+	player, music, err := decodeMusicPlayer(r)
 	if err != nil {
 		return err
 	}
-	a.resetLoadedRiq(r, player)
+	a.resetLoadedRiq(r, player, music)
 	if err := a.loadModulesFor(a.collectUsedGames()); err != nil {
 		return err
 	}

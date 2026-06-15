@@ -13,17 +13,26 @@ import (
 	"hsdemo/riq"
 )
 
-func decodeMusicPlayer(r *riq.Riq) (*audio.Player, error) {
+func decodeMusicPlayer(r *riq.Riq) (*audio.Player, *pitchPCMReader, error) {
+	pcm, err := decodeMusicPCM(r)
+	if err != nil {
+		return nil, nil, err
+	}
+	reader := newPitchPCMReader(pcm, 1)
+	player, err := audioCtx.NewPlayer(reader)
+	if err != nil {
+		return nil, nil, err
+	}
+	player.SetVolume(0.85)
+	return player, reader, nil
+}
+
+func decodeMusicPCM(r *riq.Riq) ([]byte, error) {
 	stream, err := decodeMusicStream(r)
 	if err != nil {
 		return nil, err
 	}
-	player, err := audioCtx.NewPlayer(stream)
-	if err != nil {
-		return nil, err
-	}
-	player.SetVolume(0.85)
-	return player, nil
+	return io.ReadAll(stream)
 }
 
 func decodeMusicStream(r *riq.Riq) (io.Reader, error) {

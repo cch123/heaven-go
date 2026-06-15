@@ -105,6 +105,12 @@ func (c *Ctx) SoundAtPitchPanOff(beat float64, name string, vol, pitch, pan, off
 	c.At(beat, func() { c.SoundPitchPanOff(name, vol, pitch, pan, offsetSec) })
 }
 
+// SetMinigamePitch changes the current chart music pitch and beat clock,
+// matching HS Conductor.SetMinigamePitch for game-local slowdowns.
+func (c *Ctx) SetMinigamePitch(pitch float64) {
+	c.App.setMinigamePitch(pitch)
+}
+
 // PlayCommon 播放公共音效（assets/common：miss/nearMiss/count-ins 等）。
 func (c *Ctx) PlayCommon(name string) { c.App.PlayCommon(name, 1) }
 

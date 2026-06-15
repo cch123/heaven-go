@@ -29,6 +29,7 @@ func (a *App) SeekBeat(beat float64) error {
 	if a.bm == nil || a.cond == nil {
 		return nil
 	}
+	a.setMinigamePitch(1)
 	if err := a.cond.SeekBeat(beat); err != nil {
 		return err
 	}
@@ -55,6 +56,7 @@ func (a *App) SeekBeat(beat float64) error {
 
 // restart 重置一轮游玩（不重载资产）。
 func (a *App) restart() error {
+	a.setMinigamePitch(1)
 	if err := a.cond.Reset(); err != nil {
 		return err
 	}

@@ -16,6 +16,7 @@
 package conductor
 
 import (
+	"math"
 	"time"
 
 	"github.com/hajimehoshi/ebiten/v2/audio"
@@ -37,10 +38,31 @@ type Conductor struct {
 	lastTick time.Time
 	playing  bool
 	drift    float64 // 最近一次外推值与音频时钟的偏差（诊断用）
+	pitch    float64
+	clock    func() float64
 }
 
 func New(bm *riq.Beatmap, player *audio.Player) *Conductor {
-	return &Conductor{bm: bm, player: player}
+	return &Conductor{bm: bm, player: player, pitch: 1}
+}
+
+// SetClock overrides the audio-position clock used for drift correction. Chart
+// music with runtime pitch resampling reports source time here; audio.Player
+// itself reports output time and would erase minigame slowdowns after restore.
+func (c *Conductor) SetClock(clock func() float64) {
+	c.clock = clock
+}
+
+// SetMinigamePitch changes how quickly song position advances, equivalent to
+// Heaven Studio's minigamePitch multiplier. The audio reader is controlled by
+// engine.App; this method only owns the conductor time mapping.
+func (c *Conductor) SetMinigamePitch(pitch float64) {
+	if math.IsNaN(pitch) || math.IsInf(pitch, 0) || pitch <= 0 {
+		pitch = 1
+	} else if pitch < 0.01 {
+		pitch = 0.01
+	}
+	c.pitch = pitch
 }
 
 // Play 启动音乐与时钟。
@@ -62,6 +84,7 @@ func (c *Conductor) Reset() error {
 	c.playing = false
 	c.pos = 0
 	c.drift = 0
+	c.pitch = 1
 	return c.player.SetPosition(0)
 }
 
@@ -102,15 +125,15 @@ func (c *Conductor) Update() {
 	dt := now.Sub(c.lastTick).Seconds()
 	c.lastTick = now
 
-	c.pos += dt
+	c.pos += dt * c.pitch
 
 	// 音频播完后 Position() 冻结：改纯单调时钟推进，否则漂移校正会把
 	// 时间拽住，谱面尾部（音频结束之后的 end 事件）永远到不了
-	if !c.player.IsPlaying() && c.pos >= c.player.Position().Seconds() {
+	real := c.realPosition()
+	if !c.player.IsPlaying() && c.pos >= real {
 		return
 	}
 
-	real := c.player.Position().Seconds()
 	c.drift = c.pos - real
 	if abs(c.drift) > snapThreshold {
 		c.pos = real
@@ -130,6 +153,16 @@ func (c *Conductor) Drift() float64 { return c.drift }
 
 // Playing 报告时钟是否在走。
 func (c *Conductor) Playing() bool { return c.playing }
+
+func (c *Conductor) realPosition() float64 {
+	if c.clock != nil {
+		return c.clock()
+	}
+	if c.player == nil {
+		return c.pos
+	}
+	return c.player.Position().Seconds()
+}
 
 func abs(x float64) float64 {
 	if x < 0 {

@@ -13,4 +13,5 @@ type chartRuntimeState struct {
 	bm     *riq.Beatmap
 	cond   *conductor.Conductor
 	player *audio.Player
+	music  *pitchPCMReader
 }

@@ -164,9 +164,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   用），未移植——bop 的不悦表现走 `bossAnnoyed ? BossMiss : Bop` 分支，与原版一致。
 - countIn 计数音实现 Normal/Alt/Cowbell/GBA/DS Male/DS Female 音色；公共音效
   以 `count-ins` 子目录相对路径加载，匹配 SoundEffects.cs 的 folder/type 语义。
-- agbSamuraiSlice：`slowDown` 命中已保留 slow 版 slice 音效和 Flash 动画；原版
-  `conductor.SetMinigamePitch(0.5)` 的全曲实时变调需要 engine 音频重采样能力，
-  当前尚未接入。
+- agbSamuraiSlice：`slowDown` 命中已接入 slow 版 slice 音效、Flash 动画，以及
+  原版 `conductor.SetMinigamePitch(0.5)` 一拍全曲实时变调。
 - airRally：rally、ba-bum-bum-bum、catch、enter、set distance、forward、
   4beat/8beat/count voice、rainbow、spawnBird、day、cloud、snowflake、tree、
   islandSpeed 均已接入运行时；动态天气/鸟群/树/彩虹为按 AirRally.cs 与 prefab

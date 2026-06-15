@@ -438,10 +438,8 @@ func (m *Module) hitDemon(ev demonEvt, state float64, j engine.Judgment) {
 			m.ctx.Scene.PlayState(m.fireAnim, "Fire"+itoa(m.fireState-2), beat, 0.5)
 		}
 		if ev.slowDown {
-			// HS also pitch-shifts the whole minigame for one beat. The current
-			// engine has no chart-wide resampler yet, so this preserves the
-			// visible Flash animation and slow-version slice SFX while README
-			// tracks the remaining audio-engine gap explicitly.
+			m.ctx.SetMinigamePitch(0.5)
+			m.ctx.At(beat+1, func() { m.ctx.SetMinigamePitch(1) })
 			m.ctx.Scene.PlayState("flash", "Flash", beat, 0.5)
 		}
 	}
