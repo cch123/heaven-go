@@ -16,7 +16,7 @@ var audioCtx *audio.Context // audio.NewContext 进程内只能调用一次
 
 // App 实现 ebiten.Game。
 //
-// 运行时字段按职责拆在 app_*_state.go。这里保留匿名嵌入，让既有代码仍可用
+// 运行时字段按职责拆在 state_*.go。这里保留匿名嵌入，让既有代码仍可用
 // a.bm、a.result 这类直接访问，同时避免继续把谱面、输入、VFX、菜单和结算状态
 // 堆进一个不可维护的大结构体。
 type App struct {
