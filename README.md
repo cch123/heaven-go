@@ -134,6 +134,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   内部骨架 path 合成为 scene 节点。原版主体是 MeshRenderer/材质贴图的 3D
   场景，当前暂用手写 2D billboard 渲染，仍待补 MeshRenderer、材质纹理、
   CameraPivot/FOV 与 ScrollingFloor 材质滚动的完整运行时支持。
+- animalAcrobat：动物队列、障碍旋转/hold 判定、起跳/落地、背景颜色、
+  Spotlight/Confetti 与 BGTileManager 双 tile 回收已接入；PlayerAcrobat 的
+  SuperCurveObject 跳跃/阴影/旋转 coroutine、AnimalAcrobat.CameraUpdate 的逐动物
+  hold/release/长颈鹿 zoom 相机流程仍待逐曲线复刻。
 - fillbots：`bop`/small/medium/large/custom/blackout/background appearance/
   object appearance 已接入，机器人落体、堆叠、传送带哨兵、hold/release 判定、
   release whiff、explosion、fillErUp 和 OK/miss/arm/water/beep 音效按 C# 时序

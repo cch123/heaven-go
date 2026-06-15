@@ -65,6 +65,13 @@ type bgEase struct {
 	ease         int
 }
 
+type bgTileRuntime struct {
+	firstBase    [2]float64
+	secondBase   [2]float64
+	tileDistance float64
+	ok           bool
+}
+
 type acrobatObstacle struct {
 	kind   animalKind
 	beat   float64
@@ -126,6 +133,7 @@ type Module struct {
 	partyPoppers string
 	bgTileA      string
 	bgTileB      string
+	bgTiles      bgTileRuntime
 
 	playerNums map[string]float64
 	gameNums   map[string]float64

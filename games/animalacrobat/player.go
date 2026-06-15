@@ -89,8 +89,8 @@ func (m *Module) updateCamera(beat float64) {
 		target = 0
 	}
 	// TODO(animalAcrobat): this follows the player using AnimalAcrobat's
-	// serialized smooth speed; the Unity BgTileManager recycling and camera
-	// coroutine still need a dedicated parity pass.
+	// serialized smooth speed; AnimalAcrobat.CameraUpdate's per-animal hold,
+	// release and giraffe zoom coroutine still need a dedicated parity pass.
 	speed := num(m.gameNums, "_cameraSmoothSpeed", 10)
 	if speed <= 0 {
 		m.cameraX = target

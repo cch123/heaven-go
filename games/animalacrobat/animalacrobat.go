@@ -35,6 +35,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	if c, ok := comps["bgTileManager0"]; ok {
 		m.bgTileA = ref(c.Refs, "_bgTileFirst")
 		m.bgTileB = ref(c.Refs, "_bgTileSecond")
+		m.initBGTiles()
 	}
 
 	for _, bind := range []struct {
@@ -258,6 +259,7 @@ func (m *Module) Update(t, beat float64) {
 	m.updatePlayer(beat)
 	m.updateAutoBop(beat)
 	m.updateCamera(beat)
+	m.updateBGTiles()
 	cam := m.ctx.SampleScene(beat)
 	m.cameraWX, m.cameraWY = cam[0]+m.cameraX, cam[1]
 	m.ctx.Scene.SetCamera(m.cameraWX, m.cameraWY, cam[2])

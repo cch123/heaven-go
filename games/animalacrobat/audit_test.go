@@ -1,6 +1,7 @@
 package animalacrobat
 
 import (
+	"math"
 	"testing"
 
 	"hsdemo/kart"
@@ -108,5 +109,53 @@ func TestAnimalAcrobatObstacleComponentDoesNotMatchInputFamily(t *testing.T) {
 	}
 	if got := obstacleComponent(comps, "Elephant").Refs["_rotateRoot"]; got != "right" {
 		t.Fatalf("obstacleComponent returned %q, want obstacle family component", got)
+	}
+}
+
+func TestAnimalAcrobatBGTileManagerRefs(t *testing.T) {
+	as := loadAnimalAssets(t)
+	c := as.Extra.Components["bgTileManager0"]
+	if c.Path == "" {
+		t.Fatal("missing BGTileManager component")
+	}
+	first := c.Refs["_bgTileFirst"]
+	second := c.Refs["_bgTileSecond"]
+	if first == "" || second == "" {
+		t.Fatalf("missing BGTileManager tile refs: first=%q second=%q", first, second)
+	}
+	ax, _ := nodePos(as, first)
+	bx, _ := nodePos(as, second)
+	if bx <= ax {
+		t.Fatalf("bg tile distance must be positive: first=%v second=%v", ax, bx)
+	}
+}
+
+func TestAnimalAcrobatBGTilePositionsMatchUnityRecycle(t *testing.T) {
+	rt := bgTileRuntime{
+		firstBase:    [2]float64{-2.3766, 2.57},
+		secondBase:   [2]float64{55.77, 2.57},
+		tileDistance: 55.77 - (-2.3766),
+		ok:           true,
+	}
+	d := rt.tileDistance
+	cases := []struct {
+		name    string
+		camera  float64
+		firstX  float64
+		secondX float64
+	}{
+		{name: "before first threshold", camera: d - 0.01, firstX: rt.firstBase[0], secondX: rt.secondBase[0]},
+		{name: "first tile recycled", camera: d, firstX: rt.firstBase[0] + 2*d, secondX: rt.secondBase[0]},
+		{name: "second tile recycled", camera: 2 * d, firstX: rt.firstBase[0] + 2*d, secondX: rt.secondBase[0] + 2*d},
+		{name: "first tile recycled again", camera: 3 * d, firstX: rt.firstBase[0] + 4*d, secondX: rt.secondBase[0] + 2*d},
+	}
+	for _, tc := range cases {
+		first, second := bgTilePositions(tc.camera, rt)
+		if math.Abs(first[0]-tc.firstX) > 1e-6 || math.Abs(second[0]-tc.secondX) > 1e-6 {
+			t.Fatalf("%s: got first.x=%v second.x=%v, want %v %v", tc.name, first[0], second[0], tc.firstX, tc.secondX)
+		}
+		if first[1] != rt.firstBase[1] || second[1] != rt.secondBase[1] {
+			t.Fatalf("%s: y changed: first.y=%v second.y=%v", tc.name, first[1], second[1])
+		}
 	}
 }
