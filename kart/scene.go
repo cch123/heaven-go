@@ -33,6 +33,8 @@ type sceneNodeState struct {
 	matBlend        [4]float64
 	matThreshold    float64
 	hasMatThreshold bool
+	palette         Palette
+	hasPalette      bool
 	size            [2]float64 // drawMode != 0 时生效
 	order           int        // sortingOrder（可被动画驱动）
 }
@@ -197,6 +199,7 @@ func NewScene(as *Assets) *SceneInst {
 		orderOver:  map[int]int{},
 		zOver:      map[int]float64{},
 		spriteOver: map[int]string{},
+		palette:    DefaultPalette(),
 	}
 	for path, ctrlName := range as.Animators {
 		if ctrl, ok := as.Controllers[ctrlName]; ok {
@@ -891,8 +894,39 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 			case attr == "material._Threshold":
 				s.state[i].matThreshold = v
 				s.state[i].hasMatThreshold = true
+			case strings.HasPrefix(attr, "material._ColorAlpha."):
+				if !s.state[i].hasPalette {
+					s.state[i].palette = s.paletteForNode(i)
+					s.state[i].hasPalette = true
+				}
+				setPaletteChannel(&s.state[i].palette.Alpha, strings.TrimPrefix(attr, "material._ColorAlpha."), v)
+			case strings.HasPrefix(attr, "material._ColorBravo."):
+				if !s.state[i].hasPalette {
+					s.state[i].palette = s.paletteForNode(i)
+					s.state[i].hasPalette = true
+				}
+				setPaletteChannel(&s.state[i].palette.Fill, strings.TrimPrefix(attr, "material._ColorBravo."), v)
+			case strings.HasPrefix(attr, "material._ColorDelta."):
+				if !s.state[i].hasPalette {
+					s.state[i].palette = s.paletteForNode(i)
+					s.state[i].hasPalette = true
+				}
+				setPaletteChannel(&s.state[i].palette.Outline, strings.TrimPrefix(attr, "material._ColorDelta."), v)
 			}
 		}
+	}
+}
+
+func setPaletteChannel(c *[4]float64, ch string, v float64) {
+	switch ch {
+	case "r":
+		c[0] = v
+	case "g":
+		c[1] = v
+	case "b":
+		c[2] = v
+	case "a":
+		c[3] = v
 	}
 }
 
@@ -1026,6 +1060,9 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			s.scratch.Clear()
 			if s.as.Rig.Nodes[i].Mapped {
 				pal := s.paletteForNode(i)
+				if st.hasPalette {
+					pal = st.palette
+				}
 				if st.hasMatThreshold {
 					pal.Threshold = st.matThreshold
 				}
@@ -1050,6 +1087,9 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		if s.as.Rig.Nodes[i].Mapped {
 			pal := s.paletteForNode(i)
+			if st.hasPalette {
+				pal = st.palette
+			}
 			if st.hasMatThreshold {
 				pal.Threshold = st.matThreshold
 			}

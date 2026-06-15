@@ -481,6 +481,8 @@ type instNodeState struct {
 	matBlend        [4]float64
 	matThreshold    float64
 	hasMatThreshold bool
+	palette         Palette
+	hasPalette      bool
 	order           int
 }
 
@@ -501,6 +503,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
 			active: !n.Inactive, renderOn: !n.Hidden,
 			color: c, order: n.Order,
+			palette: scene.paletteOf(n.Mat),
 		}
 	}
 	states[0].pos = in.Offset
@@ -519,6 +522,9 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 	}
 	for ti, c := range in.matAdd {
 		states[ti].matAdd = c
+	}
+	for ti, p := range in.palettes {
+		states[ti].palette = p
 	}
 	for ti, o := range in.orders {
 		states[ti].order = o
@@ -569,6 +575,10 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 		if pal, ok := in.palettes[ti]; ok {
 			e.HasPalette = true
 			e.Palette = pal
+		}
+		if st.hasPalette {
+			e.HasPalette = true
+			e.Palette = st.palette
 		}
 		scene.Queue(e)
 	}
@@ -756,6 +766,15 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 			case attr == "material._Threshold":
 				states[ti].matThreshold = v
 				states[ti].hasMatThreshold = true
+			case strings.HasPrefix(attr, "material._ColorAlpha."):
+				states[ti].hasPalette = true
+				setPaletteChannel(&states[ti].palette.Alpha, strings.TrimPrefix(attr, "material._ColorAlpha."), v)
+			case strings.HasPrefix(attr, "material._ColorBravo."):
+				states[ti].hasPalette = true
+				setPaletteChannel(&states[ti].palette.Fill, strings.TrimPrefix(attr, "material._ColorBravo."), v)
+			case strings.HasPrefix(attr, "material._ColorDelta."):
+				states[ti].hasPalette = true
+				setPaletteChannel(&states[ti].palette.Outline, strings.TrimPrefix(attr, "material._ColorDelta."), v)
 			}
 		}
 	}

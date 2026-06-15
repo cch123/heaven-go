@@ -223,5 +223,9 @@ func supportedFloatAttr(attr string) bool {
 	case "m_IsActive", "m_Enabled", "m_FlipX", "m_FlipY", "m_SortingOrder", "m_Size.x", "m_Size.y":
 		return true
 	}
-	return strings.HasPrefix(attr, "m_Color.") || strings.HasPrefix(attr, "m_fontColor.")
+	return strings.HasPrefix(attr, "m_Color.") ||
+		strings.HasPrefix(attr, "m_fontColor.") ||
+		strings.HasPrefix(attr, "material._ColorAlpha.") ||
+		strings.HasPrefix(attr, "material._ColorBravo.") ||
+		strings.HasPrefix(attr, "material._ColorDelta.")
 }
