@@ -1,0 +1,10 @@
+{
+ "Car": "ChickenAnim",
+ "Island/offset/GameObject/Landmass": "ChargerAnim",
+ "Island/offset/GameObject/Landmass/Car": "FakeChickenAnim",
+ "Island/offset/StonePlatform": "PlatformAnim",
+ "Parallax": "ParallaxFade",
+ "Parallax/Birds": "BirdsAnim",
+ "Sea": "WaterAnim",
+ "UnParallax": "UnParallaxFade"
+}

@@ -1,0 +1,22 @@
+{
+ "Birds": "Parallax/Birds",
+ "BirdsAnim": "Parallax/Birds",
+ "ChickenAnim": "Car",
+ "Clouds": "Parallax/CloudySky",
+ "Doodles": "Parallax/Doodles",
+ "FallingHelmet": "Car/FallingCar/CarWindow (1)/Helmet",
+ "Helmet": "Car/Helmet",
+ "ParallaxFade": "Parallax",
+ "Planets": "Parallax/Planets",
+ "Stars": "Parallax/Stars",
+ "UnParallaxFade": "UnParallax",
+ "WaterAnim": "Sea",
+ "bgHigh": "BG/Color1",
+ "bgLow": "BG/Color2",
+ "bubbleText": "BubblePivot/CountBubble/Count Text",
+ "countBubble": "BubblePivot",
+ "endingText": "ArrivalText",
+ "gradient": "BG/Gradient",
+ "headlightColor": "Car/CarBody/HeadLight",
+ "yardsText": "Yards Text"
+}

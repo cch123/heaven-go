@@ -1,0 +1,4796 @@
+{
+ "nodes": [
+  {
+   "name": "chargingChicken",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 70,
+   "rotZ": 0,
+   "scale": [
+    8,
+    8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "BG/Gradient",
+   "parent": 1,
+   "pos": [
+    0,
+    -0.38983
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.978325,
+    0.25751638
+   ],
+   "sprite": "Gradient",
+   "order": -69,
+   "color": [
+    0.43137255,
+    0.8392157,
+    1,
+    1
+   ],
+   "size": [
+    40,
+    30.000002
+   ]
+  },
+  {
+   "name": "Color1",
+   "path": "BG/Color1",
+   "parent": 1,
+   "pos": [
+    0,
+    39.5797
+   ],
+   "rotZ": 0,
+   "scale": [
+    199.17188,
+    72.22213
+   ],
+   "order": -70,
+   "color": [
+    0.43137255,
+    0.8392157,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Color2",
+   "path": "BG/Color2",
+   "parent": 1,
+   "pos": [
+    0,
+    -32.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    199.17188,
+    82.7137
+   ],
+   "order": -75,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "UnParallax",
+   "path": "UnParallax",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 500,
+   "rotZ": 0,
+   "scale": [
+    51,
+    51
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Future",
+   "path": "UnParallax/Future",
+   "parent": 5,
+   "pos": [
+    -2.1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "Future_0",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    21.11,
+    10.342448
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "UnParallax/Stars",
+   "parent": 5,
+   "pos": [
+    0.026,
+    0.924
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0375,
+    1.0375
+   ],
+   "sprite": "Chicken_55",
+   "order": -49,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.27,
+    7.59
+   ]
+  },
+  {
+   "name": "Galaxy",
+   "path": "UnParallax/Stars/Galaxy",
+   "parent": 7,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "sprite": "Chicken_150",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.62,
+    7.66
+   ]
+  },
+  {
+   "name": "MoreStars",
+   "path": "UnParallax/Stars/MoreStars",
+   "parent": 7,
+   "pos": [
+    0,
+    -7.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "Chicken_55",
+   "order": -49,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.27,
+    7.59
+   ]
+  },
+  {
+   "name": "Parallax",
+   "path": "Parallax",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 50,
+   "rotZ": 0,
+   "scale": [
+    6,
+    6
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CloudySky",
+   "path": "Parallax/CloudySky",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0375,
+    1.0375
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cloud1",
+   "path": "Parallax/CloudySky/Cloud1",
+   "parent": 11,
+   "pos": [
+    -4.992,
+    2.019
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_9",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.28,
+    2.16
+   ],
+   "mapped": true,
+   "mat": "chicken_cloudshader"
+  },
+  {
+   "name": "Cloud2",
+   "path": "Parallax/CloudySky/Cloud2",
+   "parent": 11,
+   "pos": [
+    3.492,
+    1.229
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_40",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.27,
+    2.08
+   ],
+   "mapped": true,
+   "mat": "chicken_cloudshader"
+  },
+  {
+   "name": "Cloud3",
+   "path": "Parallax/CloudySky/Cloud3",
+   "parent": 11,
+   "pos": [
+    6.103,
+    3.312
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_4",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.28,
+    2.16
+   ],
+   "mapped": true,
+   "mat": "chicken_cloudshader"
+  },
+  {
+   "name": "Cloud4",
+   "path": "Parallax/CloudySky/Cloud4",
+   "parent": 11,
+   "pos": [
+    11.409,
+    -0.43
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_4",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.28,
+    2.16
+   ],
+   "mapped": true,
+   "mat": "chicken_cloudshader"
+  },
+  {
+   "name": "CloudySkyDuplicate",
+   "path": "Parallax/CloudySky/CloudySkyDuplicate",
+   "parent": 11,
+   "pos": [
+    23.13253,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cloud1",
+   "path": "Parallax/CloudySky/CloudySkyDuplicate/Cloud1",
+   "parent": 16,
+   "pos": [
+    -4.992,
+    2.019
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_9",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.28,
+    2.16
+   ],
+   "mapped": true,
+   "mat": "chicken_cloudshader"
+  },
+  {
+   "name": "Cloud2",
+   "path": "Parallax/CloudySky/CloudySkyDuplicate/Cloud2",
+   "parent": 16,
+   "pos": [
+    3.492,
+    1.229
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_40",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.27,
+    2.08
+   ],
+   "mapped": true,
+   "mat": "chicken_cloudshader"
+  },
+  {
+   "name": "Cloud3",
+   "path": "Parallax/CloudySky/CloudySkyDuplicate/Cloud3",
+   "parent": 16,
+   "pos": [
+    6.103,
+    3.312
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_4",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.28,
+    2.16
+   ],
+   "mapped": true,
+   "mat": "chicken_cloudshader"
+  },
+  {
+   "name": "Cloud4",
+   "path": "Parallax/CloudySky/CloudySkyDuplicate/Cloud4",
+   "parent": 16,
+   "pos": [
+    11.409,
+    -0.43
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_4",
+   "order": -20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.28,
+    2.16
+   ],
+   "mapped": true,
+   "mat": "chicken_cloudshader"
+  },
+  {
+   "name": "Planets",
+   "path": "Parallax/Planets",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0375,
+    1.0375
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Earth",
+   "path": "Parallax/Planets/Earth",
+   "parent": 21,
+   "pos": [
+    -0.34,
+    0.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_59",
+   "order": -24,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    0.76
+   ]
+  },
+  {
+   "name": "Mars",
+   "path": "Parallax/Planets/Mars",
+   "parent": 21,
+   "pos": [
+    8.75,
+    0.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6,
+    0.6
+   ],
+   "sprite": "Chicken_60",
+   "order": -24,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    0.76
+   ]
+  },
+  {
+   "name": "Alien",
+   "path": "Parallax/Planets/Alien",
+   "parent": 21,
+   "pos": [
+    7.379,
+    2.292
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_41",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    0.76
+   ]
+  },
+  {
+   "name": "PlanetsDuplicate",
+   "path": "Parallax/Planets/PlanetsDuplicate",
+   "parent": 21,
+   "pos": [
+    28.915663,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Earth",
+   "path": "Parallax/Planets/PlanetsDuplicate/Earth",
+   "parent": 25,
+   "pos": [
+    -0.34,
+    0.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_59",
+   "order": -24,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    0.76
+   ]
+  },
+  {
+   "name": "Mars",
+   "path": "Parallax/Planets/PlanetsDuplicate/Mars",
+   "parent": 25,
+   "pos": [
+    8.75,
+    0.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6,
+    0.6
+   ],
+   "sprite": "Chicken_60",
+   "order": -24,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    0.76
+   ]
+  },
+  {
+   "name": "Alien",
+   "path": "Parallax/Planets/PlanetsDuplicate/Alien",
+   "parent": 25,
+   "pos": [
+    7.379,
+    2.292
+   ],
+   "rotZ": 0.7853981379883825,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_41",
+   "order": -23,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    0.76
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "Parallax/Stars",
+   "parent": 10,
+   "pos": [
+    -16,
+    1.33
+   ],
+   "z": 50,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "Chicken_54",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.27,
+    7.59
+   ],
+   "mapped": true,
+   "mat": "chicken_starshader"
+  },
+  {
+   "name": "StarsLow",
+   "path": "Parallax/Stars/StarsLow",
+   "parent": 29,
+   "pos": [
+    -0.6,
+    -6.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "Chicken_54",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.27,
+    7.59
+   ],
+   "mapped": true,
+   "mat": "chicken_starshader"
+  },
+  {
+   "name": "StarsDuplicate",
+   "path": "Parallax/Stars/StarsDuplicate",
+   "parent": 29,
+   "pos": [
+    16,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_54",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.27,
+    7.59
+   ],
+   "mapped": true,
+   "mat": "chicken_starshader"
+  },
+  {
+   "name": "StarsLow",
+   "path": "Parallax/Stars/StarsDuplicate/StarsLow",
+   "parent": 31,
+   "pos": [
+    -0.6,
+    -6.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "Chicken_54",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.27,
+    7.59
+   ],
+   "mapped": true,
+   "mat": "chicken_starshader"
+  },
+  {
+   "name": "StarsDuplicate1",
+   "path": "Parallax/Stars/StarsDuplicate1",
+   "parent": 29,
+   "pos": [
+    32,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_54",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.27,
+    7.59
+   ],
+   "mapped": true,
+   "mat": "chicken_starshader"
+  },
+  {
+   "name": "StarsLow",
+   "path": "Parallax/Stars/StarsDuplicate1/StarsLow",
+   "parent": 33,
+   "pos": [
+    -0.6,
+    -6.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "Chicken_54",
+   "order": -30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.27,
+    7.59
+   ],
+   "mapped": true,
+   "mat": "chicken_starshader"
+  },
+  {
+   "name": "Doodles",
+   "path": "Parallax/Doodles",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0375,
+    1.0375
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "StarS1",
+   "path": "Parallax/Doodles/StarS1",
+   "parent": 35,
+   "pos": [
+    0.16,
+    3.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS2",
+   "path": "Parallax/Doodles/StarS2",
+   "parent": 35,
+   "pos": [
+    -1.734,
+    -0.878
+   ],
+   "rotZ": -5.216703416620083,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS3",
+   "path": "Parallax/Doodles/StarS3",
+   "parent": 35,
+   "pos": [
+    7.99,
+    3.338
+   ],
+   "rotZ": -5.216703416620083,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS4",
+   "path": "Parallax/Doodles/StarS4",
+   "parent": 35,
+   "pos": [
+    17.453,
+    0.103
+   ],
+   "rotZ": -5.216703416620083,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS5",
+   "path": "Parallax/Doodles/StarS5",
+   "parent": 35,
+   "pos": [
+    16.895,
+    -2.62
+   ],
+   "rotZ": -5.216703416620083,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS6",
+   "path": "Parallax/Doodles/StarS6",
+   "parent": 35,
+   "pos": [
+    18.987,
+    3.564
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS7",
+   "path": "Parallax/Doodles/StarS7",
+   "parent": 35,
+   "pos": [
+    5.198,
+    3.811
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS8",
+   "path": "Parallax/Doodles/StarS8",
+   "parent": 35,
+   "pos": [
+    1.632,
+    1.724
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS9",
+   "path": "Parallax/Doodles/StarS9",
+   "parent": 35,
+   "pos": [
+    14.606,
+    4.021
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS10",
+   "path": "Parallax/Doodles/StarS10",
+   "parent": 35,
+   "pos": [
+    19.617,
+    -0.958
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS11",
+   "path": "Parallax/Doodles/StarS11",
+   "parent": 35,
+   "pos": [
+    4.991,
+    -2.198
+   ],
+   "rotZ": -0.7155848197189975,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarL1",
+   "path": "Parallax/Doodles/StarL1",
+   "parent": 35,
+   "pos": [
+    1.26,
+    -1.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_6",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarL2",
+   "path": "Parallax/Doodles/StarL2",
+   "parent": 35,
+   "pos": [
+    16.29,
+    2.81
+   ],
+   "rotZ": -4.235964916844715,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_6",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Heart1",
+   "path": "Parallax/Doodles/Heart1",
+   "parent": 35,
+   "pos": [
+    11.112,
+    -1.149
+   ],
+   "rotZ": -0.6632249023373081,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_49",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Heart2",
+   "path": "Parallax/Doodles/Heart2",
+   "parent": 35,
+   "pos": [
+    14.08,
+    -1.25
+   ],
+   "rotZ": 0.6632249023373081,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_49",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Heart3",
+   "path": "Parallax/Doodles/Heart3",
+   "parent": 35,
+   "pos": [
+    8.575,
+    1.28
+   ],
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "Chicken_49",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Heart4",
+   "path": "Parallax/Doodles/Heart4",
+   "parent": 35,
+   "pos": [
+    13.989,
+    1.907
+   ],
+   "rotZ": -0.38397228224205676,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "Chicken_49",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS1",
+   "path": "Parallax/Doodles/OnigiriS1",
+   "parent": 35,
+   "pos": [
+    -7.053,
+    3.828
+   ],
+   "rotZ": 2.4085541238523835,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS2",
+   "path": "Parallax/Doodles/OnigiriS2",
+   "parent": 35,
+   "pos": [
+    -7.903,
+    1.435
+   ],
+   "rotZ": 0.6457717827349448,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS3",
+   "path": "Parallax/Doodles/OnigiriS3",
+   "parent": 35,
+   "pos": [
+    -0.987,
+    1.441
+   ],
+   "rotZ": 0.6981315651864876,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS4",
+   "path": "Parallax/Doodles/OnigiriS4",
+   "parent": 35,
+   "pos": [
+    -3.59,
+    -2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS5",
+   "path": "Parallax/Doodles/OnigiriS5",
+   "parent": 35,
+   "pos": [
+    20.67,
+    -2.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriL1",
+   "path": "Parallax/Doodles/OnigiriL1",
+   "parent": 35,
+   "pos": [
+    -4.554,
+    2.381
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_11",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriL2",
+   "path": "Parallax/Doodles/OnigiriL2",
+   "parent": 35,
+   "pos": [
+    -6.24,
+    -1
+   ],
+   "rotZ": 0.8203047531044252,
+   "scale": [
+    0.68,
+    0.68
+   ],
+   "sprite": "Chicken_11",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Squid1",
+   "path": "Parallax/Doodles/Squid1",
+   "parent": 35,
+   "pos": [
+    7.8,
+    -0.89
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "Chicken_5",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Squid2",
+   "path": "Parallax/Doodles/Squid2",
+   "parent": 35,
+   "pos": [
+    20.033,
+    1.236
+   ],
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_5",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Rocket",
+   "path": "Parallax/Doodles/Rocket",
+   "parent": 35,
+   "pos": [
+    4.247,
+    0.955
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_44",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "KissyFace",
+   "path": "Parallax/Doodles/KissyFace",
+   "parent": 35,
+   "pos": [
+    11.049,
+    2.682
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_28",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "DoodlesDuplicate",
+   "path": "Parallax/Doodles/DoodlesDuplicate",
+   "parent": 35,
+   "pos": [
+    30.361446,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "StarS1",
+   "path": "Parallax/Doodles/DoodlesDuplicate/StarS1",
+   "parent": 64,
+   "pos": [
+    0.16,
+    3.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS2",
+   "path": "Parallax/Doodles/DoodlesDuplicate/StarS2",
+   "parent": 64,
+   "pos": [
+    -1.734,
+    -0.878
+   ],
+   "rotZ": -5.216703416620083,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS3",
+   "path": "Parallax/Doodles/DoodlesDuplicate/StarS3",
+   "parent": 64,
+   "pos": [
+    7.99,
+    3.338
+   ],
+   "rotZ": -5.216703416620083,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS7",
+   "path": "Parallax/Doodles/DoodlesDuplicate/StarS7",
+   "parent": 64,
+   "pos": [
+    5.198,
+    3.811
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS8",
+   "path": "Parallax/Doodles/DoodlesDuplicate/StarS8",
+   "parent": 64,
+   "pos": [
+    1.632,
+    1.724
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarS11",
+   "path": "Parallax/Doodles/DoodlesDuplicate/StarS11",
+   "parent": 64,
+   "pos": [
+    4.991,
+    -2.198
+   ],
+   "rotZ": -0.7155848197189975,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "Chicken_43",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "StarL1",
+   "path": "Parallax/Doodles/DoodlesDuplicate/StarL1",
+   "parent": 64,
+   "pos": [
+    1.26,
+    -1.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_6",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Heart3",
+   "path": "Parallax/Doodles/DoodlesDuplicate/Heart3",
+   "parent": 64,
+   "pos": [
+    8.575,
+    1.28
+   ],
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "Chicken_49",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS1",
+   "path": "Parallax/Doodles/DoodlesDuplicate/OnigiriS1",
+   "parent": 64,
+   "pos": [
+    -7.053,
+    3.828
+   ],
+   "rotZ": 2.4085541238523835,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS2",
+   "path": "Parallax/Doodles/DoodlesDuplicate/OnigiriS2",
+   "parent": 64,
+   "pos": [
+    -7.903,
+    1.435
+   ],
+   "rotZ": 0.6457717827349448,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS3",
+   "path": "Parallax/Doodles/DoodlesDuplicate/OnigiriS3",
+   "parent": 64,
+   "pos": [
+    -0.987,
+    1.441
+   ],
+   "rotZ": 0.6981315651864876,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriS4",
+   "path": "Parallax/Doodles/DoodlesDuplicate/OnigiriS4",
+   "parent": 64,
+   "pos": [
+    -3.59,
+    -2.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_42",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriL1",
+   "path": "Parallax/Doodles/DoodlesDuplicate/OnigiriL1",
+   "parent": 64,
+   "pos": [
+    -4.554,
+    2.381
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_11",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "OnigiriL2",
+   "path": "Parallax/Doodles/DoodlesDuplicate/OnigiriL2",
+   "parent": 64,
+   "pos": [
+    -6.24,
+    -1
+   ],
+   "rotZ": 0.8203047531044252,
+   "scale": [
+    0.68,
+    0.68
+   ],
+   "sprite": "Chicken_11",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Squid1",
+   "path": "Parallax/Doodles/DoodlesDuplicate/Squid1",
+   "parent": 64,
+   "pos": [
+    7.8,
+    -0.89
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "Chicken_5",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Rocket",
+   "path": "Parallax/Doodles/DoodlesDuplicate/Rocket",
+   "parent": 64,
+   "pos": [
+    4.247,
+    0.955
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_44",
+   "order": -40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.44
+   ],
+   "mapped": true,
+   "mat": "chicken_mirage"
+  },
+  {
+   "name": "Birds",
+   "path": "Parallax/Birds",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bird1",
+   "path": "Parallax/Birds/Bird1",
+   "parent": 81,
+   "pos": [
+    0.861,
+    3.467
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "sprite": "Chicken_32",
+   "order": -19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.52
+   ]
+  },
+  {
+   "name": "Bird2",
+   "path": "Parallax/Birds/Bird2",
+   "parent": 81,
+   "pos": [
+    1.924,
+    3.139
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_32",
+   "order": -19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.52
+   ]
+  },
+  {
+   "name": "Bird3",
+   "path": "Parallax/Birds/Bird3",
+   "parent": 81,
+   "pos": [
+    3.247,
+    3.97
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "sprite": "Chicken_32",
+   "order": -19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.52
+   ]
+  },
+  {
+   "name": "Bird4",
+   "path": "Parallax/Birds/Bird4",
+   "parent": 81,
+   "pos": [
+    4.297,
+    2.862
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_34",
+   "order": -19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.52
+   ]
+  },
+  {
+   "name": "Yards Text",
+   "path": "Yards Text",
+   "parent": 0,
+   "pos": [
+    0,
+    4.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1236,
+    1.1236
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArrivalText",
+   "path": "ArrivalText",
+   "parent": 0,
+   "pos": [
+    0,
+    -4.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1236,
+    1.1236
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BubblePivot",
+   "path": "BubblePivot",
+   "parent": 0,
+   "pos": [
+    -1.3203124,
+    1.038702
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0387019,
+    1.038702
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CountBubble",
+   "path": "BubblePivot/CountBubble",
+   "parent": 88,
+   "pos": [
+    1.262,
+    1.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    2.52
+   ]
+  },
+  {
+   "name": "Count Text",
+   "path": "BubblePivot/CountBubble/Count Text",
+   "parent": 89,
+   "pos": [
+    0.063,
+    -0.011
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0817348,
+    1.0817347
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Car",
+   "path": "Car",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0387019,
+    1.038702
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CarBody",
+   "path": "Car/CarBody",
+   "parent": 91,
+   "pos": [
+    -2.524,
+    0.843
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_0",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    1.56
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "HeadLight",
+   "path": "Car/CarBody/HeadLight",
+   "parent": 92,
+   "pos": [
+    1.885,
+    -0.33999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9627401,
+    0.96274
+   ],
+   "sprite": "Chicken_31",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.95,
+    0.96
+   ]
+  },
+  {
+   "name": "CarColor",
+   "path": "Car/CarBody/CarColor",
+   "parent": 92,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_58",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    1.56
+   ],
+   "mapped": true,
+   "mat": "chicken_carshader"
+  },
+  {
+   "name": "CarWindow",
+   "path": "Car/CarWindow",
+   "parent": 91,
+   "pos": [
+    -2.662,
+    0.672
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_12",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.44,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "Helmet",
+   "path": "Car/Helmet",
+   "parent": 91,
+   "pos": [
+    -2.624,
+    2.027
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_48",
+   "order": 9,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.83,
+    1.84
+   ]
+  },
+  {
+   "name": "WheelL",
+   "path": "Car/WheelL",
+   "parent": 91,
+   "pos": [
+    -3.167,
+    0.283
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "WheelR",
+   "path": "Car/WheelR",
+   "parent": 91,
+   "pos": [
+    -1.963,
+    0.283
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "FallingCar",
+   "path": "Car/FallingCar",
+   "parent": 91,
+   "pos": [
+    -2.75,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CarBody (1)",
+   "path": "Car/FallingCar/CarBody (1)",
+   "parent": 99,
+   "pos": [
+    0.226,
+    -0.157
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_0",
+   "order": 18,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    1.56
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "HeadLight",
+   "path": "Car/FallingCar/CarBody (1)/HeadLight",
+   "parent": 100,
+   "pos": [
+    1.885,
+    -0.33999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9627401,
+    0.96274
+   ],
+   "sprite": "Chicken_31",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.95,
+    0.96
+   ]
+  },
+  {
+   "name": "CarColor",
+   "path": "Car/FallingCar/CarBody (1)/CarColor",
+   "parent": 100,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_58",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    1.56
+   ],
+   "mapped": true,
+   "mat": "chicken_carshader"
+  },
+  {
+   "name": "CarWindow (1)",
+   "path": "Car/FallingCar/CarWindow (1)",
+   "parent": 99,
+   "pos": [
+    0.088,
+    -0.328
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_24",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.44,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "Helmet",
+   "path": "Car/FallingCar/CarWindow (1)/Helmet",
+   "parent": 103,
+   "pos": [
+    0.039000094,
+    1.3610001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_48",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.83,
+    1.84
+   ]
+  },
+  {
+   "name": "WheelL (1)",
+   "path": "Car/FallingCar/WheelL (1)",
+   "parent": 99,
+   "pos": [
+    -0.417,
+    -0.717
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_1",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "WheelR (1)",
+   "path": "Car/FallingCar/WheelR (1)",
+   "parent": 99,
+   "pos": [
+    0.787,
+    -0.717
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_1",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "Sea",
+   "path": "Sea",
+   "parent": 0,
+   "pos": [
+    0,
+    -4.2604
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.043838,
+    1.043838
+   ],
+   "sprite": "Chicken_53",
+   "order": 100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    200,
+    1.5242803
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "SeaUnder",
+   "path": "Sea/SeaUnder",
+   "parent": 107,
+   "pos": [
+    0,
+    -34
+   ],
+   "rotZ": 0,
+   "scale": [
+    11.7645,
+    958.003
+   ],
+   "sprite": "Chicken_51",
+   "order": 99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17,
+    0.07
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "Island",
+   "path": "Island",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "offset",
+   "path": "Island/offset",
+   "parent": 109,
+   "pos": [
+    -5.35,
+    0.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "Island/offset/GameObject",
+   "parent": 110,
+   "pos": [
+    2.68,
+    -2.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.03,
+    1.03
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Landmass",
+   "path": "Island/offset/GameObject/Landmass",
+   "parent": 111,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ChargerSkyArm",
+   "path": "Island/offset/GameObject/Landmass/ChargerSkyArm",
+   "parent": 112,
+   "pos": [
+    -0.3281825,
+    43.8611
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0159198,
+    1.0159198
+   ],
+   "sprite": "Chicken_17",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 1,
+   "size": [
+    0.44,
+    70.17373
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "ChargerArm",
+   "path": "Island/offset/GameObject/Landmass/ChargerArm",
+   "parent": 112,
+   "pos": [
+    -1.3248,
+    6.223
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0159199,
+    1.0159199
+   ],
+   "sprite": "Chicken_52",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4,
+    3.48
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "PumpHead",
+   "path": "Island/offset/GameObject/Landmass/PumpHead",
+   "parent": 112,
+   "pos": [
+    -0.33,
+    8.07
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.01592,
+    1.01592
+   ],
+   "sprite": "Chicken_8",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    1.08
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "PumpPlunger",
+   "path": "Island/offset/GameObject/Landmass/PumpHead/PumpPlunger",
+   "parent": 115,
+   "pos": [
+    0,
+    0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_3",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.92
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "powTEMP",
+   "path": "Island/offset/GameObject/Landmass/PumpHead/powTEMP",
+   "parent": 115,
+   "pos": [
+    0.019,
+    -0.424
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "powTEMP",
+   "order": 100,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.8,
+    2.72
+   ]
+  },
+  {
+   "name": "SmallLandmass",
+   "path": "Island/offset/GameObject/Landmass/SmallLandmass",
+   "parent": 112,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_18",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.84,
+    5.08
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "Car",
+   "path": "Island/offset/GameObject/Landmass/Car",
+   "parent": 112,
+   "pos": [
+    2.5922327,
+    2.4466019
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0084466,
+    1.0084466
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CarBody",
+   "path": "Island/offset/GameObject/Landmass/Car/CarBody",
+   "parent": 119,
+   "pos": [
+    -2.524,
+    0.843
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_0",
+   "order": 10,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    1.56
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "HeadLight",
+   "path": "Island/offset/GameObject/Landmass/Car/CarBody/HeadLight",
+   "parent": 120,
+   "pos": [
+    1.885,
+    -0.33999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9627401,
+    0.96274
+   ],
+   "sprite": "Chicken_31",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.95,
+    0.96
+   ]
+  },
+  {
+   "name": "CarWindow",
+   "path": "Island/offset/GameObject/Landmass/Car/CarBody/CarWindow",
+   "parent": 120,
+   "pos": [
+    -0.13800478,
+    -0.17099869
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_12",
+   "order": 15,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.44,
+    0.68
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "CarColor",
+   "path": "Island/offset/GameObject/Landmass/Car/CarBody/CarColor",
+   "parent": 120,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_58",
+   "order": 6,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    1.56
+   ],
+   "mapped": true,
+   "mat": "chicken_carshader"
+  },
+  {
+   "name": "WheelL",
+   "path": "Island/offset/GameObject/Landmass/Car/WheelL",
+   "parent": 119,
+   "pos": [
+    -3.167,
+    0.283
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.99999994,
+    0.99999994
+   ],
+   "sprite": "Chicken_1",
+   "order": 5,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "WheelR",
+   "path": "Island/offset/GameObject/Landmass/Car/WheelR",
+   "parent": 119,
+   "pos": [
+    -1.963,
+    0.283
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_1",
+   "order": 5,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "CountBubble",
+   "path": "Island/offset/GameObject/Landmass/Car/CountBubble",
+   "parent": 119,
+   "pos": [
+    -0.038,
+    2.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_7",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    2.52
+   ]
+  },
+  {
+   "name": "Count Text",
+   "path": "Island/offset/GameObject/Landmass/Car/CountBubble/Count Text",
+   "parent": 126,
+   "pos": [
+    0.063,
+    -0.011
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0817348,
+    1.0817347
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BurnedChicken",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken",
+   "parent": 119,
+   "pos": [
+    -2.56,
+    1.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.96274173,
+    0.96274173
+   ],
+   "sprite": "Chicken_35",
+   "order": -5,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.28,
+    2.6
+   ]
+  },
+  {
+   "name": "Eyeball",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/Eyeball",
+   "parent": 128,
+   "pos": [
+    0.159,
+    0.647
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_46",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.52
+   ]
+  },
+  {
+   "name": "WhiteCarBody",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/WhiteCarBody",
+   "parent": 128,
+   "pos": [
+    0.037393223,
+    -0.25655913
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0387002,
+    1.0387002
+   ],
+   "sprite": "Chicken_0",
+   "order": 10,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    1.56
+   ]
+  },
+  {
+   "name": "CarColor",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/WhiteCarBody/CarColor",
+   "parent": 130,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_58",
+   "order": 6,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    1.56
+   ]
+  },
+  {
+   "name": "WheelL",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/WhiteCarBody/WheelL",
+   "parent": 130,
+   "pos": [
+    -0.64300007,
+    -0.5599998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_1",
+   "order": 5,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    0.76
+   ]
+  },
+  {
+   "name": "WheelR",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/WhiteCarBody/WheelR",
+   "parent": 130,
+   "pos": [
+    0.56099993,
+    -0.5599998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_1",
+   "order": 5,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.76,
+    0.76
+   ]
+  },
+  {
+   "name": "shockwave",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/WhiteCarBody/shockwave",
+   "parent": 130,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.2,
+    0.2
+   ],
+   "sprite": "shockwave",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    22,
+    22
+   ]
+  },
+  {
+   "name": "Smoke",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/Smoke",
+   "parent": 128,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Fire",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/Fire",
+   "parent": 128,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PartsNormal",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/PartsNormal",
+   "parent": 128,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PartsColored",
+   "path": "Island/offset/GameObject/Landmass/Car/BurnedChicken/PartsNormal/PartsColored",
+   "parent": 137,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Helmet",
+   "path": "Island/offset/GameObject/Landmass/Car/Helmet",
+   "parent": 119,
+   "pos": [
+    -2.6230047,
+    2.0330043
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_48",
+   "order": 16,
+   "hidden": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.83,
+    1.84
+   ]
+  },
+  {
+   "name": "CollapseParticles",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles",
+   "parent": 112,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CollapseL",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseL",
+   "parent": 140,
+   "pos": [
+    -0.8,
+    0.5000001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3,
+    1.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke1",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseL/Smoke1",
+   "parent": 141,
+   "pos": [
+    0,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke2",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseL/Smoke2",
+   "parent": 141,
+   "pos": [
+    0,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Splash",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseL/Splash",
+   "parent": 141,
+   "pos": [
+    0,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rocks",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseL/Rocks",
+   "parent": 141,
+   "pos": [
+    0,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CollapseR",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseR",
+   "parent": 140,
+   "pos": [
+    0.8,
+    0.5000001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3,
+    1.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke1",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseR/Smoke1",
+   "parent": 146,
+   "pos": [
+    0,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke2",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseR/Smoke2",
+   "parent": 146,
+   "pos": [
+    0,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Splash",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseR/Splash",
+   "parent": 146,
+   "pos": [
+    0,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rocks",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticles/CollapseR/Rocks",
+   "parent": 146,
+   "pos": [
+    0,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CollapseParticlesNg",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg",
+   "parent": 112,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.7,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CollapseL",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseL",
+   "parent": 151,
+   "pos": [
+    -0.8,
+    0.5000001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3,
+    1.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke1",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseL/Smoke1",
+   "parent": 152,
+   "pos": [
+    0,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke2",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseL/Smoke2",
+   "parent": 152,
+   "pos": [
+    0,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Splash",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseL/Splash",
+   "parent": 152,
+   "pos": [
+    0,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rocks",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseL/Rocks",
+   "parent": 152,
+   "pos": [
+    0,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CollapseR",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseR",
+   "parent": 151,
+   "pos": [
+    0.8,
+    0.5000001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.3,
+    1.3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke1",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseR/Smoke1",
+   "parent": 157,
+   "pos": [
+    0,
+    -1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke2",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseR/Smoke2",
+   "parent": 157,
+   "pos": [
+    0,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Splash",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseR/Splash",
+   "parent": 157,
+   "pos": [
+    0,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rocks",
+   "path": "Island/offset/GameObject/Landmass/CollapseParticlesNg/CollapseR/Rocks",
+   "parent": 157,
+   "pos": [
+    0,
+    -1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BigLandmass",
+   "path": "Island/offset/GameObject/BigLandmass",
+   "parent": 111,
+   "pos": [
+    -2.68,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftEdge",
+   "path": "Island/offset/GameObject/BigLandmass/LeftEdge",
+   "parent": 162,
+   "pos": [
+    0.47,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_50",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    5.19
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "GrassFallL",
+   "path": "Island/offset/GameObject/BigLandmass/LeftEdge/GrassFallL",
+   "parent": 163,
+   "pos": [
+    -0.18,
+    2.43
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rocks",
+   "path": "Island/offset/GameObject/BigLandmass/LeftEdge/GrassFallL/Rocks",
+   "parent": 164,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightEdge",
+   "path": "Island/offset/GameObject/BigLandmass/RightEdge",
+   "parent": 162,
+   "pos": [
+    4.8,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_56",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    5.19
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "GrassFallR",
+   "path": "Island/offset/GameObject/BigLandmass/RightEdge/GrassFallR",
+   "parent": 166,
+   "pos": [
+    0.18,
+    2.43
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rocks",
+   "path": "Island/offset/GameObject/BigLandmass/RightEdge/GrassFallR/Rocks",
+   "parent": 167,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Middle",
+   "path": "Island/offset/GameObject/BigLandmass/Middle",
+   "parent": 162,
+   "pos": [
+    2.6366,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Chicken_57",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    3.2539172,
+    5.19
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "StonePlatform",
+   "path": "Island/offset/StonePlatform",
+   "parent": 110,
+   "pos": [
+    -0.6111798,
+    0.6669998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0177,
+    1.0177
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PlatformHolder",
+   "path": "Island/offset/StonePlatform/PlatformHolder",
+   "parent": 170,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PlatformTexture",
+   "path": "Island/offset/StonePlatform/PlatformHolder/PlatformTexture",
+   "parent": 171,
+   "pos": [
+    1.8514514,
+    -0.9991054
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.03,
+    1.03
+   ],
+   "sprite": "Chicken_14",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.68,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "chicken_cellshader"
+  },
+  {
+   "name": "Splash",
+   "path": "Island/offset/Splash",
+   "parent": 110,
+   "pos": [
+    1.2792001,
+    -3.6617992
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0177,
+    1.0177
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sploosh",
+   "path": "Island/offset/Splash/Sploosh",
+   "parent": 173,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SplooshMini",
+   "path": "Island/offset/Splash/SplooshMini",
+   "parent": 173,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ChickenSplash",
+   "path": "Island/offset/ChickenSplash",
+   "parent": 110,
+   "pos": [
+    0,
+    -3.661799
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sploosh",
+   "path": "Island/offset/ChickenSplash/Sploosh",
+   "parent": 176,
+   "pos": [
+    0,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SplooshMini",
+   "path": "Island/offset/ChickenSplash/SplooshMini",
+   "parent": 176,
+   "pos": [
+    0,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

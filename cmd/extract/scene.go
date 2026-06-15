@@ -944,6 +944,10 @@ func bundlePath(dir string, parts ...string) string {
 var mappingShaderGUIDs = []string{
 	"d6702951943fe3f48b9e437dd725e76f", // CellAnime_MappedInvert
 	"ff54fed5718ccc543808dec1f266d1c8", // CellAnime_Mapped
+	"0fd674cb47a44464ab7cd46f6b8e2422", // ChargingChicken ChickenCar/Cell channel mask
+	"05b2b41ae5e852e44a848016376434c8", // ChargingChicken ChickenCloud/Star channel mask
+	"98ff3747664c4c240a800e54e6f5fdf7", // ChargingChicken ChickenMirage channel mask
+	"c3025c1be707f9c45ba76feb4ddfa60b", // ChargingChicken ChickenWater channel mask
 }
 
 // scanMappedMats 扫描游戏目录下使用映射 shader 的材质，guid → 文件主名。

@@ -1,0 +1,324 @@
+{
+ "BirdsAnim": {
+  "default": "Idle",
+  "states": {
+   "BirdsFly": {
+    "clip": "Animations/Background/BirdsFly",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "ChargerAnim": {
+  "default": "N/A",
+  "states": {
+   "Bounce": {
+    "clip": "Animations/ChargerArm/PumpBounce",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/ChargerArm/PumpIdle",
+    "speed": 1
+   },
+   "N/A": {
+    "speed": 1
+   },
+   "Prep1": {
+    "clip": "Animations/ChargerArm/PumpPrep1",
+    "speed": 1
+   },
+   "Prep2": {
+    "clip": "Animations/ChargerArm/PumpPrep2",
+    "speed": 1
+   },
+   "Prep3": {
+    "clip": "Animations/ChargerArm/PumpPrep3",
+    "speed": 1
+   },
+   "Prep4": {
+    "clip": "Animations/ChargerArm/PumpPrep4",
+    "speed": 1
+   },
+   "Pump": {
+    "clip": "Animations/ChargerArm/PumpPump",
+    "speed": 1
+   }
+  }
+ },
+ "ChickenAnim": {
+  "default": "Nothing",
+  "states": {
+   "Back": {
+    "clip": "Animations/Chicken/ChickenBack",
+    "speed": 1
+   },
+   "Bomb": {
+    "clip": "Animations/Chicken/ChickenBomb",
+    "speed": 1
+   },
+   "Charge": {
+    "clip": "Animations/Chicken/ChickenCharge",
+    "speed": 1
+   },
+   "ChickenLookFrom": {
+    "clip": "Animations/Chicken/ChickenLookFrom",
+    "speed": 1
+   },
+   "ChickenLookTo": {
+    "clip": "Animations/Chicken/ChickenLookTo",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "ChickenLooking",
+      "exitTime": 1,
+      "duration": 6.551956e-10
+     }
+    ]
+   },
+   "ChickenLooking": {
+    "clip": "Animations/Chicken/ChickenLooking",
+    "speed": 1
+   },
+   "Fall": {
+    "clip": "Animations/Chicken/ChickenFall",
+    "speed": 1
+   },
+   "Gone": {
+    "clip": "Animations/Chicken/ChickenGone",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Chicken/ChickenIdle",
+    "speed": 1
+   },
+   "Nothing": {
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Animations/Chicken/ChickenPrepare",
+    "speed": 1
+   },
+   "Ride": {
+    "clip": "Animations/Chicken/ChickenRide",
+    "speed": 1
+   },
+   "Success": {
+    "clip": "Animations/Chicken/ChickenSuccess",
+    "speed": 1
+   },
+   "TooFar": {
+    "clip": "Animations/Chicken/ChickenTooFar",
+    "speed": 1
+   }
+  }
+ },
+ "FakeChickenAnim": {
+  "default": "Nothing",
+  "states": {
+   "Burn": {
+    "clip": "Animations/FakeChicken/FakeChickenBurn",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/FakeChicken/FakeChickenIdle",
+    "speed": 1
+   },
+   "Nothing": {
+    "speed": 1
+   },
+   "Respawn": {
+    "clip": "Animations/FakeChicken/FakeChickenRespawn",
+    "speed": 1
+   }
+  }
+ },
+ "ParallaxFade": {
+  "default": "Idle",
+  "states": {
+   "BirdsDisable": {
+    "clip": "Animations/Background/BirdsDisable",
+    "speed": 1
+   },
+   "BirdsEnable": {
+    "clip": "Animations/Background/BirdsEnable",
+    "speed": 1
+   },
+   "BirdsIn": {
+    "clip": "Animations/Background/BirdsFadeIn",
+    "speed": 1
+   },
+   "BirdsOut": {
+    "clip": "Animations/Background/BirdsFadeOut",
+    "speed": 1
+   },
+   "CloudDisable": {
+    "clip": "Animations/Background/CloudDisable",
+    "speed": 1
+   },
+   "CloudEnable": {
+    "clip": "Animations/Background/CloudEnable",
+    "speed": 1
+   },
+   "CloudIn": {
+    "clip": "Animations/Background/CloudFadeIn",
+    "speed": 1
+   },
+   "CloudOut": {
+    "clip": "Animations/Background/CloudFadeOut",
+    "speed": 1
+   },
+   "DoodlesDisable": {
+    "clip": "Animations/Background/DoodlesDisable",
+    "speed": 1
+   },
+   "DoodlesEnable": {
+    "clip": "Animations/Background/DoodlesEnable",
+    "speed": 1
+   },
+   "DoodlesIn": {
+    "clip": "Animations/Background/DoodlesFadeIn",
+    "speed": 1
+   },
+   "DoodlesOut": {
+    "clip": "Animations/Background/DoodlesFadeOut",
+    "speed": 1
+   },
+   "EarthDisable": {
+    "clip": "Animations/Background/EarthDisable",
+    "speed": 1
+   },
+   "EarthEnable": {
+    "clip": "Animations/Background/EarthEnable",
+    "speed": 1
+   },
+   "EarthIn": {
+    "clip": "Animations/Background/EarthFadeIn",
+    "speed": 1
+   },
+   "EarthOut": {
+    "clip": "Animations/Background/EarthFadeOut",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "MarsDisable": {
+    "clip": "Animations/Background/MarsDisable",
+    "speed": 1
+   },
+   "MarsEnable": {
+    "clip": "Animations/Background/MarsEnable",
+    "speed": 1
+   },
+   "MarsIn": {
+    "clip": "Animations/Background/MarsFadeIn",
+    "speed": 1
+   },
+   "MarsOut": {
+    "clip": "Animations/Background/MarsFadeOut",
+    "speed": 1
+   },
+   "StarsDisable": {
+    "clip": "Animations/Background/StarsDisable",
+    "speed": 1
+   },
+   "StarsEnable": {
+    "clip": "Animations/Background/StarsEnable",
+    "speed": 1
+   },
+   "StarsIn": {
+    "clip": "Animations/Background/StarsFadeIn",
+    "speed": 1
+   },
+   "StarsOut": {
+    "clip": "Animations/Background/StarsFadeOut",
+    "speed": 1
+   }
+  }
+ },
+ "PlatformAnim": {
+  "default": "Nothing",
+  "states": {
+   "Fall": {
+    "clip": "Animations/StonePlatform/PlatformFall",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Nothing": {
+    "speed": 1
+   },
+   "Plat1": {
+    "clip": "Animations/StonePlatform/Plat1",
+    "speed": 1
+   },
+   "Plat2": {
+    "clip": "Animations/StonePlatform/Plat2",
+    "speed": 1
+   },
+   "Set": {
+    "clip": "Animations/StonePlatform/PlatformSet",
+    "speed": 1
+   }
+  }
+ },
+ "UnParallaxFade": {
+  "default": "Idle",
+  "states": {
+   "FutureDisable": {
+    "clip": "Animations/Background/FutureDisable",
+    "speed": 1
+   },
+   "FutureEnable": {
+    "clip": "Animations/Background/FutureEnable",
+    "speed": 1
+   },
+   "FutureIn": {
+    "clip": "Animations/Background/FutureFadeIn",
+    "speed": 1
+   },
+   "FutureOut": {
+    "clip": "Animations/Background/FutureFadeOut",
+    "speed": 1
+   },
+   "GalaxyDisable": {
+    "clip": "Animations/Background/GalaxyDisable",
+    "speed": 1
+   },
+   "GalaxyEnable": {
+    "clip": "Animations/Background/GalaxyEnable",
+    "speed": 1
+   },
+   "GalaxyIn": {
+    "clip": "Animations/Background/GalaxyFadeIn",
+    "speed": 1
+   },
+   "GalaxyOut": {
+    "clip": "Animations/Background/GalaxyFadeOut",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "WaterAnim": {
+  "default": "Idle",
+  "states": {
+   "AntiScroll": {
+    "clip": "Animations/Water/WaterScrollRev",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Scroll": {
+    "clip": "Animations/Water/WaterScroll",
+    "speed": 1
+   }
+  }
+ }
+}
