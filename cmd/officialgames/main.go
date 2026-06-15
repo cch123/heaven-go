@@ -210,6 +210,12 @@ func scanExtractSpecs(dir string) map[string]bool {
 		}
 		return nil
 	})
+	if raw, err := os.ReadFile(filepath.Join(dir, "main.go")); err == nil {
+		text := string(raw)
+		if strings.Contains(text, `*game != "karateman"`) && strings.Contains(text, "exportRigAndStage") {
+			out["karateman"] = true
+		}
+	}
 	return out
 }
 

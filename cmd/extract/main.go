@@ -31,14 +31,7 @@ var (
 	outDir = flag.String("out", "", "输出目录（默认 assets/<game>）")
 	game   = flag.String("game", "karateman", "要提取的 minigame（karateman / rhythmSomen）")
 
-	animNames = []string{"Beat", "Jab", "Straight", "Prepare"}
-	soundList = []string{
-		"objectOut.ogg",      // 抛出
-		"potHit.ogg",         // 命中（罐子）
-		"punchKickHit1.ogg",  // 命中（偏差较大）
-		"swingNoHit.wav",     // 空挥
-		"karate_through.wav", // 漏拍飞过
-	}
+	soundExts = map[string]bool{".ogg": true, ".wav": true}
 )
 
 func gamePath(parts ...string) string {
@@ -484,16 +477,25 @@ func quatToZ(z, w float64) float64 { return 2 * math.Atan2(z, w) }
 // ---------- anims ----------
 
 func exportAnims(tables map[string]*spriteTable) {
-	anims := map[string]*kmdata.Anim{}
-	for _, name := range animNames {
-		p := gamePath("Sprites", "anime", "karateman", name+".anim")
+	root := gamePath("Sprites", "anime")
+	type clipFile struct {
+		base, nsKey string
+		clip        *kmdata.Anim
+	}
+	var clips []clipFile
+	baseCount := map[string]int{}
+	must(filepath.WalkDir(root, func(p string, d os.DirEntry, err error) error {
+		if err != nil || d.IsDir() || filepath.Ext(p) != ".anim" {
+			return err
+		}
 		raw, err := os.ReadFile(p)
 		if err != nil {
-			log.Printf("skip %s: %v", name, err)
-			continue
+			return err
 		}
 		docs, err := uy.Parse(raw)
-		must(err)
+		if err != nil {
+			return fmt.Errorf("%s: %w", p, err)
+		}
 		var clip map[string]any
 		for i := range docs {
 			if docs[i].ClassID == 74 {
@@ -502,12 +504,31 @@ func exportAnims(tables map[string]*spriteTable) {
 			}
 		}
 		if clip == nil {
-			log.Fatalf("%s: no AnimationClip doc", name)
+			return fmt.Errorf("%s: no AnimationClip doc", p)
 		}
-		anims[name] = convertClip(clip, tables)
-		fmt.Printf("anim %-9s dur=%.3fs loop=%v\n", name, anims[name].Duration, anims[name].Loop)
+		rel, err := filepath.Rel(root, p)
+		if err != nil {
+			rel = filepath.Base(p)
+		}
+		ns := strings.TrimSuffix(filepath.ToSlash(rel), ".anim")
+		base := strings.TrimSuffix(filepath.Base(p), ".anim")
+		clips = append(clips, clipFile{base: base, nsKey: ns, clip: convertClip(clip, tables)})
+		baseCount[base]++
+		fmt.Printf("anim %-24s dur=%.3fs loop=%v\n", ns, clips[len(clips)-1].clip.Duration, clips[len(clips)-1].clip.Loop)
+		return nil
+	}))
+
+	anims := map[string]*kmdata.Anim{}
+	for _, c := range clips {
+		anims[c.nsKey] = c.clip
+		if baseCount[c.base] == 1 {
+			anims[c.base] = c.clip
+		} else {
+			fmt.Printf("anim %q has %d files; only namespaced keys exported (for example %q)\n", c.base, baseCount[c.base], c.nsKey)
+		}
 	}
 	writeJSON("anims.json", anims)
+	fmt.Printf("anims: %d clip files, %d json keys\n", len(clips), len(anims))
 }
 
 func convertClip(clip map[string]any, tables map[string]*spriteTable) *kmdata.Anim {
@@ -657,15 +678,31 @@ func extractCommon() {
 // ---------- sounds ----------
 
 func exportSounds() {
-	for _, name := range soundList {
-		b, err := os.ReadFile(gamePath("Sounds", name))
-		if err != nil {
-			log.Printf("skip sound %s: %v", name, err)
-			continue
+	root := gamePath("Sounds")
+	copied := 0
+	must(filepath.WalkDir(root, func(p string, d os.DirEntry, err error) error {
+		if err != nil || d.IsDir() {
+			return err
 		}
-		must(os.WriteFile(filepath.Join(*outDir, "sounds", name), b, 0o644))
-	}
-	fmt.Printf("sounds: %d copied\n", len(soundList))
+		ext := strings.ToLower(filepath.Ext(p))
+		if !soundExts[ext] {
+			return nil
+		}
+		rel, err := filepath.Rel(root, p)
+		if err != nil {
+			return err
+		}
+		dst := filepath.Join(*outDir, "sounds", rel)
+		must(os.MkdirAll(filepath.Dir(dst), 0o755))
+		b, err := os.ReadFile(p)
+		if err != nil {
+			return err
+		}
+		must(os.WriteFile(dst, b, 0o644))
+		copied++
+		return nil
+	}))
+	fmt.Printf("sounds: %d copied\n", copied)
 }
 
 // ---------- 标定输出 ----------

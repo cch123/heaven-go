@@ -56,3 +56,32 @@ func TestScanRegisterCallsAcrossRootGoFiles(t *testing.T) {
 		t.Fatalf("non-Go files should not be scanned: %v", got)
 	}
 }
+
+func TestScanExtractSpecsIncludesLegacyKarateMan(t *testing.T) {
+	dir := t.TempDir()
+	main := `package main
+func main() {
+	if *game != "karateman" {
+		extractScene(*game)
+		return
+	}
+	exportRigAndStage(nil)
+}`
+	if err := os.WriteFile(filepath.Join(dir, "main.go"), []byte(main), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	specs := `package main
+var sceneSpecs = map[string]sceneSpec{
+	"rhythmSomen": basicOfficialSceneSpec("RhythmSomen", "rhythmSomen.prefab"),
+}`
+	if err := os.WriteFile(filepath.Join(dir, "scene.go"), []byte(specs), 0o644); err != nil {
+		t.Fatal(err)
+	}
+
+	got := scanExtractSpecs(dir)
+	for _, id := range []string{"karateman", "rhythmSomen"} {
+		if !got[id] {
+			t.Fatalf("missing extract spec %s in %v", id, got)
+		}
+	}
+}
