@@ -1,0 +1,644 @@
+{
+ "SumoGHead": {
+  "default": "empty",
+  "states": {
+   "SumoGIdle": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGIdle",
+    "speed": 1
+   },
+   "SumoGPose1": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose1",
+    "speed": 1
+   },
+   "SumoGPose2": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose2",
+    "speed": 1
+   },
+   "SumoGPose3": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose3",
+    "speed": 1
+   },
+   "SumoGPose4": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose4",
+    "speed": 1
+   },
+   "SumoGPose6": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose6",
+    "speed": 1
+   },
+   "SumoGPoseAlt4": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPoseAlt4",
+    "speed": 1
+   },
+   "SumoGSlap": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGSlap",
+    "speed": 1
+   },
+   "SumoGSlapLook": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGSlapLook",
+    "speed": 1
+   },
+   "SumoGStomp": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGStomp",
+    "speed": 1
+   },
+   "SumoNerd": {
+    "clip": "Animations/SumoBrothers/Heads/SumoNerd",
+    "speed": 1
+   },
+   "SumoPIdle": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPIdle",
+    "speed": 1
+   },
+   "SumoPMiss": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPMiss",
+    "speed": 1
+   },
+   "SumoPPose1": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose1",
+    "speed": 1
+   },
+   "SumoPPose2": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose2",
+    "speed": 1
+   },
+   "SumoPPose3": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose3",
+    "speed": 1
+   },
+   "SumoPPose4": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose4",
+    "speed": 1
+   },
+   "SumoPPose6": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose6",
+    "speed": 1
+   },
+   "SumoPPoseBarely1": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely1",
+    "speed": 1
+   },
+   "SumoPPoseBarely2": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely2",
+    "speed": 1
+   },
+   "SumoPPoseBarely3": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely3",
+    "speed": 1
+   },
+   "SumoPPoseBarely4": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely4",
+    "speed": 1
+   },
+   "SumoPPoseBarely6": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely6",
+    "speed": 1
+   },
+   "SumoPSlap": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPSlap",
+    "speed": 1
+   },
+   "SumoPSlapBarely": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPSlapBarely",
+    "speed": 1
+   },
+   "SumoPSlapLook": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPSlapLook",
+    "speed": 1
+   },
+   "SumoPSlapLookBarely": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPSlapLookBarely",
+    "speed": 1
+   },
+   "SumoPStomp": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPStomp",
+    "speed": 1
+   },
+   "SumoPStompBarely": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPStompBarely",
+    "speed": 1
+   },
+   "SumoUncanny": {
+    "clip": "Animations/SumoBrothers/Heads/SumoUncanny",
+    "speed": 1
+   },
+   "empty": {
+    "clip": "Animations/SumoBrothers/Heads/empty",
+    "speed": 1
+   }
+  }
+ },
+ "SumoPHead": {
+  "default": "empty",
+  "states": {
+   "SumoGIdle": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGIdle",
+    "speed": 0
+   },
+   "SumoGPose1": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose1",
+    "speed": 1
+   },
+   "SumoGPose2": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose2",
+    "speed": 1
+   },
+   "SumoGPose3": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose3",
+    "speed": 1
+   },
+   "SumoGPose4": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose4",
+    "speed": 1
+   },
+   "SumoGPose6": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPose6",
+    "speed": 1
+   },
+   "SumoGPoseAlt4": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGPoseAlt4",
+    "speed": 1
+   },
+   "SumoGSlap": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGSlap",
+    "speed": 0
+   },
+   "SumoGSlapLook": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGSlapLook",
+    "speed": 1
+   },
+   "SumoGStomp": {
+    "clip": "Animations/SumoBrothers/Heads/SumoGStomp",
+    "speed": 1
+   },
+   "SumoNerd": {
+    "clip": "Animations/SumoBrothers/Heads/SumoNerd",
+    "speed": 1
+   },
+   "SumoPIdle": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPIdle",
+    "speed": 1
+   },
+   "SumoPMiss": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPMiss",
+    "speed": 1
+   },
+   "SumoPPose1": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose1",
+    "speed": 1
+   },
+   "SumoPPose2": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose2",
+    "speed": 1
+   },
+   "SumoPPose3": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose3",
+    "speed": 1
+   },
+   "SumoPPose4": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose4",
+    "speed": 1
+   },
+   "SumoPPose6": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPose6",
+    "speed": 1
+   },
+   "SumoPPoseBarely1": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely1",
+    "speed": 1
+   },
+   "SumoPPoseBarely2": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely2",
+    "speed": 1
+   },
+   "SumoPPoseBarely3": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely3",
+    "speed": 1
+   },
+   "SumoPPoseBarely4": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely4",
+    "speed": 1
+   },
+   "SumoPPoseBarely6": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPPoseBarely6",
+    "speed": 1
+   },
+   "SumoPSlap": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPSlap",
+    "speed": 0
+   },
+   "SumoPSlapBarely": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPSlapBarely",
+    "speed": 1
+   },
+   "SumoPSlapLook": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPSlapLook",
+    "speed": 1
+   },
+   "SumoPSlapLookBarely": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPSlapLookBarely",
+    "speed": 1
+   },
+   "SumoPStomp": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPStomp",
+    "speed": 1
+   },
+   "SumoPStompBarely": {
+    "clip": "Animations/SumoBrothers/Heads/SumoPStompBarely",
+    "speed": 1
+   },
+   "SumoUncanny": {
+    "clip": "Animations/SumoBrothers/Heads/SumoUncanny",
+    "speed": 1
+   },
+   "empty": {
+    "clip": "Animations/SumoBrothers/Heads/empty",
+    "speed": 1
+   }
+  }
+ },
+ "YaseiNoIkiG3M4": {
+  "default": "wwwwwwwwwi wiwwild",
+  "states": {
+   "JORKIN": {
+    "clip": "Animations/JORKIN",
+    "speed": 1
+   },
+   "wwwwwwwwwi wiwwild": {
+    "clip": "Animations/wwwwwwwwwi wiwwild",
+    "speed": 1
+   }
+  }
+ },
+ "bgGreatWave": {
+  "default": "empty",
+  "states": {
+   "GreatWave": {
+    "clip": "Animations/backgrounds/GreatWave",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "GreatWaveIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "GreatWaveDark": {
+    "clip": "Animations/backgrounds/GreatWaveDark",
+    "speed": 1
+   },
+   "GreatWaveIdle": {
+    "clip": "Animations/backgrounds/GreatWaveIdle",
+    "speed": 1
+   },
+   "Nerd": {
+    "clip": "Animations/backgrounds/Nerd",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NerdIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NerdDark": {
+    "clip": "Animations/backgrounds/NerdDark",
+    "speed": 1
+   },
+   "NerdIdle": {
+    "clip": "Animations/backgrounds/NerdIdle",
+    "speed": 1
+   },
+   "OtaniOniji": {
+    "clip": "Animations/backgrounds/OtaniOniji",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "OtaniOnijiIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "OtaniOnijiDark": {
+    "clip": "Animations/backgrounds/OtaniOnijiDark",
+    "speed": 1
+   },
+   "OtaniOnijiIdle": {
+    "clip": "Animations/backgrounds/OtaniOnijiIdle",
+    "speed": 1
+   },
+   "empty": {
+    "clip": "Animations/backgrounds/empty",
+    "speed": 1
+   }
+  }
+ },
+ "glasses": {
+  "default": "glassesGone",
+  "states": {
+   "glassesGone": {
+    "clip": "Animations/glassesGone",
+    "speed": 1
+   },
+   "glassesLand": {
+    "clip": "Animations/glassesLand",
+    "speed": 1
+   },
+   "glassesThrow": {
+    "clip": "Animations/glassesThrow",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "glassesLand",
+      "exitTime": 0,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "impact": {
+  "default": "impactGone",
+  "states": {
+   "impact": {
+    "clip": "Animations/impact",
+    "speed": 1
+   },
+   "impactGone": {
+    "speed": 1
+   }
+  }
+ },
+ "inuSensei": {
+  "default": "InuIdle",
+  "states": {
+   "InuAlarm": {
+    "clip": "Animations/inuSensei/InuAlarm",
+    "speed": 1
+   },
+   "InuBeatChange": {
+    "clip": "Animations/inuSensei/InuBeatChange",
+    "speed": 1
+   },
+   "InuBop": {
+    "clip": "Animations/inuSensei/InuBop",
+    "speed": 1
+   },
+   "InuBopMiss": {
+    "clip": "Animations/inuSensei/InuBopMiss",
+    "speed": 1
+   },
+   "InuCrouch": {
+    "clip": "Animations/inuSensei/InuCrouch",
+    "speed": 1
+   },
+   "InuFloat": {
+    "clip": "Animations/inuSensei/InuFloat",
+    "speed": 1
+   },
+   "InuFloatMiss": {
+    "clip": "Animations/inuSensei/InuFloatMiss",
+    "speed": 1
+   },
+   "InuIdle": {
+    "clip": "Animations/inuSensei/InuIdle",
+    "speed": 1
+   }
+  }
+ },
+ "sumoBrotherP": {
+  "default": "SumoIdle",
+  "states": {
+   "SumoBop": {
+    "clip": "Animations/SumoBrothers/SumoBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "SumoIdle",
+      "exitTime": 7.1009145e-9,
+      "duration": 0.29435793
+     }
+    ]
+   },
+   "SumoCrouch": {
+    "clip": "Animations/SumoBrothers/SumoCrouch",
+    "speed": 1
+   },
+   "SumoIdle": {
+    "clip": "Animations/SumoBrothers/SumoIdle",
+    "speed": 1
+   },
+   "SumoPoseG1": {
+    "clip": "Animations/SumoBrothers/SumoPoseG1",
+    "speed": 1
+   },
+   "SumoPoseG2": {
+    "clip": "Animations/SumoBrothers/SumoPoseG2",
+    "speed": 1
+   },
+   "SumoPoseG3": {
+    "clip": "Animations/SumoBrothers/SumoPoseG3",
+    "speed": 1
+   },
+   "SumoPoseG4": {
+    "clip": "Animations/SumoBrothers/SumoPoseG4",
+    "speed": 1
+   },
+   "SumoPoseG4Alt": {
+    "clip": "Animations/SumoBrothers/SumoPoseG4Alt",
+    "speed": 1
+   },
+   "SumoPoseG6": {
+    "clip": "Animations/SumoBrothers/SumoPoseG6",
+    "speed": 1
+   },
+   "SumoPoseGBop1": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBop1",
+    "speed": 1
+   },
+   "SumoPoseGBop2": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBop2",
+    "speed": 1
+   },
+   "SumoPoseGBop3": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBop3",
+    "speed": 1
+   },
+   "SumoPoseGBop4": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBop4",
+    "speed": 1
+   },
+   "SumoPoseGBop6": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBop6",
+    "speed": 1
+   },
+   "SumoPoseGBopMiss1": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBopMiss1",
+    "speed": 1
+   },
+   "SumoPoseGBopMiss2": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBopMiss2",
+    "speed": 1
+   },
+   "SumoPoseGBopMiss3": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBopMiss3",
+    "speed": 1
+   },
+   "SumoPoseGBopMiss4": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBopMiss4",
+    "speed": 1
+   },
+   "SumoPoseGBopMiss6": {
+    "clip": "Animations/SumoBrothers/SumoPoseGBopMiss6",
+    "speed": 1
+   },
+   "SumoPoseGMiss1": {
+    "clip": "Animations/SumoBrothers/SumoPoseGMiss1",
+    "speed": 1
+   },
+   "SumoPoseGMiss2": {
+    "clip": "Animations/SumoBrothers/SumoPoseGMiss2",
+    "speed": 1
+   },
+   "SumoPoseGMiss3": {
+    "clip": "Animations/SumoBrothers/SumoPoseGMiss3",
+    "speed": 1
+   },
+   "SumoPoseGMiss4": {
+    "clip": "Animations/SumoBrothers/SumoPoseGMiss4",
+    "speed": 1
+   },
+   "SumoPoseGMiss6": {
+    "clip": "Animations/SumoBrothers/SumoPoseGMiss6",
+    "speed": 1
+   },
+   "SumoPoseP1": {
+    "clip": "Animations/SumoBrothers/SumoPoseP1",
+    "speed": 1
+   },
+   "SumoPoseP2": {
+    "clip": "Animations/SumoBrothers/SumoPoseP2",
+    "speed": 1
+   },
+   "SumoPoseP3": {
+    "clip": "Animations/SumoBrothers/SumoPoseP3",
+    "speed": 1
+   },
+   "SumoPoseP4": {
+    "clip": "Animations/SumoBrothers/SumoPoseP4",
+    "speed": 1
+   },
+   "SumoPoseP6": {
+    "clip": "Animations/SumoBrothers/SumoPoseP6",
+    "speed": 1
+   },
+   "SumoPosePBop1": {
+    "clip": "Animations/SumoBrothers/SumoPosePBop1",
+    "speed": 1
+   },
+   "SumoPosePBop2": {
+    "clip": "Animations/SumoBrothers/SumoPosePBop2",
+    "speed": 1
+   },
+   "SumoPosePBop3": {
+    "clip": "Animations/SumoBrothers/SumoPosePBop3",
+    "speed": 1
+   },
+   "SumoPosePBop4": {
+    "clip": "Animations/SumoBrothers/SumoPosePBop4",
+    "speed": 1
+   },
+   "SumoPosePBop6": {
+    "clip": "Animations/SumoBrothers/SumoPosePBop6",
+    "speed": 1
+   },
+   "SumoPosePBopMiss1": {
+    "clip": "Animations/SumoBrothers/SumoPosePBopMiss1",
+    "speed": 1
+   },
+   "SumoPosePBopMiss2": {
+    "clip": "Animations/SumoBrothers/SumoPosePBopMiss2",
+    "speed": 1
+   },
+   "SumoPosePBopMiss3": {
+    "clip": "Animations/SumoBrothers/SumoPosePBopMiss3",
+    "speed": 1
+   },
+   "SumoPosePBopMiss4": {
+    "clip": "Animations/SumoBrothers/SumoPosePBopMiss4",
+    "speed": 1
+   },
+   "SumoPosePBopMiss6": {
+    "clip": "Animations/SumoBrothers/SumoPosePBopMiss6",
+    "speed": 1
+   },
+   "SumoPosePMiss1": {
+    "clip": "Animations/SumoBrothers/SumoPosePMiss1",
+    "speed": 1
+   },
+   "SumoPosePMiss2": {
+    "clip": "Animations/SumoBrothers/SumoPosePMiss2",
+    "speed": 1
+   },
+   "SumoPosePMiss3": {
+    "clip": "Animations/SumoBrothers/SumoPosePMiss3",
+    "speed": 1
+   },
+   "SumoPosePMiss4": {
+    "clip": "Animations/SumoBrothers/SumoPosePMiss4",
+    "speed": 1
+   },
+   "SumoPosePMiss6": {
+    "clip": "Animations/SumoBrothers/SumoPosePMiss6",
+    "speed": 1
+   },
+   "SumoPoseSwitch": {
+    "clip": "Animations/SumoBrothers/SumoPoseSwitch",
+    "speed": 1
+   },
+   "SumoSlapBack": {
+    "clip": "Animations/SumoBrothers/SumoSlapBack",
+    "speed": 1
+   },
+   "SumoSlapFront": {
+    "clip": "Animations/SumoBrothers/SumoSlapFront",
+    "speed": 1
+   },
+   "SumoSlapMiss": {
+    "clip": "Animations/SumoBrothers/SumoSlapMiss",
+    "speed": 1
+   },
+   "SumoSlapPrepare": {
+    "clip": "Animations/SumoBrothers/SumoSlapPrepare",
+    "speed": 1
+   },
+   "SumoSlapToStomp": {
+    "clip": "Animations/SumoBrothers/SumoSlapToStomp",
+    "speed": 1
+   },
+   "SumoStompL": {
+    "clip": "Animations/SumoBrothers/SumoStompL",
+    "speed": 1
+   },
+   "SumoStompMiss": {
+    "clip": "Animations/SumoBrothers/SumoStompMiss",
+    "speed": 1
+   },
+   "SumoStompPrepareL": {
+    "clip": "Animations/SumoBrothers/SumoStompPrepareL",
+    "speed": 1
+   },
+   "SumoStompPrepareR": {
+    "clip": "Animations/SumoBrothers/SumoStompPrepareR",
+    "speed": 1
+   },
+   "SumoStompR": {
+    "clip": "Animations/SumoBrothers/SumoStompR",
+    "speed": 1
+   }
+  }
+ }
+}

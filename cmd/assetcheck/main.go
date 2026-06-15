@@ -144,7 +144,20 @@ func resolveAnimPath(game, root, rel string, nodes map[string]bool) string {
 	if rel != "" {
 		full = root + "/" + rel
 	}
-	if nodes[full] || game != "nightWalkAgb" || !strings.HasPrefix(root, "JumpPlatform/rollPlatform/RodHolder") {
+	if nodes[full] {
+		return full
+	}
+	if game == "sumoBrothers" {
+		switch {
+		case root == "backgroundChanges/bgStatic" && rel == "mask" && nodes["backgroundChanges/bgMove/mask"]:
+			return "backgroundChanges/bgMove/mask"
+		case (root == "sumoBrotherP" || root == "sumoBrotherG") && rel == "head/head" && nodes[root+"/head/headdy"]:
+			return root + "/head/headdy"
+		case root == "sumoBrotherG" && rel == "effects/stompEffect2" && nodes["sumoBrotherP/effects/stompEffect2"]:
+			return "sumoBrotherP/effects/stompEffect2"
+		}
+	}
+	if game != "nightWalkAgb" || !strings.HasPrefix(root, "JumpPlatform/rollPlatform/RodHolder") {
 		return full
 	}
 	// Night Walk GBA reuses JumpPlatform.controller on the roll RodHolder.

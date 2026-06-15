@@ -1,0 +1,28 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "cameraX": 0,
+    "cameraXNew": 0,
+    "stompShakeSpeed": 0.125
+   },
+   "refs": {
+    "backgroundMaterial": "BGColor",
+    "bgBtm": "background/backgroundExtend2",
+    "bgMove": "backgroundChanges/bgMove",
+    "bgStatic": "backgroundChanges/bgStatic",
+    "bgTop": "background/backgroundExtend",
+    "confetti": "confetti/leftfetti",
+    "glasses": "misc/glasses",
+    "impact": "misc/impact",
+    "inuSensei": "inuSensei",
+    "mawashiMaterial": "Mawashis",
+    "sumoBrotherG": "sumoBrotherG",
+    "sumoBrotherGHead": "sumoBrotherG/head/headdy",
+    "sumoBrotherP": "sumoBrotherP",
+    "sumoBrotherPHead": "sumoBrotherP/head/headdy"
+   }
+  }
+ }
+}

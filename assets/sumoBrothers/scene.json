@@ -1,0 +1,3114 @@
+{
+ "nodes": [
+  {
+   "name": "sumoBrothers",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "background",
+   "path": "background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    140,
+    2.08
+   ],
+   "sprite": "background",
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.96,
+    2.64
+   ],
+   "sortGroup": [
+    0,
+    -100
+   ],
+   "mapped": true,
+   "mat": "BGColor"
+  },
+  {
+   "name": "backgroundGlow",
+   "path": "background/backgroundGlow",
+   "parent": 1,
+   "pos": [
+    0,
+    -3.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "backgroundGlow",
+   "order": -999,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.88,
+    1.76
+   ]
+  },
+  {
+   "name": "backgroundExtend",
+   "path": "background/backgroundExtend",
+   "parent": 1,
+   "pos": [
+    0,
+    8.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.64,
+    20
+   ],
+   "order": -1001,
+   "color": [
+    1,
+    1,
+    0.011764707,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "backgroundExtend2",
+   "path": "background/backgroundExtend2",
+   "parent": 1,
+   "pos": [
+    0,
+    -8.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.64,
+    20
+   ],
+   "order": -1002,
+   "color": [
+    1,
+    1,
+    0.45098042,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "backgroundChanges",
+   "path": "backgroundChanges",
+   "parent": 0,
+   "pos": [
+    0.01,
+    -0.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.08,
+    2.08
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -90
+   ]
+  },
+  {
+   "name": "bgMove",
+   "path": "backgroundChanges/bgMove",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bgGreatWave",
+   "order": -49,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.91,
+    5.27
+   ],
+   "sortGroup": [
+    0,
+    1
+   ],
+   "maskIn": 1
+  },
+  {
+   "name": "mask",
+   "path": "backgroundChanges/bgMove/mask",
+   "parent": 6,
+   "pos": [
+    10.4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bgGreatWave",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    9.91,
+    5.27
+   ],
+   "mask": true
+  },
+  {
+   "name": "bumpsL",
+   "path": "backgroundChanges/bgMove/mask/bumpsL",
+   "parent": 7,
+   "pos": [
+    -5.3028,
+    0
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mask1",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    5.55,
+    0.7
+   ],
+   "mask": true
+  },
+  {
+   "name": "bumpsR",
+   "path": "backgroundChanges/bgMove/mask/bumpsR",
+   "parent": 7,
+   "pos": [
+    5.3028,
+    0
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mask1",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    5.55,
+    0.7
+   ],
+   "mask": true
+  },
+  {
+   "name": "bumpsB",
+   "path": "backgroundChanges/bgMove/mask/bumpsB",
+   "parent": 7,
+   "pos": [
+    0,
+    -2.979
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mask2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.24,
+    0.7
+   ],
+   "mask": true
+  },
+  {
+   "name": "bumpsT",
+   "path": "backgroundChanges/bgMove/mask/bumpsT",
+   "parent": 7,
+   "pos": [
+    0,
+    2.983
+   ],
+   "rotZ": 3.141592653589793,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "mask2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.24,
+    0.7
+   ],
+   "mask": true
+  },
+  {
+   "name": "bgStatic",
+   "path": "backgroundChanges/bgStatic",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "backgroundold",
+   "order": -49,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.91,
+    5.27
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "inuSenseiPlatform",
+   "path": "inuSenseiPlatform",
+   "parent": 0,
+   "pos": [
+    0.02,
+    -0.846
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.074,
+    2.074
+   ],
+   "sprite": "inuSenseiPlatform",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.64,
+    1.11
+   ],
+   "sortGroup": [
+    0,
+    -70
+   ]
+  },
+  {
+   "name": "ground",
+   "path": "ground",
+   "parent": 0,
+   "pos": [
+    0,
+    -2.862
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.084,
+    2.084
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -60
+   ]
+  },
+  {
+   "name": "groundL",
+   "path": "ground/groundL",
+   "parent": 14,
+   "pos": [
+    0.023,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ground",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.95,
+    2.7
+   ]
+  },
+  {
+   "name": "groundR",
+   "path": "ground/groundR",
+   "parent": 14,
+   "pos": [
+    -0.023,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "ground",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.95,
+    2.7
+   ]
+  },
+  {
+   "name": "groundExtend",
+   "path": "ground/groundExtend",
+   "parent": 14,
+   "pos": [
+    0,
+    -10.82
+   ],
+   "rotZ": 0,
+   "scale": [
+    11.829995,
+    20
+   ],
+   "order": -1001,
+   "color": [
+    0.87843144,
+    0.8117648,
+    0.7137255,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "inuSensei",
+   "path": "inuSensei",
+   "parent": 0,
+   "pos": [
+    0.05,
+    2.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.08,
+    2.08
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52000004,
+    0.68
+   ],
+   "sortGroup": [
+    0,
+    -2
+   ]
+  },
+  {
+   "name": "body",
+   "path": "inuSensei/body",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bodyMain",
+   "path": "inuSensei/body/bodyMain",
+   "parent": 19,
+   "pos": [
+    -0.007,
+    -0.362
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "inuIdle",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.005,
+    1
+   ]
+  },
+  {
+   "name": "bow",
+   "path": "inuSensei/body/bow",
+   "parent": 19,
+   "pos": [
+    -0.0051,
+    -0.1833
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "inuCollar",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "name": "ears",
+   "path": "inuSensei/body/ears",
+   "parent": 19,
+   "pos": [
+    0,
+    0.6599999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "inuEarL",
+   "path": "inuSensei/body/ears/inuEarL",
+   "parent": 22,
+   "pos": [
+    -0.25,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "inuEar",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "name": "inuEarR",
+   "path": "inuSensei/body/ears/inuEarR",
+   "parent": 22,
+   "pos": [
+    0.25,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "inuEar",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "name": "head",
+   "path": "inuSensei/head",
+   "parent": 18,
+   "pos": [
+    -0.009,
+    0.001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "inuHead",
+   "path": "inuSensei/head/inuHead",
+   "parent": 25,
+   "pos": [
+    0,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "inuHead",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "inuMouth",
+   "path": "inuSensei/head/inuMouth",
+   "parent": 25,
+   "pos": [
+    0,
+    2.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "inuMouth",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5,
+    0.5
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "inuSensei/shadow",
+   "parent": 18,
+   "pos": [
+    0,
+    -0.676
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "inuShadow",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "fan",
+   "path": "inuSensei/fan",
+   "parent": 18,
+   "pos": [
+    0.3,
+    -0.215
+   ],
+   "rotZ": -0.6981315651864876,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "inuFan",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.44,
+    0.68
+   ]
+  },
+  {
+   "name": "sumoBrotherG",
+   "path": "sumoBrotherG",
+   "parent": 0,
+   "pos": [
+    -3.9,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.96,
+    2.96
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "head",
+   "path": "sumoBrotherG/head",
+   "parent": 30,
+   "pos": [
+    0.61800003,
+    0.4000001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "headdy",
+   "path": "sumoBrotherG/head/headdy",
+   "parent": 31,
+   "pos": [
+    0,
+    -0.002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoIdleG",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.84
+   ]
+  },
+  {
+   "name": "body",
+   "path": "sumoBrotherG/body",
+   "parent": 30,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bodyMain",
+   "path": "sumoBrotherG/body/bodyMain",
+   "parent": 33,
+   "pos": [
+    0.07299992,
+    0.059000045
+   ],
+   "rotZ": 0.17453299908797273,
+   "scale": [
+    0.9999999,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoIdle1",
+   "order": 11,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8,
+    1.32
+   ]
+  },
+  {
+   "name": "legs",
+   "path": "sumoBrotherG/body/legs",
+   "parent": 33,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "feet",
+   "path": "sumoBrotherG/body/legs/feet",
+   "parent": 35,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "foot1",
+   "path": "sumoBrotherG/body/legs/feet/foot1",
+   "parent": 36,
+   "pos": [
+    0.463,
+    -0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoFoot2",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.36
+   ]
+  },
+  {
+   "name": "foot2",
+   "path": "sumoBrotherG/body/legs/feet/foot2",
+   "parent": 36,
+   "pos": [
+    -0.81,
+    -0.513
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoFoot1",
+   "order": 14,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.36
+   ]
+  },
+  {
+   "name": "legR",
+   "path": "sumoBrotherG/body/legs/legR",
+   "parent": 35,
+   "pos": [
+    0.45199993,
+    -0.079999946
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoIdle3",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    1.08
+   ]
+  },
+  {
+   "name": "legR2",
+   "path": "sumoBrotherG/body/legs/legR2",
+   "parent": 35,
+   "pos": [
+    0.365,
+    -0.085
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_24",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    0.85
+   ]
+  },
+  {
+   "name": "legL",
+   "path": "sumoBrotherG/body/legs/legL",
+   "parent": 35,
+   "pos": [
+    -0.19700004,
+    -0.06999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoIdle2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.16,
+    1.08
+   ]
+  },
+  {
+   "name": "legL2",
+   "path": "sumoBrotherG/body/legs/legL2",
+   "parent": 35,
+   "pos": [
+    -0.458,
+    -0.085
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_24",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    0.85
+   ]
+  },
+  {
+   "name": "arms",
+   "path": "sumoBrotherG/body/arms",
+   "parent": 33,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "armL",
+   "path": "sumoBrotherG/body/arms/armL",
+   "parent": 43,
+   "pos": [
+    0.227,
+    0.64
+   ],
+   "rotZ": 0.2094395027715192,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_22",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.45
+   ]
+  },
+  {
+   "name": "armL2",
+   "path": "sumoBrotherG/body/arms/armL2",
+   "parent": 43,
+   "pos": [
+    0.7199,
+    0.6143
+   ],
+   "rotZ": 0.4363322585636825,
+   "scale": [
+    1.2,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.55,
+    0.325
+   ]
+  },
+  {
+   "name": "handL",
+   "path": "sumoBrotherG/body/arms/handL",
+   "parent": 43,
+   "pos": [
+    1.3175676,
+    0.8445946
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33783785,
+    0.33783785
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_31",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.375,
+    0.375
+   ]
+  },
+  {
+   "name": "armR",
+   "path": "sumoBrotherG/body/arms/armR",
+   "parent": 43,
+   "pos": [
+    -0.305,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_28",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.45
+   ]
+  },
+  {
+   "name": "armR2",
+   "path": "sumoBrotherG/body/arms/armR2",
+   "parent": 43,
+   "pos": [
+    -0.42499998,
+    0.581
+   ],
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_6",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.55,
+    0.325
+   ]
+  },
+  {
+   "name": "handR",
+   "path": "sumoBrotherG/body/arms/handR",
+   "parent": 43,
+   "pos": [
+    1.3175676,
+    0.8445946
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33783785,
+    0.33783785
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_31",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.375,
+    0.375
+   ]
+  },
+  {
+   "name": "mawashi",
+   "path": "sumoBrotherG/mawashi",
+   "parent": 30,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mawashi1",
+   "path": "sumoBrotherG/mawashi/mawashi1",
+   "parent": 50,
+   "pos": [
+    -0.474,
+    0.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoMawashi2",
+   "order": 12,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    1.08
+   ],
+   "mapped": true,
+   "mat": "Mawashis"
+  },
+  {
+   "name": "mawashi2",
+   "path": "sumoBrotherG/mawashi/mawashi2",
+   "parent": 50,
+   "pos": [
+    0.073,
+    -0.046
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoMawashi4",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    1.08
+   ],
+   "mapped": true,
+   "mat": "Mawashis"
+  },
+  {
+   "name": "mawashipose",
+   "path": "sumoBrotherG/mawashi/mawashipose",
+   "parent": 50,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mawashi3",
+   "path": "sumoBrotherG/mawashi/mawashipose/mawashi3",
+   "parent": 53,
+   "pos": [
+    0.072999984,
+    -0.045999967
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoMawashi4",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.84,
+    1.08
+   ]
+  },
+  {
+   "name": "mawashi4",
+   "path": "sumoBrotherG/mawashi/mawashipose/mawashi4",
+   "parent": 53,
+   "pos": [
+    0.072999984,
+    -0.045999967
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1.3
+   ],
+   "sprite": "sumou_brothers/sumoMawashi3",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    0.3921569,
+    0.38431376,
+    0.9686275,
+    1
+   ],
+   "size": [
+    0.84,
+    1.08
+   ]
+  },
+  {
+   "name": "rope1",
+   "path": "sumoBrotherG/mawashi/mawashipose/rope1",
+   "parent": 53,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "rope2",
+   "path": "sumoBrotherG/mawashi/mawashipose/rope2",
+   "parent": 53,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "rope3",
+   "path": "sumoBrotherG/mawashi/mawashipose/rope3",
+   "parent": 53,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "rope4",
+   "path": "sumoBrotherG/mawashi/mawashipose/rope4",
+   "parent": 53,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "rope5",
+   "path": "sumoBrotherG/mawashi/mawashipose/rope5",
+   "parent": 53,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "sumoBrotherG/shadow",
+   "parent": 30,
+   "pos": [
+    0.01999998,
+    -0.5350001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1.4000001
+   ],
+   "sprite": "sumou_brothers/sumoShadow",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8,
+    0.44
+   ]
+  },
+  {
+   "name": "effects",
+   "path": "sumoBrotherG/effects",
+   "parent": 30,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "speedLines",
+   "path": "sumoBrotherG/effects/speedLines",
+   "parent": 62,
+   "pos": [
+    0.042,
+    0.357
+   ],
+   "rotZ": 0.38397228224205676,
+   "scale": [
+    2.5,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoSlapWhoosh",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    0.44
+   ]
+  },
+  {
+   "name": "stompEffect",
+   "path": "sumoBrotherG/effects/stompEffect",
+   "parent": 62,
+   "pos": [
+    -0.518,
+    -0.582
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    0.6
+   ],
+   "sprite": "sumou_brothers/slapMiss",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    1
+   ]
+  },
+  {
+   "name": "stompDust",
+   "path": "sumoBrotherG/effects/stompDust",
+   "parent": 62,
+   "pos": [
+    -0.977,
+    -0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/smoke",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    0.6666667,
+    0.6666667,
+    0.54901963,
+    0.78431374
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "sumoBrotherP",
+   "path": "sumoBrotherP",
+   "parent": 0,
+   "pos": [
+    3.9,
+    -2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.96,
+    2.96
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "head",
+   "path": "sumoBrotherP/head",
+   "parent": 66,
+   "pos": [
+    0.618,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "headdy",
+   "path": "sumoBrotherP/head/headdy",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoIdle",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.84
+   ]
+  },
+  {
+   "name": "body",
+   "path": "sumoBrotherP/body",
+   "parent": 66,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bodyMain",
+   "path": "sumoBrotherP/body/bodyMain",
+   "parent": 69,
+   "pos": [
+    0.073,
+    0.059
+   ],
+   "rotZ": 0.17453299908797273,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoIdle1",
+   "order": 11,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8,
+    1.32
+   ]
+  },
+  {
+   "name": "legs",
+   "path": "sumoBrotherP/body/legs",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "feet",
+   "path": "sumoBrotherP/body/legs/feet",
+   "parent": 71,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "foot1",
+   "path": "sumoBrotherP/body/legs/feet/foot1",
+   "parent": 72,
+   "pos": [
+    0.463,
+    -0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoFoot2",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.36
+   ]
+  },
+  {
+   "name": "foot2",
+   "path": "sumoBrotherP/body/legs/feet/foot2",
+   "parent": 72,
+   "pos": [
+    -0.81,
+    -0.513
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoFoot1",
+   "order": 14,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.36
+   ]
+  },
+  {
+   "name": "legR",
+   "path": "sumoBrotherP/body/legs/legR",
+   "parent": 71,
+   "pos": [
+    0.452,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoIdle3",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    1.08
+   ]
+  },
+  {
+   "name": "legR2",
+   "path": "sumoBrotherP/body/legs/legR2",
+   "parent": 71,
+   "pos": [
+    0.365,
+    -0.085
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_24",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    0.85
+   ]
+  },
+  {
+   "name": "legL",
+   "path": "sumoBrotherP/body/legs/legL",
+   "parent": 71,
+   "pos": [
+    -0.19699997,
+    -0.07000002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoIdle2",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.16,
+    1.08
+   ]
+  },
+  {
+   "name": "legL2",
+   "path": "sumoBrotherP/body/legs/legL2",
+   "parent": 71,
+   "pos": [
+    -0.458,
+    -0.085
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_24",
+   "order": 7,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.4,
+    0.85
+   ]
+  },
+  {
+   "name": "arms",
+   "path": "sumoBrotherP/body/arms",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "armL",
+   "path": "sumoBrotherP/body/arms/armL",
+   "parent": 79,
+   "pos": [
+    0.227,
+    0.64
+   ],
+   "rotZ": 0.2094395027715192,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_22",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    0.45
+   ]
+  },
+  {
+   "name": "armL2",
+   "path": "sumoBrotherP/body/arms/armL2",
+   "parent": 79,
+   "pos": [
+    0.7199,
+    0.6143
+   ],
+   "rotZ": 0.4363322585636825,
+   "scale": [
+    1.2,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.55,
+    0.325
+   ]
+  },
+  {
+   "name": "handL",
+   "path": "sumoBrotherP/body/arms/handL",
+   "parent": 79,
+   "pos": [
+    1.3175676,
+    0.8445946
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33783785,
+    0.3378378
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_31",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.375,
+    0.375
+   ]
+  },
+  {
+   "name": "armR",
+   "path": "sumoBrotherP/body/arms/armR",
+   "parent": 79,
+   "pos": [
+    -0.305,
+    0.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_28",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.45
+   ]
+  },
+  {
+   "name": "armR2",
+   "path": "sumoBrotherP/body/arms/armR2",
+   "parent": 79,
+   "pos": [
+    -0.43299988,
+    0.5810001
+   ],
+   "rotZ": 1.0471975549810364,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_6",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.55,
+    0.325
+   ]
+  },
+  {
+   "name": "handR",
+   "path": "sumoBrotherP/body/arms/handR",
+   "parent": 79,
+   "pos": [
+    1.3175676,
+    0.8445946
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3378378,
+    0.3378378
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_31",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.375,
+    0.375
+   ]
+  },
+  {
+   "name": "mawashi",
+   "path": "sumoBrotherP/mawashi",
+   "parent": 66,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mawashi1",
+   "path": "sumoBrotherP/mawashi/mawashi1",
+   "parent": 86,
+   "pos": [
+    -0.474,
+    0.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoMawashi2",
+   "order": 12,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.84,
+    1.08
+   ],
+   "mapped": true,
+   "mat": "Mawashis"
+  },
+  {
+   "name": "mawashi2",
+   "path": "sumoBrotherP/mawashi/mawashi2",
+   "parent": 86,
+   "pos": [
+    0.073,
+    -0.046
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoMawashi4",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    0.84,
+    1.08
+   ],
+   "mapped": true,
+   "mat": "Mawashis"
+  },
+  {
+   "name": "mawashipose",
+   "path": "sumoBrotherP/mawashi/mawashipose",
+   "parent": 86,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mawashi3",
+   "path": "sumoBrotherP/mawashi/mawashipose/mawashi3",
+   "parent": 89,
+   "pos": [
+    0.072999984,
+    -0.045999967
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoMawashi4",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.84,
+    1.08
+   ]
+  },
+  {
+   "name": "mawashi4",
+   "path": "sumoBrotherP/mawashi/mawashipose/mawashi4",
+   "parent": 89,
+   "pos": [
+    1.3175676,
+    0.8445946
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33783785,
+    0.3378378
+   ],
+   "sprite": "sumou_brothers/sumoMawashi3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    0.68
+   ]
+  },
+  {
+   "name": "rope1",
+   "path": "sumoBrotherP/mawashi/mawashipose/rope1",
+   "parent": 89,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "rope2",
+   "path": "sumoBrotherP/mawashi/mawashipose/rope2",
+   "parent": 89,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "rope3",
+   "path": "sumoBrotherP/mawashi/mawashipose/rope3",
+   "parent": 89,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "rope4",
+   "path": "sumoBrotherP/mawashi/mawashipose/rope4",
+   "parent": 89,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "rope5",
+   "path": "sumoBrotherP/mawashi/mawashipose/rope5",
+   "parent": 89,
+   "pos": [
+    1.6963,
+    -0.3642
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "sumou_brothers/sumou_brothers_63",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.75
+   ]
+  },
+  {
+   "name": "shadow",
+   "path": "sumoBrotherP/shadow",
+   "parent": 66,
+   "pos": [
+    0.02,
+    -0.535
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1.4
+   ],
+   "sprite": "sumou_brothers/sumoShadow",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8,
+    0.44
+   ]
+  },
+  {
+   "name": "effects",
+   "path": "sumoBrotherP/effects",
+   "parent": 66,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "speedLines",
+   "path": "sumoBrotherP/effects/speedLines",
+   "parent": 98,
+   "pos": [
+    0.042,
+    0.357
+   ],
+   "rotZ": 0.38397228224205676,
+   "scale": [
+    2.5,
+    1
+   ],
+   "sprite": "sumou_brothers/sumoSlapWhoosh",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    0.44
+   ]
+  },
+  {
+   "name": "stompEffect",
+   "path": "sumoBrotherP/effects/stompEffect",
+   "parent": 98,
+   "pos": [
+    -0.518,
+    -0.582
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    0.6
+   ],
+   "sprite": "sumou_brothers/slapMiss",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    1
+   ]
+  },
+  {
+   "name": "stompEffect2",
+   "path": "sumoBrotherP/effects/stompEffect2",
+   "parent": 98,
+   "pos": [
+    -0.518,
+    -0.582
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2,
+    0.6
+   ],
+   "sprite": "sumou_brothers/slapMiss",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.08,
+    1
+   ]
+  },
+  {
+   "name": "stompDust",
+   "path": "sumoBrotherP/effects/stompDust",
+   "parent": 98,
+   "pos": [
+    -0.977,
+    -0.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "sumou_brothers/smoke",
+   "order": 20,
+   "inactive": true,
+   "color": [
+    0.6666667,
+    0.6666667,
+    0.54901963,
+    0.78431374
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "misc",
+   "path": "misc",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.96,
+    2.96
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "impact",
+   "path": "misc/impact",
+   "parent": 103,
+   "pos": [
+    0,
+    0.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "sumou_brothers/burst",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ],
+   "mapped": true,
+   "mat": "ImpactColors"
+  },
+  {
+   "name": "glasses",
+   "path": "misc/glasses",
+   "parent": 103,
+   "pos": [
+    -1.423,
+    0.881
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "sumou_brothers/sumoGlasses",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    0.6,
+    0.44
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "YaseiNoIkiG3M4",
+   "path": "YaseiNoIkiG3M4",
+   "parent": 0,
+   "pos": [
+    0,
+    -20
+   ],
+   "z": 20,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "YaseiNoIkiG3M4",
+   "order": -1005,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.8,
+    7.2
+   ],
+   "sortGroup": [
+    0,
+    -1000
+   ]
+  },
+  {
+   "name": "jork",
+   "path": "YaseiNoIkiG3M4/jork",
+   "parent": 106,
+   "pos": [
+    0.44,
+    0.68
+   ],
+   "z": 1.48,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "References",
+   "path": "References",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.39,
+    1.39
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sumoscreenshot",
+   "path": "References/sumoscreenshot",
+   "parent": 108,
+   "pos": [
+    0,
+    -3.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    3,
+    3
+   ],
+   "order": 500,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4,
+    4.8
+   ]
+  },
+  {
+   "name": "brosReference",
+   "path": "References/brosReference",
+   "parent": 108,
+   "pos": [
+    0,
+    -1.65
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 501,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.6862745
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "inuReference",
+   "path": "References/inuReference",
+   "parent": 108,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "order": 501,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.74509805
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "AngryTapper2 - [Rhythm Heaven Megamix] - Sumo Brothers (Perfect) (English) [tsWYl6E2WcY - 853x480 - 1m17s] (1)",
+   "path": "References/AngryTapper2 - [Rhythm Heaven Megamix] - Sumo Brothers (Perfect) (English) [tsWYl6E2WcY - 853x480 - 1m17s] (1)",
+   "parent": 108,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4988,
+    1.4988
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.53,
+    4.8
+   ]
+  },
+  {
+   "name": "AngryTapper2 - [Rhythm Heaven Megamix] - Sumo Brothers (Perfect) (English) [tsWYl6E2WcY - 853x480 - 1m18s]",
+   "path": "References/AngryTapper2 - [Rhythm Heaven Megamix] - Sumo Brothers (Perfect) (English) [tsWYl6E2WcY - 853x480 - 1m17s] (1)/AngryTapper2 - [Rhythm Heaven Megamix] - Sumo Brothers (Perfect) (English) [tsWYl6E2WcY - 853x480 - 1m18s]",
+   "parent": 112,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.048,
+    1.048
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.53,
+    4.8
+   ]
+  },
+  {
+   "name": "confetti",
+   "path": "confetti",
+   "parent": 0,
+   "pos": [
+    -7.67,
+    0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "leftfetti",
+   "path": "confetti/leftfetti",
+   "parent": 114,
+   "pos": [
+    -0.71,
+    -0.42
+   ],
+   "rotZ": -0.6727177916803497,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "rightfetti",
+   "path": "confetti/leftfetti/rightfetti",
+   "parent": 115,
+   "pos": [
+    13.073555,
+    10.415537
+   ],
+   "rotZ": 1.3168664861116666,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

@@ -1047,6 +1047,24 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "splash", markers: []string{"smallSplashParticles", "bigSplashParticles"}},
 		},
 	},
+	"sumoBrothers": {
+		dir:    "SumoBrothers",
+		prefab: "sumoBrothers.prefab",
+		roleFields: []string{
+			"inuSensei", "sumoBrotherP", "sumoBrotherG", "sumoBrotherGHead",
+			"sumoBrotherPHead", "impact", "glasses", "dust", "bgMove", "bgStatic",
+			"confetti", "bgTop", "bgBtm",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"inuSensei", "sumoBrotherP", "sumoBrotherG", "sumoBrotherGHead",
+				"sumoBrotherPHead", "impact", "glasses", "dust", "bgMove", "bgStatic",
+				"confetti", "backgroundMaterial", "bgTop", "bgBtm", "mawashiMaterial",
+				"cameraX", "cameraXNew", "stompShakeSpeed",
+			}},
+		},
+	},
 	"kitties": {
 		dir:    "Kitties",
 		prefab: "kitties.prefab",

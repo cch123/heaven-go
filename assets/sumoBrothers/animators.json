@@ -1,0 +1,12 @@
+{
+ "YaseiNoIkiG3M4": "YaseiNoIkiG3M4",
+ "backgroundChanges/bgMove": "bgGreatWave",
+ "backgroundChanges/bgStatic": "bgGreatWave",
+ "inuSensei": "inuSensei",
+ "misc/glasses": "glasses",
+ "misc/impact": "impact",
+ "sumoBrotherG": "sumoBrotherP",
+ "sumoBrotherG/head/headdy": "SumoGHead",
+ "sumoBrotherP": "sumoBrotherP",
+ "sumoBrotherP/head/headdy": "SumoGHead"
+}
