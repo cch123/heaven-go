@@ -1,0 +1,12 @@
+{
+ "bgGO": "Background",
+ "boyAnim": "Boy",
+ "bushGO": "Weasels/WeaselBush",
+ "clouds": "Background/CloudGroup",
+ "girlAnim": "Girl",
+ "girlObj": "Girl",
+ "girlWeaselObj": "Weasels/WeaselGirl",
+ "girlWeaselShockObj": "Weasels/Shock2",
+ "treeAnim": "Tree",
+ "weasels": "Weasels"
+}

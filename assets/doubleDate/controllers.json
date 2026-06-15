@@ -1,0 +1,250 @@
+{
+ "Boy": {
+  "default": "Idle",
+  "params": {
+   "Stare": false
+  },
+  "states": {
+   "Barely": {
+    "clip": "Animations/Barely",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "IdleStare",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "IdleStare",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "IdleBop": {
+    "clip": "Animations/IdleBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "IdleStare",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "IdleBop2": {
+    "clip": "Animations/IdleBop2",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "IdleStare",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "IdleStare": {
+    "clip": "Animations/IdleStare",
+    "speed": 1
+   },
+   "Kick": {
+    "clip": "Animations/Kick",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "IdleStare",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Ready": {
+    "clip": "Animations/Ready",
+    "speed": 1
+   },
+   "UnReady": {
+    "clip": "Animations/UnReady",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     },
+     {
+      "dst": "IdleStare",
+      "conds": [
+       {
+        "mode": "if",
+        "param": "Stare"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Girl": {
+  "default": "IdleGirl",
+  "states": {
+   "GirlBlush": {
+    "clip": "Animations/GirlBlush",
+    "speed": 1
+   },
+   "GirlBop": {
+    "clip": "Animations/GirlBop",
+    "speed": 1
+   },
+   "GirlLookUp": {
+    "clip": "Animations/GirlLookUp",
+    "speed": 1
+   },
+   "GirlSad": {
+    "clip": "Animations/GirlSad",
+    "speed": 1
+   },
+   "IdleGirl": {
+    "clip": "Animations/IdleGirl",
+    "speed": 1
+   }
+  }
+ },
+ "Tree": {
+  "default": "TreeIdle",
+  "states": {
+   "TreeIdle": {
+    "clip": "Animations/TreeIdle",
+    "speed": 1
+   },
+   "TreeRustle": {
+    "clip": "Animations/TreeRustle",
+    "speed": 1
+   }
+  }
+ },
+ "Weasels": {
+  "default": "WeaselsIdle",
+  "states": {
+   "WeaselsAppearUpset": {
+    "clip": "Animations/WeaselsAppearUpset",
+    "speed": 1
+   },
+   "WeaselsBop": {
+    "clip": "Animations/WeaselsBop",
+    "speed": 1
+   },
+   "WeaselsHappy": {
+    "clip": "Animations/WeaselsHappy",
+    "speed": 1
+   },
+   "WeaselsHide": {
+    "clip": "Animations/WeaselsHide",
+    "speed": 1
+   },
+   "WeaselsHit": {
+    "clip": "Animations/WeaselsHit",
+    "speed": 1
+   },
+   "WeaselsIdle": {
+    "clip": "Animations/WeaselsIdle",
+    "speed": 1
+   },
+   "WeaselsJump": {
+    "clip": "Animations/WeaselsJump",
+    "speed": 1
+   },
+   "WeaselsSurprised": {
+    "clip": "Animations/WeaselsSurprised",
+    "speed": 1
+   }
+  }
+ }
+}

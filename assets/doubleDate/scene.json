@@ -1,0 +1,3047 @@
+{
+ "nodes": [
+  {
+   "name": "doubleDate",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Leaves",
+   "path": "Leaves",
+   "parent": 0,
+   "pos": [
+    -7.8,
+    6.84
+   ],
+   "z": -0.19,
+   "rotZ": 0.13190081588798827,
+   "scale": [
+    0.9774259,
+    0.9774259
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Plane Transform 1",
+   "path": "Leaves/Plane Transform 1",
+   "parent": 1,
+   "pos": [
+    0.12,
+    -2.88
+   ],
+   "z": 9.3,
+   "rotZ": -0.2099628029397547,
+   "scale": [
+    0.75251,
+    1.1757969
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SubEmitter0",
+   "path": "Leaves/SubEmitter0",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Tree",
+   "path": "Tree",
+   "parent": 0,
+   "pos": [
+    -8.6,
+    -2.58
+   ],
+   "z": 0.0022686,
+   "rotZ": 0,
+   "scale": [
+    0.45057452,
+    0.45057452
+   ],
+   "sprite": "TreeShadow_1",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    0.3254902
+   ],
+   "size": [
+    7.88,
+    7.5899997
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    -0.022276,
+    -0.13
+   ],
+   "z": 0.0022686,
+   "rotZ": 0,
+   "scale": [
+    0.92045,
+    0.92045
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BottomSection",
+   "path": "Background/BottomSection",
+   "parent": 5,
+   "pos": [
+    0.9394,
+    -2.6077
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.47687823,
+    0.47687823
+   ],
+   "sprite": "BottomSection",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    50,
+    12.05
+   ]
+  },
+  {
+   "name": "School",
+   "path": "Background/School",
+   "parent": 5,
+   "pos": [
+    -4.97,
+    1.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.38398036,
+    0.38398036
+   ],
+   "sprite": "School",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    29.25,
+    12.07
+   ]
+  },
+  {
+   "name": "GradientBackground",
+   "path": "Background/GradientBackground",
+   "parent": 5,
+   "pos": [
+    -1.7011,
+    0.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    45.64268,
+    0.565524
+   ],
+   "sprite": "GradientBackground",
+   "order": -10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    18.43
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Background/GradientBackground/Square",
+   "parent": 8,
+   "pos": [
+    0,
+    16.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.2014135,
+    50.35004
+   ],
+   "order": -250,
+   "color": [
+    0.93725497,
+    0.52156866,
+    0.2901961,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CloudGroup",
+   "path": "Background/CloudGroup",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Clouds",
+   "path": "Background/CloudGroup/Clouds",
+   "parent": 10,
+   "pos": [
+    -5,
+    1.2324624
+   ],
+   "z": -95.646385,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CloudBig",
+   "path": "Background/CloudGroup/Clouds/CloudBig",
+   "parent": 11,
+   "pos": [
+    14.53,
+    -1.69
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4516,
+    0.4516
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudSmall",
+   "path": "Background/CloudGroup/Clouds/CloudSmall",
+   "parent": 11,
+   "pos": [
+    6.08,
+    -1.9724624
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.6250482,
+    0.6250482
+   ],
+   "sprite": "CloudSmall",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.81,
+    4.1
+   ]
+  },
+  {
+   "name": "CloudBig",
+   "path": "Background/CloudGroup/Clouds/CloudBig",
+   "parent": 11,
+   "pos": [
+    -5.1,
+    -1.16
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4658,
+    0.4658
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig",
+   "path": "Background/CloudGroup/Clouds/CloudBig",
+   "parent": 11,
+   "pos": [
+    -2.62,
+    -1.24
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4266232,
+    0.4266232
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudSmall",
+   "path": "Background/CloudGroup/Clouds/CloudSmall",
+   "parent": 11,
+   "pos": [
+    0.02,
+    -1.0024624
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.5241,
+    0.5241
+   ],
+   "sprite": "CloudSmall",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.81,
+    4.1
+   ]
+  },
+  {
+   "name": "CloudBig",
+   "path": "Background/CloudGroup/Clouds/CloudBig",
+   "parent": 11,
+   "pos": [
+    10.34,
+    -1.22
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4913,
+    0.4913
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (1)",
+   "path": "Background/CloudGroup/Clouds/CloudBig (1)",
+   "parent": 11,
+   "pos": [
+    8.39,
+    -2.09
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4913,
+    0.4913
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (2)",
+   "path": "Background/CloudGroup/Clouds/CloudBig (2)",
+   "parent": 11,
+   "pos": [
+    12.86,
+    -1.48
+   ],
+   "z": 95.646385,
+   "rotZ": 0.21026670832369534,
+   "scale": [
+    0.432344,
+    0.432344
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (3)",
+   "path": "Background/CloudGroup/Clouds/CloudBig (3)",
+   "parent": 11,
+   "pos": [
+    8.98,
+    -2.98
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4913,
+    0.4913
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (4)",
+   "path": "Background/CloudGroup/Clouds/CloudBig (4)",
+   "parent": 11,
+   "pos": [
+    11.6,
+    -2.58
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4913,
+    0.4913
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "Clouds (1)",
+   "path": "Background/CloudGroup/Clouds (1)",
+   "parent": 10,
+   "pos": [
+    15,
+    1.2324624
+   ],
+   "z": -95.646385,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CloudBig",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig",
+   "parent": 22,
+   "pos": [
+    13.46,
+    -1.71
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4516,
+    0.4516
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudSmall",
+   "path": "Background/CloudGroup/Clouds (1)/CloudSmall",
+   "parent": 22,
+   "pos": [
+    6.08,
+    -1.9724624
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.6250482,
+    0.6250482
+   ],
+   "sprite": "CloudSmall",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.81,
+    4.1
+   ]
+  },
+  {
+   "name": "CloudBig",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig",
+   "parent": 22,
+   "pos": [
+    -3.5600004,
+    -1.31
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4658,
+    0.4658
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig",
+   "parent": 22,
+   "pos": [
+    -0.92,
+    -1.19
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4266232,
+    0.4266232
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudSmall",
+   "path": "Background/CloudGroup/Clouds (1)/CloudSmall",
+   "parent": 22,
+   "pos": [
+    0.4204867,
+    -0.83
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.5241,
+    0.5241
+   ],
+   "sprite": "CloudSmall",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.81,
+    4.1
+   ]
+  },
+  {
+   "name": "CloudBig",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig",
+   "parent": 22,
+   "pos": [
+    9,
+    -1.26
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4913,
+    0.4913
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (1)",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig (1)",
+   "parent": 22,
+   "pos": [
+    7.92,
+    -2.51
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4913,
+    0.4913
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (2)",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig (2)",
+   "parent": 22,
+   "pos": [
+    11.86,
+    -1.67
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.432344,
+    0.432344
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (3)",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig (3)",
+   "parent": 22,
+   "pos": [
+    -2.34,
+    -1.86
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4266232,
+    0.4266232
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (4)",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig (4)",
+   "parent": 22,
+   "pos": [
+    2.17,
+    -1.77
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4266232,
+    0.4266232
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (5)",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig (5)",
+   "parent": 22,
+   "pos": [
+    4.46,
+    -2.36
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4913,
+    0.4913
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (6)",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig (6)",
+   "parent": 22,
+   "pos": [
+    0.15,
+    -2.24
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4266232,
+    0.4266232
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloudBig (7)",
+   "path": "Background/CloudGroup/Clouds (1)/CloudBig (7)",
+   "parent": 22,
+   "pos": [
+    10.35,
+    -2.63
+   ],
+   "z": 95.646385,
+   "rotZ": 0,
+   "scale": [
+    0.4266232,
+    0.4266232
+   ],
+   "sprite": "CloudBig",
+   "order": -9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.37,
+    5.62
+   ]
+  },
+  {
+   "name": "CloversComp",
+   "path": "Background/CloversComp",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Clovers1",
+   "path": "Background/CloversComp/Clovers1",
+   "parent": 36,
+   "pos": [
+    0.6259999,
+    -5.327
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3832525,
+    0.3832525
+   ],
+   "sprite": "Clovers",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.55,
+    8.25
+   ]
+  },
+  {
+   "name": "Clovers2",
+   "path": "Background/CloversComp/Clovers2",
+   "parent": 36,
+   "pos": [
+    2.724,
+    -5.031
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3832525,
+    0.3832525
+   ],
+   "sprite": "Clovers",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.55,
+    8.25
+   ]
+  },
+  {
+   "name": "Clovers3",
+   "path": "Background/CloversComp/Clovers3",
+   "parent": 36,
+   "pos": [
+    6.602,
+    -5.316
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3832525,
+    0.3832525
+   ],
+   "sprite": "Clovers",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.55,
+    8.25
+   ]
+  },
+  {
+   "name": "Clovers4",
+   "path": "Background/CloversComp/Clovers4",
+   "parent": 36,
+   "pos": [
+    8.696,
+    -4.873
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3832525,
+    0.3832525
+   ],
+   "sprite": "Clovers",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.55,
+    8.25
+   ]
+  },
+  {
+   "name": "ExtraGrass",
+   "path": "Background/ExtraGrass",
+   "parent": 5,
+   "pos": [
+    3.098,
+    -4.608
+   ],
+   "z": 0.025000215,
+   "rotZ": 0,
+   "scale": [
+    0.38342834,
+    0.38342834
+   ],
+   "sprite": "Grass",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8299999,
+    1.8299999
+   ]
+  },
+  {
+   "name": "ExtraGrass (1)",
+   "path": "Background/ExtraGrass (1)",
+   "parent": 5,
+   "pos": [
+    5.469,
+    -4.462
+   ],
+   "z": 0.025000004,
+   "rotZ": 0.08849115364613755,
+   "scale": [
+    0.38342834,
+    0.38342834
+   ],
+   "sprite": "Grass",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8299999,
+    1.8299999
+   ]
+  },
+  {
+   "name": "ExtraGrass (2)",
+   "path": "Background/ExtraGrass (2)",
+   "parent": 5,
+   "pos": [
+    5.02,
+    -4.526
+   ],
+   "z": 0.025000004,
+   "rotZ": -0.3498252168562062,
+   "scale": [
+    0.33937243,
+    0.33937243
+   ],
+   "sprite": "Grass",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8299999,
+    1.8299999
+   ]
+  },
+  {
+   "name": "Boy",
+   "path": "Boy",
+   "parent": 0,
+   "pos": [
+    -0.022276,
+    -0.13000003
+   ],
+   "z": 0.0022686,
+   "rotZ": 0,
+   "scale": [
+    0.92045,
+    0.92045
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BoyTorso_2_Idle",
+   "path": "Boy/BoyTorso_2_Idle",
+   "parent": 44,
+   "pos": [
+    -1.363,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37291682,
+    0.37291682
+   ],
+   "sprite": "BoyTorso_2_Idle",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.17,
+    1.85
+   ]
+  },
+  {
+   "name": "BoyBody",
+   "path": "Boy/BoyBody",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BoyHead",
+   "path": "Boy/BoyBody/BoyHead",
+   "parent": 46,
+   "pos": [
+    -1.3411,
+    2.762
+   ],
+   "rotZ": 0.022689317554172805,
+   "scale": [
+    0.3817915,
+    0.3817915
+   ],
+   "sprite": "BoyHead_1",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.9299998,
+    4.3199997
+   ]
+  },
+  {
+   "name": "Blush1",
+   "path": "Boy/BoyBody/BoyHead/Blush1",
+   "parent": 47,
+   "pos": [
+    -0.14404398,
+    -1.1961052
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0141401,
+    1.0141401
+   ],
+   "sprite": "Blush",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.68,
+    0.41
+   ]
+  },
+  {
+   "name": "Blush2",
+   "path": "Boy/BoyBody/BoyHead/Blush2",
+   "parent": 47,
+   "pos": [
+    1.209,
+    -1.158
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75273967,
+    0.8350894
+   ],
+   "sprite": "Blush",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.68,
+    0.41
+   ]
+  },
+  {
+   "name": "BoyArmRight",
+   "path": "Boy/BoyBody/BoyArmRight",
+   "parent": 46,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BoyArmRight_1",
+   "path": "Boy/BoyBody/BoyArmRight/BoyArmRight_1",
+   "parent": 50,
+   "pos": [
+    -1.921,
+    1.175
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.35203603,
+    0.35203603
+   ],
+   "sprite": "BoyArmPart_1",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.05,
+    2.27
+   ]
+  },
+  {
+   "name": "BoyArmRight_2",
+   "path": "Boy/BoyBody/BoyArmRight/BoyArmRight_2",
+   "parent": 50,
+   "pos": [
+    -1.993,
+    0.435
+   ],
+   "rotZ": 7.748602599999613e-7,
+   "scale": [
+    0.37674236,
+    0.37674236
+   ],
+   "sprite": "BoyArmPart_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    3.03
+   ]
+  },
+  {
+   "name": "BoyHand",
+   "path": "Boy/BoyBody/BoyArmRight/BoyHand",
+   "parent": 50,
+   "pos": [
+    -2.4,
+    -0.157
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3415161,
+    0.3415161
+   ],
+   "sprite": "BoyHand",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.05,
+    1.32
+   ]
+  },
+  {
+   "name": "BoyArmLeft",
+   "path": "Boy/BoyBody/BoyArmLeft",
+   "parent": 46,
+   "pos": [
+    2.179,
+    0.504
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BoyArmRight_1",
+   "path": "Boy/BoyBody/BoyArmLeft/BoyArmRight_1",
+   "parent": 54,
+   "pos": [
+    -2.958,
+    0.684
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.35802,
+    0.35802
+   ],
+   "sprite": "BoyArmPart_1",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.05,
+    2.27
+   ]
+  },
+  {
+   "name": "BoyArmRight_2",
+   "path": "Boy/BoyBody/BoyArmLeft/BoyArmRight_2",
+   "parent": 54,
+   "pos": [
+    -2.885,
+    -0.023
+   ],
+   "rotZ": 7.748602599999613e-7,
+   "scale": [
+    0.36797822,
+    0.36797822
+   ],
+   "sprite": "BoyArmPart_2",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    3.03
+   ]
+  },
+  {
+   "name": "BoyHand",
+   "path": "Boy/BoyBody/BoyArmLeft/BoyHand",
+   "parent": 54,
+   "pos": [
+    -2.4383,
+    -0.6671
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.35267803,
+    0.35267803
+   ],
+   "sprite": "BoyHand",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.05,
+    1.32
+   ]
+  },
+  {
+   "name": "BoyTorso_1",
+   "path": "Boy/BoyBody/BoyTorso_1",
+   "parent": 46,
+   "pos": [
+    -1.3496,
+    1.164
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3723488,
+    0.3723488
+   ],
+   "sprite": "BoyTorso1",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.1400003,
+    6.17
+   ]
+  },
+  {
+   "name": "BoyLegRight",
+   "path": "Boy/BoyLegRight",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BoyLegRight_Idle",
+   "path": "Boy/BoyLegRight/BoyLegRight_Idle",
+   "parent": 59,
+   "pos": [
+    -2,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3850923,
+    0.3850923
+   ],
+   "sprite": "BoyLeg_Idle",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9099998,
+    5.0099998
+   ]
+  },
+  {
+   "name": "BoyFootRight_Idle",
+   "path": "Boy/BoyLegRight/BoyFootRight_Idle",
+   "parent": 59,
+   "pos": [
+    -2.4,
+    -1.6925
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37716323,
+    0.37716323
+   ],
+   "sprite": "BoyFoot_Idle",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.79,
+    2.47
+   ]
+  },
+  {
+   "name": "BoyLegLeft",
+   "path": "Boy/BoyLegLeft",
+   "parent": 44,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BoyLegLeft_Idle",
+   "path": "Boy/BoyLegLeft/BoyLegLeft_Idle",
+   "parent": 62,
+   "pos": [
+    -0.745,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3850923,
+    0.3850923
+   ],
+   "sprite": "BoyLeg_Idle",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9099998,
+    5.0099998
+   ]
+  },
+  {
+   "name": "BoyFootLeft_Idle",
+   "path": "Boy/BoyFootLeft_Idle",
+   "parent": 44,
+   "pos": [
+    -0.346,
+    -1.701
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37715998,
+    0.37715998
+   ],
+   "sprite": "BoyFoot_Idle",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.79,
+    2.47
+   ]
+  },
+  {
+   "name": "Smear1",
+   "path": "Boy/Smear1",
+   "parent": 44,
+   "pos": [
+    -3.532,
+    0.916
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37291682,
+    0.37291682
+   ],
+   "sprite": "BallKickedSmear",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.17,
+    1.85
+   ]
+  },
+  {
+   "name": "Smear2",
+   "path": "Boy/Smear2",
+   "parent": 44,
+   "pos": [
+    -2.8,
+    0.529
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37291682,
+    0.37291682
+   ],
+   "sprite": "BoyLeg_KickSmear",
+   "order": 8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.17,
+    1.85
+   ]
+  },
+  {
+   "name": "Girl",
+   "path": "Girl",
+   "parent": 0,
+   "pos": [
+    2.9735,
+    1.3461698
+   ],
+   "z": -8.7367,
+   "rotZ": 0,
+   "scale": [
+    0.92045,
+    0.92045
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GirlHead",
+   "path": "Girl/GirlHead",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GirlHead_1",
+   "path": "Girl/GirlHead/GirlHead_1",
+   "parent": 68,
+   "pos": [
+    -1.7196816,
+    1.2072039
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.3785681,
+    0.3785681
+   ],
+   "sprite": "GirlHead_1",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.01,
+    3.8500001
+   ]
+  },
+  {
+   "name": "GirlFace_1",
+   "path": "Girl/GirlHead/GirlFace_1",
+   "parent": 68,
+   "pos": [
+    -1.601,
+    1.005
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.3844599,
+    0.3844599
+   ],
+   "sprite": "GirlFace_1",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.92,
+    1.81
+   ]
+  },
+  {
+   "name": "GirlHair",
+   "path": "Girl/GirlHead/GirlHair",
+   "parent": 68,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GirlHair_Back",
+   "path": "Girl/GirlHead/GirlHair/GirlHair_Back",
+   "parent": 71,
+   "pos": [
+    -1.7679,
+    1.1967
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.38459146,
+    0.38459146
+   ],
+   "sprite": "GirlHair_Back",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.86,
+    4.64
+   ]
+  },
+  {
+   "name": "GirlHair_Front",
+   "path": "Girl/GirlHead/GirlHair/GirlHair_Front",
+   "parent": 71,
+   "pos": [
+    -1.8818,
+    1.3146
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.41508937,
+    0.40595508
+   ],
+   "sprite": "GirlHair_Front",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.98,
+    3.7299998
+   ]
+  },
+  {
+   "name": "Blush",
+   "path": "Girl/GirlHead/Blush",
+   "parent": 68,
+   "pos": [
+    -1.914,
+    0.786
+   ],
+   "z": 9.494247,
+   "rotZ": 0.05536357950872103,
+   "scale": [
+    0.3844599,
+    0.3844599
+   ],
+   "sprite": "Blush",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.92,
+    1.81
+   ]
+  },
+  {
+   "name": "Blush (1)",
+   "path": "Girl/GirlHead/Blush (1)",
+   "parent": 68,
+   "pos": [
+    -1.407,
+    0.811
+   ],
+   "z": 9.494247,
+   "rotZ": 0.10886584759446176,
+   "scale": [
+    0.29960862,
+    0.3844599
+   ],
+   "sprite": "Blush",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.92,
+    1.81
+   ]
+  },
+  {
+   "name": "GirlBody",
+   "path": "Girl/GirlBody",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GirlTorso",
+   "path": "Girl/GirlBody/GirlTorso",
+   "parent": 76,
+   "pos": [
+    -1.7515,
+    -0.1802
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.37994012,
+    0.37994012
+   ],
+   "sprite": "GirlTorso",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    4.39
+   ]
+  },
+  {
+   "name": "GirlBow",
+   "path": "Girl/GirlBody/GirlBow",
+   "parent": 76,
+   "pos": [
+    -1.752682,
+    0.045203805
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.38342834,
+    0.38342834
+   ],
+   "sprite": "GirlBow",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.8299999,
+    1.8299999
+   ]
+  },
+  {
+   "name": "GirlLegs",
+   "path": "Girl/GirlLegs",
+   "parent": 67,
+   "pos": [
+    -1.7147816,
+    -2.6151962
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.38762054,
+    0.37635282
+   ],
+   "sprite": "GirlLegs",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.3500004,
+    9.59
+   ]
+  },
+  {
+   "name": "GirlArmLeft",
+   "path": "Girl/GirlArmLeft",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GirlArmLeft",
+   "path": "Girl/GirlArmLeft/GirlArmLeft",
+   "parent": 80,
+   "pos": [
+    -1.292382,
+    -0.5250963
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.3725662,
+    0.3725662
+   ],
+   "sprite": "GirlArm_Left",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.66,
+    4.83
+   ]
+  },
+  {
+   "name": "GirlHandLeft",
+   "path": "Girl/GirlArmLeft/GirlHandLeft",
+   "parent": 80,
+   "pos": [
+    -1.799882,
+    -1.4542962
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.36823925,
+    0.36823925
+   ],
+   "sprite": "GirlHand_Left",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.37,
+    1.39
+   ]
+  },
+  {
+   "name": "GirlArmLeft (1)",
+   "path": "Girl/GirlArmLeft/GirlArmLeft (1)",
+   "parent": 80,
+   "pos": [
+    -1.351001,
+    -0.507
+   ],
+   "z": 9.494247,
+   "rotZ": 0.32518828265354593,
+   "scale": [
+    0.3890336,
+    0.3890336
+   ],
+   "sprite": "GirlArm_Gasp2",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.66,
+    4.83
+   ]
+  },
+  {
+   "name": "GirlArmRight",
+   "path": "Girl/GirlArmRight",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GirlArmRight",
+   "path": "Girl/GirlArmRight/GirlArmRight",
+   "parent": 84,
+   "pos": [
+    -2.272682,
+    -0.70179623
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.36967298,
+    0.36967298
+   ],
+   "sprite": "GirlArm_Right",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    6.0099998
+   ]
+  },
+  {
+   "name": "GirlHandRight",
+   "path": "Girl/GirlArmRight/GirlHandRight",
+   "parent": 84,
+   "pos": [
+    -2.7657,
+    -1.8334
+   ],
+   "z": 9.494244,
+   "rotZ": 0,
+   "scale": [
+    0.37393242,
+    0.37393242
+   ],
+   "sprite": "GirlHand_Right",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.1499999,
+    1.39
+   ]
+  },
+  {
+   "name": "Bench",
+   "path": "Bench",
+   "parent": 0,
+   "pos": [
+    2.5435,
+    0.69176996
+   ],
+   "z": -81.205,
+   "rotZ": 0,
+   "scale": [
+    0.92045,
+    0.92045
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "BenchLeftSide",
+   "path": "Bench/BenchLeftSide",
+   "parent": 87,
+   "pos": [
+    -5.7190456,
+    -0.9928322
+   ],
+   "z": 88.225716,
+   "rotZ": 0,
+   "scale": [
+    0.3823656,
+    0.3823656
+   ],
+   "sprite": "BenchSide",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.25,
+    10.04
+   ]
+  },
+  {
+   "name": "BenchMiddle",
+   "path": "Bench/BenchMiddle",
+   "parent": 87,
+   "pos": [
+    -2.8019452,
+    -0.312
+   ],
+   "z": 88.225716,
+   "rotZ": 0,
+   "scale": [
+    3.059535,
+    0.3820588
+   ],
+   "sprite": "BenchMiddle",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.64,
+    6.45
+   ]
+  },
+  {
+   "name": "BenchRightSide",
+   "path": "Bench/BenchRightSide",
+   "parent": 87,
+   "pos": [
+    -0.070545435,
+    -0.9928322
+   ],
+   "z": 88.225716,
+   "rotZ": 0,
+   "scale": [
+    0.3823656,
+    0.3823656
+   ],
+   "sprite": "BenchSide",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.25,
+    10.04
+   ]
+  },
+  {
+   "name": "BenchMiddleBar",
+   "path": "Bench/BenchMiddleBar",
+   "parent": 87,
+   "pos": [
+    -2.8019452,
+    -2.155
+   ],
+   "z": 88.225716,
+   "rotZ": 0,
+   "scale": [
+    3.059535,
+    0.3820588
+   ],
+   "sprite": "BoyAndHisCrush+Bench+Balls_17",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.64,
+    6.45
+   ]
+  },
+  {
+   "name": "BenchShadow",
+   "path": "Bench/BenchShadow",
+   "parent": 87,
+   "pos": [
+    -2.91,
+    -2.51
+   ],
+   "z": 88.225716,
+   "rotZ": 0,
+   "scale": [
+    0.3823656,
+    0.3823656
+   ],
+   "sprite": "BenchShadow",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.82,
+    1.97
+   ]
+  },
+  {
+   "name": "Weasels",
+   "path": "Weasels",
+   "parent": 0,
+   "pos": [
+    0.53779,
+    0.8271699
+   ],
+   "z": -1.6876,
+   "rotZ": 0,
+   "scale": [
+    0.92045,
+    0.92045
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "WeaselGirl",
+   "path": "Weasels/WeaselGirl",
+   "parent": 93,
+   "pos": [
+    4.88388,
+    -3.3399043
+   ],
+   "z": -9.439873,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -2
+   ]
+  },
+  {
+   "name": "WeaselGirlHead",
+   "path": "Weasels/WeaselGirl/WeaselGirlHead",
+   "parent": 94,
+   "pos": [
+    -0.9093471,
+    0.3200114
+   ],
+   "z": 11.27578,
+   "rotZ": -0.20406687222734826,
+   "scale": [
+    0.37757048,
+    0.37757048
+   ],
+   "sprite": "WeaselCouple_4",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.49,
+    3.1399999
+   ]
+  },
+  {
+   "name": "WeaselGirlBody",
+   "path": "Weasels/WeaselGirl/WeaselGirlBody",
+   "parent": 94,
+   "pos": [
+    -0.7723475,
+    -0.7299886
+   ],
+   "z": 11.27578,
+   "rotZ": 0,
+   "scale": [
+    0.38477853,
+    0.38477853
+   ],
+   "sprite": "WeaselCouple_22",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.03,
+    3.52
+   ]
+  },
+  {
+   "name": "WeaselGirlArm",
+   "path": "Weasels/WeaselGirl/WeaselGirlArm",
+   "parent": 94,
+   "pos": [
+    -1.256,
+    0.195
+   ],
+   "z": 11.257,
+   "rotZ": 0,
+   "scale": [
+    0.38414508,
+    0.38414508
+   ],
+   "sprite": "WeaselGirlArm_1",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2,
+    3.3700001
+   ]
+  },
+  {
+   "name": "WeaselGirlLegs",
+   "path": "Weasels/WeaselGirl/WeaselGirlLegs",
+   "parent": 94,
+   "pos": [
+    -0.404,
+    -2.372
+   ],
+   "z": 11.257,
+   "rotZ": 0,
+   "scale": [
+    0.38414508,
+    0.38414508
+   ],
+   "sprite": "WeaselGirlBody_Jump",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.02,
+    3.47
+   ]
+  },
+  {
+   "name": "WeaselBoy",
+   "path": "Weasels/WeaselBoy",
+   "parent": 93,
+   "pos": [
+    0.6618778,
+    -4.807884
+   ],
+   "z": -105.81443,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -2
+   ]
+  },
+  {
+   "name": "WeaselBoyHead",
+   "path": "Weasels/WeaselBoy/WeaselBoyHead",
+   "parent": 99,
+   "pos": [
+    2.113,
+    1.752
+   ],
+   "z": 107.6503,
+   "rotZ": -0.20406687222734826,
+   "scale": [
+    0.37757036,
+    0.37757036
+   ],
+   "sprite": "WeaselBoyLeft_Idle",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.49,
+    3.1399999
+   ]
+  },
+  {
+   "name": "WeaselBoyBody",
+   "path": "Weasels/WeaselBoy/WeaselBoyBody",
+   "parent": 99,
+   "pos": [
+    2.25,
+    0.7
+   ],
+   "z": 107.6503,
+   "rotZ": 0,
+   "scale": [
+    0.38414508,
+    0.38414508
+   ],
+   "sprite": "WeaselCouple_19",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.02,
+    3.47
+   ]
+  },
+  {
+   "name": "WeaselBoyArm",
+   "path": "Weasels/WeaselBoy/WeaselBoyArm",
+   "parent": 99,
+   "pos": [
+    1.834,
+    1.462
+   ],
+   "z": 107.6503,
+   "rotZ": 0,
+   "scale": [
+    0.38414508,
+    0.38414508
+   ],
+   "sprite": "WeaselBoyArm_1",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.98,
+    3.3700001
+   ]
+  },
+  {
+   "name": "WeaselBoyLegs",
+   "path": "Weasels/WeaselBoy/WeaselBoyLegs",
+   "parent": 99,
+   "pos": [
+    2.628,
+    3.15
+   ],
+   "z": 107.6503,
+   "rotZ": 0,
+   "scale": [
+    0.38414508,
+    0.38414508
+   ],
+   "sprite": "WeaselBoyBody_Jump",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.02,
+    3.47
+   ]
+  },
+  {
+   "name": "WeaselBush",
+   "path": "Weasels/WeaselBush",
+   "parent": 93,
+   "pos": [
+    3.474,
+    -4.73
+   ],
+   "z": 1.8289,
+   "rotZ": 0,
+   "scale": [
+    0.38273954,
+    0.38273954
+   ],
+   "sprite": "Bushes_3",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.57,
+    2.46
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "Weasels/WeaselBush/Grass",
+   "parent": 104,
+   "pos": [
+    0.98,
+    -2.72
+   ],
+   "z": 0.01,
+   "rotZ": 0,
+   "scale": [
+    9.129487,
+    2.5716865
+   ],
+   "sprite": "HMMM",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.57,
+    2.46
+   ]
+  },
+  {
+   "name": "Shock1",
+   "path": "Weasels/Shock1",
+   "parent": 93,
+   "pos": [
+    2.033,
+    -2.87
+   ],
+   "z": 1.835911,
+   "rotZ": 0,
+   "scale": [
+    0.37757048,
+    0.37757048
+   ],
+   "sprite": "ShockedEffect",
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.49,
+    3.1399999
+   ]
+  },
+  {
+   "name": "Shock2",
+   "path": "Weasels/Shock2",
+   "parent": 93,
+   "pos": [
+    3.24,
+    -7.75
+   ],
+   "z": 1.835911,
+   "rotZ": 0,
+   "scale": [
+    0.37757048,
+    0.37757048
+   ],
+   "sprite": "ShockedEffect",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.49,
+    3.1399999
+   ]
+  },
+  {
+   "name": "DropShadow",
+   "path": "DropShadow",
+   "parent": 0,
+   "pos": [
+    -0.022276,
+    -0.13000003
+   ],
+   "z": 0.0022686,
+   "rotZ": 0,
+   "scale": [
+    0.92045,
+    0.92045
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "DropShadow/Shadow",
+   "parent": 108,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.3201789,
+    0.3201789
+   ],
+   "sprite": "SOMETHING",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    0.4392157
+   ],
+   "size": [
+    1.88,
+    3.4399998
+   ]
+  },
+  {
+   "name": "SoccerBall",
+   "path": "SoccerBall",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3729168,
+    0.3729168
+   ],
+   "sprite": "SoccerBall",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.52,
+    3.51
+   ]
+  },
+  {
+   "name": "BasketBall",
+   "path": "BasketBall",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3729168,
+    0.3729168
+   ],
+   "sprite": "Basketball",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.45,
+    3.4600003
+   ]
+  },
+  {
+   "name": "Football",
+   "path": "Football",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3729168,
+    0.3729168
+   ],
+   "sprite": "Football",
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    4.71
+   ]
+  }
+ ]
+}

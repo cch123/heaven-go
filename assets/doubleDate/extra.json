@@ -1,0 +1,1153 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "_animSpeed": 1,
+    "_skyColor.a": 1,
+    "_skyColor.b": 1,
+    "_skyColor.g": 1,
+    "_skyColor.r": 0.64705884,
+    "cloudDistance": 20,
+    "cloudSpeed": 0.06,
+    "floorHeight": -2.75,
+    "noonColor.a": 1,
+    "noonColor.b": 0.7764706,
+    "noonColor.g": 0.87058824,
+    "noonColor.r": 0.9529412,
+    "shadowDepthScaleMax": 0.25,
+    "shadowDepthScaleMin": 5.25
+   },
+   "refs": {
+    "basket": "BasketBall",
+    "bgGO": "Background",
+    "bgGradient": "Background/GradientBackground",
+    "bgSquare": "Background/GradientBackground/Square",
+    "boyAnim": "Boy",
+    "bushGO": "Weasels/WeaselBush",
+    "clouds": "Background/CloudGroup",
+    "dropShadow": "DropShadow",
+    "football": "Football",
+    "girlAnim": "Girl",
+    "girlObj": "Girl",
+    "girlWeaselObj": "Weasels/WeaselGirl",
+    "girlWeaselShockObj": "Weasels/Shock2",
+    "leaves": "Leaves",
+    "soccer": "SoccerBall",
+    "treeAnim": "Tree",
+    "weasels": "Weasels"
+   },
+   "sprites": {
+    "bgIntro": "GradientIntro",
+    "bgLong": "GradientBackground"
+   },
+   "lists": {
+    "ballBouncePaths": [
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "SoccerIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.4,
+          "pos.x": -12.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 135
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.2,
+          "height": 2.75,
+          "pos.x": -7.75,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.25,
+          "height": 2.5,
+          "pos.x": -2.15,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 151.875
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.6,
+          "height": 1.8,
+          "pos.x": 3.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 151.875
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 9.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "SoccerJust"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 0.5,
+          "height": 1.2,
+          "pos.x": -2.976,
+          "pos.y": -0.24,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -45
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -8,
+          "pos.y": 7.8,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "SoccerNgLate"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.25,
+          "pos.x": -3,
+          "pos.y": -0.36,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1,
+          "pos.x": -0.5,
+          "pos.y": -4,
+          "pos.z": -1.26,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 3,
+          "pos.y": -5.75,
+          "pos.z": -1.89,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "SoccerNgEarly"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.25,
+          "pos.x": -3,
+          "pos.y": -0.36,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1,
+          "pos.x": -0.5,
+          "pos.y": -4,
+          "pos.z": -1.26,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -2.4,
+          "pos.y": -5.75,
+          "pos.z": -1.89,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BasketBallIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.4,
+          "pos.x": -12.25,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 135
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.75,
+          "height": 2.4,
+          "pos.x": -7.75,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2,
+          "pos.x": -4.25,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.1,
+          "height": 1.5,
+          "pos.x": 0.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 151.875
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.2,
+          "height": 1,
+          "pos.x": 5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 227.8125
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 9.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BasketBallJust"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 0.5,
+          "height": 1.5,
+          "pos.x": -3,
+          "pos.y": -1.05,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -45
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -8,
+          "pos.y": 7.8,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BasketBallNgLate"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.5,
+          "pos.x": -3,
+          "pos.y": -1.05,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 253.125
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1,
+          "pos.x": -0.5,
+          "pos.y": -4,
+          "pos.z": -1.26,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 3,
+          "pos.y": -5.75,
+          "pos.z": -1.89,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BasketBallNgEarly"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.5,
+          "pos.x": -3,
+          "pos.y": -1.05,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -379.6875
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1,
+          "pos.x": -0.5,
+          "pos.y": -4,
+          "pos.z": -1.26,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -2.4,
+          "pos.y": -5.75,
+          "pos.z": -1.89,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "FootBallIn"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.4,
+          "pos.x": -12,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 482.733
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.75,
+          "height": 6.75,
+          "pos.x": -3.4708004,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -405
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.25,
+          "height": 2.55,
+          "pos.x": -7.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 450
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.25,
+          "height": 0.25,
+          "pos.x": 0.45,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 405
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.9,
+          "height": 6,
+          "pos.x": 3.2464664,
+          "pos.y": -2.093107,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "strs": {
+          "tag": "impact"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1980
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.4,
+          "height": 0.75,
+          "pos.x": 8.25,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 12,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "FootBallInNoHit"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.4,
+          "pos.x": -12,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 482.733
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.75,
+          "height": 6.75,
+          "pos.x": -3.4708004,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -405
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.25,
+          "height": 2.55,
+          "pos.x": -7.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 450
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.3,
+          "height": 2.25,
+          "pos.x": 0.45,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 405
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1.3,
+          "height": 1.75,
+          "pos.x": 5.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 151.875
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 9.5,
+          "pos.y": -2.75,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "FootBallNgLate"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.25,
+          "pos.x": -3,
+          "pos.y": -0.36,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 607.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1,
+          "pos.x": -0.5,
+          "pos.y": -4,
+          "pos.z": -1.26,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 3,
+          "pos.y": -5.75,
+          "pos.z": -1.89,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "FootBallNgEarly"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.25,
+          "pos.x": -3,
+          "pos.y": -0.36,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -607.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1,
+          "pos.x": -0.5,
+          "pos.y": -4,
+          "pos.z": -1.26,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -180
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -2.4,
+          "pos.y": -5.75,
+          "pos.z": -1.89,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "FootBallJust"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 0.3,
+          "height": 0,
+          "pos.x": -3,
+          "pos.y": -0.36,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 45
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -4,
+          "pos.y": 8,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "FootBallFall"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 5,
+          "height": 1,
+          "pos.x": -4,
+          "pos.y": 8,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2160
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": -5,
+          "pos.y": -1.25,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

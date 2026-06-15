@@ -1843,8 +1843,9 @@ func dumpComponent(dt *docTable, paths map[int64]string, tables map[string]*spri
 	return c
 }
 
-// dumpItem 解析结构体数组的一项；nest=true 时再下钻一层嵌套结构数组
-// （SuperCurveObject.Path 的 positions 等）。
+// dumpItem 解析结构体数组的一项；nest=true 时再下钻一层嵌套结构数组。
+// SuperCurveObject.Path 会形成 paths[].positions[].values[]，因此第二层
+// 的纯结构数组也保留，但不继续递归，避免丢掉每个轨迹点上的 rot 等曲线值。
 func dumpItem(field string, im map[string]any,
 	resolveRef func(string, map[string]any) (string, bool), nest bool) kmdata.ComponentItem {
 	item := kmdata.ComponentItem{
@@ -1875,7 +1876,7 @@ func dumpItem(field string, im map[string]any,
 				}
 			}
 		case []any:
-			if !nest {
+			if !nest && !scalarStructArray(itv) {
 				continue
 			}
 			for _, nv := range itv {
@@ -1891,6 +1892,36 @@ func dumpItem(field string, im map[string]any,
 		}
 	}
 	return item
+}
+
+func scalarStructArray(items []any) bool {
+	if len(items) == 0 {
+		return false
+	}
+	for _, v := range items {
+		m := uy.M(v)
+		if m == nil {
+			return false
+		}
+		for _, vv := range m {
+			switch tv := vv.(type) {
+			case []any:
+				return false
+			case map[string]any:
+				if _, hasID := tv["fileID"]; hasID {
+					continue
+				}
+				if _, hasX := tv["x"]; hasX {
+					continue
+				}
+				if _, hasR := tv["r"]; hasR {
+					continue
+				}
+				return false
+			}
+		}
+	}
+	return true
 }
 
 // ---------- anims / sounds ----------
