@@ -84,6 +84,7 @@ import (
 	"hsdemo/games/taptrial"
 	"hsdemo/games/taptroupe"
 	"hsdemo/games/thedazzles"
+	"hsdemo/games/tossboys"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/tramandpauline"
 	"hsdemo/games/trickclass"
@@ -134,6 +135,7 @@ func registerGames() {
 	engine.Register("tapTrial", taptrial.New)
 	engine.Register("tapTroupe", taptroupe.New)
 	engine.Register("theDazzles", thedazzles.New)
+	engine.Register("tossBoys", tossboys.New)
 	engine.Register("trickClass", trickclass.New)
 	engine.Register("meatGrinder", meatgrinder.New)
 	engine.Register("totemClimb", totemclimb.New)
