@@ -170,8 +170,6 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - Judgement 结算页已接入 Heaven Studio 的评分阈值/分类评价消息、rank 标志图、
   默认 epilogue 图与结算音效/jingle/循环音乐；原版 `JudgementOpen.playable`
   的逐信号精确定时尚未完整移植，当前用等价状态推进。
-- kitties：roll 成功后的 spinnya 循环音未实现随机变调（±5%，循环重采样
-  不支持）；音量 0.85 与起止时序一致。
 - firstContact：`FirstContact.cs` 的 trailing mistranslation 分支引用
   `firstContact/slightlyFail`，但 HeavenStudio-master 的
   `Assets/Bundled/Games/FirstContact/Sounds` 未包含该音频文件；当前不播放

@@ -9,8 +9,6 @@
 //	      B+2.75 松开；中途空按/漏放 → RollFail
 //	fish：鱼竿（官方关未用，按 C# 时序实现）
 //	bgcolor：背景色 ColorEase
-//
-// 已知简化：spinnya 循环音的随机变调（±5%）未实现（循环重采样不支持）。
 package kitties
 
 import (
@@ -233,7 +231,7 @@ func (m *Module) spinStart(b float64) {
 			"spinplayer1", "spinplayer2", "spinplayer3", "spinplayer4", "spinplayer5"}[i], 1)
 	}
 	m.stopNya()
-	m.stopNya = ctx.SoundLoopVol("spinnya", 0.85)
+	m.stopNya = ctx.SoundLoopPitchVol("spinnya", spinNyaPitch(), 0.85)
 	m.playCat(2, "Rolling")
 	// ScheduleRollFinish（hasSpun 时才挂松开判定）
 	ctx.ScheduleInputRelease(target+0.75,
@@ -426,6 +424,10 @@ func (c colorRGBA) RGBA() (r, g, b, a uint32) {
 }
 
 func boolParam(e *riq.Entity, key string) bool { return e.Float(key, 0) != 0 }
+
+func spinNyaPitch() float64 {
+	return 0.95 + rand.Float64()*0.10
+}
 
 func colorParam(e *riq.Entity, key string, def [4]float64) [4]float64 {
 	if mm, ok := e.Data[key].(map[string]any); ok {

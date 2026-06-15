@@ -3,6 +3,7 @@ package kitties
 // 交付前审计：controller/绑定/roles/音效/生成坐标表。
 
 import (
+	"math/rand"
 	"testing"
 
 	"hsdemo/kart"
@@ -15,6 +16,16 @@ func loadAssets(t *testing.T) *kart.Assets {
 		t.Skipf("assets not extracted: %v", err)
 	}
 	return as
+}
+
+func TestSpinNyaPitchRange(t *testing.T) {
+	rand.Seed(1)
+	for i := 0; i < 100; i++ {
+		p := spinNyaPitch()
+		if p < 0.95 || p >= 1.05 {
+			t.Fatalf("spinnya pitch = %.6f, want [0.95, 1.05)", p)
+		}
+	}
 }
 
 func TestControllersResolve(t *testing.T) {
