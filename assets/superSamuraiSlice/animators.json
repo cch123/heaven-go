@@ -1,0 +1,19 @@
+{
+ "BackgroundHolder/Holder": "Holder",
+ "BackgroundHolder/Holder/CloudHolder": "CloudHolder",
+ "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1": "Fog1",
+ "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2": "Fog2",
+ "BackgroundHolder/Holder/Fog/Holder/Smoke 1": "Fog1",
+ "BackgroundHolder/Holder/Fog/Holder/Smoke 2": "Fog2",
+ "BackgroundHolder/Holder/Skateboard": "Animations/Platforms/Skateboard/Skateboard.controller",
+ "BackgroundHolder/Holder/Skateboard/Skateboard": "Animations/Misc/Skateboard/Skateboard.controller",
+ "BackgroundHolder/Holder/WaterHolder/Water": "Water",
+ "BackgroundHolder/Holder/WaterHolder/Water (1)": "Water",
+ "Flash": "Flash",
+ "PlatformHolder/Eagle": "Animations/Platforms/Eagle/Eagle.controller",
+ "PlatformHolder/Eagle/Eagle": "Animations/Misc/Eagle/Eagle.controller",
+ "SamuraiHolder": "SamuraiHolder",
+ "SamuraiHolder/GameObject/Samurai": "Samurai",
+ "demon": "Animations/Demon/Small/demon.controller",
+ "mediumDemon": "Animations/Demon/Medium/demon.controller"
+}

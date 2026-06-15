@@ -104,15 +104,38 @@ func exportControllers(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map
 	animGUIDs := scanGUIDs(animDir, ".anim")
 	ctrlGUIDs := scanGUIDs(animDir, ".controller")
 
-	// guid → controller 名（文件主名）
-	ctrlName := map[string]string{}
+	type ctrlFile struct {
+		guid, base, nsKey, path string
+	}
+	var ctrlFiles []ctrlFile
+	baseCount := map[string]int{}
 	for g, p := range ctrlGUIDs {
-		ctrlName[g] = strings.TrimSuffix(filepath.Base(p), ".controller")
+		base := strings.TrimSuffix(filepath.Base(p), ".controller")
+		ctrlFiles = append(ctrlFiles, ctrlFile{
+			guid:  g,
+			base:  base,
+			nsKey: animNSKey(animDir, p),
+			path:  p,
+		})
+		baseCount[base]++
+	}
+
+	// guid → controller key. Like .anim clips, controller basenames are not
+	// globally unique in some official games (Super Samurai Slice has three
+	// Demon/*/demon.controller files). Namespace duplicates so Animator
+	// bindings cannot accidentally share the wrong state machine.
+	ctrlName := map[string]string{}
+	for _, c := range ctrlFiles {
+		name := c.base
+		if baseCount[c.base] > 1 {
+			name = c.nsKey
+		}
+		ctrlName[c.guid] = name
 	}
 
 	ctrls := map[string]kmdata.Controller{}
-	for guid, p := range ctrlGUIDs {
-		ctrls[ctrlName[guid]] = parseController(p, animDir, animGUIDs)
+	for _, c := range ctrlFiles {
+		ctrls[ctrlName[c.guid]] = parseController(c.path, animDir, animGUIDs)
 	}
 	writeJSON("controllers.json", ctrls)
 

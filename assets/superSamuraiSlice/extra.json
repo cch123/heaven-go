@@ -1,0 +1,728 @@
+{
+ "components": {
+  "demon0": {
+   "path": "demon",
+   "nums": {
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0
+   },
+   "refs": {
+    "Explode1": "demon/Holder/blowup",
+    "Explode2": "demon/Holder/blowupAway",
+    "Explode3": "demon/Holder/blowupKick",
+    "SmallDemonAnim": "demon",
+    "groundPlane": "demon/Holder/GroundPlane",
+    "windZone": "demon/Holder/WindZone"
+   }
+  },
+  "demon1": {
+   "path": "mediumDemon",
+   "nums": {
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0
+   },
+   "refs": {
+    "Explode1": "mediumDemon/Holder/blowup",
+    "MediumDemonAnim": "mediumDemon",
+    "groundPlane": "mediumDemon/Holder/GroundPlane",
+    "windZone": "mediumDemon/Holder/WindZone"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "boombeat2": 0,
+    "demonAnims": 0,
+    "direction": 0,
+    "isEagleActive": 0,
+    "isLargeDemonActive": 0,
+    "isOn": 0,
+    "isRocketActive": 0,
+    "isSkateboardActive": 0,
+    "isWaterActive": 1,
+    "samuraiBop": 1,
+    "slashType": 0,
+    "totalEvents": -1,
+    "whichDemon": 0,
+    "whichInput": -1
+   },
+   "refs": {
+    "BG": "BackgroundHolder/Holder/Main",
+    "BGAnim": "BackgroundHolder/Holder",
+    "Cloud": "BackgroundHolder/Holder/CloudHolder",
+    "CloudAnim": "BackgroundHolder/Holder/CloudHolder",
+    "Eagle": "PlatformHolder/Eagle/Eagle",
+    "Eagle1Anim": "PlatformHolder/Eagle",
+    "EagleAnim": "PlatformHolder/Eagle/Eagle",
+    "FG": "BackgroundHolder/Holder/ForegroundHolder",
+    "Fog": "BackgroundHolder/Holder/Fog",
+    "MediumDemon": "mediumDemon",
+    "Samurai": "SamuraiHolder/GameObject/Samurai",
+    "Samurai1Anim": "SamuraiHolder",
+    "SamuraiAnim": "SamuraiHolder/GameObject/Samurai",
+    "SamuraiShadow": "SamuraiHolder/GameObject/Samurai/SamuraiHolder/Shadow",
+    "Skateboard": "BackgroundHolder/Holder/Skateboard/Skateboard",
+    "Skateboard1Anim": "BackgroundHolder/Holder/Skateboard",
+    "SkateboardAnim": "BackgroundHolder/Holder/Skateboard/Skateboard",
+    "SmallDemon": "demon",
+    "Water": "BackgroundHolder/Holder/WaterHolder",
+    "flash": "Flash",
+    "fogGO": "BackgroundHolder/Holder/Fog",
+    "lightning": "SamuraiHolder/GameObject/lightning/Main",
+    "waterGO": "BackgroundHolder/Holder/WaterHolder",
+    "waterL": "WaterParticle/WaterL",
+    "waterR": "WaterParticle/WaterR"
+   },
+   "lists": {
+    "demonPaths": [
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "rightUp"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 7.765,
+          "pos.y": 2.91,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 1/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 1/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Curves/Curve 1/Point 2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "leftUp"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 2/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2.7,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 2/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 2/Point 2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "rightDown"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 3/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.4,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 3/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 3/Point 2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "leftDown"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 4/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 5.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 4/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 4/Point 2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "CurveR"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.2,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.06,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 2"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.1,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 3"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.15,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 4"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.125,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 5"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.125,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 6"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.15,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 7"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.09,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 8"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.04,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 9"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.15,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 10"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.08,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 11"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.15,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 12"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.01,
+          "height": -0.1,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 13"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1000,
+          "height": 0.01,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 14"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 5/Point 15"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "CurveL"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.2,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.06,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 2"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.1,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 3"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.15,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 4"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.125,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 5"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.125,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 6"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.15,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 7"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.09,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 8"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": 0.04,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 9"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.15,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 10"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.08,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 11"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.16,
+          "height": -0.15,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 12"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0.01,
+          "height": -0.1,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 13"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1000,
+          "height": 0.01,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 14"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/Curve 6/Point 15"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  }
+ }
+}

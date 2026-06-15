@@ -1,0 +1,325 @@
+{
+ "Animations/Demon/Large/demon.controller": {
+  "default": "idle",
+  "states": {
+   "Attack": {
+    "clip": "Animations/Demon/Large/Attack",
+    "speed": 1
+   },
+   "Break": {
+    "clip": "Animations/Demon/Large/Break",
+    "speed": 1
+   },
+   "GoAway": {
+    "clip": "Animations/Demon/Large/GoAway",
+    "speed": 1
+   },
+   "Intro": {
+    "clip": "Animations/Demon/Large/Intro",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Demon/Large/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Demon/Medium/demon.controller": {
+  "default": "idle",
+  "states": {
+   "Attack": {
+    "clip": "Animations/Demon/Medium/Attack",
+    "speed": 1
+   },
+   "Break": {
+    "clip": "Animations/Demon/Medium/Break",
+    "speed": 1
+   },
+   "GoAway": {
+    "clip": "Animations/Demon/Medium/GoAway",
+    "speed": 1
+   },
+   "disappear": {
+    "clip": "Animations/Demon/Medium/disappear",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Demon/Medium/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Demon/Small/demon.controller": {
+  "default": "idle",
+  "states": {
+   "Break_H": {
+    "clip": "Animations/Demon/Small/Break_H",
+    "speed": 1
+   },
+   "Break_K": {
+    "clip": "Animations/Demon/Small/Break_K",
+    "speed": 1
+   },
+   "Break_Miss": {
+    "clip": "Animations/Demon/Small/Break_Miss",
+    "speed": 1
+   },
+   "Break_P": {
+    "clip": "Animations/Demon/Small/Break_P",
+    "speed": 1
+   },
+   "Break_V": {
+    "clip": "Animations/Demon/Small/Break_V",
+    "speed": 1
+   },
+   "disappear": {
+    "clip": "Animations/Demon/Small/disappear",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Demon/Small/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Misc/Eagle/Eagle.controller": {
+  "default": "idle",
+  "states": {
+   "fromL": {
+    "clip": "Animations/Misc/Eagle/fromL",
+    "speed": 1
+   },
+   "fromR": {
+    "clip": "Animations/Misc/Eagle/fromR",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Misc/Eagle/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Misc/Skateboard/Skateboard.controller": {
+  "default": "idle",
+  "states": {
+   "guard_FromL": {
+    "clip": "Animations/Misc/Skateboard/guard_FromL",
+    "speed": 1
+   },
+   "guard_FromR": {
+    "clip": "Animations/Misc/Skateboard/guard_FromR",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Misc/Skateboard/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Platforms/Eagle/Eagle.controller": {
+  "default": "idle",
+  "states": {
+   "enter": {
+    "clip": "Animations/Platforms/Eagle/enter",
+    "speed": 1
+   },
+   "exit": {
+    "clip": "Animations/Platforms/Eagle/exit",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Platforms/Eagle/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Platforms/Skateboard/Skateboard.controller": {
+  "default": "idle",
+  "states": {
+   "enter": {
+    "clip": "Animations/Platforms/Skateboard/enter",
+    "speed": 1
+   },
+   "exit": {
+    "clip": "Animations/Platforms/Skateboard/exit",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Platforms/Skateboard/idle",
+    "speed": 1
+   }
+  }
+ },
+ "CloudHolder": {
+  "default": "idle",
+  "states": {
+   "fade": {
+    "clip": "Animations/Background/fade",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Background/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Flash": {
+  "default": "idle",
+  "states": {
+   "flash": {
+    "clip": "Animations/Background/flash",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Background/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Fog1": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "clip": "Animations/Background/Fog/Fog1",
+    "speed": 1
+   }
+  }
+ },
+ "Fog2": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "clip": "Animations/Background/Fog/Fog2",
+    "speed": 1
+   }
+  }
+ },
+ "Holder": {
+  "default": "idle",
+  "states": {
+   "down": {
+    "clip": "Animations/Background/Main/down",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Background/Main/idle",
+    "speed": 1
+   },
+   "instant": {
+    "clip": "Animations/Background/Main/instant",
+    "speed": 1
+   },
+   "up": {
+    "clip": "Animations/Background/Main/up",
+    "speed": 1
+   }
+  }
+ },
+ "Samurai": {
+  "default": "idle",
+  "states": {
+   "Beat": {
+    "clip": "Animations/Samurai/Beat",
+    "speed": 1
+   },
+   "Counter": {
+    "clip": "Animations/Samurai/Counter",
+    "speed": 1
+   },
+   "Counter_Through": {
+    "clip": "Animations/Samurai/Counter_Through",
+    "speed": 1
+   },
+   "Guard": {
+    "clip": "Animations/Samurai/Guard",
+    "speed": 1
+   },
+   "Guard_Through": {
+    "clip": "Animations/Samurai/Guard_Through",
+    "speed": 1
+   },
+   "Kick": {
+    "clip": "Animations/Samurai/Kick",
+    "speed": 1
+   },
+   "Pale": {
+    "clip": "Animations/Samurai/Pale",
+    "speed": 1
+   },
+   "Punch": {
+    "clip": "Animations/Samurai/Punch",
+    "speed": 1
+   },
+   "Run": {
+    "clip": "Animations/Samurai/Run",
+    "speed": 1
+   },
+   "Slash00": {
+    "clip": "Animations/Samurai/Slash00",
+    "speed": 1
+   },
+   "Slash01": {
+    "clip": "Animations/Samurai/Slash01",
+    "speed": 1
+   },
+   "Slash02": {
+    "clip": "Animations/Samurai/Slash02",
+    "speed": 1
+   },
+   "Slash_Through_L": {
+    "clip": "Animations/Samurai/Slash_Through_L",
+    "speed": 1
+   },
+   "Slash_Through_R": {
+    "clip": "Animations/Samurai/Slash_Through_R",
+    "speed": 1
+   },
+   "Turn00": {
+    "clip": "Animations/Samurai/Turn00",
+    "speed": 1
+   },
+   "Turn01": {
+    "clip": "Animations/Samurai/Turn01",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Samurai/idle",
+    "speed": 1
+   }
+  }
+ },
+ "SamuraiHolder": {
+  "default": "idle",
+  "states": {
+   "enter": {
+    "clip": "Animations/Platforms/Samurai/enter",
+    "speed": 1
+   },
+   "enter2": {
+    "clip": "Animations/Platforms/Samurai/enter2",
+    "speed": 1
+   },
+   "exit": {
+    "clip": "Animations/Platforms/Samurai/exit",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Animations/Platforms/Samurai/idle",
+    "speed": 1
+   },
+   "instant": {
+    "clip": "Animations/Platforms/Samurai/instant",
+    "speed": 1
+   }
+  }
+ },
+ "Water": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "clip": "Animations/Background/Water/idle",
+    "speed": 1
+   }
+  }
+ }
+}

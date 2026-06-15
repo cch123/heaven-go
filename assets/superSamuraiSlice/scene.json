@@ -1,0 +1,9697 @@
+{
+ "nodes": [
+  {
+   "name": "superSamuraiSlice",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SamuraiHolder",
+   "path": "SamuraiHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "SamuraiHolder/GameObject",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Samurai",
+   "path": "SamuraiHolder/GameObject/Samurai",
+   "parent": 2,
+   "pos": [
+    -0.049000025,
+    -1.735
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2,
+    4.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "SamuraiHolder",
+   "path": "SamuraiHolder/GameObject/Samurai/SamuraiHolder",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Samurai",
+   "path": "SamuraiHolder/GameObject/Samurai/SamuraiHolder/Samurai",
+   "parent": 4,
+   "pos": [
+    -0.19,
+    0.24499999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_obj_4",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.57
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "SamuraiHolder/GameObject/Samurai/SamuraiHolder/Shadow",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_obj_47",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.47058824
+   ],
+   "size": [
+    0.51,
+    0.08
+   ]
+  },
+  {
+   "name": "samurai_obj_45",
+   "path": "SamuraiHolder/GameObject/Samurai/SamuraiHolder/samurai_obj_45",
+   "parent": 4,
+   "pos": [
+    -0.025000006,
+    0.21499999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_obj_45",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.94
+   ]
+  },
+  {
+   "name": "lightning",
+   "path": "SamuraiHolder/GameObject/lightning",
+   "parent": 2,
+   "pos": [
+    -0.049000025,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2,
+    4.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "SamuraiHolder/GameObject/lightning/Main",
+   "parent": 8,
+   "pos": [
+    0,
+    0.121
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dot",
+   "path": "SamuraiHolder/GameObject/lightning/Main/Dot",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SLine1",
+   "path": "SamuraiHolder/GameObject/lightning/Main/SLine1",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SLine2",
+   "path": "SamuraiHolder/GameObject/lightning/Main/SLine2",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BLine1",
+   "path": "SamuraiHolder/GameObject/lightning/Main/BLine1",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BLine2",
+   "path": "SamuraiHolder/GameObject/lightning/Main/BLine2",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlueRing1",
+   "path": "SamuraiHolder/GameObject/lightning/Main/BlueRing1",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BlueRing2",
+   "path": "SamuraiHolder/GameObject/lightning/Main/BlueRing2",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dot2",
+   "path": "SamuraiHolder/GameObject/lightning/Main/Dot2",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WRing",
+   "path": "SamuraiHolder/GameObject/lightning/Main/WRing",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningMain",
+   "path": "SamuraiHolder/GameObject/lightning/Main/LightningMain",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.5288563716078528,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningMain2",
+   "path": "SamuraiHolder/GameObject/lightning/Main/LightningMain2",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.5288563716078528,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningOuter",
+   "path": "SamuraiHolder/GameObject/lightning/Main/LightningOuter",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -0.5288563716078528,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningOuter2",
+   "path": "SamuraiHolder/GameObject/lightning/Main/LightningOuter2",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -2.4328793764330054,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningRandom1",
+   "path": "SamuraiHolder/GameObject/lightning/Main/LightningRandom1",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -2.4328793764330054,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningRandom2",
+   "path": "SamuraiHolder/GameObject/lightning/Main/LightningRandom2",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -2.4328793764330054,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningRandom3",
+   "path": "SamuraiHolder/GameObject/lightning/Main/LightningRandom3",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -2.4328793764330054,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Curves",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve 1",
+   "path": "Curves/Curve 1",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/Curve 1/Point 1",
+   "parent": 27,
+   "pos": [
+    7.765,
+    2.9099998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Curves/Curve 1/Point 2",
+   "parent": 27,
+   "pos": [
+    1.34,
+    0.45000002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve 2",
+   "path": "Curves/Curve 2",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/Curve 2/Point 1",
+   "parent": 30,
+   "pos": [
+    -7.1050005,
+    2.91
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Curves/Curve 2/Point 2",
+   "parent": 30,
+   "pos": [
+    -1.0050001,
+    -0.50000006
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve 3",
+   "path": "Curves/Curve 3",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/Curve 3/Point 1",
+   "parent": 33,
+   "pos": [
+    7.765,
+    -4.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Curves/Curve 3/Point 2",
+   "parent": 33,
+   "pos": [
+    1.97,
+    0.44999987
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve 4",
+   "path": "Curves/Curve 4",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/Curve 4/Point 1",
+   "parent": 36,
+   "pos": [
+    -6.7700005,
+    -4.2450004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Curves/Curve 4/Point 2",
+   "parent": 36,
+   "pos": [
+    -1.1300001,
+    -0.26500005
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve 5",
+   "path": "Curves/Curve 5",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/Curve 5/Point 0",
+   "parent": 39,
+   "pos": [
+    13.86,
+    3.975
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/Curve 5/Point 1",
+   "parent": 39,
+   "pos": [
+    11.245,
+    3.1299999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Curves/Curve 5/Point 2",
+   "parent": 39,
+   "pos": [
+    6.61,
+    2.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 3",
+   "path": "Curves/Curve 5/Point 3",
+   "parent": 39,
+   "pos": [
+    5.085,
+    2.59
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 4",
+   "path": "Curves/Curve 5/Point 4",
+   "parent": 39,
+   "pos": [
+    4.29,
+    3.195
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 5",
+   "path": "Curves/Curve 5/Point 5",
+   "parent": 39,
+   "pos": [
+    4.04,
+    4.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 6",
+   "path": "Curves/Curve 5/Point 6",
+   "parent": 39,
+   "pos": [
+    4.485,
+    4.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 7",
+   "path": "Curves/Curve 5/Point 7",
+   "parent": 39,
+   "pos": [
+    5.9100003,
+    5.5649996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 8",
+   "path": "Curves/Curve 5/Point 8",
+   "parent": 39,
+   "pos": [
+    7.34,
+    5.1800003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 9",
+   "path": "Curves/Curve 5/Point 9",
+   "parent": 39,
+   "pos": [
+    7.745,
+    4.585
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 10",
+   "path": "Curves/Curve 5/Point 10",
+   "parent": 39,
+   "pos": [
+    7.83,
+    4.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 11",
+   "path": "Curves/Curve 5/Point 11",
+   "parent": 39,
+   "pos": [
+    7.48,
+    3.155
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 12",
+   "path": "Curves/Curve 5/Point 12",
+   "parent": 39,
+   "pos": [
+    6.56,
+    2.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 13",
+   "path": "Curves/Curve 5/Point 13",
+   "parent": 39,
+   "pos": [
+    4.5899997,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 14",
+   "path": "Curves/Curve 5/Point 14",
+   "parent": 39,
+   "pos": [
+    0.65999997,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 15",
+   "path": "Curves/Curve 5/Point 15",
+   "parent": 39,
+   "pos": [
+    0.65999997,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curve 6",
+   "path": "Curves/Curve 6",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/Curve 6/Point 0",
+   "parent": 56,
+   "pos": [
+    13.86,
+    3.975
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/Curve 6/Point 1",
+   "parent": 56,
+   "pos": [
+    11.245,
+    3.1299999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Curves/Curve 6/Point 2",
+   "parent": 56,
+   "pos": [
+    6.61,
+    2.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 3",
+   "path": "Curves/Curve 6/Point 3",
+   "parent": 56,
+   "pos": [
+    5.085,
+    2.59
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 4",
+   "path": "Curves/Curve 6/Point 4",
+   "parent": 56,
+   "pos": [
+    4.29,
+    3.195
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 5",
+   "path": "Curves/Curve 6/Point 5",
+   "parent": 56,
+   "pos": [
+    4.04,
+    4.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 6",
+   "path": "Curves/Curve 6/Point 6",
+   "parent": 56,
+   "pos": [
+    4.485,
+    4.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 7",
+   "path": "Curves/Curve 6/Point 7",
+   "parent": 56,
+   "pos": [
+    5.9100003,
+    5.5649996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 8",
+   "path": "Curves/Curve 6/Point 8",
+   "parent": 56,
+   "pos": [
+    7.34,
+    5.1800003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 9",
+   "path": "Curves/Curve 6/Point 9",
+   "parent": 56,
+   "pos": [
+    7.745,
+    4.585
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 10",
+   "path": "Curves/Curve 6/Point 10",
+   "parent": 56,
+   "pos": [
+    7.83,
+    4.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 11",
+   "path": "Curves/Curve 6/Point 11",
+   "parent": 56,
+   "pos": [
+    7.48,
+    3.155
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 12",
+   "path": "Curves/Curve 6/Point 12",
+   "parent": 56,
+   "pos": [
+    6.56,
+    2.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 13",
+   "path": "Curves/Curve 6/Point 13",
+   "parent": 56,
+   "pos": [
+    4.5899997,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 14",
+   "path": "Curves/Curve 6/Point 14",
+   "parent": 56,
+   "pos": [
+    0.65999997,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 15",
+   "path": "Curves/Curve 6/Point 15",
+   "parent": 56,
+   "pos": [
+    0.65999997,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BackgroundHolder",
+   "path": "BackgroundHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2,
+    4.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "BackgroundHolder/Background",
+   "parent": 73,
+   "pos": [
+    0.009523809,
+    0.10119047
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "BackgroundHolder/Background/Gradient",
+   "parent": 74,
+   "pos": [
+    0,
+    0.074999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    8,
+    2.7900724
+   ],
+   "sprite": "samurai_bg_21",
+   "order": 0,
+   "color": [
+    0.78431374,
+    0.78431374,
+    0.78431374,
+    1
+   ],
+   "size": [
+    1.44,
+    1.12
+   ]
+  },
+  {
+   "name": "Sun",
+   "path": "BackgroundHolder/Background/Sun",
+   "parent": 74,
+   "pos": [
+    1.9649999,
+    0.955
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    1.2
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "BackgroundHolder/Holder",
+   "parent": 73,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Skateboard",
+   "path": "BackgroundHolder/Holder/Skateboard",
+   "parent": 77,
+   "pos": [
+    -0.08571428,
+    -0.4119048
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Skateboard",
+   "path": "BackgroundHolder/Holder/Skateboard/Skateboard",
+   "parent": 78,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "BackgroundHolder/Holder/Skateboard/Skateboard/Holder",
+   "parent": 79,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "BackgroundHolder/Holder/Skateboard/Skateboard/Holder/Shadow",
+   "parent": 80,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1
+   ],
+   "sprite": "samurai_obj_47",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.47058824
+   ],
+   "size": [
+    0.51,
+    0.08
+   ]
+  },
+  {
+   "name": "Board",
+   "path": "BackgroundHolder/Holder/Skateboard/Skateboard/Holder/Board",
+   "parent": 80,
+   "pos": [
+    0,
+    0.074999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_obj_20",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.17
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "BackgroundHolder/Holder/Main",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Main 1",
+   "path": "BackgroundHolder/Holder/Main/Main 1",
+   "parent": 83,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -8
+   ]
+  },
+  {
+   "name": "Soil 1",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Soil 1",
+   "parent": 84,
+   "pos": [
+    0,
+    -0.675
+   ],
+   "rotZ": 0,
+   "scale": [
+    13,
+    5
+   ],
+   "sprite": "samurai_bg_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    0.32
+   ]
+  },
+  {
+   "name": "Soil 2",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Soil 2",
+   "parent": 84,
+   "pos": [
+    0,
+    -1.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    13,
+    4
+   ],
+   "sprite": "samurai_bg_13",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    0.32
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall",
+   "parent": 84,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_22",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22",
+   "parent": 87,
+   "pos": [
+    -2.3988097,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22 (2)",
+   "parent": 87,
+   "pos": [
+    -0.034999996,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22 (1)",
+   "parent": 87,
+   "pos": [
+    -1.305,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22 (3)",
+   "parent": 87,
+   "pos": [
+    1.245,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22 (4)",
+   "parent": 87,
+   "pos": [
+    2.4,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22",
+   "parent": 87,
+   "pos": [
+    -2.465,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.017409,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (5)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22 (5)",
+   "parent": 87,
+   "pos": [
+    -1.185,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (6)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22 (6)",
+   "parent": 87,
+   "pos": [
+    0.09000003,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (7)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22 (7)",
+   "parent": 87,
+   "pos": [
+    1.37,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (8)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Wall/samurai_bg_22 (8)",
+   "parent": 87,
+   "pos": [
+    2.55,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.85,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Grass",
+   "parent": 84,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_14",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Grass/samurai_bg_14",
+   "parent": 98,
+   "pos": [
+    -2.48,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Grass/samurai_bg_14 (1)",
+   "parent": 98,
+   "pos": [
+    -1.29,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Grass/samurai_bg_14 (2)",
+   "parent": 98,
+   "pos": [
+    -0.019999996,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Grass/samurai_bg_14 (3)",
+   "parent": 98,
+   "pos": [
+    1.25,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Grass/samurai_bg_14 (4)",
+   "parent": 98,
+   "pos": [
+    2.48,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "Houses",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses",
+   "parent": 84,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_31",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_31",
+   "parent": 104,
+   "pos": [
+    -2.28,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_31",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_31 (1)",
+   "parent": 104,
+   "pos": [
+    -0.69000006,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_32",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_31 (2)",
+   "parent": 104,
+   "pos": [
+    0.98499995,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_31",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_31 (3)",
+   "parent": 104,
+   "pos": [
+    2.475,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_33",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_15",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_15",
+   "parent": 104,
+   "pos": [
+    0.235,
+    0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_15",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.46,
+    0.72
+   ]
+  },
+  {
+   "name": "samurai_bg_15 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_15 (1)",
+   "parent": 104,
+   "pos": [
+    1.635,
+    0.099999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_28",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.46,
+    0.72
+   ]
+  },
+  {
+   "name": "samurai_bg_24",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_24",
+   "parent": 104,
+   "pos": [
+    -1.8199999,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_24 (1)",
+   "parent": 104,
+   "pos": [
+    -1.5,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_24 (2)",
+   "parent": 104,
+   "pos": [
+    -0.22000003,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_24 (3)",
+   "parent": 104,
+   "pos": [
+    0.5049999,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_24 (4)",
+   "parent": 104,
+   "pos": [
+    1.3,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (5)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_24 (5)",
+   "parent": 104,
+   "pos": [
+    2.095,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (6)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_24 (6)",
+   "parent": 104,
+   "pos": [
+    2.855,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (7)",
+   "path": "BackgroundHolder/Holder/Main/Main 1/Houses/samurai_bg_24 (7)",
+   "parent": 104,
+   "pos": [
+    -2.57,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "Main 2",
+   "path": "BackgroundHolder/Holder/Main/Main 2",
+   "parent": 83,
+   "pos": [
+    6.233,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -8
+   ]
+  },
+  {
+   "name": "Soil 1",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Soil 1",
+   "parent": 119,
+   "pos": [
+    0,
+    -0.675
+   ],
+   "rotZ": 0,
+   "scale": [
+    13,
+    5
+   ],
+   "sprite": "samurai_bg_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    0.32
+   ]
+  },
+  {
+   "name": "Soil 2",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Soil 2",
+   "parent": 119,
+   "pos": [
+    0,
+    -1.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    13,
+    4
+   ],
+   "sprite": "samurai_bg_13",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    0.32
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall",
+   "parent": 119,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_22",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22",
+   "parent": 122,
+   "pos": [
+    -2.3988097,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22 (2)",
+   "parent": 122,
+   "pos": [
+    -0.034999996,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22 (1)",
+   "parent": 122,
+   "pos": [
+    -1.305,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22 (3)",
+   "parent": 122,
+   "pos": [
+    1.245,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22 (4)",
+   "parent": 122,
+   "pos": [
+    2.4,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22",
+   "parent": 122,
+   "pos": [
+    -2.465,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.017409,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (5)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22 (5)",
+   "parent": 122,
+   "pos": [
+    -1.185,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (6)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22 (6)",
+   "parent": 122,
+   "pos": [
+    0.09000003,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (7)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22 (7)",
+   "parent": 122,
+   "pos": [
+    1.37,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (8)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Wall/samurai_bg_22 (8)",
+   "parent": 122,
+   "pos": [
+    2.55,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.85,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Grass",
+   "parent": 119,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_14",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Grass/samurai_bg_14",
+   "parent": 133,
+   "pos": [
+    -2.48,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Grass/samurai_bg_14 (1)",
+   "parent": 133,
+   "pos": [
+    -1.29,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Grass/samurai_bg_14 (2)",
+   "parent": 133,
+   "pos": [
+    -0.019999996,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Grass/samurai_bg_14 (3)",
+   "parent": 133,
+   "pos": [
+    1.25,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Grass/samurai_bg_14 (4)",
+   "parent": 133,
+   "pos": [
+    2.48,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "Houses",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses",
+   "parent": 119,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_31",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_31",
+   "parent": 139,
+   "pos": [
+    -2.28,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_31",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_31 (1)",
+   "parent": 139,
+   "pos": [
+    -0.45,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_31",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_31 (2)",
+   "parent": 139,
+   "pos": [
+    0.98499995,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_31",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_31 (3)",
+   "parent": 139,
+   "pos": [
+    2.475,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_33",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_15",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_15",
+   "parent": 139,
+   "pos": [
+    0.235,
+    0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_15",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.46,
+    0.72
+   ]
+  },
+  {
+   "name": "samurai_bg_15 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_15 (1)",
+   "parent": 139,
+   "pos": [
+    1.675,
+    0.065
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_15",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.46,
+    0.72
+   ]
+  },
+  {
+   "name": "samurai_bg_15 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_15 (2)",
+   "parent": 139,
+   "pos": [
+    -1.685,
+    0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_15",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.46,
+    0.72
+   ]
+  },
+  {
+   "name": "samurai_bg_24",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_24",
+   "parent": 139,
+   "pos": [
+    -1.9799999,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_24 (1)",
+   "parent": 139,
+   "pos": [
+    -1.4399999,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_24 (2)",
+   "parent": 139,
+   "pos": [
+    -0.22000003,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_24 (3)",
+   "parent": 139,
+   "pos": [
+    0.5049999,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_24 (4)",
+   "parent": 139,
+   "pos": [
+    1.3,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (5)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_24 (5)",
+   "parent": 139,
+   "pos": [
+    2.095,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (6)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_24 (6)",
+   "parent": 139,
+   "pos": [
+    2.855,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (7)",
+   "path": "BackgroundHolder/Holder/Main/Main 2/Houses/samurai_bg_24 (7)",
+   "parent": 139,
+   "pos": [
+    -2.57,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "Main 3",
+   "path": "BackgroundHolder/Holder/Main/Main 3",
+   "parent": 83,
+   "pos": [
+    12.446,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -8
+   ]
+  },
+  {
+   "name": "Soil 1",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Soil 1",
+   "parent": 155,
+   "pos": [
+    0,
+    -0.675
+   ],
+   "rotZ": 0,
+   "scale": [
+    13,
+    5
+   ],
+   "sprite": "samurai_bg_6",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    0.32
+   ]
+  },
+  {
+   "name": "Soil 2",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Soil 2",
+   "parent": 155,
+   "pos": [
+    0,
+    -1.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    13,
+    4
+   ],
+   "sprite": "samurai_bg_13",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    0.32
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall",
+   "parent": 155,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_22",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22",
+   "parent": 158,
+   "pos": [
+    -2.3988097,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22 (2)",
+   "parent": 158,
+   "pos": [
+    -0.034999996,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22 (1)",
+   "parent": 158,
+   "pos": [
+    -1.305,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22 (3)",
+   "parent": 158,
+   "pos": [
+    1.245,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22 (4)",
+   "parent": 158,
+   "pos": [
+    2.4,
+    -0.87738097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22",
+   "parent": 158,
+   "pos": [
+    -2.465,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.017409,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (5)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22 (5)",
+   "parent": 158,
+   "pos": [
+    -1.185,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (6)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22 (6)",
+   "parent": 158,
+   "pos": [
+    0.09000003,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (7)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22 (7)",
+   "parent": 158,
+   "pos": [
+    1.37,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_22 (8)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Wall/samurai_bg_22 (8)",
+   "parent": 158,
+   "pos": [
+    2.55,
+    -0.84999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.85,
+    1
+   ],
+   "sprite": "samurai_bg_22",
+   "order": 3,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.28,
+    0.56
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Grass",
+   "parent": 155,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_14",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Grass/samurai_bg_14",
+   "parent": 169,
+   "pos": [
+    -2.48,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Grass/samurai_bg_14 (1)",
+   "parent": 169,
+   "pos": [
+    -1.29,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Grass/samurai_bg_14 (2)",
+   "parent": 169,
+   "pos": [
+    -0.019999996,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Grass/samurai_bg_14 (3)",
+   "parent": 169,
+   "pos": [
+    1.25,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "samurai_bg_14 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Grass/samurai_bg_14 (4)",
+   "parent": 169,
+   "pos": [
+    2.48,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_14",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.28,
+    0.18
+   ]
+  },
+  {
+   "name": "Houses",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses",
+   "parent": 155,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_31",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_31",
+   "parent": 175,
+   "pos": [
+    -2.28,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_31",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_31 (1)",
+   "parent": 175,
+   "pos": [
+    -0.69000006,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_32",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_31 (2)",
+   "parent": 175,
+   "pos": [
+    0.98499995,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_31",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_31 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_31 (3)",
+   "parent": 175,
+   "pos": [
+    2.475,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_33",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    1.1,
+    1.03
+   ]
+  },
+  {
+   "name": "samurai_bg_15",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_15",
+   "parent": 175,
+   "pos": [
+    0.235,
+    0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_15",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.46,
+    0.72
+   ]
+  },
+  {
+   "name": "samurai_bg_15 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_15 (1)",
+   "parent": 175,
+   "pos": [
+    1.635,
+    0.099999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_28",
+   "order": 1,
+   "color": [
+    0.39215687,
+    0.39215687,
+    0.39215687,
+    1
+   ],
+   "size": [
+    0.46,
+    0.72
+   ]
+  },
+  {
+   "name": "samurai_bg_24",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_24",
+   "parent": 175,
+   "pos": [
+    -1.8199999,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (1)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_24 (1)",
+   "parent": 175,
+   "pos": [
+    -1.5,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (2)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_24 (2)",
+   "parent": 175,
+   "pos": [
+    -0.22000003,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (3)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_24 (3)",
+   "parent": 175,
+   "pos": [
+    0.5049999,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (4)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_24 (4)",
+   "parent": 175,
+   "pos": [
+    1.3,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (5)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_24 (5)",
+   "parent": 175,
+   "pos": [
+    2.095,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (6)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_24 (6)",
+   "parent": 175,
+   "pos": [
+    2.855,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "samurai_bg_24 (7)",
+   "path": "BackgroundHolder/Holder/Main/Main 3/Houses/samurai_bg_24 (7)",
+   "parent": 175,
+   "pos": [
+    -2.57,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_24",
+   "order": 2,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.66,
+    0.48
+   ]
+  },
+  {
+   "name": "ForegroundHolder",
+   "path": "BackgroundHolder/Holder/ForegroundHolder",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 0.5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -9
+   ]
+  },
+  {
+   "name": "Foreground",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground",
+   "parent": 190,
+   "pos": [
+    0,
+    0.10119046
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Houses",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/Houses",
+   "parent": 191,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_51",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/Houses/samurai_bg_51",
+   "parent": 192,
+   "pos": [
+    -3.27,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_51",
+   "order": 0,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.64,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/Houses/samurai_bg_30",
+   "parent": 192,
+   "pos": [
+    -1.9649999,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/Houses/samurai_bg_30 (1)",
+   "parent": 192,
+   "pos": [
+    -1.16,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (2)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/Houses/samurai_bg_30 (2)",
+   "parent": 192,
+   "pos": [
+    -0.125,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (3)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/Houses/samurai_bg_30 (3)",
+   "parent": 192,
+   "pos": [
+    0.68,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (4)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/Houses/samurai_bg_30 (4)",
+   "parent": 192,
+   "pos": [
+    1.8700001,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (5)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/Houses/samurai_bg_30 (5)",
+   "parent": 192,
+   "pos": [
+    2.685,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject",
+   "parent": 191,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_20",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject/samurai_bg_20",
+   "parent": 200,
+   "pos": [
+    -1.935,
+    0.099999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject/samurai_bg_20 (1)",
+   "parent": 200,
+   "pos": [
+    -1.77,
+    0.099999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (2)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject/samurai_bg_20 (2)",
+   "parent": 200,
+   "pos": [
+    -1.5999999,
+    0.099999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (3)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject/samurai_bg_20 (3)",
+   "parent": 200,
+   "pos": [
+    -1.8499999,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (4)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject/samurai_bg_20 (4)",
+   "parent": 200,
+   "pos": [
+    -1.675,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (5)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject/samurai_bg_20 (5)",
+   "parent": 200,
+   "pos": [
+    -1.77,
+    0.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "wheel",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/wheel",
+   "parent": 191,
+   "pos": [
+    -0.635,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_19",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.32,
+    0.4
+   ]
+  },
+  {
+   "name": "GameObject (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject (1)",
+   "parent": 191,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_20",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject (1)/samurai_bg_20",
+   "parent": 208,
+   "pos": [
+    0.35,
+    0.089999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject (1)/samurai_bg_20 (1)",
+   "parent": 208,
+   "pos": [
+    0.515,
+    0.089999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (2)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject (1)/samurai_bg_20 (2)",
+   "parent": 208,
+   "pos": [
+    0.68500006,
+    0.089999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (3)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject (1)/samurai_bg_20 (3)",
+   "parent": 208,
+   "pos": [
+    0.43500003,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (4)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject (1)/samurai_bg_20 (4)",
+   "parent": 208,
+   "pos": [
+    0.61,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (5)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/GameObject (1)/samurai_bg_20 (5)",
+   "parent": 208,
+   "pos": [
+    0.515,
+    0.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "wheel (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground/wheel (1)",
+   "parent": 191,
+   "pos": [
+    1.36,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_19",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.32,
+    0.4
+   ]
+  },
+  {
+   "name": "Foreground (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)",
+   "parent": 190,
+   "pos": [
+    6.803,
+    0.10119046
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Houses",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/Houses",
+   "parent": 216,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_51",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/Houses/samurai_bg_51",
+   "parent": 217,
+   "pos": [
+    -3.27,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_51",
+   "order": 0,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.64,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/Houses/samurai_bg_30",
+   "parent": 217,
+   "pos": [
+    -1.9649999,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/Houses/samurai_bg_30 (1)",
+   "parent": 217,
+   "pos": [
+    -1.16,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (2)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/Houses/samurai_bg_30 (2)",
+   "parent": 217,
+   "pos": [
+    -0.125,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (3)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/Houses/samurai_bg_30 (3)",
+   "parent": 217,
+   "pos": [
+    0.68,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (4)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/Houses/samurai_bg_30 (4)",
+   "parent": 217,
+   "pos": [
+    1.8700001,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "samurai_bg_30 (5)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/Houses/samurai_bg_30 (5)",
+   "parent": 217,
+   "pos": [
+    2.685,
+    0.29999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_30",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    1.06,
+    0.56
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject",
+   "parent": 216,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_20",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject/samurai_bg_20",
+   "parent": 225,
+   "pos": [
+    -1.935,
+    0.099999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject/samurai_bg_20 (1)",
+   "parent": 225,
+   "pos": [
+    -1.77,
+    0.099999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (2)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject/samurai_bg_20 (2)",
+   "parent": 225,
+   "pos": [
+    -1.5999999,
+    0.099999994
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (3)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject/samurai_bg_20 (3)",
+   "parent": 225,
+   "pos": [
+    -1.8499999,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (4)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject/samurai_bg_20 (4)",
+   "parent": 225,
+   "pos": [
+    -1.675,
+    0.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (5)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject/samurai_bg_20 (5)",
+   "parent": 225,
+   "pos": [
+    -1.77,
+    0.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "wheel",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/wheel",
+   "parent": 216,
+   "pos": [
+    -0.635,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_19",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.32,
+    0.4
+   ]
+  },
+  {
+   "name": "GameObject (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject (1)",
+   "parent": 216,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "samurai_bg_20",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject (1)/samurai_bg_20",
+   "parent": 233,
+   "pos": [
+    0.35,
+    0.089999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject (1)/samurai_bg_20 (1)",
+   "parent": 233,
+   "pos": [
+    0.515,
+    0.089999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (2)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject (1)/samurai_bg_20 (2)",
+   "parent": 233,
+   "pos": [
+    0.68500006,
+    0.089999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (3)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject (1)/samurai_bg_20 (3)",
+   "parent": 233,
+   "pos": [
+    0.43500003,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (4)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject (1)/samurai_bg_20 (4)",
+   "parent": 233,
+   "pos": [
+    0.61,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "samurai_bg_20 (5)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/GameObject (1)/samurai_bg_20 (5)",
+   "parent": 233,
+   "pos": [
+    0.515,
+    0.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_20",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.16,
+    0.16
+   ]
+  },
+  {
+   "name": "wheel (1)",
+   "path": "BackgroundHolder/Holder/ForegroundHolder/Foreground (1)/wheel (1)",
+   "parent": 216,
+   "pos": [
+    1.36,
+    0.22
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_19",
+   "order": 1,
+   "color": [
+    0.5882353,
+    0.5882353,
+    0.5882353,
+    1
+   ],
+   "size": [
+    0.32,
+    0.4
+   ]
+  },
+  {
+   "name": "WaterHolder",
+   "path": "BackgroundHolder/Holder/WaterHolder",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    4
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "BackgroundHolder/Holder/WaterHolder/Water",
+   "parent": 241,
+   "pos": [
+    0,
+    0.076190464
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "BackgroundHolder/Holder/WaterHolder/Water/Water",
+   "parent": 242,
+   "pos": [
+    0,
+    -1.235
+   ],
+   "rotZ": 0,
+   "scale": [
+    13.4,
+    1.35
+   ],
+   "sprite": "samurai_bg_16",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    0.48,
+    0.48
+   ]
+  },
+  {
+   "name": "Mark",
+   "path": "BackgroundHolder/Holder/WaterHolder/Water/Mark",
+   "parent": 242,
+   "pos": [
+    0.004999995,
+    -1.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_11",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "drawMode": 2,
+   "size": [
+    6.4,
+    0.64
+   ]
+  },
+  {
+   "name": "Water (1)",
+   "path": "BackgroundHolder/Holder/WaterHolder/Water (1)",
+   "parent": 241,
+   "pos": [
+    6.43,
+    0.076190464
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Water",
+   "path": "BackgroundHolder/Holder/WaterHolder/Water (1)/Water",
+   "parent": 245,
+   "pos": [
+    0,
+    -1.235
+   ],
+   "rotZ": 0,
+   "scale": [
+    13.4,
+    1.35
+   ],
+   "sprite": "samurai_bg_16",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    0.48,
+    0.48
+   ]
+  },
+  {
+   "name": "Mark",
+   "path": "BackgroundHolder/Holder/WaterHolder/Water (1)/Mark",
+   "parent": 245,
+   "pos": [
+    0.004999995,
+    -1.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_11",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "drawMode": 2,
+   "size": [
+    6.4,
+    0.64
+   ]
+  },
+  {
+   "name": "Fog",
+   "path": "BackgroundHolder/Holder/Fog",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "BackgroundHolder/Holder/Fog/Holder",
+   "parent": 248,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke 1",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1",
+   "parent": 249,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -5
+   ]
+  },
+  {
+   "name": "samurai_bg_29",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29",
+   "parent": 250,
+   "pos": [
+    -2.79,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (1)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (1)",
+   "parent": 250,
+   "pos": [
+    -2.27,
+    -0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (2)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (2)",
+   "parent": 250,
+   "pos": [
+    -1.4699999,
+    -0.14999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (3)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (3)",
+   "parent": 250,
+   "pos": [
+    -0.40999997,
+    -0.105
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (4)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (4)",
+   "parent": 250,
+   "pos": [
+    0.42999998,
+    -0.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (5)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (5)",
+   "parent": 250,
+   "pos": [
+    1.01,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (6)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (6)",
+   "parent": 250,
+   "pos": [
+    1.5999999,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (7)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (7)",
+   "parent": 250,
+   "pos": [
+    2.23,
+    -0.13499999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (9)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (9)",
+   "parent": 250,
+   "pos": [
+    3.6799998,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (10)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (10)",
+   "parent": 250,
+   "pos": [
+    4.2,
+    -0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (11)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (11)",
+   "parent": 250,
+   "pos": [
+    5,
+    -0.14999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (12)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (12)",
+   "parent": 250,
+   "pos": [
+    6.06,
+    -0.105
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (13)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (13)",
+   "parent": 250,
+   "pos": [
+    6.9,
+    -0.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (14)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (14)",
+   "parent": 250,
+   "pos": [
+    7.4799995,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (15)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (15)",
+   "parent": 250,
+   "pos": [
+    8.07,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (16)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (16)",
+   "parent": 250,
+   "pos": [
+    8.7,
+    -0.13499999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (8)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 1/samurai_bg_29 (8)",
+   "parent": 250,
+   "pos": [
+    2.8149998,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "Smoke 2",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2",
+   "parent": 249,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    15
+   ]
+  },
+  {
+   "name": "samurai_bg_29",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29",
+   "parent": 268,
+   "pos": [
+    -2.495,
+    -0.59999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (1)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (1)",
+   "parent": 268,
+   "pos": [
+    -1.13,
+    -0.565
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (2)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (2)",
+   "parent": 268,
+   "pos": [
+    0.195,
+    -0.59499997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (3)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (3)",
+   "parent": 268,
+   "pos": [
+    1.3,
+    -0.405
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (4)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (4)",
+   "parent": 268,
+   "pos": [
+    2.585,
+    -0.45999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (5)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (5)",
+   "parent": 268,
+   "pos": [
+    3.9916668,
+    -0.59999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (6)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (6)",
+   "parent": 268,
+   "pos": [
+    5.3566666,
+    -0.565
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (7)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (7)",
+   "parent": 268,
+   "pos": [
+    6.681667,
+    -0.59499997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (8)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (8)",
+   "parent": 268,
+   "pos": [
+    7.786667,
+    -0.405
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (9)",
+   "path": "BackgroundHolder/Holder/Fog/Holder/Smoke 2/samurai_bg_29 (9)",
+   "parent": 268,
+   "pos": [
+    9.071667,
+    -0.45999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "Holder (1)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)",
+   "parent": 248,
+   "pos": [
+    12.94,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smoke 1",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1",
+   "parent": 279,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -5
+   ]
+  },
+  {
+   "name": "samurai_bg_29",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29",
+   "parent": 280,
+   "pos": [
+    -2.79,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (1)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (1)",
+   "parent": 280,
+   "pos": [
+    -2.27,
+    -0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (2)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (2)",
+   "parent": 280,
+   "pos": [
+    -1.4699999,
+    -0.14999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (3)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (3)",
+   "parent": 280,
+   "pos": [
+    -0.40999997,
+    -0.105
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (4)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (4)",
+   "parent": 280,
+   "pos": [
+    0.42999998,
+    -0.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (5)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (5)",
+   "parent": 280,
+   "pos": [
+    1.01,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (6)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (6)",
+   "parent": 280,
+   "pos": [
+    1.5999999,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (7)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (7)",
+   "parent": 280,
+   "pos": [
+    2.23,
+    -0.13499999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (9)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (9)",
+   "parent": 280,
+   "pos": [
+    3.6799998,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (10)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (10)",
+   "parent": 280,
+   "pos": [
+    4.2,
+    -0.06
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (11)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (11)",
+   "parent": 280,
+   "pos": [
+    5,
+    -0.14999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (12)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (12)",
+   "parent": 280,
+   "pos": [
+    6.06,
+    -0.105
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (13)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (13)",
+   "parent": 280,
+   "pos": [
+    6.9,
+    -0.12
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (14)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (14)",
+   "parent": 280,
+   "pos": [
+    7.4799995,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (15)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (15)",
+   "parent": 280,
+   "pos": [
+    8.07,
+    -0.049999997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (16)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (16)",
+   "parent": 280,
+   "pos": [
+    8.7,
+    -0.13499999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (8)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 1/samurai_bg_29 (8)",
+   "parent": 280,
+   "pos": [
+    2.8149998,
+    -0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3,
+    0.3
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "Smoke 2",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2",
+   "parent": 279,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    15
+   ]
+  },
+  {
+   "name": "samurai_bg_29",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29",
+   "parent": 298,
+   "pos": [
+    -2.495,
+    -0.59999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (1)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (1)",
+   "parent": 298,
+   "pos": [
+    -1.13,
+    -0.565
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (2)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (2)",
+   "parent": 298,
+   "pos": [
+    0.195,
+    -0.59499997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (3)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (3)",
+   "parent": 298,
+   "pos": [
+    1.3,
+    -0.405
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (4)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (4)",
+   "parent": 298,
+   "pos": [
+    2.585,
+    -0.45999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (5)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (5)",
+   "parent": 298,
+   "pos": [
+    3.9916668,
+    -0.59999996
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (6)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (6)",
+   "parent": 298,
+   "pos": [
+    5.3566666,
+    -0.565
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (7)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (7)",
+   "parent": 298,
+   "pos": [
+    6.681667,
+    -0.59499997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (8)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (8)",
+   "parent": 298,
+   "pos": [
+    7.786667,
+    -0.405
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "samurai_bg_29 (9)",
+   "path": "BackgroundHolder/Holder/Fog/Holder (1)/Smoke 2/samurai_bg_29 (9)",
+   "parent": 298,
+   "pos": [
+    9.071667,
+    -0.45999998
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "samurai_bg_29",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.78431374
+   ],
+   "size": [
+    2.64,
+    0.64
+   ]
+  },
+  {
+   "name": "CloudHolder",
+   "path": "BackgroundHolder/Holder/CloudHolder",
+   "parent": 77,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -9
+   ]
+  },
+  {
+   "name": "Cloud 1",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 1",
+   "parent": 309,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cloud",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 1/cloud",
+   "parent": 310,
+   "pos": [
+    -2.235,
+    4.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "cloud (1)",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 1/cloud (1)",
+   "parent": 310,
+   "pos": [
+    -1.275,
+    3.695
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "cloud (2)",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 1/cloud (2)",
+   "parent": 310,
+   "pos": [
+    0.79999995,
+    3.8049998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "cloud (3)",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 1/cloud (3)",
+   "parent": 310,
+   "pos": [
+    2.0049999,
+    3.215
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "cloud (4)",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 1/cloud (4)",
+   "parent": 310,
+   "pos": [
+    2.565,
+    4.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "Cloud 2",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 2",
+   "parent": 309,
+   "pos": [
+    6.4,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "cloud",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 2/cloud",
+   "parent": 316,
+   "pos": [
+    -2.235,
+    4.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "cloud (1)",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 2/cloud (1)",
+   "parent": 316,
+   "pos": [
+    -1.275,
+    3.695
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "cloud (2)",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 2/cloud (2)",
+   "parent": 316,
+   "pos": [
+    0.79999995,
+    3.8049998
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "cloud (3)",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 2/cloud (3)",
+   "parent": 316,
+   "pos": [
+    2.0049999,
+    3.215
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "cloud (4)",
+   "path": "BackgroundHolder/Holder/CloudHolder/Cloud 2/cloud (4)",
+   "parent": 316,
+   "pos": [
+    2.565,
+    4.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_bg_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.27,
+    0.48
+   ]
+  },
+  {
+   "name": "PlatformHolder",
+   "path": "PlatformHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eagle",
+   "path": "PlatformHolder/Eagle",
+   "parent": 322,
+   "pos": [
+    -0.035,
+    -1.685
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eagle",
+   "path": "PlatformHolder/Eagle/Eagle",
+   "parent": 323,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2,
+    4.2
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "PlatformHolder/Eagle/Eagle/Holder",
+   "parent": 324,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "body",
+   "path": "PlatformHolder/Eagle/Eagle/Holder/body",
+   "parent": 325,
+   "pos": [
+    -0.17,
+    -0.03
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samurai_obj_58",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.12,
+    0.74
+   ]
+  },
+  {
+   "name": "Flash",
+   "path": "Flash",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    25,
+    25
+   ],
+   "order": 9999,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "WaterParticle",
+   "path": "WaterParticle",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WaterL",
+   "path": "WaterParticle/WaterL",
+   "parent": 328,
+   "pos": [
+    -6.81,
+    -4.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "white",
+   "path": "WaterParticle/WaterL/white",
+   "parent": 329,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "blue",
+   "path": "WaterParticle/WaterL/blue",
+   "parent": 329,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WaterR",
+   "path": "WaterParticle/WaterR",
+   "parent": 328,
+   "pos": [
+    7.7749996,
+    -4.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "white",
+   "path": "WaterParticle/WaterR/white",
+   "parent": 332,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "blue",
+   "path": "WaterParticle/WaterR/blue",
+   "parent": 332,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "demon",
+   "path": "demon",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2,
+    4.2
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "demon/Holder",
+   "parent": 335,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "enemy_obj_0",
+   "path": "demon/Holder/enemy_obj_0",
+   "parent": 336,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "enemy_obj_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "S_Demon"
+  },
+  {
+   "name": "enemy_obj_30",
+   "path": "demon/Holder/enemy_obj_30",
+   "parent": 336,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "enemy_obj_30",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.24,
+    0.47
+   ],
+   "mapped": true,
+   "mat": "S_Demon"
+  },
+  {
+   "name": "enemy_obj_29",
+   "path": "demon/Holder/enemy_obj_29",
+   "parent": 336,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "enemy_obj_29",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.25,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "S_Demon"
+  },
+  {
+   "name": "GroundPlane",
+   "path": "demon/Holder/GroundPlane",
+   "parent": 336,
+   "pos": [
+    -0.429,
+    -0.498
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WindZone",
+   "path": "demon/Holder/WindZone",
+   "parent": 336,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "blowupAway",
+   "path": "demon/Holder/blowupAway",
+   "parent": 336,
+   "pos": [
+    0.652,
+    0.237
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "big",
+   "path": "demon/Holder/blowupAway/big",
+   "parent": 342,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "teeth",
+   "path": "demon/Holder/blowupAway/teeth",
+   "parent": 342,
+   "pos": [
+    -0.0812,
+    -0.1067
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "eyes",
+   "path": "demon/Holder/blowupAway/eyes",
+   "parent": 342,
+   "pos": [
+    -0.0812,
+    0.0146
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bottom",
+   "path": "demon/Holder/blowupAway/bottom",
+   "parent": 342,
+   "pos": [
+    0,
+    -0.445
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "teeth",
+   "path": "demon/Holder/blowupAway/bottom/teeth",
+   "parent": 346,
+   "pos": [
+    -0.0812,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "blowupKick",
+   "path": "demon/Holder/blowupKick",
+   "parent": 336,
+   "pos": [
+    1.231,
+    -0.014
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "big",
+   "path": "demon/Holder/blowupKick/big",
+   "parent": 348,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "teeth",
+   "path": "demon/Holder/blowupKick/teeth",
+   "parent": 348,
+   "pos": [
+    -0.0812,
+    -0.1067
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "eyes",
+   "path": "demon/Holder/blowupKick/eyes",
+   "parent": 348,
+   "pos": [
+    -0.0812,
+    0.0146
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bottom",
+   "path": "demon/Holder/blowupKick/bottom",
+   "parent": 348,
+   "pos": [
+    0,
+    -0.026
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "teeth",
+   "path": "demon/Holder/blowupKick/bottom/teeth",
+   "parent": 352,
+   "pos": [
+    -0.0812,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "blowup",
+   "path": "demon/Holder/blowup",
+   "parent": 336,
+   "pos": [
+    0.652,
+    0.237
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "big",
+   "path": "demon/Holder/blowup/big",
+   "parent": 354,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "teeth",
+   "path": "demon/Holder/blowup/teeth",
+   "parent": 354,
+   "pos": [
+    -0.0812,
+    -0.1067
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "eyes",
+   "path": "demon/Holder/blowup/eyes",
+   "parent": 354,
+   "pos": [
+    -0.0812,
+    0.0146
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bottom",
+   "path": "demon/Holder/blowup/bottom",
+   "parent": 354,
+   "pos": [
+    0,
+    -0.445
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "teeth",
+   "path": "demon/Holder/blowup/bottom/teeth",
+   "parent": 358,
+   "pos": [
+    -0.0812,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "mediumDemon",
+   "path": "mediumDemon",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.2,
+    4.2
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Holder",
+   "path": "mediumDemon/Holder",
+   "parent": 360,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "enemy_obj_36",
+   "path": "mediumDemon/Holder/enemy_obj_36",
+   "parent": 361,
+   "pos": [
+    -0.265,
+    0.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "enemy_obj_34",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.63,
+    0.99
+   ],
+   "mapped": true,
+   "mat": "M_Demon"
+  },
+  {
+   "name": "enemy_obj_7",
+   "path": "mediumDemon/Holder/enemy_obj_7",
+   "parent": 361,
+   "pos": [
+    0,
+    0.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "enemy_obj_33",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.89
+   ],
+   "mapped": true,
+   "mat": "M_Demon"
+  },
+  {
+   "name": "enemy_obj_41",
+   "path": "mediumDemon/Holder/enemy_obj_41",
+   "parent": 361,
+   "pos": [
+    -0.21,
+    -0.005
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "enemy_obj_41",
+   "order": 2,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.88,
+    0.19
+   ],
+   "mapped": true,
+   "mat": "M_Demon"
+  },
+  {
+   "name": "enemy_obj_36 (1)",
+   "path": "mediumDemon/Holder/enemy_obj_36 (1)",
+   "parent": 361,
+   "pos": [
+    -2.980232e-8,
+    -0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "enemy_obj_34",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    0.63,
+    0.99
+   ],
+   "mapped": true,
+   "mat": "M_Demon"
+  },
+  {
+   "name": "GroundPlane",
+   "path": "mediumDemon/Holder/GroundPlane",
+   "parent": 361,
+   "pos": [
+    -0.429,
+    -0.498
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WindZone",
+   "path": "mediumDemon/Holder/WindZone",
+   "parent": 361,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "blowup",
+   "path": "mediumDemon/Holder/blowup",
+   "parent": 361,
+   "pos": [
+    -1.206,
+    0.237
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "big",
+   "path": "mediumDemon/Holder/blowup/big",
+   "parent": 368,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "teeth",
+   "path": "mediumDemon/Holder/blowup/teeth",
+   "parent": 368,
+   "pos": [
+    -0.0812,
+    -0.1067
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "eyes",
+   "path": "mediumDemon/Holder/blowup/eyes",
+   "parent": 368,
+   "pos": [
+    -0.185,
+    0.0146
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bottom",
+   "path": "mediumDemon/Holder/blowup/bottom",
+   "parent": 368,
+   "pos": [
+    0,
+    -0.655
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "teeth",
+   "path": "mediumDemon/Holder/blowup/bottom/teeth",
+   "parent": 372,
+   "pos": [
+    -0.0812,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "big",
+   "path": "mediumDemon/Holder/blowup/bottom/big",
+   "parent": 372,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}
