@@ -1,0 +1,18 @@
+{
+ "BG": "Game/stageLmodel",
+ "Lights": "Game/CameraPivot/RallyCam/Lights",
+ "WBG": "Game/WhiteBG",
+ "ball": "Game/Ball",
+ "ballHitFX": "Game/BounceFX",
+ "ballShadow": "Game/Ball/Shadow",
+ "ballTrail": "Game/Ball/Particle System",
+ "cameraPivot": "Game/CameraPivot",
+ "cameraPos": "Game/CameraPivot/RallyCam",
+ "missCurve": "Game/Curves/MissCurve",
+ "opponentAnim": "Game/Paddlers/Opponent",
+ "paddlers": "Game/Paddlers",
+ "playerAnim": "Game/Paddlers/Player",
+ "returnCurve": "Game/Curves/ReturnCurve",
+ "serveCurve": "Game/Curves/ServeCurve",
+ "tossCurve": "Game/Curves/TossCurve"
+}

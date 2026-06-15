@@ -9,6 +9,7 @@ import (
 	"os"
 	"os/exec"
 	"path/filepath"
+	"reflect"
 	"sort"
 	"strings"
 
@@ -2036,7 +2037,7 @@ func scanImportedClips(root string, fps float64) map[string]map[int64]importedCl
 	}
 	out := map[string]map[int64]importedClip{}
 	_ = filepath.WalkDir(root, func(p string, d os.DirEntry, err error) error {
-		if err != nil || d.IsDir() || !strings.HasSuffix(p, ".fbx.meta") {
+		if err != nil || d.IsDir() || (!strings.HasSuffix(p, ".fbx.meta") && !strings.HasSuffix(p, ".dae.meta")) {
 			return err
 		}
 		raw, err := os.ReadFile(p)
@@ -2056,7 +2057,7 @@ func scanImportedClips(root string, fps float64) map[string]map[int64]importedCl
 		if err != nil {
 			rel = filepath.Base(fbxPath)
 		}
-		rel = strings.TrimSuffix(filepath.ToSlash(rel), ".fbx")
+		rel = strings.TrimSuffix(strings.TrimSuffix(filepath.ToSlash(rel), ".fbx"), ".dae")
 		for _, cv := range uy.L(uy.Get(m, "ModelImporter", "animations", "clipAnimations")) {
 			c := uy.M(cv)
 			id := uy.I(c["internalID"])
@@ -2080,9 +2081,59 @@ func scanImportedClips(root string, fps float64) map[string]map[int64]importedCl
 				Loop:     uy.I(c["loopTime"]) != 0,
 			}
 		}
+		// Some imported model animations (Rhythm Rally's Paddler.fbx) expose no
+		// clipAnimations entries, but Unity still records the AnimationClip
+		// fileIDs in internalIDToNameTable. Preserve those names so controller
+		// states can bind to their imported motions instead of becoming blank.
+		for _, tv := range uy.L(uy.Get(m, "ModelImporter", "internalIDToNameTable")) {
+			t := uy.M(tv)
+			id := uy.I(mapValueByStringKey(t["first"], "74"))
+			if id == 0 {
+				continue
+			}
+			if out[guid] != nil {
+				if _, exists := out[guid][id]; exists {
+					continue
+				}
+			}
+			if out[guid] == nil {
+				out[guid] = map[int64]importedClip{}
+			}
+			out[guid][id] = importedClip{
+				Key: rel + "/" + importedClipTableName(uy.S(t["second"]), id),
+			}
+		}
 		return nil
 	})
 	return out
+}
+
+func mapValueByStringKey(m any, key string) any {
+	if mm := uy.M(m); mm != nil {
+		return mm[key]
+	}
+	rv := reflect.ValueOf(m)
+	if !rv.IsValid() || rv.Kind() != reflect.Map {
+		return nil
+	}
+	for _, k := range rv.MapKeys() {
+		if fmt.Sprint(k.Interface()) == key {
+			return rv.MapIndex(k).Interface()
+		}
+	}
+	return nil
+}
+
+func importedClipTableName(raw string, id int64) string {
+	name := strings.TrimSpace(raw)
+	if i := strings.LastIndex(name, "|"); i >= 0 && i+1 < len(name) {
+		name = name[i+1:]
+	}
+	name = strings.TrimSpace(name)
+	if name == "" {
+		return fmt.Sprintf("clip_%d", id)
+	}
+	return name
 }
 
 func exportAnimDir(spec sceneSpec, tables map[string]*spriteTable) {

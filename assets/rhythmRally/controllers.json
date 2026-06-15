@@ -1,0 +1,53 @@
+{
+ "Paddler": {
+  "default": "Idle",
+  "states": {
+   "Beat": {
+    "clip": "Models/Paddler/pingpong_beat",
+    "speed": 4
+   },
+   "Idle": {
+    "clip": "Models/Paddler/pingpong_beat",
+    "speed": 0
+   },
+   "Pose": {
+    "clip": "Models/Paddler/pingpong_pose",
+    "speed": 4
+   },
+   "Ready0": {
+    "clip": "Models/Paddler/pingpong_ready00",
+    "speed": 4
+   },
+   "Ready1": {
+    "clip": "Models/Paddler/pingpong_ready01",
+    "speed": 4
+   },
+   "ReadyBeat": {
+    "clip": "Models/Paddler/pingpong_ready_beat",
+    "speed": 4
+   },
+   "Swing": {
+    "clip": "Models/Paddler/pingpong_swing",
+    "speed": 4,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "UnReady1": {
+    "clip": "Models/Paddler/pingpong_ready01",
+    "speed": -4,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ }
+}

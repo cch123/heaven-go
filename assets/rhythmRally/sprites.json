@@ -1,0 +1,142 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png",
+  "atlas5.png",
+  "atlas6.png",
+  "atlas7.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "L_stage": {
+   "X": 0,
+   "Y": 0,
+   "W": 4000,
+   "H": 4000,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "L_stage_shadow": {
+   "X": 0,
+   "Y": 0,
+   "W": 512,
+   "H": 512,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "body": {
+   "X": 0,
+   "Y": 0,
+   "W": 1024,
+   "H": 1024,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "boy": {
+   "X": 0,
+   "Y": 0,
+   "W": 512,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "foodlut": {
+   "X": 0,
+   "Y": 0,
+   "W": 512,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "h_specular": {
+   "X": 0,
+   "Y": 0,
+   "W": 512,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "present": {
+   "X": 0,
+   "Y": 0,
+   "W": 512,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "stand": {
+   "X": 0,
+   "Y": 0,
+   "W": 16,
+   "H": 16,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

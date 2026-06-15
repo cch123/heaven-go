@@ -1,0 +1,26 @@
+{
+ "Models/Paddler/pingpong_beat": {
+  "duration": 0,
+  "loop": false
+ },
+ "Models/Paddler/pingpong_pose": {
+  "duration": 0,
+  "loop": false
+ },
+ "Models/Paddler/pingpong_ready00": {
+  "duration": 0,
+  "loop": false
+ },
+ "Models/Paddler/pingpong_ready01": {
+  "duration": 0,
+  "loop": false
+ },
+ "Models/Paddler/pingpong_ready_beat": {
+  "duration": 0,
+  "loop": false
+ },
+ "Models/Paddler/pingpong_swing": {
+  "duration": 0,
+  "loop": false
+ }
+}

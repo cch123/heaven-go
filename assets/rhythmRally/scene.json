@@ -1,0 +1,1057 @@
+{
+ "nodes": [
+  {
+   "name": "rhythmRally",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Game",
+   "path": "Game",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CameraPivot",
+   "path": "Game/CameraPivot",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RallyCam",
+   "path": "Game/CameraPivot/RallyCam",
+   "parent": 2,
+   "pos": [
+    -1.86,
+    2.2
+   ],
+   "z": -3.9,
+   "rotZ": -0.0898269843301355,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Camera",
+   "path": "Game/CameraPivot/RallyCam/Camera",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BackgroundPlane",
+   "path": "Game/CameraPivot/RallyCam/BackgroundPlane",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 10,
+   "rotZ": 0,
+   "scale": [
+    8000,
+    8000
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Lights",
+   "path": "Game/CameraPivot/RallyCam/Lights",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Directional Light",
+   "path": "Game/CameraPivot/RallyCam/Lights/Directional Light",
+   "parent": 6,
+   "pos": [
+    0,
+    5
+   ],
+   "rotZ": -0.28327030444980894,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Directional Light 2",
+   "path": "Game/CameraPivot/RallyCam/Lights/Directional Light 2",
+   "parent": 6,
+   "pos": [
+    0,
+    5
+   ],
+   "rotZ": 0.030827488969923607,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "table",
+   "path": "Game/table",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Game/table/Shadow",
+   "parent": 9,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.65,
+    3.3
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Game/Square",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.66,
+    0.66
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0.836565,
+    1,
+    0.6745098
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Ball",
+   "path": "Game/Ball",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.08,
+    0.08
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Game/Ball/Shadow",
+   "parent": 12,
+   "pos": [
+    0,
+    -1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.33333334
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Particle System",
+   "path": "Game/Ball/Particle System",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Game/Curves",
+   "parent": 1,
+   "pos": [
+    0,
+    0.712
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ServeCurve",
+   "path": "Game/Curves/ServeCurve",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Game/Curves/ServeCurve/Point 0",
+   "parent": 16,
+   "pos": [
+    0,
+    0.03
+   ],
+   "z": 2.079,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Game/Curves/ServeCurve/Point 1",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -0.564,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Game/Curves/ServeCurve/Point 2",
+   "parent": 16,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -2.0983,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ReturnCurve",
+   "path": "Game/Curves/ReturnCurve",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 6.283185307179586,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Game/Curves/ReturnCurve/Point 0",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 2.1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Game/Curves/ReturnCurve/Point 1",
+   "parent": 20,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -0.564,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Game/Curves/ReturnCurve/Point 2",
+   "parent": 20,
+   "pos": [
+    0,
+    0.0281
+   ],
+   "z": -2.0833,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TossCurve",
+   "path": "Game/Curves/TossCurve",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Game/Curves/TossCurve/Point 0",
+   "parent": 24,
+   "pos": [
+    0,
+    0.03
+   ],
+   "z": 2.079,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Game/Curves/TossCurve/Point 1",
+   "parent": 24,
+   "pos": [
+    0,
+    0.425
+   ],
+   "z": 2.079,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "Game/Curves/TossCurve/Point 2",
+   "parent": 24,
+   "pos": [
+    0,
+    0.03
+   ],
+   "z": 2.079,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MissCurve",
+   "path": "Game/Curves/MissCurve",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Game/Curves/MissCurve/Point 0",
+   "parent": 28,
+   "pos": [
+    -0.122241914,
+    0
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Game/Curves/MissCurve/Point 1",
+   "parent": 28,
+   "pos": [
+    1,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Paddlers",
+   "path": "Game/Paddlers",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Player",
+   "path": "Game/Paddlers/Player",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -2.55,
+   "rotZ": 0,
+   "scale": [
+    0.225,
+    0.225
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Game/Paddlers/Player/Shadow",
+   "parent": 32,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 0.6960001,
+   "rotZ": 0,
+   "scale": [
+    4.08,
+    4.08
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.33333334
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "YOU",
+   "path": "Game/Paddlers/Player/YOU",
+   "parent": 32,
+   "pos": [
+    -0.0258,
+    0
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    0.02,
+    0.02
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Opponent",
+   "path": "Game/Paddlers/Opponent",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 2.55,
+   "rotZ": 0,
+   "scale": [
+    0.225,
+    0.225
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Game/Paddlers/Opponent/Shadow",
+   "parent": 35,
+   "pos": [
+    0,
+    0
+   ],
+   "z": 0.6960001,
+   "rotZ": 0,
+   "scale": [
+    4.08,
+    4.08
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.33333334
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "BounceFX",
+   "path": "Game/BounceFX",
+   "parent": 1,
+   "pos": [
+    0,
+    0.691
+   ],
+   "z": 0.589,
+   "rotZ": 0,
+   "scale": [
+    0.099999994,
+    0.10000001
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0.5882353
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "stageLmodel",
+   "path": "Game/stageLmodel",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WhiteBG",
+   "path": "Game/WhiteBG",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": -3.141592653589793,
+   "scale": [
+    100,
+    100
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "vsn_mesh_4_",
+   "path": "Game/WhiteBG/vsn_mesh_4_",
+   "parent": 39,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}
