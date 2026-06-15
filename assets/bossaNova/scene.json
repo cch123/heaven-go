@@ -1,0 +1,5264 @@
+{
+ "nodes": [
+  {
+   "name": "bossaNova",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CharacterPositions",
+   "path": "CharacterPositions",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bossa",
+   "path": "CharacterPositions/Bossa",
+   "parent": 1,
+   "pos": [
+    -1.33,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "CharacterPositions/Bossa/Head",
+   "parent": 2,
+   "pos": [
+    -0.61,
+    -0.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_18",
+   "order": 2008,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.08,
+    1.85
+   ]
+  },
+  {
+   "name": "Sprout",
+   "path": "CharacterPositions/Bossa/Head/Sprout",
+   "parent": 3,
+   "pos": [
+    0.13114761,
+    1.2295082
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_0",
+   "order": 2002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1
+   ]
+  },
+  {
+   "name": "LegR",
+   "path": "CharacterPositions/Bossa/LegR",
+   "parent": 2,
+   "pos": [
+    -0.24,
+    -2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_90",
+   "order": 2001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.64,
+    1.18
+   ]
+  },
+  {
+   "name": "LegL",
+   "path": "CharacterPositions/Bossa/LegL",
+   "parent": 2,
+   "pos": [
+    0.06,
+    -2.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_107",
+   "order": 2003,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    1.31
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "CharacterPositions/Bossa/Body",
+   "parent": 2,
+   "pos": [
+    0.03,
+    -1.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_121",
+   "order": 2007,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.26
+   ]
+  },
+  {
+   "name": "Bottom",
+   "path": "CharacterPositions/Bossa/Bottom",
+   "parent": 2,
+   "pos": [
+    0,
+    -1.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_43",
+   "order": 2002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    1.01
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "CharacterPositions/Bossa/Torso",
+   "parent": 2,
+   "pos": [
+    -0.04999995,
+    -1.464
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_29",
+   "order": 2007,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.26
+   ]
+  },
+  {
+   "name": "RHand1",
+   "path": "CharacterPositions/Bossa/RHand1",
+   "parent": 2,
+   "pos": [
+    -0.4,
+    -1.453
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_56",
+   "order": 2004,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.56,
+    0.92
+   ]
+  },
+  {
+   "name": "RHand2",
+   "path": "CharacterPositions/Bossa/RHand2",
+   "parent": 2,
+   "pos": [
+    -0.72,
+    -1.798
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_72",
+   "order": 2005,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.05,
+    0.75
+   ]
+  },
+  {
+   "name": "RHand3",
+   "path": "CharacterPositions/Bossa/RHand3",
+   "parent": 2,
+   "pos": [
+    -1.04,
+    -1.994
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_84",
+   "order": 2006,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.72
+   ]
+  },
+  {
+   "name": "LHand1",
+   "path": "CharacterPositions/Bossa/LHand1",
+   "parent": 2,
+   "pos": [
+    -0.09,
+    -1.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_56",
+   "order": 2009,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.56,
+    0.92
+   ]
+  },
+  {
+   "name": "LHand2",
+   "path": "CharacterPositions/Bossa/LHand2",
+   "parent": 2,
+   "pos": [
+    -0.39,
+    -1.91
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_72",
+   "order": 2010,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.05,
+    0.75
+   ]
+  },
+  {
+   "name": "LHand3",
+   "path": "CharacterPositions/Bossa/LHand3",
+   "parent": 2,
+   "pos": [
+    -0.76,
+    -2.098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_84",
+   "order": 2011,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.72
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CharacterPositions/Bossa/Shadow",
+   "parent": 2,
+   "pos": [
+    -0.013000011,
+    -2.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.5,
+    0.5
+   ],
+   "sprite": "recieve_main_120",
+   "order": 2000,
+   "color": [
+    1,
+    1,
+    1,
+    0.29411766
+   ],
+   "size": [
+    3.8888888,
+    3
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "CharacterPositions/Bossa/Hit",
+   "parent": 2,
+   "pos": [
+    -0.73300004,
+    -1.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "recieve_main_13",
+   "order": 20012,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.22,
+    1.22
+   ]
+  },
+  {
+   "name": "Hit1",
+   "path": "CharacterPositions/Bossa/Hit/Hit1",
+   "parent": 17,
+   "pos": [
+    -0.11750013,
+    -0.04000008
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5250001,
+    1.5250001
+   ],
+   "sprite": "recieve_main_16",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.63,
+    1.66
+   ]
+  },
+  {
+   "name": "Hit2",
+   "path": "CharacterPositions/Bossa/Hit/Hit2",
+   "parent": 17,
+   "pos": [
+    0.047499835,
+    -0.2225
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5250001,
+    1.525
+   ],
+   "sprite": "recieve_main_16",
+   "order": 2012,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    1.63,
+    1.66
+   ]
+  },
+  {
+   "name": "Bump",
+   "path": "CharacterPositions/Bossa/Bump",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BumpEffect",
+   "path": "CharacterPositions/Bossa/Bump/BumpEffect",
+   "parent": 20,
+   "pos": [
+    1.328,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_83",
+   "order": 2000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.62,
+    1.91
+   ]
+  },
+  {
+   "name": "Star1",
+   "path": "CharacterPositions/Bossa/Bump/Star1",
+   "parent": 20,
+   "pos": [
+    2.057,
+    -0.197
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_15",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "name": "Star2",
+   "path": "CharacterPositions/Bossa/Bump/Star2",
+   "parent": 20,
+   "pos": [
+    1.933,
+    0.513
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_15",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "name": "Star3",
+   "path": "CharacterPositions/Bossa/Bump/Star3",
+   "parent": 20,
+   "pos": [
+    1.179,
+    0.684
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_15",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "name": "Star4",
+   "path": "CharacterPositions/Bossa/Bump/Star4",
+   "parent": 20,
+   "pos": [
+    0.595,
+    0.364
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_15",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "name": "Nova",
+   "path": "CharacterPositions/Nova",
+   "parent": 1,
+   "pos": [
+    1.127,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "CharacterPositions/Nova/Head",
+   "parent": 26,
+   "pos": [
+    -0.61,
+    -0.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_18",
+   "order": 2008,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.08,
+    1.85
+   ]
+  },
+  {
+   "name": "Eyelash",
+   "path": "CharacterPositions/Nova/Head/Eyelash",
+   "parent": 27,
+   "pos": [
+    -0.36065578,
+    0.065573804
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_11",
+   "order": 2009,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1
+   ]
+  },
+  {
+   "name": "Eyelash2",
+   "path": "CharacterPositions/Nova/Head/Eyelash2",
+   "parent": 27,
+   "pos": [
+    -0.36065578,
+    0.065573804
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_11",
+   "order": 2009,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1
+   ]
+  },
+  {
+   "name": "Flower",
+   "path": "CharacterPositions/Nova/Head/Flower",
+   "parent": 27,
+   "pos": [
+    0.10327863,
+    1.2409836
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_10",
+   "order": 2002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.31,
+    1
+   ]
+  },
+  {
+   "name": "LegR",
+   "path": "CharacterPositions/Nova/LegR",
+   "parent": 26,
+   "pos": [
+    -0.23,
+    -2.17
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_90",
+   "order": 2001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.64,
+    1.18
+   ]
+  },
+  {
+   "name": "LegL",
+   "path": "CharacterPositions/Nova/LegL",
+   "parent": 26,
+   "pos": [
+    0.07,
+    -2.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_107",
+   "order": 2003,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    1.31
+   ]
+  },
+  {
+   "name": "RHand1",
+   "path": "CharacterPositions/Nova/RHand1",
+   "parent": 26,
+   "pos": [
+    -0.395,
+    -1.455
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_56",
+   "order": 2004,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.56,
+    0.92
+   ]
+  },
+  {
+   "name": "RHand2",
+   "path": "CharacterPositions/Nova/RHand2",
+   "parent": 26,
+   "pos": [
+    -0.72,
+    -1.798
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_72",
+   "order": 2005,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.05,
+    0.75
+   ]
+  },
+  {
+   "name": "RHand3",
+   "path": "CharacterPositions/Nova/RHand3",
+   "parent": 26,
+   "pos": [
+    -1.04,
+    -1.994
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_84",
+   "order": 2006,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.72
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "CharacterPositions/Nova/Body",
+   "parent": 26,
+   "pos": [
+    0.03,
+    -1.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_121",
+   "order": 2007,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.26
+   ]
+  },
+  {
+   "name": "Bottom",
+   "path": "CharacterPositions/Nova/Bottom",
+   "parent": 26,
+   "pos": [
+    0,
+    -1.88
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_43",
+   "order": 2002,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.38,
+    1.01
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "CharacterPositions/Nova/Torso",
+   "parent": 26,
+   "pos": [
+    -0.049999952,
+    -1.464
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_29",
+   "order": 2007,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.24,
+    1.26
+   ]
+  },
+  {
+   "name": "LHand1",
+   "path": "CharacterPositions/Nova/LHand1",
+   "parent": 26,
+   "pos": [
+    -0.078,
+    -1.582
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_56",
+   "order": 2009,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.56,
+    0.92
+   ]
+  },
+  {
+   "name": "LHand2",
+   "path": "CharacterPositions/Nova/LHand2",
+   "parent": 26,
+   "pos": [
+    -0.39,
+    -1.91
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_72",
+   "order": 2010,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.05,
+    0.75
+   ]
+  },
+  {
+   "name": "LHand3",
+   "path": "CharacterPositions/Nova/LHand3",
+   "parent": 26,
+   "pos": [
+    -0.76,
+    -2.098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_84",
+   "order": 2011,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.72
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "CharacterPositions/Nova/Shadow",
+   "parent": 26,
+   "pos": [
+    0,
+    -2.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "recieve_main_120",
+   "order": 2000,
+   "color": [
+    1,
+    1,
+    1,
+    0.29411766
+   ],
+   "size": [
+    3.8888888,
+    3
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "CharacterPositions/Nova/Hit",
+   "parent": 26,
+   "pos": [
+    -0.73300004,
+    -1.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.4,
+    0.4
+   ],
+   "sprite": "recieve_main_13",
+   "order": 20012,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.22,
+    1.22
+   ]
+  },
+  {
+   "name": "Hit1",
+   "path": "CharacterPositions/Nova/Hit/Hit1",
+   "parent": 43,
+   "pos": [
+    -0.11750013,
+    -0.04000008
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5250001,
+    1.5250001
+   ],
+   "sprite": "recieve_main_16",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.63,
+    1.66
+   ]
+  },
+  {
+   "name": "Hit2",
+   "path": "CharacterPositions/Nova/Hit/Hit2",
+   "parent": 43,
+   "pos": [
+    0.047499835,
+    -0.22249997
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5250001,
+    1.5250001
+   ],
+   "sprite": "recieve_main_16",
+   "order": 2012,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "flipY": true,
+   "size": [
+    1.63,
+    1.66
+   ]
+  },
+  {
+   "name": "Bump",
+   "path": "CharacterPositions/Nova/Bump",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BumpEffect",
+   "path": "CharacterPositions/Nova/Bump/BumpEffect",
+   "parent": 46,
+   "pos": [
+    1.328,
+    -0.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_83",
+   "order": 2000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.62,
+    1.91
+   ]
+  },
+  {
+   "name": "Star1",
+   "path": "CharacterPositions/Nova/Bump/Star1",
+   "parent": 46,
+   "pos": [
+    2.057,
+    -0.197
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_15",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "name": "Star2",
+   "path": "CharacterPositions/Nova/Bump/Star2",
+   "parent": 46,
+   "pos": [
+    1.933,
+    0.513
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_15",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "name": "Star3",
+   "path": "CharacterPositions/Nova/Bump/Star3",
+   "parent": 46,
+   "pos": [
+    1.179,
+    0.684
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_15",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "name": "Star4",
+   "path": "CharacterPositions/Nova/Bump/Star4",
+   "parent": 46,
+   "pos": [
+    0.595,
+    0.364
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_15",
+   "order": 2012,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.5
+   ]
+  },
+  {
+   "name": "Screenshot_Wii_Bossa_Nova",
+   "path": "Screenshot_Wii_Bossa_Nova",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.157,
+    2.157
+   ],
+   "sprite": "Screenshot_Wii_Bossa_Nova",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.24,
+    4.62
+   ]
+  },
+  {
+   "name": "BallHolder",
+   "path": "BallHolder",
+   "parent": 0,
+   "pos": [
+    8.47,
+    -0.25
+   ],
+   "z": -3.5,
+   "rotZ": 0,
+   "scale": [
+    0.63,
+    0.63
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ball",
+   "path": "BallHolder/Ball",
+   "parent": 53,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_82",
+   "order": 3001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.07,
+    2.08
+   ]
+  },
+  {
+   "name": "CubeHolder",
+   "path": "CubeHolder",
+   "parent": 0,
+   "pos": [
+    -8.47,
+    -0.25
+   ],
+   "z": -3.5,
+   "rotZ": 0,
+   "scale": [
+    0.63,
+    0.63
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cube",
+   "path": "CubeHolder/Cube",
+   "parent": 55,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_103",
+   "order": 3001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.07,
+    2.08
+   ]
+  },
+  {
+   "name": "Rhythm Heaven Megamix_30.03.25_21.57.57.304",
+   "path": "Rhythm Heaven Megamix_30.03.25_21.57.57.304",
+   "parent": 0,
+   "pos": [
+    0,
+    -5.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.57,
+    4.57
+   ],
+   "sprite": "Rhythm Heaven Megamix_30.03.25_21.57.57.304",
+   "order": 3000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4,
+    4.8
+   ]
+  },
+  {
+   "name": "EnterCurveR",
+   "path": "EnterCurveR",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "EnterCurveR/Point 0",
+   "parent": 58,
+   "pos": [
+    8.47,
+    -0.25
+   ],
+   "z": -3.5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "EnterCurveR/Point 1",
+   "parent": 58,
+   "pos": [
+    2.71,
+    -1.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HitCurveR",
+   "path": "HitCurveR",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "HitCurveR/Point 0",
+   "parent": 61,
+   "pos": [
+    2.71,
+    -1.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "HitCurveR/Point 1",
+   "parent": 61,
+   "pos": [
+    10.5,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MissCurveR",
+   "path": "MissCurveR",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "MissCurveR/Point 0",
+   "parent": 64,
+   "pos": [
+    2.5611796,
+    -1.477883
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "MissCurveR/Point 1",
+   "parent": 64,
+   "pos": [
+    3.2273707,
+    -7.3301926
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "EnterCurveL",
+   "path": "EnterCurveL",
+   "parent": 0,
+   "pos": [
+    -0.2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "EnterCurveL/Point 0",
+   "parent": 67,
+   "pos": [
+    -8.47,
+    -0.25
+   ],
+   "z": -3.5,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "EnterCurveL/Point 1",
+   "parent": 67,
+   "pos": [
+    -2.71,
+    -1.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HitCurveL",
+   "path": "HitCurveL",
+   "parent": 0,
+   "pos": [
+    -0.2,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "HitCurveL/Point 0",
+   "parent": 70,
+   "pos": [
+    -2.71,
+    -1.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "HitCurveL/Point 1",
+   "parent": 70,
+   "pos": [
+    -10.5,
+    -0.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MissCurveL",
+   "path": "MissCurveL",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "MissCurveL/Point 0",
+   "parent": 73,
+   "pos": [
+    -2.66118,
+    -1.477883
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "MissCurveL/Point 1",
+   "parent": 73,
+   "pos": [
+    -3.327371,
+    -7.3301926
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Cloud",
+   "path": "Cloud",
+   "parent": 0,
+   "pos": [
+    0,
+    -3.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "recieve_main_133",
+   "path": "Cloud/recieve_main_133",
+   "parent": 76,
+   "pos": [
+    0,
+    0.3180328
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_133",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.33,
+    2.32
+   ]
+  },
+  {
+   "name": "recieve_main_133 (1)",
+   "path": "Cloud/recieve_main_133 (1)",
+   "parent": 76,
+   "pos": [
+    1.2786884,
+    0.5409836
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_133",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.33,
+    2.32
+   ]
+  },
+  {
+   "name": "recieve_main_133 (5)",
+   "path": "Cloud/recieve_main_133 (5)",
+   "parent": 76,
+   "pos": [
+    1.2786884,
+    0.5409836
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_133",
+   "order": 1001,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.33,
+    2.32
+   ]
+  },
+  {
+   "name": "recieve_main_133 (2)",
+   "path": "Cloud/recieve_main_133 (2)",
+   "parent": 76,
+   "pos": [
+    2.6885245,
+    1.213115
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_133",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.33,
+    2.32
+   ]
+  },
+  {
+   "name": "recieve_main_134",
+   "path": "Cloud/recieve_main_134",
+   "parent": 76,
+   "pos": [
+    2.032787,
+    2.114754
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_134",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.74
+   ]
+  },
+  {
+   "name": "recieve_main_134 (1)",
+   "path": "Cloud/recieve_main_134 (1)",
+   "parent": 76,
+   "pos": [
+    0.967213,
+    2.409836
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_134",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.74
+   ]
+  },
+  {
+   "name": "recieve_main_134 (2)",
+   "path": "Cloud/recieve_main_134 (2)",
+   "parent": 76,
+   "pos": [
+    0,
+    1.983607
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_134",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.74
+   ]
+  },
+  {
+   "name": "recieve_main_134 (5)",
+   "path": "Cloud/recieve_main_134 (5)",
+   "parent": 76,
+   "pos": [
+    0,
+    1.983607
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_134",
+   "order": 1001,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.74
+   ]
+  },
+  {
+   "name": "recieve_main_134 (6)",
+   "path": "Cloud/recieve_main_134 (6)",
+   "parent": 76,
+   "pos": [
+    0,
+    1.983607
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_134",
+   "order": 1001,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.74
+   ]
+  },
+  {
+   "name": "recieve_main_135",
+   "path": "Cloud/recieve_main_135",
+   "parent": 76,
+   "pos": [
+    0,
+    2.7213113
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_135",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    1.15
+   ]
+  },
+  {
+   "name": "recieve_main_133 (3)",
+   "path": "Cloud/recieve_main_133 (3)",
+   "parent": 76,
+   "pos": [
+    -1.295082,
+    0.5409836
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_133",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.33,
+    2.32
+   ]
+  },
+  {
+   "name": "recieve_main_133 (4)",
+   "path": "Cloud/recieve_main_133 (4)",
+   "parent": 76,
+   "pos": [
+    -2.704918,
+    1.213115
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_133",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.33,
+    2.32
+   ]
+  },
+  {
+   "name": "recieve_main_134 (3)",
+   "path": "Cloud/recieve_main_134 (3)",
+   "parent": 76,
+   "pos": [
+    -2.0491803,
+    2.114754
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_134",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.74
+   ]
+  },
+  {
+   "name": "recieve_main_134 (4)",
+   "path": "Cloud/recieve_main_134 (4)",
+   "parent": 76,
+   "pos": [
+    -0.96721303,
+    2.409836
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_134",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    1.74
+   ]
+  },
+  {
+   "name": "recieve_main_138",
+   "path": "Cloud/recieve_main_138",
+   "parent": 76,
+   "pos": [
+    0,
+    1.4754097
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_138",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.73,
+    2.08
+   ]
+  },
+  {
+   "name": "cloudparticles",
+   "path": "Cloud/cloudparticles",
+   "parent": 76,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "recieve_main_135",
+   "path": "Cloud/cloudparticles/recieve_main_135",
+   "parent": 92,
+   "pos": [
+    5.29,
+    0.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_135",
+   "order": 10001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    1.15
+   ]
+  },
+  {
+   "name": "recieve_main_135 (3)",
+   "path": "Cloud/cloudparticles/recieve_main_135 (3)",
+   "parent": 92,
+   "pos": [
+    -5.29,
+    0.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_135",
+   "order": 10001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    1.15
+   ]
+  },
+  {
+   "name": "recieve_main_135 (1)",
+   "path": "Cloud/cloudparticles/recieve_main_135 (1)",
+   "parent": 92,
+   "pos": [
+    -3.71,
+    -0.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_135",
+   "order": 10001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    1.15
+   ]
+  },
+  {
+   "name": "recieve_main_135 (2)",
+   "path": "Cloud/cloudparticles/recieve_main_135 (2)",
+   "parent": 92,
+   "pos": [
+    3.71,
+    -0.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_135",
+   "order": 10001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    1.15
+   ]
+  },
+  {
+   "name": "recieve_main_135 (4)",
+   "path": "Cloud/cloudparticles/recieve_main_135 (4)",
+   "parent": 92,
+   "pos": [
+    -0.05,
+    -1.66
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_main_135",
+   "order": 10001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    1.15
+   ]
+  },
+  {
+   "name": "RingL",
+   "path": "RingL",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RingR",
+   "path": "RingR",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Endless BG",
+   "path": "Endless BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    32,
+    18
+   ],
+   "sprite": "recieve_main_13",
+   "order": 999,
+   "inactive": true,
+   "color": [
+    0.45098042,
+    0.45098042,
+    0.45098042,
+    1
+   ],
+   "size": [
+    1.22,
+    1.22
+   ]
+  },
+  {
+   "name": "ShapeShadow",
+   "path": "ShapeShadow",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.61,
+    0.61
+   ],
+   "sprite": "recieve_main_120",
+   "order": 3000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.29411766
+   ],
+   "size": [
+    3.8888888,
+    3
+   ]
+  },
+  {
+   "name": "bossano",
+   "path": "bossano",
+   "parent": 0,
+   "pos": [
+    2.99,
+    -3.45
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.6347,
+    2.6347
+   ],
+   "order": 2999,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.4,
+    3.6
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "GameObject",
+   "parent": 0,
+   "pos": [
+    0,
+    -3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "doll_a_receive_miss.000",
+   "path": "doll_a_receive_miss.000",
+   "parent": 0,
+   "pos": [
+    1.772,
+    -0.761
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_receive_miss.001",
+   "path": "doll_a_receive_miss.001",
+   "parent": 0,
+   "pos": [
+    1.772,
+    -0.761
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_receive_miss.002",
+   "path": "doll_a_receive_miss.002",
+   "parent": 0,
+   "pos": [
+    1.772,
+    -0.761
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_receive_miss.003",
+   "path": "doll_a_receive_miss.003",
+   "parent": 0,
+   "pos": [
+    1.772,
+    -0.761
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_receive_miss.004",
+   "path": "doll_a_receive_miss.004",
+   "parent": 0,
+   "pos": [
+    1.772,
+    -0.761
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_receive_miss.005",
+   "path": "doll_a_receive_miss.005",
+   "parent": 0,
+   "pos": [
+    1.772,
+    -0.761
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.000",
+   "path": "doll_a_rotate_lr.000",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.002",
+   "path": "doll_a_rotate_lr.002",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.003",
+   "path": "doll_a_rotate_lr.003",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.004",
+   "path": "doll_a_rotate_lr.004",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.005",
+   "path": "doll_a_rotate_lr.005",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.006",
+   "path": "doll_a_rotate_lr.006",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.007",
+   "path": "doll_a_rotate_lr.007",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.008",
+   "path": "doll_a_rotate_lr.008",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_lr.009",
+   "path": "doll_a_rotate_lr.009",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_rl.000",
+   "path": "doll_a_rotate_rl.000",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_rl.001",
+   "path": "doll_a_rotate_rl.001",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_rotate_rl.006",
+   "path": "doll_a_rotate_rl.006",
+   "parent": 0,
+   "pos": [
+    -2.01,
+    -0.77
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.000",
+   "path": "doll_a_through.000",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.001",
+   "path": "doll_a_through.001",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.002",
+   "path": "doll_a_through.002",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.003",
+   "path": "doll_a_through.003",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.004",
+   "path": "doll_a_through.004",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.005",
+   "path": "doll_a_through.005",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.006",
+   "path": "doll_a_through.006",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.007",
+   "path": "doll_a_through.007",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "doll_a_through.008",
+   "path": "doll_a_through.008",
+   "parent": 0,
+   "pos": [
+    -1.995,
+    -0.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.09,
+    1.09
+   ],
+   "order": 2000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.000",
+   "path": "stage_sink.000",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_rotate.001",
+   "path": "stage_rotate.001",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.001",
+   "path": "stage_sink.001",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0.899371,
+    0.899371,
+    0.899371,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.002",
+   "path": "stage_sink.002",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0.8050314,
+    0.8050314,
+    0.8050314,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.003",
+   "path": "stage_sink.003",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0.735849,
+    0.735849,
+    0.735849,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.004",
+   "path": "stage_sink.004",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0.74213827,
+    0.74213827,
+    0.74213827,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.005",
+   "path": "stage_sink.005",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0.6855345,
+    0.6855345,
+    0.6855345,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.006",
+   "path": "stage_sink.006",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0.66666657,
+    0.66666657,
+    0.66666657,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.007",
+   "path": "stage_sink.007",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0.6792453,
+    0.6792453,
+    0.6792453,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.008",
+   "path": "stage_sink.008",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    0.6415094,
+    0.6415094,
+    0.6415094,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "stage_sink.009",
+   "path": "stage_sink.009",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.67
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.6,
+    1.6
+   ],
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "1P BG",
+   "path": "BG/1P BG",
+   "parent": 142,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bg",
+   "path": "BG/1P BG/bg",
+   "parent": 143,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "bg0",
+   "path": "BG/1P BG/bg/bg0",
+   "parent": 144,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.56,
+    0.56
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "recieve_tree_1_10",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_10",
+   "parent": 145,
+   "pos": [
+    -11.8,
+    5.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_10",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    5.32,
+    1.88
+   ]
+  },
+  {
+   "name": "recieve_tree_1_10 (2)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_10 (2)",
+   "parent": 145,
+   "pos": [
+    10.66,
+    4.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_10",
+   "order": 10,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    5.32,
+    1.88
+   ]
+  },
+  {
+   "name": "recieve_tree_1_10 (1)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_10 (1)",
+   "parent": 145,
+   "pos": [
+    -13.73,
+    -0.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_10",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    5.32,
+    1.88
+   ]
+  },
+  {
+   "name": "recieve_tree_1_5",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_5",
+   "parent": 145,
+   "pos": [
+    15,
+    -3.55
+   ],
+   "rotZ": 1.064650968897606,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "sprite": "recieve_tree_1_5",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.79,
+    3.61
+   ]
+  },
+  {
+   "name": "recieve_tree_1_5 (1)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_5 (1)",
+   "parent": 145,
+   "pos": [
+    12.46,
+    -2.87
+   ],
+   "rotZ": 1.064650968897606,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "sprite": "recieve_tree_1_5",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.79,
+    3.61
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6",
+   "parent": 145,
+   "pos": [
+    -15.03,
+    1.48
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 13,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "flipY": true,
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (1)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (1)",
+   "parent": 145,
+   "pos": [
+    12.749,
+    3.826
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (2)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (2)",
+   "parent": 145,
+   "pos": [
+    -8.24,
+    1.88
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "flipY": true,
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (3)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (3)",
+   "parent": 145,
+   "pos": [
+    10.41,
+    6.02
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (4)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (4)",
+   "parent": 145,
+   "pos": [
+    12.23,
+    6.83
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 17,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (5)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (5)",
+   "parent": 145,
+   "pos": [
+    13.89,
+    6.52
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 18,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "flipY": true,
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (6)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (6)",
+   "parent": 145,
+   "pos": [
+    10.551,
+    3.784
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (7)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (7)",
+   "parent": 145,
+   "pos": [
+    -13.27,
+    3.78
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (8)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (8)",
+   "parent": 145,
+   "pos": [
+    -7.39,
+    3.41
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 19,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (9)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (9)",
+   "parent": 145,
+   "pos": [
+    -5.69,
+    3.17
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 20,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_6 (10)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_6 (10)",
+   "parent": 145,
+   "pos": [
+    -13.98,
+    5.64
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_6",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    3.19,
+    3.18
+   ]
+  },
+  {
+   "name": "recieve_tree_1_8",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_8",
+   "parent": 145,
+   "pos": [
+    -5.56,
+    1.21
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_8",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2.65,
+    3.87
+   ]
+  },
+  {
+   "name": "recieve_tree_1_8 (1)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_8 (1)",
+   "parent": 145,
+   "pos": [
+    -14.45,
+    8.25
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_8",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "flipY": true,
+   "size": [
+    2.65,
+    3.87
+   ]
+  },
+  {
+   "name": "recieve_tree_1_8 (2)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_8 (2)",
+   "parent": 145,
+   "pos": [
+    -13.13,
+    9.33
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_8",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "flipY": true,
+   "size": [
+    2.65,
+    3.87
+   ]
+  },
+  {
+   "name": "recieve_tree_1_8 (3)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_8 (3)",
+   "parent": 145,
+   "pos": [
+    13.64,
+    4.59
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_8",
+   "order": 23,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2.65,
+    3.87
+   ]
+  },
+  {
+   "name": "recieve_tree_1_8 (4)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_8 (4)",
+   "parent": 145,
+   "pos": [
+    10.63,
+    8.32
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_8",
+   "order": 23,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2.65,
+    3.87
+   ]
+  },
+  {
+   "name": "recieve_tree_1_8 (5)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_8 (5)",
+   "parent": 145,
+   "pos": [
+    -14.48,
+    -1.64
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_8",
+   "order": 23,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2.65,
+    3.87
+   ]
+  },
+  {
+   "name": "recieve_tree_1_7",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_7",
+   "parent": 145,
+   "pos": [
+    5.09,
+    2.66
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_7",
+   "order": 24,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2,
+    3.9
+   ]
+  },
+  {
+   "name": "recieve_tree_1_7 (1)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_7 (1)",
+   "parent": 145,
+   "pos": [
+    -12.266,
+    7.279
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_7",
+   "order": 24,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2,
+    3.9
+   ]
+  },
+  {
+   "name": "recieve_tree_1_9",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_9",
+   "parent": 145,
+   "pos": [
+    10.758,
+    2.022
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_9",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    2.64,
+    2.9
+   ]
+  },
+  {
+   "name": "recieve_tree_1_0",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_0",
+   "parent": 145,
+   "pos": [
+    0.31,
+    9.91
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.9,
+    1
+   ],
+   "sprite": "recieve_tree_1_0",
+   "order": 26,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    17.25,
+    37.65
+   ]
+  },
+  {
+   "name": "recieve_tree_1_3",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_3",
+   "parent": 145,
+   "pos": [
+    1.16,
+    -6.83
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_3",
+   "order": 27,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.42,
+    4.25
+   ]
+  },
+  {
+   "name": "recieve_tree_1_4",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_4",
+   "parent": 145,
+   "pos": [
+    14.55,
+    -6.22
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_4",
+   "order": 28,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    3.29
+   ]
+  },
+  {
+   "name": "recieve_tree_1_3 (1)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_3 (1)",
+   "parent": 145,
+   "pos": [
+    -11.86,
+    -5.68
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_3",
+   "order": 29,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.42,
+    4.25
+   ]
+  },
+  {
+   "name": "recieve_tree_1_3 (2)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_3 (2)",
+   "parent": 145,
+   "pos": [
+    -13.97,
+    -7.22
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_3",
+   "order": 30,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.42,
+    4.25
+   ]
+  },
+  {
+   "name": "recieve_tree_1_4 (1)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_4 (1)",
+   "parent": 145,
+   "pos": [
+    4.49,
+    -7.83
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_tree_1_4",
+   "order": 31,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    3.29
+   ]
+  },
+  {
+   "name": "recieve_tree_1_1",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_1",
+   "parent": 145,
+   "pos": [
+    -8.17,
+    6.89
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    20,
+    1
+   ],
+   "sprite": "recieve_tree_1_1",
+   "order": 32,
+   "color": [
+    1,
+    1,
+    1,
+    0.19607843
+   ],
+   "size": [
+    2.23,
+    1.27
+   ]
+  },
+  {
+   "name": "recieve_tree_1_1 (1)",
+   "path": "BG/1P BG/bg/bg0/recieve_tree_1_1 (1)",
+   "parent": 145,
+   "pos": [
+    -13.31,
+    9.8
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    20,
+    1
+   ],
+   "sprite": "recieve_tree_1_1",
+   "order": 33,
+   "color": [
+    1,
+    1,
+    1,
+    0.19607843
+   ],
+   "size": [
+    2.23,
+    1.27
+   ]
+  },
+  {
+   "name": "fg",
+   "path": "BG/1P BG/fg",
+   "parent": 143,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fg0",
+   "path": "BG/1P BG/fg/fg0",
+   "parent": 179,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.56,
+    0.56
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "recieve_foliage_2",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2",
+   "parent": 180,
+   "pos": [
+    -9.11,
+    -7.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (1)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (1)",
+   "parent": 180,
+   "pos": [
+    -12.54,
+    -6.21
+   ],
+   "rotZ": 0.1570796634202127,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (4)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (4)",
+   "parent": 180,
+   "pos": [
+    -11.86,
+    -8.1
+   ],
+   "rotZ": 0.087266490994371,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3002,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (5)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (5)",
+   "parent": 180,
+   "pos": [
+    -15.53,
+    -7.86
+   ],
+   "rotZ": 0.087266490994371,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3002,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (6)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (6)",
+   "parent": 180,
+   "pos": [
+    -6.36,
+    -8.4
+   ],
+   "rotZ": 0.087266490994371,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3002,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (2)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (2)",
+   "parent": 180,
+   "pos": [
+    -3.27,
+    -7.7
+   ],
+   "rotZ": -0.087266490994371,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (7)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (7)",
+   "parent": 180,
+   "pos": [
+    -0.71,
+    -6.49
+   ],
+   "rotZ": 0.2094395027715192,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (9)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (9)",
+   "parent": 180,
+   "pos": [
+    8.95,
+    -5.88
+   ],
+   "rotZ": 0.1221729823825301,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (10)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (10)",
+   "parent": 180,
+   "pos": [
+    12.63,
+    -6.4400005
+   ],
+   "rotZ": 0.1221729823825301,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (11)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (11)",
+   "parent": 180,
+   "pos": [
+    14.62,
+    -4.63
+   ],
+   "rotZ": 0.27925264991162274,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3001,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (8)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (8)",
+   "parent": 180,
+   "pos": [
+    6.73,
+    -7.83
+   ],
+   "rotZ": 0.2617993138268839,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_2 (3)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_2 (3)",
+   "parent": 180,
+   "pos": [
+    10.5,
+    -7.68
+   ],
+   "rotZ": -0.10471963843671714,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_2",
+   "order": 3001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.02,
+    3.02
+   ]
+  },
+  {
+   "name": "recieve_foliage_4",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_4",
+   "parent": 180,
+   "pos": [
+    -3.53,
+    -9.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_4",
+   "order": 3000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    2.88
+   ]
+  },
+  {
+   "name": "recieve_foliage_4 (2)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_4 (2)",
+   "parent": 180,
+   "pos": [
+    -0.81,
+    -9.05
+   ],
+   "rotZ": 0.2094395027715192,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_4",
+   "order": 3000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    2.88
+   ]
+  },
+  {
+   "name": "recieve_foliage_4 (3)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_4 (3)",
+   "parent": 180,
+   "pos": [
+    8.78,
+    -8.24
+   ],
+   "rotZ": 0.1221729823825301,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_4",
+   "order": 3000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    2.88
+   ]
+  },
+  {
+   "name": "recieve_foliage_4 (4)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_4 (4)",
+   "parent": 180,
+   "pos": [
+    12.46,
+    -8.8
+   ],
+   "rotZ": 0.1221729823825301,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_4",
+   "order": 3000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    2.88
+   ]
+  },
+  {
+   "name": "recieve_foliage_4 (5)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_4 (5)",
+   "parent": 180,
+   "pos": [
+    15.84,
+    -6.77
+   ],
+   "rotZ": 0.27925264991162274,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_4",
+   "order": 3000,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    2.88
+   ]
+  },
+  {
+   "name": "recieve_foliage_4 (1)",
+   "path": "BG/1P BG/fg/fg0/recieve_foliage_4 (1)",
+   "parent": 180,
+   "pos": [
+    -9.77,
+    -9.39
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "recieve_foliage_4",
+   "order": 3000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    2.88
+   ]
+  },
+  {
+   "name": "recieve_main_14",
+   "path": "BG/1P BG/recieve_main_14",
+   "parent": 143,
+   "pos": [
+    -0.66,
+    11.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    17.5997,
+    1
+   ],
+   "sprite": "recieve_main_14",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.7,
+    35.41
+   ]
+  },
+  {
+   "name": "2P BG",
+   "path": "BG/2P BG",
+   "parent": 142,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "BG/2P BG/Square",
+   "parent": 200,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    50,
+    50
+   ],
+   "order": 0,
+   "color": [
+    0.4509804,
+    0.4509804,
+    0.4509804,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

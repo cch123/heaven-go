@@ -243,6 +243,20 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"playerGhost", "greenGhost", "drummerGhost", "ghostHandL", "ghostHandR", "audience", "spotlightMask", "flash", "Bass", "Cymbal", "TomL", "TomR", "Snare", "Hihat", "UnlitArea"}},
 		},
 	},
+	"bossaNova": {
+		dir:    "BossaNova",
+		prefab: "bossaNova.prefab",
+		roleFields: []string{
+			"bossaAnim", "novaAnim", "ringL", "ringR", "cloudAnim", "positionAnim",
+			"ballShape", "cubeShape", "bgOne", "bgTwo", "bgTwoSR",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"bossaAnim", "novaAnim", "ringL", "ringR", "cloudAnim", "positionAnim", "ballShape", "cubeShape", "bgOne", "bgTwo", "bgTwoSR"}},
+			{name: "ballShape", markers: []string{"enterCurve", "hitCurve", "missCurve", "shapeTransform", "Shadow"}, atPath: "BallHolder", curveFields: []string{"enterCurve", "hitCurve", "missCurve"}},
+			{name: "cubeShape", markers: []string{"enterCurve", "hitCurve", "missCurve", "shapeTransform", "Shadow"}, atPath: "CubeHolder", curveFields: []string{"enterCurve", "hitCurve", "missCurve"}},
+		},
+	},
 	"dressYourBest": {
 		dir:    "DressYourBest",
 		prefab: "dressYourBest.prefab",
@@ -1798,8 +1812,81 @@ func exportAnimDir(dir string, tables map[string]*spriteTable) {
 			fmt.Printf("anim %q 有 %d 个同名文件，仅按命名空间 key 导出（如 %q）\n", c.base, baseCount[c.base], c.nsKey)
 		}
 	}
+	if *game == "bossaNova" {
+		fixBossaNovaAnimPaths(anims)
+	}
 	writeJSON("anims.json", anims)
 	fmt.Printf("anims: %d clip files\n", len(clips))
+}
+
+func fixBossaNovaAnimPaths(anims map[string]*kmdata.Anim) {
+	for key, a := range anims {
+		if a == nil || !(strings.HasPrefix(key, "Nova/") || strings.HasPrefix(key, "Nova")) {
+			continue
+		}
+		moveXYCurve(a.Pos, "Head/Sprout", "Head/Flower")
+		moveXYCurve(a.Scale, "Head/Sprout", "Head/Flower")
+		moveKeys(a.Euler, "Head/Sprout", "Head/Flower")
+		moveSwaps(a.Sprites, "Head/Sprout", "Head/Flower")
+		moveFloatAttrs(a.Floats, "Head/Sprout", "Head/Flower")
+	}
+}
+
+func moveXYCurve(m map[string]kmdata.XYCurve, src, dst string) {
+	v, ok := m[src]
+	if !ok {
+		return
+	}
+	if old, exists := m[dst]; exists {
+		if len(old.X) == 0 {
+			old.X = v.X
+		}
+		if len(old.Y) == 0 {
+			old.Y = v.Y
+		}
+		m[dst] = old
+	} else {
+		m[dst] = v
+	}
+	delete(m, src)
+}
+
+func moveKeys(m map[string][]kmdata.Key, src, dst string) {
+	v, ok := m[src]
+	if !ok {
+		return
+	}
+	if len(m[dst]) == 0 {
+		m[dst] = v
+	}
+	delete(m, src)
+}
+
+func moveSwaps(m map[string][]kmdata.SwapKey, src, dst string) {
+	v, ok := m[src]
+	if !ok {
+		return
+	}
+	if len(m[dst]) == 0 {
+		m[dst] = v
+	}
+	delete(m, src)
+}
+
+func moveFloatAttrs(m map[string]map[string][]kmdata.Key, src, dst string) {
+	v, ok := m[src]
+	if !ok {
+		return
+	}
+	if m[dst] == nil {
+		m[dst] = map[string][]kmdata.Key{}
+	}
+	for attr, keys := range v {
+		if len(m[dst][attr]) == 0 {
+			m[dst][attr] = keys
+		}
+	}
+	delete(m, src)
 }
 
 func copySounds(dir string) {

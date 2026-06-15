@@ -1,0 +1,13 @@
+{
+ "ballShape": "BallHolder",
+ "bgOne": "BG/1P BG",
+ "bgTwo": "BG/2P BG",
+ "bgTwoSR": "BG/2P BG/Square",
+ "bossaAnim": "CharacterPositions/Bossa",
+ "cloudAnim": "Cloud",
+ "cubeShape": "CubeHolder",
+ "novaAnim": "CharacterPositions/Nova",
+ "positionAnim": "CharacterPositions",
+ "ringL": "RingL",
+ "ringR": "RingR"
+}

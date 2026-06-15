@@ -1,0 +1,305 @@
+{
+ "curves": {
+  "ballShape.enterCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      8.47,
+      -0.25,
+      -3.5
+     ],
+     "lh": [
+      9.97,
+      -3.75,
+      -5
+     ],
+     "rh": [
+      6.970000000000001,
+      3.25,
+      -2
+     ]
+    },
+    {
+     "p": [
+      2.71,
+      -1.02,
+      0
+     ],
+     "lh": [
+      4.21,
+      3.48,
+      -0.5
+     ],
+     "rh": [
+      1.21,
+      -5.52,
+      0.5
+     ]
+    }
+   ]
+  },
+  "ballShape.hitCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      2.71,
+      -1.02,
+      0
+     ],
+     "lh": [
+      -0.79,
+      -11.02,
+      0
+     ],
+     "rh": [
+      6.21,
+      8.98,
+      0
+     ]
+    },
+    {
+     "p": [
+      10.5,
+      -0.5,
+      0
+     ],
+     "lh": [
+      8.5,
+      4.5,
+      0
+     ],
+     "rh": [
+      12.5,
+      -5.5,
+      0
+     ]
+    }
+   ]
+  },
+  "ballShape.missCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      2.5611796,
+      -1.477883,
+      0
+     ],
+     "lh": [
+      2.5611796,
+      -2.4778830000000003,
+      0
+     ],
+     "rh": [
+      2.5611796,
+      -0.47788300000000006,
+      0
+     ]
+    },
+    {
+     "p": [
+      3.2273707,
+      -7.3301926,
+      0
+     ],
+     "lh": [
+      3.2273707,
+      2.6698074,
+      0
+     ],
+     "rh": [
+      3.2273707,
+      -17.3301926,
+      0
+     ]
+    }
+   ]
+  },
+  "cubeShape.enterCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -8.67,
+      -0.25,
+      -3.5
+     ],
+     "lh": [
+      -10.17,
+      -3.75,
+      -5
+     ],
+     "rh": [
+      -7.170000000000001,
+      3.25,
+      -2
+     ]
+    },
+    {
+     "p": [
+      -2.91,
+      -1.02,
+      0
+     ],
+     "lh": [
+      -4.41,
+      3.48,
+      -0.5
+     ],
+     "rh": [
+      -1.41,
+      -5.52,
+      0.5
+     ]
+    }
+   ]
+  },
+  "cubeShape.hitCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -2.91,
+      -1.02,
+      0
+     ],
+     "lh": [
+      0.5900000000000001,
+      -11.02,
+      0
+     ],
+     "rh": [
+      -6.41,
+      8.98,
+      0
+     ]
+    },
+    {
+     "p": [
+      -10.7,
+      -0.5,
+      0
+     ],
+     "lh": [
+      -8.7,
+      4.5,
+      0
+     ],
+     "rh": [
+      -12.7,
+      -5.5,
+      0
+     ]
+    }
+   ]
+  },
+  "cubeShape.missCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -2.66118,
+      -1.477883,
+      0
+     ],
+     "lh": [
+      -2.66118,
+      -2.4778830000000003,
+      0
+     ],
+     "rh": [
+      -2.66118,
+      -0.47788300000000006,
+      0
+     ]
+    },
+    {
+     "p": [
+      -3.327371,
+      -7.3301926,
+      0
+     ],
+     "lh": [
+      -3.327371,
+      2.6698074,
+      0
+     ],
+     "rh": [
+      -3.327371,
+      -17.3301926,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "components": {
+  "ballShape": {
+   "path": "BallHolder",
+   "nums": {
+    "forBossa": 0,
+    "isCube": 0,
+    "isEntering": 0,
+    "isFalling": 0,
+    "isHit": 0,
+    "isMiss": 0,
+    "spin": 0,
+    "startBeat": 0,
+    "voiceVariant": 0,
+    "voiceline": 0
+   },
+   "refs": {
+    "Shadow": "ShapeShadow",
+    "enterCurve": "EnterCurveR",
+    "hitCurve": "HitCurveR",
+    "missCurve": "MissCurveR",
+    "shapeTransform": "BallHolder/Ball"
+   }
+  },
+  "cubeShape": {
+   "path": "CubeHolder",
+   "nums": {
+    "forBossa": 0,
+    "isCube": 1,
+    "isEntering": 0,
+    "isFalling": 0,
+    "isHit": 0,
+    "isMiss": 0,
+    "spin": 0,
+    "startBeat": 0,
+    "voiceVariant": 0,
+    "voiceline": 0
+   },
+   "refs": {
+    "Shadow": "ShapeShadow",
+    "enterCurve": "EnterCurveL",
+    "hitCurve": "HitCurveL",
+    "missCurve": "MissCurveL",
+    "shapeTransform": "CubeHolder/Cube"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "angerLevel": 0,
+    "bossaPlayfulSpinRandomization": 0,
+    "emotion": 1
+   },
+   "refs": {
+    "ballShape": "BallHolder",
+    "bgOne": "BG/1P BG",
+    "bgTwo": "BG/2P BG",
+    "bgTwoSR": "BG/2P BG/Square",
+    "bossaAnim": "CharacterPositions/Bossa",
+    "cloudAnim": "Cloud",
+    "cubeShape": "CubeHolder",
+    "novaAnim": "CharacterPositions/Nova",
+    "positionAnim": "CharacterPositions",
+    "ringL": "RingL",
+    "ringR": "RingR"
+   }
+  }
+ }
+}

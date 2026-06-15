@@ -1,0 +1,130 @@
+{
+ "BossaAnim": {
+  "default": "Idle",
+  "states": {
+   "Barely": {
+    "clip": "Bossa/BossaBarely",
+    "speed": 1
+   },
+   "Head Bump": {
+    "clip": "Bossa/BossaHeadBump",
+    "speed": 1
+   },
+   "Hit": {
+    "clip": "Bossa/BossaHit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Bossa/BossaIdle",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Bossa/BossaMiss",
+    "speed": 1
+   },
+   "Spin Left": {
+    "clip": "Bossa/BossaSpinLeft",
+    "speed": 1
+   },
+   "Spin Right": {
+    "clip": "Bossa/BossaSpinRight",
+    "speed": 1
+   },
+   "Whiff": {
+    "clip": "Bossa/BossaWhiff",
+    "speed": 1
+   }
+  }
+ },
+ "CloudAnim": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Cloud/CloudIdle",
+    "speed": 1
+   },
+   "Sink": {
+    "clip": "Cloud/CloudSink",
+    "speed": 1
+   },
+   "Spin": {
+    "clip": "Cloud/CloudSpin",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1.0018865,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "NovaAnim": {
+  "default": "Idle",
+  "states": {
+   "Head Bump": {
+    "clip": "Nova/NovaHeadBump",
+    "speed": 1
+   },
+   "Hit": {
+    "clip": "Nova/NovaHit",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Nova/NovaIdle",
+    "speed": 1
+   },
+   "Spin Left": {
+    "clip": "Nova/NovaSpinLeft",
+    "speed": 1
+   },
+   "Spin Right": {
+    "clip": "Nova/NovaSpinRight",
+    "speed": 1
+   },
+   "Whiff": {
+    "clip": "Nova/NovaWhiff",
+    "speed": 1
+   }
+  }
+ },
+ "PositionsAnim": {
+  "default": "IdleL",
+  "states": {
+   "IdleL": {
+    "clip": "Positions/IdleL",
+    "speed": 1
+   },
+   "IdleR": {
+    "clip": "Positions/IdleR",
+    "speed": 1
+   },
+   "Sink Left": {
+    "clip": "Positions/SinkLeft",
+    "speed": 1
+   },
+   "Sink Right": {
+    "clip": "Positions/SinkRight",
+    "speed": 1
+   },
+   "Spin Left": {
+    "clip": "Positions/SpinLeft",
+    "speed": 1
+   },
+   "Spin Right": {
+    "clip": "Positions/SpinRight",
+    "speed": 1
+   }
+  }
+ },
+ "stage_wait_009": {
+  "default": "New Animation",
+  "states": {
+   "New Animation": {
+    "clip": "Bossa/New Animation",
+    "speed": 1
+   }
+  }
+ }
+}
