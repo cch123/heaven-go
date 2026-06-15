@@ -30,6 +30,7 @@ import (
 	"hsdemo/games/bonodori"
 	"hsdemo/games/bossanova"
 	"hsdemo/games/bouncyroad"
+	"hsdemo/games/builttoscaleds"
 	"hsdemo/games/builttoscalervl"
 	"hsdemo/games/cannery"
 	"hsdemo/games/catchytune"
@@ -169,6 +170,7 @@ func main() {
 	engine.Register("bonOdori", bonodori.New)
 	engine.Register("boardMeeting", boardmeeting.New)
 	engine.Register("bouncyRoad", bouncyroad.New)
+	engine.Register("builtToScaleDS", builttoscaleds.New)
 	engine.Register("builtToScaleRvl", builttoscalervl.New)
 	engine.Register("cannery", cannery.New)
 	engine.Register("catchyTune", catchytune.New)

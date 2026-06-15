@@ -2,7 +2,7 @@
 
 Heaven Studio 游玩部分（play-only，无编辑器）的 Go + Ebitengine 移植。引擎层（判定/调度/切游戏/HUD）与游戏模块解耦，资产经导出管线从 Heaven Studio Unity 工程提取，支持加载任意用户 `.riq` 谱面。
 
-**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Crop Stomp、Dog Ninja、Drumming Practice、Fireworks、Fork Lifter、Frog Princess、Glee Club、Karate Man、Kitties!、Lockstep、Marching Orders、Meat Grinder、Mr. Upbeat、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Spaceball、Space Dance、Tambourine、Tap Trial、Tap Troupe、The Clappy Trio、Totem Climb、Tram & Pauline、Trick on the Class、Tunnel、Wizard's Waltz。
+**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Built to Scale DS、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Crop Stomp、Dog Ninja、Drumming Practice、Fireworks、Fork Lifter、Frog Princess、Glee Club、Karate Man、Kitties!、Lockstep、Marching Orders、Meat Grinder、Mr. Upbeat、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Spaceball、Space Dance、Tambourine、Tap Trial、Tap Troupe、The Clappy Trio、Totem Climb、Tram & Pauline、Trick on the Class、Tunnel、Wizard's Waltz。
 谱面中未移植的 minigame 显示占位画面，乐曲与其余游戏照常进行。
 
 ## 运行
@@ -110,6 +110,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   仍缺完整项：Joe 的 MappingMaterial 换色、Word prefab 的原版字形动画、背景纹理/
   Sunburst/Rings 精确材质、ParticleSystem 参数级复刻、face clip 与 body clip 的层叠
   播放（当前为单 RigInst clip），这些作为显式简化保留。
+- builtToScaleDS：`spawn blocks` 的生成、windup、判定、hit/NG/miss/Sink、
+  Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
+  当前用 Ebitengine 几何体替代 3D SkinnedMeshRenderer/材质渲染，Piano 的
+  `SetLoopParams` 持续尾音先按准确音高的一次性触发处理。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
