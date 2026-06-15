@@ -108,6 +108,28 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"dollAnim", "crowdAnim", "bagAnim", "bagCopyAnim", "buttonAnim", "lightsAnim", "topAnim", "barsAnim", "fartAnim", "bagObject"}},
 		},
 	},
+	"quizShow": {
+		dir:    "QuizShow",
+		prefab: "quizShow.prefab",
+		roleFields: []string{
+			"contesteeLeftArmAnim", "contesteeRightArmAnim", "contesteeHead",
+			"hostLeftArmAnim", "hostRightArmAnim", "hostHead", "signAnim",
+			"timerTransform", "stopWatchRef", "blackOut",
+			"firstDigitSr", "secondDigitSr", "hostFirstDigitSr", "hostSecondDigitSr",
+			"contCounter", "hostCounter", "contExplosion", "hostExplosion", "signExplosion",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"contesteeLeftArmAnim", "contesteeRightArmAnim", "contesteeHead",
+				"hostLeftArmAnim", "hostRightArmAnim", "hostHead", "signAnim",
+				"timerTransform", "stopWatchRef", "blackOut",
+				"firstDigitSr", "secondDigitSr", "hostFirstDigitSr", "hostSecondDigitSr",
+				"contCounter", "hostCounter", "contExplosion", "hostExplosion", "signExplosion",
+				"contestantNumberSprites", "hostNumberSprites", "explodedCounter",
+			}},
+		},
+	},
 	"samuraiSliceNtr": {
 		dir:    "SamuraiSliceNtr",
 		prefab: "samuraiSliceNtr.prefab",

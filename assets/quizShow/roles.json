@@ -1,0 +1,21 @@
+{
+ "blackOut": "Blackout",
+ "contCounter": "Contestee/Counter/Sprite",
+ "contExplosion": "Contestee/Counter/Explosion",
+ "contesteeHead": "Contestee/Head",
+ "contesteeLeftArmAnim": "Contestee/LeftArm",
+ "contesteeRightArmAnim": "Contestee/RightArm",
+ "firstDigitSr": "Contestee/Counter/FirstDigit",
+ "hostCounter": "QuizHost/Counter/Sprite",
+ "hostExplosion": "QuizHost/Counter/Explosion",
+ "hostFirstDigitSr": "QuizHost/Counter/FirstDigit",
+ "hostHead": "QuizHost/Head",
+ "hostLeftArmAnim": "QuizHost/LeftArm",
+ "hostRightArmAnim": "QuizHost/RightArm",
+ "hostSecondDigitSr": "QuizHost/Counter/SecondDigit",
+ "secondDigitSr": "Contestee/Counter/SecondDigit",
+ "signAnim": "SignHolder",
+ "signExplosion": "SignHolder/Explosion",
+ "stopWatchRef": "Timer",
+ "timerTransform": "Timer/Stopwatch/Needle"
+}

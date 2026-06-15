@@ -37,3 +37,12 @@ func (c *Ctx) Play(rolePath, clip string, startBeat, timeScale float64) {
 
 // At 在指定拍执行回调（BeatAction 等价物），载入期与运行期均可调用。
 func (c *Ctx) At(beat float64, fn func()) { c.App.at(beat, fn) }
+
+// AwardSkillStar 复刻脚本侧直接调用 SkillStarManager.StarJust 的事件。
+// 常规 skill star 仍由 gameManager/skill star + 判定窗口处理；少数游戏
+// 例如 Quiz Show 在自己的成功条件满足后显式发星。
+func (c *Ctx) AwardSkillStar() {
+	if c.App != nil && !c.App.starGot {
+		c.App.starGot = true
+	}
+}

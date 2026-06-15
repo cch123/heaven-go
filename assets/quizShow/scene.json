@@ -1,0 +1,2349 @@
+{
+ "nodes": [
+  {
+   "name": "quizShow",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SignHolder",
+   "path": "SignHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sign",
+   "path": "SignHolder/Sign",
+   "parent": 1,
+   "pos": [
+    -0.085,
+    3.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "quiz_bg_6",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.26568,
+    0.76
+   ]
+  },
+  {
+   "name": "Grid",
+   "path": "SignHolder/Grid",
+   "parent": 1,
+   "pos": [
+    -0.106,
+    3.2927
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "quiz_bg_11",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.26568,
+    0.76
+   ]
+  },
+  {
+   "name": "Border2",
+   "path": "SignHolder/Border2",
+   "parent": 1,
+   "pos": [
+    2.0042999,
+    3.278
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "quiz_bg_14",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.26568,
+    0.76
+   ]
+  },
+  {
+   "name": "Border",
+   "path": "SignHolder/Border",
+   "parent": 1,
+   "pos": [
+    -2.2461,
+    3.2717
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "quiz_bg_14",
+   "order": 14,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.26568,
+    0.76
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "SignHolder/Face",
+   "parent": 1,
+   "pos": [
+    -0.1188,
+    3.2927
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "quiz_bg_15",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.96000004
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Accent",
+   "path": "SignHolder/Accent",
+   "parent": 1,
+   "pos": [
+    1.0236,
+    3.971
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.911,
+    1.911
+   ],
+   "sprite": "quiz_bg_16",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.30000004,
+    0.30000004
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Accent (1)",
+   "path": "SignHolder/Accent (1)",
+   "parent": 1,
+   "pos": [
+    -1.5342,
+    3.2612
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "quiz_bg_17",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62000006,
+    0.5200001
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Accent (2)",
+   "path": "SignHolder/Accent (2)",
+   "parent": 1,
+   "pos": [
+    1.3491,
+    3.2696
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "quiz_bg_21",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.5600001,
+    0.5600001
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Accent (3)",
+   "path": "SignHolder/Accent (3)",
+   "parent": 1,
+   "pos": [
+    0.66449994,
+    2.5577002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.911,
+    1.911
+   ],
+   "sprite": "quiz_bg_20",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2600001,
+    0.2600001
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Accent (4)",
+   "path": "SignHolder/Accent (4)",
+   "parent": 1,
+   "pos": [
+    1.7754,
+    2.7341
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.902306,
+    1.902306
+   ],
+   "sprite": "quiz_bg_20",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2600001,
+    0.2600001
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Accent (5)",
+   "path": "SignHolder/Accent (5)",
+   "parent": 1,
+   "pos": [
+    -1.1813998,
+    2.5409002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.911,
+    1.911
+   ],
+   "sprite": "quiz_bg_16",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.30000004,
+    0.30000004
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Accent (6)",
+   "path": "SignHolder/Accent (6)",
+   "parent": 1,
+   "pos": [
+    -2.0109,
+    3.845
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.8689998,
+    1.8689998
+   ],
+   "sprite": "quiz_bg_20",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2600001,
+    0.2600001
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Accent (7)",
+   "path": "SignHolder/Accent (7)",
+   "parent": 1,
+   "pos": [
+    -1.0574999,
+    4.0718
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.806,
+    1.806
+   ],
+   "sprite": "quiz_bg_20",
+   "order": 12,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2600001,
+    0.2600001
+   ],
+   "mapped": true,
+   "mat": "RecolorableSign"
+  },
+  {
+   "name": "Explosion",
+   "path": "SignHolder/Explosion",
+   "parent": 1,
+   "pos": [
+    -0.352,
+    3.23
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1237,
+    1.1237
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fire",
+   "path": "SignHolder/Explosion/fire",
+   "parent": 15,
+   "pos": [
+    -0.744,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "smoke",
+   "path": "SignHolder/Explosion/smoke",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1414,
+    1.1414
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fire (1)",
+   "path": "SignHolder/Explosion/fire (1)",
+   "parent": 15,
+   "pos": [
+    1.146,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "smoke (1)",
+   "path": "SignHolder/Explosion/smoke (1)",
+   "parent": 15,
+   "pos": [
+    0.186,
+    0.088
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.85858,
+    0.85858
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BrokenSign",
+   "path": "SignHolder/BrokenSign",
+   "parent": 1,
+   "pos": [
+    -0.1,
+    3.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "quiz_bg_4",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.7151673,
+    1.8722994
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Floor",
+   "path": "BG/Floor",
+   "parent": 21,
+   "pos": [
+    0.61,
+    -3.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1196904,
+    2.1196904
+   ],
+   "sprite": "Floor",
+   "order": -60,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.85,
+    1.4
+   ]
+  },
+  {
+   "name": "Wall",
+   "path": "BG/Wall",
+   "parent": 21,
+   "pos": [
+    0.2552,
+    -1.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    24.771067,
+    2.1250002
+   ],
+   "sprite": "quiz_bg_19",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.88000005,
+    0.76000017
+   ]
+  },
+  {
+   "name": "Audience",
+   "path": "BG/Audience",
+   "parent": 21,
+   "pos": [
+    4.6600003,
+    2.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "Audience",
+   "order": -78,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.243898,
+    3.48
+   ]
+  },
+  {
+   "name": "Audience (1)",
+   "path": "BG/Audience (1)",
+   "parent": 21,
+   "pos": [
+    -4.74,
+    2.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "Audience",
+   "order": -77,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.243898,
+    3.48
+   ]
+  },
+  {
+   "name": "QuizHost",
+   "path": "QuizHost",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Counter",
+   "path": "QuizHost/Counter",
+   "parent": 26,
+   "pos": [
+    -4.34,
+    -2.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "QuizHost/Counter/Sprite",
+   "parent": 27,
+   "pos": [
+    0.014,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "CounterWhite",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    1.88
+   ]
+  },
+  {
+   "name": "SecondDigit",
+   "path": "QuizHost/Counter/SecondDigit",
+   "parent": 27,
+   "pos": [
+    -0.052,
+    -0.179
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "ZeroHost",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.48
+   ]
+  },
+  {
+   "name": "FirstDigit",
+   "path": "QuizHost/Counter/FirstDigit",
+   "parent": 27,
+   "pos": [
+    -0.561,
+    -0.065
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "sprite": "ZeroHost",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    1.48
+   ]
+  },
+  {
+   "name": "Explosion",
+   "path": "QuizHost/Counter/Explosion",
+   "parent": 27,
+   "pos": [
+    -0.352,
+    -0.082
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fire",
+   "path": "QuizHost/Counter/Explosion/fire",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "smoke",
+   "path": "QuizHost/Counter/Explosion/smoke",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "QuizHost/Body",
+   "parent": 26,
+   "pos": [
+    -5.63,
+    -0.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "HostBody",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.36,
+    1.7
+   ]
+  },
+  {
+   "name": "BowTie",
+   "path": "QuizHost/Body/BowTie",
+   "parent": 34,
+   "pos": [
+    -0.12,
+    0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "BowTie",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.33
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "QuizHost/Head",
+   "parent": 26,
+   "pos": [
+    -5.41,
+    0.997
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "HostFaceNeutral",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.09,
+    1.28
+   ]
+  },
+  {
+   "name": "60",
+   "path": "QuizHost/Head/60",
+   "parent": 36,
+   "pos": [
+    -0.304,
+    -0.351
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "quiz_parts_21",
+   "order": 9,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.33
+   ]
+  },
+  {
+   "name": "60 (1)",
+   "path": "QuizHost/Head/60 (1)",
+   "parent": 36,
+   "pos": [
+    -0.078,
+    -0.399
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "quiz_parts_21",
+   "order": 9,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.58,
+    0.33
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "QuizHost/RightArm",
+   "parent": 26,
+   "pos": [
+    -4.931991,
+    -0.8019358
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "QuizHost/RightArm/Arm",
+   "parent": 39,
+   "pos": [
+    -0.8730087,
+    0.313
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2
+   ],
+   "sprite": "ArmLayDown",
+   "order": 3,
+   "color": [
+    0.83921576,
+    0.7803922,
+    0,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "QuizHost/RightArm/Hand",
+   "parent": 39,
+   "pos": [
+    -0.08,
+    -0.333
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.17434,
+    2.17434
+   ],
+   "sprite": "HostRightHand",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    0.43
+   ]
+  },
+  {
+   "name": "DPAD",
+   "path": "QuizHost/RightArm/DPAD",
+   "parent": 39,
+   "pos": [
+    -0.2648091,
+    -0.63376415
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "DPAD0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.19,
+    0.87
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "QuizHost/RightArm/Hit",
+   "parent": 39,
+   "pos": [
+    0.548,
+    -0.431
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2
+   ],
+   "sprite": "quiz_parts_25",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "QuizHost/RightArm/Hit/Star",
+   "parent": 43,
+   "pos": [
+    0.492,
+    -0.557
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "QuizHost/RightArm/Hit/Star (1)",
+   "parent": 43,
+   "pos": [
+    -0.617,
+    -0.152
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "QuizHost/RightArm/Hit/Star (2)",
+   "parent": 43,
+   "pos": [
+    -0.609,
+    0.595
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "QuizHost/LeftArm",
+   "parent": 26,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "QuizHost/LeftArm/Arm",
+   "parent": 47,
+   "pos": [
+    -4.489,
+    -0.344
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "ArmLayDownNoShoulder",
+   "order": -6,
+   "color": [
+    0.83921576,
+    0.7803922,
+    0,
+    1
+   ],
+   "size": [
+    0.81,
+    0.6
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "QuizHost/LeftArm/Hand",
+   "parent": 47,
+   "pos": [
+    -3.67,
+    -0.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "HostLeftHand",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.73,
+    0.45
+   ]
+  },
+  {
+   "name": "AButton",
+   "path": "QuizHost/LeftArm/AButton",
+   "parent": 47,
+   "pos": [
+    -3.5861,
+    -1.169
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "AButton0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.22,
+    0.9
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "QuizHost/LeftArm/Hit",
+   "parent": 47,
+   "pos": [
+    -3.055,
+    -1.012
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2
+   ],
+   "sprite": "quiz_parts_25",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "QuizHost/LeftArm/Hit/Star",
+   "parent": 51,
+   "pos": [
+    0.492,
+    -0.557
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "QuizHost/LeftArm/Hit/Star (1)",
+   "parent": 51,
+   "pos": [
+    -0.617,
+    -0.152
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "QuizHost/LeftArm/Hit/Star (2)",
+   "parent": 51,
+   "pos": [
+    -0.609,
+    0.595
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Contestee",
+   "path": "Contestee",
+   "parent": 0,
+   "pos": [
+    -0.12,
+    0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Counter",
+   "path": "Contestee/Counter",
+   "parent": 55,
+   "pos": [
+    -4.34,
+    -2.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Contestee/Counter/Sprite",
+   "parent": 56,
+   "pos": [
+    -0.008,
+    -0.025
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "CounterWhite",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    1.88
+   ]
+  },
+  {
+   "name": "FirstDigit",
+   "path": "Contestee/Counter/FirstDigit",
+   "parent": 56,
+   "pos": [
+    -0.083,
+    -0.147
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ZeroCon",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1.49
+   ]
+  },
+  {
+   "name": "SecondDigit",
+   "path": "Contestee/Counter/SecondDigit",
+   "parent": 56,
+   "pos": [
+    -0.592,
+    -0.065
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ZeroCon",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1.49
+   ]
+  },
+  {
+   "name": "Explosion",
+   "path": "Contestee/Counter/Explosion",
+   "parent": 56,
+   "pos": [
+    -0.352,
+    -0.082
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "fire",
+   "path": "Contestee/Counter/Explosion/fire",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "smoke",
+   "path": "Contestee/Counter/Explosion/smoke",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Contestee/Body",
+   "parent": 55,
+   "pos": [
+    -5.663,
+    -0.661
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "ContesteeBody",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.36,
+    1.7
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Contestee/Head",
+   "parent": 55,
+   "pos": [
+    -5.503,
+    0.907
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "ContesteeFaceNeutral",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.09,
+    1.28
+   ]
+  },
+  {
+   "name": "RightArm",
+   "path": "Contestee/RightArm",
+   "parent": 55,
+   "pos": [
+    -4.931991,
+    -0.8019358
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "Contestee/RightArm/Arm",
+   "parent": 65,
+   "pos": [
+    -0.887,
+    0.203
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2
+   ],
+   "sprite": "ArmLayDown",
+   "order": 3,
+   "color": [
+    0.86274517,
+    0.49803925,
+    0,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "Contestee/RightArm/Hand",
+   "parent": 65,
+   "pos": [
+    -0.301,
+    -0.357
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "ContesteeRightHand",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.48,
+    0.43
+   ]
+  },
+  {
+   "name": "AButton",
+   "path": "Contestee/RightArm/AButton",
+   "parent": 65,
+   "pos": [
+    -0.33620882,
+    -0.6757642
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "AButton0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.22,
+    0.9
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "Contestee/RightArm/Hit",
+   "parent": 65,
+   "pos": [
+    -4.528,
+    -1.434
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2
+   ],
+   "sprite": "quiz_parts_25",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Contestee/RightArm/Hit/Star",
+   "parent": 69,
+   "pos": [
+    0.492,
+    -0.557
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Contestee/RightArm/Hit/Star (1)",
+   "parent": 69,
+   "pos": [
+    -0.617,
+    -0.152
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "Contestee/RightArm/Hit/Star (2)",
+   "parent": 69,
+   "pos": [
+    -0.609,
+    0.595
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "LeftArm",
+   "path": "Contestee/LeftArm",
+   "parent": 55,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "Contestee/LeftArm/Arm",
+   "parent": 73,
+   "pos": [
+    -4.783,
+    -0.389
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "ArmLayDownNoShoulder",
+   "order": -6,
+   "color": [
+    0.86274517,
+    0.49803925,
+    0,
+    1
+   ],
+   "size": [
+    0.81,
+    0.6
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "Contestee/LeftArm/Hand",
+   "parent": 73,
+   "pos": [
+    -3.802,
+    -0.956
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2.1
+   ],
+   "sprite": "ContesteeLeftHand",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.73,
+    0.45
+   ]
+  },
+  {
+   "name": "DPAD",
+   "path": "Contestee/LeftArm/DPAD",
+   "parent": 73,
+   "pos": [
+    -3.6827002,
+    -1.3118
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "sprite": "DPAD0",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.19,
+    0.87
+   ]
+  },
+  {
+   "name": "Hit",
+   "path": "Contestee/LeftArm/Hit",
+   "parent": 73,
+   "pos": [
+    -4.528,
+    -1.434
+   ],
+   "rotZ": 0,
+   "scale": [
+    -2.1,
+    2
+   ],
+   "sprite": "quiz_parts_25",
+   "order": 3,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star",
+   "path": "Contestee/LeftArm/Hit/Star",
+   "parent": 77,
+   "pos": [
+    0.492,
+    -0.557
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star (1)",
+   "path": "Contestee/LeftArm/Hit/Star (1)",
+   "parent": 77,
+   "pos": [
+    -0.617,
+    -0.152
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Star (2)",
+   "path": "Contestee/LeftArm/Hit/Star (2)",
+   "parent": 77,
+   "pos": [
+    -0.609,
+    0.595
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.93870425,
+    0.89400405
+   ],
+   "sprite": "quiz_parts_22",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.92,
+    0.83
+   ]
+  },
+  {
+   "name": "Timer",
+   "path": "Timer",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stopwatch",
+   "path": "Timer/Stopwatch",
+   "parent": 81,
+   "pos": [
+    -0.028,
+    0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1129928,
+    2.1129928
+   ],
+   "sprite": "quiz_parts_49",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.26568,
+    0.76
+   ]
+  },
+  {
+   "name": "Needle",
+   "path": "Timer/Stopwatch/Needle",
+   "parent": 82,
+   "pos": [
+    -0.001,
+    0.002
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.90201366,
+    0.90201366
+   ],
+   "sprite": "quiz_parts_48",
+   "order": 16,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.26568,
+    0.76
+   ]
+  },
+  {
+   "name": "Blackout",
+   "path": "Blackout",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Blackout/Sprite",
+   "parent": 84,
+   "pos": [
+    -3.88,
+    -2.71
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.041117,
+    2.041117
+   ],
+   "sprite": "quiz_bg_2",
+   "order": 999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    1.88
+   ]
+  },
+  {
+   "name": "Sprite (1)",
+   "path": "Blackout/Sprite (1)",
+   "parent": 84,
+   "pos": [
+    0.09,
+    3.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    39.53375,
+    9.883437
+   ],
+   "sprite": "quiz_bg_3",
+   "order": 999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    1.88
+   ]
+  },
+  {
+   "name": "Sprite (2)",
+   "path": "Blackout/Sprite (2)",
+   "parent": 84,
+   "pos": [
+    0.09,
+    -8.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    39.53375,
+    9.883437
+   ],
+   "sprite": "quiz_bg_3",
+   "order": 999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    1.88
+   ]
+  },
+  {
+   "name": "Sprite (3)",
+   "path": "Blackout/Sprite (3)",
+   "parent": 84,
+   "pos": [
+    5.68,
+    -2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    21.716383,
+    26.067566
+   ],
+   "sprite": "quiz_bg_3",
+   "order": 999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    1.88
+   ]
+  },
+  {
+   "name": "Sprite (4)",
+   "path": "Blackout/Sprite (4)",
+   "parent": 84,
+   "pos": [
+    -9.64,
+    -2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    8.228474,
+    26.067566
+   ],
+   "sprite": "quiz_bg_3",
+   "order": 999,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    1.88
+   ]
+  }
+ ]
+}

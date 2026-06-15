@@ -1,0 +1,9 @@
+{
+ "Contestee/Head": "Head",
+ "Contestee/LeftArm": "LeftArm",
+ "Contestee/RightArm": "RightArm",
+ "QuizHost/Head": "HostHead",
+ "QuizHost/LeftArm": "LeftArm 1",
+ "QuizHost/RightArm": "RightArm 1",
+ "SignHolder": "SignHolder"
+}

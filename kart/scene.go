@@ -478,6 +478,15 @@ func maxf(a, b float64) float64 {
 // SetSpinIdx 设置节点旋转叠加（弧度；transform.Rotate 的积分由模块自做）。
 func (s *SceneInst) SetSpinIdx(idx int, rad float64) { s.spinOver[idx] = rad }
 
+// SetSpinOver 设置节点局部旋转叠加（弧度）。一些 HS 脚本直接写
+// transform.rotation，例如 Quiz Show 的秒表指针；按 path 暴露避免模块
+// 依赖 scene 内部下标。
+func (s *SceneInst) SetSpinOver(path string, rad float64) {
+	if i, ok := s.byPath[path]; ok {
+		s.spinOver[i] = rad
+	}
+}
+
 // SetActive 覆盖节点 m_IsActive（GameObject.SetActive 语义，沿层级传播）。
 func (s *SceneInst) SetActive(path string, active bool) {
 	if i, ok := s.byPath[path]; ok {

@@ -1,0 +1,182 @@
+{
+ "ContesteeHead": {
+  "default": "ContesteeHeadIdle",
+  "states": {
+   "ContesteeHeadIdle": {
+    "clip": "Animations/ContesteeHeadIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Head": {
+  "default": "ContesteeHeadIdle",
+  "states": {
+   "ContesteeHeadIdle": {
+    "clip": "Animations/ContesteeHeadIdle",
+    "speed": 1
+   },
+   "ContesteeHeadStage1": {
+    "clip": "Animations/ContesteeHeadStage1",
+    "speed": 1
+   },
+   "ContesteeHeadStage2": {
+    "clip": "Animations/ContesteeHeadStage2",
+    "speed": 1
+   },
+   "ContesteeHeadStage3": {
+    "clip": "Animations/ContesteeHeadStage3",
+    "speed": 1
+   },
+   "ContesteeSad": {
+    "clip": "Animations/ContesteeSad",
+    "speed": 1
+   },
+   "ContesteeSmile": {
+    "clip": "Animations/ContesteeSmile",
+    "speed": 1
+   }
+  }
+ },
+ "HostHead": {
+  "default": "HostIdleHead",
+  "states": {
+   "HostIdleHead": {
+    "clip": "Animations/HostIdleHead",
+    "speed": 1
+   },
+   "HostSad": {
+    "clip": "Animations/HostSad",
+    "speed": 1
+   },
+   "HostSmile": {
+    "clip": "Animations/HostSmile",
+    "speed": 1
+   },
+   "HostStage1": {
+    "clip": "Animations/HostStage1",
+    "speed": 1
+   },
+   "HostStage2": {
+    "clip": "Animations/HostStage2",
+    "speed": 1
+   },
+   "HostStage3": {
+    "clip": "Animations/HostStage3",
+    "speed": 1
+   },
+   "HostStage4": {
+    "clip": "Animations/HostStage4",
+    "speed": 1
+   }
+  }
+ },
+ "LeftArm": {
+  "default": "LeftArmIdle",
+  "states": {
+   "LeftArmIdle": {
+    "clip": "Animations/LeftArmIdle",
+    "speed": 1
+   },
+   "LeftArmPress": {
+    "clip": "Animations/LeftArmPress",
+    "speed": 1
+   },
+   "LeftPrepare": {
+    "clip": "Animations/LeftPrepare",
+    "speed": 1
+   },
+   "LeftPrepareIdle": {
+    "clip": "Animations/LeftPrepareIdle",
+    "speed": 1
+   },
+   "LeftRest": {
+    "clip": "Animations/LeftRest",
+    "speed": 1
+   }
+  }
+ },
+ "LeftArm 1": {
+  "default": "HostLeftArmIdle",
+  "states": {
+   "HostLeftArmIdle": {
+    "clip": "Animations/HostLeftArmIdle",
+    "speed": 1
+   },
+   "HostLeftHit": {
+    "clip": "Animations/HostLeftHit",
+    "speed": 1
+   },
+   "HostLeftPrepare": {
+    "clip": "Animations/HostLeftPrepare",
+    "speed": 1
+   },
+   "HostLeftRest": {
+    "clip": "Animations/HostLeftRest",
+    "speed": 1
+   }
+  }
+ },
+ "RightArm": {
+  "default": "RightArmIdle",
+  "states": {
+   "RIghtPrepare": {
+    "clip": "Animations/RIghtPrepare",
+    "speed": 1
+   },
+   "RightArmHit": {
+    "clip": "Animations/RightArmHit",
+    "speed": 1
+   },
+   "RightArmIdle": {
+    "clip": "Animations/RightArmIdle",
+    "speed": 1
+   },
+   "RightPrepareIdle": {
+    "clip": "Animations/RightPrepareIdle",
+    "speed": 1
+   },
+   "RightRest": {
+    "clip": "Animations/RightRest",
+    "speed": 1
+   }
+  }
+ },
+ "RightArm 1": {
+  "default": "HostRightArmIdle",
+  "states": {
+   "HostPrepare": {
+    "clip": "Animations/HostPrepare",
+    "speed": 1
+   },
+   "HostRightArmIdle": {
+    "clip": "Animations/HostRightArmIdle",
+    "speed": 1
+   },
+   "HostRightHit": {
+    "clip": "Animations/HostRightHit",
+    "speed": 1
+   },
+   "HostRightRest": {
+    "clip": "Animations/HostRightRest",
+    "speed": 1
+   }
+  }
+ },
+ "Sign": {
+  "default": "",
+  "states": {}
+ },
+ "SignHolder": {
+  "default": "SignIdle",
+  "states": {
+   "Exploded": {
+    "clip": "Animations/Exploded",
+    "speed": 1
+   },
+   "SignIdle": {
+    "clip": "Animations/SignIdle",
+    "speed": 1
+   }
+  }
+ }
+}
