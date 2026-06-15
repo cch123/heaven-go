@@ -257,7 +257,7 @@ func poseExpired(pose string, age float64) bool {
 func (m *Module) sampleSceneAnimations(beat float64) {
 	u := beat / 5
 	if p := m.ctx.Role("Floor"); p != "" {
-		m.ctx.Scene.PlayNormalized(p, "Animations/floor/move", u-math.Floor(u))
+		m.ctx.Scene.PlayFrozen(p, "moving", u-math.Floor(u))
 	}
 	if p := m.ctx.Role("Dog"); p != "" {
 		m.ctx.Scene.PlayNormalized(p, "Animations/dog/run", math.Mod(u*7.5, 1))

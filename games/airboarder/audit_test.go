@@ -40,7 +40,7 @@ func TestAirboarderExtractedAssetCoverage(t *testing.T) {
 		"airboy":      {"hover", "bop", "duck", "charge", "hold", "jump", "hit1", "hit2", "letsgo"},
 		"arch":        {"idle", "move", "shake", "break"},
 		"Wall":        {"idle", "move", "shake", "break"},
-		"floor_model": {"idle", "move"},
+		"floor_model": {"idle", "moving"},
 		"dog":         {"run", "wag"},
 	} {
 		c, ok := controllers[ctrl]
