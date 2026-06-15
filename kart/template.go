@@ -106,6 +106,8 @@ type Instance struct {
 	actives    map[int]bool // 模板内下标 → SetActive 覆盖
 	sprites    map[int]string
 	colors     map[int][4]float64 // SpriteRenderer.color 覆盖（sr.color 直写）
+	palettes   map[int]Palette    // mapped material overrides per instance renderer
+	matAdd     map[int][4]float64 // material._AddColor 覆盖（screen 混合）
 	orders     map[int]int        // SpriteRenderer.sortingOrder 覆盖（sr.sortingOrder 直写）
 	pos        map[int][2]float64 // Transform.localPosition 覆盖（脚本每帧写 transform）
 	rots       map[int]float64    // Transform.localEulerAngles.z 覆盖（弧度）
@@ -116,18 +118,20 @@ type Instance struct {
 func (t *Template) NewInstance() *Instance {
 	root := &t.as.Rig.Nodes[t.Nodes[0].RigIdx]
 	in := &Instance{
-		T:       t,
-		Offset:  root.Pos,
-		Scale:   [2]float64{1, 1},
-		players: map[int]*instPlayer{},
-		layers:  map[string]*instPlayer{},
-		actives: map[int]bool{},
-		sprites: map[int]string{},
-		colors:  map[int][4]float64{},
-		orders:  map[int]int{},
-		pos:     map[int][2]float64{},
-		rots:    map[int]float64{},
-		scales:  map[int][2]float64{},
+		T:        t,
+		Offset:   root.Pos,
+		Scale:    [2]float64{1, 1},
+		players:  map[int]*instPlayer{},
+		layers:   map[string]*instPlayer{},
+		actives:  map[int]bool{},
+		sprites:  map[int]string{},
+		colors:   map[int][4]float64{},
+		palettes: map[int]Palette{},
+		matAdd:   map[int][4]float64{},
+		orders:   map[int]int{},
+		pos:      map[int][2]float64{},
+		rots:     map[int]float64{},
+		scales:   map[int][2]float64{},
 	}
 	// controller 默认状态不自动播（Unity 激活时播默认态；由调用方
 	// PlayDefaultState 以正确的 timeScale 启动）
@@ -323,6 +327,17 @@ func (in *Instance) SetColor(relPath string, c [4]float64) {
 	}
 }
 
+// SetPalette 覆盖子树内 mapped renderer 的材质调色板。Unity Instantiate 会给
+// Shoot-'Em-Up 敌机各自 new Material；实例级 palette 保留这个非共享语义。
+func (in *Instance) SetPalette(relPath string, p Palette) {
+	for ti, tn := range in.T.Nodes {
+		if tn.RelPath == relPath {
+			in.palettes[ti] = p
+			return
+		}
+	}
+}
+
 // SetOrder 覆盖子树内节点的 sortingOrder。Wizard's Waltz 的花会根据
 // z 位置每实例改排序；共享模板节点不能只改全局 rig order。
 func (in *Instance) SetOrder(relPath string, order int) {
@@ -461,6 +476,7 @@ type instNodeState struct {
 	active   bool
 	renderOn bool
 	color    [4]float64
+	matAdd   [4]float64
 	order    int
 }
 
@@ -496,6 +512,9 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 	}
 	for ti, c := range in.colors {
 		states[ti].color = c
+	}
+	for ti, c := range in.matAdd {
+		states[ti].matAdd = c
 	}
 	for ti, o := range in.orders {
 		states[ti].order = o
@@ -535,12 +554,18 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			continue
 		}
 		n := &t.as.Rig.Nodes[tn.RigIdx]
-		scene.Queue(ExtraSprite{
+		e := ExtraSprite{
 			Sprite: st.sprite, World: world[ti], Z: z,
 			Layer: n.Layer, Order: st.order,
 			FlipX: st.flipX, FlipY: st.flipY, Tint: st.color,
 			Mapped: n.Mapped, Mat: n.Mat,
-		})
+			Add: st.matAdd,
+		}
+		if pal, ok := in.palettes[ti]; ok {
+			e.HasPalette = true
+			e.Palette = pal
+		}
+		scene.Queue(e)
 	}
 }
 
@@ -686,6 +711,18 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 					states[ti].color[2] = v
 				case "a":
 					states[ti].color[3] = v
+				}
+			case strings.HasPrefix(attr, "material._AddColor."):
+				ch := strings.TrimPrefix(attr, "material._AddColor.")
+				switch ch {
+				case "r":
+					states[ti].matAdd[0] = v
+				case "g":
+					states[ti].matAdd[1] = v
+				case "b":
+					states[ti].matAdd[2] = v
+				case "a":
+					states[ti].matAdd[3] = v
 				}
 			}
 		}

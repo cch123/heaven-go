@@ -628,8 +628,11 @@ type ExtraSprite struct {
 	Layer, Order int
 	FlipX, FlipY bool
 	Tint         [4]float64 // 零值视为白色
+	Add          [4]float64 // material._AddColor for mapped queued sprites
 	Mapped       bool       // 调色板映射材质（SceneInst.SetPalette）
 	Mat          string     // 映射材质名（按名调色板）
+	HasPalette   bool       // true 时 Palette 为实例级 mapped 材质参数
+	Palette      Palette
 }
 
 // Queue 注入一帧动态绘制项（Draw 后清空，每帧重新注入）。
@@ -828,6 +831,18 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				case "a":
 					s.state[i].color[3] = v
 				}
+			case strings.HasPrefix(attr, "material._AddColor."):
+				ch := strings.TrimPrefix(attr, "material._AddColor.")
+				switch ch {
+				case "r":
+					s.state[i].matAdd[0] = v
+				case "g":
+					s.state[i].matAdd[1] = v
+				case "b":
+					s.state[i].matAdd[2] = v
+				case "a":
+					s.state[i].matAdd[3] = v
+				}
 			}
 		}
 	}
@@ -919,9 +934,13 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			if !ok {
 				continue
 			}
-			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint}
+			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint, Add: q.Add}
 			if q.Mapped {
-				s.as.DrawSpriteMapped(dst, q.Sprite, view.Mul(q.World), proj, qo, s.paletteOf(q.Mat))
+				pal := s.paletteOf(q.Mat)
+				if q.HasPalette {
+					pal = q.Palette
+				}
+				s.as.DrawSpriteMapped(dst, q.Sprite, view.Mul(q.World), proj, qo, pal)
 			} else {
 				s.as.DrawSpriteOpts(dst, q.Sprite, view.Mul(q.World), proj, qo)
 			}

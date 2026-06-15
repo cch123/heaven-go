@@ -1,0 +1,14 @@
+{
+ "DamageEffect": "DamageEffect",
+ "IntroGate": "IntroGate",
+ "Monitor": "MonitorHolder",
+ "Monitor/monitor/Captain": "Captain",
+ "laser": "laser",
+ "prefabs/enemy": "enemy",
+ "prefabs/impact": "impact",
+ "prefabs/missimpact": "missimpact",
+ "prefabs/origin": "origin",
+ "prefabs/trajectory": "trajectory",
+ "prefabs/trajectory/sprite": "trajectory",
+ "ship": "ship"
+}

@@ -1,0 +1,333 @@
+{
+ "Captain": {
+  "default": "capHidden",
+  "params": {
+   "isTalk": false
+  },
+  "states": {
+   "capBop": {
+    "clip": "Animations/capBop",
+    "speed": 1
+   },
+   "capHidden": {
+    "clip": "Animations/capHidden",
+    "speed": 1
+   },
+   "capHide": {
+    "clip": "Animations/capHide",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "capHidden",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "capIdle": {
+    "clip": "Animations/capIdle",
+    "speed": 1
+   },
+   "capShow": {
+    "clip": "Animations/capShow",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "capIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "capTalk": {
+    "clip": "Animations/capTalk",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "capIdle",
+      "conds": [
+       {
+        "mode": "ifnot",
+        "param": "isTalk"
+       }
+      ],
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "DamageEffect": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "damage": {
+    "clip": "Animations/Effect/damage",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "IntroGate": {
+  "default": "gateHidden",
+  "states": {
+   "gateHidden": {
+    "clip": "Animations/gateHidden",
+    "speed": 1
+   },
+   "gateOpen1": {
+    "clip": "Animations/gateOpen1",
+    "speed": 1
+   },
+   "gateOpen2": {
+    "clip": "Animations/gateOpen2",
+    "speed": 1
+   },
+   "gateOpen3": {
+    "clip": "Animations/gateOpen3",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "gateHidden",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "gateShow": {
+    "clip": "Animations/gateShow",
+    "speed": 1
+   }
+  }
+ },
+ "MonitorHolder": {
+  "default": "monitorHidden",
+  "states": {
+   "idle2": {
+    "clip": "Animations/monitorIdle2",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle3",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "idle3": {
+    "clip": "Animations/monitorIdle",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle2",
+      "exitTime": 3,
+      "duration": 0
+     }
+    ]
+   },
+   "monitorHidden": {
+    "clip": "Animations/monitorHidden",
+    "speed": 1
+   },
+   "monitorIdle": {
+    "clip": "Animations/monitorIdle",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle2",
+      "exitTime": 2,
+      "duration": 0
+     }
+    ]
+   },
+   "monitorIn": {
+    "clip": "Animations/monitorIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "monitorIdle",
+      "exitTime": 1.3333334,
+      "duration": 0
+     }
+    ]
+   },
+   "monitorOut": {
+    "clip": "Animations/monitorOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "monitorHidden",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "enemy": {
+  "default": "Basic",
+  "states": {
+   "Arrange": {
+    "clip": "Animations/enemy/init_arrange",
+    "speed": 1
+   },
+   "Basic": {
+    "clip": "Animations/enemy/init_basic",
+    "speed": 1
+   },
+   "BasicClassic": {
+    "clip": "Animations/enemy/init_basicclassic",
+    "speed": 1
+   },
+   "Endless": {
+    "clip": "Animations/enemy/init_endless",
+    "speed": 1
+   },
+   "EndlessClassic": {
+    "clip": "Animations/enemy/init_endlessclassic",
+    "speed": 1
+   },
+   "Lockstep": {
+    "clip": "Animations/enemy/init_lockstep",
+    "speed": 1
+   },
+   "Practice": {
+    "clip": "Animations/enemy/init_practice",
+    "speed": 1
+   },
+   "PracticeClassic": {
+    "clip": "Animations/enemy/init_practiceclassic",
+    "speed": 1
+   },
+   "Remix9": {
+    "clip": "Animations/enemy/init_remix9",
+    "speed": 1
+   },
+   "enemyAttack": {
+    "clip": "Animations/enemy/enemyAttack",
+    "speed": 1
+   },
+   "enemyIdle": {
+    "speed": 1
+   },
+   "enemyMissLeft": {
+    "clip": "Animations/enemy/enemyMissL",
+    "speed": 1
+   },
+   "enemyMissRight": {
+    "clip": "Animations/enemy/enemyMissR",
+    "speed": 1
+   },
+   "enemySpawn": {
+    "clip": "Animations/enemy/enemySpawn",
+    "speed": 2,
+    "transitions": [
+     {
+      "dst": "enemyIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "impact": {
+  "default": "impact",
+  "states": {
+   "impact": {
+    "clip": "Animations/Effect/impact",
+    "speed": 1
+   }
+  }
+ },
+ "laser": {
+  "default": "idle",
+  "states": {
+   "idle": {
+    "speed": 1
+   },
+   "laser": {
+    "clip": "Animations/laser",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "missimpact": {
+  "default": "missimpact",
+  "states": {
+   "missimpact": {
+    "clip": "Animations/Effect/missimpact",
+    "speed": 1
+   }
+  }
+ },
+ "origin": {
+  "default": "origin",
+  "states": {
+   "origin": {
+    "clip": "Animations/Effect/origin",
+    "speed": 1
+   }
+  }
+ },
+ "ship": {
+  "default": "shipIdle",
+  "states": {
+   "shipDamage": {
+    "clip": "Animations/shipDamage",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "shipIdle",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   },
+   "shipIdle": {
+    "clip": "Animations/shipIdle",
+    "speed": 1
+   },
+   "shipShoot": {
+    "clip": "Animations/shipShoot",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "shipIdle",
+      "exitTime": 0.75,
+      "duration": 0.25
+     }
+    ]
+   }
+  }
+ },
+ "trajectory": {
+  "default": "trajectory",
+  "states": {
+   "trajectory": {
+    "clip": "Animations/Effect/trajectory",
+    "speed": 1
+   },
+   "trajectory_damage": {
+    "clip": "Animations/Effect/trajectory_damage",
+    "speed": 1
+   }
+  }
+ }
+}
