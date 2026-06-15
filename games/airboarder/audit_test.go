@@ -5,6 +5,8 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+
+	"hsdemo/kmdata"
 )
 
 func TestAirboarderExtractedAssetCoverage(t *testing.T) {
@@ -78,6 +80,26 @@ func TestAirboarderExtractedAssetCoverage(t *testing.T) {
 	} {
 		if _, err := os.Stat(filepath.Join(root, "sounds", sound)); err != nil {
 			t.Fatalf("missing sound %s: %v", sound, err)
+		}
+	}
+}
+
+func TestAirboarderSynthesizesImportedModelAnimPaths(t *testing.T) {
+	var scene kmdata.Rig
+	readJSON(t, filepath.Join("..", "..", "assets", "airboarder", "scene.json"), &scene)
+	nodes := map[string]bool{}
+	for _, n := range scene.Nodes {
+		nodes[n.Path] = true
+	}
+	for _, path := range []string{
+		"MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Head",
+		"MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/board_model/eft_fire_L",
+		"Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/block04Pg",
+		"Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/block07Pg",
+		"MovingObjects/dog/dog_model_skeleton/dog_root/hip/tail2",
+	} {
+		if !nodes[path] {
+			t.Fatalf("missing synthesized imported-model path %q", path)
 		}
 	}
 }

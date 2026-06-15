@@ -130,8 +130,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - airboarder：`bop`/`duck`/`crouch`/`jump`/`forceCharge`/`letsGo`/背景地板
   颜色/相机事件、arch/wall 判定窗口、CPU/玩家编舞、ready/yeah/miss/barely
   音效序列已按 C# 时序接入；提取器已导出 `Models` 下的 airboy、arch、
-  wall、dog、floor controller 和所有 `.anim`。原版主体是 MeshRenderer/材质贴图
-  的 3D 场景，当前暂用手写 2D billboard 渲染，仍待补 MeshRenderer、材质纹理、
+  wall、dog、floor controller 和所有 `.anim`，并把 Animator 曲线访问的 FBX
+  内部骨架 path 合成为 scene 节点。原版主体是 MeshRenderer/材质贴图的 3D
+  场景，当前暂用手写 2D billboard 渲染，仍待补 MeshRenderer、材质纹理、
   CameraPivot/FOV 与 ScrollingFloor 材质滚动的完整运行时支持。
 - fillbots：`bop`/small/medium/large/custom/blackout/background appearance/
   object appearance 已接入，机器人落体、堆叠、传送带哨兵、hold/release 判定、

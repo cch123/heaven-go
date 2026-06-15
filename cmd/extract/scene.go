@@ -4,6 +4,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"log"
 	"os"
@@ -31,14 +32,19 @@ type sceneSpec struct {
 	strArrayFields  []string // 字符串数组字段（如动画名表）
 	curveFields     []string // BezierCurve3D 引用字段
 	extraScenePaths []string // FBX 内部动画 path 等无法从 YAML hierarchy 暴露的显式补点
-	objMarkers      []string // 识别"对象模板组件"的字段集合（如 MobTrickObj）
-	objRefFields    []string // 模板组件上的单引用字段（→ 节点 path，如 Meat.startPosition）
-	objSpriteFields []string // 模板组件上的 sprite 引用数组字段（→ 切片名，如 Meat.meats）
-	wantSequences   bool     // 提取 SoundSequences 组件
-	commonSounds    []string // 需要的公共音效（Assets/Resources/Sfx/<name>）
-	extraSounds     []extraSound
-	wantControllers bool // 提取 AnimatorController 状态机（controllers.json + animators.json）
-	wantTexts       bool // 提取 TMP 世界文本（texts.json + fonts/）
+	// synthesizeAnimPaths adds scene nodes for AnimationClip paths that live
+	// inside imported model/FBX hierarchies. Unity resolves those child
+	// Transforms at runtime through the model importer, but they are not YAML
+	// GameObjects in the owning prefab.
+	synthesizeAnimPaths bool
+	objMarkers          []string // 识别"对象模板组件"的字段集合（如 MobTrickObj）
+	objRefFields        []string // 模板组件上的单引用字段（→ 节点 path，如 Meat.startPosition）
+	objSpriteFields     []string // 模板组件上的 sprite 引用数组字段（→ 切片名，如 Meat.meats）
+	wantSequences       bool     // 提取 SoundSequences 组件
+	commonSounds        []string // 需要的公共音效（Assets/Resources/Sfx/<name>）
+	extraSounds         []extraSound
+	wantControllers     bool // 提取 AnimatorController 状态机（controllers.json + animators.json）
+	wantTexts           bool // 提取 TMP 世界文本（texts.json + fonts/）
 
 	components []componentSpec // 通用组件 dump（Extra.Components）
 	// templatePrefabs 是 C# 运行时 Instantiate 的 prefab 资产引用；这些
@@ -95,7 +101,8 @@ var sceneSpecs = map[string]sceneSpec{
 			"archBasic", "wallBasic", "floor",
 			"CPU1", "CPU2", "Player", "Dog", "Tail", "Floor",
 		},
-		wantControllers: true,
+		wantControllers:     true,
+		synthesizeAnimPaths: true,
 		components: []componentSpec{
 			{name: "game", markers: []string{
 				"bgMaterial", "fadeMaterial", "floorMaterial", "cloudMaterial",
@@ -1287,6 +1294,9 @@ func extractScene(game string) {
 	if spec.wantControllers {
 		exportControllers(spec, docs, idx, paths)
 	}
+	if spec.synthesizeAnimPaths {
+		synthesizeSceneAnimationPaths()
+	}
 	if spec.wantTexts {
 		exportTexts(docs, paths)
 	}
@@ -1721,6 +1731,92 @@ func ensureSyntheticScenePath(scene *kmdata.Rig, pathIdx map[string]int, path st
 	})
 	pathIdx[path] = i
 	return i
+}
+
+func synthesizeSceneAnimationPaths() {
+	var scene kmdata.Rig
+	readGeneratedJSON("scene.json", &scene)
+	var anims map[string]*kmdata.Anim
+	readGeneratedJSON("anims.json", &anims)
+	var ctrls map[string]kmdata.Controller
+	readGeneratedJSON("controllers.json", &ctrls)
+	var animators kmdata.Animators
+	readGeneratedJSON("animators.json", &animators)
+
+	pathIdx := map[string]int{}
+	for i, n := range scene.Nodes {
+		if _, ok := pathIdx[n.Path]; !ok {
+			pathIdx[n.Path] = i
+		}
+	}
+
+	added := 0
+	for root, ctrlName := range animators {
+		ctrl, ok := ctrls[ctrlName]
+		if !ok {
+			continue
+		}
+		for _, st := range ctrl.States {
+			if st.Clip == "" {
+				continue
+			}
+			anim := anims[st.Clip]
+			if anim == nil {
+				continue
+			}
+			for _, rel := range animCurvePaths(anim) {
+				if rel == "" {
+					continue
+				}
+				full := rel
+				if root != "" {
+					full = root + "/" + rel
+				}
+				if _, ok := pathIdx[full]; ok {
+					continue
+				}
+				ensureSyntheticScenePath(&scene, pathIdx, full)
+				added++
+			}
+		}
+	}
+	if added == 0 {
+		return
+	}
+	writeJSON("scene.json", &scene)
+	fmt.Printf("scene: synthesized %d animator model paths\n", added)
+}
+
+func animCurvePaths(a *kmdata.Anim) []string {
+	seen := map[string]bool{}
+	add := func(path string) { seen[path] = true }
+	for p := range a.Pos {
+		add(p)
+	}
+	for p := range a.Scale {
+		add(p)
+	}
+	for p := range a.Euler {
+		add(p)
+	}
+	for p := range a.Sprites {
+		add(p)
+	}
+	for p := range a.Floats {
+		add(p)
+	}
+	out := make([]string, 0, len(seen))
+	for p := range seen {
+		out = append(out, p)
+	}
+	sort.Strings(out)
+	return out
+}
+
+func readGeneratedJSON(name string, out any) {
+	b, err := os.ReadFile(filepath.Join(*outDir, name))
+	must(err)
+	must(json.Unmarshal(b, out))
 }
 
 // ---------- roles ----------
