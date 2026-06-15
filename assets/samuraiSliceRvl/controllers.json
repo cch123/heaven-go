@@ -1,0 +1,209 @@
+{
+ "Fog1": {
+  "default": "Fog2",
+  "states": {
+   "Fog2": {
+    "clip": "Animations/Fog2",
+    "speed": 1
+   }
+  }
+ },
+ "Fog1 (1)": {
+  "default": "FogMove1",
+  "states": {
+   "FogMove1": {
+    "clip": "Animations/New Animation",
+    "speed": 2
+   }
+  }
+ },
+ "HordeDemon": {
+  "default": "HordeIdle",
+  "states": {
+   "HordeBite": {
+    "clip": "Demons/HordeBite",
+    "speed": 1
+   },
+   "HordeIdle": {
+    "clip": "Demons/HordeIdle",
+    "speed": 1
+   },
+   "HordeRush": {
+    "clip": "Demons/HordeRush",
+    "speed": 1
+   },
+   "HordeSummon": {
+    "clip": "Demons/HordeSummon",
+    "speed": 1
+   },
+   "HordeSummonFinal": {
+    "clip": "Demons/HordeSummonFinal",
+    "speed": 1
+   }
+  }
+ },
+ "LargeDemon": {
+  "default": "LargeIdle",
+  "states": {
+   "LargeIdle": {
+    "clip": "Demons/LargeIdle",
+    "speed": 1
+   },
+   "LargeSummon": {
+    "clip": "Demons/LargeSummon",
+    "speed": 1
+   },
+   "LargeWaddle": {
+    "clip": "Demons/LargeWaddle",
+    "speed": 1
+   }
+  }
+ },
+ "Lightning": {
+  "default": "LightningStrike1",
+  "states": {
+   "LightningStrike1": {
+    "clip": "Particles/LightningStrike1",
+    "speed": 1
+   },
+   "LightningStrike2": {
+    "clip": "Particles/LightningStrike2",
+    "speed": 1
+   },
+   "LightningStrike3": {
+    "clip": "Particles/LightningStrike3",
+    "speed": 1
+   }
+  }
+ },
+ "MediumDemon": {
+  "default": "MediumIdle",
+  "states": {
+   "MediumIdle": {
+    "clip": "Demons/MediumIdle",
+    "speed": 1
+   },
+   "MediumSummon": {
+    "clip": "Demons/MediumSummon",
+    "speed": 1
+   },
+   "MediumWaddle": {
+    "clip": "Demons/MediumWaddle",
+    "speed": 1
+   }
+  }
+ },
+ "New Animator Controller": {
+  "default": "New State",
+  "states": {
+   "New State": {
+    "speed": 1
+   }
+  }
+ },
+ "SamuraiFlash": {
+  "default": "Flash",
+  "states": {
+   "Flash": {
+    "clip": "Particles/Flash",
+    "speed": 1
+   }
+  }
+ },
+ "SamuraiWii": {
+  "default": "SamuraiIdle",
+  "states": {
+   "SamuraiBop": {
+    "clip": "Samurai/SamuraiBop",
+    "speed": 1
+   },
+   "SamuraiHordeEnd": {
+    "clip": "Samurai/SamuraiHordeEnd",
+    "speed": 1
+   },
+   "SamuraiHordeLoop": {
+    "clip": "Samurai/SamuraiHordeLoop",
+    "speed": 1
+   },
+   "SamuraiHordeMiss": {
+    "clip": "Samurai/SamuraiHordeMiss",
+    "speed": 1
+   },
+   "SamuraiHordeStart": {
+    "clip": "Samurai/SamuraiHordeStart",
+    "speed": 1
+   },
+   "SamuraiIdle": {
+    "clip": "Samurai/SamuraiIdle",
+    "speed": 1
+   },
+   "SamuraiMiss": {
+    "clip": "Samurai/SamuraiMiss",
+    "speed": 1
+   },
+   "SamuraiReady": {
+    "clip": "Samurai/SamuraiReady",
+    "speed": 1
+   },
+   "SamuraiRun": {
+    "clip": "Samurai/SamuraiRun",
+    "speed": 1
+   },
+   "SamuraiSlash": {
+    "clip": "Samurai/SamuraiSlash",
+    "speed": 1
+   },
+   "SamuraiSlash2": {
+    "clip": "Samurai/SamuraiSlash2",
+    "speed": 1
+   }
+  }
+ },
+ "SmallDemon": {
+  "default": "SmallSummon",
+  "states": {
+   "SmallIdle": {
+    "clip": "Demons/SmallIdle",
+    "speed": 1
+   },
+   "SmallSummon": {
+    "clip": "Demons/SmallSummon",
+    "speed": 1
+   },
+   "SmallWaddle": {
+    "clip": "Demons/SmallWaddle",
+    "speed": 1
+   }
+  }
+ },
+ "Windmill": {
+  "default": "WindmillIdle",
+  "states": {
+   "WindmillIdle": {
+    "clip": "Samurai/WindmillSpin",
+    "speed": 1
+   },
+   "WindmillSpin2": {
+    "clip": "Samurai/WindmillIdle",
+    "speed": 1
+   }
+  }
+ },
+ "XLDemon": {
+  "default": "XLIdle",
+  "states": {
+   "XLIdle": {
+    "clip": "Demons/XLIdle",
+    "speed": 1
+   },
+   "XLSummon": {
+    "clip": "Demons/XLSummon",
+    "speed": 1
+   },
+   "XLWaddle": {
+    "clip": "Demons/XLWaddle",
+    "speed": 1
+   }
+  }
+ }
+}

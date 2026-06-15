@@ -1,0 +1,3453 @@
+{
+ "nodes": [
+  {
+   "name": "samuraiSliceRvl",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Refs",
+   "path": "Refs",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -20
+   ]
+  },
+  {
+   "name": "Ref",
+   "path": "Refs/Ref",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.93,
+    0.93
+   ],
+   "order": 32767,
+   "color": [
+    1,
+    1,
+    1,
+    0.6862745
+   ],
+   "size": [
+    19.14,
+    10.8
+   ]
+  },
+  {
+   "name": "animation_00.002",
+   "path": "Refs/animation_00.002",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_00.002",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_00.000",
+   "path": "Refs/animation_00.000",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_00.000",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_00.001",
+   "path": "Refs/animation_00.001",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_00.001",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_02.000",
+   "path": "Refs/animation_02.000",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_02.000",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_02.001",
+   "path": "Refs/animation_02.001",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_02.001",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_02.002",
+   "path": "Refs/animation_02.002",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_02.002",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_02.003",
+   "path": "Refs/animation_02.003",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_02.003",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_02.004",
+   "path": "Refs/animation_02.004",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_02.004",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_02.005",
+   "path": "Refs/animation_02.005",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_02.005",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_02.006",
+   "path": "Refs/animation_02.006",
+   "parent": 1,
+   "pos": [
+    -2.824,
+    -0.989
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_02.006",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_03.000",
+   "path": "Refs/animation_03.000",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.639
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_03.000",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_03.001",
+   "path": "Refs/animation_03.001",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.639
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_03.001",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_03.002",
+   "path": "Refs/animation_03.002",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.639
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_03.002",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_03.003",
+   "path": "Refs/animation_03.003",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.639
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_03.003",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_03.004",
+   "path": "Refs/animation_03.004",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.639
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_03.004",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_03.005",
+   "path": "Refs/animation_03.005",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.639
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_03.005",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_03.006",
+   "path": "Refs/animation_03.006",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.639
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_03.006",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_06.000",
+   "path": "Refs/animation_06.000",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_06.000",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_06.001",
+   "path": "Refs/animation_06.001",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_06.001",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_06.002",
+   "path": "Refs/animation_06.002",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_06.002",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_06.003",
+   "path": "Refs/animation_06.003",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_06.003",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_08.000",
+   "path": "Refs/animation_08.000",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_08.000",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_08.001",
+   "path": "Refs/animation_08.001",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_08.001",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_08.002",
+   "path": "Refs/animation_08.002",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_08.002",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_08.003",
+   "path": "Refs/animation_08.003",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_08.003",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_08.004",
+   "path": "Refs/animation_08.004",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_08.004",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_08.005",
+   "path": "Refs/animation_08.005",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_08.005",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_08.006",
+   "path": "Refs/animation_08.006",
+   "parent": 1,
+   "pos": [
+    -2.46,
+    -0.723
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_08.006",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_10.000",
+   "path": "Refs/animation_10.000",
+   "parent": 1,
+   "pos": [
+    -3.888,
+    -0.597
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_10.000",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_12.000",
+   "path": "Refs/animation_12.000",
+   "parent": 1,
+   "pos": [
+    -3.889,
+    -0.597
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_12.000",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_15.001",
+   "path": "Refs/animation_15.001",
+   "parent": 1,
+   "pos": [
+    -3.889,
+    -0.597
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_15.001",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_15.003",
+   "path": "Refs/animation_15.003",
+   "parent": 1,
+   "pos": [
+    -3.889,
+    -0.597
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_15.003",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "animation_35.000",
+   "path": "Refs/animation_35.000",
+   "parent": 1,
+   "pos": [
+    1.98,
+    -0.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4,
+    1.4
+   ],
+   "sprite": "animation_35.000",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "StoryRefs",
+   "path": "StoryRefs",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -19
+   ]
+  },
+  {
+   "name": "animation_0.000.0",
+   "path": "StoryRefs/animation_0.000.0",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    4,
+    4
+   ],
+   "sprite": "animation_0.000.0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "BGHolder",
+   "path": "BGHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BGSquare",
+   "path": "BGHolder/BGSquare",
+   "parent": 38,
+   "pos": [
+    -0.4036,
+    -0.6632
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bgsamurai_5",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "drawMode": 2,
+   "size": [
+    22.811146,
+    14.084407
+   ]
+  },
+  {
+   "name": "Landscape",
+   "path": "BGHolder/Landscape",
+   "parent": 38,
+   "pos": [
+    0.246,
+    -2.769
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.075,
+    1.1
+   ],
+   "sprite": "bgsamurai_0",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.67,
+    5.58
+   ]
+  },
+  {
+   "name": "SteveHolder",
+   "path": "SteveHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "SteveHolder/Impact",
+   "parent": 41,
+   "pos": [
+    -2.257,
+    -2.379
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_36",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.61,
+    0.48
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "SteveHolder/Shadow",
+   "parent": 41,
+   "pos": [
+    -3.435,
+    -2.505
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_8",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.70980394
+   ],
+   "size": [
+    4.73,
+    1.62
+   ]
+  },
+  {
+   "name": "Slash",
+   "path": "SteveHolder/Slash",
+   "parent": 41,
+   "pos": [
+    -1.1,
+    0.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.73,
+    2.44
+   ]
+  },
+  {
+   "name": "Sword",
+   "path": "SteveHolder/Sword",
+   "parent": 41,
+   "pos": [
+    -3.36,
+    0.52
+   ],
+   "rotZ": 2.5307274059181215,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.26,
+    0.27
+   ]
+  },
+  {
+   "name": "Sword (1)",
+   "path": "SteveHolder/Sword (1)",
+   "parent": 41,
+   "pos": [
+    -3.36,
+    0.52
+   ],
+   "rotZ": 2.5307274059181215,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_2",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.26,
+    0.27
+   ]
+  },
+  {
+   "name": "Sword (2)",
+   "path": "SteveHolder/Sword (2)",
+   "parent": 41,
+   "pos": [
+    -3.36,
+    0.52
+   ],
+   "rotZ": 2.5307274059181215,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_2",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.26,
+    0.27
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "SteveHolder/Neck",
+   "parent": 41,
+   "pos": [
+    -3.065,
+    0.086
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_49",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.65
+   ]
+  },
+  {
+   "name": "Arm2",
+   "path": "SteveHolder/Arm2",
+   "parent": 41,
+   "pos": [
+    -2.616,
+    0.078
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.49,
+    0.49
+   ]
+  },
+  {
+   "name": "Arm1",
+   "path": "SteveHolder/Arm1",
+   "parent": 41,
+   "pos": [
+    -2.39,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_25",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.63,
+    0.74
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "SteveHolder/Smear",
+   "parent": 41,
+   "pos": [
+    -3.025,
+    1.059
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "samuraislice1_15",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.72,
+    1.2
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "SteveHolder/Head",
+   "parent": 41,
+   "pos": [
+    -2.742,
+    0.219
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_39",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.98
+   ]
+  },
+  {
+   "name": "WindmillHolder",
+   "path": "SteveHolder/WindmillHolder",
+   "parent": 41,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Stick",
+   "path": "SteveHolder/WindmillHolder/Stick",
+   "parent": 53,
+   "pos": [
+    -2.746,
+    0.809
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "demons_3",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.12,
+    1.14
+   ]
+  },
+  {
+   "name": "Windmill",
+   "path": "SteveHolder/WindmillHolder/Windmill",
+   "parent": 53,
+   "pos": [
+    -2.748,
+    1.067
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "demons_4",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.11,
+    1.11
+   ]
+  },
+  {
+   "name": "Foot2",
+   "path": "SteveHolder/Foot2",
+   "parent": 41,
+   "pos": [
+    -2.536,
+    -1.96
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_32",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.75
+   ]
+  },
+  {
+   "name": "Foot1",
+   "path": "SteveHolder/Foot1",
+   "parent": 41,
+   "pos": [
+    -4.274,
+    -2.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_38",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.74,
+    0.9
+   ]
+  },
+  {
+   "name": "Pants",
+   "path": "SteveHolder/Pants",
+   "parent": 41,
+   "pos": [
+    -3.35,
+    -1.614
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.83,
+    2.25
+   ]
+  },
+  {
+   "name": "Shirt",
+   "path": "SteveHolder/Shirt",
+   "parent": 41,
+   "pos": [
+    -3.165,
+    -0.73
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.7
+   ],
+   "sprite": "samuraislice1_46",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.06,
+    2.54
+   ]
+  },
+  {
+   "name": "Horde",
+   "path": "Horde",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HDemon1",
+   "path": "Horde/HDemon1",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_51",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    1.3
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "Horde/HDemon1/Impact",
+   "parent": 61,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 4.71238898038469,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_43",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.01,
+    1.22
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "Horde/HDemon1/Smear",
+   "parent": 61,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_66",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.36,
+    0.56
+   ]
+  },
+  {
+   "name": "DemonHolder",
+   "path": "DemonHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "SDemon",
+   "path": "DemonHolder/SDemon",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_56",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.17,
+    1.88
+   ]
+  },
+  {
+   "name": "MDemon",
+   "path": "DemonHolder/MDemon",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_57",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    2.19
+   ]
+  },
+  {
+   "name": "LDemon",
+   "path": "DemonHolder/LDemon",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_62",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    2.45
+   ]
+  },
+  {
+   "name": "XLDemon",
+   "path": "DemonHolder/XLDemon",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_63",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.76,
+    3.33
+   ]
+  },
+  {
+   "name": "DemonCurves",
+   "path": "DemonCurves",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Spawn",
+   "path": "DemonCurves/Spawn",
+   "parent": 69,
+   "pos": [
+    2.1284378,
+    -0.06229548
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "DemonCurves/Spawn/Point 0",
+   "parent": 70,
+   "pos": [
+    0.49864483,
+    0.17507975
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "DemonCurves/Spawn/Point 1",
+   "parent": 70,
+   "pos": [
+    -3.6779761,
+    0.13839182
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Walk",
+   "path": "DemonCurves/Walk",
+   "parent": 69,
+   "pos": [
+    -1.06,
+    0.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "DemonCurves/Walk/Point 0",
+   "parent": 73,
+   "pos": [
+    -0.48953128,
+    -0.34446824
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "DemonCurves/Walk/Point 1",
+   "parent": 73,
+   "pos": [
+    -1.9094751,
+    -1.4655033
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "DemonCurves/Walk/Point 2",
+   "parent": 73,
+   "pos": [
+    -3.632382,
+    -2.5941916
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 3",
+   "path": "DemonCurves/Walk/Point 3",
+   "parent": 73,
+   "pos": [
+    -8.387299,
+    -2.8526654
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Miss",
+   "path": "DemonCurves/Miss",
+   "parent": 69,
+   "pos": [
+    2.1284378,
+    -0.06229548
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "DemonCurves/Miss/Point 0",
+   "parent": 78,
+   "pos": [
+    -3.596793,
+    0.14136155
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "DemonCurves/Miss/Point 1",
+   "parent": 78,
+   "pos": [
+    -1.1957669,
+    1.1608967
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 2",
+   "path": "DemonCurves/Miss/Point 2",
+   "parent": 78,
+   "pos": [
+    0.29256558,
+    6.25679
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LightningHolder",
+   "path": "LightningHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "Lightning1",
+   "path": "LightningHolder/Lightning1",
+   "parent": 82,
+   "pos": [
+    1.14,
+    3.471
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.75,
+    1.75
+   ],
+   "sprite": "Particles_13",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.02,
+    1.75
+   ]
+  },
+  {
+   "name": "FGHolder",
+   "path": "FGHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    3
+   ]
+  },
+  {
+   "name": "Bamboo",
+   "path": "FGHolder/Bamboo",
+   "parent": 84,
+   "pos": [
+    -9.383,
+    -0.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.08,
+    1.11
+   ],
+   "sprite": "bgsamurai_3",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.21,
+    10.61
+   ]
+  },
+  {
+   "name": "Cherry",
+   "path": "FGHolder/Cherry",
+   "parent": 84,
+   "pos": [
+    6.684,
+    -2.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.08,
+    1.1
+   ],
+   "sprite": "bgsamurai_4",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.39,
+    7.86
+   ]
+  },
+  {
+   "name": "Cherry (1)",
+   "path": "FGHolder/Cherry (1)",
+   "parent": 84,
+   "pos": [
+    5.86,
+    4.81
+   ],
+   "rotZ": 1.436405847116927,
+   "scale": [
+    1.1,
+    1.08
+   ],
+   "sprite": "bgsamurai_4",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.39,
+    7.86
+   ]
+  },
+  {
+   "name": "Fog1 (1)",
+   "path": "FGHolder/Fog1 (1)",
+   "parent": 84,
+   "pos": [
+    0.92,
+    -4.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7292389,
+    1.1
+   ],
+   "sprite": "bgsamurai_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.27450982
+   ],
+   "drawMode": 2,
+   "size": [
+    40.40465,
+    1.08
+   ]
+  },
+  {
+   "name": "Fog1",
+   "path": "FGHolder/Fog1",
+   "parent": 84,
+   "pos": [
+    1.3244,
+    -4.31
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8622559,
+    1.3
+   ],
+   "sprite": "bgsamurai_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.33333334
+   ],
+   "drawMode": 2,
+   "size": [
+    30.364532,
+    1.08
+   ]
+  },
+  {
+   "name": "Particles",
+   "path": "Particles",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Flash",
+   "path": "Flash",
+   "parent": 0,
+   "pos": [
+    0.0072,
+    0.0001
+   ],
+   "rotZ": 0,
+   "scale": [
+    59.476948,
+    33.664413
+   ],
+   "sprite": "Particles_5",
+   "order": 5,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.3,
+    0.3
+   ]
+  },
+  {
+   "name": "StoryHolder",
+   "path": "StoryHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    50
+   ]
+  },
+  {
+   "name": "Child",
+   "path": "StoryHolder/Child",
+   "parent": 92,
+   "pos": [
+    -1.576,
+    -0.355
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "Story1_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.92,
+    2.73
+   ]
+  },
+  {
+   "name": "Pinwheel",
+   "path": "StoryHolder/Pinwheel",
+   "parent": 92,
+   "pos": [
+    -3.034,
+    2.513
+   ],
+   "rotZ": 0.2119260211519429,
+   "scale": [
+    2.2000003,
+    2.2000003
+   ],
+   "sprite": "Story1_1",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.44,
+    1.44
+   ]
+  },
+  {
+   "name": "Lady",
+   "path": "StoryHolder/Lady",
+   "parent": 92,
+   "pos": [
+    4.384,
+    0.406
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "Story1_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.87,
+    2.05
+   ]
+  },
+  {
+   "name": "Cinema",
+   "path": "StoryHolder/Cinema",
+   "parent": 92,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Texture",
+   "path": "StoryHolder/Cinema/Texture",
+   "parent": 96,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2514083,
+    2.2676055
+   ],
+   "sprite": "Story1_25",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.3529412
+   ],
+   "drawMode": 2,
+   "size": [
+    8.6174965,
+    3.0862586
+   ]
+  },
+  {
+   "name": "Bar1",
+   "path": "StoryHolder/Cinema/Bar1",
+   "parent": 96,
+   "pos": [
+    0,
+    4.3474
+   ],
+   "rotZ": 0,
+   "scale": [
+    59.255,
+    5.494353
+   ],
+   "sprite": "Story1_31",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.32,
+    0.32
+   ]
+  },
+  {
+   "name": "Bar2",
+   "path": "StoryHolder/Cinema/Bar2",
+   "parent": 96,
+   "pos": [
+    0,
+    -4.3474
+   ],
+   "rotZ": 0,
+   "scale": [
+    59.255,
+    5.494353
+   ],
+   "sprite": "Story1_31",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.32,
+    0.32
+   ]
+  },
+  {
+   "name": "Yay",
+   "path": "StoryHolder/Yay",
+   "parent": 92,
+   "pos": [
+    1.129,
+    1.115
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "Story1_18",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.74,
+    0.44
+   ]
+  },
+  {
+   "name": "Whee",
+   "path": "StoryHolder/Whee",
+   "parent": 92,
+   "pos": [
+    1.536,
+    0.157
+   ],
+   "rotZ": 4.71238898038469,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "sprite": "Story1_30",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.34,
+    1.15
+   ]
+  },
+  {
+   "name": "DemonSliced",
+   "path": "DemonSliced",
+   "parent": 0,
+   "pos": [
+    -0.7269889,
+    0.378484
+   ],
+   "z": 0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DemonSmallTop",
+   "path": "DemonSliced/DemonSmallTop",
+   "parent": 102,
+   "pos": [
+    0.51,
+    -0.243
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_55",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.07,
+    1.54
+   ]
+  },
+  {
+   "name": "DemonSmallButton",
+   "path": "DemonSliced/DemonSmallButton",
+   "parent": 102,
+   "pos": [
+    0.9342,
+    -0.40060002
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_54",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    2.01
+   ]
+  },
+  {
+   "name": "DemonMediumTop",
+   "path": "DemonSliced/DemonMediumTop",
+   "parent": 102,
+   "pos": [
+    0.6101,
+    -0.2403
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_58",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.27,
+    2.45
+   ]
+  },
+  {
+   "name": "DemonMediumButtom",
+   "path": "DemonSliced/DemonMediumButtom",
+   "parent": 102,
+   "pos": [
+    1.0191,
+    -0.43629998
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_59",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.19,
+    2.04
+   ]
+  },
+  {
+   "name": "DemonBigTop",
+   "path": "DemonSliced/DemonBigTop",
+   "parent": 102,
+   "pos": [
+    0.454,
+    -0.351
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_61",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.12,
+    2.38
+   ]
+  },
+  {
+   "name": "DemonBigButtom",
+   "path": "DemonSliced/DemonBigButtom",
+   "parent": 102,
+   "pos": [
+    0.9421,
+    -0.379
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_60",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.02,
+    2.32
+   ]
+  },
+  {
+   "name": "DemonHugeTop",
+   "path": "DemonSliced/DemonHugeTop",
+   "parent": 102,
+   "pos": [
+    0.459,
+    0.027
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_64",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    2.76
+   ]
+  },
+  {
+   "name": "DemonHugeButtom",
+   "path": "DemonSliced/DemonHugeButtom",
+   "parent": 102,
+   "pos": [
+    0.9818,
+    -0.63809997
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_65",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.29,
+    3.22
+   ]
+  },
+  {
+   "name": "SmallDemonSlicedPrefab",
+   "path": "SmallDemonSlicedPrefab",
+   "parent": 0,
+   "pos": [
+    -0.7269889,
+    0.378484
+   ],
+   "z": 0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DemonSmallTop",
+   "path": "SmallDemonSlicedPrefab/DemonSmallTop",
+   "parent": 111,
+   "pos": [
+    -0.211,
+    0.125
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_55",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.07,
+    1.54
+   ]
+  },
+  {
+   "name": "DemonSmallButton",
+   "path": "SmallDemonSlicedPrefab/DemonSmallButton",
+   "parent": 111,
+   "pos": [
+    0.2094,
+    -0.029599994
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_54",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    2.01
+   ]
+  },
+  {
+   "name": "MediumDemonSliced",
+   "path": "MediumDemonSliced",
+   "parent": 0,
+   "pos": [
+    -0.7269889,
+    0.378484
+   ],
+   "z": 0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DemonMediumTop",
+   "path": "MediumDemonSliced/DemonMediumTop",
+   "parent": 114,
+   "pos": [
+    -0.106,
+    0.129
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_58",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.27,
+    2.45
+   ]
+  },
+  {
+   "name": "DemonMediumButtom",
+   "path": "MediumDemonSliced/DemonMediumButtom",
+   "parent": 114,
+   "pos": [
+    0.319,
+    -0.050500005
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_59",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.19,
+    2.04
+   ]
+  },
+  {
+   "name": "BigDemonSliced",
+   "path": "BigDemonSliced",
+   "parent": 0,
+   "pos": [
+    -0.7269889,
+    0.378484
+   ],
+   "z": 0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DemonBigTop",
+   "path": "BigDemonSliced/DemonBigTop",
+   "parent": 117,
+   "pos": [
+    -0.279,
+    0.036
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_61",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.12,
+    2.38
+   ]
+  },
+  {
+   "name": "DemonBigButtom",
+   "path": "BigDemonSliced/DemonBigButtom",
+   "parent": 117,
+   "pos": [
+    0.222,
+    -0.006
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_60",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.02,
+    2.32
+   ]
+  },
+  {
+   "name": "HugeDemonSliced",
+   "path": "HugeDemonSliced",
+   "parent": 0,
+   "pos": [
+    -0.7269889,
+    0.378484
+   ],
+   "z": 0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DemonHugeTop",
+   "path": "HugeDemonSliced/DemonHugeTop",
+   "parent": 120,
+   "pos": [
+    -0.266,
+    0.408
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_64",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.87,
+    2.76
+   ]
+  },
+  {
+   "name": "DemonHugeButtom",
+   "path": "HugeDemonSliced/DemonHugeButtom",
+   "parent": 120,
+   "pos": [
+    0.25200003,
+    -0.2691
+   ],
+   "z": -0.1501643,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_65",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.29,
+    3.22
+   ]
+  },
+  {
+   "name": "SlicedHorde",
+   "path": "SlicedHorde",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TopDemonHorde",
+   "path": "SlicedHorde/TopDemonHorde",
+   "parent": 123,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_52",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.12,
+    1.11
+   ]
+  },
+  {
+   "name": "ButomDemonHorde",
+   "path": "SlicedHorde/ButomDemonHorde",
+   "parent": 123,
+   "pos": [
+    0.219,
+    -0.1768
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_53",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.6,
+    1.05
+   ]
+  },
+  {
+   "name": "HordePrefab",
+   "path": "HordePrefab",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_51",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.76,
+    1.3
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "HordePrefab/Impact",
+   "parent": 126,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 4.71238898038469,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_43",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.01,
+    1.22
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "HordePrefab/Smear",
+   "parent": 126,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "demons_66",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.36,
+    0.56
+   ]
+  },
+  {
+   "name": "Smog",
+   "path": "Smog",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmogParticlePrefab",
+   "path": "SmogParticlePrefab",
+   "parent": 0,
+   "pos": [
+    0,
+    -5.13
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "demons_42",
+   "order": -1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.4,
+    1.4
+   ]
+  }
+ ]
+}

@@ -96,6 +96,7 @@ import (
 	"hsdemo/games/rhythmtweezers"
 	"hsdemo/games/ringside"
 	"hsdemo/games/samuraislicentr"
+	"hsdemo/games/samuraislicervl"
 	"hsdemo/games/seesaw"
 	"hsdemo/games/showtime"
 	"hsdemo/games/slotmonster"
@@ -759,6 +760,7 @@ func main() {
 	engine.Register("rhythmTweezers", rhythmtweezers.New)
 	engine.Register("ringside", ringside.New)
 	engine.Register("samuraiSliceNtr", samuraislicentr.New)
+	engine.Register("samuraiSliceRvl", samuraislicervl.New)
 	engine.Register("showtime", showtime.New)
 	engine.Register("tramAndPauline", tramandpauline.New)
 	engine.Register("tunnel", tunnel.New)

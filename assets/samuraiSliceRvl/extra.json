@@ -1,0 +1,609 @@
+{
+ "refArrays": {
+  "slicedDemonPrefabs": [
+   "SmallDemonSlicedPrefab",
+   "MediumDemonSliced",
+   "BigDemonSliced",
+   "HugeDemonSliced"
+  ]
+ },
+ "curves": {
+  "game.missCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -1.4683552,
+      0.07906607,
+      0
+     ],
+     "lh": [
+      -1.9446668800000002,
+      -0.025069234999999995,
+      0
+     ],
+     "rh": [
+      -0.9920435199999997,
+      0.183201375,
+      0
+     ]
+    },
+    {
+     "p": [
+      0.9326709,
+      1.09860122,
+      0
+     ],
+     "lh": [
+      0.34095319999999996,
+      0.5141704699999999,
+      0
+     ],
+     "rh": [
+      1.5243886,
+      1.68303197,
+      0
+     ]
+    },
+    {
+     "p": [
+      2.42100338,
+      6.194494519999999,
+      0
+     ],
+     "lh": [
+      2.6763038999999997,
+      5.551870119999999,
+      0
+     ],
+     "rh": [
+      2.16570286,
+      6.837118919999999,
+      0
+     ]
+    }
+   ]
+  },
+  "game.spawnCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      2.62708263,
+      0.11278427,
+      0
+     ],
+     "lh": [
+      3.91815213,
+      -2.89101633,
+      0
+     ],
+     "rh": [
+      1.3360131299999998,
+      3.11658487,
+      0
+     ]
+    },
+    {
+     "p": [
+      -1.5495383,
+      0.07609634,
+      0
+     ],
+     "lh": [
+      -0.1438204999999999,
+      3.0691297399999997,
+      0
+     ],
+     "rh": [
+      -2.9552561,
+      -2.91693706,
+      0
+     ]
+    }
+   ]
+  },
+  "game.walkCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -1.54953128,
+      0.07553176,
+      0
+     ],
+     "lh": [
+      -0.9740090800000001,
+      0.61746346,
+      0
+     ],
+     "rh": [
+      -2.12505348,
+      -0.46639994,
+      0
+     ]
+    },
+    {
+     "p": [
+      -2.9694751000000004,
+      -1.0455033,
+      0
+     ],
+     "lh": [
+      -2.7199569400000003,
+      -0.8807241100000001,
+      0
+     ],
+     "rh": [
+      -3.21899326,
+      -1.21028249,
+      0
+     ]
+    },
+    {
+     "p": [
+      -4.692382,
+      -2.1741916,
+      0
+     ],
+     "lh": [
+      -3.99759235,
+      -2.06562818,
+      0
+     ],
+     "rh": [
+      -5.387171650000001,
+      -2.2827550199999997,
+      0
+     ]
+    },
+    {
+     "p": [
+      -9.447299000000001,
+      -2.4326654,
+      0
+     ],
+     "lh": [
+      -8.838512900000001,
+      -2.59030776,
+      0
+     ],
+     "rh": [
+      -10.0560851,
+      -2.2750230399999998,
+      0
+     ]
+    }
+   ]
+  },
+  "missCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -1.4683552,
+      0.07906607,
+      0
+     ],
+     "lh": [
+      -1.9446668800000002,
+      -0.025069234999999995,
+      0
+     ],
+     "rh": [
+      -0.9920435199999997,
+      0.183201375,
+      0
+     ]
+    },
+    {
+     "p": [
+      0.9326709,
+      1.09860122,
+      0
+     ],
+     "lh": [
+      0.34095319999999996,
+      0.5141704699999999,
+      0
+     ],
+     "rh": [
+      1.5243886,
+      1.68303197,
+      0
+     ]
+    },
+    {
+     "p": [
+      2.42100338,
+      6.194494519999999,
+      0
+     ],
+     "lh": [
+      2.6763038999999997,
+      5.551870119999999,
+      0
+     ],
+     "rh": [
+      2.16570286,
+      6.837118919999999,
+      0
+     ]
+    }
+   ]
+  },
+  "spawnCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      2.62708263,
+      0.11278427,
+      0
+     ],
+     "lh": [
+      3.91815213,
+      -2.89101633,
+      0
+     ],
+     "rh": [
+      1.3360131299999998,
+      3.11658487,
+      0
+     ]
+    },
+    {
+     "p": [
+      -1.5495383,
+      0.07609634,
+      0
+     ],
+     "lh": [
+      -0.1438204999999999,
+      3.0691297399999997,
+      0
+     ],
+     "rh": [
+      -2.9552561,
+      -2.91693706,
+      0
+     ]
+    }
+   ]
+  },
+  "walkCurve": {
+   "sampling": 25,
+   "points": [
+    {
+     "p": [
+      -1.54953128,
+      0.07553176,
+      0
+     ],
+     "lh": [
+      -0.9740090800000001,
+      0.61746346,
+      0
+     ],
+     "rh": [
+      -2.12505348,
+      -0.46639994,
+      0
+     ]
+    },
+    {
+     "p": [
+      -2.9694751000000004,
+      -1.0455033,
+      0
+     ],
+     "lh": [
+      -2.7199569400000003,
+      -0.8807241100000001,
+      0
+     ],
+     "rh": [
+      -3.21899326,
+      -1.21028249,
+      0
+     ]
+    },
+    {
+     "p": [
+      -4.692382,
+      -2.1741916,
+      0
+     ],
+     "lh": [
+      -3.99759235,
+      -2.06562818,
+      0
+     ],
+     "rh": [
+      -5.387171650000001,
+      -2.2827550199999997,
+      0
+     ]
+    },
+    {
+     "p": [
+      -9.447299000000001,
+      -2.4326654,
+      0
+     ],
+     "lh": [
+      -8.838512900000001,
+      -2.59030776,
+      0
+     ],
+     "rh": [
+      -10.0560851,
+      -2.2750230399999998,
+      0
+     ]
+    }
+   ]
+  }
+ },
+ "refArrayIdx": {
+  "slicedDemonPrefabs": [
+   111,
+   114,
+   117,
+   120
+  ]
+ },
+ "components": {
+  "demon": {
+   "path": "DemonHolder",
+   "nums": {
+    "isSpawning": 0,
+    "startBeat": 0,
+    "type": 0
+   },
+   "refs": {
+    "LDemonAnim": "DemonHolder/LDemon",
+    "Ldemon": "DemonHolder/LDemon",
+    "MDemonAnim": "DemonHolder/MDemon",
+    "Mdemon": "DemonHolder/MDemon",
+    "SDemonAnim": "DemonHolder/SDemon",
+    "Sdemon": "DemonHolder/SDemon",
+    "XLDemonAnim": "DemonHolder/XLDemon",
+    "XLdemon": "DemonHolder/XLDemon",
+    "missCurve": "DemonCurves/Miss",
+    "walkCurve": "DemonCurves/Walk"
+   }
+  },
+  "flash": {
+   "path": "LightningHolder",
+   "nums": {
+    "startBeat": 0,
+    "strikeNumber": 0
+   },
+   "refs": {
+    "FlashAnim": "Flash",
+    "FlashEffect": "Flash",
+    "Lightning": "LightningHolder/Lightning1",
+    "LightningAnim": "LightningHolder/Lightning1"
+   }
+  },
+  "game": {
+   "path": "",
+   "refs": {
+    "SamuraiAnim": "SteveHolder",
+    "demonholder": "DemonHolder",
+    "fgHolder": "FGHolder",
+    "flashholder": "LightningHolder",
+    "hordeDemonPrefab": "HordePrefab",
+    "hordeSlicedPrefab": "SlicedHorde",
+    "missCurve": "DemonCurves/Miss",
+    "smogEffectPrefab": "Smog",
+    "spawnCurve": "DemonCurves/Spawn",
+    "walkCurve": "DemonCurves/Walk"
+   },
+   "refArrays": {
+    "slicedDemonPrefabs": [
+     "SmallDemonSlicedPrefab",
+     "MediumDemonSliced",
+     "BigDemonSliced",
+     "HugeDemonSliced"
+    ]
+   },
+   "lists": {
+    "hordeSpawnPositions": [
+     {
+      "nums": {
+       "x": 1.45,
+       "y": 0.38
+      }
+     },
+     {
+      "nums": {
+       "x": 2.84,
+       "y": -1.87
+      }
+     },
+     {
+      "nums": {
+       "x": 2.95,
+       "y": -0.56
+      }
+     },
+     {
+      "nums": {
+       "x": 3.25,
+       "y": -0.9
+      }
+     },
+     {
+      "nums": {
+       "x": 4.13,
+       "y": -1.01
+      }
+     },
+     {
+      "nums": {
+       "x": 1.39,
+       "y": -0.76
+      }
+     },
+     {
+      "nums": {
+       "x": 3.83,
+       "y": 0.39
+      }
+     }
+    ]
+   }
+  },
+  "horde0": {
+   "path": "Horde/HDemon1",
+   "nums": {
+    "fallVelocity.x": 0,
+    "fallVelocity.y": 10,
+    "gravity": 80,
+    "maxRushDuration": 0.9,
+    "minRushDuration": 0.5,
+    "rotationSpeed": -450,
+    "targetPosition.x": 0,
+    "targetPosition.y": 0,
+    "targetPosition.z": 0
+   },
+   "refs": {
+    "anim": "Horde/HDemon1",
+    "sr": "Horde/HDemon1"
+   }
+  },
+  "horde1": {
+   "path": "HordePrefab",
+   "nums": {
+    "fallVelocity.x": 0,
+    "fallVelocity.y": 10,
+    "gravity": 30,
+    "maxRushDuration": 0.9,
+    "minRushDuration": 0.2,
+    "rotationSpeed": -50,
+    "targetPosition.x": 0,
+    "targetPosition.y": 0,
+    "targetPosition.z": 0
+   },
+   "refs": {
+    "anim": "HordePrefab",
+    "sr": "HordePrefab"
+   }
+  },
+  "sliced0": {
+   "path": "BigDemonSliced",
+   "nums": {
+    "botVelocity.x": 0,
+    "botVelocity.y": -2,
+    "gravity": 25,
+    "rotationSpeed": -50,
+    "topVelocity.x": 0,
+    "topVelocity.y": 2,
+    "waitTime": 0.08
+   },
+   "refs": {
+    "botPart": "BigDemonSliced/DemonBigButtom",
+    "topPart": "BigDemonSliced/DemonBigTop"
+   }
+  },
+  "sliced1": {
+   "path": "DemonSliced",
+   "nums": {
+    "botVelocity.x": 1,
+    "botVelocity.y": -1,
+    "gravity": 30,
+    "rotationSpeed": -100,
+    "topVelocity.x": 1.5,
+    "topVelocity.y": 4,
+    "waitTime": 0.15
+   },
+   "refs": {
+    "botPart": "DemonSliced/DemonSmallButton",
+    "topPart": "DemonSliced/DemonSmallTop"
+   }
+  },
+  "sliced2": {
+   "path": "HugeDemonSliced",
+   "nums": {
+    "botVelocity.x": 0,
+    "botVelocity.y": -2,
+    "gravity": 25,
+    "rotationSpeed": -50,
+    "topVelocity.x": 0,
+    "topVelocity.y": 2,
+    "waitTime": 0.08
+   },
+   "refs": {
+    "botPart": "HugeDemonSliced/DemonHugeButtom",
+    "topPart": "HugeDemonSliced/DemonHugeTop"
+   }
+  },
+  "sliced3": {
+   "path": "MediumDemonSliced",
+   "nums": {
+    "botVelocity.x": 0,
+    "botVelocity.y": -2,
+    "gravity": 25,
+    "rotationSpeed": -50,
+    "topVelocity.x": 0,
+    "topVelocity.y": 2,
+    "waitTime": 0.08
+   },
+   "refs": {
+    "botPart": "MediumDemonSliced/DemonMediumButtom",
+    "topPart": "MediumDemonSliced/DemonMediumTop"
+   }
+  },
+  "sliced4": {
+   "path": "SlicedHorde",
+   "nums": {
+    "botVelocity.x": 0,
+    "botVelocity.y": -2,
+    "gravity": 30,
+    "rotationSpeed": -150,
+    "topVelocity.x": 0,
+    "topVelocity.y": 2,
+    "waitTime": 0.08
+   },
+   "refs": {
+    "botPart": "SlicedHorde/ButomDemonHorde",
+    "topPart": "SlicedHorde/TopDemonHorde"
+   }
+  },
+  "sliced5": {
+   "path": "SmallDemonSlicedPrefab",
+   "nums": {
+    "botVelocity.x": 0,
+    "botVelocity.y": -2,
+    "gravity": 25,
+    "rotationSpeed": -50,
+    "topVelocity.x": 0,
+    "topVelocity.y": 2,
+    "waitTime": 0.08
+   },
+   "refs": {
+    "botPart": "SmallDemonSlicedPrefab/DemonSmallButton",
+    "topPart": "SmallDemonSlicedPrefab/DemonSmallTop"
+   }
+  },
+  "smog": {
+   "path": "Smog",
+   "nums": {
+    "baseOffset.x": 62.5,
+    "baseOffset.y": 7.5,
+    "defaultStartPos.x": -30,
+    "defaultStartPos.y": -22.5,
+    "manualOffset.x": 0.47,
+    "manualOffset.y": -0.45,
+    "manualOffset.z": 0,
+    "particleZPos": -5.75,
+    "pixelScale": 0.0085
+   },
+   "refs": {
+    "particlePrefab": "SmogParticlePrefab"
+   }
+  }
+ }
+}

@@ -1,0 +1,9 @@
+{
+ "SamuraiAnim": "SteveHolder",
+ "demonholder": "DemonHolder",
+ "fgHolder": "FGHolder",
+ "flashholder": "LightningHolder",
+ "hordeDemonPrefab": "HordePrefab",
+ "hordeSlicedPrefab": "SlicedHorde",
+ "smogEffectPrefab": "Smog"
+}

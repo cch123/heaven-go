@@ -1,0 +1,12 @@
+{
+ "DemonHolder/LDemon": "LargeDemon",
+ "DemonHolder/MDemon": "MediumDemon",
+ "DemonHolder/SDemon": "SmallDemon",
+ "DemonHolder/XLDemon": "XLDemon",
+ "Flash": "SamuraiFlash",
+ "Horde/HDemon1": "HordeDemon",
+ "HordePrefab": "HordeDemon",
+ "LightningHolder/Lightning1": "Lightning",
+ "SteveHolder": "SamuraiWii",
+ "SteveHolder/WindmillHolder/Windmill": "Windmill"
+}
