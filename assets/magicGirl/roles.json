@@ -1,0 +1,10 @@
+{
+ "Mako": "MagicGirl/Mako",
+ "MakoFace": "MagicGirl/Mako/HeadandHair/Head",
+ "MakoObject": "MagicGirl",
+ "MonsterHands": "MonsterHand",
+ "TransfComponent": "TransformationComponent",
+ "backgroundSprite": "",
+ "bgImage": "Canvas/BG",
+ "jumpEffect": "JumpParticle"
+}

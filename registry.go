@@ -44,6 +44,7 @@ import (
 	"hsdemo/games/lockstep"
 	"hsdemo/games/lovelizards"
 	"hsdemo/games/loverap"
+	"hsdemo/games/magicgirl"
 	"hsdemo/games/mannequinfactory"
 	"hsdemo/games/manzai"
 	"hsdemo/games/marchingorders"
@@ -145,6 +146,7 @@ func registerGames() {
 	engine.Register("lockstep", lockstep.New)
 	engine.Register("loveLizards", lovelizards.New)
 	engine.Register("loveRap", loverap.New)
+	engine.Register("magicGirl", magicgirl.New)
 	engine.Register("manzai", manzai.New)
 	engine.Register("mannequinFactory", mannequinfactory.New)
 	engine.Register("moaiDooWop", moaidoowop.New)

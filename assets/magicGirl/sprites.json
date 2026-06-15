@@ -1,0 +1,105 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "Background (1)": {
+   "X": 0,
+   "Y": 0,
+   "W": 2000,
+   "H": 1238,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MG_Spritesheet3_0": {
+   "X": 150,
+   "Y": 235,
+   "W": 702,
+   "H": 651,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MG_Spritesheet3_2": {
+   "X": 907,
+   "Y": 248,
+   "W": 647,
+   "H": 639,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MG_Spritesheet3_3": {
+   "X": 57,
+   "Y": 1984,
+   "W": 1954,
+   "H": 2013,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "MG_Spritesheet3_4": {
+   "X": 2233,
+   "Y": 2794,
+   "W": 1110,
+   "H": 1108,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "backgroundstars": {
+   "X": 0,
+   "Y": 0,
+   "W": 2420,
+   "H": 4320,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

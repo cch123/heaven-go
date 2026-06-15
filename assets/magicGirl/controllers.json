@@ -1,0 +1,212 @@
+{
+ "MGHead": {
+  "default": "FaceIdle",
+  "states": {
+   "FaceBarely": {
+    "clip": "Animations/Mako/FaceBarely",
+    "speed": 1
+   },
+   "FaceIdle": {
+    "clip": "Animations/Mako/FaceIdle",
+    "speed": 1
+   },
+   "FaceMiss": {
+    "clip": "Animations/Mako/FaceMiss",
+    "speed": 1
+   },
+   "FaceSmile": {
+    "clip": "Animations/Mako/FaceSmile",
+    "speed": 1
+   },
+   "FaceWink": {
+    "clip": "Animations/Mako/FaceWink",
+    "speed": 1
+   }
+  }
+ },
+ "MGMako": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Mako/MGBop",
+    "speed": 1
+   },
+   "D_Left_Move": {
+    "clip": "Animations/Mako/D_Left_Move",
+    "speed": 1
+   },
+   "D_Right_Move": {
+    "clip": "Animations/Mako/D_Right_Move",
+    "speed": 1
+   },
+   "Final": {
+    "clip": "Animations/Mako/Outfits/Final",
+    "speed": 1
+   },
+   "FlashQuick": {
+    "clip": "Animations/Mako/Flashes/FlashQuick",
+    "speed": 1
+   },
+   "FullFlash": {
+    "clip": "Animations/Mako/Flashes/FullFlash",
+    "speed": 1
+   },
+   "Hold": {
+    "clip": "Animations/Mako/MGHold",
+    "speed": 1
+   },
+   "Hurt": {
+    "clip": "Animations/Mako/Hurt",
+    "speed": 1
+   },
+   "Hurt_L": {
+    "clip": "Animations/Mako/Hurt_L",
+    "speed": 1
+   },
+   "Hurt_R": {
+    "clip": "Animations/Mako/Hurt_R",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "IdleFlash": {
+    "speed": 1
+   },
+   "Jump": {
+    "clip": "Animations/Mako/MGJump",
+    "speed": 1
+   },
+   "PhaseA": {
+    "clip": "Animations/Mako/Outfits/PhaseA",
+    "speed": 1
+   },
+   "PhaseB": {
+    "clip": "Animations/Mako/Outfits/PhaseB",
+    "speed": 1
+   },
+   "PhaseC": {
+    "clip": "Animations/Mako/Outfits/PhaseC",
+    "speed": 1
+   },
+   "PhaseD": {
+    "clip": "Animations/Mako/Outfits/PhaseD",
+    "speed": 1
+   },
+   "Prepare": {
+    "clip": "Animations/Mako/MGPrepare",
+    "speed": 1
+   },
+   "U_Left_Move": {
+    "clip": "Animations/Mako/U_Left_Move",
+    "speed": 1
+   },
+   "U_Right_Move": {
+    "clip": "Animations/Mako/U_Right_Move",
+    "speed": 1
+   },
+   "Uniform": {
+    "clip": "Animations/Mako/Outfits/Uniform",
+    "speed": 1
+   }
+  }
+ },
+ "Monster": {
+  "default": "MonsterIdle",
+  "states": {
+   "MonsterAppear": {
+    "clip": "Animations/Monster/MonsterAppear",
+    "speed": 1
+   },
+   "MonsterAttackD": {
+    "clip": "Animations/Monster/MonsterAttackD",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MonsterIdle",
+      "exitTime": 1,
+      "duration": 0.33180165
+     }
+    ]
+   },
+   "MonsterAttackU": {
+    "clip": "Animations/Monster/MonsterAttackU",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MonsterIdle",
+      "exitTime": 0.75,
+      "duration": 0.21072535
+     }
+    ]
+   },
+   "MonsterIdle": {
+    "clip": "Animations/Monster/MonsterIdle",
+    "speed": 1
+   },
+   "MonsterScared": {
+    "clip": "Animations/Monster/MonsterScared",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "MonsterIdle",
+      "exitTime": 3.347577,
+      "duration": 0.020791441
+     }
+    ]
+   }
+  }
+ },
+ "MonsterHand": {
+  "default": "Idle",
+  "states": {
+   "Appear": {
+    "clip": "Animations/Monster/MonsterHandAppear",
+    "speed": 1
+   },
+   "Attack": {
+    "clip": "Animations/Monster/MonsterHandAttack",
+    "speed": 1
+   },
+   "Hide": {
+    "clip": "Animations/Monster/MonsterHandHide",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "TransfCompAnim": {
+  "default": "DressA",
+  "states": {
+   "Appear": {
+    "clip": "Animations/TransfComponent/TrCoAppear",
+    "speed": 1
+   },
+   "DressA": {
+    "clip": "Animations/TransfComponent/TrCoDressA",
+    "speed": 1
+   },
+   "DressB": {
+    "clip": "Animations/TransfComponent/TrCoDressB",
+    "speed": 1
+   },
+   "Hand": {
+    "clip": "Animations/TransfComponent/TrCoHands",
+    "speed": 1
+   },
+   "Hide": {
+    "clip": "Animations/TransfComponent/TrCoHide",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Legs": {
+    "clip": "Animations/TransfComponent/TrCoLegs",
+    "speed": 1
+   }
+  }
+ }
+}

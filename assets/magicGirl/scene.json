@@ -1,0 +1,2530 @@
+{
+ "nodes": [
+  {
+   "name": "magicGirl",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    6,
+    0.82
+   ],
+   "sprite": "Background (1)",
+   "order": -1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20,
+    12.38
+   ],
+   "mapped": true,
+   "mat": "BG"
+  },
+  {
+   "name": "Square",
+   "path": "Background/Square",
+   "parent": 1,
+   "pos": [
+    0,
+    16
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    20
+   ],
+   "order": -1001,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "BG"
+  },
+  {
+   "name": "Square (1)",
+   "path": "Background/Square (1)",
+   "parent": 1,
+   "pos": [
+    0,
+    -16
+   ],
+   "rotZ": 0,
+   "scale": [
+    20,
+    20
+   ],
+   "order": -1001,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ],
+   "mapped": true,
+   "mat": "BG"
+  },
+  {
+   "name": "MagicGirl",
+   "path": "MagicGirl",
+   "parent": 0,
+   "pos": [
+    0,
+    0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Mako",
+   "path": "MagicGirl/Mako",
+   "parent": 4,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    5
+   ]
+  },
+  {
+   "name": "HeadandHair",
+   "path": "MagicGirl/Mako/HeadandHair",
+   "parent": 5,
+   "pos": [
+    0.43,
+    -0.11
+   ],
+   "z": 0.08990709,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "MagicGirl/Mako/HeadandHair/Head",
+   "parent": 6,
+   "pos": [
+    -0.4222499,
+    0.92173755
+   ],
+   "z": 0.089907095,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    5
+   ]
+  },
+  {
+   "name": "Sweat",
+   "path": "MagicGirl/Mako/HeadandHair/Head/Sweat",
+   "parent": 7,
+   "pos": [
+    -1.0244998,
+    4.0365257
+   ],
+   "z": -1.8201857,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    1.22
+   ]
+  },
+  {
+   "name": "Sweat (1)",
+   "path": "MagicGirl/Mako/HeadandHair/Head/Sweat (1)",
+   "parent": 7,
+   "pos": [
+    -1.6244998,
+    3.616525
+   ],
+   "z": -1.8201857,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.6,
+    1.22
+   ]
+  },
+  {
+   "name": "Hairs",
+   "path": "MagicGirl/Mako/HeadandHair/Hairs",
+   "parent": 6,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "R_Pigtail",
+   "path": "MagicGirl/Mako/HeadandHair/Hairs/R_Pigtail",
+   "parent": 10,
+   "pos": [
+    -1.0222499,
+    2.0717375
+   ],
+   "z": 0.0899071,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.82,
+    5
+   ]
+  },
+  {
+   "name": "L_Pigtail",
+   "path": "MagicGirl/Mako/HeadandHair/Hairs/L_Pigtail",
+   "parent": 10,
+   "pos": [
+    0.17775017,
+    2.0717375
+   ],
+   "z": 0.0899071,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.32,
+    2.36
+   ]
+  },
+  {
+   "name": "Hair",
+   "path": "MagicGirl/Mako/HeadandHair/Hairs/Hair",
+   "parent": 10,
+   "pos": [
+    -0.4222499,
+    1.95
+   ],
+   "z": -0.08990709,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.36,
+    5.92
+   ]
+  },
+  {
+   "name": "Torso_Bent",
+   "path": "MagicGirl/Mako/Torso_Bent",
+   "parent": 5,
+   "pos": [
+    0,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.18,
+    6.44
+   ]
+  },
+  {
+   "name": "R_Arm",
+   "path": "MagicGirl/Mako/Torso_Bent/R_Arm",
+   "parent": 14,
+   "pos": [
+    -0.70672303,
+    -1.3522304
+   ],
+   "z": -0.082091115,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "R_Open",
+   "path": "MagicGirl/Mako/Torso_Bent/R_Arm/R_Open",
+   "parent": 15,
+   "pos": [
+    0.9933615,
+    1.3661151
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.92,
+    3.66
+   ]
+  },
+  {
+   "name": "R_Fist",
+   "path": "MagicGirl/Mako/Torso_Bent/R_Arm/R_Fist",
+   "parent": 15,
+   "pos": [
+    1.1,
+    1.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.84,
+    2.84
+   ]
+  },
+  {
+   "name": "R_Arm",
+   "path": "MagicGirl/Mako/Torso_Bent/R_Arm/R_Arm",
+   "parent": 15,
+   "pos": [
+    0.8,
+    1.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.08,
+    3.38
+   ]
+  },
+  {
+   "name": "R_Out",
+   "path": "MagicGirl/Mako/Torso_Bent/R_Arm/R_Out",
+   "parent": 15,
+   "pos": [
+    1.01,
+    1.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.9,
+    3.94
+   ]
+  },
+  {
+   "name": "R_Up",
+   "path": "MagicGirl/Mako/Torso_Bent/R_Arm/R_Up",
+   "parent": 15,
+   "pos": [
+    0.7733615,
+    1.1861151
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.14,
+    5.38
+   ]
+  },
+  {
+   "name": "L_Arm",
+   "path": "MagicGirl/Mako/Torso_Bent/L_Arm",
+   "parent": 14,
+   "pos": [
+    -0.70672303,
+    -1.3522304
+   ],
+   "z": -0.08209112,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "L_hurt",
+   "path": "MagicGirl/Mako/Torso_Bent/L_Arm/L_hurt",
+   "parent": 21,
+   "pos": [
+    0.14,
+    1.51
+   ],
+   "z": 0.04104556,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.4,
+    3.84
+   ]
+  },
+  {
+   "name": "L_Open",
+   "path": "MagicGirl/Mako/Torso_Bent/L_Arm/L_Open",
+   "parent": 21,
+   "pos": [
+    -0.28663847,
+    1.3661151
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.92,
+    3.66
+   ]
+  },
+  {
+   "name": "L_Fist",
+   "path": "MagicGirl/Mako/Torso_Bent/L_Arm/L_Fist",
+   "parent": 21,
+   "pos": [
+    0.18,
+    1.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.84,
+    2.84
+   ]
+  },
+  {
+   "name": "L_Arm",
+   "path": "MagicGirl/Mako/Torso_Bent/L_Arm/L_Arm",
+   "parent": 21,
+   "pos": [
+    -0.08000001,
+    1.6
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.92,
+    3.66
+   ]
+  },
+  {
+   "name": "L_Out",
+   "path": "MagicGirl/Mako/Torso_Bent/L_Arm/L_Out",
+   "parent": 21,
+   "pos": [
+    0,
+    1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.9,
+    3.94
+   ]
+  },
+  {
+   "name": "L_Up",
+   "path": "MagicGirl/Mako/Torso_Bent/L_Arm/L_Up",
+   "parent": 21,
+   "pos": [
+    -0.02000001,
+    1.1861151
+   ],
+   "z": 0.04104556,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.14,
+    5.38
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "MagicGirl/Mako/Torso",
+   "parent": 5,
+   "pos": [
+    0,
+    -0.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.28,
+    6.7
+   ]
+  },
+  {
+   "name": "R_Arm",
+   "path": "MagicGirl/Mako/Torso/R_Arm",
+   "parent": 28,
+   "pos": [
+    -0.70672303,
+    -1.3522304
+   ],
+   "z": -0.082091115,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "R_Open",
+   "path": "MagicGirl/Mako/Torso/R_Arm/R_Open",
+   "parent": 29,
+   "pos": [
+    0.9933615,
+    1.3661151
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.92,
+    3.66
+   ]
+  },
+  {
+   "name": "R_Fist",
+   "path": "MagicGirl/Mako/Torso/R_Arm/R_Fist",
+   "parent": 29,
+   "pos": [
+    1.1,
+    1.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.84,
+    2.84
+   ]
+  },
+  {
+   "name": "R_Arm",
+   "path": "MagicGirl/Mako/Torso/R_Arm/R_Arm",
+   "parent": 29,
+   "pos": [
+    0.8,
+    1.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.08,
+    3.38
+   ]
+  },
+  {
+   "name": "R_Out",
+   "path": "MagicGirl/Mako/Torso/R_Arm/R_Out",
+   "parent": 29,
+   "pos": [
+    1.01,
+    1.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.9,
+    3.94
+   ]
+  },
+  {
+   "name": "R_Up",
+   "path": "MagicGirl/Mako/Torso/R_Arm/R_Up",
+   "parent": 29,
+   "pos": [
+    0.7733615,
+    1.1861151
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.14,
+    5.38
+   ]
+  },
+  {
+   "name": "L_Arm",
+   "path": "MagicGirl/Mako/Torso/L_Arm",
+   "parent": 28,
+   "pos": [
+    -0.70672303,
+    -1.3522304
+   ],
+   "z": -0.08209112,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "L_hurt",
+   "path": "MagicGirl/Mako/Torso/L_Arm/L_hurt",
+   "parent": 35,
+   "pos": [
+    0.14,
+    1.51
+   ],
+   "z": 0.04104556,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 4,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.4,
+    3.84
+   ]
+  },
+  {
+   "name": "L_Open",
+   "path": "MagicGirl/Mako/Torso/L_Arm/L_Open",
+   "parent": 35,
+   "pos": [
+    -0.28663847,
+    1.3661151
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.92,
+    3.66
+   ]
+  },
+  {
+   "name": "L_Fist",
+   "path": "MagicGirl/Mako/Torso/L_Arm/L_Fist",
+   "parent": 35,
+   "pos": [
+    -0.4,
+    1.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.84,
+    2.84
+   ]
+  },
+  {
+   "name": "L_Arm",
+   "path": "MagicGirl/Mako/Torso/L_Arm/L_Arm",
+   "parent": 35,
+   "pos": [
+    -0.08000001,
+    1.6
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.92,
+    3.66
+   ]
+  },
+  {
+   "name": "L_Out",
+   "path": "MagicGirl/Mako/Torso/L_Arm/L_Out",
+   "parent": 35,
+   "pos": [
+    0,
+    1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.9,
+    3.94
+   ]
+  },
+  {
+   "name": "L_Up",
+   "path": "MagicGirl/Mako/Torso/L_Arm/L_Up",
+   "parent": 35,
+   "pos": [
+    -0.02000001,
+    1.1861151
+   ],
+   "z": 0.04104556,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.14,
+    5.38
+   ]
+  },
+  {
+   "name": "L_Leg",
+   "path": "MagicGirl/Mako/L_Leg",
+   "parent": 5,
+   "pos": [
+    -0.35336152,
+    -0.9561152
+   ],
+   "z": -0.041045558,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "L_Leg",
+   "path": "MagicGirl/Mako/L_Leg/L_Leg",
+   "parent": 42,
+   "pos": [
+    -0.04663849,
+    -0.5438848
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    7.26
+   ]
+  },
+  {
+   "name": "L_Leg_UP",
+   "path": "MagicGirl/Mako/L_Leg/L_Leg_UP",
+   "parent": 42,
+   "pos": [
+    -0.04663849,
+    -0.5438848
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.48,
+    7.28
+   ]
+  },
+  {
+   "name": "L_Bent",
+   "path": "MagicGirl/Mako/L_Leg/L_Bent",
+   "parent": 42,
+   "pos": [
+    -0.07,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.52,
+    6.66
+   ]
+  },
+  {
+   "name": "L_KneeUP",
+   "path": "MagicGirl/Mako/L_Leg/L_KneeUP",
+   "parent": 42,
+   "pos": [
+    -0.1966385,
+    -0.99388486
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    3.76
+   ]
+  },
+  {
+   "name": "L_Toes",
+   "path": "MagicGirl/Mako/L_Leg/L_Toes",
+   "parent": 42,
+   "pos": [
+    -0.10663849,
+    -0.4838849
+   ],
+   "z": 0.04104556,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.12,
+    7.38
+   ]
+  },
+  {
+   "name": "R_Leg",
+   "path": "MagicGirl/Mako/R_Leg",
+   "parent": 5,
+   "pos": [
+    -0.35336152,
+    -0.9561152
+   ],
+   "z": -0.04104556,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "R_Leg",
+   "path": "MagicGirl/Mako/R_Leg/R_Leg",
+   "parent": 48,
+   "pos": [
+    0.7533615,
+    -0.5438848
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.58,
+    7.26
+   ]
+  },
+  {
+   "name": "R_Leg_UP",
+   "path": "MagicGirl/Mako/R_Leg/R_Leg_UP",
+   "parent": 48,
+   "pos": [
+    0.7533615,
+    -0.5438848
+   ],
+   "z": 0.041045558,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.48,
+    7.28
+   ]
+  },
+  {
+   "name": "R_Bent",
+   "path": "MagicGirl/Mako/R_Leg/R_Bent",
+   "parent": 48,
+   "pos": [
+    0.77,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.52,
+    6.66
+   ]
+  },
+  {
+   "name": "R_KneeUP",
+   "path": "MagicGirl/Mako/R_Leg/R_KneeUP",
+   "parent": 48,
+   "pos": [
+    0.9,
+    -0.9938849
+   ],
+   "z": 0.04104556,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.52,
+    6.66
+   ]
+  },
+  {
+   "name": "R_Toes",
+   "path": "MagicGirl/Mako/R_Leg/R_Toes",
+   "parent": 48,
+   "pos": [
+    0.8233615,
+    -0.48388487
+   ],
+   "z": 0.04104556,
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.12,
+    7.38
+   ]
+  },
+  {
+   "name": "Platform",
+   "path": "Platform",
+   "parent": 0,
+   "pos": [
+    0,
+    -3.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.495,
+    0.495
+   ],
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    16.69,
+    3.48
+   ]
+  },
+  {
+   "name": "Monster0",
+   "path": "Monster0",
+   "parent": 0,
+   "pos": [
+    -4.2,
+    2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.45,
+    0.45
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Monster",
+   "path": "Monster0/Monster",
+   "parent": 55,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.48,
+    5.9
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "Monster0/Monster/Smear",
+   "parent": 56,
+   "pos": [
+    2,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 51,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    2.92
+   ]
+  },
+  {
+   "name": "Monster1",
+   "path": "Monster1",
+   "parent": 0,
+   "pos": [
+    4.2,
+    2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.45,
+    0.45
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Monster",
+   "path": "Monster1/Monster",
+   "parent": 58,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.48,
+    5.9
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "Monster1/Monster/Smear",
+   "parent": 59,
+   "pos": [
+    2,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 51,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    2.92
+   ]
+  },
+  {
+   "name": "Monster2",
+   "path": "Monster2",
+   "parent": 0,
+   "pos": [
+    -4.2,
+    -1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.45,
+    0.45
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Monster",
+   "path": "Monster2/Monster",
+   "parent": 61,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.48,
+    5.9
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "Monster2/Monster/Smear",
+   "parent": 62,
+   "pos": [
+    2,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 51,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    2.92
+   ]
+  },
+  {
+   "name": "Monster3",
+   "path": "Monster3",
+   "parent": 0,
+   "pos": [
+    4.2,
+    -1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.45,
+    0.45
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Monster",
+   "path": "Monster3/Monster",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 50,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.48,
+    5.9
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "Monster3/Monster/Smear",
+   "parent": 65,
+   "pos": [
+    2,
+    1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 51,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    2.92
+   ]
+  },
+  {
+   "name": "Canvas",
+   "path": "Canvas",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "Canvas/BG",
+   "parent": 67,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.017,
+    0.017
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Curves",
+   "path": "Curves",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HitCurve0",
+   "path": "Curves/HitCurve0",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/HitCurve0/Point 0",
+   "parent": 70,
+   "pos": [
+    -4.2,
+    2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/HitCurve0/Point 1",
+   "parent": 70,
+   "pos": [
+    -6.5,
+    2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HitCurve1",
+   "path": "Curves/HitCurve1",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/HitCurve1/Point 0",
+   "parent": 73,
+   "pos": [
+    4.2,
+    2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/HitCurve1/Point 1",
+   "parent": 73,
+   "pos": [
+    6.5,
+    2.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HitCurve2",
+   "path": "Curves/HitCurve2",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/HitCurve2/Point 0",
+   "parent": 76,
+   "pos": [
+    -4.2,
+    -1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/HitCurve2/Point 1",
+   "parent": 76,
+   "pos": [
+    -6.5,
+    -1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HitCurve3",
+   "path": "Curves/HitCurve3",
+   "parent": 69,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 0",
+   "path": "Curves/HitCurve3/Point 0",
+   "parent": 79,
+   "pos": [
+    4.2,
+    -1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Point 1",
+   "path": "Curves/HitCurve3/Point 1",
+   "parent": 79,
+   "pos": [
+    6.5,
+    -1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "MonsterHand",
+   "path": "MonsterHand",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HandL",
+   "path": "MonsterHand/HandL",
+   "parent": 82,
+   "pos": [
+    -4.5,
+    1
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.82,
+    8.48
+   ]
+  },
+  {
+   "name": "Smear (1)",
+   "path": "MonsterHand/HandL/Smear (1)",
+   "parent": 83,
+   "pos": [
+    -3,
+    2
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    4,
+    2
+   ],
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    2.92
+   ]
+  },
+  {
+   "name": "HandR",
+   "path": "MonsterHand/HandR",
+   "parent": 82,
+   "pos": [
+    4.5,
+    1
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.82,
+    8.48
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "MonsterHand/HandR/Smear",
+   "parent": 85,
+   "pos": [
+    3,
+    2
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    4,
+    2
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    2.92
+   ]
+  },
+  {
+   "name": "TransformationComponent",
+   "path": "TransformationComponent",
+   "parent": 0,
+   "pos": [
+    -5.5,
+    2.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TrCo",
+   "path": "TransformationComponent/TrCo",
+   "parent": 87,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.94,
+    5.16
+   ]
+  },
+  {
+   "name": "JumpParticle",
+   "path": "JumpParticle",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.1999998,
+    3.1999998
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SmallStars",
+   "path": "JumpParticle/SmallStars",
+   "parent": 89,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Dot",
+   "path": "JumpParticle/Dot",
+   "parent": 89,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sparkle",
+   "path": "JumpParticle/Sparkle",
+   "parent": 89,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ring",
+   "path": "JumpParticle/Ring",
+   "parent": 89,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.2,
+    3.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Effect_Monster0",
+   "path": "Effect_Monster0",
+   "parent": 0,
+   "pos": [
+    -2,
+    2
+   ],
+   "rotZ": -2.356194509392128,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Effect_Monster1",
+   "path": "Effect_Monster1",
+   "parent": 0,
+   "pos": [
+    2,
+    2
+   ],
+   "rotZ": 0.7853981441976652,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Effect_Monster2",
+   "path": "Effect_Monster2",
+   "parent": 0,
+   "pos": [
+    -3,
+    -0.5
+   ],
+   "rotZ": -2.356194509392128,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Effect_Monster3",
+   "path": "Effect_Monster3",
+   "parent": 0,
+   "pos": [
+    3,
+    -0.5
+   ],
+   "rotZ": 0.7853981441976652,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}
