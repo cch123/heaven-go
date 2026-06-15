@@ -1,0 +1,17 @@
+{
+ "Darkness": "Darkness",
+ "LeaderFrog": "frogLeader",
+ "Mike": "Mike",
+ "Mike2": "Mike2",
+ "PlayerFrog": "frogPlayer",
+ "SingerFrog": "frogSinger",
+ "SpotlightBack": "SpotlightsBack",
+ "SpotlightBackColor": "SpotlightsBack/SpotlightsBackColor",
+ "SpotlightFront": "SpotlightsFront",
+ "SpotlightFrontColor": "SpotlightsFront/SpotlightsFrontColor",
+ "Stage": "Stage",
+ "StageTop": "Stage/StageTop",
+ "bgHigh": "BG/Color1",
+ "bgLow": "BG/Color2",
+ "gradient": "BG/Gradient"
+}

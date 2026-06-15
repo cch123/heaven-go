@@ -160,6 +160,33 @@ var sceneSpecs = map[string]sceneSpec{
 			}, multi: true},
 		},
 	},
+	"frogHop": {
+		dir:    "FrogHop",
+		prefab: "frogHop.prefab",
+		roleFields: []string{
+			"PlayerFrog", "LeaderFrog", "SingerFrog",
+			"Darkness", "SpotlightFront", "SpotlightBack",
+			"SpotlightFrontColor", "SpotlightBackColor",
+			"Mike", "Mike2", "Stage", "StageTop",
+			"gradient", "bgLow", "bgHigh",
+		},
+		refArrayFields:  []string{"OtherFrogs", "_FrogColors"},
+		wantControllers: true,
+		commonSounds:    []string{"miss.wav"},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"PlayerFrog", "OtherFrogs", "LeaderFrog", "SingerFrog",
+				"Darkness", "SpotlightFront", "SpotlightBack",
+				"SpotlightFrontColor", "SpotlightBackColor",
+				"Mike", "Mike2", "Stage", "StageTop",
+				"_FrogColors", "gradient", "bgLow", "bgHigh",
+			}},
+			{name: "frog", markers: []string{
+				"FrogAnim", "SpriteParts", "Head", "Belt",
+				"BodyMat", "HeadMat",
+			}, multi: true},
+		},
+	},
 	"moaiDooWop": {
 		dir:    "MoaiDooWop",
 		prefab: "moaiDooWop.prefab",

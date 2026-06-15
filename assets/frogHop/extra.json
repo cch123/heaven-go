@@ -1,0 +1,235 @@
+{
+ "refArrays": {
+  "OtherFrogs": [
+   "frog1",
+   "frog2",
+   "frog3"
+  ],
+  "_FrogColors": [
+   "SingerBody",
+   "SingerHead",
+   "LeaderBody",
+   "LeaderHead",
+   "BackupBody",
+   "BackupHead",
+   "FrogBelts",
+   "Stage"
+  ]
+ },
+ "refArrayIdx": {
+  "OtherFrogs": [
+   1,
+   15,
+   29
+  ],
+  "_FrogColors": [
+   -1,
+   -1,
+   -1,
+   -1,
+   -1,
+   -1,
+   -1,
+   -1
+  ]
+ },
+ "components": {
+  "frog0": {
+   "path": "frog1",
+   "refs": {
+    "Belt": "frog1/Belt",
+    "FrogAnim": "frog1",
+    "Head": "frog1/Head",
+    "MissFace": "frog1/Head/MissFace"
+   },
+   "refArrays": {
+    "BodyMat": [
+     "frog1/Body",
+     "frog1/Smear"
+    ],
+    "HeadMat": [
+     "frog1/Head",
+     "frog1/Head/MissFace",
+     "frog1/FakeHead"
+    ],
+    "SpriteParts": [
+     "frog1/Body",
+     "frog1/Head",
+     "frog1/FakeHead",
+     "frog1/Smear",
+     "frog1/Head/MissFace",
+     "frog1/Head/MissFace/Tongue"
+    ]
+   }
+  },
+  "frog1": {
+   "path": "frog2",
+   "refs": {
+    "Belt": "frog2/Belt",
+    "FrogAnim": "frog2",
+    "Head": "frog2/Head",
+    "MissFace": "frog2/Head/MissFace"
+   },
+   "refArrays": {
+    "BodyMat": [
+     "frog2/Body",
+     "frog2/Smear"
+    ],
+    "HeadMat": [
+     "frog2/Head",
+     "frog2/Head/MissFace",
+     "frog2/FakeHead"
+    ],
+    "SpriteParts": [
+     "frog2/Body",
+     "frog2/Head",
+     "frog2/FakeHead",
+     "frog2/Smear",
+     "frog2/Head/MissFace",
+     "frog2/Head/MissFace/Tongue"
+    ]
+   }
+  },
+  "frog2": {
+   "path": "frog3",
+   "refs": {
+    "Belt": "frog3/Belt",
+    "FrogAnim": "frog3",
+    "Head": "frog3/Head",
+    "MissFace": "frog3/Head/MissFace"
+   },
+   "refArrays": {
+    "BodyMat": [
+     "frog3/Body",
+     "frog3/Smear"
+    ],
+    "HeadMat": [
+     "frog3/Head",
+     "frog3/Head/MissFace",
+     "frog3/FakeHead"
+    ],
+    "SpriteParts": [
+     "frog3/Body",
+     "frog3/Head",
+     "frog3/FakeHead",
+     "frog3/Smear",
+     "frog3/Head/MissFace",
+     "frog3/Head/MissFace/Tongue"
+    ]
+   }
+  },
+  "frog3": {
+   "path": "frogLeader",
+   "refs": {
+    "Belt": "frogLeader/Belt",
+    "FrogAnim": "frogLeader",
+    "Head": "frogLeader/Head"
+   },
+   "refArrays": {
+    "BodyMat": [
+     "frogLeader/Body",
+     "frogLeader/Smear"
+    ],
+    "HeadMat": [
+     "frogLeader/Head",
+     "frogLeader/FakeHead"
+    ],
+    "SpriteParts": [
+     "frogLeader/Body",
+     "frogLeader/Head",
+     "frogLeader/FakeHead",
+     "frogLeader/Smear"
+    ]
+   }
+  },
+  "frog4": {
+   "path": "frogPlayer",
+   "refs": {
+    "Belt": "frogPlayer/Belt",
+    "FrogAnim": "frogPlayer",
+    "Head": "frogPlayer/Head",
+    "MissFace": "frogPlayer/Head/MissFace"
+   },
+   "refArrays": {
+    "BodyMat": [
+     "frogPlayer/Body",
+     "frogPlayer/Smear"
+    ],
+    "HeadMat": [
+     "frogPlayer/Head",
+     "frogPlayer/Head/MissFace",
+     "frogPlayer/FakeHead"
+    ],
+    "SpriteParts": [
+     "frogPlayer/Body",
+     "frogPlayer/Head",
+     "frogPlayer/FakeHead",
+     "frogPlayer/Smear",
+     "frogPlayer/Head/MissFace",
+     "frogPlayer/Head/MissFace/Tongue"
+    ]
+   }
+  },
+  "frog5": {
+   "path": "frogSinger",
+   "refs": {
+    "Belt": "frogSinger/Belt",
+    "FrogAnim": "frogSinger",
+    "Head": "frogSinger/Head"
+   },
+   "refArrays": {
+    "BodyMat": [
+     "frogSinger/Body",
+     "frogSinger/Smear"
+    ],
+    "HeadMat": [
+     "frogSinger/Head",
+     "frogSinger/FakeHead"
+    ],
+    "SpriteParts": [
+     "frogSinger/Body",
+     "frogSinger/Head",
+     "frogSinger/FakeHead",
+     "frogSinger/Smear"
+    ]
+   }
+  },
+  "game": {
+   "path": "",
+   "refs": {
+    "Darkness": "Darkness",
+    "LeaderFrog": "frogLeader",
+    "Mike": "Mike",
+    "Mike2": "Mike2",
+    "PlayerFrog": "frogPlayer",
+    "SingerFrog": "frogSinger",
+    "SpotlightBack": "SpotlightsBack",
+    "SpotlightBackColor": "SpotlightsBack/SpotlightsBackColor",
+    "SpotlightFront": "SpotlightsFront",
+    "SpotlightFrontColor": "SpotlightsFront/SpotlightsFrontColor",
+    "Stage": "Stage",
+    "StageTop": "Stage/StageTop",
+    "bgHigh": "BG/Color1",
+    "bgLow": "BG/Color2",
+    "gradient": "BG/Gradient"
+   },
+   "refArrays": {
+    "OtherFrogs": [
+     "frog1",
+     "frog2",
+     "frog3"
+    ],
+    "_FrogColors": [
+     "SingerBody",
+     "SingerHead",
+     "LeaderBody",
+     "LeaderHead",
+     "BackupBody",
+     "BackupHead",
+     "FrogBelts",
+     "Stage"
+    ]
+   }
+  }
+ }
+}

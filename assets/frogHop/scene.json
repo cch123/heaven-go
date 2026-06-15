@@ -1,0 +1,2241 @@
+{
+ "nodes": [
+  {
+   "name": "frogHop",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "frog1",
+   "path": "frog1",
+   "parent": 0,
+   "pos": [
+    -2.583,
+    -0.06999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4539407,
+    0.4539407
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "frog1/Body",
+   "parent": 1,
+   "pos": [
+    0,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    6.62
+   ],
+   "mapped": true,
+   "mat": "BackupBody"
+  },
+  {
+   "name": "Head",
+   "path": "frog1/Head",
+   "parent": 1,
+   "pos": [
+    0,
+    7.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_13",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "MissFace",
+   "path": "frog1/Head/MissFace",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_22",
+   "order": 10,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "Tongue",
+   "path": "frog1/Head/MissFace/Tongue",
+   "parent": 4,
+   "pos": [
+    -0.141,
+    -0.895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0810812,
+    0.9302326
+   ],
+   "sprite": "froghopupscale4096_87",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.62
+   ]
+  },
+  {
+   "name": "Sweat",
+   "path": "frog1/Head/Sweat",
+   "parent": 3,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Drop1",
+   "path": "frog1/Head/Sweat/Drop1",
+   "parent": 6,
+   "pos": [
+    -2.1,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_76",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.48
+   ]
+  },
+  {
+   "name": "Drop2",
+   "path": "frog1/Head/Sweat/Drop2",
+   "parent": 6,
+   "pos": [
+    -1.5,
+    1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_70",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Drop3",
+   "path": "frog1/Head/Sweat/Drop3",
+   "parent": 6,
+   "pos": [
+    1.5,
+    1.3500004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_70",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Drop4",
+   "path": "frog1/Head/Sweat/Drop4",
+   "parent": 6,
+   "pos": [
+    2.1,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_76",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.48
+   ]
+  },
+  {
+   "name": "FakeHead",
+   "path": "frog1/FakeHead",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_69",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.08,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "Smear",
+   "path": "frog1/Smear",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_77",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    0.9
+   ],
+   "mapped": true,
+   "mat": "BackupBody"
+  },
+  {
+   "name": "Pow",
+   "path": "frog1/Pow",
+   "parent": 1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_72",
+   "order": 11,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    2.86
+   ]
+  },
+  {
+   "name": "Belt",
+   "path": "frog1/Belt",
+   "parent": 1,
+   "pos": [
+    0.015,
+    3.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_40",
+   "order": 9,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    2.28,
+    0.42
+   ],
+   "mapped": true,
+   "mat": "FrogBelts"
+  },
+  {
+   "name": "frog2",
+   "path": "frog2",
+   "parent": 0,
+   "pos": [
+    -0.861,
+    -0.06999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4539407,
+    0.4539407
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "frog2/Body",
+   "parent": 15,
+   "pos": [
+    0,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    6.62
+   ],
+   "mapped": true,
+   "mat": "BackupBody"
+  },
+  {
+   "name": "Head",
+   "path": "frog2/Head",
+   "parent": 15,
+   "pos": [
+    0,
+    7.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_13",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "MissFace",
+   "path": "frog2/Head/MissFace",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_22",
+   "order": 10,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "Tongue",
+   "path": "frog2/Head/MissFace/Tongue",
+   "parent": 18,
+   "pos": [
+    -0.141,
+    -0.895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0810812,
+    0.9302326
+   ],
+   "sprite": "froghopupscale4096_87",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.62
+   ]
+  },
+  {
+   "name": "Sweat",
+   "path": "frog2/Head/Sweat",
+   "parent": 17,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Drop1",
+   "path": "frog2/Head/Sweat/Drop1",
+   "parent": 20,
+   "pos": [
+    -2.1,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_76",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.48
+   ]
+  },
+  {
+   "name": "Drop2",
+   "path": "frog2/Head/Sweat/Drop2",
+   "parent": 20,
+   "pos": [
+    -1.5,
+    1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_70",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Drop3",
+   "path": "frog2/Head/Sweat/Drop3",
+   "parent": 20,
+   "pos": [
+    1.5,
+    1.3500004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_70",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Drop4",
+   "path": "frog2/Head/Sweat/Drop4",
+   "parent": 20,
+   "pos": [
+    2.1,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_76",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.48
+   ]
+  },
+  {
+   "name": "FakeHead",
+   "path": "frog2/FakeHead",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_69",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.08,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "Smear",
+   "path": "frog2/Smear",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_77",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    0.9
+   ],
+   "mapped": true,
+   "mat": "BackupBody"
+  },
+  {
+   "name": "Pow",
+   "path": "frog2/Pow",
+   "parent": 15,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_72",
+   "order": 11,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    2.86
+   ]
+  },
+  {
+   "name": "Belt",
+   "path": "frog2/Belt",
+   "parent": 15,
+   "pos": [
+    0.015,
+    3.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_40",
+   "order": 9,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    2.28,
+    0.42
+   ],
+   "mapped": true,
+   "mat": "FrogBelts"
+  },
+  {
+   "name": "frog3",
+   "path": "frog3",
+   "parent": 0,
+   "pos": [
+    0.86100006,
+    -0.06999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4539407,
+    0.4539407
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "frog3/Body",
+   "parent": 29,
+   "pos": [
+    0,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    6.62
+   ],
+   "mapped": true,
+   "mat": "BackupBody"
+  },
+  {
+   "name": "Head",
+   "path": "frog3/Head",
+   "parent": 29,
+   "pos": [
+    0,
+    7.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_13",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "MissFace",
+   "path": "frog3/Head/MissFace",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_22",
+   "order": 10,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "Tongue",
+   "path": "frog3/Head/MissFace/Tongue",
+   "parent": 32,
+   "pos": [
+    -0.141,
+    -0.895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0810812,
+    0.9302326
+   ],
+   "sprite": "froghopupscale4096_87",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.62
+   ]
+  },
+  {
+   "name": "Sweat",
+   "path": "frog3/Head/Sweat",
+   "parent": 31,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Drop1",
+   "path": "frog3/Head/Sweat/Drop1",
+   "parent": 34,
+   "pos": [
+    -2.1,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_76",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.48
+   ]
+  },
+  {
+   "name": "Drop2",
+   "path": "frog3/Head/Sweat/Drop2",
+   "parent": 34,
+   "pos": [
+    -1.5,
+    1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_70",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Drop3",
+   "path": "frog3/Head/Sweat/Drop3",
+   "parent": 34,
+   "pos": [
+    1.5,
+    1.3500004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_70",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Drop4",
+   "path": "frog3/Head/Sweat/Drop4",
+   "parent": 34,
+   "pos": [
+    2.1,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_76",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.48
+   ]
+  },
+  {
+   "name": "FakeHead",
+   "path": "frog3/FakeHead",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_69",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.08,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "Smear",
+   "path": "frog3/Smear",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_77",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    0.9
+   ],
+   "mapped": true,
+   "mat": "BackupBody"
+  },
+  {
+   "name": "Pow",
+   "path": "frog3/Pow",
+   "parent": 29,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_72",
+   "order": 11,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    2.86
+   ]
+  },
+  {
+   "name": "Belt",
+   "path": "frog3/Belt",
+   "parent": 29,
+   "pos": [
+    0.015,
+    3.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_40",
+   "order": 9,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    2.28,
+    0.42
+   ],
+   "mapped": true,
+   "mat": "FrogBelts"
+  },
+  {
+   "name": "frogPlayer",
+   "path": "frogPlayer",
+   "parent": 0,
+   "pos": [
+    2.583,
+    -0.06999999
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4539407,
+    0.4539407
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "frogPlayer/Body",
+   "parent": 43,
+   "pos": [
+    0,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_7",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    6.62
+   ],
+   "mapped": true,
+   "mat": "BackupBody"
+  },
+  {
+   "name": "Head",
+   "path": "frogPlayer/Head",
+   "parent": 43,
+   "pos": [
+    0,
+    7.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_13",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "MissFace",
+   "path": "frogPlayer/Head/MissFace",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_22",
+   "order": 10,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "Tongue",
+   "path": "frogPlayer/Head/MissFace/Tongue",
+   "parent": 46,
+   "pos": [
+    -0.141,
+    -0.895
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0810812,
+    0.9302326
+   ],
+   "sprite": "froghopupscale4096_87",
+   "order": 11,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.52,
+    0.62
+   ]
+  },
+  {
+   "name": "Sweat",
+   "path": "frogPlayer/Head/Sweat",
+   "parent": 45,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Drop1",
+   "path": "frogPlayer/Head/Sweat/Drop1",
+   "parent": 48,
+   "pos": [
+    -2.1,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_76",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.48
+   ]
+  },
+  {
+   "name": "Drop2",
+   "path": "frogPlayer/Head/Sweat/Drop2",
+   "parent": 48,
+   "pos": [
+    -1.5,
+    1.35
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_70",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Drop3",
+   "path": "frogPlayer/Head/Sweat/Drop3",
+   "parent": 48,
+   "pos": [
+    1.5,
+    1.3500004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_70",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Drop4",
+   "path": "frogPlayer/Head/Sweat/Drop4",
+   "parent": 48,
+   "pos": [
+    2.1,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_76",
+   "order": 9,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.48
+   ]
+  },
+  {
+   "name": "FakeHead",
+   "path": "frogPlayer/FakeHead",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_69",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.08,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "BackupHead"
+  },
+  {
+   "name": "Smear",
+   "path": "frogPlayer/Smear",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_77",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    0.9
+   ],
+   "mapped": true,
+   "mat": "BackupBody"
+  },
+  {
+   "name": "Pow",
+   "path": "frogPlayer/Pow",
+   "parent": 43,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_72",
+   "order": 11,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.6,
+    2.86
+   ]
+  },
+  {
+   "name": "Belt",
+   "path": "frogPlayer/Belt",
+   "parent": 43,
+   "pos": [
+    0.015,
+    3.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_40",
+   "order": 9,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    2.28,
+    0.42
+   ],
+   "mapped": true,
+   "mat": "FrogBelts"
+  },
+  {
+   "name": "frogLeader",
+   "path": "frogLeader",
+   "parent": 0,
+   "pos": [
+    1.348,
+    -2.588
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4539407,
+    0.4539407
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "frogLeader/Body",
+   "parent": 57,
+   "pos": [
+    0,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_7",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    6.62
+   ],
+   "mapped": true,
+   "mat": "LeaderBody"
+  },
+  {
+   "name": "Head",
+   "path": "frogLeader/Head",
+   "parent": 57,
+   "pos": [
+    0,
+    7.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_43",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "LeaderHead"
+  },
+  {
+   "name": "Belt",
+   "path": "frogLeader/Belt",
+   "parent": 57,
+   "pos": [
+    0.015,
+    3.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_40",
+   "order": 20,
+   "color": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "size": [
+    2.28,
+    0.42
+   ],
+   "mapped": true,
+   "mat": "FrogBelts"
+  },
+  {
+   "name": "FakeHead",
+   "path": "frogLeader/FakeHead",
+   "parent": 57,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_69",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.08,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "LeaderHead"
+  },
+  {
+   "name": "Smear",
+   "path": "frogLeader/Smear",
+   "parent": 57,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_77",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    0.9
+   ],
+   "mapped": true,
+   "mat": "LeaderBody"
+  },
+  {
+   "name": "frogSinger",
+   "path": "frogSinger",
+   "parent": 0,
+   "pos": [
+    -1.348,
+    -2.588
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4539407,
+    0.4539407
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "frogSinger/Body",
+   "parent": 63,
+   "pos": [
+    0,
+    3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_7",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.12,
+    6.62
+   ],
+   "mapped": true,
+   "mat": "SingerBody"
+  },
+  {
+   "name": "Head",
+   "path": "frogSinger/Head",
+   "parent": 63,
+   "pos": [
+    0,
+    7.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_24",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.94,
+    3.02
+   ],
+   "mapped": true,
+   "mat": "SingerHead"
+  },
+  {
+   "name": "Belt",
+   "path": "frogSinger/Belt",
+   "parent": 63,
+   "pos": [
+    0.015,
+    3.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_40",
+   "order": 20,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    2.28,
+    0.42
+   ],
+   "mapped": true,
+   "mat": "FrogBelts"
+  },
+  {
+   "name": "FakeHead",
+   "path": "frogSinger/FakeHead",
+   "parent": 63,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_69",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.08,
+    0.76
+   ],
+   "mapped": true,
+   "mat": "SingerHead"
+  },
+  {
+   "name": "Smear",
+   "path": "frogSinger/Smear",
+   "parent": 63,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_77",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.9,
+    0.9
+   ],
+   "mapped": true,
+   "mat": "SingerBody"
+  },
+  {
+   "name": "Stage",
+   "path": "Stage",
+   "parent": 0,
+   "pos": [
+    0,
+    -1.91
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.56,
+    0.56
+   ],
+   "sprite": "froghopupscale4096_65",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    20.56,
+    12
+   ],
+   "mapped": true,
+   "mat": "Stage"
+  },
+  {
+   "name": "StageTop",
+   "path": "Stage/StageTop",
+   "parent": 69,
+   "pos": [
+    0,
+    1.4
+   ],
+   "rotZ": 1.5707963267948966,
+   "scale": [
+    1,
+    1.01
+   ],
+   "sprite": "froghopupscale4096_85",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.14,
+    20.56
+   ]
+  },
+  {
+   "name": "Mike",
+   "path": "Mike",
+   "parent": 0,
+   "pos": [
+    -5.101,
+    -2.092
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4539407,
+    0.4539407
+   ],
+   "sprite": "froghopupscale4096_73",
+   "order": 30,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.08,
+    9.46
+   ]
+  },
+  {
+   "name": "Mike2",
+   "path": "Mike2",
+   "parent": 0,
+   "pos": [
+    5.101,
+    -2.092
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4539407,
+    0.4539407
+   ],
+   "sprite": "froghopupscale4096_73",
+   "order": 30,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.08,
+    9.46
+   ]
+  },
+  {
+   "name": "SpotlightsFront",
+   "path": "SpotlightsFront",
+   "parent": 0,
+   "pos": [
+    0,
+    1.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "sprite": "froghopupscale4096_75",
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "SpotlightsFrontColor",
+   "path": "SpotlightsFront/SpotlightsFrontColor",
+   "parent": 73,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_75",
+   "order": 14,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    11.88,
+    16.82
+   ]
+  },
+  {
+   "name": "SpotlightsBack",
+   "path": "SpotlightsBack",
+   "parent": 0,
+   "pos": [
+    0,
+    4.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48,
+    0.48
+   ],
+   "sprite": "froghopupscale4096_74",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "mask": true
+  },
+  {
+   "name": "SpotlightsBackColor",
+   "path": "SpotlightsBack/SpotlightsBackColor",
+   "parent": 75,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "froghopupscale4096_74",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    16.9,
+    20.04
+   ]
+  },
+  {
+   "name": "Darkness",
+   "path": "Darkness",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    200,
+    150
+   ],
+   "order": 14,
+   "color": [
+    0,
+    0,
+    0,
+    0.5019608
+   ],
+   "size": [
+    0.32,
+    0.32
+   ],
+   "maskIn": 2
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Gradient",
+   "path": "BG/Gradient",
+   "parent": 78,
+   "pos": [
+    0,
+    -1.0349
+   ],
+   "rotZ": 0,
+   "scale": [
+    4.978325,
+    0.1368148
+   ],
+   "sprite": "Gradient",
+   "order": -69,
+   "color": [
+    0.3529412,
+    0.6117647,
+    0.15686275,
+    1
+   ],
+   "size": [
+    40,
+    30.000002
+   ]
+  },
+  {
+   "name": "Color1",
+   "path": "BG/Color1",
+   "parent": 78,
+   "pos": [
+    0,
+    38.353268
+   ],
+   "rotZ": 0,
+   "scale": [
+    199.17188,
+    74.6719
+   ],
+   "order": -70,
+   "color": [
+    0.3529412,
+    0.6117647,
+    0.15686275,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Color2",
+   "path": "BG/Color2",
+   "parent": 78,
+   "pos": [
+    0,
+    -32.4
+   ],
+   "rotZ": 0,
+   "scale": [
+    199.17188,
+    82.7137
+   ],
+   "order": -75,
+   "color": [
+    0.83921576,
+    0.9333334,
+    0.6431373,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  }
+ ]
+}

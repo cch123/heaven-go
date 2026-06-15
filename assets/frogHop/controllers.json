@@ -1,0 +1,145 @@
+{
+ "BackupFrogAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 0.75
+   },
+   "Bump": {
+    "clip": "Animations/BackupBump",
+    "speed": 0.75
+   },
+   "Charge": {
+    "clip": "Animations/Charge",
+    "speed": 0.75
+   },
+   "Glare": {
+    "clip": "Animations/BackupGlare",
+    "speed": 1
+   },
+   "HeadIdle": {
+    "speed": 1
+   },
+   "Hop": {
+    "clip": "Animations/Hop",
+    "speed": 0.75
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "LongHop": {
+    "clip": "Animations/LongHop",
+    "speed": 0.75
+   },
+   "Ouch": {
+    "clip": "Animations/BackupOuch",
+    "speed": 1
+   },
+   "Spin": {
+    "clip": "Animations/BackupSpin",
+    "speed": 0.75
+   },
+   "Sweat": {
+    "clip": "Animations/BackupSweat",
+    "speed": 1
+   },
+   "TalkNarrow": {
+    "clip": "Animations/BackupTalkNarrow",
+    "speed": 1
+   },
+   "TalkSpecial": {
+    "clip": "Animations/BackupTalkSpecial",
+    "speed": 1
+   },
+   "TalkWide": {
+    "clip": "Animations/BackupTalkWide",
+    "speed": 1
+   }
+  }
+ },
+ "LeaderFrogAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 0.75
+   },
+   "Charge": {
+    "clip": "Animations/Charge",
+    "speed": 0.75
+   },
+   "Hop": {
+    "clip": "Animations/Hop",
+    "speed": 0.75
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "LongHop": {
+    "clip": "Animations/LongHop",
+    "speed": 0.75
+   },
+   "Spin": {
+    "clip": "Animations/LeaderSpin",
+    "speed": 0.75
+   },
+   "TalkNarrow": {
+    "clip": "Animations/LeaderTalkNarrow",
+    "speed": 1
+   },
+   "TalkSpecial": {
+    "clip": "Animations/LeaderTalkSpecial",
+    "speed": 1
+   },
+   "TalkWide": {
+    "clip": "Animations/LeaderTalkWide",
+    "speed": 1
+   }
+  }
+ },
+ "SingerFrogAnim": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Animations/Bop",
+    "speed": 0.75
+   },
+   "Charge": {
+    "clip": "Animations/Charge",
+    "speed": 0.75
+   },
+   "Hop": {
+    "clip": "Animations/Hop",
+    "speed": 0.75
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "LongHop": {
+    "clip": "Animations/LongHop",
+    "speed": 0.75
+   },
+   "Spin": {
+    "clip": "Animations/SingerSpin",
+    "speed": 0.75
+   },
+   "SpinHS": {
+    "clip": "Animations/SingerSpinHS",
+    "speed": 0.75
+   },
+   "TalkNarrow": {
+    "clip": "Animations/SingerTalkNarrow",
+    "speed": 1
+   },
+   "TalkSpecial": {
+    "clip": "Animations/SingerTalkSpecial",
+    "speed": 1
+   },
+   "TalkWide": {
+    "clip": "Animations/SingerTalkWide",
+    "speed": 1
+   }
+  }
+ }
+}
