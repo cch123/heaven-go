@@ -131,6 +131,35 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "game", markers: []string{"dollAnim", "crowdAnim", "bagAnim", "bagCopyAnim", "buttonAnim", "lightsAnim", "topAnim", "barsAnim", "fartAnim", "bagObject"}},
 		},
 	},
+	"fillbots": {
+		dir:    "Fillbots",
+		prefab: "fillbots.prefab",
+		roleFields: []string{
+			"smallBot", "mediumBot", "largeBot", "filler", "conveyerBelt",
+			"blackout", "BGPlane",
+		},
+		refArrayFields:  []string{"gears", "meters", "metersFuel", "fillerRenderer", "otherRenderer"},
+		wantControllers: true,
+		templatePrefabs: []string{
+			"Prefabs/BotSmall.prefab",
+			"Prefabs/BotMedium.prefab",
+			"Prefabs/BotLarge.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"smallBot", "mediumBot", "largeBot", "filler", "gears", "meters",
+				"metersFuel", "impactMaterial", "conveyerBelt", "blackout",
+				"fillerRenderer", "otherRenderer", "BGPlane",
+			}},
+			{name: "bot", markers: []string{
+				"size", "limbFallHeight", "flyDistance", "stackDistanceRate",
+				"fullBody", "legs", "body", "head", "fuelFill", "fillAnim",
+			}, multi: true},
+			{name: "fullBody", markers: []string{
+				"mask", "sprites", "fullBody",
+			}, multi: true},
+		},
+	},
 	"moaiDooWop": {
 		dir:    "MoaiDooWop",
 		prefab: "moaiDooWop.prefab",

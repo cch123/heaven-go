@@ -1,0 +1,9 @@
+{
+ "BGPlane": "BgObjects/White",
+ "blackout": "BgObjects/Black",
+ "conveyerBelt": "BgObjects/Conveyer",
+ "filler": "Filler",
+ "largeBot": "BotSmall",
+ "mediumBot": "BotSmall",
+ "smallBot": "BotSmall"
+}

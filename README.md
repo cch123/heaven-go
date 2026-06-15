@@ -134,6 +134,14 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   wall、dog、floor controller 和所有 `.anim`。原版主体是 MeshRenderer/材质贴图
   的 3D 场景，当前暂用手写 2D billboard 渲染，仍待补 MeshRenderer、材质纹理、
   CameraPivot/FOV 与 ScrollingFloor 材质滚动的完整运行时支持。
+- fillbots：`bop`/small/medium/large/custom/blackout/background appearance/
+  object appearance 已接入，机器人落体、堆叠、传送带哨兵、hold/release 判定、
+  release whiff、explosion、fillErUp 和 OK/miss/arm/water/beep 音效按 C# 时序
+  移植；controller、模板 prefab、FullBody/limb/filler/meter/conveyer 动画已
+  接入。当前模板实例还不能进入 `SceneInst` 的 SpriteMask 合成 pass，因此燃料
+  Fill 用同一 Fill 曲线手写色块近似；`SoundByte.BendUp` 的 water loop 连续升调
+  尚无运行时支持，先保留初始 pitch 循环；FullBody 动画事件驱动的灯罩 mask sprite
+  切换仍待补到模板实例事件系统。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。

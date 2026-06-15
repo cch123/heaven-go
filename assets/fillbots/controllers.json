@@ -1,0 +1,325 @@
+{
+ "Animations/Large/Fill.controller": {
+  "default": "Idle",
+  "states": {
+   "Fill": {
+    "clip": "Animations/Large/Fill",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Large/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Medium/Fill.controller": {
+  "default": "Idle",
+  "states": {
+   "Fill": {
+    "clip": "Animations/Medium/Fill",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Medium/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Animations/Small/Fill.controller": {
+  "default": "Idle",
+  "states": {
+   "Fill": {
+    "clip": "Animations/Small/Fill",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Small/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Conveyer": {
+  "default": "ConveyerIdle",
+  "states": {
+   "ConveyerIdle": {
+    "clip": "Animations/ConveyerIdle",
+    "speed": 1
+   },
+   "Move": {
+    "clip": "Animations/ConveyerMove",
+    "speed": 1
+   }
+  }
+ },
+ "FallingLimb": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animations/Idle",
+    "speed": 1
+   },
+   "Impact": {
+    "clip": "Animations/Impact",
+    "speed": 1
+   }
+  }
+ },
+ "Filler": {
+  "default": "FillerIdle",
+  "states": {
+   "FillerIdle": {
+    "clip": "Animations/Filler/FillerIdle",
+    "speed": 1
+   },
+   "FillerPrepare": {
+    "clip": "Animations/Filler/FillerPrepare",
+    "speed": 1
+   },
+   "HoldBeatLarge": {
+    "clip": "Animations/Filler/Large_HoldBeat",
+    "speed": 1
+   },
+   "HoldBeatMedium": {
+    "clip": "Animations/Filler/Medium_HoldBeat",
+    "speed": 1
+   },
+   "HoldBeatSmall": {
+    "clip": "Animations/Filler/Small_HoldBeat",
+    "speed": 1
+   },
+   "HoldLarge": {
+    "clip": "Animations/Filler/Large_Hold",
+    "speed": 1
+   },
+   "HoldMedium": {
+    "clip": "Animations/Filler/Medium_Hold",
+    "speed": 1
+   },
+   "HoldSmall": {
+    "clip": "Animations/Filler/Small_Hold",
+    "speed": 1
+   },
+   "ReleaseLarge": {
+    "clip": "Animations/Filler/Large_Release",
+    "speed": 1
+   },
+   "ReleaseMedium": {
+    "clip": "Animations/Filler/Medium_Release",
+    "speed": 1
+   },
+   "ReleaseSmall": {
+    "clip": "Animations/Filler/Small_Release",
+    "speed": 1
+   },
+   "ReleaseWhiffLarge": {
+    "clip": "Animations/Filler/Large_ReleaseWhiff",
+    "speed": 1
+   },
+   "ReleaseWhiffMedium": {
+    "clip": "Animations/Filler/Medium_ReleaseWhiff",
+    "speed": 1
+   },
+   "ReleaseWhiffSmall": {
+    "clip": "Animations/Filler/Small_ReleaseWhiff",
+    "speed": 1
+   }
+  }
+ },
+ "LargeBot": {
+  "default": "IdleBody",
+  "states": {
+   "Beyond": {
+    "clip": "Animations/Large/Beyond",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Beyond2",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Beyond2": {
+    "clip": "Animations/Large/Beyond2",
+    "speed": 1
+   },
+   "Dead": {
+    "clip": "Animations/Large/Dead",
+    "speed": 1
+   },
+   "Fly": {
+    "clip": "Animations/Large/Fly",
+    "speed": 1
+   },
+   "Hold": {
+    "clip": "Animations/Large/Hold",
+    "speed": 1
+   },
+   "HoldBarely": {
+    "clip": "Animations/Large/HoldBarely",
+    "speed": 1
+   },
+   "HoldBeat": {
+    "clip": "Animations/Large/HoldBeat",
+    "speed": 1
+   },
+   "IdleBody": {
+    "clip": "Animations/Large/IdleBody",
+    "speed": 1
+   },
+   "Release": {
+    "clip": "Animations/Large/Release",
+    "speed": 1
+   },
+   "ReleaseEarly": {
+    "clip": "Animations/Large/ReleaseEarly",
+    "speed": 1
+   },
+   "ReleaseLate": {
+    "clip": "Animations/Large/ReleaseLate",
+    "speed": 1
+   },
+   "Success": {
+    "clip": "Animations/Large/Success",
+    "speed": 1
+   }
+  }
+ },
+ "MediumBot": {
+  "default": "IdleBody",
+  "states": {
+   "Beyond": {
+    "clip": "Animations/Medium/Beyond",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Beyond2",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Beyond2": {
+    "clip": "Animations/Medium/Beyond2",
+    "speed": 1
+   },
+   "Dead": {
+    "clip": "Animations/Medium/Dead",
+    "speed": 1
+   },
+   "Fly": {
+    "clip": "Animations/Medium/Fly",
+    "speed": 1
+   },
+   "Hold": {
+    "clip": "Animations/Medium/Hold",
+    "speed": 1
+   },
+   "HoldBarely": {
+    "clip": "Animations/Medium/HoldBarely",
+    "speed": 1
+   },
+   "HoldBeat": {
+    "clip": "Animations/Medium/HoldBeat",
+    "speed": 1
+   },
+   "IdleBody": {
+    "clip": "Animations/Medium/IdleBody",
+    "speed": 1
+   },
+   "Release": {
+    "clip": "Animations/Medium/Release",
+    "speed": 1
+   },
+   "ReleaseEarly": {
+    "clip": "Animations/Medium/ReleaseEarly",
+    "speed": 1
+   },
+   "ReleaseLate": {
+    "clip": "Animations/Medium/ReleaseLate",
+    "speed": 1
+   },
+   "Success": {
+    "clip": "Animations/Medium/Success",
+    "speed": 1
+   }
+  }
+ },
+ "Meter": {
+  "default": "Idle",
+  "states": {
+   "Down": {
+    "clip": "Animations/MeterDown",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/MeterIdle",
+    "speed": 1
+   },
+   "Up": {
+    "clip": "Animations/MeterUp",
+    "speed": 1
+   }
+  }
+ },
+ "SmallBot": {
+  "default": "IdleBody",
+  "states": {
+   "Beyond": {
+    "clip": "Animations/Small/Beyond",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Beyond2",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Beyond2": {
+    "clip": "Animations/Small/Beyond2",
+    "speed": 1
+   },
+   "Dead": {
+    "clip": "Animations/Small/Dead",
+    "speed": 1
+   },
+   "Fly": {
+    "clip": "Animations/Small/Fly",
+    "speed": 1
+   },
+   "Hold": {
+    "clip": "Animations/Small/Hold",
+    "speed": 1
+   },
+   "HoldBarely": {
+    "clip": "Animations/Small/HoldBarely",
+    "speed": 1
+   },
+   "HoldBeat": {
+    "clip": "Animations/Small/HoldBeat",
+    "speed": 1
+   },
+   "IdleBody": {
+    "clip": "Animations/Small/IdleBody",
+    "speed": 1
+   },
+   "Release": {
+    "clip": "Animations/Small/Release",
+    "speed": 1
+   },
+   "ReleaseEarly": {
+    "clip": "Animations/Small/ReleaseEarly",
+    "speed": 1
+   },
+   "ReleaseLate": {
+    "clip": "Animations/Small/ReleaseLate",
+    "speed": 1
+   },
+   "Success": {
+    "clip": "Animations/Small/Success",
+    "speed": 1
+   }
+  }
+ }
+}
