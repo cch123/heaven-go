@@ -24,21 +24,22 @@ func (a *App) drawResult(screen *ebiten.Image, white color.RGBA) {
 	a.text(screen, a.result.Header, a.faceMid, 82, 94, color.RGBA{255, 252, 242, 255}, false)
 
 	if a.result.TwoMessage {
-		if a.resultT >= resultMsgTime {
+		if a.resultT >= resultMessage1Time {
 			a.drawWrappedText(screen, a.result.Message1, a.faceMid, 90, 155, 455, 30, ink)
 		}
-		if a.resultT >= resultMsg2Time {
+		if a.resultT >= resultMessage2Time {
 			a.drawWrappedText(screen, a.result.Message2, a.faceMid, 90, 235, 455, 30, ink)
 		}
-	} else if a.resultT >= resultMsgTime {
+	} else if a.resultT >= resultMessage0Time {
 		a.drawWrappedText(screen, a.result.Message0, a.faceMid, 90, 178, 455, 32, ink)
 	}
 
-	scoreShown := a.result.Score
+	scoreShown := clamp01(a.result.Score)
+	barDone := a.resultBarDoneTime()
 	if a.resultT < resultBarStart {
 		scoreShown = 0
-	} else if a.resultT < resultBarStart+resultBarDur {
-		scoreShown *= (a.resultT - resultBarStart) / resultBarDur
+	} else if a.resultT < barDone {
+		scoreShown *= (a.resultT - resultBarStart) / (barDone - resultBarStart)
 	}
 	barColor := resultScoreColor(scoreShown)
 	vector.DrawFilledRect(screen, 95, 388, 508, 32, color.RGBA{42, 38, 48, 220}, false)
@@ -48,7 +49,7 @@ func (a *App) drawResult(screen *ebiten.Image, white color.RGBA) {
 	vector.StrokeLine(screen, 101+float32(496*rankHiThreshold), 390, 101+float32(496*rankHiThreshold), 419, 2, color.RGBA{255, 255, 255, 170}, false)
 	a.text(screen, fmt.Sprintf("%d", int(scoreShown*100)), a.faceBig, 626, 379, barColor, false)
 
-	if a.resultT >= resultRankTime {
+	if a.resultT >= a.resultRankTime() {
 		a.drawRankLogo(screen)
 		if a.result.SubRank {
 			a.text(screen, "...but, just", a.faceMid, 760, 306, dim, true)

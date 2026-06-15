@@ -40,13 +40,13 @@ func (a *App) updateResultAudio() {
 		return
 	}
 	if a.result.TwoMessage {
-		a.playResultOnceAt(resultMsgTime, "message1", "resultMessage2", 1)
-		a.playResultOnceAt(resultMsg2Time, "message2", "resultMessage3", 1)
+		a.playResultOnceAt(resultMessage1Time, "message1", "resultMessage2", 1)
+		a.playResultOnceAt(resultMessage2Time, "message2", "resultMessage3", 1)
 	} else {
-		a.playResultOnceAt(resultMsgTime, "message0", "resultMessage3", 1)
+		a.playResultOnceAt(resultMessage0Time, "message0", "resultMessage3", 1)
 	}
 	a.playResultLoopOnceAt(resultBarStart, "barStart", "resultGauge", 0.85)
-	if a.resultT >= resultBarStart+resultBarDur {
+	if a.resultT >= a.resultBarDoneTime() {
 		if a.fireResultCue("barStop") {
 			a.stopResultAudio()
 			a.playResultSound("resultGaugeStop", 1)
@@ -59,8 +59,8 @@ func (a *App) updateResultAudio() {
 		}
 	}
 	rankSound, rankStart, rankLoop, _ := a.resultRankAudioNames()
-	a.playResultOnceAt(resultRankTime, "rank", rankSound, 1)
-	if a.resultT >= resultRankTime+resultRankMusicWait && a.fireResultCue("rankMusic") {
+	a.playResultOnceAt(a.resultRankTime(), "rank", rankSound, 1)
+	if a.resultT >= a.resultRankMusicTime() && a.fireResultCue("rankMusic") {
 		a.playResultSound(rankStart, 0.9)
 		a.scheduleResultLoop(rankLoop, a.resultT+a.resultSoundDuration(rankStart))
 	}

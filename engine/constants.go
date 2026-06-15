@@ -28,12 +28,14 @@ const (
 )
 
 const (
-	resultMsgTime  = 0.55
-	resultMsg2Time = 1.25
-	resultBarStart = 1.8
-	resultBarDur   = 1.25
-	resultRankTime = 3.45
-	// JudgementManager.WaitAndRank waits 1.5s after the rank sound before
-	// starting the rank jingle/loop music.
+	// JudgementOpen.playable signal times. The bar parameters are serialized
+	// on Judgement.unity's JudgementManager component.
+	resultMessage1Time  = 1.2333333333333325
+	resultMessage0Time  = 1.7333333333333325
+	resultMessage2Time  = 2.2333333333333325
+	resultBarStart      = 3.899999999999999
+	resultBarDuration   = 2.5
+	resultBarRankWait   = 1
 	resultRankMusicWait = 1.5
+	resultEpilogueWait  = 1.5
 )

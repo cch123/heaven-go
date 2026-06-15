@@ -22,15 +22,15 @@ func (a *App) updateResult() error {
 // skips the rest of the result-frame work, matching the old inline state switch.
 func (a *App) advanceResult() bool {
 	if !a.resultEpilogue {
-		if a.resultT < resultRankTime {
-			a.resultT = resultRankTime
+		if a.resultT < a.resultRankTime() {
+			a.resultT = a.resultRankTime()
 			a.skipResultAudioToRank()
 		} else {
 			a.enterResultEpilogue()
 		}
 		return false
 	}
-	if a.resultT > 1.5 {
+	if a.resultT > resultEpilogueWait {
 		a.returnToLevelSelect()
 		return true
 	}

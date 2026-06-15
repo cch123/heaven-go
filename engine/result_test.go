@@ -80,10 +80,10 @@ func TestDrawResultSmoke(t *testing.T) {
 				Score: 0.95, Rank: resultRankHi, Header: "Rhythm League Notes",
 				Message0: "That was great! Really great!", Star: true, NoMiss: true,
 			},
-			resultT:      resultRankTime,
 			resultAssets: loadResultAssets("../assets/common/ratings"),
 		},
 	}
+	app.resultT = app.resultRankTime()
 	setTestFaces(t, app)
 	screen := ebiten.NewImage(ScreenW, ScreenH)
 	app.drawResult(screen, colorWhite())
@@ -155,6 +155,28 @@ func TestResultAudioAssetsDecode(t *testing.T) {
 	} {
 		if len(audio.clips[strings.ToLower(name)]) == 0 {
 			t.Fatalf("missing decoded result audio %s", name)
+		}
+	}
+}
+
+func TestResultTimingMatchesJudgementPlayable(t *testing.T) {
+	app := &App{resultRuntimeState: resultRuntimeState{result: resultSummary{Score: 0.8}}}
+	tests := []struct {
+		name string
+		got  float64
+		want float64
+	}{
+		{name: "message1", got: resultMessage1Time, want: 1.2333333333333325},
+		{name: "message0", got: resultMessage0Time, want: 1.7333333333333325},
+		{name: "message2", got: resultMessage2Time, want: 2.2333333333333325},
+		{name: "barStart", got: resultBarStart, want: 3.899999999999999},
+		{name: "barDone", got: app.resultBarDoneTime(), want: 3.899999999999999 + 0.8*2.5},
+		{name: "rank", got: app.resultRankTime(), want: 3.899999999999999 + 0.8*2.5 + 1},
+		{name: "rankMusic", got: app.resultRankMusicTime(), want: 3.899999999999999 + 0.8*2.5 + 1 + 1.5},
+	}
+	for _, tt := range tests {
+		if math.Abs(tt.got-tt.want) > 1e-9 {
+			t.Fatalf("%s time = %.12f, want %.12f", tt.name, tt.got, tt.want)
 		}
 	}
 }

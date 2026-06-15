@@ -171,8 +171,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   islandSpeed 均已接入运行时；动态天气/鸟群/树/彩虹为按 AirRally.cs 与 prefab
   序列化参数手写的非场景节点实例。
 - Judgement 结算页已接入 Heaven Studio 的评分阈值/分类评价消息、rank 标志图、
-  默认 epilogue 图与结算音效/jingle/循环音乐；原版 `JudgementOpen.playable`
-  的逐信号精确定时尚未完整移植，当前用等价状态推进。
+  默认 epilogue 图与结算音效/jingle/循环音乐；`JudgementOpen.playable` 的
+  Message0/1/2、BarStart 信号时间，以及 `JudgementManager` 的 barDuration/
+  barRankWait/rankMusWait 已按原版参数推进。
 - firstContact：`FirstContact.cs` 的 trailing mistranslation 分支引用
   `firstContact/slightlyFail`，但 HeavenStudio-master 的
   `Assets/Bundled/Games/FirstContact/Sounds` 未包含该音频文件；当前不播放
