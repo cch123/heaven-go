@@ -123,6 +123,11 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   主要动画、平台 guard、爆炸音效与鸟叫已接入；`Explode1/2/3`、`lightning`、
   `waterL/waterR` 仍是手写瞬时效果，尚未按 Unity ParticleSystem 序列化参数
   做逐项复刻。
+- chargingChicken：`input`/`journeyLength`/倒计时泡泡/文本编辑/音乐淡入淡出/
+  背景与视差 appearance/车身与前景色/强制 look/explode 的 action surface 已接入，
+  主 charge、release、blastoff、鼓点 loop、岛实例入场和主要动画可运行；岛屿
+  Collapse/StonePlatform/水花/草屑等 ParticleSystem 与逐石块实例、车材质
+  `_Progress` 连续充能、精确落水/复位物理仍待按 Unity 序列化参数补齐。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
