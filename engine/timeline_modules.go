@@ -4,38 +4,7 @@ import (
 	"fmt"
 	"sort"
 	"strings"
-
-	"github.com/hajimehoshi/ebiten/v2/audio"
-
-	"hsdemo/conductor"
-	"hsdemo/riq"
 )
-
-func (a *App) resetLoadedRiq(r *riq.Riq, player *audio.Player) {
-	if a.player != nil {
-		a.player.Close()
-	}
-
-	a.r, a.bm = r, r.Beatmap
-	a.player = player
-	a.cond = conductor.New(r.Beatmap, player)
-	a.modules = map[string]Module{}
-	a.active = nil
-	a.switches = nil
-	a.actions = nil
-	a.inputs = nil
-	a.scores = nil
-	a.flashes = nil
-	a.camEvts = nil
-	a.musicFades = nil
-	a.viewScales = nil
-	a.fx.reset()
-	a.flt.reset()
-	a.tbx.reset()
-	a.unported = nil
-	a.starBeat, a.endBeat = -1, 0
-	a.resetRunState()
-}
 
 func (a *App) collectUsedGames() map[string]bool {
 	used := map[string]bool{}
