@@ -48,6 +48,7 @@ import (
 	"hsdemo/games/flipperflop"
 	"hsdemo/games/forklifter"
 	"hsdemo/games/frogprincess"
+	"hsdemo/games/fruitbasket"
 	"hsdemo/games/gardendance"
 	"hsdemo/games/gleeclub"
 	"hsdemo/games/holeinone"
@@ -90,6 +91,7 @@ import (
 	"hsdemo/games/tramandpauline"
 	"hsdemo/games/trickclass"
 	"hsdemo/games/tunnel"
+	"hsdemo/games/valiantvolley"
 	"hsdemo/games/wizardswaltz"
 )
 
@@ -172,6 +174,7 @@ func main() {
 	engine.Register("fallingWaffle", fallingwaffle.New)
 	engine.Register("flipperFlop", flipperflop.New)
 	engine.Register("forkLifter", forklifter.New)
+	engine.Register("fruitBasket", fruitbasket.New)
 	engine.Register("frogPrincess", frogprincess.New)
 	engine.Register("gardenDance", gardendance.New)
 	engine.Register("gleeClub", gleeclub.New)
@@ -217,6 +220,7 @@ func main() {
 	engine.Register("showtime", showtime.New)
 	engine.Register("tramAndPauline", tramandpauline.New)
 	engine.Register("tunnel", tunnel.New)
+	engine.Register("valiantVolley", valiantvolley.New)
 	engine.Register("wizardsWaltz", wizardswaltz.New)
 
 	app, err := engine.New(*assetsRoot, *path)

@@ -1,0 +1,1097 @@
+{
+ "components": {
+  "apple": {
+   "path": "Apple",
+   "nums": {
+    "bothSidesRole": 0,
+    "expressionDuration": 0,
+    "missExpression": 0,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0,
+    "side": 0,
+    "startBeat": 0,
+    "successExpression": 0
+   },
+   "refs": {
+    "leftPipe": "Curves/LemonRoll/LeftPipeSpawn",
+    "rightPipe": "Curves/LemonRoll/RightPipeSpawn",
+    "sprite": "Apple/AppleSprite"
+   }
+  },
+  "daydream": {
+   "path": "ThoughtBubble",
+   "nums": {
+    "daydreamType": 0,
+    "fadeOutTime": 0
+   },
+   "refs": {
+    "bubbleAnimator": "ThoughtBubble",
+    "bubbleLRenderer": "ThoughtBubble/BubbleL",
+    "daydreamAnimator": "ThoughtBubble/BubbleL/Thought",
+    "daydreamContainer": "ThoughtBubble/BubbleL/Thought"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "isDaydreaming": 0
+   },
+   "refs": {
+    "applePrefab": "Apple",
+    "catsAnimator": "BG/Cats",
+    "courtneyAnimator": "Courtney",
+    "courtneyExtendedSprite": "Courtney/Extended",
+    "courtneyHoleSprite": "Courtney/Hole",
+    "courtneySprite": "Courtney/Body",
+    "fruitHolder": "FruitHolder",
+    "hoopL": "HoopL",
+    "hoopR": "HoopR",
+    "lemonPrefab": "Lemon",
+    "melonPrefab": "Melon",
+    "thoughtBubblePrefab": "ThoughtBubble"
+   },
+   "lists": {
+    "fruitPaths": [
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "ToRightBasket"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasket/Point 0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasket/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasket/Point 2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 1
+      },
+      "strs": {
+       "name": "ToLeftBasket"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasket/Point 0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasket/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasket/Point 2"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "LemonRollRight"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": -7,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/LeftPipeSpawn"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": 270
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 2,
+          "height": 0,
+          "pos.x": -5.5,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/Point 0"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": 180
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 2,
+          "height": 0,
+          "pos.x": -2,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/Point 1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 2,
+          "height": 0,
+          "pos.x": 2,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/Point 2"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": -180
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 5.5,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/Point 3"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": -360
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 7,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/RightPipeSpawn"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": -450
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "LemonRollLeft"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/RightPipeSpawn"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": -270
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 2,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/Point 3"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": -180
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 2,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/Point 2"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": 0
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 2,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/Point 1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": 180
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/Point 0"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 2
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": 360
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/LemonRoll/LeftPipeSpawn"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1
+            },
+            "strs": {
+             "key": "Easing"
+            }
+           },
+           {
+            "nums": {
+             "value": 450
+            },
+            "strs": {
+             "key": "Rotation"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "ToLeftBasketMelon"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 0.5,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasketMelon/Point 0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2.8,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasketMelon/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasketMelon/Point 2"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasketMelon/Point 3"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "ToRightBasketMelon"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 0.5,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasketMelon/Point 0"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2.8,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasketMelon/Point 1"
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasketMelon/Point 2"
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasketMelon/Point 3"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "ToLeftBasketMiss"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasketMiss/Point 0"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasketMiss/Point 1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasketMiss/Point 2"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "ToRightBasketMiss"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftBasketMiss/Point 0"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 3.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasketMiss/Point 1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightBasketMiss/Point 2"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "ToLeftMiss"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftMiss/Point 0"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftMiss/Point 1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToLeftMiss/Point 2"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "ToRightMiss"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightMiss/Point 0"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightMiss/Point 1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 1,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Curves/ToRightMiss/Point 2"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 1
+            },
+            "strs": {
+             "key": "MissDir"
+            }
+           }
+          ]
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "lemon": {
+   "path": "Lemon",
+   "nums": {
+    "bothSidesRole": 0,
+    "expressionDuration": 0,
+    "missExpression": 0,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0,
+    "side": 0,
+    "startBeat": 0,
+    "successExpression": 0
+   },
+   "refs": {
+    "leftPipe": "Curves/LemonRoll/LeftPipeSpawn",
+    "rightPipe": "Curves/LemonRoll/RightPipeSpawn",
+    "sprite": "Lemon/LemonSprite"
+   }
+  },
+  "melon": {
+   "path": "Melon",
+   "nums": {
+    "expressionDuration": 0,
+    "missExpression": 0,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0,
+    "side": 0,
+    "startBeat": 0,
+    "successExpression": 0
+   },
+   "refs": {
+    "leftPipe": "Curves/LemonRoll/LeftPipeSpawn",
+    "leftPipeAnim": "PipeL",
+    "rightPipe": "Curves/LemonRoll/RightPipeSpawn",
+    "rightPipeAnim": "PipeR",
+    "sprite": "Melon/MelonSprite"
+   }
+  }
+ }
+}

@@ -1,0 +1,14 @@
+{
+ "applePrefab": "Apple",
+ "catsAnimator": "BG/Cats",
+ "courtneyAnimator": "Courtney",
+ "courtneyExtendedSprite": "Courtney/Extended",
+ "courtneyHoleSprite": "Courtney/Hole",
+ "courtneySprite": "Courtney/Body",
+ "fruitHolder": "FruitHolder",
+ "hoopL": "HoopL",
+ "hoopR": "HoopR",
+ "lemonPrefab": "Lemon",
+ "melonPrefab": "Melon",
+ "thoughtBubblePrefab": "ThoughtBubble"
+}

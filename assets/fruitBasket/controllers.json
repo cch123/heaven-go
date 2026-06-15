@@ -1,0 +1,349 @@
+{
+ "Cats": {
+  "default": "catsIdle",
+  "states": {
+   "catsBop": {
+    "clip": "Animations/cats/catsBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "catsIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "catsIdle": {
+    "clip": "Animations/cats/catsIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Courtney": {
+  "default": "idle",
+  "states": {
+   "Cry": {
+    "clip": "Animations/Courtney/cry",
+    "speed": 1
+   },
+   "CryStart": {
+    "clip": "Animations/Courtney/cryFadeIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Cry",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "CryStop": {
+    "clip": "Animations/Courtney/cryFadeOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DaydreamKiss": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamKiss",
+    "speed": 1
+   },
+   "DaydreamKissStart": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamKissFadeIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "DaydreamKiss",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DaydreamKissStop": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamKissFadeOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DaydreamNone": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamNone",
+    "speed": 1
+   },
+   "DaydreamNoneStart": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamNoneFadeIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "DaydreamNone",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DaydreamNoneStop": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamNoneFadeOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DaydreamTongue": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamTongue",
+    "speed": 1
+   },
+   "DaydreamTongueStart": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamTongueFadeIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "DaydreamTongue",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DaydreamTongueStop": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamToungeFadeOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DaydreamWorried": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamWorried",
+    "speed": 1
+   },
+   "DaydreamWorriedStart": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamWorriedFadeIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "DaydreamWorried",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "DaydreamWorriedStop": {
+    "clip": "Animations/Courtney/DaydreamExpressions/daydreamWorriedFadeOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Happy": {
+    "clip": "Animations/Courtney/laugh",
+    "speed": 1
+   },
+   "HappyStart": {
+    "clip": "Animations/Courtney/laughFadeIn",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Happy",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "HappyStop": {
+    "clip": "Animations/Courtney/laughFadeOut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "fruit_hit": {
+    "clip": "Animations/Courtney/fruit_hit",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "idle": {
+    "clip": "Animations/Courtney/idle",
+    "speed": 1
+   },
+   "miss": {
+    "clip": "Animations/Courtney/miss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "test": {
+    "speed": 1
+   },
+   "whiff": {
+    "clip": "Animations/Courtney/whiff",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Hoop": {
+  "default": "hoop",
+  "states": {
+   "hoop": {
+    "clip": "Animations/hoop/hoopIdle",
+    "speed": 1
+   },
+   "hoopScore": {
+    "clip": "Animations/hoop/hoopScore",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "hoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "hoopScoreMelon": {
+    "clip": "Animations/hoop/hoopScoreMelon",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "hoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "hoopShake": {
+    "speed": 1
+   }
+  }
+ },
+ "Mouth": {
+  "default": "face_just",
+  "states": {
+   "face_just": {
+    "clip": "Animations/Courtney/face_just",
+    "speed": 1
+   }
+  }
+ },
+ "PipeL": {
+  "default": "pipeIdle",
+  "states": {
+   "pipeFlash": {
+    "clip": "Animations/pipe/pipeFlash",
+    "speed": 1
+   },
+   "pipeIdle": {
+    "clip": "Animations/pipe/pipeIdle",
+    "speed": 1
+   }
+  }
+ },
+ "PipeR": {
+  "default": "pipeIdle",
+  "states": {
+   "pipeFlash": {
+    "clip": "Animations/pipe/pipeFlash",
+    "speed": 1
+   },
+   "pipeIdle": {
+    "clip": "Animations/pipe/pipeIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Thought": {
+  "default": "burger",
+  "states": {
+   "BurgerAndDrink": {
+    "clip": "Animations/daydreams/BurgerAndDrink",
+    "speed": 1
+   },
+   "Dog": {
+    "clip": "Animations/daydreams/Dog",
+    "speed": 1
+   },
+   "Girl": {
+    "clip": "Animations/daydreams/Girl",
+    "speed": 1
+   },
+   "Panda": {
+    "clip": "Animations/daydreams/Panda",
+    "speed": 1
+   },
+   "Skateboard": {
+    "clip": "Animations/daydreams/Skateboard",
+    "speed": 1
+   },
+   "Spider": {
+    "clip": "Animations/daydreams/Spider",
+    "speed": 1
+   },
+   "TicTacToe": {
+    "clip": "Animations/daydreams/TicTacToe",
+    "speed": 1
+   },
+   "burger": {
+    "clip": "Animations/daydreams/Burger",
+    "speed": 1
+   }
+  }
+ },
+ "ThoughtBubble": {
+  "default": "New State",
+  "states": {
+   "New State": {
+    "speed": 1
+   },
+   "thoughtBubble": {
+    "clip": "Animations/thoughtBubble/thoughtBubble",
+    "speed": 1
+   },
+   "thoughtBubbleFadeIn": {
+    "clip": "Animations/thoughtBubble/thoughtBubbleFadeIn",
+    "speed": 1
+   },
+   "thoughtBubbleFadeOut": {
+    "clip": "Animations/thoughtBubble/thoughtBubbleFadeOut",
+    "speed": 1
+   }
+  }
+ }
+}
