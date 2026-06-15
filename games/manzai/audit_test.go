@@ -56,6 +56,14 @@ func TestManzaiControllersClipsAndPaths(t *testing.T) {
 
 	nodes := nodeSet(as)
 	covered := map[string]bool{}
+	looseClips := map[string]string{
+		// CrowdCheerLoop.anim is exported next to the live crowd clips, but
+		// CrowdAnim.controller has no state for it and Manzai.cs only dispatches
+		// the CrowdAnimationList enum names Idle/Bop/Cheer/Uproar/Angry/Jump.
+		// Keep its curves path-checked so a future extraction change cannot
+		// silently drop the unused loop asset.
+		"Animations/Crowd/CrowdCheerLoop": "Crowd",
+	}
 	for root, ctrlName := range as.Animators {
 		for stName, st := range as.Controllers[ctrlName].States {
 			if st.Clip == "" {
@@ -70,6 +78,16 @@ func TestManzaiControllersClipsAndPaths(t *testing.T) {
 			checkAnimPaths(t, a, st.Clip, root, nodes)
 			checkSupportedAttrs(t, a, st.Clip)
 		}
+	}
+	for clip, root := range looseClips {
+		covered[clip] = true
+		a := as.Anims[clip]
+		if a == nil {
+			t.Errorf("loose clip %q missing", clip)
+			continue
+		}
+		checkAnimPaths(t, a, clip, root, nodes)
+		checkSupportedAttrs(t, a, clip)
 	}
 	for name := range as.Anims {
 		if strings.Contains(name, "/") && !covered[name] {

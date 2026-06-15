@@ -103,7 +103,9 @@ func TestControllersAndAnimationPaths(t *testing.T) {
 		"HordeDemon":   {"HordeIdle", "HordeSummon", "HordeSummonFinal", "HordeRush", "HordeBite"},
 		"Lightning":    {"LightningStrike1", "LightningStrike2", "LightningStrike3"},
 		"SamuraiFlash": {"Flash"},
-		"Windmill":     {"WindmillIdle", "WindmillSpin"},
+		// Unity's Windmill.controller state is named WindmillSpin2 even though
+		// it binds the WindmillIdle clip; keep the state name literal.
+		"Windmill": {"WindmillIdle", "WindmillSpin2"},
 	} {
 		c := as.Controllers[ctrl]
 		if c.States == nil {
