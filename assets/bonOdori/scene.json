@@ -1,0 +1,4123 @@
+{
+ "nodes": [
+  {
+   "name": "bonOdori",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    -0.3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line",
+   "path": "Line",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line1",
+   "path": "Line/Line1",
+   "parent": 1,
+   "pos": [
+    62.84,
+    3.345
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line2",
+   "path": "Line/Line2",
+   "parent": 1,
+   "pos": [
+    64.65,
+    1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line3",
+   "path": "Line/Line3",
+   "parent": 1,
+   "pos": [
+    66.21,
+    0.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line4",
+   "path": "Line/Line4",
+   "parent": 1,
+   "pos": [
+    67.75,
+    -1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line5",
+   "path": "Line/Line5",
+   "parent": 1,
+   "pos": [
+    69.19,
+    -2.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line1Blue",
+   "path": "Line/Line1Blue",
+   "parent": 1,
+   "pos": [
+    62.84,
+    3.345
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line2Blue",
+   "path": "Line/Line2Blue",
+   "parent": 1,
+   "pos": [
+    64.65,
+    1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line3Blue",
+   "path": "Line/Line3Blue",
+   "parent": 1,
+   "pos": [
+    66.21,
+    0.36
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line4Blue",
+   "path": "Line/Line4Blue",
+   "parent": 1,
+   "pos": [
+    67.75,
+    -1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Line5Blue",
+   "path": "Line/Line5Blue",
+   "parent": 1,
+   "pos": [
+    69.19,
+    -2.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    7,
+    7
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    7.401,
+    6.3507
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.4,
+    1.56
+   ]
+  },
+  {
+   "name": "Left Rope",
+   "path": "BG/Left Rope",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rope1",
+   "path": "BG/Left Rope/Rope1",
+   "parent": 13,
+   "pos": [
+    -0.8134,
+    0.608
+   ],
+   "z": -0.0995,
+   "rotZ": 0,
+   "scale": [
+    0.08807207,
+    0.074279174
+   ],
+   "sprite": "BonOdoriBG_0",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.49,
+    9
+   ]
+  },
+  {
+   "name": "LightSmall1",
+   "path": "BG/Left Rope/LightSmall1",
+   "parent": 13,
+   "pos": [
+    -0.7722,
+    0.455
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.0584766,
+    0.0584766
+   ],
+   "sprite": "BonOdoriBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.86
+   ]
+  },
+  {
+   "name": "LightSmall2",
+   "path": "BG/Left Rope/LightSmall2",
+   "parent": 13,
+   "pos": [
+    -0.7722,
+    0.67199993
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.0584766,
+    0.0584766
+   ],
+   "sprite": "BonOdoriBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.86
+   ]
+  },
+  {
+   "name": "LightSmall3",
+   "path": "BG/Left Rope/LightSmall3",
+   "parent": 13,
+   "pos": [
+    -0.6356999,
+    0.692
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.0584766,
+    0.0584766
+   ],
+   "sprite": "BonOdoriBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.86
+   ]
+  },
+  {
+   "name": "LightSmall4",
+   "path": "BG/Left Rope/LightSmall4",
+   "parent": 13,
+   "pos": [
+    -0.5028,
+    0.72099996
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.0584766,
+    0.0584766
+   ],
+   "sprite": "BonOdoriBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.86
+   ]
+  },
+  {
+   "name": "LightMedium1",
+   "path": "BG/Left Rope/LightMedium1",
+   "parent": 13,
+   "pos": [
+    -0.67102,
+    0.403
+   ],
+   "z": -0.1099,
+   "rotZ": 0,
+   "scale": [
+    0.055434473,
+    0.066207044
+   ],
+   "sprite": "bondoriback_2_lamp2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.77,
+    3.53
+   ]
+  },
+  {
+   "name": "LightMedium2",
+   "path": "BG/Left Rope/LightMedium2",
+   "parent": 13,
+   "pos": [
+    -0.5361,
+    0.457
+   ],
+   "z": -0.1099,
+   "rotZ": 0,
+   "scale": [
+    0.05543447,
+    0.066207044
+   ],
+   "sprite": "bondoriback_2_lamp2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.77,
+    3.53
+   ]
+  },
+  {
+   "name": "LightMedium3",
+   "path": "BG/Left Rope/LightMedium3",
+   "parent": 13,
+   "pos": [
+    -0.1976,
+    0.53
+   ],
+   "z": -0.1099,
+   "rotZ": 0,
+   "scale": [
+    0.05543447,
+    0.066207044
+   ],
+   "sprite": "bondoriback_2_lamp2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.77,
+    3.53
+   ]
+  },
+  {
+   "name": "LightBig1",
+   "path": "BG/Left Rope/LightBig1",
+   "parent": 13,
+   "pos": [
+    -0.3717,
+    0.628
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.056639913,
+    0.06606307
+   ],
+   "sprite": "BonOdoriBG_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.64,
+    5.06
+   ]
+  },
+  {
+   "name": "LightBig2",
+   "path": "BG/Left Rope/LightBig2",
+   "parent": 13,
+   "pos": [
+    -0.912,
+    0.526
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.056639913,
+    0.06606307
+   ],
+   "sprite": "BonOdoriBG_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.64,
+    5.06
+   ]
+  },
+  {
+   "name": "Right Rope",
+   "path": "BG/Right Rope",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Rope1 (1)",
+   "path": "BG/Right Rope/Rope1 (1)",
+   "parent": 24,
+   "pos": [
+    0.8134,
+    0.608
+   ],
+   "z": -0.0995,
+   "rotZ": 0,
+   "scale": [
+    0.08807207,
+    0.074279174
+   ],
+   "sprite": "BonOdoriBG_0",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    13.49,
+    9
+   ]
+  },
+  {
+   "name": "LightSmall1 (1)",
+   "path": "BG/Right Rope/LightSmall1 (1)",
+   "parent": 24,
+   "pos": [
+    0.7722,
+    0.455
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.0584766,
+    0.0584766
+   ],
+   "sprite": "BonOdoriBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.86
+   ]
+  },
+  {
+   "name": "LightSmall2 (1)",
+   "path": "BG/Right Rope/LightSmall2 (1)",
+   "parent": 24,
+   "pos": [
+    0.7722,
+    0.67199993
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.0584766,
+    0.0584766
+   ],
+   "sprite": "BonOdoriBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.86
+   ]
+  },
+  {
+   "name": "LightSmall3 (1)",
+   "path": "BG/Right Rope/LightSmall3 (1)",
+   "parent": 24,
+   "pos": [
+    0.6356999,
+    0.692
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.0584766,
+    0.0584766
+   ],
+   "sprite": "BonOdoriBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.86
+   ]
+  },
+  {
+   "name": "LightSmall4 (1)",
+   "path": "BG/Right Rope/LightSmall4 (1)",
+   "parent": 24,
+   "pos": [
+    0.5028,
+    0.72099996
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.0584766,
+    0.0584766
+   ],
+   "sprite": "BonOdoriBG_9",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.86
+   ]
+  },
+  {
+   "name": "LightMedium1 (1)",
+   "path": "BG/Right Rope/LightMedium1 (1)",
+   "parent": 24,
+   "pos": [
+    0.67102,
+    0.403
+   ],
+   "z": -0.1099,
+   "rotZ": 0,
+   "scale": [
+    0.055434473,
+    0.066207044
+   ],
+   "sprite": "bondoriback_2_lamp2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.77,
+    3.53
+   ]
+  },
+  {
+   "name": "LightMedium2 (1)",
+   "path": "BG/Right Rope/LightMedium2 (1)",
+   "parent": 24,
+   "pos": [
+    0.5361,
+    0.457
+   ],
+   "z": -0.1099,
+   "rotZ": 0,
+   "scale": [
+    0.05543447,
+    0.066207044
+   ],
+   "sprite": "bondoriback_2_lamp2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.77,
+    3.53
+   ]
+  },
+  {
+   "name": "LightMedium3 (1)",
+   "path": "BG/Right Rope/LightMedium3 (1)",
+   "parent": 24,
+   "pos": [
+    0.1976,
+    0.53
+   ],
+   "z": -0.1099,
+   "rotZ": 0,
+   "scale": [
+    0.05543447,
+    0.066207044
+   ],
+   "sprite": "bondoriback_2_lamp2",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.77,
+    3.53
+   ]
+  },
+  {
+   "name": "LightBig1 (1)",
+   "path": "BG/Right Rope/LightBig1 (1)",
+   "parent": 24,
+   "pos": [
+    0.3717,
+    0.628
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.056639913,
+    0.06606307
+   ],
+   "sprite": "BonOdoriBG_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.64,
+    5.06
+   ]
+  },
+  {
+   "name": "LightBig2 (1)",
+   "path": "BG/Right Rope/LightBig2 (1)",
+   "parent": 24,
+   "pos": [
+    0.912,
+    0.526
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.056639913,
+    0.06606307
+   ],
+   "sprite": "BonOdoriBG_7",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.64,
+    5.06
+   ]
+  },
+  {
+   "name": "Stars",
+   "path": "BG/Stars",
+   "parent": 12,
+   "pos": [
+    0.19456828,
+    0.7211803
+   ],
+   "z": -0.09948612,
+   "rotZ": 0,
+   "scale": [
+    0.16030268,
+    0.18681407
+   ],
+   "sprite": "bondoriback_2_stars",
+   "order": -14,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    25.8,
+    21.36
+   ]
+  },
+  {
+   "name": "Floor",
+   "path": "BG/Floor",
+   "parent": 12,
+   "pos": [
+    -0.026064046,
+    -0.75
+   ],
+   "rotZ": 0,
+   "scale": [
+    3,
+    0.3190706
+   ],
+   "sprite": "BonOdoriBGV2_18",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.91,
+    2.05
+   ]
+  },
+  {
+   "name": "Sky",
+   "path": "BG/Sky",
+   "parent": 12,
+   "pos": [
+    0,
+    -0.042
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.4411252,
+    0.09377054
+   ],
+   "sprite": "BonOdoriBGV2_2",
+   "order": -15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.44,
+    18.45
+   ]
+  },
+  {
+   "name": "Tower",
+   "path": "BG/Tower",
+   "parent": 12,
+   "pos": [
+    0,
+    0.19533
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.06329493,
+    0.074336454
+   ],
+   "sprite": "bondoriback_2_tower",
+   "order": -2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.12,
+    19.29
+   ]
+  },
+  {
+   "name": "Ropes",
+   "path": "BG/Ropes",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.13511688,
+    0.15746295
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BonOdoriBGV2_0",
+   "path": "BG/Ropes/BonOdoriBGV2_0",
+   "parent": 39,
+   "pos": [
+    -5.13,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.43431,
+    0.43431
+   ],
+   "sprite": "BonOdoriBGV2_0",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.5,
+    11.56
+   ]
+  },
+  {
+   "name": "BonOdoriBGV2_0 (1)",
+   "path": "BG/Ropes/BonOdoriBGV2_0 (1)",
+   "parent": 39,
+   "pos": [
+    5.13,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.43431,
+    0.43431
+   ],
+   "sprite": "BonOdoriBGV2_0",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.5,
+    11.56
+   ]
+  },
+  {
+   "name": "BonOdoriBGV2_0 (2)",
+   "path": "BG/Ropes/BonOdoriBGV2_0 (2)",
+   "parent": 39,
+   "pos": [
+    -13.148,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.43431,
+    0.43431
+   ],
+   "sprite": "BonOdoriBGV2_0",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.5,
+    11.56
+   ]
+  },
+  {
+   "name": "BonOdoriBGV2_0 (3)",
+   "path": "BG/Ropes/BonOdoriBGV2_0 (3)",
+   "parent": 39,
+   "pos": [
+    13.155,
+    2.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    -0.43431,
+    0.43431
+   ],
+   "sprite": "BonOdoriBGV2_0",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    18.5,
+    11.56
+   ]
+  },
+  {
+   "name": "Tower",
+   "path": "BG/Tower",
+   "parent": 12,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BonOdoriBG_2",
+   "path": "BG/Tower/BonOdoriBG_2",
+   "parent": 44,
+   "pos": [
+    0,
+    0.706
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.06812827,
+    0.07939554
+   ],
+   "sprite": "BonOdoriBGV2_3",
+   "order": -3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    9.06,
+    3.281424
+   ]
+  },
+  {
+   "name": "BonOdoriBG_4",
+   "path": "BG/Tower/BonOdoriBG_4",
+   "parent": 44,
+   "pos": [
+    0,
+    0.2394391
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.06273727,
+    0.07311298
+   ],
+   "sprite": "BonOdoriBGV2_5",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10.86,
+    10.87472
+   ]
+  },
+  {
+   "name": "BonOdoriBG_6",
+   "path": "BG/Tower/BonOdoriBG_6",
+   "parent": 44,
+   "pos": [
+    0,
+    -0.16956091
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.060262013,
+    0.070228346
+   ],
+   "sprite": "BonOdoriBGV2_15",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    8.9,
+    7.703343
+   ]
+  },
+  {
+   "name": "BonOdoriBGV2_16",
+   "path": "BG/Tower/BonOdoriBGV2_16",
+   "parent": 44,
+   "pos": [
+    0,
+    -0.46136647
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.051088806,
+    0.059538044
+   ],
+   "sprite": "BonOdoriBGV2_16",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.59,
+    0.65
+   ]
+  },
+  {
+   "name": "Square",
+   "path": "Square",
+   "parent": 0,
+   "pos": [
+    -1.0778,
+    -0.1902
+   ],
+   "rotZ": 0,
+   "scale": [
+    32.319553,
+    19.977827
+   ],
+   "order": 499,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Player",
+   "path": "Player",
+   "parent": 0,
+   "pos": [
+    4.935997,
+    -2.024
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3333333,
+    0.3333333
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.42,
+    0.89
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayer"
+  },
+  {
+   "name": "ClothingRight",
+   "path": "Player/ClothingRight",
+   "parent": 50,
+   "pos": [
+    1.9728975,
+    1.8032906
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorirealer_42",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerArms"
+  },
+  {
+   "name": "ClothingLeft",
+   "path": "Player/ClothingLeft",
+   "parent": 50,
+   "pos": [
+    -2.0906963,
+    1.6233087
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorirealer_42",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerArms"
+  },
+  {
+   "name": "FootRight",
+   "path": "Player/FootRight",
+   "parent": 50,
+   "pos": [
+    0.955,
+    -5.283
+   ],
+   "rotZ": -0.014319277733570697,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "odorireal_26",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2,
+    0.28
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerFeet"
+  },
+  {
+   "name": "FootLeft",
+   "path": "Player/FootLeft",
+   "parent": 50,
+   "pos": [
+    -0.9468107,
+    -5.283
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "sprite": "odorireal_26",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.18,
+    0.28
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerFeet"
+  },
+  {
+   "name": "Head",
+   "path": "Player/Head",
+   "parent": 50,
+   "pos": [
+    0.0040946305,
+    6.2428465
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorireal_32",
+   "order": 20,
+   "color": [
+    0.148332,
+    1,
+    0,
+    0
+   ],
+   "size": [
+    0.84,
+    0.44
+   ]
+  },
+  {
+   "name": "RealHead",
+   "path": "Player/Head/RealHead",
+   "parent": 55,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_32",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.44
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Player/Head/Face",
+   "parent": 55,
+   "pos": [
+    1.4749775,
+    -4.5568438
+   ],
+   "z": -0.001865613,
+   "rotZ": 0,
+   "scale": [
+    3.0003002,
+    3.0003002
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RealFace",
+   "path": "Player/Head/Face/RealFace",
+   "parent": 57,
+   "pos": [
+    -0.49161002,
+    1.2025142
+   ],
+   "z": 0.0060041025,
+   "rotZ": 0,
+   "scale": [
+    0.3333,
+    0.3333
+   ],
+   "sprite": "odorireal_7",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.26,
+    0.2
+   ]
+  },
+  {
+   "name": "Glasses",
+   "path": "Player/Head/Glasses",
+   "parent": 55,
+   "pos": [
+    0,
+    -0.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_9",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.31,
+    0.23
+   ]
+  },
+  {
+   "name": "HandLeft",
+   "path": "Player/HandLeft",
+   "parent": 50,
+   "pos": [
+    -3.3855667,
+    -0.49647915
+   ],
+   "rotZ": 0.6544983004967078,
+   "scale": [
+    1.09989,
+    0.99990004
+   ],
+   "sprite": "odorireal_48",
+   "order": 5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.21
+   ]
+  },
+  {
+   "name": "HandRight",
+   "path": "Player/HandRight",
+   "parent": 50,
+   "pos": [
+    3.2837667,
+    -0.47648108
+   ],
+   "rotZ": -0.6544984898827243,
+   "scale": [
+    1.0998899,
+    0.9999
+   ],
+   "sprite": "odorireal_48",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.21
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "Player/Neck",
+   "parent": 50,
+   "pos": [
+    0,
+    3.933
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_51",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.8
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Player/Body",
+   "parent": 50,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorirealer_52",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.38,
+    8.94
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayer"
+  },
+  {
+   "name": "Flower",
+   "path": "Player/Body/Flower",
+   "parent": 63,
+   "pos": [
+    0.547,
+    -1.132
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerFlower"
+  },
+  {
+   "name": "Flower (1)",
+   "path": "Player/Body/Flower (1)",
+   "parent": 63,
+   "pos": [
+    -0.74,
+    -2.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerFlower"
+  },
+  {
+   "name": "Flower (2)",
+   "path": "Player/Body/Flower (2)",
+   "parent": 63,
+   "pos": [
+    0.561,
+    -3.223
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerFlower"
+  },
+  {
+   "name": "Flower (3)",
+   "path": "Player/Body/Flower (3)",
+   "parent": 63,
+   "pos": [
+    1.232,
+    0.914
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerFlower"
+  },
+  {
+   "name": "Flower (4)",
+   "path": "Player/Body/Flower (4)",
+   "parent": 63,
+   "pos": [
+    -1.165,
+    0.926
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerFlower"
+  },
+  {
+   "name": "Flower (5)",
+   "path": "Player/Body/Flower (5)",
+   "parent": 63,
+   "pos": [
+    0.7,
+    2.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayerFlower"
+  },
+  {
+   "name": "Circle",
+   "path": "Player/Circle",
+   "parent": 50,
+   "pos": [
+    0,
+    -6
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    2
+   ],
+   "order": -1,
+   "color": [
+    0.65882355,
+    0.5372549,
+    0.41960785,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "Player/FX",
+   "parent": 50,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FX Left",
+   "path": "Player/FX/FX Left",
+   "parent": 71,
+   "pos": [
+    -1.4000001,
+    3.5249999
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    1.7272198,
+    1.7272198
+   ],
+   "sprite": "odorirealer_83",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.04,
+    1
+   ]
+  },
+  {
+   "name": "FX Right",
+   "path": "Player/FX/FX Right",
+   "parent": 71,
+   "pos": [
+    1.4,
+    3.5249999
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    1.7272198,
+    1.7272198
+   ],
+   "sprite": "odorirealer_83",
+   "order": 25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.04,
+    1
+   ]
+  },
+  {
+   "name": "CPU1",
+   "path": "CPU1",
+   "parent": 0,
+   "pos": [
+    -4.936,
+    -2.024
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33333334,
+    0.33333334
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.78,
+    1.02
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayer"
+  },
+  {
+   "name": "ClothingRight",
+   "path": "CPU1/ClothingRight",
+   "parent": 74,
+   "pos": [
+    1.9728975,
+    1.8032906
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorirealer_42",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "bonOdoriArmsCPU1"
+  },
+  {
+   "name": "ClothingLeft",
+   "path": "CPU1/ClothingLeft",
+   "parent": 74,
+   "pos": [
+    -2.0906963,
+    1.6233087
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorirealer_42",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "bonOdoriArmsCPU1"
+  },
+  {
+   "name": "FootRight",
+   "path": "CPU1/FootRight",
+   "parent": 74,
+   "pos": [
+    0.955,
+    -5.283
+   ],
+   "rotZ": -0.014319277733570697,
+   "scale": [
+    0.99990004,
+    0.99990004
+   ],
+   "sprite": "odorireal_24",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2,
+    0.28
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFeetCPU1"
+  },
+  {
+   "name": "FootLeft",
+   "path": "CPU1/FootLeft",
+   "parent": 74,
+   "pos": [
+    -0.9468107,
+    -5.283
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorireal_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.18,
+    0.28
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFeetCPU1"
+  },
+  {
+   "name": "HandLeft",
+   "path": "CPU1/HandLeft",
+   "parent": 74,
+   "pos": [
+    -3.3855667,
+    -0.49647915
+   ],
+   "rotZ": 0.6686357039465075,
+   "scale": [
+    1.09989,
+    0.99990004
+   ],
+   "sprite": "odorireal_48",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.21
+   ]
+  },
+  {
+   "name": "HandRight",
+   "path": "CPU1/HandRight",
+   "parent": 74,
+   "pos": [
+    3.2837667,
+    -0.47648108
+   ],
+   "rotZ": -0.6686355643404037,
+   "scale": [
+    1.0998899,
+    0.9999
+   ],
+   "sprite": "odorireal_48",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.21
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "CPU1/Neck",
+   "parent": 74,
+   "pos": [
+    0,
+    3.933
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_51",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.8
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "CPU1/FX",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FX Left",
+   "path": "CPU1/FX/FX Left",
+   "parent": 82,
+   "pos": [
+    -1.4000001,
+    3.5249999
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    1.7272198,
+    1.7272198
+   ],
+   "sprite": "odorirealer_83",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.04,
+    1
+   ]
+  },
+  {
+   "name": "FX Right",
+   "path": "CPU1/FX/FX Right",
+   "parent": 82,
+   "pos": [
+    1.4,
+    3.5249999
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    1.7272198,
+    1.7272198
+   ],
+   "sprite": "odorirealer_83",
+   "order": 25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.04,
+    1
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "CPU1/Body",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorirealer_52",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.38,
+    8.94
+   ],
+   "mapped": true,
+   "mat": "bonOdoriCPU1"
+  },
+  {
+   "name": "Flower",
+   "path": "CPU1/Body/Flower",
+   "parent": 85,
+   "pos": [
+    0.547,
+    -1.132
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU1"
+  },
+  {
+   "name": "Flower (1)",
+   "path": "CPU1/Body/Flower (1)",
+   "parent": 85,
+   "pos": [
+    -0.74,
+    -2.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU1"
+  },
+  {
+   "name": "Flower (2)",
+   "path": "CPU1/Body/Flower (2)",
+   "parent": 85,
+   "pos": [
+    0.561,
+    -3.223
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU1"
+  },
+  {
+   "name": "Flower (3)",
+   "path": "CPU1/Body/Flower (3)",
+   "parent": 85,
+   "pos": [
+    2.064,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU1"
+  },
+  {
+   "name": "Flower (4)",
+   "path": "CPU1/Body/Flower (4)",
+   "parent": 85,
+   "pos": [
+    -2.05,
+    0.583
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU1"
+  },
+  {
+   "name": "Flower (5)",
+   "path": "CPU1/Body/Flower (5)",
+   "parent": 85,
+   "pos": [
+    0.75,
+    2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU1"
+  },
+  {
+   "name": "Head",
+   "path": "CPU1/Head",
+   "parent": 74,
+   "pos": [
+    0,
+    6.32
+   ],
+   "z": 0.018446082,
+   "rotZ": 0,
+   "scale": [
+    3,
+    3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RealHead",
+   "path": "CPU1/Head/RealHead",
+   "parent": 92,
+   "pos": [
+    0.123333335,
+    -0.27
+   ],
+   "z": -0.006148694,
+   "rotZ": 0,
+   "scale": [
+    0.3333,
+    0.3333
+   ],
+   "sprite": "odorireal_29",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.44
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "CPU1/Head/Face",
+   "parent": 92,
+   "pos": [
+    0,
+    -2.1103334
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RealFace",
+   "path": "CPU1/Head/Face/RealFace",
+   "parent": 94,
+   "pos": [
+    0.0013648769,
+    1.75
+   ],
+   "z": -0.006148694,
+   "rotZ": 0,
+   "scale": [
+    0.3333,
+    0.3333
+   ],
+   "sprite": "odorireal_0",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.26,
+    0.2
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "CPU1/Circle",
+   "parent": 74,
+   "pos": [
+    0,
+    -6
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    2
+   ],
+   "order": -1,
+   "color": [
+    0.65882355,
+    0.5372549,
+    0.41960785,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CPU2",
+   "path": "CPU2",
+   "parent": 0,
+   "pos": [
+    -1.645333,
+    -2.024
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33333334,
+    0.33333334
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.42,
+    0.89
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayer"
+  },
+  {
+   "name": "ClothingRight",
+   "path": "CPU2/ClothingRight",
+   "parent": 97,
+   "pos": [
+    1.9728975,
+    1.8032906
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorirealer_42",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "bonOdoriArmsCPU2"
+  },
+  {
+   "name": "ClothingLeft",
+   "path": "CPU2/ClothingLeft",
+   "parent": 97,
+   "pos": [
+    -2.0906963,
+    1.6233087
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorirealer_42",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "bonOdoriArmsCPU2"
+  },
+  {
+   "name": "FootRight",
+   "path": "CPU2/FootRight",
+   "parent": 97,
+   "pos": [
+    0.955,
+    -5.283
+   ],
+   "rotZ": -0.014319277733570697,
+   "scale": [
+    0.99990004,
+    0.99990004
+   ],
+   "sprite": "odorireal_24",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2,
+    0.28
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFeetCPU2"
+  },
+  {
+   "name": "FootLeft",
+   "path": "CPU2/FootLeft",
+   "parent": 97,
+   "pos": [
+    -0.9468107,
+    -5.283
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorireal_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.18,
+    0.28
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFeetCPU2"
+  },
+  {
+   "name": "HandLeft",
+   "path": "CPU2/HandLeft",
+   "parent": 97,
+   "pos": [
+    -3.3855667,
+    -0.49647915
+   ],
+   "rotZ": 0.6686357039465075,
+   "scale": [
+    1.09989,
+    0.99990004
+   ],
+   "sprite": "odorireal_48",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.21
+   ]
+  },
+  {
+   "name": "HandRight",
+   "path": "CPU2/HandRight",
+   "parent": 97,
+   "pos": [
+    3.2837667,
+    -0.47648108
+   ],
+   "rotZ": -0.6686355643404037,
+   "scale": [
+    1.0998899,
+    0.9999
+   ],
+   "sprite": "odorireal_48",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.21
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "CPU2/Neck",
+   "parent": 97,
+   "pos": [
+    0,
+    3.933
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_51",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.8
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "CPU2/FX",
+   "parent": 97,
+   "pos": [
+    -9.872001,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.99999,
+    0.99999
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FX Left",
+   "path": "CPU2/FX/FX Left",
+   "parent": 105,
+   "pos": [
+    -1.4000001,
+    3.5249999
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    1.7272198,
+    1.7272198
+   ],
+   "sprite": "odorirealer_83",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.04,
+    1
+   ]
+  },
+  {
+   "name": "FX Right",
+   "path": "CPU2/FX/FX Right",
+   "parent": 105,
+   "pos": [
+    1.4,
+    3.5249999
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    1.7272198,
+    1.7272198
+   ],
+   "sprite": "odorirealer_83",
+   "order": 25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.04,
+    1
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "CPU2/Body",
+   "parent": 97,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorirealer_52",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.38,
+    8.94
+   ],
+   "mapped": true,
+   "mat": "bonOdoriCPU2"
+  },
+  {
+   "name": "Flower",
+   "path": "CPU2/Body/Flower",
+   "parent": 108,
+   "pos": [
+    0.547,
+    -1.132
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU2"
+  },
+  {
+   "name": "Flower (1)",
+   "path": "CPU2/Body/Flower (1)",
+   "parent": 108,
+   "pos": [
+    -0.74,
+    -2.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU2"
+  },
+  {
+   "name": "Flower (2)",
+   "path": "CPU2/Body/Flower (2)",
+   "parent": 108,
+   "pos": [
+    0.561,
+    -3.223
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU2"
+  },
+  {
+   "name": "Flower (3)",
+   "path": "CPU2/Body/Flower (3)",
+   "parent": 108,
+   "pos": [
+    2.064,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU2"
+  },
+  {
+   "name": "Flower (4)",
+   "path": "CPU2/Body/Flower (4)",
+   "parent": 108,
+   "pos": [
+    -2.05,
+    0.583
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU2"
+  },
+  {
+   "name": "Flower (5)",
+   "path": "CPU2/Body/Flower (5)",
+   "parent": 108,
+   "pos": [
+    0.75,
+    2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU2"
+  },
+  {
+   "name": "Head",
+   "path": "CPU2/Head",
+   "parent": 97,
+   "pos": [
+    0,
+    6.28
+   ],
+   "z": 0.011057476,
+   "rotZ": 0,
+   "scale": [
+    3,
+    3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RealHead",
+   "path": "CPU2/Head/RealHead",
+   "parent": 115,
+   "pos": [
+    0.34100002,
+    -0.083
+   ],
+   "z": -0.0036858253,
+   "rotZ": 0,
+   "scale": [
+    0.3333,
+    0.3333
+   ],
+   "sprite": "odorireal_30",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.44
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "CPU2/Head/Face",
+   "parent": 115,
+   "pos": [
+    0,
+    -2.0863335
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RealFace",
+   "path": "CPU2/Head/Face/RealFace",
+   "parent": 117,
+   "pos": [
+    -0.0043333336,
+    1.77
+   ],
+   "z": -0.0036858253,
+   "rotZ": 0,
+   "scale": [
+    0.33333334,
+    0.33333334
+   ],
+   "sprite": "odorireal_1",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.26,
+    0.2
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "CPU2/Circle",
+   "parent": 97,
+   "pos": [
+    0,
+    -6
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    2
+   ],
+   "order": -1,
+   "color": [
+    0.65882355,
+    0.5372549,
+    0.41960785,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "CPU3",
+   "path": "CPU3",
+   "parent": 0,
+   "pos": [
+    1.645333,
+    -2.024
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33333334,
+    0.33333334
+   ],
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.42,
+    0.89
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayer"
+  },
+  {
+   "name": "ClothingRight",
+   "path": "CPU3/ClothingRight",
+   "parent": 120,
+   "pos": [
+    1.9728975,
+    1.8032906
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorirealer_42",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "bonOdoriArmsCPU3"
+  },
+  {
+   "name": "ClothingLeft",
+   "path": "CPU3/ClothingLeft",
+   "parent": 120,
+   "pos": [
+    -2.0906963,
+    1.6233087
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorirealer_42",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.28,
+    0.5
+   ],
+   "mapped": true,
+   "mat": "bonOdoriArmsCPU3"
+  },
+  {
+   "name": "FootRight",
+   "path": "CPU3/FootRight",
+   "parent": 120,
+   "pos": [
+    0.955,
+    -5.283
+   ],
+   "rotZ": -0.014319277733570697,
+   "scale": [
+    0.99990004,
+    0.99990004
+   ],
+   "sprite": "odorireal_24",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.2,
+    0.28
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFeetCPU3"
+  },
+  {
+   "name": "FootLeft",
+   "path": "CPU3/FootLeft",
+   "parent": 120,
+   "pos": [
+    -0.9468107,
+    -5.283
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9999,
+    0.9999
+   ],
+   "sprite": "odorireal_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.18,
+    0.28
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFeetCPU3"
+  },
+  {
+   "name": "HandLeft",
+   "path": "CPU3/HandLeft",
+   "parent": 120,
+   "pos": [
+    -3.3855667,
+    -0.49647915
+   ],
+   "rotZ": 0.6686357039465075,
+   "scale": [
+    1.09989,
+    0.99990004
+   ],
+   "sprite": "odorireal_48",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.21
+   ]
+  },
+  {
+   "name": "HandRight",
+   "path": "CPU3/HandRight",
+   "parent": 120,
+   "pos": [
+    3.2837667,
+    -0.47648108
+   ],
+   "rotZ": -0.6686355643404037,
+   "scale": [
+    1.0998899,
+    0.9999
+   ],
+   "sprite": "odorireal_48",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.22,
+    0.21
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "CPU3/Neck",
+   "parent": 120,
+   "pos": [
+    0,
+    3.933
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_51",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.8
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "CPU3/Body",
+   "parent": 120,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorirealer_52",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.38,
+    8.94
+   ],
+   "mapped": true,
+   "mat": "bonOdoriCPU3"
+  },
+  {
+   "name": "Flower",
+   "path": "CPU3/Body/Flower",
+   "parent": 128,
+   "pos": [
+    0.547,
+    -1.132
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU3"
+  },
+  {
+   "name": "Flower (1)",
+   "path": "CPU3/Body/Flower (1)",
+   "parent": 128,
+   "pos": [
+    -0.74,
+    -2.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU3"
+  },
+  {
+   "name": "Flower (2)",
+   "path": "CPU3/Body/Flower (2)",
+   "parent": 128,
+   "pos": [
+    0.561,
+    -3.223
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU3"
+  },
+  {
+   "name": "Flower (3)",
+   "path": "CPU3/Body/Flower (3)",
+   "parent": 128,
+   "pos": [
+    2.064,
+    0.54
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU3"
+  },
+  {
+   "name": "Flower (4)",
+   "path": "CPU3/Body/Flower (4)",
+   "parent": 128,
+   "pos": [
+    -2.05,
+    0.583
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU3"
+  },
+  {
+   "name": "Flower (5)",
+   "path": "CPU3/Body/Flower (5)",
+   "parent": 128,
+   "pos": [
+    0.75,
+    2.78
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_22",
+   "order": 2,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    1.12
+   ],
+   "mapped": true,
+   "mat": "bonOdoriFlowerCPU3"
+  },
+  {
+   "name": "Head",
+   "path": "CPU3/Head",
+   "parent": 120,
+   "pos": [
+    0,
+    6.15
+   ],
+   "z": 0.018828651,
+   "rotZ": 0,
+   "scale": [
+    3,
+    3
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RealHead",
+   "path": "CPU3/Head/RealHead",
+   "parent": 135,
+   "pos": [
+    0,
+    -0.16404772
+   ],
+   "z": -0.0062762173,
+   "rotZ": 0,
+   "scale": [
+    0.3333,
+    0.3333
+   ],
+   "sprite": "odorireal_31",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.84,
+    0.44
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "CPU3/Head/Face",
+   "parent": 135,
+   "pos": [
+    0.5710436,
+    -0.8176154
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RealFace",
+   "path": "CPU3/Head/Face/RealFace",
+   "parent": 137,
+   "pos": [
+    -0.5710436,
+    0.4802339
+   ],
+   "z": -0.0062762173,
+   "rotZ": 0,
+   "scale": [
+    0.33333334,
+    0.33333334
+   ],
+   "sprite": "odorireal_2",
+   "order": 40,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.26,
+    0.2
+   ]
+  },
+  {
+   "name": "Circle",
+   "path": "CPU3/Circle",
+   "parent": 120,
+   "pos": [
+    0,
+    -6
+   ],
+   "rotZ": 0,
+   "scale": [
+    5,
+    2
+   ],
+   "order": -1,
+   "color": [
+    0.65882355,
+    0.5372549,
+    0.41960785,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "FX",
+   "path": "CPU3/FX",
+   "parent": 120,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FX Left",
+   "path": "CPU3/FX/FX Left",
+   "parent": 140,
+   "pos": [
+    -1.4000001,
+    3.5249999
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    1.7272198,
+    1.7272198
+   ],
+   "sprite": "odorirealer_83",
+   "order": 25,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.04,
+    1
+   ]
+  },
+  {
+   "name": "FX Right",
+   "path": "CPU3/FX/FX Right",
+   "parent": 140,
+   "pos": [
+    1.4,
+    3.5249999
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    1.7272198,
+    1.7272198
+   ],
+   "sprite": "odorirealer_83",
+   "order": 25,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    1.04,
+    1
+   ]
+  },
+  {
+   "name": "Judge",
+   "path": "Judge",
+   "parent": 0,
+   "pos": [
+    0,
+    1.85
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.3333333,
+    0.3333333
+   ],
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.42,
+    0.89
+   ],
+   "mapped": true,
+   "mat": "bonOdoriPlayer"
+  },
+  {
+   "name": "Megaphone",
+   "path": "Judge/Megaphone",
+   "parent": 143,
+   "pos": [
+    -1.93,
+    0.47
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_54",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.82,
+    2.36
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Judge/Head",
+   "parent": 143,
+   "pos": [
+    -0.039,
+    1.87
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "sprite": "odorireal_55",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.38,
+    4.02
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "Judge/Head/Face",
+   "parent": 145,
+   "pos": [
+    0.043333337,
+    -1.1188889
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.0555555,
+    1.0555555
+   ],
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.64,
+    1.04
+   ]
+  },
+  {
+   "name": "RealFace",
+   "path": "Judge/Head/Face/RealFace",
+   "parent": 146,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "odorireal_4",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.64,
+    1.04
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Judge/Body",
+   "parent": 143,
+   "pos": [
+    0.051,
+    -1.215
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "sprite": "odorireal_43",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    4.1
+   ]
+  },
+  {
+   "name": "LHand",
+   "path": "Judge/LHand",
+   "parent": 143,
+   "pos": [
+    -1.68,
+    -0.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.64
+   ],
+   "sprite": "odorireal_51",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.8
+   ]
+  },
+  {
+   "name": "RHand",
+   "path": "Judge/RHand",
+   "parent": 143,
+   "pos": [
+    1.86,
+    -1.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.7,
+    0.5
+   ],
+   "sprite": "odorireal_51",
+   "order": -8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.32,
+    1.8
+   ]
+  },
+  {
+   "name": "LFoot",
+   "path": "Judge/LFoot",
+   "parent": 143,
+   "pos": [
+    -0.71,
+    -2.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "odorireal_46",
+   "order": -8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.6,
+    2.6
+   ]
+  },
+  {
+   "name": "RFoot",
+   "path": "Judge/RFoot",
+   "parent": 143,
+   "pos": [
+    0.71,
+    -2.61
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.75,
+    0.75
+   ],
+   "sprite": "odorireal_46",
+   "order": -8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.6,
+    2.6
+   ]
+  }
+ ]
+}

@@ -82,6 +82,19 @@ var sceneSpecs = map[string]sceneSpec{
 			{name: "maya", markers: []string{"enterCurves", "flyingCurves", "missCurve", "bigYokaiStartPosition", "bigYokaiXDistance", "shadowOffsetX"}, atPath: "AA1_Maya_0", curveFields: []string{"missCurve"}, curveArrayFields: []string{"enterCurves", "flyingCurves"}},
 		},
 	},
+	"bonOdori": {
+		dir:    "BonOdori",
+		prefab: "bonOdori.prefab",
+		roleFields: []string{
+			"darkPlane", "Judge", "JudgeFace",
+		},
+		refArrayFields: []string{
+			"Texts", "TextsBlue", "Donpans",
+		},
+		wantControllers: true,
+		wantTexts:       true,
+		commonSounds:    []string{"nearMiss.ogg"},
+	},
 	"samuraiSliceNtr": {
 		dir:    "SamuraiSliceNtr",
 		prefab: "samuraiSliceNtr.prefab",

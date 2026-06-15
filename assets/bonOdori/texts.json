@@ -1,0 +1,202 @@
+[
+ {
+  "path": "Line/Line1",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 500,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line5Blue",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 501,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line5",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 500,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line4",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 500,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line3Blue",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 501,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line4Blue",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 501,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line2Blue",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 501,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line2",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 500,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line3",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 500,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ },
+ {
+  "path": "Line/Line1Blue",
+  "text": "",
+  "size": 1.25,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 501,
+  "layer": 0,
+  "font": "WarioWareIncMerge.ttf",
+  "rect": [
+   19.9,
+   0.2
+  ],
+  "hAlign": 1,
+  "vAlign": 512
+ }
+]

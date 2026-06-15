@@ -1,0 +1,46 @@
+{
+ "refArrays": {
+  "Donpans": [
+   "Player",
+   "CPU1",
+   "CPU2",
+   "CPU3"
+  ],
+  "Texts": [
+   "Line/Line1",
+   "Line/Line2",
+   "Line/Line3",
+   "Line/Line4",
+   "Line/Line5"
+  ],
+  "TextsBlue": [
+   "Line/Line1Blue",
+   "Line/Line2Blue",
+   "Line/Line3Blue",
+   "Line/Line4Blue",
+   "Line/Line5Blue"
+  ]
+ },
+ "refArrayIdx": {
+  "Donpans": [
+   50,
+   74,
+   97,
+   120
+  ],
+  "Texts": [
+   2,
+   3,
+   4,
+   5,
+   6
+  ],
+  "TextsBlue": [
+   7,
+   8,
+   9,
+   10,
+   11
+  ]
+ }
+}

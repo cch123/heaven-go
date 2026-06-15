@@ -16,6 +16,8 @@ import (
 	"fmt"
 	"image"
 	"image/color"
+	"image/draw"
+	"math"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"golang.org/x/image/font"
@@ -31,6 +33,14 @@ const textPPU = 216.0
 
 // parsedFonts 按字体文件名缓存解析结果（多个文本节点共用）。
 var parsedFonts = map[string]*opentype.Font{}
+
+// TextRun is a single TMP-style inline text span. Color is baked into the
+// generated glyph bitmap; Scale supports Bon Odori's <size=0.9375> marker.
+type TextRun struct {
+	Text  string
+	Color [4]float64
+	Scale float64
+}
 
 func (a *Assets) font(name string) (*opentype.Font, error) {
 	if f, ok := parsedFonts[name]; ok {
@@ -63,20 +73,80 @@ func (a *Assets) ApplyTexts() error {
 func (a *Assets) SetText(path, content string) error {
 	for i := range a.Texts {
 		if a.Texts[i].Path == path {
-			return a.renderTextNode(&a.Texts[i], content)
+			return a.renderTextRuns(&a.Texts[i], []TextRun{{Text: content}}, -1)
 		}
 	}
 	return fmt.Errorf("文本节点 %q 不存在", path)
 }
 
+// SetTextRuns renders a text node from pre-parsed rich text runs.
+func (a *Assets) SetTextRuns(path string, runs []TextRun) error {
+	return a.SetTextRunsClipped(path, runs, -1)
+}
+
+// SetTextRunsClipped renders rich text and clips glyph pixels after clipUnits
+// from the line's left text edge. clipUnits < 0 disables clipping. This mirrors
+// TMP SpriteMask usage in Bon Odori's blue lyric overlay without changing the
+// generic scene mask pipeline.
+func (a *Assets) SetTextRunsClipped(path string, runs []TextRun, clipUnits float64) error {
+	for i := range a.Texts {
+		if a.Texts[i].Path == path {
+			return a.renderTextRuns(&a.Texts[i], runs, clipUnits)
+		}
+	}
+	return fmt.Errorf("文本节点 %q 不存在", path)
+}
+
+// MeasureTextRuns reports the preferred line width and each rune's left edge in
+// text units. It lets minigames reproduce TMP characterInfo positions for masks.
+func (a *Assets) MeasureTextRuns(path string, runs []TextRun) (float64, []float64, error) {
+	for i := range a.Texts {
+		if a.Texts[i].Path == path {
+			layout, err := a.layoutTextRuns(&a.Texts[i], runs)
+			if err != nil {
+				return 0, nil, err
+			}
+			defer layout.close()
+			return float64(layout.textW) / textPPU, layout.charX, nil
+		}
+	}
+	return 0, nil, fmt.Errorf("文本节点 %q 不存在", path)
+}
+
 // renderTextNode 排版一个文本节点并更新场景节点的切片/排序。
 func (a *Assets) renderTextNode(tn *kmdata.TextNode, content string) error {
+	return a.renderTextRuns(tn, []TextRun{{Text: content}}, -1)
+}
+
+type textSpan struct {
+	text    string
+	face    font.Face
+	color   [4]float64
+	startPx int
+}
+
+type textLayout struct {
+	spans      []textSpan
+	textW      int
+	ascent     int
+	descent    int
+	charX      []float64
+	closeFaces []font.Face
+	contentW   int
+	dotX       int
+	pivotX     float64
+	pivotY     float64
+	content    bool
+}
+
+func (a *Assets) renderTextRuns(tn *kmdata.TextNode, runs []TextRun, clipUnits float64) error {
 	idx, ok := a.NodeIndex(tn.Path)
 	if !ok {
 		return fmt.Errorf("文本节点 path %q 不在场景树", tn.Path)
 	}
-	if tn.HAlign != 2 || (tn.VAlign != 512 && tn.VAlign != 256) {
-		// 目前官方移植只遇到 Center + Middle/Top；其他对齐出现时报错而非静默错位。
+	if (tn.HAlign != 1 && tn.HAlign != 2) || (tn.VAlign != 512 && tn.VAlign != 256) {
+		// 官方游戏目前只需要 TMP Left/Center + Middle/Top。遇到其它对齐时报错，
+		// 避免悄悄把歌词、标牌或 UI 文本排到错误位置。
 		return fmt.Errorf("文本 %q 对齐 (%d,%d) 未实现", tn.Path, tn.HAlign, tn.VAlign)
 	}
 
@@ -84,51 +154,150 @@ func (a *Assets) renderTextNode(tn *kmdata.TextNode, content string) error {
 	n.Order = tn.Order
 	n.Layer = tn.Layer
 	n.Color = tn.Color
-	if content == "" {
+	layout, err := a.layoutTextRuns(tn, runs)
+	if err != nil {
+		return err
+	}
+	defer layout.close()
+	if !layout.content {
 		n.Sprite = ""
 		return nil
 	}
 
-	f, err := a.font(tn.Font)
-	if err != nil {
-		return err
-	}
-	emPx := tn.Size * 0.1 * textPPU // fontSize → 世界 em 高 → 像素
-	face, err := opentype.NewFace(f, &opentype.FaceOptions{
-		Size: emPx, DPI: 72, Hinting: font.HintingNone,
-	})
-	if err != nil {
-		return err
-	}
-	defer face.Close()
-
-	met := face.Metrics()
-	adv := font.MeasureString(face, content)
-	w := adv.Ceil()
-	ascent, descent := met.Ascent.Ceil(), met.Descent.Ceil()
-	h := ascent + descent
-	if w <= 0 || h <= 0 {
-		return fmt.Errorf("文本 %q 排版尺寸为空", content)
-	}
 	const pad = 4
-	img := image.NewRGBA(image.Rect(0, 0, w+2*pad, h+2*pad))
-	d := &font.Drawer{
-		Dst: img, Src: image.NewUniform(color.White), Face: face,
-		Dot: fixed.P(pad, pad+ascent),
+	img := image.NewRGBA(image.Rect(0, 0, layout.contentW+2*pad, layout.ascent+layout.descent+2*pad))
+	for _, sp := range layout.spans {
+		d := &font.Drawer{
+			Dst: img, Src: image.NewUniform(runColor(sp.color)), Face: sp.face,
+			Dot: fixed.P(layout.dotX+sp.startPx, pad+layout.ascent),
+		}
+		d.DrawString(sp.text)
 	}
-	d.DrawString(content)
-
-	// 枢轴：x 取水平中心；y 按 TMP 垂直对齐取行中线或顶边，换算为
-	// Unity 归一化（自底边）。颜色烘成节点 tint 而不是 glyph 像素，
-	// 因为 TextFlash 动画会继续驱动 m_fontColor.r/g/b。
-	H := float64(img.Bounds().Dy())
-	midFromTop := float64(pad) + (float64(ascent)+float64(descent))/2
-	pivotY := 1 - midFromTop/H
-	if tn.VAlign == 256 {
-		pivotY = 1 - float64(pad)/H
+	if clipUnits >= 0 {
+		clipPx := layout.dotX + int(math.Round(clipUnits*textPPU))
+		if clipPx < 0 {
+			clipPx = 0
+		}
+		if clipPx < img.Bounds().Dx() {
+			draw.Draw(img, image.Rect(clipPx, 0, img.Bounds().Dx(), img.Bounds().Dy()), image.Transparent, image.Point{}, draw.Src)
+		}
 	}
 
-	a.RegisterSprite("__text_"+tn.Path, ebiten.NewImageFromImage(img), textPPU, 0.5, pivotY)
+	a.RegisterSprite("__text_"+tn.Path, ebiten.NewImageFromImage(img), textPPU, layout.pivotX, layout.pivotY)
 	n.Sprite = "__text_" + tn.Path
 	return nil
+}
+
+func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayout, error) {
+	f, err := a.font(tn.Font)
+	if err != nil {
+		return nil, err
+	}
+	emPx := tn.Size * 0.1 * textPPU // fontSize → 世界 em 高 → 像素
+
+	layout := &textLayout{}
+	faces := map[float64]font.Face{}
+	faceFor := func(scale float64) (font.Face, error) {
+		if scale <= 0 {
+			scale = 1
+		}
+		if fc, ok := faces[scale]; ok {
+			return fc, nil
+		}
+		fc, err := opentype.NewFace(f, &opentype.FaceOptions{
+			Size: emPx * scale, DPI: 72, Hinting: font.HintingNone,
+		})
+		if err != nil {
+			return nil, err
+		}
+		faces[scale] = fc
+		layout.closeFaces = append(layout.closeFaces, fc)
+		return fc, nil
+	}
+	baseFace, err := faceFor(1)
+	if err != nil {
+		return nil, err
+	}
+	met := baseFace.Metrics()
+	layout.ascent, layout.descent = met.Ascent.Ceil(), met.Descent.Ceil()
+	x := 0
+	for _, run := range runs {
+		if run.Text == "" {
+			continue
+		}
+		layout.content = true
+		fc, err := faceFor(run.Scale)
+		if err != nil {
+			layout.close()
+			return nil, err
+		}
+		layout.spans = append(layout.spans, textSpan{
+			text:    run.Text,
+			face:    fc,
+			color:   run.Color,
+			startPx: x,
+		})
+		for _, r := range run.Text {
+			layout.charX = append(layout.charX, float64(x)/textPPU)
+			x += font.MeasureString(fc, string(r)).Ceil()
+		}
+	}
+	layout.textW = x
+	if !layout.content {
+		return layout, nil
+	}
+	h := layout.ascent + layout.descent
+	if layout.textW <= 0 || h <= 0 {
+		layout.close()
+		return nil, fmt.Errorf("文本排版尺寸为空")
+	}
+	layout.contentW = layout.textW
+	if tn.Rect[0] > 0 {
+		layout.contentW = max(layout.contentW, int(tn.Rect[0]*textPPU+0.5))
+	}
+	const pad = 4
+	layout.dotX = pad
+	layout.pivotX = 0
+	if tn.HAlign == 2 {
+		layout.dotX += (layout.contentW - layout.textW) / 2
+		layout.pivotX = 0.5
+	}
+
+	// 枢轴：x 取水平对齐点；y 按 TMP 垂直对齐取行中线或顶边，
+	// 换算为 Unity 归一化（自底边）。
+	H := float64(h + 2*pad)
+	midFromTop := float64(pad) + (float64(layout.ascent)+float64(layout.descent))/2
+	layout.pivotY = 1 - midFromTop/H
+	if tn.VAlign == 256 {
+		layout.pivotY = 1 - float64(pad)/H
+	}
+	return layout, nil
+}
+
+func (l *textLayout) close() {
+	for _, f := range l.closeFaces {
+		f.Close()
+	}
+}
+
+func runColor(c [4]float64) color.Color {
+	if c == [4]float64{} {
+		c = [4]float64{1, 1, 1, 1}
+	}
+	return color.NRGBA{
+		R: uint8(clamp01(c[0])*255 + 0.5),
+		G: uint8(clamp01(c[1])*255 + 0.5),
+		B: uint8(clamp01(c[2])*255 + 0.5),
+		A: uint8(clamp01(c[3])*255 + 0.5),
+	}
+}
+
+func clamp01(v float64) float64 {
+	if v < 0 {
+		return 0
+	}
+	if v > 1 {
+		return 1
+	}
+	return v
 }

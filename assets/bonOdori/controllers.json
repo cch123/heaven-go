@@ -1,0 +1,210 @@
+{
+ "CPU": {
+  "default": "NeutralBopped",
+  "states": {
+   "Bop": {
+    "clip": "Players/Bop",
+    "speed": 1
+   },
+   "BopHappy": {
+    "clip": "Players/BopHappy",
+    "speed": 1
+   },
+   "Bow": {
+    "clip": "Players/Bow",
+    "speed": 1
+   },
+   "ClapFront": {
+    "clip": "Players/ClapFront",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NeutralClapFront",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ClapSide": {
+    "clip": "Players/ClapSide",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NeutralBopped",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NeutralBopped": {
+    "clip": "Players/NeutralBopped",
+    "speed": 1
+   },
+   "NeutralClapFront": {
+    "speed": 1
+   }
+  }
+ },
+ "CPU1Face": {
+  "default": "CPU1Neut",
+  "states": {
+   "Annoyed": {
+    "clip": "Expressions/Annoyed",
+    "speed": 1
+   },
+   "CPU1Neut": {
+    "clip": "Expressions/CPU1Neut",
+    "speed": 1
+   }
+  }
+ },
+ "CPU2Face": {
+  "default": "CPU2Neut",
+  "states": {
+   "Annoyed": {
+    "clip": "Expressions/Annoyed",
+    "speed": 1
+   },
+   "CPU2Neut": {
+    "clip": "Expressions/CPU2Neut",
+    "speed": 1
+   }
+  }
+ },
+ "CPU3Face": {
+  "default": "CPU3Neut",
+  "states": {
+   "Annoyed": {
+    "clip": "Expressions/Annoyed",
+    "speed": 1
+   },
+   "CPU3Neut": {
+    "clip": "Expressions/CPU3Neut",
+    "speed": 1
+   }
+  }
+ },
+ "DarkPlane": {
+  "default": "StayOff",
+  "states": {
+   "Appear": {
+    "clip": "DarkPlane/Appear",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "StayOn",
+      "exitTime": 0.75,
+      "duration": 0.25
+     }
+    ]
+   },
+   "GoAway": {
+    "clip": "DarkPlane/GoAway",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "StayOff",
+      "exitTime": 0.75,
+      "duration": 0.25
+     }
+    ]
+   },
+   "StayOff": {
+    "clip": "DarkPlane/StayOff",
+    "speed": 1
+   },
+   "StayOn": {
+    "clip": "DarkPlane/StayOn",
+    "speed": 1
+   }
+  }
+ },
+ "Judge": {
+  "default": "Idle",
+  "states": {
+   "Bop": {
+    "clip": "Judge/Bop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 0.16666669,
+      "duration": 0.25
+     }
+    ]
+   },
+   "Idle": {
+    "clip": "Judge/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "JudgeFace": {
+  "default": "Neutral",
+  "states": {
+   "Happy": {
+    "clip": "Face/Happy",
+    "speed": 1
+   },
+   "Neutral": {
+    "clip": "Face/Neutral",
+    "speed": 1
+   },
+   "Sad": {
+    "clip": "Face/Sad",
+    "speed": 1
+   }
+  }
+ },
+ "Player": {
+  "default": "NeutralBopped",
+  "states": {
+   "Bop": {
+    "clip": "Players/Bop",
+    "speed": 1
+   },
+   "Bow": {
+    "clip": "Players/Bow",
+    "speed": 1
+   },
+   "ClapFront": {
+    "clip": "Players/ClapFront",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NeutralClapFront",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "ClapSide": {
+    "clip": "Players/ClapSide",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "NeutralBopped",
+      "exitTime": 1,
+      "duration": 8.2213253e-10
+     }
+    ]
+   },
+   "NeutralBopped": {
+    "clip": "Players/NeutralBopped",
+    "speed": 1
+   },
+   "NeutralClapFront": {
+    "speed": 1
+   }
+  }
+ },
+ "PlayerFace": {
+  "default": "PlayerNeut",
+  "states": {
+   "PlayerNeut": {
+    "clip": "Expressions/PlayerNeut",
+    "speed": 1
+   }
+  }
+ }
+}

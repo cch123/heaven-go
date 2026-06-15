@@ -1,0 +1,12 @@
+{
+ "CPU1": "CPU",
+ "CPU1/Head/Face/RealFace": "CPU1Face",
+ "CPU2": "CPU",
+ "CPU2/Head/Face/RealFace": "CPU2Face",
+ "CPU3": "CPU",
+ "CPU3/Head/Face/RealFace": "CPU3Face",
+ "Judge": "Judge",
+ "Judge/Head/Face": "JudgeFace",
+ "Player": "Player",
+ "Player/Head/Face/RealFace": "PlayerFace"
+}
