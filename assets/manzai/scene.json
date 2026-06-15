@@ -1,0 +1,3233 @@
+{
+ "nodes": [
+  {
+   "name": "manzai",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "stage reference",
+   "path": "stage reference",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5385,
+    1.5385
+   ],
+   "sprite": "YEAH",
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    11.56,
+    6.5
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    -0.97065556,
+    0.014455373
+   ],
+   "z": 0.8908919,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Ceiling",
+   "path": "BG/Ceiling",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CeilingL",
+   "path": "BG/Ceiling/CeilingL",
+   "parent": 3,
+   "pos": [
+    -3.5191445,
+    4.863445
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.1123152,
+    2.268056
+   ],
+   "sprite": "Background_Sprites_15",
+   "order": 16,
+   "color": [
+    0.5294118,
+    0.5294118,
+    0.5294118,
+    1
+   ],
+   "size": [
+    4.8,
+    0.56
+   ]
+  },
+  {
+   "name": "CeilingR",
+   "path": "BG/Ceiling/CeilingR",
+   "parent": 3,
+   "pos": [
+    5.4604554,
+    4.863445
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.1123152,
+    2.268056
+   ],
+   "sprite": "Background_Sprites_15",
+   "order": 17,
+   "flipX": true,
+   "color": [
+    0.5294118,
+    0.5294118,
+    0.5294118,
+    1
+   ],
+   "size": [
+    4.8,
+    0.56
+   ]
+  },
+  {
+   "name": "Doors",
+   "path": "BG/Doors",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Door0",
+   "path": "BG/Doors/Door0",
+   "parent": 6,
+   "pos": [
+    -2.0093446,
+    1.0655447
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "Background_Sprites_0",
+   "order": -8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.96,
+    1.92
+   ]
+  },
+  {
+   "name": "Door1",
+   "path": "BG/Doors/Door1",
+   "parent": 6,
+   "pos": [
+    -0.02934444,
+    1.0655447
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "Background_Sprites_0",
+   "order": -8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.96,
+    1.92
+   ]
+  },
+  {
+   "name": "Door2",
+   "path": "BG/Doors/Door2",
+   "parent": 6,
+   "pos": [
+    1.9706556,
+    1.0655447
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "Background_Sprites_0",
+   "order": -8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.96,
+    1.92
+   ]
+  },
+  {
+   "name": "Door3",
+   "path": "BG/Doors/Door3",
+   "parent": 6,
+   "pos": [
+    3.9506555,
+    1.0655447
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15,
+    2.15
+   ],
+   "sprite": "Background_Sprites_0",
+   "order": -8,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.96,
+    1.92
+   ]
+  },
+  {
+   "name": "Lanterns",
+   "path": "BG/Lanterns",
+   "parent": 2,
+   "pos": [
+    0.1,
+    0
+   ],
+   "z": -1,
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Lantern0",
+   "path": "BG/Lanterns/Lantern0",
+   "parent": 11,
+   "pos": [
+    -5.1783447,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern1",
+   "path": "BG/Lanterns/Lantern1",
+   "parent": 11,
+   "pos": [
+    -3.8193445,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern2",
+   "path": "BG/Lanterns/Lantern2",
+   "parent": 11,
+   "pos": [
+    -2.4493446,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern3",
+   "path": "BG/Lanterns/Lantern3",
+   "parent": 11,
+   "pos": [
+    -1.0793444,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern4",
+   "path": "BG/Lanterns/Lantern4",
+   "parent": 11,
+   "pos": [
+    0.28865558,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern5",
+   "path": "BG/Lanterns/Lantern5",
+   "parent": 11,
+   "pos": [
+    1.6526556,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern6",
+   "path": "BG/Lanterns/Lantern6",
+   "parent": 11,
+   "pos": [
+    3.0206556,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern7",
+   "path": "BG/Lanterns/Lantern7",
+   "parent": 11,
+   "pos": [
+    4.3906555,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern8",
+   "path": "BG/Lanterns/Lantern8",
+   "parent": 11,
+   "pos": [
+    5.7606554,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Lantern9",
+   "path": "BG/Lanterns/Lantern9",
+   "parent": 11,
+   "pos": [
+    7.1196556,
+    4.015545
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.15925,
+    2.15925
+   ],
+   "sprite": "Background_Sprites_5",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.65
+   ]
+  },
+  {
+   "name": "Stage",
+   "path": "BG/Stage",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "StageL",
+   "path": "BG/Stage/StageL",
+   "parent": 22,
+   "pos": [
+    -3.4593444,
+    -0.42195538
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.16,
+    2.177116
+   ],
+   "sprite": "Background_Sprites_18",
+   "order": -6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.64,
+    5.23
+   ]
+  },
+  {
+   "name": "StageR",
+   "path": "BG/Stage/StageR",
+   "parent": 22,
+   "pos": [
+    5.4006553,
+    -0.42195538
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.16,
+    2.177116
+   ],
+   "sprite": "Background_Sprites_18",
+   "order": -5,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.64,
+    5.23
+   ]
+  },
+  {
+   "name": "Trapdoors",
+   "path": "BG/Trapdoors",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "TrapdoorL",
+   "path": "BG/Trapdoors/TrapdoorL",
+   "parent": 25,
+   "pos": [
+    -1.5193444,
+    -1.9694554
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.177116,
+    2.177116
+   ],
+   "sprite": "Background_Sprites_14",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.29,
+    0.63
+   ]
+  },
+  {
+   "name": "TrapdoorR",
+   "path": "BG/Trapdoors/TrapdoorR",
+   "parent": 25,
+   "pos": [
+    3.4606557,
+    -1.9694554
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    2.177116,
+    2.177116
+   ],
+   "sprite": "Background_Sprites_14",
+   "order": -6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.29,
+    0.63
+   ]
+  },
+  {
+   "name": "Lights",
+   "path": "BG/Lights",
+   "parent": 2,
+   "pos": [
+    0.9706556,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    2.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpotlightR",
+   "path": "BG/Lights/SpotlightR",
+   "parent": 28,
+   "pos": [
+    0.535,
+    1.653
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Background_Sprites_17",
+   "order": -2,
+   "color": [
+    1,
+    1,
+    1,
+    0.23529412
+   ],
+   "size": [
+    2.11,
+    5.96
+   ]
+  },
+  {
+   "name": "SpotlightL",
+   "path": "BG/Lights/SpotlightL",
+   "parent": 28,
+   "pos": [
+    -0.535,
+    1.653
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Background_Sprites_17",
+   "order": -3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.23529412
+   ],
+   "size": [
+    2.11,
+    5.96
+   ]
+  },
+  {
+   "name": "Darkness",
+   "path": "BG/Lights/Darkness",
+   "parent": 28,
+   "pos": [
+    0,
+    -0.0072276867
+   ],
+   "z": -0.8908919,
+   "rotZ": 0,
+   "scale": [
+    30,
+    20
+   ],
+   "sprite": "Background_Sprites_1",
+   "order": -4,
+   "color": [
+    1,
+    1,
+    1,
+    0.47058824
+   ],
+   "size": [
+    0.32,
+    0.32
+   ]
+  },
+  {
+   "name": "Birds",
+   "path": "Birds",
+   "parent": 0,
+   "pos": [
+    1.22,
+    -0.2
+   ],
+   "z": -0.05792329,
+   "rotZ": 0,
+   "scale": [
+    0.9,
+    0.9
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Microphone",
+   "path": "Birds/Microphone",
+   "parent": 32,
+   "pos": [
+    -1.4007286,
+    4.6
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.4444447,
+    2.4444447
+   ],
+   "sprite": "Microphone",
+   "order": 15,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.83,
+    2.71
+   ]
+  },
+  {
+   "name": "VultureHolder",
+   "path": "Birds/VultureHolder",
+   "parent": 32,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Vulture",
+   "path": "Birds/VultureHolder/Vulture",
+   "parent": 34,
+   "pos": [
+    1.2999998,
+    0.36889482
+   ],
+   "z": 0.018050596,
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "animation_09.002",
+   "path": "Birds/VultureHolder/Vulture/animation_09.002",
+   "parent": 35,
+   "pos": [
+    -0.49,
+    -1.0093455
+   ],
+   "z": -0.018050596,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "LegL",
+   "path": "Birds/VultureHolder/Vulture/LegL",
+   "parent": 35,
+   "pos": [
+    -0.734,
+    -0.805
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_52",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    0.62
+   ]
+  },
+  {
+   "name": "KneeL",
+   "path": "Birds/VultureHolder/Vulture/KneeL",
+   "parent": 35,
+   "pos": [
+    -0.635,
+    -0.51
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_45",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.32,
+    0.32
+   ]
+  },
+  {
+   "name": "Tail",
+   "path": "Birds/VultureHolder/Vulture/Tail",
+   "parent": 35,
+   "pos": [
+    0.058,
+    -0.685
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_51",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.47,
+    0.71
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Birds/VultureHolder/Vulture/Body",
+   "parent": 35,
+   "pos": [
+    -0.42,
+    -0.05
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_63",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.16,
+    1.16
+   ]
+  },
+  {
+   "name": "Neck",
+   "path": "Birds/VultureHolder/Vulture/Neck",
+   "parent": 35,
+   "pos": [
+    -0.597,
+    -0.05
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_58",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    1.05
+   ]
+  },
+  {
+   "name": "FULL HEAD",
+   "path": "Birds/VultureHolder/Vulture/FULL HEAD",
+   "parent": 35,
+   "pos": [
+    -0.737,
+    0.163
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Birds/VultureHolder/Vulture/FULL HEAD/Head",
+   "parent": 42,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_53",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.65,
+    0.7
+   ]
+  },
+  {
+   "name": "EyeR",
+   "path": "Birds/VultureHolder/Vulture/FULL HEAD/EyeR",
+   "parent": 42,
+   "pos": [
+    0.02699989,
+    0.03200002
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_47",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.25,
+    0.26
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "Birds/VultureHolder/Vulture/FULL HEAD/EyeL",
+   "parent": 42,
+   "pos": [
+    -0.246,
+    0.09499997
+   ],
+   "rotZ": -0.4799655210877513,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_47",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.25,
+    0.26
+   ]
+  },
+  {
+   "name": "Beak",
+   "path": "Birds/VultureHolder/Vulture/FULL HEAD/Beak",
+   "parent": 42,
+   "pos": [
+    -0.343,
+    -0.126
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_41",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.65,
+    0.5
+   ]
+  },
+  {
+   "name": "LegR",
+   "path": "Birds/VultureHolder/Vulture/LegR",
+   "parent": 35,
+   "pos": [
+    -0.322,
+    -0.843
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_52",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.66,
+    0.62
+   ]
+  },
+  {
+   "name": "KneeR",
+   "path": "Birds/VultureHolder/Vulture/KneeR",
+   "parent": 35,
+   "pos": [
+    -0.223,
+    -0.54
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_45",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.32,
+    0.32
+   ]
+  },
+  {
+   "name": "Wing",
+   "path": "Birds/VultureHolder/Vulture/Wing",
+   "parent": 35,
+   "pos": [
+    0.041,
+    -0.269
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_65",
+   "order": 11,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.45
+   ]
+  },
+  {
+   "name": "WingALT",
+   "path": "Birds/VultureHolder/Vulture/WingALT",
+   "parent": 35,
+   "pos": [
+    0.041,
+    -0.269
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_65",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.45
+   ]
+  },
+  {
+   "name": "Starburst",
+   "path": "Birds/VultureHolder/Vulture/Starburst",
+   "parent": 35,
+   "pos": [
+    -1.03,
+    0.168
+   ],
+   "z": -0.018050596,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "Comedians_66",
+   "order": 40,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.61
+   ]
+  },
+  {
+   "name": "Sweat1",
+   "path": "Birds/VultureHolder/Vulture/Sweat1",
+   "parent": 35,
+   "pos": [
+    0.769,
+    0.983
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "Comedians_8",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "Sweat2",
+   "path": "Birds/VultureHolder/Vulture/Sweat2",
+   "parent": 35,
+   "pos": [
+    0.757,
+    1.413
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "Comedians_8",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "Sweat3",
+   "path": "Birds/VultureHolder/Vulture/Sweat3",
+   "parent": 35,
+   "pos": [
+    0.273,
+    1.886
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "Comedians_8",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "Sweat4",
+   "path": "Birds/VultureHolder/Vulture/Sweat4",
+   "parent": 35,
+   "pos": [
+    -0.092,
+    1.645
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "Comedians_8",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.1,
+    0.1
+   ]
+  },
+  {
+   "name": "ExtraEye",
+   "path": "Birds/VultureHolder/Vulture/ExtraEye",
+   "parent": 35,
+   "pos": [
+    -0.967,
+    0.882
+   ],
+   "rotZ": -0.7853981379883825,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_47",
+   "order": 9,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.25,
+    0.26
+   ]
+  },
+  {
+   "name": "Feathers",
+   "path": "Birds/VultureHolder/Vulture/Feathers",
+   "parent": 35,
+   "pos": [
+    -0.4,
+    0.1
+   ],
+   "z": 0.03987269,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Birds/VultureHolder/Shadow",
+   "parent": 34,
+   "pos": [
+    0.25,
+    -1.875
+   ],
+   "rotZ": 0,
+   "scale": [
+    3.44304,
+    3.44304
+   ],
+   "sprite": "Comedians_9",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    0.47058824
+   ],
+   "size": [
+    1.0025,
+    0.52
+   ]
+  },
+  {
+   "name": "RavenHolder",
+   "path": "Birds/RavenHolder",
+   "parent": 32,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.1,
+    1.1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Raven",
+   "path": "Birds/RavenHolder/Raven",
+   "parent": 59,
+   "pos": [
+    -2.7,
+    -0.7
+   ],
+   "z": 0.05792329,
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "animation_00.002 1",
+   "path": "Birds/RavenHolder/Raven/animation_00.002 1",
+   "parent": 60,
+   "pos": [
+    0,
+    -0.6
+   ],
+   "z": -0.05792329,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "FULL HEAD",
+   "path": "Birds/RavenHolder/Raven/FULL HEAD",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Tail",
+   "path": "Birds/RavenHolder/Raven/FULL HEAD/Tail",
+   "parent": 62,
+   "pos": [
+    -0.2352,
+    -0.339
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_2",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.31,
+    0.29
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "Birds/RavenHolder/Raven/FULL HEAD/ArmL",
+   "parent": 62,
+   "pos": [
+    0.218,
+    -0.2348
+   ],
+   "rotZ": 0.08726650098485242,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_11",
+   "order": 1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.29,
+    0.43
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Birds/RavenHolder/Raven/FULL HEAD/Body",
+   "parent": 62,
+   "pos": [
+    0,
+    -0.004000014
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_0",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.61,
+    0.98
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "Birds/RavenHolder/Raven/FULL HEAD/ArmR",
+   "parent": 62,
+   "pos": [
+    -0.221,
+    -0.23
+   ],
+   "rotZ": -0.06981333845919581,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_11",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.29,
+    0.43
+   ]
+  },
+  {
+   "name": "EyeR",
+   "path": "Birds/RavenHolder/Raven/FULL HEAD/EyeR",
+   "parent": 62,
+   "pos": [
+    0.1590001,
+    0.123
+   ],
+   "rotZ": 0.3316125138162344,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_16",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.23,
+    0.19
+   ]
+  },
+  {
+   "name": "Beak",
+   "path": "Birds/RavenHolder/Raven/FULL HEAD/Beak",
+   "parent": 62,
+   "pos": [
+    0.247,
+    -0.016
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_19",
+   "order": 7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.56,
+    0.3
+   ]
+  },
+  {
+   "name": "EyeL",
+   "path": "Birds/RavenHolder/Raven/FULL HEAD/EyeL",
+   "parent": 62,
+   "pos": [
+    -0.04900001,
+    0.09000001
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_16",
+   "order": 8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.23,
+    0.19
+   ]
+  },
+  {
+   "name": "LegR",
+   "path": "Birds/RavenHolder/Raven/LegR",
+   "parent": 60,
+   "pos": [
+    0.164,
+    -0.549
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_17",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.38,
+    0.39
+   ]
+  },
+  {
+   "name": "LegL",
+   "path": "Birds/RavenHolder/Raven/LegL",
+   "parent": 60,
+   "pos": [
+    -0.164,
+    -0.549
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_17",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.38,
+    0.39
+   ]
+  },
+  {
+   "name": "POW",
+   "path": "Birds/RavenHolder/Raven/POW",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Smear",
+   "path": "Birds/RavenHolder/Raven/POW/Smear",
+   "parent": 72,
+   "pos": [
+    -0.208,
+    -0.327
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Comedians_44",
+   "order": 60,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.23,
+    1.09
+   ]
+  },
+  {
+   "name": "Starburst",
+   "path": "Birds/RavenHolder/Raven/POW/Starburst",
+   "parent": 72,
+   "pos": [
+    1.281,
+    0.377
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.5,
+    1.5
+   ],
+   "sprite": "Comedians_37",
+   "order": 51,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.71,
+    0.75
+   ]
+  },
+  {
+   "name": "Star1",
+   "path": "Birds/RavenHolder/Raven/POW/Star1",
+   "parent": 72,
+   "pos": [
+    0.615,
+    0.971
+   ],
+   "z": -0.05792329,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "Comedians_59",
+   "order": 55,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.27,
+    0.27
+   ]
+  },
+  {
+   "name": "Star2",
+   "path": "Birds/RavenHolder/Raven/POW/Star2",
+   "parent": 72,
+   "pos": [
+    1.715,
+    0.679
+   ],
+   "z": -0.05792329,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "Comedians_59",
+   "order": 55,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.27,
+    0.27
+   ]
+  },
+  {
+   "name": "Star3",
+   "path": "Birds/RavenHolder/Raven/POW/Star3",
+   "parent": 72,
+   "pos": [
+    1.656,
+    -0.527
+   ],
+   "z": -0.05792329,
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "sprite": "Comedians_59",
+   "order": 55,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.27,
+    0.27
+   ]
+  },
+  {
+   "name": "Bubbles",
+   "path": "Birds/RavenHolder/Bubbles",
+   "parent": 59,
+   "pos": [
+    -1.2,
+    0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "PivotL",
+   "path": "Birds/RavenHolder/Bubbles/PivotL",
+   "parent": 78,
+   "pos": [
+    -1.45,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpeechL",
+   "path": "Birds/RavenHolder/Bubbles/PivotL/SpeechL",
+   "parent": 79,
+   "pos": [
+    -2.2,
+    3.47
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BubbleL",
+   "path": "Birds/RavenHolder/Bubbles/PivotL/SpeechL/BubbleL",
+   "parent": 80,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bubbles_1",
+   "order": 70,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.89,
+    2.16
+   ]
+  },
+  {
+   "name": "TextL",
+   "path": "Birds/RavenHolder/Bubbles/PivotL/SpeechL/BubbleL/TextL",
+   "parent": 81,
+   "pos": [
+    -0.009999996,
+    0.15000004
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "Bubbles_18",
+   "order": 71,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    0.5
+   ]
+  },
+  {
+   "name": "PivotR",
+   "path": "Birds/RavenHolder/Bubbles/PivotR",
+   "parent": 78,
+   "pos": [
+    -1.45,
+    -0.8
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpeechR",
+   "path": "Birds/RavenHolder/Bubbles/PivotR/SpeechR",
+   "parent": 83,
+   "pos": [
+    2.4,
+    3.41
+   ],
+   "rotZ": -0.6981315651864876,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble R",
+   "path": "Birds/RavenHolder/Bubbles/PivotR/SpeechR/Bubble R",
+   "parent": 84,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Bubbles_1",
+   "order": 70,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.89,
+    2.16
+   ]
+  },
+  {
+   "name": "TextR",
+   "path": "Birds/RavenHolder/Bubbles/PivotR/SpeechR/Bubble R/TextR",
+   "parent": 85,
+   "pos": [
+    -0.010000016,
+    0.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.5,
+    1.5
+   ],
+   "sprite": "Bubbles_18",
+   "order": 71,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    0.5
+   ]
+  },
+  {
+   "name": "PivotD",
+   "path": "Birds/RavenHolder/Bubbles/PivotD",
+   "parent": 78,
+   "pos": [
+    -1.4,
+    1.7
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.33333,
+    1.33333
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpeechD",
+   "path": "Birds/RavenHolder/Bubbles/PivotD/SpeechD",
+   "parent": 87,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BubbleD",
+   "path": "Birds/RavenHolder/Bubbles/PivotD/SpeechD/BubbleD",
+   "parent": 88,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1,
+    1
+   ],
+   "sprite": "Bubbles_0",
+   "order": 70,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5975,
+    2.0875
+   ]
+  },
+  {
+   "name": "TextD",
+   "path": "Birds/RavenHolder/Bubbles/PivotD/SpeechD/BubbleD/TextD",
+   "parent": 89,
+   "pos": [
+    -0.074,
+    0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.47619048,
+    1
+   ],
+   "sprite": "Bubbles_17",
+   "order": 71,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.9775,
+    0.5175
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Birds/RavenHolder/Shadow",
+   "parent": 59,
+   "pos": [
+    -2.72,
+    -2.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.7,
+    2.7
+   ],
+   "sprite": "Comedians_9",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.47058824
+   ],
+   "size": [
+    1.0025,
+    0.52
+   ]
+  },
+  {
+   "name": "Crowd",
+   "path": "Crowd",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -2,
+   "rotZ": 0,
+   "scale": [
+    0.8,
+    0.8
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "CrowdHolder",
+   "path": "Crowd/CrowdHolder",
+   "parent": 92,
+   "pos": [
+    0,
+    -5.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "animation_4.000_71_percent_scale",
+   "path": "Crowd/CrowdHolder/animation_4.000_71_percent_scale",
+   "parent": 93,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    6,
+    6
+   ],
+   "order": -50,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    5.12,
+    5.12
+   ]
+  },
+  {
+   "name": "Bird1",
+   "path": "Crowd/CrowdHolder/Bird1",
+   "parent": 93,
+   "pos": [
+    -13.68,
+    1.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "sprite": "Crowd_18",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.52,
+    3.86
+   ]
+  },
+  {
+   "name": "Face1",
+   "path": "Crowd/CrowdHolder/Bird1/Face1",
+   "parent": 95,
+   "pos": [
+    1.924,
+    0.297
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_24",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.79,
+    1.22
+   ]
+  },
+  {
+   "name": "Bird2",
+   "path": "Crowd/CrowdHolder/Bird2",
+   "parent": 93,
+   "pos": [
+    -9.616,
+    1.518
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "sprite": "Crowd_34",
+   "order": 24,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    3.9
+   ]
+  },
+  {
+   "name": "Face2",
+   "path": "Crowd/CrowdHolder/Bird2/Face2",
+   "parent": 97,
+   "pos": [
+    1.108,
+    1.293
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_9",
+   "order": 26,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.41,
+    1.06
+   ]
+  },
+  {
+   "name": "Bird3",
+   "path": "Crowd/CrowdHolder/Bird3",
+   "parent": 93,
+   "pos": [
+    -6.1,
+    1.28
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "sprite": "Crowd_21",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.86,
+    2.98
+   ]
+  },
+  {
+   "name": "Face3",
+   "path": "Crowd/CrowdHolder/Bird3/Face3",
+   "parent": 99,
+   "pos": [
+    1.222,
+    0.869
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_6",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.49,
+    1.17
+   ]
+  },
+  {
+   "name": "Mouth3",
+   "path": "Crowd/CrowdHolder/Bird3/Mouth3",
+   "parent": 99,
+   "pos": [
+    1.596,
+    1.012
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_14",
+   "order": 24,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.07,
+    0.97
+   ]
+  },
+  {
+   "name": "Bird4",
+   "path": "Crowd/CrowdHolder/Bird4",
+   "parent": 93,
+   "pos": [
+    -2.522,
+    1.778
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "sprite": "Crowd_16",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3,
+    4.04
+   ]
+  },
+  {
+   "name": "Face4",
+   "path": "Crowd/CrowdHolder/Bird4/Face4",
+   "parent": 102,
+   "pos": [
+    0.764,
+    1.051
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_29",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.42,
+    1.14
+   ]
+  },
+  {
+   "name": "Bird5",
+   "path": "Crowd/CrowdHolder/Bird5",
+   "parent": 93,
+   "pos": [
+    2.581,
+    1.859
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "sprite": "Crowd_0",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.28,
+    3.9
+   ]
+  },
+  {
+   "name": "Face5",
+   "path": "Crowd/CrowdHolder/Bird5/Face5",
+   "parent": 104,
+   "pos": [
+    -1.702,
+    0.487
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_36",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.89,
+    0.82
+   ]
+  },
+  {
+   "name": "Bird6",
+   "path": "Crowd/CrowdHolder/Bird6",
+   "parent": 93,
+   "pos": [
+    5.707,
+    1.83
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "sprite": "Crowd_4",
+   "order": 21,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.92,
+    3.86
+   ]
+  },
+  {
+   "name": "Eye6",
+   "path": "Crowd/CrowdHolder/Bird6/Eye6",
+   "parent": 106,
+   "pos": [
+    -1.179,
+    0.901
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_20",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.41,
+    0.43
+   ]
+  },
+  {
+   "name": "Mouth6",
+   "path": "Crowd/CrowdHolder/Bird6/Mouth6",
+   "parent": 106,
+   "pos": [
+    -1.432,
+    0.779
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_26",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.75,
+    0.75
+   ]
+  },
+  {
+   "name": "Bird7",
+   "path": "Crowd/CrowdHolder/Bird7",
+   "parent": 93,
+   "pos": [
+    9.274,
+    1.681
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "sprite": "Crowd_2",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.14,
+    4.06
+   ]
+  },
+  {
+   "name": "Face7",
+   "path": "Crowd/CrowdHolder/Bird7/Face7",
+   "parent": 109,
+   "pos": [
+    -1.395,
+    0.447
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_45",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.95,
+    1.07
+   ]
+  },
+  {
+   "name": "Bird8",
+   "path": "Crowd/CrowdHolder/Bird8",
+   "parent": 93,
+   "pos": [
+    12.886,
+    1.829
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "sprite": "Crowd_32",
+   "order": 20,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.15,
+    4.02
+   ]
+  },
+  {
+   "name": "Face8",
+   "path": "Crowd/CrowdHolder/Bird8/Face8",
+   "parent": 111,
+   "pos": [
+    -1.428,
+    0.577
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_47",
+   "order": 22,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.06,
+    0.92
+   ]
+  },
+  {
+   "name": "MissEyes",
+   "path": "Crowd/CrowdHolder/MissEyes",
+   "parent": 93,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.06666,
+    1.06666
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bird1",
+   "path": "Crowd/CrowdHolder/MissEyes/Bird1",
+   "parent": 113,
+   "pos": [
+    -11.54,
+    2.44
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_30",
+   "order": 30,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    0.71
+   ]
+  },
+  {
+   "name": "Bird2",
+   "path": "Crowd/CrowdHolder/MissEyes/Bird2",
+   "parent": 113,
+   "pos": [
+    -8.35,
+    2.551
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_30",
+   "order": 30,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    0.71
+   ]
+  },
+  {
+   "name": "Bird3",
+   "path": "Crowd/CrowdHolder/MissEyes/Bird3",
+   "parent": 113,
+   "pos": [
+    -4.882,
+    2.112
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_30",
+   "order": 30,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    0.71
+   ]
+  },
+  {
+   "name": "Bird4",
+   "path": "Crowd/CrowdHolder/MissEyes/Bird4",
+   "parent": 113,
+   "pos": [
+    -1.992,
+    2.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_30",
+   "order": 30,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    0.71
+   ]
+  },
+  {
+   "name": "Bird5",
+   "path": "Crowd/CrowdHolder/MissEyes/Bird5",
+   "parent": 113,
+   "pos": [
+    1.137,
+    2.42
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_30",
+   "order": 30,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    0.71
+   ]
+  },
+  {
+   "name": "Bird6",
+   "path": "Crowd/CrowdHolder/MissEyes/Bird6",
+   "parent": 113,
+   "pos": [
+    4.424,
+    2.516
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_30",
+   "order": 30,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    0.71
+   ]
+  },
+  {
+   "name": "Bird7",
+   "path": "Crowd/CrowdHolder/MissEyes/Bird7",
+   "parent": 113,
+   "pos": [
+    7.674,
+    2.243
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_30",
+   "order": 30,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    0.71
+   ]
+  },
+  {
+   "name": "Bird8",
+   "path": "Crowd/CrowdHolder/MissEyes/Bird8",
+   "parent": 113,
+   "pos": [
+    11.075,
+    2.487
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "Crowd_30",
+   "order": 30,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.9,
+    0.71
+   ]
+  }
+ ]
+}

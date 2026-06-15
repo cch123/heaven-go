@@ -1,0 +1,186 @@
+{
+ "BothBirdsAnim": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "SlideIn": {
+    "clip": "Animations/BothBirds/BirdsSlideIn",
+    "speed": 1
+   },
+   "SlideOut": {
+    "clip": "Animations/BothBirds/BirdsSlideOut",
+    "speed": 1
+   }
+  }
+ },
+ "CrowdAnim": {
+  "default": "Idleblah",
+  "states": {
+   "Angry": {
+    "clip": "Animations/Crowd/CrowdMiss",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Animations/Crowd/CrowdBop",
+    "speed": 1
+   },
+   "Cheer": {
+    "clip": "Animations/Crowd/CrowdCheer",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Animations/Crowd/CrowdIdle",
+    "speed": 1
+   },
+   "Idleblah": {
+    "speed": 1
+   },
+   "Uproar": {
+    "clip": "Animations/Crowd/CrowdBigCheer",
+    "speed": 1
+   }
+  }
+ },
+ "DonaiyanenBubble": {
+  "default": "Idle",
+  "states": {
+   "Donaiyanen": {
+    "clip": "Animations/Bubble/DonaiyanenAppear",
+    "speed": 1
+   },
+   "DonaiyanenL": {
+    "clip": "Animations/Bubble/DonaiyanenAppearL",
+    "speed": 1
+   },
+   "DonaiyanenR": {
+    "clip": "Animations/Bubble/DonaiyanenAppearR",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "HaiBubbleL": {
+  "default": "Idle",
+  "states": {
+   "HaiL": {
+    "clip": "Animations/Bubble/HaiAppearL",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "HaiBubbleR": {
+  "default": "Idle",
+  "states": {
+   "HaiR": {
+    "clip": "Animations/Bubble/HaiAppearR",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   }
+  }
+ },
+ "RavenAnim": {
+  "default": "Idle",
+  "states": {
+   "Attack": {
+    "clip": "Animations/Raven/RavenAttack",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Animations/Raven/RavenBop",
+    "speed": 1
+   },
+   "Damage": {
+    "clip": "Animations/Raven/RavenDamage",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Animations/Raven/RavenMiss",
+    "speed": 1
+   },
+   "Move": {
+    "clip": "Animations/Raven/RavenMove",
+    "speed": 1
+   },
+   "MoveM": {
+    "clip": "Animations/Raven/RavenMoveM",
+    "speed": 1
+   },
+   "Ready": {
+    "clip": "Animations/Raven/RavenReady",
+    "speed": 1
+   },
+   "Spin": {
+    "clip": "Animations/Raven/RavenSpin",
+    "speed": 1
+   },
+   "Talk": {
+    "clip": "Animations/Raven/RavenTalk",
+    "speed": 1
+   }
+  }
+ },
+ "StageAnim": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "speed": 1
+   },
+   "LightsOff": {
+    "clip": "Animations/Stage/LightsOff",
+    "speed": 1
+   },
+   "LightsOn": {
+    "clip": "Animations/Stage/LightsOn",
+    "speed": 1
+   }
+  }
+ },
+ "VultureAnim": {
+  "default": "Idle",
+  "states": {
+   "Attack": {
+    "clip": "Animations/Vulture/VultureAttack",
+    "speed": 1
+   },
+   "Boing": {
+    "clip": "Animations/Vulture/VultureBoing",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Animations/Vulture/VultureBop",
+    "speed": 1
+   },
+   "Damage": {
+    "clip": "Animations/Vulture/VultureDamage",
+    "speed": 1
+   },
+   "Dodge": {
+    "clip": "Animations/Vulture/VultureDodge",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Move": {
+    "clip": "Animations/Vulture/VultureMove",
+    "speed": 1
+   },
+   "Talk": {
+    "clip": "Animations/Vulture/VultureTalk",
+    "speed": 1
+   }
+  }
+ }
+}

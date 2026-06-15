@@ -1,0 +1,10 @@
+{
+ "BG": "StageAnim",
+ "Birds": "BothBirdsAnim",
+ "Birds/RavenHolder/Bubbles/PivotD/SpeechD": "DonaiyanenBubble",
+ "Birds/RavenHolder/Bubbles/PivotL/SpeechL": "HaiBubbleL",
+ "Birds/RavenHolder/Bubbles/PivotR/SpeechR": "HaiBubbleR",
+ "Birds/RavenHolder/Raven": "RavenAnim",
+ "Birds/VultureHolder/Vulture": "VultureAnim",
+ "Crowd": "CrowdAnim"
+}
