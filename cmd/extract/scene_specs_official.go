@@ -19,7 +19,41 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 	"builtToScaleDS":  basicOfficialSceneSpec("BuiltToScaleDS", "builtToScaleDS.prefab"),
 	"builtToScaleRvl": basicOfficialSceneSpec("BuiltToScaleRvl", "builtToScaleRvl.prefab"),
 	"cannery":         basicOfficialSceneSpec("Cannery", "cannery.prefab"),
-	"catchOfTheDay":   basicOfficialSceneSpec("CatchOfTheDay", "catchOfTheDay.prefab"),
+	"catchOfTheDay": {
+		dir:    "CatchOfTheDay",
+		prefab: "catchOfTheDay.prefab",
+		roleFields: []string{
+			"Angler", "LakeScenePrefab", "LakeSceneHolder", "AnglerTransform",
+		},
+		wantControllers: true,
+		commonSounds: []string{
+			"count-ins/and.wav",
+			"count-ins/go1.wav",
+			"count-ins/go2.wav",
+			"count-ins/one1.wav",
+			"count-ins/two1.wav",
+			"count-ins/three1.wav",
+			"miss.wav",
+		},
+		templatePrefabs: []string{
+			"Prefabs/LakeScene.prefab",
+			"Prefabs/SchoolFish.prefab",
+			"Prefabs/Bubble.prefab",
+		},
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"Angler", "LakeScenePrefab", "LakeSceneHolder", "_TopColors", "_BottomColors",
+				"AnglerTransform", "_StickyCanvas",
+			}},
+			{name: "lake", markers: []string{
+				"FishAnimator", "BGAnimator", "GradientBG", "TopBG", "BottomBG",
+				"BGFishes", "BigManta", "SmallManta", "FishSchool", "SchoolFishes",
+				"Bubbles", "Renderer", "CrossfadeAnimator", "RenderCamera", "DisplayMesh",
+				"SchoolFishPrefab",
+			}, atPath: "Main/LakeScene"},
+			{name: "bgfish", markers: []string{"_Animator", "_Sprite", "FleeAnim", "FlipSprite"}, multi: true},
+		},
+	},
 	"catchyTune":      basicOfficialSceneSpec("CatchyTune", "catchyTune.prefab"),
 	"chameleon":       basicOfficialSceneSpec("Chameleon", "chameleon.prefab"),
 	"chargingChicken": basicOfficialSceneSpec("ChargingChicken", "chargingChicken.prefab"),

@@ -1,0 +1,6 @@
+{
+ "Angler": "StickyCanvas/Angler/Character",
+ "AnglerTransform": "StickyCanvas/Angler",
+ "LakeSceneHolder": "Main",
+ "LakeScenePrefab": "LakeScene"
+}

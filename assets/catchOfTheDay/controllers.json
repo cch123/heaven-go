@@ -1,0 +1,417 @@
+{
+ "Angler": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Angler/Idle",
+    "speed": 1
+   },
+   "Just": {
+    "clip": "Angler/Just",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "JustLoop": {
+    "clip": "Angler/JustLoop",
+    "speed": 1
+   },
+   "Miss": {
+    "clip": "Angler/Miss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Pick": {
+    "clip": "Angler/Pick",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Through": {
+    "clip": "Angler/Through",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "BGFish": {
+  "default": "BGFishIdle",
+  "states": {
+   "BGFishIdle": {
+    "clip": "Background/BGFishIdle",
+    "speed": 1
+   },
+   "BGFishOut_E": {
+    "clip": "Background/BGFishOut_E",
+    "speed": 1
+   },
+   "BGFishOut_ENE": {
+    "clip": "Background/BGFishOut_ENE",
+    "speed": 1
+   },
+   "BGFishOut_ESE": {
+    "clip": "Background/BGFishOut_ESE",
+    "speed": 1
+   },
+   "BGFishOut_NE": {
+    "clip": "Background/BGFishOut_NE",
+    "speed": 1
+   },
+   "BGFishOut_NW": {
+    "clip": "Background/BGFishOut_NW",
+    "speed": 1
+   },
+   "BGFishOut_SE": {
+    "clip": "Background/BGFishOut_SE",
+    "speed": 1
+   },
+   "BGFishOut_SW": {
+    "clip": "Background/BGFishOut_SW",
+    "speed": 1
+   },
+   "BGFishOut_W": {
+    "clip": "Background/BGFishOut_W",
+    "speed": 1
+   },
+   "BGFishOut_WNW": {
+    "clip": "Background/BGFishOut_WNW",
+    "speed": 1
+   },
+   "BGFishOut_WSW": {
+    "clip": "Background/BGFishOut_WSW",
+    "speed": 1
+   }
+  }
+ },
+ "Background": {
+  "default": "LayoutA",
+  "states": {
+   "LayoutA": {
+    "clip": "Background/LayoutA",
+    "speed": 1
+   },
+   "LayoutB": {
+    "clip": "Background/LayoutB",
+    "speed": 1
+   },
+   "LayoutC": {
+    "clip": "Background/LayoutC",
+    "speed": 1
+   }
+  }
+ },
+ "BigManta": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "BigManta/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "FishAnimator": {
+  "default": "NoFish",
+  "states": {
+   "Fish1_Bite": {
+    "clip": "Fish1/Fish1_Bite",
+    "speed": 1
+   },
+   "Fish1_Just": {
+    "clip": "Fish1/Fish1_Just",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish1_JustLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish1_JustLoop": {
+    "clip": "Fish1/Fish1_JustLoop",
+    "speed": 1
+   },
+   "Fish1_JustM": {
+    "clip": "Fish1/Fish1_JustM",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish1_JustLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish1_Miss": {
+    "clip": "Fish1/Fish1_Miss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish1_MissLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish1_MissLoop": {
+    "clip": "Fish1/Fish1_MissLoop",
+    "speed": 1
+   },
+   "Fish1_Out": {
+    "clip": "Fish1/Fish1_Out",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "OutLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish1_Pick": {
+    "clip": "Fish1/Fish1_Pick",
+    "speed": 1
+   },
+   "Fish1_Through": {
+    "clip": "Fish1/Fish1_Through",
+    "speed": 1
+   },
+   "Fish1_Wait": {
+    "clip": "Fish1/Fish1_Wait",
+    "speed": 1
+   },
+   "Fish2_Bite": {
+    "clip": "Fish2/Fish2_Bite",
+    "speed": 1
+   },
+   "Fish2_Just": {
+    "clip": "Fish2/Fish2_Just",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish2_JustLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish2_JustLoop": {
+    "clip": "Fish2/Fish2_JustLoop",
+    "speed": 1
+   },
+   "Fish2_JustM": {
+    "clip": "Fish2/Fish2_JustM",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish2_JustLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish2_Miss": {
+    "clip": "Fish2/Fish2_Miss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish2_MissLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish2_MissLoop": {
+    "clip": "Fish2/Fish2_MissLoop",
+    "speed": 1
+   },
+   "Fish2_Out": {
+    "clip": "Fish2/Fish2_Out",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "OutLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish2_Pick": {
+    "clip": "Fish2/Fish2_Pick",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish2_Wait",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish2_Rest": {
+    "clip": "Fish2/Fish2_Rest",
+    "speed": 1
+   },
+   "Fish2_Through": {
+    "clip": "Fish2/Fish2_Through",
+    "speed": 1
+   },
+   "Fish2_Wait": {
+    "clip": "Fish2/Fish2_Wait",
+    "speed": 1
+   },
+   "Fish3_Bite": {
+    "clip": "Fish3/Fish3_Bite",
+    "speed": 1
+   },
+   "Fish3_Just": {
+    "clip": "Fish3/Fish3_Just",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish3_JustLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish3_JustLoop": {
+    "clip": "Fish3/Fish3_JustLoop",
+    "speed": 1
+   },
+   "Fish3_Miss": {
+    "clip": "Fish3/Fish3_Miss",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish3_MissLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish3_MissLoop": {
+    "clip": "Fish3/Fish3_MissLoop",
+    "speed": 1
+   },
+   "Fish3_Out": {
+    "clip": "Fish3/Fish3_Out",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "OutLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish3_PickDown": {
+    "clip": "Fish3/Fish3_PickDown",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish3_Rest",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish3_PickUp": {
+    "clip": "Fish3/Fish3_PickUp",
+    "speed": 1
+   },
+   "Fish3_Rest": {
+    "clip": "Fish3/Fish3_Rest",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish3_RestLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish3_RestLoop": {
+    "clip": "Fish3/Fish3_RestLoop",
+    "speed": 1
+   },
+   "Fish3_Through": {
+    "clip": "Fish3/Fish3_Through",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish3_ThroughLoop",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "Fish3_ThroughLoop": {
+    "clip": "Fish3/Fish3_ThroughLoop",
+    "speed": 1
+   },
+   "Fish3_Wait": {
+    "clip": "Fish3/Fish3_Wait",
+    "speed": 1
+   },
+   "Fish3_WaitB": {
+    "clip": "Fish3/Fish3_WaitB",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Fish3_Wait",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "NoFish": {
+    "clip": "Fish/NoFish",
+    "speed": 1
+   },
+   "OutLoop": {
+    "clip": "Fish/OutLoop",
+    "speed": 1
+   }
+  }
+ },
+ "SchoolFish": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "SchoolFish/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "SmallManta": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "SmallManta/Idle",
+    "speed": 1
+   }
+  }
+ }
+}

@@ -1,0 +1,4998 @@
+{
+ "nodes": [
+  {
+   "name": "catchOfTheDay",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Main",
+   "path": "Main",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -5
+   ]
+  },
+  {
+   "name": "LakeScene",
+   "path": "Main/LakeScene",
+   "parent": 1,
+   "pos": [
+    -0.43,
+    -0.18
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Renderer",
+   "path": "Main/LakeScene/Renderer",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -32768
+   ]
+  },
+  {
+   "name": "BigManta",
+   "path": "Main/LakeScene/Renderer/BigManta",
+   "parent": 3,
+   "pos": [
+    3.19,
+    -1.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Main/LakeScene/Renderer/BigManta/Body",
+   "parent": 4,
+   "pos": [
+    -0.782,
+    0.036
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.125,
+    0.125
+   ],
+   "sprite": "manta_body01",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.42,
+    2.14
+   ]
+  },
+  {
+   "name": "Tail",
+   "path": "Main/LakeScene/Renderer/BigManta/Tail",
+   "parent": 4,
+   "pos": [
+    0.637,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.125,
+    0.125
+   ],
+   "sprite": "manta_tail01",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.14,
+    1.18
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "Main/LakeScene/Renderer/BigManta/Eyes",
+   "parent": 4,
+   "pos": [
+    -1.325,
+    0.133
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eye1",
+   "path": "Main/LakeScene/Renderer/BigManta/Eyes/Eye1",
+   "parent": 7,
+   "pos": [
+    0.01,
+    0.245
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "manta_eye01",
+   "order": 1002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.78
+   ]
+  },
+  {
+   "name": "Eye2",
+   "path": "Main/LakeScene/Renderer/BigManta/Eyes/Eye2",
+   "parent": 7,
+   "pos": [
+    0.008,
+    -0.235
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "manta_eye01",
+   "order": 1002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.78
+   ]
+  },
+  {
+   "name": "SmallManta",
+   "path": "Main/LakeScene/Renderer/SmallManta",
+   "parent": 3,
+   "pos": [
+    1.65,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Manta",
+   "path": "Main/LakeScene/Renderer/SmallManta/Manta",
+   "parent": 10,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "manta_bg01",
+   "order": -3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.627451
+   ],
+   "size": [
+    2.3,
+    0.86
+   ]
+  },
+  {
+   "name": "FishAnimator",
+   "path": "Main/LakeScene/Renderer/FishAnimator",
+   "parent": 3,
+   "pos": [
+    0.0060000066,
+    -0.118
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Fish1",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish1",
+   "parent": 12,
+   "pos": [
+    0.6901,
+    -1.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fish01_wait01",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.02
+   ]
+  },
+  {
+   "name": "Fin",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish1/Fin",
+   "parent": 13,
+   "pos": [
+    -0.1096,
+    -0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fin01_03",
+   "order": 3,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.38,
+    0.46
+   ]
+  },
+  {
+   "name": "Fish2",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish2",
+   "parent": 12,
+   "pos": [
+    0.86,
+    -1.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fish02_bite",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.18
+   ]
+  },
+  {
+   "name": "Fin",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish2/Fin",
+   "parent": 15,
+   "pos": [
+    0,
+    -0.10003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fin02_03",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.38,
+    0.38
+   ]
+  },
+  {
+   "name": "Fish3",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3",
+   "parent": 12,
+   "pos": [
+    1.533,
+    -1.232
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3/Body",
+   "parent": 17,
+   "pos": [
+    0.4271,
+    0.082
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fish03_body",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.54,
+    1.18
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3/Head",
+   "parent": 17,
+   "pos": [
+    -0.77297,
+    0.04211
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fish03_head_idle",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.02
+   ]
+  },
+  {
+   "name": "Tongue",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3/Head/Tongue",
+   "parent": 19,
+   "pos": [
+    -0.25,
+    -0.0099
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fish03_tongue01",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    0.62
+   ]
+  },
+  {
+   "name": "TongueSmear",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3/Head/Tongue/TongueSmear",
+   "parent": 20,
+   "pos": [
+    -0.42,
+    -0.0603
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fish03_tongue03",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.86
+   ]
+  },
+  {
+   "name": "DorsalFin",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3/DorsalFin",
+   "parent": 17,
+   "pos": [
+    0.1572,
+    0.6022
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fin03_02",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "Fin",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3/Fin",
+   "parent": 17,
+   "pos": [
+    0.0269,
+    -0.208
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fin03_01",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.78
+   ]
+  },
+  {
+   "name": "TailFinTop",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3/TailFinTop",
+   "parent": 17,
+   "pos": [
+    0.7169,
+    0.4919
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fin03_05",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    0.7
+   ]
+  },
+  {
+   "name": "TailFinBot",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Fish3/TailFinBot",
+   "parent": 17,
+   "pos": [
+    0.7671,
+    -0.208
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fin03_08",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.7
+   ]
+  },
+  {
+   "name": "Bobber",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Bobber",
+   "parent": 12,
+   "pos": [
+    0,
+    1.0696
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "bobber",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    1.66
+   ]
+  },
+  {
+   "name": "Hook",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Hook",
+   "parent": 12,
+   "pos": [
+    0,
+    -1.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "hook01",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.94
+   ]
+  },
+  {
+   "name": "Worm",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Worm",
+   "parent": 12,
+   "pos": [
+    -0.0199,
+    -1.4098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "worm01",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.62
+   ]
+  },
+  {
+   "name": "Ripples",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Ripples",
+   "parent": 12,
+   "pos": [
+    0,
+    1.228
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ripple01",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Ripples/ripple01",
+   "parent": 29,
+   "pos": [
+    0.0103,
+    -0.0147
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.480464,
+    1.23372
+   ],
+   "sprite": "ripple01",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.54
+   ]
+  },
+  {
+   "name": "ripple02a",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Ripples/ripple02a",
+   "parent": 29,
+   "pos": [
+    -0.4611,
+    -0.0176
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ripple02",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.54
+   ]
+  },
+  {
+   "name": "ripple02b",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Ripples/ripple02b",
+   "parent": 29,
+   "pos": [
+    0.4623,
+    -0.0185
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ripple02",
+   "order": 0,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.54
+   ]
+  },
+  {
+   "name": "ripple01b",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Ripples/ripple01b",
+   "parent": 29,
+   "pos": [
+    0,
+    -1.228
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ripple01",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.54
+   ]
+  },
+  {
+   "name": "Surprise",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Surprise",
+   "parent": 12,
+   "pos": [
+    -0.241,
+    -0.398
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4013165,
+    0.4013165
+   ],
+   "sprite": "surprise",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.7
+   ]
+  },
+  {
+   "name": "Splash",
+   "path": "Main/LakeScene/Renderer/FishAnimator/Splash",
+   "parent": 12,
+   "pos": [
+    -0.0508,
+    1.7189
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "splash01",
+   "order": -2,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.34
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Main/LakeScene/Renderer/Background",
+   "parent": 3,
+   "pos": [
+    0.010000006,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sand",
+   "path": "Main/LakeScene/Renderer/Background/sand",
+   "parent": 36,
+   "pos": [
+    0.188,
+    -2.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.41882175,
+    0.40972224
+   ],
+   "sprite": "sand",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    7.1,
+    0.86
+   ]
+  },
+  {
+   "name": "hill01",
+   "path": "Main/LakeScene/Renderer/Background/hill01",
+   "parent": 36,
+   "pos": [
+    3.441,
+    -1.726
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "hill01",
+   "order": 501,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.34,
+    2.3
+   ]
+  },
+  {
+   "name": "hill02",
+   "path": "Main/LakeScene/Renderer/Background/hill02",
+   "parent": 36,
+   "pos": [
+    -2.482,
+    -1.922
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "hill02",
+   "order": 501,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.62,
+    1.9
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "Main/LakeScene/Renderer/Background/Grass",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Grass01",
+   "path": "Main/LakeScene/Renderer/Background/Grass/Grass01",
+   "parent": 40,
+   "pos": [
+    -2.2,
+    -0.357
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass05",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    2.62
+   ]
+  },
+  {
+   "name": "Grass02",
+   "path": "Main/LakeScene/Renderer/Background/Grass/Grass02",
+   "parent": 40,
+   "pos": [
+    -3.13,
+    -1.236
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass04",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.9
+   ]
+  },
+  {
+   "name": "Grass03",
+   "path": "Main/LakeScene/Renderer/Background/Grass/Grass03",
+   "parent": 40,
+   "pos": [
+    3.45,
+    -0.046
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass04",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.9
+   ]
+  },
+  {
+   "name": "Grass04",
+   "path": "Main/LakeScene/Renderer/Background/Grass/Grass04",
+   "parent": 40,
+   "pos": [
+    2.72,
+    -0.762
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass06",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    2.14
+   ]
+  },
+  {
+   "name": "Grass05",
+   "path": "Main/LakeScene/Renderer/Background/Grass/Grass05",
+   "parent": 40,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass07",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    2.94
+   ]
+  },
+  {
+   "name": "coral",
+   "path": "Main/LakeScene/Renderer/Background/coral",
+   "parent": 36,
+   "pos": [
+    -1.219,
+    -1.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "coral",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.66,
+    1.66
+   ]
+  },
+  {
+   "name": "decor04",
+   "path": "Main/LakeScene/Renderer/Background/decor04",
+   "parent": 36,
+   "pos": [
+    -2.238,
+    -1.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "decor04",
+   "order": 502,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "decor03",
+   "path": "Main/LakeScene/Renderer/Background/decor03",
+   "parent": 36,
+   "pos": [
+    -1.842,
+    -2.035
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "decor03",
+   "order": 502,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "decor02",
+   "path": "Main/LakeScene/Renderer/Background/decor02",
+   "parent": 36,
+   "pos": [
+    3.2,
+    -1.879
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "decor02",
+   "order": 502,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "decor01",
+   "path": "Main/LakeScene/Renderer/Background/decor01",
+   "parent": 36,
+   "pos": [
+    3.52,
+    -1.398
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "decor01",
+   "order": 502,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Backdrop",
+   "path": "Main/LakeScene/Renderer/Background/Backdrop",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GradientBG",
+   "path": "Main/LakeScene/Renderer/Background/Backdrop/GradientBG",
+   "parent": 51,
+   "pos": [
+    0,
+    -0.0739
+   ],
+   "rotZ": 0,
+   "scale": [
+    1250,
+    0.311053
+   ],
+   "sprite": "GradientBG",
+   "order": -5,
+   "color": [
+    0.70980394,
+    0.87058824,
+    0.87058824,
+    1
+   ],
+   "size": [
+    0.24,
+    4.72
+   ]
+  },
+  {
+   "name": "ColorBG_Bottom",
+   "path": "Main/LakeScene/Renderer/Background/Backdrop/ColorBG_Bottom",
+   "parent": 51,
+   "pos": [
+    0,
+    -100
+   ],
+   "rotZ": 0,
+   "scale": [
+    1250,
+    625
+   ],
+   "sprite": "ColorBG",
+   "order": -10,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    0.16,
+    0.17
+   ]
+  },
+  {
+   "name": "ColorBG_Top",
+   "path": "Main/LakeScene/Renderer/Background/Backdrop/ColorBG_Top",
+   "parent": 51,
+   "pos": [
+    0,
+    100
+   ],
+   "rotZ": 0,
+   "scale": [
+    1250,
+    625
+   ],
+   "sprite": "ColorBG",
+   "order": -10,
+   "color": [
+    0.70980394,
+    0.87058824,
+    0.87058824,
+    1
+   ],
+   "size": [
+    0.16,
+    0.17
+   ]
+  },
+  {
+   "name": "Fish",
+   "path": "Main/LakeScene/Renderer/Background/Fish",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BGFish1",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish1",
+   "parent": 55,
+   "pos": [
+    2.8610003,
+    -0.24300005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish1/Sprite",
+   "parent": 56,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish2",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish2",
+   "parent": 55,
+   "pos": [
+    -2.3337,
+    -1.4997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish2/Sprite",
+   "parent": 58,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish3",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish3",
+   "parent": 55,
+   "pos": [
+    -2.679,
+    -1.221
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish3/Sprite",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish4",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish4",
+   "parent": 55,
+   "pos": [
+    -0.74,
+    -1.801
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish4/Sprite",
+   "parent": 62,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish5",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish5",
+   "parent": 55,
+   "pos": [
+    1.724,
+    -1.619
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish5/Sprite",
+   "parent": 64,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish6",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish6",
+   "parent": 55,
+   "pos": [
+    2.4042,
+    -0.52
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish6/Sprite",
+   "parent": 66,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish7",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish7",
+   "parent": 55,
+   "pos": [
+    3.3044,
+    -0.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish7/Sprite",
+   "parent": 68,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish8",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish8",
+   "parent": 55,
+   "pos": [
+    -3.6562,
+    -0.5791
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish8/Sprite",
+   "parent": 70,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "Particles",
+   "path": "Main/LakeScene/Renderer/Background/Particles",
+   "parent": 36,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble1",
+   "path": "Main/LakeScene/Renderer/Background/Particles/Bubble1",
+   "parent": 72,
+   "pos": [
+    -3.93,
+    -1.82
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble2",
+   "path": "Main/LakeScene/Renderer/Background/Particles/Bubble2",
+   "parent": 72,
+   "pos": [
+    -3.581,
+    -2.543
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble3",
+   "path": "Main/LakeScene/Renderer/Background/Particles/Bubble3",
+   "parent": 72,
+   "pos": [
+    -2.722,
+    -0.477
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble4",
+   "path": "Main/LakeScene/Renderer/Background/Particles/Bubble4",
+   "parent": 72,
+   "pos": [
+    -2.477,
+    -0.752
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble5",
+   "path": "Main/LakeScene/Renderer/Background/Particles/Bubble5",
+   "parent": 72,
+   "pos": [
+    1.328,
+    -1.803
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble6",
+   "path": "Main/LakeScene/Renderer/Background/Particles/Bubble6",
+   "parent": 72,
+   "pos": [
+    1.952,
+    -0.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble7",
+   "path": "Main/LakeScene/Renderer/Background/Particles/Bubble7",
+   "parent": 72,
+   "pos": [
+    2.641,
+    0.549
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble8",
+   "path": "Main/LakeScene/Renderer/Background/Particles/Bubble8",
+   "parent": 72,
+   "pos": [
+    4.551,
+    -0.509
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FishSchool",
+   "path": "Main/LakeScene/Renderer/FishSchool",
+   "parent": 3,
+   "pos": [
+    0,
+    7.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    500
+   ]
+  },
+  {
+   "name": "Camera",
+   "path": "Main/LakeScene/Camera",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -10,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Quad",
+   "path": "Main/LakeScene/Quad",
+   "parent": 2,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    8.75,
+    8.75
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1111
+   ]
+  },
+  {
+   "name": "StickyCanvas",
+   "path": "StickyCanvas",
+   "parent": 0,
+   "pos": [
+    0.61,
+    -0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Angler",
+   "path": "StickyCanvas/Angler",
+   "parent": 84,
+   "pos": [
+    -7.5328,
+    3.2494001
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.2,
+    2.2
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "StickyCanvas/Angler/Background",
+   "parent": 85,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_bg",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.38,
+    2.38
+   ]
+  },
+  {
+   "name": "Character",
+   "path": "StickyCanvas/Angler/Character",
+   "parent": 85,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "StickyCanvas/Angler/Character/Head",
+   "parent": 87,
+   "pos": [
+    -0.4103,
+    -0.1104
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_head",
+   "order": 51,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    1.02
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "StickyCanvas/Angler/Character/Head/Face",
+   "parent": 88,
+   "pos": [
+    0.537,
+    -0.332
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "angler_face_idle",
+   "order": 52,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "Hat",
+   "path": "StickyCanvas/Angler/Character/Hat",
+   "parent": 87,
+   "pos": [
+    -0.2304,
+    -0.0103
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_hat",
+   "order": 200,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.62
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "StickyCanvas/Angler/Character/Torso",
+   "parent": 87,
+   "pos": [
+    -0.2801,
+    -0.55033
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_torso",
+   "order": 60,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.86
+   ]
+  },
+  {
+   "name": "Waist",
+   "path": "StickyCanvas/Angler/Character/Waist",
+   "parent": 87,
+   "pos": [
+    -0.2505,
+    -0.8705
+   ],
+   "rotZ": -0.22483528032223038,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_waist",
+   "order": 50,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    0.62
+   ]
+  },
+  {
+   "name": "ShoulderR",
+   "path": "StickyCanvas/Angler/Character/ShoulderR",
+   "parent": 87,
+   "pos": [
+    -0.3594,
+    -0.4801
+   ],
+   "rotZ": 0.3518085286863966,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_shoulder",
+   "order": 90,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "ShoulderL",
+   "path": "StickyCanvas/Angler/Character/ShoulderL",
+   "parent": 87,
+   "pos": [
+    -0.429,
+    -0.449
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_shoulder",
+   "order": 47,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "SleeveR",
+   "path": "StickyCanvas/Angler/Character/SleeveR",
+   "parent": 87,
+   "pos": [
+    -0.2287,
+    -0.5457
+   ],
+   "rotZ": 0.2712520771297097,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_sleeve",
+   "order": 70,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "SleeveL",
+   "path": "StickyCanvas/Angler/Character/SleeveL",
+   "parent": 87,
+   "pos": [
+    -0.3415,
+    -0.5546
+   ],
+   "rotZ": -0.3330876139926857,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_sleeve",
+   "order": 45,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "StickyCanvas/Angler/Character/ArmR",
+   "parent": 87,
+   "pos": [
+    -0.0483,
+    -0.5042
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_arm",
+   "order": 80,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "StickyCanvas/Angler/Character/ArmL",
+   "parent": 87,
+   "pos": [
+    -0.1893,
+    -0.5673
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_arm",
+   "order": 46,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "WristR",
+   "path": "StickyCanvas/Angler/Character/WristR",
+   "parent": 87,
+   "pos": [
+    0.0512,
+    -0.4513
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_cuff",
+   "order": 110,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "WristL",
+   "path": "StickyCanvas/Angler/Character/WristL",
+   "parent": 87,
+   "pos": [
+    -0.1034,
+    -0.5049
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_cuff",
+   "order": 49,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "HandR",
+   "path": "StickyCanvas/Angler/Character/HandR",
+   "parent": 87,
+   "pos": [
+    0.1159,
+    -0.4051
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_hand",
+   "order": 100,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "HandL",
+   "path": "StickyCanvas/Angler/Character/HandL",
+   "parent": 87,
+   "pos": [
+    -0.0309,
+    -0.4554
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "angler_hand",
+   "order": 69,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.53
+   ]
+  },
+  {
+   "name": "Rod",
+   "path": "StickyCanvas/Angler/Character/Rod",
+   "parent": 87,
+   "pos": [
+    0.749,
+    0.36
+   ],
+   "rotZ": -0.7028046510022458,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "rod01",
+   "order": 68,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    3.02
+   ]
+  },
+  {
+   "name": "GameObject",
+   "path": "GameObject",
+   "parent": 0,
+   "pos": [
+    8.883,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LakeScene",
+   "path": "LakeScene",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Renderer",
+   "path": "LakeScene/Renderer",
+   "parent": 105,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -32768
+   ]
+  },
+  {
+   "name": "BigManta",
+   "path": "LakeScene/Renderer/BigManta",
+   "parent": 106,
+   "pos": [
+    3.19,
+    -1.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    2,
+    2
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "LakeScene/Renderer/BigManta/Body",
+   "parent": 107,
+   "pos": [
+    -0.782,
+    0.036
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.125,
+    0.125
+   ],
+   "sprite": "manta_body01",
+   "order": 1001,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.42,
+    2.14
+   ]
+  },
+  {
+   "name": "Tail",
+   "path": "LakeScene/Renderer/BigManta/Tail",
+   "parent": 107,
+   "pos": [
+    0.637,
+    0.074
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.125,
+    0.125
+   ],
+   "sprite": "manta_tail01",
+   "order": 1000,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.14,
+    1.18
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "LakeScene/Renderer/BigManta/Eyes",
+   "parent": 107,
+   "pos": [
+    -1.325,
+    0.133
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5,
+    0.5
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Eye1",
+   "path": "LakeScene/Renderer/BigManta/Eyes/Eye1",
+   "parent": 110,
+   "pos": [
+    0.01,
+    0.245
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "manta_eye01",
+   "order": 1002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.78
+   ]
+  },
+  {
+   "name": "Eye2",
+   "path": "LakeScene/Renderer/BigManta/Eyes/Eye2",
+   "parent": 110,
+   "pos": [
+    0.008,
+    -0.235
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "manta_eye01",
+   "order": 1002,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.78
+   ]
+  },
+  {
+   "name": "SmallManta",
+   "path": "LakeScene/Renderer/SmallManta",
+   "parent": 106,
+   "pos": [
+    1.65,
+    -0.57
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Manta",
+   "path": "LakeScene/Renderer/SmallManta/Manta",
+   "parent": 113,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "manta_bg01",
+   "order": -3,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.627451
+   ],
+   "size": [
+    2.3,
+    0.86
+   ]
+  },
+  {
+   "name": "FishAnimator",
+   "path": "LakeScene/Renderer/FishAnimator",
+   "parent": 106,
+   "pos": [
+    0.0060000066,
+    -0.118
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Fish1",
+   "path": "LakeScene/Renderer/FishAnimator/Fish1",
+   "parent": 115,
+   "pos": [
+    0.6901,
+    -1.16
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fish01_wait01",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.02
+   ]
+  },
+  {
+   "name": "Fin",
+   "path": "LakeScene/Renderer/FishAnimator/Fish1/Fin",
+   "parent": 116,
+   "pos": [
+    -0.1096,
+    -0.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fin01_03",
+   "order": 3,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.38,
+    0.46
+   ]
+  },
+  {
+   "name": "Fish2",
+   "path": "LakeScene/Renderer/FishAnimator/Fish2",
+   "parent": 115,
+   "pos": [
+    0.86,
+    -1.11
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fish02_bite",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.58,
+    1.18
+   ]
+  },
+  {
+   "name": "Fin",
+   "path": "LakeScene/Renderer/FishAnimator/Fish2/Fin",
+   "parent": 118,
+   "pos": [
+    0,
+    -0.10003
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fin02_03",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.38,
+    0.38
+   ]
+  },
+  {
+   "name": "Fish3",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3",
+   "parent": 115,
+   "pos": [
+    1.533,
+    -1.232
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3/Body",
+   "parent": 120,
+   "pos": [
+    0.4271,
+    0.082
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fish03_body",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.54,
+    1.18
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3/Head",
+   "parent": 120,
+   "pos": [
+    -0.77297,
+    0.04211
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fish03_head_idle",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.02
+   ]
+  },
+  {
+   "name": "Tongue",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3/Head/Tongue",
+   "parent": 122,
+   "pos": [
+    -0.25,
+    -0.0099
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fish03_tongue01",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    0.62
+   ]
+  },
+  {
+   "name": "TongueSmear",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3/Head/Tongue/TongueSmear",
+   "parent": 123,
+   "pos": [
+    -0.42,
+    -0.0603
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "fish03_tongue03",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    0.86
+   ]
+  },
+  {
+   "name": "DorsalFin",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3/DorsalFin",
+   "parent": 120,
+   "pos": [
+    0.1572,
+    0.6022
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fin03_02",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "Fin",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3/Fin",
+   "parent": 120,
+   "pos": [
+    0.0269,
+    -0.208
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fin03_01",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.78
+   ]
+  },
+  {
+   "name": "TailFinTop",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3/TailFinTop",
+   "parent": 120,
+   "pos": [
+    0.7169,
+    0.4919
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fin03_05",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.1,
+    0.7
+   ]
+  },
+  {
+   "name": "TailFinBot",
+   "path": "LakeScene/Renderer/FishAnimator/Fish3/TailFinBot",
+   "parent": 120,
+   "pos": [
+    0.7671,
+    -0.208
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "fin03_08",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.7
+   ]
+  },
+  {
+   "name": "Bobber",
+   "path": "LakeScene/Renderer/FishAnimator/Bobber",
+   "parent": 115,
+   "pos": [
+    0,
+    1.0696
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "bobber",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.46,
+    1.66
+   ]
+  },
+  {
+   "name": "Hook",
+   "path": "LakeScene/Renderer/FishAnimator/Hook",
+   "parent": 115,
+   "pos": [
+    0,
+    -1.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "hook01",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.94
+   ]
+  },
+  {
+   "name": "Worm",
+   "path": "LakeScene/Renderer/FishAnimator/Worm",
+   "parent": 115,
+   "pos": [
+    -0.0199,
+    -1.4098
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "worm01",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.62
+   ]
+  },
+  {
+   "name": "Ripples",
+   "path": "LakeScene/Renderer/FishAnimator/Ripples",
+   "parent": 115,
+   "pos": [
+    0,
+    1.228
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ripple01",
+   "path": "LakeScene/Renderer/FishAnimator/Ripples/ripple01",
+   "parent": 132,
+   "pos": [
+    0.0103,
+    -0.0147
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.480464,
+    1.23372
+   ],
+   "sprite": "ripple01",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.54
+   ]
+  },
+  {
+   "name": "ripple02a",
+   "path": "LakeScene/Renderer/FishAnimator/Ripples/ripple02a",
+   "parent": 132,
+   "pos": [
+    -0.4611,
+    -0.0176
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ripple02",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.54
+   ]
+  },
+  {
+   "name": "ripple02b",
+   "path": "LakeScene/Renderer/FishAnimator/Ripples/ripple02b",
+   "parent": 132,
+   "pos": [
+    0.4623,
+    -0.0185
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ripple02",
+   "order": 0,
+   "hidden": true,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.54
+   ]
+  },
+  {
+   "name": "ripple01b",
+   "path": "LakeScene/Renderer/FishAnimator/Ripples/ripple01b",
+   "parent": 132,
+   "pos": [
+    0,
+    -1.228
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "ripple01",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.94,
+    0.54
+   ]
+  },
+  {
+   "name": "Surprise",
+   "path": "LakeScene/Renderer/FishAnimator/Surprise",
+   "parent": 115,
+   "pos": [
+    -0.241,
+    -0.398
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4013165,
+    0.4013165
+   ],
+   "sprite": "surprise",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.86,
+    0.7
+   ]
+  },
+  {
+   "name": "Splash",
+   "path": "LakeScene/Renderer/FishAnimator/Splash",
+   "parent": 115,
+   "pos": [
+    -0.0508,
+    1.7189
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "splash01",
+   "order": -2,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.26,
+    1.34
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "LakeScene/Renderer/Background",
+   "parent": 106,
+   "pos": [
+    0.010000006,
+    -0.02
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sand",
+   "path": "LakeScene/Renderer/Background/sand",
+   "parent": 139,
+   "pos": [
+    0.188,
+    -2.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.41882175,
+    0.40972224
+   ],
+   "sprite": "sand",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    0.39215687
+   ],
+   "size": [
+    7.1,
+    0.86
+   ]
+  },
+  {
+   "name": "hill01",
+   "path": "LakeScene/Renderer/Background/hill01",
+   "parent": 139,
+   "pos": [
+    3.441,
+    -1.726
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "hill01",
+   "order": 501,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.34,
+    2.3
+   ]
+  },
+  {
+   "name": "hill02",
+   "path": "LakeScene/Renderer/Background/hill02",
+   "parent": 139,
+   "pos": [
+    -2.482,
+    -1.922
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "hill02",
+   "order": 501,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.62,
+    1.9
+   ]
+  },
+  {
+   "name": "Grass",
+   "path": "LakeScene/Renderer/Background/Grass",
+   "parent": 139,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Grass01",
+   "path": "LakeScene/Renderer/Background/Grass/Grass01",
+   "parent": 143,
+   "pos": [
+    -2.2,
+    -0.357
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass05",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    2.62
+   ]
+  },
+  {
+   "name": "Grass02",
+   "path": "LakeScene/Renderer/Background/Grass/Grass02",
+   "parent": 143,
+   "pos": [
+    -3.13,
+    -1.236
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass04",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.9
+   ]
+  },
+  {
+   "name": "Grass03",
+   "path": "LakeScene/Renderer/Background/Grass/Grass03",
+   "parent": 143,
+   "pos": [
+    3.45,
+    -0.046
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass04",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    1.9
+   ]
+  },
+  {
+   "name": "Grass04",
+   "path": "LakeScene/Renderer/Background/Grass/Grass04",
+   "parent": 143,
+   "pos": [
+    2.72,
+    -0.762
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass06",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.78,
+    2.14
+   ]
+  },
+  {
+   "name": "Grass05",
+   "path": "LakeScene/Renderer/Background/Grass/Grass05",
+   "parent": 143,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "grass07",
+   "order": 0,
+   "hidden": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.7,
+    2.94
+   ]
+  },
+  {
+   "name": "coral",
+   "path": "LakeScene/Renderer/Background/coral",
+   "parent": 139,
+   "pos": [
+    -1.219,
+    -1.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "coral",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.66,
+    1.66
+   ]
+  },
+  {
+   "name": "decor04",
+   "path": "LakeScene/Renderer/Background/decor04",
+   "parent": 139,
+   "pos": [
+    -2.238,
+    -1.64
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "decor04",
+   "order": 502,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "decor03",
+   "path": "LakeScene/Renderer/Background/decor03",
+   "parent": 139,
+   "pos": [
+    -1.842,
+    -2.035
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "decor03",
+   "order": 502,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "decor02",
+   "path": "LakeScene/Renderer/Background/decor02",
+   "parent": 139,
+   "pos": [
+    3.2,
+    -1.879
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "decor02",
+   "order": 502,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "decor01",
+   "path": "LakeScene/Renderer/Background/decor01",
+   "parent": 139,
+   "pos": [
+    3.52,
+    -1.398
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "decor01",
+   "order": 502,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.62,
+    0.7
+   ]
+  },
+  {
+   "name": "Backdrop",
+   "path": "LakeScene/Renderer/Background/Backdrop",
+   "parent": 139,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "GradientBG",
+   "path": "LakeScene/Renderer/Background/Backdrop/GradientBG",
+   "parent": 154,
+   "pos": [
+    0,
+    -0.0739
+   ],
+   "rotZ": 0,
+   "scale": [
+    1250,
+    0.311053
+   ],
+   "sprite": "GradientBG",
+   "order": -5,
+   "color": [
+    0.70980394,
+    0.87058824,
+    0.87058824,
+    1
+   ],
+   "size": [
+    0.24,
+    4.72
+   ]
+  },
+  {
+   "name": "ColorBG_Bottom",
+   "path": "LakeScene/Renderer/Background/Backdrop/ColorBG_Bottom",
+   "parent": 154,
+   "pos": [
+    0,
+    -100
+   ],
+   "rotZ": 0,
+   "scale": [
+    1250,
+    625
+   ],
+   "sprite": "ColorBG",
+   "order": -10,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    0.16,
+    0.17
+   ]
+  },
+  {
+   "name": "ColorBG_Top",
+   "path": "LakeScene/Renderer/Background/Backdrop/ColorBG_Top",
+   "parent": 154,
+   "pos": [
+    0,
+    100
+   ],
+   "rotZ": 0,
+   "scale": [
+    1250,
+    625
+   ],
+   "sprite": "ColorBG",
+   "order": -10,
+   "color": [
+    0.70980394,
+    0.87058824,
+    0.87058824,
+    1
+   ],
+   "size": [
+    0.16,
+    0.17
+   ]
+  },
+  {
+   "name": "Fish",
+   "path": "LakeScene/Renderer/Background/Fish",
+   "parent": 139,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BGFish1",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish1",
+   "parent": 158,
+   "pos": [
+    2.8610003,
+    -0.24300005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish1/Sprite",
+   "parent": 159,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish2",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish2",
+   "parent": 158,
+   "pos": [
+    -2.3337,
+    -1.4997
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish2/Sprite",
+   "parent": 161,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish3",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish3",
+   "parent": 158,
+   "pos": [
+    -2.679,
+    -1.221
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish3/Sprite",
+   "parent": 163,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish4",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish4",
+   "parent": 158,
+   "pos": [
+    -0.74,
+    -1.801
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish4/Sprite",
+   "parent": 165,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish5",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish5",
+   "parent": 158,
+   "pos": [
+    1.724,
+    -1.619
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish5/Sprite",
+   "parent": 167,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish6",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish6",
+   "parent": 158,
+   "pos": [
+    2.4042,
+    -0.52
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish6/Sprite",
+   "parent": 169,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish7",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish7",
+   "parent": 158,
+   "pos": [
+    3.3044,
+    -0.48
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish7/Sprite",
+   "parent": 171,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "BGFish8",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish8",
+   "parent": 158,
+   "pos": [
+    -3.6562,
+    -0.5791
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.15,
+    0.15
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "LakeScene/Renderer/Background/Fish/BGFish8/Sprite",
+   "parent": 173,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "bg_fish01",
+   "order": -4,
+   "color": [
+    0.46666667,
+    0.7372549,
+    0.81960785,
+    1
+   ],
+   "size": [
+    1.02,
+    0.7
+   ]
+  },
+  {
+   "name": "Particles",
+   "path": "LakeScene/Renderer/Background/Particles",
+   "parent": 139,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble1",
+   "path": "LakeScene/Renderer/Background/Particles/Bubble1",
+   "parent": 175,
+   "pos": [
+    -3.93,
+    -1.82
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble2",
+   "path": "LakeScene/Renderer/Background/Particles/Bubble2",
+   "parent": 175,
+   "pos": [
+    -3.581,
+    -2.543
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble3",
+   "path": "LakeScene/Renderer/Background/Particles/Bubble3",
+   "parent": 175,
+   "pos": [
+    -2.722,
+    -0.477
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble4",
+   "path": "LakeScene/Renderer/Background/Particles/Bubble4",
+   "parent": 175,
+   "pos": [
+    -2.477,
+    -0.752
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble5",
+   "path": "LakeScene/Renderer/Background/Particles/Bubble5",
+   "parent": 175,
+   "pos": [
+    1.328,
+    -1.803
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble6",
+   "path": "LakeScene/Renderer/Background/Particles/Bubble6",
+   "parent": 175,
+   "pos": [
+    1.952,
+    -0.74
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble7",
+   "path": "LakeScene/Renderer/Background/Particles/Bubble7",
+   "parent": 175,
+   "pos": [
+    2.641,
+    0.549
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Bubble8",
+   "path": "LakeScene/Renderer/Background/Particles/Bubble8",
+   "parent": 175,
+   "pos": [
+    4.551,
+    -0.509
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "FishSchool",
+   "path": "LakeScene/Renderer/FishSchool",
+   "parent": 106,
+   "pos": [
+    0,
+    7.86
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    500
+   ]
+  },
+  {
+   "name": "Camera",
+   "path": "LakeScene/Camera",
+   "parent": 105,
+   "pos": [
+    0,
+    0
+   ],
+   "z": -10,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Quad",
+   "path": "LakeScene/Quad",
+   "parent": 105,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    8.75,
+    8.75
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1111
+   ]
+  },
+  {
+   "name": "SchoolFish",
+   "path": "SchoolFish",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "SchoolFish/Body",
+   "parent": 187,
+   "pos": [
+    0.2402,
+    0.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "blindfish",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.7,
+    0.94
+   ]
+  },
+  {
+   "name": "Fin",
+   "path": "SchoolFish/Fin",
+   "parent": 187,
+   "pos": [
+    0.35,
+    0.201
+   ],
+   "rotZ": 0.1254869954101697,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "blindfish_fin",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.5,
+    0.7
+   ]
+  },
+  {
+   "name": "Eye",
+   "path": "SchoolFish/Eye",
+   "parent": 187,
+   "pos": [
+    -0.76013,
+    -0.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "sprite": "blindfish_eye",
+   "order": 1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    0.54,
+    0.54
+   ]
+  },
+  {
+   "name": "Bubble",
+   "path": "Bubble",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  }
+ ]
+}

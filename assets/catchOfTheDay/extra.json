@@ -1,0 +1,542 @@
+{
+ "components": {
+  "bgfish0": {
+   "path": "LakeScene/Renderer/Background/Fish/BGFish1",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "LakeScene/Renderer/Background/Fish/BGFish1",
+    "_Sprite": "LakeScene/Renderer/Background/Fish/BGFish1/Sprite"
+   }
+  },
+  "bgfish1": {
+   "path": "LakeScene/Renderer/Background/Fish/BGFish2",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "LakeScene/Renderer/Background/Fish/BGFish2",
+    "_Sprite": "LakeScene/Renderer/Background/Fish/BGFish2/Sprite"
+   }
+  },
+  "bgfish10": {
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish3",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "Main/LakeScene/Renderer/Background/Fish/BGFish3",
+    "_Sprite": "Main/LakeScene/Renderer/Background/Fish/BGFish3/Sprite"
+   }
+  },
+  "bgfish11": {
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish4",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "Main/LakeScene/Renderer/Background/Fish/BGFish4",
+    "_Sprite": "Main/LakeScene/Renderer/Background/Fish/BGFish4/Sprite"
+   }
+  },
+  "bgfish12": {
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish5",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "Main/LakeScene/Renderer/Background/Fish/BGFish5",
+    "_Sprite": "Main/LakeScene/Renderer/Background/Fish/BGFish5/Sprite"
+   }
+  },
+  "bgfish13": {
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish6",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "Main/LakeScene/Renderer/Background/Fish/BGFish6",
+    "_Sprite": "Main/LakeScene/Renderer/Background/Fish/BGFish6/Sprite"
+   }
+  },
+  "bgfish14": {
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish7",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "Main/LakeScene/Renderer/Background/Fish/BGFish7",
+    "_Sprite": "Main/LakeScene/Renderer/Background/Fish/BGFish7/Sprite"
+   }
+  },
+  "bgfish15": {
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish8",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "Main/LakeScene/Renderer/Background/Fish/BGFish8",
+    "_Sprite": "Main/LakeScene/Renderer/Background/Fish/BGFish8/Sprite"
+   }
+  },
+  "bgfish2": {
+   "path": "LakeScene/Renderer/Background/Fish/BGFish3",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "LakeScene/Renderer/Background/Fish/BGFish3",
+    "_Sprite": "LakeScene/Renderer/Background/Fish/BGFish3/Sprite"
+   }
+  },
+  "bgfish3": {
+   "path": "LakeScene/Renderer/Background/Fish/BGFish4",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "LakeScene/Renderer/Background/Fish/BGFish4",
+    "_Sprite": "LakeScene/Renderer/Background/Fish/BGFish4/Sprite"
+   }
+  },
+  "bgfish4": {
+   "path": "LakeScene/Renderer/Background/Fish/BGFish5",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "LakeScene/Renderer/Background/Fish/BGFish5",
+    "_Sprite": "LakeScene/Renderer/Background/Fish/BGFish5/Sprite"
+   }
+  },
+  "bgfish5": {
+   "path": "LakeScene/Renderer/Background/Fish/BGFish6",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "LakeScene/Renderer/Background/Fish/BGFish6",
+    "_Sprite": "LakeScene/Renderer/Background/Fish/BGFish6/Sprite"
+   }
+  },
+  "bgfish6": {
+   "path": "LakeScene/Renderer/Background/Fish/BGFish7",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "LakeScene/Renderer/Background/Fish/BGFish7",
+    "_Sprite": "LakeScene/Renderer/Background/Fish/BGFish7/Sprite"
+   }
+  },
+  "bgfish7": {
+   "path": "LakeScene/Renderer/Background/Fish/BGFish8",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "LakeScene/Renderer/Background/Fish/BGFish8",
+    "_Sprite": "LakeScene/Renderer/Background/Fish/BGFish8/Sprite"
+   }
+  },
+  "bgfish8": {
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish1",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "Main/LakeScene/Renderer/Background/Fish/BGFish1",
+    "_Sprite": "Main/LakeScene/Renderer/Background/Fish/BGFish1/Sprite"
+   }
+  },
+  "bgfish9": {
+   "path": "Main/LakeScene/Renderer/Background/Fish/BGFish2",
+   "nums": {
+    "FleeAnim": 0,
+    "FlipSprite": 0
+   },
+   "refs": {
+    "_Animator": "Main/LakeScene/Renderer/Background/Fish/BGFish2",
+    "_Sprite": "Main/LakeScene/Renderer/Background/Fish/BGFish2/Sprite"
+   }
+  },
+  "game": {
+   "path": "",
+   "refs": {
+    "Angler": "StickyCanvas/Angler/Character",
+    "AnglerTransform": "StickyCanvas/Angler",
+    "LakeSceneHolder": "Main",
+    "LakeScenePrefab": "LakeScene",
+    "_StickyCanvas": "StickyCanvas"
+   },
+   "lists": {
+    "_BottomColors": [
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.8196079,
+       "g": 0.7372549,
+       "r": 0.4666667
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.48235297,
+       "g": 0.7137255,
+       "r": 0.3529412
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.41960788,
+       "g": 0.627451,
+       "r": 0.70980394
+      }
+     }
+    ],
+    "_TopColors": [
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.8705883,
+       "g": 0.8705883,
+       "r": 0.70980394
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.6784314,
+       "g": 0.8745099,
+       "r": 0.70980394
+      }
+     },
+     {
+      "nums": {
+       "a": 1,
+       "b": 0.6784314,
+       "g": 0.8705883,
+       "r": 0.8705883
+      }
+     }
+    ]
+   }
+  },
+  "lake": {
+   "path": "Main/LakeScene",
+   "nums": {
+    "FishOut": 0,
+    "IsDummy": 1
+   },
+   "refs": {
+    "BGAnimator": "Main/LakeScene/Renderer/Background",
+    "BigManta": "Main/LakeScene/Renderer/BigManta",
+    "BottomBG": "Main/LakeScene/Renderer/Background/Backdrop/ColorBG_Bottom",
+    "DisplayMesh": "Main/LakeScene/Quad",
+    "FishAnimator": "Main/LakeScene/Renderer/FishAnimator",
+    "FishSchoolHolder": "Main/LakeScene/Renderer/FishSchool",
+    "GradientBG": "Main/LakeScene/Renderer/Background/Backdrop/GradientBG",
+    "MeshSort": "Main/LakeScene/Quad",
+    "RenderCamera": "Main/LakeScene/Camera",
+    "Renderer": "Main/LakeScene/Renderer",
+    "SchoolFishPrefab": "SchoolFish",
+    "SmallManta": "Main/LakeScene/Renderer/SmallManta",
+    "TopBG": "Main/LakeScene/Renderer/Background/Backdrop/ColorBG_Top",
+    "XXXXXXXXXXXX": "Main/LakeScene/Renderer/FishSchool",
+    "_SortingGroup": "Main/LakeScene/Renderer"
+   },
+   "refArrays": {
+    "BGFishes": [
+     "Main/LakeScene/Renderer/Background/Fish/BGFish1",
+     "Main/LakeScene/Renderer/Background/Fish/BGFish2",
+     "Main/LakeScene/Renderer/Background/Fish/BGFish3",
+     "Main/LakeScene/Renderer/Background/Fish/BGFish4",
+     "Main/LakeScene/Renderer/Background/Fish/BGFish5",
+     "Main/LakeScene/Renderer/Background/Fish/BGFish6",
+     "Main/LakeScene/Renderer/Background/Fish/BGFish7",
+     "Main/LakeScene/Renderer/Background/Fish/BGFish8"
+    ],
+    "Bubbles": [
+     "Main/LakeScene/Renderer/Background/Particles/Bubble1",
+     "Main/LakeScene/Renderer/Background/Particles/Bubble2",
+     "Main/LakeScene/Renderer/Background/Particles/Bubble3",
+     "Main/LakeScene/Renderer/Background/Particles/Bubble4",
+     "Main/LakeScene/Renderer/Background/Particles/Bubble5",
+     "Main/LakeScene/Renderer/Background/Particles/Bubble6",
+     "Main/LakeScene/Renderer/Background/Particles/Bubble7",
+     "Main/LakeScene/Renderer/Background/Particles/Bubble8"
+    ],
+    "SchoolFishes": [
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     "",
+     ""
+    ]
+   }
+  }
+ }
+}
