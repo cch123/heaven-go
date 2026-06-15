@@ -1,0 +1,2739 @@
+{
+ "nodes": [
+  {
+   "name": "tossBoys",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpecialOverlay",
+   "path": "SpecialOverlay",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Kiiyan",
+   "path": "SpecialOverlay/Kiiyan",
+   "parent": 1,
+   "pos": [
+    -2.84,
+    1.15
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77801377,
+    0.77801377
+   ],
+   "sprite": "tossboyspecial",
+   "order": 90,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.399998,
+    21.599998
+   ]
+  },
+  {
+   "name": "Aokun",
+   "path": "SpecialOverlay/Aokun",
+   "parent": 1,
+   "pos": [
+    3.55,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77801377,
+    0.77801377
+   ],
+   "sprite": "tossboyspecial",
+   "order": 90,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.399998,
+    21.599998
+   ]
+  },
+  {
+   "name": "Akachan",
+   "path": "SpecialOverlay/Akachan",
+   "parent": 1,
+   "pos": [
+    5.69,
+    0.93
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.77801377,
+    0.77801377
+   ],
+   "sprite": "tossboyspecial",
+   "order": 90,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.399998,
+    21.599998
+   ]
+  },
+  {
+   "name": "Arrows",
+   "path": "Arrows",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "KiiYanArrow",
+   "path": "Arrows/KiiYanArrow",
+   "parent": 5,
+   "pos": [
+    -3.82,
+    2.76
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.54489625,
+    0.54489625
+   ],
+   "sprite": "tossboys_54",
+   "order": -9,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "AoKunArrow",
+   "path": "Arrows/AoKunArrow",
+   "parent": 5,
+   "pos": [
+    2.82,
+    1.49
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.54489625,
+    0.54489625
+   ],
+   "sprite": "tossboys_54",
+   "order": -9,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "AkaChanArrow",
+   "path": "Arrows/AkaChanArrow",
+   "parent": 5,
+   "pos": [
+    4.74,
+    2.71
+   ],
+   "rotZ": -1.5707963267948966,
+   "scale": [
+    0.54489625,
+    0.54489625
+   ],
+   "sprite": "tossboys_54",
+   "order": -9,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Akachan",
+   "path": "Akachan",
+   "parent": 0,
+   "pos": [
+    4.7300005,
+    -0.2589999
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Akachan/Head",
+   "parent": 9,
+   "pos": [
+    0.034,
+    0.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.537875,
+    0.537875
+   ],
+   "sprite": "tossboys_1",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Akachan/Body",
+   "parent": 9,
+   "pos": [
+    0.042,
+    -0.251
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_7",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LLeg",
+   "path": "Akachan/LLeg",
+   "parent": 9,
+   "pos": [
+    -0.224,
+    -1.009
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_25",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RLeg",
+   "path": "Akachan/RLeg",
+   "parent": 9,
+   "pos": [
+    0.26,
+    -1.009
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_25",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LArm",
+   "path": "Akachan/LArm",
+   "parent": 9,
+   "pos": [
+    -0.346,
+    -0.174
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_35",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RArm",
+   "path": "Akachan/RArm",
+   "parent": 9,
+   "pos": [
+    0.392,
+    -0.175
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_35",
+   "order": 4,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Akachan/Shadow",
+   "parent": 9,
+   "pos": [
+    0.019,
+    -1.472
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4671409,
+    0.4671409
+   ],
+   "sprite": "tossboys_16",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LHand",
+   "path": "Akachan/LHand",
+   "parent": 9,
+   "pos": [
+    -0.636,
+    1.426
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_28",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RHand",
+   "path": "Akachan/RHand",
+   "parent": 9,
+   "pos": [
+    0.662,
+    1.426
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_28",
+   "order": 10,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LSmear",
+   "path": "Akachan/LSmear",
+   "parent": 9,
+   "pos": [
+    -0.636,
+    0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4887382,
+    0.86644125
+   ],
+   "sprite": "tossboys_12",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RSmear",
+   "path": "Akachan/RSmear",
+   "parent": 9,
+   "pos": [
+    0.662,
+    0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4887382,
+    0.86644125
+   ],
+   "sprite": "tossboys_12",
+   "order": 10,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "Akachan/Impact",
+   "parent": 9,
+   "pos": [
+    0.057,
+    1.716
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_19",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "HitParticle",
+   "path": "Akachan/HitParticle",
+   "parent": 9,
+   "pos": [
+    0,
+    2.05
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6674856,
+    0.6674856
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "Aokun",
+   "path": "Aokun",
+   "parent": 0,
+   "pos": [
+    2.8000002,
+    -1.62
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Aokun/Head",
+   "parent": 23,
+   "pos": [
+    0.132,
+    1.039
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.509161,
+    0.509161
+   ],
+   "sprite": "tossboys_2",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Aokun/Body",
+   "parent": 23,
+   "pos": [
+    0.019,
+    -0.088
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_8",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LLeg",
+   "path": "Aokun/LLeg",
+   "parent": 23,
+   "pos": [
+    -0.228,
+    -1.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_25",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RLeg",
+   "path": "Aokun/RLeg",
+   "parent": 23,
+   "pos": [
+    0.256,
+    -1.04
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_25",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LArm",
+   "path": "Aokun/LArm",
+   "parent": 23,
+   "pos": [
+    -0.362,
+    -0.02300005
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_35",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RArm",
+   "path": "Aokun/RArm",
+   "parent": 23,
+   "pos": [
+    0.386,
+    -0.011
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_35",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Aokun/Shadow",
+   "parent": 23,
+   "pos": [
+    0.027,
+    -1.497
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_16",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LHand",
+   "path": "Aokun/LHand",
+   "parent": 23,
+   "pos": [
+    -0.636,
+    1.426
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_28",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RHand",
+   "path": "Aokun/RHand",
+   "parent": 23,
+   "pos": [
+    0.662,
+    1.426
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_28",
+   "order": 10,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LSmear",
+   "path": "Aokun/LSmear",
+   "parent": 23,
+   "pos": [
+    -0.636,
+    0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4887382,
+    0.86644125
+   ],
+   "sprite": "tossboys_12",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RSmear",
+   "path": "Aokun/RSmear",
+   "parent": 23,
+   "pos": [
+    0.662,
+    0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4887382,
+    0.86644125
+   ],
+   "sprite": "tossboys_12",
+   "order": 10,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "Aokun/Impact",
+   "parent": 23,
+   "pos": [
+    0.057,
+    1.716
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_19",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "HitParticle",
+   "path": "Aokun/HitParticle",
+   "parent": 23,
+   "pos": [
+    0,
+    2.26
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6674856,
+    0.6674856
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "Kiiyan",
+   "path": "Kiiyan",
+   "parent": 0,
+   "pos": [
+    -3.87,
+    -0.63
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "Kiiyan/Head",
+   "parent": 37,
+   "pos": [
+    0.036,
+    1.262
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.52303183,
+    0.52303183
+   ],
+   "sprite": "tossboys_0",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Kiiyan/Body",
+   "parent": 37,
+   "pos": [
+    0.019,
+    -0.1170001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_6",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LLeg",
+   "path": "Kiiyan/LLeg",
+   "parent": 37,
+   "pos": [
+    -0.24,
+    -1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5144033,
+    0.5144033
+   ],
+   "sprite": "tossboys_25",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RLeg",
+   "path": "Kiiyan/RLeg",
+   "parent": 37,
+   "pos": [
+    0.26600036,
+    -1.08
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5144033,
+    0.5144033
+   ],
+   "sprite": "tossboys_25",
+   "order": 2,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LArm",
+   "path": "Kiiyan/LArm",
+   "parent": 37,
+   "pos": [
+    -0.538,
+    0.036
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_26",
+   "order": 6,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RArm",
+   "path": "Kiiyan/RArm",
+   "parent": 37,
+   "pos": [
+    0.579,
+    0.035
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_26",
+   "order": 6,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Shadow",
+   "path": "Kiiyan/Shadow",
+   "parent": 37,
+   "pos": [
+    0.019,
+    -1.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.50603956,
+    0.5060396
+   ],
+   "sprite": "tossboys_16",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LHand",
+   "path": "Kiiyan/LHand",
+   "parent": 37,
+   "pos": [
+    -0.636,
+    1.426
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_28",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RHand",
+   "path": "Kiiyan/RHand",
+   "parent": 37,
+   "pos": [
+    0.662,
+    1.426
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_28",
+   "order": 10,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LSmear",
+   "path": "Kiiyan/LSmear",
+   "parent": 37,
+   "pos": [
+    -0.636,
+    0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4887382,
+    0.86644125
+   ],
+   "sprite": "tossboys_12",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RSmear",
+   "path": "Kiiyan/RSmear",
+   "parent": 37,
+   "pos": [
+    0.662,
+    0.24
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4887382,
+    0.86644125
+   ],
+   "sprite": "tossboys_12",
+   "order": 10,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Impact",
+   "path": "Kiiyan/Impact",
+   "parent": 37,
+   "pos": [
+    0.057,
+    1.716
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48873824,
+    0.48873824
+   ],
+   "sprite": "tossboys_19",
+   "order": 10,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "HitParticle",
+   "path": "Kiiyan/HitParticle",
+   "parent": 37,
+   "pos": [
+    0,
+    2.41
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6674856,
+    0.6674856
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    32
+   ]
+  },
+  {
+   "name": "DPad",
+   "path": "DPad",
+   "parent": 0,
+   "pos": [
+    -3.85,
+    -2.33
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.48874,
+    0.48874
+   ],
+   "sprite": "tossboys_9",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "B",
+   "path": "B",
+   "parent": 0,
+   "pos": [
+    2.8300002,
+    -3.29
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5282812,
+    0.5282812
+   ],
+   "sprite": "tossboys_10",
+   "order": -8,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "A",
+   "path": "A",
+   "parent": 0,
+   "pos": [
+    4.75,
+    -1.92
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5016916,
+    0.48914933
+   ],
+   "sprite": "tossboys_10",
+   "order": -9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Background",
+   "path": "Background",
+   "parent": 0,
+   "pos": [
+    0,
+    0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    100,
+    100
+   ],
+   "order": -600,
+   "color": [
+    0.38431376,
+    0.9921569,
+    0.73333335,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "HatchHolder",
+   "path": "HatchHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Hatch",
+   "path": "HatchHolder/Hatch",
+   "parent": 55,
+   "pos": [
+    0.09,
+    -0.165
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5282812,
+    0.5414882
+   ],
+   "sprite": "tossboys_48",
+   "order": -7,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "LeftSide",
+   "path": "HatchHolder/LeftSide",
+   "parent": 55,
+   "pos": [
+    -1.113,
+    0.149
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5282812,
+    0.5282812
+   ],
+   "sprite": "tossboys_51",
+   "order": -8,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "RightSide",
+   "path": "HatchHolder/RightSide",
+   "parent": 55,
+   "pos": [
+    1.266,
+    0.149
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5282812,
+    0.5282812
+   ],
+   "sprite": "tossboys_51",
+   "order": -8,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Hole",
+   "path": "HatchHolder/Hole",
+   "parent": 55,
+   "pos": [
+    0.076,
+    -0.56
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.3023977,
+    0.7060011
+   ],
+   "sprite": "tossboys_14",
+   "order": -10,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Ballspots",
+   "path": "Ballspots",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "akachan interactions",
+   "path": "Ballspots/akachan interactions",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spawn1",
+   "path": "Ballspots/akachan interactions/spawn1",
+   "parent": 61,
+   "pos": [
+    0.058,
+    -0.117
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn",
+   "path": "Ballspots/akachan interactions/spawn",
+   "parent": 61,
+   "pos": [
+    2.82,
+    5.09
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (2)",
+   "path": "Ballspots/akachan interactions/spawn1 (2)",
+   "parent": 61,
+   "pos": [
+    4.744,
+    1.431
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (3)",
+   "path": "Ballspots/akachan interactions/spawn1 (3)",
+   "parent": 61,
+   "pos": [
+    3.67,
+    3.99
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0.6528621,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (4)",
+   "path": "Ballspots/akachan interactions/spawn1 (4)",
+   "parent": 61,
+   "pos": [
+    2.825,
+    -0.129
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0,
+    0.5506482,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (5)",
+   "path": "Ballspots/akachan interactions/spawn1 (5)",
+   "parent": 61,
+   "pos": [
+    3.78,
+    2.89
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0.6528621,
+    0,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (6)",
+   "path": "Ballspots/akachan interactions/spawn1 (6)",
+   "parent": 61,
+   "pos": [
+    0.06,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0.5949937,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (7)",
+   "path": "Ballspots/akachan interactions/spawn1 (7)",
+   "parent": 61,
+   "pos": [
+    -3.86,
+    1.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0.89164263,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "kiiyaninteractions",
+   "path": "Ballspots/kiiyaninteractions",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spawn1",
+   "path": "Ballspots/kiiyaninteractions/spawn1",
+   "parent": 70,
+   "pos": [
+    0.058,
+    -0.117
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0.89164263,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (1)",
+   "path": "Ballspots/kiiyaninteractions/spawn1 (1)",
+   "parent": 70,
+   "pos": [
+    -1.85,
+    5.07
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0.89164263,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (2)",
+   "path": "Ballspots/kiiyaninteractions/spawn1 (2)",
+   "parent": 70,
+   "pos": [
+    -3.86,
+    1.19
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0.89164263,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (3)",
+   "path": "Ballspots/kiiyaninteractions/spawn1 (3)",
+   "parent": 70,
+   "pos": [
+    2.825,
+    -0.129
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0,
+    0.5506482,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (4)",
+   "path": "Ballspots/kiiyaninteractions/spawn1 (4)",
+   "parent": 70,
+   "pos": [
+    -0.33,
+    3.46
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0,
+    1,
+    0.09811425,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (6)",
+   "path": "Ballspots/kiiyaninteractions/spawn1 (6)",
+   "parent": 70,
+   "pos": [
+    0.06,
+    4
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0.5949937,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (5)",
+   "path": "Ballspots/kiiyaninteractions/spawn1 (5)",
+   "parent": 70,
+   "pos": [
+    -3.86,
+    3.52
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    1,
+    0.936293,
+    0.4198113,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "aokuninteractions",
+   "path": "Ballspots/aokuninteractions",
+   "parent": 60,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "spawn1 (3)",
+   "path": "Ballspots/aokuninteractions/spawn1 (3)",
+   "parent": 78,
+   "pos": [
+    2.825,
+    -0.129
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0,
+    0.5506482,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (4)",
+   "path": "Ballspots/aokuninteractions/spawn1 (4)",
+   "parent": 78,
+   "pos": [
+    2.825,
+    3.68
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0.3726415,
+    0.71707344,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (5)",
+   "path": "Ballspots/aokuninteractions/spawn1 (5)",
+   "parent": 78,
+   "pos": [
+    2.825,
+    1.94
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0,
+    0.5500002,
+    1,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "spawn1 (6)",
+   "path": "Ballspots/aokuninteractions/spawn1 (6)",
+   "parent": 78,
+   "pos": [
+    -0.12,
+    10
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.71716,
+    0.71716
+   ],
+   "order": 90,
+   "color": [
+    0,
+    1,
+    0.09392524,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "Ball",
+   "path": "Ball",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Sprite",
+   "path": "Ball/Sprite",
+   "parent": 83,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.5230318,
+    0.5230318
+   ],
+   "sprite": "tossboys_36",
+   "order": 10,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.44,
+    3.33
+   ]
+  },
+  {
+   "name": "Soshi",
+   "path": "Soshi",
+   "parent": 0,
+   "pos": [
+    -0.13,
+    4.55
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.95,
+    0.95
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "Soshi/Body",
+   "parent": 85,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32,
+    0.32
+   ],
+   "sprite": "tossboysguitarist_23",
+   "order": -104,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.85,
+    6.23
+   ],
+   "mapped": true,
+   "mat": "SoshiMat"
+  },
+  {
+   "name": "Head",
+   "path": "Soshi/Head",
+   "parent": 85,
+   "pos": [
+    -0.066,
+    1.37
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32,
+    0.32
+   ],
+   "sprite": "tossboysguitarist_0",
+   "order": -103,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.62,
+    4.83
+   ],
+   "mapped": true,
+   "mat": "SoshiMat"
+  },
+  {
+   "name": "Face",
+   "path": "Soshi/Head/Face",
+   "parent": 87,
+   "pos": [
+    0.20625,
+    -1.0312501
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tossboysguitarist_1",
+   "order": -102,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.24,
+    1.67
+   ]
+  },
+  {
+   "name": "Pants",
+   "path": "Soshi/Pants",
+   "parent": 85,
+   "pos": [
+    0.47,
+    -2.58
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32,
+    0.32
+   ],
+   "sprite": "tossboysguitarist_22",
+   "order": -104,
+   "color": [
+    0.40000004,
+    0.7803922,
+    1,
+    1
+   ],
+   "size": [
+    7.46,
+    11.17
+   ]
+  },
+  {
+   "name": "Feet",
+   "path": "Soshi/Feet",
+   "parent": 85,
+   "pos": [
+    0.44,
+    -4.32
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32,
+    0.32
+   ],
+   "sprite": "tossboysguitarist_30",
+   "order": -105,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    10,
+    2.18
+   ]
+  },
+  {
+   "name": "Guitar",
+   "path": "Soshi/Guitar",
+   "parent": 85,
+   "pos": [
+    0.82,
+    -0.38
+   ],
+   "rotZ": 5.128483597762728,
+   "scale": [
+    0.32,
+    0.32
+   ],
+   "sprite": "tossboysguitarist_3",
+   "order": -101,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    5.86,
+    17.19
+   ],
+   "mapped": true,
+   "mat": "GuitarMat"
+  },
+  {
+   "name": "Overlay",
+   "path": "Soshi/Guitar/Overlay",
+   "parent": 91,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "tossboysguitarist_25",
+   "order": -100,
+   "color": [
+    1,
+    1,
+    1,
+    0
+   ],
+   "size": [
+    5.86,
+    17.18
+   ]
+  },
+  {
+   "name": "RHand",
+   "path": "Soshi/RHand",
+   "parent": 85,
+   "pos": [
+    -0.536,
+    -0.215
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32,
+    0.32
+   ],
+   "sprite": "tossboysguitarist_17",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.6,
+    2.99
+   ],
+   "mapped": true,
+   "mat": "SoshiMat"
+  },
+  {
+   "name": "LArm",
+   "path": "Soshi/LArm",
+   "parent": 85,
+   "pos": [
+    0.94,
+    -0.34
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32,
+    0.32
+   ],
+   "sprite": "tossboysguitarist_7",
+   "order": -105,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    3.77
+   ],
+   "mapped": true,
+   "mat": "SoshiMat"
+  },
+  {
+   "name": "LHand",
+   "path": "Soshi/LHand",
+   "parent": 85,
+   "pos": [
+    1.341,
+    -0.441
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.32,
+    0.32
+   ],
+   "sprite": "tossboysguitarist_21",
+   "order": -99,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.73,
+    2.91
+   ],
+   "mapped": true,
+   "mat": "SoshiMat"
+  },
+  {
+   "name": "Shadow",
+   "path": "Soshi/Shadow",
+   "parent": 85,
+   "pos": [
+    0.4526316,
+    -4.497369
+   ],
+   "rotZ": 0,
+   "scale": [
+    1.4348423,
+    0.91548115
+   ],
+   "sprite": "tossboys_16",
+   "order": -150,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    6.5,
+    4.18
+   ]
+  },
+  {
+   "name": "Effects",
+   "path": "Soshi/Effects",
+   "parent": 85,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ImpactR",
+   "path": "Soshi/Effects/ImpactR",
+   "parent": 97,
+   "pos": [
+    1.9263159,
+    0.10526306
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33684215,
+    0.33684215
+   ],
+   "sprite": "tossboysguitarist_24",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.78,
+    5.66
+   ]
+  },
+  {
+   "name": "ImpactL",
+   "path": "Soshi/Effects/ImpactL",
+   "parent": 97,
+   "pos": [
+    -1.6526316,
+    0.10526306
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33684215,
+    0.33684215
+   ],
+   "sprite": "tossboysguitarist_24",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.78,
+    5.66
+   ]
+  },
+  {
+   "name": "Particle",
+   "path": "Soshi/Effects/Particle",
+   "parent": 97,
+   "pos": [
+    2.9052634,
+    1.3368422
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33684215,
+    0.33684215
+   ],
+   "sprite": "tossboysguitarist_28",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.49,
+    3.65
+   ]
+  },
+  {
+   "name": "Particle",
+   "path": "Soshi/Effects/Particle",
+   "parent": 97,
+   "pos": [
+    -2.631579,
+    1.3368422
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33684215,
+    0.33684215
+   ],
+   "sprite": "tossboysguitarist_28",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.49,
+    3.65
+   ]
+  },
+  {
+   "name": "Particle (1)",
+   "path": "Soshi/Effects/Particle (1)",
+   "parent": 97,
+   "pos": [
+    2.9052634,
+    -1.3368422
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33684215,
+    0.33684215
+   ],
+   "sprite": "tossboysguitarist_28",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.49,
+    3.65
+   ]
+  },
+  {
+   "name": "Particle (2)",
+   "path": "Soshi/Effects/Particle (2)",
+   "parent": 97,
+   "pos": [
+    -2.631579,
+    -1.3368422
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.33684215,
+    0.33684215
+   ],
+   "sprite": "tossboysguitarist_28",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.49,
+    3.65
+   ]
+  }
+ ]
+}

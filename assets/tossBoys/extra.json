@@ -1,0 +1,1425 @@
+{
+ "components": {
+  "ball": {
+   "path": "Ball",
+   "nums": {
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0,
+    "willBePopped": 0
+   }
+  },
+  "game": {
+   "path": "",
+   "refs": {
+    "akachan": "Akachan",
+    "aokun": "Aokun",
+    "ballPrefab": "Ball",
+    "bg": "Background",
+    "guitarMat": "GuitarMat",
+    "hatchAnim": "HatchHolder",
+    "kiiyan": "Kiiyan",
+    "soshi": "Soshi",
+    "soshiAnim": "Soshi",
+    "soshiMat": "SoshiMat",
+    "soshiPants": "Soshi/Pants",
+    "specialAka": "SpecialOverlay/Akachan",
+    "specialAo": "SpecialOverlay/Aokun",
+    "specialKii": "SpecialOverlay/Kiiyan"
+   },
+   "lists": {
+    "ballPaths": [
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedBlue"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedYellow"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 2.75,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedDispense"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueRed"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/aokuninteractions/spawn1 (3)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueYellow"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/aokuninteractions/spawn1 (3)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/kiiyaninteractions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueDispense"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/kiiyaninteractions/spawn1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/kiiyaninteractions/spawn1 (3)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowRed"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 2.75,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/kiiyaninteractions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowBlue"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/kiiyaninteractions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/kiiyaninteractions/spawn1 (3)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowDispense"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 4.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/kiiyaninteractions/spawn1"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/kiiyaninteractions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedBlueDual"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedYellowDual"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueRedDual"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueYellowDual"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowBlueDual"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowRedDual"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 1.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedBlueHigh"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 3,
+          "height": 9,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedYellowHigh"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 3,
+          "height": 9,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueRedHigh"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 3,
+          "height": 9,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueYellowHigh"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 3,
+          "height": 9.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowRedHigh"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 3,
+          "height": 9,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowBlueHigh"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 3,
+          "height": 9.5,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 720
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedBlur"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3.8,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "RedKeep"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": -202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (2)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueBlur"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3.8,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "BlueKeep"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (4)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowBlur"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 2,
+          "height": 3.8,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         }
+        }
+       ]
+      }
+     },
+     {
+      "nums": {
+       "preview": 0
+      },
+      "strs": {
+       "name": "YellowKeep"
+      },
+      "items": {
+       "positions": [
+        {
+         "nums": {
+          "duration": 1,
+          "height": 2,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 1
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         },
+         "items": {
+          "values": [
+           {
+            "nums": {
+             "value": 202.5
+            },
+            "strs": {
+             "key": "rot"
+            }
+           }
+          ]
+         }
+        },
+        {
+         "nums": {
+          "duration": 0,
+          "height": 0,
+          "pos.x": 0,
+          "pos.y": 0,
+          "pos.z": 0,
+          "useLastRealPos": 0
+         },
+         "refs": {
+          "target": "Ballspots/akachan interactions/spawn1 (7)"
+         }
+        }
+       ]
+      }
+     }
+    ]
+   }
+  },
+  "kid0": {
+   "path": "Akachan",
+   "nums": {
+    "crouch": 0
+   },
+   "strs": {
+    "prefix": "Aka"
+   },
+   "refs": {
+    "_hitEffect": "Akachan/HitParticle",
+    "arrow": "Arrows/AkaChanArrow"
+   }
+  },
+  "kid1": {
+   "path": "Aokun",
+   "nums": {
+    "crouch": 0
+   },
+   "strs": {
+    "prefix": "Ao"
+   },
+   "refs": {
+    "_hitEffect": "Aokun/HitParticle",
+    "arrow": "Arrows/AoKunArrow"
+   }
+  },
+  "kid2": {
+   "path": "Kiiyan",
+   "nums": {
+    "crouch": 0
+   },
+   "strs": {
+    "prefix": "Kii"
+   },
+   "refs": {
+    "_hitEffect": "Kiiyan/HitParticle",
+    "arrow": "Arrows/KiiYanArrow"
+   }
+  }
+ }
+}

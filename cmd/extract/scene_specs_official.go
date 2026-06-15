@@ -375,9 +375,30 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 	"superSamuraiSlice": basicOfficialSceneSpec("SuperSamuraiSlice", "superSamuraiSlice.prefab"),
 	"tapTroupe":         basicOfficialSceneSpec("TapTroupe", "tapTroupe.prefab"),
 	"theDazzles":        basicOfficialSceneSpec("TheDazzles", "theDazzles.prefab"),
-	"tossBoys":          basicOfficialSceneSpec("TossBoys", "tossBoys.prefab"),
-	"tramAndPauline":    basicOfficialSceneSpec("TramAndPauline", "tramAndPauline.prefab"),
-	"tunnel":            basicOfficialSceneSpec("Tunnel", "tunnel.prefab"),
+	"tossBoys": {
+		dir:    "TossBoys",
+		prefab: "tossBoys.prefab",
+		roleFields: []string{
+			"akachan", "aokun", "kiiyan", "hatchAnim", "soshiAnim",
+			"ballPrefab", "specialAka", "specialAo", "specialKii",
+			"soshi", "bg", "soshiPants",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{
+				"akachan", "aokun", "kiiyan", "hatchAnim", "soshiAnim",
+				"ballPrefab", "specialAka", "specialAo", "specialKii",
+				"soshi", "currentSpecialKid", "bg", "soshiPants",
+				"soshiMat", "guitarMat", "ballPaths",
+			}},
+			{name: "kid", markers: []string{
+				"_hitEffect", "arrow", "prefix", "crouch",
+			}, multi: true},
+			{name: "ball", markers: []string{"willBePopped"}, atPath: "Ball"},
+		},
+	},
+	"tramAndPauline": basicOfficialSceneSpec("TramAndPauline", "tramAndPauline.prefab"),
+	"tunnel":         basicOfficialSceneSpec("Tunnel", "tunnel.prefab"),
 	"valiantVolley": {
 		dir:             "ValiantVolley",
 		prefab:          "valiantVolley.prefab",

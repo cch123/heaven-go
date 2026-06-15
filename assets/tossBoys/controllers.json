@@ -1,0 +1,200 @@
+{
+ "Akachan": {
+  "default": "AkaIdle",
+  "states": {
+   "AkaBarely": {
+    "clip": "Animations/AkaBarely",
+    "speed": 1
+   },
+   "AkaBop": {
+    "clip": "Animations/AkaBop",
+    "speed": 1
+   },
+   "AkaCrouch": {
+    "clip": "Animations/AkaCrouch",
+    "speed": 1
+   },
+   "AkaCrouchHit": {
+    "clip": "Animations/AkaCrouchHit",
+    "speed": 1
+   },
+   "AkaHit": {
+    "clip": "Animations/AkaHit",
+    "speed": 1
+   },
+   "AkaIdle": {
+    "clip": "Animations/AkaIdle",
+    "speed": 1
+   },
+   "AkaMiss": {
+    "clip": "Animations/AkaMiss",
+    "speed": 1
+   },
+   "AkaPrepareHand": {
+    "clip": "Animations/AkaPrepareHand",
+    "speed": 1
+   },
+   "AkaSlap": {
+    "clip": "Animations/AkaSlap",
+    "speed": 1
+   },
+   "AkaWhiff": {
+    "clip": "Animations/AkaWhiff",
+    "speed": 1
+   }
+  }
+ },
+ "Aokun": {
+  "default": "AoIdle",
+  "states": {
+   "AoBarely": {
+    "clip": "Animations/AoBarely",
+    "speed": 1
+   },
+   "AoBop": {
+    "clip": "Animations/AoBop",
+    "speed": 1
+   },
+   "AoCrouch": {
+    "clip": "Animations/AoCrouch",
+    "speed": 1
+   },
+   "AoCrouchHit": {
+    "clip": "Animations/AoCrouchHit",
+    "speed": 1
+   },
+   "AoHit": {
+    "clip": "Animations/AoHit",
+    "speed": 1
+   },
+   "AoIdle": {
+    "clip": "Animations/AoIdle",
+    "speed": 1
+   },
+   "AoMiss": {
+    "clip": "Animations/AoMiss",
+    "speed": 1
+   },
+   "AoPrepareHand": {
+    "clip": "Animations/AoPrepareHand",
+    "speed": 1
+   },
+   "AoSlap": {
+    "clip": "Animations/AoSlap",
+    "speed": 1
+   },
+   "AoWhiff": {
+    "clip": "Animations/AoWhiff",
+    "speed": 1
+   }
+  }
+ },
+ "HatchHolder": {
+  "default": "HatchClosed",
+  "states": {
+   "HatchClosed": {
+    "clip": "Animations/HatchClosed",
+    "speed": 1
+   },
+   "HatchOpen": {
+    "clip": "Animations/HatchOpen",
+    "speed": 1
+   }
+  }
+ },
+ "Kiiyan": {
+  "default": "KiiIdle",
+  "states": {
+   "KiiBarely": {
+    "clip": "Animations/KiiBarely",
+    "speed": 1
+   },
+   "KiiBop": {
+    "clip": "Animations/KiiBop",
+    "speed": 1
+   },
+   "KiiCrouch": {
+    "clip": "Animations/KiiCrouch",
+    "speed": 1
+   },
+   "KiiCrouchHit": {
+    "clip": "Animations/KiiCrouchHit",
+    "speed": 1
+   },
+   "KiiHit": {
+    "clip": "Animations/KiiHit",
+    "speed": 1
+   },
+   "KiiIdle": {
+    "clip": "Animations/KiiIdle",
+    "speed": 1
+   },
+   "KiiMiss": {
+    "clip": "Animations/KiiMiss",
+    "speed": 1
+   },
+   "KiiPrepareHand": {
+    "clip": "Animations/KiiPrepareHand",
+    "speed": 1
+   },
+   "KiiSlap": {
+    "clip": "Animations/KiiSlap",
+    "speed": 1
+   },
+   "KiiWhiff": {
+    "clip": "Animations/KiiWhiff",
+    "speed": 1
+   }
+  }
+ },
+ "Soshi": {
+  "default": "Idle",
+  "states": {
+   "Blink": {
+    "clip": "Animations/SoshiBlink",
+    "speed": 1
+   },
+   "Bop": {
+    "clip": "Animations/SoshiBop",
+    "speed": 1
+   },
+   "Idle": {
+    "speed": 1
+   },
+   "Strum": {
+    "clip": "Animations/SoshiStrum",
+    "speed": 1
+   }
+  }
+ },
+ "SpecialOverlay": {
+  "default": "FadeIn",
+  "states": {
+   "FadeIn": {
+    "clip": "Animations/FadeIn",
+    "speed": 1
+   },
+   "Neutral": {
+    "clip": "Animations/Neutral",
+    "speed": 1
+   }
+  }
+ },
+ "TossBoysBall": {
+  "default": "NeutralBall",
+  "states": {
+   "Hit": {
+    "clip": "Animations/Hit",
+    "speed": 1
+   },
+   "NeutralBall": {
+    "clip": "Animations/NeutralBall",
+    "speed": 1
+   },
+   "WiggleBall": {
+    "clip": "Animations/WiggleBall",
+    "speed": 1
+   }
+  }
+ }
+}
