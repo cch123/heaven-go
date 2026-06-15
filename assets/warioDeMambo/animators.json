@@ -1,0 +1,18 @@
+{
+ "DancerL/DancerJumper": "DancerJumper",
+ "DancerL/DancerJumper/DancerL": "Dancer",
+ "DancerL/DancerJumper/DancerL/ArmHolder": "DancerArm",
+ "DancerL/DancerJumper/DancerL/HeadHolder": "DancerHead",
+ "DancerR/DancerJumper": "DancerJumper",
+ "DancerR/DancerJumper/DancerL": "Dancer",
+ "DancerR/DancerJumper/DancerL/ArmHolder": "DancerArm",
+ "DancerR/DancerJumper/DancerL/HeadHolder": "DancerHead",
+ "LightHolderL": "WFloorLights",
+ "LightHolderR": "WFloorLights",
+ "LightHolderT": "WTopLights",
+ "TextHolder": "Command",
+ "WarioJumper": "PlayerJump",
+ "WarioJumper/WAAAAAAAA": "Player",
+ "WarioJumper/WAAAAAAAA/Face": "WahFace",
+ "WarioJumper/WAAAAAAAA/HoldingArm": "WahHand"
+}

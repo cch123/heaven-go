@@ -1,0 +1,3385 @@
+{
+ "nodes": [
+  {
+   "name": "warioDeMambo",
+   "path": "",
+   "parent": -1,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "BG",
+   "path": "BG",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    31.717216,
+    24.073772
+   ],
+   "order": -999,
+   "color": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "size": [
+    1,
+    1
+   ]
+  },
+  {
+   "name": "endPose",
+   "path": "endPose",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.465,
+    0.465
+   ],
+   "sprite": "endPose",
+   "order": 1000,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    38.399998,
+    21.599998
+   ]
+  },
+  {
+   "name": "face",
+   "path": "face",
+   "parent": 0,
+   "pos": [
+    0,
+    -0.718
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.37878802,
+    0.37878802
+   ],
+   "sprite": "face",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    7.34,
+    6.11
+   ]
+  },
+  {
+   "name": "Reference",
+   "path": "Reference",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": -999,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    19.2,
+    10.8
+   ]
+  },
+  {
+   "name": "LightHolderT",
+   "path": "LightHolderT",
+   "parent": 0,
+   "pos": [
+    0,
+    3.9
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Light1",
+   "path": "LightHolderT/Light1",
+   "parent": 5,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.35,
+    0.35
+   ],
+   "sprite": "pcomambo_dancers_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.58,
+    3.54
+   ]
+  },
+  {
+   "name": "Light2",
+   "path": "LightHolderT/Light2",
+   "parent": 5,
+   "pos": [
+    1.5,
+    0
+   ],
+   "rotZ": -0.3490659765485052,
+   "scale": [
+    0.2,
+    0.25
+   ],
+   "sprite": "pcomambo_dancers_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light2 (1)",
+   "path": "LightHolderT/Light2 (1)",
+   "parent": 5,
+   "pos": [
+    -1.5,
+    0
+   ],
+   "rotZ": 0.34906579928311926,
+   "scale": [
+    0.2,
+    0.25
+   ],
+   "sprite": "pcomambo_dancers_3",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light2 (2)",
+   "path": "LightHolderT/Light2 (2)",
+   "parent": 5,
+   "pos": [
+    2.597,
+    -0.1
+   ],
+   "rotZ": -0.418879019183994,
+   "scale": [
+    0.16000001,
+    0.2
+   ],
+   "sprite": "pcomambo_dancers_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light2 (3)",
+   "path": "LightHolderT/Light2 (3)",
+   "parent": 5,
+   "pos": [
+    3.407,
+    0
+   ],
+   "rotZ": -0.5235986503113411,
+   "scale": [
+    0.13,
+    0.16
+   ],
+   "sprite": "pcomambo_dancers_3",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light2 (4)",
+   "path": "LightHolderT/Light2 (4)",
+   "parent": 5,
+   "pos": [
+    -2.597,
+    -0.1
+   ],
+   "rotZ": 0.418879019183994,
+   "scale": [
+    0.16000001,
+    0.2
+   ],
+   "sprite": "pcomambo_dancers_3",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light2 (5)",
+   "path": "LightHolderT/Light2 (5)",
+   "parent": 5,
+   "pos": [
+    -3.407,
+    0
+   ],
+   "rotZ": 0.5235988952603093,
+   "scale": [
+    0.13,
+    0.16
+   ],
+   "sprite": "pcomambo_dancers_3",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "LightHolderL",
+   "path": "LightHolderL",
+   "parent": 0,
+   "pos": [
+    0,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Light3",
+   "path": "LightHolderL/Light3",
+   "parent": 13,
+   "pos": [
+    -4.6341,
+    -1.8681998
+   ],
+   "rotZ": 0.44661159109012954,
+   "scale": [
+    0.19,
+    0.244697
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (1)",
+   "path": "LightHolderL/Light3 (1)",
+   "parent": 13,
+   "pos": [
+    -4.095,
+    -0.997
+   ],
+   "rotZ": 0.5040533117120384,
+   "scale": [
+    0.19,
+    0.23
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (2)",
+   "path": "LightHolderL/Light3 (2)",
+   "parent": 13,
+   "pos": [
+    -3.649,
+    -0.186
+   ],
+   "rotZ": 0.695248505747345,
+   "scale": [
+    0.17,
+    0.2
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (3)",
+   "path": "LightHolderL/Light3 (3)",
+   "parent": 13,
+   "pos": [
+    -3.3,
+    0.488
+   ],
+   "rotZ": 0.5367479744436842,
+   "scale": [
+    0.12,
+    0.15
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (4)",
+   "path": "LightHolderL/Light3 (4)",
+   "parent": 13,
+   "pos": [
+    -4.29,
+    0.488
+   ],
+   "rotZ": 0.5367479744436842,
+   "scale": [
+    0.12,
+    0.15
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (5)",
+   "path": "LightHolderL/Light3 (5)",
+   "parent": 13,
+   "pos": [
+    -5.355,
+    0.488
+   ],
+   "rotZ": 0.5367479744436842,
+   "scale": [
+    0.12,
+    0.15
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (6)",
+   "path": "LightHolderL/Light3 (6)",
+   "parent": 13,
+   "pos": [
+    -6.37,
+    0.488
+   ],
+   "rotZ": 0.5367479744436842,
+   "scale": [
+    0.12,
+    0.15
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (7)",
+   "path": "LightHolderL/Light3 (7)",
+   "parent": 13,
+   "pos": [
+    -7.354,
+    0.531
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.17,
+    0.17
+   ],
+   "sprite": "pcomambo_dancers_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (8)",
+   "path": "LightHolderL/Light3 (8)",
+   "parent": 13,
+   "pos": [
+    -5.128,
+    -0.359
+   ],
+   "rotZ": 0.695248505747345,
+   "scale": [
+    0.17,
+    0.2
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (9)",
+   "path": "LightHolderL/Light3 (9)",
+   "parent": 13,
+   "pos": [
+    -6.706,
+    -0.34700012
+   ],
+   "rotZ": 0.4933524191296155,
+   "scale": [
+    0.17,
+    0.2
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (10)",
+   "path": "LightHolderL/Light3 (10)",
+   "parent": 13,
+   "pos": [
+    -7.106,
+    -2.235
+   ],
+   "rotZ": 0.44661159109012954,
+   "scale": [
+    0.19,
+    0.244697
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (11)",
+   "path": "LightHolderL/Light3 (11)",
+   "parent": 13,
+   "pos": [
+    -8.437,
+    0.748
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.17,
+    0.17
+   ],
+   "sprite": "pcomambo_dancers_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (13)",
+   "path": "LightHolderL/Light3 (13)",
+   "parent": 13,
+   "pos": [
+    -6.073,
+    -1.315
+   ],
+   "rotZ": 0.5040533117120384,
+   "scale": [
+    0.19,
+    0.23
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (14)",
+   "path": "LightHolderL/Light3 (14)",
+   "parent": 13,
+   "pos": [
+    -7.648,
+    -0.87
+   ],
+   "rotZ": 0.5040533117120384,
+   "scale": [
+    0.19,
+    0.23
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (15)",
+   "path": "LightHolderL/Light3 (15)",
+   "parent": 13,
+   "pos": [
+    -8.848,
+    -0.213
+   ],
+   "rotZ": 0.5040533117120384,
+   "scale": [
+    0.19,
+    0.23
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (16)",
+   "path": "LightHolderL/Light3 (16)",
+   "parent": 13,
+   "pos": [
+    -8.441,
+    -1.526
+   ],
+   "rotZ": 0.44661159109012954,
+   "scale": [
+    0.19,
+    0.244697
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "LightHolderR",
+   "path": "LightHolderR",
+   "parent": 0,
+   "pos": [
+    0,
+    -3
+   ],
+   "rotZ": 0,
+   "scale": [
+    -1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Light3",
+   "path": "LightHolderR/Light3",
+   "parent": 30,
+   "pos": [
+    -4.6341,
+    -1.8681998
+   ],
+   "rotZ": 0.44661159109012954,
+   "scale": [
+    0.19,
+    0.244697
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (1)",
+   "path": "LightHolderR/Light3 (1)",
+   "parent": 30,
+   "pos": [
+    -4.095,
+    -0.997
+   ],
+   "rotZ": 0.5040533117120384,
+   "scale": [
+    0.19,
+    0.23
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (2)",
+   "path": "LightHolderR/Light3 (2)",
+   "parent": 30,
+   "pos": [
+    -3.649,
+    -0.186
+   ],
+   "rotZ": 0.695248505747345,
+   "scale": [
+    0.17,
+    0.2
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (3)",
+   "path": "LightHolderR/Light3 (3)",
+   "parent": 30,
+   "pos": [
+    -3.3,
+    0.488
+   ],
+   "rotZ": 0.5367479744436842,
+   "scale": [
+    0.12,
+    0.15
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (4)",
+   "path": "LightHolderR/Light3 (4)",
+   "parent": 30,
+   "pos": [
+    -4.29,
+    0.488
+   ],
+   "rotZ": 0.5367479744436842,
+   "scale": [
+    0.12,
+    0.15
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (5)",
+   "path": "LightHolderR/Light3 (5)",
+   "parent": 30,
+   "pos": [
+    -5.355,
+    0.488
+   ],
+   "rotZ": 0.5367479744436842,
+   "scale": [
+    0.12,
+    0.15
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (6)",
+   "path": "LightHolderR/Light3 (6)",
+   "parent": 30,
+   "pos": [
+    -6.37,
+    0.488
+   ],
+   "rotZ": 0.5367479744436842,
+   "scale": [
+    0.12,
+    0.15
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (7)",
+   "path": "LightHolderR/Light3 (7)",
+   "parent": 30,
+   "pos": [
+    -7.354,
+    0.531
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.17,
+    0.17
+   ],
+   "sprite": "pcomambo_dancers_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (8)",
+   "path": "LightHolderR/Light3 (8)",
+   "parent": 30,
+   "pos": [
+    -5.128,
+    -0.359
+   ],
+   "rotZ": 0.695248505747345,
+   "scale": [
+    0.17,
+    0.2
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (9)",
+   "path": "LightHolderR/Light3 (9)",
+   "parent": 30,
+   "pos": [
+    -6.706,
+    -0.34700012
+   ],
+   "rotZ": 0.4933524191296155,
+   "scale": [
+    0.17,
+    0.2
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (10)",
+   "path": "LightHolderR/Light3 (10)",
+   "parent": 30,
+   "pos": [
+    -7.106,
+    -2.235
+   ],
+   "rotZ": 0.44661159109012954,
+   "scale": [
+    0.19,
+    0.244697
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (11)",
+   "path": "LightHolderR/Light3 (11)",
+   "parent": 30,
+   "pos": [
+    -8.437,
+    0.748
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.17,
+    0.17
+   ],
+   "sprite": "pcomambo_dancers_16",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (13)",
+   "path": "LightHolderR/Light3 (13)",
+   "parent": 30,
+   "pos": [
+    -6.073,
+    -1.315
+   ],
+   "rotZ": 0.5040533117120384,
+   "scale": [
+    0.19,
+    0.23
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (14)",
+   "path": "LightHolderR/Light3 (14)",
+   "parent": 30,
+   "pos": [
+    -7.648,
+    -0.87
+   ],
+   "rotZ": 0.5040533117120384,
+   "scale": [
+    0.19,
+    0.23
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (15)",
+   "path": "LightHolderR/Light3 (15)",
+   "parent": 30,
+   "pos": [
+    -8.848,
+    -0.213
+   ],
+   "rotZ": 0.5040533117120384,
+   "scale": [
+    0.19,
+    0.23
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "Light3 (16)",
+   "path": "LightHolderR/Light3 (16)",
+   "parent": 30,
+   "pos": [
+    -8.441,
+    -1.526
+   ],
+   "rotZ": 0.44661159109012954,
+   "scale": [
+    0.19,
+    0.244697
+   ],
+   "sprite": "pcomambo_dancers_7",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    4.33,
+    4.78
+   ]
+  },
+  {
+   "name": "TextHolder",
+   "path": "TextHolder",
+   "parent": 0,
+   "pos": [
+    0,
+    -2.3
+   ],
+   "z": -1.11,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Command",
+   "path": "TextHolder/Command",
+   "parent": 47,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.25
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DancerL",
+   "path": "DancerL",
+   "parent": 0,
+   "pos": [
+    -9.77,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "DancerJumper",
+   "path": "DancerL/DancerJumper",
+   "parent": 49,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DancerL",
+   "path": "DancerL/DancerJumper/DancerL",
+   "parent": 50,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "DancerL/DancerJumper/DancerL/HeadHolder",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "DancerL/DancerJumper/DancerL/HeadHolder/Head",
+   "parent": 52,
+   "pos": [
+    4.791,
+    2.442
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_2",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.53,
+    2.81
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "DancerL/DancerJumper/DancerL/Torso",
+   "parent": 51,
+   "pos": [
+    4.784,
+    1.083
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_5",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.69,
+    4.97
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LegL",
+   "path": "DancerL/DancerJumper/DancerL/LegL",
+   "parent": 51,
+   "pos": [
+    4.545,
+    -0.492
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_14",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    5.34
+   ]
+  },
+  {
+   "name": "LegR",
+   "path": "DancerL/DancerJumper/DancerL/LegR",
+   "parent": 51,
+   "pos": [
+    5.071,
+    -0.492
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_14",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    5.34
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "DancerL/DancerJumper/DancerL/ArmL",
+   "parent": 51,
+   "pos": [
+    4.225,
+    1.001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_10",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.69,
+    4.51
+   ]
+  },
+  {
+   "name": "ArmHolder",
+   "path": "DancerL/DancerJumper/DancerL/ArmHolder",
+   "parent": 51,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "DancerL/DancerJumper/DancerL/ArmHolder/ArmR",
+   "parent": 58,
+   "pos": [
+    5.023,
+    2.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_4",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.34,
+    4.82
+   ]
+  },
+  {
+   "name": "System",
+   "path": "DancerL/DancerJumper/DancerL/ArmHolder/System",
+   "parent": 58,
+   "pos": [
+    4.86,
+    3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_29",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.98
+   ]
+  },
+  {
+   "name": "DancerR",
+   "path": "DancerR",
+   "parent": 0,
+   "pos": [
+    -0.05995185,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -10
+   ]
+  },
+  {
+   "name": "DancerJumper",
+   "path": "DancerR/DancerJumper",
+   "parent": 61,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "DancerL",
+   "path": "DancerR/DancerJumper/DancerL",
+   "parent": 62,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "HeadHolder",
+   "path": "DancerR/DancerJumper/DancerL/HeadHolder",
+   "parent": 63,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Head",
+   "path": "DancerR/DancerJumper/DancerL/HeadHolder/Head",
+   "parent": 64,
+   "pos": [
+    4.791,
+    2.442
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_2",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.53,
+    2.81
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "DancerR/DancerJumper/DancerL/Torso",
+   "parent": 63,
+   "pos": [
+    4.784,
+    1.083
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_5",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.69,
+    4.97
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LegL",
+   "path": "DancerR/DancerJumper/DancerL/LegL",
+   "parent": 63,
+   "pos": [
+    4.545,
+    -0.492
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_14",
+   "order": -1,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    5.34
+   ]
+  },
+  {
+   "name": "LegR",
+   "path": "DancerR/DancerJumper/DancerL/LegR",
+   "parent": 63,
+   "pos": [
+    5.071,
+    -0.492
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_14",
+   "order": -1,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.2,
+    5.34
+   ]
+  },
+  {
+   "name": "ArmL",
+   "path": "DancerR/DancerJumper/DancerL/ArmL",
+   "parent": 63,
+   "pos": [
+    4.225,
+    1.001
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_10",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.69,
+    4.51
+   ]
+  },
+  {
+   "name": "ArmHolder",
+   "path": "DancerR/DancerJumper/DancerL/ArmHolder",
+   "parent": 63,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "ArmR",
+   "path": "DancerR/DancerJumper/DancerL/ArmHolder/ArmR",
+   "parent": 70,
+   "pos": [
+    5.023,
+    2.76
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.4,
+    0.4
+   ],
+   "sprite": "pcomambo_dancers_4",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.34,
+    4.82
+   ]
+  },
+  {
+   "name": "System",
+   "path": "DancerR/DancerJumper/DancerL/ArmHolder/System",
+   "parent": 70,
+   "pos": [
+    4.86,
+    3.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_29",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.98
+   ]
+  },
+  {
+   "name": "WarioJumper",
+   "path": "WarioJumper",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "WAAAAAAAA",
+   "path": "WarioJumper/WAAAAAAAA",
+   "parent": 73,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Squiggly",
+   "path": "WarioJumper/WAAAAAAAA/Squiggly",
+   "parent": 74,
+   "pos": [
+    0,
+    2
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_40",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.34,
+    1.83
+   ]
+  },
+  {
+   "name": "Face",
+   "path": "WarioJumper/WAAAAAAAA/Face",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    2
+   ]
+  },
+  {
+   "name": "Schnoz",
+   "path": "WarioJumper/WAAAAAAAA/Face/Schnoz",
+   "parent": 76,
+   "pos": [
+    0,
+    -0.617
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_31",
+   "order": 4,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.99,
+    2.32
+   ]
+  },
+  {
+   "name": "Eyes",
+   "path": "WarioJumper/WAAAAAAAA/Face/Eyes",
+   "parent": 76,
+   "pos": [
+    0,
+    -0.558
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.6,
+    0.6
+   ],
+   "sprite": "pcomambo_player_8",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.3,
+    1.21
+   ]
+  },
+  {
+   "name": "Mouth",
+   "path": "WarioJumper/WAAAAAAAA/Face/Mouth",
+   "parent": 76,
+   "pos": [
+    0,
+    -1.59
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.65,
+    0.65
+   ],
+   "sprite": "pcomambo_player_20",
+   "order": 0,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.5,
+    1.17
+   ]
+  },
+  {
+   "name": "OtherArm",
+   "path": "WarioJumper/WAAAAAAAA/OtherArm",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    1
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "WarioJumper/WAAAAAAAA/OtherArm/Arm",
+   "parent": 80,
+   "pos": [
+    -0.797,
+    -1.746
+   ],
+   "rotZ": 6.019698076492653,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_15",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.97
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "WarioJumper/WAAAAAAAA/OtherArm/Hand",
+   "parent": 80,
+   "pos": [
+    -0.856,
+    -1.847
+   ],
+   "rotZ": 5.690013944199151,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_13",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.91,
+    2
+   ]
+  },
+  {
+   "name": "Body",
+   "path": "WarioJumper/WAAAAAAAA/Body",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "Torso",
+   "path": "WarioJumper/WAAAAAAAA/Body/Torso",
+   "parent": 83,
+   "pos": [
+    0,
+    -2.01
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_21",
+   "order": 3,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    3.84,
+    3.89
+   ]
+  },
+  {
+   "name": "Logo",
+   "path": "WarioJumper/WAAAAAAAA/Body/Logo",
+   "parent": 83,
+   "pos": [
+    0,
+    -2.366
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_28",
+   "order": 9,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.14,
+    0.88
+   ]
+  },
+  {
+   "name": "Legs",
+   "path": "WarioJumper/WAAAAAAAA/Legs",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "LegR",
+   "path": "WarioJumper/WAAAAAAAA/Legs/LegR",
+   "parent": 86,
+   "pos": [
+    0.465,
+    -4.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_34",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    3.85
+   ]
+  },
+  {
+   "name": "Foot",
+   "path": "WarioJumper/WAAAAAAAA/Legs/Foot",
+   "parent": 86,
+   "pos": [
+    0.154,
+    -3.99
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.5
+   ],
+   "sprite": "pcomambo_player_15",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.97
+   ]
+  },
+  {
+   "name": "Foot2",
+   "path": "WarioJumper/WAAAAAAAA/Legs/Foot2",
+   "parent": 86,
+   "pos": [
+    0.154,
+    -3.99
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.25,
+    0.5
+   ],
+   "sprite": "pcomambo_player_15",
+   "order": 0,
+   "flipX": true,
+   "inactive": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.97
+   ]
+  },
+  {
+   "name": "LegL",
+   "path": "WarioJumper/WAAAAAAAA/Legs/LegL",
+   "parent": 86,
+   "pos": [
+    -0.465,
+    -4.5
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_34",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.74,
+    3.85
+   ]
+  },
+  {
+   "name": "HoldingArm",
+   "path": "WarioJumper/WAAAAAAAA/HoldingArm",
+   "parent": 74,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -1
+   ]
+  },
+  {
+   "name": "Arm",
+   "path": "WarioJumper/WAAAAAAAA/HoldingArm/Arm",
+   "parent": 91,
+   "pos": [
+    0.54,
+    -1.51
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_22",
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.43,
+    3.85
+   ]
+  },
+  {
+   "name": "Hand",
+   "path": "WarioJumper/WAAAAAAAA/HoldingArm/Hand",
+   "parent": 91,
+   "pos": [
+    0.54,
+    0.24
+   ],
+   "rotZ": 1.4559748109091175,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_2",
+   "order": 2,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    2.52,
+    1.81
+   ]
+  },
+  {
+   "name": "System",
+   "path": "WarioJumper/WAAAAAAAA/HoldingArm/System",
+   "parent": 91,
+   "pos": [
+    0.56,
+    0.53
+   ],
+   "rotZ": 0,
+   "scale": [
+    0.55,
+    0.55
+   ],
+   "sprite": "pcomambo_player_29",
+   "order": 5,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    1.52,
+    1.98
+   ]
+  },
+  {
+   "name": "Spotlights",
+   "path": "Spotlights",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -20
+   ]
+  },
+  {
+   "name": "SpotlightL",
+   "path": "Spotlights/SpotlightL",
+   "parent": 95,
+   "pos": [
+    0,
+    -4.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pcomambo_spotlight_0",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    0.7490196
+   ],
+   "size": [
+    6.84,
+    12.52
+   ]
+  },
+  {
+   "name": "SpotlightR",
+   "path": "Spotlights/SpotlightR",
+   "parent": 95,
+   "pos": [
+    0,
+    -4.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "pcomambo_spotlight_0",
+   "order": -5,
+   "color": [
+    1,
+    1,
+    1,
+    0.7490196
+   ],
+   "size": [
+    6.84,
+    12.52
+   ]
+  },
+  {
+   "name": "SpotlightPoints",
+   "path": "SpotlightPoints",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "SpotlightPlayerLocation",
+   "path": "SpotlightPoints/SpotlightPlayerLocation",
+   "parent": 98,
+   "pos": [
+    0,
+    -4.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "LeftSpotlight",
+   "path": "SpotlightPoints/LeftSpotlight",
+   "parent": 98,
+   "pos": [
+    -5,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "RightSpotlight",
+   "path": "SpotlightPoints/RightSpotlight",
+   "parent": 98,
+   "pos": [
+    5,
+    -1.1
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "wildbreathmambo",
+   "path": "wildbreathmambo",
+   "parent": 0,
+   "pos": [
+    0,
+    17
+   ],
+   "z": 1,
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "sprite": "wildbreathmambo",
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "size": [
+    12.8,
+    7.2
+   ]
+  },
+  {
+   "name": "Refs",
+   "path": "Refs",
+   "parent": 0,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "inactive": true,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ],
+   "sortGroup": [
+    0,
+    -100
+   ]
+  },
+  {
+   "name": "NormalBop1",
+   "path": "Refs/NormalBop1",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.1303596,
+    2.1303596
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.40392157
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "NormalBop2",
+   "path": "Refs/NormalBop2",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13036,
+    2.13036
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.49019608
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "NormalBop3",
+   "path": "Refs/NormalBop3",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13036,
+    2.13036
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.4627451
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "ThinkBop1",
+   "path": "Refs/ThinkBop1",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.48235294
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "ThinkBop2",
+   "path": "Refs/ThinkBop2",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.49019608
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "ThinkBop3",
+   "path": "Refs/ThinkBop3",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.48235294
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "ThinkBop4",
+   "path": "Refs/ThinkBop4",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.49803922
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "LeftTurn",
+   "path": "Refs/LeftTurn",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.5372549
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "RightTurn",
+   "path": "Refs/RightTurn",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.5019608
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "HappyBop1",
+   "path": "Refs/HappyBop1",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.49019608
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "HappyBop2",
+   "path": "Refs/HappyBop2",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.4509804
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "PlayerJump",
+   "path": "Refs/PlayerJump",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.5686275
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "Dance1",
+   "path": "Refs/Dance1",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.50980395
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "Dance2",
+   "path": "Refs/Dance2",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.42745098
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "Dance3",
+   "path": "Refs/Dance3",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.48235294
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "Dance4",
+   "path": "Refs/Dance4",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.46666667
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "Dance5",
+   "path": "Refs/Dance5",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.49803922
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "Dance6",
+   "path": "Refs/Dance6",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "flipX": true,
+   "color": [
+    1,
+    1,
+    1,
+    0.48235294
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "Pose1",
+   "path": "Refs/Pose1",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.43137255
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "Pose2",
+   "path": "Refs/Pose2",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.4745098
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "DancePoint1",
+   "path": "Refs/DancePoint1",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.5372549
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "DancePoint2",
+   "path": "Refs/DancePoint2",
+   "parent": 103,
+   "pos": [
+    0.04,
+    -0.2
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.5254902
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "LightPlacementRef",
+   "path": "Refs/LightPlacementRef",
+   "parent": 103,
+   "pos": [
+    0,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.5686275
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  },
+  {
+   "name": "LightPlacementRef2",
+   "path": "Refs/LightPlacementRef2",
+   "parent": 103,
+   "pos": [
+    0,
+    -0.25
+   ],
+   "rotZ": 0,
+   "scale": [
+    2.13,
+    2.13
+   ],
+   "order": 0,
+   "color": [
+    1,
+    1,
+    1,
+    0.49803922
+   ],
+   "size": [
+    7.2,
+    4.8
+   ]
+  }
+ ]
+}

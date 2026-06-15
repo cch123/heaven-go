@@ -107,6 +107,7 @@ import (
 	"hsdemo/games/trickclass"
 	"hsdemo/games/tunnel"
 	"hsdemo/games/valiantvolley"
+	"hsdemo/games/wariodemambo"
 	"hsdemo/games/wizardswaltz"
 	"hsdemo/games/workingdough"
 )
@@ -217,6 +218,7 @@ func registerGames() {
 	engine.Register("tramAndPauline", tramandpauline.New)
 	engine.Register("tunnel", tunnel.New)
 	engine.Register("valiantVolley", valiantvolley.New)
+	engine.Register("warioDeMambo", wariodemambo.New)
 	engine.Register("workingDough", workingdough.New)
 	engine.Register("wizardsWaltz", wizardswaltz.New)
 }

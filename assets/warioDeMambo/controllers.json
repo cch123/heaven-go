@@ -1,0 +1,376 @@
+{
+ "Command": {
+  "default": "Idle",
+  "states": {
+   "Idle": {
+    "clip": "Animations/Text/Idle",
+    "speed": 1
+   },
+   "Text": {
+    "clip": "Animations/Text",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "Idle",
+      "exitTime": 1,
+      "duration": 0.25
+     }
+    ]
+   }
+  }
+ },
+ "Dancer": {
+  "default": "DancerIdle",
+  "states": {
+   "DPreDancePose": {
+    "clip": "Animations/Dancer/DPreDancePose",
+    "speed": 1
+   },
+   "DancerBad": {
+    "clip": "Animations/Dancer/DancerBad",
+    "speed": 1
+   },
+   "DancerDance": {
+    "clip": "Animations/Dancer/DancerDance",
+    "speed": 1
+   },
+   "DancerFinalLoop": {
+    "clip": "Animations/Dancer/DancerFinalLoop",
+    "speed": 1
+   },
+   "DancerIdle": {
+    "clip": "Animations/Dancer/DancerIdle",
+    "speed": 1
+   },
+   "DancerPose1": {
+    "clip": "Animations/Dancer/DancerPose1",
+    "speed": 1
+   },
+   "DancerPose2": {
+    "clip": "Animations/Dancer/DancerPose2",
+    "speed": 1
+   },
+   "ReadyDance": {
+    "clip": "Animations/Dancer/ReadyDance",
+    "speed": 1
+   }
+  }
+ },
+ "DancerArm": {
+  "default": "DArmIdle",
+  "states": {
+   "DArmCtoR": {
+    "clip": "Animations/Dancer/Arm/DArmCtoR",
+    "speed": 1
+   },
+   "DArmDanceLoop": {
+    "clip": "Animations/Dancer/Arm/DArmDanceLoop",
+    "speed": 1
+   },
+   "DArmIdle": {
+    "clip": "Animations/Dancer/Arm/DArmIdle",
+    "speed": 1
+   },
+   "DArmLtoC": {
+    "clip": "Animations/Dancer/Arm/DArmLtoC",
+    "speed": 1
+   },
+   "DArmLtoR": {
+    "clip": "Animations/Dancer/Arm/DArmLtoR",
+    "speed": 1
+   },
+   "DArmPose1": {
+    "clip": "Animations/Dancer/Arm/DArmPose1",
+    "speed": 1
+   },
+   "DArmPose2": {
+    "clip": "Animations/Dancer/Arm/DArmPose2",
+    "speed": 1
+   },
+   "DArmRtoC": {
+    "clip": "Animations/Dancer/Arm/DArmRtoC",
+    "speed": 1
+   },
+   "DArmRtoL": {
+    "clip": "Animations/Dancer/Arm/DArmRtoL",
+    "speed": 1
+   },
+   "DarmCtoL": {
+    "clip": "Animations/Dancer/Arm/DArmCtoL",
+    "speed": 1
+   }
+  }
+ },
+ "DancerHead": {
+  "default": "DHeadIdle",
+  "states": {
+   "DHeadCtoL": {
+    "clip": "Animations/Dancer/Head/DHeadCtoL",
+    "speed": 1
+   },
+   "DHeadCtoR": {
+    "clip": "Animations/Dancer/Head/DHeadCtoR",
+    "speed": 1
+   },
+   "DHeadDanceLoop": {
+    "clip": "Animations/Dancer/Head/DHeadDanceLoop",
+    "speed": 1
+   },
+   "DHeadIdle": {
+    "clip": "Animations/Dancer/Head/DHeadIdle",
+    "speed": 1
+   },
+   "DHeadLtoC": {
+    "clip": "Animations/Dancer/Head/DHeadLtoC",
+    "speed": 1
+   },
+   "DHeadLtoR": {
+    "clip": "Animations/Dancer/Head/DHeadLtoR",
+    "speed": 1
+   },
+   "DHeadPose1": {
+    "clip": "Animations/Dancer/Head/DHeadPose1",
+    "speed": 1
+   },
+   "DHeadPose2": {
+    "clip": "Animations/Dancer/Head/DHeadPose2",
+    "speed": 1
+   },
+   "DHeadRtoC": {
+    "clip": "Animations/Dancer/Head/DHeadRtoC",
+    "speed": 1
+   },
+   "DHeadRtoL": {
+    "clip": "Animations/Dancer/Head/DHeadRtoL",
+    "speed": 1
+   }
+  }
+ },
+ "DancerJumper": {
+  "default": "DJumpIdle",
+  "states": {
+   "DJump": {
+    "clip": "Animations/Dancer/DJump",
+    "speed": 0.5
+   },
+   "DJumpIdle": {
+    "clip": "Animations/Dancer/DJumpIdle",
+    "speed": 1
+   }
+  }
+ },
+ "Player": {
+  "default": "WahIdle",
+  "states": {
+   "WDanceLoop": {
+    "clip": "Animations/Player/WDanceLoop",
+    "speed": 1
+   },
+   "WahBad": {
+    "clip": "Animations/Player/WahBad",
+    "speed": 1
+   },
+   "WahBopHap": {
+    "clip": "Animations/Player/WahBopHap",
+    "speed": 1
+   },
+   "WahBopNorm": {
+    "clip": "Animations/Player/WahBopNorm",
+    "speed": 1
+   },
+   "WahBopReady": {
+    "clip": "Animations/Player/WahBopReady",
+    "speed": 1
+   },
+   "WahIdle": {
+    "clip": "Animations/Player/WahIdle",
+    "speed": 1
+   },
+   "WahPose1": {
+    "clip": "Animations/Player/WahPose1",
+    "speed": 1
+   },
+   "WahPose2": {
+    "clip": "Animations/Player/WahPose2",
+    "speed": 1
+   },
+   "WahThink": {
+    "clip": "Animations/Player/WahThink",
+    "speed": 1
+   }
+  }
+ },
+ "PlayerJump": {
+  "default": "WJumpIdle",
+  "states": {
+   "WJump": {
+    "clip": "Animations/Player/WJump",
+    "speed": 0.5
+   },
+   "WJumpIdle": {
+    "clip": "Animations/Player/WJumpIdle",
+    "speed": 1
+   },
+   "WWalkCLC": {
+    "clip": "Animations/Player/WWalkCLC",
+    "speed": 1
+   },
+   "WWalkCRC": {
+    "clip": "Animations/Player/WWalkCRC",
+    "speed": 1
+   },
+   "WWalkFinal": {
+    "clip": "Animations/Player/WWalkFinal",
+    "speed": 1
+   }
+  }
+ },
+ "WFloorLights": {
+  "default": "WBLightsIdle",
+  "states": {
+   "WBLightsFaster": {
+    "clip": "Animations/Lights/WBLightsFaster",
+    "speed": 1
+   },
+   "WBLightsFasterAlt": {
+    "clip": "Animations/Lights/WBLightsFasterAlt",
+    "speed": 1
+   },
+   "WBLightsIdle": {
+    "clip": "Animations/Lights/WBLightsIdle",
+    "speed": 1
+   },
+   "WBLightsStage1": {
+    "clip": "Animations/Lights/WBLightsStage1",
+    "speed": 1
+   },
+   "WBLightsStage2": {
+    "clip": "Animations/Lights/WBLightsStage2",
+    "speed": 1
+   },
+   "WBLightsStage3": {
+    "clip": "Animations/Lights/WBLightsStage3",
+    "speed": 1
+   },
+   "WBLightsStage4": {
+    "clip": "Animations/Lights/WBLightsStage4",
+    "speed": 1
+   },
+   "WBLightsStageAlt": {
+    "clip": "Animations/Lights/WBLightsStageAlt",
+    "speed": 1
+   },
+   "WBLightsStageAlt2": {
+    "clip": "Animations/Lights/WBLightsStageAlt2",
+    "speed": 1
+   }
+  }
+ },
+ "WTopLights": {
+  "default": "WTLightsIdle",
+  "states": {
+   "WTLightsFaster": {
+    "clip": "Animations/Lights/WTLightsFaster",
+    "speed": 1
+   },
+   "WTLightsFasterAlt": {
+    "clip": "Animations/Lights/WTLightsFasterAlt",
+    "speed": 1
+   },
+   "WTLightsIdle": {
+    "clip": "Animations/Lights/WTLightsIdle",
+    "speed": 1
+   },
+   "WTLightsStage1": {
+    "clip": "Animations/Lights/WTLightsStage1",
+    "speed": 1
+   },
+   "WTLightsStage2": {
+    "clip": "Animations/Lights/WTLightsStage2",
+    "speed": 1
+   },
+   "WTLightsStage3": {
+    "clip": "Animations/Lights/WTLightsStage3",
+    "speed": 1
+   },
+   "WTLightsStage4": {
+    "clip": "Animations/Lights/WTLightsStage4",
+    "speed": 1
+   },
+   "WTLightsStageAlt": {
+    "clip": "Animations/Lights/WTLightsStageAlt",
+    "speed": 1
+   },
+   "WTLightsStageAlt2": {
+    "clip": "Animations/Lights/WTLightsStageAlt2",
+    "speed": 1
+   }
+  }
+ },
+ "WahFace": {
+  "default": "WFaceIdle",
+  "states": {
+   "WFaceCtoL": {
+    "clip": "Animations/Player/Face/WFaceCtoL",
+    "speed": 1
+   },
+   "WFaceCtoR": {
+    "clip": "Animations/Player/Face/WFaceCtoR",
+    "speed": 1
+   },
+   "WFaceIdle": {
+    "clip": "Animations/Player/Face/WFaceIdle",
+    "speed": 1
+   },
+   "WFaceLtoC": {
+    "clip": "Animations/Player/Face/WFaceLtoC",
+    "speed": 1
+   },
+   "WFaceLtoR": {
+    "clip": "Animations/Player/Face/WFaceLtoR",
+    "speed": 1
+   },
+   "WFaceRtoC": {
+    "clip": "Animations/Player/Face/WFaceRtoC",
+    "speed": 1
+   },
+   "WFaceRtoL": {
+    "clip": "Animations/Player/Face/WFaceRtoL",
+    "speed": 1
+   }
+  }
+ },
+ "WahHand": {
+  "default": "WHandIdle",
+  "states": {
+   "WHandCtoL": {
+    "clip": "Animations/Player/Hand/WHandCtoL",
+    "speed": 1
+   },
+   "WHandCtoR": {
+    "clip": "Animations/Player/Hand/WHandCtoR",
+    "speed": 1
+   },
+   "WHandIdle": {
+    "clip": "Animations/Player/Hand/WHandIdle",
+    "speed": 1
+   },
+   "WHandLtoC": {
+    "clip": "Animations/Player/Hand/WHandLtoC",
+    "speed": 1
+   },
+   "WHandLtoR": {
+    "clip": "Animations/Player/Hand/WHandLtoR",
+    "speed": 1
+   },
+   "WHandRtoC": {
+    "clip": "Animations/Player/Hand/WHandRtoC",
+    "speed": 1
+   },
+   "WHandRtoL": {
+    "clip": "Animations/Player/Hand/WHandRtoL",
+    "speed": 1
+   }
+  }
+ }
+}
