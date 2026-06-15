@@ -95,6 +95,19 @@ var sceneSpecs = map[string]sceneSpec{
 		wantTexts:       true,
 		commonSounds:    []string{"nearMiss.ogg"},
 	},
+	"figureFighter": {
+		dir:    "FigureFighter",
+		prefab: "figureFighter.prefab",
+		roleFields: []string{
+			"dollAnim", "crowdAnim", "bagAnim", "bagCopyAnim", "buttonAnim",
+			"lightsAnim", "topAnim", "barsAnim", "fartAnim", "bagObject",
+			"chainParticles1", "chainParticles2",
+		},
+		wantControllers: true,
+		components: []componentSpec{
+			{name: "game", markers: []string{"dollAnim", "crowdAnim", "bagAnim", "bagCopyAnim", "buttonAnim", "lightsAnim", "topAnim", "barsAnim", "fartAnim", "bagObject"}},
+		},
+	},
 	"samuraiSliceNtr": {
 		dir:    "SamuraiSliceNtr",
 		prefab: "samuraiSliceNtr.prefab",

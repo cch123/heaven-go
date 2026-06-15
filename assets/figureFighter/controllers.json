@@ -1,0 +1,357 @@
+{
+ "BagCopy": {
+  "default": "idle",
+  "states": {
+   "Blow": {
+    "clip": "BagCopy/Blow",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "BagCopy/idle",
+    "speed": 1
+   }
+  }
+ },
+ "Bars": {
+  "default": "Idle",
+  "states": {
+   "CloseIn1": {
+    "clip": "Bars/CloseIn1",
+    "speed": 1
+   },
+   "CloseIn2": {
+    "clip": "Bars/CloseIn2",
+    "speed": 1
+   },
+   "CloseIn3": {
+    "clip": "Bars/CloseIn3",
+    "speed": 1
+   },
+   "Idle": {
+    "clip": "Bars/Idle",
+    "speed": 1
+   }
+  }
+ },
+ "Fart": {
+  "default": "idle",
+  "states": {
+   "gas_L": {
+    "clip": "Fart/gas_L",
+    "speed": 1
+   },
+   "gas_S": {
+    "clip": "Fart/gas_S",
+    "speed": 1
+   },
+   "idle": {
+    "clip": "Fart/idle",
+    "speed": 1
+   }
+  }
+ },
+ "FeverBag": {
+  "default": "BagIdle",
+  "states": {
+   "BagBarely": {
+    "clip": "Bag/BagBarely",
+    "speed": 1
+   },
+   "BagBlow": {
+    "clip": "Bag/BagBlow",
+    "speed": 1
+   },
+   "BagHit1": {
+    "clip": "Bag/BagHit1",
+    "speed": 1
+   },
+   "BagHit2": {
+    "clip": "Bag/BagHit2",
+    "speed": 1
+   },
+   "BagIdle": {
+    "clip": "Bag/BagIdle",
+    "speed": 1
+   },
+   "BagSummon": {
+    "clip": "Bag/BagSummon",
+    "speed": 1
+   },
+   "BagThrough": {
+    "clip": "Bag/BagThrough",
+    "speed": 1
+   }
+  }
+ },
+ "FeverButton": {
+  "default": "ButtonIdle",
+  "states": {
+   "ButtonIdle": {
+    "clip": "Button/ButtonIdle",
+    "speed": 1
+   },
+   "ButtonPress": {
+    "clip": "Button/ButtonPress",
+    "speed": 1
+   },
+   "ButtonPress2": {
+    "clip": "Button/ButtonPress2",
+    "speed": 1
+   }
+  }
+ },
+ "FeverCrowd": {
+  "default": "CrowdIdle",
+  "states": {
+   "CrowdBop0": {
+    "clip": "Crowd/CrowdBopNeutral",
+    "speed": 1
+   },
+   "CrowdBop1": {
+    "clip": "Crowd/CrowdBopHalfRiled",
+    "speed": 1
+   },
+   "CrowdBop2": {
+    "clip": "Crowd/CrowdBopFullyRiled",
+    "speed": 1
+   },
+   "CrowdIdle": {
+    "clip": "Crowd/CrowdIdle",
+    "speed": 1
+   }
+  }
+ },
+ "FeverFigure": {
+  "default": "FigureIdle",
+  "states": {
+   "FigureBarely1": {
+    "clip": "Doll/FigureBarely1",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FigureDeflateBarely",
+      "exitTime": 0.6874998,
+      "duration": 0
+     }
+    ]
+   },
+   "FigureBarely2": {
+    "clip": "Doll/FigureBarely2",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FigureDeflateBarely",
+      "exitTime": 0.5,
+      "duration": 0
+     }
+    ]
+   },
+   "FigureBarely3": {
+    "clip": "Doll/FigureBarely3",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FigureDeflateBarely",
+      "exitTime": 0.8,
+      "duration": 0
+     }
+    ]
+   },
+   "FigureBarely4": {
+    "clip": "Doll/FigureBarely4",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FigureDeflateBarely",
+      "exitTime": 0.46428573,
+      "duration": 0
+     }
+    ]
+   },
+   "FigureBop": {
+    "clip": "Doll/FigureBop1",
+    "speed": 1
+   },
+   "FigureBop2": {
+    "clip": "Doll/FigureBop2",
+    "speed": 1
+   },
+   "FigureBop3": {
+    "clip": "Doll/FigureBop3",
+    "speed": 1
+   },
+   "FigureBop4": {
+    "clip": "Doll/FigureBop4",
+    "speed": 1
+   },
+   "FigureDeflate": {
+    "clip": "Doll/FigureDeflate",
+    "speed": 1
+   },
+   "FigureDeflateBarely": {
+    "clip": "Doll/FigureDeflateBarely",
+    "speed": 1
+   },
+   "FigureFinisher": {
+    "clip": "Doll/FigureFinisher",
+    "speed": 1
+   },
+   "FigureIdle": {
+    "clip": "Doll/FigureIdle",
+    "speed": 1
+   },
+   "FigureInflate": {
+    "clip": "Doll/FigureInflate",
+    "speed": 1
+   },
+   "FigureJab": {
+    "clip": "Doll/FigureJab",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FigureDeflate",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "FigureJab2": {
+    "clip": "Doll/FigureJab2",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "FigureDeflate",
+      "exitTime": 0.66525525,
+      "duration": 0
+     }
+    ]
+   },
+   "FigurePrep1": {
+    "clip": "Doll/FigurePrep1",
+    "speed": 1
+   },
+   "FigurePrep2": {
+    "clip": "Doll/FigurePrep2",
+    "speed": 1
+   },
+   "FigurePrep3": {
+    "clip": "Doll/FigurePrep3",
+    "speed": 1
+   },
+   "FigurePrep4": {
+    "clip": "Doll/FigurePrep4",
+    "speed": 1
+   },
+   "FigureWhiff1": {
+    "clip": "Doll/FigureWhiff1",
+    "speed": 1
+   },
+   "FigureWhiff2": {
+    "clip": "Doll/FigureWhiff2",
+    "speed": 1
+   }
+  }
+ },
+ "FeverLights": {
+  "default": "LightAmbient",
+  "states": {
+   "BackFade1": {
+    "clip": "Lights/BackFade1",
+    "speed": 1
+   },
+   "BackFade2": {
+    "clip": "Lights/BackFade2",
+    "speed": 1
+   },
+   "BackFade3": {
+    "clip": "Lights/BackFade3",
+    "speed": 1
+   },
+   "BackFade4": {
+    "clip": "Lights/BackFade4",
+    "speed": 1
+   },
+   "BackFade5": {
+    "clip": "Lights/BackFade5",
+    "speed": 1
+   },
+   "BackFade6": {
+    "clip": "Lights/BackFade6",
+    "speed": 1
+   },
+   "BackFadeO1": {
+    "clip": "Lights/BackFadeO1",
+    "speed": 1
+   },
+   "BackFadeO2": {
+    "clip": "Lights/BackFadeO2",
+    "speed": 1
+   },
+   "BackFadeO3": {
+    "clip": "Lights/BackFadeO3",
+    "speed": 1
+   },
+   "BackFadeO4": {
+    "clip": "Lights/BackFadeO4",
+    "speed": 1
+   },
+   "BackFadeO5": {
+    "clip": "Lights/BackFadeO5",
+    "speed": 1
+   },
+   "BackFadeO6": {
+    "clip": "Lights/BackFadeO6",
+    "speed": 1
+   },
+   "BackFlash1": {
+    "clip": "Lights/BackFlash1",
+    "speed": 1
+   },
+   "BackFlash2": {
+    "clip": "Lights/BackFlash2",
+    "speed": 1
+   },
+   "BackFlash3": {
+    "clip": "Lights/BackFlash3",
+    "speed": 1
+   },
+   "BackFlash4": {
+    "clip": "Lights/BackFlash4",
+    "speed": 1
+   },
+   "BackFlash5": {
+    "clip": "Lights/BackFlash5",
+    "speed": 1
+   },
+   "BackFlash6": {
+    "clip": "Lights/BackFlash6",
+    "speed": 1
+   },
+   "LightAmbient": {
+    "clip": "Lights/LightAmbient",
+    "speed": 1
+   },
+   "LightsOff": {
+    "clip": "Lights/LightsOff",
+    "speed": 1
+   }
+  }
+ },
+ "FeverSpots": {
+  "default": "SpotsOff",
+  "states": {
+   "SpotsFadeIn": {
+    "clip": "Lights/SpotsFadeIn",
+    "speed": 1
+   },
+   "SpotsFadeOut": {
+    "clip": "Lights/SpotsFadeOut",
+    "speed": 1
+   },
+   "SpotsOff": {
+    "clip": "Lights/SpotsOff",
+    "speed": 1
+   }
+  }
+ }
+}

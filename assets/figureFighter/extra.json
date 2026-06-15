@@ -1,0 +1,25 @@
+{
+ "components": {
+  "game": {
+   "path": "",
+   "nums": {
+    "strongPunch": 0
+   },
+   "refs": {
+    "StickyLayer": "StickyBars",
+    "bagAnim": "Bag",
+    "bagCopyAnim": "BagCopy",
+    "bagObject": "Bag",
+    "barsAnim": "StickyBars/Bars",
+    "buttonAnim": "Button",
+    "chainParticles1": "ChainParticle/Chain",
+    "chainParticles2": "ChainParticle/Chain (1)",
+    "crowdAnim": "Background/Crowds",
+    "dollAnim": "Doll",
+    "fartAnim": "Fart",
+    "lightsAnim": "Background/Lights",
+    "topAnim": "TopsSpots"
+   }
+  }
+ }
+}

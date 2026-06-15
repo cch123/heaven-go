@@ -1,0 +1,11 @@
+{
+ "Background/Crowds": "FeverCrowd",
+ "Background/Lights": "FeverLights",
+ "Bag": "FeverBag",
+ "BagCopy": "BagCopy",
+ "Button": "FeverButton",
+ "Doll": "FeverFigure",
+ "Fart": "Fart",
+ "StickyBars/Bars": "Bars",
+ "TopsSpots": "FeverSpots"
+}
