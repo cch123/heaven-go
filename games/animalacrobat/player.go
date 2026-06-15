@@ -14,6 +14,7 @@ func (m *Module) startInitialJump(beat float64, first *acrobatObstacle) {
 	m.jump = playerJump{
 		start: beat, dur: 1, fromX: startX, toX: startX + dist,
 		fromY: startY, toY: startY, height: num(m.playerNums, "_jumpHeightInitial", defaultJumpHeightInitial),
+		shadowMul: 1,
 	}
 	m.jumpActive = true
 	m.playPlayer("PlayerJump", beat)
@@ -41,9 +42,23 @@ func (m *Module) startJumpFromObstacle(beat float64, ob *acrobatObstacle) {
 		if next.kind == kindGorilla {
 			toX = next.x + next.endX
 			toY = next.endY
+			height -= 0.2
 		}
 	}
-	m.jump = playerJump{start: beat, dur: dur, fromX: fromX, toX: toX, fromY: fromY, toY: toY, height: height, land: ob.end}
+	rot := playerRotateJump
+	shadowMul := 1.4
+	if ob.kind == kindGiraffe {
+		shadowMul = 2.2
+	}
+	if next := m.nextObstacleAfter(ob); next != nil && next.kind == kindGorilla {
+		rot = playerRotateArc
+		shadowMul = 1.4
+	}
+	m.jump = playerJump{
+		start: beat, dur: dur, fromX: fromX, toX: toX,
+		fromY: fromY, toY: toY, height: height, land: ob.end,
+		rotate: rot, shadowMul: shadowMul,
+	}
 	m.jumpActive = true
 	m.ctx.Scene.SetActive(m.player, true)
 	m.playPlayer("PlayerJump", beat)
@@ -66,9 +81,8 @@ func (m *Module) updatePlayer(beat float64) {
 	if m.jumpActive {
 		u := clamp01((beat - m.jump.start) / m.jump.dur)
 		x := m.jump.fromX + (m.jump.toX-m.jump.fromX)*u
-		// TODO(animalAcrobat): PlayerAcrobat uses its own jump coroutine curves.
-		// This preserves the serialized distances/heights but still needs a
-		// curve-by-curve pass before the README simplification can be removed.
+		// SuperCurveObject.GetPathPositionFromBeat uses this exact parabola:
+		// LerpUnclamped(start,end,t) plus (-(2t-1)^2+1)*height on Y.
 		y := m.jump.fromY + (m.jump.toY-m.jump.fromY)*u + 4*m.jump.height*u*(1-u)
 		m.playerX, m.playerY = x, y
 		m.ctx.Scene.SetPosOver(m.player, x, y)
@@ -81,6 +95,7 @@ func (m *Module) updatePlayer(beat float64) {
 	} else if m.holding == nil {
 		m.ctx.Scene.SetPosOver(m.player, m.playerX, m.playerY)
 	}
+	m.updatePlayerVisuals(beat)
 }
 
 func (m *Module) updateAutoBop(beat float64) {
@@ -97,6 +112,86 @@ func (m *Module) updateAutoBop(beat float64) {
 
 func (m *Module) playPlayer(state string, beat float64) {
 	m.ctx.Scene.PlayState(m.player, state, beat, animScale)
+}
+
+func (m *Module) resetPlayerVisuals() {
+	m.ctx.Scene.SetSpinOver(m.player, 0)
+	if m.playerShadow != "" {
+		m.ctx.Scene.SetActive(m.playerShadow, true)
+		m.ctx.Scene.SetScaleOver(m.playerShadow, m.shadowScale[0], m.shadowScale[1])
+	}
+}
+
+func (m *Module) updatePlayerVisuals(beat float64) {
+	startAngle := num(m.playerNums, "_jumpStartAngle", 120)
+	m.ctx.Scene.SetSpinOver(m.player, playerRotationAt(m.jump, beat, startAngle)*math.Pi/180)
+	if m.playerShadow == "" {
+		return
+	}
+	sx, sy := playerShadowScaleAt(m.jump, beat, m.shadowScale[0], m.shadowScale[1], m.landingShadowBeats())
+	m.ctx.Scene.SetActive(m.playerShadow, true)
+	m.ctx.Scene.SetScaleOver(m.playerShadow, sx, sy)
+}
+
+func (m *Module) landingShadowBeats() float64 {
+	end := m.jump.start + m.jump.dur
+	secPerBeat := m.ctx.SecPerBeat(end)
+	if secPerBeat <= 0 {
+		return 0.5
+	}
+	return 0.5 / secPerBeat
+}
+
+func playerRotationAt(j playerJump, beat, startAngle float64) float64 {
+	if j.dur <= 0 {
+		return 0
+	}
+	switch j.rotate {
+	case playerRotateArc:
+		if beat >= j.start+j.dur {
+			return 0
+		}
+		return lerp(startAngle, 360, clamp01((beat-j.start)/j.dur))
+	case playerRotateJump:
+		spinStart := j.start + j.dur - 1
+		spinEnd := spinStart + 0.5
+		if beat < spinStart {
+			length := j.dur - 1
+			if length <= 0 {
+				return 360
+			}
+			return lerp(startAngle, 360, clamp01((beat-j.start)/length))
+		}
+		if beat < spinEnd {
+			return lerp(0, 720, clamp01((beat-spinStart)/0.5))
+		}
+	}
+	return 0
+}
+
+func playerShadowScaleAt(j playerJump, beat, defaultX, defaultY, landingBeats float64) (float64, float64) {
+	if j.dur <= 0 || j.shadowMul <= 0 {
+		return defaultX, defaultY
+	}
+	end := j.start + j.dur
+	if j.land && beat >= end {
+		if landingBeats <= 0 {
+			return defaultX * 12, defaultY * 12
+		}
+		u := clamp01((beat - end) / landingBeats)
+		e := 1 - (1-u)*(1-u)
+		return lerp(defaultX, defaultX*12, e), lerp(defaultY, defaultY*12, e)
+	}
+	spinStart := end - 1
+	if beat < spinStart {
+		return defaultX * j.shadowMul, defaultY * j.shadowMul
+	}
+	if beat < end {
+		u := clamp01((beat - spinStart) / (end - spinStart))
+		e := 1 - (1-u)*(1-u)
+		return lerp(defaultX*j.shadowMul, defaultX, e), lerp(defaultY*j.shadowMul, defaultY, e)
+	}
+	return defaultX, defaultY
 }
 
 func (m *Module) emitSparkle(beat, x, y float64, col color.NRGBA) {

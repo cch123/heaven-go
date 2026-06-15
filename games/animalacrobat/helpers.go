@@ -80,6 +80,14 @@ func nodePos(as *kart.Assets, path string) (float64, float64) {
 	return 0, 0
 }
 
+func nodeScale(as *kart.Assets, path string) (float64, float64) {
+	if i, ok := as.NodeIndex(path); ok {
+		s := as.Rig.Nodes[i].Scale
+		return s[0], s[1]
+	}
+	return 1, 1
+}
+
 func rotationHeight(as *kart.Assets, spec obstacleSpec) float64 {
 	_, y := nodePos(as, spec.gripPoint)
 	return math.Abs(y)

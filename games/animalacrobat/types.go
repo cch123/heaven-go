@@ -75,6 +75,14 @@ type bgTileRuntime struct {
 	ok           bool
 }
 
+type playerRotateMode int
+
+const (
+	playerRotateNone playerRotateMode = iota
+	playerRotateJump
+	playerRotateArc
+)
+
 type acrobatObstacle struct {
 	kind   animalKind
 	beat   float64
@@ -119,6 +127,8 @@ type playerJump struct {
 	toY        float64
 	height     float64
 	land       bool
+	rotate     playerRotateMode
+	shadowMul  float64
 }
 
 type sparkle struct {
@@ -132,6 +142,8 @@ type Module struct {
 	proj kart.Aff
 
 	player       string
+	playerShadow string
+	shadowScale  [2]float64
 	spotlight    string
 	partyPoppers string
 	bgTileA      string
@@ -179,6 +191,7 @@ func New() engine.Module {
 		playerNums:   map[string]float64{},
 		gameNums:     map[string]float64{},
 		bg:           bgEase{fromA: defaultBGAlpha, toA: defaultBGAlpha, fromB: defaultBGBravo, toB: defaultBGBravo},
+		shadowScale:  [2]float64{1, 1},
 		lastMissBeat: math.Inf(-1),
 	}
 }

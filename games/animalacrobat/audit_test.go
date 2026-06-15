@@ -235,3 +235,46 @@ func assertCameraTarget(t *testing.T, m *Module, beat, wantX, wantY, wantZ float
 		t.Fatalf("beat %v: camera target=(%v,%v,%v), want (%v,%v,%v)", beat, got.x, got.y, got.z, wantX, wantY, wantZ)
 	}
 }
+
+func TestAnimalAcrobatPlayerRotationMatchesCoroutines(t *testing.T) {
+	jump := playerJump{start: 20, dur: 2, rotate: playerRotateJump}
+	if got := playerRotationAt(jump, 20, 120); got != 120 {
+		t.Fatalf("RotateJump start=%v, want 120", got)
+	}
+	if got := playerRotationAt(jump, 21, 120); got != 0 {
+		t.Fatalf("RotateJump spin phase resets to 0 at beat 21, got %v", got)
+	}
+	if got := playerRotationAt(jump, 21.25, 120); got != 360 {
+		t.Fatalf("RotateJump second spin=%v, want 360", got)
+	}
+	if got := playerRotationAt(jump, 21.5, 120); got != 0 {
+		t.Fatalf("RotateJump end=%v, want 0", got)
+	}
+
+	arc := playerJump{start: 20, dur: 4, rotate: playerRotateArc}
+	if got := playerRotationAt(arc, 22, 120); got != 240 {
+		t.Fatalf("ArcRotate mid=%v, want 240", got)
+	}
+	if got := playerRotationAt(arc, 24, 120); got != 0 {
+		t.Fatalf("ArcRotate end=%v, want 0", got)
+	}
+}
+
+func TestAnimalAcrobatPlayerShadowMatchesCoroutines(t *testing.T) {
+	jump := playerJump{start: 10, dur: 4, shadowMul: 2.2}
+	assertShadowScale(t, jump, 10, 3.5, 3.5, 1, 7.7, 7.7)
+	assertShadowScale(t, jump, 13.5, 3.5, 3.5, 1, 4.55, 4.55)
+	assertShadowScale(t, jump, 14, 3.5, 3.5, 1, 3.5, 3.5)
+
+	land := playerJump{start: 10, dur: 2, shadowMul: 1.4, land: true}
+	assertShadowScale(t, land, 12.5, 3.5, 3.5, 1, 32.375, 32.375)
+	assertShadowScale(t, land, 13, 3.5, 3.5, 1, 42, 42)
+}
+
+func assertShadowScale(t *testing.T, j playerJump, beat, sx, sy, landingBeats, wantX, wantY float64) {
+	t.Helper()
+	gotX, gotY := playerShadowScaleAt(j, beat, sx, sy, landingBeats)
+	if math.Abs(gotX-wantX) > 1e-6 || math.Abs(gotY-wantY) > 1e-6 {
+		t.Fatalf("beat %v: shadow scale=(%v,%v), want (%v,%v)", beat, gotX, gotY, wantX, wantY)
+	}
+}

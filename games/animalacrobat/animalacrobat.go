@@ -31,6 +31,8 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	}
 	if c, ok := comps["player"]; ok {
 		m.playerNums = c.Nums
+		m.playerShadow = ref(c.Refs, "_shadow")
+		m.shadowScale[0], m.shadowScale[1] = nodeScale(ctx.Assets, m.playerShadow)
 	}
 	if c, ok := comps["bgTileManager0"]; ok {
 		m.bgTileA = ref(c.Refs, "_bgTileFirst")
@@ -242,6 +244,7 @@ func (m *Module) OnSwitch(beat float64) {
 	m.lastBop = int(math.Floor(beat)) - 1
 	m.holding = nil
 	m.drumrollStop = nil
+	m.resetPlayerVisuals()
 	m.resetCamera(beat)
 	m.ctx.Scene.SetActive(m.partyPoppers, false)
 	m.ctx.Scene.SetActive(m.player, true)
