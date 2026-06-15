@@ -1,0 +1,505 @@
+{
+ "refArrays": {
+  "_bgCats": [
+   "BgCats/GreenCat1",
+   "BgCats/PinkCat2",
+   "BgCats/BlueCat3",
+   "BgCats/GreenCat4",
+   "BgCats/BlueCat5",
+   "BgCats/PinkCat6",
+   "BgCats/PinkCat7",
+   "BgCats/PinkCat8",
+   "BgCats/PinkCat9",
+   "BgCats/GreenCat10",
+   "BgCats/BlueCat11",
+   "BgCats/GreenCat12"
+  ],
+  "_catLeftObjectsBig": [
+   "CatLeft/CatHolder/ObjectHolder/BigLog",
+   "CatLeft/CatHolder/ObjectHolder/bigBall"
+  ],
+  "_catLeftObjectsHuge": [
+   "CatLeft/CatHolder/ObjectHolder/HugeLog",
+   "CatLeft/CatHolder/ObjectHolder/Freezer",
+   "CatLeft/CatHolder/ObjectHolder/Peach"
+  ],
+  "_catLeftObjectsSmall": [
+   "CatLeft/CatHolder/ObjectHolder/SmallLog",
+   "CatLeft/CatHolder/ObjectHolder/Can",
+   "CatLeft/CatHolder/ObjectHolder/Bat",
+   "CatLeft/CatHolder/ObjectHolder/broom",
+   "CatLeft/CatHolder/ObjectHolder/barrel",
+   "CatLeft/CatHolder/ObjectHolder/book"
+  ],
+  "_catRightObjectsBig": [
+   "Cat/CatHolder/ObjectHolder/BigLog",
+   "Cat/CatHolder/ObjectHolder/bigBall"
+  ],
+  "_catRightObjectsHuge": [
+   "Cat/CatHolder/ObjectHolder/HugeLog",
+   "Cat/CatHolder/ObjectHolder/Freezer",
+   "Cat/CatHolder/ObjectHolder/Peach"
+  ],
+  "_catRightObjectsSmall": [
+   "Cat/CatHolder/ObjectHolder/SmallLog",
+   "Cat/CatHolder/ObjectHolder/Can",
+   "Cat/CatHolder/ObjectHolder/Bat",
+   "Cat/CatHolder/ObjectHolder/broom",
+   "Cat/CatHolder/ObjectHolder/barrel",
+   "Cat/CatHolder/ObjectHolder/book"
+  ]
+ },
+ "refArrayIdx": {
+  "_bgCats": [
+   249,
+   156,
+   280,
+   187,
+   125,
+   373,
+   342,
+   435,
+   404,
+   218,
+   94,
+   311
+  ],
+  "_catLeftObjectsBig": [
+   56,
+   62
+  ],
+  "_catLeftObjectsHuge": [
+   57,
+   58,
+   59
+  ],
+  "_catLeftObjectsSmall": [
+   52,
+   53,
+   54,
+   55,
+   61,
+   60
+  ],
+  "_catRightObjectsBig": [
+   25,
+   31
+  ],
+  "_catRightObjectsHuge": [
+   26,
+   27,
+   28
+  ],
+  "_catRightObjectsSmall": [
+   21,
+   22,
+   23,
+   24,
+   30,
+   29
+  ]
+ },
+ "components": {
+  "baby": {
+   "path": "babyRef",
+   "nums": {
+    "_addedHeight": 2,
+    "_addedY": 2,
+    "_rot": 360,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0
+   },
+   "sprites": {
+    "_flySprite": "baby0",
+    "_standSprite": "baby1"
+   }
+  },
+  "bear": {
+   "path": "Beast",
+   "nums": {
+    "_ease": 24,
+    "_zoomInLength": 1,
+    "_zoomInPower": -2
+   },
+   "refs": {
+    "_anim": "Beast"
+   }
+  },
+  "bigObject": {
+   "path": "BigObject",
+   "refs": {
+    "_ballSR1": "BigObject/dough/dough",
+    "_ballSR2": "BigObject/dough",
+    "_logSR": "BigObject/log"
+   },
+   "sprites": {
+    "_ballCutSprite": "lumbearjackcustoms_15",
+    "_logCutSprite": "lumbearjackobjects_3"
+   }
+  },
+  "bomb": {
+   "path": "bombRef",
+   "nums": {
+    "_rot": 1080,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0
+   }
+  },
+  "catMove0": {
+   "path": "BgCats/BlueCat11",
+   "nums": {
+    "_slideOffset": 30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove1": {
+   "path": "BgCats/BlueCat3",
+   "nums": {
+    "_slideOffset": -30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove10": {
+   "path": "BgCats/PinkCat8",
+   "nums": {
+    "_slideOffset": 30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove11": {
+   "path": "BgCats/PinkCat9",
+   "nums": {
+    "_slideOffset": -30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove12": {
+   "path": "Cat",
+   "nums": {
+    "_slideOffset": 0,
+    "_startAtOther": 0,
+    "_usePoint": 1
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove13": {
+   "path": "CatLeft",
+   "nums": {
+    "_slideOffset": 0,
+    "_startAtOther": 1,
+    "_usePoint": 1
+   },
+   "refs": {
+    "_otherPoint": "CatLeftPoint"
+   }
+  },
+  "catMove2": {
+   "path": "BgCats/BlueCat5",
+   "nums": {
+    "_slideOffset": 30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove3": {
+   "path": "BgCats/GreenCat1",
+   "nums": {
+    "_slideOffset": -30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove4": {
+   "path": "BgCats/GreenCat10",
+   "nums": {
+    "_slideOffset": -30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove5": {
+   "path": "BgCats/GreenCat12",
+   "nums": {
+    "_slideOffset": -30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove6": {
+   "path": "BgCats/GreenCat4",
+   "nums": {
+    "_slideOffset": 30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove7": {
+   "path": "BgCats/PinkCat2",
+   "nums": {
+    "_slideOffset": 30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove8": {
+   "path": "BgCats/PinkCat6",
+   "nums": {
+    "_slideOffset": -30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "catMove9": {
+   "path": "BgCats/PinkCat7",
+   "nums": {
+    "_slideOffset": -30,
+    "_startAtOther": 1,
+    "_usePoint": 0
+   },
+   "refs": {
+    "_otherPoint": "CatRightPoint"
+   }
+  },
+  "game": {
+   "path": "",
+   "nums": {
+    "_catAnimationOffsetEnd": 0.5,
+    "_catAnimationOffsetStart": -0.5
+   },
+   "refs": {
+    "_baby": "babyRef",
+    "_barrelCutParticle": "ParticleCutPoint/BarrelBreak",
+    "_batCutParticle": "ParticleCutPoint/BatBreak",
+    "_bear": "Beast",
+    "_bigBallCutParticle": "ParticleCutPoint/BigDoughBreak",
+    "_bigLogCutParticle": "ParticleCutPoint/BigLogBreak",
+    "_bigLogHitParticle": "ParticleHitPoint/BigLogChip",
+    "_bigObjectPrefab": "BigObject",
+    "_bombRef": "bombRef",
+    "_bookCutParticle": "ParticleCutPoint/BookBreak",
+    "_broomCutParticle": "ParticleCutPoint/BroomBreak",
+    "_canCutParticle": "ParticleCutPoint/SodaBreak",
+    "_catLeft": "CatLeft/CatHolder",
+    "_catLeftMove": "CatLeft",
+    "_catRight": "Cat/CatHolder",
+    "_catRightMove": "Cat",
+    "_cutObjectHolder": "Beast/Stump/ObjectHolder",
+    "_freezerBreakParticle": "ParticleCutPoint/FreezerBreak",
+    "_freezerChipParticle": "ParticleHitPoint/FreezerChip",
+    "_hugeLogCutParticle": "ParticleCutPoint/HugeLogBreak",
+    "_hugeLogHitParticle": "ParticleHitPoint/HugeLogChip",
+    "_hugeObjectPrefab": "HugeObject",
+    "_missObjectRef": "MissObjectRef",
+    "_particleCutPoint": "ParticleCutPoint",
+    "_particleHitPoint": "ParticleHitPoint",
+    "_peachCutParticle": "ParticleCutPoint/PeachBreak",
+    "_peachHitParticle": "ParticleHitPoint/PeachChip",
+    "_smallLogCutParticle": "ParticleCutPoint/SmallLogBreak",
+    "_smallObjectPrefab": "SmallObject",
+    "_snowParticle": "Snow",
+    "_wind": "EffectWind"
+   },
+   "refArrays": {
+    "_bgCats": [
+     "BgCats/GreenCat1",
+     "BgCats/PinkCat2",
+     "BgCats/BlueCat3",
+     "BgCats/GreenCat4",
+     "BgCats/BlueCat5",
+     "BgCats/PinkCat6",
+     "BgCats/PinkCat7",
+     "BgCats/PinkCat8",
+     "BgCats/PinkCat9",
+     "BgCats/GreenCat10",
+     "BgCats/BlueCat11",
+     "BgCats/GreenCat12"
+    ],
+    "_catLeftObjectsBig": [
+     "CatLeft/CatHolder/ObjectHolder/BigLog",
+     "CatLeft/CatHolder/ObjectHolder/bigBall"
+    ],
+    "_catLeftObjectsHuge": [
+     "CatLeft/CatHolder/ObjectHolder/HugeLog",
+     "CatLeft/CatHolder/ObjectHolder/Freezer",
+     "CatLeft/CatHolder/ObjectHolder/Peach"
+    ],
+    "_catLeftObjectsSmall": [
+     "CatLeft/CatHolder/ObjectHolder/SmallLog",
+     "CatLeft/CatHolder/ObjectHolder/Can",
+     "CatLeft/CatHolder/ObjectHolder/Bat",
+     "CatLeft/CatHolder/ObjectHolder/broom",
+     "CatLeft/CatHolder/ObjectHolder/barrel",
+     "CatLeft/CatHolder/ObjectHolder/book"
+    ],
+    "_catRightObjectsBig": [
+     "Cat/CatHolder/ObjectHolder/BigLog",
+     "Cat/CatHolder/ObjectHolder/bigBall"
+    ],
+    "_catRightObjectsHuge": [
+     "Cat/CatHolder/ObjectHolder/HugeLog",
+     "Cat/CatHolder/ObjectHolder/Freezer",
+     "Cat/CatHolder/ObjectHolder/Peach"
+    ],
+    "_catRightObjectsSmall": [
+     "Cat/CatHolder/ObjectHolder/SmallLog",
+     "Cat/CatHolder/ObjectHolder/Can",
+     "Cat/CatHolder/ObjectHolder/Bat",
+     "Cat/CatHolder/ObjectHolder/broom",
+     "Cat/CatHolder/ObjectHolder/barrel",
+     "Cat/CatHolder/ObjectHolder/book"
+    ]
+   }
+  },
+  "hugeObject": {
+   "path": "HugeObject",
+   "refs": {
+    "_freezerSR": "HugeObject/freezer",
+    "_logSR": "HugeObject/log",
+    "_peachSR": "HugeObject/peach"
+   },
+   "spriteArrays": {
+    "_freezerCutSprites": [
+     "lumbearjackobjects_10",
+     "lumbearjackobjects_4",
+     "lumbearjackobjects_16"
+    ],
+    "_logCutSprites": [
+     "lumbearjackobjects_29",
+     "lumbearjackobjects_30",
+     "lumbearjackobjects_31"
+    ],
+    "_peachCutSprites": [
+     "lumbearjackobjects_6",
+     "lumbearjackobjects_11",
+     "lumbearjackobjects_12"
+    ]
+   }
+  },
+  "missObject": {
+   "path": "MissObjectRef",
+   "nums": {
+    "_beatDuration": 1,
+    "_height": 3,
+    "_jumpDistanceX": -7,
+    "_jumpDistanceY": -2,
+    "_rot": 135,
+    "offset.x": 0,
+    "offset.y": 0,
+    "offset.z": 0
+   }
+  },
+  "rotate0": {
+   "path": "BigObject",
+   "nums": {
+    "_ease": 4,
+    "_rotationLeft": 22,
+    "_rotationRight": -22
+   },
+   "refs": {
+    "_pivotLeft": "BigObject/LeftPivot",
+    "_pivotRight": "BigObject/RightPivot",
+    "_pivotSingle": "BigObject/Single"
+   },
+   "refArrays": {
+    "_objectsToMove": [
+     "BigObject/log",
+     "BigObject/dough"
+    ]
+   }
+  },
+  "rotate1": {
+   "path": "HugeObject",
+   "nums": {
+    "_ease": 4,
+    "_rotationLeft": 22,
+    "_rotationRight": -22
+   },
+   "refs": {
+    "_pivotLeft": "HugeObject/LeftPivot",
+    "_pivotRight": "HugeObject/RightPivot"
+   },
+   "refArrays": {
+    "_objectsToMove": [
+     "HugeObject/log",
+     "HugeObject/freezer",
+     "HugeObject/peach"
+    ]
+   }
+  },
+  "rotate2": {
+   "path": "SmallObject",
+   "nums": {
+    "_ease": 4,
+    "_rotationLeft": 22,
+    "_rotationRight": -22
+   },
+   "refs": {
+    "_pivotLeft": "SmallObject/LeftPivot",
+    "_pivotRight": "SmallObject/RightPivot",
+    "_pivotSingle": "SmallObject/PivotSingle"
+   },
+   "refArrays": {
+    "_objectsToMove": [
+     "SmallObject/log",
+     "SmallObject/can",
+     "SmallObject/bat",
+     "SmallObject/broom",
+     "SmallObject/barrel",
+     "SmallObject/book"
+    ]
+   }
+  },
+  "smallObject": {
+   "path": "SmallObject",
+   "refs": {
+    "_barrel": "SmallObject/barrel",
+    "_bat": "SmallObject/bat",
+    "_book": "SmallObject/book",
+    "_broom": "SmallObject/broom",
+    "_can": "SmallObject/can",
+    "_log": "SmallObject/log"
+   }
+  }
+ }
+}

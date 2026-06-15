@@ -1,0 +1,2893 @@
+{
+ "atlases": [
+  "atlas0.png",
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png",
+  "atlas5.png",
+  "atlas6.png",
+  "atlas7.png"
+ ],
+ "ppu": 100,
+ "sprites": {
+  "baby0": {
+   "X": 2807,
+   "Y": 3446,
+   "W": 477,
+   "H": 566,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "baby1": {
+   "X": 3318,
+   "Y": 3446,
+   "W": 585,
+   "H": 569,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelParts00_0": {
+   "X": 0,
+   "Y": 0,
+   "W": 312,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelParts00_1": {
+   "X": 0,
+   "Y": 156,
+   "W": 312,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelParts01": {
+   "X": 0,
+   "Y": 0,
+   "W": 312,
+   "H": 312,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 1,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_0": {
+   "X": 0,
+   "Y": 0,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_1": {
+   "X": 127,
+   "Y": 0,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_2": {
+   "X": 254,
+   "Y": 0,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_3": {
+   "X": 380,
+   "Y": 0,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_4": {
+   "X": 507,
+   "Y": 0,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_5": {
+   "X": 0,
+   "Y": 156,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_6": {
+   "X": 127,
+   "Y": 156,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_7": {
+   "X": 254,
+   "Y": 156,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_8": {
+   "X": 380,
+   "Y": 156,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "barrelWood_9": {
+   "X": 507,
+   "Y": 156,
+   "W": 117,
+   "H": 156,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 487.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackbg_0": {
+   "X": 0,
+   "Y": 0,
+   "W": 3534,
+   "H": 1929,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackbg_1": {
+   "X": 19,
+   "Y": 1953,
+   "W": 1341,
+   "H": 1458,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackbg_2": {
+   "X": 3611,
+   "Y": 30,
+   "W": 458,
+   "H": 455,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_0": {
+   "X": 40,
+   "Y": 24,
+   "W": 308,
+   "H": 308,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_1": {
+   "X": 416,
+   "Y": 28,
+   "W": 636,
+   "H": 556,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_10": {
+   "X": 2392,
+   "Y": 460,
+   "W": 324,
+   "H": 740,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_11": {
+   "X": 2724,
+   "Y": 472,
+   "W": 384,
+   "H": 312,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_12": {
+   "X": 3192,
+   "Y": 448,
+   "W": 660,
+   "H": 228,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_13": {
+   "X": 52,
+   "Y": 692,
+   "W": 276,
+   "H": 304,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_14": {
+   "X": 420,
+   "Y": 600,
+   "W": 628,
+   "H": 656,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_15": {
+   "X": 1096,
+   "Y": 624,
+   "W": 592,
+   "H": 572,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_18": {
+   "X": 2884,
+   "Y": 1008,
+   "W": 576,
+   "H": 504,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_19": {
+   "X": 3492,
+   "Y": 1024,
+   "W": 576,
+   "H": 488,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_2": {
+   "X": 1068,
+   "Y": 32,
+   "W": 636,
+   "H": 552,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_20": {
+   "X": 21,
+   "Y": 1327,
+   "W": 344,
+   "H": 290,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_21": {
+   "X": 412,
+   "Y": 1340,
+   "W": 188,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_22": {
+   "X": 640,
+   "Y": 1344,
+   "W": 53,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_24": {
+   "X": 940,
+   "Y": 1320,
+   "W": 240,
+   "H": 164,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_25": {
+   "X": 1220,
+   "Y": 1340,
+   "W": 224,
+   "H": 120,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_26": {
+   "X": 1452,
+   "Y": 1336,
+   "W": 216,
+   "H": 128,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_27": {
+   "X": 1688,
+   "Y": 1328,
+   "W": 132,
+   "H": 144,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_28": {
+   "X": 611,
+   "Y": 1415,
+   "W": 105,
+   "H": 72,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_29": {
+   "X": 1988,
+   "Y": 1352,
+   "W": 568,
+   "H": 452,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_3": {
+   "X": 1724,
+   "Y": 28,
+   "W": 632,
+   "H": 392,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_31": {
+   "X": 941,
+   "Y": 1493,
+   "W": 313,
+   "H": 135,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_32": {
+   "X": 50,
+   "Y": 1628,
+   "W": 227,
+   "H": 278,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_37": {
+   "X": 20,
+   "Y": 1940,
+   "W": 336,
+   "H": 300,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_4": {
+   "X": 2392,
+   "Y": 20,
+   "W": 612,
+   "H": 396,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_47": {
+   "X": 520,
+   "Y": 2420,
+   "W": 336,
+   "H": 152,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_49": {
+   "X": 48,
+   "Y": 2796,
+   "W": 260,
+   "H": 172,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_5": {
+   "X": 3012,
+   "Y": 43,
+   "W": 248,
+   "H": 99,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_50": {
+   "X": 340,
+   "Y": 2792,
+   "W": 296,
+   "H": 176,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_51": {
+   "X": 668,
+   "Y": 2788,
+   "W": 312,
+   "H": 180,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_52": {
+   "X": 1024,
+   "Y": 2788,
+   "W": 332,
+   "H": 176,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_53": {
+   "X": 1396,
+   "Y": 2792,
+   "W": 352,
+   "H": 176,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_54": {
+   "X": 1776,
+   "Y": 2792,
+   "W": 364,
+   "H": 172,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_55": {
+   "X": 2184,
+   "Y": 2784,
+   "W": 380,
+   "H": 184,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_56": {
+   "X": 2616,
+   "Y": 2776,
+   "W": 388,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_57": {
+   "X": 3056,
+   "Y": 2768,
+   "W": 404,
+   "H": 200,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_58": {
+   "X": 44,
+   "Y": 2992,
+   "W": 420,
+   "H": 196,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_59": {
+   "X": 504,
+   "Y": 2996,
+   "W": 440,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_6": {
+   "X": 3480,
+   "Y": 40,
+   "W": 408,
+   "H": 364,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_60": {
+   "X": 976,
+   "Y": 3004,
+   "W": 452,
+   "H": 184,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_61": {
+   "X": 1448,
+   "Y": 3004,
+   "W": 472,
+   "H": 184,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_62": {
+   "X": 1948,
+   "Y": 3004,
+   "W": 480,
+   "H": 184,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_63": {
+   "X": 2464,
+   "Y": 2996,
+   "W": 476,
+   "H": 192,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_64": {
+   "X": 2988,
+   "Y": 2984,
+   "W": 464,
+   "H": 204,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_65": {
+   "X": 36,
+   "Y": 3252,
+   "W": 448,
+   "H": 224,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_66": {
+   "X": 528,
+   "Y": 3248,
+   "W": 432,
+   "H": 228,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_67": {
+   "X": 976,
+   "Y": 3236,
+   "W": 420,
+   "H": 240,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_68": {
+   "X": 1428,
+   "Y": 3228,
+   "W": 396,
+   "H": 248,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_69": {
+   "X": 1864,
+   "Y": 3220,
+   "W": 376,
+   "H": 256,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_7": {
+   "X": 3944,
+   "Y": 76,
+   "W": 120,
+   "H": 848,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_70": {
+   "X": 2272,
+   "Y": 3208,
+   "W": 360,
+   "H": 268,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_71": {
+   "X": 2668,
+   "Y": 3208,
+   "W": 352,
+   "H": 268,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_72": {
+   "X": 3052,
+   "Y": 3204,
+   "W": 336,
+   "H": 272,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_73": {
+   "X": 3432,
+   "Y": 3200,
+   "W": 328,
+   "H": 276,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_74": {
+   "X": 56,
+   "Y": 3504,
+   "W": 312,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_75": {
+   "X": 424,
+   "Y": 3500,
+   "W": 296,
+   "H": 284,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_76": {
+   "X": 760,
+   "Y": 3492,
+   "W": 280,
+   "H": 292,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_77": {
+   "X": 1084,
+   "Y": 3488,
+   "W": 272,
+   "H": 296,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_78": {
+   "X": 1372,
+   "Y": 3484,
+   "W": 260,
+   "H": 300,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_79": {
+   "X": 1664,
+   "Y": 3480,
+   "W": 240,
+   "H": 304,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_8": {
+   "X": 40,
+   "Y": 344,
+   "W": 308,
+   "H": 308,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_80": {
+   "X": 1944,
+   "Y": 3480,
+   "W": 236,
+   "H": 304,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcharacter_9": {
+   "X": 1788,
+   "Y": 460,
+   "W": 504,
+   "H": 740,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_0": {
+   "X": 310,
+   "Y": 60,
+   "W": 263,
+   "H": 387,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_1": {
+   "X": 774,
+   "Y": 60,
+   "W": 263,
+   "H": 387,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_10": {
+   "X": 961,
+   "Y": 544,
+   "W": 245,
+   "H": 402,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_11": {
+   "X": 1517,
+   "Y": 701,
+   "W": 153,
+   "H": 281,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_12": {
+   "X": 1743,
+   "Y": 703,
+   "W": 149,
+   "H": 277,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_13": {
+   "X": 1955,
+   "Y": 704,
+   "W": 171,
+   "H": 272,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_14": {
+   "X": 2185,
+   "Y": 685,
+   "W": 273,
+   "H": 181,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_15": {
+   "X": 3484,
+   "Y": 119,
+   "W": 350,
+   "H": 328,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_16": {
+   "X": 2681,
+   "Y": 685,
+   "W": 307,
+   "H": 327,
+   "PivotX": 0.5381791,
+   "PivotY": 0.41571423,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_17": {
+   "X": 3004,
+   "Y": 649,
+   "W": 326,
+   "H": 380,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_19": {
+   "X": 2195,
+   "Y": 929,
+   "W": 252,
+   "H": 148,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_2": {
+   "X": 1439,
+   "Y": 111,
+   "W": 344,
+   "H": 343,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_20": {
+   "X": 119,
+   "Y": 1033,
+   "W": 253,
+   "H": 409,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_21": {
+   "X": 381,
+   "Y": 1032,
+   "W": 216,
+   "H": 407,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_22": {
+   "X": 694,
+   "Y": 1042,
+   "W": 279,
+   "H": 401,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_23": {
+   "X": 999,
+   "Y": 1041,
+   "W": 259,
+   "H": 400,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_24": {
+   "X": 128,
+   "Y": 1529,
+   "W": 233,
+   "H": 407,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_25": {
+   "X": 377,
+   "Y": 1529,
+   "W": 235,
+   "H": 407,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_26": {
+   "X": 698,
+   "Y": 1529,
+   "W": 233,
+   "H": 407,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_27": {
+   "X": 987,
+   "Y": 1529,
+   "W": 237,
+   "H": 433,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_28": {
+   "X": 205,
+   "Y": 2012,
+   "W": 340,
+   "H": 400,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_29": {
+   "X": 803,
+   "Y": 2012,
+   "W": 340,
+   "H": 400,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_3": {
+   "X": 1888,
+   "Y": 111,
+   "W": 228,
+   "H": 343,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_30": {
+   "X": 202,
+   "Y": 2512,
+   "W": 312,
+   "H": 370,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_31": {
+   "X": 531,
+   "Y": 2512,
+   "W": 301,
+   "H": 411,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_32": {
+   "X": 841,
+   "Y": 2512,
+   "W": 302,
+   "H": 406,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_4": {
+   "X": 2190,
+   "Y": 111,
+   "W": 231,
+   "H": 343,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_5": {
+   "X": 2553,
+   "Y": 126,
+   "W": 310,
+   "H": 341,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_6": {
+   "X": 2918,
+   "Y": 123,
+   "W": 349,
+   "H": 343,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_7": {
+   "X": 118,
+   "Y": 547,
+   "W": 218,
+   "H": 397,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_8": {
+   "X": 353,
+   "Y": 540,
+   "W": 222,
+   "H": 399,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackcustoms_9": {
+   "X": 678,
+   "Y": 545,
+   "W": 269,
+   "H": 404,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_0": {
+   "X": 18,
+   "Y": 15,
+   "W": 456,
+   "H": 535,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_1": {
+   "X": 500,
+   "Y": 14,
+   "W": 183,
+   "H": 734,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_10": {
+   "X": 1253,
+   "Y": 628,
+   "W": 487,
+   "H": 750,
+   "PivotX": 0.51629025,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_11": {
+   "X": 2316,
+   "Y": 740,
+   "W": 857,
+   "H": 678,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_12": {
+   "X": 3217,
+   "Y": 742,
+   "W": 860,
+   "H": 677,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_13": {
+   "X": 429,
+   "Y": 2419,
+   "W": 302,
+   "H": 590,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_14": {
+   "X": 195,
+   "Y": 976,
+   "W": 291,
+   "H": 320,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_15": {
+   "X": 513,
+   "Y": 792,
+   "W": 665,
+   "H": 748,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_16": {
+   "X": 1774,
+   "Y": 814,
+   "W": 505,
+   "H": 747,
+   "PivotX": 0.50576484,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_17": {
+   "X": 830,
+   "Y": 2422,
+   "W": 340,
+   "H": 765,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_18": {
+   "X": 1184,
+   "Y": 2419,
+   "W": 366,
+   "H": 773,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_19": {
+   "X": 1593,
+   "Y": 2443,
+   "W": 453,
+   "H": 710,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_2": {
+   "X": 693,
+   "Y": 15,
+   "W": 477,
+   "H": 709,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_20": {
+   "X": 2071,
+   "Y": 2442,
+   "W": 472,
+   "H": 710,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_21": {
+   "X": 111,
+   "Y": 3141,
+   "W": 140,
+   "H": 585,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_22": {
+   "X": 266,
+   "Y": 3140,
+   "W": 142,
+   "H": 588,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_23": {
+   "X": 2583,
+   "Y": 1612,
+   "W": 88,
+   "H": 434,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_24": {
+   "X": 2693,
+   "Y": 1610,
+   "W": 90,
+   "H": 433,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_25": {
+   "X": 2915,
+   "Y": 1592,
+   "W": 128,
+   "H": 134,
+   "PivotX": 0.56352043,
+   "PivotY": 0.49241525,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_26": {
+   "X": 3047,
+   "Y": 1593,
+   "W": 127,
+   "H": 133,
+   "PivotX": 0.53200936,
+   "PivotY": 0.5305653,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_27": {
+   "X": 3290,
+   "Y": 1599,
+   "W": 137,
+   "H": 136,
+   "PivotX": 0.5122373,
+   "PivotY": 0.52612305,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_28": {
+   "X": 3429,
+   "Y": 1599,
+   "W": 143,
+   "H": 136,
+   "PivotX": 0.4857818,
+   "PivotY": 0.51131666,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_29": {
+   "X": 22,
+   "Y": 1599,
+   "W": 651,
+   "H": 710,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_3": {
+   "X": 1206,
+   "Y": 22,
+   "W": 525,
+   "H": 545,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_30": {
+   "X": 687,
+   "Y": 1601,
+   "W": 669,
+   "H": 712,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_31": {
+   "X": 1372,
+   "Y": 1595,
+   "W": 678,
+   "H": 718,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_32": {
+   "X": 3290,
+   "Y": 1868,
+   "W": 70,
+   "H": 264,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_33": {
+   "X": 3365,
+   "Y": 1866,
+   "W": 63,
+   "H": 266,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_34": {
+   "X": 3435,
+   "Y": 1866,
+   "W": 69,
+   "H": 273,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_35": {
+   "X": 3507,
+   "Y": 1860,
+   "W": 67,
+   "H": 280,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_36": {
+   "X": 3668,
+   "Y": 1541,
+   "W": 154,
+   "H": 251,
+   "PivotX": 0.5323074,
+   "PivotY": 0.43656623,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_37": {
+   "X": 3827,
+   "Y": 1539,
+   "W": 154,
+   "H": 256,
+   "PivotX": 0.5064602,
+   "PivotY": 0.49611282,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_4": {
+   "X": 1782,
+   "Y": 21,
+   "W": 489,
+   "H": 736,
+   "PivotX": 0.5317867,
+   "PivotY": 0.5016244,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_40": {
+   "X": 2684,
+   "Y": 2781,
+   "W": 665,
+   "H": 501,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_41": {
+   "X": 3370,
+   "Y": 2688,
+   "W": 652,
+   "H": 626,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_42": {
+   "X": 2767,
+   "Y": 2326,
+   "W": 319,
+   "H": 268,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_43": {
+   "X": 3095,
+   "Y": 2281,
+   "W": 251,
+   "H": 335,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_44": {
+   "X": 3384,
+   "Y": 2252,
+   "W": 241,
+   "H": 401,
+   "PivotX": 0.5096572,
+   "PivotY": 0.49385995,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_45": {
+   "X": 3641,
+   "Y": 2295,
+   "W": 291,
+   "H": 311,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_46": {
+   "X": 2138,
+   "Y": 3803,
+   "W": 464,
+   "H": 170,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_47": {
+   "X": 2905,
+   "Y": 1848,
+   "W": 67,
+   "H": 278,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_48": {
+   "X": 2977,
+   "Y": 1850,
+   "W": 58,
+   "H": 274,
+   "PivotX": 0.4544145,
+   "PivotY": 0.50296277,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_49": {
+   "X": 3039,
+   "Y": 1848,
+   "W": 68,
+   "H": 273,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_5": {
+   "X": 2315,
+   "Y": 20,
+   "W": 856,
+   "H": 679,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_50": {
+   "X": 3112,
+   "Y": 1845,
+   "W": 73,
+   "H": 278,
+   "PivotX": 0.5443333,
+   "PivotY": 0.55529785,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_51": {
+   "X": 1915,
+   "Y": 3822,
+   "W": 124,
+   "H": 124,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_52": {
+   "X": 3720,
+   "Y": 1952,
+   "W": 71,
+   "H": 70,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_53": {
+   "X": 3878,
+   "Y": 1847,
+   "W": 78,
+   "H": 286,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_56": {
+   "X": 2361,
+   "Y": 1667,
+   "W": 49,
+   "H": 408,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_57": {
+   "X": 433,
+   "Y": 3132,
+   "W": 165,
+   "H": 279,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_58": {
+   "X": 610,
+   "Y": 3131,
+   "W": 171,
+   "H": 279,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_59": {
+   "X": 439,
+   "Y": 3485,
+   "W": 159,
+   "H": 271,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_6": {
+   "X": 3210,
+   "Y": 23,
+   "W": 865,
+   "H": 678,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_60": {
+   "X": 610,
+   "Y": 3486,
+   "W": 158,
+   "H": 270,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_61": {
+   "X": 853,
+   "Y": 3239,
+   "W": 454,
+   "H": 765,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_62": {
+   "X": 1327,
+   "Y": 3241,
+   "W": 462,
+   "H": 759,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_7": {
+   "X": 117,
+   "Y": 2424,
+   "W": 300,
+   "H": 584,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_8": {
+   "X": 55,
+   "Y": 656,
+   "W": 121,
+   "H": 588,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "lumbearjackobjects_9": {
+   "X": 193,
+   "Y": 625,
+   "W": 296,
+   "H": 321,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "splash1": {
+   "X": 123,
+   "Y": 126,
+   "W": 439,
+   "H": 431,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "splash2": {
+   "X": 737,
+   "Y": 119,
+   "W": 477,
+   "H": 451,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "splash3": {
+   "X": 1340,
+   "Y": 117,
+   "W": 494,
+   "H": 451,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "splash4": {
+   "X": 1947,
+   "Y": 93,
+   "W": 539,
+   "H": 491,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "splash5": {
+   "X": 68,
+   "Y": 694,
+   "W": 572,
+   "H": 529,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "splash6": {
+   "X": 681,
+   "Y": 696,
+   "W": 575,
+   "H": 531,
+   "PivotX": 0.4886517,
+   "PivotY": 0.4836151,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "splash7": {
+   "X": 1305,
+   "Y": 679,
+   "W": 579,
+   "H": 570,
+   "PivotX": 0.50734836,
+   "PivotY": 0.4847895,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "splash8": {
+   "X": 1906,
+   "Y": 668,
+   "W": 602,
+   "H": 581,
+   "PivotX": 0.50361305,
+   "PivotY": 0.48128134,
+   "atlas": 7,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  }
+ }
+}

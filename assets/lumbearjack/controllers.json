@@ -1,0 +1,114 @@
+{
+ "Beast": {
+  "default": "BeastIdle",
+  "states": {
+   "BeastBop": {
+    "clip": "Animations/BeastBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BeastIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BeastCut": {
+    "clip": "Animations/BeastCut",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BeastIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BeastCutMid": {
+    "clip": "Animations/BeastCutMid",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BeastIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BeastCutMidNoImpact": {
+    "clip": "Animations/BeastCutMidNoImpact",
+    "speed": 1
+   },
+   "BeastHalfCut": {
+    "clip": "Animations/BeastHalfCut",
+    "speed": 1
+   },
+   "BeastHuhL": {
+    "clip": "Animations/BeastHuhL",
+    "speed": 1
+   },
+   "BeastHuhR": {
+    "clip": "Animations/BeastHuhR",
+    "speed": 1
+   },
+   "BeastIdle": {
+    "clip": "Animations/BeastIdle",
+    "speed": 1
+   },
+   "BeastReady": {
+    "clip": "Animations/BeastReady",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BeastIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "BeastRest": {
+    "clip": "Animations/BeastRest",
+    "speed": 1
+   },
+   "BeastWhiff": {
+    "clip": "Animations/BeastWhiff",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "BeastIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   }
+  }
+ },
+ "Cat": {
+  "default": "CatIdle",
+  "states": {
+   "CatBop": {
+    "clip": "Animations/CatBop",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "CatIdle",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
+   },
+   "CatDance": {
+    "clip": "Animations/CatDance",
+    "speed": 1
+   },
+   "CatGrab": {
+    "clip": "Animations/CatGrab",
+    "speed": 1
+   },
+   "CatIdle": {
+    "clip": "Animations/CatIdle",
+    "speed": 1
+   }
+  }
+ }
+}

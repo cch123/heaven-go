@@ -1,0 +1,17 @@
+{
+ "_baby": "babyRef",
+ "_bear": "Beast",
+ "_bigObjectPrefab": "BigObject",
+ "_bombRef": "bombRef",
+ "_catLeft": "CatLeft/CatHolder",
+ "_catLeftMove": "CatLeft",
+ "_catRight": "Cat/CatHolder",
+ "_catRightMove": "Cat",
+ "_cutObjectHolder": "Beast/Stump/ObjectHolder",
+ "_hugeObjectPrefab": "HugeObject",
+ "_missObjectRef": "MissObjectRef",
+ "_particleCutPoint": "ParticleCutPoint",
+ "_particleHitPoint": "ParticleHitPoint",
+ "_smallObjectPrefab": "SmallObject",
+ "_snowParticle": "Snow"
+}
