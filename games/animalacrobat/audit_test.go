@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	"hsdemo/kart"
+	"hsdemo/kmdata"
 )
 
 func loadAnimalAssets(t *testing.T) *kart.Assets {
@@ -97,5 +98,15 @@ func TestAnimalAcrobatObstacleComponents(t *testing.T) {
 				}
 			}
 		}
+	}
+}
+
+func TestAnimalAcrobatObstacleComponentDoesNotMatchInputFamily(t *testing.T) {
+	comps := map[string]kmdata.Component{
+		"obstacleInput0": {Path: "Elephant", Refs: map[string]string{"_monkey": "wrong"}},
+		"obstacle0":      {Path: "Elephant", Refs: map[string]string{"_rotateRoot": "right"}},
+	}
+	if got := obstacleComponent(comps, "Elephant").Refs["_rotateRoot"]; got != "right" {
+		t.Fatalf("obstacleComponent returned %q, want obstacle family component", got)
 	}
 }

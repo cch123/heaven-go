@@ -33,7 +33,7 @@ func ref(vals map[string]string, key string) string {
 
 func obstacleComponent(comps map[string]kmdata.Component, root string) kmdata.Component {
 	for key, c := range comps {
-		if strings.HasPrefix(key, "obstacle") && c.Path == root {
+		if componentFamily(key, "obstacle") && c.Path == root {
 			return c
 		}
 	}
@@ -46,11 +46,23 @@ func inputComponent(comps map[string]kmdata.Component, root string, giraffe bool
 		prefix = "giraffeInput"
 	}
 	for key, c := range comps {
-		if strings.HasPrefix(key, prefix) && c.Path == root {
+		if componentFamily(key, prefix) && c.Path == root {
 			return c
 		}
 	}
 	return kmdata.Component{}
+}
+
+func componentFamily(key, prefix string) bool {
+	if key == prefix {
+		return true
+	}
+	if !strings.HasPrefix(key, prefix) || len(key) == len(prefix) {
+		return false
+	}
+	// Extracted multi components are named obstacle0/obstacle1/...; this guard
+	// prevents the shorter "obstacle" family from swallowing obstacleInput*.
+	return key[len(prefix)] >= '0' && key[len(prefix)] <= '9'
 }
 
 func relPath(root, path string) string {
