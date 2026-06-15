@@ -36,7 +36,7 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	registered := scanStringSet(filepath.Join(*repo, "main.go"), regexp.MustCompile(`engine\.Register\("([^"]+)"`))
+	registered := scanRegisterCalls(*repo)
 	extractSpecs := scanExtractSpecs(filepath.Join(*repo, "cmd", "extract"))
 	packIn, err := scanPackIn(*levelsDir)
 	if err != nil {
@@ -58,7 +58,6 @@ func scanLoaders(root string) (map[string]gameInfo, error) {
 	dir := filepath.Join(root, "Assets", "Scripts", "Games")
 	out := map[string]gameInfo{}
 	reGame := regexp.MustCompile(`return\s+new\s+Minigame\s*\(\s*"([^"]+)"\s*,\s*"((?:\\.|[^"])*)"`)
-	reAction := regexp.MustCompile(`new\s+GameAction\s*\(\s*"([^"]+)"`)
 	err := filepath.WalkDir(dir, func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
@@ -79,10 +78,10 @@ func scanLoaders(root string) (map[string]gameInfo, error) {
 		rel, _ := filepath.Rel(dir, path)
 		seenActions := map[string]bool{}
 		var actions []string
-		for _, am := range reAction.FindAllStringSubmatch(text, -1) {
-			if !seenActions[am[1]] {
-				seenActions[am[1]] = true
-				actions = append(actions, am[1])
+		for _, action := range scanGameActions(text) {
+			if !seenActions[action] {
+				seenActions[action] = true
+				actions = append(actions, action)
 			}
 		}
 		sort.Strings(actions)
@@ -95,6 +94,65 @@ func scanLoaders(root string) (map[string]gameInfo, error) {
 		return nil
 	})
 	return out, err
+}
+
+func scanGameActions(text string) []string {
+	start := strings.Index(text, "new List<GameAction>")
+	if start < 0 {
+		return nil
+	}
+	text = text[start:]
+	open := strings.IndexByte(text, '{')
+	if open < 0 {
+		return nil
+	}
+	lines := strings.Split(text[open+1:], "\n")
+	reAction := regexp.MustCompile(`^\s*new\s*(?:GameAction\s*)?\(\s*"((?:\\.|[^"])*)"`)
+	var actions []string
+	depth := 1
+	for _, line := range lines {
+		if depth == 1 {
+			if m := reAction.FindStringSubmatch(line); m != nil {
+				actions = append(actions, unescapeCSharpString(m[1]))
+			}
+		}
+		depth += braceDelta(line)
+		if depth <= 0 {
+			break
+		}
+	}
+	return actions
+}
+
+func braceDelta(line string) int {
+	delta := 0
+	inString := false
+	escaped := false
+	for _, r := range line {
+		if inString {
+			if escaped {
+				escaped = false
+				continue
+			}
+			if r == '\\' {
+				escaped = true
+				continue
+			}
+			if r == '"' {
+				inString = false
+			}
+			continue
+		}
+		switch r {
+		case '"':
+			inString = true
+		case '{':
+			delta++
+		case '}':
+			delta--
+		}
+	}
+	return delta
 }
 
 func stripLineComments(s string) string {
@@ -114,14 +172,24 @@ func unescapeCSharpString(s string) string {
 	return strings.Join(strings.Fields(repl.Replace(s)), " ")
 }
 
-func scanStringSet(path string, re *regexp.Regexp) map[string]bool {
-	raw, err := os.ReadFile(path)
-	if err != nil {
-		return map[string]bool{}
-	}
+func scanRegisterCalls(repo string) map[string]bool {
 	out := map[string]bool{}
-	for _, m := range re.FindAllStringSubmatch(string(raw), -1) {
-		out[m[1]] = true
+	re := regexp.MustCompile(`engine\.Register\("([^"]+)"`)
+	entries, err := os.ReadDir(repo)
+	if err != nil {
+		return out
+	}
+	for _, ent := range entries {
+		if ent.IsDir() || filepath.Ext(ent.Name()) != ".go" {
+			continue
+		}
+		raw, err := os.ReadFile(filepath.Join(repo, ent.Name()))
+		if err != nil {
+			continue
+		}
+		for _, m := range re.FindAllStringSubmatch(string(raw), -1) {
+			out[m[1]] = true
+		}
 	}
 	return out
 }
