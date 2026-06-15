@@ -120,8 +120,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   的连续滑音、barely 命中时 Soshi 闪电黄/蓝随机换色已接入。
 - superSamuraiSlice：`bop`/小恶魔/大恶魔/平台滚动/环境开关的事件流、输入、
   主要动画、平台 guard、爆炸音效与鸟叫已接入；`Explode1/2/3`、`lightning`、
-  `waterL/waterR` 仍是手写瞬时效果，尚未按 Unity ParticleSystem 序列化参数
-  做逐项复刻。
+  `waterL/waterR` 已用官方 `sliceparticles` 图集切片做 burst，并按 C# 时序触发；
+  仍待把 Unity ParticleSystem 序列化参数通用导出后逐项复刻。
 - chargingChicken：`input`/`journeyLength`/倒计时泡泡/文本编辑/音乐淡入淡出/
   背景与视差 appearance/车身与前景色/强制 look/explode 的 action surface 已接入，
   主 charge、release、blastoff、鼓点 loop、岛实例入场和主要动画可运行；岛屿

@@ -5,6 +5,7 @@ import (
 	"math"
 	"os"
 	"path/filepath"
+	"strconv"
 	"strings"
 	"testing"
 
@@ -12,6 +13,7 @@ import (
 )
 
 type superSamuraiSliceAssets struct {
+	Sheet       kmdata.Sheet
 	Rig         kmdata.Rig
 	Roles       kmdata.Roles
 	Extra       kmdata.Extra
@@ -28,6 +30,7 @@ func loadSuperSamuraiSliceAssets(t *testing.T) *superSamuraiSliceAssets {
 		Anims:  map[string]*kmdata.Anim{},
 		Sounds: map[string]bool{},
 	}
+	readAssetJSON(t, filepath.Join(root, "sprites.json"), &as.Sheet)
 	readAssetJSON(t, filepath.Join(root, "scene.json"), &as.Rig)
 	readAssetJSON(t, filepath.Join(root, "roles.json"), &as.Roles)
 	readAssetJSON(t, filepath.Join(root, "extra.json"), &as.Extra)
@@ -100,6 +103,19 @@ func TestSuperSamuraiSliceBindings(t *testing.T) {
 		if got := as.Roles[role]; got != want {
 			t.Fatalf("role %s = %q, want %q", role, got, want)
 		}
+	}
+}
+
+func TestSuperSamuraiSliceParticleSprites(t *testing.T) {
+	as := loadSuperSamuraiSliceAssets(t)
+	for i := 0; i <= 17; i++ {
+		name := "sliceparticles_" + strconv.Itoa(i)
+		if _, ok := as.Sheet.Sprites[name]; !ok {
+			t.Fatalf("missing particle sprite %s", name)
+		}
+	}
+	if smallExplodeType(1) == effectLightning || smallExplodeType(2) == effectLightning || smallExplodeType(4) == effectLightning {
+		t.Fatalf("small demon explode type aliases lightning")
 	}
 }
 

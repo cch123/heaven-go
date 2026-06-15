@@ -36,6 +36,8 @@ func clamp01(v float64) float64 {
 	return v
 }
 
+func lerp(a, b, u float64) float64 { return a + (b-a)*u }
+
 func parabola(u float64) float64 {
 	u = clamp01(u)
 	return 4 * u * (1 - u)

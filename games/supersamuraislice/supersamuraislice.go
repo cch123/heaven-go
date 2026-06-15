@@ -8,7 +8,6 @@ import (
 	"sort"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/vector"
 
 	"hsdemo/engine"
 	"hsdemo/kart"
@@ -26,8 +25,12 @@ const (
 )
 
 const (
-	effectBoom = iota
+	effectExplode1 = iota
+	effectExplode2
+	effectExplode3
 	effectLightning
+	effectWaterL
+	effectWaterR
 )
 
 type bopEvt struct {
@@ -49,9 +52,9 @@ type smallEvt struct {
 }
 
 type effect struct {
-	beat float64
-	typ  int
-	pos  [2]float64
+	beat, startT float64
+	typ          int
+	pos          [2]float64
 }
 
 type Module struct {
@@ -71,6 +74,9 @@ type Module struct {
 	fogGO         string
 	cloud         string
 	flash         string
+	lightning     string
+	waterL        string
+	waterR        string
 	skateRoot     string
 	skate         string
 	eagleRoot     string
@@ -138,6 +144,9 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.fogGO = roleOr(as, "fogGO", "BackgroundHolder/Holder/Fog")
 	m.cloud = roleOr(as, "Cloud", "BackgroundHolder/Holder/CloudHolder")
 	m.flash = roleOr(as, "flash", "Flash")
+	m.lightning = roleOr(as, "lightning", "SamuraiHolder/GameObject/lightning/Main")
+	m.waterL = roleOr(as, "waterL", "WaterParticle/WaterL")
+	m.waterR = roleOr(as, "waterR", "WaterParticle/WaterR")
 	m.skateRoot = roleOr(as, "Skateboard1Anim", "BackgroundHolder/Holder/Skateboard")
 	m.skate = roleOr(as, "SkateboardAnim", "BackgroundHolder/Holder/Skateboard/Skateboard")
 	m.eagleRoot = roleOr(as, "Eagle1Anim", "PlatformHolder/Eagle")
@@ -230,7 +239,7 @@ func (m *Module) OnSwitch(beat float64) {
 	m.resetScene(beat)
 	m.lastPulse = int(math.Floor(beat)) - 1
 	m.demons = liveDemons(m.demons, beat)
-	m.effects = liveEffects(m.effects, beat)
+	m.effects = liveEffects(m.effects, m.ctx.Time())
 }
 
 func (m *Module) Whiff(beat float64) { m.WhiffAction(beat, actionSlice) }
@@ -253,10 +262,10 @@ func (m *Module) Update(t, beat float64) {
 		d.update(beat)
 	}
 	m.demons = liveDemons(m.demons, beat)
-	m.effects = liveEffects(m.effects, beat)
+	m.effects = liveEffects(m.effects, t)
 }
 
-func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
+func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(color.RGBA{R: 0x43, G: 0x5e, B: 0x90, A: 0xff})
 	m.applyScrollOffsets()
 	m.ctx.SampleScene(beat)
@@ -265,7 +274,7 @@ func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
 	}
 	m.ctx.Scene.Draw(screen, m.proj)
 	for _, fx := range m.effects {
-		m.drawEffect(screen, fx, beat)
+		m.drawEffect(screen, fx, t)
 	}
 }
 
@@ -472,29 +481,14 @@ func liveDemons(in []*activeDemon, beat float64) []*activeDemon {
 	return out
 }
 
-func liveEffects(in []effect, beat float64) []effect {
+func liveEffects(in []effect, t float64) []effect {
 	out := in[:0]
 	for _, fx := range in {
-		if beat-fx.beat < 1 {
+		if t-fx.startT < superSliceEffectMaxLife {
 			out = append(out, fx)
 		}
 	}
 	return out
-}
-
-func (m *Module) drawEffect(screen *ebiten.Image, fx effect, beat float64) {
-	// TODO(port-parity): replace this placeholder flash with the extracted
-	// ParticleSystem parameters for Explode1/2/3 and lightning.
-	u := clamp01(beat - fx.beat)
-	alpha := float32(1 - u)
-	x := float32(engine.ScreenW/2 + fx.pos[0]*54)
-	y := float32(engine.ScreenH/2 - fx.pos[1]*54)
-	r := float32(32 + 96*u)
-	col := color.RGBA{R: 255, G: 245, B: 170, A: uint8(alpha * 180)}
-	if fx.typ == effectLightning {
-		col = color.RGBA{R: 160, G: 220, B: 255, A: uint8(alpha * 200)}
-	}
-	vector.DrawFilledCircle(screen, x, y, r, col, true)
 }
 
 func pick[T any](cond bool, a, b T) T {
