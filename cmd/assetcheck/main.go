@@ -22,6 +22,7 @@ type report struct {
 	game          string
 	nodes         int
 	roles         int
+	meshBindings  int
 	animatorRoots int
 	controllers   int
 	checkedPaths  int
@@ -66,6 +67,28 @@ func auditGame(dir, game string) report {
 	for field, path := range roles {
 		if !nodes[path] {
 			r.errs = append(r.errs, fmt.Sprintf("role %s points at missing path %q", field, path))
+		}
+	}
+
+	var meshes kmdata.MeshData
+	if err := readOptionalJSON(filepath.Join(dir, "meshes.json"), &meshes); err != nil {
+		r.errs = append(r.errs, fmt.Sprintf("read meshes.json: %v", err))
+	}
+	r.meshBindings = len(meshes.Bindings)
+	for _, b := range meshes.Bindings {
+		if !nodes[b.Path] {
+			r.errs = append(r.errs, fmt.Sprintf("mesh binding %q points at missing scene path", b.Path))
+		}
+		if b.Mesh.FileID == 0 && b.Mesh.GUID == "" {
+			r.errs = append(r.errs, fmt.Sprintf("mesh binding %q has empty mesh reference", b.Path))
+		}
+		for _, mat := range b.Materials {
+			if mat.GUID == "" || mat.GUID == "0" {
+				continue
+			}
+			if _, ok := meshes.Materials[mat.GUID]; !ok {
+				r.errs = append(r.errs, fmt.Sprintf("mesh binding %q material guid %s missing from materials table", b.Path, mat.GUID))
+			}
 		}
 	}
 
@@ -407,8 +430,8 @@ func printReport(r report) {
 		status = "failed"
 	}
 	fmt.Printf("%s: %s\n", r.game, status)
-	fmt.Printf("nodes=%d roles=%d controllers=%d animatorRoots=%d checkedAnimationPaths=%d\n",
-		r.nodes, r.roles, r.controllers, r.animatorRoots, r.checkedPaths)
+	fmt.Printf("nodes=%d roles=%d meshBindings=%d controllers=%d animatorRoots=%d checkedAnimationPaths=%d\n",
+		r.nodes, r.roles, r.meshBindings, r.controllers, r.animatorRoots, r.checkedPaths)
 	if len(r.errs) == 0 {
 		return
 	}

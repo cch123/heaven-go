@@ -80,6 +80,7 @@ type Assets struct {
 	Rig     kmdata.Rig      // karateman: rig.json；scene 游戏: scene.json
 	Roles   kmdata.Roles    // scene 游戏: 脚本字段 → 节点 path
 	Extra   kmdata.Extra    // scene 游戏: 扩展序列化数据（可选）
+	Meshes  kmdata.MeshData // scene 游戏: MeshRenderer/材质绑定（可选）
 	Stage   kmdata.Stage
 	Anims   map[string]*kmdata.Anim
 	// Sounds: 文件主名（无扩展名）→ 解码后的 16-bit LE 立体声裸 PCM
@@ -123,6 +124,11 @@ func Load(dir string, audioRate int) (*Assets, error) {
 		}
 		if _, err := os.Stat(filepath.Join(dir, "extra.json")); err == nil {
 			if err := readJSON(filepath.Join(dir, "extra.json"), &a.Extra); err != nil {
+				return nil, err
+			}
+		}
+		if _, err := os.Stat(filepath.Join(dir, "meshes.json")); err == nil {
+			if err := readJSON(filepath.Join(dir, "meshes.json"), &a.Meshes); err != nil {
 				return nil, err
 			}
 		}

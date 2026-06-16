@@ -95,3 +95,59 @@ func TestBBoxFinite(t *testing.T) {
 		t.Errorf("suspicious rig height: %.2f units", maxY-minY)
 	}
 }
+
+func TestLoadReadsOptionalMeshData(t *testing.T) {
+	dir := t.TempDir()
+	writeTestJSON(t, dir, "sprites.json", kmdata.Sheet{PPU: 100, Sprites: map[string]kmdata.SpriteInfo{}})
+	writeTestJSON(t, dir, "anims.json", map[string]*kmdata.Anim{})
+	writeTestJSON(t, dir, "scene.json", kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "", Parent: -1, Scale: [2]float64{1, 1}}}})
+	writeTestJSON(t, dir, "roles.json", kmdata.Roles{})
+	writeTestJSON(t, dir, "meshes.json", kmdata.MeshData{
+		Bindings: []kmdata.MeshBinding{{
+			Path:     "Root/Plane",
+			Renderer: "MeshRenderer",
+			Mesh:     kmdata.AssetRef{FileID: 10209, GUID: "0"},
+			Materials: []kmdata.AssetRef{{
+				FileID: 2100000,
+				GUID:   "mat-guid",
+				Name:   "GridPlane",
+				Path:   "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat",
+			}},
+			Enabled: true,
+		}},
+		Materials: map[string]kmdata.Material{
+			"mat-guid": {
+				Name: "GridPlane",
+				GUID: "mat-guid",
+				Textures: map[string]kmdata.TextureEnv{
+					"_MainTex": {Texture: kmdata.AssetRef{GUID: "tex-guid", Name: "grid"}},
+				},
+			},
+		},
+	})
+
+	as, err := Load(dir, 48000)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(as.Meshes.Bindings) != 1 {
+		t.Fatalf("mesh bindings = %d, want 1", len(as.Meshes.Bindings))
+	}
+	if got := as.Meshes.Bindings[0].Mesh.FileID; got != 10209 {
+		t.Fatalf("builtin mesh fileID = %d, want 10209", got)
+	}
+	if as.Meshes.Materials["mat-guid"].Textures["_MainTex"].Texture.GUID != "tex-guid" {
+		t.Fatalf("material texture not loaded: %#v", as.Meshes.Materials)
+	}
+}
+
+func writeTestJSON(t *testing.T, dir, name string, v any) {
+	t.Helper()
+	b, err := json.Marshal(v)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(dir, name), b, 0o644); err != nil {
+		t.Fatal(err)
+	}
+}
