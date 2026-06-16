@@ -185,7 +185,6 @@ func (m *Module) Draw(screen *ebiten.Image, _ float64, beat float64) {
 	m.drawFlatSceneSurfaces(screen, bg, meterColors)
 	for _, b := range m.bots {
 		b.queue(beat)
-		b.drawFuel(screen, m.proj)
 	}
 	m.ctx.Scene.Draw(screen, m.proj)
 }

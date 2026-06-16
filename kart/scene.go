@@ -665,6 +665,8 @@ type ExtraSprite struct {
 	Mat          string // 映射材质名（按名调色板）
 	HasPalette   bool   // true 时 Palette 为实例级 mapped 材质参数
 	Palette      Palette
+	Mask         bool // SpriteMask：本体不绘制，只为 MaskIn=1 的项目提供可见区域
+	MaskIn       int  // SpriteRenderer m_MaskInteraction（1=VisibleInsideMask）
 }
 
 // Queue 注入一帧动态绘制项（Draw 后清空，每帧重新注入）。
@@ -987,12 +989,15 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		gZ                float64
 		extra             int // ≥0：s.queued 下标（动态绘制项）
 	}
+	type maskItem struct {
+		idx, extra int // extra >= 0 表示 s.queued，下标否则为 scene 节点
+	}
 	items := make([]item, 0, len(s.state)+len(s.queued))
 	// 活动的 SpriteMask（本体不绘制，为 MaskIn=1 的渲染器提供可见区域）
-	var masks []int
+	var masks []maskItem
 	for i := range s.state {
 		if s.as.Rig.Nodes[i].Mask && s.actives[i] && s.state[i].renderOn && s.state[i].sprite != "" {
-			masks = append(masks, i)
+			masks = append(masks, maskItem{idx: i, extra: -1})
 		}
 	}
 	for i := range s.state {
@@ -1017,6 +1022,18 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 	}
 	for qi := range s.queued {
 		q := &s.queued[qi]
+		if q.Mask {
+			if q.Sprite != "" {
+				masks = append(masks, maskItem{extra: qi})
+			}
+			continue
+		}
+		if q.Sprite == "" {
+			continue
+		}
+		if q.Tint != [4]float64{} && q.Tint[3] <= 0 {
+			continue
+		}
 		it := item{
 			idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: qi,
 		}
@@ -1050,6 +1067,55 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		return x.idx < y.idx
 	})
+	ensureScratch := func() {
+		w, h := dst.Bounds().Dx(), dst.Bounds().Dy()
+		if s.scratch == nil || s.scratch.Bounds().Dx() != w || s.scratch.Bounds().Dy() != h {
+			s.scratch = ebiten.NewImage(w, h)
+			s.maskBuf = ebiten.NewImage(w, h)
+		}
+	}
+	drawQueued := func(target *ebiten.Image, q *ExtraSprite, qo SpriteOpts, view Aff) {
+		if q.Mapped {
+			pal := s.paletteOf(q.Mat)
+			if q.HasPalette {
+				pal = q.Palette
+			}
+			if q.HasThreshold {
+				pal.Threshold = q.Threshold
+			}
+			if q.HasProgress {
+				pal.Progress = q.Progress
+				pal.UseProgress = true
+			}
+			s.as.DrawSpriteMapped(target, q.Sprite, view.Mul(q.World), proj, qo, pal)
+		} else {
+			s.as.DrawSpriteOpts(target, q.Sprite, view.Mul(q.World), proj, qo)
+		}
+	}
+	drawMasks := func() {
+		s.maskBuf.Clear()
+		for _, mi := range masks {
+			if mi.extra >= 0 {
+				q := &s.queued[mi.extra]
+				view, ok := s.camView(q.Z)
+				if !ok {
+					continue
+				}
+				// SpriteMask ignores SpriteRenderer.color; draw the mask silhouette
+				// opaque even when the prefab renderer color is transparent.
+				s.as.DrawSpriteOpts(s.maskBuf, q.Sprite, view.Mul(q.World), proj,
+					SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY})
+				continue
+			}
+			mview, ok := s.camView(s.worldZ[mi.idx])
+			if !ok {
+				continue
+			}
+			ms := &s.state[mi.idx]
+			s.as.DrawSpriteOpts(s.maskBuf, ms.sprite, mview.Mul(s.world[mi.idx]), proj,
+				SpriteOpts{FlipX: ms.flipX, FlipY: ms.flipY})
+		}
+	}
 	for _, it := range items {
 		if it.extra >= 0 {
 			q := &s.queued[it.extra]
@@ -1058,22 +1124,20 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 				continue
 			}
 			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint, MatColor: q.MatColor, Add: q.Add, Blend: q.Blend, OutlineWidth: q.OutlineWidth}
-			if q.Mapped {
-				pal := s.paletteOf(q.Mat)
-				if q.HasPalette {
-					pal = q.Palette
+			if q.MaskIn == 1 {
+				if len(masks) == 0 {
+					continue
 				}
-				if q.HasThreshold {
-					pal.Threshold = q.Threshold
-				}
-				if q.HasProgress {
-					pal.Progress = q.Progress
-					pal.UseProgress = true
-				}
-				s.as.DrawSpriteMapped(dst, q.Sprite, view.Mul(q.World), proj, qo, pal)
-			} else {
-				s.as.DrawSpriteOpts(dst, q.Sprite, view.Mul(q.World), proj, qo)
+				ensureScratch()
+				s.scratch.Clear()
+				drawQueued(s.scratch, q, qo, view)
+				drawMasks()
+				mop := &ebiten.DrawImageOptions{Blend: ebiten.BlendDestinationIn}
+				s.scratch.DrawImage(s.maskBuf, mop)
+				dst.DrawImage(s.scratch, nil)
+				continue
 			}
+			drawQueued(dst, q, qo, view)
 			continue
 		}
 		i := it.idx
@@ -1099,11 +1163,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			if len(masks) == 0 {
 				continue
 			}
-			w, h := dst.Bounds().Dx(), dst.Bounds().Dy()
-			if s.scratch == nil || s.scratch.Bounds().Dx() != w || s.scratch.Bounds().Dy() != h {
-				s.scratch = ebiten.NewImage(w, h)
-				s.maskBuf = ebiten.NewImage(w, h)
-			}
+			ensureScratch()
 			s.scratch.Clear()
 			if s.as.Rig.Nodes[i].Mapped {
 				pal := s.paletteForNode(i)
@@ -1121,16 +1181,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			} else {
 				s.as.DrawSpriteOpts(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts)
 			}
-			s.maskBuf.Clear()
-			for _, mi := range masks {
-				mview, ok := s.camView(s.worldZ[mi])
-				if !ok {
-					continue
-				}
-				ms := &s.state[mi]
-				s.as.DrawSpriteOpts(s.maskBuf, ms.sprite, mview.Mul(s.world[mi]), proj,
-					SpriteOpts{FlipX: ms.flipX, FlipY: ms.flipY})
-			}
+			drawMasks()
 			mop := &ebiten.DrawImageOptions{Blend: ebiten.BlendDestinationIn}
 			s.scratch.DrawImage(s.maskBuf, mop)
 			dst.DrawImage(s.scratch, nil)

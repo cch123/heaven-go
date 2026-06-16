@@ -5,6 +5,8 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+
+	"hsdemo/kmdata"
 )
 
 func TestFillbotsExtractedAssetCoverage(t *testing.T) {
@@ -57,6 +59,23 @@ func TestFillbotsExtractedAssetCoverage(t *testing.T) {
 	} {
 		if got := animators[path]; got != ctrl {
 			t.Fatalf("animator %s = %q, want %q", path, got, ctrl)
+		}
+	}
+
+	var rig kmdata.Rig
+	readJSON(t, filepath.Join(root, "scene.json"), &rig)
+	byPath := map[string]kmdata.Node{}
+	for _, n := range rig.Nodes {
+		byPath[n.Path] = n
+	}
+	for _, rootPath := range []string{"BotSmall", "BotMedium", "BotLarge"} {
+		mask := byPath[rootPath+"/FullBody/Mask"]
+		if !mask.Mask {
+			t.Fatalf("%s/FullBody/Mask is not marked as SpriteMask", rootPath)
+		}
+		fill := byPath[rootPath+"/FullBody/Fill"]
+		if fill.MaskIn != 1 {
+			t.Fatalf("%s/FullBody/Fill MaskIn = %d, want VisibleInsideMask", rootPath, fill.MaskIn)
 		}
 	}
 

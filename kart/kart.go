@@ -11,6 +11,7 @@ import (
 	"encoding/json"
 	"fmt"
 	"image"
+	"image/color"
 	_ "image/png"
 	"io"
 	"math"
@@ -94,6 +95,8 @@ type Assets struct {
 	subs map[string]*ebiten.Image
 }
 
+const UnitySquareSprite = "__unity_square"
+
 // Load 读取提取器输出目录；音效解码到 audioRate 采样率。
 // 自动识别两种布局：karateman（rig.json + stage.json + 单图集）
 // 与 scene 游戏（scene.json + roles.json + 多图集）。
@@ -106,6 +109,7 @@ func Load(dir string, audioRate int) (*Assets, error) {
 	if err := readJSON(filepath.Join(dir, "sprites.json"), &a.Sheet); err != nil {
 		return nil, err
 	}
+	a.ensureBuiltinSprites()
 	if err := readJSON(filepath.Join(dir, "anims.json"), &a.Anims); err != nil {
 		return nil, err
 	}
@@ -195,6 +199,21 @@ func Load(dir string, audioRate int) (*Assets, error) {
 		}
 	}
 	return a, nil
+}
+
+func (a *Assets) ensureBuiltinSprites() {
+	if a.Sheet.Sprites == nil {
+		a.Sheet.Sprites = map[string]kmdata.SpriteInfo{}
+	}
+	if a.subs == nil {
+		a.subs = map[string]*ebiten.Image{}
+	}
+	if _, ok := a.subs[UnitySquareSprite]; ok {
+		return
+	}
+	img := ebiten.NewImage(1, 1)
+	img.Fill(color.White)
+	a.RegisterSprite(UnitySquareSprite, img, 1, 0.5, 0.5)
 }
 
 func loadPNG(p string) (*ebiten.Image, error) {

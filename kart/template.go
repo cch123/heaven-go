@@ -567,16 +567,20 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 		}
 		tint := st.color
 		tint[3] *= st.matAlpha * st.matOpacity
-		if !actives[ti] || !st.renderOn || st.sprite == "" || tint[3] <= 0 {
+		n := &t.as.Rig.Nodes[tn.RigIdx]
+		if !actives[ti] || !st.renderOn || st.sprite == "" {
 			continue
 		}
-		n := &t.as.Rig.Nodes[tn.RigIdx]
+		if !n.Mask && tint[3] <= 0 {
+			continue
+		}
 		e := ExtraSprite{
 			Sprite: st.sprite, World: world[ti], Z: z,
 			Layer: n.Layer, Order: st.order,
 			FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor,
 			OutlineWidth: st.outlineWidth,
 			Mapped:       n.Mapped, Mat: n.Mat,
+			Mask: n.Mask, MaskIn: n.MaskIn,
 			Add: st.matAdd, Blend: st.matBlend,
 			Threshold: st.matThreshold, HasThreshold: st.hasMatThreshold,
 			Progress: st.matProgress, HasProgress: st.hasMatProgress,

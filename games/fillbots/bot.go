@@ -3,8 +3,6 @@ package fillbots
 import (
 	"math"
 
-	"github.com/hajimehoshi/ebiten/v2"
-
 	"hsdemo/engine"
 	"hsdemo/kart"
 )
@@ -71,6 +69,10 @@ func (b *bot) initInstance(beat float64) {
 	in.PlayDefaultState("Legs", beat, secondsScale(b.mod.ctx, beat))
 	in.PlayDefaultState("Body", beat, secondsScale(b.mod.ctx, beat))
 	in.PlayDefaultState("Head", beat, secondsScale(b.mod.ctx, beat))
+	// The original prefab uses Unity's built-in Square sprite for the masked
+	// fuel renderer. It is not in Fillbots' local atlas, so the runtime supplies
+	// the same 1x1 white sprite and lets the Fill animation scale it.
+	in.SetSprite("FullBody/Fill", kart.UnitySquareSprite)
 	in.SetActive("FullBody", false)
 	in.SetActive("Legs", true)
 	in.SetActive("Body", true)
@@ -389,27 +391,9 @@ func (b *bot) applyPalette() {
 	for _, path := range []string{"FullBody", "Legs", "Body", "Head"} {
 		b.inst.SetPalette(path, pal)
 	}
+	b.inst.SetColor("FullBody/Fill", b.fuel)
 }
 
 func (b *bot) queue(beat float64) {
 	b.inst.Queue(b.mod.ctx.Scene, beat, kart.Identity(), 0)
-}
-
-func (b *bot) drawFuel(screen *ebiten.Image, proj kart.Aff) {
-	if b.fill <= 0 || b.state < stateHolding {
-		return
-	}
-	h := b.spec.fillScaleY * clamp01(b.fill)
-	if h <= 0 {
-		return
-	}
-	// Template instances currently do not participate in SceneInst's SpriteMask
-	// pass, so the Fill SpriteRenderer's mask is approximated with the same
-	// animated local position/scale curve and drawn underneath the mapped body.
-	fillY := b.spec.fillPosY * clamp01(b.fill)
-	world := kart.Translate(b.inst.Offset[0], b.inst.Offset[1]).
-		Mul(kart.Scale(b.spec.rootScale[0], b.spec.rootScale[1])).
-		Mul(kart.Translate(0, fillY)).
-		Mul(kart.Scale(5, h))
-	drawWorldRect(screen, proj, world, 1, 1, b.fuel)
 }

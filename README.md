@@ -143,9 +143,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   object appearance 已接入，机器人落体、堆叠、传送带哨兵、hold/release 判定、
   release whiff、explosion、fillErUp 和 OK/miss/arm/water/beep 音效按 C# 时序
   移植；controller、模板 prefab、FullBody/limb/filler/meter/conveyer 动画已
-  接入。当前模板实例还不能进入 `SceneInst` 的 SpriteMask 合成 pass，因此燃料
-  Fill 用同一 Fill 曲线手写色块近似；FullBody 动画事件驱动的灯罩 mask sprite
-  切换仍待补到模板实例事件系统。
+  接入。燃料 Fill 已按 prefab 的 Unity Square、Fill 动画和 SpriteMask
+  `VisibleInsideMask` 合成路径绘制。
 - 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
   `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
   勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
