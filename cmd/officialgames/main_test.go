@@ -137,6 +137,10 @@ func TestTotemClimbOfficialActionsAreHandled(t *testing.T) {
 	assertOfficialActionsHandled(t, "totemClimb", filepath.Join("..", "..", "games", "totemclimb"))
 }
 
+func TestKarateManOfficialActionsAreHandled(t *testing.T) {
+	assertOfficialActionsHandled(t, "karateman", filepath.Join("..", "..", "games", "karateman"))
+}
+
 func assertOfficialActionsHandled(t *testing.T, id, dir string) {
 	t.Helper()
 	const hsRoot = "/Users/xargin/Downloads/HeavenStudio-master"

@@ -11,6 +11,7 @@ import (
 	"image/color"
 	"math"
 	"sort"
+	"strings"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"github.com/hajimehoshi/ebiten/v2/text/v2"
@@ -46,6 +47,24 @@ const (
 	hitTaco    = 999
 )
 
+const (
+	potKindNormal = iota
+	potKindCombo1
+	potKindCombo2
+	potKindCombo3
+	potKindCombo4
+	potKindCombo5
+	potKindComboEnd
+	potKindKickBarrel
+	potKindKickPayload
+)
+
+const (
+	comboModeDisabled = iota
+	comboModeNormal
+	comboModeJump
+)
+
 type potResult int
 
 const (
@@ -63,6 +82,10 @@ type pot struct {
 	sprite    string
 	hitSound  string
 	heavy     bool
+	kind      int
+	tint      [4]float64
+	kickBall  bool
+	kickBeat  float64
 	result    potResult
 	judgeT    float64
 }
@@ -111,20 +134,49 @@ type Module struct {
 	particleWind      float64
 	particleIntensity float64
 
+	comboMode      int
+	noriMode       int
+	noriMax        float64
+	nori           float64
+	gameplayFxType int
+
 	words []wordEvt
 	marks []hitMark
 
 	itemTint [4]float64
 	starTint [4]float64
 
-	prepareUntil float64
-	lastBeat     int
-	lastPunchT   float64
+	prepareUntil   float64
+	lastBeat       int
+	lastPunchT     float64
+	comboSeq       int
+	specialCamBeat float64
+	specialCamEnd  float64
+	specialCamRet  float64
+
+	seriousActive bool
+	seriousFlash  bool
+	seriousRed    [4]float64
+	seriousWhite  [4]float64
+	seriousBlack  [4]float64
+	seriousHit    float64
 
 	faceBig *text.GoTextFace
 }
 
-func New() engine.Module { return &Module{lastBeat: -1, prepareUntil: math.Inf(-1)} }
+func New() engine.Module {
+	return &Module{
+		lastBeat:       -1,
+		prepareUntil:   math.Inf(-1),
+		comboMode:      comboModeNormal,
+		specialCamBeat: math.Inf(1),
+		specialCamEnd:  math.Inf(-1),
+		seriousRed:     [4]float64{1, 0, 0, 1},
+		seriousWhite:   [4]float64{1, 1, 1, 1},
+		seriousBlack:   [4]float64{0, 0, 0, 1},
+		seriousHit:     math.Inf(-1),
+	}
+}
 
 func (m *Module) ID() string { return "karateman" }
 
@@ -153,8 +205,20 @@ func (m *Module) OnEvent(e *riq.Entity) {
 	switch e.Datamodel {
 	case "karateman/hit":
 		m.scheduleHit(e)
+	case "karateman/bulb":
+		m.scheduleBulb(e)
+	case "karateman/combo":
+		m.scheduleCombo(e)
+	case "karateman/kick":
+		m.scheduleKick(e)
 	case "karateman/warnings":
 		m.scheduleWord(e)
+	case "karateman/hitX":
+		// Legacy hidden warning action. Heaven Studio keeps this for old charts;
+		// it maps directly to the modern warning text type.
+		m.scheduleWord(&riq.Entity{Beat: e.Beat, Length: e.Length, Data: map[string]any{
+			"whichWarning": e.Float("type", 2),
+		}})
 	case "karateman/bop":
 		toggle := boolParamDefault(e, "toggle2", true)
 		auto := boolParam(e, "toggle")
@@ -181,10 +245,16 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		})
 	case "karateman/background appearance":
 		m.addBackground(e)
+	case "karateman/set background effects":
+		m.addLegacyBackground(e)
 	case "karateman/set object colors":
 		m.ctx.At(b, func() {
 			m.itemTint = colorParam(e, "colorC", [4]float64{1, 1, 1, 1})
-			m.starTint = colorParam(e, "colorD", [4]float64{1, 1, 1, 1})
+			if int(e.Float("star", 0)) == 0 {
+				m.starTint = m.itemTint
+			} else {
+				m.starTint = colorParam(e, "colorD", [4]float64{1, 1, 1, 1})
+			}
 		})
 	case "karateman/particle effects":
 		typ := int(e.Float("type", 0))
@@ -202,6 +272,53 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			// faithful for forced-face moments but cannot be blended over a body
 			// action until RigInst supports additive/layered clips.
 			m.playJoe(fmt.Sprintf("Face%02d", face), b)
+		})
+	case "karateman/special camera":
+		length := e.Length
+		if length <= 0 {
+			length = 8
+		}
+		ret := math.Min(2, length*0.5)
+		end := math.MaxFloat64
+		if boolParamDefault(e, "toggle", true) {
+			end = b + length - 0.001
+		}
+		m.ctx.At(b, func() {
+			m.specialCamBeat = b
+			m.specialCamEnd = end
+			m.specialCamRet = ret
+		})
+	case "karateman/set gameplay modifiers":
+		mode := int(e.Float("type", 0))
+		fxType := int(e.Float("fxType", 0))
+		combo := int(e.Float("combo", comboModeNormal))
+		tMax := e.Float("TengokuMax", 5)
+		mMax := e.Float("MaxMania", 10)
+		m.ctx.At(b, func() {
+			m.noriMode = mode
+			m.comboMode = combo
+			m.noriMax = 0
+			switch mode {
+			case 1:
+				m.noriMax = math.Max(1, tMax)
+			case 2, 3:
+				m.noriMax = math.Max(1, mMax)
+			}
+			if m.noriMax > 0 && m.nori <= 0 {
+				m.nori = m.noriMax * 0.5
+			}
+			m.gameplayFxType = fxType
+		})
+	case "karateman/toggleseriousBG":
+		active := boolParamDefault(e, "boolserious", true)
+		red := colorParam(e, "redColor", [4]float64{1, 0, 0, 1})
+		white := colorParam(e, "whiteColor", [4]float64{1, 1, 1, 1})
+		black := colorParam(e, "blackColor", [4]float64{0, 0, 0, 1})
+		flashing := boolParamDefault(e, "flashing", true)
+		m.ctx.At(b, func() {
+			m.seriousActive = active
+			m.seriousRed, m.seriousWhite, m.seriousBlack = red, white, black
+			m.seriousFlash = flashing
 		})
 	}
 }
@@ -243,17 +360,23 @@ func (m *Module) Update(t, beat float64) {
 
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	bg, shadow, texture, fx, texType, fxType := m.appearanceAt(beat)
+	if fxType == 0 {
+		fxType = m.gameplayFxType
+	}
 	screen.Fill(rgba(bg))
 	m.drawTexture(screen, texture, texType, beat)
 	vector.DrawFilledRect(screen, 0, float32(groundY), engine.ScreenW, engine.ScreenH-float32(groundY), shadeRGBA(bg, 0.78), false)
 	m.drawParticles(screen, beat)
+	m.drawSeriousBG(screen, beat)
 
+	proj := m.cameraProj(beat)
 	m.joe.Sample(t)
-	m.joe.Draw(screen, m.proj)
-	m.drawPots(screen, t, beat, shadow)
+	m.joe.Draw(screen, proj)
+	m.drawPots(screen, t, beat, shadow, proj)
 	m.drawHitMarks(screen, beat)
 	m.drawWords(screen, beat)
 	m.drawFX(screen, fx, fxType, beat)
+	m.drawNori(screen)
 }
 
 func (m *Module) scheduleHit(e *riq.Entity) {
@@ -267,13 +390,92 @@ func (m *Module) scheduleHit(e *riq.Entity) {
 		sprite:    hitTypeSprite(typ),
 		hitSound:  hitTypeSound(typ),
 		heavy:     hitTypeHeavy(typ),
+		kind:      potKindNormal,
+		tint:      [4]float64{1, 1, 1, 1},
 	}
-	active := m.ctx.GameAt(b) == m.ID() || m.ctx.GameAt(b+1) == m.ID()
+	m.schedulePot(p, throwSound(b), !boolParam(e, "mute"), 0)
+}
+
+func (m *Module) scheduleBulb(e *riq.Entity) {
+	b := e.Beat
+	bulbType := int(e.Float("type", 0))
+	if bulbType == 0 {
+		bulbType = m.nextBulbType(b)
+	}
+	tint := bulbTint(bulbType, colorParam(e, "colorA", [4]float64{1, 1, 1, 1}))
+	throw := bulbThrowSound(b, bulbType, int(e.Float("sfx", 0)), stringParam(e, "throwSfx", "lightbulbOut"))
+	hit := bulbHitSound(bulbType, int(e.Float("sfx", 0)), stringParam(e, "hitSfx", "lightbulbHit"))
+	p := &pot{
+		throwBeat: b,
+		hitBeat:   b + 1,
+		rot0:      deterministicRot(b, len(m.pots)),
+		typ:       hitLightbulb,
+		sprite:    "karateman_bulb",
+		hitSound:  hit,
+		kind:      potKindNormal,
+		tint:      tint,
+	}
+	m.schedulePot(p, throw, !boolParam(e, "mute"), 0)
+}
+
+func (m *Module) scheduleCombo(e *riq.Entity) {
+	b := e.Beat
+	m.ctx.SoundAt(b, "barrelOutCombos", 1)
+	if !boolParam(e, "disableVoice") {
+		m.scheduleComboVoice(b, boolParam(e, "pitchVoice"), e.Float("forcePitch", 1), boolParamDefault(e, "cutOut", true))
+	}
+	for i, off := range []float64{0, 0.25, 0.5, 0.75, 1, 1.5} {
+		kind := potKindCombo1 + i
+		sprite := "karateman_pot"
+		if kind == potKindComboEnd {
+			sprite = "karateman_barrel"
+		}
+		throwBeat := b + off
+		p := &pot{
+			throwBeat: throwBeat,
+			hitBeat:   throwBeat + 1,
+			rot0:      deterministicRot(throwBeat, len(m.pots)+i),
+			typ:       hitPot,
+			sprite:    sprite,
+			hitSound:  comboHitSound(kind),
+			heavy:     kind == potKindComboEnd,
+			kind:      kind,
+			tint:      [4]float64{1, 1, 1, 1},
+		}
+		m.schedulePot(p, "", false, comboAction(kind))
+	}
+}
+
+func (m *Module) scheduleKick(e *riq.Entity) {
+	b := e.Beat
+	offset := e.Float("KickOffset", 0)
+	m.ctx.SoundAt(b, "barrelOutKicks", 1)
+	if !boolParam(e, "disableVoice") {
+		m.scheduleKickVoice(b, offset, boolParam(e, "pitchVoice"), e.Float("forcePitch", 1), boolParamDefault(e, "cutOut", true))
+	}
+	p := &pot{
+		throwBeat: b,
+		hitBeat:   b + 1,
+		rot0:      deterministicRot(b, len(m.pots)),
+		typ:       hitPot,
+		sprite:    "karateman_barrel",
+		hitSound:  "barrelBreak",
+		heavy:     true,
+		kind:      potKindKickBarrel,
+		tint:      [4]float64{1, 1, 1, 1},
+		kickBall:  boolParam(e, "toggle"),
+		kickBeat:  b + 1.75 + offset,
+	}
+	m.schedulePot(p, "", false, 0)
+}
+
+func (m *Module) schedulePot(p *pot, throw string, playThrow bool, action int) {
+	active := m.ctx.GameAt(p.throwBeat) == m.ID() || m.ctx.GameAt(p.hitBeat) == m.ID()
 	if active {
 		m.pots = append(m.pots, p)
 	}
-	if !boolParam(e, "mute") {
-		m.ctx.SoundAt(b, throwSound(b), 1)
+	if playThrow && throw != "" {
+		m.ctx.SoundAt(p.throwBeat, throw, 1)
 	}
 	if !active {
 		return
@@ -285,11 +487,141 @@ func (m *Module) scheduleHit(e *riq.Entity) {
 		func(state float64, j engine.Judgment) { m.hitPot(p, state, j) },
 		func() { m.missPot(p) },
 	)
-	m.ctx.At(b+2, func() {
+	if action > 0 {
+		// The legacy input layer has only coarse action channels, so the combo
+		// windows stay score-equivalent while still accepting the alternate key
+		// used by Heaven Studio's AltDown/AltUp combo path.
+		alt := m.ctx.ScheduleInputActionCond(
+			p.hitBeat,
+			action,
+			func() bool { return p.result == potFlying && m.ctx.GameAt(p.hitBeat) == m.ID() },
+			func(state float64, j engine.Judgment) { m.hitPot(p, state, j) },
+			func() {},
+		)
+		alt.NoAutoplay = true
+	}
+	m.ctx.At(p.throwBeat+2, func() {
 		if p.result == potMiss {
 			m.ctx.Sound("karate_through")
+			m.noriThrough()
 		}
 	})
+}
+
+func (m *Module) scheduleComboVoice(beat float64, bpmPitch bool, forcePitch float64, _ bool) {
+	for _, s := range []struct {
+		off  float64
+		name string
+	}{
+		{1, "en/punchy1"},
+		{1.25, "en/punchy2"},
+		{1.5, "en/punchy3"},
+		{1.75, "en/punchy4"},
+		{2, "en/ko"},
+		{2.5, "en/pow"},
+	} {
+		b := beat + s.off
+		pitch := forcePitch
+		if bpmPitch {
+			pitch = m.ctx.BPMAt(b) / pitchMod
+		}
+		m.ctx.SoundAtPitchOff(b, s.name, 1, pitch, 0)
+	}
+}
+
+func (m *Module) scheduleKickVoice(beat, offset float64, bpmPitch bool, forcePitch float64, _ bool) {
+	for _, s := range []struct {
+		off  float64
+		name string
+	}{
+		{1, "en/punchKick1"},
+		{1.5, "en/punchKick2"},
+		{1.75 + offset, "en/punchKick3"},
+		{2.5 + offset, "en/punchKick4"},
+	} {
+		b := beat + s.off
+		pitch := forcePitch
+		if bpmPitch {
+			pitch = m.ctx.BPMAt(b) / pitchMod
+		}
+		m.ctx.SoundAtPitchOff(b, s.name, 1, pitch, 0)
+	}
+}
+
+func (m *Module) nextBulbType(beat float64) int {
+	next := math.Inf(1)
+	typ := 1
+	for _, p := range m.pots {
+		if p.throwBeat < beat || p.throwBeat >= next {
+			continue
+		}
+		switch p.kind {
+		case potKindCombo1, potKindCombo2, potKindCombo3, potKindCombo4, potKindCombo5, potKindComboEnd:
+			next, typ = p.throwBeat, 2
+		case potKindKickBarrel, potKindKickPayload:
+			next, typ = p.throwBeat, 3
+		}
+	}
+	return typ
+}
+
+func bulbTint(typ int, custom [4]float64) [4]float64 {
+	switch typ {
+	case 2:
+		return [4]float64{0.23137255, 1, 1, 1}
+	case 3:
+		return [4]float64{1, 1, 0, 1}
+	case 4:
+		return custom
+	default:
+		return [4]float64{1, 1, 1, 1}
+	}
+}
+
+func bulbThrowSound(beat float64, typ, sfx int, custom string) string {
+	base := "Lightbulb"
+	if sfx == 3 {
+		return custom
+	}
+	if sfx == 2 || (sfx == 0 && typ == 3) {
+		base = "LightbulbNtr"
+	}
+	if math.Abs(math.Mod(beat, 1)-0.5) < 0.0001 {
+		return "offbeat" + base + "Out"
+	}
+	return strings.ToLower(base[:1]) + base[1:] + "Out"
+}
+
+func bulbHitSound(typ, sfx int, custom string) string {
+	if sfx == 3 {
+		return custom
+	}
+	if sfx == 2 || (sfx == 0 && typ == 3) {
+		return "lightbulbNtrHit"
+	}
+	return "lightbulbHit"
+}
+
+func comboHitSound(kind int) string {
+	switch kind {
+	case potKindCombo3:
+		return "comboHit2"
+	case potKindCombo4, potKindCombo5:
+		return "comboHit3"
+	case potKindComboEnd:
+		return "comboHit4"
+	default:
+		return "comboHit1"
+	}
+}
+
+func comboAction(kind int) int {
+	switch kind {
+	case potKindCombo1, potKindComboEnd:
+		return 1
+	default:
+		return 0
+	}
 }
 
 func (m *Module) scheduleWord(e *riq.Entity) {
@@ -339,20 +671,53 @@ func (m *Module) addBackground(e *riq.Entity) {
 	m.bgs = append(m.bgs, ev)
 }
 
+func (m *Module) addLegacyBackground(e *riq.Entity) {
+	b := e.Beat
+	preset := int(e.Float("type", 0))
+	bgStart := m.backgroundColorAt(b)
+	bgEnd := bgPreset(preset)
+	if preset == 6 {
+		bgEnd = colorParam(e, "colorA", bgStart)
+	}
+	shadowStart, shadowEnd := tintColor(bgStart), tintColor(bgEnd)
+	if int(e.Float("type2", 0)) == 1 {
+		shadowEnd = colorParam(e, "colorB", shadowEnd)
+	}
+	textureStart, textureEnd := tintColor(bgStart), tintColor(bgEnd)
+	if int(e.Float("type5", 0)) == 1 {
+		textureStart = colorParam(e, "colorC", textureStart)
+		textureEnd = colorParam(e, "colorD", textureEnd)
+	}
+	m.bgs = append(m.bgs, bgEvt{
+		beat: b, length: e.Length, bg0: bgStart, bg1: bgEnd,
+		shadow0: shadowStart, shadow1: shadowEnd,
+		texture0: textureStart, texture1: textureEnd,
+		fx0:  colorParam(e, "colorC", [4]float64{0.7647, 0.196, 0, 0.2}),
+		fx1:  colorParam(e, "colorD", [4]float64{0.7647, 0.196, 0, 0.2}),
+		ease: 0, textureType: int(e.Float("type4", 0)), fxType: int(e.Float("type3", 0)),
+	})
+}
+
 func (m *Module) hitPot(p *pot, state float64, j engine.Judgment) {
 	beat := m.ctx.Beat()
 	if j == engine.JudgeNG || math.Abs(state) >= 1 {
 		p.result = potNG
 		p.judgeT = m.ctx.Time()
-		m.playPunch(p.heavy, beat)
+		m.playPotAction(p, beat, false)
 		m.ctx.PlayCommon("miss")
+		m.noriNG()
 		return
 	}
 	p.result = potHit
 	p.judgeT = m.ctx.Time()
-	m.playPunch(p.heavy, beat)
+	m.playPotAction(p, beat, true)
 	m.ctx.Sound(p.hitSound)
 	m.marks = append(m.marks, hitMark{beat: beat, x: m.ctx.Assets.Stage.HitPos[0], y: m.ctx.Assets.Stage.HitPos[1], color: m.starTint})
+	m.seriousHit = beat
+	m.noriHit()
+	if p.kind == potKindKickBarrel {
+		m.spawnKickPayload(p)
+	}
 }
 
 func (m *Module) missPot(p *pot) {
@@ -369,6 +734,77 @@ func (m *Module) playPunch(heavy bool, beat float64) {
 	m.playJoe("Jab", beat)
 }
 
+func (m *Module) playPotAction(p *pot, beat float64, hit bool) {
+	if p.kind == potKindKickPayload {
+		if hit {
+			m.lastPunchT = m.ctx.Time()
+			m.playJoe("ManKick", beat)
+			return
+		}
+		m.playJoe("LowKickMiss", beat)
+		return
+	}
+	switch p.kind {
+	case potKindCombo1:
+		m.comboSeq = 1
+		m.playJoe("Jab", beat)
+	case potKindCombo2:
+		m.comboSeq = 2
+		m.playJoe("Straight", beat)
+	case potKindCombo3:
+		m.comboSeq = 3
+		m.playJoe("LowJab", beat)
+	case potKindCombo4:
+		m.comboSeq = 4
+		if hit {
+			m.playJoe("LowKick", beat)
+		} else {
+			m.playJoe("LowKickMiss", beat)
+			m.ctx.Sound("comboMiss")
+		}
+	case potKindCombo5:
+		m.comboSeq = 5
+		m.playJoe("BackHand", beat)
+	case potKindComboEnd:
+		m.comboSeq = 0
+		if m.comboMode == comboModeJump {
+			m.playJoe("UpperCutJump", beat)
+		} else {
+			m.playJoe("UpperCut", beat)
+		}
+	case potKindKickBarrel:
+		m.playPunch(true, beat)
+	case potKindNormal:
+		m.playPunch(p.heavy, beat)
+	default:
+		m.playPunch(p.heavy, beat)
+	}
+}
+
+func (m *Module) spawnKickPayload(src *pot) {
+	sprite := "karateman_bomb"
+	sound := "bombKick"
+	if src.kickBall {
+		sprite = "karateman_ball"
+	}
+	throwBeat := src.throwBeat + 1
+	if src.kickBeat > throwBeat {
+		throwBeat = src.kickBeat - 0.75
+	}
+	p := &pot{
+		throwBeat: throwBeat,
+		hitBeat:   src.kickBeat,
+		rot0:      deterministicRot(src.kickBeat, len(m.pots)),
+		typ:       hitBomb,
+		sprite:    sprite,
+		hitSound:  sound,
+		heavy:     true,
+		kind:      potKindKickPayload,
+		tint:      [4]float64{1, 1, 1, 1},
+	}
+	m.schedulePot(p, "", false, 0)
+}
+
 func (m *Module) bopAt(beat float64) {
 	if m.ctx.GameAt(beat) != m.ID() || beat < m.prepareUntil {
 		return
@@ -378,6 +814,92 @@ func (m *Module) bopAt(beat float64) {
 
 func (m *Module) playJoe(clip string, beat float64) {
 	m.joe.Play(clip, m.ctx.BeatToTime(beat))
+}
+
+func (m *Module) cameraProj(beat float64) kart.Aff {
+	u := 0.0
+	if beat >= m.specialCamBeat && beat <= m.specialCamEnd {
+		u = 1
+		switch {
+		case m.specialCamRet > 0 && beat <= m.specialCamBeat+m.specialCamRet:
+			u = engine.Ease(6, 0, 1, clamp01((beat-m.specialCamBeat)/m.specialCamRet))
+		case m.specialCamRet > 0 && beat >= m.specialCamEnd-m.specialCamRet:
+			u = engine.Ease(3, 1, 0, clamp01((beat-(m.specialCamEnd-m.specialCamRet))/m.specialCamRet))
+		}
+	}
+	// Prefab camera points are near=(0,-0.8,-8.25), far=(0,-0.6,-10).
+	// In the 2D projection this is equivalent to a slight zoom out and upward
+	// move, while preserving the legacy rig's extracted world coordinates.
+	scale := 1 - 0.175*u
+	y := -18 * u
+	return kart.Translate(joeScreenX, groundY+y+m.unit*m.ctx.Assets.Stage.FloorY).
+		Mul(kart.Scale(m.unit*scale, -m.unit*scale))
+}
+
+func (m *Module) drawSeriousBG(screen *ebiten.Image, beat float64) {
+	if !m.seriousActive {
+		return
+	}
+	topH := float32(engine.ScreenH) * 0.48
+	bottomY := topH
+	white := rgba(m.seriousWhite)
+	black := rgba(m.seriousBlack)
+	red := rgba(m.seriousRed)
+	if m.seriousFlash && beat-m.seriousHit >= 0 && beat-m.seriousHit < 0.25 {
+		white, black = black, white
+	}
+	vector.DrawFilledRect(screen, 0, 0, engine.ScreenW, topH, white, false)
+	vector.DrawFilledRect(screen, 0, bottomY, engine.ScreenW, engine.ScreenH-bottomY, black, false)
+	for i := -1; i < 8; i++ {
+		x := float32(i*170) + float32(math.Mod(beat*36, 170))
+		vector.StrokeLine(screen, x, 20, x+90, topH-10, 18, red, false)
+		vector.StrokeLine(screen, x+70, bottomY+18, x-30, engine.ScreenH-20, 18, red, false)
+	}
+}
+
+func (m *Module) drawNori(screen *ebiten.Image) {
+	if m.noriMode == 0 || m.noriMax <= 0 {
+		return
+	}
+	const w, h = float32(210), float32(14)
+	x := float32(engine.ScreenW) - w - 28
+	y := float32(28)
+	if m.noriMode == 3 {
+		x = float32(engine.ScreenW/2) - w/2
+		y = float32(engine.ScreenH) - 34
+	}
+	vector.DrawFilledRect(screen, x-2, y-2, w+4, h+4, color.RGBA{0, 0, 0, 170}, false)
+	vector.DrawFilledRect(screen, x, y, w, h, color.RGBA{45, 25, 20, 220}, false)
+	fill := w * float32(clamp01(m.nori/m.noriMax))
+	col := color.RGBA{255, 218, 57, 240}
+	if m.noriMode == 2 || m.noriMode == 3 {
+		col = color.RGBA{255, 80, 80, 240}
+	}
+	vector.DrawFilledRect(screen, x, y, fill, h, col, false)
+}
+
+func (m *Module) noriHit() {
+	if m.noriMax <= 0 {
+		return
+	}
+	m.nori = math.Min(m.noriMax, m.nori+1)
+	m.ctx.Sound("nori_just")
+}
+
+func (m *Module) noriNG() {
+	if m.noriMax <= 0 {
+		return
+	}
+	m.nori = math.Max(0, m.nori-1.5)
+	m.ctx.Sound("nori_ng")
+}
+
+func (m *Module) noriThrough() {
+	if m.noriMax <= 0 {
+		return
+	}
+	m.nori = math.Max(0, m.nori-1)
+	m.ctx.Sound("nori_through")
 }
 
 func (m *Module) jabDur() float64 {
@@ -425,7 +947,7 @@ func (m *Module) appearanceAt(beat float64) (bg, shadow, texture, fx [4]float64,
 	return
 }
 
-func (m *Module) drawPots(screen *ebiten.Image, t, beat float64, shadow [4]float64) {
+func (m *Module) drawPots(screen *ebiten.Image, t, beat float64, shadow [4]float64, proj kart.Aff) {
 	st := &m.ctx.Assets.Stage
 	for _, p := range m.pots {
 		if beat < p.throwBeat {
@@ -447,10 +969,10 @@ func (m *Module) drawPots(screen *ebiten.Image, t, beat float64, shadow [4]float
 			}
 			drawX := st.HitPos[0] + (x-st.HitPos[0])*s
 			drawY := st.HitPos[1] + (y-st.HitPos[1])*s
-			m.drawPotShadow(screen, drawX, s, shadow, alpha)
+			m.drawPotShadow(screen, drawX, s, shadow, alpha, proj)
 			world := kart.Translate(drawX, drawY).Mul(kart.Rotate(rot)).Mul(kart.Scale(s, s))
-			tint := scaleAlpha(m.itemTint, alpha)
-			m.ctx.Assets.DrawSpriteTint(screen, p.sprite, world, m.proj, false, tint)
+			tint := scaleAlpha(mulColor(m.itemTint, p.tint), alpha)
+			m.ctx.Assets.DrawSpriteTint(screen, p.sprite, world, proj, false, tint)
 		case potHit:
 			dt := t - p.judgeT
 			if dt > 1.0 {
@@ -459,16 +981,16 @@ func (m *Module) drawPots(screen *ebiten.Image, t, beat float64, shadow [4]float
 			x := st.HitPos[0] - 14*dt
 			y := st.HitPos[1] + 10*dt - 14*dt*dt
 			world := kart.Translate(x, y).Mul(kart.Rotate(p.rot0 + outSpin*dt))
-			m.ctx.Assets.DrawSpriteTint(screen, p.sprite, world, m.proj, false, m.itemTint)
+			m.ctx.Assets.DrawSpriteTint(screen, p.sprite, world, proj, false, mulColor(m.itemTint, p.tint))
 		}
 	}
 }
 
-func (m *Module) drawPotShadow(screen *ebiten.Image, x, s float64, shadow [4]float64, alpha float64) {
+func (m *Module) drawPotShadow(screen *ebiten.Image, x, s float64, shadow [4]float64, alpha float64, proj kart.Aff) {
 	st := &m.ctx.Assets.Stage
 	y := st.HitPos[1] + (st.FloorY+0.05-st.HitPos[1])*s
 	world := kart.Translate(x, y).Mul(kart.Scale(s, s))
-	m.ctx.Assets.DrawSpriteTint(screen, "karateman_object_shadow", world, m.proj, false, scaleAlpha(shadow, alpha*0.6))
+	m.ctx.Assets.DrawSpriteTint(screen, "karateman_object_shadow", world, proj, false, scaleAlpha(shadow, alpha*0.6))
 }
 
 func (m *Module) drawHitMarks(screen *ebiten.Image, beat float64) {
@@ -737,6 +1259,10 @@ func scaleAlpha(c [4]float64, alpha float64) [4]float64 {
 	return c
 }
 
+func mulColor(a, b [4]float64) [4]float64 {
+	return [4]float64{a[0] * b[0], a[1] * b[1], a[2] * b[2], a[3] * b[3]}
+}
+
 func rgba(c [4]float64) color.RGBA {
 	return color.RGBA{uint8(clamp01(c[0]) * 255), uint8(clamp01(c[1]) * 255), uint8(clamp01(c[2]) * 255), uint8(clamp01(c[3]) * 255)}
 }
@@ -752,6 +1278,13 @@ func boolParamDefault(e *riq.Entity, key string, def bool) bool {
 		return def
 	}
 	return boolParam(e, key)
+}
+
+func stringParam(e *riq.Entity, key, def string) string {
+	if v, ok := e.Data[key].(string); ok && v != "" {
+		return v
+	}
+	return def
 }
 
 func colorParam(e *riq.Entity, key string, def [4]float64) [4]float64 {
