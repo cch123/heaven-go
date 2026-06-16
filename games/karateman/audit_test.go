@@ -9,6 +9,8 @@ import (
 	"strings"
 	"testing"
 
+	"hsdemo/games/internal/particlefx"
+	"hsdemo/kart"
 	"hsdemo/kmdata"
 	"hsdemo/riq"
 )
@@ -18,6 +20,7 @@ type karateManAssets struct {
 	Rig    kmdata.Rig
 	Stage  kmdata.Stage
 	Anims  map[string]*kmdata.Anim
+	Parts  kmdata.ParticleData
 	Sounds map[string]bool
 }
 
@@ -32,6 +35,7 @@ func loadKarateManAssets(t *testing.T) *karateManAssets {
 	readKarateManJSON(t, filepath.Join(root, "rig.json"), &as.Rig)
 	readKarateManJSON(t, filepath.Join(root, "stage.json"), &as.Stage)
 	readKarateManJSON(t, filepath.Join(root, "anims.json"), &as.Anims)
+	readKarateManJSON(t, filepath.Join(root, "particles.json"), &as.Parts)
 
 	soundRoot := filepath.Join(root, "sounds")
 	if err := filepath.WalkDir(soundRoot, func(p string, d os.DirEntry, err error) error {
@@ -123,6 +127,68 @@ func TestKarateManAllAnimationGroupsExtracted(t *testing.T) {
 	}
 	if as.Anims["NoPose"] != nil {
 		t.Fatal("duplicate NoPose clips must stay namespaced instead of sharing a bare key")
+	}
+}
+
+func TestKarateManWeatherParticleSystemsExtracted(t *testing.T) {
+	as := loadKarateManAssets(t)
+	if len(as.Parts.Systems) != 26 {
+		t.Fatalf("particle systems = %d, want 26", len(as.Parts.Systems))
+	}
+	for _, tc := range []struct {
+		path   string
+		active bool
+		max    int
+	}{
+		{path: "karateman/Effect/Snow", active: true, max: 1280},
+		{path: "karateman/Effect/Snow/SnowFront", active: true, max: 1000},
+		{path: "karateman/Effect/Fire", active: false, max: 2048},
+		{path: "karateman/Effect/Fire/FireFront", active: true, max: 1000},
+		{path: "karateman/Effect/Rain", active: false, max: 1280},
+		{path: "karateman/Effect/Rain/RainSplash", active: true, max: 1000},
+	} {
+		ps := mustFindKarateParticle(t, as.Parts, tc.path)
+		if ps.Active != tc.active {
+			t.Fatalf("%s active = %v, want %v", tc.path, ps.Active, tc.active)
+		}
+		if !ps.Enabled || !ps.Emission.Enabled || !ps.Renderer.Enabled {
+			t.Fatalf("%s should keep enabled emission and renderer flags: %#v", tc.path, ps)
+		}
+		if ps.MaxParticles != tc.max {
+			t.Fatalf("%s maxParticles = %d, want %d", tc.path, ps.MaxParticles, tc.max)
+		}
+		if ps.StartLifetime.Scalar <= 0 && len(ps.StartLifetime.Max) == 0 {
+			t.Fatalf("%s missing startLifetime curve", tc.path)
+		}
+		if ps.StartSize.Scalar <= 0 && len(ps.StartSize.Max) == 0 {
+			t.Fatalf("%s missing startSize curve", tc.path)
+		}
+	}
+}
+
+func TestKarateManWeatherParticleRuntimeUsesInactiveRoots(t *testing.T) {
+	as := loadKarateManAssets(t)
+	kartAssets := &kart.Assets{Particles: as.Parts}
+	active := particlefx.Roots(kartAssets)
+	withInactive := particlefx.RootsIncludingInactive(kartAssets)
+
+	for _, root := range []string{
+		"karateman/Effect/Snow",
+		"karateman/Effect/Fire",
+		"karateman/Effect/Rain",
+	} {
+		if len(withInactive[root]) != 2 {
+			t.Fatalf("%s including inactive has %d systems, want root + child", root, len(withInactive[root]))
+		}
+	}
+	// Fire and Rain root emitters are inactive in the prefab because
+	// KarateMan.SetParticleEffect activates the selected Effect before Play().
+	// The runtime must include those inactive roots or the main weather layer is lost.
+	if len(active["karateman/Effect/Fire"]) >= len(withInactive["karateman/Effect/Fire"]) {
+		t.Fatalf("active-only Fire roots unexpectedly include inactive root emitter")
+	}
+	if got := karateParticleRoot(kartAssets, "Rain"); got != "karateman/Effect/Rain" {
+		t.Fatalf("karateParticleRoot(Rain) = %q, want karateman/Effect/Rain", got)
 	}
 }
 
@@ -268,6 +334,17 @@ func TestKarateManAllSoundsExtracted(t *testing.T) {
 			t.Fatalf("missing sound %s", key)
 		}
 	}
+}
+
+func mustFindKarateParticle(t *testing.T, data kmdata.ParticleData, path string) kmdata.ParticleSystem {
+	t.Helper()
+	for _, ps := range data.Systems {
+		if ps.Path == path {
+			return ps
+		}
+	}
+	t.Fatalf("missing particle system %s", path)
+	return kmdata.ParticleSystem{}
 }
 
 func hasKarateManNode(r kmdata.Rig, path string) bool {

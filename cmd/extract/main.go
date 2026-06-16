@@ -57,6 +57,7 @@ func main() {
 
 	sheet := exportAtlas(guidTable)
 	rig := exportRigAndStage(guidTable)
+	exportKarateParticles(guidTable)
 	exportAnims(guidTable)
 	exportSounds()
 

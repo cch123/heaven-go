@@ -18,21 +18,40 @@ type Effect struct {
 	Life         float64
 }
 
+type Stream struct {
+	Root, Anchor string
+	Pos          [2]float64
+	StartT       float64
+	Rate         float64
+	Wind         [2]float64
+	Prewarm      bool
+}
+
 type Runtime struct {
 	Assets       *kart.Assets
 	Proj         kart.Aff
 	FallbackLife float64
+	IncludeOff   bool
 	Roots        map[string][]kmdata.ParticleSystem
 	Worlds       map[string]kart.Aff
 	Lifetimes    map[string]float64
 }
 
 func New(as *kart.Assets, proj kart.Aff, fallbackLife float64) *Runtime {
-	roots := Roots(as)
+	return newRuntime(as, proj, fallbackLife, false)
+}
+
+func NewIncludingInactive(as *kart.Assets, proj kart.Aff, fallbackLife float64) *Runtime {
+	return newRuntime(as, proj, fallbackLife, true)
+}
+
+func newRuntime(as *kart.Assets, proj kart.Aff, fallbackLife float64, includeInactive bool) *Runtime {
+	roots := roots(as, includeInactive)
 	return &Runtime{
 		Assets:       as,
 		Proj:         proj,
 		FallbackLife: fallbackLife,
+		IncludeOff:   includeInactive,
 		Roots:        roots,
 		Worlds:       Worlds(as),
 		Lifetimes:    Lifetimes(roots, fallbackLife),
@@ -48,6 +67,13 @@ func (r *Runtime) NewEffect(root, anchor string, pos [2]float64, beat, startT fl
 		life = r.FallbackLife
 	}
 	return Effect{Beat: beat, StartT: startT, Root: root, Anchor: firstNonEmpty(anchor, root), Pos: pos, Life: life}, true
+}
+
+func (r *Runtime) NewStream(root, anchor string, pos [2]float64, startT, rate float64) (Stream, bool) {
+	if root == "" || len(r.Roots[root]) == 0 {
+		return Stream{}, false
+	}
+	return Stream{Root: root, Anchor: firstNonEmpty(anchor, root), Pos: pos, StartT: startT, Rate: rate}, true
 }
 
 func (r *Runtime) Draw(dst *ebiten.Image, fx Effect, now float64) {
@@ -78,10 +104,46 @@ func (r *Runtime) Draw(dst *ebiten.Image, fx Effect, now float64) {
 	}
 }
 
+func (r *Runtime) DrawStream(dst *ebiten.Image, stream Stream, now float64) {
+	age := now - stream.StartT
+	if age < 0 {
+		return
+	}
+	systems := r.Roots[stream.Root]
+	if len(systems) == 0 {
+		return
+	}
+	base := kart.Translate(stream.Pos[0], stream.Pos[1])
+	anchorWorld, ok := r.Worlds[firstNonEmpty(stream.Anchor, stream.Root)]
+	if !ok {
+		anchorWorld = kart.Identity()
+	}
+	invAnchor, ok := InvertAff(anchorWorld)
+	if !ok {
+		invAnchor = kart.Identity()
+	}
+	for si := range systems {
+		ps := &systems[si]
+		rel := kart.Identity()
+		if world, ok := r.Worlds[ps.Path]; ok {
+			rel = invAnchor.Mul(world)
+		}
+		r.drawStreamSystem(dst, stream, *ps, base.Mul(rel), age)
+	}
+}
+
 func Roots(as *kart.Assets) map[string][]kmdata.ParticleSystem {
+	return roots(as, false)
+}
+
+func RootsIncludingInactive(as *kart.Assets) map[string][]kmdata.ParticleSystem {
+	return roots(as, true)
+}
+
+func roots(as *kart.Assets, includeInactive bool) map[string][]kmdata.ParticleSystem {
 	paths := make([]string, 0, len(as.Particles.Systems))
 	for _, ps := range as.Particles.Systems {
-		if ps.Active && ps.Enabled && ps.Renderer.Enabled {
+		if (includeInactive || ps.Active) && ps.Enabled && ps.Renderer.Enabled {
 			paths = append(paths, ps.Path)
 		}
 	}
@@ -91,7 +153,7 @@ func Roots(as *kart.Assets) map[string][]kmdata.ParticleSystem {
 		// group for every valid prefix lets game code trigger the authored prefab
 		// root without hard-coding its child emitters.
 		for _, ps := range as.Particles.Systems {
-			if !ps.Active || !ps.Enabled || !ps.Renderer.Enabled {
+			if (!includeInactive && !ps.Active) || !ps.Enabled || !ps.Renderer.Enabled {
 				continue
 			}
 			if ps.Path == root || strings.HasPrefix(ps.Path, root+"/") {
@@ -143,7 +205,7 @@ func Lifetimes(roots map[string][]kmdata.ParticleSystem, fallback float64) map[s
 }
 
 func (r *Runtime) drawSystem(dst *ebiten.Image, fx Effect, ps kmdata.ParticleSystem, world kart.Aff, age float64) {
-	if !ps.Enabled || !ps.Active || !ps.Emission.Enabled || len(ps.TextureSheet.Sprites) == 0 {
+	if !r.systemDrawable(ps) {
 		return
 	}
 	simSpeed := ps.SimulationSpeed
@@ -170,61 +232,123 @@ func (r *Runtime) drawSystem(dst *ebiten.Image, fx Effect, ps kmdata.ParticleSys
 				continue
 			}
 			u := clamp01(sysAge / life)
-			sprite := ps.TextureSheet.Sprites[int(math.Floor(particleRand(seed, 2)*float64(len(ps.TextureSheet.Sprites))))%len(ps.TextureSheet.Sprites)]
-			x, y := startOffset(ps, particleRand(seed, 3), particleRand(seed, 4))
-			vx, vy := startVelocity(ps, particleRand(seed, 5))
-			if ps.VelocityOverLifetime.Enabled {
-				vx += curveValue(ps.VelocityOverLifetime.X, u, particleRand(seed, 6))
-				vy += curveValue(ps.VelocityOverLifetime.Y, u, particleRand(seed, 7))
-			}
-			ax, ay := 0.0, -math.Abs(curveValue(ps.GravityModifier, u, 0))
-			if ps.ForceOverLifetime.Enabled {
-				ax += curveValue(ps.ForceOverLifetime.X, u, particleRand(seed, 8))
-				ay += curveValue(ps.ForceOverLifetime.Y, u, particleRand(seed, 9))
-			}
-			x += vx*sysAge + 0.5*ax*sysAge*sysAge
-			y += vy*sysAge + 0.5*ay*sysAge*sysAge
-
-			size := curveValue(ps.StartSize, u, particleRand(seed, 10))
-			sx, sy := size, size
-			if ps.SizeOverLifetime.Enabled {
-				mul := curveValue(ps.SizeOverLifetime.Curve, u, particleRand(seed, 11))
-				if mul != 0 {
-					sx *= mul
-					sy *= mul
-				}
-				if xmul := curveValue(ps.SizeOverLifetime.X, u, particleRand(seed, 12)); xmul != 0 {
-					sx *= xmul
-				}
-				if ymul := curveValue(ps.SizeOverLifetime.Y, u, particleRand(seed, 13)); ymul != 0 {
-					sy *= ymul
-				}
-			}
-			if ps.Renderer.LengthScale > 0 {
-				sy *= ps.Renderer.LengthScale
-			}
-			if sx == 0 || sy == 0 {
-				continue
-			}
-
-			rot := curveValue(ps.StartRotation, u, particleRand(seed, 14))
-			if ps.RotationOverLifetime.Enabled {
-				rot += curveValue(ps.RotationOverLifetime.Curve, u, particleRand(seed, 15)) * sysAge
-				rot += curveValue(ps.RotationOverLifetime.Z, u, particleRand(seed, 16)) * sysAge
-			}
-			tint := startColor(ps.StartColor, particleRand(seed, 17))
-			if ps.ColorOverLifetime.Enabled {
-				tint = mulColor(tint, gradientColor(ps.ColorOverLifetime.Color, u, particleRand(seed, 18)))
-			}
-			if tint[3] <= 0 {
-				continue
-			}
-			opts := kart.SpriteOpts{Tint: tint}
-			opts.FlipX = ps.Renderer.Flip[0] != 0
-			opts.FlipY = ps.Renderer.Flip[1] != 0
-			r.Assets.DrawSpriteOpts(dst, sprite, world.Mul(kart.TRS(x, y, rot, sx, sy)), r.Proj, opts)
+			r.drawParticle(dst, ps, world, seed, u, sysAge, [2]float64{})
 		}
 	}
+}
+
+func (r *Runtime) drawStreamSystem(dst *ebiten.Image, stream Stream, ps kmdata.ParticleSystem, world kart.Aff, age float64) {
+	if !r.systemDrawable(ps) {
+		return
+	}
+	simSpeed := ps.SimulationSpeed
+	if simSpeed <= 0 {
+		simSpeed = 1
+	}
+	delay := curveValue(ps.StartDelay, 0, 0)
+	rate := stream.Rate
+	if rate <= 0 {
+		rate = curveValue(ps.Emission.RateOverTime, 0, 0.5)
+	}
+	if rate <= 0 {
+		return
+	}
+	maxLife := curveMax(ps.StartLifetime)
+	if maxLife <= 0 {
+		maxLife = r.FallbackLife
+	}
+	simAge := age * simSpeed
+	if stream.Prewarm {
+		simAge += maxLife
+	}
+	sysTime := simAge - delay
+	if sysTime < 0 {
+		return
+	}
+	start := int(math.Floor(math.Max(0, sysTime-maxLife) * rate))
+	end := int(math.Ceil(sysTime * rate))
+	if ps.MaxParticles > 0 && end-start > ps.MaxParticles {
+		start = end - ps.MaxParticles
+	}
+	for i := start; i < end; i++ {
+		emitT := float64(i) / rate
+		particleAge := sysTime - emitT
+		seed := streamParticleSeed(stream, ps.Path, i)
+		life := curveValue(ps.StartLifetime, 0, particleRand(seed, 1))
+		if life <= 0 || particleAge < 0 || particleAge > life {
+			continue
+		}
+		r.drawParticle(dst, ps, world, seed, clamp01(particleAge/life), particleAge, stream.Wind)
+	}
+}
+
+func (r *Runtime) systemDrawable(ps kmdata.ParticleSystem) bool {
+	return ps.Enabled && (r.IncludeOff || ps.Active) && ps.Emission.Enabled && ps.Renderer.Enabled
+}
+
+func (r *Runtime) drawParticle(dst *ebiten.Image, ps kmdata.ParticleSystem, world kart.Aff, seed uint64, u, age float64, wind [2]float64) {
+	sprite := particleSprite(ps, seed)
+	x, y := startOffset(ps, particleRand(seed, 3), particleRand(seed, 4))
+	vx, vy := startVelocity(ps, particleRand(seed, 5))
+	vx += wind[0]
+	vy += wind[1]
+	if ps.VelocityOverLifetime.Enabled {
+		vx += curveValue(ps.VelocityOverLifetime.X, u, particleRand(seed, 6))
+		vy += curveValue(ps.VelocityOverLifetime.Y, u, particleRand(seed, 7))
+	}
+	ax, ay := 0.0, -math.Abs(curveValue(ps.GravityModifier, u, 0))
+	if ps.ForceOverLifetime.Enabled {
+		ax += curveValue(ps.ForceOverLifetime.X, u, particleRand(seed, 8))
+		ay += curveValue(ps.ForceOverLifetime.Y, u, particleRand(seed, 9))
+	}
+	x += vx*age + 0.5*ax*age*age
+	y += vy*age + 0.5*ay*age*age
+
+	size := curveValue(ps.StartSize, u, particleRand(seed, 10))
+	sx, sy := size, size
+	if ps.SizeOverLifetime.Enabled {
+		mul := curveValue(ps.SizeOverLifetime.Curve, u, particleRand(seed, 11))
+		if mul != 0 {
+			sx *= mul
+			sy *= mul
+		}
+		if xmul := curveValue(ps.SizeOverLifetime.X, u, particleRand(seed, 12)); xmul != 0 {
+			sx *= xmul
+		}
+		if ymul := curveValue(ps.SizeOverLifetime.Y, u, particleRand(seed, 13)); ymul != 0 {
+			sy *= ymul
+		}
+	}
+	if ps.Renderer.LengthScale > 0 {
+		sy *= ps.Renderer.LengthScale
+	}
+	if sx == 0 || sy == 0 {
+		return
+	}
+
+	rot := curveValue(ps.StartRotation, u, particleRand(seed, 14))
+	if ps.RotationOverLifetime.Enabled {
+		rot += curveValue(ps.RotationOverLifetime.Curve, u, particleRand(seed, 15)) * age
+		rot += curveValue(ps.RotationOverLifetime.Z, u, particleRand(seed, 16)) * age
+	}
+	tint := startColor(ps.StartColor, particleRand(seed, 17))
+	if ps.ColorOverLifetime.Enabled {
+		tint = mulColor(tint, gradientColor(ps.ColorOverLifetime.Color, u, particleRand(seed, 18)))
+	}
+	if tint[3] <= 0 {
+		return
+	}
+	opts := kart.SpriteOpts{Tint: tint}
+	opts.FlipX = ps.Renderer.Flip[0] != 0
+	opts.FlipY = ps.Renderer.Flip[1] != 0
+	r.Assets.DrawSpriteOpts(dst, sprite, world.Mul(kart.TRS(x, y, rot, sx, sy)), r.Proj, opts)
+}
+
+func particleSprite(ps kmdata.ParticleSystem, seed uint64) string {
+	if len(ps.TextureSheet.Sprites) == 0 {
+		return kart.UnitySquareSprite
+	}
+	return ps.TextureSheet.Sprites[int(math.Floor(particleRand(seed, 2)*float64(len(ps.TextureSheet.Sprites))))%len(ps.TextureSheet.Sprites)]
 }
 
 func startOffset(ps kmdata.ParticleSystem, rx, ry float64) (float64, float64) {
@@ -406,6 +530,13 @@ func particleSeed(fx Effect, path string, burst, index int) uint64 {
 	h := hashString64(path)
 	h ^= math.Float64bits(fx.Beat) + 0x9e3779b97f4a7c15 + (h << 6) + (h >> 2)
 	h ^= uint64(burst+1)*0xbf58476d1ce4e5b9 + uint64(index+1)*0x94d049bb133111eb
+	return h
+}
+
+func streamParticleSeed(stream Stream, path string, index int) uint64 {
+	h := hashString64(path)
+	h ^= math.Float64bits(stream.StartT) + 0x9e3779b97f4a7c15 + (h << 6) + (h >> 2)
+	h ^= uint64(index+1) * 0x94d049bb133111eb
 	return h
 }
 

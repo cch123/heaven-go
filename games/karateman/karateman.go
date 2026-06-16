@@ -16,6 +16,7 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/vector"
 
 	"hsdemo/engine"
+	"hsdemo/games/internal/particlefx"
 	"hsdemo/kart"
 	"hsdemo/kmdata"
 	"hsdemo/riq"
@@ -131,14 +132,16 @@ type Module struct {
 
 	pots []*pot
 
-	bops []bopMarker
-	bgs  []bgEvt
-	// Pack-In uses one fire particle setup in The Miner Grind. These are a
-	// hand-rendered stand-in for the three Unity ParticleSystems until the
-	// generic ParticleSystem exporter covers the legacy Karate Man prefab.
+	bops          []bopMarker
+	bgs           []bgEvt
+	particles     *particlefx.Runtime
+	particleRoots map[int]string
+
 	particleType      int
 	particleWind      float64
 	particleIntensity float64
+	particleStartT    float64
+	particlePrewarm   bool
 
 	comboMode      int
 	noriMode       int
@@ -203,6 +206,12 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.wordProj = kart.Translate(engine.ScreenW/2-0.5*54, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.itemTint = [4]float64{1, 1, 1, 1}
 	m.starTint = [4]float64{1, 1, 1, 1}
+	m.particles = particlefx.NewIncludingInactive(ctx.Assets, m.proj, 6)
+	m.particleRoots = map[int]string{
+		1: karateParticleRoot(ctx.Assets, "Snow"),
+		2: karateParticleRoot(ctx.Assets, "Fire"),
+		3: karateParticleRoot(ctx.Assets, "Rain"),
+	}
 	return nil
 }
 
@@ -287,10 +296,13 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		typ := int(e.Float("type", 0))
 		wind := e.Float("valA", 1)
 		intensity := e.Float("valB", 1)
+		instant := boolParam(e, "instant")
 		m.ctx.At(b, func() {
 			m.particleType = typ
 			m.particleWind = wind
 			m.particleIntensity = intensity
+			m.particleStartT = m.ctx.Time()
+			m.particlePrewarm = instant
 		})
 	case "karateman/force facial expression":
 		face := int(e.Float("type", 0))
@@ -392,7 +404,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	m.drawTexture(screen, texture, texType, beat)
 	m.drawFX(screen, fx, fxType, beat)
 	vector.DrawFilledRect(screen, 0, float32(groundY), engine.ScreenW, engine.ScreenH-float32(groundY), shadeRGBA(bg, 0.78), false)
-	m.drawParticles(screen, beat)
+	m.drawParticles(screen, t)
 	m.drawSeriousBG(screen, beat)
 
 	proj := m.cameraProj(beat)
@@ -1141,24 +1153,32 @@ func (m *Module) drawScreenSprite(screen *ebiten.Image, sprite string, tint [4]f
 	screen.DrawImage(img, op)
 }
 
-func (m *Module) drawParticles(screen *ebiten.Image, beat float64) {
-	if m.particleType == 0 || m.particleIntensity <= 0 {
+func (m *Module) drawParticles(screen *ebiten.Image, t float64) {
+	if m.particleType == 0 || m.particleIntensity <= 0 || m.particles == nil {
 		return
 	}
-	count := int(28 * math.Max(0.5, m.particleIntensity))
-	for i := 0; i < count; i++ {
-		seed := float64(i) * 19.371
-		x := math.Mod(seed*37+beat*34*m.particleWind, engine.ScreenW+80) - 40
-		y := math.Mod(seed*53+beat*80, engine.ScreenH+80) - 40
-		switch m.particleType {
-		case 1:
-			vector.DrawFilledCircle(screen, float32(x), float32(y), 2.2, color.RGBA{245, 250, 255, 170}, false)
-		case 2:
-			vector.DrawFilledCircle(screen, float32(x), float32(groundY-40-math.Mod(seed*31+beat*70, 280)), 3.5, color.RGBA{255, 115, 36, 120}, false)
-		case 3:
-			vector.StrokeLine(screen, float32(x), float32(y), float32(x+12*m.particleWind), float32(y+34), 2, color.RGBA{170, 210, 255, 120}, false)
+	root := m.particleRoots[m.particleType]
+	rate := m.particleIntensity * 6
+	if m.particleType == 3 {
+		rate = m.particleIntensity * 32
+	}
+	stream, ok := m.particles.NewStream(root, root, [2]float64{}, m.particleStartT, rate)
+	if !ok {
+		return
+	}
+	stream.Wind[0] = m.particleWind
+	stream.Prewarm = m.particlePrewarm
+	m.particles.DrawStream(screen, stream, t)
+}
+
+func karateParticleRoot(as *kart.Assets, name string) string {
+	suffix := "/" + name
+	for _, ps := range as.Particles.Systems {
+		if ps.Path == name || strings.HasSuffix(ps.Path, suffix) {
+			return ps.Path
 		}
 	}
+	return ""
 }
 
 func karatePotFlight(st kmdata.Stage, throwBeat, rot0, beat float64) (x, y, z, rot float64) {

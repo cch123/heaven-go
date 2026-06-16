@@ -110,8 +110,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   Joe MappingMaterial 换色和 wig 开关已接入；Word prefab 已接入原版字形图集与
   `word/Word00..06` 动画；`Head.FaceXX` 表情 clip 已按 Unity 子树播放语义
   叠加在 Joe 身体动作之上；背景纹理与 Sunburst/Rings 已按官方单图贴图和
-  `bg/Sunburst`、`bg/Rings` 动画 clip 播放。
-  仍缺完整项：ParticleSystem 参数级复刻，这些作为显式简化保留。
+  `bg/Sunburst`、`bg/Rings` 动画 clip 播放；Snow/Fire/Rain weather
+  ParticleSystem 已从 `karateman.prefab` 导出，并按 `SetParticleEffect` 的
+  rateOverTime/instant/wind 语义驱动。
+  仍缺完整项：各物件 `HitParticles[]` 的逐物件命中碎片/爆点参数级复刻。
 - builtToScaleDS：`spawn blocks` 的生成、windup、判定、hit/NG/miss/Sink、
   Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
   提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载并
