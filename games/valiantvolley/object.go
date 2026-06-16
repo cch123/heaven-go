@@ -228,6 +228,18 @@ func (o *volleyObject) targetBeat() float64 {
 	return o.hitBeat
 }
 
+func (o *volleyObject) expectsInputAt(beat float64) bool {
+	if math.Abs(beat-(o.plan.start+o.plan.distance*3)) < 0.25 {
+		return true
+	}
+	for _, input := range o.plan.inputs {
+		if math.Abs(beat-(input+o.plan.distance*2)) < 0.25 {
+			return true
+		}
+	}
+	return false
+}
+
 func (o *volleyObject) update(m *Module, t, beat float64) {
 	if beat < o.plan.start {
 		return

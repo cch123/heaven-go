@@ -86,7 +86,7 @@ func (a *ant) action(m *Module, beat float64, action string, pitch float64) {
 
 func (m *Module) expecting(typ int, beat float64) bool {
 	for _, o := range m.objects {
-		if o.typ == typ && !o.dead && math.Abs(beat-o.targetBeat()) < 0.25 {
+		if o.typ == typ && !o.dead && !o.missed && o.expectsInputAt(beat) {
 			return true
 		}
 	}
