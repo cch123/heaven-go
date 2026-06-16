@@ -70,16 +70,19 @@ func TestKarateManLegacyRigAndStage(t *testing.T) {
 	if as.Sheet.Atlas != "atlas.png" {
 		t.Fatalf("atlas = %q, want atlas.png", as.Sheet.Atlas)
 	}
-	if got, want := as.Sheet.Atlases, []string{"atlas.png", "atlas1.png"}; len(got) != len(want) || got[0] != want[0] || got[1] != want[1] {
-		t.Fatalf("atlases = %#v, want %#v", got, want)
+	if got := as.Sheet.Atlases; len(got) != 9 || got[0] != "atlas.png" || got[1] != "atlas1.png" {
+		t.Fatalf("atlases = %#v, want two packed atlases plus seven background atlases", got)
 	}
-	if len(as.Sheet.Sprites) != 94 {
-		t.Fatalf("sprites = %d, want 94", len(as.Sheet.Sprites))
+	if len(as.Sheet.Sprites) != 101 {
+		t.Fatalf("sprites = %d, want 101", len(as.Sheet.Sprites))
 	}
 	for _, sprite := range []string{
 		"karateman_head_0", "karateman_arm_5", "karateman_pot", "karateman_object_shadow",
 		"karateman_word_1", "karateman_word_2", "karateman_word_3", "karateman_word_4",
 		"karateman_word_exclaim", "karateman_word_mu_en", "karateman_word_combo_en",
+		"bg_gradient", "radial_gradient", "karate_bg_bloody",
+		"karate_bg_sunburst_1", "karate_bg_sunburst_2",
+		"karate_bg_rings_1", "karate_bg_rings_2",
 	} {
 		if _, ok := as.Sheet.Sprites[sprite]; !ok {
 			t.Fatalf("missing sprite %s", sprite)
@@ -203,6 +206,48 @@ func TestKarateManWordRuntimeMapping(t *testing.T) {
 	}
 	if _, ok := legacyHitXWarningKind(&riq.Entity{Data: map[string]any{}}); ok {
 		t.Fatal("legacy hitX without type should be ignored")
+	}
+}
+
+func TestKarateManBackgroundClipsResolveOfficialSprites(t *testing.T) {
+	as := loadKarateManAssets(t)
+	for _, tc := range []struct {
+		typ     int
+		clip    string
+		sprites []string
+	}{
+		{typ: 1, clip: "bg/Sunburst", sprites: []string{"karate_bg_sunburst_1", "karate_bg_sunburst_2"}},
+		{typ: 2, clip: "bg/Rings", sprites: []string{"karate_bg_rings_1", "karate_bg_rings_2"}},
+		{typ: 3, clip: "bg/Rings", sprites: []string{"karate_bg_rings_1", "karate_bg_rings_2"}},
+	} {
+		if got := karateBGFXClip(tc.typ); got != tc.clip {
+			t.Fatalf("karateBGFXClip(%d) = %s, want %s", tc.typ, got, tc.clip)
+		}
+		clip := as.Anims[tc.clip]
+		if clip == nil {
+			t.Fatalf("missing %s", tc.clip)
+		}
+		for _, sprite := range tc.sprites {
+			if _, ok := as.Sheet.Sprites[sprite]; !ok {
+				t.Fatalf("%s references missing sprite %s", tc.clip, sprite)
+			}
+		}
+	}
+	for typ, want := range map[int]string{
+		1: "bg_gradient",
+		2: "radial_gradient",
+		3: "karate_bg_bloody",
+		4: "bg_gradient",
+	} {
+		if got := karateBGTextureSprite(typ); got != want {
+			t.Fatalf("karateBGTextureSprite(%d) = %s, want %s", typ, got, want)
+		}
+		if _, ok := as.Sheet.Sprites[want]; !ok {
+			t.Fatalf("texture type %d uses missing sprite %s", typ, want)
+		}
+	}
+	if karateBGTextureCovers(1) || !karateBGTextureCovers(2) || !karateBGTextureCovers(3) || karateBGTextureCovers(4) {
+		t.Fatal("background texture aspect rules drifted from Unity sliced vs regular sprites")
 	}
 }
 

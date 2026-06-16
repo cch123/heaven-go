@@ -230,6 +230,37 @@ func exportAtlas(tables map[string]*spriteTable) *kmdata.Sheet {
 			sheet.Sprites[name] = sp
 		}
 	}
+	for _, rel := range []string{
+		"bg_gradient.png",
+		"radial_gradient.png",
+		"karate_bg_bloody.png",
+		"karate_bg_sunburst_1.png",
+		"karate_bg_sunburst_2.png",
+		"karate_bg_rings_1.png",
+		"karate_bg_rings_2.png",
+	} {
+		metaPath := gamePath("Sprites", rel+".meta")
+		raw, err := os.ReadFile(metaPath)
+		must(err)
+		m, err := uy.ParseSingle(raw)
+		must(err)
+		t := tables[uy.S(m["guid"])]
+		if t == nil {
+			log.Fatalf("background texture %s missing from sprite table", rel)
+		}
+		atlasIdx := len(sheet.Atlases)
+		atlasName := fmt.Sprintf("atlas%d.png", atlasIdx)
+		png, err := os.ReadFile(t.pngPath)
+		must(err)
+		must(os.WriteFile(filepath.Join(*outDir, atlasName), png, 0o644))
+		sheet.Atlases = append(sheet.Atlases, atlasName)
+
+		base := strings.TrimSuffix(filepath.Base(t.pngPath), ".png")
+		sheet.Sprites[base] = kmdata.SpriteInfo{
+			X: 0, Y: 0, W: t.texW, H: t.texH,
+			PivotX: 0.5, PivotY: 0.5, Atlas: atlasIdx, PPU: t.ppu,
+		}
+	}
 	writeJSON("sprites.json", sheet)
 	fmt.Printf("atlas: %d atlases, %d sprites, ppu=%.2f\n", len(sheet.Atlases), len(sheet.Sprites), sheet.PPU)
 	return sheet

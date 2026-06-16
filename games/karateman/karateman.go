@@ -390,6 +390,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	}
 	screen.Fill(rgba(bg))
 	m.drawTexture(screen, texture, texType, beat)
+	m.drawFX(screen, fx, fxType, beat)
 	vector.DrawFilledRect(screen, 0, float32(groundY), engine.ScreenW, engine.ScreenH-float32(groundY), shadeRGBA(bg, 0.78), false)
 	m.drawParticles(screen, beat)
 	m.drawSeriousBG(screen, beat)
@@ -400,7 +401,6 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	m.drawPots(screen, t, beat, shadow, proj)
 	m.drawHitMarks(screen, beat)
 	m.drawWords(screen, t, beat)
-	m.drawFX(screen, fx, fxType, beat)
 	m.drawNori(screen)
 }
 
@@ -1055,52 +1055,90 @@ func (m *Module) drawWords(screen *ebiten.Image, t, beat float64) {
 }
 
 func (m *Module) drawTexture(screen *ebiten.Image, tint [4]float64, typ int, beat float64) {
-	if typ == 0 {
+	sprite := karateBGTextureSprite(typ)
+	if sprite == "" {
 		return
 	}
-	col := rgba(scaleAlpha(tint, 0.22))
-	switch typ {
-	case 1, 4:
-		for y := 0; y < engine.ScreenH; y += 18 {
-			alpha := uint8(25 + (y % 36))
-			col.A = alpha
-			vector.DrawFilledRect(screen, 0, float32(y), engine.ScreenW, 10, col, false)
-		}
-	case 2:
-		cx, cy := float32(engine.ScreenW/2), float32(engine.ScreenH/2)
-		for r := float32(60); r < 720; r += 90 {
-			col.A = uint8(36)
-			vector.StrokeCircle(screen, cx, cy, r+float32(math.Sin(beat)*6), 6, col, false)
-		}
-	case 3:
-		col.A = 34
-		for i := 0; i < 12; i++ {
-			x := float32(i * 92)
-			vector.StrokeLine(screen, x, 0, x-180, engine.ScreenH, 12, col, false)
-		}
-	}
+	m.drawScreenSprite(screen, sprite, tint, karateBGTextureCovers(typ))
 }
 
 func (m *Module) drawFX(screen *ebiten.Image, tint [4]float64, typ int, beat float64) {
-	if typ == 0 {
+	sprite := karateBGFXSprite(m.ctx.Assets.Anims, typ, beat)
+	if sprite == "" {
 		return
 	}
-	col := rgba(tint)
+	m.drawScreenSprite(screen, sprite, tint, true)
+}
+
+func karateBGTextureSprite(typ int) string {
+	switch typ {
+	case 1, 4:
+		return "bg_gradient"
+	case 2:
+		return "radial_gradient"
+	case 3:
+		return "karate_bg_bloody"
+	default:
+		return ""
+	}
+}
+
+func karateBGTextureCovers(typ int) bool {
+	// Gradient/SeniorGradient are SpriteRenderer sliced backgrounds; the other
+	// texture sprites keep their source aspect and cover the camera view.
+	return typ == 2 || typ == 3
+}
+
+func karateBGFXClip(typ int) string {
 	switch typ {
 	case 1:
-		cx, cy := float32(joeScreenX+160), float32(groundY-230)
-		for i := 0; i < 20; i++ {
-			a := float64(i)/20*math.Pi*2 + beat*0.08
-			x := cx + float32(math.Cos(a))*620
-			y := cy + float32(math.Sin(a))*620
-			vector.StrokeLine(screen, cx, cy, x, y, 18, col, false)
-		}
+		return "bg/Sunburst"
 	case 2, 3:
-		cx, cy := float32(engine.ScreenW/2), float32(engine.ScreenH/2)
-		for r := float32(80); r < 680; r += 120 {
-			vector.StrokeCircle(screen, cx, cy, r+float32(math.Mod(beat*16, 120)), 10, col, false)
-		}
+		// Old Remix Editor builds serialized the rings effect as 3; keep it
+		// resolving to the same official clip so imported custom levels behave.
+		return "bg/Rings"
+	default:
+		return ""
 	}
+}
+
+func karateBGFXSprite(anims map[string]*kmdata.Anim, typ int, beat float64) string {
+	clip := anims[karateBGFXClip(typ)]
+	if clip == nil || clip.Duration <= 0 {
+		return ""
+	}
+	// KarateMan.cs drives DoNormalizedAnimation with (songPos * 0.5) % 1,
+	// so the two-frame background effect advances on beat position, not wall time.
+	at := math.Mod(math.Max(beat, 0)*0.5, 1) * clip.Duration
+	pose := kart.SampleClipNode(clip, "", at)
+	if !pose.HasSprite {
+		return ""
+	}
+	return pose.Sprite
+}
+
+func (m *Module) drawScreenSprite(screen *ebiten.Image, sprite string, tint [4]float64, cover bool) {
+	img := m.ctx.Assets.Sub(sprite)
+	if img == nil {
+		return
+	}
+	b := img.Bounds()
+	w, h := float64(b.Dx()), float64(b.Dy())
+	if w <= 0 || h <= 0 {
+		return
+	}
+	sx := float64(engine.ScreenW) / w
+	sy := float64(engine.ScreenH) / h
+	if cover {
+		s := math.Max(sx, sy)
+		sx, sy = s, s
+	}
+	op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
+	op.GeoM.Translate(-w/2, -h/2)
+	op.GeoM.Scale(sx, sy)
+	op.GeoM.Translate(float64(engine.ScreenW)/2, float64(engine.ScreenH)/2)
+	op.ColorScale.Scale(float32(tint[0]), float32(tint[1]), float32(tint[2]), float32(tint[3]))
+	screen.DrawImage(img, op)
 }
 
 func (m *Module) drawParticles(screen *ebiten.Image, beat float64) {

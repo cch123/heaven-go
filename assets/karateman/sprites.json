@@ -2,10 +2,113 @@
  "atlas": "atlas.png",
  "atlases": [
   "atlas.png",
-  "atlas1.png"
+  "atlas1.png",
+  "atlas2.png",
+  "atlas3.png",
+  "atlas4.png",
+  "atlas5.png",
+  "atlas6.png",
+  "atlas7.png",
+  "atlas8.png"
  ],
  "ppu": 71.95853,
  "sprites": {
+  "bg_gradient": {
+   "X": 0,
+   "Y": 0,
+   "W": 512,
+   "H": 2048,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karate_bg_bloody": {
+   "X": 0,
+   "Y": 0,
+   "W": 1280,
+   "H": 960,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 400,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karate_bg_rings_1": {
+   "X": 0,
+   "Y": 0,
+   "W": 6250,
+   "H": 3516,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 7,
+   "ppu": 45,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karate_bg_rings_2": {
+   "X": 0,
+   "Y": 0,
+   "W": 6250,
+   "H": 3516,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 8,
+   "ppu": 45,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karate_bg_sunburst_1": {
+   "X": 0,
+   "Y": 0,
+   "W": 6250,
+   "H": 3516,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 5,
+   "ppu": 45,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karate_bg_sunburst_2": {
+   "X": 0,
+   "Y": 0,
+   "W": 6250,
+   "H": 3516,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 6,
+   "ppu": 45,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
   "karateman_alien": {
    "X": 3476,
    "Y": 2727,
@@ -1337,6 +1440,22 @@
    "PivotY": 0.29782745,
    "atlas": 1,
    "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "radial_gradient": {
+   "X": 0,
+   "Y": 0,
+   "W": 2048,
+   "H": 2048,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
    "border": [
     0,
     0,
