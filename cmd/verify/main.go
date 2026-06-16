@@ -22,6 +22,7 @@ import (
 	"hsdemo/games/agbsamuraislice"
 	"hsdemo/games/airboarder"
 	"hsdemo/games/airrally"
+	"hsdemo/games/animalacrobat"
 	"hsdemo/games/balloonhunter"
 	"hsdemo/games/basketballgirls"
 	"hsdemo/games/bigrockfinish"
@@ -34,6 +35,7 @@ import (
 	"hsdemo/games/builttoscaleds"
 	"hsdemo/games/builttoscalervl"
 	"hsdemo/games/cannery"
+	"hsdemo/games/catchoftheday"
 	"hsdemo/games/catchytune"
 	"hsdemo/games/chameleon"
 	"hsdemo/games/chargingchicken"
@@ -44,14 +46,20 @@ import (
 	"hsdemo/games/cropstomp"
 	"hsdemo/games/djschool"
 	"hsdemo/games/dogninja"
+	"hsdemo/games/doubledate"
 	"hsdemo/games/dressyourbest"
+	"hsdemo/games/drummerduel"
 	"hsdemo/games/drummingpractice"
 	"hsdemo/games/fallingwaffle"
+	"hsdemo/games/fanclub"
 	"hsdemo/games/figurefighter"
 	"hsdemo/games/fillbots"
 	"hsdemo/games/fireworks"
+	"hsdemo/games/firstcontact"
 	"hsdemo/games/flipperflop"
 	"hsdemo/games/forklifter"
+	"hsdemo/games/freezeframe"
+	"hsdemo/games/froghop"
 	"hsdemo/games/frogprincess"
 	"hsdemo/games/fruitbasket"
 	"hsdemo/games/gardendance"
@@ -61,16 +69,21 @@ import (
 	"hsdemo/games/kitties"
 	"hsdemo/games/launchparty"
 	"hsdemo/games/lockstep"
+	"hsdemo/games/lovelab"
 	"hsdemo/games/lovelizards"
 	"hsdemo/games/loverap"
+	"hsdemo/games/lumbearjack"
 	"hsdemo/games/magicgirl"
 	"hsdemo/games/mannequinfactory"
 	"hsdemo/games/manzai"
 	"hsdemo/games/marchingorders"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/moaidoowop"
+	"hsdemo/games/monkeywatch"
 	"hsdemo/games/mrupbeat"
 	"hsdemo/games/munchymonk"
+	"hsdemo/games/nailcarpenter"
+	"hsdemo/games/nightwalkagb"
 	"hsdemo/games/ninjabodyguard"
 	"hsdemo/games/nipinthebud"
 	"hsdemo/games/nogame"
@@ -79,6 +92,7 @@ import (
 	"hsdemo/games/pajamaparty"
 	"hsdemo/games/powercalligraphy"
 	"hsdemo/games/quizshow"
+	"hsdemo/games/rapmen"
 	"hsdemo/games/rhythmfighter"
 	"hsdemo/games/rhythmrally"
 	"hsdemo/games/rhythmsheriff"
@@ -99,16 +113,19 @@ import (
 	"hsdemo/games/spacedance"
 	"hsdemo/games/spacesoccer"
 	"hsdemo/games/splashdown"
+	"hsdemo/games/sumobrothers"
 	"hsdemo/games/supersamuraislice"
 	"hsdemo/games/tambourine"
 	"hsdemo/games/taptrial"
 	"hsdemo/games/taptroupe"
 	"hsdemo/games/thedazzles"
+	"hsdemo/games/tossboys"
 	"hsdemo/games/totemclimb"
 	"hsdemo/games/tramandpauline"
 	"hsdemo/games/trickclass"
 	"hsdemo/games/tunnel"
 	"hsdemo/games/valiantvolley"
+	"hsdemo/games/wariodemambo"
 	"hsdemo/games/wizardswaltz"
 	"hsdemo/games/workingdough"
 )
@@ -170,6 +187,7 @@ func main() {
 	engine.Register("agbSamuraiSlice", agbsamuraislice.New)
 	engine.Register("airRally", airrally.New)
 	engine.Register("airboarder", airboarder.New)
+	engine.Register("animalAcrobat", animalacrobat.New)
 	engine.Register("basketballGirls", basketballgirls.New)
 	engine.Register("balloonHunter", balloonhunter.New)
 	engine.Register("bigRockFinish", bigrockfinish.New)
@@ -180,6 +198,7 @@ func main() {
 	engine.Register("builtToScaleDS", builttoscaleds.New)
 	engine.Register("builtToScaleRvl", builttoscalervl.New)
 	engine.Register("cannery", cannery.New)
+	engine.Register("catchOfTheDay", catchoftheday.New)
 	engine.Register("catchyTune", catchytune.New)
 	engine.Register("clappyTrio", clappytrio.New)
 	engine.Register("chameleon", chameleon.New)
@@ -189,14 +208,20 @@ func main() {
 	engine.Register("cropStomp", cropstomp.New)
 	engine.Register("djSchool", djschool.New)
 	engine.Register("dogNinja", dogninja.New)
+	engine.Register("doubleDate", doubledate.New)
 	engine.Register("dressYourBest", dressyourbest.New)
+	engine.Register("drummerDuel", drummerduel.New)
 	engine.Register("drummingPractice", drummingpractice.New)
 	engine.Register("figureFighter", figurefighter.New)
 	engine.Register("fillbots", fillbots.New)
 	engine.Register("fireworks", fireworks.New)
 	engine.Register("fallingWaffle", fallingwaffle.New)
+	engine.Register("fanClub", fanclub.New)
+	engine.Register("firstContact", firstcontact.New)
 	engine.Register("flipperFlop", flipperflop.New)
 	engine.Register("forkLifter", forklifter.New)
+	engine.Register("freezeFrame", freezeframe.New)
+	engine.Register("frogHop", froghop.New)
 	engine.Register("fruitBasket", fruitbasket.New)
 	engine.Register("frogPrincess", frogprincess.New)
 	engine.Register("gardenDance", gardendance.New)
@@ -220,19 +245,25 @@ func main() {
 	engine.Register("kitties", kitties.New)
 	engine.Register("launchParty", launchparty.New)
 	engine.Register("lockstep", lockstep.New)
+	engine.Register("loveLab", lovelab.New)
 	engine.Register("loveLizards", lovelizards.New)
 	engine.Register("loveRap", loverap.New)
+	engine.Register("lumbearjack", lumbearjack.New)
 	engine.Register("magicGirl", magicgirl.New)
 	engine.Register("manzai", manzai.New)
 	engine.Register("mannequinFactory", mannequinfactory.New)
 	engine.Register("moaiDooWop", moaidoowop.New)
+	engine.Register("monkeyWatch", monkeywatch.New)
 	engine.Register("spaceball", spaceball.New)
 	engine.Register("spaceSoccer", spacesoccer.New)
 	engine.Register("spaceDance", spacedance.New)
 	engine.Register("splashdown", splashdown.New)
+	engine.Register("sumoBrothers", sumobrothers.New)
 	engine.Register("superSamuraiSlice", supersamuraislice.New)
 	engine.Register("mrUpbeat", mrupbeat.New)
 	engine.Register("munchyMonk", munchymonk.New)
+	engine.Register("nailCarpenter", nailcarpenter.New)
+	engine.Register("nightWalkAgb", nightwalkagb.New)
 	engine.Register("ninjaBodyguard", ninjabodyguard.New)
 	engine.Register("nipInTheBud", nipinthebud.New)
 	engine.Register("noGame", nogame.New)
@@ -241,6 +272,7 @@ func main() {
 	engine.Register("pajamaParty", pajamaparty.New)
 	engine.Register("powerCalligraphy", powercalligraphy.New)
 	engine.Register("quizShow", quizshow.New)
+	engine.Register("rapMen", rapmen.New)
 	engine.Register("rhythmFighter", rhythmfighter.New)
 	engine.Register("rhythmRally", rhythmrally.New)
 	engine.Register("rhythmTestGBA", rhythmtestgba.New)
@@ -254,8 +286,10 @@ func main() {
 	engine.Register("showtime", showtime.New)
 	engine.Register("sickBeats", sickbeats.New)
 	engine.Register("tramAndPauline", tramandpauline.New)
+	engine.Register("tossBoys", tossboys.New)
 	engine.Register("tunnel", tunnel.New)
 	engine.Register("valiantVolley", valiantvolley.New)
+	engine.Register("warioDeMambo", wariodemambo.New)
 	engine.Register("workingDough", workingdough.New)
 	engine.Register("wizardsWaltz", wizardswaltz.New)
 
