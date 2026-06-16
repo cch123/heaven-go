@@ -128,6 +128,14 @@ func TestValiantVolleyTimingAndMultiSpawnSemantics(t *testing.T) {
 	if multi.lastJuggle != 23 || multi.lastJuggleLength != 4 {
 		t.Fatalf("last juggle = beat %v len %v", multi.lastJuggle, multi.lastJuggleLength)
 	}
+	multiObj := &volleyObject{plan: multi, hitBeat: 29}
+	if got := multiObj.postHitLength(); got != multi.distance {
+		t.Fatalf("non-final hit post length = %v, want interval distance %v", got, multi.distance)
+	}
+	multiObj.hitBeat = 31
+	if got := multiObj.postHitLength(); got != multi.lastJuggleLength {
+		t.Fatalf("final hit post length = %v, want last juggle length %v", got, multi.lastJuggleLength)
+	}
 	if actionFruit != 3 {
 		t.Fatalf("fruit action channel = %d, want 3", actionFruit)
 	}

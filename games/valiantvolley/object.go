@@ -239,7 +239,7 @@ func (o *volleyObject) update(m *Module, t, beat float64) {
 		return
 	}
 	if o.hit || o.barely {
-		u := (beat - o.hitBeat) / o.plan.distance
+		u := (beat - o.hitBeat) / o.postHitLength()
 		if u > 1 {
 			o.dead = true
 		}
@@ -272,9 +272,9 @@ func (o *volleyObject) pos(beat float64) [3]float64 {
 	d := o.plan.distance
 	switch {
 	case o.hit:
-		return kart.EvalBezier(o.curve("object.hitCurve"), clamp01((beat-o.hitBeat)/d))
+		return kart.EvalBezier(o.curve("object.hitCurve"), clamp01((beat-o.hitBeat)/o.postHitLength()))
 	case o.barely:
-		return kart.EvalBezier(o.curve("object.barelyCurve"), clamp01((beat-o.hitBeat)/d))
+		return kart.EvalBezier(o.curve("object.barelyCurve"), clamp01((beat-o.hitBeat)/o.postHitLength()))
 	case beat < o.plan.start+d:
 		return kart.EvalBezier(o.curve("object.enterCurve"), clamp01((beat-o.plan.start)/d))
 	case beat < o.plan.start+2*d:
@@ -282,6 +282,15 @@ func (o *volleyObject) pos(beat float64) [3]float64 {
 	default:
 		return kart.EvalBezier(o.curve("object.bounceCurve2"), clamp01((beat-(o.plan.start+2*d))/d))
 	}
+}
+
+func (o *volleyObject) postHitLength() float64 {
+	if o.plan.lastJuggle != 0 && nearly(o.hitBeat, o.plan.lastJuggle+o.plan.distance*2) && o.plan.lastJuggleLength > 0 {
+		// VolleyObject.Update switches final multi-juggle hit/barely travel to
+		// lastJuggleLength so the return curve resolves at the interval end.
+		return o.plan.lastJuggleLength
+	}
+	return o.plan.distance
 }
 
 func (o *volleyObject) curve(name string) kmdata.Curve {
