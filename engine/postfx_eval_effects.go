@@ -77,6 +77,15 @@ func evalColorGradingParams(p *fxParams, list []fxEvt, beat float64) {
 	p.sat = evalNum(list, beat, "sat", 0)/100 + 1
 	p.bright = evalNum(list, beat, "bright", 0)/100 + 1
 	p.contra = evalNum(list, beat, "con", 0)/100 + 1
+	if evalFlag(list, beat, "technicolor", false) {
+		p.techInt = evalNum(list, beat, "tech", 0)
+		p.techExposure = 8 - evalNum(list, beat, "exposure", 1)
+		p.techBalance = [3]float64{
+			1 - evalNum(list, beat, "red", 0.5),
+			1 - evalNum(list, beat, "green", 0.5),
+			1 - evalNum(list, beat, "blue", 0.5),
+		}
+	}
 }
 
 func evalPixelQuadParams(p *fxParams, list []fxEvt, beat float64) {
@@ -105,6 +114,7 @@ func evalBloomParams(p *fxParams, list []fxEvt, beat float64) {
 	p.bloomInt = math.Exp2(inten/10) - 1 // PPv2 intensity 响应曲线。
 	p.bloomThr = evalNum(list, beat, "threshold", 1)
 	p.bloomKnee = evalNum(list, beat, "softKnee", 0.5)
+	p.bloomAna = math.Max(-1, math.Min(1, evalNum(list, beat, "ana", 0)))
 	p.bloomTint = evalColor(list, beat, "color", [4]float64{1, 1, 1, 1})
 }
 

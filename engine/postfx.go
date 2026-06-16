@@ -11,10 +11,10 @@
 //	→ Bloom 叠加（阈值软膝 + 高斯模糊，简化为 1/4 分辨率两轮）
 //	→ Vignette（classic 模式）→ Grain（hash 噪声近似胶片颗粒）
 //	→ Color Grading LDR（LMS 白平衡/滤色/色相/饱和/亮度/LogC 对比度）
+//	→ Technicolor（X-PostProcessing AfterStack）
 //
 // 已知简化（详见 README）：bloom 用固定两轮 1/4 分辨率模糊近似 PPv2 的
-// mip 金字塔；grain 用 hash 噪声近似烘焙噪声纹理；anamorphicRatio 未实现
-// （全部关卡取 0）；technicolor 未实现（全部关卡未启用）。
+// mip 金字塔；grain 用 hash 噪声近似烘焙噪声纹理。
 package engine
 
 import (

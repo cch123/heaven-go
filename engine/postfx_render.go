@@ -49,6 +49,7 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 	fx.bloomFull.Fill(color.Black)
 	if p.bloomOn {
 		knee := p.bloomThr*p.bloomKnee + 1e-5
+		blurX, blurY := bloomAnamorphicBlurScale(p.bloomAna)
 		fx.q1.Clear()
 		op := &ebiten.DrawRectShaderOptions{}
 		op.GeoM.Scale(0.25, 0.25)
@@ -63,12 +64,12 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 			fx.q2.Clear()
 			bo := &ebiten.DrawRectShaderOptions{}
 			bo.Images[0] = fx.q1
-			bo.Uniforms = map[string]any{"Dir": []float32{1, 0}}
+			bo.Uniforms = map[string]any{"Dir": []float32{float32(blurX), 0}}
 			fx.q2.DrawRectShader(ScreenW/4, ScreenH/4, fx.blur, bo)
 			fx.q1.Clear()
 			bo = &ebiten.DrawRectShaderOptions{}
 			bo.Images[0] = fx.q2
-			bo.Uniforms = map[string]any{"Dir": []float32{0, 1}}
+			bo.Uniforms = map[string]any{"Dir": []float32{0, float32(blurY)}}
 			fx.q1.DrawRectShader(ScreenW/4, ScreenH/4, fx.blur, bo)
 		}
 		uo := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
@@ -91,6 +92,8 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 		"Balance": []float32{float32(p.balR), float32(p.balG), float32(p.balB)},
 		"Filter":  []float32{float32(p.filter[0]), float32(p.filter[1]), float32(p.filter[2])},
 		"HSB":     []float32{float32(p.hue), float32(p.sat), float32(p.bright), float32(p.contra)},
+		"TechIE":  []float32{float32(p.techInt), float32(p.techExposure)},
+		"TechBal": []float32{float32(p.techBalance[0]), float32(p.techBalance[1]), float32(p.techBalance[2])},
 		"Grain":   []float32{float32(p.grainInt), float32(p.grainSize), float32(p.grainColored), float32(math.Mod(t, 64))},
 		"BloomIT": []float32{float32(p.bloomInt * p.bloomTint[0]), float32(p.bloomInt * p.bloomTint[1]), float32(p.bloomInt * p.bloomTint[2])},
 		"Glitch":  []float32{float32(p.scanJitter), float32(p.screenJump), float32(p.retroDistort), float32(math.Mod(t, 64))},
@@ -105,6 +108,17 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 		"CRP":     crP,
 	}
 	dst.DrawRectShader(ScreenW, ScreenH, fx.uber, op)
+}
+
+func bloomAnamorphicBlurScale(ratio float64) (float64, float64) {
+	ratio = math.Max(-1, math.Min(1, ratio))
+	// PPv2 通过改变 bloom pyramid 的初始宽高实现 anamorphicRatio：
+	// 正值横向拉伸、负值纵向拉伸。Go 端 bloom 链目前固定 1/4 两轮，
+	// 因此把同一语义折算到 separable blur 的采样轴上。
+	if ratio > 0 {
+		return 1 + ratio, 1
+	}
+	return 1, 1 - ratio
 }
 
 func packColorReplaceUniforms(p fxParams) ([]float32, []float32, []float32) {

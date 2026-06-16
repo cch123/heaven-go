@@ -51,6 +51,8 @@ var GradeOn float
 var Balance vec3
 var Filter vec3
 var HSB vec4     // (hueShift/360, sat, brightness, contrast)
+var TechIE vec2  // (technicolor intensity, 8-exposure)
+var TechBal vec3 // (1-redBalance, 1-greenBalance, 1-blueBalance)
 var Grain vec4   // (intensity, size, colored, time)
 var BloomIT vec3 // intensity * tint
 var Glitch vec4  // (scanJitter, screenJump, retroDistort, time)
@@ -130,6 +132,22 @@ func applyColorReplace(c vec3) vec3 {
 		c = colorReplaceOne(c, CRFrom[i].rgb, CRTo[i].rgb, CRP[i].xy)
 	}
 	return c
+}
+
+func applyTechnicolor(c vec3) vec3 {
+	if TechIE.x <= 0 {
+		return c
+	}
+	cyan := vec3(0.0, 1.30, 1.0)
+	magenta := vec3(1.0, 0.0, 1.05)
+	yellow := vec3(1.6, 1.6, 0.05)
+	exposure := max(TechIE.y, 1e-4)
+	balance := 1.0 / max(TechBal*exposure, vec3(1e-4))
+	nr := dot(vec2(1.05, 0.620), c.rg*balance.rr)
+	ng := dot(vec2(0.30, 1.0), c.rg*balance.gg)
+	nb := dot(vec2(1.0, 1.05), c.rb*balance.bb)
+	result := (vec3(nr) + cyan) * (vec3(ng) + magenta) * (vec3(nb) + yellow)
+	return mix(c, result, clamp(TechIE.x, 0, 1))
 }
 
 func scanJitterUV(uv vec2) vec2 {
@@ -326,6 +344,7 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 		c = pow(clamp(lin, vec3(0), vec3(1)), vec3(1.0/2.2))
 	}
 
+	c = applyTechnicolor(c)
 	c = applyColorReplace(c)
 
 	if Edge.z > 0.5 {

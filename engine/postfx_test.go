@@ -111,3 +111,73 @@ func TestColorReplaceDisableHidesAllSlots(t *testing.T) {
 		t.Fatalf("disabled colorReplace should not output any active slot: %#v", p)
 	}
 }
+
+func TestColorGradingTechnicolorParams(t *testing.T) {
+	list := []fxEvt{{
+		beat:   0,
+		length: 2,
+		data: map[string]any{
+			"enable":        true,
+			"technicolor":   true,
+			"techStart":     0.2,
+			"techEnd":       0.8,
+			"exposureStart": 2.0,
+			"exposureEnd":   4.0,
+			"redStart":      0.2,
+			"redEnd":        0.6,
+			"greenStart":    0.4,
+			"greenEnd":      0.8,
+			"blueStart":     0.1,
+			"blueEnd":       0.3,
+			"ease":          0.0,
+		},
+	}}
+	var p fxParams
+	evalColorGradingParams(&p, list, 1)
+	if !p.gradeOn {
+		t.Fatal("colorGrading should be enabled")
+	}
+	if math.Abs(p.techInt-0.5) > 1e-9 {
+		t.Fatalf("technicolor intensity did not ease: %v", p.techInt)
+	}
+	if math.Abs(p.techExposure-5.0) > 1e-9 {
+		t.Fatalf("technicolor exposure should use XPost 8-exposure transform: %v", p.techExposure)
+	}
+	wantBal := [3]float64{0.6, 0.4, 0.8}
+	for i := range wantBal {
+		if math.Abs(p.techBalance[i]-wantBal[i]) > 1e-9 {
+			t.Fatalf("technicolor balance[%d] = %v, want %v", i, p.techBalance[i], wantBal[i])
+		}
+	}
+}
+
+func TestBloomAnamorphicRatioParams(t *testing.T) {
+	list := []fxEvt{{
+		beat:   0,
+		length: 2,
+		data: map[string]any{
+			"enable":     true,
+			"intenStart": 1.0,
+			"intenEnd":   1.0,
+			"anaStart":   -1.0,
+			"anaEnd":     1.0,
+			"ease":       0.0,
+		},
+	}}
+	var p fxParams
+	evalBloomParams(&p, list, 1.5)
+	if !p.bloomOn {
+		t.Fatal("bloom should be enabled")
+	}
+	if math.Abs(p.bloomAna-0.5) > 1e-9 {
+		t.Fatalf("anamorphic ratio did not ease: %v", p.bloomAna)
+	}
+	x, y := bloomAnamorphicBlurScale(p.bloomAna)
+	if math.Abs(x-1.5) > 1e-9 || math.Abs(y-1.0) > 1e-9 {
+		t.Fatalf("positive anamorphic ratio should bias horizontal blur: %v %v", x, y)
+	}
+	x, y = bloomAnamorphicBlurScale(-0.75)
+	if math.Abs(x-1.0) > 1e-9 || math.Abs(y-1.75) > 1e-9 {
+		t.Fatalf("negative anamorphic ratio should bias vertical blur: %v %v", x, y)
+	}
+}

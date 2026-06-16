@@ -18,11 +18,14 @@ type fxParams struct {
 	balR, balG, balB         float64
 	filter                   [4]float64
 	hue, sat, bright, contra float64
+	techInt, techExposure    float64
+	techBalance              [3]float64
 	// pixelQuad
 	pixSize, pixRatio, pixSX, pixSY float64
 	// bloom
 	bloomOn                       bool
 	bloomInt, bloomThr, bloomKnee float64
+	bloomAna                      float64
 	bloomTint                     [4]float64
 	// X-PostProcessing glitch/blur/edge/color effects.
 	scanJitter, screenJump                  float64
