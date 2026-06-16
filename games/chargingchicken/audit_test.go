@@ -240,3 +240,15 @@ func TestChargingChickenMappedMaterials(t *testing.T) {
 		}
 	}
 }
+
+func TestChargingChickenUsesMaterialAlphaCurves(t *testing.T) {
+	as := loadChargingChickenAssets(t)
+	for _, anim := range as.Anims {
+		for _, attrs := range anim.Floats {
+			if len(attrs["material._Alpha"]) > 0 {
+				return
+			}
+		}
+	}
+	t.Fatal("chargingChicken should contain material._Alpha curves for parallax/background fades")
+}

@@ -29,6 +29,7 @@ type sceneNodeState struct {
 	renderOn        bool // SpriteRenderer m_Enabled（仅本节点，不传播）
 	color           [4]float64
 	matColor        [4]float64
+	matAlpha        float64 // material._Alpha：材质级透明度，最终与 SpriteRenderer.color.a 相乘
 	matAdd          [4]float64
 	matBlend        [4]float64
 	outlineWidth    float64
@@ -676,7 +677,7 @@ func (s *SceneInst) Sample(beat float64) {
 			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
 			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
 			active: !n.Inactive, renderOn: !n.Hidden,
-			color: c, matColor: [4]float64{1, 1, 1, 1}, size: n.Size, order: n.Order,
+			color: c, matColor: [4]float64{1, 1, 1, 1}, matAlpha: 1, size: n.Size, order: n.Order,
 		}
 	}
 	for i, v := range s.activeOver {
@@ -898,6 +899,8 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				case "a":
 					s.state[i].matColor[3] = v
 				}
+			case attr == "material._Alpha":
+				s.state[i].matAlpha = v
 			case strings.HasPrefix(attr, "material._BlendColor."):
 				ch := strings.TrimPrefix(attr, "material._BlendColor.")
 				switch ch {
@@ -980,7 +983,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if !s.actives[i] || !st.renderOn {
 			continue
 		}
-		if st.sprite == "" || st.color[3] <= 0 {
+		if st.sprite == "" || st.color[3]*st.matAlpha <= 0 {
 			continue
 		}
 		if s.as.Rig.Nodes[i].Mask {
@@ -1054,7 +1057,9 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		i := it.idx
 		st := &s.state[i]
-		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend, OutlineWidth: st.outlineWidth}
+		tint := st.color
+		tint[3] *= st.matAlpha
+		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend, OutlineWidth: st.outlineWidth}
 		if s.as.Rig.Nodes[i].DrawMode != 0 {
 			// sliced/tiled：m_Size 是权威尺寸——动画把它压到 0 即等于隐藏
 			//（原版光束收束就是 size.y→0），不能退化成"按原始尺寸绘制"

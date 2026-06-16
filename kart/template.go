@@ -477,6 +477,7 @@ type instNodeState struct {
 	renderOn        bool
 	color           [4]float64
 	matColor        [4]float64
+	matAlpha        float64 // material._Alpha：材质级透明度，最终与 SpriteRenderer.color.a 相乘
 	matAdd          [4]float64
 	matBlend        [4]float64
 	outlineWidth    float64
@@ -503,7 +504,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
 			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
 			active: !n.Inactive, renderOn: !n.Hidden,
-			color: c, order: n.Order,
+			color: c, matAlpha: 1, order: n.Order,
 			palette: scene.paletteOf(n.Mat),
 		}
 	}
@@ -561,14 +562,16 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			world[ti] = world[tn.Parent].Mul(local)
 			actives[ti] = st.active && actives[tn.Parent]
 		}
-		if !actives[ti] || !st.renderOn || st.sprite == "" || st.color[3] <= 0 {
+		tint := st.color
+		tint[3] *= st.matAlpha
+		if !actives[ti] || !st.renderOn || st.sprite == "" || tint[3] <= 0 {
 			continue
 		}
 		n := &t.as.Rig.Nodes[tn.RigIdx]
 		e := ExtraSprite{
 			Sprite: st.sprite, World: world[ti], Z: z,
 			Layer: n.Layer, Order: st.order,
-			FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor,
+			FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor,
 			OutlineWidth: st.outlineWidth,
 			Mapped:       n.Mapped, Mat: n.Mat,
 			Add: st.matAdd, Blend: st.matBlend,
@@ -753,6 +756,8 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 				case "a":
 					states[ti].matColor[3] = v
 				}
+			case attr == "material._Alpha":
+				states[ti].matAlpha = v
 			case strings.HasPrefix(attr, "material._BlendColor."):
 				ch := strings.TrimPrefix(attr, "material._BlendColor.")
 				switch ch {
