@@ -1,0 +1,1631 @@
+{
+ "bindings": [
+  {
+   "path": "Game/Models/ElevatorWithRod/Divider",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10206,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "fe19b7cdebcfcc048b1b853d82b84007",
+     "name": "Divider",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/Divider.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (1)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (2)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (3)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (4)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (5)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (6)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (7)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (8)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Environment/Planes/Plane (9)",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10209,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "3df450e97190f504d9ac4f14283b2e0a",
+     "name": "GridPlane",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Prefabs/FlyingRod/Divider",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10206,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "fe19b7cdebcfcc048b1b853d82b84007",
+     "name": "Divider",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/Divider.mat"
+    }
+   ],
+   "enabled": true
+  },
+  {
+   "path": "Game/Models/Prefabs/HitParts/Divider",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10202,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "fe19b7cdebcfcc048b1b853d82b84007",
+     "name": "Divider",
+     "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/Divider.mat"
+    }
+   ],
+   "enabled": true
+  }
+ ],
+ "materials": {
+  "05418807da86e2146bc9e10ad24a33aa": {
+   "name": "Object",
+   "guid": "05418807da86e2146bc9e10ad24a33aa",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/Object.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "floats": {
+    "_AdditionalLightIgnoreCelShade": 0.9,
+    "_AlphaClip": 0,
+    "_Angle": 89,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_CelShadeMidPoint": -0.5,
+    "_CelShadeSoftness": 0.05,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.379,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DirectLightMultiplier": 1,
+    "_DstBlend": 0,
+    "_EmissionMulByBaseColor": 0,
+    "_EnvironmentReflections": 1,
+    "_FirstOutlineWidth": 0.02,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.621,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_IndirectLightMultiplier": 1,
+    "_IsFace": 0,
+    "_MainLightIgnoreCelShade": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionRemapEnd": 1,
+    "_OcclusionRemapStart": 0,
+    "_OcclusionStrength": 1,
+    "_OutlineWidth": 4,
+    "_OutlineZOffset": 0,
+    "_OutlineZOffsetMaskRemapEnd": 1,
+    "_OutlineZOffsetMaskRemapStart": 0,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadowMappingAmount": 0.65,
+    "_ReceiveShadowMappingPosOffset": 0,
+    "_ReceiveShadows": 1,
+    "_SampleGI": 0,
+    "_SecondOutlineWidth": 0.02,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_UseAlphaClipping": 0,
+    "_UseEmission": 0,
+    "_UseOcclusion": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "_Color": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "_EmissionColor": [
+     0.20754719,
+     0.20754719,
+     0.20754719,
+     1
+    ],
+    "_EmissionMapChannelMask": [
+     1,
+     1,
+     1,
+     0
+    ],
+    "_FirstOutlineColor": [
+     0,
+     0,
+     0,
+     0.5
+    ],
+    "_IndirectLightMinColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_OcclusionMapChannelMask": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "_OutlineColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SecondOutlineColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_ShadowMapColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.2,
+     0.2,
+     0.2,
+     1
+    ]
+   }
+  },
+  "0a3c18cb015cf214d96424424e27f376": {
+   "name": "Bridge",
+   "guid": "0a3c18cb015cf214d96424424e27f376",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Bridge.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_EmissionMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.807,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 1,
+    "_SampleGI": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "_Color": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "_EmissionColor": [
+     0.122641504,
+     0.122641504,
+     0.122641504,
+     1
+    ],
+    "_SpecColor": [
+     0.2,
+     0.2,
+     0.2,
+     1
+    ]
+   }
+  },
+  "19e1f16b6cfe97b44abbebd8638abba7": {
+   "name": "Lights 4",
+   "guid": "19e1f16b6cfe97b44abbebd8638abba7",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Lights 4.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.689,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 0,
+    "_SampleGI": 0,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.1509434,
+     0.1509434,
+     0.1509434,
+     1
+    ]
+   }
+  },
+  "30ee7eac2a3457f469ba20a22c6dede1": {
+   "name": "Lights 1",
+   "guid": "30ee7eac2a3457f469ba20a22c6dede1",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Lights 1.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.689,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 0,
+    "_SampleGI": 0,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.1509434,
+     0.1509434,
+     0.1509434,
+     1
+    ]
+   }
+  },
+  "3df450e97190f504d9ac4f14283b2e0a": {
+   "name": "GridPlane",
+   "guid": "3df450e97190f504d9ac4f14283b2e0a",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GridPlane.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      28,
+      28
+     ],
+     "offset": [
+      0.5,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      28,
+      28
+     ],
+     "offset": [
+      0.5,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.689,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 0,
+    "_SampleGI": 0,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.1509434,
+     0.1509434,
+     0.1509434,
+     1
+    ]
+   }
+  },
+  "45fa01f86bd75304ab8466f06e0ba493": {
+   "name": "GapShadow",
+   "guid": "45fa01f86bd75304ab8466f06e0ba493",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/GapShadow.mat",
+   "shader": {
+    "fileID": 46,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "floats": {
+    "_AdditionalLightIgnoreCelShade": 0.9,
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_CelShadeMidPoint": -0.5,
+    "_CelShadeSoftness": 0.05,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_ColorMask": 15,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DirectLightMultiplier": 1,
+    "_DstBlend": 10,
+    "_EmissionMulByBaseColor": 0,
+    "_EnableExternalAlpha": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0,
+    "_GlossyReflections": 0,
+    "_IndirectLightMultiplier": 1,
+    "_IsFace": 0,
+    "_MainLightIgnoreCelShade": 0,
+    "_Metallic": 0,
+    "_Mode": 3,
+    "_OcclusionRemapEnd": 1,
+    "_OcclusionRemapStart": 0,
+    "_OcclusionStrength": 1,
+    "_OutlineWidth": 1,
+    "_OutlineZOffset": 0.0001,
+    "_OutlineZOffsetMaskRemapEnd": 1,
+    "_OutlineZOffsetMaskRemapStart": 0,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadowMappingAmount": 0.65,
+    "_ReceiveShadowMappingPosOffset": 0,
+    "_ReceiveShadows": 1,
+    "_SampleGI": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Stencil": 0,
+    "_StencilComp": 8,
+    "_StencilOp": 0,
+    "_StencilReadMask": 255,
+    "_StencilWriteMask": 255,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_UseAlphaClipping": 0,
+    "_UseEmission": 0,
+    "_UseOcclusion": 0,
+    "_UseUIAlphaClip": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 0
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     0,
+     0,
+     0.2509804
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_EmissionMapChannelMask": [
+     1,
+     1,
+     1,
+     0
+    ],
+    "_Flip": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "_IndirectLightMinColor": [
+     0.1,
+     0.1,
+     0.1,
+     1
+    ],
+    "_OcclusionMapChannelMask": [
+     1,
+     0,
+     0,
+     0
+    ],
+    "_OutlineColor": [
+     0.5,
+     0.5,
+     0.5,
+     1
+    ],
+    "_RendererColor": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "_ShadowMapColor": [
+     1,
+     0.825,
+     0.78,
+     1
+    ],
+    "_SpecColor": [
+     0.2,
+     0.2,
+     0.2,
+     1
+    ]
+   }
+  },
+  "73426b57c6ae34c4a9b416620cb72234": {
+   "name": "Line",
+   "guid": "73426b57c6ae34c4a9b416620cb72234",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Line.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.711,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 1,
+    "_SampleGI": 0,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "_Color": [
+     1,
+     0,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0.084905684,
+     0.084905684,
+     0.084905684,
+     1
+    ],
+    "_SpecColor": [
+     0.2,
+     0.2,
+     0.2,
+     1
+    ]
+   }
+  },
+  "9dd5968860c25854c81d2bab1f5413d6": {
+   "name": "Lights",
+   "guid": "9dd5968860c25854c81d2bab1f5413d6",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Lights.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.689,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 0,
+    "_SampleGI": 0,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.1509434,
+     0.1509434,
+     0.1509434,
+     1
+    ]
+   }
+  },
+  "bb162603bc9317b4c99d15b50be9b8ff": {
+   "name": "Lights 2",
+   "guid": "bb162603bc9317b4c99d15b50be9b8ff",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Lights 2.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.689,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 0,
+    "_SampleGI": 0,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.1509434,
+     0.1509434,
+     0.1509434,
+     1
+    ]
+   }
+  },
+  "d6c3778325e261f419ed0cd865aa532b": {
+   "name": "Hole",
+   "guid": "d6c3778325e261f419ed0cd865aa532b",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Hole.mat",
+   "shader": {
+    "fileID": 46,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 1,
+    "_SampleGI": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.2,
+     0.2,
+     0.2,
+     1
+    ]
+   }
+  },
+  "da6d7e38b05966f40b51e566d6b339a8": {
+   "name": "Lights 3",
+   "guid": "da6d7e38b05966f40b51e566d6b339a8",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Lights 3.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0.689,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 0,
+    "_SampleGI": 0,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.1509434,
+     0.1509434,
+     0.1509434,
+     1
+    ]
+   }
+  },
+  "eafa15cb3393da547b21d564d4e71546": {
+   "name": "Belt",
+   "guid": "eafa15cb3393da547b21d564d4e71546",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Belt.mat",
+   "shader": {
+    "fileID": 46,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "42ac679b050de8c4288fbafb9d353498",
+      "name": "Line00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Line00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "42ac679b050de8c4288fbafb9d353498",
+      "name": "Line00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Line00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      -0.6537118
+     ]
+    }
+   },
+   "floats": {
+    "PixelSnap": 0,
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnableExternalAlpha": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0,
+    "_Glossiness": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 1,
+    "_SampleGI": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_Flip": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "_RendererColor": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "_SpecColor": [
+     0.2,
+     0.2,
+     0.2,
+     1
+    ]
+   }
+  },
+  "f8523e095c9f2194d8ae47687a42305a": {
+   "name": "Grid",
+   "guid": "f8523e095c9f2194d8ae47687a42305a",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/Grid.mat",
+   "shader": {
+    "fileID": 45,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_BaseMap": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    },
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "657c2f9c15dce0541bcc21ff7c7ede1d",
+      "name": "cubeLine00",
+      "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/World/cubeLine00.png"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_AlphaClip": 0,
+    "_Blend": 0,
+    "_BumpScale": 1,
+    "_ClearCoatMask": 0,
+    "_ClearCoatSmoothness": 0,
+    "_Cull": 2,
+    "_Cutoff": 0.5,
+    "_DetailAlbedoMapScale": 1,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_EnvironmentReflections": 1,
+    "_GlossMapScale": 0.305,
+    "_Glossiness": 0.689,
+    "_GlossinessSource": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.005,
+    "_QueueOffset": 0,
+    "_ReceiveShadows": 0,
+    "_SampleGI": 0,
+    "_Shininess": 0,
+    "_Smoothness": 0.5,
+    "_SmoothnessSource": 0,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecSource": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_Surface": 0,
+    "_UVSec": 0,
+    "_WorkflowMode": 1,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_BaseColor": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_Color": [
+     0,
+     1,
+     0,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ],
+    "_SpecColor": [
+     0.1509434,
+     0.1509434,
+     0.1509434,
+     1
+    ]
+   }
+  },
+  "fe19b7cdebcfcc048b1b853d82b84007": {
+   "name": "Divider",
+   "guid": "fe19b7cdebcfcc048b1b853d82b84007",
+   "path": "Bundled/Games/BuiltToScaleDS/Models/Materials/Divider.mat",
+   "shader": {
+    "fileID": 10755,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "floats": {
+    "_BumpScale": 1,
+    "_Cutoff": 0.5,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_GlossMapScale": 1,
+    "_Glossiness": 0.5,
+    "_GlossyReflections": 1,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.02,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecularHighlights": 1,
+    "_SrcBlend": 1,
+    "_UVSec": 0,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_Color": [
+     0.509434,
+     0.509434,
+     0.509434,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ]
+   }
+  }
+ }
+}

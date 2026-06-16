@@ -11,7 +11,7 @@ import (
 
 func TestAirboarderExtractedAssetCoverage(t *testing.T) {
 	root := filepath.Join("..", "..", "assets", "airboarder")
-	for _, name := range []string{"scene.json", "sprites.json", "roles.json", "extra.json", "anims.json", "controllers.json", "animators.json", "atlas0.png"} {
+	for _, name := range []string{"scene.json", "sprites.json", "roles.json", "extra.json", "anims.json", "controllers.json", "animators.json", "meshes.json", "atlas0.png"} {
 		if _, err := os.Stat(filepath.Join(root, name)); err != nil {
 			t.Fatalf("missing %s: %v", name, err)
 		}
@@ -81,6 +81,35 @@ func TestAirboarderExtractedAssetCoverage(t *testing.T) {
 		if _, err := os.Stat(filepath.Join(root, "sounds", sound)); err != nil {
 			t.Fatalf("missing sound %s: %v", sound, err)
 		}
+	}
+}
+
+func TestAirboarderMeshRendererAssets(t *testing.T) {
+	root := filepath.Join("..", "..", "assets", "airboarder")
+	var meshes kmdata.MeshData
+	readJSON(t, filepath.Join(root, "meshes.json"), &meshes)
+	if len(meshes.Bindings) != 1 {
+		t.Fatalf("mesh bindings = %d, want 1", len(meshes.Bindings))
+	}
+	b := meshes.Bindings[0]
+	if b.Path != "Sky/vsn_mesh_1_" || b.Renderer != "MeshRenderer" {
+		t.Fatalf("sky mesh binding = %#v", b)
+	}
+	if b.Mesh.GUID == "" || b.Mesh.FileID == 0 {
+		t.Fatalf("sky mesh should preserve imported FBX guid+fileID: %#v", b.Mesh)
+	}
+	if len(b.Materials) != 1 || b.Materials[0].Name != "sky" {
+		t.Fatalf("sky material refs = %#v", b.Materials)
+	}
+	mat := meshes.Materials[b.Materials[0].GUID]
+	if mat.Name != "sky" {
+		t.Fatalf("sky material not exported: %#v", mat)
+	}
+	if tex := mat.Textures["_MainTex"].Texture; tex.GUID == "" || tex.FileID == 0 {
+		t.Fatalf("sky _MainTex texture ref not preserved: %#v", tex)
+	}
+	if mat.Colors["_Color"] == ([4]float64{}) {
+		t.Fatalf("sky material color missing: %#v", mat.Colors)
 	}
 }
 

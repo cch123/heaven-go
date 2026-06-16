@@ -112,8 +112,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   播放（当前为单 RigInst clip），这些作为显式简化保留。
 - builtToScaleDS：`spawn blocks` 的生成、windup、判定、hit/NG/miss/Sink、
   Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
-  提取器已导出且运行时已加载 `meshes.json`（内置 mesh fileID、MeshRenderer
-  材质、纹理槽、float/color 材质参数），当前运行时仍用 Ebitengine 几何体替代 3D
+  提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载
+  （内置 mesh fileID、MeshRenderer 材质、纹理槽、float/color 材质参数），
+  当前运行时仍用 Ebitengine 几何体替代 3D
   SkinnedMeshRenderer/材质渲染；Piano 的 `SetLoopParams(beat+length, 0.1f)`
   持续尾音和淡出已接入。
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/
@@ -133,9 +134,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   颜色/相机事件、arch/wall 判定窗口、CPU/玩家编舞、ready/yeah/miss/barely
   音效序列已按 C# 时序接入；提取器已导出 `Models` 下的 airboy、arch、
   wall、dog、floor controller 和所有 `.anim`，并把 Animator 曲线访问的 FBX
-  内部骨架 path 合成为 scene 节点；MeshRenderer/材质/纹理槽已导出并由运行时
-  加载到 `Assets.Meshes`。原版主体是 MeshRenderer/材质贴图的 3D 场景，当前暂用
-  手写 2D billboard 渲染，仍待补 MeshRenderer 渲染、CameraPivot/FOV 与
+  内部骨架 path 合成为 scene 节点；MeshRenderer/材质/纹理槽已导出，
+  `assets/airboarder/meshes.json` 已入库并由运行时加载到 `Assets.Meshes`。
+  原版主体是 MeshRenderer/材质贴图的 3D 场景，当前暂用手写 2D billboard
+  渲染，仍待补 MeshRenderer 渲染、CameraPivot/FOV 与
   ScrollingFloor 材质滚动的完整运行时支持。
 - animalAcrobat：动物队列、障碍旋转/hold 判定、起跳/落地、背景颜色、
   Spotlight/Confetti、BGTileManager 双 tile 回收，以及 AnimalAcrobat.CameraUpdate

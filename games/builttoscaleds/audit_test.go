@@ -16,6 +16,7 @@ type builtToScaleDSAssets struct {
 	Rig         kmdata.Rig
 	Roles       kmdata.Roles
 	Extra       kmdata.Extra
+	Meshes      kmdata.MeshData
 	Anims       map[string]*kmdata.Anim
 	Controllers map[string]kmdata.Controller
 	Animators   kmdata.Animators
@@ -33,6 +34,7 @@ func loadBuiltToScaleDSAssets(t *testing.T) *builtToScaleDSAssets {
 	readAssetJSON(t, filepath.Join(root, "scene.json"), &as.Rig)
 	readAssetJSON(t, filepath.Join(root, "roles.json"), &as.Roles)
 	readAssetJSON(t, filepath.Join(root, "extra.json"), &as.Extra)
+	readAssetJSON(t, filepath.Join(root, "meshes.json"), &as.Meshes)
 	readAssetJSON(t, filepath.Join(root, "anims.json"), &as.Anims)
 	readAssetJSON(t, filepath.Join(root, "controllers.json"), &as.Controllers)
 	readAssetJSON(t, filepath.Join(root, "animators.json"), &as.Animators)
@@ -88,6 +90,60 @@ func TestBuiltToScaleDSBindings(t *testing.T) {
 	} {
 		if got := as.Roles[role]; got != want {
 			t.Fatalf("role %s = %q, want %q", role, got, want)
+		}
+	}
+}
+
+func TestBuiltToScaleDSMeshRendererAssets(t *testing.T) {
+	as := loadBuiltToScaleDSAssets(t)
+	if len(as.Meshes.Bindings) != 13 {
+		t.Fatalf("mesh bindings = %d, want 13", len(as.Meshes.Bindings))
+	}
+	var gridPlanes, dividers int
+	seenPath := map[string]bool{}
+	for _, b := range as.Meshes.Bindings {
+		if !hasNode(as.Rig, b.Path) {
+			t.Fatalf("mesh binding %q does not point at a scene node", b.Path)
+		}
+		if b.Renderer != "MeshRenderer" {
+			t.Fatalf("binding %q renderer = %q, want MeshRenderer", b.Path, b.Renderer)
+		}
+		if b.Mesh.FileID == 10209 {
+			gridPlanes++
+		}
+		if b.Mesh.FileID == 10206 || b.Mesh.FileID == 10202 {
+			dividers++
+		}
+		for _, ref := range b.Materials {
+			if ref.GUID == "" {
+				t.Fatalf("binding %q has empty material guid", b.Path)
+			}
+			if _, ok := as.Meshes.Materials[ref.GUID]; !ok {
+				t.Fatalf("binding %q material %s missing from table", b.Path, ref.GUID)
+			}
+		}
+		seenPath[b.Path] = true
+	}
+	if gridPlanes != 10 {
+		t.Fatalf("grid plane mesh count = %d, want 10", gridPlanes)
+	}
+	if dividers != 3 {
+		t.Fatalf("divider mesh count = %d, want 3", dividers)
+	}
+	for _, path := range []string{
+		"Game/Models/Environment/Planes/Plane",
+		"Game/Models/Environment/Planes/Plane (9)",
+		"Game/Models/ElevatorWithRod/Divider",
+		"Game/Models/Prefabs/FlyingRod/Divider",
+		"Game/Models/Prefabs/HitParts/Divider",
+	} {
+		if !seenPath[path] {
+			t.Fatalf("missing mesh binding %s", path)
+		}
+	}
+	for _, mat := range []string{"GridPlane", "Divider", "Object", "Belt", "Grid"} {
+		if !hasMaterialName(as.Meshes, mat) {
+			t.Fatalf("missing material %s in mesh material table", mat)
 		}
 	}
 }
@@ -232,6 +288,15 @@ func requireComponent(t *testing.T, extra kmdata.Extra, name string) kmdata.Comp
 func hasNode(r kmdata.Rig, path string) bool {
 	for _, n := range r.Nodes {
 		if n.Path == path {
+			return true
+		}
+	}
+	return false
+}
+
+func hasMaterialName(meshes kmdata.MeshData, name string) bool {
+	for _, mat := range meshes.Materials {
+		if mat.Name == name {
 			return true
 		}
 	}

@@ -1,0 +1,97 @@
+{
+ "bindings": [
+  {
+   "path": "Sky/vsn_mesh_1_",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": -1677165586242444022,
+    "guid": "669fa6d6b4096764387b9cf777fbf915",
+    "name": "scene",
+    "path": "Bundled/Games/Airboarder/Models/scene.fbx"
+   },
+   "materials": [
+    {
+     "fileID": 2100000,
+     "guid": "d308d6053cbc091489ae82391d36d476",
+     "name": "sky",
+     "path": "Bundled/Games/Airboarder/Models/Materials/sky.mat"
+    }
+   ],
+   "enabled": true
+  }
+ ],
+ "materials": {
+  "d308d6053cbc091489ae82391d36d476": {
+   "name": "sky",
+   "guid": "d308d6053cbc091489ae82391d36d476",
+   "path": "Bundled/Games/Airboarder/Models/Materials/sky.mat",
+   "shader": {
+    "fileID": 10755,
+    "guid": "0000000000000000f000000000000000"
+   },
+   "textures": {
+    "_MainTex": {
+     "texture": {
+      "fileID": 2800000,
+      "guid": "5b82c9572d4fe7c41af997c06e051ea0"
+     },
+     "scale": [
+      1,
+      1
+     ],
+     "offset": [
+      0,
+      0
+     ]
+    }
+   },
+   "floats": {
+    "_BumpScale": 1,
+    "_ColorMask": 15,
+    "_CullMode": 0,
+    "_Cutoff": 0.5,
+    "_DetailNormalMapScale": 1,
+    "_DstBlend": 0,
+    "_GlossMapScale": 1,
+    "_Glossiness": 0,
+    "_GlossyReflections": 0,
+    "_Metallic": 0,
+    "_Mode": 0,
+    "_OcclusionStrength": 1,
+    "_Parallax": 0.02,
+    "_SmoothnessTextureChannel": 0,
+    "_SpecularHighlights": 0,
+    "_SrcBlend": 1,
+    "_Stencil": 0,
+    "_StencilComp": 8,
+    "_StencilOp": 0,
+    "_StencilReadMask": 255,
+    "_StencilWriteMask": 255,
+    "_Threshold": 0,
+    "_UVSec": 0,
+    "_UseUIAlphaClip": 0,
+    "_ZWrite": 1
+   },
+   "colors": {
+    "_ClipRect": [
+     -32767,
+     -32767,
+     32767,
+     32767
+    ],
+    "_Color": [
+     0.9921569,
+     0.7686275,
+     0.9921569,
+     1
+    ],
+    "_EmissionColor": [
+     0,
+     0,
+     0,
+     1
+    ]
+   }
+  }
+ }
+}
