@@ -37,6 +37,8 @@ func Ease(kind int, start, end, v float64) float64 {
 		return start + easeBack(kind, d, v)
 	case 29, 30, 31:
 		return start + easeElastic(kind, d, v)
+	case 32: // Spring
+		return start + easeSpring(d, v)
 	case 33, 34, 35, 36, 37, 38, 39, 40, 41, 42:
 		return start + easeOutIn(kind, d, v)
 	case 43: // InstantOut

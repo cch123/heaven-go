@@ -97,13 +97,3 @@ func colorOf(m map[string]any, key string, def [4]float64) [4]float64 {
 	}
 	return [4]float64{get("r", def[0]), get("g", def[1]), get("b", def[2]), get("a", def[3])}
 }
-
-func clamp01(v float64) float64 {
-	if v < 0 {
-		return 0
-	}
-	if v > 1 {
-		return 1
-	}
-	return v
-}

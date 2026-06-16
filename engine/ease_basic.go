@@ -112,3 +112,10 @@ func easeCirc(kind int, d, v float64) float64 {
 		return d / 2 * (math.Sqrt(1-v*v) + 1)
 	}
 }
+
+func easeSpring(d, v float64) float64 {
+	// Direct port of Heaven Studio Util.EasingFunction.Spring. Unlike the
+	// polynomial families, Spring intentionally overshoots before settling.
+	w := (math.Sin(v*math.Pi*(0.2+2.5*v*v*v))*math.Pow(1-v, 2.2) + v) * (1 + 1.2*(1-v))
+	return d * w
+}
