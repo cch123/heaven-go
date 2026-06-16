@@ -144,10 +144,10 @@ func TestBallPathData(t *testing.T) {
 		t.Fatalf("impact time = %v", got)
 	}
 	pos, h, val := samplePath(paths["SoccerIn"], 1.5, 0, [3]float64{})
-	if pos[0] <= -12.5 || pos[0] >= -7.75 {
+	if pos[0] <= -7.75 || pos[0] >= -2.15 {
 		t.Fatalf("sample x = %v", pos[0])
 	}
-	if h <= 0 || val("rot") != 135 {
+	if h <= 0 || math.Abs(val("rot")-202.5) > 1e-6 {
 		t.Fatalf("sample height/rot = %v/%v", h, val("rot"))
 	}
 }

@@ -67,7 +67,11 @@ func (p bouncePath) eval(elapsed float64) [2]float64 {
 			}
 			continue
 		}
-		if elapsed <= segStart+cur.duration {
+		// Unity's SuperCurveObject switches to the next segment on exact
+		// boundaries. That matters for hit-frame values and for paths that use
+		// useLastRealPos, so keep the strict comparison instead of clamping the
+		// previous segment through its endpoint.
+		if elapsed < segStart+cur.duration {
 			u := clamp01((elapsed - segStart) / cur.duration)
 			start := cur.pos
 			if cur.useLastReal {
