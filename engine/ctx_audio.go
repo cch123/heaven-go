@@ -137,6 +137,34 @@ func (c *Ctx) SoundLoopPitchVol(name string, pitch, vol float64) func() {
 	return c.SoundLoopPitchHandle(name, pitch, vol).StopFunc()
 }
 
+// SoundLoopPitchVolUntil mirrors Sound.SetLoopParams: the loop stays at full
+// volume until endBeat, then fades over fadeSec before being stopped.
+func (c *Ctx) SoundLoopPitchVolUntil(name string, pitch, vol, endBeat, fadeSec float64) *SoundLoopHandle {
+	handle := c.SoundLoopPitchHandle(name, pitch, vol)
+	c.fadeAndStopLoop(handle, endBeat, fadeSec, vol)
+	return handle
+}
+
+func (c *Ctx) fadeAndStopLoop(handle *SoundLoopHandle, endBeat, fadeSec, vol float64) {
+	if handle == nil {
+		return
+	}
+	if fadeSec <= 0 || c.App == nil || c.App.bm == nil {
+		c.At(endBeat, handle.Stop)
+		return
+	}
+	startTime := c.BeatToTime(endBeat)
+	stopTime := startTime + fadeSec
+	const steps = 6
+	for i := 1; i <= steps; i++ {
+		u := float64(i) / steps
+		level := vol * (1 - u)
+		beat := c.TimeToBeat(startTime + fadeSec*u)
+		c.At(beat, func() { handle.SetVolume(level) })
+	}
+	c.At(c.TimeToBeat(stopTime), handle.Stop)
+}
+
 // SoundLoopPitchHandle 创建可在播放期间变更 pitch 的循环音效。
 // Rockers 的 BendUp/BendDown 与 Fillbots 的 water loop 都依赖 Unity
 // AudioSource.pitch 连续变化，因此这里不能再预先重采样成固定 pitch。

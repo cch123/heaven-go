@@ -24,6 +24,7 @@ const (
 	blockHitFrame        = 39.0
 	blockTotalFrames     = 80.0
 	spawnFrameOffset     = -3.0
+	pianoFadeSec         = 0.1
 
 	actionFlick = 0
 )
@@ -362,18 +363,20 @@ func (m *Module) findBlock(ev blockEvt) *block {
 }
 
 func (m *Module) schedulePiano(beat, length float64, semitone int) {
+	stopBeat := pianoEndBeat(beat, length)
 	m.ctx.At(beat, func() {
 		if m.ctx.GameAt(beat) == m.ID() {
-			m.ctx.SoundPitchOff("Piano", 0.8, semitonePitch(semitone), 0)
+			m.ctx.SoundLoopPitchVolUntil("Piano", semitonePitch(semitone), 0.8, stopBeat, pianoFadeSec)
 		}
 	})
 }
 
-func (m *Module) playPianoNow(_ float64, semitone int) {
-	// SoundByte.SetLoopParams sustains Piano until beat+length. ctx audio only
-	// exposes one-shot playback today, so the note onset and pitch are exact
-	// while sustain length is tracked as a known simplification in README.
-	m.ctx.SoundPitch("Piano", 0.8, semitonePitch(semitone))
+func (m *Module) playPianoNow(length float64, semitone int) {
+	m.ctx.SoundLoopPitchVolUntil("Piano", semitonePitch(semitone), 0.8, pianoEndBeat(m.ctx.Beat(), length), pianoFadeSec)
+}
+
+func pianoEndBeat(beat, length float64) float64 {
+	return beat + math.Max(0, length)
 }
 
 func (m *Module) cameraAt(beat float64) (rot, zoom float64) {

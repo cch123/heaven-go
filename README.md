@@ -112,8 +112,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   播放（当前为单 RigInst clip），这些作为显式简化保留。
 - builtToScaleDS：`spawn blocks` 的生成、windup、判定、hit/NG/miss/Sink、
   Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
-  当前用 Ebitengine 几何体替代 3D SkinnedMeshRenderer/材质渲染，Piano 的
-  `SetLoopParams` 持续尾音先按准确音高的一次性触发处理。
+  当前用 Ebitengine 几何体替代 3D SkinnedMeshRenderer/材质渲染；Piano 的
+  `SetLoopParams(beat+length, 0.1f)` 持续尾音和淡出已接入。
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/
   `cmon`/`lastOne`/together riff 的事件流、JJ/Soshi 动画、循环和弦/逐弦音色、
   premade sample enum、mute 收尾、摄像机 pass-turn 与 C# `BendUp/BendDown(0.05f)`

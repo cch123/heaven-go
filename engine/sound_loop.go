@@ -37,6 +37,13 @@ func (h *SoundLoopHandle) SetPitch(pitch float64) {
 	h.reader.SetPitch(pitch)
 }
 
+func (h *SoundLoopHandle) SetVolume(vol float64) {
+	if h == nil || h.player == nil {
+		return
+	}
+	h.player.SetVolume(vol)
+}
+
 func (h *SoundLoopHandle) RampPitch(target, seconds float64) {
 	if h == nil || h.reader == nil {
 		return

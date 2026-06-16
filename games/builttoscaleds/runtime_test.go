@@ -22,6 +22,12 @@ func TestBuiltToScaleDSStaccatoAndPitch(t *testing.T) {
 	assertRuntimeNear(t, semitonePitch(12), 2)
 }
 
+func TestBuiltToScaleDSPianoLoopParams(t *testing.T) {
+	assertRuntimeNear(t, pianoEndBeat(12, 0.75), 12.75)
+	assertRuntimeNear(t, pianoEndBeat(12, -0.25), 12)
+	assertRuntimeNear(t, pianoFadeSec, 0.1)
+}
+
 func TestBuiltToScaleDSBlockFrameMatchesUnityConstants(t *testing.T) {
 	ev := blockEvt{beat: 72.5, length: 0.75}
 	frame := blockAnimFrame(ev, hitBeat(ev), 0.5)
