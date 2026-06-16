@@ -30,6 +30,7 @@ type sceneNodeState struct {
 	color           [4]float64
 	matColor        [4]float64
 	matAlpha        float64 // material._Alpha：材质级透明度，最终与 SpriteRenderer.color.a 相乘
+	matOpacity      float64 // material._Opacity：Airboarder 透明材质的独立淡入淡出因子
 	matProgress     float64 // material._Progress：ChargingChicken ChickenCar 充能渐变
 	hasMatProgress  bool
 	matAdd          [4]float64
@@ -681,7 +682,7 @@ func (s *SceneInst) Sample(beat float64) {
 			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
 			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
 			active: !n.Inactive, renderOn: !n.Hidden,
-			color: c, matColor: [4]float64{1, 1, 1, 1}, matAlpha: 1, size: n.Size, order: n.Order,
+			color: c, matColor: [4]float64{1, 1, 1, 1}, matAlpha: 1, matOpacity: 1, size: n.Size, order: n.Order,
 		}
 	}
 	for i, v := range s.activeOver {
@@ -866,6 +867,13 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				s.state[i].active = v > 0.5
 			case attr == "m_Enabled":
 				s.state[i].renderOn = v > 0.5
+			case attr == "m_AnchoredPosition.x":
+				// World-space Canvas children are serialized as RectTransforms, but
+				// HS uses them as ordinary local offsets (Charging Chicken water UV
+				// scroll). In the Go scene tree they must drive transform position.
+				s.state[i].pos[0] = v
+			case attr == "m_AnchoredPosition.y":
+				s.state[i].pos[1] = v
 			case strings.HasPrefix(attr, "m_Color."), strings.HasPrefix(attr, "m_fontColor."):
 				ch := strings.TrimPrefix(attr, "m_Color.")
 				ch = strings.TrimPrefix(ch, "m_fontColor.")
@@ -905,6 +913,8 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				}
 			case attr == "material._Alpha":
 				s.state[i].matAlpha = v
+			case attr == "material._Opacity":
+				s.state[i].matOpacity = v
 			case attr == "material._Progress":
 				s.state[i].matProgress = v
 				s.state[i].hasMatProgress = true
@@ -990,7 +1000,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if !s.actives[i] || !st.renderOn {
 			continue
 		}
-		if st.sprite == "" || st.color[3]*st.matAlpha <= 0 {
+		if st.sprite == "" || st.color[3]*st.matAlpha*st.matOpacity <= 0 {
 			continue
 		}
 		if s.as.Rig.Nodes[i].Mask {
@@ -1069,7 +1079,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		i := it.idx
 		st := &s.state[i]
 		tint := st.color
-		tint[3] *= st.matAlpha
+		tint[3] *= st.matAlpha * st.matOpacity
 		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend, OutlineWidth: st.outlineWidth}
 		if s.as.Rig.Nodes[i].DrawMode != 0 {
 			// sliced/tiled：m_Size 是权威尺寸——动画把它压到 0 即等于隐藏

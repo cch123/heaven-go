@@ -265,6 +265,21 @@ func TestChargingChickenUsesMaterialProgressCurves(t *testing.T) {
 	t.Fatal("chargingChicken should contain material._Progress curves for ChickenCar fade")
 }
 
+func TestChargingChickenUsesAnchoredWaterScrollCurves(t *testing.T) {
+	as := loadChargingChickenAssets(t)
+	for name, anim := range as.Anims {
+		if !strings.Contains(name, "WaterScroll") {
+			continue
+		}
+		for _, attrs := range anim.Floats {
+			if len(attrs["m_AnchoredPosition.x"]) > 0 {
+				return
+			}
+		}
+	}
+	t.Fatal("chargingChicken WaterScroll clips should contain m_AnchoredPosition.x curves")
+}
+
 func TestCarChargeProgressMatchesUnityWindow(t *testing.T) {
 	m := &Module{inputting: true, nextInputReady: 18, yardsLength: 6}
 	for _, tc := range []struct {

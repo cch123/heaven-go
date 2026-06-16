@@ -104,6 +104,29 @@ func TestAirboarderSynthesizesImportedModelAnimPaths(t *testing.T) {
 	}
 }
 
+func TestAirboarderMaterialCurvesRemainExtracted(t *testing.T) {
+	var anims map[string]*kmdata.Anim
+	readJSON(t, filepath.Join("..", "..", "assets", "airboarder", "anims.json"), &anims)
+	seenOpacity := false
+	seenFresnel := false
+	for _, anim := range anims {
+		for _, attrs := range anim.Floats {
+			if len(attrs["material._Opacity"]) > 0 {
+				seenOpacity = true
+			}
+			if len(attrs["material._FresnelPower"]) > 0 {
+				seenFresnel = true
+			}
+		}
+	}
+	if !seenOpacity {
+		t.Fatal("airboarder obstacle fade clips should contain material._Opacity curves")
+	}
+	if !seenFresnel {
+		t.Fatal("airboarder charge clips should contain material._FresnelPower curves")
+	}
+}
+
 func TestAirboarderBopRegionSemantics(t *testing.T) {
 	m := &Module{bops: []bopEvt{{beat: 4, auto: true}, {beat: 8, auto: false}}}
 	if m.autoBopAt(3.99) || !m.autoBopAt(4) || m.autoBopAt(7.99) != true || m.autoBopAt(8) {

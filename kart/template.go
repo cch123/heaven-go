@@ -478,6 +478,7 @@ type instNodeState struct {
 	color           [4]float64
 	matColor        [4]float64
 	matAlpha        float64 // material._Alpha：材质级透明度，最终与 SpriteRenderer.color.a 相乘
+	matOpacity      float64 // material._Opacity：与 _Alpha 相乘，避免两个 shader 字段互相覆盖
 	matProgress     float64 // material._Progress：ChargingChicken ChickenCar 充能渐变
 	hasMatProgress  bool
 	matAdd          [4]float64
@@ -506,7 +507,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
 			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
 			active: !n.Inactive, renderOn: !n.Hidden,
-			color: c, matAlpha: 1, order: n.Order,
+			color: c, matAlpha: 1, matOpacity: 1, order: n.Order,
 			palette: scene.paletteOf(n.Mat),
 		}
 	}
@@ -565,7 +566,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			actives[ti] = st.active && actives[tn.Parent]
 		}
 		tint := st.color
-		tint[3] *= st.matAlpha
+		tint[3] *= st.matAlpha * st.matOpacity
 		if !actives[ti] || !st.renderOn || st.sprite == "" || tint[3] <= 0 {
 			continue
 		}
@@ -722,6 +723,12 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 				states[ti].active = v > 0.5
 			case attr == "m_Enabled":
 				states[ti].renderOn = v > 0.5
+			case attr == "m_AnchoredPosition.x":
+				// RectTransform curves in gameplay prefabs are authored as local
+				// offsets, so instances need the same transform mapping as scenes.
+				states[ti].pos[0] = v
+			case attr == "m_AnchoredPosition.y":
+				states[ti].pos[1] = v
 			case strings.HasPrefix(attr, "m_Color."), strings.HasPrefix(attr, "m_fontColor."):
 				ch := strings.TrimPrefix(attr, "m_Color.")
 				ch = strings.TrimPrefix(ch, "m_fontColor.")
@@ -761,6 +768,8 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 				}
 			case attr == "material._Alpha":
 				states[ti].matAlpha = v
+			case attr == "material._Opacity":
+				states[ti].matOpacity = v
 			case attr == "material._Progress":
 				states[ti].matProgress = v
 				states[ti].hasMatProgress = true

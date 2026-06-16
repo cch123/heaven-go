@@ -29,6 +29,64 @@ func TestMaterialAlphaCurvesAffectSceneAndTemplateTint(t *testing.T) {
 	}
 }
 
+func TestMaterialOpacityCurvesMultiplyMaterialAlpha(t *testing.T) {
+	as := materialAlphaAssets()
+
+	scene := NewScene(as)
+	scene.Play("Root", "Opacity", 0, 1)
+	scene.Sample(0.5)
+	if got, want := scene.state[0].matOpacity, 0.5; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("scene material opacity = %v, want %v", got, want)
+	}
+
+	scene.Play("Root", "AlphaAndOpacity", 0, 1)
+	scene.Sample(0.5)
+	tint := scene.state[0].color
+	tint[3] *= scene.state[0].matAlpha * scene.state[0].matOpacity
+	if got, want := tint[3], 0.25; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("scene alpha*opacity = %v, want %v", got, want)
+	}
+
+	tmpl := NewTemplate(as, "Root")
+	inst := tmpl.NewInstance()
+	inst.Play("", "Opacity", 0, 1)
+	inst.Queue(scene, 0.5, Identity(), 0)
+	if len(scene.queued) != 1 {
+		t.Fatalf("queued sprites = %d, want 1", len(scene.queued))
+	}
+	if got, want := scene.queued[0].Tint[3], 0.5; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("template material opacity tint = %v, want %v", got, want)
+	}
+}
+
+func TestAnchoredPositionCurvesDriveLocalPosition(t *testing.T) {
+	as := materialAlphaAssets()
+
+	scene := NewScene(as)
+	scene.Play("Root", "Anchored", 0, 1)
+	scene.Sample(0.5)
+	if got, want := scene.state[0].pos[0], 2.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("scene anchored x = %v, want %v", got, want)
+	}
+	if got, want := scene.state[0].pos[1], -3.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("scene anchored y = %v, want %v", got, want)
+	}
+
+	tmpl := NewTemplate(as, "Root")
+	inst := tmpl.NewInstance()
+	inst.Play("", "Anchored", 0, 1)
+	inst.Queue(scene, 0.5, Identity(), 0)
+	if len(scene.queued) != 1 {
+		t.Fatalf("queued sprites = %d, want 1", len(scene.queued))
+	}
+	if got, want := scene.queued[0].World.Tx, 2.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("template anchored x = %v, want %v", got, want)
+	}
+	if got, want := scene.queued[0].World.Ty, -3.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("template anchored y = %v, want %v", got, want)
+	}
+}
+
 func TestMaterialProgressCurvesAffectSceneAndTemplatePalette(t *testing.T) {
 	as := materialAlphaAssets()
 
@@ -62,6 +120,14 @@ func materialAlphaAssets() *Assets {
 		{T: 0, V: 0.25},
 		{T: 1, V: 0.75},
 	}
+	anchoredX := []kmdata.Key{
+		{T: 0, V: 0},
+		{T: 1, V: 4},
+	}
+	anchoredY := []kmdata.Key{
+		{T: 0, V: 0},
+		{T: 1, V: -6},
+	}
 	return &Assets{
 		Rig: kmdata.Rig{Nodes: []kmdata.Node{{
 			Name:   "Root",
@@ -76,6 +142,30 @@ func materialAlphaAssets() *Assets {
 				Duration: 1,
 				Floats: map[string]map[string][]kmdata.Key{
 					"": {"material._Alpha": keys},
+				},
+			},
+			"Opacity": {
+				Duration: 1,
+				Floats: map[string]map[string][]kmdata.Key{
+					"": {"material._Opacity": keys},
+				},
+			},
+			"AlphaAndOpacity": {
+				Duration: 1,
+				Floats: map[string]map[string][]kmdata.Key{
+					"": {
+						"material._Alpha":   keys,
+						"material._Opacity": keys,
+					},
+				},
+			},
+			"Anchored": {
+				Duration: 1,
+				Floats: map[string]map[string][]kmdata.Key{
+					"": {
+						"m_AnchoredPosition.x": anchoredX,
+						"m_AnchoredPosition.y": anchoredY,
+					},
 				},
 			},
 			"Charge": {
