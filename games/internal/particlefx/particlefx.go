@@ -146,32 +146,47 @@ func RootsIncludingInactive(as *kart.Assets) map[string][]kmdata.ParticleSystem 
 func roots(as *kart.Assets, includeInactive bool) map[string][]kmdata.ParticleSystem {
 	paths := make([]string, 0, len(as.Particles.Systems))
 	for _, ps := range as.Particles.Systems {
-		if (includeInactive || ps.Active) && ps.Enabled && ps.Renderer.Enabled {
+		if particleSystemPlayable(ps, includeInactive) {
 			paths = append(paths, ps.Path)
 		}
 	}
 	out := map[string][]kmdata.ParticleSystem{}
 	for _, root := range paths {
-		// Unity's ParticleSystem.Play defaults to withChildren=true. Building a
-		// group for every valid prefix lets game code trigger the authored prefab
-		// root without hard-coding its child emitters.
+		group := []kmdata.ParticleSystem{}
+		// Unity's ParticleSystem.Play defaults to withChildren=true. A prefab
+		// root can have its own renderer disabled and still be the authored
+		// trigger point for enabled child emitters. Keep those parent systems in
+		// the group for Unity-equivalent hierarchy/lifetime accounting; drawSystem
+		// still skips non-renderer systems when emitting pixels.
 		for _, ps := range as.Particles.Systems {
-			if (!includeInactive && !ps.Active) || !ps.Enabled || !ps.Renderer.Enabled {
+			if !particleSystemPlayable(ps, includeInactive) {
 				continue
 			}
 			if ps.Path == root || strings.HasPrefix(ps.Path, root+"/") {
-				out[root] = append(out[root], ps)
+				group = append(group, ps)
 			}
 		}
-		sort.Slice(out[root], func(i, j int) bool {
-			a, b := out[root][i], out[root][j]
+		if len(group) == 0 {
+			continue
+		}
+		sort.Slice(group, func(i, j int) bool {
+			a, b := group[i], group[j]
 			if a.Renderer.SortingOrder != b.Renderer.SortingOrder {
 				return a.Renderer.SortingOrder < b.Renderer.SortingOrder
 			}
 			return a.Path < b.Path
 		})
+		out[root] = group
 	}
 	return out
+}
+
+func particleSystemPlayable(ps kmdata.ParticleSystem, includeInactive bool) bool {
+	return (includeInactive || ps.Active) && ps.Enabled
+}
+
+func particleSystemDrawable(ps kmdata.ParticleSystem, includeInactive bool) bool {
+	return particleSystemPlayable(ps, includeInactive) && ps.Renderer.Enabled
 }
 
 func Worlds(as *kart.Assets) map[string]kart.Aff {
@@ -192,14 +207,10 @@ func Lifetimes(roots map[string][]kmdata.ParticleSystem, fallback float64) map[s
 	for root, systems := range roots {
 		life := 0.0
 		for _, ps := range systems {
-			simSpeed := ps.SimulationSpeed
-			if simSpeed <= 0 {
-				simSpeed = 1
-			}
 			delay := curveValue(ps.StartDelay, 0, 0)
 			maxLife := curveMax(ps.StartLifetime)
 			for _, burst := range ps.Emission.Bursts {
-				life = math.Max(life, delay+burst.Time+maxLife/simSpeed)
+				life = math.Max(life, delay+burst.Time+maxLife)
 			}
 		}
 		out[root] = math.Max(life, fallback)
