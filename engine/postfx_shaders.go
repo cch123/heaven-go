@@ -42,17 +42,13 @@ package main
 
 var Pixel vec4   // (size, ratio, scaleX, scaleY)；size==0 关
 var Lens vec4    // (theta, sigma, intensity, caAmount)
-var LensXY vec2  // (intensityX, intensityY)
+var LensCtr vec4 // (lens intensityX/Y, vignette centerX/Y)
 var Vig vec4     // (intensity*3, smoothness*5, roundness', rounded)
-var VigCol vec3
-var VigCtr vec2
-var VigOn float
-var GradeOn float
-var Balance vec3
+var VigColOn vec4 // (color rgb, enabled)
+var BalanceGrade vec4 // (LMS balance rgb, grade enabled)
 var Filter vec3
 var HSB vec4     // (hueShift/360, sat, brightness, contrast)
-var TechIE vec2  // (technicolor intensity, 8-exposure)
-var TechBal vec3 // (1-redBalance, 1-greenBalance, 1-blueBalance)
+var Tech [2]vec4 // [0]=(technicolor intensity, 8-exposure), [1]=balance rgb
 var Grain vec4   // (intensity, size, colored, time)
 var BloomIT vec3 // intensity * tint
 var Glitch vec4  // (scanJitter, screenJump, retroDistort, time)
@@ -61,20 +57,18 @@ var Blur vec4    // (gaussRadius, dirRadius, dirAngle, grainyRadius)
 var Analog vec4  // (noiseSpeed, noiseFading, luminanceThreshold, time)
 var Liquid vec4  // (speed, horizontal, vertical, time)
 var Edge vec4    // (edgeWidth, backgroundFade, enabled, unused)
-var EdgeCol vec3
-var EdgeBG vec3
+var EdgeCols [2]vec4 // [0]=edge color, [1]=background color
 var Neon vec4    // (edgeWidth, edgeFade, brightness, backgroundFade)
 var Aurora vec4  // (fading, area, smoothness, colorChange*10)
 var AuroraC vec4 // (colorFactorR/G/B, time*flowSpeed)
 var CRFrom [5]vec4
 var CRTo [5]vec4
-var CRP [5]vec4
 
 func distortUV(uv vec2) vec2 {
 	if Lens.z == 0 {
 		return uv
 	}
-	ruv := LensXY * (uv - 0.5)
+	ruv := LensCtr.xy * (uv - 0.5)
 	ru := length(ruv)
 	if Lens.z > 0 {
 		wu := ru * Lens.x
@@ -131,35 +125,35 @@ func hsv2rgb(c vec3) vec3 {
 	return c.z * mix(k.xxx, clamp(p-k.xxx, 0.0, 1.0), c.y)
 }
 
-func colorReplaceOne(c vec3, from vec3, to vec3, prm vec2) vec3 {
-	if prm.x == 0 && prm.y == 0 {
+func colorReplaceOne(c vec3, from vec4, to vec4) vec3 {
+	if from.a == 0 && to.a == 0 {
 		return c
 	}
-	d := distance(from, c)
-	return mix(to, c, clamp((d-prm.x)/max(prm.y, 0.1), 0.0, 1.0))
+	d := distance(from.rgb, c)
+	return mix(to.rgb, c, clamp((d-from.a)/max(to.a, 0.1), 0.0, 1.0))
 }
 
 func applyColorReplace(c vec3) vec3 {
 	for i := 0; i < 5; i++ {
-		c = colorReplaceOne(c, CRFrom[i].rgb, CRTo[i].rgb, CRP[i].xy)
+		c = colorReplaceOne(c, CRFrom[i], CRTo[i])
 	}
 	return c
 }
 
 func applyTechnicolor(c vec3) vec3 {
-	if TechIE.x <= 0 {
+	if Tech[0].x <= 0 {
 		return c
 	}
 	cyan := vec3(0.0, 1.30, 1.0)
 	magenta := vec3(1.0, 0.0, 1.05)
 	yellow := vec3(1.6, 1.6, 0.05)
-	exposure := max(TechIE.y, 1e-4)
-	balance := 1.0 / max(TechBal*exposure, vec3(1e-4))
+	exposure := max(Tech[0].y, 1e-4)
+	balance := 1.0 / max(Tech[1].rgb*exposure, vec3(1e-4))
 	nr := dot(vec2(1.05, 0.620), c.rg*balance.rr)
 	ng := dot(vec2(0.30, 1.0), c.rg*balance.gg)
 	nb := dot(vec2(1.0, 1.05), c.rb*balance.bb)
 	result := (vec3(nr) + cyan) * (vec3(ng) + magenta) * (vec3(nb) + yellow)
-	return mix(c, result, clamp(TechIE.x, 0, 1))
+	return mix(c, result, clamp(Tech[0].x, 0, 1))
 }
 
 func applyAnalogNoise(c vec3, uv vec2) vec3 {
@@ -368,14 +362,14 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	c += sampleBloom(duv) * BloomIT
 
 	// Vignette（PPv2 classic）
-	if VigOn > 0.5 {
-		d := abs(duv-VigCtr) * Vig.x
+	if VigColOn.w > 0.5 {
+		d := abs(duv-LensCtr.zw) * Vig.x
 		if Vig.w > 0.5 {
 			d.x *= s.x / s.y
 		}
 		d = pow(clamp(d, vec2(0), vec2(1)), vec2(Vig.z))
 		vf := pow(clamp(1.0-dot(d, d), 0, 1), Vig.y)
-		c *= mix(VigCol, vec3(1.0), vf)
+		c *= mix(VigColOn.rgb, vec3(1.0), vf)
 	}
 
 	// Grain（hash 噪声近似 PPv2 胶片颗粒；亮度响应权重）
@@ -394,14 +388,14 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	}
 
 	// Color Grading（LDR，近似 PPv2 Lut2DBaker 顺序）
-	if GradeOn > 0.5 {
+	if BalanceGrade.w > 0.5 {
 		c = clamp(c, vec3(0), vec3(1))
 		lin := pow(c, vec3(2.2))
 		lin *= HSB.z // brightness
 		// 白平衡（LMS）
-		l := dot(lin, vec3(0.390405, 0.549941, 0.00892632)) * Balance.x
-		m := dot(lin, vec3(0.0708416, 0.963172, 0.00135775)) * Balance.y
-		sc := dot(lin, vec3(0.0231082, 0.128021, 0.936245)) * Balance.z
+		l := dot(lin, vec3(0.390405, 0.549941, 0.00892632)) * BalanceGrade.x
+		m := dot(lin, vec3(0.0708416, 0.963172, 0.00135775)) * BalanceGrade.y
+		sc := dot(lin, vec3(0.0231082, 0.128021, 0.936245)) * BalanceGrade.z
 		lin.r = dot(vec3(l, m, sc), vec3(2.85847, -1.62879, -0.0248910))
 		lin.g = dot(vec3(l, m, sc), vec3(-0.210182, 1.15820, 0.000324281))
 		lin.b = dot(vec3(l, m, sc), vec3(-0.0418120, -0.118169, 1.06867))
@@ -427,8 +421,8 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 
 	if Edge.z > 0.5 {
 		g := sobelLum(duv, Edge.x)
-		bg := mix(c, EdgeBG, Edge.y)
-		c = mix(bg, EdgeCol, clamp(g, 0.0, 1.0))
+		bg := mix(c, EdgeCols[1].rgb, Edge.y)
+		c = mix(bg, EdgeCols[0].rgb, clamp(g, 0.0, 1.0))
 	}
 
 	if Neon.x != 0 || Neon.y != 0 || Neon.w != 0 {

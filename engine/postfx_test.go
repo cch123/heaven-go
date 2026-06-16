@@ -24,6 +24,16 @@ func TestKageCompile(t *testing.T) {
 	}
 }
 
+func TestPostFXApplyPathRuns(t *testing.T) {
+	var fx postFX
+	if err := fx.ensure(); err != nil {
+		t.Fatal(err)
+	}
+	fx.Target().Fill(colorRGBA(0x20, 0x40, 0x80, 0xff))
+	dst := ebiten.NewImage(ScreenW, ScreenH)
+	fx.Apply(dst, "../assets", 0, 1)
+}
+
 // TestWhiteBalanceNeutral 中性参数应得到 ≈1 的系数。
 func TestWhiteBalanceNeutral(t *testing.T) {
 	r, g, b := whiteBalance(0, 0)

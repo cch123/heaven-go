@@ -38,7 +38,7 @@ func (fx *postFX) Target() *ebiten.Image {
 // Apply 把离屏帧经后处理链画到 dst。
 func (fx *postFX) Apply(dst *ebiten.Image, assetsRoot string, beat, t float64) {
 	p := fx.eval(beat)
-	crFrom, crTo, crP := packColorReplaceUniforms(p)
+	crFrom, crTo := packColorReplaceUniforms(p)
 	neon := []float32{}
 	if p.neonOn {
 		neon = []float32{float32(p.neonWidth), float32(p.neonFade), float32(p.neonBright), float32(p.neonBg)}
@@ -93,19 +93,18 @@ func (fx *postFX) Apply(dst *ebiten.Image, assetsRoot string, beat, t float64) {
 	op.Images[0] = fx.frame
 	op.Images[1] = fx.bloomFull
 	op.Uniforms = map[string]any{
-		"Pixel":   []float32{float32(p.pixSize), float32(p.pixRatio), float32(p.pixSX), float32(p.pixSY)},
-		"Lens":    []float32{float32(p.lensTheta), float32(p.lensSigma), float32(p.lensIntensity), float32(p.caAmt)},
-		"LensXY":  []float32{float32(p.lensIX), float32(p.lensIY)},
-		"Vig":     []float32{float32(p.vigInt * 3), float32(p.vigSmooth * 5), float32((1-p.vigRound)*6 + p.vigRound), float32(p.vigRounded)},
-		"VigCol":  []float32{float32(p.vigColor[0]), float32(p.vigColor[1]), float32(p.vigColor[2])},
-		"VigCtr":  []float32{float32(p.vigX), float32(p.vigY)},
-		"VigOn":   b32(p.vigOn),
-		"GradeOn": b32(p.gradeOn),
-		"Balance": []float32{float32(p.balR), float32(p.balG), float32(p.balB)},
-		"Filter":  []float32{float32(p.filter[0]), float32(p.filter[1]), float32(p.filter[2])},
-		"HSB":     []float32{float32(p.hue), float32(p.sat), float32(p.bright), float32(p.contra)},
-		"TechIE":  []float32{float32(p.techInt), float32(p.techExposure)},
-		"TechBal": []float32{float32(p.techBalance[0]), float32(p.techBalance[1]), float32(p.techBalance[2])},
+		"Pixel":        []float32{float32(p.pixSize), float32(p.pixRatio), float32(p.pixSX), float32(p.pixSY)},
+		"Lens":         []float32{float32(p.lensTheta), float32(p.lensSigma), float32(p.lensIntensity), float32(p.caAmt)},
+		"LensCtr":      []float32{float32(p.lensIX), float32(p.lensIY), float32(p.vigX), float32(p.vigY)},
+		"Vig":          []float32{float32(p.vigInt * 3), float32(p.vigSmooth * 5), float32((1-p.vigRound)*6 + p.vigRound), float32(p.vigRounded)},
+		"VigColOn":     []float32{float32(p.vigColor[0]), float32(p.vigColor[1]), float32(p.vigColor[2]), b32(p.vigOn)},
+		"BalanceGrade": []float32{float32(p.balR), float32(p.balG), float32(p.balB), b32(p.gradeOn)},
+		"Filter":       []float32{float32(p.filter[0]), float32(p.filter[1]), float32(p.filter[2])},
+		"HSB":          []float32{float32(p.hue), float32(p.sat), float32(p.bright), float32(p.contra)},
+		"Tech": []float32{
+			float32(p.techInt), float32(p.techExposure), 0, 0,
+			float32(p.techBalance[0]), float32(p.techBalance[1]), float32(p.techBalance[2]), 0,
+		},
 		"Grain":   []float32{float32(p.grainInt), float32(p.grainSize), float32(p.grainColored), float32(math.Mod(t, 64))},
 		"BloomIT": []float32{float32(p.bloomInt * p.bloomTint[0]), float32(p.bloomInt * p.bloomTint[1]), float32(p.bloomInt * p.bloomTint[2])},
 		"Glitch":  []float32{float32(p.scanJitter), float32(p.screenJump), float32(p.retroDistort), float32(math.Mod(t, 64))},
@@ -114,14 +113,15 @@ func (fx *postFX) Apply(dst *ebiten.Image, assetsRoot string, beat, t float64) {
 		"Analog":  []float32{float32(p.analogSpeed), float32(p.analogFade), float32(p.analogThresh), float32(math.Mod(t, 100))},
 		"Liquid":  []float32{float32(p.liquidSpeed), float32(p.liquidHoriz), float32(p.liquidVert), float32(t)},
 		"Edge":    []float32{float32(p.edgeWidth), float32(p.edgeBgFade), b32(p.edgeOn), 0},
-		"EdgeCol": []float32{float32(p.edgeColor[0]), float32(p.edgeColor[1]), float32(p.edgeColor[2])},
-		"EdgeBG":  []float32{float32(p.edgeBgColor[0]), float32(p.edgeBgColor[1]), float32(p.edgeBgColor[2])},
+		"EdgeCols": []float32{
+			float32(p.edgeColor[0]), float32(p.edgeColor[1]), float32(p.edgeColor[2]), 0,
+			float32(p.edgeBgColor[0]), float32(p.edgeBgColor[1]), float32(p.edgeBgColor[2]), 0,
+		},
 		"Neon":    neon,
 		"Aurora":  aurora,
 		"AuroraC": []float32{float32(p.auroraColor[0]), float32(p.auroraColor[1]), float32(p.auroraColor[2]), float32(t * p.auroraSpeed)},
 		"CRFrom":  crFrom,
 		"CRTo":    crTo,
-		"CRP":     crP,
 	}
 	baseDst.DrawRectShader(ScreenW, ScreenH, fx.uber, op)
 	if p.vhsOn && fx.vhs.apply(dst, baseDst, assetsRoot, p, t) {
@@ -143,16 +143,14 @@ func bloomAnamorphicBlurScale(ratio float64) (float64, float64) {
 	return 1, 1 - ratio
 }
 
-func packColorReplaceUniforms(p fxParams) ([]float32, []float32, []float32) {
+func packColorReplaceUniforms(p fxParams) ([]float32, []float32) {
 	from := make([]float32, 0, 20)
 	to := make([]float32, 0, 20)
-	prm := make([]float32, 0, 20)
 	for i := 0; i < 5; i++ {
-		from = append(from, float32(p.crFrom[i][0]), float32(p.crFrom[i][1]), float32(p.crFrom[i][2]), 0)
-		to = append(to, float32(p.crTo[i][0]), float32(p.crTo[i][1]), float32(p.crTo[i][2]), 0)
-		prm = append(prm, float32(p.crRange[i]), float32(p.crFuzz[i]), 0, 0)
+		from = append(from, float32(p.crFrom[i][0]), float32(p.crFrom[i][1]), float32(p.crFrom[i][2]), float32(p.crRange[i]))
+		to = append(to, float32(p.crTo[i][0]), float32(p.crTo[i][1]), float32(p.crTo[i][2]), float32(p.crFuzz[i]))
 	}
-	return from, to, prm
+	return from, to
 }
 
 func b32(b bool) float32 {
