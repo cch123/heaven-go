@@ -5,6 +5,7 @@ package meatgrinder
 // 角色/引用绑定。资产未提取时跳过（先 go run ./cmd/extract -game meatGrinder）。
 
 import (
+	"math"
 	"strings"
 	"testing"
 
@@ -191,7 +192,7 @@ func TestFloatAttrsSupported(t *testing.T) {
 }
 
 // TestSpriteSwapsResolve：所有 sprite 换帧关键帧必须解析到图集切片
-//（空名 = 该帧隐藏，是合法值）。
+// （空名 = 该帧隐藏，是合法值）。
 func TestSpriteSwapsResolve(t *testing.T) {
 	as := loadAssets(t)
 	for name, a := range as.Anims {
@@ -245,5 +246,13 @@ func TestRolesAndRefs(t *testing.T) {
 		if _, ok := as.Sheet.Sprites[name]; !ok {
 			t.Errorf("粒子切片 %s 不在图集", name)
 		}
+	}
+}
+
+func TestMeatGrinderUsesFullEasingTable(t *testing.T) {
+	m := &Module{gearEvts: []gearEvt{{beat: 4, length: 4, ease: 32, speed: 3}}}
+	got := m.gearSpeedAt(6)
+	if math.Abs(got-2) < 1e-6 {
+		t.Fatalf("Spring gear easing fell back to linear midpoint: %v", got)
 	}
 }

@@ -494,32 +494,6 @@ func randUnit3() (float64, float64, float64) {
 	}
 }
 
-// ---------- 缓动（Util.EasingFunction，level 用到 Linear=0 / Instant=1） ----------
-
-func ease(kind int, start, end, v float64) float64 {
-	if v < 0 {
-		v = 0
-	}
-	if v > 1 {
-		v = 1
-	}
-	switch kind {
-	case 1: // Instant：恒为终值
-		return end
-	case 2: // EaseInQuad
-		return start + (end-start)*v*v
-	case 3: // EaseOutQuad
-		return start + (end-start)*(1-(1-v)*(1-v))
-	case 4: // EaseInOutQuad
-		if v < 0.5 {
-			return start + (end-start)*2*v*v
-		}
-		return start + (end-start)*(1-2*(1-v)*(1-v))
-	default: // Linear（未实现的罕见缓动按线性处理并不静默：见 README 已知简化）
-		return start + (end-start)*v
-	}
-}
-
 // gearSpeedAt 重建 ChangeGears 速度时间轴（初始 newGearSpeed=1；
 // 每个事件从上一事件目标值缓动到自身 speed）。
 func (m *Module) gearSpeedAt(beat float64) float64 {
@@ -532,7 +506,7 @@ func (m *Module) gearSpeedAt(beat float64) float64 {
 		if e.length > 0 {
 			norm = (beat - e.beat) / e.length
 		}
-		cur = ease(e.ease, prev, e.speed, norm)
+		cur = engine.Ease(e.ease, prev, e.speed, norm)
 		prev = e.speed
 	}
 	return cur
@@ -579,7 +553,7 @@ func (m *Module) Update(t, beat float64) {
 	active, evt, norm := m.cartAt(beat)
 	m.ctx.Scene.SetActive(m.ctx.Role("CartGuyParentAnim"), active)
 	if active {
-		v := ease(evt.ease, 0, 1, norm)
+		v := engine.Ease(evt.ease, 0, 1, norm)
 		m.ctx.Scene.PlayNormalized(m.ctx.Role("CartGuyParentAnim"), "Cart Guy/CartguyMove"+evt.dir, v)
 	}
 
