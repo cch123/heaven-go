@@ -4,6 +4,8 @@ import (
 	"os"
 	"path/filepath"
 	"testing"
+
+	"hsdemo/riq"
 )
 
 func TestCountInStyleNames(t *testing.T) {
@@ -34,6 +36,42 @@ func TestCountInStyleNames(t *testing.T) {
 			got := st.and()
 			t.Errorf("type %d and = %q, want %q", tc.typ, got, tc.andSound)
 		}
+	}
+}
+
+func TestCountInEventKindAcceptsGameScopedActions(t *testing.T) {
+	cases := map[string]string{
+		"countIn/count-in":             "count-in",
+		"tapTroupe/countIn/count-in":   "count-in",
+		"monkeyWatch/countIn/count-in": "count-in",
+	}
+	for dm, want := range cases {
+		got, ok := countInEventKind(dm)
+		if !ok || got != want {
+			t.Fatalf("countInEventKind(%q) = %q, %v; want %q, true", dm, got, ok, want)
+		}
+	}
+}
+
+func TestGameScopedCountInDispatchesAsEngineEvent(t *testing.T) {
+	app := &App{
+		chartRuntimeState: chartRuntimeState{
+			bm: &riq.Beatmap{Entities: []riq.Entity{{
+				Datamodel: "tapTroupe/countIn/count-in",
+				Beat:      16,
+				Length:    8,
+				Data:      map[string]any{"go": true, "and": true},
+			}}},
+		},
+		moduleRuntimeState: moduleRuntimeState{modules: map[string]Module{}},
+	}
+	used := app.collectUsedGames()
+	if used["tapTroupe"] {
+		t.Fatal("game-scoped count-in should not force-load the tapTroupe module")
+	}
+	app.dispatchBeatmapEvent(&app.bm.Entities[0])
+	if got, want := len(app.actions), 7; got != want {
+		t.Fatalf("scheduled actions = %d, want %d count-in sounds", got, want)
 	}
 }
 

@@ -15,6 +15,9 @@ func (a *App) collectUsedGames() map[string]bool {
 			used[g] = true
 			continue
 		}
+		if _, ok := countInEventKind(e.Datamodel); ok {
+			continue
+		}
 		switch e.Game() {
 		case "gameManager", "vfx", "countIn", "global", "ppe":
 			continue // ppe is handled by the engine and does not own a module.

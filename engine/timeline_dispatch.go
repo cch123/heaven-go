@@ -43,7 +43,7 @@ func (a *App) dispatchBeatmapEvent(e *riq.Entity) {
 			ease:   int(e.Float("ease", 0)),
 			axis:   int(e.Float("axis", 0)),
 		})
-	case e.Game() == "countIn":
+	case isCountInEvent(e.Datamodel):
 		a.scheduleCountIn(e.Datamodel, e.Beat, e.Length, e.Data)
 	case e.Datamodel == "vfx/filter":
 		a.flt.add(e)

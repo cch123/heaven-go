@@ -56,6 +56,25 @@ func (s countInStyle) goSound() string {
 	return s.folder + "go" + s.suffix
 }
 
+func countInEventKind(datamodel string) (string, bool) {
+	if strings.HasPrefix(datamodel, "countIn/") {
+		return strings.TrimPrefix(datamodel, "countIn/"), true
+	}
+	// Some official loaders expose the shared count-in action under a minigame
+	// namespace, e.g. tapTroupe/countIn/count-in. Heaven Studio still routes
+	// these to SoundEffects; keeping the prefix would make Entity.Game() treat
+	// them as tapTroupe/monkeyWatch actions and silently drop the cue.
+	if _, rest, ok := strings.Cut(datamodel, "/countIn/"); ok && rest != "" {
+		return rest, true
+	}
+	return "", false
+}
+
+func isCountInEvent(datamodel string) bool {
+	_, ok := countInEventKind(datamodel)
+	return ok
+}
+
 // scheduleCountIn 把一个 countIn/* 实体翻译为公共音效调度（载入期调用）。
 func (a *App) scheduleCountIn(datamodel string, beat, length float64, data map[string]any) {
 	num := func(key string, def float64) float64 {
@@ -70,8 +89,12 @@ func (a *App) scheduleCountIn(datamodel string, beat, length float64, data map[s
 	}
 	style := countStyle(int(num("type", 0)))
 	cname := func(i int) string { return style.count(countNames[i]) }
+	kind, ok := countInEventKind(datamodel)
+	if !ok {
+		return
+	}
 
-	switch strings.TrimPrefix(datamodel, "countIn/") {
+	switch kind {
 	case "count": // 单次计数：type=数字（0=One..3=Four），countType=音色
 		style = countStyle(int(num("countType", 0)))
 		n := int(num("type", 0))
