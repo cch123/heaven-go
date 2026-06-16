@@ -137,6 +137,15 @@ func TestValiantVolleyTimingAndMultiSpawnSemantics(t *testing.T) {
 	if multiObj.expectsInputAt(30) {
 		t.Fatal("multi object should not expect input away from scheduled target beats")
 	}
+	if curve, u := multiObj.preHitCurve(18); curve != "object.enterCurve" || math.Abs(u-0.5) > 1e-9 {
+		t.Fatalf("regular pre-hit curve = %s %.3f, want enterCurve 0.500", curve, u)
+	}
+	if curve, u := multiObj.preHitCurve(24); curve != "object.bounceCurve1" || math.Abs(u-0.25) > 1e-9 {
+		t.Fatalf("last juggle first bounce = %s %.3f, want bounceCurve1 0.250", curve, u)
+	}
+	if curve, u := multiObj.preHitCurve(28); curve != "object.bounceCurve2" || math.Abs(u-0.25) > 1e-9 {
+		t.Fatalf("last juggle second bounce = %s %.3f, want bounceCurve2 0.250", curve, u)
+	}
 	if got := multiObj.postHitLength(); got != multi.distance {
 		t.Fatalf("non-final hit post length = %v, want interval distance %v", got, multi.distance)
 	}

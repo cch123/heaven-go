@@ -281,18 +281,35 @@ func (o *volleyObject) queue(sc *kart.SceneInst, t, beat float64) {
 }
 
 func (o *volleyObject) pos(beat float64) [3]float64 {
-	d := o.plan.distance
 	switch {
 	case o.hit:
 		return kart.EvalBezier(o.curve("object.hitCurve"), clamp01((beat-o.hitBeat)/o.postHitLength()))
 	case o.barely:
 		return kart.EvalBezier(o.curve("object.barelyCurve"), clamp01((beat-o.hitBeat)/o.postHitLength()))
-	case beat < o.plan.start+d:
-		return kart.EvalBezier(o.curve("object.enterCurve"), clamp01((beat-o.plan.start)/d))
-	case beat < o.plan.start+2*d:
-		return kart.EvalBezier(o.curve("object.bounceCurve1"), clamp01((beat-(o.plan.start+d))/d))
 	default:
-		return kart.EvalBezier(o.curve("object.bounceCurve2"), clamp01((beat-(o.plan.start+2*d))/d))
+		name, u := o.preHitCurve(beat)
+		return kart.EvalBezier(o.curve(name), u)
+	}
+}
+
+func (o *volleyObject) preHitCurve(beat float64) (string, float64) {
+	d := o.plan.distance
+	if o.plan.lastJuggle != 0 && o.plan.lastJuggleLength > 0 {
+		if beat >= o.plan.lastJuggle && beat < o.plan.lastJuggle+o.plan.lastJuggleLength {
+			return "object.bounceCurve1", clamp01((beat - o.plan.lastJuggle) / o.plan.lastJuggleLength)
+		}
+		second := o.plan.lastJuggle + d
+		if beat >= second && beat < second+o.plan.lastJuggleLength {
+			return "object.bounceCurve2", clamp01((beat - second) / o.plan.lastJuggleLength)
+		}
+	}
+	switch {
+	case beat < o.plan.start+d:
+		return "object.enterCurve", clamp01((beat - o.plan.start) / d)
+	case beat < o.plan.start+2*d:
+		return "object.bounceCurve1", clamp01((beat - (o.plan.start + d)) / d)
+	default:
+		return "object.bounceCurve2", clamp01((beat - (o.plan.start + 2*d)) / d)
 	}
 }
 
