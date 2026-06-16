@@ -195,9 +195,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - cheerReaders：toggleCaption 已接原 TMP caption/underlay 节点、StickyCanvas
   跟随相机语义和旧谱面 CheckCaptions 自动禁用路径；yay 纸花粒子仍为等价手写
   实现（白/黑方片爆散），未逐参数复刻 ParticleSystem。
-- ninjaBodyguard：HitParticle 的 ParticleSystemRenderer 未由提取器通用导出，
-  运行时用同一 prefab 节点位置发射短促白色斩击线，时序与命中触发一致，但
-  未逐参数复刻 Unity 粒子大小/速度随机曲线。
+- ninjaBodyguard：HitParticle 已按 prefab 中 ArrowSliceA/B 两个 ParticleSystem
+  的 lifetime、simulationSpeed、startSpeed、shape arc/radius/rotation、burst、
+  ForceModule 与 ParticleSystemRenderer sortingOrder/lengthScale 做运行时发射。
 - animalAcrobat：动物模板、摆动、hold/release 判定与音效已接入；catch/
   release/confetti 粒子暂用同拍位星形闪光表示，release/trail/sweat/confetti
   仍未逐 ParticleSystem 参数复刻。

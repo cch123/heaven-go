@@ -1,6 +1,7 @@
 package ninjabodyguard
 
 import (
+	"math"
 	"testing"
 
 	"hsdemo/kart"
@@ -76,5 +77,62 @@ func TestNinjaBodyguardLegacyCutBindingsAreEmpty(t *testing.T) {
 				t.Fatalf("%s legacy NinjaCutL.001 has non-empty sprite %q", clip, k.Name)
 			}
 		}
+	}
+}
+
+func TestNinjaBodyguardHitParticleMatchesPrefabParams(t *testing.T) {
+	if len(ninjaHitParticleEmitters) != 2 {
+		t.Fatalf("hit particle emitters = %d, want 2", len(ninjaHitParticleEmitters))
+	}
+	wantRot := []float64{60, 110}
+	for i, want := range wantRot {
+		if got := ninjaHitParticleEmitters[i].shapeRotDeg; got != want {
+			t.Fatalf("emitter %d rotation = %v, want %v", i, got, want)
+		}
+	}
+	checks := map[string][2]float64{
+		"lifetime":    {ninjaHitParticleLifetimeSec, 3.5},
+		"simSpeed":    {ninjaHitParticleSimulationSpeed, 3},
+		"startSize":   {ninjaHitParticleStartSize, 1.05},
+		"speedMin":    {ninjaHitParticleSpeedMin, 6},
+		"speedMax":    {ninjaHitParticleSpeedMax, 8},
+		"angle":       {ninjaHitParticleShapeAngleDeg, 30},
+		"arc":         {ninjaHitParticleShapeArcDeg, 10},
+		"radius":      {ninjaHitParticleShapeRadius, 0.75},
+		"shapeY":      {ninjaHitParticleShapeYOffset, -0.5},
+		"forceY":      {ninjaHitParticleForceY, -10},
+		"lengthScale": {ninjaHitParticleLengthScale, 2},
+	}
+	for name, vals := range checks {
+		if math.Abs(vals[0]-vals[1]) > 1e-9 {
+			t.Fatalf("%s = %v, want %v", name, vals[0], vals[1])
+		}
+	}
+	if ninjaHitParticleBurstCount != 1 {
+		t.Fatalf("burst count = %d, want 1", ninjaHitParticleBurstCount)
+	}
+	if ninjaHitParticleOrder != 50 {
+		t.Fatalf("sorting order = %d, want 50", ninjaHitParticleOrder)
+	}
+}
+
+func TestNinjaBodyguardHitParticleSimulationQueuesTwoStreaks(t *testing.T) {
+	sp := newNinjaHitSpark(12, 4)
+	if len(sp.particles) != 2 {
+		t.Fatalf("particles = %d, want 2", len(sp.particles))
+	}
+	items := ninjaHitParticleSprites(sp, kart.Identity(), 4)
+	if len(items) != 2 {
+		t.Fatalf("initial queued particles = %d, want 2", len(items))
+	}
+	if items[0].Sprite != ninjaHitParticleSprite || items[1].Sprite != ninjaHitParticleSprite {
+		t.Fatalf("queued sprites should use %q: %#v", ninjaHitParticleSprite, items)
+	}
+	if items[0].Order != 50 || items[1].Order != 51 {
+		t.Fatalf("orders = %d,%d; want 50,51", items[0].Order, items[1].Order)
+	}
+	expired := ninjaHitParticleSprites(sp, kart.Identity(), 4+ninjaHitParticleVisibleSec+0.01)
+	if len(expired) != 0 {
+		t.Fatalf("expired particles queued = %d, want 0", len(expired))
 	}
 }

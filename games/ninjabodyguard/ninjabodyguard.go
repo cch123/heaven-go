@@ -3,7 +3,6 @@
 package ninjabodyguard
 
 import (
-	"image/color"
 	"math"
 	"math/rand"
 	"sort"
@@ -62,10 +61,6 @@ type arrowInst struct {
 	inst     *kart.Instance
 	bornBeat float64
 	state    int
-}
-
-type hitSpark struct {
-	beat float64
 }
 
 type Module struct {
@@ -142,12 +137,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.ninjaT = kart.NewTemplate(ctx.Assets, m.firstNinja)
 	m.arrowT = kart.NewTemplate(ctx.Assets, m.ninjaArrow)
 
-	// HitParticle is a Unity ParticleSystem. Scene extraction keeps its node
-	// transform but not the renderer module, so runtime registers a tiny white
-	// slash sprite and emits it from that authored transform on perfect cuts.
-	slash := ebiten.NewImage(4, 28)
-	slash.Fill(color.RGBA{255, 255, 255, 255})
-	ctx.Assets.RegisterSprite("__ninja_hit_slash", slash, 100, 0.5, 0.5)
+	registerNinjaHitParticleSprite(ctx.Assets)
 
 	m.reset(0)
 	return nil
@@ -243,7 +233,7 @@ func (m *Module) WhiffAction(beat float64, action int) {
 }
 
 func (m *Module) Update(t, beat float64) {
-	m.pruneEffects(beat)
+	m.pruneEffects(t, beat)
 }
 
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
@@ -258,7 +248,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	for _, a := range m.effects {
 		a.inst.Queue(m.ctx.Scene, beat, kart.Identity(), 0)
 	}
-	m.queueSparks(beat)
+	m.queueSparks(t)
 	m.ctx.Scene.Draw(screen, m.proj)
 }
 
@@ -389,7 +379,7 @@ func (m *Module) onHit(beat, state float64) {
 		m.ctx.Scene.PlayState(m.guide, pick(left, "Left", "Right"), beat, 0.5)
 		m.ctx.Sound("SE_AGB_TONO_EN_HIT")
 		m.spawnArrow(arrowDestroy, beat)
-		m.sparks = append(m.sparks, hitSpark{beat: beat})
+		m.sparks = append(m.sparks, newNinjaHitSpark(beat, m.ctx.BeatToTime(beat)))
 	}
 	m.setInputs(!m.dPad)
 }
@@ -495,7 +485,7 @@ func (m *Module) spawnArrow(state int, beat float64) {
 	m.effects = append(m.effects, &arrowInst{inst: inst, bornBeat: beat, state: state})
 }
 
-func (m *Module) pruneEffects(beat float64) {
+func (m *Module) pruneEffects(t, beat float64) {
 	dst := m.effects[:0]
 	for _, e := range m.effects {
 		if e.state == arrowHit || beat-e.bornBeat <= 2 {
@@ -505,33 +495,21 @@ func (m *Module) pruneEffects(beat float64) {
 	m.effects = dst
 	sparks := m.sparks[:0]
 	for _, s := range m.sparks {
-		if beat-s.beat <= 0.35 {
+		if t-s.time <= ninjaHitParticleVisibleSec {
 			sparks = append(sparks, s)
 		}
 	}
 	m.sparks = sparks
 }
 
-func (m *Module) queueSparks(beat float64) {
+func (m *Module) queueSparks(t float64) {
 	base, ok := m.ctx.Scene.NodeWorld(m.hitParticle)
 	if !ok {
 		base = kart.Translate(-1.57, 1.36)
 	}
 	for _, sp := range m.sparks {
-		u := (beat - sp.beat) / 0.22
-		if u < 0 || u > 1 {
-			continue
-		}
-		alpha := 1 - u
-		for i := 0; i < 5; i++ {
-			off := float64(i-2) * 0.11
-			lenScale := 1.0 + float64(i%2)*0.25
-			world := base.Mul(kart.TRS(off+u*0.35, off*0.2, -0.62, 0.16, lenScale))
-			m.ctx.Scene.Queue(kart.ExtraSprite{
-				Sprite: "__ninja_hit_slash", World: world,
-				Layer: 0, Order: 52 + i,
-				Tint: [4]float64{1, 1, 1, alpha},
-			})
+		for _, q := range ninjaHitParticleSprites(sp, base, t) {
+			m.ctx.Scene.Queue(q)
 		}
 	}
 }
