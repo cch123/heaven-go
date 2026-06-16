@@ -26,6 +26,8 @@ const (
 	groundY    = 470.0
 	rigFitH    = 330.0
 
+	karateJoeFaceLayer = "joe/head-face"
+
 	inSpinDeg = 125.0
 	outSpin   = -9.0
 	camD      = 10.0
@@ -293,10 +295,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 	case "karateman/force facial expression":
 		face := int(e.Float("type", 0))
 		m.ctx.At(b, func() {
-			// The extracted legacy rig is single-layer. Playing the face clip is
-			// faithful for forced-face moments but cannot be blended over a body
-			// action until RigInst supports additive/layered clips.
-			m.playJoe(fmt.Sprintf("Face%02d", face), b)
+			m.playJoeFace(face, b)
 		})
 	case "karateman/special camera":
 		length := e.Length
@@ -357,6 +356,7 @@ func (m *Module) Ready() {
 func (m *Module) OnSwitch(beat float64) {
 	m.lastBeat = int(math.Floor(beat)) - 1
 	m.prepareUntil = math.Inf(-1)
+	m.joe.ClearLayer(karateJoeFaceLayer)
 	m.playJoe("Beat", beat)
 }
 
@@ -839,6 +839,11 @@ func (m *Module) bopAt(beat float64) {
 
 func (m *Module) playJoe(clip string, beat float64) {
 	m.joe.Play(clip, m.ctx.BeatToTime(beat))
+}
+
+func (m *Module) playJoeFace(face int, beat float64) {
+	clip := fmt.Sprintf("karateman/Head/Face%02d", face)
+	m.joe.PlayLayer(karateJoeFaceLayer, "Head", clip, m.ctx.BeatToTime(beat))
 }
 
 func (m *Module) cameraProj(beat float64) kart.Aff {

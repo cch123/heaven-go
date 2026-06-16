@@ -819,13 +819,24 @@ func sampleSwap(keys []kmdata.SwapKey, t float64) (string, bool) {
 // ---------- 骨架实例 ----------
 
 type nodeState struct {
-	pos    [2]float64
-	rot    float64
-	scale  [2]float64
-	sprite string
-	flipX  bool
-	active bool
-	color  [4]float64
+	pos      [2]float64
+	rot      float64
+	scale    [2]float64
+	size     [2]float64
+	sprite   string
+	flipX    bool
+	flipY    bool
+	active   bool
+	renderOn bool
+	order    int
+	color    [4]float64
+}
+
+type rigLayer struct {
+	rootPath string
+	anim     *kmdata.Anim
+	start    float64
+	clipName string
 }
 
 // RigInst 是一个可播放动画的骨架实例。根节点的 prefab 位移被清零，
@@ -843,6 +854,9 @@ type RigInst struct {
 
 	anim  *kmdata.Anim
 	start float64
+
+	layers     map[string]rigLayer
+	layerOrder []string
 }
 
 func NewRig(as *Assets) *RigInst {
@@ -855,6 +869,7 @@ func NewRig(as *Assets) *RigInst {
 		activeOver: map[int]bool{},
 		colorOver:  map[int][4]float64{},
 		palOver:    map[int]Palette{},
+		layers:     map[string]rigLayer{},
 	}
 	for i, n := range as.Rig.Nodes {
 		r.byPath[n.Path] = i
@@ -870,9 +885,9 @@ func (r *RigInst) reset() {
 			c = [4]float64{1, 1, 1, 1}
 		}
 		st := nodeState{
-			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
-			sprite: n.Sprite, flipX: n.FlipX,
-			active: !n.Inactive, color: c,
+			pos: n.Pos, rot: n.RotZ, scale: n.Scale, size: n.Size,
+			sprite: n.Sprite, flipX: n.FlipX, flipY: n.FlipY,
+			active: !n.Inactive, renderOn: !n.Hidden, order: n.Order, color: c,
 		}
 		if n.Parent < 0 {
 			st.pos = [2]float64{0, 0} // 摆放交给 proj
@@ -892,6 +907,27 @@ func (r *RigInst) Play(name string, t float64) {
 	if a, ok := r.as.Anims[name]; ok {
 		r.anim, r.start = a, t
 	}
+}
+
+// PlayLayer 在 rootPath 子树上叠放一条独立剪辑。旧 Karate Man 的 Head.FaceXX
+// 是同一个 Animator 里的子树播放；若用 Play 会把 Jab/Beat 之类身体动作整条替换掉。
+func (r *RigInst) PlayLayer(key, rootPath, name string, t float64) {
+	a, ok := r.as.Anims[name]
+	if !ok {
+		return
+	}
+	if _, ok := r.byPath[rootPath]; !ok && rootPath != "" {
+		return
+	}
+	if _, exists := r.layers[key]; !exists {
+		r.layerOrder = append(r.layerOrder, key)
+	}
+	r.layers[key] = rigLayer{rootPath: rootPath, anim: a, start: t, clipName: name}
+}
+
+// ClearLayer 移除 PlayLayer 创建的覆盖层。
+func (r *RigInst) ClearLayer(key string) {
+	delete(r.layers, key)
 }
 
 // SetActive 覆盖节点 m_IsActive，并在 Sample 中按 Unity activeInHierarchy
@@ -928,13 +964,14 @@ func (r *RigInst) Playing(t float64) bool {
 func (r *RigInst) Sample(t float64) {
 	r.reset()
 	if r.anim != nil {
-		at := t - r.start
-		if r.anim.Loop && r.anim.Duration > 0 {
-			at = math.Mod(at, r.anim.Duration)
-		} else if at > r.anim.Duration {
-			at = r.anim.Duration // 非循环动画保持末帧（下个 Bop 会接管）
+		r.applyClip(r.anim, "", rigClipTime(r.anim, r.start, t))
+	}
+	for _, key := range r.layerOrder {
+		layer, ok := r.layers[key]
+		if !ok || layer.anim == nil {
+			continue
 		}
-		r.apply(at)
+		r.applyClip(layer.anim, layer.rootPath, rigClipTime(layer.anim, layer.start, t))
 	}
 	for i, n := range r.as.Rig.Nodes {
 		st := &r.state[i]
@@ -949,10 +986,23 @@ func (r *RigInst) Sample(t float64) {
 	}
 }
 
-func (r *RigInst) apply(at float64) {
-	a := r.anim
+func rigClipTime(a *kmdata.Anim, start, t float64) float64 {
+	at := t - start
+	if at < 0 {
+		return 0
+	}
+	if a.Loop && a.Duration > 0 {
+		return math.Mod(at, a.Duration)
+	}
+	if at > a.Duration {
+		return a.Duration // 非循环动画保持末帧（下个 Bop 会接管）
+	}
+	return at
+}
+
+func (r *RigInst) applyClip(a *kmdata.Anim, rootPath string, at float64) {
 	for path, c := range a.Pos {
-		if i, ok := r.byPath[path]; ok {
+		if i, ok := r.clipNode(rootPath, path); ok {
 			if len(c.X) > 0 {
 				r.state[i].pos[0] = evalKeys(c.X, at)
 			}
@@ -962,12 +1012,12 @@ func (r *RigInst) apply(at float64) {
 		}
 	}
 	for path, keys := range a.Euler {
-		if i, ok := r.byPath[path]; ok && len(keys) > 0 {
+		if i, ok := r.clipNode(rootPath, path); ok && len(keys) > 0 {
 			r.state[i].rot = evalKeys(keys, at) * math.Pi / 180
 		}
 	}
 	for path, c := range a.Scale {
-		if i, ok := r.byPath[path]; ok {
+		if i, ok := r.clipNode(rootPath, path); ok {
 			if len(c.X) > 0 {
 				r.state[i].scale[0] = evalKeys(c.X, at)
 			}
@@ -977,21 +1027,77 @@ func (r *RigInst) apply(at float64) {
 		}
 	}
 	for path, keys := range a.Sprites {
-		if i, ok := r.byPath[path]; ok {
+		if i, ok := r.clipNode(rootPath, path); ok {
 			if name, ok := sampleSwap(keys, at); ok {
 				r.state[i].sprite = name // 空名 = 该帧隐藏
 			}
 		}
 	}
 	for path, attrs := range a.Floats {
-		i, ok := r.byPath[path]
+		i, ok := r.clipNode(rootPath, path)
 		if !ok {
 			continue
 		}
-		if keys, ok := attrs["m_FlipX"]; ok && len(keys) > 0 {
-			r.state[i].flipX = evalKeys(keys, at) > 0.5
+		for attr, keys := range attrs {
+			if len(keys) == 0 {
+				continue
+			}
+			v := evalKeys(keys, at)
+			switch {
+			case attr == "m_FlipX":
+				r.state[i].flipX = v > 0.5
+			case attr == "m_FlipY":
+				r.state[i].flipY = v > 0.5
+			case attr == "m_Size.x":
+				r.state[i].size[0] = v
+			case attr == "m_Size.y":
+				r.state[i].size[1] = v
+			case attr == "m_SortingOrder":
+				r.state[i].order = int(v)
+			case attr == "m_IsActive":
+				r.state[i].active = v > 0.5
+			case attr == "m_Enabled":
+				r.state[i].renderOn = v > 0.5
+			case attr == "m_AnchoredPosition.x":
+				r.state[i].pos[0] = v
+			case attr == "m_AnchoredPosition.y":
+				r.state[i].pos[1] = v
+			case strings.HasPrefix(attr, "m_Color."), strings.HasPrefix(attr, "m_fontColor."):
+				ch := strings.TrimPrefix(attr, "m_Color.")
+				ch = strings.TrimPrefix(ch, "m_fontColor.")
+				switch ch {
+				case "r":
+					r.state[i].color[0] = v
+				case "g":
+					r.state[i].color[1] = v
+				case "b":
+					r.state[i].color[2] = v
+				case "a":
+					r.state[i].color[3] = v
+				}
+			}
 		}
 	}
+}
+
+func (r *RigInst) clipNode(rootPath, path string) (int, bool) {
+	if rootPath == "" {
+		i, ok := r.byPath[path]
+		return i, ok
+	}
+	full := path
+	switch {
+	case path == "":
+		full = rootPath
+	case rigPathInSubtree(path, rootPath):
+		// Some legacy extracted clips, including Karate Man's FaceXX, are stored
+		// with full node paths even though Unity addresses them as Head.FaceXX.
+		full = path
+	default:
+		full = rootPath + "/" + path
+	}
+	i, ok := r.byPath[full]
+	return i, ok
 }
 
 // Draw 按 sortingOrder 绘制（需先 Sample）。
@@ -999,10 +1105,10 @@ func (r *RigInst) Draw(dst *ebiten.Image, proj Aff) {
 	type item struct{ idx, order int }
 	items := make([]item, 0, len(r.state))
 	for i, n := range r.as.Rig.Nodes {
-		if n.Hidden || !r.actives[i] || r.state[i].sprite == "" || r.state[i].color[3] <= 0 {
+		if n.Hidden || !r.state[i].renderOn || !r.actives[i] || r.state[i].sprite == "" || r.state[i].color[3] <= 0 {
 			continue
 		}
-		items = append(items, item{i, n.Order})
+		items = append(items, item{i, r.state[i].order})
 	}
 	// 稳定插入排序（节点数 18，开销可忽略）
 	for i := 1; i < len(items); i++ {
@@ -1012,11 +1118,12 @@ func (r *RigInst) Draw(dst *ebiten.Image, proj Aff) {
 	}
 	for _, it := range items {
 		st := &r.state[it.idx]
+		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, Stretch: st.size}
 		if pal, ok := r.paletteForNode(it.idx); ok {
-			r.as.DrawSpriteMapped(dst, st.sprite, r.world[it.idx], proj, SpriteOpts{FlipX: st.flipX, Tint: st.color}, pal)
+			r.as.DrawSpriteMapped(dst, st.sprite, r.world[it.idx], proj, opts, pal)
 			continue
 		}
-		r.as.DrawSpriteTint(dst, st.sprite, r.world[it.idx], proj, st.flipX, st.color)
+		r.as.DrawSpriteOpts(dst, st.sprite, r.world[it.idx], proj, opts)
 	}
 }
 

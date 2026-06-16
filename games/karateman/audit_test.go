@@ -2,6 +2,7 @@ package karateman
 
 import (
 	"encoding/json"
+	"fmt"
 	"math"
 	"os"
 	"path/filepath"
@@ -122,6 +123,32 @@ func TestKarateManAllAnimationGroupsExtracted(t *testing.T) {
 	}
 }
 
+func TestKarateManFaceClipsAreHeadScoped(t *testing.T) {
+	as := loadKarateManAssets(t)
+	for face := 0; face <= 8; face++ {
+		key := fmt.Sprintf("karateman/Head/Face%02d", face)
+		clip := as.Anims[key]
+		if clip == nil {
+			t.Fatalf("missing %s", key)
+		}
+		for path := range clip.Pos {
+			assertKarateManHeadPath(t, key, path)
+		}
+		for path := range clip.Euler {
+			assertKarateManHeadPath(t, key, path)
+		}
+		for path := range clip.Scale {
+			assertKarateManHeadPath(t, key, path)
+		}
+		for path := range clip.Sprites {
+			assertKarateManHeadPath(t, key, path)
+		}
+		for path := range clip.Floats {
+			assertKarateManHeadPath(t, key, path)
+		}
+	}
+}
+
 func TestKarateManWordClipsResolveSprites(t *testing.T) {
 	as := loadKarateManAssets(t)
 	for _, key := range []string{
@@ -205,6 +232,13 @@ func hasKarateManNode(r kmdata.Rig, path string) bool {
 		}
 	}
 	return false
+}
+
+func assertKarateManHeadPath(t *testing.T, clip, path string) {
+	t.Helper()
+	if path != "Head" && !strings.HasPrefix(path, "Head/") {
+		t.Fatalf("%s drives non-Head path %q", clip, path)
+	}
 }
 
 func assertKarateManNear(t *testing.T, got, want float64) {

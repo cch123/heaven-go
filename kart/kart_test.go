@@ -87,6 +87,48 @@ func TestJabSpriteSwap(t *testing.T) {
 	}
 }
 
+func TestRigLayerOverridesSubtreeWithoutReplacingBaseClip(t *testing.T) {
+	as := loadDataOnly(t)
+	rig := NewRig(as)
+	rig.Play("Jab", 0)
+	rig.Sample(0.1)
+	leftArm := rig.byPath["LeftArm"]
+	baseArmSprite := rig.state[leftArm].sprite
+	baseArmRot := rig.state[leftArm].rot
+
+	rig.Play("Jab", 0)
+	rig.PlayLayer("face", "Head", "karateman/Head/Face08", 0)
+	rig.Sample(0.1)
+	head := rig.byPath["Head"]
+	if got := rig.state[head].sprite; got != "karateman_head_8" {
+		t.Fatalf("Head layer sprite = %q, want karateman_head_8", got)
+	}
+	if got := rig.state[leftArm].sprite; got != baseArmSprite {
+		t.Fatalf("base Jab arm sprite was replaced by face layer: %q -> %q", baseArmSprite, got)
+	}
+	if got := rig.state[leftArm].rot; got != baseArmRot {
+		t.Fatalf("base Jab arm rotation was replaced by face layer: %v -> %v", baseArmRot, got)
+	}
+}
+
+func TestRigLayerAcceptsRelativeClipPaths(t *testing.T) {
+	as := loadDataOnly(t)
+	as.Anims["relativeFace"] = &kmdata.Anim{
+		Duration: 0.016666668,
+		Sprites: map[string][]kmdata.SwapKey{
+			"": {{T: 0, Name: "karateman_head_7"}},
+		},
+	}
+	rig := NewRig(as)
+	rig.Play("Beat", 0)
+	rig.PlayLayer("face", "Head", "relativeFace", 0)
+	rig.Sample(0)
+	head := rig.byPath["Head"]
+	if got := rig.state[head].sprite; got != "karateman_head_7" {
+		t.Fatalf("relative Head layer sprite = %q, want karateman_head_7", got)
+	}
+}
+
 func TestRigRuntimeOverrides(t *testing.T) {
 	as := loadDataOnly(t)
 	rig := NewRig(as)
