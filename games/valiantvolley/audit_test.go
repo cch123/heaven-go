@@ -131,6 +131,12 @@ func TestValiantVolleyTimingAndMultiSpawnSemantics(t *testing.T) {
 	if actionFruit != 3 {
 		t.Fatalf("fruit action channel = %d, want 3", actionFruit)
 	}
+	if got, want := passTurnJustHitClearBeat(20, 4), 31.5; got != want {
+		t.Fatalf("PassTurn justHit clear beat = %v, want %v", got, want)
+	}
+	if got, want := passTurnJustHitClearBeat(ev.beat, ev.length), 17.5; got != want {
+		t.Fatalf("standalone hit justHit clear beat = %v, want %v", got, want)
+	}
 }
 
 func nodeSet(as *kart.Assets) map[string]bool {

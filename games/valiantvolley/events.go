@@ -27,22 +27,28 @@ func (m *Module) scheduleIntervalsAndObjects() {
 		m.ctx.At(iv.beat, func() { m.startInterval(iv) })
 		m.ctx.At(iv.beat+iv.length, func() { m.passTurn(iv) })
 		group := m.hitsInInterval(iv)
+		hasHits := false
 		for typ := objDirt; typ <= objFruit; typ++ {
 			events := group[typ]
 			if len(events) == 0 {
 				continue
 			}
+			hasHits = true
 			for _, ev := range events {
 				used[eventKey(ev)] = true
 				m.schedulePrepare(ev)
 			}
 			m.spawnVolleyObject(m.multiSpawn(events, iv))
 		}
+		if hasHits {
+			m.scheduleJustHitClear(passTurnJustHitClearBeat(iv.beat, iv.length))
+		}
 	}
 	for _, ev := range m.hits {
 		if used[eventKey(ev)] {
 			continue
 		}
+		m.scheduleStandaloneInterval(ev)
 		m.schedulePrepare(ev)
 		m.spawnVolleyObject(objectPlan{
 			start: ev.beat - ev.length, distance: ev.length, typ: ev.typ,
@@ -97,11 +103,34 @@ func (m *Module) startInterval(iv intervalEvt) {
 
 func (m *Module) passTurn(iv intervalEvt) {
 	m.multiInputInterval = false
-	for _, a := range m.ants {
-		if a != nil {
-			a.justHit = false
+}
+
+func (m *Module) scheduleStandaloneInterval(ev hitEvt) {
+	m.ctx.At(ev.beat, func() {
+		for _, a := range m.ants {
+			if a != nil {
+				a.cantBop = true
+			}
 		}
-	}
+	})
+	m.scheduleJustHitClear(passTurnJustHitClearBeat(ev.beat, ev.length))
+}
+
+func (m *Module) scheduleJustHitClear(beat float64) {
+	m.ctx.At(beat, func() {
+		for _, a := range m.ants {
+			if a != nil {
+				a.justHit = false
+			}
+		}
+	})
+}
+
+func passTurnJustHitClearBeat(start, length float64) float64 {
+	// ValiantVolley.PassTurn queues this at passBeat - 0.5 + intervalLength*2.
+	// Since passBeat is start+length, the official clear lands after the player
+	// return window instead of immediately when the interval changes hands.
+	return start + length*3 - 0.5
 }
 
 func (m *Module) schedulePrepare(ev hitEvt) {
