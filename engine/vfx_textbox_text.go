@@ -2,6 +2,7 @@ package engine
 
 import (
 	"image"
+	_ "image/png"
 	"math"
 	"os"
 	"path/filepath"
@@ -28,6 +29,17 @@ func (t *textboxFX) ensure(assetsRoot string) bool {
 	}
 	t.font = f
 	t.cache = map[string]*ebiten.Image{}
+	pf, err := os.Open(filepath.Join(assetsRoot, "common", "textbox.png"))
+	if err != nil {
+		return false
+	}
+	defer pf.Close()
+	panel, _, err := image.Decode(pf)
+	if err != nil {
+		return false
+	}
+	t.panelSDF = panel
+	t.panelCache = map[string]*ebiten.Image{}
 	return true
 }
 

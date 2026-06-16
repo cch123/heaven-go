@@ -5,6 +5,7 @@
 package engine
 
 import (
+	"image"
 	"regexp"
 	"strings"
 
@@ -24,9 +25,11 @@ type textboxEvt struct {
 }
 
 type textboxFX struct {
-	evts  []textboxEvt
-	font  *opentype.Font
-	cache map[string]*ebiten.Image
+	evts       []textboxEvt
+	font       *opentype.Font
+	panelSDF   image.Image
+	cache      map[string]*ebiten.Image
+	panelCache map[string]*ebiten.Image
 }
 
 var richTagRe = regexp.MustCompile(`<[^>]*>`)
@@ -65,10 +68,12 @@ func (t *textboxFX) Draw(dst *ebiten.Image, assetsRoot string, beat float64) {
 			continue
 		}
 		px, py := anchorPos(e.anchor, e.x, e.y)
-		// TextboxPrefab 的四个 sliced SDF SpriteRenderer 合成约 12×3 world-unit
-		// 的白底黑边圆角框；这里按同一几何尺寸直接绘制圆角面板。
 		bw, bh := 6*e.w*54*2, 1.5*e.h*54*2
-		drawTextboxPanel(dst, px-bw/2, py-bh/2, bw, bh)
+		if panel := t.renderPanel(bw, bh); panel != nil {
+			po := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
+			po.GeoM.Translate(px-bw/2, py-bh/2)
+			dst.DrawImage(panel, po)
+		}
 		if e.text != "" {
 			txt := t.renderText(e.text, e.align, 11.2*e.w*54, 2.2*e.h*54)
 			if txt != nil {

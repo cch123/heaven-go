@@ -156,8 +156,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   对齐枚举已接入；字形边缘抗锯齿方式不同，Justified/Flush 的词间距拉伸
   暂不展开（官方已提取文本目前未依赖该行为）。
 - vfx/display textbox 已按原版 TextboxAnchor、TextboxPrefab 尺寸、文本矩形、
-  富文本 align 与自动换行绘制；框体暂用等价白底黑边圆角面板替代 TextboxSDF
-  shader 的四角 sliced 渲染，边缘抗锯齿细节不同。
+  富文本 align 与自动换行绘制；框体按官方 `textboxSDF.png` 的四角 sliced
+  SpriteRenderer 与 TextboxSDFMaterial 阈值生成，文本仍用 OTF 位图排版而非 TMP
+  SDF 字形渲染。
 - 多游戏 remix 中，未激活游戏的 interval 调度音效仍会播放（与 C# MultiSound 全局
   播放行为一致）；其动画动作也会执行但不可见。
 - C# 的 `BossAnim.SetBool("bossAnnoyed")` 在原版 controller 中无任何转换引用（死调

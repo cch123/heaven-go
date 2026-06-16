@@ -1,11 +1,12 @@
 package engine
 
 import (
+	"image"
 	"image/color"
 	"math"
+	"strconv"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/vector"
 )
 
 // anchorPos 返回原版 VFXObject.TextboxAnchor 坐标：XAnchor=3, YAnchor=3.5；
@@ -39,28 +40,114 @@ func anchorPos(anchor int, x, y float64) (float64, float64) {
 	}
 }
 
-func drawTextboxPanel(dst *ebiten.Image, x, y, w, h float64) {
-	r := math.Min(h*0.42, 34)
-	drawRoundedRect(dst, x, y, w, h, r+7, color.RGBA{0, 0, 0, 245})
-	drawRoundedRect(dst, x+6, y+6, w-12, h-12, r, color.RGBA{255, 255, 255, 245})
+func (t *textboxFX) renderPanel(w, h float64) *ebiten.Image {
+	if t.panelSDF == nil || w <= 0 || h <= 0 {
+		return nil
+	}
+	pw, ph := int(math.Round(w)), int(math.Round(h))
+	if pw <= 0 || ph <= 0 {
+		return nil
+	}
+	key := strconv.Itoa(pw) + "x" + strconv.Itoa(ph)
+	if img, ok := t.panelCache[key]; ok {
+		return img
+	}
+	rgba := t.renderPanelRGBA(pw, ph)
+	img := ebiten.NewImageFromImage(rgba)
+	t.panelCache[key] = img
+	return img
 }
 
-func drawRoundedRect(dst *ebiten.Image, x, y, w, h, r float64, c color.RGBA) {
+func (t *textboxFX) renderPanelRGBA(pw, ph int) *image.RGBA {
+	rgba := image.NewRGBA(image.Rect(0, 0, pw, ph))
+	drawTextboxQuadrant(rgba, t.panelSDF, 0, 0, pw/2, ph/2, false, false)
+	drawTextboxQuadrant(rgba, t.panelSDF, pw/2, 0, pw-pw/2, ph/2, true, false)
+	drawTextboxQuadrant(rgba, t.panelSDF, 0, ph/2, pw/2, ph-ph/2, false, true)
+	drawTextboxQuadrant(rgba, t.panelSDF, pw/2, ph/2, pw-pw/2, ph-ph/2, true, true)
+	return rgba
+}
+
+func drawTextboxQuadrant(dst *image.RGBA, src image.Image, ox, oy, w, h int, flipX, flipY bool) {
 	if w <= 0 || h <= 0 {
 		return
 	}
-	if r > w/2 {
-		r = w / 2
+	sb := src.Bounds()
+	sw, sh := sb.Dx(), sb.Dy()
+	// TextboxPrefab uses one sliced SpriteRenderer per quadrant. The source
+	// sprite has border left/top = 57px and right/bottom = 0px, so the 57px
+	// corner stays stable while the 7px inner strip stretches toward the center.
+	const border = 57
+	for y := 0; y < h; y++ {
+		ty := y
+		if flipY {
+			ty = h - 1 - y
+		}
+		sy := textboxSlicedCoord(ty, h, sh, border)
+		for x := 0; x < w; x++ {
+			tx := x
+			if flipX {
+				tx = w - 1 - x
+			}
+			sx := textboxSlicedCoord(tx, w, sw, border)
+			dst.SetRGBA(ox+x, oy+y, textboxSDFColor(src.At(sb.Min.X+sx, sb.Min.Y+sy)))
+		}
 	}
-	if r > h/2 {
-		r = h / 2
+}
+
+func textboxSlicedCoord(pos, size, srcSize, border int) int {
+	if size <= 1 || srcSize <= 1 {
+		return 0
 	}
-	fx, fy, fw, fh := float32(x), float32(y), float32(w), float32(h)
-	fr := float32(r)
-	vector.DrawFilledRect(dst, fx+fr, fy, fw-2*fr, fh, c, true)
-	vector.DrawFilledRect(dst, fx, fy+fr, fw, fh-2*fr, c, true)
-	vector.DrawFilledCircle(dst, fx+fr, fy+fr, fr, c, true)
-	vector.DrawFilledCircle(dst, fx+fw-fr, fy+fr, fr, c, true)
-	vector.DrawFilledCircle(dst, fx+fr, fy+fh-fr, fr, c, true)
-	vector.DrawFilledCircle(dst, fx+fw-fr, fy+fh-fr, fr, c, true)
+	if border > srcSize-1 {
+		border = srcSize - 1
+	}
+	keep := border
+	if keep > size {
+		keep = size
+	}
+	if pos < keep {
+		return clampInt(pos, 0, srcSize-1)
+	}
+	innerDst := size - keep
+	innerSrc := srcSize - border
+	if innerDst <= 0 || innerSrc <= 0 {
+		return clampInt(border, 0, srcSize-1)
+	}
+	u := float64(pos-keep) / float64(innerDst)
+	return clampInt(border+int(math.Round(u*float64(innerSrc-1))), 0, srcSize-1)
+}
+
+func textboxSDFColor(c color.Color) color.RGBA {
+	r, _, _, _ := c.RGBA()
+	a := float64(r) / 65535.0
+	outline := smoothstep(0.85-0.025, 0.85+0.025, a)
+	alpha := smoothstep(1.0-0.45-0.025, 1.0-0.45+0.025, a)
+	v := uint8(math.Round(outline * 255))
+	return color.RGBA{R: v, G: v, B: v, A: uint8(math.Round(alpha * 255))}
+}
+
+func smoothstep(edge0, edge1, x float64) float64 {
+	if edge0 == edge1 {
+		if x < edge0 {
+			return 0
+		}
+		return 1
+	}
+	t := (x - edge0) / (edge1 - edge0)
+	if t < 0 {
+		t = 0
+	} else if t > 1 {
+		t = 1
+	}
+	return t * t * (3 - 2*t)
+}
+
+func clampInt(v, lo, hi int) int {
+	if v < lo {
+		return lo
+	}
+	if v > hi {
+		return hi
+	}
+	return v
 }

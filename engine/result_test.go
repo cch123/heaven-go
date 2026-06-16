@@ -226,6 +226,41 @@ func TestTextboxDrawSmoke(t *testing.T) {
 	tb.Draw(screen, "../assets", 2)
 }
 
+func TestTextboxPanelUsesOfficialSDF(t *testing.T) {
+	var tb textboxFX
+	if !tb.ensure("../assets") {
+		t.Fatal("textbox assets did not load")
+	}
+	panel := tb.renderPanelRGBA(648, 162)
+	if panel == nil {
+		t.Fatal("panel did not render")
+	}
+	if got := panel.Bounds().Dx(); got != 648 {
+		t.Fatalf("panel width = %d, want 648", got)
+	}
+	if got := panel.Bounds().Dy(); got != 162 {
+		t.Fatalf("panel height = %d, want 162", got)
+	}
+
+	var transparent, outline, fill int
+	for y := 0; y < panel.Bounds().Dy(); y += 3 {
+		for x := 0; x < panel.Bounds().Dx(); x += 3 {
+			r, g, b, a := panel.At(x, y).RGBA()
+			switch {
+			case a == 0:
+				transparent++
+			case a > 0 && r < 0x2000 && g < 0x2000 && b < 0x2000:
+				outline++
+			case a > 0xf000 && r > 0xe000 && g > 0xe000 && b > 0xe000:
+				fill++
+			}
+		}
+	}
+	if transparent == 0 || outline == 0 || fill == 0 {
+		t.Fatalf("panel samples transparent=%d outline=%d fill=%d, want all present", transparent, outline, fill)
+	}
+}
+
 func colorWhite() color.RGBA { return color.RGBA{245, 245, 250, 255} }
 
 func setTestFaces(t *testing.T, app *App) {
