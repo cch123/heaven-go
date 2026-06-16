@@ -153,8 +153,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   BossCall→BossCallIdle 已逐曲线验证源末帧与目标姿态一致，视觉无差。
 - 缓动函数全表实现（engine/ease.go，HS Ease 枚举 0..43 含 Expo/Circ/Bounce/
   Back/Elastic/OutIn/InstantOut）。
-- TMP 文本用源 OTF 排版（原版为 SDF 渲染），字体/字号/颜色/对齐一致，字形边缘
-  抗锯齿方式不同；只实现 Center/Middle 对齐（其他对齐出现时显式报错）。
+- TMP 文本用源 OTF 排版（原版为 SDF 渲染），字体/字号/颜色与 TMP 水平/垂直
+  对齐枚举已接入；字形边缘抗锯齿方式不同，Justified/Flush 的词间距拉伸
+  暂不展开（官方已提取文本目前未依赖该行为）。
 - vfx/display textbox 已按原版 TextboxAnchor、TextboxPrefab 尺寸、文本矩形、
   富文本 align 与自动换行绘制；框体暂用等价白底黑边圆角面板替代 TextboxSDF
   shader 的四角 sliced 渲染，边缘抗锯齿细节不同。

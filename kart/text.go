@@ -5,7 +5,7 @@
 // 源 OTF 生成），因此这里直接用源字体文件排版：
 //
 //	em 世界高度 = m_fontSize × 0.1（TMP 非正交模式 fontScale = size/pointSize × 0.1）
-//	对齐：水平 Center（m_HorizontalAlignment=2）+ 垂直 Middle/Top（512/256）；
+//	对齐：按 TMP 水平/垂直枚举把生成位图的枢轴放到对应对齐线；
 //	      行中线 = 基线 + (ascender+descender)/2，用 sprite 枢轴复刻 TMP 锚点
 //
 // 文本渲染为高分辨率位图后注册为动态切片，由场景树按 MeshRenderer 的
@@ -30,6 +30,22 @@ import (
 // textPPU 是文本位图的像素密度（px/unit）。屏幕投影 54 px/unit，
 // 4 倍超采样保证缩放后边缘平滑。
 const textPPU = 216.0
+
+const (
+	tmpHLeft      = 1
+	tmpHCenter    = 2
+	tmpHRight     = 4
+	tmpHJustified = 8
+	tmpHFlush     = 16
+	tmpHGeometry  = 32
+
+	tmpVTop      = 256
+	tmpVMiddle   = 512
+	tmpVBottom   = 1024
+	tmpVBaseline = 2048
+	tmpVMidline  = 4096
+	tmpVCapline  = 8192
+)
 
 // parsedFonts 按字体文件名缓存解析结果（多个文本节点共用）。
 var parsedFonts = map[string]*opentype.Font{}
@@ -144,12 +160,6 @@ func (a *Assets) renderTextRuns(tn *kmdata.TextNode, runs []TextRun, clipUnits f
 	if !ok {
 		return fmt.Errorf("文本节点 path %q 不在场景树", tn.Path)
 	}
-	if (tn.HAlign != 1 && tn.HAlign != 2) || (tn.VAlign != 512 && tn.VAlign != 256) {
-		// 官方游戏目前只需要 TMP Left/Center + Middle/Top。遇到其它对齐时报错，
-		// 避免悄悄把歌词、标牌或 UI 文本排到错误位置。
-		return fmt.Errorf("文本 %q 对齐 (%d,%d) 未实现", tn.Path, tn.HAlign, tn.VAlign)
-	}
-
 	n := &a.Rig.Nodes[idx]
 	n.Order = tn.Order
 	n.Layer = tn.Layer
@@ -256,22 +266,63 @@ func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayou
 		layout.contentW = max(layout.contentW, int(tn.Rect[0]*textPPU+0.5))
 	}
 	const pad = 4
-	layout.dotX = pad
-	layout.pivotX = 0
-	if tn.HAlign == 2 {
-		layout.dotX += (layout.contentW - layout.textW) / 2
-		layout.pivotX = 0.5
+	anchorX, err := textHorizontalAnchor(tn.HAlign)
+	if err != nil {
+		layout.close()
+		return nil, fmt.Errorf("文本 %q: %w", tn.Path, err)
 	}
+	layout.dotX = pad + int(math.Round(float64(layout.contentW-layout.textW)*anchorX))
+	layout.pivotX = anchorX
 
 	// 枢轴：x 取水平对齐点；y 按 TMP 垂直对齐取行中线或顶边，
 	// 换算为 Unity 归一化（自底边）。
 	H := float64(h + 2*pad)
-	midFromTop := float64(pad) + (float64(layout.ascent)+float64(layout.descent))/2
-	layout.pivotY = 1 - midFromTop/H
-	if tn.VAlign == 256 {
-		layout.pivotY = 1 - float64(pad)/H
+	anchorY, err := textVerticalAnchorFromTop(tn.VAlign, layout.ascent, layout.descent, pad)
+	if err != nil {
+		layout.close()
+		return nil, fmt.Errorf("文本 %q: %w", tn.Path, err)
 	}
+	layout.pivotY = 1 - anchorY/H
 	return layout, nil
+}
+
+func textHorizontalAnchor(align int) (float64, error) {
+	switch align {
+	case tmpHLeft, tmpHJustified, tmpHFlush:
+		// Justified/Flush alter inter-word spacing in TMP. The renderer keeps
+		// glyph advances unchanged but preserves their left rect anchor; current
+		// official texts do not rely on paragraph justification stretching.
+		return 0, nil
+	case tmpHCenter, tmpHGeometry:
+		return 0.5, nil
+	case tmpHRight:
+		return 1, nil
+	default:
+		return 0, fmt.Errorf("TMP 水平对齐 %d 未实现", align)
+	}
+}
+
+func textVerticalAnchorFromTop(align, ascent, descent, pad int) (float64, error) {
+	top := float64(pad)
+	baseline := float64(pad + ascent)
+	bottom := float64(pad + ascent + descent)
+	midline := float64(pad) + (float64(ascent)+float64(descent))/2
+	switch align {
+	case tmpVTop:
+		return top, nil
+	case tmpVMiddle, tmpVMidline:
+		return midline, nil
+	case tmpVBottom:
+		return bottom, nil
+	case tmpVBaseline:
+		return baseline, nil
+	case tmpVCapline:
+		// Go's opentype face does not expose cap height. TMP Capline is closest
+		// to the ascender top for these dynamic font assets.
+		return top, nil
+	default:
+		return 0, fmt.Errorf("TMP 垂直对齐 %d 未实现", align)
+	}
 }
 
 func (l *textLayout) close() {

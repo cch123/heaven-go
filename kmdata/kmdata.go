@@ -200,8 +200,8 @@ type TextNode struct {
 	Layer  int        `json:"layer"`
 	Font   string     `json:"font"`   // fonts/ 下的字体文件名
 	Rect   [2]float64 `json:"rect"`   // RectTransform m_SizeDelta
-	HAlign int        `json:"hAlign"` // m_HorizontalAlignment（2=Center）
-	VAlign int        `json:"vAlign"` // m_VerticalAlignment（512=Middle）
+	HAlign int        `json:"hAlign"` // m_HorizontalAlignment（TMP 枚举）
+	VAlign int        `json:"vAlign"` // m_VerticalAlignment（TMP 枚举）
 }
 
 // XYCurve 是二维向量曲线（位置/缩放按分量存）。
