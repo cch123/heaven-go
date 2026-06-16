@@ -85,7 +85,7 @@ demo.riq (ZIP)                                                                  
 | `kmdata` | 导出物的中间格式（JSON schema） | — |
 | `kart` | 运行时：图集子图、仿射骨架/场景合成、曲线采样（Hermite + 阶跃换帧 + FlipX + m_IsActive 层级传播 + m_Color + CellAnime `_Color/_AddColor`）；`SceneInst` 支持多 Animator 并行与同根多层剪辑，剪辑时间 = 拍数 × timeScale；AnimatorController 状态机（状态名→剪辑映射、退出转换 + bool 条件，meatGrinder 的 tackMeated 满脸肉循环）；DoNormalizedAnimation（按归一化时间采样）；TMP 世界文本（动态字体 glyph 表为空 → 用源 OTF 排版为动态切片，meatGrinder 的 GRINDER 铭牌与 changeText）；模块注入的动态绘制项（模板实例/手写粒子）与场景节点统一 (layer, order, z) 排序 | Animator(Controller) / TextMeshPro / SpriteRenderer |
 | `riq` | `.riq` 加载（v1 `remix.json` 与 v2 `Charts/chart0.json` 双布局）、tempo map、关卡元数据 | Jukebox（RiqFileHandler / RiqBeatmap） |
-| `conductor` | 采样时钟：以 `player.Position()` 为权威，单调时钟外推 + 漂移校正 | Conductor.cs（`dspTime` + `absTime` 平滑） |
+| `conductor` | 采样时钟：以单调时钟平滑推进，`player.Position()` 只做粗同步锚，避免音频缓冲块台阶传到动画 | Conductor.cs（`dspTime` + `absTime` 平滑） |
 | `synth` | 程序化 PCM 合成（karateman demo 音轨鼓点） | —（替代版权音乐） |
 | `cmd/genriq` | 生成 v2 布局测试谱面 | —（替代关卡编辑器） |
 | `somen.go` | Rhythm Sōmen 完整玩法：吊臂时序、判定（ace ±10ms / just ±50ms / ng ±100ms）、bop 区间、slurp 打断逻辑、技能星、flash、结算 | RhythmSomen.cs + GameManager 事件调度 |
@@ -94,7 +94,7 @@ demo.riq (ZIP)                                                                  
 ## 设计要点
 
 - **资产管线**：`cmd/extract` 演示了移植方案的核心环节——把 Unity 序列化资产（图集 `.meta` 切片、prefab 骨架、`.anim` 关键帧曲线）转成引擎无关的 JSON。Joe 的出拳（Jab）/律动（Beat）动画直接来自原工程的曲线数据，含 Hermite 切线与阶跃帧语义。
-- **时钟**：复刻 Conductor.cs 的策略——歌曲时间以音频播放位置为锚，每帧用单调时钟外推，偏差小于 50ms 时按 8%/帧 缓收敛，大于则直接重锚。
+- **时钟**：复刻 Conductor.cs 的策略——歌曲时间以单调时钟平滑推进，音频播放位置只作为粗同步锚；偏差在死区内不校正，超过死区才半步收敛，避免 `audio.Player.Position()` 的缓冲块台阶造成所有动画抖动。
 - **输入采样**：`ebiten.SetTPS(240)`，把逻辑帧对输入的量化误差从 60Hz 的 ±8ms 压到约 ±2ms。
 - **tempo map**：分段线性的节拍↔时间双向映射，支持谱面中途变速（demo 谱面第 48 拍 120→140 BPM）。
 - **轨迹**：复刻原版 `KarateManPot.ProgressToFlyPosition` 的飞行公式——参数（判定点、地面、起点偏移、`HitPositionOffset`、`ItemSlipRt`）由提取器从 prefab 序列化字段导出为 `stage.json`。事件 beat 为抛出拍，判定在 beat+1，全程 2 拍；y 走归一化抛物线（判定时刻恰过拳头），z 跨度 ±8 配合透视近似（相机距离 10，缩放 `s = 10/(10+z)`），罐子从近景右下角飞入、判定后缩小着飞向远处；入场自转 125°/拍。
