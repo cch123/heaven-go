@@ -1,6 +1,7 @@
 package sneakyspirits
 
 import (
+	"math"
 	"testing"
 
 	"hsdemo/games/internal/audittest"
@@ -29,6 +30,11 @@ func TestSneakySpiritsExtractedAssetCoverage(t *testing.T) {
 	audittest.RequireSounds(t, as,
 		"moving", "arrowMiss", "hit", "ghostScared", "ghostEscape", "laugh", "rainLoop",
 	)
+	for _, sprite := range []string{"Raindrop", "Rainplop1", "Rain_slowmo1", "Rain_slowmo2", "Rain_slowmo3", "Rain_slowmo4"} {
+		if _, ok := as.Sheet.Sprites[sprite]; !ok {
+			t.Fatalf("missing rain sprite %q", sprite)
+		}
+	}
 }
 
 func TestSneakySpiritsControllersAndAnimationPaths(t *testing.T) {
@@ -51,4 +57,20 @@ func TestSneakySpiritsControllersAndAnimationPaths(t *testing.T) {
 		"Animations/Move", "Animations/MoveDown", "Animations/BowDraw",
 		"Animations/BowRecoil", "Animations/GhostBarely", "Animations/GhostDieNose",
 	)
+}
+
+func TestSneakySpiritsSlowdownRuntimeSemantics(t *testing.T) {
+	if got, want := rainSimulationScale(true), sneakySlowRainSimRate/sneakyNormalRainSimRate; math.Abs(got-want) > 1e-12 {
+		t.Fatalf("slow rain simulation scale = %.12f, want %.12f", got, want)
+	}
+	if got := rainSimulationScale(false); got != 1 {
+		t.Fatalf("normal rain simulation scale = %.12f, want 1", got)
+	}
+	m := &Module{slowT: 9}
+	if !m.slowActiveAt(8.999) {
+		t.Fatal("slowdown should stay active before its restore beat")
+	}
+	if m.slowActiveAt(9) {
+		t.Fatal("slowdown should end exactly on its restore beat")
+	}
 }

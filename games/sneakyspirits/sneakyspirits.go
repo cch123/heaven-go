@@ -12,7 +12,6 @@
 package sneakyspirits
 
 import (
-	"log"
 	"math"
 	"math/rand"
 
@@ -26,6 +25,15 @@ import (
 // MovingGhost.prefab：子节点 Sprite（scale 2.3）播放 Move/MoveDown，
 // 切片 Ghost_move。
 const ghostScale = 2.3
+
+const (
+	sneakySlowBeats         = 1.0
+	sneakySlowPitch         = 0.25
+	sneakyNormalRainSimRate = 1.5
+	sneakySlowRainSimRate   = 0.008
+)
+
+var sneakySlowRainSprites = [...]string{"Rain_slowmo1", "Rain_slowmo2", "Rain_slowmo3", "Rain_slowmo4"}
 
 type movingGhost struct {
 	pos       int     // 0..6
@@ -60,7 +68,7 @@ type Module struct {
 	arrowT  float64 // ArrowMiss 显示起拍（-1 = 无）
 	bowMove *bowMove
 	loaded  bool
-	slowT   float64 // 慢动作结束拍（slowDown；本谱面未用）
+	slowT   float64 // 慢动作结束拍（slowDown 成功命中后持续 1 拍）
 
 	rain []raindrop
 }
@@ -106,9 +114,6 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			length = 1
 		}
 		slow := boolParam(e, "slowDown")
-		if slow {
-			log.Printf("sneakySpirits: slowDown 慢动作变体未实现（0.25 倍速音频；官方非 PRACTICE 关未用）")
-		}
 		vols := make([]float64, 7)
 		for i := 0; i < 7; i++ {
 			vols[i] = e.Float([]string{"volume1", "volume2", "volume3", "volume4", "volume5", "volume6", "volume7"}[i], 100) / 100
@@ -127,7 +132,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		ctx.At(b+length*3, func() { m.forceReload() })
 		// 判定（flick=主键按下）
 		ctx.ScheduleInput(b+length*7,
-			func(st float64, _ engine.Judgment) { m.just(st, b+length*7) },
+			func(st float64, _ engine.Judgment) { m.just(st, b+length*7, slow) },
 			func() { m.miss(b + length*7) })
 	case "sneakySpirits/fakeGhost":
 		pos := int(e.Float("position", 1)) - 1
@@ -159,7 +164,7 @@ func (m *Module) forceReload() {
 
 // ---------- 判定 ----------
 
-func (m *Module) just(state float64, beat float64) {
+func (m *Module) just(state float64, beat float64, slowDown bool) {
 	if !m.loaded {
 		return
 	}
@@ -176,10 +181,46 @@ func (m *Module) just(state float64, beat float64) {
 	m.loaded = false
 	ctx.Sound("hit")
 	ctx.Scene.PlayState(ctx.Role("bowAnim"), "BowRecoil", beat, 0.25)
+	if slowDown {
+		m.beginSlowdown(beat)
+	}
 	ctx.Scene.PlayState(ctx.Role("doorAnim"), "DoorOpen", beat, 0.5)
 	ctx.At(beat+1, func() {
+		m.endSlowdown()
 		ctx.Scene.PlayState(ctx.Role("doorAnim"), "DoorClose", ctx.Beat(), 0.5)
 	})
+}
+
+func (m *Module) beginSlowdown(beat float64) {
+	m.slowT = beat + sneakySlowBeats
+	m.setSlowScene(true)
+	m.ctx.SetMinigamePitch(sneakySlowPitch)
+}
+
+func (m *Module) endSlowdown() {
+	m.slowT = -10
+	m.ctx.SetMinigamePitch(1)
+	m.setSlowScene(false)
+}
+
+func (m *Module) slowActiveAt(beat float64) bool {
+	return beat < m.slowT
+}
+
+func (m *Module) setSlowScene(active bool) {
+	if m.ctx == nil || m.ctx.Scene == nil {
+		return
+	}
+	m.setRoleActive("slowRain", active)
+	m.setRoleActive("normalRain", !active)
+	m.setRoleActive("slowTree", active)
+	m.setRoleActive("normalTree", !active)
+}
+
+func (m *Module) setRoleActive(role string, active bool) {
+	if p := m.ctx.Role(role); p != "" {
+		m.ctx.Scene.SetActive(p, active)
+	}
 }
 
 func (m *Module) miss(beat float64) {
@@ -213,6 +254,7 @@ func (m *Module) Whiff(beat float64) {
 
 func (m *Module) OnSwitch(beat float64) {
 	m.loaded = false
+	m.endSlowdown()
 	// InitGhosts：跨段进行中的 spawnGhost 已由 OnEvent 静态展开覆盖
 	sc := m.ctx.Scene
 	sc.SetActive(m.ctx.Role("deathGhostPrefab"), false)
@@ -317,18 +359,36 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	}
 	sc.Draw(screen, m.proj)
 
-	m.drawRain(screen, t)
+	m.drawRain(screen, t, m.slowActiveAt(beat))
 }
 
 // drawRain：雨景 ParticleSystem 的等价手写（垂直雨丝）。
-func (m *Module) drawRain(screen *ebiten.Image, t float64) {
+func (m *Module) drawRain(screen *ebiten.Image, t float64, slow bool) {
+	simScale := rainSimulationScale(slow)
 	for i := range m.rain {
 		r := &m.rain[i]
-		y := math.Mod(r.y+t*r.speed, 12)
+		y := math.Mod(r.y+t*r.speed*simScale, 12)
 		px := float64(engine.ScreenW)/2 + r.x*54
 		py := -54 + (y * 54)
+		if slow {
+			world := kart.Translate(r.x, (float64(engine.ScreenH)/2-py)/54)
+			sprite := sneakySlowRainSprites[i%len(sneakySlowRainSprites)]
+			m.ctx.Assets.DrawSpriteOpts(screen, sprite, world, m.proj, kart.SpriteOpts{
+				Tint: [4]float64{1, 1, 1, 0.75},
+			})
+			continue
+		}
 		ebitenFillRect(screen, px, py, 1.5, 18, colorRGBA{200, 205, 235, 110})
 	}
+}
+
+func rainSimulationScale(slow bool) float64 {
+	if slow {
+		// Matches the prefab switch in SneakySpirits.Success: Rain uses
+		// simulationSpeed 1.5 while Rain Slow uses 0.008.
+		return sneakySlowRainSimRate / sneakyNormalRainSimRate
+	}
+	return 1
 }
 
 // ---------- 工具 ----------
