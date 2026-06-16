@@ -17,6 +17,7 @@ type superSamuraiSliceAssets struct {
 	Rig         kmdata.Rig
 	Roles       kmdata.Roles
 	Extra       kmdata.Extra
+	Particles   kmdata.ParticleData
 	Anims       map[string]*kmdata.Anim
 	Controllers map[string]kmdata.Controller
 	Animators   kmdata.Animators
@@ -34,6 +35,7 @@ func loadSuperSamuraiSliceAssets(t *testing.T) *superSamuraiSliceAssets {
 	readAssetJSON(t, filepath.Join(root, "scene.json"), &as.Rig)
 	readAssetJSON(t, filepath.Join(root, "roles.json"), &as.Roles)
 	readAssetJSON(t, filepath.Join(root, "extra.json"), &as.Extra)
+	readAssetJSON(t, filepath.Join(root, "particles.json"), &as.Particles)
 	readAssetJSON(t, filepath.Join(root, "anims.json"), &as.Anims)
 	readAssetJSON(t, filepath.Join(root, "controllers.json"), &as.Controllers)
 	readAssetJSON(t, filepath.Join(root, "animators.json"), &as.Animators)
@@ -116,6 +118,47 @@ func TestSuperSamuraiSliceParticleSprites(t *testing.T) {
 	}
 	if smallExplodeType(1) == effectLightning || smallExplodeType(2) == effectLightning || smallExplodeType(4) == effectLightning {
 		t.Fatalf("small demon explode type aliases lightning")
+	}
+}
+
+func TestSuperSamuraiSliceParticleSystemsExtracted(t *testing.T) {
+	as := loadSuperSamuraiSliceAssets(t)
+	if len(as.Particles.Systems) != 48 {
+		t.Fatalf("ParticleSystem count = %d, want 48", len(as.Particles.Systems))
+	}
+
+	lightning := requireParticleSystem(t, as, "SamuraiHolder/GameObject/lightning/Main")
+	if lightning.StartLifetime.Scalar != 0.15 || lightning.StartSize.Scalar != 4 {
+		t.Fatalf("lightning main parameters changed: %#v", lightning)
+	}
+	if len(lightning.Emission.Bursts) != 1 || lightning.Emission.Bursts[0].Count.Scalar != 1 {
+		t.Fatalf("lightning burst changed: %#v", lightning.Emission)
+	}
+	if len(lightning.TextureSheet.Sprites) != 1 ||
+		lightning.TextureSheet.Sprites[0] != "sliceparticles_13" {
+		t.Fatalf("lightning sprite changed: %#v", lightning.TextureSheet)
+	}
+	if lightning.Renderer.RenderAlignment != 2 || lightning.Renderer.LengthScale != 2 ||
+		!lightning.Renderer.RotateWithStretchDirection {
+		t.Fatalf("lightning renderer changed: %#v", lightning.Renderer)
+	}
+
+	for _, path := range []string{"WaterParticle/WaterL", "WaterParticle/WaterR"} {
+		water := requireParticleSystem(t, as, path)
+		if water.StartLifetime.Mode != 3 || water.StartLifetime.Scalar != 3 ||
+			water.StartLifetime.MinScalar != 2 || water.StartSize.Scalar != 0.13 {
+			t.Fatalf("%s parameters changed: %#v", path, water)
+		}
+		if len(water.Emission.Bursts) != 1 || water.Emission.Bursts[0].Count.Scalar != 25 {
+			t.Fatalf("%s burst changed: %#v", path, water.Emission)
+		}
+		if len(water.TextureSheet.Sprites) != 1 || water.TextureSheet.Sprites[0] != "enemy_obj_3" {
+			t.Fatalf("%s sprite changed: %#v", path, water.TextureSheet)
+		}
+		if water.Renderer.SortingOrder != 25 || water.Renderer.LengthScale != 2 ||
+			!water.Renderer.RotateWithStretchDirection {
+			t.Fatalf("%s renderer changed: %#v", path, water.Renderer)
+		}
 	}
 }
 
@@ -343,6 +386,17 @@ func requireComponent(t *testing.T, extra kmdata.Extra, name string) kmdata.Comp
 		t.Fatalf("missing component %s", name)
 	}
 	return c
+}
+
+func requireParticleSystem(t *testing.T, as *superSamuraiSliceAssets, path string) kmdata.ParticleSystem {
+	t.Helper()
+	for _, ps := range as.Particles.Systems {
+		if ps.Path == path {
+			return ps
+		}
+	}
+	t.Fatalf("missing ParticleSystem %s", path)
+	return kmdata.ParticleSystem{}
 }
 
 func assertNear(t *testing.T, got, want float64) {

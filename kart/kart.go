@@ -75,16 +75,17 @@ func (m Aff) GeoM() ebiten.GeoM {
 // ---------- 资产 ----------
 
 type Assets struct {
-	Sheet   kmdata.Sheet
-	Atlas   *ebiten.Image   // 单图集（legacy karateman 格式）
-	Atlases []*ebiten.Image // 多图集（scene 格式）
-	Rig     kmdata.Rig      // karateman: rig.json；scene 游戏: scene.json
-	Roles   kmdata.Roles    // scene 游戏: 脚本字段 → 节点 path
-	Extra   kmdata.Extra    // scene 游戏: 扩展序列化数据（可选）
-	Meshes  kmdata.MeshData // scene 游戏: MeshRenderer/材质绑定（可选）
-	MeshTex map[string]*ebiten.Image
-	Stage   kmdata.Stage
-	Anims   map[string]*kmdata.Anim
+	Sheet     kmdata.Sheet
+	Atlas     *ebiten.Image       // 单图集（legacy karateman 格式）
+	Atlases   []*ebiten.Image     // 多图集（scene 格式）
+	Rig       kmdata.Rig          // karateman: rig.json；scene 游戏: scene.json
+	Roles     kmdata.Roles        // scene 游戏: 脚本字段 → 节点 path
+	Extra     kmdata.Extra        // scene 游戏: 扩展序列化数据（可选）
+	Meshes    kmdata.MeshData     // scene 游戏: MeshRenderer/材质绑定（可选）
+	Particles kmdata.ParticleData // scene 游戏: ParticleSystem 参数（可选）
+	MeshTex   map[string]*ebiten.Image
+	Stage     kmdata.Stage
+	Anims     map[string]*kmdata.Anim
 	// Sounds: 文件主名（无扩展名）→ 解码后的 16-bit LE 立体声裸 PCM
 	Sounds map[string][]byte
 
@@ -145,6 +146,11 @@ func Load(dir string, audioRate int) (*Assets, error) {
 					}
 					a.MeshTex[env.Image] = img
 				}
+			}
+		}
+		if _, err := os.Stat(filepath.Join(dir, "particles.json")); err == nil {
+			if err := readJSON(filepath.Join(dir, "particles.json"), &a.Particles); err != nil {
+				return nil, err
 			}
 		}
 		for _, name := range a.Sheet.Atlases {

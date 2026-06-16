@@ -47,3 +47,33 @@ func TestRhythmSomenAnimationPaths(t *testing.T) {
 	audittest.RequireClipPaths(t, as, "SomenMan/Shock", "ShockNothing", "ShockNothing")
 	audittest.RequireClipPaths(t, as, "Shoot", "WaterFlow", "Shoot/WaterFlow")
 }
+
+func TestRhythmSomenSplashParticleSystem(t *testing.T) {
+	as := audittest.LoadAssets(t, "rhythmSomen")
+	idx := -1
+	for i := range as.Particles.Systems {
+		if as.Particles.Systems[i].Path == "SplashEffect" {
+			idx = i
+			break
+		}
+	}
+	if idx < 0 {
+		t.Fatalf("missing SplashEffect ParticleSystem: %#v", as.Particles.Systems)
+	}
+	ps := as.Particles.Systems[idx]
+	if ps.Duration != 0.05 || ps.StartLifetime.Scalar != 0.5 ||
+		ps.StartSpeed.Scalar != 5 || ps.StartSize.Scalar != 0.2 ||
+		ps.GravityModifier.Scalar != 2 {
+		t.Fatalf("SplashEffect core parameters changed: %#v", ps)
+	}
+	if len(ps.Emission.Bursts) != 1 || ps.Emission.Bursts[0].Count.Scalar != 3 {
+		t.Fatalf("SplashEffect burst parameters changed: %#v", ps.Emission)
+	}
+	if len(ps.TextureSheet.Sprites) != 1 || ps.TextureSheet.Sprites[0] != "sweat" {
+		t.Fatalf("SplashEffect texture sheet changed: %#v", ps.TextureSheet)
+	}
+	if ps.Renderer.RenderAlignment != 4 || !ps.Renderer.FreeformStretching ||
+		!ps.Renderer.RotateWithStretchDirection {
+		t.Fatalf("SplashEffect renderer parameters changed: %#v", ps.Renderer)
+	}
+}

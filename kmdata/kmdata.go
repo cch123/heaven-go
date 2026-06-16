@@ -266,6 +266,153 @@ type MeshData struct {
 	Geometries map[string][]MeshGeometry `json:"geometries,omitempty"` // mesh asset guid -> geometries
 }
 
+// ParticleData preserves Unity ParticleSystem + ParticleSystemRenderer
+// serialization. Runtime games should use this instead of re-auditing prefab
+// YAML when porting official particle effects.
+type ParticleData struct {
+	Systems []ParticleSystem `json:"systems,omitempty"`
+}
+
+type ParticleSystem struct {
+	Path                 string           `json:"path"`
+	Enabled              bool             `json:"enabled"`
+	Active               bool             `json:"active"`
+	Duration             float64          `json:"duration"`
+	SimulationSpeed      float64          `json:"simulationSpeed"`
+	Looping              bool             `json:"looping"`
+	Prewarm              bool             `json:"prewarm"`
+	PlayOnAwake          bool             `json:"playOnAwake"`
+	StopAction           int              `json:"stopAction"`
+	CullingMode          int              `json:"cullingMode"`
+	ScalingMode          int              `json:"scalingMode"`
+	EmitterVelocityMode  int              `json:"emitterVelocityMode"`
+	StartDelay           ParticleCurve    `json:"startDelay"`
+	StartLifetime        ParticleCurve    `json:"startLifetime"`
+	StartSpeed           ParticleCurve    `json:"startSpeed"`
+	StartSize            ParticleCurve    `json:"startSize"`
+	StartSizeY           ParticleCurve    `json:"startSizeY,omitempty"`
+	StartSizeZ           ParticleCurve    `json:"startSizeZ,omitempty"`
+	StartRotation        ParticleCurve    `json:"startRotation"`
+	StartRotationX       ParticleCurve    `json:"startRotationX,omitempty"`
+	StartRotationY       ParticleCurve    `json:"startRotationY,omitempty"`
+	StartColor           ParticleGradient `json:"startColor"`
+	GravityModifier      ParticleCurve    `json:"gravityModifier"`
+	MaxParticles         int              `json:"maxParticles"`
+	Shape                ParticleShape    `json:"shape"`
+	Emission             ParticleEmission `json:"emission"`
+	SizeOverLifetime     ParticleAxis     `json:"sizeOverLifetime"`
+	RotationOverLifetime ParticleAxis     `json:"rotationOverLifetime"`
+	ColorOverLifetime    ParticleColorMod `json:"colorOverLifetime"`
+	VelocityOverLifetime ParticleAxis     `json:"velocityOverLifetime"`
+	ForceOverLifetime    ParticleAxis     `json:"forceOverLifetime"`
+	TextureSheet         ParticleSheet    `json:"textureSheet"`
+	Renderer             ParticleRenderer `json:"renderer"`
+}
+
+type ParticleCurve struct {
+	Mode      int     `json:"mode"`
+	Scalar    float64 `json:"scalar"`
+	MinScalar float64 `json:"minScalar,omitempty"`
+	Max       []Key   `json:"max,omitempty"`
+	Min       []Key   `json:"min,omitempty"`
+}
+
+type ParticleGradient struct {
+	Mode        int              `json:"mode"`
+	MinColor    [4]float64       `json:"minColor,omitempty"`
+	MaxColor    [4]float64       `json:"maxColor,omitempty"`
+	MinGradient ParticleGradKeys `json:"minGradient"`
+	MaxGradient ParticleGradKeys `json:"maxGradient"`
+}
+
+type ParticleGradKeys struct {
+	Mode      int                     `json:"mode"`
+	ColorKeys []ParticleGradientColor `json:"colorKeys,omitempty"`
+	AlphaKeys []ParticleGradientAlpha `json:"alphaKeys,omitempty"`
+}
+
+type ParticleGradientColor struct {
+	T     float64    `json:"t"`
+	Color [4]float64 `json:"color"`
+}
+
+type ParticleGradientAlpha struct {
+	T float64 `json:"t"`
+	A float64 `json:"a"`
+}
+
+type ParticleEmission struct {
+	Enabled          bool            `json:"enabled"`
+	RateOverTime     ParticleCurve   `json:"rateOverTime"`
+	RateOverDistance ParticleCurve   `json:"rateOverDistance"`
+	Bursts           []ParticleBurst `json:"bursts,omitempty"`
+}
+
+type ParticleBurst struct {
+	Time           float64       `json:"time"`
+	Count          ParticleCurve `json:"count"`
+	CycleCount     int           `json:"cycleCount"`
+	RepeatInterval float64       `json:"repeatInterval"`
+	Probability    float64       `json:"probability"`
+}
+
+type ParticleShape struct {
+	Enabled         bool       `json:"enabled"`
+	Type            int        `json:"type"`
+	Angle           float64    `json:"angle"`
+	Radius          float64    `json:"radius"`
+	RadiusThickness float64    `json:"radiusThickness"`
+	Arc             float64    `json:"arc"`
+	Length          float64    `json:"length"`
+	Position        [3]float64 `json:"position,omitempty"`
+	Rotation        [3]float64 `json:"rotation,omitempty"`
+	Scale           [3]float64 `json:"scale,omitempty"`
+}
+
+type ParticleAxis struct {
+	Enabled bool          `json:"enabled"`
+	X       ParticleCurve `json:"x"`
+	Y       ParticleCurve `json:"y"`
+	Z       ParticleCurve `json:"z"`
+	Curve   ParticleCurve `json:"curve"`
+}
+
+type ParticleColorMod struct {
+	Enabled bool             `json:"enabled"`
+	Color   ParticleGradient `json:"color"`
+}
+
+type ParticleSheet struct {
+	Enabled bool     `json:"enabled"`
+	Mode    int      `json:"mode"`
+	Tiles   [2]int   `json:"tiles,omitempty"`
+	Cycles  int      `json:"cycles,omitempty"`
+	Sprites []string `json:"sprites,omitempty"`
+}
+
+type ParticleRenderer struct {
+	Enabled                    bool       `json:"enabled"`
+	Materials                  []AssetRef `json:"materials,omitempty"`
+	Mesh                       AssetRef   `json:"mesh,omitempty"`
+	SortingLayer               int        `json:"sortingLayer"`
+	SortingOrder               int        `json:"sortingOrder"`
+	RenderMode                 int        `json:"renderMode"`
+	SortMode                   int        `json:"sortMode"`
+	RenderAlignment            int        `json:"renderAlignment"`
+	MinParticleSize            float64    `json:"minParticleSize"`
+	MaxParticleSize            float64    `json:"maxParticleSize"`
+	CameraVelocityScale        float64    `json:"cameraVelocityScale"`
+	VelocityScale              float64    `json:"velocityScale"`
+	LengthScale                float64    `json:"lengthScale"`
+	SortingFudge               float64    `json:"sortingFudge"`
+	NormalDirection            float64    `json:"normalDirection"`
+	Pivot                      [3]float64 `json:"pivot,omitempty"`
+	Flip                       [3]float64 `json:"flip,omitempty"`
+	AllowRoll                  bool       `json:"allowRoll"`
+	FreeformStretching         bool       `json:"freeformStretching"`
+	RotateWithStretchDirection bool       `json:"rotateWithStretchDirection"`
+}
+
 // XYCurve 是二维向量曲线（位置/缩放按分量存）。
 type XYCurve struct {
 	X []Key `json:"x,omitempty"`
