@@ -10,8 +10,9 @@ package munchymonk
 
 import (
 	"image/color"
-	"log"
 	"math"
+	"os"
+	"path/filepath"
 	"sort"
 
 	"github.com/hajimehoshi/ebiten/v2"
@@ -23,6 +24,8 @@ import (
 
 // 主题色 "b9fffc"
 var bgColor = color.RGBA{0xb9, 0xff, 0xfc, 255}
+
+const vineBoomSound = "fanClub/arisa_dab"
 
 type dumpling struct {
 	inst     *kart.Instance
@@ -95,6 +98,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	if err := ctx.LoadAssets("munchyMonk"); err != nil {
 		return err
 	}
+	m.loadVineBoom()
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.dumpT = kart.NewTemplate(ctx.Assets, ctx.Role("DumplingObj"))
 	for name, c := range ctx.Assets.Extra.Components {
@@ -221,7 +225,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 	case "munchyMonk/MonkAnimation":
 		which := int(e.Float("whichAnim", 0))
 		if boolParam(e, "vineBoom") {
-			log.Printf("munchyMonk: vineBoom 音效（fanClub/arisa_dab）未提取——官方关卡未使用")
+			ctx.SoundAt(b, vineBoomSound, 1)
 		}
 		ctx.At(b, func() {
 			if which == 1 {
@@ -273,6 +277,30 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			m.ctx.Scene.SetActive(m.ctx.Role("CloudMonkey"), true)
 		})
 	}
+}
+
+func (m *Module) loadVineBoom() {
+	pcm, err := loadVineBoomPCM(m.ctx.AssetsRoot())
+	if err != nil {
+		return
+	}
+	// HS plays this as SoundByte.PlayOneShotGame("fanClub/arisa_dab"), even
+	// though the event belongs to munchyMonk. Keep the namespaced key so the
+	// cross-game reference remains visible and cannot collide with local sounds.
+	m.ctx.Assets.Sounds[vineBoomSound] = pcm
+}
+
+func loadVineBoomPCM(assetsRoot string) ([]byte, error) {
+	path := filepath.Join(assetsRoot, "fanClub", "sounds", "arisa_dab.wav")
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		return nil, err
+	}
+	pcm, err := kart.DecodePCM(raw, filepath.Ext(path), engine.SampleRate)
+	if err != nil {
+		return nil, err
+	}
+	return pcm, nil
 }
 
 // Ready：bop 区间（SetupBopRegion autoBop）逐拍脉冲。

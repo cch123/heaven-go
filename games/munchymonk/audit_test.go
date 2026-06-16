@@ -28,6 +28,16 @@ func TestMunchyMonkExtractedAssetCoverage(t *testing.T) {
 	audittest.RequireSequences(t, as, "one_go", "two_go", "three_go")
 }
 
+func TestMunchyMonkLoadsFanClubVineBoom(t *testing.T) {
+	pcm, err := loadVineBoomPCM("../../assets")
+	if err != nil {
+		t.Skipf("fanClub vine boom asset not extracted: %v", err)
+	}
+	if len(pcm) == 0 {
+		t.Fatal("decoded fanClub/arisa_dab is empty")
+	}
+}
+
 func TestMunchyMonkControllersAndAnimationPaths(t *testing.T) {
 	as := audittest.LoadAssets(t, "munchyMonk")
 	for ctrl, states := range map[string][]string{
