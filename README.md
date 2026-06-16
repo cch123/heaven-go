@@ -107,10 +107,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - karateman：Pack-In 使用路径已接入 engine（hit/bop/prepare/warnings/background/
   set object colors/particle effects/force facial expression）。普通 pot 与 rock 的
   轨迹、判定、throw/hit/through/voice 音效按 C# 时序移植；背景颜色、物体颜色、
-  Joe MappingMaterial 换色和 wig 开关已接入。
-  仍缺完整项：Word prefab 的原版字形动画、背景纹理/
-  Sunburst/Rings 精确材质、ParticleSystem 参数级复刻、face clip 与 body clip 的层叠
-  播放（当前为单 RigInst clip），这些作为显式简化保留。
+  Joe MappingMaterial 换色和 wig 开关已接入；Word prefab 已接入原版字形图集与
+  `word/Word00..06` 动画。
+  仍缺完整项：背景纹理/Sunburst/Rings 精确材质、ParticleSystem 参数级复刻、
+  face clip 与 body clip 的层叠播放（当前为单 RigInst clip），这些作为显式简化保留。
 - builtToScaleDS：`spawn blocks` 的生成、windup、判定、hit/NG/miss/Sink、
   Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
   提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载并

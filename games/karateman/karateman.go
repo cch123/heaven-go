@@ -6,7 +6,6 @@
 package karateman
 
 import (
-	"bytes"
 	"fmt"
 	"image/color"
 	"math"
@@ -14,9 +13,7 @@ import (
 	"strings"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/text/v2"
 	"github.com/hajimehoshi/ebiten/v2/vector"
-	"golang.org/x/image/font/gofont/goregular"
 
 	"hsdemo/engine"
 	"hsdemo/kart"
@@ -123,10 +120,12 @@ type hitMark struct {
 }
 
 type Module struct {
-	ctx  *engine.Ctx
-	joe  *kart.RigInst
-	proj kart.Aff
-	unit float64
+	ctx      *engine.Ctx
+	joe      *kart.RigInst
+	word     *kart.RigInst
+	proj     kart.Aff
+	wordProj kart.Aff
+	unit     float64
 
 	pots []*pot
 
@@ -165,8 +164,6 @@ type Module struct {
 	seriousWhite  [4]float64
 	seriousBlack  [4]float64
 	seriousHit    float64
-
-	faceBig *text.GoTextFace
 }
 
 func New() engine.Module {
@@ -191,18 +188,19 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 		return err
 	}
 	m.joe = kart.NewRig(ctx.Assets)
+	wordAssets := *ctx.Assets
+	wordAssets.Rig = karateWordRig()
+	m.word = kart.NewRig(&wordAssets)
 	m.applyJoeAppearance(defaultJoeBodyColor, defaultJoeHighlightColor, false)
 	_, minY, _, maxY := m.joe.BBox()
 	m.unit = rigFitH / (maxY - minY)
 	m.proj = kart.Translate(joeScreenX, groundY+m.unit*ctx.Assets.Stage.FloorY).Mul(kart.Scale(m.unit, -m.unit))
+	// The Word prefab is a sibling of Joe in Unity's scene root. RigInst clears
+	// root translation by design, so the root x offset lives in the projection
+	// while the prefab's 0.8 scale remains on the synthetic root node.
+	m.wordProj = kart.Translate(engine.ScreenW/2-0.5*54, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.itemTint = [4]float64{1, 1, 1, 1}
 	m.starTint = [4]float64{1, 1, 1, 1}
-
-	src, err := text.NewGoTextFaceSource(bytes.NewReader(goregular.TTF))
-	if err != nil {
-		return err
-	}
-	m.faceBig = &text.GoTextFace{Source: src, Size: 46}
 	return nil
 }
 
@@ -234,11 +232,13 @@ func (m *Module) OnEvent(e *riq.Entity) {
 	case "karateman/warnings":
 		m.scheduleWord(e)
 	case "karateman/hitX":
-		// Legacy hidden warning action. Heaven Studio keeps this for old charts;
-		// it maps directly to the modern warning text type.
-		m.scheduleWord(&riq.Entity{Beat: e.Beat, Length: e.Length, Data: map[string]any{
-			"whichWarning": e.Float("type", 2),
-		}})
+		// Legacy hidden warning action. Unity's converter offsets type 0..6 by
+		// one and maps type>=7 to the "hit one" warning; missing type is ignored.
+		if kind, ok := legacyHitXWarningKind(e); ok {
+			m.scheduleWord(&riq.Entity{Beat: e.Beat, Length: e.Length, Data: map[string]any{
+				"whichWarning": float64(kind),
+			}})
+		}
 	case "karateman/bop":
 		toggle := boolParamDefault(e, "toggle2", true)
 		auto := boolParam(e, "toggle")
@@ -399,7 +399,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	m.joe.Draw(screen, proj)
 	m.drawPots(screen, t, beat, shadow, proj)
 	m.drawHitMarks(screen, beat)
-	m.drawWords(screen, beat)
+	m.drawWords(screen, t, beat)
 	m.drawFX(screen, fx, fxType, beat)
 	m.drawNori(screen)
 }
@@ -1027,29 +1027,26 @@ func (m *Module) drawHitMarks(screen *ebiten.Image, beat float64) {
 	}
 }
 
-func (m *Module) drawWords(screen *ebiten.Image, beat float64) {
+func (m *Module) drawWords(screen *ebiten.Image, t, beat float64) {
+	if m.word == nil {
+		return
+	}
+	var active *wordEvt
 	for _, w := range m.words {
 		if beat < w.beat || beat > w.clear {
 			continue
 		}
-		u := clamp01((beat - w.beat) / 0.25)
-		y := engine.ScreenH*0.23 - (1-u)*18
-		m.drawText(screen, wordLabel(w.kind), engine.ScreenW/2, y, color.RGBA{255, 255, 255, 235}, true)
+		if active == nil || w.beat >= active.beat {
+			wc := w
+			active = &wc
+		}
 	}
-}
-
-func (m *Module) drawText(screen *ebiten.Image, s string, x, y float64, c color.Color, center bool) {
-	if m.faceBig == nil {
+	if active == nil {
 		return
 	}
-	if center {
-		w, _ := text.Measure(s, m.faceBig, 0)
-		x -= w / 2
-	}
-	op := &text.DrawOptions{}
-	op.GeoM.Translate(x, y)
-	op.ColorScale.ScaleWithColor(c)
-	text.Draw(screen, s, m.faceBig, op)
+	m.word.Play(wordClip(active.kind), m.ctx.BeatToTime(active.beat))
+	m.word.Sample(t)
+	m.word.Draw(screen, m.wordProj)
 }
 
 func (m *Module) drawTexture(screen *ebiten.Image, tint [4]float64, typ int, beat float64) {
@@ -1211,27 +1208,12 @@ func wordVoice(kind int) (hit, number string) {
 	return "en/hit", number
 }
 
-func wordLabel(kind int) string {
-	switch kind {
-	case 0:
-		return "HIT ONE"
-	case 1:
-		return "HIT TWO"
-	case 2:
-		return "HIT THREE"
-	case 3:
-		return "HIT THREE"
-	case 4:
-		return "HIT FOUR"
-	case 5:
-		return "GRR!"
-	case 6:
-		return "WARNING"
-	case 7:
-		return "COMBO"
-	default:
-		return "HIT"
+func wordClip(kind int) string {
+	idx := kind
+	if kind >= 3 {
+		idx = kind - 1
 	}
+	return fmt.Sprintf("word/Word%02d", clampInt(idx, 0, 6))
 }
 
 func wordClearBeat(beat, length float64, kind int, custom bool) float64 {
@@ -1245,6 +1227,29 @@ func wordClearBeat(beat, length float64, kind int, custom bool) float64 {
 		clear = beat + length
 	}
 	return clear
+}
+
+func legacyHitXWarningKind(e *riq.Entity) (int, bool) {
+	if e.Data == nil {
+		return 0, false
+	}
+	if _, ok := e.Data["type"]; !ok {
+		return 0, false
+	}
+	typ := int(e.Float("type", 0))
+	if typ < 7 {
+		return typ + 1, true
+	}
+	return 0, true
+}
+
+func karateWordRig() kmdata.Rig {
+	return kmdata.Rig{Nodes: []kmdata.Node{
+		{Name: "Word", Path: "", Parent: -1, Scale: [2]float64{0.8, 0.8}},
+		{Name: "Main", Path: "Main", Parent: 0, Pos: [2]float64{-4.4, 1}, Scale: [2]float64{4.5, 4.5}},
+		{Name: "Sub", Path: "Sub", Parent: 0, Pos: [2]float64{-1.403, 1}, Scale: [2]float64{4.5, 4.5}},
+		{Name: "Exclaim", Path: "Exclaim", Parent: 0, Pos: [2]float64{-1.08, 1}, Scale: [2]float64{4.5, 4.5}},
+	}}
 }
 
 func bgPreset(preset int) [4]float64 {

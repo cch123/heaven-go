@@ -185,11 +185,22 @@ func Load(dir string, audioRate int) (*Assets, error) {
 		if err := readJSON(filepath.Join(dir, "stage.json"), &a.Stage); err != nil {
 			return nil, err
 		}
-		img, err := loadPNG(filepath.Join(dir, a.Sheet.Atlas))
-		if err != nil {
-			return nil, err
+		if len(a.Sheet.Atlases) > 0 {
+			for _, name := range a.Sheet.Atlases {
+				img, err := loadPNG(filepath.Join(dir, name))
+				if err != nil {
+					return nil, err
+				}
+				a.Atlases = append(a.Atlases, img)
+			}
+			a.Atlas = a.Atlases[0]
+		} else {
+			img, err := loadPNG(filepath.Join(dir, a.Sheet.Atlas))
+			if err != nil {
+				return nil, err
+			}
+			a.Atlas = img
 		}
-		a.Atlas = img
 	}
 
 	sndRoot := filepath.Join(dir, "sounds")

@@ -198,24 +198,40 @@ func resolveSprite(tables map[string]*spriteTable, guid string, fileID int64) st
 // ---------- atlas ----------
 
 func exportAtlas(tables map[string]*spriteTable) *kmdata.Sheet {
-	metaPath := gamePath("Sprites", "karateman_main.png.meta")
-	raw, err := os.ReadFile(metaPath)
-	must(err)
-	m, err := uy.ParseSingle(raw)
-	must(err)
-	guid := uy.S(m["guid"])
-	t := tables[guid]
-	if t == nil {
-		log.Fatalf("atlas meta guid %s not in table", guid)
+	sheet := &kmdata.Sheet{Atlas: "atlas.png", Sprites: map[string]kmdata.SpriteInfo{}}
+	for atlasIdx, spec := range []struct {
+		rel  string
+		name string
+	}{
+		{rel: filepath.Join("Sprites", "karateman_main.png.meta"), name: "atlas.png"},
+		{rel: filepath.Join("Sprites", "karateman_word.png.meta"), name: "atlas1.png"},
+	} {
+		raw, err := os.ReadFile(gamePath(spec.rel))
+		must(err)
+		m, err := uy.ParseSingle(raw)
+		must(err)
+		guid := uy.S(m["guid"])
+		t := tables[guid]
+		if t == nil {
+			log.Fatalf("atlas meta guid %s not in table", guid)
+		}
+		if atlasIdx == 0 {
+			sheet.PPU = t.ppu
+		}
+		png, err := os.ReadFile(t.pngPath)
+		must(err)
+		must(os.WriteFile(filepath.Join(*outDir, spec.name), png, 0o644))
+		sheet.Atlases = append(sheet.Atlases, spec.name)
+		for name, sp := range t.sheet {
+			sp.Atlas = atlasIdx
+			if t.ppu != sheet.PPU {
+				sp.PPU = t.ppu
+			}
+			sheet.Sprites[name] = sp
+		}
 	}
-
-	png, err := os.ReadFile(t.pngPath)
-	must(err)
-	must(os.WriteFile(filepath.Join(*outDir, "atlas.png"), png, 0o644))
-
-	sheet := &kmdata.Sheet{Atlas: "atlas.png", PPU: t.ppu, Sprites: t.sheet}
 	writeJSON("sprites.json", sheet)
-	fmt.Printf("atlas: %d sprites, ppu=%.2f\n", len(t.sheet), t.ppu)
+	fmt.Printf("atlas: %d atlases, %d sprites, ppu=%.2f\n", len(sheet.Atlases), len(sheet.Sprites), sheet.PPU)
 	return sheet
 }
 

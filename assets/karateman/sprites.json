@@ -1,5 +1,9 @@
 {
  "atlas": "atlas.png",
+ "atlases": [
+  "atlas.png",
+  "atlas1.png"
+ ],
  "ppu": 71.95853,
  "sprites": {
   "karateman_alien": {
@@ -1157,6 +1161,182 @@
    "H": 983,
    "PivotX": 0.5,
    "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_1": {
+   "X": 49,
+   "Y": 49,
+   "W": 254,
+   "H": 444,
+   "PivotX": 0.37538463,
+   "PivotY": 0.27765027,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_2": {
+   "X": 391,
+   "Y": 63,
+   "W": 430,
+   "H": 425,
+   "PivotX": 0.28342247,
+   "PivotY": 0.28539795,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_3": {
+   "X": 923,
+   "Y": 49,
+   "W": 396,
+   "H": 483,
+   "PivotX": 0.29782745,
+   "PivotY": 0.26331338,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_4": {
+   "X": 1411,
+   "Y": 88,
+   "W": 420,
+   "H": 439,
+   "PivotX": 0.28740036,
+   "PivotY": 0.27954915,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_combo_en": {
+   "X": 29,
+   "Y": 1196,
+   "W": 1191,
+   "H": 420,
+   "PivotX": 0.13518976,
+   "PivotY": 0.2874002,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_combo_jp": {
+   "X": 49,
+   "Y": 635,
+   "W": 684,
+   "H": 479,
+   "PivotX": 0.20790271,
+   "PivotY": 0.26502648,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_exclaim": {
+   "X": 1919,
+   "Y": 83,
+   "W": 186,
+   "H": 449,
+   "PivotX": 0.4259483,
+   "PivotY": 0.27577642,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_hit_en": {
+   "X": 44,
+   "Y": 1660,
+   "W": 552,
+   "H": 391,
+   "PivotX": 0.24141154,
+   "PivotY": 0.3,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_hit_jp": {
+   "X": 1348,
+   "Y": 742,
+   "W": 400,
+   "H": 308,
+   "PivotX": 0.2956848,
+   "PivotY": 0.3420565,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_mu_en": {
+   "X": 1279,
+   "Y": 1187,
+   "W": 762,
+   "H": 400,
+   "PivotX": 0.19205631,
+   "PivotY": 0.2956848,
+   "atlas": 1,
+   "ppu": 488.28125,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_word_mu_jp": {
+   "X": 820,
+   "Y": 679,
+   "W": 430,
+   "H": 396,
+   "PivotX": 0.28342247,
+   "PivotY": 0.29782745,
+   "atlas": 1,
+   "ppu": 488.28125,
    "border": [
     0,
     0,
