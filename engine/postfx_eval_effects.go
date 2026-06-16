@@ -107,3 +107,126 @@ func evalBloomParams(p *fxParams, list []fxEvt, beat float64) {
 	p.bloomKnee = evalNum(list, beat, "softKnee", 0.5)
 	p.bloomTint = evalColor(list, beat, "color", [4]float64{1, 1, 1, 1})
 }
+
+func evalRetroTVParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	inten := evalNum(list, beat, "inten", 0)
+	if inten == 0 || !evalFlag(list, beat, "enable", true) {
+		return
+	}
+	p.retroDistort = inten
+	p.retroRGB = evalNum(list, beat, "rgb", 1)
+	p.retroBottom = evalNum(list, beat, "bottom", 0.02)
+	p.retroNoise = evalNum(list, beat, "noise", 0.3)
+}
+
+func evalScanJitterParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	inten := evalNum(list, beat, "inten", 0)
+	if inten != 0 && evalFlag(list, beat, "enable", true) {
+		p.scanJitter = inten
+	}
+}
+
+func evalScreenJumpParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	inten := evalNum(list, beat, "inten", 0)
+	if inten != 0 && evalFlag(list, beat, "enable", true) {
+		p.screenJump = inten
+	}
+}
+
+func evalGaussianBlurParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	inten := evalNum(list, beat, "inten", 0)
+	if inten != 0 && evalFlag(list, beat, "enable", true) {
+		p.gaussBlur = inten
+	}
+}
+
+func evalDirectionalBlurParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	inten := evalNum(list, beat, "inten", 0)
+	if inten == 0 || !evalFlag(list, beat, "enable", true) {
+		return
+	}
+	p.dirBlur = inten
+	p.dirAngle = evalNum(list, beat, "angle", 0) * math.Pi / 180
+}
+
+func evalEdgeDetectParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	inten := evalNum(list, beat, "inten", 0.3)
+	if inten == 0 || !evalFlag(list, beat, "enable", true) {
+		return
+	}
+	p.edgeOn = true
+	p.edgeWidth = inten
+	p.edgeColor = evalColorPair(list, beat, "color", "color2", [4]float64{0, 0, 0, 1})
+	p.edgeBgFade = evalNum(list, beat, "bg", 1)
+	p.edgeBgColor = evalColorPair(list, beat, "bgColor", "bgColor2", [4]float64{1, 1, 1, 1})
+}
+
+func evalSobelNeonParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 || !evalFlag(list, beat, "enable", true) {
+		return
+	}
+	p.neonFade = evalNum(list, beat, "inten", 0)
+	p.neonWidth = evalNum(list, beat, "edgeWidth", 0)
+	p.neonBg = evalNum(list, beat, "bgFade", 1)
+	p.neonBright = evalNum(list, beat, "brightness", 1)
+	p.neonOn = p.neonFade != 0 || p.neonWidth != 0 || p.neonBg != 1 || p.neonBright != 1
+}
+
+func evalColorReplaceParams(p *fxParams, list []fxEvt, beat float64) {
+	enabled := true
+	for _, e := range list {
+		if beat < e.beat {
+			break
+		}
+		enabled = flag(e.data, "enable", true)
+		slot := int(num(e.data, "colorSlot", 1)) - 1
+		if slot < 0 || slot >= len(p.crRange) {
+			continue
+		}
+		if flag(e.data, "clear", false) {
+			p.crFrom[slot], p.crTo[slot] = [4]float64{}, [4]float64{}
+			p.crRange[slot], p.crFuzz[slot] = 0, 0
+			continue
+		}
+		if !enabled {
+			continue
+		}
+		prog := 1.0
+		if e.length > 0 {
+			prog = clamp01((beat - e.beat) / e.length)
+		}
+		ease := int(num(e.data, "ease", 0))
+		from0 := colorOf(e.data, "originalColor", [4]float64{0, 0, 0, 1})
+		from1 := colorOf(e.data, "originalColor2", [4]float64{0, 0, 0, 1})
+		to0 := colorOf(e.data, "newColor", [4]float64{1, 1, 1, 1})
+		to1 := colorOf(e.data, "newColor2", [4]float64{1, 1, 1, 1})
+		for i := 0; i < 4; i++ {
+			p.crFrom[slot][i] = Ease(ease, from0[i], from1[i], prog)
+			p.crTo[slot][i] = Ease(ease, to0[i], to1[i], prog)
+		}
+		p.crRange[slot] = Ease(ease, num(e.data, "range", 0.2), num(e.data, "range2", 0.2), prog)
+		p.crFuzz[slot] = Ease(ease, num(e.data, "fuzziness", 0.5), num(e.data, "fuzziness2", 0.5), prog)
+	}
+	if !enabled {
+		p.crFrom, p.crTo = [5][4]float64{}, [5][4]float64{}
+		p.crRange, p.crFuzz = [5]float64{}, [5]float64{}
+	}
+}

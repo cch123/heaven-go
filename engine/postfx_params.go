@@ -24,4 +24,16 @@ type fxParams struct {
 	bloomOn                       bool
 	bloomInt, bloomThr, bloomKnee float64
 	bloomTint                     [4]float64
+	// X-PostProcessing glitch/blur/edge/color effects.
+	scanJitter, screenJump                  float64
+	retroDistort, retroRGB, retroBottom     float64
+	retroNoise                              float64
+	gaussBlur, dirBlur, dirAngle            float64
+	edgeOn                                  bool
+	edgeWidth, edgeBgFade                   float64
+	edgeColor, edgeBgColor                  [4]float64
+	neonOn                                  bool
+	neonFade, neonWidth, neonBg, neonBright float64
+	crFrom, crTo                            [5][4]float64
+	crRange, crFuzz                         [5]float64
 }

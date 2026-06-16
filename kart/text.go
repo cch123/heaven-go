@@ -18,6 +18,7 @@ import (
 	"image/color"
 	"image/draw"
 	"math"
+	"strings"
 
 	"github.com/hajimehoshi/ebiten/v2"
 	"golang.org/x/image/font"
@@ -138,17 +139,26 @@ type textSpan struct {
 	text    string
 	face    font.Face
 	color   [4]float64
+	line    int
 	startPx int
+}
+
+type textLine struct {
+	width    int
+	dotX     int
+	baseline int
 }
 
 type textLayout struct {
 	spans      []textSpan
+	lines      []textLine
 	textW      int
 	ascent     int
 	descent    int
 	charX      []float64
 	closeFaces []font.Face
 	contentW   int
+	contentH   int
 	dotX       int
 	pivotX     float64
 	pivotY     float64
@@ -175,11 +185,15 @@ func (a *Assets) renderTextRuns(tn *kmdata.TextNode, runs []TextRun, clipUnits f
 	}
 
 	const pad = 4
-	img := image.NewRGBA(image.Rect(0, 0, layout.contentW+2*pad, layout.ascent+layout.descent+2*pad))
+	img := image.NewRGBA(image.Rect(0, 0, layout.contentW+2*pad, layout.contentH+2*pad))
 	for _, sp := range layout.spans {
+		if sp.line < 0 || sp.line >= len(layout.lines) {
+			continue
+		}
+		ln := layout.lines[sp.line]
 		d := &font.Drawer{
 			Dst: img, Src: image.NewUniform(runColor(sp.color)), Face: sp.face,
-			Dot: fixed.P(layout.dotX+sp.startPx, pad+layout.ascent),
+			Dot: fixed.P(ln.dotX+sp.startPx, pad+ln.baseline),
 		}
 		d.DrawString(sp.text)
 	}
@@ -230,34 +244,68 @@ func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayou
 	}
 	met := baseFace.Metrics()
 	layout.ascent, layout.descent = met.Ascent.Ceil(), met.Descent.Ceil()
+	layout.lines = []textLine{{}}
 	x := 0
+	line := 0
 	for _, run := range runs {
 		if run.Text == "" {
 			continue
 		}
-		layout.content = true
 		fc, err := faceFor(run.Scale)
 		if err != nil {
 			layout.close()
 			return nil, err
 		}
-		layout.spans = append(layout.spans, textSpan{
-			text:    run.Text,
-			face:    fc,
-			color:   run.Color,
-			startPx: x,
-		})
+		fm := fc.Metrics()
+		layout.ascent = max(layout.ascent, fm.Ascent.Ceil())
+		layout.descent = max(layout.descent, fm.Descent.Ceil())
+		var b strings.Builder
+		spanStart := x
+		flush := func() {
+			if b.Len() == 0 {
+				return
+			}
+			layout.spans = append(layout.spans, textSpan{
+				text:    b.String(),
+				face:    fc,
+				color:   run.Color,
+				line:    line,
+				startPx: spanStart,
+			})
+			b.Reset()
+		}
 		for _, r := range run.Text {
+			if r == '\r' {
+				continue
+			}
+			if r == '\n' {
+				flush()
+				layout.lines[line].width = max(layout.lines[line].width, x)
+				line++
+				layout.lines = append(layout.lines, textLine{})
+				x = 0
+				spanStart = 0
+				continue
+			}
+			if b.Len() == 0 {
+				spanStart = x
+			}
+			layout.content = true
+			b.WriteRune(r)
 			layout.charX = append(layout.charX, float64(x)/textPPU)
 			x += font.MeasureString(fc, string(r)).Ceil()
 		}
+		flush()
 	}
-	layout.textW = x
+	layout.lines[line].width = max(layout.lines[line].width, x)
+	for _, ln := range layout.lines {
+		layout.textW = max(layout.textW, ln.width)
+	}
 	if !layout.content {
 		return layout, nil
 	}
-	h := layout.ascent + layout.descent
-	if layout.textW <= 0 || h <= 0 {
+	lineH := layout.ascent + layout.descent
+	if layout.textW <= 0 || lineH <= 0 {
 		layout.close()
 		return nil, fmt.Errorf("文本排版尺寸为空")
 	}
@@ -265,24 +313,35 @@ func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayou
 	if tn.Rect[0] > 0 {
 		layout.contentW = max(layout.contentW, int(tn.Rect[0]*textPPU+0.5))
 	}
+	textBlockH := len(layout.lines) * lineH
+	layout.contentH = textBlockH
+	if tn.Rect[1] > 0 {
+		layout.contentH = max(layout.contentH, int(tn.Rect[1]*textPPU+0.5))
+	}
 	const pad = 4
 	anchorX, err := textHorizontalAnchor(tn.HAlign)
 	if err != nil {
 		layout.close()
 		return nil, fmt.Errorf("文本 %q: %w", tn.Path, err)
 	}
-	layout.dotX = pad + int(math.Round(float64(layout.contentW-layout.textW)*anchorX))
+	for i := range layout.lines {
+		layout.lines[i].dotX = pad + int(math.Round(float64(layout.contentW-layout.lines[i].width)*anchorX))
+	}
+	layout.dotX = layout.lines[0].dotX
 	layout.pivotX = anchorX
 
-	// 枢轴：x 取水平对齐点；y 按 TMP 垂直对齐取行中线或顶边，
+	// 枢轴：x 取水平对齐点；y 按 TMP 垂直对齐把整段文本块放进 RectTransform，
 	// 换算为 Unity 归一化（自底边）。
-	H := float64(h + 2*pad)
-	anchorY, err := textVerticalAnchorFromTop(tn.VAlign, layout.ascent, layout.descent, pad)
+	H := float64(layout.contentH + 2*pad)
+	blockTop, anchorY, err := textVerticalPlacement(tn.VAlign, layout.ascent, layout.descent, layout.contentH, textBlockH)
 	if err != nil {
 		layout.close()
 		return nil, fmt.Errorf("文本 %q: %w", tn.Path, err)
 	}
-	layout.pivotY = 1 - anchorY/H
+	for i := range layout.lines {
+		layout.lines[i].baseline = blockTop + i*lineH + layout.ascent
+	}
+	layout.pivotY = 1 - (float64(pad)+anchorY)/H
 	return layout, nil
 }
 
@@ -302,26 +361,31 @@ func textHorizontalAnchor(align int) (float64, error) {
 	}
 }
 
-func textVerticalAnchorFromTop(align, ascent, descent, pad int) (float64, error) {
-	top := float64(pad)
-	baseline := float64(pad + ascent)
-	bottom := float64(pad + ascent + descent)
-	midline := float64(pad) + (float64(ascent)+float64(descent))/2
+func textVerticalPlacement(align, ascent, _ int, contentH, textBlockH int) (int, float64, error) {
+	free := contentH - textBlockH
+	if free < 0 {
+		free = 0
+	}
+	top := 0
+	center := float64(contentH) / 2
+	bottom := float64(contentH)
 	switch align {
 	case tmpVTop:
-		return top, nil
+		return top, 0, nil
 	case tmpVMiddle, tmpVMidline:
-		return midline, nil
+		top = free / 2
+		return top, center, nil
 	case tmpVBottom:
-		return bottom, nil
+		top = free
+		return top, bottom, nil
 	case tmpVBaseline:
-		return baseline, nil
+		return top, float64(ascent), nil
 	case tmpVCapline:
 		// Go's opentype face does not expose cap height. TMP Capline is closest
 		// to the ascender top for these dynamic font assets.
-		return top, nil
+		return top, 0, nil
 	default:
-		return 0, fmt.Errorf("TMP 垂直对齐 %d 未实现", align)
+		return 0, 0, fmt.Errorf("TMP 垂直对齐 %d 未实现", align)
 	}
 }
 

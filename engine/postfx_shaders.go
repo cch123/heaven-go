@@ -53,6 +53,16 @@ var Filter vec3
 var HSB vec4     // (hueShift/360, sat, brightness, contrast)
 var Grain vec4   // (intensity, size, colored, time)
 var BloomIT vec3 // intensity * tint
+var Glitch vec4  // (scanJitter, screenJump, retroDistort, time)
+var Retro vec4   // (rgbBlend, bottomCollapse, noiseAmount, unused)
+var Blur vec4    // (gaussRadius, dirRadius, dirAngle, unused)
+var Edge vec4    // (edgeWidth, backgroundFade, enabled, unused)
+var EdgeCol vec3
+var EdgeBG vec3
+var Neon vec4    // (edgeWidth, edgeFade, brightness, backgroundFade)
+var CRFrom [5]vec4
+var CRTo [5]vec4
+var CRP [5]vec4
 
 func distortUV(uv vec2) vec2 {
 	if Lens.z == 0 {
@@ -83,6 +93,10 @@ func sampleBloom(uv vec2) vec3 {
 	return imageSrc1At(p).rgb
 }
 
+func wrap01(uv vec2) vec2 {
+	return fract(fract(uv) + vec2(1.0))
+}
+
 func hash(p vec2) float {
 	h := dot(p, vec2(127.1, 311.7))
 	return fract(sin(h) * 43758.5453123)
@@ -101,6 +115,122 @@ func hsv2rgb(c vec3) vec3 {
 	k := vec4(1.0, 2.0/3.0, 1.0/3.0, 3.0)
 	p := abs(fract(c.xxx+k.xyz)*6.0 - k.www)
 	return c.z * mix(k.xxx, clamp(p-k.xxx, 0.0, 1.0), c.y)
+}
+
+func colorReplaceOne(c vec3, from vec3, to vec3, prm vec2) vec3 {
+	if prm.x == 0 && prm.y == 0 {
+		return c
+	}
+	d := distance(from, c)
+	return mix(to, c, clamp((d-prm.x)/max(prm.y, 0.1), 0.0, 1.0))
+}
+
+func applyColorReplace(c vec3) vec3 {
+	for i := 0; i < 5; i++ {
+		c = colorReplaceOne(c, CRFrom[i].rgb, CRTo[i].rgb, CRP[i].xy)
+	}
+	return c
+}
+
+func scanJitterUV(uv vec2) vec2 {
+	if Glitch.x == 0 {
+		return uv
+	}
+	displacement := 0.005 + pow(Glitch.x, 3.0)*0.1
+	threshold := clamp(1.0-Glitch.x*1.2, 0.0, 1.0)
+	strength := 0.5 + 0.5*cos(Glitch.w*18.0)
+	j := hash(vec2(uv.y*2048.0, floor(Glitch.w*60.0)))*2.0 - 1.0
+	j *= step(threshold, abs(j)) * displacement * strength
+	return wrap01(uv + vec2(j, 0))
+}
+
+func screenJumpUV(uv vec2) vec2 {
+	if Glitch.y == 0 {
+		return uv
+	}
+	jumpTime := Glitch.w * Glitch.y * 9.8
+	y := mix(uv.y, fract(uv.y+jumpTime), Glitch.y)
+	return wrap01(vec2(uv.x, y))
+}
+
+func retroUV(uv vec2) vec2 {
+	if Glitch.z == 0 {
+		return uv
+	}
+	d := uv - 0.5
+	r2 := dot(d, d)
+	uv += d * r2 * Glitch.z * 0.18
+	if Retro.y > 0 {
+		collapse := smoothstep(1.0-Retro.y, 1.0, uv.y)
+		uv.x = mix(uv.x, 0.5+(uv.x-0.5)*(1.0-collapse*Glitch.z), collapse)
+	}
+	return uv
+}
+
+func sampleGlitched(uv vec2) vec3 {
+	uv = retroUV(screenJumpUV(scanJitterUV(uv)))
+	c := sampleUV(uv)
+	if Blur.x > 0 {
+		r := Blur.x * 0.75
+		c = c*0.40 +
+			(sampleUV(uv+vec2(r, 0)) + sampleUV(uv-vec2(r, 0)))*0.15 +
+			(sampleUV(uv+vec2(0, r)) + sampleUV(uv-vec2(0, r)))*0.10 +
+			(sampleUV(uv+vec2(r*2, r*2)) + sampleUV(uv-vec2(r*2, r*2)))*0.05
+	}
+	if Blur.y > 0 {
+		dir := vec2(cos(Blur.z), sin(Blur.z)) * Blur.y * 0.004
+		sum := vec3(0)
+		for k := -6; k <= 6; k++ {
+			sum += sampleUV(uv + dir*float(k))
+		}
+		c = sum / 13.0
+	}
+	if Glitch.z != 0 && Retro.x > 0 {
+		off := Glitch.z * Retro.x * 0.006
+		c.r = sampleUV(uv+vec2(off, 0)).r
+		c.b = sampleUV(uv-vec2(off, 0)).b
+	}
+	if Glitch.z != 0 && Retro.z > 0 {
+		n := hash(uv*imageSrc0Size()+vec2(floor(Glitch.w*60.0)))
+		c += (n-0.5) * Retro.z * Glitch.z * 0.25
+	}
+	return c
+}
+
+func intensity(c vec3) float {
+	return sqrt(dot(c, c))
+}
+
+func sobelLum(uv vec2, width float) float {
+	sz := imageSrc0Size()
+	stepUV := vec2(width/sz.x, width/sz.y)
+	tl := intensity(sampleGlitched(uv + vec2(-stepUV.x, stepUV.y)))
+	ml := intensity(sampleGlitched(uv + vec2(-stepUV.x, 0)))
+	bl := intensity(sampleGlitched(uv + vec2(-stepUV.x, -stepUV.y)))
+	mt := intensity(sampleGlitched(uv + vec2(0, stepUV.y)))
+	mb := intensity(sampleGlitched(uv + vec2(0, -stepUV.y)))
+	tr := intensity(sampleGlitched(uv + vec2(stepUV.x, stepUV.y)))
+	mr := intensity(sampleGlitched(uv + vec2(stepUV.x, 0)))
+	br := intensity(sampleGlitched(uv + vec2(stepUV.x, -stepUV.y)))
+	gx := tl + 2.0*ml + bl - tr - 2.0*mr - br
+	gy := -tl - 2.0*mt - tr + bl + 2.0*mb + br
+	return sqrt(gx*gx + gy*gy)
+}
+
+func sobelRGB(uv vec2, width float) vec3 {
+	sz := imageSrc0Size()
+	stepUV := vec2(width/sz.x, width/sz.y)
+	tl := sampleGlitched(uv + vec2(-stepUV.x, stepUV.y))
+	ml := sampleGlitched(uv + vec2(-stepUV.x, 0))
+	bl := sampleGlitched(uv + vec2(-stepUV.x, -stepUV.y))
+	mt := sampleGlitched(uv + vec2(0, stepUV.y))
+	mb := sampleGlitched(uv + vec2(0, -stepUV.y))
+	tr := sampleGlitched(uv + vec2(stepUV.x, stepUV.y))
+	mr := sampleGlitched(uv + vec2(stepUV.x, 0))
+	br := sampleGlitched(uv + vec2(stepUV.x, -stepUV.y))
+	gx := tl + 2.0*ml + bl - tr - 2.0*mr - br
+	gy := -tl - 2.0*mt - tr + bl + 2.0*mb + br
+	return sqrt(gx*gx + gy*gy)
 }
 
 func linearToLogC(x vec3) vec3 {
@@ -131,11 +261,11 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 		coords := 2.0*uv - 1.0
 		end := uv - coords*dot(coords, coords)*Lens.w
 		delta := (end - uv) / 3.0
-		c.r = sampleUV(distortUV(uv)).r
-		c.g = sampleUV(distortUV(uv + delta)).g
-		c.b = sampleUV(distortUV(uv + delta*2.0)).b
+		c.r = sampleGlitched(distortUV(uv)).r
+		c.g = sampleGlitched(distortUV(uv + delta)).g
+		c.b = sampleGlitched(distortUV(uv + delta*2.0)).b
 	} else {
-		c = sampleUV(duv)
+		c = sampleGlitched(duv)
 	}
 
 	// Bloom（已模糊的亮部 × intensity × tint）
@@ -194,6 +324,20 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 		lc = (lc-0.4135884)*HSB.w + 0.4135884
 		lin = max(logCToLinear(lc), vec3(0))
 		c = pow(clamp(lin, vec3(0), vec3(1)), vec3(1.0/2.2))
+	}
+
+	c = applyColorReplace(c)
+
+	if Edge.z > 0.5 {
+		g := sobelLum(duv, Edge.x)
+		bg := mix(c, EdgeBG, Edge.y)
+		c = mix(bg, EdgeCol, clamp(g, 0.0, 1.0))
+	}
+
+	if Neon.x != 0 || Neon.y != 0 || Neon.w != 0 {
+		g := sobelRGB(duv, Neon.x)
+		bg := mix(vec3(0), c, Neon.w)
+		c = mix(bg, g, Neon.y) * Neon.z
 	}
 
 	return vec4(clamp(c, vec3(0), vec3(1)), 1)

@@ -38,6 +38,26 @@ func evalColor(list []fxEvt, beat float64, key string, def [4]float64) [4]float6
 	return v
 }
 
+func evalColorPair(list []fxEvt, beat float64, fromKey, toKey string, def [4]float64) [4]float64 {
+	v := def
+	for _, e := range list {
+		if beat < e.beat {
+			break
+		}
+		prog := 1.0
+		if e.length > 0 {
+			prog = clamp01((beat - e.beat) / e.length)
+		}
+		ease := int(num(e.data, "ease", 0))
+		from := colorOf(e.data, fromKey, def)
+		to := colorOf(e.data, toKey, def)
+		for i := 0; i < 4; i++ {
+			v[i] = Ease(ease, from[i], to[i], prog)
+		}
+	}
+	return v
+}
+
 // evalFlag 取"当前生效事件"的布尔参数（最后一个 beat<=now 的事件）。
 func evalFlag(list []fxEvt, beat float64, key string, def bool) bool {
 	v := def

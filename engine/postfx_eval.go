@@ -9,5 +9,13 @@ func (fx *postFX) eval(beat float64) fxParams {
 	evalColorGradingParams(&p, fx.evts["colorGrading"], beat)
 	evalPixelQuadParams(&p, fx.evts["pixelQuad"], beat)
 	evalBloomParams(&p, fx.evts["bloom"], beat)
+	evalRetroTVParams(&p, fx.evts["retroTv"], beat)
+	evalScanJitterParams(&p, fx.evts["scanJitter"], beat)
+	evalScreenJumpParams(&p, fx.evts["screenJump"], beat)
+	evalGaussianBlurParams(&p, fx.evts["gaussBlur"], beat)
+	evalDirectionalBlurParams(&p, fx.evts["dirBlur"], beat)
+	evalEdgeDetectParams(&p, fx.evts["edgeDetect"], beat)
+	evalSobelNeonParams(&p, fx.evts["sobelNeon"], beat)
+	evalColorReplaceParams(&p, fx.evts["colorReplace"], beat)
 	return p
 }

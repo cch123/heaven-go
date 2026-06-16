@@ -37,6 +37,13 @@ func (fx *postFX) Target() *ebiten.Image {
 // Apply 把离屏帧经后处理链画到 dst。
 func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 	p := fx.eval(beat)
+	crFrom, crTo, crP := packColorReplaceUniforms(p)
+	neon := []float32{}
+	if p.neonOn {
+		neon = []float32{float32(p.neonWidth), float32(p.neonFade), float32(p.neonBright), float32(p.neonBg)}
+	} else {
+		neon = []float32{0, 0, 0, 0}
+	}
 
 	// bloom 前置链：阈值预滤 → 两轮可分离高斯（1/4 分辨率）→ 升采样
 	fx.bloomFull.Fill(color.Black)
@@ -86,8 +93,30 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 		"HSB":     []float32{float32(p.hue), float32(p.sat), float32(p.bright), float32(p.contra)},
 		"Grain":   []float32{float32(p.grainInt), float32(p.grainSize), float32(p.grainColored), float32(math.Mod(t, 64))},
 		"BloomIT": []float32{float32(p.bloomInt * p.bloomTint[0]), float32(p.bloomInt * p.bloomTint[1]), float32(p.bloomInt * p.bloomTint[2])},
+		"Glitch":  []float32{float32(p.scanJitter), float32(p.screenJump), float32(p.retroDistort), float32(math.Mod(t, 64))},
+		"Retro":   []float32{float32(p.retroRGB), float32(p.retroBottom), float32(p.retroNoise), 0},
+		"Blur":    []float32{float32(p.gaussBlur), float32(p.dirBlur), float32(p.dirAngle), 0},
+		"Edge":    []float32{float32(p.edgeWidth), float32(p.edgeBgFade), b32(p.edgeOn), 0},
+		"EdgeCol": []float32{float32(p.edgeColor[0]), float32(p.edgeColor[1]), float32(p.edgeColor[2])},
+		"EdgeBG":  []float32{float32(p.edgeBgColor[0]), float32(p.edgeBgColor[1]), float32(p.edgeBgColor[2])},
+		"Neon":    neon,
+		"CRFrom":  crFrom,
+		"CRTo":    crTo,
+		"CRP":     crP,
 	}
 	dst.DrawRectShader(ScreenW, ScreenH, fx.uber, op)
+}
+
+func packColorReplaceUniforms(p fxParams) ([]float32, []float32, []float32) {
+	from := make([]float32, 0, 20)
+	to := make([]float32, 0, 20)
+	prm := make([]float32, 0, 20)
+	for i := 0; i < 5; i++ {
+		from = append(from, float32(p.crFrom[i][0]), float32(p.crFrom[i][1]), float32(p.crFrom[i][2]), 0)
+		to = append(to, float32(p.crTo[i][0]), float32(p.crTo[i][1]), float32(p.crTo[i][2]), 0)
+		prm = append(prm, float32(p.crRange[i]), float32(p.crFuzz[i]), 0, 0)
+	}
+	return from, to, prm
 }
 
 func b32(b bool) float32 {

@@ -47,7 +47,9 @@ type postFX struct {
 func (fx *postFX) add(e *riq.Entity) {
 	kind := e.Datamodel[len("ppe/"):]
 	switch kind {
-	case "vignette", "cabb", "bloom", "lensD", "grain", "colorGrading", "pixelQuad":
+	case "vignette", "cabb", "bloom", "lensD", "grain", "colorGrading", "pixelQuad",
+		"retroTv", "scanJitter", "gaussBlur", "dirBlur", "screenJump",
+		"edgeDetect", "sobelNeon", "colorReplace":
 		if fx.evts == nil {
 			fx.evts = map[string][]fxEvt{}
 		}
