@@ -7,6 +7,8 @@ import (
 	"strings"
 	"testing"
 
+	"hsdemo/games/internal/particlefx"
+	"hsdemo/kart"
 	"hsdemo/kmdata"
 )
 
@@ -14,6 +16,7 @@ type chargingChickenAssets struct {
 	Rig         kmdata.Rig
 	Roles       kmdata.Roles
 	Extra       kmdata.Extra
+	Particles   kmdata.ParticleData
 	Anims       map[string]*kmdata.Anim
 	Controllers map[string]kmdata.Controller
 	Animators   kmdata.Animators
@@ -30,6 +33,7 @@ func loadChargingChickenAssets(t *testing.T) *chargingChickenAssets {
 	readAssetJSON(t, filepath.Join(root, "scene.json"), &as.Rig)
 	readAssetJSON(t, filepath.Join(root, "roles.json"), &as.Roles)
 	readAssetJSON(t, filepath.Join(root, "extra.json"), &as.Extra)
+	readAssetJSON(t, filepath.Join(root, "particles.json"), &as.Particles)
 	readAssetJSON(t, filepath.Join(root, "anims.json"), &as.Anims)
 	readAssetJSON(t, filepath.Join(root, "controllers.json"), &as.Controllers)
 	readAssetJSON(t, filepath.Join(root, "animators.json"), &as.Animators)
@@ -202,6 +206,9 @@ func TestChargingChickenControllersAndSounds(t *testing.T) {
 			t.Fatalf("animator %s = %q, want %q", path, got, ctrl)
 		}
 	}
+	if got := as.Controllers["PlatformAnim"].Default; got != "Idle" {
+		t.Fatalf("PlatformAnim default = %q, want Idle", got)
+	}
 
 	for _, snd := range []string{
 		"cowbell", "PumpStart", "chargeLoop", "chargeRelease",
@@ -217,6 +224,54 @@ func TestChargingChickenControllersAndSounds(t *testing.T) {
 		if !as.Sounds[snd] {
 			t.Fatalf("missing sound %s", snd)
 		}
+	}
+}
+
+func TestChargingChickenParticleSystemsExtracted(t *testing.T) {
+	as := loadChargingChickenAssets(t)
+	if len(as.Particles.Systems) != 36 {
+		t.Fatalf("ParticleSystem count = %d, want 36", len(as.Particles.Systems))
+	}
+	for path, wantSprites := range map[string][]string{
+		"Island/offset/Splash/Sploosh": {"splash00_0", "splash00_1", "splash00_2", "splash00_3"},
+		"Island/offset/ChickenSplash/Sploosh": {
+			"splash01_0", "splash01_1", "splash01_2", "splash01_3",
+			"splash01_4", "splash01_5", "splash01_6", "splash01_7",
+		},
+		"Island/offset/GameObject/Landmass/CollapseParticles/CollapseL/Rocks": {"rocks_0", "rocks_1"},
+		"Island/offset/GameObject/BigLandmass/LeftEdge/GrassFallL":            {"grass_0", "grass_1", "grass_2"},
+	} {
+		ps := requireParticleSystem(t, as, path)
+		for _, sprite := range wantSprites {
+			if !hasString(ps.TextureSheet.Sprites, sprite) {
+				t.Fatalf("%s missing sprite %s: %#v", path, sprite, ps.TextureSheet.Sprites)
+			}
+		}
+		if len(ps.Emission.Bursts) == 0 {
+			t.Fatalf("%s missing burst data", path)
+		}
+	}
+}
+
+func TestChargingChickenRuntimeParticleRoots(t *testing.T) {
+	raw := loadChargingChickenAssets(t)
+	as := &kart.Assets{Rig: raw.Rig, Particles: raw.Particles}
+	roots := particlefx.Roots(as)
+	for root, want := range map[string]int{
+		"Island/offset/Splash":                                      3,
+		"Island/offset/ChickenSplash":                               3,
+		"Island/offset/GameObject/Landmass/CollapseParticles":       11,
+		"Island/offset/GameObject/Landmass/CollapseParticlesNg":     11,
+		"Island/offset/GameObject/BigLandmass/LeftEdge/GrassFallL":  2,
+		"Island/offset/GameObject/BigLandmass/RightEdge/GrassFallR": 2,
+	} {
+		if got := len(roots[root]); got != want {
+			t.Fatalf("runtime particle root %s systems = %d, want %d", root, got, want)
+		}
+	}
+	life := particlefx.Lifetimes(roots, 1.2)
+	if life["Island/offset/Splash"] < 1.5 || life["Island/offset/GameObject/Landmass/CollapseParticles"] < 1.2 {
+		t.Fatalf("particle lifetimes should come from Unity curves: %#v", life)
 	}
 }
 
@@ -300,4 +355,24 @@ func TestCarChargeProgressMatchesUnityWindow(t *testing.T) {
 	if got := m.carChargeProgress(9); got != 0 {
 		t.Fatalf("inactive charge progress = %.3f, want 0", got)
 	}
+}
+
+func requireParticleSystem(t *testing.T, as *chargingChickenAssets, path string) kmdata.ParticleSystem {
+	t.Helper()
+	for _, ps := range as.Particles.Systems {
+		if ps.Path == path {
+			return ps
+		}
+	}
+	t.Fatalf("missing ParticleSystem %s", path)
+	return kmdata.ParticleSystem{}
+}
+
+func hasString(items []string, want string) bool {
+	for _, item := range items {
+		if item == want {
+			return true
+		}
+	}
+	return false
 }

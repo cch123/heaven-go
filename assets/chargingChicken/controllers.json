@@ -239,7 +239,7 @@
   }
  },
  "PlatformAnim": {
-  "default": "Nothing",
+  "default": "Idle",
   "states": {
    "Fall": {
     "clip": "Animations/StonePlatform/PlatformFall",

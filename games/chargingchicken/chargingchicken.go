@@ -11,6 +11,7 @@ import (
 	"github.com/hajimehoshi/ebiten/v2"
 
 	"hsdemo/engine"
+	"hsdemo/games/internal/particlefx"
 	"hsdemo/kart"
 	"hsdemo/riq"
 )
@@ -77,6 +78,15 @@ type Module struct {
 	platform      string
 	bigLandmass   string
 	smallLandmass string
+	stoneSplash   string
+	chickenSplash string
+	collapseOK    string
+	collapseNG    string
+	grassL        string
+	grassR        string
+
+	particles *particlefx.Runtime
+	effects   []particlefx.Effect
 
 	charges   []chargeEvt
 	journeys  []journeyEvt
@@ -168,6 +178,13 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.platform = islandComp.Refs["PlatformAnim"]
 	m.bigLandmass = islandComp.Refs["BigLandmass"]
 	m.smallLandmass = islandComp.Refs["SmallLandmass"]
+	m.stoneSplash = islandComp.Refs["StoneSplashEffect"]
+	m.chickenSplash = islandComp.Refs["ChickenSplashEffect"]
+	m.collapseOK = islandComp.Refs["IslandCollapse"]
+	m.collapseNG = islandComp.Refs["IslandCollapseNg"]
+	m.grassL = islandComp.Refs["GrassL"]
+	m.grassR = islandComp.Refs["GrassR"]
+	m.particles = particlefx.New(as, m.proj, 1.2)
 
 	m.islandT = kart.NewTemplate(as, "Island")
 	m.current = newIsland(m, 0)
@@ -300,12 +317,13 @@ func (m *Module) Update(t, beat float64) {
 	if m.next != nil {
 		m.next.update(beat)
 	}
+	m.effects = liveEffects(m.effects, t)
 	m.applyBubble(beat)
 	m.applyColors(beat)
 	m.applyParallax()
 }
 
-func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
+func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(color.RGBA{R: 0x6e, G: 0xd6, B: 0xff, A: 0xff})
 	m.ctx.SampleScene(beat)
 	if m.current != nil {
@@ -315,6 +333,9 @@ func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
 		m.next.queue(m.ctx.Scene, beat)
 	}
 	m.ctx.Scene.Draw(screen, m.proj)
+	for _, fx := range m.effects {
+		m.particles.Draw(screen, fx, t)
+	}
 }
 
 func (m *Module) chargeUp(ev chargeEvt, lateness float64) {
@@ -511,7 +532,11 @@ func (m *Module) chickenFall(fellTooFar bool) {
 		m.ctx.Sound("SE_CHIKEN_CAR_FALL")
 		m.ctx.SoundAt(m.ctx.Beat()+0.6, "SE_CHIKEN_CAR_FALL_WATER", 0.5)
 	}
-	m.ctx.At(m.ctx.Beat()+0.6, func() {
+	splashBeat := m.ctx.Beat() + 0.6
+	m.ctx.At(splashBeat, func() {
+		if m.current != nil {
+			m.current.playParticle(splashBeat, m.chickenSplash)
+		}
 		m.ctx.Scene.PlayState(m.chicken, "Back", m.ctx.Beat(), 0.5)
 	})
 }

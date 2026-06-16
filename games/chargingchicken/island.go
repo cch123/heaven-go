@@ -64,8 +64,12 @@ func (i *island) collapse(beat float64, success bool) {
 		if success {
 			i.inst.SetActive(relIsland(i.mod.bigLandmass), false)
 			i.inst.SetActive(relIsland(i.mod.smallLandmass), true)
+			i.playParticle(beat, i.mod.collapseOK)
+			i.playParticle(beat, i.mod.grassL)
+			i.playParticle(beat, i.mod.grassR)
 		} else {
 			i.inst.SetActive(relIsland(i.mod.smallLandmass), false)
+			i.playParticle(beat, i.mod.collapseNG)
 		}
 	})
 }
@@ -79,6 +83,9 @@ func (i *island) spawnStones(beat, length float64, tooLate bool) {
 		i.inst.PlayState(relIsland(i.mod.platform), "Set", beat-length-1, 0.5)
 		i.mod.ctx.SoundAt(beat-length-1, "SE_CHIKEN_BLOCK_SET", 1)
 	}
+	i.mod.ctx.At(beat, func() {
+		i.playParticle(beat, i.mod.stoneSplash)
+	})
 }
 
 func (i *island) beginMove(startBeat, endBeat, endX float64) {
@@ -109,4 +116,11 @@ func (i *island) queue(scene *kart.SceneInst, beat float64) {
 	}
 	i.inst.Offset = [2]float64{i.x, 0}
 	i.inst.Queue(scene, beat, kart.Identity(), 0)
+}
+
+func (i *island) playParticle(beat float64, root string) {
+	if i == nil || i.mod == nil {
+		return
+	}
+	i.mod.addParticleEffect(beat, root, "Island", [2]float64{i.x, 0})
 }
