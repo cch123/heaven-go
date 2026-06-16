@@ -115,6 +115,13 @@ func TestPajamaPartyAnimationPathsResolve(t *testing.T) {
 		ctrl := as.Controllers[ctrlName]
 		for stName, st := range ctrl.States {
 			if st.Clip == "" {
+				if alias := namespacedClipForRoot(root, stName); alias != "" {
+					if aliasAnim := as.Anims[alias]; aliasAnim != nil {
+						covered[alias] = true
+						checkAnimPaths(t, root, alias, aliasAnim, nodes)
+						checkSupportedAttrs(t, alias, aliasAnim)
+					}
+				}
 				continue
 			}
 			anim := as.Anims[st.Clip]
@@ -124,12 +131,39 @@ func TestPajamaPartyAnimationPathsResolve(t *testing.T) {
 			covered[st.Clip] = true
 			checkAnimPaths(t, root, st.Clip, anim, nodes)
 			checkSupportedAttrs(t, st.Clip, anim)
+			if alias := namespacedClipForRoot(root, st.Clip); alias != "" {
+				if aliasAnim := as.Anims[alias]; aliasAnim != nil {
+					covered[alias] = true
+					checkAnimPaths(t, root, alias, aliasAnim, nodes)
+					checkSupportedAttrs(t, alias, aliasAnim)
+				}
+			}
 		}
 	}
 	for clip := range as.Anims {
 		if strings.Contains(clip, "/") && !covered[clip] {
 			t.Fatalf("clip %s is not driven by any controller state", clip)
 		}
+	}
+}
+
+func namespacedClipForRoot(root, clip string) string {
+	if strings.Contains(clip, "/") {
+		return ""
+	}
+	switch root {
+	case "Bg":
+		return "Anime/BG/" + clip
+	case bedRoot:
+		return "Anime/Bed/" + clip
+	case makoAnim:
+		return "Anime/Mako/" + clip
+	case makoPillow:
+		return "Anime/MakoPillow/" + clip
+	case "Monkey/Monkey":
+		return "Anime/Monkey/" + clip
+	default:
+		return ""
 	}
 }
 

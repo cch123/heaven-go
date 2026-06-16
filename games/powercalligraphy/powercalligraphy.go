@@ -371,10 +371,47 @@ func (m *Module) playSceneVariant(root, ctrlName, state string, beat, timeScale 
 		return
 	}
 	st, ok := ctrl.States[state]
-	if !ok || st.Clip == "" || st.Speed*timeScale == 0 {
+	if !ok {
+		if clip, ok := rawVariantClip(ctrlName, state); ok {
+			if m.ctx.Assets.Anims[clip] != nil {
+				m.ctx.Scene.Play(root, clip, beat, timeScale)
+			}
+		}
+		return
+	}
+	if st.Clip == "" || st.Speed*timeScale == 0 {
 		return
 	}
 	m.ctx.Scene.Play(root, st.Clip, beat, timeScale*st.Speed)
+}
+
+func rawVariantClip(ctrlName, state string) (string, bool) {
+	sep := strings.Index(ctrlName, "-")
+	if sep < 0 {
+		return "", false
+	}
+	group, name := ctrlName[:sep], ctrlName[sep+1:]
+	switch group {
+	case "fudePos", "paper", "shift":
+	default:
+		return "", false
+	}
+	digits := 0
+	for digits < len(state) && state[digits] >= '0' && state[digits] <= '9' {
+		digits++
+	}
+	if digits == 0 {
+		return "", false
+	}
+	num := state[:digits]
+	if len(num) == 1 {
+		num = "0" + num
+	}
+	suffix := state[digits:]
+	if suffix != "" {
+		suffix = "-" + suffix
+	}
+	return fmt.Sprintf("Animations/%s/%s-%s%s%s", name, group, name, num, suffix), true
 }
 
 func (m *Module) updatePapers(beat float64) {

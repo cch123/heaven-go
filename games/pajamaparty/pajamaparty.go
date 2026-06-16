@@ -321,7 +321,8 @@ func (m *Module) playerJump(beat float64, pressout, ng bool) {
 	m.player.hasJumped = true
 	m.player.canCharge = false
 	m.player.canJump = false
-	m.ctx.Scene.PlayState(makoAnim, "MakoJump"+m.suffix(), beat, animScale(m.ctx, "Anime/Mako/MakoJump"+m.suffix(), m.player.jumpLength))
+	clip := "Anime/Mako/MakoJump" + m.suffix()
+	m.ctx.Scene.Play(makoAnim, clip, beat, animScale(m.ctx, clip, m.player.jumpLength))
 }
 
 func (m *Module) jumpRow(row int, beat float64, alt int) {

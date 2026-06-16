@@ -99,7 +99,15 @@
     "speed": 1
    },
    "fude-sweep": {
-    "speed": 1
+    "clip": "Animations/fude-sweep0",
+    "speed": 1,
+    "transitions": [
+     {
+      "dst": "fude-sweep1",
+      "exitTime": 1,
+      "duration": 0
+     }
+    ]
    },
    "fude-sweep-end": {
     "clip": "Animations/fude-sweep2",

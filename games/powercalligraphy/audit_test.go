@@ -1,6 +1,8 @@
 package powercalligraphy
 
 import (
+	"path"
+	"strconv"
 	"strings"
 	"testing"
 
@@ -149,11 +151,71 @@ func checkControllerClips(t *testing.T, as *kart.Assets) {
 			covered[st.Clip] = true
 			checkAnimPaths(t, root, st.Clip, anim, nodes)
 			checkSupportedAttrs(t, st.Clip, anim)
+			if alias := path.Base(st.Clip); alias != st.Clip {
+				if aliasAnim := as.Anims[alias]; aliasAnim != nil {
+					covered[alias] = true
+					checkAnimPaths(t, root, alias, aliasAnim, nodes)
+					checkSupportedAttrs(t, alias, aliasAnim)
+				}
+			}
 		}
 	}
+	coverAnimPatternClips(t, as, nodes, covered)
 	for clip := range as.Anims {
 		if !covered[clip] {
 			t.Fatalf("clip %s is not driven by any controller state", clip)
+		}
+	}
+}
+
+func coverAnimPatternClips(t *testing.T, as *kart.Assets, nodes map[string]bool, covered map[string]bool) {
+	t.Helper()
+	for typ, root := range as.Extra.RefArrays["basePapers"] {
+		def, ok := loadPaperDef(as, root, typ)
+		if !ok {
+			continue
+		}
+		animNum := 0
+		for _, item := range def.pattern {
+			if item.fudeAnim == fudeRelease || item.fudeAnim == fudeTap {
+				animNum++
+				coverRawVariantState(t, as, nodes, covered, typ, strconv.Itoa(animNum))
+			}
+			switch item.stroke {
+			case strokeTome, strokeHane, strokeHarai:
+				animNum++
+				for _, suffix := range []string{"just", "fast", "late", "miss"} {
+					coverRawVariantState(t, as, nodes, covered, typ, strconv.Itoa(animNum)+suffix)
+				}
+			}
+		}
+	}
+}
+
+func coverRawVariantState(t *testing.T, as *kart.Assets, nodes map[string]bool, covered map[string]bool, typ int, state string) {
+	t.Helper()
+	for _, ctrlName := range []string{fudePosController(typ), paperController(typ), shiftController(typ)} {
+		clip, ok := rawVariantClip(ctrlName, state)
+		if !ok {
+			continue
+		}
+		anim := as.Anims[clip]
+		if anim == nil {
+			continue
+		}
+		root := rootForController(as, ctrlName)
+		if root == "" {
+			continue
+		}
+		covered[clip] = true
+		checkAnimPaths(t, root, clip, anim, nodes)
+		checkSupportedAttrs(t, clip, anim)
+		if alias := path.Base(clip); alias != clip {
+			if aliasAnim := as.Anims[alias]; aliasAnim != nil {
+				covered[alias] = true
+				checkAnimPaths(t, root, alias, aliasAnim, nodes)
+				checkSupportedAttrs(t, alias, aliasAnim)
+			}
 		}
 	}
 }

@@ -1,6 +1,7 @@
 package nailcarpenter
 
 import (
+	"math"
 	"path"
 	"testing"
 
@@ -166,7 +167,7 @@ func TestShojiAndPatternSemantics(t *testing.T) {
 	if got := m.shojiXAt(0); got != shojiFullOpenX {
 		t.Fatalf("initial shoji x = %v", got)
 	}
-	if got := m.shojiXAt(5); got != shojiFullOpenX*0.75 {
+	if got := m.shojiXAt(5); math.Abs(got-shojiFullOpenX*0.75) > 1e-9 {
 		t.Fatalf("mid shoji x = %v", got)
 	}
 	if got := m.shojiXAt(7); got != shojiFullOpenX*0.5 {
