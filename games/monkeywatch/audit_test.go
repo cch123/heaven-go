@@ -69,7 +69,13 @@ func TestMonkeyWatchAutoSecondState(t *testing.T) {
 	}
 	m.buildMonkeyTimeline()
 	m.claps[0].min = m.startSecondForClap(0)
-	if got := m.startSecondForClap(1); got != 13 {
-		t.Fatalf("auto second = %d, want 13", got)
+	if got := m.startSecondForClap(1); got != 14 {
+		t.Fatalf("auto second = %d, want 14", got)
+	}
+}
+
+func TestMonkeyWatchUsesCSharpRoundToEven(t *testing.T) {
+	if round(4.5) != 4 || round(5.5) != 6 {
+		t.Fatalf("round half ties must match C# Math.Round: 4.5=%d 5.5=%d", round(4.5), round(5.5))
 	}
 }

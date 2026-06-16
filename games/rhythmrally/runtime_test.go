@@ -67,17 +67,17 @@ func TestBallPositionUsesServeAndReturnCurves(t *testing.T) {
 
 func TestFlightTimingMatchesUnitySpeedBranches(t *testing.T) {
 	for _, tc := range []struct {
-		name          string
-		speed         int
-		served        bool
-		hit, d1, d2   float64
-		heightSecond  float64
-		heightServing float64
+		name         string
+		speed        int
+		served       bool
+		hit, d1, d2  float64
+		heightFirst  float64
+		heightSecond float64
 	}{
 		{"normalServe", speedNormal, true, 4, 1, 1, 1.25, 1.25},
 		{"normalReturn", speedNormal, false, 6, 1, 1, 1.25, 1.25},
-		{"fastServe", speedFast, true, 4, 0.5, 0.5, 1.25, 0.75},
-		{"fastReturn", speedFast, false, 5, 1, 2, 2, 1.25},
+		{"fastServe", speedFast, true, 4, 0.5, 0.5, 0.75, 0.75},
+		{"fastReturn", speedFast, false, 5, 1, 2, 1.25, 2},
 		{"superFastReturn", speedSuperFast, false, 5, 0.5, 0.5, 0.75, 0.75},
 		{"slowReturn", speedSlow, false, 8, 2, 2, 3, 3},
 	} {
@@ -86,11 +86,11 @@ func TestFlightTimingMatchesUnitySpeedBranches(t *testing.T) {
 		if hit != tc.hit || d1 != tc.d1 || d2 != tc.d2 {
 			t.Fatalf("%s timing = %.2f %.2f %.2f, want %.2f %.2f %.2f", tc.name, hit, d1, d2, tc.hit, tc.d1, tc.d2)
 		}
-		if got := m.flightHeight(tc.speed, false, true); got != tc.heightSecond {
-			t.Fatalf("%s second-leg height = %.2f, want %.2f", tc.name, got, tc.heightSecond)
+		if got := m.flightHeight(tc.speed, tc.served, false); got != tc.heightFirst {
+			t.Fatalf("%s first-leg height = %.2f, want %.2f", tc.name, got, tc.heightFirst)
 		}
-		if got := m.flightHeight(tc.speed, true, false); got != tc.heightServing {
-			t.Fatalf("%s serving height = %.2f, want %.2f", tc.name, got, tc.heightServing)
+		if got := m.flightHeight(tc.speed, tc.served, true); got != tc.heightSecond {
+			t.Fatalf("%s second-leg height = %.2f, want %.2f", tc.name, got, tc.heightSecond)
 		}
 	}
 }

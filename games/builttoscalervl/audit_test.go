@@ -77,8 +77,8 @@ func TestRodPlanningWaitsUntilShootableMiddleRightBlock(t *testing.T) {
 	if !shoot {
 		t.Fatal("rod should be planned as shoot")
 	}
-	if end != 6 {
-		t.Fatalf("shoot end time = %d, want 6 after rod returns to player block", end)
+	if end != 5 {
+		t.Fatalf("shoot end time = %d, want 5 when rod lands on player block", end)
 	}
 }
 

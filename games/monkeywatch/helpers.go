@@ -125,7 +125,12 @@ func clamp01(v float64) float64 {
 
 func radians(deg float64) float64 { return deg * math.Pi / 180 }
 
-func round(v float64) int { return int(math.Round(v)) }
+func round(v float64) int {
+	// Unity calls C# Math.Round without an explicit MidpointRounding mode here,
+	// which uses banker's rounding. Go's math.Round rounds halves away from zero,
+	// so use RoundToEven for auto-second and monkey-count parity.
+	return int(math.RoundToEven(v))
+}
 
 func ceil(v float64) int { return int(math.Ceil(v)) }
 
