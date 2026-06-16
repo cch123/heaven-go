@@ -57,11 +57,15 @@ var Grain vec4   // (intensity, size, colored, time)
 var BloomIT vec3 // intensity * tint
 var Glitch vec4  // (scanJitter, screenJump, retroDistort, time)
 var Retro vec4   // (rgbBlend, bottomCollapse, noiseAmount, unused)
-var Blur vec4    // (gaussRadius, dirRadius, dirAngle, unused)
+var Blur vec4    // (gaussRadius, dirRadius, dirAngle, grainyRadius)
+var Analog vec4  // (noiseSpeed, noiseFading, luminanceThreshold, time)
+var Liquid vec4  // (speed, horizontal, vertical, time)
 var Edge vec4    // (edgeWidth, backgroundFade, enabled, unused)
 var EdgeCol vec3
 var EdgeBG vec3
 var Neon vec4    // (edgeWidth, edgeFade, brightness, backgroundFade)
+var Aurora vec4  // (fading, area, smoothness, colorChange*10)
+var AuroraC vec4 // (colorFactorR/G/B, time*flowSpeed)
 var CRFrom [5]vec4
 var CRTo [5]vec4
 var CRP [5]vec4
@@ -102,6 +106,14 @@ func wrap01(uv vec2) vec2 {
 func hash(p vec2) float {
 	h := dot(p, vec2(127.1, 311.7))
 	return fract(sin(h) * 43758.5453123)
+}
+
+func analogNoise(p vec2) float {
+	return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453)
+}
+
+func grainRand(p vec2) float {
+	return sin(dot(p, vec2(1233.224, 1743.335)))
 }
 
 func rgb2hsv(c vec3) vec3 {
@@ -150,6 +162,44 @@ func applyTechnicolor(c vec3) vec3 {
 	return mix(c, result, clamp(TechIE.x, 0, 1))
 }
 
+func applyAnalogNoise(c vec3, uv vec2) vec3 {
+	if Analog.x == 0 || Analog.y == 0 {
+		return c
+	}
+	seed := Analog.w * Analog.x
+	nc := c
+	lum := dot(nc, vec3(0.22, 0.707, 0.071))
+	if analogNoise(vec2(seed, seed)) > Analog.z {
+		nc = vec3(lum)
+	}
+	nx := analogNoise(vec2(seed, seed) + uv/vec2(-213.0, 5.53))
+	ny := analogNoise(vec2(seed, seed) - uv/vec2(213.0, -5.53))
+	nz := analogNoise(vec2(seed, seed) + uv/vec2(213.0, 5.53))
+	nc += 0.25*vec3(nx, ny, nz) - vec3(0.125)
+	return mix(c, nc, Analog.y)
+}
+
+func applyAurora(c vec3, uv vec2) vec3 {
+	if Aurora.x <= 0 {
+		return c
+	}
+	tx := AuroraC.w
+	uv0 := uv - vec2(0.5+0.5*sin(1.4*6.28*uv.x+2.8*tx), 0.5)
+	wave := vec3(
+		0.5*(cos(sqrt(dot(uv0, uv0))*5.6)+1.0),
+		cos(4.62*dot(uv, uv)+tx),
+		cos(length(uv-vec2(1.6*cos(tx*2.0), 1.0*sin(tx*1.7)))*1.3),
+	)
+	waveFactor := dot(wave, AuroraC.rgb) / max(Aurora.w, 1e-4)
+	vig := 1.0 - smoothstep(Aurora.y, Aurora.y-0.05-Aurora.z, length(vec2(0.5)-uv))
+	ac := vec3(
+		AuroraC.r*0.5*(sin(1.28*waveFactor+tx*3.45)+1.0),
+		AuroraC.g*0.5*(sin(1.28*waveFactor+tx*3.15)+1.0),
+		AuroraC.b*0.4*(sin(1.28*waveFactor+tx*1.26)+1.0),
+	)
+	return mix(c, ac, vig*Aurora.x)
+}
+
 func scanJitterUV(uv vec2) vec2 {
 	if Glitch.x == 0 {
 		return uv
@@ -185,9 +235,36 @@ func retroUV(uv vec2) vec2 {
 	return uv
 }
 
+func liquidUV(uv vec2) vec2 {
+	if Liquid.x == 0 {
+		return uv
+	}
+	phase := Liquid.w * Liquid.x * 0.1
+	return wrap01(vec2(
+		uv.x+sin((uv.y+phase)*10.0*Liquid.z)*0.01,
+		uv.y+sin((uv.x+phase)*10.0*Liquid.y)*0.01,
+	))
+}
+
+func sampleGrainyBlur(uv vec2) vec3 {
+	if Blur.w <= 0 {
+		return sampleUV(uv)
+	}
+	random := grainRand(uv)
+	sum := vec3(0)
+	for k := 0; k < 4; k++ {
+		random = fract(43758.5453*random + 0.61432)
+		ox := (random - 0.5) * 2.0
+		random = fract(43758.5453*random + 0.61432)
+		oy := (random - 0.5) * 2.0
+		sum += sampleUV(uv + vec2(ox, oy)*Blur.w/1080.0)
+	}
+	return sum / 4.0
+}
+
 func sampleGlitched(uv vec2) vec3 {
-	uv = retroUV(screenJumpUV(scanJitterUV(uv)))
-	c := sampleUV(uv)
+	uv = retroUV(screenJumpUV(scanJitterUV(liquidUV(uv))))
+	c := sampleGrainyBlur(uv)
 	if Blur.x > 0 {
 		r := Blur.x * 0.75
 		c = c*0.40 +
@@ -212,6 +289,7 @@ func sampleGlitched(uv vec2) vec3 {
 		n := hash(uv*imageSrc0Size()+vec2(floor(Glitch.w*60.0)))
 		c += (n-0.5) * Retro.z * Glitch.z * 0.25
 	}
+	c = applyAnalogNoise(c, uv)
 	return c
 }
 
@@ -358,6 +436,8 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 		bg := mix(vec3(0), c, Neon.w)
 		c = mix(bg, g, Neon.y) * Neon.z
 	}
+
+	c = applyAurora(c, duv)
 
 	return vec4(clamp(c, vec3(0), vec3(1)), 1)
 }

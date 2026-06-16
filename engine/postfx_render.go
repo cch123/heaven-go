@@ -44,6 +44,12 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 	} else {
 		neon = []float32{0, 0, 0, 0}
 	}
+	aurora := []float32{}
+	if p.auroraOn {
+		aurora = []float32{float32(p.auroraFade), float32(p.auroraArea), float32(p.auroraSmooth), float32(p.auroraChange)}
+	} else {
+		aurora = []float32{0, 0, 0, 1}
+	}
 
 	// bloom 前置链：阈值预滤 → 两轮可分离高斯（1/4 分辨率）→ 升采样
 	fx.bloomFull.Fill(color.Black)
@@ -98,11 +104,15 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 		"BloomIT": []float32{float32(p.bloomInt * p.bloomTint[0]), float32(p.bloomInt * p.bloomTint[1]), float32(p.bloomInt * p.bloomTint[2])},
 		"Glitch":  []float32{float32(p.scanJitter), float32(p.screenJump), float32(p.retroDistort), float32(math.Mod(t, 64))},
 		"Retro":   []float32{float32(p.retroRGB), float32(p.retroBottom), float32(p.retroNoise), 0},
-		"Blur":    []float32{float32(p.gaussBlur), float32(p.dirBlur), float32(p.dirAngle), 0},
+		"Blur":    []float32{float32(p.gaussBlur), float32(p.dirBlur), float32(p.dirAngle), float32(p.grainBlur)},
+		"Analog":  []float32{float32(p.analogSpeed), float32(p.analogFade), float32(p.analogThresh), float32(math.Mod(t, 100))},
+		"Liquid":  []float32{float32(p.liquidSpeed), float32(p.liquidHoriz), float32(p.liquidVert), float32(t)},
 		"Edge":    []float32{float32(p.edgeWidth), float32(p.edgeBgFade), b32(p.edgeOn), 0},
 		"EdgeCol": []float32{float32(p.edgeColor[0]), float32(p.edgeColor[1]), float32(p.edgeColor[2])},
 		"EdgeBG":  []float32{float32(p.edgeBgColor[0]), float32(p.edgeBgColor[1]), float32(p.edgeBgColor[2])},
 		"Neon":    neon,
+		"Aurora":  aurora,
+		"AuroraC": []float32{float32(p.auroraColor[0]), float32(p.auroraColor[1]), float32(p.auroraColor[2]), float32(t * p.auroraSpeed)},
 		"CRFrom":  crFrom,
 		"CRTo":    crTo,
 		"CRP":     crP,

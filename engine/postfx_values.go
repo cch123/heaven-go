@@ -70,6 +70,17 @@ func evalFlag(list []fxEvt, beat float64, key string, def bool) bool {
 	return v
 }
 
+func evalPlainNum(list []fxEvt, beat float64, key string, def float64) float64 {
+	v := def
+	for _, e := range list {
+		if beat < e.beat {
+			break
+		}
+		v = num(e.data, key, def)
+	}
+	return v
+}
+
 func num(m map[string]any, key string, def float64) float64 {
 	if v, ok := m[key].(float64); ok {
 		return v

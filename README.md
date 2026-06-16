@@ -196,11 +196,13 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - lockstep：人群渲染将原版"3 台正交相机 → RenderTexture → 平铺 quad"等价
   实现为同尺度无限棋盘格直绘（几何/相位/缩放一致）。
 - ppe 后处理（engine/postfx.go）：colorGrading/vignette/cabb/lensD/pixelQuad 与
-  colorReplace/scanJitter/screenJump/retroTv/edgeDetect/sobelNeon/gaussBlur/dirBlur
-  已接入；colorGrading 的 technicolor AfterStack 已按 X-PostProcessing shader
-  接入；bloom 用 1/4 分辨率两轮高斯近似 PPv2 的 mip 金字塔，anamorphicRatio
-  按 Unity 参数语义偏置水平/垂直模糊轴；grain/retroTv 噪声用 hash 近似烘焙
-  噪声纹理；flash/HUD 不参与后处理（对应编辑器叠层）。
+  colorReplace/scanJitter/screenJump/retroTv/edgeDetect/sobelNeon/gaussBlur/
+  grainBlur/dirBlur/analogNoise/liquidScreen/aurora 已接入；colorGrading 的
+  technicolor AfterStack、GrainyBlur、AnalogNoise、Drunk、AuroraVignette 已按
+  X-PostProcessing/Custom shader 公式接入；bloom 用 1/4 分辨率两轮高斯近似
+  PPv2 的 mip 金字塔，anamorphicRatio 按 Unity 参数语义偏置水平/垂直模糊轴；
+  grain/retroTv 噪声用 hash 近似烘焙噪声纹理；retroTv 下的 HSonVHS 仍待按
+  VHS 多 RT composite 链补齐；flash/HUD 不参与后处理（对应编辑器叠层）。
 - totemClimb 柱子网格按"可见窗口直算"替代 Unity 的 12×3 环形回收（视觉等价）；
   原版 pillar (2) 不带下延段的细节按统一模板绘制（重叠区域同贴图，视觉等价）。
 - totemClimb 高跳保持期的提前松手惩罚（UnHold + ScoreMiss + 重按回握）按

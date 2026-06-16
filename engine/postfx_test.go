@@ -40,13 +40,18 @@ func TestPostFXAcceptsXPostProcessingEventsSeenInCustomLevels(t *testing.T) {
 		"ppe/edgeDetect",
 		"ppe/sobelNeon",
 		"ppe/gaussBlur",
+		"ppe/grainBlur",
 		"ppe/dirBlur",
+		"ppe/analogNoise",
+		"ppe/liquidScreen",
+		"ppe/aurora",
 	} {
 		fx.add(&riq.Entity{Datamodel: dm, Data: map[string]any{"enable": true}})
 	}
 	for _, kind := range []string{
 		"colorReplace", "scanJitter", "screenJump", "retroTv",
-		"edgeDetect", "sobelNeon", "gaussBlur", "dirBlur",
+		"edgeDetect", "sobelNeon", "gaussBlur", "grainBlur", "dirBlur",
+		"analogNoise", "liquidScreen", "aurora",
 	} {
 		if len(fx.evts[kind]) != 1 {
 			t.Fatalf("%s event not registered: %#v", kind, fx.evts)
@@ -179,5 +184,95 @@ func TestBloomAnamorphicRatioParams(t *testing.T) {
 	x, y = bloomAnamorphicBlurScale(-0.75)
 	if math.Abs(x-1.0) > 1e-9 || math.Abs(y-1.75) > 1e-9 {
 		t.Fatalf("negative anamorphic ratio should bias vertical blur: %v %v", x, y)
+	}
+}
+
+func TestAfterStackXPostProcessingParams(t *testing.T) {
+	var p fxParams
+	evalGrainyBlurParams(&p, []fxEvt{{
+		beat:   0,
+		length: 2,
+		data: map[string]any{
+			"enable":     true,
+			"intenStart": 2.0,
+			"intenEnd":   6.0,
+			"ease":       0.0,
+		},
+	}}, 1)
+	if math.Abs(p.grainBlur-4.0) > 1e-9 {
+		t.Fatalf("grainBlur radius did not ease: %v", p.grainBlur)
+	}
+
+	p = fxParams{}
+	evalAnalogNoiseParams(&p, []fxEvt{{
+		beat:   0,
+		length: 2,
+		data: map[string]any{
+			"enable":         true,
+			"intenStart":     0.2,
+			"intenEnd":       0.6,
+			"fadingStart":    0.1,
+			"fadingEnd":      0.5,
+			"thresholdStart": 0.3,
+			"thresholdEnd":   0.9,
+			"ease":           0.0,
+		},
+	}}, 1)
+	if math.Abs(p.analogSpeed-0.4) > 1e-9 || math.Abs(p.analogFade-0.3) > 1e-9 || math.Abs(p.analogThresh-0.6) > 1e-9 {
+		t.Fatalf("analogNoise params did not ease: %#v", p)
+	}
+
+	p = fxParams{}
+	evalLiquidScreenParams(&p, []fxEvt{{
+		beat: 0,
+		data: map[string]any{
+			"enable":   true,
+			"intenEnd": 3.0,
+			"horizEnd": 4.0,
+			"vertEnd":  5.0,
+		},
+	}}, 3)
+	if p.liquidSpeed != 3 || p.liquidHoriz != 4 || p.liquidVert != 5 {
+		t.Fatalf("liquidScreen should use end fields directly: %#v", p)
+	}
+
+	p = fxParams{}
+	evalAuroraParams(&p, []fxEvt{{
+		beat:   0,
+		length: 2,
+		data: map[string]any{
+			"enable":      true,
+			"intenStart":  0.2,
+			"intenEnd":    0.6,
+			"sizeStart":   0.1,
+			"sizeEnd":     0.5,
+			"smoothStart": 0.2,
+			"smoothEnd":   0.8,
+			"solidStart":  0.1,
+			"solidEnd":    0.3,
+			"redStart":    1.0,
+			"redEnd":      0.6,
+			"greenStart":  0.4,
+			"greenEnd":    0.8,
+			"blueStart":   0.2,
+			"blueEnd":     0.4,
+			"speed":       1.5,
+			"ease":        0.0,
+		},
+	}}, 1)
+	if !p.auroraOn || math.Abs(p.auroraFade-0.4) > 1e-9 || math.Abs(p.auroraArea-0.3) > 1e-9 {
+		t.Fatalf("aurora primary params did not ease: %#v", p)
+	}
+	if math.Abs(p.auroraSmooth-p.auroraArea) > 1e-9 {
+		t.Fatalf("aurora smoothness should mirror Unity's newSize assignment: %#v", p)
+	}
+	if math.Abs(p.auroraChange-2.0) > 1e-9 || math.Abs(p.auroraSpeed-1.5) > 1e-9 {
+		t.Fatalf("aurora scalar params wrong: %#v", p)
+	}
+	wantColor := [3]float64{0.8, 0.6, 0.3}
+	for i := range wantColor {
+		if math.Abs(p.auroraColor[i]-wantColor[i]) > 1e-9 {
+			t.Fatalf("aurora color[%d] = %v, want %v", i, p.auroraColor[i], wantColor[i])
+		}
 	}
 }

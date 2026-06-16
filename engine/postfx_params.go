@@ -31,12 +31,18 @@ type fxParams struct {
 	scanJitter, screenJump                  float64
 	retroDistort, retroRGB, retroBottom     float64
 	retroNoise                              float64
-	gaussBlur, dirBlur, dirAngle            float64
+	gaussBlur, grainBlur, dirBlur, dirAngle float64
+	analogSpeed, analogFade, analogThresh   float64
+	liquidSpeed, liquidHoriz, liquidVert    float64
 	edgeOn                                  bool
 	edgeWidth, edgeBgFade                   float64
 	edgeColor, edgeBgColor                  [4]float64
 	neonOn                                  bool
 	neonFade, neonWidth, neonBg, neonBright float64
+	auroraOn                                bool
+	auroraFade, auroraArea, auroraSmooth    float64
+	auroraChange, auroraSpeed               float64
+	auroraColor                             [3]float64
 	crFrom, crTo                            [5][4]float64
 	crRange, crFuzz                         [5]float64
 }

@@ -162,6 +162,16 @@ func evalGaussianBlurParams(p *fxParams, list []fxEvt, beat float64) {
 	}
 }
 
+func evalGrainyBlurParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	inten := evalNum(list, beat, "inten", 0)
+	if inten != 0 && evalFlag(list, beat, "enable", true) {
+		p.grainBlur = inten
+	}
+}
+
 func evalDirectionalBlurParams(p *fxParams, list []fxEvt, beat float64) {
 	if len(list) == 0 {
 		return
@@ -172,6 +182,35 @@ func evalDirectionalBlurParams(p *fxParams, list []fxEvt, beat float64) {
 	}
 	p.dirBlur = inten
 	p.dirAngle = evalNum(list, beat, "angle", 0) * math.Pi / 180
+}
+
+func evalAnalogNoiseParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	speed := evalNum(list, beat, "inten", 0)
+	if speed == 0 || !evalFlag(list, beat, "enable", true) {
+		return
+	}
+	p.analogSpeed = speed
+	p.analogFade = evalNum(list, beat, "fading", 0)
+	p.analogThresh = evalNum(list, beat, "threshold", 0)
+}
+
+func evalLiquidScreenParams(p *fxParams, list []fxEvt, beat float64) {
+	for _, e := range list {
+		if beat < e.beat {
+			break
+		}
+		speed := num(e.data, "intenEnd", 0)
+		if speed == 0 || !flag(e.data, "enable", true) {
+			p.liquidSpeed, p.liquidHoriz, p.liquidVert = 0, 0, 0
+			continue
+		}
+		p.liquidSpeed = speed
+		p.liquidHoriz = num(e.data, "horizEnd", 1)
+		p.liquidVert = num(e.data, "vertEnd", 1)
+	}
 }
 
 func evalEdgeDetectParams(p *fxParams, list []fxEvt, beat float64) {
@@ -198,6 +237,29 @@ func evalSobelNeonParams(p *fxParams, list []fxEvt, beat float64) {
 	p.neonBg = evalNum(list, beat, "bgFade", 1)
 	p.neonBright = evalNum(list, beat, "brightness", 1)
 	p.neonOn = p.neonFade != 0 || p.neonWidth != 0 || p.neonBg != 1 || p.neonBright != 1
+}
+
+func evalAuroraParams(p *fxParams, list []fxEvt, beat float64) {
+	if len(list) == 0 {
+		return
+	}
+	inten := evalNum(list, beat, "inten", 0)
+	if inten == 0 || !evalFlag(list, beat, "enable", true) {
+		return
+	}
+	p.auroraOn = true
+	p.auroraFade = inten
+	p.auroraArea = evalNum(list, beat, "size", 0)
+	// VFXManager.cs computes smoothness but writes vignetteSmothness from newSize.
+	// Keep that typo-compatible behavior so editor-authored events match Unity.
+	p.auroraSmooth = p.auroraArea
+	p.auroraChange = evalNum(list, beat, "solid", 0.1) * 10
+	p.auroraSpeed = evalPlainNum(list, beat, "speed", 1)
+	p.auroraColor = [3]float64{
+		evalNum(list, beat, "red", 1),
+		evalNum(list, beat, "green", 1),
+		evalNum(list, beat, "blue", 1),
+	}
 }
 
 func evalColorReplaceParams(p *fxParams, list []fxEvt, beat float64) {

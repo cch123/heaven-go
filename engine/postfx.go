@@ -11,7 +11,8 @@
 //	→ Bloom 叠加（阈值软膝 + 高斯模糊，简化为 1/4 分辨率两轮）
 //	→ Vignette（classic 模式）→ Grain（hash 噪声近似胶片颗粒）
 //	→ Color Grading LDR（LMS 白平衡/滤色/色相/饱和/亮度/LogC 对比度）
-//	→ Technicolor（X-PostProcessing AfterStack）
+//	→ X-PostProcessing AfterStack（Technicolor / GrainyBlur / AnalogNoise /
+//	   LiquidScreen / AuroraVignette）
 //
 // 已知简化（详见 README）：bloom 用固定两轮 1/4 分辨率模糊近似 PPv2 的
 // mip 金字塔；grain 用 hash 噪声近似烘焙噪声纹理。
@@ -48,8 +49,9 @@ func (fx *postFX) add(e *riq.Entity) {
 	kind := e.Datamodel[len("ppe/"):]
 	switch kind {
 	case "vignette", "cabb", "bloom", "lensD", "grain", "colorGrading", "pixelQuad",
-		"retroTv", "scanJitter", "gaussBlur", "dirBlur", "screenJump",
-		"edgeDetect", "sobelNeon", "colorReplace":
+		"retroTv", "scanJitter", "gaussBlur", "grainBlur", "dirBlur", "analogNoise",
+		"screenJump", "edgeDetect", "sobelNeon", "colorReplace", "liquidScreen",
+		"aurora":
 		if fx.evts == nil {
 			fx.evts = map[string][]fxEvt{}
 		}

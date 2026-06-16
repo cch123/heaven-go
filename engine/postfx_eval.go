@@ -13,9 +13,13 @@ func (fx *postFX) eval(beat float64) fxParams {
 	evalScanJitterParams(&p, fx.evts["scanJitter"], beat)
 	evalScreenJumpParams(&p, fx.evts["screenJump"], beat)
 	evalGaussianBlurParams(&p, fx.evts["gaussBlur"], beat)
+	evalGrainyBlurParams(&p, fx.evts["grainBlur"], beat)
 	evalDirectionalBlurParams(&p, fx.evts["dirBlur"], beat)
+	evalAnalogNoiseParams(&p, fx.evts["analogNoise"], beat)
+	evalLiquidScreenParams(&p, fx.evts["liquidScreen"], beat)
 	evalEdgeDetectParams(&p, fx.evts["edgeDetect"], beat)
 	evalSobelNeonParams(&p, fx.evts["sobelNeon"], beat)
 	evalColorReplaceParams(&p, fx.evts["colorReplace"], beat)
+	evalAuroraParams(&p, fx.evts["aurora"], beat)
 	return p
 }
