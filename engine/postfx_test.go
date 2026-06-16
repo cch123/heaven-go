@@ -1,8 +1,12 @@
 package engine
 
 import (
+	"bytes"
 	"image/color"
+	"log"
 	"math"
+	"os"
+	"strings"
 	"testing"
 
 	"github.com/hajimehoshi/ebiten/v2"
@@ -70,6 +74,62 @@ func TestPostFXAcceptsXPostProcessingEventsSeenInCustomLevels(t *testing.T) {
 		if len(fx.evts[kind]) != 1 {
 			t.Fatalf("%s event not registered: %#v", kind, fx.evts)
 		}
+	}
+}
+
+func TestPostFXKnownCustomLevelEventsDoNotLogUnimplemented(t *testing.T) {
+	var buf bytes.Buffer
+	old := log.Writer()
+	log.SetOutput(&buf)
+	defer log.SetOutput(old)
+
+	var fx postFX
+	for _, dm := range []string{
+		"ppe/colorReplace",
+		"ppe/scanJitter",
+		"ppe/screenJump",
+	} {
+		fx.add(&riq.Entity{Datamodel: dm, Data: map[string]any{"enable": true}})
+	}
+	if got := buf.String(); strings.Contains(got, "未实现") {
+		t.Fatalf("known custom-level postfx logged as unimplemented: %s", got)
+	}
+}
+
+func TestLetterToTheBlackWorldPostFXEventsAreKnown(t *testing.T) {
+	const level = "../levels/Letter to the Black World.riq"
+	if _, err := os.Stat(level); err != nil {
+		t.Skipf("local showcase level not present: %v", err)
+	}
+	r, err := riq.Load(level)
+	if err != nil {
+		t.Fatalf("load showcase level: %v", err)
+	}
+
+	want := map[string]bool{
+		"ppe/colorReplace": false,
+		"ppe/scanJitter":   false,
+		"ppe/screenJump":   false,
+	}
+	var fx postFX
+	var buf bytes.Buffer
+	old := log.Writer()
+	log.SetOutput(&buf)
+	defer log.SetOutput(old)
+	for i := range r.Beatmap.Entities {
+		e := &r.Beatmap.Entities[i]
+		if _, ok := want[e.Datamodel]; ok {
+			want[e.Datamodel] = true
+			fx.add(e)
+		}
+	}
+	for dm, seen := range want {
+		if !seen {
+			t.Fatalf("showcase level did not contain expected %s event", dm)
+		}
+	}
+	if got := buf.String(); strings.Contains(got, "未实现") {
+		t.Fatalf("showcase postfx event logged as unimplemented: %s", got)
 	}
 }
 
