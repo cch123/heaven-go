@@ -23,6 +23,7 @@ func (fx *postFX) ensure() error {
 	}
 	fx.frame = ebiten.NewImage(ScreenW, ScreenH)
 	fx.bloomFull = ebiten.NewImage(ScreenW, ScreenH)
+	fx.postFull = ebiten.NewImage(ScreenW, ScreenH)
 	fx.q1 = ebiten.NewImage(ScreenW/4, ScreenH/4)
 	fx.q2 = ebiten.NewImage(ScreenW/4, ScreenH/4)
 	return nil
@@ -35,7 +36,7 @@ func (fx *postFX) Target() *ebiten.Image {
 }
 
 // Apply 把离屏帧经后处理链画到 dst。
-func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
+func (fx *postFX) Apply(dst *ebiten.Image, assetsRoot string, beat, t float64) {
 	p := fx.eval(beat)
 	crFrom, crTo, crP := packColorReplaceUniforms(p)
 	neon := []float32{}
@@ -83,6 +84,11 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 		fx.bloomFull.DrawImage(fx.q1, uo)
 	}
 
+	baseDst := dst
+	if p.vhsOn {
+		fx.postFull.Clear()
+		baseDst = fx.postFull
+	}
 	op := &ebiten.DrawRectShaderOptions{}
 	op.Images[0] = fx.frame
 	op.Images[1] = fx.bloomFull
@@ -117,7 +123,13 @@ func (fx *postFX) Apply(dst *ebiten.Image, beat, t float64) {
 		"CRTo":    crTo,
 		"CRP":     crP,
 	}
-	dst.DrawRectShader(ScreenW, ScreenH, fx.uber, op)
+	baseDst.DrawRectShader(ScreenW, ScreenH, fx.uber, op)
+	if p.vhsOn && fx.vhs.apply(dst, baseDst, assetsRoot, p, t) {
+		return
+	}
+	if baseDst != dst {
+		dst.DrawImage(baseDst, nil)
+	}
 }
 
 func bloomAnamorphicBlurScale(ratio float64) (float64, float64) {

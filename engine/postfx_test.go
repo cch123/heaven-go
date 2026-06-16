@@ -1,6 +1,7 @@
 package engine
 
 import (
+	"image/color"
 	"math"
 	"testing"
 
@@ -13,6 +14,9 @@ import (
 func TestKageCompile(t *testing.T) {
 	for name, src := range map[string]string{
 		"uber": uberKage, "bloomPre": bloomPreKage, "blur": blurKage,
+		"vhsNoise": vhsNoiseGenKage, "vhsSmear": vhsSmearKage,
+		"vhsDown": vhsDownsampleKage, "vhsUp": vhsUpsampleKage,
+		"vhsComposite": vhsCompositeKage, "vhsGrain": vhsGrainKage,
 	} {
 		if _, err := ebiten.NewShader([]byte(src)); err != nil {
 			t.Errorf("%s: %v", name, err)
@@ -185,6 +189,80 @@ func TestBloomAnamorphicRatioParams(t *testing.T) {
 	if math.Abs(x-1.0) > 1e-9 || math.Abs(y-1.75) > 1e-9 {
 		t.Fatalf("negative anamorphic ratio should bias vertical blur: %v %v", x, y)
 	}
+}
+
+func TestRetroTVVHSParams(t *testing.T) {
+	list := []fxEvt{{
+		beat:   0,
+		length: 2,
+		data: map[string]any{
+			"enable":          true,
+			"HSonVHS":         true,
+			"bleedIntStart":   0.2,
+			"bleedIntEnd":     0.6,
+			"bleedIteration":  5.0,
+			"vhsGrainStart":   0.1,
+			"vhsGrainEnd":     0.3,
+			"grainScaleStart": 0.4,
+			"grainScaleEnd":   0.8,
+			"stripeDenStart":  0.2,
+			"stripeDenEnd":    0.4,
+			"stripeOpacStart": 0.6,
+			"stripeOpacEnd":   1.0,
+			"edgeIntStart":    0.5,
+			"edgeIntEnd":      1.5,
+			"edgeDistStart":   0.001,
+			"edgeDistEnd":     0.003,
+			"ease":            0.0,
+		},
+	}}
+	var p fxParams
+	evalRetroTVParams(&p, list, 1)
+	if !p.vhsOn {
+		t.Fatal("HSonVHS should enable VHS even when CRT distortion intensity is zero")
+	}
+	if p.vhsIterations != 5 {
+		t.Fatalf("VHS iterations = %d, want 5", p.vhsIterations)
+	}
+	checks := map[string][2]float64{
+		"bleed":         {p.vhsBleed, 0.4},
+		"grain":         {p.vhsGrain, 0.2},
+		"grainScale":    {p.vhsGrainScale, 0.6},
+		"stripeDensity": {p.vhsStripeDensity, 0.3},
+		"stripeOpacity": {p.vhsStripeOpacity, 0.8},
+		"edgeIntensity": {p.vhsEdgeIntensity, 1.0},
+		"edgeDistance":  {p.vhsEdgeDistance, 0.002},
+	}
+	for name, vals := range checks {
+		if math.Abs(vals[0]-vals[1]) > 1e-9 {
+			t.Fatalf("%s = %v, want %v", name, vals[0], vals[1])
+		}
+	}
+}
+
+func TestVHSApplyPathRuns(t *testing.T) {
+	src := ebiten.NewImage(ScreenW, ScreenH)
+	src.Fill(colorRGBA(0x40, 0x80, 0xc0, 0xff))
+	dst := ebiten.NewImage(ScreenW, ScreenH)
+	var v vhsPostFX
+	ok := v.apply(dst, src, "../assets", fxParams{
+		vhsOn:            true,
+		vhsBleed:         0.4,
+		vhsIterations:    2,
+		vhsGrain:         0.2,
+		vhsGrainScale:    0.6,
+		vhsStripeDensity: 0.3,
+		vhsStripeOpacity: 0.8,
+		vhsEdgeIntensity: 1.0,
+		vhsEdgeDistance:  0.002,
+	}, 1)
+	if !ok {
+		t.Fatal("VHS apply path should initialize and draw")
+	}
+}
+
+func colorRGBA(r, g, b, a uint8) color.RGBA {
+	return color.RGBA{R: r, G: g, B: b, A: a}
 }
 
 func TestAfterStackXPostProcessingParams(t *testing.T) {

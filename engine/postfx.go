@@ -39,9 +39,11 @@ type postFX struct {
 	uber      *ebiten.Shader
 	preShader *ebiten.Shader // bloom 阈值预滤
 	blur      *ebiten.Shader // 可分离高斯（方向作 uniform）
+	vhs       vhsPostFX
 
 	frame     *ebiten.Image // 全分辨率游戏画面
 	bloomFull *ebiten.Image // 全分辨率 bloom 结果（关闭时为黑）
+	postFull  *ebiten.Image // 需要多 pass 后处理时的全分辨率中间帧
 	q1, q2    *ebiten.Image // 1/4 分辨率工作缓冲
 }
 

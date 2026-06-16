@@ -41,7 +41,7 @@ func (a *App) drawActiveModule(canvas *ebiten.Image, t, beat float64) {
 		// ppe：游戏画面渲到离屏帧，经后处理链上屏（flash/HUD 不参与，
 		// 对应 HS 的编辑器叠层不过 PostProcessLayer）
 		a.active.Draw(a.fx.Target(), t, beat)
-		a.fx.Apply(canvas, beat, t)
+		a.fx.Apply(canvas, a.assetsRoot, beat, t)
 	} else {
 		a.active.Draw(canvas, t, beat)
 	}

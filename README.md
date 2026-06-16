@@ -201,8 +201,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   technicolor AfterStack、GrainyBlur、AnalogNoise、Drunk、AuroraVignette 已按
   X-PostProcessing/Custom shader 公式接入；bloom 用 1/4 分辨率两轮高斯近似
   PPv2 的 mip 金字塔，anamorphicRatio 按 Unity 参数语义偏置水平/垂直模糊轴；
-  grain/retroTv 噪声用 hash 近似烘焙噪声纹理；retroTv 下的 HSonVHS 仍待按
-  VHS 多 RT composite 链补齐；flash/HUD 不参与后处理（对应编辑器叠层）。
+  retroTv 下的 HSonVHS 已接入 VHS noise/smear/downsample/upsample/composite/
+  grain 多 RT 链，VHS 纹理优先从 `assets/common/vhs` 读取，缺失时回退本机
+  HeavenStudio-master 资源，再缺失则记录日志并生成确定性 fallback；grain/retroTv
+  非 VHS 噪声用 hash 近似烘焙噪声纹理；flash/HUD 不参与后处理（对应编辑器叠层）。
 - totemClimb 柱子网格按"可见窗口直算"替代 Unity 的 12×3 环形回收（视觉等价）；
   原版 pillar (2) 不带下延段的细节按统一模板绘制（重叠区域同贴图，视觉等价）。
 - totemClimb 高跳保持期的提前松手惩罚（UnHold + ScoreMiss + 重按回握）按

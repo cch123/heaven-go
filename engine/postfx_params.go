@@ -31,6 +31,11 @@ type fxParams struct {
 	scanJitter, screenJump                  float64
 	retroDistort, retroRGB, retroBottom     float64
 	retroNoise                              float64
+	vhsOn                                   bool
+	vhsBleed, vhsGrain, vhsGrainScale       float64
+	vhsStripeDensity, vhsStripeOpacity      float64
+	vhsEdgeIntensity, vhsEdgeDistance       float64
+	vhsIterations                           int
 	gaussBlur, grainBlur, dirBlur, dirAngle float64
 	analogSpeed, analogFade, analogThresh   float64
 	liquidSpeed, liquidHoriz, liquidVert    float64

@@ -123,13 +123,26 @@ func evalRetroTVParams(p *fxParams, list []fxEvt, beat float64) {
 		return
 	}
 	inten := evalNum(list, beat, "inten", 0)
-	if inten == 0 || !evalFlag(list, beat, "enable", true) {
+	enabled := evalFlag(list, beat, "enable", true)
+	if inten != 0 && enabled {
+		p.retroDistort = inten
+		p.retroRGB = evalNum(list, beat, "rgb", 1)
+		p.retroBottom = evalNum(list, beat, "bottom", 0.02)
+		p.retroNoise = evalNum(list, beat, "noise", 0.3)
+	}
+	if !enabled || !evalFlag(list, beat, "HSonVHS", false) {
 		return
 	}
-	p.retroDistort = inten
-	p.retroRGB = evalNum(list, beat, "rgb", 1)
-	p.retroBottom = evalNum(list, beat, "bottom", 0.02)
-	p.retroNoise = evalNum(list, beat, "noise", 0.3)
+	p.vhsBleed = evalNum(list, beat, "bleedInt", 0.5)
+	p.vhsIterations = int(math.Max(2, math.Min(8, math.Round(evalPlainNum(list, beat, "bleedIteration", 2)))))
+	p.vhsGrain = evalNum(list, beat, "vhsGrain", 0.1)
+	p.vhsGrainScale = evalNum(list, beat, "grainScale", 0.1)
+	p.vhsStripeDensity = evalNum(list, beat, "stripeDen", 0.1)
+	p.vhsStripeOpacity = evalNum(list, beat, "stripeOpac", 1)
+	p.vhsEdgeIntensity = evalNum(list, beat, "edgeInt", 0.5)
+	p.vhsEdgeDistance = evalNum(list, beat, "edgeDist", 0.002)
+	p.vhsOn = p.vhsBleed > 0 || p.vhsEdgeIntensity > 0 ||
+		(p.vhsStripeDensity > 0 && p.vhsStripeOpacity > 0) || p.vhsGrain > 0
 }
 
 func evalScanJitterParams(p *fxParams, list []fxEvt, beat float64) {
