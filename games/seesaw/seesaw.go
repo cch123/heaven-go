@@ -7,14 +7,11 @@
 //	high 跳：弹起更高（height 参数插值 12..28），落板 Lightning + 爆闪
 //	+ 轨道珠粒子 + 伪相机跟随（gameTrans 下移）。
 //	changeBgColor 渐变背景双色；recolor 调色板映射换色（贴图 RGB 掩码）。
-//
-// bop/choke 事件未被任何官方关卡使用（全部 Pack-In 谱面核对过），
-// 未实现——出现时打日志跳过。
+//	bop/choke 控制空闲律动、strum 律动变体和延迟爆炸。
 package seesaw
 
 import (
 	"image/color"
-	"log"
 	"math"
 	"sort"
 
@@ -97,9 +94,14 @@ type guy struct {
 	heightLast float64
 	midAirDone bool
 	canBop     bool
+	dead       bool
+	strum      bool
+	wantChoke  float64
+	wantLen    float64
 	rot        float64
 	animRel    string // 实例内 Animator 相对 path（"See"/"Saw"）
 	holderPath string
+	deathPath  string
 }
 
 type Module struct {
@@ -124,6 +126,7 @@ type Module struct {
 	orbs []orb
 
 	defaultFill, defaultOutline [4]float64
+	seeShouldBop, sawShouldBop  bool
 }
 
 func New() engine.Module {
@@ -160,7 +163,15 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 
 	mkGuy := func(holder, animRel string, see bool) *guy {
 		t := kart.NewTemplate(ctx.Assets, holder)
-		g := &guy{inst: t.NewInstance(), see: see, canBop: true, animRel: animRel, holderPath: holder}
+		compName := "saw"
+		if see {
+			compName = "see"
+		}
+		death := ctx.Assets.Extra.Components[compName].Refs["deathParticle"]
+		g := &guy{
+			inst: t.NewInstance(), see: see, canBop: true, wantChoke: -1,
+			animRel: animRel, holderPath: holder, deathPath: death,
+		}
 		return g
 	}
 	m.see = mkGuy(ctx.Role("see"), "See", true)
@@ -194,8 +205,43 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		m.recolors = append(m.recolors, recolorEvt{
 			beat: b, fill: colorParam(e, "fill"), outline: colorParam(e, "outline"),
 		})
-	case "seeSaw/bop", "seeSaw/choke":
-		log.Printf("seeSaw: 事件 %s 未实现（官方关卡未使用）", e.Datamodel)
+	case "seeSaw/bop":
+		length := e.Length
+		if length == 0 {
+			length = 1
+		}
+		bopSee, bopSaw := boolParam(e, "bopSee"), boolParam(e, "bopSaw")
+		autoSee, autoSaw := boolParam(e, "autoSee"), boolParam(e, "autoSaw")
+		strumSee, strumSaw := boolParam(e, "strumSee"), boolParam(e, "strumSaw")
+		m.ctx.At(b, func() {
+			m.seeShouldBop, m.sawShouldBop = autoSee, autoSaw
+			m.see.strum, m.saw.strum = strumSee, strumSaw
+		})
+		for i := 0; i < m.bopActionCount(length); i++ {
+			beat := b + float64(i)
+			m.ctx.At(beat, func() {
+				if bopSaw {
+					m.bopGuy(m.saw, beat)
+				}
+				if bopSee {
+					m.bopGuy(m.see, beat)
+				}
+			})
+		}
+	case "seeSaw/choke":
+		length := e.Length
+		if length == 0 {
+			length = 4
+		}
+		seeChoke, sawChoke := boolParam(e, "see"), boolParam(e, "saw")
+		m.ctx.At(b, func() {
+			if seeChoke {
+				m.chokeGuy(m.see, b, length)
+			}
+			if sawChoke {
+				m.chokeGuy(m.saw, b, length)
+			}
+		})
 	}
 }
 
@@ -593,11 +639,7 @@ func (m *Module) landGuy(g *guy, landType int, getUpOut bool) {
 		// 终落：回地面，转 Neutral
 		g.state, g.lastState = stNone, g.state
 		g.inst.Offset = m.nodeInGame("Game/Curves/See/SeeStartJump/Point0")
-		neutral := "NeutralSaw"
-		if g.see {
-			neutral = "NeutralSee"
-		}
-		g.inst.PlayState(g.animRel, neutral, beat, 0.5)
+		m.afterEndJumpLand(g, beat)
 		return
 	}
 	if landType == landBig && !g.see {
@@ -632,6 +674,76 @@ func (m *Module) landGuy(g *guy, landType int, getUpOut bool) {
 	}
 	g.lastState = g.state
 	g.state = stNone
+}
+
+func (m *Module) afterEndJumpLand(g *guy, beat float64) {
+	if m.shouldRunQueuedChoke(g, beat) {
+		chokeBeat, length := g.wantChoke, g.wantLen
+		g.wantChoke = -1
+		m.chokeGuy(g, chokeBeat, length)
+		return
+	}
+	if (g.see && m.seeShouldBop) || (!g.see && m.sawShouldBop) {
+		m.bopGuy(g, beat)
+		return
+	}
+	m.playNeutral(g, beat)
+}
+
+func (m *Module) shouldRunQueuedChoke(g *guy, beat float64) bool {
+	return g.wantChoke >= beat-0.25 && g.wantChoke <= beat+0.25
+}
+
+func (m *Module) bopActionCount(length float64) int {
+	count := 0
+	for i := 0; float64(i) < length; i++ {
+		count++
+	}
+	return count
+}
+
+func (m *Module) playNeutral(g *guy, beat float64) {
+	neutral := "NeutralSaw"
+	if g.see {
+		neutral = "NeutralSee"
+	}
+	g.inst.PlayState(g.animRel, neutral, beat, 0.5)
+}
+
+func (m *Module) bopGuy(g *guy, beat float64) {
+	if !g.canBop || g.state != stNone || g.dead {
+		return
+	}
+	name := "BopSaw"
+	if g.see {
+		name = "BopSee"
+	}
+	if g.strum {
+		name += "_Strum"
+	}
+	g.inst.PlayState(g.animRel, name, beat, 0.5)
+}
+
+func (m *Module) chokeGuy(g *guy, beat, length float64) {
+	if !g.canBop || g.state != stNone || g.dead {
+		g.wantChoke, g.wantLen = beat, length
+		return
+	}
+	g.wantChoke = -1
+	g.dead = true
+	intro := "Choke_Saw_Intro"
+	sound := "explosionWhite"
+	if g.see {
+		intro = "Choke_See_Intro"
+		sound = "explosionBlack"
+	}
+	g.inst.PlayState(g.animRel, intro, beat, 0.5)
+	m.ctx.SoundAt(beat+length, sound, 1)
+	m.ctx.At(beat+length-1, func() { g.inst.PlayState("", "Invert", beat+length-1, 0.5) })
+	m.ctx.At(beat+length, func() {
+		g.inst.PlayState(g.animRel, "Explode", beat+length, 0.5)
+		m.spawnDeathOrbs(g)
+	})
 }
 
 // nodeInGame 取场景节点在 Game 根下的本地坐标。
@@ -714,6 +826,24 @@ func (m *Module) spawnOrbs(white bool) {
 	}
 }
 
+func (m *Module) spawnDeathOrbs(g *guy) {
+	pos := m.nodeInGame(g.deathPath)
+	sprite := "Seesaw1_34"
+	if g.see {
+		sprite = "Seesaw1_33"
+	}
+	t := m.ctx.Time()
+	for i := 0; i < 12; i++ {
+		ang := randF() * 2 * math.Pi
+		spd := 18 + randF()*22
+		m.orbs = append(m.orbs, orb{
+			born: t, px: pos[0], py: pos[1],
+			vx: math.Cos(ang) * spd, vy: math.Sin(ang) * spd,
+			g: 18, life: 1.2, size: 0.9, sprite: sprite,
+		})
+	}
+}
+
 var rngState uint64 = 0x2545f4914f6cdd1d
 
 func randF() float64 {
@@ -765,6 +895,10 @@ func (m *Module) OnSwitch(beat float64) {
 	sec := m.ctx.SecPerBeat(beat)
 	m.see.inst.PlayState("See", "NeutralSee", beat, sec)
 	m.saw.inst.PlayState("Saw", "NeutralSaw", beat, sec)
+	m.see.inst.PlayState("", "NoInvert", beat, sec)
+	m.saw.inst.PlayState("", "NoInvert", beat, sec)
+	m.see.dead, m.saw.dead = false, false
+	m.see.wantChoke, m.saw.wantChoke = -1, -1
 	sc.PlayState(m.ctx.Role("seeSawAnim"), "Neut", beat, sec)
 	// OnSwitch 早于首帧 Draw；先采样一次，下面读取曲线锚点才有有效世界矩阵。
 	sc.Sample(beat)

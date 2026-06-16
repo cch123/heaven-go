@@ -90,6 +90,8 @@ func TestStatesAndClips(t *testing.T) {
 		"Jump_OutIn_Start", "Jump_OutOut_Fall", "Jump_InIn_Fall",
 		"Jump_InOut_Tuck", "Jump_OutIn_Tuck", "Jump_OutOut_Transform",
 		"Jump_OutIn_Transform", "BadOut_SeeReact", "BadIn_SeeReact",
+		"BopSaw", "BopSaw_Strum", "BopSee", "BopSee_Strum",
+		"Choke_Saw_Intro", "Choke_Saw", "Choke_See_Intro", "Choke_See", "Explode",
 		"Land_Out", "Land_In", "Land_Out_Big", "Land_In_Big",
 		"Land_Out_Miss", "Land_In_Miss", "Land_Out_Barely", "Land_In_Barely",
 		"GetUp_Out", "GetUp_In", "GetUp_Out_Big", "GetUp_In_Big",
@@ -103,6 +105,17 @@ func TestStatesAndClips(t *testing.T) {
 	for _, st := range []string{"Neut", "Good", "Bad", "Lightning"} {
 		if _, ok := plank.States[st]; !ok {
 			t.Errorf("Seesaw controller 缺状态 %q", st)
+		}
+	}
+	for ctrl, states := range map[string][]string{
+		"GuyInverter": {"NoInvert", "Invert"},
+		"SeeInverter": {"NoInvert", "Invert"},
+	} {
+		c := as.Controllers[ctrl]
+		for _, st := range states {
+			if _, ok := c.States[st]; !ok {
+				t.Errorf("%s controller 缺状态 %q", ctrl, st)
+			}
 		}
 	}
 }
@@ -123,5 +136,53 @@ func TestMappedNodes(t *testing.T) {
 		if _, ok := as.Sheet.Sprites[s]; !ok {
 			t.Errorf("轨道珠切片 %s 缺失", s)
 		}
+	}
+}
+
+func TestBopAndChokeAssets(t *testing.T) {
+	as := loadAssets(t)
+	for _, sound := range []string{"explosionBlack", "explosionWhite"} {
+		if as.Sounds[sound] == nil {
+			t.Fatalf("missing choke sound %q", sound)
+		}
+	}
+	for comp, want := range map[string]string{
+		"see": "Game/Guys/SeeHolder/BlackOrbs (1)",
+		"saw": "Game/Guys/SawHolder/BlackOrbs (2)",
+	} {
+		got := as.Extra.Components[comp].Refs["deathParticle"]
+		if got != want {
+			t.Fatalf("%s deathParticle = %q, want %q", comp, got, want)
+		}
+		if _, ok := as.NodeIndex(got); !ok {
+			t.Fatalf("%s deathParticle target %q missing", comp, got)
+		}
+	}
+}
+
+func TestBopEventSchedulesLikeUnityLoop(t *testing.T) {
+	m := &Module{}
+	if got := m.bopActionCount(0.5); got != 1 {
+		t.Fatalf("bop count for length 0.5 = %d, want 1", got)
+	}
+	if got := m.bopActionCount(1); got != 1 {
+		t.Fatalf("bop count for length 1 = %d, want 1", got)
+	}
+	if got := m.bopActionCount(1.5); got != 2 {
+		t.Fatalf("bop count for length 1.5 = %d, want 2", got)
+	}
+	if got := m.bopActionCount(4); got != 4 {
+		t.Fatalf("bop count for length 4 = %d, want 4", got)
+	}
+}
+
+func TestChokeDefersUntilEndJumpLandingWindow(t *testing.T) {
+	m := &Module{}
+	g := &guy{canBop: true, wantChoke: 12, wantLen: 4}
+	if !m.shouldRunQueuedChoke(g, 11.75) || !m.shouldRunQueuedChoke(g, 12.25) {
+		t.Fatal("queued choke should run inside Unity +/-0.25 beat landing window")
+	}
+	if m.shouldRunQueuedChoke(g, 11.74) || m.shouldRunQueuedChoke(g, 12.26) {
+		t.Fatal("queued choke should not run outside Unity +/-0.25 beat landing window")
 	}
 }
