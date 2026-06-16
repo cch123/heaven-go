@@ -125,7 +125,7 @@ func TestValiantVolleyTimingAndMultiSpawnSemantics(t *testing.T) {
 	if len(multi.inputs) != 2 || multi.inputs[0] != 21 || multi.inputs[1] != 23 {
 		t.Fatalf("multi inputs = %v", multi.inputs)
 	}
-	if multi.lastJuggle != 23 || multi.lastJuggleLength != 1 {
+	if multi.lastJuggle != 23 || multi.lastJuggleLength != 4 {
 		t.Fatalf("last juggle = beat %v len %v", multi.lastJuggle, multi.lastJuggleLength)
 	}
 	if actionFruit != 3 {

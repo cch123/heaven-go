@@ -82,9 +82,9 @@ func (m *Module) multiSpawn(events []hitEvt, iv intervalEvt) objectPlan {
 		}
 		if nearly(ev.beat+ev.length, iv.beat+iv.length) {
 			plan.lastJuggle = ev.beat
-			// The current-game code adds beat-multiIntervalStartBeat to the
-			// last event length; this preserves that WIP timing quirk.
-			plan.lastJuggleLength = ev.length + first.beat - iv.beat
+			// Unity stretches the final return over the elapsed interval offset
+			// so the last bounce/hit curve is timed from the final cue beat.
+			plan.lastJuggleLength = ev.length + ev.beat - iv.beat
 		}
 	}
 	return plan
