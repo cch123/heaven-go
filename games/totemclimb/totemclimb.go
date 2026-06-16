@@ -243,16 +243,23 @@ func (m *Module) resolveBeats() {
 	if !m.hasStart {
 		return
 	}
+	segmentEnd := math.Inf(1)
+	if m.ctx != nil {
+		segmentEnd = m.ctx.NextGameExitBeat(m.ID(), m.startBeat)
+		if segmentEnd > m.startBeat && segmentEnd < m.endBeat {
+			m.endBeat = segmentEnd
+		}
+	}
 	sort.Slice(m.allStops, func(i, j int) bool { return m.allStops[i].beat < m.allStops[j].beat })
 	sort.Float64s(m.allAboves)
 	for _, s := range m.allStops {
-		if s.beat > m.startBeat {
+		if s.beat > m.startBeat && s.beat < segmentEnd {
 			m.endBeat, m.useEndTotem = s.beat, s.anim
 			break
 		}
 	}
 	for _, a := range m.allAboves {
-		if a >= m.startBeat {
+		if a >= m.startBeat && a < segmentEnd {
 			m.pillarEnd = a
 			break
 		}

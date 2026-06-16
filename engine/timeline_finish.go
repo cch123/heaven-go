@@ -6,12 +6,9 @@ import (
 )
 
 func (a *App) finishLoadedTimeline() error {
+	a.ensureEndBeat()
 	for _, m := range a.modules {
 		m.Ready()
-	}
-	if a.endBeat == 0 && len(a.bm.Entities) > 0 {
-		last := a.bm.Entities[len(a.bm.Entities)-1]
-		a.endBeat = last.Beat + last.Length + 4
 	}
 	sortActions(a.actions)
 	sort.Slice(a.inputs, func(i, j int) bool { return a.inputs[i].Beat < a.inputs[j].Beat })
@@ -27,4 +24,12 @@ func (a *App) finishLoadedTimeline() error {
 		a.swIdx = 1
 	}
 	return nil
+}
+
+func (a *App) ensureEndBeat() {
+	if a.hasEndBeat || a.bm == nil || len(a.bm.Entities) == 0 {
+		return
+	}
+	last := a.bm.Entities[len(a.bm.Entities)-1]
+	a.endBeat = last.Beat + last.Length + 4
 }

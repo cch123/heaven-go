@@ -6,6 +6,7 @@ import (
 
 	"hsdemo/engine"
 	"hsdemo/games/airrally"
+	"hsdemo/games/balloonhunter"
 	"hsdemo/games/meatgrinder"
 	"hsdemo/games/sneakyspirits"
 	"hsdemo/games/somen"
@@ -113,6 +114,46 @@ func TestLoadTotemClimbLevel(t *testing.T) {
 	}
 	if len(stats.Unported) != 0 {
 		t.Errorf("unexpected unported games: %v", stats.Unported)
+	}
+}
+
+// TestLoadFissureLocalLevelNoTotemStackOverflow covers a custom remix that
+// switches away from Totem Climb without a totemClimb/stop event. The module
+// must clamp its static input expansion to the active game segment instead of
+// recursing toward +Inf.
+func TestLoadFissureLocalLevelNoTotemStackOverflow(t *testing.T) {
+	level := "../levels/Fissure.riq"
+	if _, err := os.Stat(level); err != nil {
+		t.Skipf("local Fissure level not present: %v", err)
+	}
+	engine.Register("totemClimb", totemclimb.New)
+
+	app, err := engine.New("../assets", level)
+	if err != nil {
+		t.Fatalf("engine.New: %v", err)
+	}
+	stats := app.LoadStats()
+	if stats.Inputs == 0 {
+		t.Fatal("expected Totem Climb to schedule bounded inputs for Fissure")
+	}
+}
+
+// TestLoadBalloonSpheresUsesFirstEndMarker covers a v1 custom remix with
+// leftover editor events after the authored fade-to-black/end marker.
+func TestLoadBalloonSpheresUsesFirstEndMarker(t *testing.T) {
+	level := "../levels/Balloon Spheres.riq"
+	if _, err := os.Stat(level); err != nil {
+		t.Skipf("local Balloon Spheres level not present: %v", err)
+	}
+	engine.Register("balloonHunter", balloonhunter.New)
+
+	app, err := engine.New("../assets", level)
+	if err != nil {
+		t.Fatalf("engine.New: %v", err)
+	}
+	stats := app.LoadStats()
+	if stats.EndBeat != 291 {
+		t.Errorf("endBeat = %v, want first gameManager/end at 291", stats.EndBeat)
 	}
 }
 

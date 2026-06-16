@@ -53,3 +53,23 @@ func (c *Ctx) NextSwitchBeat(beat float64) float64 {
 	}
 	return next
 }
+
+// NextGameExitBeat returns the next switchGame beat that leaves gameID, or the
+// chart end. Heaven Studio uses this distinction in games such as Totem Climb:
+// repeated switchGame/totemClimb events are still the same active segment.
+func (c *Ctx) NextGameExitBeat(gameID string, beat float64) float64 {
+	next := math.Inf(1)
+	for _, sw := range c.App.switches {
+		if sw.beat <= beat {
+			continue
+		}
+		if sw.id != gameID {
+			next = sw.beat
+			break
+		}
+	}
+	if c.App.endBeat > beat && c.App.endBeat < next {
+		next = c.App.endBeat
+	}
+	return next
+}

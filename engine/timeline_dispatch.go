@@ -17,7 +17,13 @@ func (a *App) dispatchBeatmapEvent(e *riq.Entity) {
 	case strings.HasPrefix(e.Datamodel, "gameManager/switchGame/"):
 		// collectUsedGames already records switch events before modules load.
 	case e.Datamodel == "gameManager/end":
-		a.endBeat = e.Beat
+		// Heaven Studio treats the first end marker as the playable remix end.
+		// Some v1 community levels keep edited-out events after that marker; a
+		// later stray end must not push result timing into those leftovers.
+		if !a.hasEndBeat || e.Beat < a.endBeat {
+			a.endBeat = e.Beat
+			a.hasEndBeat = true
+		}
 	case e.Datamodel == "gameManager/skill star":
 		a.starBeat = e.Beat + e.Length
 	case e.Datamodel == "gameManager/toggle inputs":

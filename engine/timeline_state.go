@@ -53,6 +53,7 @@ func (a *App) clearTimelineState() {
 	a.unported = nil
 	a.actIdx = 0
 	a.starBeat, a.endBeat = -1, 0
+	a.hasEndBeat = false
 	a.fx.reset()
 	a.flt.reset()
 	a.tbx.reset()
