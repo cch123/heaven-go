@@ -2,12 +2,14 @@ package engine
 
 func (a *App) startPlay() {
 	a.setMinigamePitch(1)
+	a.resetMusicFilter()
 	a.cond.Play()
 	a.state = statePlay
 }
 
 func (a *App) enterResult() {
 	a.setMinigamePitch(1)
+	a.resetMusicFilter()
 	a.cond.Pause()
 	a.result = a.buildResultSummary()
 	a.resultT = 0

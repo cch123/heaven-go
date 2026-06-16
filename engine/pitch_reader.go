@@ -18,7 +18,8 @@ type pitchPCMReader struct {
 	frames int
 	pos    float64
 
-	pitch float64
+	pitch  float64
+	filter musicFilterState
 }
 
 func newPitchPCMReader(pcm []byte, pitch float64) *pitchPCMReader {
@@ -26,6 +27,7 @@ func newPitchPCMReader(pcm []byte, pitch float64) *pitchPCMReader {
 		pcm:    pcm,
 		frames: len(pcm) / 4,
 		pitch:  clampLoopPitch(pitch),
+		filter: newMusicFilterState(),
 	}
 }
 
@@ -85,6 +87,7 @@ func (r *pitchPCMReader) Seek(offset int64, whence int) (int64, error) {
 	}
 	next -= next % 4
 	r.pos = float64(next / 4)
+	r.filter.resetToMain()
 	return next, nil
 }
 
@@ -116,15 +119,14 @@ func (r *pitchPCMReader) writeFrameLocked(dst []byte) {
 		next = r.frames - 1
 	}
 	frac := r.pos - float64(j)
+	var frame [2]float64
 	for ch := 0; ch < 2; ch++ {
 		a := pcmSample16(r.pcm, j, ch)
 		b := pcmSample16(r.pcm, next, ch)
-		v := a + (b-a)*frac
-		if v > math.MaxInt16 {
-			v = math.MaxInt16
-		} else if v < math.MinInt16 {
-			v = math.MinInt16
-		}
-		binary.LittleEndian.PutUint16(dst[ch*2:], uint16(int16(math.Round(v))))
+		frame[ch] = a + (b-a)*frac
+	}
+	frame[0], frame[1] = r.filter.processFrame(frame[0], frame[1])
+	for ch := 0; ch < 2; ch++ {
+		binary.LittleEndian.PutUint16(dst[ch*2:], uint16(int16(math.Round(clampPCM16(frame[ch])))))
 	}
 }

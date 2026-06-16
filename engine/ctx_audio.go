@@ -111,6 +111,16 @@ func (c *Ctx) SetMinigamePitch(pitch float64) {
 	c.App.setMinigamePitch(pitch)
 }
 
+// TransitionMusicFilter applies Unity AudioMixer-style Music group snapshot
+// values to the live chart music. The duration is real seconds, matching
+// AudioMixerSnapshot.TransitionTo rather than beat length.
+func (c *Ctx) TransitionMusicFilter(highpassHz, lowpassHz, gainDB, seconds float64) {
+	c.App.transitionMusicFilter(highpassHz, lowpassHz, gainDB, seconds)
+}
+
+// ResetMusicFilter returns chart music to the MainMixer Main snapshot.
+func (c *Ctx) ResetMusicFilter() { c.App.resetMusicFilter() }
+
 // PlayCommon 播放公共音效（assets/common：miss/nearMiss/count-ins 等）。
 func (c *Ctx) PlayCommon(name string) { c.App.PlayCommon(name, 1) }
 

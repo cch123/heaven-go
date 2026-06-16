@@ -41,6 +41,16 @@ const (
 	headUpSecond
 )
 
+const (
+	djSchoolMainHighpassHz = 10
+	djSchoolMainLowpassHz  = 22000
+	djSchoolMainGainDB     = 0.01
+
+	djSchoolHoldHighpassHz = 2909
+	djSchoolHoldLowpassHz  = 2064
+	djSchoolHoldGainDB     = 10
+)
+
 type bopEvt struct {
 	beat, length float64
 	bop, auto    bool
@@ -582,25 +592,25 @@ func (m *Module) guardedSoundAtOff(beat float64, name string, vol, offset float6
 	})
 }
 
-func (m *Module) startRadioFX(beat float64) {
+func (m *Module) startRadioFX(_ float64) {
 	if !m.soundFX {
 		return
 	}
-	// HS switches to the DJSchool_Hold AudioMixer snapshot here. The engine
-	// cannot yet filter a live music stream, so this keeps the timing audible
-	// through the existing per-minigame music-volume timeline until a mixer
-	// filter path is available.
-	m.ctx.FadeMusicVolume(beat, 0.1, 0.62)
+	// Values come from Assets/Resources/MainMixer.mixer, snapshot
+	// DJSchool_Hold. Student.cs transitions to it over 0.1 real seconds.
+	m.ctx.TransitionMusicFilter(djSchoolHoldHighpassHz, djSchoolHoldLowpassHz, djSchoolHoldGainDB, 0.1)
 }
 
-func (m *Module) stopRadioFX(beat float64) {
+func (m *Module) stopRadioFX(_ float64) {
 	if !m.soundFX {
 		return
 	}
-	m.ctx.FadeMusicVolume(beat, 0.04, 1)
+	// Student.cs returns to the Main snapshot over 0.04 real seconds.
+	m.ctx.TransitionMusicFilter(djSchoolMainHighpassHz, djSchoolMainLowpassHz, djSchoolMainGainDB, 0.04)
 }
 
 func (m *Module) resetScene(beat float64) {
+	m.ctx.ResetMusicFilter()
 	sec := m.ctx.SecPerBeat(math.Max(beat, 0))
 	m.ctx.Scene.PlayDefaultState("", beat, sec)
 	m.ctx.Scene.PlayDefaultState(m.student, beat, sec)

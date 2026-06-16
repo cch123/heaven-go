@@ -200,10 +200,11 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   `Assets/Bundled/Games/FirstContact/Sounds` 未包含该音频文件；当前不播放
   替代音效，只保留 translator_eh 动画与红色 `..?` 文本，并用审计测试锁定
   该资源缺口，后续补到官方音频后移除此项。
-- djSchool：hold 期间的 `sound FX` 原版切到 `DJSchool_Hold` AudioMixer
-  snapshot（唱片摩擦滤波）；当前运行时先按同拍位做音乐 ducking，recordStop/
-  recordSwipe/voice/cheer/boo 与动画状态已按 C# 时序接入，后续需补 live music
-  filter 才能清掉此项。
+- djSchool：hold 期间的 `sound FX` 已按 `Student.cs` 切换
+  `DJSchool_Hold`/`Main` AudioMixer snapshot；Music group 的 Highpass/
+  Lowpass cutoff 与 MusicVolume dB 值来自 `Assets/Resources/MainMixer.mixer`，
+  过渡时长使用原版 `TransitionTo(.1f/.04f)` 的真实秒语义，recordStop/
+  recordSwipe/voice/cheer/boo 与动画状态已按 C# 时序接入。
 - cheerReaders：toggleCaption 已接原 TMP caption/underlay 节点、StickyCanvas
   跟随相机语义和旧谱面 CheckCaptions 自动禁用路径；yay 纸花已按
   WhiteParticle/BlackParticle 的 sprite、emission、shape、lifetime、size/
