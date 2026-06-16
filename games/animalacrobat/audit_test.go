@@ -98,6 +98,86 @@ func TestAnimalAcrobatObstacleComponents(t *testing.T) {
 					t.Errorf("%s missing input ref %s", root, key)
 				}
 			}
+			spec := (&Module{}).makeInputSpec(root, in)
+			if spec.holdParticleRel == "" || spec.sweatParticleRel == "" {
+				t.Errorf("%s particle refs were not converted to template-relative paths", root)
+			}
+		}
+	}
+}
+
+func TestAnimalAcrobatActionParticleSystems(t *testing.T) {
+	as := loadAnimalAssets(t)
+	for _, sprite := range []string{acrobatStarSprite, acrobatRingSprite, acrobatSweatSprite} {
+		if _, ok := as.Sheet.Sprites[sprite]; !ok {
+			t.Fatalf("missing ParticleSystem UV sprite %s", sprite)
+		}
+	}
+
+	m := &Module{}
+	m.spawnStarBurst(12, 3, 1, 2, acrobatParticleHold, 0x1234)
+	if len(m.particles) != acrobatSparkleBurstCount+acrobatRingBurstCount {
+		t.Fatalf("hold particles = %d, want %d", len(m.particles), acrobatSparkleBurstCount+acrobatRingBurstCount)
+	}
+	var stars, rings int
+	for _, p := range m.particles {
+		switch p.sprite {
+		case acrobatStarSprite:
+			stars++
+			if p.order != acrobatSparkleOrder || p.sizeProfile != sizeProfileSparkle {
+				t.Fatalf("hold sparkle particle did not mirror Sparkle renderer/profile: %#v", p)
+			}
+		case acrobatRingSprite:
+			rings++
+			if p.order != acrobatRingOrder || p.sizeProfile != sizeProfileRing {
+				t.Fatalf("ring particle did not mirror Ring renderer/profile: %#v", p)
+			}
+		default:
+			t.Fatalf("unexpected hold particle sprite %s", p.sprite)
+		}
+	}
+	if stars != acrobatSparkleBurstCount || rings != acrobatRingBurstCount {
+		t.Fatalf("hold particle split stars=%d rings=%d", stars, rings)
+	}
+
+	m.particles = nil
+	m.spawnSweatBurst(12, 3, 1, 2)
+	if len(m.particles) != acrobatSweatBurstCount*2 {
+		t.Fatalf("sweat particles = %d, want %d", len(m.particles), acrobatSweatBurstCount*2)
+	}
+	var delayed int
+	for _, p := range m.particles {
+		if p.sprite != acrobatSweatSprite || p.order != acrobatSweatOrder || p.sizeProfile != sizeProfileSweat {
+			t.Fatalf("unexpected sweat particle: %#v", p)
+		}
+		if math.Abs(p.born-(3+acrobatSweatStartDelayBS)) < 1e-9 {
+			delayed++
+		}
+	}
+	if delayed != acrobatSweatBurstCount {
+		t.Fatalf("delayed sweat particles = %d, want %d", delayed, acrobatSweatBurstCount)
+	}
+}
+
+func TestAnimalAcrobatTrailLifecycle(t *testing.T) {
+	m := &Module{}
+	m.startTrail(5, 1, 2)
+	if !m.trail.active {
+		t.Fatal("trail should be active after SpawnTrail")
+	}
+	if len(m.particles) == 0 {
+		t.Fatal("prewarmed trail should seed particles")
+	}
+	m.stopTrail(5.1)
+	if m.trail.active {
+		t.Fatal("trail should stop after KillTrail")
+	}
+	for _, p := range m.particles {
+		if p.alpha != alphaProfileTrail {
+			continue
+		}
+		if remaining := p.born + p.life - 5.1; remaining > 0.2000001 {
+			t.Fatalf("trail particle remaining life = %v, want <= 0.2", remaining)
 		}
 	}
 }

@@ -146,7 +146,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   Spotlight/Confetti、BGTileManager 双 tile 回收，以及 AnimalAcrobat.CameraUpdate
   的逐动物 hold/release/长颈鹿 zoom 相机流程已接入；PlayerAcrobat 的
   SuperCurveObject 跳跃曲线、RotateJump/ArcRotate、ShadowCo/LandingShadowCo
-  已按 C# 公式接入，release/trail/sweat ParticleSystem 仍待按序列化参数复刻。
+  已按 C# 公式接入；hold/release/sweat/SparkleTrail 已按 PlayerMonkey.prefab
+  的 UV sprite、burst/rate、lifetime、velocity、size/color 与 Renderer
+  sortingOrder 参数接入运行时。
 - fillbots：`bop`/small/medium/large/custom/blackout/background appearance/
   object appearance 已接入，机器人落体、堆叠、传送带哨兵、hold/release 判定、
   release whiff、explosion、fillErUp 和 OK/miss/arm/water/beep 音效按 C# 时序
@@ -199,9 +201,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - ninjaBodyguard：HitParticle 已按 prefab 中 ArrowSliceA/B 两个 ParticleSystem
   的 lifetime、simulationSpeed、startSpeed、shape arc/radius/rotation、burst、
   ForceModule 与 ParticleSystemRenderer sortingOrder/lengthScale 做运行时发射。
-- animalAcrobat：动物模板、摆动、hold/release 判定与音效已接入；catch/
-  release/confetti 粒子暂用同拍位星形闪光表示，release/trail/sweat/confetti
-  仍未逐 ParticleSystem 参数复刻。
+- animalAcrobat：PartyPoppers confetti 仍暂用同拍位星形闪光表示；需继续
+  按 ConfettiL/R prefab 的 ParticleSystem 参数复刻。
 - lockstep：人群渲染将原版"3 台正交相机 → RenderTexture → 平铺 quad"等价
   实现为同尺度无限棋盘格直绘（几何/相位/缩放一致）。
 - ppe 后处理（engine/postfx.go）：colorGrading/vignette/cabb/lensD/pixelQuad 与

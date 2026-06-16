@@ -86,8 +86,10 @@ func (m *Module) makeObstacleSpec(root string, c kmdata.Component) obstacleSpec 
 
 func (m *Module) makeInputSpec(root string, c kmdata.Component) inputSpec {
 	in := inputSpec{
-		holdLength: num(c.Nums, "_holdLength", 1),
-		monkey:     ref(c.Refs, "_monkey"),
+		holdLength:       num(c.Nums, "_holdLength", 1),
+		monkey:           ref(c.Refs, "_monkey"),
+		holdParticleRel:  relPath(root, ref(c.Refs, "_holdParticle")),
+		sweatParticleRel: relPath(root, ref(c.Refs, "_sweatParticle")),
 	}
 	in.monkeyRel = relPath(root, in.monkey)
 	return in
@@ -249,6 +251,10 @@ func (m *Module) OnSwitch(beat float64) {
 	m.ctx.Scene.SetActive(m.partyPoppers, false)
 	m.ctx.Scene.SetActive(m.player, true)
 	m.ctx.Scene.PlayDefaultState(m.player, beat, m.ctx.SecPerBeat(beat))
+	m.particles = nil
+	m.sparkles = nil
+	m.trail = trailEmitter{}
+	m.muteRelease = false
 }
 
 func (m *Module) Whiff(beat float64) {
@@ -284,6 +290,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 		}
 		ob.inst.Queue(m.ctx.Scene, beat, kart.Identity(), 0)
 	}
+	m.queueParticles(t)
 	m.ctx.Scene.Draw(screen, m.proj)
 	m.drawSparkles(screen, beat)
 }

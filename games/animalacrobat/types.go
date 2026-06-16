@@ -114,9 +114,11 @@ type obstacleSpec struct {
 }
 
 type inputSpec struct {
-	holdLength float64
-	monkey     string
-	monkeyRel  string
+	holdLength       float64
+	monkey           string
+	monkeyRel        string
+	holdParticleRel  string
+	sweatParticleRel string
 }
 
 type playerJump struct {
@@ -136,6 +138,47 @@ type sparkle struct {
 	x, y float64
 	col  color.NRGBA
 }
+
+type acrobatParticle struct {
+	sprite      string
+	born        float64
+	life        float64
+	x, y        float64
+	vx, vy      float64
+	rot         float64
+	spin        float64
+	startSize   float64
+	sizeProfile particleSizeProfile
+	alpha       particleAlphaProfile
+	tint        [4]float64
+	order       int
+}
+
+type trailEmitter struct {
+	active   bool
+	nextEmit [3]float64
+}
+
+type particleSizeProfile int
+
+const (
+	sizeProfileRelease particleSizeProfile = iota
+	sizeProfileSparkle
+	sizeProfileRing
+	sizeProfileSweat
+	sizeProfileTrail
+	sizeProfileTrailSmall
+)
+
+type particleAlphaProfile int
+
+const (
+	alphaProfileOpaque particleAlphaProfile = iota
+	alphaProfileSparkle
+	alphaProfileRing
+	alphaProfileSweat
+	alphaProfileTrail
+)
 
 type Module struct {
 	ctx  *engine.Ctx
@@ -180,6 +223,9 @@ type Module struct {
 	lastMissBeat float64
 	lastBop      int
 	sparkles     []sparkle
+	particles    []acrobatParticle
+	trail        trailEmitter
+	muteRelease  bool
 	drumrollStop func()
 }
 

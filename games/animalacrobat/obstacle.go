@@ -59,6 +59,7 @@ func (m *Module) justHold(ob *acrobatObstacle, beat float64, j engine.Judgment) 
 	ob.held = true
 	m.holding = ob
 	m.monkeyMissed = false
+	m.stopTrail(m.ctx.Time())
 	m.ctx.Scene.SetActive(m.player, false)
 	ob.inst.SetActive(ob.input.monkeyRel, true)
 	ob.inst.PlayState(ob.input.monkeyRel, "PlayerHang", beat, animScale)
@@ -74,9 +75,9 @@ func (m *Module) justHold(ob *acrobatObstacle, beat float64, j engine.Judgment) 
 	}
 	if j == engine.JudgeNG {
 		m.ctx.Sound("common_nearMiss")
-		m.emitObstacleSparkle(ob, beat, color.NRGBA{110, 190, 255, 210})
+		m.spawnSweatParticle(ob, beat)
 	} else {
-		m.emitObstacleSparkle(ob, beat, color.NRGBA{255, 255, 255, 230})
+		m.spawnHoldParticle(ob, beat)
 	}
 }
 
@@ -95,6 +96,9 @@ func (m *Module) justRelease(ob *acrobatObstacle, releaseBeat float64, j engine.
 	m.ctx.Scene.SetActive(m.player, true)
 	if ob.kind == kindGiraffe {
 		m.ctx.Sound("giraffeJump")
+		if j == engine.JudgeNG {
+			m.muteRelease = true
+		}
 		if m.drumrollStop != nil {
 			m.drumrollStop()
 		}
@@ -108,6 +112,7 @@ func (m *Module) justRelease(ob *acrobatObstacle, releaseBeat float64, j engine.
 		ob.inst.PlayState("FireHoop", "FireClose", releaseBeat+2, animScale)
 	} else if j == engine.JudgeNG {
 		m.ctx.Sound("common_nearMiss")
+		m.muteRelease = true
 	} else {
 		m.ctx.Sound("release")
 	}

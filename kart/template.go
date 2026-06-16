@@ -619,9 +619,12 @@ func (in *Instance) samplePlayer(p *instPlayer, states []instNodeState, beat flo
 	in.applyClip(p, states, clipT)
 }
 
-// NodeWorld 返回子树内节点（相对 path）在 baseWorld 下的世界变换
-// （JumperPoint 等锚点查询；需与 Queue 相同的 beat 采样口径——
-// 锚点节点不被剪辑驱动时直接按 prefab 变换合成）。
+// NodeWorld 返回子树内节点（相对 path）在 baseWorld 下的世界变换。
+// It mirrors the runtime TRS overrides used by Queue so script-driven anchors
+// such as rotated grab points and ParticleSystem roots do not fall back to the
+// prefab bind pose. Animation-clip sampling is still owned by Queue; callers
+// should only use this for anchors whose transform is static except for script
+// overrides.
 func (in *Instance) NodeWorld(relPath string, baseWorld Aff) (Aff, bool) {
 	t := in.T
 	target := -1
@@ -644,11 +647,23 @@ func (in *Instance) NodeWorld(relPath string, baseWorld Aff) (Aff, bool) {
 	for i := len(chain) - 1; i >= 0; i-- {
 		ti := chain[i]
 		n := &t.as.Rig.Nodes[t.Nodes[ti].RigIdx]
-		pos := n.Pos
+		pos, rot, scale := n.Pos, n.RotZ, n.Scale
 		if ti == 0 {
 			pos = in.Offset
+			rot += in.Rot
+			scale[0] *= in.Scale[0]
+			scale[1] *= in.Scale[1]
 		}
-		aff = aff.Mul(TRS(pos[0], pos[1], n.RotZ, n.Scale[0], n.Scale[1]))
+		if p, ok := in.pos[ti]; ok {
+			pos = p
+		}
+		if r, ok := in.rots[ti]; ok {
+			rot = r
+		}
+		if s, ok := in.scales[ti]; ok {
+			scale = s
+		}
+		aff = aff.Mul(TRS(pos[0], pos[1], rot, scale[0], scale[1]))
 	}
 	return aff, true
 }

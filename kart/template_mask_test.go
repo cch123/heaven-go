@@ -1,6 +1,7 @@
 package kart
 
 import (
+	"math"
 	"testing"
 
 	"hsdemo/kmdata"
@@ -41,5 +42,32 @@ func TestTemplateQueuePreservesTransparentSpriteMasks(t *testing.T) {
 	}
 	if !sawMask || !sawMaskIn {
 		t.Fatalf("queued mask=%v maskIn=%v, want both true; queue=%#v", sawMask, sawMaskIn, scene.queued)
+	}
+}
+
+func TestTemplateNodeWorldHonorsRuntimeOverrides(t *testing.T) {
+	as := &Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}},
+			{Name: "Pivot", Path: "Root/Pivot", Parent: 0, Pos: [2]float64{1, 0}, Scale: [2]float64{1, 1}},
+			{Name: "Anchor", Path: "Root/Pivot/Anchor", Parent: 1, Pos: [2]float64{0, 2}, Scale: [2]float64{1, 1}},
+		}},
+	}
+	in := NewTemplate(as, "Root").NewInstance()
+	in.Offset = [2]float64{2, 3}
+	in.SetRot("", math.Pi/2)
+	in.SetScale("", 2, 2)
+	in.SetPos("Pivot", 0.5, -0.5)
+	in.SetRot("Pivot", -math.Pi/2)
+
+	got, ok := in.NodeWorld("Pivot/Anchor", Identity())
+	if !ok {
+		t.Fatal("missing anchor")
+	}
+	want := TRS(2, 3, math.Pi/2, 2, 2).
+		Mul(TRS(0.5, -0.5, -math.Pi/2, 1, 1)).
+		Mul(TRS(0, 2, 0, 1, 1))
+	if got != want {
+		t.Fatalf("NodeWorld = %#v, want %#v", got, want)
 	}
 }

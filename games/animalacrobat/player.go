@@ -23,6 +23,7 @@ func (m *Module) startInitialJump(beat float64, first *acrobatObstacle) {
 func (m *Module) startJumpFromObstacle(beat float64, ob *acrobatObstacle) {
 	fromX := ob.x + ob.gripX
 	fromY := ob.gripY
+	muted := m.muteRelease
 	dur := 2.0
 	dist := num(m.playerNums, "_jumpDistance", defaultJumpDistance)
 	height := num(m.playerNums, "_jumpHeight", defaultJumpHeight)
@@ -54,6 +55,9 @@ func (m *Module) startJumpFromObstacle(beat float64, ob *acrobatObstacle) {
 		rot = playerRotateArc
 		shadowMul = 1.4
 	}
+	if ob.kind == kindGiraffe && !muted {
+		m.startTrail(m.ctx.BeatToTime(beat), fromX, fromY)
+	}
 	m.jump = playerJump{
 		start: beat, dur: dur, fromX: fromX, toX: toX,
 		fromY: fromY, toY: toY, height: height, land: ob.end,
@@ -62,9 +66,17 @@ func (m *Module) startJumpFromObstacle(beat float64, ob *acrobatObstacle) {
 	m.jumpActive = true
 	m.ctx.Scene.SetActive(m.player, true)
 	m.playPlayer("PlayerJump", beat)
+	if muted {
+		m.muteRelease = false
+	} else {
+		m.spawnReleaseParticle(beat, fromX, fromY)
+	}
 	if ob.end {
 		m.ctx.SoundAt(beat+dur, "land", 1)
-		m.ctx.At(beat+dur, func() { m.playPlayer("PlayerLand", beat+dur) })
+		m.ctx.At(beat+dur, func() {
+			m.stopTrail(m.ctx.BeatToTime(beat + dur))
+			m.playPlayer("PlayerLand", beat+dur)
+		})
 	}
 }
 
