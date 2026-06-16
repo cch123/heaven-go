@@ -157,8 +157,11 @@ func checkAnimPaths(t *testing.T, anim *kmdata.Anim, clip string, okPath func(st
 
 func supportedFloatAttr(attr string) bool {
 	switch attr {
-	case "m_IsActive", "m_Enabled", "m_FlipX", "m_FlipY", "m_SortingOrder", "m_Size.x", "m_Size.y":
+	case "m_IsActive", "m_Enabled", "m_FlipX", "m_FlipY", "m_SortingOrder", "m_Size.x", "m_Size.y",
+		"material._OutlineWidth":
 		return true
 	}
-	return strings.HasPrefix(attr, "m_Color.") || strings.HasPrefix(attr, "m_fontColor.")
+	return strings.HasPrefix(attr, "m_Color.") ||
+		strings.HasPrefix(attr, "m_fontColor.") ||
+		strings.HasPrefix(attr, "material._Color.")
 }

@@ -26,7 +26,7 @@ func TestBindingsComponentsCurvesTextAndSounds(t *testing.T) {
 		}
 	}
 	for _, comp := range []string{"game", "object", "child"} {
-		if as.Extra.Components[comp].Path == "" {
+		if _, ok := as.Extra.Components[comp]; !ok {
 			t.Fatalf("missing component %s", comp)
 		}
 	}

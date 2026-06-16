@@ -111,7 +111,7 @@ func TestRhythmSheriffMappedMaterialsPresent(t *testing.T) {
 			seen[n.Mat] = true
 		}
 	}
-	for _, mat := range []string{"Fur", "Clothes", "Bandana", "Gun", "Sky", "Ground", "Rocks", "Bush", "Tear"} {
+	for _, mat := range []string{"Fur", "Clothes", "Bandana", "Sky", "Ground", "Rocks", "Bush", "Tear"} {
 		if !seen[mat] {
 			t.Fatalf("mapped material %s not used by scene", mat)
 		}

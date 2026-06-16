@@ -479,6 +479,7 @@ type instNodeState struct {
 	matColor        [4]float64
 	matAdd          [4]float64
 	matBlend        [4]float64
+	outlineWidth    float64
 	matThreshold    float64
 	hasMatThreshold bool
 	palette         Palette
@@ -568,7 +569,8 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			Sprite: st.sprite, World: world[ti], Z: z,
 			Layer: n.Layer, Order: st.order,
 			FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor,
-			Mapped: n.Mapped, Mat: n.Mat,
+			OutlineWidth: st.outlineWidth,
+			Mapped:       n.Mapped, Mat: n.Mat,
 			Add: st.matAdd, Blend: st.matBlend,
 			Threshold: st.matThreshold, HasThreshold: st.hasMatThreshold,
 		}
@@ -763,6 +765,8 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 				case "a":
 					states[ti].matBlend[3] = v
 				}
+			case attr == "material._OutlineWidth":
+				states[ti].outlineWidth = v
 			case attr == "material._Threshold":
 				states[ti].matThreshold = v
 				states[ti].hasMatThreshold = true

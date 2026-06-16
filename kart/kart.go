@@ -545,6 +545,7 @@ type SpriteOpts struct {
 	MatColor     [4]float64 // CellAnime _Color；零值视为白色
 	Add          [4]float64 // CellAnime _AddColor（screen 混合）
 	Blend        [4]float64 // material._BlendColor（命中白闪等 overlay 混色）
+	OutlineWidth float64    // TMP material._OutlineWidth（仅动态文本 sprite）
 	Stretch      [2]float64 // 非零时拉伸到该尺寸（unit，对应 SpriteRenderer sliced/tiled 的 m_Size）
 }
 
@@ -578,6 +579,9 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 	if !stretch {
 		local := Scale(fx/ppu, -fy/ppu).
 			Mul(Translate(-sp.PivotX*float64(sp.W), -(1-sp.PivotY)*float64(sp.H)))
+		if strings.HasPrefix(name, "__text_") && o.OutlineWidth > 0 {
+			drawTextOutline(dst, img, proj.Mul(world).Mul(local), tint, o.OutlineWidth)
+		}
 		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend)
 		return
 	}
@@ -671,6 +675,28 @@ func drawTinted(dst, img *ebiten.Image, m Aff, tint [4]float64) {
 	op.GeoM = m.GeoM()
 	op.ColorScale.Scale(float32(tint[0]), float32(tint[1]), float32(tint[2]), float32(tint[3]))
 	dst.DrawImage(img, op)
+}
+
+func drawTextOutline(dst, img *ebiten.Image, m Aff, tint [4]float64, width float64) {
+	px := int(math.Ceil(width * 16))
+	if px < 1 {
+		return
+	}
+	if px > 8 {
+		px = 8
+	}
+	outline := [4]float64{0, 0, 0, tint[3]}
+	for dy := -px; dy <= px; dy++ {
+		for dx := -px; dx <= px; dx++ {
+			if dx == 0 && dy == 0 {
+				continue
+			}
+			if dx*dx+dy*dy > px*px {
+				continue
+			}
+			drawTinted(dst, img, m.Mul(Translate(float64(dx), float64(dy))), outline)
+		}
+	}
 }
 
 func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add, blend [4]float64) {

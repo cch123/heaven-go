@@ -31,6 +31,7 @@ type sceneNodeState struct {
 	matColor        [4]float64
 	matAdd          [4]float64
 	matBlend        [4]float64
+	outlineWidth    float64
 	matThreshold    float64
 	hasMatThreshold bool
 	palette         Palette
@@ -651,6 +652,7 @@ type ExtraSprite struct {
 	MatColor     [4]float64 // material._Color for queued sprites
 	Add          [4]float64 // material._AddColor for mapped queued sprites
 	Blend        [4]float64 // material._BlendColor for queued sprites
+	OutlineWidth float64    // TMP material._OutlineWidth for queued text sprites
 	Threshold    float64    // material._Threshold for mapped queued sprites
 	HasThreshold bool
 	Mapped       bool   // 调色板映射材质（SceneInst.SetPalette）
@@ -908,6 +910,8 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				case "a":
 					s.state[i].matBlend[3] = v
 				}
+			case attr == "material._OutlineWidth":
+				s.state[i].outlineWidth = v
 			case attr == "material._Threshold":
 				s.state[i].matThreshold = v
 				s.state[i].hasMatThreshold = true
@@ -1033,7 +1037,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			if !ok {
 				continue
 			}
-			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint, MatColor: q.MatColor, Add: q.Add, Blend: q.Blend}
+			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint, MatColor: q.MatColor, Add: q.Add, Blend: q.Blend, OutlineWidth: q.OutlineWidth}
 			if q.Mapped {
 				pal := s.paletteOf(q.Mat)
 				if q.HasPalette {
@@ -1050,7 +1054,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		i := it.idx
 		st := &s.state[i]
-		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend}
+		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: st.color, MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend, OutlineWidth: st.outlineWidth}
 		if s.as.Rig.Nodes[i].DrawMode != 0 {
 			// sliced/tiled：m_Size 是权威尺寸——动画把它压到 0 即等于隐藏
 			//（原版光束收束就是 size.y→0），不能退化成"按原始尺寸绘制"

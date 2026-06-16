@@ -1,6 +1,7 @@
 package figurefighter
 
 import (
+	"path"
 	"path/filepath"
 	"testing"
 
@@ -124,6 +125,9 @@ func TestAllClipsAccountedAndSpriteSwapsResolve(t *testing.T) {
 		for _, st := range c.States {
 			if st.Clip != "" {
 				ctrlClips[st.Clip] = true
+				if alias := path.Base(st.Clip); alias != st.Clip {
+					ctrlClips[alias] = true
+				}
 			}
 		}
 	}
