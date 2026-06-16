@@ -38,6 +38,31 @@ func TestMunchyMonkLoadsFanClubVineBoom(t *testing.T) {
 	}
 }
 
+func TestMunchyMonkDefaultColorsPersistBeforeSwitchBeat(t *testing.T) {
+	m := New().(*Module)
+	red := [4]float64{1, 0, 0, 1}
+	green := [4]float64{0, 1, 0, 1}
+	blue := [4]float64{0, 0, 1, 1}
+	yellow := [4]float64{1, 1, 0, 1}
+	m.defaultColorEvts = []defaultColorEvt{
+		{beat: 4, one: red, two: green, three: blue},
+		{beat: 8, one: yellow, two: yellow, three: yellow},
+	}
+
+	m.restoreDefaultColors(8)
+	if m.oneColor != red || m.twoColor != green || m.threeColor != blue {
+		t.Fatalf("restore at exact event beat applied wrong colors: one=%v two=%v three=%v", m.oneColor, m.twoColor, m.threeColor)
+	}
+	m.restoreDefaultColors(8.01)
+	if m.oneColor != yellow || m.twoColor != yellow || m.threeColor != yellow {
+		t.Fatalf("restore after event beat did not apply latest colors: one=%v two=%v three=%v", m.oneColor, m.twoColor, m.threeColor)
+	}
+	m.restoreDefaultColors(1)
+	if m.oneColor != defaultOneColor || m.twoColor != defaultTwoColor || m.threeColor != defaultThreeColor {
+		t.Fatalf("restore before color events should reset defaults: one=%v two=%v three=%v", m.oneColor, m.twoColor, m.threeColor)
+	}
+}
+
 func TestMunchyMonkControllersAndAnimationPaths(t *testing.T) {
 	as := audittest.LoadAssets(t, "munchyMonk")
 	for ctrl, states := range map[string][]string{

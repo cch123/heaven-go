@@ -27,6 +27,12 @@ var bgColor = color.RGBA{0xb9, 0xff, 0xfc, 255}
 
 const vineBoomSound = "fanClub/arisa_dab"
 
+var (
+	defaultOneColor   = [4]float64{1, 1, 1, 1}
+	defaultTwoColor   = [4]float64{1, 0.51, 0.45, 1}
+	defaultThreeColor = [4]float64{0.34, 0.77, 0.36, 1}
+)
+
 type dumpling struct {
 	inst     *kart.Instance
 	color    [4]float64
@@ -39,6 +45,11 @@ type dumpling struct {
 type bopEvt struct {
 	beat, length float64
 	bop, auto    bool
+}
+
+type defaultColorEvt struct {
+	beat            float64
+	one, two, three [4]float64
 }
 
 type scrollObj struct {
@@ -57,6 +68,9 @@ type Module struct {
 	dumplings []*dumpling // 存活栈（输入取栈顶）
 	bops      []bopEvt
 	endBeat   float64
+
+	oneColor, twoColor, threeColor [4]float64
+	defaultColorEvts               []defaultColorEvt
 
 	needBlush bool
 	isStaring bool
@@ -89,7 +103,11 @@ type Module struct {
 	hasLastT  bool
 }
 
-func New() engine.Module { return &Module{inputsTil: 10} }
+func New() engine.Module {
+	m := &Module{inputsTil: 10}
+	m.resetDefaultColors()
+	return m
+}
 
 func (m *Module) ID() string { return "munchyMonk" }
 
@@ -137,54 +155,70 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			}
 		}
 	case "munchyMonk/One":
-		colorOne := [4]float64{1, 1, 1, 1}
-		if boolParam(e, "uniqueColor") {
-			colorOne = colorParam(e, "oneColor")
-		}
+		unique := boolParam(e, "uniqueColor")
+		customOne := colorParam(e, "oneColor")
 		ctx.PlaySeq("one_go", b)
 		ctx.At(b, func() {
+			colorOne := m.oneColor
+			if unique {
+				colorOne = customOne
+			}
 			m.giver(1, "GiveIn", b)
 			m.spawnDumpling(b, 0, colorOne)
 		})
 		ctx.At(b+0.5, func() { m.giver(1, "GiveOut", b+0.5) })
 		m.scheduleDumplingInput(b + 1)
 	case "munchyMonk/TwoTwo":
-		c1 := [4]float64{1, 0.51, 0.45, 1}
-		c2 := c1
-		if boolParam(e, "uniqueColor") {
-			c1, c2 = colorParam(e, "twoColor1"), colorParam(e, "twoColor2")
-		}
+		unique := boolParam(e, "uniqueColor")
+		custom1, custom2 := colorParam(e, "twoColor1"), colorParam(e, "twoColor2")
 		ctx.PlaySeq("two_go", b)
 		ctx.At(b-0.5, func() {
+			c1 := m.twoColor
+			if unique {
+				c1 = custom1
+			}
 			m.giver(2, "GiveIn", b-0.5)
 			m.spawnDumpling(b-0.5, 1, c1)
 		})
 		ctx.At(b, func() {
+			c2 := m.twoColor
+			if unique {
+				c2 = custom2
+			}
 			m.giver(2, "GiveOut", b)
 			m.spawnDumpling(b-0.5, 2, c2)
 		})
 		m.scheduleDumplingInput(b + 1)
 		m.scheduleDumplingInput(b + 1.5)
 	case "munchyMonk/Three":
-		c1 := [4]float64{0.34, 0.77, 0.36, 1}
-		c2, c3 := c1, c1
-		if boolParam(e, "uniqueColor") {
-			c1 = colorParam(e, "threeColor1")
-			c2 = colorParam(e, "threeColor2")
-			c3 = colorParam(e, "threeColor3")
-		}
+		unique := boolParam(e, "uniqueColor")
+		custom1 := colorParam(e, "threeColor1")
+		custom2 := colorParam(e, "threeColor2")
+		custom3 := colorParam(e, "threeColor3")
 		ctx.PlaySeq("three_go", b)
 		ctx.At(b, func() {
+			c1 := m.threeColor
+			if unique {
+				c1 = custom1
+			}
 			m.giver(3, "GiveIn", b)
 			m.spawnDumpling(b, 3, c1)
 		})
 		ctx.At(b+0.5, func() { m.giver(3, "GiveOut", b+0.5) })
 		ctx.At(b+1.3, func() {
+			c2 := m.threeColor
+			if unique {
+				c2 = custom2
+			}
 			m.giver(3, "GiveIn", b+1.3)
 			m.spawnDumpling(b+1.3, 4, c2)
 		})
 		ctx.At(b+1.75, func() { m.giver(3, "GiveOut", b+1.75) })
 		ctx.At(b+2.3, func() {
+			c3 := m.threeColor
+			if unique {
+				c3 = custom3
+			}
 			m.giver(3, "GiveIn", b+2.3)
 			m.spawnDumpling(b+2.3, 5, c3)
 		})
@@ -193,7 +227,14 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		m.scheduleDumplingInput(b + 2)
 		m.scheduleDumplingInput(b + 3)
 	case "munchyMonk/defaultColors":
-		// 默认色已在事件分支取色处覆盖；官方关卡未用 unique 默认变更
+		ev := defaultColorEvt{
+			beat:  b,
+			one:   colorParam(e, "oneColor"),
+			two:   colorParam(e, "twoColor"),
+			three: colorParam(e, "threeColor"),
+		}
+		m.defaultColorEvts = append(m.defaultColorEvts, ev)
+		ctx.At(b, func() { m.applyDefaultColors(ev) })
 	case "munchyMonk/Modifiers":
 		inputsTil := int(e.Float("inputsTil", 10))
 		reset := boolParam(e, "resetLevel")
@@ -301,6 +342,32 @@ func loadVineBoomPCM(assetsRoot string) ([]byte, error) {
 		return nil, err
 	}
 	return pcm, nil
+}
+
+func (m *Module) resetDefaultColors() {
+	m.oneColor = defaultOneColor
+	m.twoColor = defaultTwoColor
+	m.threeColor = defaultThreeColor
+}
+
+func (m *Module) applyDefaultColors(ev defaultColorEvt) {
+	m.oneColor = ev.one
+	m.twoColor = ev.two
+	m.threeColor = ev.three
+}
+
+func (m *Module) restoreDefaultColors(beat float64) {
+	m.resetDefaultColors()
+	found := false
+	var last defaultColorEvt
+	for _, ev := range m.defaultColorEvts {
+		if ev.beat < beat && (!found || ev.beat >= last.beat) {
+			last, found = ev, true
+		}
+	}
+	if found {
+		m.applyDefaultColors(last)
+	}
 }
 
 // Ready：bop 区间（SetupBopRegion autoBop）逐拍脉冲。
@@ -463,6 +530,7 @@ func (m *Module) scheduleDumplingInput(judgeBeat float64) {
 // ---------- 生命周期 ----------
 
 func (m *Module) OnSwitch(beat float64) {
+	m.restoreDefaultColors(beat)
 	sc := m.ctx.Scene
 	sec := m.ctx.SecPerBeat(beat)
 	for _, role := range []string{"MonkAnim", "MonkArmsAnim", "MonkHolderAnim",
