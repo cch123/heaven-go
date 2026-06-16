@@ -245,6 +245,8 @@ func meshGeometryFromFBXNode(n *fbxNode) (kmdata.MeshGeometry, bool) {
 	var rawVerts []float64
 	var rawIdx []int
 	var rawUV []float64
+	var rawUVIndex []int
+	var uvMapping, uvRef string
 	for _, c := range n.children {
 		switch c.name {
 		case "Vertices":
@@ -257,8 +259,15 @@ func meshGeometryFromFBXNode(n *fbxNode) (kmdata.MeshGeometry, bool) {
 			}
 		case "LayerElementUV":
 			for _, uv := range c.children {
-				if uv.name == "UV" && len(uv.props) > 0 {
+				switch {
+				case uv.name == "MappingInformationType" && len(uv.props) > 0:
+					uvMapping, _ = uv.props[0].(string)
+				case uv.name == "ReferenceInformationType" && len(uv.props) > 0:
+					uvRef, _ = uv.props[0].(string)
+				case uv.name == "UV" && len(uv.props) > 0:
 					rawUV, _ = uv.props[0].([]float64)
+				case uv.name == "UVIndex" && len(uv.props) > 0:
+					rawUVIndex, _ = uv.props[0].([]int)
 				}
 			}
 		}
@@ -273,7 +282,7 @@ func meshGeometryFromFBXNode(n *fbxNode) (kmdata.MeshGeometry, bool) {
 	for i := 0; i+1 < len(rawUV); i += 2 {
 		g.UVs = append(g.UVs, [2]float64{rawUV[i], rawUV[i+1]})
 	}
-	g.Indices = triangulateFBXPolygonIndices(rawIdx)
+	g.Indices, g.UVIndices = triangulateFBXPolygonIndices(rawIdx, rawUVIndex, uvMapping, uvRef)
 	if len(g.Indices) == 0 {
 		return kmdata.MeshGeometry{}, false
 	}
@@ -287,25 +296,69 @@ func cleanFBXName(s string) string {
 	return s
 }
 
-func triangulateFBXPolygonIndices(raw []int) []int {
-	var out []int
-	var poly []int
+func triangulateFBXPolygonIndices(raw, rawUV []int, uvMapping, uvRef string) ([]int, []int) {
+	var out, uvOut []int
+	var poly, uvPoly []int
+	polyVertex := 0
 	flush := func() {
 		if len(poly) >= 3 {
 			for i := 1; i+1 < len(poly); i++ {
 				out = append(out, poly[0], poly[i], poly[i+1])
+				if len(uvPoly) == len(poly) {
+					uvOut = append(uvOut, uvPoly[0], uvPoly[i], uvPoly[i+1])
+				}
 			}
 		}
 		poly = poly[:0]
+		uvPoly = uvPoly[:0]
 	}
-	for _, idx := range raw {
+	for pi, idx := range raw {
+		uvIdx := fbxUVIndex(idx, pi, polyVertex, rawUV, uvMapping, uvRef)
 		if idx < 0 {
 			poly = append(poly, -idx-1)
+			if uvIdx >= 0 {
+				uvPoly = append(uvPoly, uvIdx)
+			}
+			polyVertex++
 			flush()
 			continue
 		}
 		poly = append(poly, idx)
+		if uvIdx >= 0 {
+			uvPoly = append(uvPoly, uvIdx)
+		}
+		polyVertex++
 	}
 	flush()
-	return out
+	if len(uvOut) != len(out) {
+		uvOut = nil
+	}
+	return out, uvOut
+}
+
+func fbxUVIndex(vertexIdx, polygonIdx, polygonVertex int, rawUV []int, mapping, ref string) int {
+	vertex := vertexIdx
+	if vertex < 0 {
+		vertex = -vertex - 1
+	}
+	switch mapping {
+	case "ByPolygonVertex":
+		if ref == "IndexToDirect" {
+			if polygonIdx >= 0 && polygonIdx < len(rawUV) {
+				return rawUV[polygonIdx]
+			}
+			return -1
+		}
+		return polygonVertex
+	case "ByVertice":
+		if ref == "IndexToDirect" {
+			if vertex >= 0 && vertex < len(rawUV) {
+				return rawUV[vertex]
+			}
+			return -1
+		}
+		return vertex
+	default:
+		return -1
+	}
 }

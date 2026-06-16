@@ -2,6 +2,9 @@ package kart
 
 import (
 	"encoding/json"
+	"image"
+	"image/color"
+	"image/png"
 	"math"
 	"os"
 	"path/filepath"
@@ -98,6 +101,7 @@ func TestBBoxFinite(t *testing.T) {
 
 func TestLoadReadsOptionalMeshData(t *testing.T) {
 	dir := t.TempDir()
+	writeTestPNG(t, filepath.Join(dir, "meshtex", "grid.png"))
 	writeTestJSON(t, dir, "sprites.json", kmdata.Sheet{PPU: 100, Sprites: map[string]kmdata.SpriteInfo{}})
 	writeTestJSON(t, dir, "anims.json", map[string]*kmdata.Anim{})
 	writeTestJSON(t, dir, "scene.json", kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "", Parent: -1, Scale: [2]float64{1, 1}}}})
@@ -120,7 +124,7 @@ func TestLoadReadsOptionalMeshData(t *testing.T) {
 				Name: "GridPlane",
 				GUID: "mat-guid",
 				Textures: map[string]kmdata.TextureEnv{
-					"_MainTex": {Texture: kmdata.AssetRef{GUID: "tex-guid", Name: "grid"}},
+					"_MainTex": {Texture: kmdata.AssetRef{GUID: "tex-guid", Name: "grid"}, Image: "meshtex/grid.png"},
 				},
 			},
 		},
@@ -139,6 +143,9 @@ func TestLoadReadsOptionalMeshData(t *testing.T) {
 	if as.Meshes.Materials["mat-guid"].Textures["_MainTex"].Texture.GUID != "tex-guid" {
 		t.Fatalf("material texture not loaded: %#v", as.Meshes.Materials)
 	}
+	if as.MeshTex["meshtex/grid.png"] == nil {
+		t.Fatalf("mesh texture image not decoded: %#v", as.MeshTex)
+	}
 }
 
 func writeTestJSON(t *testing.T, dir, name string, v any) {
@@ -148,6 +155,23 @@ func writeTestJSON(t *testing.T, dir, name string, v any) {
 		t.Fatal(err)
 	}
 	if err := os.WriteFile(filepath.Join(dir, name), b, 0o644); err != nil {
+		t.Fatal(err)
+	}
+}
+
+func writeTestPNG(t *testing.T, path string) {
+	t.Helper()
+	if err := os.MkdirAll(filepath.Dir(path), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	img := image.NewRGBA(image.Rect(0, 0, 2, 2))
+	img.Set(0, 0, color.RGBA{255, 0, 0, 255})
+	f, err := os.Create(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer f.Close()
+	if err := png.Encode(f, img); err != nil {
 		t.Fatal(err)
 	}
 }

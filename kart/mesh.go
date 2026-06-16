@@ -2,6 +2,7 @@ package kart
 
 import (
 	"image/color"
+	"math"
 
 	"github.com/hajimehoshi/ebiten/v2"
 
@@ -68,7 +69,8 @@ func (s *SceneInst) drawMeshBinding(dst *ebiten.Image, bindingIdx, nodeIdx int, 
 		return
 	}
 	if g := s.meshGeometry(b); g != nil {
-		drawMeshGeometry(dst, proj.Mul(world), g, s.meshTint(nodeIdx, b))
+		tex, env := s.meshTexture(b)
+		drawMeshGeometry(dst, proj.Mul(world), g, s.meshTint(nodeIdx, b), tex, env)
 	}
 }
 
@@ -84,6 +86,21 @@ func (s *SceneInst) meshGeometry(b *kmdata.MeshBinding) *kmdata.MeshGeometry {
 	// Until exact submesh matching is implemented, avoid guessing when an FBX
 	// contains several Geometry nodes.
 	return nil
+}
+
+func (s *SceneInst) meshTexture(b *kmdata.MeshBinding) (*ebiten.Image, kmdata.TextureEnv) {
+	if len(b.Materials) == 0 {
+		return nil, kmdata.TextureEnv{}
+	}
+	mat, ok := s.as.Meshes.Materials[b.Materials[0].GUID]
+	if !ok {
+		return nil, kmdata.TextureEnv{}
+	}
+	env, ok := mat.Textures["_MainTex"]
+	if !ok || env.Image == "" || s.as.MeshTex == nil {
+		return nil, kmdata.TextureEnv{}
+	}
+	return s.as.MeshTex[env.Image], env
 }
 
 func drawSolidQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64) {
@@ -110,8 +127,12 @@ func drawSolidQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64) {
 	dst.DrawTriangles(vs[:], []uint16{0, 1, 2, 0, 2, 3}, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
 }
 
-func drawMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, tint [4]float64) {
+func drawMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {
 	if tint[3] <= 0 || len(g.Vertices) == 0 || len(g.Indices) < 3 || len(g.Vertices) > 65535 {
+		return
+	}
+	if tex != nil && len(g.UVs) > 0 && len(g.UVIndices) == len(g.Indices) {
+		drawTexturedMeshGeometry(dst, m, g, tint, tex, env)
 		return
 	}
 	vs := make([]ebiten.Vertex, len(g.Vertices))
@@ -136,6 +157,54 @@ func drawMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, tint [4]
 		is = append(is, uint16(idx))
 	}
 	dst.DrawTriangles(vs, is, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func drawTexturedMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {
+	if len(g.Indices) > 65535 {
+		return
+	}
+	b := tex.Bounds()
+	w, h := float64(b.Dx()), float64(b.Dy())
+	scale := env.Scale
+	if scale == [2]float64{} {
+		scale = [2]float64{1, 1}
+	}
+	vs := make([]ebiten.Vertex, len(g.Indices))
+	is := make([]uint16, len(g.Indices))
+	for i, vi := range g.Indices {
+		if vi < 0 || vi >= len(g.Vertices) {
+			return
+		}
+		ui := g.UVIndices[i]
+		if ui < 0 || ui >= len(g.UVs) {
+			return
+		}
+		p := g.Vertices[vi]
+		uv := g.UVs[ui]
+		u := wrap01(uv[0]*scale[0] + env.Offset[0])
+		v := wrap01(uv[1]*scale[1] + env.Offset[1])
+		x, y := m.Apply(p[0], p[1])
+		vs[i] = ebiten.Vertex{
+			DstX:   float32(x),
+			DstY:   float32(y),
+			SrcX:   float32(u*w) + float32(b.Min.X),
+			SrcY:   float32((1-v)*h) + float32(b.Min.Y),
+			ColorR: float32(tint[0]),
+			ColorG: float32(tint[1]),
+			ColorB: float32(tint[2]),
+			ColorA: float32(tint[3]),
+		}
+		is[i] = uint16(i)
+	}
+	dst.DrawTriangles(vs, is, tex, &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func wrap01(v float64) float64 {
+	v = math.Mod(v, 1)
+	if v < 0 {
+		v += 1
+	}
+	return v
 }
 
 var meshWhite *ebiten.Image

@@ -110,6 +110,9 @@ func TestParseAirboarderSceneFBXGeometry(t *testing.T) {
 	if len(g.Vertices) != 32 || len(g.Indices) != 180 {
 		t.Fatalf("geometry sizes = %d vertices, %d indices; want 32/180", len(g.Vertices), len(g.Indices))
 	}
+	if len(g.UVs) != 52 || len(g.UVIndices) != len(g.Indices) {
+		t.Fatalf("uv sizes = %d uvs, %d uv indices; want 52/%d", len(g.UVs), len(g.UVIndices), len(g.Indices))
+	}
 	minX, maxX := g.Vertices[0][0], g.Vertices[0][0]
 	for _, v := range g.Vertices {
 		minX = math.Min(minX, v[0])

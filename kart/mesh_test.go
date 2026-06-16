@@ -95,6 +95,36 @@ func TestImportedFBXMeshRendererUsesSingleGeometry(t *testing.T) {
 	scene.Draw(dst, Translate(48, 48).Mul(Scale(4, -4)))
 }
 
+func TestImportedFBXMeshRendererUsesTextureUVs(t *testing.T) {
+	as := meshTestAssets(nil)
+	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{GUID: "mesh-guid", Name: "scene"}
+	as.Meshes.Materials["mat-guid"] = kmdata.Material{
+		Name: "Sky",
+		GUID: "mat-guid",
+		Textures: map[string]kmdata.TextureEnv{
+			"_MainTex": {Image: "meshtex/sky.png", Scale: [2]float64{1, 1}},
+		},
+		Colors: map[string][4]float64{"_Color": {1, 1, 1, 1}},
+	}
+	as.Meshes.Geometries = map[string][]kmdata.MeshGeometry{
+		"mesh-guid": {{
+			Name:      "mesh_1_",
+			Vertices:  [][3]float64{{-1, -1, 0}, {1, -1, 0}, {1, 1, 0}, {-1, 1, 0}},
+			UVs:       [][2]float64{{0, 0}, {1, 0}, {1, 1}, {0, 1}},
+			Indices:   []int{0, 1, 2, 0, 2, 3},
+			UVIndices: []int{0, 1, 2, 0, 2, 3},
+		}},
+	}
+	as.MeshTex = map[string]*ebiten.Image{"meshtex/sky.png": ebiten.NewImage(2, 2)}
+	scene := NewScene(as)
+	scene.Sample(0)
+	if tex, _ := scene.meshTexture(&as.Meshes.Bindings[0]); tex == nil {
+		t.Fatal("mesh texture was not resolved")
+	}
+	dst := ebiten.NewImage(96, 96)
+	scene.Draw(dst, Translate(48, 48).Mul(Scale(4, -4)))
+}
+
 func meshTestAssets(anims map[string]*kmdata.Anim) *Assets {
 	if anims == nil {
 		anims = map[string]*kmdata.Anim{}

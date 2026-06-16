@@ -12,6 +12,7 @@ import (
 	"fmt"
 	"image"
 	"image/color"
+	_ "image/jpeg"
 	_ "image/png"
 	"io"
 	"math"
@@ -81,6 +82,7 @@ type Assets struct {
 	Roles   kmdata.Roles    // scene 游戏: 脚本字段 → 节点 path
 	Extra   kmdata.Extra    // scene 游戏: 扩展序列化数据（可选）
 	Meshes  kmdata.MeshData // scene 游戏: MeshRenderer/材质绑定（可选）
+	MeshTex map[string]*ebiten.Image
 	Stage   kmdata.Stage
 	Anims   map[string]*kmdata.Anim
 	// Sounds: 文件主名（无扩展名）→ 解码后的 16-bit LE 立体声裸 PCM
@@ -130,6 +132,19 @@ func Load(dir string, audioRate int) (*Assets, error) {
 		if _, err := os.Stat(filepath.Join(dir, "meshes.json")); err == nil {
 			if err := readJSON(filepath.Join(dir, "meshes.json"), &a.Meshes); err != nil {
 				return nil, err
+			}
+			a.MeshTex = map[string]*ebiten.Image{}
+			for _, mat := range a.Meshes.Materials {
+				for _, env := range mat.Textures {
+					if env.Image == "" || a.MeshTex[env.Image] != nil {
+						continue
+					}
+					img, err := loadPNG(filepath.Join(dir, env.Image))
+					if err != nil {
+						return nil, err
+					}
+					a.MeshTex[env.Image] = img
+				}
 			}
 		}
 		for _, name := range a.Sheet.Atlases {

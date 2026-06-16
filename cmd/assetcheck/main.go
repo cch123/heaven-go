@@ -91,6 +91,16 @@ func auditGame(dir, game string) report {
 			}
 		}
 	}
+	for guid, mat := range meshes.Materials {
+		for slot, env := range mat.Textures {
+			if env.Image == "" {
+				continue
+			}
+			if _, err := os.Stat(filepath.Join(dir, filepath.FromSlash(env.Image))); err != nil {
+				r.errs = append(r.errs, fmt.Sprintf("mesh material %s texture %s image %q missing: %v", guid, slot, env.Image, err))
+			}
+		}
+	}
 	for guid, geoms := range meshes.Geometries {
 		if guid == "" || guid == "0" {
 			r.errs = append(r.errs, "mesh geometry table has empty/builtin guid key")
@@ -106,6 +116,17 @@ func auditGame(dir, game string) report {
 				if idx < 0 || idx >= len(g.Vertices) {
 					r.errs = append(r.errs, fmt.Sprintf("mesh geometry %s/%s index %d out of %d vertices", guid, g.Name, idx, len(g.Vertices)))
 					break
+				}
+			}
+			if len(g.UVIndices) > 0 {
+				if len(g.UVIndices) != len(g.Indices) {
+					r.errs = append(r.errs, fmt.Sprintf("mesh geometry %s/%s uv index count does not match triangle indices", guid, g.Name))
+				}
+				for _, idx := range g.UVIndices {
+					if idx < 0 || idx >= len(g.UVs) {
+						r.errs = append(r.errs, fmt.Sprintf("mesh geometry %s/%s uv index %d out of %d uvs", guid, g.Name, idx, len(g.UVs)))
+						break
+					}
 				}
 			}
 		}

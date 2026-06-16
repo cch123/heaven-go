@@ -121,6 +121,9 @@ func TestAirboarderMeshRendererAssets(t *testing.T) {
 	if len(geoms[0].Vertices) != 32 || len(geoms[0].Indices) != 180 {
 		t.Fatalf("sky geometry sizes = %d vertices, %d indices; want 32/180", len(geoms[0].Vertices), len(geoms[0].Indices))
 	}
+	if len(geoms[0].UVs) != 52 || len(geoms[0].UVIndices) != len(geoms[0].Indices) {
+		t.Fatalf("sky uv sizes = %d uvs, %d uv indices; want 52/%d", len(geoms[0].UVs), len(geoms[0].UVIndices), len(geoms[0].Indices))
+	}
 }
 
 func TestAirboarderSynthesizesImportedModelAnimPaths(t *testing.T) {

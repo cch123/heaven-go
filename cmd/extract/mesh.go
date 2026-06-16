@@ -238,6 +238,7 @@ func parseMaterialAsset(path, guid string, ref kmdata.AssetRef, shaderAssets, te
 				}
 				mat.Textures[name] = kmdata.TextureEnv{
 					Texture: tex,
+					Image:   copyMeshTexture(tex),
 					Scale:   [2]float64{uy.F(uy.Get(env, "m_Scale", "x")), uy.F(uy.Get(env, "m_Scale", "y"))},
 					Offset:  [2]float64{uy.F(uy.Get(env, "m_Offset", "x")), uy.F(uy.Get(env, "m_Offset", "y"))},
 				}
@@ -265,6 +266,32 @@ func parseMaterialAsset(path, guid string, ref kmdata.AssetRef, shaderAssets, te
 		return mat, true
 	}
 	return kmdata.Material{}, false
+}
+
+func copyMeshTexture(ref kmdata.AssetRef) string {
+	if ref.Path == "" || ref.GUID == "" {
+		return ""
+	}
+	ext := strings.ToLower(filepath.Ext(ref.Path))
+	switch ext {
+	case ".png", ".jpg", ".jpeg":
+	default:
+		return ""
+	}
+	src := filepath.Join(*hsRoot, "Assets", filepath.FromSlash(ref.Path))
+	dstRel := filepath.ToSlash(filepath.Join("meshtex", ref.GUID+ext))
+	dst := filepath.Join(*outDir, filepath.FromSlash(dstRel))
+	if err := os.MkdirAll(filepath.Dir(dst), 0o755); err != nil {
+		return ""
+	}
+	raw, err := os.ReadFile(src)
+	if err != nil {
+		return ""
+	}
+	if err := os.WriteFile(dst, raw, 0o644); err != nil {
+		return ""
+	}
+	return dstRel
 }
 
 func firstNonEmptyString(values ...string) string {

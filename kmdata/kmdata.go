@@ -231,6 +231,7 @@ type MeshBinding struct {
 
 type TextureEnv struct {
 	Texture AssetRef   `json:"texture"`
+	Image   string     `json:"image,omitempty"` // copied texture path under asset dir
 	Scale   [2]float64 `json:"scale,omitempty"`
 	Offset  [2]float64 `json:"offset,omitempty"`
 }
@@ -251,11 +252,12 @@ type Material struct {
 // triangles. Vertices stay in the model's local 3D units; the current 2D
 // renderer projects X/Y and keeps Z for future camera/skin support.
 type MeshGeometry struct {
-	Name     string       `json:"name"`
-	FBXID    int64        `json:"fbxID,omitempty"`
-	Vertices [][3]float64 `json:"vertices,omitempty"`
-	UVs      [][2]float64 `json:"uvs,omitempty"`
-	Indices  []int        `json:"indices,omitempty"`
+	Name      string       `json:"name"`
+	FBXID     int64        `json:"fbxID,omitempty"`
+	Vertices  [][3]float64 `json:"vertices,omitempty"`
+	UVs       [][2]float64 `json:"uvs,omitempty"`
+	Indices   []int        `json:"indices,omitempty"`
+	UVIndices []int        `json:"uvIndices,omitempty"`
 }
 
 type MeshData struct {
