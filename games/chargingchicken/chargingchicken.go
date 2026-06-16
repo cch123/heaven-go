@@ -734,12 +734,25 @@ func (m *Module) applyColors(beat float64) {
 	cloud := currentColor(m.cloudCols, beat, defaultCloud, defaultCloud2)
 	light := currentColor(m.lightCols, beat, defaultLight, [4]float64{1, 1, 1, 0})
 	brightness := light[0][0]
-	pal := kart.Palette{Alpha: [4]float64{brightness, brightness, brightness, 1}, Fill: car[0], Outline: car[1]}
+	pal := kart.Palette{
+		Alpha: [4]float64{brightness, brightness, brightness, 1}, Fill: car[0], Outline: car[1],
+		Progress: m.carChargeProgress(beat), UseProgress: true,
+	}
 	m.ctx.Scene.SetPaletteFor(m.carMat, pal)
 	m.ctx.Scene.SetPaletteFor(m.chickenMat, kart.Palette{Alpha: [4]float64{brightness, brightness, brightness, 1}, Fill: defaultCloud, Outline: defaultCloud})
 	m.ctx.Scene.SetPaletteFor(m.waterMat, kart.Palette{Alpha: [4]float64{brightness, brightness, brightness, 1}, Fill: defaultCloud, Outline: defaultCloud})
 	m.ctx.Scene.SetPaletteFor(m.cloudMat, kart.Palette{Alpha: cloud[0], Fill: cloud[1], Outline: defaultCloud})
 	m.ctx.Scene.SetColorOver(m.headlight, light[1])
+}
+
+func (m *Module) carChargeProgress(beat float64) float64 {
+	if !m.inputting || m.yardsLength <= 0 {
+		return 0
+	}
+	// ChargingChicken.cs writes chickenColorsCar._Progress from
+	// GetPositionFromBeat(nextInputReady - yardsTextLength*2, yardsTextLength)
+	// while the player is holding the charge.
+	return clamp01((beat - (m.nextInputReady - m.yardsLength*2)) / m.yardsLength)
 }
 
 func currentColor(list []colorEvt, beat float64, defA, defB [4]float64) [2][4]float64 {

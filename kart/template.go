@@ -478,6 +478,8 @@ type instNodeState struct {
 	color           [4]float64
 	matColor        [4]float64
 	matAlpha        float64 // material._Alpha：材质级透明度，最终与 SpriteRenderer.color.a 相乘
+	matProgress     float64 // material._Progress：ChargingChicken ChickenCar 充能渐变
+	hasMatProgress  bool
 	matAdd          [4]float64
 	matBlend        [4]float64
 	outlineWidth    float64
@@ -576,6 +578,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			Mapped:       n.Mapped, Mat: n.Mat,
 			Add: st.matAdd, Blend: st.matBlend,
 			Threshold: st.matThreshold, HasThreshold: st.hasMatThreshold,
+			Progress: st.matProgress, HasProgress: st.hasMatProgress,
 		}
 		if pal, ok := in.palettes[ti]; ok {
 			e.HasPalette = true
@@ -758,6 +761,9 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 				}
 			case attr == "material._Alpha":
 				states[ti].matAlpha = v
+			case attr == "material._Progress":
+				states[ti].matProgress = v
+				states[ti].hasMatProgress = true
 			case strings.HasPrefix(attr, "material._BlendColor."):
 				ch := strings.TrimPrefix(attr, "material._BlendColor.")
 				switch ch {

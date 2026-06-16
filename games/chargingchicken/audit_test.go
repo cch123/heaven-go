@@ -252,3 +252,37 @@ func TestChargingChickenUsesMaterialAlphaCurves(t *testing.T) {
 	}
 	t.Fatal("chargingChicken should contain material._Alpha curves for parallax/background fades")
 }
+
+func TestChargingChickenUsesMaterialProgressCurves(t *testing.T) {
+	as := loadChargingChickenAssets(t)
+	for _, anim := range as.Anims {
+		for _, attrs := range anim.Floats {
+			if len(attrs["material._Progress"]) > 0 {
+				return
+			}
+		}
+	}
+	t.Fatal("chargingChicken should contain material._Progress curves for ChickenCar fade")
+}
+
+func TestCarChargeProgressMatchesUnityWindow(t *testing.T) {
+	m := &Module{inputting: true, nextInputReady: 18, yardsLength: 6}
+	for _, tc := range []struct {
+		beat float64
+		want float64
+	}{
+		{5, 0},
+		{6, 0},
+		{9, 0.5},
+		{12, 1},
+		{14, 1},
+	} {
+		if got := m.carChargeProgress(tc.beat); got != tc.want {
+			t.Fatalf("charge progress at beat %.1f = %.3f, want %.3f", tc.beat, got, tc.want)
+		}
+	}
+	m.inputting = false
+	if got := m.carChargeProgress(9); got != 0 {
+		t.Fatalf("inactive charge progress = %.3f, want 0", got)
+	}
+}

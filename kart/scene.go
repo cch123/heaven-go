@@ -30,6 +30,8 @@ type sceneNodeState struct {
 	color           [4]float64
 	matColor        [4]float64
 	matAlpha        float64 // material._Alpha：材质级透明度，最终与 SpriteRenderer.color.a 相乘
+	matProgress     float64 // material._Progress：ChargingChicken ChickenCar 充能渐变
+	hasMatProgress  bool
 	matAdd          [4]float64
 	matBlend        [4]float64
 	outlineWidth    float64
@@ -656,6 +658,8 @@ type ExtraSprite struct {
 	OutlineWidth float64    // TMP material._OutlineWidth for queued text sprites
 	Threshold    float64    // material._Threshold for mapped queued sprites
 	HasThreshold bool
+	Progress     float64 // material._Progress for mapped queued sprites
+	HasProgress  bool
 	Mapped       bool   // 调色板映射材质（SceneInst.SetPalette）
 	Mat          string // 映射材质名（按名调色板）
 	HasPalette   bool   // true 时 Palette 为实例级 mapped 材质参数
@@ -901,6 +905,9 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 				}
 			case attr == "material._Alpha":
 				s.state[i].matAlpha = v
+			case attr == "material._Progress":
+				s.state[i].matProgress = v
+				s.state[i].hasMatProgress = true
 			case strings.HasPrefix(attr, "material._BlendColor."):
 				ch := strings.TrimPrefix(attr, "material._BlendColor.")
 				switch ch {
@@ -1049,6 +1056,10 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 				if q.HasThreshold {
 					pal.Threshold = q.Threshold
 				}
+				if q.HasProgress {
+					pal.Progress = q.Progress
+					pal.UseProgress = true
+				}
 				s.as.DrawSpriteMapped(dst, q.Sprite, view.Mul(q.World), proj, qo, pal)
 			} else {
 				s.as.DrawSpriteOpts(dst, q.Sprite, view.Mul(q.World), proj, qo)
@@ -1092,6 +1103,10 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 				if st.hasMatThreshold {
 					pal.Threshold = st.matThreshold
 				}
+				if st.hasMatProgress {
+					pal.Progress = st.matProgress
+					pal.UseProgress = true
+				}
 				s.as.DrawSpriteMapped(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts, pal)
 			} else {
 				s.as.DrawSpriteOpts(s.scratch, st.sprite, view.Mul(s.world[i]), proj, opts)
@@ -1118,6 +1133,10 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			}
 			if st.hasMatThreshold {
 				pal.Threshold = st.matThreshold
+			}
+			if st.hasMatProgress {
+				pal.Progress = st.matProgress
+				pal.UseProgress = true
 			}
 			s.as.DrawSpriteMapped(dst, st.sprite, view.Mul(s.world[i]), proj, opts, pal)
 		} else {

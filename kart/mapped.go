@@ -16,11 +16,13 @@ import (
 
 // Palette 是映射材质的运行时参数。
 type Palette struct {
-	Alpha     [4]float64 // _ColorAlpha（默认白，HS 运行时不改）
-	Fill      [4]float64 // _ColorBravo
-	Outline   [4]float64 // _ColorDelta
-	Add       [4]float64 // _AddColor（screen 混合，默认 0）
-	Threshold float64    // _Threshold（0 原样，1 反色）
+	Alpha       [4]float64 // _ColorAlpha；ChickenCar progress 模式下对应材质 _Color 亮度
+	Fill        [4]float64 // _ColorBravo；ChickenCar progress 模式下对应 _Color1
+	Outline     [4]float64 // _ColorDelta；ChickenCar progress 模式下对应 _Color2
+	Add         [4]float64 // _AddColor（screen 混合，默认 0）
+	Threshold   float64    // _Threshold（0 原样，1 反色）
+	Progress    float64    // _Progress（ChargingChicken ChickenCar shader）
+	UseProgress bool       // true 时按 ChickenCar: tex * lerp(_Color1,_Color2,_Progress) * _Color
 }
 
 // DefaultPalette 返回 shader 默认参数（seeSaw 的初始填充白/描边深蓝在模块里设）。
@@ -42,11 +44,23 @@ var Fill vec4
 var Outline vec4
 var Add vec4
 var Threshold float
+var Progress float
+var UseProgress float
 var Tint vec4
 var Blend vec4
 
 func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	c := imageSrc0At(src)
+	if UseProgress > 0.5 {
+		pc := clamp(Progress, 0.0, 1.0)
+		fade := Fill*(1.0-pc) + Outline*pc
+		out := c * fade * Alpha * Tint
+		out.rgb = out.rgb*(1.0-Blend.a) + Blend.rgb*Blend.a
+		out.r *= out.a
+		out.g *= out.a
+		out.b *= out.a
+		return out
+	}
 	mapped := Alpha*c.r + Fill*c.g + Outline*c.b
 	a := c.a
 	scr := 1.0 - (1.0-Add)*(1.0-mapped)
@@ -107,7 +121,15 @@ func (a *Assets) DrawSpriteMapped(dst *ebiten.Image, name string, world, proj Af
 	op.Uniforms = map[string]any{
 		"Alpha": v4(pal.Alpha), "Fill": v4(pal.Fill), "Outline": v4(pal.Outline),
 		"Add": v4(pal.Add), "Threshold": float32(pal.Threshold),
+		"Progress": float32(pal.Progress), "UseProgress": mapBoolFloat32(pal.UseProgress),
 		"Tint": v4(tint), "Blend": v4(o.Blend),
 	}
 	dst.DrawRectShader(sp.W, sp.H, sh, op)
+}
+
+func mapBoolFloat32(v bool) float32 {
+	if v {
+		return 1
+	}
+	return 0
 }
