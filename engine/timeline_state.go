@@ -14,9 +14,6 @@ func (a *App) resetLoadedRiq(r *riq.Riq, player *audio.Player, music *pitchPCMRe
 	a.player = player
 	a.music = music
 	a.cond = conductor.New(r.Beatmap, player)
-	if music != nil {
-		a.cond.SetClock(music.PositionSeconds)
-	}
 	a.modules = map[string]Module{}
 }
 

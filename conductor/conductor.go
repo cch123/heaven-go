@@ -39,18 +39,22 @@ type Conductor struct {
 	playing  bool
 	drift    float64 // 最近一次外推值与音频时钟的偏差（诊断用）
 	pitch    float64
-	clock    func() float64
+	clock    func() float64 // 测试用：覆盖 audio.Player.Position 的输出时间
+
+	clockOutBase  float64 // 上一次 pitch 变更时的音频输出时间
+	clockSongBase float64 // 上一次 pitch 变更时对应的歌曲源时间
 }
 
 func New(bm *riq.Beatmap, player *audio.Player) *Conductor {
 	return &Conductor{bm: bm, player: player, pitch: 1}
 }
 
-// SetClock overrides the audio-position clock used for drift correction. Chart
-// music with runtime pitch resampling reports source time here; audio.Player
-// itself reports output time and would erase minigame slowdowns after restore.
+// SetClock overrides the output-position clock used for drift correction. The
+// clock must advance in actually audible time, not decoder/read-ahead source
+// time; otherwise buffer prefetch jumps become visible animation jitter.
 func (c *Conductor) SetClock(clock func() float64) {
 	c.clock = clock
+	c.rebaseOutputClock()
 }
 
 // SetMinigamePitch changes how quickly song position advances, equivalent to
@@ -62,18 +66,21 @@ func (c *Conductor) SetMinigamePitch(pitch float64) {
 	} else if pitch < 0.01 {
 		pitch = 0.01
 	}
+	c.rebaseOutputClock()
 	c.pitch = pitch
 }
 
 // Play 启动音乐与时钟。
 func (c *Conductor) Play() {
 	c.player.Play()
+	c.rebaseOutputClock()
 	c.lastTick = time.Now()
 	c.playing = true
 }
 
 // Pause 暂停音乐与时钟。
 func (c *Conductor) Pause() {
+	c.rebaseOutputClock()
 	c.player.Pause()
 	c.playing = false
 }
@@ -85,6 +92,8 @@ func (c *Conductor) Reset() error {
 	c.pos = 0
 	c.drift = 0
 	c.pitch = 1
+	c.clockOutBase = 0
+	c.clockSongBase = 0
 	return c.player.SetPosition(0)
 }
 
@@ -103,6 +112,8 @@ func (c *Conductor) SeekTime(pos float64) error {
 	}
 	c.pos = pos
 	c.drift = 0
+	c.clockOutBase = c.outputPosition()
+	c.clockSongBase = pos
 	c.lastTick = time.Now()
 	if wasPlaying {
 		c.player.Play()
@@ -130,7 +141,7 @@ func (c *Conductor) Update() {
 	// 音频播完后 Position() 冻结：改纯单调时钟推进，否则漂移校正会把
 	// 时间拽住，谱面尾部（音频结束之后的 end 事件）永远到不了
 	real := c.realPosition()
-	if !c.player.IsPlaying() && c.pos >= real {
+	if !c.outputPlaying() && c.pos >= real {
 		return
 	}
 
@@ -155,6 +166,10 @@ func (c *Conductor) Drift() float64 { return c.drift }
 func (c *Conductor) Playing() bool { return c.playing }
 
 func (c *Conductor) realPosition() float64 {
+	return c.clockSongBase + (c.outputPosition()-c.clockOutBase)*c.pitch
+}
+
+func (c *Conductor) outputPosition() float64 {
 	if c.clock != nil {
 		return c.clock()
 	}
@@ -162,6 +177,15 @@ func (c *Conductor) realPosition() float64 {
 		return c.pos
 	}
 	return c.player.Position().Seconds()
+}
+
+func (c *Conductor) outputPlaying() bool {
+	return c.player != nil && c.player.IsPlaying()
+}
+
+func (c *Conductor) rebaseOutputClock() {
+	c.clockSongBase = c.pos
+	c.clockOutBase = c.outputPosition()
 }
 
 func abs(x float64) float64 {
