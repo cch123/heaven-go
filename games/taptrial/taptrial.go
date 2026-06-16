@@ -60,6 +60,15 @@ type star struct {
 	x, y, vx, vy, born float64
 }
 
+type playerState int
+
+const (
+	playerStateTap playerState = iota
+	playerStateDoubleTap
+	playerStateTripleTap
+	playerStateJumping
+)
+
 type Module struct {
 	ctx  *engine.Ctx
 	proj kart.Aff
@@ -87,6 +96,7 @@ type Module struct {
 	giraffeBeat float64
 	giraffeLen  float64
 	giraffeEase int
+	playerState playerState
 	tripleTaps  int
 	stars       []star
 }
@@ -150,6 +160,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		m.cue(b, b+2)
 		ctx.SoundAt(b, "ook", 1)
 		ctx.At(b, func() {
+			m.playerState = playerStateTap
 			m.playMonkeys("TapPrepare", b)
 			m.playPlayer("TapPrepare", b)
 		})
@@ -162,6 +173,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		ctx.SoundAt(b, "ookook", 1)
 		ctx.SoundAt(b+0.5, "ookook", 1)
 		ctx.At(b, func() {
+			m.playerState = playerStateDoubleTap
 			m.playMonkeys("DoubleTapPrepare", b)
 			m.playPlayer("DoubleTapPrepare", b)
 		})
@@ -179,6 +191,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		ctx.SoundAt(b, "ooki1", 1)
 		ctx.SoundAt(b+0.5, "ooki2", 1)
 		ctx.At(b, func() {
+			m.playerState = playerStateTripleTap
 			m.tripleTaps = 0
 			m.playMonkeys("PostPrepare_1", b)
 			m.playPlayer("PosePrepare_1", b)
@@ -197,6 +210,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 	case "tapTrial/jump tap prep":
 		ctx.At(b, func() {
 			m.canBop = false
+			m.playerState = playerStateJumping
 			m.playMonkeys("JumpPrepare", b)
 			m.playPlayer("JumpPrepare", b)
 		})
@@ -211,6 +225,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		ctx.SoundAt(b, snd, 1)
 		m.tapMonkeySound(b + 1)
 		ctx.At(b, func() {
+			m.playerState = playerStateJumping
 			m.jumpBeat = b
 			pAnim, mAnim := "JumpTap", "JumpTap"
 			if final {
@@ -388,14 +403,37 @@ func (m *Module) giraffeMiss() {
 	}
 }
 
-// Whiff：state 机简化——非跳跃期空按按普通拍处理（ScoreMiss 由引擎计 whiff）。
+// Whiff mirrors TapTrialPlayer.WhiffTap: the stray input feedback depends on
+// the most recent prepared tap state, and Jumping ignores empty presses until a
+// later cue prepares a different state.
 func (m *Module) Whiff(beat float64) {
-	if beat-m.jumpBeat >= 0 && beat-m.jumpBeat <= 1 {
-		return // Jumping 态不响应
+	anim, near, score := m.whiffResponse()
+	if !score {
+		return
 	}
 	m.ctx.ScoreMiss()
 	m.resetScroll()
-	m.playPlayer("Tap", beat)
+	if near {
+		m.ctx.PlayCommon("nearMiss")
+	}
+	if anim != "" {
+		m.playPlayer(anim, beat)
+	}
+}
+
+func (m *Module) whiffResponse() (anim string, nearMiss bool, scoreMiss bool) {
+	switch m.playerState {
+	case playerStateTap:
+		return "Tap", true, true
+	case playerStateDoubleTap:
+		return "DoubleTap", true, true
+	case playerStateTripleTap:
+		return "", false, true
+	case playerStateJumping:
+		return "", false, false
+	default:
+		return "Tap", true, true
+	}
 }
 
 func (m *Module) singleBop(beat float64) {

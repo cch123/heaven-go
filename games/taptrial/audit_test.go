@@ -121,6 +121,28 @@ func TestTapTrialLegacyReferenceAndTongueBindings(t *testing.T) {
 	}
 }
 
+func TestTapTrialWhiffMatchesUnityPlayerState(t *testing.T) {
+	tests := []struct {
+		state     playerState
+		anim      string
+		nearMiss  bool
+		scoreMiss bool
+	}{
+		{playerStateTap, "Tap", true, true},
+		{playerStateDoubleTap, "DoubleTap", true, true},
+		{playerStateTripleTap, "", false, true},
+		{playerStateJumping, "", false, false},
+	}
+	for _, tt := range tests {
+		m := &Module{playerState: tt.state}
+		anim, nearMiss, scoreMiss := m.whiffResponse()
+		if anim != tt.anim || nearMiss != tt.nearMiss || scoreMiss != tt.scoreMiss {
+			t.Fatalf("state %d whiff = (%q,%v,%v), want (%q,%v,%v)",
+				tt.state, anim, nearMiss, scoreMiss, tt.anim, tt.nearMiss, tt.scoreMiss)
+		}
+	}
+}
+
 func tapTrialNodeSet(as *kart.Assets) map[string]bool {
 	out := map[string]bool{}
 	for _, n := range as.Rig.Nodes {
