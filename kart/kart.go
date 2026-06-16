@@ -813,15 +813,22 @@ type nodeState struct {
 	scale  [2]float64
 	sprite string
 	flipX  bool
+	active bool
+	color  [4]float64
 }
 
 // RigInst 是一个可播放动画的骨架实例。根节点的 prefab 位移被清零，
 // 摆放位置完全由 Draw 的 proj 决定。
 type RigInst struct {
-	as     *Assets
-	byPath map[string]int
-	state  []nodeState
-	world  []Aff
+	as      *Assets
+	byPath  map[string]int
+	state   []nodeState
+	world   []Aff
+	actives []bool
+
+	activeOver map[int]bool
+	colorOver  map[int][4]float64
+	palOver    map[int]Palette
 
 	anim  *kmdata.Anim
 	start float64
@@ -829,10 +836,14 @@ type RigInst struct {
 
 func NewRig(as *Assets) *RigInst {
 	r := &RigInst{
-		as:     as,
-		byPath: map[string]int{},
-		state:  make([]nodeState, len(as.Rig.Nodes)),
-		world:  make([]Aff, len(as.Rig.Nodes)),
+		as:         as,
+		byPath:     map[string]int{},
+		state:      make([]nodeState, len(as.Rig.Nodes)),
+		world:      make([]Aff, len(as.Rig.Nodes)),
+		actives:    make([]bool, len(as.Rig.Nodes)),
+		activeOver: map[int]bool{},
+		colorOver:  map[int][4]float64{},
+		palOver:    map[int]Palette{},
 	}
 	for i, n := range as.Rig.Nodes {
 		r.byPath[n.Path] = i
@@ -843,11 +854,25 @@ func NewRig(as *Assets) *RigInst {
 
 func (r *RigInst) reset() {
 	for i, n := range r.as.Rig.Nodes {
-		st := nodeState{pos: n.Pos, rot: n.RotZ, scale: n.Scale, sprite: n.Sprite, flipX: n.FlipX}
+		c := n.Color
+		if c == [4]float64{} {
+			c = [4]float64{1, 1, 1, 1}
+		}
+		st := nodeState{
+			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
+			sprite: n.Sprite, flipX: n.FlipX,
+			active: !n.Inactive, color: c,
+		}
 		if n.Parent < 0 {
 			st.pos = [2]float64{0, 0} // 摆放交给 proj
 		}
 		r.state[i] = st
+	}
+	for i, v := range r.activeOver {
+		r.state[i].active = v
+	}
+	for i, v := range r.colorOver {
+		r.state[i].color = v
 	}
 }
 
@@ -855,6 +880,31 @@ func (r *RigInst) reset() {
 func (r *RigInst) Play(name string, t float64) {
 	if a, ok := r.as.Anims[name]; ok {
 		r.anim, r.start = a, t
+	}
+}
+
+// SetActive 覆盖节点 m_IsActive，并在 Sample 中按 Unity activeInHierarchy
+// 语义传给子节点。旧单骨架 Karate Man 的 wig 由脚本开关而非动画曲线控制。
+func (r *RigInst) SetActive(path string, active bool) {
+	if i, ok := r.byPath[path]; ok {
+		r.activeOver[i] = active
+	}
+}
+
+// SetColor 覆盖单个节点的 SpriteRenderer.color。
+func (r *RigInst) SetColor(path string, c [4]float64) {
+	if i, ok := r.byPath[path]; ok {
+		r.colorOver[i] = c
+	}
+}
+
+// SetPalette 覆盖 path 子树的 CellAnime_Mapped 调色板。legacy rig 资产有些
+// 没导出 mapped 标记，显式 palette 仍强制走 mapped shader。
+func (r *RigInst) SetPalette(path string, p Palette) {
+	for i, n := range r.as.Rig.Nodes {
+		if rigPathInSubtree(n.Path, path) {
+			r.palOver[i] = p
+		}
 	}
 }
 
@@ -880,8 +930,10 @@ func (r *RigInst) Sample(t float64) {
 		local := TRS(st.pos[0], st.pos[1], st.rot, st.scale[0], st.scale[1])
 		if n.Parent < 0 {
 			r.world[i] = local
+			r.actives[i] = st.active
 		} else {
 			r.world[i] = r.world[n.Parent].Mul(local)
+			r.actives[i] = st.active && r.actives[n.Parent]
 		}
 	}
 }
@@ -936,7 +988,7 @@ func (r *RigInst) Draw(dst *ebiten.Image, proj Aff) {
 	type item struct{ idx, order int }
 	items := make([]item, 0, len(r.state))
 	for i, n := range r.as.Rig.Nodes {
-		if n.Hidden || r.state[i].sprite == "" {
+		if n.Hidden || !r.actives[i] || r.state[i].sprite == "" || r.state[i].color[3] <= 0 {
 			continue
 		}
 		items = append(items, item{i, n.Order})
@@ -948,8 +1000,23 @@ func (r *RigInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 	}
 	for _, it := range items {
-		r.as.DrawSprite(dst, r.state[it.idx].sprite, r.world[it.idx], proj, r.state[it.idx].flipX, 1)
+		st := &r.state[it.idx]
+		if pal, ok := r.paletteForNode(it.idx); ok {
+			r.as.DrawSpriteMapped(dst, st.sprite, r.world[it.idx], proj, SpriteOpts{FlipX: st.flipX, Tint: st.color}, pal)
+			continue
+		}
+		r.as.DrawSpriteTint(dst, st.sprite, r.world[it.idx], proj, st.flipX, st.color)
 	}
+}
+
+func (r *RigInst) paletteForNode(i int) (Palette, bool) {
+	if p, ok := r.palOver[i]; ok {
+		return p, true
+	}
+	if r.as.Rig.Nodes[i].Mapped {
+		return DefaultPalette(), true
+	}
+	return Palette{}, false
 }
 
 // BBox 返回默认姿态的单位空间包围盒（minX, minY, maxX, maxY）。
@@ -964,7 +1031,7 @@ func (r *RigInst) BBox() (float64, float64, float64, float64) {
 	for i, n := range r.as.Rig.Nodes {
 		st := r.state[i]
 		sp, ok := r.as.Sheet.Sprites[st.sprite]
-		if !ok || n.Hidden {
+		if !ok || n.Hidden || !r.actives[i] {
 			continue
 		}
 		w, h := float64(sp.W)/r.as.Sheet.PPU, float64(sp.H)/r.as.Sheet.PPU
@@ -980,4 +1047,11 @@ func (r *RigInst) BBox() (float64, float64, float64, float64) {
 		}
 	}
 	return minX, minY, maxX, maxY
+}
+
+func rigPathInSubtree(path, root string) bool {
+	if root == "" {
+		return true
+	}
+	return path == root || strings.HasPrefix(path, root+"/")
 }

@@ -36,6 +36,11 @@ const (
 	pitchMod = 125.0
 )
 
+var (
+	defaultJoeBodyColor      = [4]float64{1, 1, 1, 1}
+	defaultJoeHighlightColor = [4]float64{0.81, 0.81, 0.81, 1}
+)
+
 const (
 	hitPot = iota
 	hitLightbulb
@@ -186,6 +191,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 		return err
 	}
 	m.joe = kart.NewRig(ctx.Assets)
+	m.applyJoeAppearance(defaultJoeBodyColor, defaultJoeHighlightColor, false)
 	_, minY, _, maxY := m.joe.BBox()
 	m.unit = rigFitH / (maxY - minY)
 	m.proj = kart.Translate(joeScreenX, groundY+m.unit*ctx.Assets.Stage.FloorY).Mul(kart.Scale(m.unit, -m.unit))
@@ -198,6 +204,20 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	}
 	m.faceBig = &text.GoTextFace{Source: src, Size: 46}
 	return nil
+}
+
+func (m *Module) applyJoeAppearance(body, highlight [4]float64, wig bool) {
+	pal := kart.Palette{
+		Alpha:   body,
+		Fill:    [4]float64{1, 0, 0, 1},
+		Outline: highlight,
+	}
+	// These paths are the SpriteRenderers using karateman_cellshader.mat in
+	// the Unity prefab. Shadow sprites deliberately stay outside this palette.
+	for _, path := range []string{"Head", "Body", "LeftArm", "RightArm", "LeftLeg", "RightLeg"} {
+		m.joe.SetPalette(path, pal)
+	}
+	m.joe.SetActive("Head/Wig", wig)
 }
 
 func (m *Module) OnEvent(e *riq.Entity) {
@@ -249,6 +269,11 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		m.addLegacyBackground(e)
 	case "karateman/set object colors":
 		m.ctx.At(b, func() {
+			m.applyJoeAppearance(
+				colorParam(e, "colorA", defaultJoeBodyColor),
+				colorParam(e, "colorB", defaultJoeHighlightColor),
+				boolParam(e, "wig"),
+			)
 			m.itemTint = colorParam(e, "colorC", [4]float64{1, 1, 1, 1})
 			if int(e.Float("star", 0)) == 0 {
 				m.starTint = m.itemTint

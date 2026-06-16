@@ -87,6 +87,40 @@ func TestJabSpriteSwap(t *testing.T) {
 	}
 }
 
+func TestRigRuntimeOverrides(t *testing.T) {
+	as := loadDataOnly(t)
+	rig := NewRig(as)
+
+	head := rig.byPath["Head"]
+	wig := rig.byPath["Head/Wig"]
+	body := rig.byPath["Body"]
+
+	rig.SetActive("Head/Wig", false)
+	rig.SetColor("Body", [4]float64{0.25, 0.5, 0.75, 0.6})
+	pal := Palette{Alpha: [4]float64{1, 0, 0, 1}, Fill: [4]float64{0, 1, 0, 1}, Outline: [4]float64{0, 0, 1, 1}}
+	rig.SetPalette("Head", pal)
+	rig.Sample(0)
+
+	if !rig.actives[head] {
+		t.Fatal("Head should stay active when only Head/Wig is disabled")
+	}
+	if rig.actives[wig] {
+		t.Fatal("Head/Wig should honor SetActive(false)")
+	}
+	if rig.state[body].color != [4]float64{0.25, 0.5, 0.75, 0.6} {
+		t.Fatalf("Body color override = %#v", rig.state[body].color)
+	}
+	if got, ok := rig.paletteForNode(head); !ok || got != pal {
+		t.Fatalf("Head palette override = %#v, %v", got, ok)
+	}
+	if got, ok := rig.paletteForNode(wig); !ok || got != pal {
+		t.Fatalf("Head/Wig should inherit Head subtree palette, got %#v, %v", got, ok)
+	}
+	if _, ok := rig.paletteForNode(body); ok {
+		t.Fatal("Body should not receive Head subtree palette")
+	}
+}
+
 func TestBBoxFinite(t *testing.T) {
 	as := loadDataOnly(t)
 	rig := NewRig(as)
