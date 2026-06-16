@@ -142,6 +142,12 @@ func TestSmogAndTimingConstants(t *testing.T) {
 	if actionCombo != 3 || actionSlice != 0 {
 		t.Fatalf("input action mapping changed")
 	}
+	if got := rollingEndBeat(24); got != 25 {
+		t.Fatalf("rolling loop end beat = %v, want 25", got)
+	}
+	if rollingFadeSec != 0.1 {
+		t.Fatalf("rolling fade = %v, want 0.1", rollingFadeSec)
+	}
 }
 
 func assertClipPaths(t *testing.T, as *kart.Assets, clip, root, label string) {

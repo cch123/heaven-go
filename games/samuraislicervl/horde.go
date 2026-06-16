@@ -16,6 +16,8 @@ const (
 	hordeDead
 )
 
+const rollingFadeSec = 0.1
+
 type hordeConfig struct {
 	gravity       float64
 	fallVelocity  [2]float64
@@ -23,13 +25,12 @@ type hordeConfig struct {
 }
 
 type hordeSequence struct {
-	demons      []*hordeDemon
-	spawnIndex  int
-	missed      bool
-	ended       bool
-	bitePlayed  bool
-	deathBeat   float64
-	stopRolling func()
+	demons     []*hordeDemon
+	spawnIndex int
+	missed     bool
+	ended      bool
+	bitePlayed bool
+	deathBeat  float64
 }
 
 type hordeDemon struct {
@@ -93,13 +94,7 @@ func (m *Module) comboDemonStart(seq *hordeSequence, state float64) {
 	inputBeat := m.ctx.Beat()
 	m.playSamurai("SamuraiHordeStart", inputBeat, 1)
 	m.ctx.Sound("HIT6_START")
-	seq.stopRolling = m.ctx.SoundLoop("ROLLING_START")
-	m.ctx.At(inputBeat+1.1, func() {
-		if seq.stopRolling != nil {
-			seq.stopRolling()
-			seq.stopRolling = nil
-		}
-	})
+	m.ctx.SoundLoopPitchVolUntil("ROLLING_START", 1, 1, rollingEndBeat(inputBeat), rollingFadeSec)
 	m.ctx.At(inputBeat+0.14, func() { m.playSamurai("SamuraiHordeLoop", inputBeat+0.14, 0.5) })
 
 	m.isHolding = true
@@ -154,10 +149,6 @@ func (m *Module) comboDemonSuccess(seq *hordeSequence, state float64) {
 	}
 	m.isReady = false
 	m.isHolding = false
-	if seq.stopRolling != nil {
-		seq.stopRolling()
-		seq.stopRolling = nil
-	}
 	seq.deathBeat = m.ctx.Beat() + 5
 }
 
@@ -196,11 +187,14 @@ func (m *Module) sliceCombo(beat float64) {
 			m.playSamurai("SamuraiIdle", beat+2, 1)
 		}
 	})
-	stop := m.ctx.SoundLoop("ROLLING_START")
-	m.ctx.At(beat+1.1, stop)
+	m.ctx.SoundLoopPitchVolUntil("ROLLING_START", 1, 1, rollingEndBeat(beat), rollingFadeSec)
 	for _, off := range []float64{0, 0.14, 0.28, 0.42, 0.56, 0.70, 0.84, 1} {
 		m.ctx.SoundAt(beat+off, "slice", 1.1)
 	}
+}
+
+func rollingEndBeat(startBeat float64) float64 {
+	return startBeat + 1
 }
 
 func (s *hordeSequence) spawnBatch(m *Module, count int, beat float64) {

@@ -90,7 +90,6 @@ type Module struct {
 	lastSuccessfulBeat float64
 	lastDemonBeat      float64
 	lastPulse          int
-	stopRolling        func()
 }
 
 func New() engine.Module {
