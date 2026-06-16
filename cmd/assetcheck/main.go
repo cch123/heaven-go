@@ -91,6 +91,25 @@ func auditGame(dir, game string) report {
 			}
 		}
 	}
+	for guid, geoms := range meshes.Geometries {
+		if guid == "" || guid == "0" {
+			r.errs = append(r.errs, "mesh geometry table has empty/builtin guid key")
+		}
+		for _, g := range geoms {
+			if len(g.Vertices) == 0 {
+				r.errs = append(r.errs, fmt.Sprintf("mesh geometry %s/%s has no vertices", guid, g.Name))
+			}
+			if len(g.Indices) == 0 || len(g.Indices)%3 != 0 {
+				r.errs = append(r.errs, fmt.Sprintf("mesh geometry %s/%s has invalid triangle index count", guid, g.Name))
+			}
+			for _, idx := range g.Indices {
+				if idx < 0 || idx >= len(g.Vertices) {
+					r.errs = append(r.errs, fmt.Sprintf("mesh geometry %s/%s index %d out of %d vertices", guid, g.Name, idx, len(g.Vertices)))
+					break
+				}
+			}
+		}
+	}
 
 	var anims map[string]*kmdata.Anim
 	if err := readJSON(filepath.Join(dir, "anims.json"), &anims); err != nil {

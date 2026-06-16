@@ -14,8 +14,17 @@ func (m *Module) drawTemporary2D(screen *ebiten.Image, beat float64) {
 	sky, cloud := m.bgAt(beat)
 	floor, stripe := m.floorAt(beat)
 	screen.Fill(rgba(sky))
-	m.drawClouds(screen, beat, rgba(cloud))
-	m.drawFloor(screen, beat, rgba(floor), rgba(stripe))
+	m.drawTemporaryForeground(screen, beat, rgba(cloud), rgba(floor), rgba(stripe))
+}
+
+func (m *Module) drawTemporaryFallbackBG(screen *ebiten.Image, beat float64) {
+	sky, _ := m.bgAt(beat)
+	screen.Fill(rgba(sky))
+}
+
+func (m *Module) drawTemporaryForeground(screen *ebiten.Image, beat float64, cloud, floor, stripe color.RGBA) {
+	m.drawClouds(screen, beat, cloud)
+	m.drawFloor(screen, beat, floor, stripe)
 	m.drawDog(screen, beat)
 	for _, ob := range m.obstacles {
 		m.drawObstacle(screen, ob, beat)

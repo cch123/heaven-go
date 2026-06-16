@@ -57,7 +57,7 @@ func TestMeshRendererMaterialOpacityCurvesAffectTint(t *testing.T) {
 	}
 }
 
-func TestImportedFBXMeshRendererNeedsExtractedGeometry(t *testing.T) {
+func TestImportedFBXMeshRendererNeedsGeometryData(t *testing.T) {
 	as := meshTestAssets(nil)
 	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{
 		FileID: -1677165586242444022,
@@ -69,6 +69,30 @@ func TestImportedFBXMeshRendererNeedsExtractedGeometry(t *testing.T) {
 	if _, _, ok := scene.meshDrawable(0); ok {
 		t.Fatal("imported FBX mesh should wait for real vertex extraction")
 	}
+}
+
+func TestImportedFBXMeshRendererUsesSingleGeometry(t *testing.T) {
+	as := meshTestAssets(nil)
+	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{
+		FileID: -1677165586242444022,
+		GUID:   "mesh-guid",
+		Name:   "scene",
+	}
+	as.Meshes.Geometries = map[string][]kmdata.MeshGeometry{
+		"mesh-guid": {{
+			Name:     "mesh_1_",
+			FBXID:    451390504,
+			Vertices: [][3]float64{{-1, -1, 0}, {1, -1, 0}, {1, 1, 0}, {-1, 1, 0}},
+			Indices:  []int{0, 1, 2, 0, 2, 3},
+		}},
+	}
+	scene := NewScene(as)
+	scene.Sample(0)
+	if _, _, ok := scene.meshDrawable(0); !ok {
+		t.Fatal("imported FBX mesh with one extracted geometry should be drawable")
+	}
+	dst := ebiten.NewImage(96, 96)
+	scene.Draw(dst, Translate(48, 48).Mul(Scale(4, -4)))
 }
 
 func meshTestAssets(anims map[string]*kmdata.Anim) *Assets {

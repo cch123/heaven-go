@@ -1,7 +1,7 @@
 // Package airboarder ports Airboarder's event timing, input windows, sounds,
-// and script-driven colors. The current renderer is a temporary 2D layer while
-// the engine grows full imported-FBX MeshRenderer/material-texture support for
-// the original 3D scene; see README known simplifications.
+// and script-driven colors. The current renderer combines a temporary 2D layer
+// with the extracted sky MeshRenderer while the engine grows full imported-FBX
+// material-texture and camera support for the original 3D scene; see README.
 package airboarder
 
 import (
@@ -110,8 +110,9 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.resetBoarders(0)
 
-	// Imported FBX meshes are not drawn by the current built-in mesh renderer,
-	// but playing their default states keeps extracted controller data exercised.
+	// Only the single-geometry sky MeshRenderer is drawn today; playing the
+	// controller roots still keeps the remaining extracted 3D data exercised
+	// until multi-geometry FBX and skinned rendering land.
 	for _, role := range []string{"CPU1", "CPU2", "Player", "Dog", "Tail", "Floor", "archBasic", "wallBasic"} {
 		if p := ctx.Role(role); p != "" {
 			ctx.Scene.PlayDefaultState(p, 0, ctx.SecPerBeat(0))
@@ -220,9 +221,12 @@ func (m *Module) Update(_ float64, beat float64) {
 }
 
 func (m *Module) Draw(screen *ebiten.Image, _ float64, beat float64) {
-	m.drawTemporary2D(screen, beat)
+	_, cloud := m.bgAt(beat)
+	floor, stripe := m.floorAt(beat)
+	m.drawTemporaryFallbackBG(screen, beat)
 	m.ctx.SampleSceneZ(beat, m.cameraZoomAdd(beat))
 	m.ctx.Scene.Draw(screen, m.proj)
+	m.drawTemporaryForeground(screen, beat, rgba(cloud), rgba(floor), rgba(stripe))
 }
 
 func (m *Module) resetBoarders(beat float64) {

@@ -247,9 +247,21 @@ type Material struct {
 	Colors   map[string][4]float64 `json:"colors,omitempty"`
 }
 
+// MeshGeometry is imported FBX/OBJ geometry flattened into runtime-friendly
+// triangles. Vertices stay in the model's local 3D units; the current 2D
+// renderer projects X/Y and keeps Z for future camera/skin support.
+type MeshGeometry struct {
+	Name     string       `json:"name"`
+	FBXID    int64        `json:"fbxID,omitempty"`
+	Vertices [][3]float64 `json:"vertices,omitempty"`
+	UVs      [][2]float64 `json:"uvs,omitempty"`
+	Indices  []int        `json:"indices,omitempty"`
+}
+
 type MeshData struct {
-	Bindings  []MeshBinding       `json:"bindings,omitempty"`
-	Materials map[string]Material `json:"materials,omitempty"`
+	Bindings   []MeshBinding             `json:"bindings,omitempty"`
+	Materials  map[string]Material       `json:"materials,omitempty"`
+	Geometries map[string][]MeshGeometry `json:"geometries,omitempty"` // mesh asset guid -> geometries
 }
 
 // XYCurve 是二维向量曲线（位置/缩放按分量存）。

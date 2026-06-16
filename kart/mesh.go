@@ -10,8 +10,9 @@ import (
 
 // Unity built-in mesh IDs are serialized as guid "0" plus a stable fileID.
 // BuiltToScaleDS currently uses Plane for the scrolling floor grid and Cube/
-// Capsule-like thin dividers. Imported FBX geometry still needs real vertex
-// extraction; keeping that unsupported here makes missing 3D data explicit.
+// Capsule-like thin dividers. Imported FBX meshes use extracted geometry when
+// a guid has exactly one Geometry; multi-geometry submesh matching remains
+// explicit work so we do not attach the wrong mesh to a renderer.
 func builtinMeshFootprint(ref kmdata.AssetRef) (w, h float64, ok bool) {
 	if ref.GUID != "" && ref.GUID != "0" {
 		return 0, 0, false
@@ -49,7 +50,7 @@ func (s *SceneInst) meshDrawable(bindingIdx int) (nodeIdx int, tint [4]float64, 
 	if !ok || b.Renderer != "MeshRenderer" || !b.Enabled || !s.actives[i] || !s.state[i].renderOn {
 		return 0, [4]float64{}, false
 	}
-	if _, _, ok := builtinMeshFootprint(b.Mesh); !ok {
+	if _, _, ok := builtinMeshFootprint(b.Mesh); !ok && s.meshGeometry(b) == nil {
 		return 0, [4]float64{}, false
 	}
 	tint = s.meshTint(i, b)
@@ -62,10 +63,27 @@ func (s *SceneInst) meshDrawable(bindingIdx int) (nodeIdx int, tint [4]float64, 
 func (s *SceneInst) drawMeshBinding(dst *ebiten.Image, bindingIdx, nodeIdx int, world, proj Aff) {
 	b := &s.as.Meshes.Bindings[bindingIdx]
 	w, h, ok := builtinMeshFootprint(b.Mesh)
-	if !ok {
+	if ok {
+		drawSolidQuad(dst, proj.Mul(world), w, h, s.meshTint(nodeIdx, b))
 		return
 	}
-	drawSolidQuad(dst, proj.Mul(world), w, h, s.meshTint(nodeIdx, b))
+	if g := s.meshGeometry(b); g != nil {
+		drawMeshGeometry(dst, proj.Mul(world), g, s.meshTint(nodeIdx, b))
+	}
+}
+
+func (s *SceneInst) meshGeometry(b *kmdata.MeshBinding) *kmdata.MeshGeometry {
+	if b.Mesh.GUID == "" || b.Mesh.GUID == "0" {
+		return nil
+	}
+	geoms := s.as.Meshes.Geometries[b.Mesh.GUID]
+	if len(geoms) == 1 {
+		return &geoms[0]
+	}
+	// New Unity fileID generation does not expose a stable name table in .meta.
+	// Until exact submesh matching is implemented, avoid guessing when an FBX
+	// contains several Geometry nodes.
+	return nil
 }
 
 func drawSolidQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64) {
@@ -90,6 +108,34 @@ func drawSolidQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64) {
 		}
 	}
 	dst.DrawTriangles(vs[:], []uint16{0, 1, 2, 0, 2, 3}, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func drawMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, tint [4]float64) {
+	if tint[3] <= 0 || len(g.Vertices) == 0 || len(g.Indices) < 3 || len(g.Vertices) > 65535 {
+		return
+	}
+	vs := make([]ebiten.Vertex, len(g.Vertices))
+	for i, p := range g.Vertices {
+		x, y := m.Apply(p[0], p[1])
+		vs[i] = ebiten.Vertex{
+			DstX:   float32(x),
+			DstY:   float32(y),
+			SrcX:   1,
+			SrcY:   1,
+			ColorR: float32(tint[0]),
+			ColorG: float32(tint[1]),
+			ColorB: float32(tint[2]),
+			ColorA: float32(tint[3]),
+		}
+	}
+	is := make([]uint16, 0, len(g.Indices))
+	for _, idx := range g.Indices {
+		if idx < 0 || idx >= len(vs) {
+			return
+		}
+		is = append(is, uint16(idx))
+	}
+	dst.DrawTriangles(vs, is, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
 }
 
 var meshWhite *ebiten.Image

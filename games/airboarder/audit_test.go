@@ -111,6 +111,16 @@ func TestAirboarderMeshRendererAssets(t *testing.T) {
 	if mat.Colors["_Color"] == ([4]float64{}) {
 		t.Fatalf("sky material color missing: %#v", mat.Colors)
 	}
+	geoms := meshes.Geometries[b.Mesh.GUID]
+	if len(geoms) != 1 {
+		t.Fatalf("sky geometries = %d, want 1", len(geoms))
+	}
+	if geoms[0].Name != "mesh_1_" || geoms[0].FBXID == 0 {
+		t.Fatalf("sky geometry identity = %#v", geoms[0])
+	}
+	if len(geoms[0].Vertices) != 32 || len(geoms[0].Indices) != 180 {
+		t.Fatalf("sky geometry sizes = %d vertices, %d indices; want 32/180", len(geoms[0].Vertices), len(geoms[0].Indices))
+	}
 }
 
 func TestAirboarderSynthesizesImportedModelAnimPaths(t *testing.T) {

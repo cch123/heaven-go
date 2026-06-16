@@ -24,6 +24,13 @@ func TestAuditGameChecksMeshBindings(t *testing.T) {
 			Enabled:   true,
 		}},
 		Materials: map[string]kmdata.Material{"mat-guid": {Name: "GridPlane", GUID: "mat-guid"}},
+		Geometries: map[string][]kmdata.MeshGeometry{
+			"mesh-guid": {{
+				Name:     "mesh",
+				Vertices: [][3]float64{{0, 0, 0}, {1, 0, 0}, {1, 1, 0}},
+				Indices:  []int{0, 1, 2},
+			}},
+		},
 	})
 	r := auditGame(dir, "meshGame")
 	if len(r.errs) != 0 {
@@ -31,6 +38,32 @@ func TestAuditGameChecksMeshBindings(t *testing.T) {
 	}
 	if r.meshBindings != 1 {
 		t.Fatalf("meshBindings = %d, want 1", r.meshBindings)
+	}
+}
+
+func TestAuditGameRejectsInvalidMeshGeometryIndex(t *testing.T) {
+	dir := t.TempDir()
+	writeAssetJSON(t, dir, "scene.json", kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "", Parent: -1}}})
+	writeAssetJSON(t, dir, "roles.json", kmdata.Roles{})
+	writeAssetJSON(t, dir, "anims.json", map[string]*kmdata.Anim{})
+	writeAssetJSON(t, dir, "meshes.json", kmdata.MeshData{
+		Geometries: map[string][]kmdata.MeshGeometry{
+			"mesh-guid": {{
+				Name:     "mesh",
+				Vertices: [][3]float64{{0, 0, 0}},
+				Indices:  []int{0, 1, 2},
+			}},
+		},
+	})
+	r := auditGame(dir, "meshGame")
+	found := false
+	for _, err := range r.errs {
+		if strings.Contains(err, "index 1 out of 1 vertices") {
+			found = true
+		}
+	}
+	if !found {
+		t.Fatalf("expected invalid mesh geometry index error, got %#v", r.errs)
 	}
 }
 

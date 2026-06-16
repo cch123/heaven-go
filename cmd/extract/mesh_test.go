@@ -1,6 +1,9 @@
 package main
 
 import (
+	"math"
+	"os"
+	"path/filepath"
 	"testing"
 
 	"hsdemo/kmdata"
@@ -85,6 +88,35 @@ func TestCollectMeshBindingsKeepsBuiltinMeshFileID(t *testing.T) {
 	}
 	if bindings[0].Mesh.FileID != 10209 || bindings[0].Mesh.GUID != "0" {
 		t.Fatalf("builtin mesh ref should preserve fileID and guid sentinel: %#v", bindings[0].Mesh)
+	}
+}
+
+func TestParseAirboarderSceneFBXGeometry(t *testing.T) {
+	path := filepath.Join(*hsRoot, "Assets", "Bundled", "Games", "Airboarder", "Models", "scene.fbx")
+	if _, err := os.Stat(path); err != nil {
+		t.Skipf("Heaven Studio source asset unavailable: %v", err)
+	}
+	geoms, err := parseFBXGeometries(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(geoms) != 1 {
+		t.Fatalf("geometries = %d, want 1", len(geoms))
+	}
+	g := geoms[0]
+	if g.Name != "mesh_1_" || g.FBXID == 0 {
+		t.Fatalf("geometry identity = %#v", g)
+	}
+	if len(g.Vertices) != 32 || len(g.Indices) != 180 {
+		t.Fatalf("geometry sizes = %d vertices, %d indices; want 32/180", len(g.Vertices), len(g.Indices))
+	}
+	minX, maxX := g.Vertices[0][0], g.Vertices[0][0]
+	for _, v := range g.Vertices {
+		minX = math.Min(minX, v[0])
+		maxX = math.Max(maxX, v[0])
+	}
+	if math.Abs(minX+181.85501098632812) > 0.001 || math.Abs(maxX-181.85501098632812) > 0.001 {
+		t.Fatalf("x bounds = %.6f..%.6f", minX, maxX)
 	}
 }
 

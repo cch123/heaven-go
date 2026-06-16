@@ -44,16 +44,51 @@ func exportMeshes(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int6
 	shaderAssets := scanAssetIndex(filepath.Join(*hsRoot, "Assets"), ".shader")
 	textureAssets := scanAssetIndex(gameRoot, ".png", ".psd", ".tga", ".jpg", ".jpeg")
 
+	bindings := collectMeshBindings(dt, paths, meshAssets, materialAssets)
 	data := kmdata.MeshData{
-		Bindings:  collectMeshBindings(dt, paths, meshAssets, materialAssets),
-		Materials: collectMeshMaterials(collectMaterialGUIDs(dt, paths), materialAssets, shaderAssets, textureAssets),
+		Bindings:   bindings,
+		Materials:  collectMeshMaterials(collectMaterialGUIDs(dt, paths), materialAssets, shaderAssets, textureAssets),
+		Geometries: collectMeshGeometries(collectMeshGUIDs(bindings), meshAssets),
 	}
 	if len(data.Bindings) == 0 && len(data.Materials) == 0 {
 		return
 	}
 	writeJSON("meshes.json", data)
-	fmt.Printf("meshes: %d bindings, %d materials\n", len(data.Bindings), len(data.Materials))
+	fmt.Printf("meshes: %d bindings, %d materials, %d geometry assets\n", len(data.Bindings), len(data.Materials), len(data.Geometries))
 	_ = idx // kept in signature symmetry with other scene exporters; mesh paths are resolved from paths.
+}
+
+func collectMeshGUIDs(bindings []kmdata.MeshBinding) map[string]bool {
+	out := map[string]bool{}
+	for _, b := range bindings {
+		if b.Mesh.GUID != "" && b.Mesh.GUID != "0" {
+			out[b.Mesh.GUID] = true
+		}
+	}
+	return out
+}
+
+func collectMeshGeometries(wanted map[string]bool, meshAssets assetIndex) map[string][]kmdata.MeshGeometry {
+	if len(wanted) == 0 {
+		return nil
+	}
+	out := map[string][]kmdata.MeshGeometry{}
+	for guid := range wanted {
+		ref, ok := meshAssets.refs[guid]
+		if !ok || ref.Path == "" || !strings.HasSuffix(strings.ToLower(ref.Path), ".fbx") {
+			continue
+		}
+		path := filepath.Join(*hsRoot, "Assets", filepath.FromSlash(ref.Path))
+		geoms, err := parseFBXGeometries(path)
+		if err != nil || len(geoms) == 0 {
+			continue
+		}
+		out[guid] = geoms
+	}
+	if len(out) == 0 {
+		return nil
+	}
+	return out
 }
 
 type rendererDoc struct {
