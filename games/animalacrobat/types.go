@@ -145,13 +145,17 @@ type acrobatParticle struct {
 	life        float64
 	x, y        float64
 	vx, vy      float64
+	ax, ay      float64
 	rot         float64
 	spin        float64
 	startSize   float64
+	startSizeY  float64
 	sizeProfile particleSizeProfile
 	alpha       particleAlphaProfile
 	tint        [4]float64
 	order       int
+	base        kart.Aff
+	local       bool
 }
 
 type trailEmitter struct {
@@ -168,6 +172,7 @@ const (
 	sizeProfileSweat
 	sizeProfileTrail
 	sizeProfileTrailSmall
+	sizeProfileConfetti
 )
 
 type particleAlphaProfile int
@@ -178,6 +183,7 @@ const (
 	alphaProfileRing
 	alphaProfileSweat
 	alphaProfileTrail
+	alphaProfileConfetti
 )
 
 type Module struct {
@@ -227,6 +233,7 @@ type Module struct {
 	trail        trailEmitter
 	muteRelease  bool
 	drumrollStop func()
+	confettiSeq  int
 }
 
 func New() engine.Module {

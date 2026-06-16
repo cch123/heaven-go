@@ -159,6 +159,71 @@ func TestAnimalAcrobatActionParticleSystems(t *testing.T) {
 	}
 }
 
+func TestAnimalAcrobatConfettiParticleSystem(t *testing.T) {
+	as := loadAnimalAssets(t)
+	for _, path := range confettiStreamPaths {
+		if _, ok := as.NodeIndex(path); !ok {
+			t.Fatalf("missing PartyPoppers stream node %s", path)
+		}
+	}
+	anim := as.Anims["Animations/PopIntro"]
+	if anim == nil {
+		t.Fatal("missing PopIntro animation")
+	}
+	if math.Abs(anim.Duration-acrobatConfettiPopIntroSec) > 1e-8 {
+		t.Fatalf("PopIntro duration = %.8f, want %.8f", anim.Duration, acrobatConfettiPopIntroSec)
+	}
+
+	registerConfettiSprite(as)
+	sp, ok := as.Sheet.Sprites[acrobatConfettiSprite]
+	if !ok {
+		t.Fatal("confetti runtime sprite was not registered")
+	}
+	if sp.PPU != 1 || math.Abs(sp.PivotY-acrobatConfettiMeshPivotY) > 1e-12 {
+		t.Fatalf("confetti sprite metadata = %#v", sp)
+	}
+
+	base := kart.Translate(2, 3)
+	m := &Module{}
+	m.spawnConfettiBurst(24, 10, base, 0x1234)
+	if len(m.particles) != acrobatConfettiBurstCount {
+		t.Fatalf("confetti particles = %d, want %d", len(m.particles), acrobatConfettiBurstCount)
+	}
+	wantX := acrobatConfettiMeshWidth * acrobatConfettiStartSizeX
+	wantY := acrobatConfettiMeshHeight * acrobatConfettiStartSizeY
+	for _, p := range m.particles {
+		if p.sprite != acrobatConfettiSprite || p.order != acrobatConfettiOrder {
+			t.Fatalf("unexpected confetti renderer data: %#v", p)
+		}
+		if !p.local || p.base != base {
+			t.Fatalf("confetti should be simulated in stream-local space: %#v", p)
+		}
+		if p.sizeProfile != sizeProfileConfetti || p.alpha != alphaProfileConfetti {
+			t.Fatalf("confetti profiles not attached: %#v", p)
+		}
+		if p.life < acrobatConfettiLifeMinSec/acrobatConfettiSimSpeed ||
+			p.life > acrobatConfettiLifeMaxSec/acrobatConfettiSimSpeed {
+			t.Fatalf("confetti life = %v outside prefab range", p.life)
+		}
+		if math.Abs(p.startSize-wantX) > 1e-12 || math.Abs(p.startSizeY-wantY) > 1e-12 {
+			t.Fatalf("confetti mesh size = %.12f %.12f, want %.12f %.12f", p.startSize, p.startSizeY, wantX, wantY)
+		}
+		if p.ay != acrobatConfettiGravity {
+			t.Fatalf("confetti gravity = %v, want %v", p.ay, acrobatConfettiGravity)
+		}
+	}
+
+	x0, y0 := confettiSizeFactors(0)
+	xMid, yMid := confettiSizeFactors(0.5)
+	xEnd, yEnd := confettiSizeFactors(1)
+	if x0 != 1 || y0 != 0 || xMid != 1 || yMid != 1 || xEnd != 0 || yEnd != 0 {
+		t.Fatalf("confetti size curve mismatch: start=(%v,%v) mid=(%v,%v) end=(%v,%v)", x0, y0, xMid, yMid, xEnd, yEnd)
+	}
+	if confettiAlpha(0.7) != 1 || confettiAlpha(1) != 0 {
+		t.Fatalf("confetti alpha curve mismatch")
+	}
+}
+
 func TestAnimalAcrobatTrailLifecycle(t *testing.T) {
 	m := &Module{}
 	m.startTrail(5, 1, 2)

@@ -207,8 +207,9 @@ func playerShadowScaleAt(j playerJump, beat, defaultX, defaultY, landingBeats fl
 }
 
 func (m *Module) emitSparkle(beat, x, y float64, col color.NRGBA) {
-	// Temporary ParticleSystem stand-in; README tracks this as a known
-	// simplification until the serialized emission curves are ported.
+	// Miss feedback uses the same radial flash shape as the original obstacle
+	// feedback; authored ParticleSystems such as PartyPoppers are ported in
+	// particles.go/confetti.go instead of flowing through this helper.
 	m.sparkles = append(m.sparkles, sparkle{beat: beat, x: x, y: y, col: col})
 }
 

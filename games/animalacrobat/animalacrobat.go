@@ -1,7 +1,6 @@
 package animalacrobat
 
 import (
-	"image/color"
 	"math"
 	"sort"
 
@@ -20,6 +19,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	if err := ctx.LoadAssets(m.ID()); err != nil {
 		return err
 	}
+	registerConfettiSprite(ctx.Assets)
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.player = ctx.Role("_playerMonkey")
 	m.spotlight = ctx.Role("_spotlightMain")
@@ -255,6 +255,7 @@ func (m *Module) OnSwitch(beat float64) {
 	m.sparkles = nil
 	m.trail = trailEmitter{}
 	m.muteRelease = false
+	m.confettiSeq = 0
 }
 
 func (m *Module) Whiff(beat float64) {
@@ -296,13 +297,20 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 }
 
 func (m *Module) popConfetti(beat float64) {
+	if m.monkeyMissed {
+		return
+	}
+	m.confettiSeq++
+	seq := m.confettiSeq
 	m.ctx.Scene.SetActive(m.partyPoppers, true)
 	m.ctx.Scene.PlayState("PartyPoppers/ConfettiL", "PopIntro", beat, m.ctx.SecPerBeat(beat))
 	m.ctx.Scene.PlayState("PartyPoppers/ConfettiR", "PopIntro", beat, m.ctx.SecPerBeat(beat))
-	delay := 0.23333333 / m.ctx.SecPerBeat(beat)
-	m.ctx.SoundAt(beat+delay, "cracker", 1)
-	popperOffBeat := beat + delay + 1.2
-	m.emitSparkle(beat+delay, -7.3, -2.9, color.NRGBA{255, 255, 255, 230})
-	m.emitSparkle(beat+delay, 7.3, -2.9, color.NRGBA{255, 255, 120, 230})
-	m.ctx.At(popperOffBeat, func() { m.ctx.Scene.SetActive(m.partyPoppers, false) })
+	emitBeat := beat + m.confettiPopDelayBeats(beat)
+	m.ctx.SoundAt(emitBeat, "cracker", 1)
+	m.ctx.At(emitBeat, func() {
+		if seq != m.confettiSeq {
+			return
+		}
+		m.spawnConfettiFromScene(emitBeat)
+	})
 }

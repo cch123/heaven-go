@@ -266,19 +266,22 @@ func (m *Module) queueParticles(t float64) {
 		u := clamp01(age / p.life)
 		size := p.startSize * particleSizeFactor(p.sizeProfile, u)
 		sx, sy := m.particleSpriteScale(p.sprite, size)
+		if p.sizeProfile == sizeProfileConfetti {
+			xf, yf := confettiSizeFactors(u)
+			sx, sy = p.startSize*xf, p.startSizeY*yf
+		}
 		if sx == 0 || sy == 0 {
 			continue
 		}
 		tint := p.tint
 		tint[3] *= particleAlpha(p.alpha, u)
-		x := p.x + p.vx*age
-		y := p.y + p.vy*age
-		m.ctx.Scene.Queue(kart.ExtraSprite{
-			Sprite: p.sprite,
-			World:  kart.TRS(x, y, p.rot+p.spin*age, sx, sy),
-			Order:  p.order,
-			Tint:   tint,
-		})
+		x := p.x + p.vx*age + 0.5*p.ax*age*age
+		y := p.y + p.vy*age + 0.5*p.ay*age*age
+		world := kart.TRS(x, y, p.rot+p.spin*age, sx, sy)
+		if p.local {
+			world = p.base.Mul(world)
+		}
+		m.ctx.Scene.Queue(kart.ExtraSprite{Sprite: p.sprite, World: world, Order: p.order, Tint: tint})
 	}
 	m.particles = alive
 }
@@ -330,6 +333,9 @@ func particleSizeFactor(profile particleSizeProfile, u float64) float64 {
 			{0.33333233, 0.36065638}, {0.4783008, 0.52614},
 			{0.6708979, 0.18353784}, {0.8666345, 0},
 		})
+	case sizeProfileConfetti:
+		x, _ := confettiSizeFactors(u)
+		return x
 	default:
 		return 1
 	}
@@ -349,6 +355,8 @@ func particleAlpha(profile particleAlphaProfile, u float64) float64 {
 			return u / (40309.0 / 65535.0)
 		}
 		return 1
+	case alphaProfileConfetti:
+		return confettiAlpha(u)
 	default:
 		return 1
 	}
