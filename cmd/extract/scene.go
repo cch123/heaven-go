@@ -1313,6 +1313,7 @@ func extractScene(game string) {
 	paths, nodeIdx := exportScene(spec, idx, tables)
 	exportRoles(spec, docs, idx, paths)
 	exportExtra(spec, docs, idx, paths, nodeIdx, tables)
+	exportMeshes(spec, docs, idx, paths)
 	exportAnimDir(spec, tables)
 	if spec.wantControllers {
 		exportControllers(spec, docs, idx, paths)

@@ -204,6 +204,54 @@ type TextNode struct {
 	VAlign int        `json:"vAlign"` // m_VerticalAlignment（TMP 枚举）
 }
 
+// AssetRef preserves Unity object references that cannot be resolved to a
+// SpriteRenderer slice. Mesh/material runtime support needs the original
+// guid+fileID pair because imported FBX files contain several sub-assets under
+// the same guid.
+type AssetRef struct {
+	FileID int64  `json:"fileID,omitempty"`
+	GUID   string `json:"guid,omitempty"`
+	Name   string `json:"name,omitempty"`
+	Path   string `json:"path,omitempty"`
+}
+
+// MeshBinding records a MeshFilter+MeshRenderer or SkinnedMeshRenderer present
+// in the prefab scene tree. It is the extraction-side contract needed before
+// the runtime can render official mesh-only games such as Airboarder and Built
+// to Scale from Unity-authored geometry instead of handwritten stand-ins.
+type MeshBinding struct {
+	Path      string     `json:"path"`
+	Renderer  string     `json:"renderer"` // MeshRenderer / SkinnedMeshRenderer
+	Mesh      AssetRef   `json:"mesh"`
+	Materials []AssetRef `json:"materials,omitempty"`
+	Enabled   bool       `json:"enabled"`
+	Layer     int        `json:"layer,omitempty"`
+	Order     int        `json:"order,omitempty"`
+}
+
+type TextureEnv struct {
+	Texture AssetRef   `json:"texture"`
+	Scale   [2]float64 `json:"scale,omitempty"`
+	Offset  [2]float64 `json:"offset,omitempty"`
+}
+
+// Material captures the shader, texture slots, numeric properties and color
+// properties from Unity .mat files referenced by MeshBinding entries.
+type Material struct {
+	Name     string                `json:"name"`
+	GUID     string                `json:"guid"`
+	Path     string                `json:"path,omitempty"`
+	Shader   AssetRef              `json:"shader,omitempty"`
+	Textures map[string]TextureEnv `json:"textures,omitempty"`
+	Floats   map[string]float64    `json:"floats,omitempty"`
+	Colors   map[string][4]float64 `json:"colors,omitempty"`
+}
+
+type MeshData struct {
+	Bindings  []MeshBinding       `json:"bindings,omitempty"`
+	Materials map[string]Material `json:"materials,omitempty"`
+}
+
 // XYCurve 是二维向量曲线（位置/缩放按分量存）。
 type XYCurve struct {
 	X []Key `json:"x,omitempty"`
