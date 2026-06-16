@@ -113,8 +113,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   `bg/Sunburst`、`bg/Rings` 动画 clip 播放；Snow/Fire/Rain weather
   ParticleSystem 已从 `karateman.prefab` 导出，并按 `SetParticleEffect` 的
   rateOverTime/instant/wind 语义驱动；成功命中分支的 `HitParticles[]` 已按
-  prefab 索引 root、HitPosition[1..5] 与 ItemCurves[6] 采样点参数级发射。
-  仍缺完整项：bomb/kick 在飞行超时与 NG 清理阶段的延迟爆点。
+  prefab 索引 root、HitPosition[1..5] 与 ItemCurves[6] 采样点参数级发射；
+  bomb/kick 在命中后、NG 与飞行超时清理阶段的延迟爆点也已按
+  `KarateManPot.Update` 分支补齐。
 - builtToScaleDS：`spawn blocks` 的生成、windup、判定、hit/NG/miss/Sink、
   Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
   提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载并

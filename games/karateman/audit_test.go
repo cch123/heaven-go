@@ -242,6 +242,60 @@ func TestKarateManHitParticleRootsExtracted(t *testing.T) {
 	}
 }
 
+func TestKarateManDelayedParticleSpecs(t *testing.T) {
+	for _, tc := range []struct {
+		name       string
+		pot        *pot
+		result     potResult
+		wantRoot   int
+		wantDelay  float64
+		wantCurve  int
+		wantFlight bool
+		wantSound  string
+		wantVol    float64
+		ok         bool
+	}{
+		{
+			name: "bomb hit break tail", pot: &pot{typ: hitBomb, kind: potKindNormal}, result: potHit,
+			wantRoot: karateHitParticleKick, wantDelay: 1, wantCurve: 1, wantSound: "bombBreak", wantVol: 0.25, ok: true,
+		},
+		{
+			name: "bomb ng curve6 explosion", pot: &pot{typ: hitBomb, kind: potKindNormal}, result: potNG,
+			wantRoot: karateHitParticleKick, wantDelay: 1, wantCurve: 6, ok: true,
+		},
+		{
+			name: "bomb through flight explosion", pot: &pot{typ: hitBomb, kind: potKindNormal}, result: potMiss,
+			wantRoot: karateHitParticleKick, wantDelay: 2, wantFlight: true, ok: true,
+		},
+		{
+			name: "kick bomb hit small break", pot: &pot{typ: hitBomb, kind: potKindKickPayload}, result: potHit,
+			wantRoot: karateHitParticleBombSmall, wantDelay: 3, wantCurve: 7, ok: true,
+		},
+		{
+			name: "kick bomb ng curve8 break", pot: &pot{typ: hitBomb, kind: potKindKickPayload}, result: potNG,
+			wantRoot: karateHitParticleKick, wantDelay: 1, wantCurve: 8, ok: true,
+		},
+		{
+			name: "kick bomb through curve6 break", pot: &pot{typ: hitBomb, kind: potKindKickPayload}, result: potMiss,
+			wantRoot: karateHitParticleKick, wantDelay: 1.5, wantCurve: 6, ok: true,
+		},
+		{name: "kick ball has no delayed bomb particle", pot: &pot{typ: hitBall, kind: potKindKickPayload}, result: potHit},
+	} {
+		got, ok := karateDelayedParticle(tc.pot, tc.result)
+		if ok != tc.ok {
+			t.Fatalf("%s ok = %v, want %v", tc.name, ok, tc.ok)
+		}
+		if !ok {
+			continue
+		}
+		if got.root != tc.wantRoot || got.curve != tc.wantCurve || got.flight != tc.wantFlight || got.sound != tc.wantSound {
+			t.Fatalf("%s spec = %#v", tc.name, got)
+		}
+		assertKarateManNear(t, got.delay, tc.wantDelay)
+		assertKarateManNear(t, got.volume, tc.wantVol)
+	}
+}
+
 func TestKarateManFaceClipsAreHeadScoped(t *testing.T) {
 	as := loadKarateManAssets(t)
 	for face := 0; face <= 8; face++ {

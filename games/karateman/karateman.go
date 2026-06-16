@@ -133,6 +133,16 @@ type hitMark struct {
 	color [4]float64
 }
 
+type delayedParticleSpec struct {
+	delay  float64
+	root   int
+	curve  int
+	u      float64
+	flight bool
+	sound  string
+	volume float64
+}
+
 type Module struct {
 	ctx      *engine.Ctx
 	joe      *kart.RigInst
@@ -576,6 +586,7 @@ func (m *Module) schedulePot(p *pot, throw string, playThrow bool, action int) {
 			m.noriThrough()
 		}
 	})
+	m.scheduleDelayedParticle(p, p.throwBeat, potMiss)
 }
 
 func (m *Module) scheduleComboVoice(beat float64, bpmPitch bool, forcePitch float64, _ bool) {
@@ -775,6 +786,7 @@ func (m *Module) hitPot(p *pot, state float64, j engine.Judgment) {
 		p.judgeT = m.ctx.Time()
 		m.playPotAction(p, beat, false)
 		m.ctx.PlayCommon("miss")
+		m.scheduleDelayedParticle(p, beat, potNG)
 		m.noriNG()
 		return
 	}
@@ -784,6 +796,7 @@ func (m *Module) hitPot(p *pot, state float64, j engine.Judgment) {
 	m.ctx.Sound(p.hitSound)
 	m.marks = append(m.marks, hitMark{beat: beat, x: m.ctx.Assets.Stage.HitPos[0], y: m.ctx.Assets.Stage.HitPos[1], color: m.starTint})
 	m.spawnHitParticles(p, beat)
+	m.scheduleDelayedParticle(p, beat, potHit)
 	m.seriousHit = beat
 	m.noriHit()
 	if p.kind == potKindKickBarrel {
@@ -1289,6 +1302,36 @@ func (m *Module) addHitParticle(rootIdx int, pos [2]float64, beat, rot float64, 
 	m.hitEffects = append(m.hitEffects, fx)
 }
 
+func (m *Module) scheduleDelayedParticle(p *pot, startBeat float64, result potResult) {
+	spec, ok := karateDelayedParticle(p, result)
+	if !ok {
+		return
+	}
+	eventBeat := startBeat + spec.delay
+	m.ctx.At(eventBeat, func() {
+		if p.result != result {
+			return
+		}
+		pos := m.delayedParticlePos(p, spec, eventBeat)
+		m.addHitParticle(spec.root, pos, eventBeat, 0, [4]float64{}, false)
+		if spec.sound != "" {
+			vol := spec.volume
+			if vol <= 0 {
+				vol = 1
+			}
+			m.ctx.SoundVol(spec.sound, vol)
+		}
+	})
+}
+
+func (m *Module) delayedParticlePos(p *pot, spec delayedParticleSpec, beat float64) [2]float64 {
+	if spec.flight {
+		x, y, _, _ := karatePotFlight(m.ctx.Assets.Stage, p.throwBeat, p.rot0, beat)
+		return [2]float64{x, y}
+	}
+	return m.stageCurvePoint(spec.curve, spec.u)
+}
+
 func karateParticleRoot(as *kart.Assets, name string) string {
 	suffix := "/" + name
 	for _, ps := range as.Particles.Systems {
@@ -1314,6 +1357,37 @@ func (m *Module) stageCurvePoint(idx int, u float64) [2]float64 {
 		return [2]float64{p[0], p[1]}
 	}
 	return m.stageHitPos(1)
+}
+
+func karateDelayedParticle(p *pot, result potResult) (delayedParticleSpec, bool) {
+	if p.typ != hitBomb {
+		return delayedParticleSpec{}, false
+	}
+	switch result {
+	case potHit:
+		if p.kind == potKindKickPayload {
+			// KickJustOrNg success switches KickBomb to ItemCurves[7] and lets it
+			// travel for three beats before spawning HitParticles[6].
+			return delayedParticleSpec{delay: 3, root: karateHitParticleBombSmall, curve: 7, u: 1}, true
+		}
+		// ItemHitEffect(Bomb) switches to ItemCurves[1]; Update later spawns
+		// HitParticles[7] and plays the low-volume bombBreak tail.
+		return delayedParticleSpec{delay: 1, root: karateHitParticleKick, curve: 1, u: 1, sound: "bombBreak", volume: 0.25}, true
+	case potNG:
+		if p.kind == potKindKickPayload {
+			// Bad kick uses ItemCurves[8] and explodes as soon as that one-beat
+			// curve reaches the end.
+			return delayedParticleSpec{delay: 1, root: karateHitParticleKick, curve: 8, u: 1}, true
+		}
+		return delayedParticleSpec{delay: 1, root: karateHitParticleKick, curve: 6, u: 1}, true
+	case potMiss:
+		if p.kind == potKindKickPayload {
+			return delayedParticleSpec{delay: 1.5, root: karateHitParticleKick, curve: 6, u: 1}, true
+		}
+		return delayedParticleSpec{delay: 2, root: karateHitParticleKick, flight: true}, true
+	default:
+		return delayedParticleSpec{}, false
+	}
 }
 
 func karatePotFlight(st kmdata.Stage, throwBeat, rot0, beat float64) (x, y, z, rot float64) {
