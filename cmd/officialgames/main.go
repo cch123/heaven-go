@@ -97,7 +97,7 @@ func scanLoaders(root string) (map[string]gameInfo, error) {
 }
 
 func scanGameActions(text string) []string {
-	start := strings.Index(text, "new List<GameAction>")
+	start := actionListStart(text)
 	if start < 0 {
 		return nil
 	}
@@ -122,6 +122,21 @@ func scanGameActions(text string) []string {
 		}
 	}
 	return actions
+}
+
+func actionListStart(text string) int {
+	if start := strings.Index(text, "new List<GameAction>"); start >= 0 {
+		return start
+	}
+	gameStart := strings.Index(text, "return new Minigame")
+	if gameStart < 0 {
+		return -1
+	}
+	reTypedList := regexp.MustCompile(`new\s*\(\s*\)\s*\{`)
+	if loc := reTypedList.FindStringIndex(text[gameStart:]); loc != nil {
+		return gameStart + loc[0]
+	}
+	return -1
 }
 
 func braceDelta(line string) int {

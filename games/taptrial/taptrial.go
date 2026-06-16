@@ -217,43 +217,12 @@ func (m *Module) OnEvent(e *riq.Entity) {
 	case "tapTrial/jump tap":
 		final := boolParam(e, "final")
 		alt := boolParam(e, "altfinalpose")
-		m.cue(b, b+2)
-		snd := "jumptap1"
-		if final {
-			snd = "jumptap2"
-		}
-		ctx.SoundAt(b, snd, 1)
-		m.tapMonkeySound(b + 1)
-		ctx.At(b, func() {
-			m.playerState = playerStateJumping
-			m.jumpBeat = b
-			pAnim, mAnim := "JumpTap", "JumpTap"
-			if final {
-				pAnim, mAnim = "FinalJump", "Jump"
-			}
-			m.playPlayer(pAnim, b)
-			m.playMonkeys(mAnim, b)
-		})
-		ctx.At(b+1, func() {
-			mAnim := "Jumpactualtap"
-			if final {
-				mAnim = "FinalJumpTap"
-				if alt {
-					mAnim = "FinalJumpTapAlt"
-				}
-			}
-			m.playMonkeys(mAnim, b+1)
-			m.monkeyStars()
-			m.monkeyStars()
-		})
-		if final {
-			m.restoreBopFinal(b + 1.5)
-		} else {
-			m.restoreBopNever(b + 1.5)
-		}
-		ctx.ScheduleInput(b+1,
-			func(st float64, _ engine.Judgment) { m.jumpHit(st, final, alt) },
-			func() { m.jumpMiss(final) })
+		m.scheduleJumpTap(b, final, alt)
+	case "tapTrial/final jump tap":
+		// Hidden legacy action in Heaven Studio. The loader delegates to
+		// JumpTap(beat, final: true, alt: false), so keep this routed through
+		// the same scheduling path as the modern jump tap event.
+		m.scheduleJumpTap(b, true, false)
 	case "tapTrial/scroll event":
 		on, fl := boolParam(e, "toggle"), boolParam(e, "flash")
 		mult := e.Float("m", 1)
@@ -289,6 +258,47 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			}
 		})
 	}
+}
+
+func (m *Module) scheduleJumpTap(b float64, final, alt bool) {
+	ctx := m.ctx
+	m.cue(b, b+2)
+	snd := "jumptap1"
+	if final {
+		snd = "jumptap2"
+	}
+	ctx.SoundAt(b, snd, 1)
+	m.tapMonkeySound(b + 1)
+	ctx.At(b, func() {
+		m.playerState = playerStateJumping
+		m.jumpBeat = b
+		pAnim, mAnim := "JumpTap", "JumpTap"
+		if final {
+			pAnim, mAnim = "FinalJump", "Jump"
+		}
+		m.playPlayer(pAnim, b)
+		m.playMonkeys(mAnim, b)
+	})
+	ctx.At(b+1, func() {
+		mAnim := "Jumpactualtap"
+		if final {
+			mAnim = "FinalJumpTap"
+			if alt {
+				mAnim = "FinalJumpTapAlt"
+			}
+		}
+		m.playMonkeys(mAnim, b+1)
+		m.monkeyStars()
+		m.monkeyStars()
+	})
+	if final {
+		m.restoreBopFinal(b + 1.5)
+	} else {
+		m.restoreBopNever(b + 1.5)
+	}
+	ctx.ScheduleInput(b+1,
+		func(st float64, _ engine.Judgment) { m.jumpHit(st, final, alt) },
+		func() { m.jumpMiss(final) })
 }
 
 func (m *Module) Ready() {}

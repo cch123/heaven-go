@@ -219,6 +219,9 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		m.scrolls = append(m.scrolls, scrollEvt{beat: e.Beat, x: e.Float("x", 0.1), y: e.Float("y", 0.3)})
 	case "spaceSoccer/stopBall":
 		m.stops = append(m.stops, stopEvt{beat: e.Beat, stop: boolParamDefault(e, "toggle", true)})
+	case "spaceSoccer/keep-up":
+		// Hidden backwards-compatibility action in Heaven Studio; the C# loader
+		// states it does absolutely nothing, so keep it explicit and inert.
 	case "spaceSoccer/npc kickers instant enter or exit":
 		choice := animEnter
 		if boolParam(e, "toggle") {

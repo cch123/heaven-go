@@ -270,6 +270,9 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			timeUpSound: boolDefault(e, "sound", true), consecutive: boolParam(e, "con"),
 			visualClock: boolDefault(e, "visual", true), audioClock: intParam(e, "audio", clockBoth),
 		})
+	case "quizShow/prepare":
+		b := e.Beat
+		m.ctx.At(b, func() { m.hostPrepareHands(b) })
 	case "quizShow/revealAnswer":
 		m.reveals = append(m.reveals, revealEvt{beat: e.Beat, length: durationDefault(e.Length, 4)})
 	case "quizShow/answerReaction":
@@ -651,6 +654,11 @@ func (m *Module) hostPressButton(beat float64, dpad bool) {
 	}
 	m.ctx.Sound("hostA")
 	m.playState(m.hostLeftArm, "HostLeftHit", beat)
+}
+
+func (m *Module) hostPrepareHands(beat float64) {
+	m.playState(m.hostLeftArm, "HostLeftPrepare", beat)
+	m.playState(m.hostRightArm, "HostPrepare", beat)
 }
 
 func (m *Module) contesteePressButton(dpad bool, beat float64) {

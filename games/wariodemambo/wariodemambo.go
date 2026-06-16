@@ -107,6 +107,9 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			red:  boolDefault(e, "red", true),
 			dim:  boolDefault(e, "dim", true),
 		})
+	case "defaultText":
+		// Hidden WIP action in Heaven Studio with no function delegate. Keep it
+		// explicitly inert so official action coverage catches future changes.
 	}
 }
 

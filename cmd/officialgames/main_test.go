@@ -37,6 +37,27 @@ new List<string>() { "ctr" });
 	}
 }
 
+func TestScanGameActionsHandlesTargetTypedActionList(t *testing.T) {
+	src := `
+return new Minigame("demo", "Demo", "fff", false, false, new()
+{
+    new GameAction("countIn/count-in", "Count-In"),
+    new("start", "Start")
+    {
+        parameters = new()
+        {
+            new("cue", true, "Cue")
+        }
+    },
+});
+`
+	got := scanGameActions(src)
+	want := []string{"countIn/count-in", "start"}
+	if !reflect.DeepEqual(got, want) {
+		t.Fatalf("actions = %v, want %v", got, want)
+	}
+}
+
 func TestScanRegisterCallsAcrossRootGoFiles(t *testing.T) {
 	dir := t.TempDir()
 	files := map[string]string{
@@ -89,6 +110,35 @@ var sceneSpecs = map[string]sceneSpec{
 }
 
 func TestMarchingOrdersOfficialActionsAreHandled(t *testing.T) {
+	assertOfficialActionsHandled(t, "marchingOrders", filepath.Join("..", "..", "games", "marchingorders"))
+}
+
+func TestQuizShowOfficialActionsAreHandled(t *testing.T) {
+	assertOfficialActionsHandled(t, "quizShow", filepath.Join("..", "..", "games", "quizshow"))
+}
+
+func TestWarioDeMamboOfficialActionsAreHandled(t *testing.T) {
+	assertOfficialActionsHandled(t, "warioDeMambo", filepath.Join("..", "..", "games", "wariodemambo"))
+}
+
+func TestSpaceSoccerOfficialActionsAreHandled(t *testing.T) {
+	assertOfficialActionsHandled(t, "spaceSoccer", filepath.Join("..", "..", "games", "spacesoccer"))
+}
+
+func TestTapTrialOfficialActionsAreHandled(t *testing.T) {
+	assertOfficialActionsHandled(t, "tapTrial", filepath.Join("..", "..", "games", "taptrial"))
+}
+
+func TestTapTroupeOfficialActionsAreHandled(t *testing.T) {
+	assertOfficialActionsHandled(t, "tapTroupe", filepath.Join("..", "..", "games", "taptroupe"))
+}
+
+func TestTotemClimbOfficialActionsAreHandled(t *testing.T) {
+	assertOfficialActionsHandled(t, "totemClimb", filepath.Join("..", "..", "games", "totemclimb"))
+}
+
+func assertOfficialActionsHandled(t *testing.T, id, dir string) {
+	t.Helper()
 	const hsRoot = "/Users/xargin/Downloads/HeavenStudio-master"
 	if _, err := os.Stat(hsRoot); err != nil {
 		t.Skipf("Heaven Studio source tree not present: %v", err)
@@ -97,19 +147,19 @@ func TestMarchingOrdersOfficialActionsAreHandled(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	marching, ok := games["marchingOrders"]
+	game, ok := games[id]
 	if !ok {
-		t.Fatal("marchingOrders loader not found")
+		t.Fatalf("%s loader not found", id)
 	}
-	cases := scanGoActionCases(t, filepath.Join("..", "..", "games", "marchingorders"))
+	cases := scanGoActionCases(t, dir)
 	var missing []string
-	for _, action := range marching.Actions {
-		if !cases[action] && !cases["marchingOrders/"+action] {
+	for _, action := range game.Actions {
+		if !cases[action] && !cases[id+"/"+action] && !engineHandlesOfficialAction(action) {
 			missing = append(missing, action)
 		}
 	}
 	if len(missing) != 0 {
-		t.Fatalf("missing Marching Orders actions: %v", missing)
+		t.Fatalf("missing %s actions: %v", id, missing)
 	}
 }
 
@@ -141,4 +191,8 @@ func scanGoActionCases(t *testing.T, dir string) map[string]bool {
 		t.Fatal(err)
 	}
 	return out
+}
+
+func engineHandlesOfficialAction(action string) bool {
+	return strings.HasPrefix(action, "countIn/")
 }
