@@ -4,6 +4,7 @@ package cheerreaders
 // animator 绑定路径、roles/refArrays、海报切片命名空间、书窗遮罩。
 
 import (
+	"math"
 	"testing"
 
 	"hsdemo/kart"
@@ -209,5 +210,68 @@ func TestVoiceSounds(t *testing.T) {
 		if _, ok := as.Sounds[k]; !ok {
 			t.Errorf("音效 %q 缺失", k)
 		}
+	}
+}
+
+// TestYayParticleSystems：Yay() 直接 Play 的 WhiteParticle/BlackParticle
+// 必须保留为可定位的原 prefab 粒子节点，并使用各自 UVModule 里的纸花切片。
+func TestYayParticleSystems(t *testing.T) {
+	as := loadAssets(t)
+	nodeSet := map[string]bool{}
+	for _, n := range as.Rig.Nodes {
+		nodeSet[n.Path] = true
+	}
+	for role, wantSprite := range map[string]string{
+		"whiteYayParticle": cheerConfettiWhiteSprite,
+		"blackYayParticle": cheerConfettiBlackSprite,
+	} {
+		if p := as.Roles[role]; p == "" || !nodeSet[p] {
+			t.Fatalf("role %s = %q 未解析到场景节点", role, p)
+		}
+		sp, ok := as.Sheet.Sprites[wantSprite]
+		if !ok {
+			t.Fatalf("%s sprite %q 缺失", role, wantSprite)
+		}
+		if sp.PPU != 100 || sp.PivotX != 0.5 || sp.PivotY != 0.5 {
+			t.Fatalf("%s sprite metadata = %#v, want ppu=100 pivot=(0.5,0.5)", wantSprite, sp)
+		}
+	}
+	if got, want := as.Sheet.Sprites[cheerConfettiWhiteSprite].W, 276; got != want {
+		t.Fatalf("%s width = %d, want %d", cheerConfettiWhiteSprite, got, want)
+	}
+	if got, want := as.Sheet.Sprites[cheerConfettiBlackSprite].W, 275; got != want {
+		t.Fatalf("%s width = %d, want %d", cheerConfettiBlackSprite, got, want)
+	}
+}
+
+func TestYayParticlePrefabConstants(t *testing.T) {
+	if cheerConfettiParticleCount != 25 {
+		t.Fatalf("particle count = %d, want 25 from rate 50 * length 0.5", cheerConfettiParticleCount)
+	}
+	checkNear(t, "lifetime", cheerConfettiLifetimeSec, 0.32)
+	checkNear(t, "shape width", cheerConfettiShapeWidth, 13)
+	checkNear(t, "shape height", cheerConfettiShapeHeight, 7)
+	checkNear(t, "start rotation", cheerConfettiStartRotMax, 0.87266463)
+	checkNear(t, "rotation over lifetime", cheerConfettiSpin, 13.08997)
+	if cheerConfettiOrder != 99 {
+		t.Fatalf("sorting order = %d, want 99", cheerConfettiOrder)
+	}
+}
+
+func TestYayParticleCurves(t *testing.T) {
+	checkNear(t, "alpha at birth", cheerConfettiAlpha(0), 0)
+	checkNear(t, "alpha peak", cheerConfettiAlpha(cheerConfettiAlphaPeak), 1)
+	checkNear(t, "alpha death", cheerConfettiAlpha(1), 0)
+	checkNear(t, "size key0", cheerConfettiSize(0), cheerConfettiSizeKey0V)
+	checkNear(t, "size key1", cheerConfettiSize(cheerConfettiSizeKey1T), cheerConfettiSizeKey1V)
+	if cheerConfettiSize(0.5) < 0.9 {
+		t.Fatalf("Hermite size curve midlife = %v, expected Unity tangent overshoot", cheerConfettiSize(0.5))
+	}
+}
+
+func checkNear(t *testing.T, name string, got, want float64) {
+	t.Helper()
+	if math.Abs(got-want) > 1e-6 {
+		t.Fatalf("%s = %v, want %v", name, got, want)
 	}
 }

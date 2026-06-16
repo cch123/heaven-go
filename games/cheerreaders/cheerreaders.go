@@ -110,8 +110,9 @@ type Module struct {
 }
 
 type confetti struct {
-	x, y, vx, vy, born float64
-	black              bool
+	x, y, born, delay float64
+	rot, spin         float64
+	sprite            string
 }
 
 func New() engine.Module { return &Module{canBop: true} }
@@ -1005,15 +1006,7 @@ func (m *Module) doYay(solo int) {
 }
 
 func (m *Module) spawnConfetti(black bool) {
-	t := m.lastT
-	for i := 0; i < 30; i++ {
-		ang := rand.Float64() * 2 * math.Pi
-		sp := 4 + rand.Float64()*5
-		m.particles = append(m.particles, confetti{
-			x: 0, y: 0, vx: math.Cos(ang) * sp, vy: math.Sin(ang)*sp + 3,
-			born: t, black: black,
-		})
-	}
+	m.particles = append(m.particles, newCheerConfetti(m, black)...)
 }
 
 func (m *Module) resetPose() {
@@ -1168,52 +1161,15 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	// GameCamera.AdditionalPosition.z（冲击变焦）
 	m.updateCaptionSticky(beat)
 	m.ctx.SampleSceneZ(beat, m.zoomAdd)
+	m.queueConfetti(t)
 	sc.Draw(screen, m.proj)
-	m.drawConfetti(screen, t)
 }
 
 // 主题色 "ffffde"
 var bgColor = colorRGBA{255, 255, 222, 255}
 
-func (m *Module) drawConfetti(screen *ebiten.Image, t float64) {
-	alive := m.particles[:0]
-	for _, p := range m.particles {
-		age := t - p.born
-		if age > 1.2 {
-			continue
-		}
-		alive = append(alive, p)
-		x := p.x + p.vx*age
-		y := p.y + p.vy*age - 4*age*age
-		px := float64(engine.ScreenW)/2 + x*54
-		py := float64(engine.ScreenH)/2 - y*54
-		c := colorRGBA{250, 250, 250, 255}
-		if p.black {
-			c = colorRGBA{40, 40, 40, 255}
-		}
-		// 简易方片粒子（whiteYayParticle/blackYayParticle 等价）
-		half := 4.0
-		ebitenFillRect(screen, px-half, py-half, half*2, half*2, c)
-	}
-	m.particles = alive
-}
-
 type colorRGBA struct{ R, G, B, A uint8 }
 
 func (c colorRGBA) RGBA() (r, g, b, a uint32) {
 	return uint32(c.R) * 0x101, uint32(c.G) * 0x101, uint32(c.B) * 0x101, uint32(c.A) * 0x101
-}
-
-var whitePix *ebiten.Image
-
-func ebitenFillRect(dst *ebiten.Image, x, y, w, h float64, c colorRGBA) {
-	if whitePix == nil {
-		whitePix = ebiten.NewImage(1, 1)
-		whitePix.Fill(colorRGBA{255, 255, 255, 255})
-	}
-	op := &ebiten.DrawImageOptions{}
-	op.GeoM.Scale(w, h)
-	op.GeoM.Translate(x, y)
-	op.ColorScale.Scale(float32(c.R)/255, float32(c.G)/255, float32(c.B)/255, float32(c.A)/255)
-	dst.DrawImage(whitePix, op)
 }

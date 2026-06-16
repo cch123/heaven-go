@@ -193,8 +193,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   recordSwipe/voice/cheer/boo 与动画状态已按 C# 时序接入，后续需补 live music
   filter 才能清掉此项。
 - cheerReaders：toggleCaption 已接原 TMP caption/underlay 节点、StickyCanvas
-  跟随相机语义和旧谱面 CheckCaptions 自动禁用路径；yay 纸花粒子仍为等价手写
-  实现（白/黑方片爆散），未逐参数复刻 ParticleSystem。
+  跟随相机语义和旧谱面 CheckCaptions 自动禁用路径；yay 纸花已按
+  WhiteParticle/BlackParticle 的 sprite、emission、shape、lifetime、size/
+  rotation/color over lifetime 与 sortingOrder 参数接入运行时。
 - ninjaBodyguard：HitParticle 已按 prefab 中 ArrowSliceA/B 两个 ParticleSystem
   的 lifetime、simulationSpeed、startSpeed、shape arc/radius/rotation、burst、
   ForceModule 与 ParticleSystemRenderer sortingOrder/lengthScale 做运行时发射。
