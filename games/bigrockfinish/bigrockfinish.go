@@ -16,8 +16,10 @@ import (
 )
 
 const (
-	animScale   = 0.5
-	actionFlick = 1
+	animScale       = 0.5
+	guitarFadeSec   = 0.1
+	guitarWhiffFade = 0.25
+	actionFlick     = 1
 )
 
 const (
@@ -213,8 +215,7 @@ func (m *Module) WhiffAction(beat float64, action int) {
 	m.playerPrepare = false
 	m.playerStrum = true
 	m.ctx.Scene.PlayState(m.player, "Strum", beat, animScale)
-	stop := m.ctx.SoundLoopPitchVol("guitar", semitonePitch(m.whiffPitch), 1)
-	m.ctx.At(beat+0.25, stop)
+	m.ctx.SoundLoopPitchVolUntil("guitar", semitonePitch(m.whiffPitch), 1, beat, guitarWhiffFade)
 	m.ctx.At(beat+1, func() { m.playerStrum = false })
 }
 
@@ -419,11 +420,8 @@ func (m *Module) strumSuccess(idx int, state float64) {
 	if ng {
 		pitch += 0.01
 	}
-	stopBeat := beat + m.timeScale*0.5
-	if idx == 3 {
-		stopBeat = beat + m.timeScale*4
-	}
-	m.playGuitarUntil(beat, pitch, stopBeat)
+	stopBeat := guitarStopBeat(beat, m.timeScale, idx)
+	m.playGuitarUntil(pitch, stopBeat)
 	if !ng {
 		if idx == 3 {
 			m.ctx.Sound("yeahB")
@@ -447,9 +445,15 @@ func strumState(idx int) string {
 	return "Strum"
 }
 
-func (m *Module) playGuitarUntil(startBeat, pitch, stopBeat float64) {
-	stop := m.ctx.SoundLoopPitchVol("guitar", pitch, 1)
-	m.ctx.At(stopBeat, stop)
+func (m *Module) playGuitarUntil(pitch, stopBeat float64) {
+	m.ctx.SoundLoopPitchVolUntil("guitar", pitch, 1, stopBeat, guitarFadeSec)
+}
+
+func guitarStopBeat(hitBeat, timeScale float64, idx int) float64 {
+	if idx == 3 {
+		return hitBeat + timeScale*4
+	}
+	return hitBeat + timeScale*0.5
 }
 
 func (m *Module) finishCrowdReaction(hitBeat float64) {
