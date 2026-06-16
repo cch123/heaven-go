@@ -398,9 +398,11 @@ func exportRigAndStage(tables map[string]*spriteTable) *kmdata.Rig {
 	var rootGO int64
 	goTF := map[int64]int64{}       // GameObject fileID → Transform fileID
 	var potBehaviour map[string]any // KarateManPot 序列化字段（含轨迹参数）
+	dt := &docTable{byID: map[int64]*docRef{}}
 	for i := range docs {
 		d := &docs[i]
 		c := d.Content()
+		dt.byID[d.FileID] = &docRef{classID: d.ClassID, content: c}
 		switch d.ClassID {
 		case 1: // GameObject
 			idx.goName[d.FileID] = uy.S(c["m_Name"])
@@ -477,12 +479,12 @@ func exportRigAndStage(tables map[string]*spriteTable) *kmdata.Rig {
 	writeJSON("rig.json", rig)
 	fmt.Printf("rig: %d nodes\n", len(rig.Nodes))
 
-	exportStage(idx, potBehaviour, goTF[rootGO])
+	exportStage(dt, idx, potBehaviour, goTF[rootGO])
 	return rig
 }
 
 // exportStage 提取普通罐子（path=1）的轨迹参数，坐标换算为相对 Joe 根的单位空间。
-func exportStage(idx *prefabIndex, pot map[string]any, joeTF int64) {
+func exportStage(dt *docTable, idx *prefabIndex, pot map[string]any, joeTF int64) {
 	if pot == nil {
 		log.Fatal("KarateManPot behaviour not found in prefab (no doc with HitPositionOffset+ItemSlipRt)")
 	}
@@ -493,18 +495,47 @@ func exportStage(idx *prefabIndex, pot map[string]any, joeTF int64) {
 		log.Fatalf("HitPosition has %d entries, need > %d", len(hitRefs), path)
 	}
 	joeX, joeY := idx.worldPos(joeTF)
+	joeZ := idx.worldZ(joeTF)
 	hitTFID := uy.I(uy.Get(uy.M(hitRefs[path]), "fileID"))
 	floorTFID := uy.I(uy.Get(uy.M(hitRefs[0]), "fileID"))
 	hitX, hitY := idx.worldPos(hitTFID)
 	_, floorY := idx.worldPos(floorTFID)
+	hitPositions := make([][2]float64, 0, len(hitRefs))
+	for _, hv := range hitRefs {
+		tfID := uy.I(uy.Get(uy.M(hv), "fileID"))
+		x, y := idx.worldPos(tfID)
+		hitPositions = append(hitPositions, [2]float64{x - joeX, y - joeY})
+	}
 
 	offs := uy.L(pot["HitPositionOffset"])
 	starts := uy.L(pot["StartPositionOffset"])
 	slips := uy.L(pot["ItemSlipRt"])
+	curves := make([]kmdata.Curve, 0, len(uy.L(pot["ItemCurves"])))
+	for i, cv := range uy.L(pot["ItemCurves"]) {
+		curve, ok := extractCurveRef(dt, idx, fmt.Sprintf("ItemCurves[%d]", i), cv)
+		if !ok {
+			curves = append(curves, kmdata.Curve{})
+			continue
+		}
+		for j := range curve.Points {
+			curve.Points[j].P[0] -= joeX
+			curve.Points[j].P[1] -= joeY
+			curve.Points[j].P[2] -= joeZ
+			curve.Points[j].LH[0] -= joeX
+			curve.Points[j].LH[1] -= joeY
+			curve.Points[j].LH[2] -= joeZ
+			curve.Points[j].RH[0] -= joeX
+			curve.Points[j].RH[1] -= joeY
+			curve.Points[j].RH[2] -= joeZ
+		}
+		curves = append(curves, curve)
+	}
 
 	stage := &kmdata.Stage{
-		HitPos: [2]float64{hitX - joeX, hitY - joeY},
-		FloorY: floorY - joeY,
+		HitPos:       [2]float64{hitX - joeX, hitY - joeY},
+		HitPositions: hitPositions,
+		ItemCurves:   curves,
+		FloorY:       floorY - joeY,
 		StartOffset: [2]float64{
 			uy.F(uy.Get(uy.M(starts[path]), "x")),
 			uy.F(uy.Get(uy.M(starts[path]), "y")),

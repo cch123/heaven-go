@@ -70,6 +70,17 @@ const (
 	comboModeJump
 )
 
+const (
+	karateHitParticleBarrel = iota
+	karateHitParticleOther
+	karateHitParticleBomb
+	karateHitParticlePot
+	karateHitParticleRock
+	karateHitParticleLight
+	karateHitParticleBombSmall
+	karateHitParticleKick
+)
+
 type potResult int
 
 const (
@@ -132,10 +143,12 @@ type Module struct {
 
 	pots []*pot
 
-	bops          []bopMarker
-	bgs           []bgEvt
-	particles     *particlefx.Runtime
-	particleRoots map[int]string
+	bops             []bopMarker
+	bgs              []bgEvt
+	particles        *particlefx.Runtime
+	particleRoots    map[int]string
+	hitParticleRoots map[int]string
+	hitEffects       []particlefx.Effect
 
 	particleType      int
 	particleWind      float64
@@ -211,6 +224,16 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 		1: karateParticleRoot(ctx.Assets, "Snow"),
 		2: karateParticleRoot(ctx.Assets, "Fire"),
 		3: karateParticleRoot(ctx.Assets, "Rain"),
+	}
+	m.hitParticleRoots = map[int]string{
+		karateHitParticleBarrel:    karateParticleRoot(ctx.Assets, "krt_barrel00"),
+		karateHitParticleOther:     karateParticleRoot(ctx.Assets, "krt_other00"),
+		karateHitParticleBomb:      karateParticleRoot(ctx.Assets, "krt_bomb00"),
+		karateHitParticlePot:       karateParticleRoot(ctx.Assets, "krt_pot00"),
+		karateHitParticleRock:      karateParticleRoot(ctx.Assets, "krt_rock00"),
+		karateHitParticleLight:     karateParticleRoot(ctx.Assets, "krt_light00"),
+		karateHitParticleBombSmall: karateParticleRoot(ctx.Assets, "krt_bomb01"),
+		karateHitParticleKick:      karateParticleRoot(ctx.Assets, "krt_kick00"),
 	}
 	return nil
 }
@@ -393,6 +416,15 @@ func (m *Module) Update(t, beat float64) {
 		}
 		m.marks = alive
 	}
+	if len(m.hitEffects) > 0 {
+		alive := m.hitEffects[:0]
+		for _, fx := range m.hitEffects {
+			if t-fx.StartT < fx.Life {
+				alive = append(alive, fx)
+			}
+		}
+		m.hitEffects = alive
+	}
 }
 
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
@@ -411,6 +443,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	m.joe.Sample(t)
 	m.joe.Draw(screen, proj)
 	m.drawPots(screen, t, beat, shadow, proj)
+	m.drawHitParticles(screen, t, proj)
 	m.drawHitMarks(screen, beat)
 	m.drawWords(screen, t, beat)
 	m.drawNori(screen)
@@ -750,6 +783,7 @@ func (m *Module) hitPot(p *pot, state float64, j engine.Judgment) {
 	m.playPotAction(p, beat, true)
 	m.ctx.Sound(p.hitSound)
 	m.marks = append(m.marks, hitMark{beat: beat, x: m.ctx.Assets.Stage.HitPos[0], y: m.ctx.Assets.Stage.HitPos[1], color: m.starTint})
+	m.spawnHitParticles(p, beat)
 	m.seriousHit = beat
 	m.noriHit()
 	if p.kind == potKindKickBarrel {
@@ -821,8 +855,10 @@ func (m *Module) playPotAction(p *pot, beat float64, hit bool) {
 func (m *Module) spawnKickPayload(src *pot) {
 	sprite := "karateman_bomb"
 	sound := "bombKick"
+	typ := hitBomb
 	if src.kickBall {
 		sprite = "karateman_ball"
+		typ = hitBall
 	}
 	throwBeat := src.throwBeat + 1
 	if src.kickBeat > throwBeat {
@@ -832,7 +868,7 @@ func (m *Module) spawnKickPayload(src *pot) {
 		throwBeat: throwBeat,
 		hitBeat:   src.kickBeat,
 		rot0:      deterministicRot(src.kickBeat, len(m.pots)),
-		typ:       hitBomb,
+		typ:       typ,
 		sprite:    sprite,
 		hitSound:  sound,
 		heavy:     true,
@@ -1044,6 +1080,16 @@ func (m *Module) drawHitMarks(screen *ebiten.Image, beat float64) {
 	}
 }
 
+func (m *Module) drawHitParticles(screen *ebiten.Image, t float64, proj kart.Aff) {
+	if m.particles == nil {
+		return
+	}
+	m.particles.Proj = proj
+	for _, fx := range m.hitEffects {
+		m.particles.Draw(screen, fx, t)
+	}
+}
+
 func (m *Module) drawWords(screen *ebiten.Image, t, beat float64) {
 	if m.word == nil {
 		return
@@ -1157,6 +1203,7 @@ func (m *Module) drawParticles(screen *ebiten.Image, t float64) {
 	if m.particleType == 0 || m.particleIntensity <= 0 || m.particles == nil {
 		return
 	}
+	m.particles.Proj = m.proj
 	root := m.particleRoots[m.particleType]
 	rate := m.particleIntensity * 6
 	if m.particleType == 3 {
@@ -1171,6 +1218,77 @@ func (m *Module) drawParticles(screen *ebiten.Image, t float64) {
 	m.particles.DrawStream(screen, stream, t)
 }
 
+func (m *Module) spawnHitParticles(p *pot, beat float64) {
+	switch p.kind {
+	case potKindComboEnd:
+		pos := m.stageHitPos(5)
+		m.addHitParticle(karateHitParticleBarrel, pos, beat, 0, [4]float64{}, false)
+		m.addHitParticle(karateHitParticleOther, pos, beat, deterministicRot(beat, len(m.hitEffects)+1), [4]float64{}, false)
+	case potKindKickBarrel:
+		pos := m.stageHitPos(1)
+		m.addHitParticle(karateHitParticleBarrel, pos, beat, -5*math.Pi/180, [4]float64{}, false)
+		m.addHitParticle(karateHitParticleOther, pos, beat, deterministicRot(beat, len(m.hitEffects)+1), [4]float64{}, false)
+	case potKindKickPayload:
+		pos := m.stageCurvePoint(6, 0.5)
+		root := karateHitParticleBomb
+		if p.typ == hitBall {
+			root = karateHitParticleOther
+		}
+		m.addHitParticle(root, pos, beat, 0, [4]float64{}, false)
+	default:
+		root, pos, rot, tint, hasTint := m.hitParticleForPot(p, beat)
+		m.addHitParticle(root, pos, beat, rot, tint, hasTint)
+	}
+}
+
+func (m *Module) hitParticleForPot(p *pot, beat float64) (root int, pos [2]float64, rot float64, tint [4]float64, hasTint bool) {
+	pos = m.stageHitPos(1)
+	switch p.kind {
+	case potKindCombo3:
+		pos = m.stageHitPos(2)
+	case potKindCombo4:
+		pos = m.stageHitPos(3)
+	case potKindCombo5:
+		pos = m.stageHitPos(4)
+	}
+	switch p.typ {
+	case hitLightbulb:
+		return karateHitParticleLight, pos, deterministicRot(beat, len(m.hitEffects)), p.tint, p.tint[3] > 0
+	case hitRock:
+		return karateHitParticleRock, pos, 0, [4]float64{}, false
+	case hitBomb:
+		return karateHitParticleBomb, pos, deterministicRot(beat, len(m.hitEffects)), [4]float64{}, false
+	case hitBall, hitCooking, hitAlien, hitTaco:
+		return karateHitParticleOther, pos, deterministicRot(beat, len(m.hitEffects)), [4]float64{}, false
+	default:
+		switch p.kind {
+		case potKindCombo1, potKindCombo2, potKindCombo3, potKindCombo4, potKindCombo5:
+			return karateHitParticleOther, pos, deterministicRot(beat, len(m.hitEffects)), [4]float64{}, false
+		default:
+			return karateHitParticlePot, pos, 0, m.starTint, true
+		}
+	}
+}
+
+func (m *Module) addHitParticle(rootIdx int, pos [2]float64, beat, rot float64, tint [4]float64, hasTint bool) {
+	if m.particles == nil {
+		return
+	}
+	root := m.hitParticleRoots[rootIdx]
+	if root == "" {
+		return
+	}
+	startT := m.ctx.Time()
+	fx, ok := m.particles.NewEffect(root, root, pos, beat, startT)
+	if !ok {
+		return
+	}
+	fx.Rot = rot
+	fx.Tint = tint
+	fx.HasTint = hasTint
+	m.hitEffects = append(m.hitEffects, fx)
+}
+
 func karateParticleRoot(as *kart.Assets, name string) string {
 	suffix := "/" + name
 	for _, ps := range as.Particles.Systems {
@@ -1179,6 +1297,23 @@ func karateParticleRoot(as *kart.Assets, name string) string {
 		}
 	}
 	return ""
+}
+
+func (m *Module) stageHitPos(idx int) [2]float64 {
+	st := &m.ctx.Assets.Stage
+	if idx >= 0 && idx < len(st.HitPositions) {
+		return st.HitPositions[idx]
+	}
+	return st.HitPos
+}
+
+func (m *Module) stageCurvePoint(idx int, u float64) [2]float64 {
+	st := &m.ctx.Assets.Stage
+	if idx >= 0 && idx < len(st.ItemCurves) && len(st.ItemCurves[idx].Points) > 0 {
+		p := kart.EvalBezier(st.ItemCurves[idx], clamp01(u))
+		return [2]float64{p[0], p[1]}
+	}
+	return m.stageHitPos(1)
 }
 
 func karatePotFlight(st kmdata.Stage, throwBeat, rot0, beat float64) (x, y, z, rot float64) {

@@ -102,6 +102,29 @@ func TestKarateManLegacyRigAndStage(t *testing.T) {
 	assertKarateManNear(t, as.Stage.FloorY, -2.1)
 	assertKarateManNear(t, as.Stage.HitOffset, 0.65)
 	assertKarateManNear(t, as.Stage.Slip, 0.13)
+	if len(as.Stage.HitPositions) != 6 {
+		t.Fatalf("hitPositions = %d, want 6", len(as.Stage.HitPositions))
+	}
+	for idx, want := range [][2]float64{
+		{3.82, -2.1},
+		{2.862, 1.07},
+		{3.669, -0.65},
+		{6.394, -2.339},
+		{4.7, -0.085},
+		{3.484, 3.012},
+	} {
+		assertKarateManNear(t, as.Stage.HitPositions[idx][0], want[0])
+		assertKarateManNear(t, as.Stage.HitPositions[idx][1], want[1])
+	}
+	if len(as.Stage.ItemCurves) != 10 {
+		t.Fatalf("itemCurves = %d, want 10", len(as.Stage.ItemCurves))
+	}
+	kickHit := kart.EvalBezier(as.Stage.ItemCurves[6], 0.5)
+	assertKarateManNear(t, kickHit[0], 3.856)
+	assertKarateManNear(t, kickHit[1], 1.0562)
+	kickBombEnd := kart.EvalBezier(as.Stage.ItemCurves[7], 1)
+	assertKarateManNear(t, kickBombEnd[0], 23.9)
+	assertKarateManNear(t, kickBombEnd[1], -2.1)
 }
 
 func TestKarateManAllAnimationGroupsExtracted(t *testing.T) {
@@ -189,6 +212,33 @@ func TestKarateManWeatherParticleRuntimeUsesInactiveRoots(t *testing.T) {
 	}
 	if got := karateParticleRoot(kartAssets, "Rain"); got != "karateman/Effect/Rain" {
 		t.Fatalf("karateParticleRoot(Rain) = %q, want karateman/Effect/Rain", got)
+	}
+}
+
+func TestKarateManHitParticleRootsExtracted(t *testing.T) {
+	as := loadKarateManAssets(t)
+	kartAssets := &kart.Assets{Particles: as.Parts}
+	roots := particlefx.RootsIncludingInactive(kartAssets)
+	for _, tc := range []struct {
+		name  string
+		count int
+	}{
+		{name: "krt_barrel00", count: 5},
+		{name: "krt_other00", count: 1},
+		{name: "krt_bomb00", count: 4},
+		{name: "krt_pot00", count: 1},
+		{name: "krt_rock00", count: 1},
+		{name: "krt_light00", count: 2},
+		{name: "krt_bomb01", count: 4},
+		{name: "krt_kick00", count: 2},
+	} {
+		root := karateParticleRoot(kartAssets, tc.name)
+		if root == "" {
+			t.Fatalf("missing hit particle root %s", tc.name)
+		}
+		if len(roots[root]) != tc.count {
+			t.Fatalf("%s root has %d systems, want %d", tc.name, len(roots[root]), tc.count)
+		}
 	}
 }
 

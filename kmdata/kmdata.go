@@ -429,12 +429,14 @@ type XYCurve struct {
 //	x         = lerp(HitPos.x+StartOffset.x, HitPos.x-StartOffset.x, progress)
 //	y         = FloorY + (HitPos.y-FloorY + StartOffset.y*(1-min(beat-throwBeat,1))) * flyHeight
 type Stage struct {
-	HitPos       [2]float64 `json:"hitPos"`       // 判定点（拳头）
-	FloorY       float64    `json:"floorY"`       // 地面 y
-	StartOffset  [2]float64 `json:"startOffset"`  // 起点相对判定点的偏移（x, y）
-	StartOffsetZ float64    `json:"startOffsetZ"` // 深度偏移：z 从 hit+z0 飞到 hit-z0（透视进场）
-	HitOffset    float64    `json:"hitOffset"`    // HitPositionOffset[path]
-	Slip         float64    `json:"slip"`         // ItemSlipRt[path]
+	HitPos       [2]float64   `json:"hitPos"` // 判定点（拳头）
+	HitPositions [][2]float64 `json:"hitPositions,omitempty"`
+	ItemCurves   []Curve      `json:"itemCurves,omitempty"`
+	FloorY       float64      `json:"floorY"`       // 地面 y
+	StartOffset  [2]float64   `json:"startOffset"`  // 起点相对判定点的偏移（x, y）
+	StartOffsetZ float64      `json:"startOffsetZ"` // 深度偏移：z 从 hit+z0 飞到 hit-z0（透视进场）
+	HitOffset    float64      `json:"hitOffset"`    // HitPositionOffset[path]
+	Slip         float64      `json:"slip"`         // ItemSlipRt[path]
 }
 
 // Anim 是一条动画剪辑，键为节点 path。

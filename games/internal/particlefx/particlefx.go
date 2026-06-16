@@ -15,7 +15,10 @@ type Effect struct {
 	Beat, StartT float64
 	Root, Anchor string
 	Pos          [2]float64
+	Rot          float64
 	Life         float64
+	Tint         [4]float64
+	HasTint      bool
 }
 
 type Stream struct {
@@ -85,7 +88,7 @@ func (r *Runtime) Draw(dst *ebiten.Image, fx Effect, now float64) {
 	if len(systems) == 0 {
 		return
 	}
-	base := kart.Translate(fx.Pos[0], fx.Pos[1])
+	base := kart.Translate(fx.Pos[0], fx.Pos[1]).Mul(kart.Rotate(fx.Rot))
 	anchorWorld, ok := r.Worlds[firstNonEmpty(fx.Anchor, fx.Root)]
 	if !ok {
 		anchorWorld = kart.Identity()
@@ -232,7 +235,7 @@ func (r *Runtime) drawSystem(dst *ebiten.Image, fx Effect, ps kmdata.ParticleSys
 				continue
 			}
 			u := clamp01(sysAge / life)
-			r.drawParticle(dst, ps, world, seed, u, sysAge, [2]float64{})
+			r.drawParticle(dst, ps, world, seed, u, sysAge, [2]float64{}, fx.Tint, fx.HasTint)
 		}
 	}
 }
@@ -278,7 +281,7 @@ func (r *Runtime) drawStreamSystem(dst *ebiten.Image, stream Stream, ps kmdata.P
 		if life <= 0 || particleAge < 0 || particleAge > life {
 			continue
 		}
-		r.drawParticle(dst, ps, world, seed, clamp01(particleAge/life), particleAge, stream.Wind)
+		r.drawParticle(dst, ps, world, seed, clamp01(particleAge/life), particleAge, stream.Wind, [4]float64{}, false)
 	}
 }
 
@@ -286,7 +289,7 @@ func (r *Runtime) systemDrawable(ps kmdata.ParticleSystem) bool {
 	return ps.Enabled && (r.IncludeOff || ps.Active) && ps.Emission.Enabled && ps.Renderer.Enabled
 }
 
-func (r *Runtime) drawParticle(dst *ebiten.Image, ps kmdata.ParticleSystem, world kart.Aff, seed uint64, u, age float64, wind [2]float64) {
+func (r *Runtime) drawParticle(dst *ebiten.Image, ps kmdata.ParticleSystem, world kart.Aff, seed uint64, u, age float64, wind [2]float64, tintOverride [4]float64, hasTintOverride bool) {
 	sprite := particleSprite(ps, seed)
 	x, y := startOffset(ps, particleRand(seed, 3), particleRand(seed, 4))
 	vx, vy := startVelocity(ps, particleRand(seed, 5))
@@ -332,6 +335,9 @@ func (r *Runtime) drawParticle(dst *ebiten.Image, ps kmdata.ParticleSystem, worl
 		rot += curveValue(ps.RotationOverLifetime.Z, u, particleRand(seed, 16)) * age
 	}
 	tint := startColor(ps.StartColor, particleRand(seed, 17))
+	if hasTintOverride {
+		tint = mulColor(tint, tintOverride)
+	}
 	if ps.ColorOverLifetime.Enabled {
 		tint = mulColor(tint, gradientColor(ps.ColorOverLifetime.Color, u, particleRand(seed, 18)))
 	}
