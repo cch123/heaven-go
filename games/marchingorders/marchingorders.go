@@ -130,6 +130,16 @@ func (m *Module) OnEvent(e *riq.Entity) {
 		right := int(e.Float("direction", 0)) == 0
 		point := boolParam(e, "point")
 		m.scheduleFaceTurn(b, right, fast, point)
+	case "marchingOrders/face turn":
+		// Hidden legacy action kept by Heaven Studio for old remixes. Unity's
+		// RiqBeatmap updater rewrites it to faceTurn/faceTurnFast before play;
+		// Go loads normalized RIQ directly, so do the same compatibility mapping.
+		fast := int(e.Float("type2", 0)) != 0
+		right := int(e.Float("type", 0)) == 0
+		m.scheduleFaceTurn(b, right, fast, false)
+	case "marchingOrders/marching":
+		// Legacy "Start Marching (old)" is invalidated by the Unity updater
+		// (beat = NaN). Leave it inert so old charts do not schedule stray steps.
 	case "marchingOrders/halt":
 		m.halts = append(m.halts, b)
 		mute := boolParam(e, "mute")
