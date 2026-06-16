@@ -11,6 +11,7 @@ import (
 
 	"hsdemo/engine"
 	"hsdemo/kart"
+	"hsdemo/kmdata"
 	"hsdemo/riq"
 )
 
@@ -28,9 +29,6 @@ const (
 	effectExplode1 = iota
 	effectExplode2
 	effectExplode3
-	effectLightning
-	effectWaterL
-	effectWaterR
 )
 
 type bopEvt struct {
@@ -53,8 +51,9 @@ type smallEvt struct {
 
 type effect struct {
 	beat, startT float64
-	typ          int
+	root, anchor string
 	pos          [2]float64
+	life         float64
 }
 
 type Module struct {
@@ -81,6 +80,14 @@ type Module struct {
 	skate         string
 	eagleRoot     string
 	eagle         string
+	smallRoot     string
+	mediumRoot    string
+	smallExplodes [3]string
+	mediumExplode string
+
+	particleRoots map[string][]kmdata.ParticleSystem
+	particleWorld map[string]kart.Aff
+	particleLife  map[string]float64
 
 	smallT  *kart.Template
 	mediumT *kart.Template
@@ -151,8 +158,21 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.skate = roleOr(as, "SkateboardAnim", "BackgroundHolder/Holder/Skateboard/Skateboard")
 	m.eagleRoot = roleOr(as, "Eagle1Anim", "PlatformHolder/Eagle")
 	m.eagle = roleOr(as, "EagleAnim", "PlatformHolder/Eagle/Eagle")
-	m.smallT = kart.NewTemplate(as, roleOr(as, "SmallDemon", "demon"))
-	m.mediumT = kart.NewTemplate(as, roleOr(as, "MediumDemon", "mediumDemon"))
+	m.smallRoot = roleOr(as, "SmallDemon", "demon")
+	m.mediumRoot = roleOr(as, "MediumDemon", "mediumDemon")
+	m.smallT = kart.NewTemplate(as, m.smallRoot)
+	m.mediumT = kart.NewTemplate(as, m.mediumRoot)
+	smallComp := as.Extra.Components["demon0"]
+	mediumComp := as.Extra.Components["demon1"]
+	m.smallExplodes = [3]string{
+		refOr(smallComp, "Explode1", "demon/Holder/blowup"),
+		refOr(smallComp, "Explode2", "demon/Holder/blowupAway"),
+		refOr(smallComp, "Explode3", "demon/Holder/blowupKick"),
+	}
+	m.mediumExplode = refOr(mediumComp, "Explode1", "mediumDemon/Holder/blowup")
+	m.particleWorld = superSliceParticleWorlds(as)
+	m.particleRoots = superSliceParticleRoots(as)
+	m.particleLife = superSliceParticleLifetimes(m.particleRoots)
 	m.paths = loadCurvePaths(as)
 	for _, p := range []string{m.bg, m.water, m.fg, m.fog, m.cloud} {
 		m.basePos[p] = nodePos(as, p)
@@ -484,7 +504,7 @@ func liveDemons(in []*activeDemon, beat float64) []*activeDemon {
 func liveEffects(in []effect, t float64) []effect {
 	out := in[:0]
 	for _, fx := range in {
-		if t-fx.startT < superSliceEffectMaxLife {
+		if t-fx.startT < fx.life {
 			out = append(out, fx)
 		}
 	}

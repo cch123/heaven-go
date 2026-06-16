@@ -77,11 +77,11 @@ func (m *Module) playSmallAppear(beat float64, count int) {
 		m.ctx.SoundAt(beat, "SE_IAI_NEW_ENEMY_SMALL", 1)
 		if m.waterActive && !m.eagleActive {
 			m.ctx.SoundAtPitchPan(beat+1, "SE_IAI_NEW_ENEMY_SMALL_WATER", 1, 1+m.rng.Float64()*0.2, 0)
-			typ, path := effectWaterR, m.waterR
+			path := m.waterR
 			if count == demonLeftDown {
-				typ, path = effectWaterL, m.waterL
+				path = m.waterL
 			}
-			m.ctx.At(beat+1, func() { m.addEffect(beat+1, typ, m.effectNodePos(path)) })
+			m.ctx.At(beat+1, func() { m.addParticleEffect(beat+1, path, path, m.effectNodePos(path)) })
 		}
 	default:
 		m.ctx.SoundAt(beat, "SE_IAI_NEW_ENEMY_SMALL", 1)
@@ -109,7 +109,8 @@ func (m *Module) hitSmall(d *activeDemon, p smallPlan, state float64) {
 	}
 	m.ctx.At(p.boomAt, func() {
 		d.inst.PlayState("", "disappear", p.boomAt, 0.5)
-		m.addEffect(p.boomAt, explodeType, d.position(p.boomAt))
+		root, anchor := m.smallExplosionParticleRoot(explodeType)
+		m.addParticleEffect(p.boomAt, root, anchor, d.position(p.boomAt))
 	})
 }
 
@@ -132,7 +133,7 @@ func (m *Module) playSmallBreak(d *activeDemon, idx int) {
 		m.ctx.SoundPitchPan("SE_IAI_NEW_KIAI_BARRIER_SHOCK", 1, 1, m.rng.Float64()*1.7)
 		d.inst.PlayState("", "Break_P", m.ctx.Beat(), 0.5)
 		beat := m.ctx.Beat()
-		m.addEffect(beat, effectLightning, d.position(beat))
+		m.addParticleEffect(beat, m.lightning, m.lightning, d.position(beat))
 	}
 }
 
@@ -229,7 +230,7 @@ func (m *Module) releaseBig(d *activeDemon, p bigPlan, beat float64) {
 		d.inst.PlayState("", "disappear", boom, 0.5)
 		d.state = demonDead
 		d.deathBeat = boom + 16
-		m.addEffect(boom, effectExplode1, d.position(boom))
+		m.addParticleEffect(boom, m.mediumExplode, m.mediumRoot, d.position(boom))
 	})
 }
 

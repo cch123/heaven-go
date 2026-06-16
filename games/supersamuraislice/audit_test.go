@@ -9,6 +9,7 @@ import (
 	"strings"
 	"testing"
 
+	"hsdemo/kart"
 	"hsdemo/kmdata"
 )
 
@@ -116,8 +117,10 @@ func TestSuperSamuraiSliceParticleSprites(t *testing.T) {
 			t.Fatalf("missing particle sprite %s", name)
 		}
 	}
-	if smallExplodeType(1) == effectLightning || smallExplodeType(2) == effectLightning || smallExplodeType(4) == effectLightning {
-		t.Fatalf("small demon explode type aliases lightning")
+	for idx, want := range map[int]int{0: effectExplode2, 1: effectExplode1, 2: effectExplode1, 3: effectExplode3, 4: effectExplode1} {
+		if got := smallExplodeType(idx); got != want {
+			t.Fatalf("smallExplodeType(%d) = %d, want %d", idx, got, want)
+		}
 	}
 }
 
@@ -160,6 +163,39 @@ func TestSuperSamuraiSliceParticleSystemsExtracted(t *testing.T) {
 			t.Fatalf("%s renderer changed: %#v", path, water.Renderer)
 		}
 	}
+}
+
+func TestSuperSamuraiSliceRuntimeParticleRoots(t *testing.T) {
+	raw := loadSuperSamuraiSliceAssets(t)
+	as := &kart.Assets{Rig: raw.Rig, Particles: raw.Particles}
+	roots := superSliceParticleRoots(as)
+	for root, want := range map[string]int{
+		"SamuraiHolder/GameObject/lightning/Main": 17,
+		"WaterParticle/WaterL":                    3,
+		"WaterParticle/WaterR":                    3,
+		"demon/Holder/blowup":                     6,
+		"demon/Holder/blowupAway":                 6,
+		"demon/Holder/blowupKick":                 6,
+		"mediumDemon/Holder/blowup":               7,
+	} {
+		if got := len(roots[root]); got != want {
+			t.Fatalf("runtime particle root %s systems = %d, want %d", root, got, want)
+		}
+	}
+
+	life := superSliceParticleLifetimes(roots)
+	if life["WaterParticle/WaterL"] < 2.14 || life["demon/Holder/blowup"] < 2.14 {
+		t.Fatalf("particle lifetimes should come from Unity startLifetime: %#v", life)
+	}
+
+	worlds := superSliceParticleWorlds(as)
+	invDemon, ok := invertAff(worlds["demon"])
+	if !ok {
+		t.Fatal("demon world matrix should be invertible")
+	}
+	rel := invDemon.Mul(worlds["demon/Holder/blowup"])
+	assertNear(t, rel.Tx, 0.652)
+	assertNear(t, rel.Ty, 0.237)
 }
 
 func TestSuperSamuraiSliceComponentsAndPaths(t *testing.T) {
