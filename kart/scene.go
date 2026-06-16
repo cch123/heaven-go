@@ -29,6 +29,7 @@ type sceneNodeState struct {
 	renderOn        bool // SpriteRenderer m_Enabled（仅本节点，不传播）
 	color           [4]float64
 	matColor        [4]float64
+	hasMatColor     bool
 	matAlpha        float64 // material._Alpha：材质级透明度，最终与 SpriteRenderer.color.a 相乘
 	matOpacity      float64 // material._Opacity：Airboarder 透明材质的独立淡入淡出因子
 	matProgress     float64 // material._Progress：ChargingChicken ChickenCar 充能渐变
@@ -695,6 +696,7 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, v := range s.matOver {
 		s.state[i].matColor = v.color
+		s.state[i].hasMatColor = true
 		s.state[i].matAdd = v.add
 	}
 	for i, v := range s.posOver {
@@ -902,6 +904,7 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 					s.state[i].matAdd[3] = v
 				}
 			case strings.HasPrefix(attr, "material._Color."):
+				s.state[i].hasMatColor = true
 				ch := strings.TrimPrefix(attr, "material._Color.")
 				switch ch {
 				case "r":
@@ -988,6 +991,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		gLayer, gOrder    int
 		gZ                float64
 		extra             int // ≥0：s.queued 下标（动态绘制项）
+		mesh              int // ≥0：as.Meshes.Bindings 下标（MeshRenderer）
 	}
 	type maskItem struct {
 		idx, extra int // extra >= 0 表示 s.queued，下标否则为 scene 节点
@@ -1011,7 +1015,25 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if s.as.Rig.Nodes[i].Mask {
 			continue
 		}
-		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.worldZ[i], extra: -1}
+		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.worldZ[i], extra: -1, mesh: -1}
+		if g := s.groupOf[i]; g >= 0 {
+			sg := s.as.Rig.Nodes[g].SortGroup
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.worldZ[g]
+		} else {
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = i, it.layer, it.order, it.z
+		}
+		items = append(items, it)
+	}
+	for mi, b := range s.as.Meshes.Bindings {
+		i, _, ok := s.meshDrawable(mi)
+		if !ok {
+			continue
+		}
+		order := b.Order
+		if s.state[i].order != s.as.Rig.Nodes[i].Order {
+			order = s.state[i].order
+		}
+		it := item{idx: i, layer: b.Layer, order: order, z: s.worldZ[i], extra: -1, mesh: mi}
 		if g := s.groupOf[i]; g >= 0 {
 			sg := s.as.Rig.Nodes[g].SortGroup
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.worldZ[g]
@@ -1034,9 +1056,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if q.Tint != [4]float64{} && q.Tint[3] <= 0 {
 			continue
 		}
-		it := item{
-			idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: qi,
-		}
+		it := item{idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: qi, mesh: -1}
 		it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, q.Z
 		items = append(items, it)
 	}
@@ -1138,6 +1158,15 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 				continue
 			}
 			drawQueued(dst, q, qo, view)
+			continue
+		}
+		if it.mesh >= 0 {
+			i := it.idx
+			view, ok := s.camView(s.worldZ[i])
+			if !ok {
+				continue
+			}
+			s.drawMeshBinding(dst, it.mesh, i, view.Mul(s.world[i]), proj)
 			continue
 		}
 		i := it.idx

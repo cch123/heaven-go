@@ -83,7 +83,7 @@ demo.riq (ZIP)                                                                  
 | `unityyaml` | Unity 多文档 YAML 解析（`!u!` 标记、stripped 文档、Infinity 斜率、UTF-8 BOM） | —（Unity 序列化层） |
 | `cmd/extract` | 资产导出管线，两种模式：单骨架（karateman）与整场景（`-game rhythmSomen`：全 prefab 树 + 多图集 + 全部剪辑 + 脚本字段→节点绑定 roles.json；MeshFilter/MeshRenderer/SkinnedMeshRenderer 与材质贴图属性导出到 meshes.json） | —（即移植方案中"必须先做的资产管线"） |
 | `kmdata` | 导出物的中间格式（JSON schema） | — |
-| `kart` | 运行时：图集子图、仿射骨架/场景合成、曲线采样（Hermite + 阶跃换帧 + FlipX + m_IsActive 层级传播 + m_Color + CellAnime `_Color/_AddColor`）；`SceneInst` 支持多 Animator 并行与同根多层剪辑，剪辑时间 = 拍数 × timeScale；AnimatorController 状态机（状态名→剪辑映射、退出转换 + bool 条件，meatGrinder 的 tackMeated 满脸肉循环）；DoNormalizedAnimation（按归一化时间采样）；TMP 世界文本（动态字体 glyph 表为空 → 用源 OTF 排版为动态切片，meatGrinder 的 GRINDER 铭牌与 changeText）；加载 `meshes.json` 的 MeshRenderer/材质绑定数据；模块注入的动态绘制项（模板实例/手写粒子）与场景节点统一 (layer, order, z) 排序 | Animator(Controller) / TextMeshPro / SpriteRenderer / MeshRenderer |
+| `kart` | 运行时：图集子图、仿射骨架/场景合成、曲线采样（Hermite + 阶跃换帧 + FlipX + m_IsActive 层级传播 + m_Color + CellAnime `_Color/_AddColor`）；`SceneInst` 支持多 Animator 并行与同根多层剪辑，剪辑时间 = 拍数 × timeScale；AnimatorController 状态机（状态名→剪辑映射、退出转换 + bool 条件，meatGrinder 的 tackMeated 满脸肉循环）；DoNormalizedAnimation（按归一化时间采样）；TMP 世界文本（动态字体 glyph 表为空 → 用源 OTF 排版为动态切片，meatGrinder 的 GRINDER 铭牌与 changeText）；加载 `meshes.json` 的 MeshRenderer/材质绑定数据并绘制 Unity 内置 Plane/Cube 类 mesh footprint；模块注入的动态绘制项（模板实例/手写粒子）与场景节点统一 (layer, order, z) 排序 | Animator(Controller) / TextMeshPro / SpriteRenderer / MeshRenderer |
 | `riq` | `.riq` 加载（v1 `remix.json` 与 v2 `Charts/chart0.json` 双布局）、tempo map、关卡元数据 | Jukebox（RiqFileHandler / RiqBeatmap） |
 | `conductor` | 采样时钟：以单调时钟平滑推进，`player.Position()` 只做粗同步锚，避免音频缓冲块台阶传到动画 | Conductor.cs（`dspTime` + `absTime` 平滑） |
 | `synth` | 程序化 PCM 合成（karateman demo 音轨鼓点） | —（替代版权音乐） |
@@ -112,9 +112,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   播放（当前为单 RigInst clip），这些作为显式简化保留。
 - builtToScaleDS：`spawn blocks` 的生成、windup、判定、hit/NG/miss/Sink、
   Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
-  提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载
-  （内置 mesh fileID、MeshRenderer 材质、纹理槽、float/color 材质参数），
-  当前运行时仍用 Ebitengine 几何体替代 3D
+  提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载并
+  可绘制 Unity 内置 mesh footprint（内置 mesh fileID、MeshRenderer 材质、
+  纹理槽、float/color 材质参数），当前游戏模块仍用 Ebitengine 几何体替代 3D
   SkinnedMeshRenderer/材质渲染；Piano 的 `SetLoopParams(beat+length, 0.1f)`
   持续尾音和淡出已接入。
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/
@@ -137,7 +137,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   内部骨架 path 合成为 scene 节点；MeshRenderer/材质/纹理槽已导出，
   `assets/airboarder/meshes.json` 已入库并由运行时加载到 `Assets.Meshes`。
   原版主体是 MeshRenderer/材质贴图的 3D 场景，当前暂用手写 2D billboard
-  渲染，仍待补 MeshRenderer 渲染、CameraPivot/FOV 与
+  渲染；运行时内置 mesh footprint 路径不覆盖 Airboarder 的 imported FBX
+  mesh，仍待补 FBX MeshRenderer 渲染、CameraPivot/FOV 与
   ScrollingFloor 材质滚动的完整运行时支持。
 - animalAcrobat：动物队列、障碍旋转/hold 判定、起跳/落地、背景颜色、
   Spotlight/Confetti、BGTileManager 双 tile 回收，以及 AnimalAcrobat.CameraUpdate

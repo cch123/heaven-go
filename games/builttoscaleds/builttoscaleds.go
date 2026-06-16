@@ -1,10 +1,11 @@
 // Package builttoscaleds ports Built to Scale (DS/NTR) timing onto engine.App.
 //
-// The extracted DS bundle is mesh-only: it has Animator clips and sounds, but
-// no SpriteRenderer atlas for kart.Scene to draw. Until the runtime has a mesh
-// renderer, this module keeps the original cue timing, sounds, input windows,
-// colors, lights, and camera controls, then renders an equivalent geometric
-// assembly line with Ebitengine primitives.
+// The extracted DS bundle is mesh-only: it has Animator clips, sounds, and
+// MeshRenderer bindings but no SpriteRenderer atlas. kart.Scene can now draw
+// Unity built-in mesh footprints, while the full 3D camera/material pass is
+// still incomplete; until that lands this module keeps the original cue timing,
+// sounds, input windows, colors, lights, and camera controls, then renders an
+// equivalent geometric assembly line with Ebitengine primitives.
 package builttoscaleds
 
 import (

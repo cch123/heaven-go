@@ -1,7 +1,7 @@
 // Package airboarder ports Airboarder's event timing, input windows, sounds,
 // and script-driven colors. The current renderer is a temporary 2D layer while
-// the engine grows MeshRenderer/material-texture support for the original 3D
-// scene; see README known simplifications.
+// the engine grows full imported-FBX MeshRenderer/material-texture support for
+// the original 3D scene; see README known simplifications.
 package airboarder
 
 import (
@@ -110,8 +110,8 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.resetBoarders(0)
 
-	// These roots are invisible until MeshRenderer support lands, but playing
-	// their default states keeps the extracted controller data exercised.
+	// Imported FBX meshes are not drawn by the current built-in mesh renderer,
+	// but playing their default states keeps extracted controller data exercised.
 	for _, role := range []string{"CPU1", "CPU2", "Player", "Dog", "Tail", "Floor", "archBasic", "wallBasic"} {
 		if p := ctx.Role(role); p != "" {
 			ctx.Scene.PlayDefaultState(p, 0, ctx.SecPerBeat(0))
