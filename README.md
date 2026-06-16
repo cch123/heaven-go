@@ -153,8 +153,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - 缓动函数全表实现（engine/ease.go，HS Ease 枚举 0..43 含 Expo/Circ/Bounce/
   Back/Elastic/OutIn/InstantOut）。
 - TMP 文本用源 OTF 排版（原版为 SDF 渲染），字体/字号/颜色与 TMP 水平/垂直
-  对齐枚举已接入；字形边缘抗锯齿方式不同，Justified/Flush 的词间距拉伸
-  暂不展开（官方已提取文本目前未依赖该行为）。
+  对齐枚举已接入，Justified/Flush 会按 TMP 行宽拉伸词距；字形边缘抗锯齿
+  方式仍不同。
 - vfx/display textbox 已按原版 TextboxAnchor、TextboxPrefab 尺寸、文本矩形、
   富文本 align 与自动换行绘制；框体按官方 `textboxSDF.png` 的四角 sliced
   SpriteRenderer 与 TextboxSDFMaterial 阈值生成，文本仍用 OTF 位图排版而非 TMP

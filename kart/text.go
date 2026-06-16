@@ -136,17 +136,26 @@ func (a *Assets) renderTextNode(tn *kmdata.TextNode, content string) error {
 }
 
 type textSpan struct {
-	text    string
-	face    font.Face
-	color   [4]float64
-	line    int
-	startPx int
+	text        string
+	face        font.Face
+	color       [4]float64
+	line        int
+	startPx     int
+	spaceBefore int
 }
 
 type textLine struct {
-	width    int
-	dotX     int
-	baseline int
+	width      int
+	dotX       int
+	baseline   int
+	spaceCount int
+	spaceExtra float64
+}
+
+type textCharPos struct {
+	line        int
+	x           int
+	spaceBefore int
 }
 
 type textLayout struct {
@@ -156,6 +165,7 @@ type textLayout struct {
 	ascent     int
 	descent    int
 	charX      []float64
+	chars      []textCharPos
 	closeFaces []font.Face
 	contentW   int
 	contentH   int
@@ -191,11 +201,7 @@ func (a *Assets) renderTextRuns(tn *kmdata.TextNode, runs []TextRun, clipUnits f
 			continue
 		}
 		ln := layout.lines[sp.line]
-		d := &font.Drawer{
-			Dst: img, Src: image.NewUniform(runColor(sp.color)), Face: sp.face,
-			Dot: fixed.P(ln.dotX+sp.startPx, pad+ln.baseline),
-		}
-		d.DrawString(sp.text)
+		drawTextSpan(img, sp, ln, pad)
 	}
 	if clipUnits >= 0 {
 		clipPx := layout.dotX + int(math.Round(clipUnits*textPPU))
@@ -247,6 +253,7 @@ func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayou
 	layout.lines = []textLine{{}}
 	x := 0
 	line := 0
+	spanStartSpaces := 0
 	for _, run := range runs {
 		if run.Text == "" {
 			continue
@@ -266,11 +273,12 @@ func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayou
 				return
 			}
 			layout.spans = append(layout.spans, textSpan{
-				text:    b.String(),
-				face:    fc,
-				color:   run.Color,
-				line:    line,
-				startPx: spanStart,
+				text:        b.String(),
+				face:        fc,
+				color:       run.Color,
+				line:        line,
+				startPx:     spanStart,
+				spaceBefore: spanStartSpaces,
 			})
 			b.Reset()
 		}
@@ -285,15 +293,24 @@ func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayou
 				layout.lines = append(layout.lines, textLine{})
 				x = 0
 				spanStart = 0
+				spanStartSpaces = 0
 				continue
 			}
 			if b.Len() == 0 {
 				spanStart = x
+				spanStartSpaces = layout.lines[line].spaceCount
 			}
 			layout.content = true
 			b.WriteRune(r)
-			layout.charX = append(layout.charX, float64(x)/textPPU)
+			layout.chars = append(layout.chars, textCharPos{
+				line:        line,
+				x:           x,
+				spaceBefore: layout.lines[line].spaceCount,
+			})
 			x += font.MeasureString(fc, string(r)).Ceil()
+			if isTMPStretchSpace(r) {
+				layout.lines[line].spaceCount++
+			}
 		}
 		flush()
 	}
@@ -319,16 +336,32 @@ func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayou
 		layout.contentH = max(layout.contentH, int(tn.Rect[1]*textPPU+0.5))
 	}
 	const pad = 4
-	anchorX, err := textHorizontalAnchor(tn.HAlign)
+	anchorX, justify, err := textHorizontalPlacement(tn.HAlign)
 	if err != nil {
 		layout.close()
 		return nil, fmt.Errorf("文本 %q: %w", tn.Path, err)
+	}
+	for i := range layout.lines {
+		if layout.lines[i].spaceCount == 0 || layout.contentW <= layout.lines[i].width {
+			continue
+		}
+		if justify == textJustifyFlush || (justify == textJustifyParagraph && i < len(layout.lines)-1) {
+			layout.lines[i].spaceExtra = float64(layout.contentW-layout.lines[i].width) / float64(layout.lines[i].spaceCount)
+		}
 	}
 	for i := range layout.lines {
 		layout.lines[i].dotX = pad + int(math.Round(float64(layout.contentW-layout.lines[i].width)*anchorX))
 	}
 	layout.dotX = layout.lines[0].dotX
 	layout.pivotX = anchorX
+	layout.charX = make([]float64, 0, len(layout.chars))
+	for _, ch := range layout.chars {
+		extra := 0.0
+		if ch.line >= 0 && ch.line < len(layout.lines) {
+			extra = float64(ch.spaceBefore) * layout.lines[ch.line].spaceExtra
+		}
+		layout.charX = append(layout.charX, (float64(ch.x)+extra)/textPPU)
+	}
 
 	// 枢轴：x 取水平对齐点；y 按 TMP 垂直对齐把整段文本块放进 RectTransform，
 	// 换算为 Unity 归一化（自底边）。
@@ -345,19 +378,30 @@ func (a *Assets) layoutTextRuns(tn *kmdata.TextNode, runs []TextRun) (*textLayou
 	return layout, nil
 }
 
-func textHorizontalAnchor(align int) (float64, error) {
-	switch align {
+type textJustifyMode int
+
+const (
+	textJustifyNone textJustifyMode = iota
+	textJustifyParagraph
+	textJustifyFlush
+)
+
+func textHorizontalPlacement(align int) (float64, textJustifyMode, error) {
+	switch tmpHorizontalPart(align) {
 	case tmpHLeft, tmpHJustified, tmpHFlush:
-		// Justified/Flush alter inter-word spacing in TMP. The renderer keeps
-		// glyph advances unchanged but preserves their left rect anchor; current
-		// official texts do not rely on paragraph justification stretching.
-		return 0, nil
+		mode := textJustifyNone
+		if tmpHorizontalPart(align) == tmpHJustified {
+			mode = textJustifyParagraph
+		} else if tmpHorizontalPart(align) == tmpHFlush {
+			mode = textJustifyFlush
+		}
+		return 0, mode, nil
 	case tmpHCenter, tmpHGeometry:
-		return 0.5, nil
+		return 0.5, textJustifyNone, nil
 	case tmpHRight:
-		return 1, nil
+		return 1, textJustifyNone, nil
 	default:
-		return 0, fmt.Errorf("TMP 水平对齐 %d 未实现", align)
+		return 0, textJustifyNone, fmt.Errorf("TMP 水平对齐 %d 未实现", align)
 	}
 }
 
@@ -369,7 +413,7 @@ func textVerticalPlacement(align, ascent, _ int, contentH, textBlockH int) (int,
 	top := 0
 	center := float64(contentH) / 2
 	bottom := float64(contentH)
-	switch align {
+	switch tmpVerticalPart(align) {
 	case tmpVTop:
 		return top, 0, nil
 	case tmpVMiddle, tmpVMidline:
@@ -387,6 +431,44 @@ func textVerticalPlacement(align, ascent, _ int, contentH, textBlockH int) (int,
 	default:
 		return 0, 0, fmt.Errorf("TMP 垂直对齐 %d 未实现", align)
 	}
+}
+
+func tmpHorizontalPart(align int) int {
+	if h := align & 0xff; h != 0 {
+		return h
+	}
+	return align
+}
+
+func tmpVerticalPart(align int) int {
+	if v := align & 0xff00; v != 0 {
+		return v
+	}
+	return align
+}
+
+func drawTextSpan(dst *image.RGBA, sp textSpan, ln textLine, pad int) {
+	src := image.NewUniform(runColor(sp.color))
+	x := float64(ln.dotX+sp.startPx) + float64(sp.spaceBefore)*ln.spaceExtra
+	y := pad + ln.baseline
+	if ln.spaceExtra == 0 {
+		d := &font.Drawer{Dst: dst, Src: src, Face: sp.face, Dot: fixed.P(int(math.Round(x)), y)}
+		d.DrawString(sp.text)
+		return
+	}
+	for _, r := range sp.text {
+		s := string(r)
+		d := &font.Drawer{Dst: dst, Src: src, Face: sp.face, Dot: fixed.P(int(math.Round(x)), y)}
+		d.DrawString(s)
+		x += float64(font.MeasureString(sp.face, s).Ceil())
+		if isTMPStretchSpace(r) {
+			x += ln.spaceExtra
+		}
+	}
+}
+
+func isTMPStretchSpace(r rune) bool {
+	return r == ' ' || r == '\t'
 }
 
 func (l *textLayout) close() {

@@ -92,6 +92,71 @@ func TestTextLayoutMultilineBreaksAndCentersPerLine(t *testing.T) {
 	}
 }
 
+func TestTextLayoutJustifiedAndFlushStretchWordSpacing(t *testing.T) {
+	a := textTestAssets()
+	base := kmdata.TextNode{
+		Path: "Text", Font: "go.ttf", Size: 10,
+		Rect: [2]float64{8, 2}, VAlign: tmpVMiddle,
+	}
+
+	left := base
+	left.HAlign = tmpHLeft
+	leftLayout, err := a.layoutTextRuns(&left, []TextRun{{Text: "A A\nA A"}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer leftLayout.close()
+
+	justified := base
+	justified.HAlign = tmpHJustified
+	justifiedLayout, err := a.layoutTextRuns(&justified, []TextRun{{Text: "A A\nA A"}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer justifiedLayout.close()
+	if justifiedLayout.lines[0].spaceExtra <= 0 {
+		t.Fatalf("justified first line spaceExtra = %.3f, want > 0", justifiedLayout.lines[0].spaceExtra)
+	}
+	if justifiedLayout.lines[1].spaceExtra != 0 {
+		t.Fatalf("justified final line spaceExtra = %.3f, want 0", justifiedLayout.lines[1].spaceExtra)
+	}
+	if justifiedLayout.charX[2] <= leftLayout.charX[2] {
+		t.Fatalf("justified second word x = %.3f, want greater than left %.3f", justifiedLayout.charX[2], leftLayout.charX[2])
+	}
+
+	flush := base
+	flush.HAlign = tmpHFlush
+	flushLayout, err := a.layoutTextRuns(&flush, []TextRun{{Text: "A A\nA A"}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer flushLayout.close()
+	if flushLayout.lines[0].spaceExtra <= 0 || flushLayout.lines[1].spaceExtra <= 0 {
+		t.Fatalf("flush spaceExtra = %.3f/%.3f, want both > 0", flushLayout.lines[0].spaceExtra, flushLayout.lines[1].spaceExtra)
+	}
+	if flushLayout.charX[5] <= leftLayout.charX[5] {
+		t.Fatalf("flush final line second word x = %.3f, want greater than left %.3f", flushLayout.charX[5], leftLayout.charX[5])
+	}
+}
+
+func TestTextLayoutAcceptsCombinedTMPAlignmentFlags(t *testing.T) {
+	a := textTestAssets()
+	tn := kmdata.TextNode{
+		Path: "Text", Font: "go.ttf", Size: 10,
+		Rect:   [2]float64{4, 1},
+		HAlign: tmpHRight | tmpVTop,
+		VAlign: tmpHCenter | tmpVBottom,
+	}
+	layout, err := a.layoutTextRuns(&tn, []TextRun{{Text: "TMP"}})
+	if err != nil {
+		t.Fatal(err)
+	}
+	defer layout.close()
+	if layout.pivotX != 1 {
+		t.Fatalf("combined right horizontal pivotX = %.3f, want 1", layout.pivotX)
+	}
+}
+
 func TestTextLayoutNewlineOnlyHasNoRenderableContent(t *testing.T) {
 	a := textTestAssets()
 	tn := kmdata.TextNode{
