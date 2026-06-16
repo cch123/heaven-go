@@ -15,6 +15,9 @@ func TestNoGameIsExplicitInertModule(t *testing.T) {
 	if err := m.Load(&engine.Ctx{}); err != nil {
 		t.Fatalf("Load returned error: %v", err)
 	}
+	if mm, ok := m.(*Module); !ok || mm.face == nil {
+		t.Fatalf("Load should prepare the official No Game label face, got %#v", m)
+	}
 	m.OnEvent(&riq.Entity{Datamodel: "noGame/ignored", Beat: 12})
 	m.Ready()
 	m.OnSwitch(12)

@@ -426,8 +426,13 @@ var officialBaseSceneSpecs = map[string]sceneSpec{
 	"nightWalkAgb":     basicOfficialSceneSpec("NightWalkAgb", "nightWalkAgb.prefab"),
 	"ninjaBodyguard":   basicOfficialSceneSpec("NinjaBodyguard", "ninjaBodyguard.prefab"),
 	"nipInTheBud":      basicOfficialSceneSpec("NipInTheBud", "nipInTheBud.prefab"),
-	"octopusMachine":   basicOfficialSceneSpec("OctopusMachine", "octopusMachine.prefab"),
-	"packingPests":     basicOfficialSceneSpec("PackingPests", "packingPests.prefab"),
+	"noGame": {
+		prefabPath: "Resources/Games/noGame.prefab",
+		noSprites:  true,
+		wantTexts:  true,
+	},
+	"octopusMachine": basicOfficialSceneSpec("OctopusMachine", "octopusMachine.prefab"),
+	"packingPests":   basicOfficialSceneSpec("PackingPests", "packingPests.prefab"),
 	"pajamaParty": {
 		dir:    "PajamaParty",
 		prefab: "pajamaParty.prefab",

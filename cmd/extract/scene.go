@@ -21,6 +21,7 @@ import (
 type sceneSpec struct {
 	dir             string            // Assets/Bundled/Games/<dir>
 	prefab          string            // prefab 文件名
+	prefabPath      string            // 可选：Assets/ 下的显式 prefab 路径（NoGame 等非 Bundled prefab）
 	spritesDir      string            // 可选：贴图根（默认 Sprites）
 	noSprites       bool              // 3D-only 游戏没有 Sprites 目录；仍导出空 sprites.json
 	animsDir        string            // 可选：动画/controller 根（默认 spritesDir）
@@ -1234,6 +1235,28 @@ func bundlePath(dir string, parts ...string) string {
 	return filepath.Join(append([]string{*hsRoot, "Assets", "Bundled", "Games", dir}, parts...)...)
 }
 
+func assetsPath(parts ...string) string {
+	return filepath.Join(append([]string{*hsRoot, "Assets"}, parts...)...)
+}
+
+func (s sceneSpec) prefabFile() string {
+	if s.prefabPath != "" {
+		return assetsPath(filepath.FromSlash(s.prefabPath))
+	}
+	return bundlePath(s.dir, s.prefab)
+}
+
+func (s sceneSpec) gameRoot() string {
+	if s.prefabPath != "" {
+		return filepath.Dir(s.prefabFile())
+	}
+	return bundlePath(s.dir)
+}
+
+func (s sceneSpec) soundRoot() string {
+	return filepath.Join(s.gameRoot(), "Sounds")
+}
+
 // mappingShaderGUIDs 是调色板映射 shader（CellAnime_MappedInvert /
 // CellAnime_Mapped）的 guid：贴图 RGB 通道为掩码权重，
 // out = ColorAlpha·r + ColorBravo·g + ColorDelta·b。
@@ -1284,9 +1307,9 @@ func extractScene(game string) {
 
 	tables := scanSceneSpriteMetas(spec)
 	exportSheetMulti(tables)
-	idx, docs := buildPrefabIndex(bundlePath(spec.dir, spec.prefab), spec.templatePrefabs)
-	idx.mappedMats = scanMappedMats(bundlePath(spec.dir))
-	idx.matNames = scanMaterialNames(bundlePath(spec.dir))
+	idx, docs := buildPrefabIndex(spec.prefabFile(), spec.templatePrefabs)
+	idx.mappedMats = scanMappedMats(spec.gameRoot())
+	idx.matNames = scanMaterialNames(spec.gameRoot())
 	paths, nodeIdx := exportScene(spec, idx, tables)
 	exportRoles(spec, docs, idx, paths)
 	exportExtra(spec, docs, idx, paths, nodeIdx, tables)
@@ -1300,7 +1323,7 @@ func extractScene(game string) {
 	if spec.wantTexts {
 		exportTexts(docs, paths)
 	}
-	copySounds(bundlePath(spec.dir, "Sounds"))
+	copySounds(spec.soundRoot())
 	for _, name := range spec.commonSounds {
 		b, err := os.ReadFile(filepath.Join(*hsRoot, "Assets", "Resources", "Sfx", name))
 		must(err)
@@ -1326,7 +1349,7 @@ func scanSceneSpriteMetas(spec sceneSpec) map[string]*spriteTable {
 	root := spec.spriteRoot()
 	if spec.noSprites {
 		if _, err := os.Stat(root); os.IsNotExist(err) {
-			fmt.Printf("scanned 0 sprite metas (no Sprites directory for %s)\n", spec.dir)
+			fmt.Printf("scanned 0 sprite metas (no Sprites directory for %s)\n", spec.gameRoot())
 			return map[string]*spriteTable{}
 		}
 	}
@@ -1338,7 +1361,7 @@ func (s sceneSpec) spriteRoot() string {
 	if dir == "" {
 		dir = "Sprites"
 	}
-	return bundlePath(s.dir, filepath.FromSlash(dir))
+	return filepath.Join(s.gameRoot(), filepath.FromSlash(dir))
 }
 
 func (s sceneSpec) animRoot() string {
@@ -1349,7 +1372,7 @@ func (s sceneSpec) animRoot() string {
 	if dir == "" {
 		dir = "Sprites"
 	}
-	return bundlePath(s.dir, filepath.FromSlash(dir))
+	return filepath.Join(s.gameRoot(), filepath.FromSlash(dir))
 }
 
 // ---------- 多图集 ----------
@@ -2519,6 +2542,11 @@ func importedClipTableName(raw string, id int64) string {
 
 func exportAnimDir(spec sceneSpec, tables map[string]*spriteTable) {
 	dir := spec.animRoot()
+	if _, err := os.Stat(dir); os.IsNotExist(err) {
+		writeJSON("anims.json", map[string]*kmdata.Anim{})
+		fmt.Printf("anims: 0 clip files, 0 imported clips (missing %s)\n", dir)
+		return
+	}
 	type clipFile struct {
 		base, nsKey string
 		clip        *kmdata.Anim
@@ -2557,7 +2585,7 @@ func exportAnimDir(spec sceneSpec, tables map[string]*spriteTable) {
 			fmt.Printf("anim %q 有 %d 个同名文件，仅按命名空间 key 导出（如 %q）\n", c.base, baseCount[c.base], c.nsKey)
 		}
 	}
-	imported := scanImportedClips(bundlePath(spec.dir), spec.importedAnimFPS)
+	imported := scanImportedClips(spec.gameRoot(), spec.importedAnimFPS)
 	importedCount := 0
 	for _, byID := range imported {
 		for _, c := range byID {
@@ -2643,6 +2671,10 @@ func moveFloatAttrs(m map[string]map[string][]kmdata.Key, src, dst string) {
 }
 
 func copySounds(dir string) {
+	if _, err := os.Stat(dir); os.IsNotExist(err) {
+		fmt.Printf("sounds: 0 copied (missing %s)\n", dir)
+		return
+	}
 	n := 0
 	must(filepath.WalkDir(dir, func(p string, d os.DirEntry, err error) error {
 		if err != nil || d.IsDir() || strings.HasSuffix(d.Name(), ".meta") {
