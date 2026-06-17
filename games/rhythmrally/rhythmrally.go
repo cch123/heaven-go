@@ -215,6 +215,7 @@ func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
 	if m.ball.ballActive {
 		p := m.ballPosition(beat)
 		m.drawBallShadow(screen, p)
+		m.drawBallTrail(screen, beat)
 		m.syncSceneBall(p, true)
 	} else {
 		m.syncSceneBall([3]float64{}, false)
@@ -405,6 +406,10 @@ func (m *Module) bgColorAt(beat float64) [4]float64 {
 }
 
 func (m *Module) ballPosition(beat float64) [3]float64 {
+	return m.ballPositionAt(beat, true)
+}
+
+func (m *Module) ballPositionAt(beat float64, mutate bool) [3]float64 {
 	b := m.ball
 	switch {
 	case !b.started && b.tossing:
@@ -431,7 +436,7 @@ func (m *Module) ballPosition(beat float64) [3]float64 {
 			curve = m.curves["serveCurve"]
 		}
 		p := curvePoint(curve, math.Max(0, pos), height)
-		if pos > 1.05 {
+		if mutate && pos > 1.05 {
 			m.ball.ballActive = false
 		}
 		return p

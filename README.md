@@ -195,9 +195,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   序列化参数手写的非场景节点实例。
 - rhythmRally：官方 `Game/Ball` MeshRenderer 已用 Unity 内置 Sphere
   fileID 接入运行时，球轨迹仍按原版 Bezier 曲线推进；`stageLmodel` 的
-  SkinnedMeshRenderer 多 Geometry FBX、paddler 3D/skinned 动画，以及
-  `Game/Ball/Particle System` 的 rate-over-distance 球尾迹仍待补完整运行时，
-  当前由手写 2D table/paddler 与阴影层承担可玩表现。
+  SkinnedMeshRenderer 多 Geometry FBX 与 paddler 3D/skinned 动画仍待补完整运行时；
+  `Game/Ball/Particle System` 的 rate-over-distance 球尾迹已按 prefab 的
+  lifetime/rate/size/color over lifetime 参数接入，当前由手写 2D table/paddler
+  与阴影层承担可玩表现。
 - Judgement 结算页已接入 Heaven Studio 的评分阈值/分类评价消息、rank 标志图、
   默认 epilogue 图与结算音效/jingle/循环音乐；`JudgementOpen.playable` 的
   Message0/1/2、BarStart 信号时间，以及 `JudgementManager` 的 barDuration/

@@ -94,3 +94,40 @@ func TestFlightTimingMatchesUnitySpeedBranches(t *testing.T) {
 		}
 	}
 }
+
+func TestBallTrailUsesRateOverDistanceLifetime(t *testing.T) {
+	m := &Module{curves: loadRuntimeCurves(t)}
+	m.ball = ballState{
+		started: true, served: true, ballActive: true,
+		serveBeat: 10, targetBeat: 2, speed: speedNormal,
+	}
+	parts := m.ballTrailParticles(10.75, 0.5)
+	if len(parts) == 0 {
+		t.Fatal("expected ball trail particles during serve flight")
+	}
+	for i := range parts {
+		if parts[i].age < 0 || parts[i].age > 1 {
+			t.Fatalf("particle age out of range: %#v", parts[i])
+		}
+		if i > 0 && parts[i].age > parts[i-1].age {
+			t.Fatalf("particles should be ordered oldest to newest: %#v", parts)
+		}
+	}
+	if alpha := ballTrailAlpha(0.25); alpha != 1 {
+		t.Fatalf("alpha at quarter lifetime = %v, want 1", alpha)
+	}
+	if alpha := ballTrailAlpha(0.75); alpha != 0.5 {
+		t.Fatalf("alpha at three-quarter lifetime = %v, want 0.5", alpha)
+	}
+}
+
+func TestBallTrailHiddenWhileTossing(t *testing.T) {
+	m := &Module{curves: loadRuntimeCurves(t)}
+	m.ball = ballState{
+		started: false, tossing: true, ballActive: true,
+		tossBeat: 4, tossLength: 2,
+	}
+	if parts := m.ballTrailParticles(4.5, 0.5); len(parts) != 0 {
+		t.Fatalf("tossing should hide trail, got %#v", parts)
+	}
+}
