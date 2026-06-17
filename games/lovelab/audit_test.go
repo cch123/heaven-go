@@ -5,6 +5,7 @@ import (
 	"testing"
 
 	"hsdemo/engine"
+	"hsdemo/games/internal/particlefx"
 	"hsdemo/kart"
 	"hsdemo/kmdata"
 )
@@ -30,6 +31,8 @@ func TestBindingsComponentsTemplatesAndSounds(t *testing.T) {
 		"labAssistant":        "Assistant",
 		"labAssistantHead":    "Assistant/Head/HeadHolder",
 		"labAssistantArm":     "Assistant/ArmHolder/Arm",
+		"boyFlaskBreak":       "BoyFlaskBreak/FlaskBreak",
+		"girlFlaskBreak":      "GirlFlaskBreak/FlaskBreak",
 		"heartBox":            "HeartBox",
 		"boxPerson":           "SunsetBg/BoxPerson",
 		"boxPersonDay":        "DayBg/BoxPerson",
@@ -86,6 +89,40 @@ func TestBindingsComponentsTemplatesAndSounds(t *testing.T) {
 			t.Fatalf("missing sound %s", snd)
 		}
 	}
+}
+
+func TestFlaskBreakParticleSystems(t *testing.T) {
+	as := loadAssets(t)
+	seen := map[string]bool{}
+	for _, ps := range as.Particles.Systems {
+		if seen[ps.Path] {
+			t.Fatalf("duplicate ParticleSystem path %q", ps.Path)
+		}
+		seen[ps.Path] = true
+	}
+	roots := particlefx.Roots(as)
+	for _, root := range []string{"BoyFlaskBreak/FlaskBreak", "GirlFlaskBreak/FlaskBreak"} {
+		systems := roots[root]
+		if len(systems) != 12 {
+			t.Fatalf("%s systems = %d, want 12 official child systems", root, len(systems))
+		}
+		for _, want := range []string{"lovelabmain_10", "lovelabmain_49", "lovelabmain_53"} {
+			if !particleRootUsesSprite(systems, want) {
+				t.Fatalf("%s missing particle sprite %s", root, want)
+			}
+		}
+	}
+}
+
+func particleRootUsesSprite(systems []kmdata.ParticleSystem, sprite string) bool {
+	for _, ps := range systems {
+		for _, got := range ps.TextureSheet.Sprites {
+			if got == sprite {
+				return true
+			}
+		}
+	}
+	return false
 }
 
 func TestControllersStatesClipsAndPaths(t *testing.T) {

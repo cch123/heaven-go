@@ -6,6 +6,7 @@ import (
 	"math"
 
 	"hsdemo/engine"
+	"hsdemo/games/internal/particlefx"
 	"hsdemo/kart"
 )
 
@@ -99,6 +100,7 @@ type Module struct {
 	labGirl, labGirlHead, labGirlArm                string
 	labAssistant, labAssistantHead, labAssistantArm string
 	flaskSprite, girlFlaskSprite, weirdFlaskSprite  string
+	boyFlaskBreak, girlFlaskBreak                   string
 	heartBox, boxPerson, boxPersonDay               string
 	spotlight, spotConeRoot, spotCone               string
 	clouds, sunsetBG, dayBG                         string
@@ -132,6 +134,8 @@ type Module struct {
 	girlHearts     []*heartObj
 	completeHearts []*heartObj
 	particles      []particleObj
+	breakParticles *particlefx.Runtime
+	breakEffects   []particlefx.Effect
 	currentHearts  []int
 
 	boyLiquid, girlLiquid, weirdLiquid [4]float64

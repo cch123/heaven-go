@@ -40,15 +40,31 @@ func collectParticleSystems(dt *docTable, paths map[int64]string, tables map[str
 		}
 	}
 
-	out := make([]kmdata.ParticleSystem, 0, len(systems))
-	for gid, sys := range systems {
-		path, ok := paths[gid]
-		if !ok {
+	ids := make([]int64, 0, len(systems))
+	for gid := range systems {
+		if _, ok := paths[gid]; ok {
+			ids = append(ids, gid)
+		}
+	}
+	sort.Slice(ids, func(i, j int) bool {
+		pi, pj := paths[ids[i]], paths[ids[j]]
+		if pi != pj {
+			return pi < pj
+		}
+		return ids[i] < ids[j]
+	})
+
+	out := make([]kmdata.ParticleSystem, 0, len(ids))
+	seen := map[string]bool{}
+	for _, gid := range ids {
+		path := paths[gid]
+		if seen[path] {
 			continue
 		}
+		seen[path] = true
+		sys := systems[gid]
 		out = append(out, particleSystemFromYAML(path, active[gid], sys, renderers[gid], tables, materialAssets, meshAssets))
 	}
-	sort.Slice(out, func(i, j int) bool { return out[i].Path < out[j].Path })
 	return out
 }
 

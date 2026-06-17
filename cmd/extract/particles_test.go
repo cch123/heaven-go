@@ -89,6 +89,31 @@ func TestCollectParticleSystemsExportsCoreModules(t *testing.T) {
 	}
 }
 
+func TestCollectParticleSystemsDedupesExpandedTemplatePaths(t *testing.T) {
+	dt := &docTable{byID: map[int64]*docRef{
+		1: {classID: 1, content: map[string]any{"m_IsActive": float64(1)}},
+		2: {classID: 1, content: map[string]any{"m_IsActive": float64(1)}},
+		198: {classID: 198, content: map[string]any{
+			"m_GameObject":  map[string]any{"fileID": float64(1)},
+			"InitialModule": particleTestInitial(),
+		}},
+		298: {classID: 198, content: map[string]any{
+			"m_GameObject":  map[string]any{"fileID": float64(2)},
+			"InitialModule": particleTestInitial(),
+		}},
+	}}
+	systems := collectParticleSystems(dt, map[int64]string{
+		1: "FX/Break",
+		2: "FX/Break",
+	}, nil, assetIndex{}, assetIndex{})
+	if len(systems) != 1 {
+		t.Fatalf("systems = %d, want one per exported path", len(systems))
+	}
+	if systems[0].Path != "FX/Break" {
+		t.Fatalf("system path = %q, want FX/Break", systems[0].Path)
+	}
+}
+
 func particleTestInitial() map[string]any {
 	return map[string]any{
 		"enabled":         float64(1),

@@ -7,6 +7,7 @@ import (
 	"github.com/hajimehoshi/ebiten/v2"
 
 	"hsdemo/engine"
+	"hsdemo/games/internal/particlefx"
 	"hsdemo/kart"
 )
 
@@ -30,6 +31,8 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.flaskSprite = roleOr(ctx, "flaskSpriteRend", compRef(game, "flaskSpriteRend", "Guy/ArmHolder/Arm/Flask"))
 	m.girlFlaskSprite = roleOr(ctx, "girlFlaskSpriteRend", compRef(game, "girlFlaskSpriteRend", "Girl/ArmHolder/Arm/Flask"))
 	m.weirdFlaskSprite = roleOr(ctx, "weirdFlaskSpriteRend", compRef(game, "weirdFlaskSpriteRend", "Assistant/ArmHolder/Arm/Flask"))
+	m.boyFlaskBreak = roleOr(ctx, "boyFlaskBreak", compRef(game, "boyFlaskBreak", "BoyFlaskBreak/FlaskBreak"))
+	m.girlFlaskBreak = roleOr(ctx, "girlFlaskBreak", compRef(game, "girlFlaskBreak", "GirlFlaskBreak/FlaskBreak"))
 	m.heartBox = roleOr(ctx, "heartBox", compRef(game, "heartBox", "HeartBox"))
 	m.boxPerson = roleOr(ctx, "boxPerson", compRef(game, "boxPerson", "SunsetBg/BoxPerson"))
 	m.boxPersonDay = roleOr(ctx, "boxPersonDay", compRef(game, "boxPersonDay", "DayBg/BoxPerson"))
@@ -58,6 +61,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.guyHeartTemplate = templateLast(ctx.Assets, "Hearts")
 	m.girlHeartTemplate = templateLast(ctx.Assets, "GirlHearts")
 	m.completeHeartTemplate = templateLast(ctx.Assets, "CompleteHearts")
+	m.breakParticles = particlefx.New(ctx.Assets, m.proj, 1.0)
 
 	m.initializeScene(0)
 	return nil
@@ -116,6 +120,7 @@ func (m *Module) initializeScene(beat float64) {
 	m.girlHearts = nil
 	m.completeHearts = nil
 	m.currentHearts = nil
+	m.breakEffects = nil
 	m.hasMissed = false
 	m.hasStartedInterval = false
 	m.isHolding = false
@@ -167,7 +172,7 @@ func (m *Module) Update(_, beat float64) {
 	}
 }
 
-func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
+func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	screen.Fill(color.RGBA{0xb5, 0xff, 0xff, 0xff})
 	m.updateClouds()
 	m.ctx.SampleScene(beat)
@@ -175,4 +180,5 @@ func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
 	m.queueHearts(beat)
 	m.queueParticles(beat)
 	m.ctx.Scene.Draw(screen, m.proj)
+	m.drawBreakParticles(screen, t)
 }

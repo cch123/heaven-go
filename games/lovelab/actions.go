@@ -294,12 +294,11 @@ func (m *Module) labGirlIdle(beat float64) {
 }
 
 func (m *Module) flaskBreak(which int, beat float64) {
-	x, y := -5.1, -0.5
+	root := m.boyFlaskBreak
 	if which != 0 {
-		x, y = -1, -3.45
+		root = m.girlFlaskBreak
 	}
-	m.spawnHeartBurst(x, y, beat)
-	m.ctx.PlayCommon("miss")
+	m.spawnFlaskBreakParticle(root, beat)
 }
 
 func minInt(a, b int) int {
