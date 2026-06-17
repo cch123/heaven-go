@@ -7,30 +7,30 @@
 package nogame
 
 import (
-	"bytes"
-	"image/color"
-
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/text/v2"
-	"golang.org/x/image/font/gofont/goregular"
 
 	"hsdemo/engine"
+	"hsdemo/kart"
 	"hsdemo/riq"
 )
 
 type Module struct {
-	face *text.GoTextFace
+	ctx  *engine.Ctx
+	proj kart.Aff
 }
 
 func New() engine.Module { return &Module{} }
 
 func (m *Module) ID() string { return "noGame" }
-func (m *Module) Load(*engine.Ctx) error {
-	src, err := text.NewGoTextFaceSource(bytes.NewReader(goregular.TTF))
-	if err != nil {
+func (m *Module) Load(ctx *engine.Ctx) error {
+	if err := ctx.LoadAssets("noGame"); err != nil {
 		return err
 	}
-	m.face = &text.GoTextFace{Source: src, Size: 64}
+	if err := ctx.Assets.ApplyTexts(); err != nil {
+		return err
+	}
+	m.ctx = ctx
+	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	return nil
 }
 func (m *Module) OnEvent(*riq.Entity)     {}
@@ -38,15 +38,10 @@ func (m *Module) Ready()                  {}
 func (m *Module) OnSwitch(float64)        {}
 func (m *Module) Whiff(float64)           {}
 func (m *Module) Update(float64, float64) {}
-func (m *Module) Draw(screen *ebiten.Image, _, _ float64) {
-	screen.Fill(color.RGBA{0x27, 0x27, 0x27, 0xff})
-	if m.face == nil {
+func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
+	if m.ctx == nil || m.ctx.Scene == nil {
 		return
 	}
-	const label = "No Game"
-	w, h := text.Measure(label, m.face, 0)
-	op := &text.DrawOptions{}
-	op.GeoM.Translate((engine.ScreenW-w)/2, (engine.ScreenH-h)/2)
-	op.ColorScale.ScaleWithColor(color.White)
-	text.Draw(screen, label, m.face, op)
+	m.ctx.SampleScene(beat)
+	m.ctx.Scene.Draw(screen, m.proj)
 }

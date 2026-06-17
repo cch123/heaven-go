@@ -1,0 +1,22 @@
+[
+ {
+  "path": "Text (TMP)",
+  "text": "No Game",
+  "size": 11.46,
+  "color": [
+   1,
+   1,
+   1,
+   1
+  ],
+  "order": 0,
+  "layer": 0,
+  "font": "Roboto-Medium.ttf",
+  "rect": [
+   20,
+   5
+  ],
+  "hAlign": 2,
+  "vAlign": 512
+ }
+]
