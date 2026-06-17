@@ -1,0 +1,1063 @@
+{
+ "systems": [
+  {
+   "path": "Game/Ball/Particle System",
+   "enabled": true,
+   "active": true,
+   "duration": 0.05,
+   "simulationSpeed": 1,
+   "looping": true,
+   "prewarm": false,
+   "playOnAwake": true,
+   "stopAction": 0,
+   "cullingMode": 0,
+   "scalingMode": 1,
+   "emitterVelocityMode": 1,
+   "startDelay": {
+    "mode": 0,
+    "scalar": 0,
+    "max": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startLifetime": {
+    "mode": 0,
+    "scalar": 0.08,
+    "minScalar": 5,
+    "max": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startSpeed": {
+    "mode": 0,
+    "scalar": 0,
+    "minScalar": 5,
+    "max": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startSize": {
+    "mode": 0,
+    "scalar": 0.08,
+    "minScalar": 1,
+    "max": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startSizeY": {
+    "mode": 0,
+    "scalar": 1,
+    "minScalar": 1,
+    "max": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startSizeZ": {
+    "mode": 0,
+    "scalar": 1,
+    "minScalar": 1,
+    "max": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 1,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startRotation": {
+    "mode": 0,
+    "scalar": 0,
+    "max": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startRotationX": {
+    "mode": 0,
+    "scalar": 0,
+    "max": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startRotationY": {
+    "mode": 0,
+    "scalar": 0,
+    "max": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "startColor": {
+    "mode": 0,
+    "minColor": [
+     1,
+     1,
+     1,
+     1
+    ],
+    "maxColor": [
+     1,
+     0.9607844,
+     0,
+     1
+    ],
+    "minGradient": {
+     "mode": 0,
+     "colorKeys": [
+      {
+       "t": 0,
+       "color": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "t": 1,
+       "color": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "alphaKeys": [
+      {
+       "t": 0,
+       "a": 1
+      },
+      {
+       "t": 1,
+       "a": 1
+      }
+     ]
+    },
+    "maxGradient": {
+     "mode": 0,
+     "colorKeys": [
+      {
+       "t": 0,
+       "color": [
+        1,
+        1,
+        1,
+        1
+       ]
+      },
+      {
+       "t": 1,
+       "color": [
+        1,
+        1,
+        1,
+        1
+       ]
+      }
+     ],
+     "alphaKeys": [
+      {
+       "t": 0,
+       "a": 1
+      },
+      {
+       "t": 1,
+       "a": 1
+      }
+     ]
+    }
+   },
+   "gravityModifier": {
+    "mode": 0,
+    "scalar": 0,
+    "max": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ],
+    "min": [
+     {
+      "t": 0,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     },
+     {
+      "t": 1,
+      "v": 0,
+      "i": 0,
+      "o": 0
+     }
+    ]
+   },
+   "maxParticles": 1000,
+   "shape": {
+    "enabled": false,
+    "type": 4,
+    "angle": 25,
+    "radius": 0,
+    "radiusThickness": 1,
+    "arc": 0,
+    "length": 5,
+    "position": [
+     0,
+     0,
+     0
+    ],
+    "rotation": [
+     0,
+     0,
+     0
+    ],
+    "scale": [
+     1,
+     1,
+     1
+    ]
+   },
+   "emission": {
+    "enabled": true,
+    "rateOverTime": {
+     "mode": 0,
+     "scalar": 0,
+     "minScalar": 10,
+     "max": [
+      {
+       "t": 0,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "rateOverDistance": {
+     "mode": 0,
+     "scalar": 8,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    }
+   },
+   "sizeOverLifetime": {
+    "enabled": false,
+    "x": {
+     "mode": 0,
+     "scalar": 0
+    },
+    "y": {
+     "mode": 1,
+     "scalar": 1,
+     "minScalar": 1,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 1
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 1,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "z": {
+     "mode": 1,
+     "scalar": 1,
+     "minScalar": 1,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 1
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 1,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "curve": {
+     "mode": 1,
+     "scalar": 1,
+     "minScalar": 1,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 1
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 1,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    }
+   },
+   "rotationOverLifetime": {
+    "enabled": false,
+    "x": {
+     "mode": 0,
+     "scalar": 0,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "y": {
+     "mode": 0,
+     "scalar": 0,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "z": {
+     "mode": 0,
+     "scalar": 0
+    },
+    "curve": {
+     "mode": 0,
+     "scalar": 0.7853982,
+     "minScalar": 0.7853982,
+     "max": [
+      {
+       "t": 0,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 1,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    }
+   },
+   "colorOverLifetime": {
+    "enabled": true,
+    "color": {
+     "mode": 1,
+     "minColor": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "maxColor": [
+      1,
+      1,
+      1,
+      1
+     ],
+     "minGradient": {
+      "mode": 0,
+      "colorKeys": [
+       {
+        "t": 0,
+        "color": [
+         1,
+         1,
+         1,
+         1
+        ]
+       },
+       {
+        "t": 1,
+        "color": [
+         1,
+         1,
+         1,
+         1
+        ]
+       }
+      ],
+      "alphaKeys": [
+       {
+        "t": 0,
+        "a": 1
+       },
+       {
+        "t": 1,
+        "a": 1
+       }
+      ]
+     },
+     "maxGradient": {
+      "mode": 0,
+      "colorKeys": [
+       {
+        "t": 0,
+        "color": [
+         1,
+         1,
+         1,
+         1
+        ]
+       },
+       {
+        "t": 1,
+        "color": [
+         1,
+         1,
+         1,
+         0
+        ]
+       }
+      ],
+      "alphaKeys": [
+       {
+        "t": 0.5000076295109483,
+        "a": 1
+       },
+       {
+        "t": 1,
+        "a": 0
+       }
+      ]
+     }
+    }
+   },
+   "velocityOverLifetime": {
+    "enabled": false,
+    "x": {
+     "mode": 0,
+     "scalar": 0,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "y": {
+     "mode": 0,
+     "scalar": 0,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "z": {
+     "mode": 0,
+     "scalar": 0,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "curve": {
+     "mode": 0,
+     "scalar": 0
+    }
+   },
+   "forceOverLifetime": {
+    "enabled": false,
+    "x": {
+     "mode": 0,
+     "scalar": 0,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "y": {
+     "mode": 0,
+     "scalar": 0,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "z": {
+     "mode": 0,
+     "scalar": 0,
+     "max": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ],
+     "min": [
+      {
+       "t": 0,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      },
+      {
+       "t": 1,
+       "v": 0,
+       "i": 0,
+       "o": 0
+      }
+     ]
+    },
+    "curve": {
+     "mode": 0,
+     "scalar": 0
+    }
+   },
+   "textureSheet": {
+    "enabled": false,
+    "mode": 0,
+    "tiles": [
+     1,
+     1
+    ],
+    "cycles": 1
+   },
+   "renderer": {
+    "enabled": true,
+    "materials": [
+     {
+      "fileID": 2100000,
+      "guid": "680e5d6aa1f848b44b5746ed805b32a7",
+      "name": "ball_trail",
+      "path": "Bundled/Games/RhythmRally/Models/materials/ball_trail.mat"
+     }
+    ],
+    "mesh": {},
+    "sortingLayer": 0,
+    "sortingOrder": 0,
+    "renderMode": 0,
+    "sortMode": 0,
+    "renderAlignment": 0,
+    "minParticleSize": 0,
+    "maxParticleSize": 0.5,
+    "cameraVelocityScale": 0,
+    "velocityScale": 0,
+    "lengthScale": 2,
+    "sortingFudge": 0,
+    "normalDirection": 1,
+    "pivot": [
+     0,
+     0,
+     0
+    ],
+    "flip": [
+     0,
+     0,
+     0
+    ],
+    "allowRoll": true,
+    "freeformStretching": false,
+    "rotateWithStretchDirection": true
+   }
+  }
+ ]
+}

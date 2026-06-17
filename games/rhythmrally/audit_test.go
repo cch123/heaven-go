@@ -19,6 +19,8 @@ type rhythmRallyAssets struct {
 	Anims       map[string]*kmdata.Anim
 	Controllers map[string]kmdata.Controller
 	Animators   kmdata.Animators
+	Meshes      kmdata.MeshData
+	Particles   kmdata.ParticleData
 	Sounds      map[string]bool
 }
 
@@ -36,6 +38,8 @@ func loadRhythmRallyAssets(t *testing.T) *rhythmRallyAssets {
 	readRhythmRallyJSON(t, filepath.Join(root, "anims.json"), &as.Anims)
 	readRhythmRallyJSON(t, filepath.Join(root, "controllers.json"), &as.Controllers)
 	readRhythmRallyJSON(t, filepath.Join(root, "animators.json"), &as.Animators)
+	readRhythmRallyJSON(t, filepath.Join(root, "meshes.json"), &as.Meshes)
+	readRhythmRallyJSON(t, filepath.Join(root, "particles.json"), &as.Particles)
 
 	soundRoot := filepath.Join(root, "sounds")
 	if err := filepath.WalkDir(soundRoot, func(p string, d os.DirEntry, err error) error {
@@ -191,6 +195,45 @@ func TestRhythmRallyControllerImportedClips(t *testing.T) {
 			t.Fatalf("animator %s = %q, want %q", path, got, ctrl)
 		}
 	}
+}
+
+func TestRhythmRallyMeshAndParticleAssets(t *testing.T) {
+	as := loadRhythmRallyAssets(t)
+	ball := rhythmRallyMeshBinding(t, as.Meshes, "Game/Ball")
+	if ball.Renderer != "MeshRenderer" || ball.Mesh.GUID != "0" || ball.Mesh.FileID != 10207 {
+		t.Fatalf("ball mesh binding = %#v, want built-in Sphere MeshRenderer", ball)
+	}
+	if len(ball.Materials) != 1 || ball.Materials[0].Name != "Ball" {
+		t.Fatalf("ball materials = %#v, want Ball material", ball.Materials)
+	}
+	stage := rhythmRallyMeshBinding(t, as.Meshes, "Game/WhiteBG")
+	if stage.Renderer != "SkinnedMeshRenderer" || stage.Mesh.Name != "stageLmodel" {
+		t.Fatalf("stage binding = %#v, want stageLmodel SkinnedMeshRenderer", stage)
+	}
+	if geoms := as.Meshes.Geometries[stage.Mesh.GUID]; len(geoms) != 6 {
+		t.Fatalf("stage geometry count = %d, want 6 from stageLmodel.fbx", len(geoms))
+	}
+	if got := len(as.Particles.Systems); got != 1 {
+		t.Fatalf("particle systems = %d, want ball trail", got)
+	}
+	trail := as.Particles.Systems[0]
+	if trail.Path != "Game/Ball/Particle System" || !trail.Looping || !trail.PlayOnAwake {
+		t.Fatalf("ball trail particle = %#v", trail)
+	}
+	if trail.Emission.RateOverDistance.Scalar != 8 || trail.Renderer.LengthScale != 2 {
+		t.Fatalf("ball trail params drifted: emission=%#v renderer=%#v", trail.Emission, trail.Renderer)
+	}
+}
+
+func rhythmRallyMeshBinding(t *testing.T, meshes kmdata.MeshData, path string) kmdata.MeshBinding {
+	t.Helper()
+	for _, b := range meshes.Bindings {
+		if b.Path == path {
+			return b
+		}
+	}
+	t.Fatalf("missing mesh binding %s", path)
+	return kmdata.MeshBinding{}
 }
 
 func TestRhythmRallySceneTargetsAndSounds(t *testing.T) {

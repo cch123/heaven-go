@@ -193,6 +193,11 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   4beat/8beat/count voice、rainbow、spawnBird、day、cloud、snowflake、tree、
   islandSpeed 均已接入运行时；动态天气/鸟群/树/彩虹为按 AirRally.cs 与 prefab
   序列化参数手写的非场景节点实例。
+- rhythmRally：官方 `Game/Ball` MeshRenderer 已用 Unity 内置 Sphere
+  fileID 接入运行时，球轨迹仍按原版 Bezier 曲线推进；`stageLmodel` 的
+  SkinnedMeshRenderer 多 Geometry FBX、paddler 3D/skinned 动画，以及
+  `Game/Ball/Particle System` 的 rate-over-distance 球尾迹仍待补完整运行时，
+  当前由手写 2D table/paddler 与阴影层承担可玩表现。
 - Judgement 结算页已接入 Heaven Studio 的评分阈值/分类评价消息、rank 标志图、
   默认 epilogue 图与结算音效/jingle/循环音乐；`JudgementOpen.playable` 的
   Message0/1/2、BarStart 信号时间，以及 `JudgementManager` 的 barDuration/

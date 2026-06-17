@@ -148,6 +148,18 @@ func TestBuiltinMeshRendererUsesMaterialTexture(t *testing.T) {
 	scene.Draw(dst, Translate(16, 16).Mul(Scale(2, -2)))
 }
 
+func TestSceneDrawsBuiltinSphereMeshRendererBinding(t *testing.T) {
+	as := meshTestAssets(nil)
+	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{FileID: 10207, GUID: "0"}
+	scene := NewScene(as)
+	scene.Sample(0)
+	if _, _, ok := scene.meshDrawable(0); !ok {
+		t.Fatal("built-in Sphere MeshRenderer should be drawable")
+	}
+	dst := ebiten.NewImage(32, 32)
+	scene.Draw(dst, Translate(16, 16).Mul(Scale(20, -20)))
+}
+
 func meshTestAssets(anims map[string]*kmdata.Anim) *Assets {
 	if anims == nil {
 		anims = map[string]*kmdata.Anim{}

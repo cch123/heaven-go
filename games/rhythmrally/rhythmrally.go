@@ -1,10 +1,10 @@
 // Package rhythmrally ports Rhythm Rally's cue timing, rally speeds, ball
 // Bezier travel, core sound timing, background toggle, and player input flow.
 //
-// Heaven Studio renders this game with imported 3D models. The current Go
-// renderer only consumes the extracted 2D scene and sprite metadata, so this
-// module uses the official curves and sounds with a lightweight 2D table and
-// paddler representation until the model renderer is ported.
+// Heaven Studio renders this game with imported 3D models. The Go runtime now
+// drives the official ball mesh, but the multi-geometry stage and paddlers are
+// still represented with a lightweight 2D table/paddler layer until exact FBX
+// submesh and skinned renderer support lands.
 package rhythmrally
 
 import (
@@ -40,7 +40,6 @@ var (
 	tableLine    = color.RGBA{R: 0xff, G: 0xf0, B: 0xf0, A: 0xff}
 	paddlerColor = color.RGBA{R: 0xc9, G: 0x00, B: 0x13, A: 0xff}
 	playerColor  = color.RGBA{R: 0x21, G: 0x40, B: 0xc9, A: 0xff}
-	ballColor    = color.RGBA{R: 0xff, G: 0xff, B: 0xff, A: 0xff}
 	shadowColor  = color.RGBA{R: 0x20, G: 0x00, B: 0x20, A: 0x55}
 )
 
@@ -87,7 +86,8 @@ type Module struct {
 	ctx  *engine.Ctx
 	proj kart.Aff
 
-	curves map[string]kmdata.Curve
+	curves   map[string]kmdata.Curve
+	ballPath string
 
 	serves []serveEvt
 	tosses []tossEvt
@@ -115,6 +115,10 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	}
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2+60).Mul(kart.Scale(130, -130))
 	m.curves = ctx.Assets.Extra.Curves
+	m.ballPath = ctx.Role("ball")
+	if m.ballPath == "" {
+		m.ballPath = "Game/Ball"
+	}
 	m.ball.speed = speedNormal
 	m.ball.missSide = 1
 	m.ball.ballActive = false
@@ -210,8 +214,13 @@ func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
 	m.drawPaddler(screen, true, beat)
 	if m.ball.ballActive {
 		p := m.ballPosition(beat)
-		m.drawBall(screen, p)
+		m.drawBallShadow(screen, p)
+		m.syncSceneBall(p, true)
+	} else {
+		m.syncSceneBall([3]float64{}, false)
 	}
+	m.ctx.SampleScene(beat)
+	m.ctx.Scene.Draw(screen, m.proj)
 	for _, fx := range m.fxs {
 		m.drawBounceFX(screen, fx, beat)
 	}
@@ -499,11 +508,22 @@ func curvePoint(c kmdata.Curve, u, height float64) [3]float64 {
 	return p
 }
 
-func (m *Module) drawBall(screen *ebiten.Image, p [3]float64) {
-	x, y, scale := projectRhythmPoint(p)
+func (m *Module) syncSceneBall(p [3]float64, active bool) {
+	if m.ballPath == "" {
+		return
+	}
+	m.ctx.Scene.SetActive(m.ballPath, active)
+	if !active {
+		m.ctx.Scene.ClearZOver(m.ballPath)
+		return
+	}
+	m.ctx.Scene.SetPosOver(m.ballPath, p[0], p[1])
+	m.ctx.Scene.SetZOver(m.ballPath, p[2])
+}
+
+func (m *Module) drawBallShadow(screen *ebiten.Image, p [3]float64) {
+	x, _, scale := projectRhythmPoint(p)
 	vector.DrawFilledCircle(screen, float32(x), float32(projectRhythmY(-0.399, p[2])), float32(12*scale), shadowColor, true)
-	vector.DrawFilledCircle(screen, float32(x), float32(y), float32(8*scale), ballColor, true)
-	vector.StrokeCircle(screen, float32(x), float32(y), float32(8*scale), 1.5, color.RGBA{R: 0xdd, G: 0xdd, B: 0xee, A: 0xff}, true)
 }
 
 func (m *Module) drawBounceFX(screen *ebiten.Image, fx hitFx, beat float64) {

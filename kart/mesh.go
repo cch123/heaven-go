@@ -19,6 +19,8 @@ func builtinMeshFootprint(ref kmdata.AssetRef) (w, h float64, ok bool) {
 		return 0, 0, false
 	}
 	switch ref.FileID {
+	case 10207: // Sphere: draw as a projected disc for 2D Ebitengine output.
+		return 1, 1, true
 	case 10209: // Plane: Unity's built-in plane is 10x10 units.
 		return 10, 10, true
 	case 10206, 10202: // Cube/Capsule stand-ins used by thin divider meshes.
@@ -65,6 +67,10 @@ func (s *SceneInst) drawMeshBinding(dst *ebiten.Image, bindingIdx, nodeIdx int, 
 	b := &s.as.Meshes.Bindings[bindingIdx]
 	w, h, ok := builtinMeshFootprint(b.Mesh)
 	if ok {
+		if b.Mesh.FileID == 10207 {
+			drawSolidEllipse(dst, proj.Mul(world), w/2, h/2, s.meshTint(nodeIdx, b))
+			return
+		}
 		tex, env := s.meshTexture(b)
 		if tex != nil {
 			drawTexturedBuiltinQuad(dst, proj.Mul(world), w, h, s.meshTint(nodeIdx, b), tex, env)
@@ -130,6 +136,48 @@ func drawSolidQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64) {
 		}
 	}
 	dst.DrawTriangles(vs[:], []uint16{0, 1, 2, 0, 2, 3}, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func drawSolidEllipse(dst *ebiten.Image, m Aff, rx, ry float64, tint [4]float64) {
+	if tint[3] <= 0 || rx <= 0 || ry <= 0 {
+		return
+	}
+	const segments = 32
+	vs := make([]ebiten.Vertex, segments+1)
+	cx, cy := m.Apply(0, 0)
+	vs[0] = ebiten.Vertex{
+		DstX:   float32(cx),
+		DstY:   float32(cy),
+		SrcX:   1,
+		SrcY:   1,
+		ColorR: float32(tint[0]),
+		ColorG: float32(tint[1]),
+		ColorB: float32(tint[2]),
+		ColorA: float32(tint[3]),
+	}
+	for i := 0; i < segments; i++ {
+		a := 2 * math.Pi * float64(i) / segments
+		x, y := m.Apply(math.Cos(a)*rx, math.Sin(a)*ry)
+		vs[i+1] = ebiten.Vertex{
+			DstX:   float32(x),
+			DstY:   float32(y),
+			SrcX:   1,
+			SrcY:   1,
+			ColorR: float32(tint[0]),
+			ColorG: float32(tint[1]),
+			ColorB: float32(tint[2]),
+			ColorA: float32(tint[3]),
+		}
+	}
+	idx := make([]uint16, 0, segments*3)
+	for i := 0; i < segments; i++ {
+		next := i + 2
+		if next > segments {
+			next = 1
+		}
+		idx = append(idx, 0, uint16(i+1), uint16(next))
+	}
+	dst.DrawTriangles(vs, idx, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
 }
 
 func drawTexturedBuiltinQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {
