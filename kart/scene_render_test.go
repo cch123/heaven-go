@@ -167,6 +167,39 @@ func TestSceneCameraFOVChangesPerspectiveScale(t *testing.T) {
 	}
 }
 
+func TestSceneCameraYawProjectsAroundVerticalAxis(t *testing.T) {
+	as := &Assets{
+		Rig:         kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}}}},
+		Anims:       map[string]*kmdata.Anim{},
+		Controllers: map[string]kmdata.Controller{},
+		Animators:   kmdata.Animators{},
+	}
+	scene := NewScene(as)
+
+	x, _, scale, ok := scene.projectPoint(2, 0, 0)
+	if !ok {
+		t.Fatal("default camera should see x=2 z=0")
+	}
+	if math.Abs(x-2) > 1e-9 || math.Abs(scale-1) > 1e-9 {
+		t.Fatalf("default projection = x %v scale %v, want 2 and 1", x, scale)
+	}
+
+	scene.SetCameraYaw(90)
+	x, _, scale, ok = scene.projectPoint(2, 0, 0)
+	if !ok {
+		t.Fatal("yaw camera should see x=2 z=0")
+	}
+	if math.Abs(x) > 1e-9 {
+		t.Fatalf("90 degree yaw should rotate +x onto view depth, projected x = %v", x)
+	}
+	if want := CamDist / (CamDist + 2); math.Abs(scale-want) > 1e-9 {
+		t.Fatalf("90 degree yaw scale = %v, want %v", scale, want)
+	}
+	if got := scene.cameraSortZ(2, 0); math.Abs(got-2) > 1e-9 {
+		t.Fatalf("90 degree yaw sort depth = %v, want 2", got)
+	}
+}
+
 func TestTemplateQueuesMeshRendererBinding(t *testing.T) {
 	as := &Assets{
 		Rig: kmdata.Rig{Nodes: []kmdata.Node{

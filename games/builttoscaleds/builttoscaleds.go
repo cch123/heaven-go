@@ -516,9 +516,10 @@ func (m *Module) hideDynamicMeshPrefabs() {
 func (m *Module) drawOfficialMeshScene(screen *ebiten.Image, env [4]float64, rot, zoom, beat, songTime float64) {
 	m.applyMeshMaterials(env, beat, songTime)
 	m.ctx.Scene.SetCameraFOV(m.cameraFOV)
+	m.ctx.Scene.SetCameraYaw(rot)
 	m.ctx.SampleScene(beat)
 	m.queueOfficialDynamicMeshes(beat)
-	proj := m.proj.Mul(kart.Scale(zoom, zoom)).Mul(kart.Rotate(rot * math.Pi / 180))
+	proj := m.proj.Mul(kart.Scale(zoom, zoom))
 	m.ctx.Scene.Draw(screen, proj)
 }
 

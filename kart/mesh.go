@@ -110,6 +110,28 @@ func (s *SceneInst) drawMeshBindingTinted(dst *ebiten.Image, bindingIdx int, wor
 	}
 }
 
+func (s *SceneInst) drawMeshBindingProjected(dst *ebiten.Image, bindingIdx int, world Aff, baseZ float64, proj Aff, tint [4]float64) {
+	b := &s.as.Meshes.Bindings[bindingIdx]
+	w, h, ok := builtinMeshFootprint(b.Mesh)
+	if ok {
+		if b.Mesh.FileID == 10207 {
+			drawSolidEllipseProjected(dst, s, world, baseZ, proj, w/2, h/2, tint)
+			return
+		}
+		tex, env := s.meshTexture(b)
+		if tex != nil {
+			drawTexturedBuiltinQuadProjected(dst, s, world, baseZ, proj, w, h, tint, tex, env)
+			return
+		}
+		drawSolidQuadProjected(dst, s, world, baseZ, proj, w, h, tint)
+		return
+	}
+	if g := s.meshGeometry(b); g != nil {
+		tex, env := s.meshTexture(b)
+		drawMeshGeometryProjected(dst, s, world, baseZ, proj, g, tint, tex, env)
+	}
+}
+
 func (s *SceneInst) meshGeometry(b *kmdata.MeshBinding) *kmdata.MeshGeometry {
 	if b.Mesh.GUID == "" || b.Mesh.GUID == "0" {
 		return nil
@@ -172,6 +194,33 @@ func drawSolidQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64) {
 	dst.DrawTriangles(vs[:], []uint16{0, 1, 2, 0, 2, 3}, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
 }
 
+func drawSolidQuadProjected(dst *ebiten.Image, scene *SceneInst, world Aff, baseZ float64, proj Aff, w, h float64, tint [4]float64) {
+	if tint[3] <= 0 || w <= 0 || h <= 0 {
+		return
+	}
+	x0, y0 := -w/2, -h/2
+	x1, y1 := w/2, h/2
+	points := [4][3]float64{{x0, y0, 0}, {x1, y0, 0}, {x1, y1, 0}, {x0, y1, 0}}
+	var vs [4]ebiten.Vertex
+	for i, p := range points {
+		x, y, ok := scene.projectMeshVertex(world, baseZ, proj, p[0], p[1], p[2])
+		if !ok {
+			return
+		}
+		vs[i] = ebiten.Vertex{
+			DstX:   float32(x),
+			DstY:   float32(y),
+			SrcX:   1,
+			SrcY:   1,
+			ColorR: float32(tint[0]),
+			ColorG: float32(tint[1]),
+			ColorB: float32(tint[2]),
+			ColorA: float32(tint[3]),
+		}
+	}
+	dst.DrawTriangles(vs[:], []uint16{0, 1, 2, 0, 2, 3}, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
 func drawSolidEllipse(dst *ebiten.Image, m Aff, rx, ry float64, tint [4]float64) {
 	if tint[3] <= 0 || rx <= 0 || ry <= 0 {
 		return
@@ -192,6 +241,54 @@ func drawSolidEllipse(dst *ebiten.Image, m Aff, rx, ry float64, tint [4]float64)
 	for i := 0; i < segments; i++ {
 		a := 2 * math.Pi * float64(i) / segments
 		x, y := m.Apply(math.Cos(a)*rx, math.Sin(a)*ry)
+		vs[i+1] = ebiten.Vertex{
+			DstX:   float32(x),
+			DstY:   float32(y),
+			SrcX:   1,
+			SrcY:   1,
+			ColorR: float32(tint[0]),
+			ColorG: float32(tint[1]),
+			ColorB: float32(tint[2]),
+			ColorA: float32(tint[3]),
+		}
+	}
+	idx := make([]uint16, 0, segments*3)
+	for i := 0; i < segments; i++ {
+		next := i + 2
+		if next > segments {
+			next = 1
+		}
+		idx = append(idx, 0, uint16(i+1), uint16(next))
+	}
+	dst.DrawTriangles(vs, idx, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func drawSolidEllipseProjected(dst *ebiten.Image, scene *SceneInst, world Aff, baseZ float64, proj Aff, rx, ry float64, tint [4]float64) {
+	if tint[3] <= 0 || rx <= 0 || ry <= 0 {
+		return
+	}
+	const segments = 32
+	vs := make([]ebiten.Vertex, segments+1)
+	cx, cy, ok := scene.projectMeshVertex(world, baseZ, proj, 0, 0, 0)
+	if !ok {
+		return
+	}
+	vs[0] = ebiten.Vertex{
+		DstX:   float32(cx),
+		DstY:   float32(cy),
+		SrcX:   1,
+		SrcY:   1,
+		ColorR: float32(tint[0]),
+		ColorG: float32(tint[1]),
+		ColorB: float32(tint[2]),
+		ColorA: float32(tint[3]),
+	}
+	for i := 0; i < segments; i++ {
+		a := 2 * math.Pi * float64(i) / segments
+		x, y, ok := scene.projectMeshVertex(world, baseZ, proj, math.Cos(a)*rx, math.Sin(a)*ry, 0)
+		if !ok {
+			return
+		}
 		vs[i+1] = ebiten.Vertex{
 			DstX:   float32(x),
 			DstY:   float32(y),
@@ -253,6 +350,62 @@ func drawTexturedBuiltinQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]flo
 			base := uint16(len(vs))
 			for i := range p {
 				x, y := m.Apply(p[i][0], p[i][1])
+				vs = append(vs, ebiten.Vertex{
+					DstX:   float32(x),
+					DstY:   float32(y),
+					SrcX:   float32(uv[i][0]*tw) + float32(b.Min.X),
+					SrcY:   float32((1-uv[i][1])*th) + float32(b.Min.Y),
+					ColorR: float32(tint[0]),
+					ColorG: float32(tint[1]),
+					ColorB: float32(tint[2]),
+					ColorA: float32(tint[3]),
+				})
+			}
+			is = append(is, base, base+1, base+2, base, base+2, base+3)
+		}
+	}
+	dst.DrawTriangles(vs, is, tex, &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func drawTexturedBuiltinQuadProjected(dst *ebiten.Image, scene *SceneInst, world Aff, baseZ float64, proj Aff, w, h float64, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {
+	if tint[3] <= 0 || w <= 0 || h <= 0 || tex == nil {
+		return
+	}
+	scale := env.Scale
+	if scale == [2]float64{} {
+		scale = [2]float64{1, 1}
+	}
+	ux := repeatBreaks(env.Offset[0], env.Offset[0]+scale[0])
+	vy := repeatBreaks(env.Offset[1], env.Offset[1]+scale[1])
+	if len(ux) < 2 || len(vy) < 2 {
+		return
+	}
+	b := tex.Bounds()
+	tw, th := float64(b.Dx()), float64(b.Dy())
+	vs := make([]ebiten.Vertex, 0, (len(ux)-1)*(len(vy)-1)*4)
+	is := make([]uint16, 0, (len(ux)-1)*(len(vy)-1)*6)
+	for yi := 0; yi+1 < len(vy); yi++ {
+		for xi := 0; xi+1 < len(ux); xi++ {
+			if len(vs)+4 > math.MaxUint16 {
+				return
+			}
+			u0, u1 := ux[xi], ux[xi+1]
+			v0, v1 := vy[yi], vy[yi+1]
+			x0, y0 := builtinQuadLocal(w, h, u0, v0, env.Offset, scale)
+			x1, y1 := builtinQuadLocal(w, h, u1, v1, env.Offset, scale)
+			p := [4][3]float64{{x0, y0, 0}, {x1, y0, 0}, {x1, y1, 0}, {x0, y1, 0}}
+			uv := [4][2]float64{
+				{repeatCoord(u0, u0), repeatCoord(v0, v0)},
+				{repeatCoord(u1, u0), repeatCoord(v0, v0)},
+				{repeatCoord(u1, u0), repeatCoord(v1, v0)},
+				{repeatCoord(u0, u0), repeatCoord(v1, v0)},
+			}
+			base := uint16(len(vs))
+			for i := range p {
+				x, y, ok := scene.projectMeshVertex(world, baseZ, proj, p[i][0], p[i][1], p[i][2])
+				if !ok {
+					return
+				}
 				vs = append(vs, ebiten.Vertex{
 					DstX:   float32(x),
 					DstY:   float32(y),
@@ -337,6 +490,41 @@ func drawMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, tint [4]
 	dst.DrawTriangles(vs, is, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
 }
 
+func drawMeshGeometryProjected(dst *ebiten.Image, scene *SceneInst, world Aff, baseZ float64, proj Aff, g *kmdata.MeshGeometry, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {
+	if tint[3] <= 0 || len(g.Vertices) == 0 || len(g.Indices) < 3 || len(g.Vertices) > 65535 {
+		return
+	}
+	if tex != nil && len(g.UVs) > 0 && len(g.UVIndices) == len(g.Indices) {
+		drawTexturedMeshGeometryProjected(dst, scene, world, baseZ, proj, g, tint, tex, env)
+		return
+	}
+	vs := make([]ebiten.Vertex, len(g.Vertices))
+	for i, p := range g.Vertices {
+		x, y, ok := scene.projectMeshVertex(world, baseZ, proj, p[0], p[1], p[2])
+		if !ok {
+			return
+		}
+		vs[i] = ebiten.Vertex{
+			DstX:   float32(x),
+			DstY:   float32(y),
+			SrcX:   1,
+			SrcY:   1,
+			ColorR: float32(tint[0]),
+			ColorG: float32(tint[1]),
+			ColorB: float32(tint[2]),
+			ColorA: float32(tint[3]),
+		}
+	}
+	is := make([]uint16, 0, len(g.Indices))
+	for _, idx := range g.Indices {
+		if idx < 0 || idx >= len(vs) {
+			return
+		}
+		is = append(is, uint16(idx))
+	}
+	dst.DrawTriangles(vs, is, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
 func drawTexturedMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {
 	if len(g.Indices) > 65535 {
 		return
@@ -375,6 +563,59 @@ func drawTexturedMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, 
 		is[i] = uint16(i)
 	}
 	dst.DrawTriangles(vs, is, tex, &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func drawTexturedMeshGeometryProjected(dst *ebiten.Image, scene *SceneInst, world Aff, baseZ float64, proj Aff, g *kmdata.MeshGeometry, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {
+	if len(g.Indices) > 65535 {
+		return
+	}
+	b := tex.Bounds()
+	w, h := float64(b.Dx()), float64(b.Dy())
+	scale := env.Scale
+	if scale == [2]float64{} {
+		scale = [2]float64{1, 1}
+	}
+	vs := make([]ebiten.Vertex, len(g.Indices))
+	is := make([]uint16, len(g.Indices))
+	for i, vi := range g.Indices {
+		if vi < 0 || vi >= len(g.Vertices) {
+			return
+		}
+		ui := g.UVIndices[i]
+		if ui < 0 || ui >= len(g.UVs) {
+			return
+		}
+		p := g.Vertices[vi]
+		uv := g.UVs[ui]
+		u := wrap01(uv[0]*scale[0] + env.Offset[0])
+		v := wrap01(uv[1]*scale[1] + env.Offset[1])
+		x, y, ok := scene.projectMeshVertex(world, baseZ, proj, p[0], p[1], p[2])
+		if !ok {
+			return
+		}
+		vs[i] = ebiten.Vertex{
+			DstX:   float32(x),
+			DstY:   float32(y),
+			SrcX:   float32(u*w) + float32(b.Min.X),
+			SrcY:   float32((1-v)*h) + float32(b.Min.Y),
+			ColorR: float32(tint[0]),
+			ColorG: float32(tint[1]),
+			ColorB: float32(tint[2]),
+			ColorA: float32(tint[3]),
+		}
+		is[i] = uint16(i)
+	}
+	dst.DrawTriangles(vs, is, tex, &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func (s *SceneInst) projectMeshVertex(world Aff, baseZ float64, proj Aff, x, y, z float64) (float64, float64, bool) {
+	wx, wy := world.Apply(x, y)
+	vx, vy, _, ok := s.projectPoint(wx, wy, baseZ+z)
+	if !ok {
+		return 0, 0, false
+	}
+	sx, sy := proj.Apply(vx, vy)
+	return sx, sy, true
 }
 
 func wrap01(v float64) float64 {
