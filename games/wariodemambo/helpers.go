@@ -2,6 +2,7 @@ package wariodemambo
 
 import (
 	"math"
+	"strings"
 
 	"hsdemo/engine"
 	"hsdemo/riq"
@@ -82,6 +83,27 @@ func (m *Module) localPos(path string) [2]float64 {
 
 func (m *Module) point(path string) [2]float64 {
 	return m.localPos(path)
+}
+
+func (m *Module) tintablePath(path string, hasSprite bool) bool {
+	if !hasSprite || path == m.spotL || path == m.spotR || path == m.commandText {
+		return false
+	}
+	// Wario de Mambo's Unity SetColors edits shared MamboShader/Lights/
+	// FloorLights materials. The extracted 2D rig does not preserve per-renderer
+	// material names yet, so keep the AddColor approximation away from face/head
+	// animators; applying the lighting add pass there made the performers' heads
+	// disappear and painted the spotlight color onto Wario's face.
+	for _, root := range []string{m.warioFace, m.warioBody + "/Squiggly", m.dancerLHead, m.dancerRHead} {
+		if pathInSubtree(path, root) {
+			return false
+		}
+	}
+	return true
+}
+
+func pathInSubtree(path, root string) bool {
+	return root != "" && (path == root || strings.HasPrefix(path, root+"/"))
 }
 
 func (m *Module) currentBeat() float64 {

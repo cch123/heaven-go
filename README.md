@@ -223,6 +223,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - ninjaBodyguard：HitParticle 已按 prefab 中 ArrowSliceA/B 两个 ParticleSystem
   的 lifetime、simulationSpeed、startSpeed、shape arc/radius/rotation、burst、
   ForceModule 与 ParticleSystemRenderer sortingOrder/lengthScale 做运行时发射。
+- warioDeMambo：当前颜色变化仍以 `_AddColor` 近似 `MamboShader` 的
+  `_HueShift`，并显式排除 Wario 头脸与舞者 Head Animator，避免近似灯光色
+  污染头部；后续需补完整 MamboShader/HueShift 材质运行时。
 - lockstep：人群渲染将原版"3 台正交相机 → RenderTexture → 平铺 quad"等价
   实现为同尺度无限棋盘格直绘（几何/相位/缩放一致）。
 - ppe 后处理（engine/postfx.go）：colorGrading/vignette/cabb/lensD/pixelQuad 与

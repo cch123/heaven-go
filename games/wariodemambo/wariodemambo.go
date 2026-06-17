@@ -50,7 +50,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.redAdd = colorField(game.Nums, "redAddColor", m.redAdd)
 
 	for _, n := range ctx.Assets.Rig.Nodes {
-		if n.Sprite == "" || n.Path == m.spotL || n.Path == m.spotR || n.Path == m.commandText {
+		if !m.tintablePath(n.Path, n.Sprite != "") {
 			continue
 		}
 		m.tintPaths = append(m.tintPaths, n.Path)

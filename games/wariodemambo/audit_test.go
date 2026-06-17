@@ -75,6 +75,44 @@ func TestBindingsComponentsTextAndSounds(t *testing.T) {
 	}
 }
 
+func TestTintPathsDoNotColorFaceAndHeadAnimators(t *testing.T) {
+	m := &Module{
+		spotL:       "Spotlights/SpotlightL",
+		spotR:       "Spotlights/SpotlightR",
+		commandText: "TextHolder/Command",
+		warioBody:   "WarioJumper/WAAAAAAAA",
+		warioFace:   "WarioJumper/WAAAAAAAA/Face",
+		dancerLHead: "DancerL/DancerJumper/DancerL/HeadHolder",
+		dancerRHead: "DancerR/DancerJumper/DancerL/HeadHolder",
+	}
+	blocked := []string{
+		"WarioJumper/WAAAAAAAA/Face",
+		"WarioJumper/WAAAAAAAA/Face/Eyes",
+		"WarioJumper/WAAAAAAAA/Squiggly",
+		"DancerL/DancerJumper/DancerL/HeadHolder/Head",
+		"DancerR/DancerJumper/DancerL/HeadHolder/Head",
+		"Spotlights/SpotlightL",
+		"TextHolder/Command",
+	}
+	for _, path := range blocked {
+		if m.tintablePath(path, true) {
+			t.Fatalf("path %s should not receive Wario AddColor approximation", path)
+		}
+	}
+	for _, path := range []string{
+		"WarioJumper/WAAAAAAAA/Body/Torso",
+		"DancerL/DancerJumper/DancerL/Torso",
+		"LightHolderT/Light1",
+	} {
+		if !m.tintablePath(path, true) {
+			t.Fatalf("path %s should still receive Wario AddColor approximation", path)
+		}
+	}
+	if m.tintablePath("WarioJumper/WAAAAAAAA", false) {
+		t.Fatal("sprite-less nodes must not be tint targets")
+	}
+}
+
 func TestControllersStatesClipsAndPaths(t *testing.T) {
 	as := loadAssets(t)
 	want := map[string][]string{
