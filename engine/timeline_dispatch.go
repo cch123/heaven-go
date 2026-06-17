@@ -30,6 +30,10 @@ func (a *App) dispatchBeatmapEvent(e *riq.Entity) {
 		on := boolParam(e, "toggle")
 		b := e.Beat
 		a.at(b, func() { a.inputOn = on })
+	case e.Datamodel == "advanced/play custom sfx":
+		a.scheduleAdvancedCustomSFX(e)
+	case e.Datamodel == "advanced/play sfx":
+		a.scheduleAdvancedSFX(e)
 	case e.Datamodel == "vfx/flash":
 		a.flashes = append(a.flashes, flashEvt{
 			beat: e.Beat, length: e.Length,
@@ -57,7 +61,7 @@ func (a *App) dispatchBeatmapEvent(e *riq.Entity) {
 		a.tbx.add(e)
 	case e.Game() == "ppe":
 		a.fx.add(e)
-	case e.Game() == "gameManager" || e.Game() == "vfx" || e.Game() == "global":
+	case e.Game() == "gameManager" || e.Game() == "vfx" || e.Game() == "global" || e.Game() == "advanced":
 		// Unsupported global events are intentionally ignored until ported.
 	default:
 		if m, ok := a.modules[e.Game()]; ok {

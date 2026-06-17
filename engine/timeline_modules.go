@@ -19,8 +19,8 @@ func (a *App) collectUsedGames() map[string]bool {
 			continue
 		}
 		switch e.Game() {
-		case "gameManager", "vfx", "countIn", "global", "ppe":
-			continue // ppe is handled by the engine and does not own a module.
+		case "gameManager", "vfx", "countIn", "global", "ppe", "advanced":
+			continue // Engine-owned timelines do not instantiate minigame modules.
 		}
 		used[e.Game()] = true
 	}

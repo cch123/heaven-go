@@ -16,6 +16,7 @@ package riq
 import (
 	"archive/zip"
 	"bytes"
+	"encoding/binary"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -182,6 +183,14 @@ type Riq struct {
 	Audio       []byte
 	AudioFormat AudioFormat
 	AudioName   string // 容器内的音频文件名（诊断用）
+	CustomSfx   map[string]EmbeddedAudio
+}
+
+// EmbeddedAudio 是 RIQ Resources/Sounds 下的自定义音频资源。
+type EmbeddedAudio struct {
+	Name   string
+	Data   []byte
+	Format AudioFormat
 }
 
 // ---------- tempo map ----------
@@ -382,7 +391,10 @@ func loadV2(files map[string][]byte, chartName string) (*Riq, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &Riq{Beatmap: bm, Audio: audio, AudioFormat: Sniff(audio), AudioName: audioName}, nil
+	return &Riq{
+		Beatmap: bm, Audio: audio, AudioFormat: Sniff(audio), AudioName: audioName,
+		CustomSfx: findEmbeddedSounds(files),
+	}, nil
 }
 
 // indexTable 把 {"0": "a", "1": "b"} 形式的 JSON 对象还原为有序切片。
@@ -484,11 +496,98 @@ func loadV1(files map[string][]byte) (*Riq, error) {
 	sort.SliceStable(bm.Entities, func(i, j int) bool { return bm.Entities[i].Beat < bm.Entities[j].Beat })
 	bm.trimEntitiesAfterFirstEnd()
 
-	audio, ok := files["song.bin"]
-	if !ok {
-		return nil, fmt.Errorf("v1 riq missing song.bin")
+	customSfx := findEmbeddedSounds(files)
+	audioName, audio, format, err := v1ChartAudio(files, bm, customSfx)
+	if err != nil {
+		return nil, err
 	}
-	return &Riq{Beatmap: bm, Audio: audio, AudioFormat: Sniff(audio), AudioName: "song.bin"}, nil
+	return &Riq{Beatmap: bm, Audio: audio, AudioFormat: format, AudioName: audioName, CustomSfx: customSfx}, nil
+}
+
+func v1ChartAudio(files map[string][]byte, bm *Beatmap, customSfx map[string]EmbeddedAudio) (string, []byte, AudioFormat, error) {
+	if audio, ok := files["song.bin"]; ok {
+		return "song.bin", audio, Sniff(audio), nil
+	}
+	if len(customSfx) == 0 {
+		return "", nil, AudioUnknown, fmt.Errorf("v1 riq missing song.bin")
+	}
+
+	// Some Heaven Studio BobbyBuild practice charts intentionally have no
+	// music track and drive all audible timing through advanced/custom SFX
+	// events. The conductor still needs a playable stream, so synthesize a
+	// silent WAV long enough for seeking and result timing.
+	endBeat := fallbackTimelineEndBeat(bm.Entities)
+	dur := bm.BeatToTime(endBeat + 4)
+	if dur < 1 {
+		dur = 1
+	}
+	return "generated-silence.wav", silentWAV(dur), AudioWAV, nil
+}
+
+func fallbackTimelineEndBeat(es []Entity) float64 {
+	if end, ok := firstEndBeat(es); ok {
+		return end
+	}
+	var last float64
+	for i := range es {
+		if e := es[i].Beat + es[i].Length; e > last {
+			last = e
+		}
+	}
+	return last
+}
+
+func findEmbeddedSounds(files map[string][]byte) map[string]EmbeddedAudio {
+	const prefix = "Resources/Sounds/"
+	names := make([]string, 0, len(files))
+	for name := range files {
+		if strings.HasPrefix(name, prefix) {
+			names = append(names, name)
+		}
+	}
+	sort.Strings(names)
+
+	out := map[string]EmbeddedAudio{}
+	for _, name := range names {
+		data := files[name]
+		format := Sniff(data)
+		if format == AudioUnknown {
+			continue
+		}
+		base := path.Base(name)
+		stem := strings.TrimSuffix(base, path.Ext(base))
+		out[stem] = EmbeddedAudio{Name: name, Data: data, Format: format}
+	}
+	return out
+}
+
+func silentWAV(seconds float64) []byte {
+	const (
+		sampleRate    = 44100
+		channels      = 2
+		bitsPerSample = 16
+		blockAlign    = channels * bitsPerSample / 8
+	)
+	samples := int(seconds*sampleRate + 0.5)
+	if samples < sampleRate {
+		samples = sampleRate
+	}
+	dataSize := samples * blockAlign
+	out := make([]byte, 44+dataSize)
+	copy(out[0:4], "RIFF")
+	binary.LittleEndian.PutUint32(out[4:8], uint32(36+dataSize))
+	copy(out[8:12], "WAVE")
+	copy(out[12:16], "fmt ")
+	binary.LittleEndian.PutUint32(out[16:20], 16)
+	binary.LittleEndian.PutUint16(out[20:22], 1)
+	binary.LittleEndian.PutUint16(out[22:24], channels)
+	binary.LittleEndian.PutUint32(out[24:28], sampleRate)
+	binary.LittleEndian.PutUint32(out[28:32], sampleRate*blockAlign)
+	binary.LittleEndian.PutUint16(out[32:34], blockAlign)
+	binary.LittleEndian.PutUint16(out[34:36], bitsPerSample)
+	copy(out[36:40], "data")
+	binary.LittleEndian.PutUint32(out[40:44], uint32(dataSize))
+	return out
 }
 
 func (b *Beatmap) trimEntitiesAfterFirstEnd() {

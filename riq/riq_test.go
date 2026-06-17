@@ -74,3 +74,46 @@ func TestTrimEntitiesAfterFirstEndDropsEditorLeftovers(t *testing.T) {
 		}
 	}
 }
+
+func TestLoadV1PracticeWithEmbeddedCustomSFX(t *testing.T) {
+	level := "../levels/Balloon Hunter (PRACTICE).riq"
+	if _, err := os.Stat(level); err != nil {
+		t.Skipf("local Balloon Hunter practice level not present: %v", err)
+	}
+	r, err := Load(level)
+	if err != nil {
+		t.Fatalf("load: %v", err)
+	}
+	if r.AudioName != "generated-silence.wav" {
+		t.Fatalf("audio name = %q, want generated silence fallback", r.AudioName)
+	}
+	if r.AudioFormat != AudioWAV {
+		t.Fatalf("audio format = %v, want wav", r.AudioFormat)
+	}
+	sfx, ok := r.CustomSfx["balloon spheres prac"]
+	if !ok {
+		t.Fatalf("embedded custom sfx missing; keys=%v", keysOf(r.CustomSfx))
+	}
+	if sfx.Format != AudioOGG {
+		t.Fatalf("custom sfx format = %v, want ogg", sfx.Format)
+	}
+	if got := firstEndOrZero(r.Beatmap.Entities); got != 114 {
+		t.Fatalf("first end beat = %v, want 114", got)
+	}
+	if got := r.Beatmap.BeatToTime(114); got < 52 || got > 53 {
+		t.Fatalf("end time = %v sec, want around 52.6", got)
+	}
+}
+
+func firstEndOrZero(es []Entity) float64 {
+	end, _ := firstEndBeat(es)
+	return end
+}
+
+func keysOf(m map[string]EmbeddedAudio) []string {
+	out := make([]string, 0, len(m))
+	for k := range m {
+		out = append(out, k)
+	}
+	return out
+}

@@ -13,6 +13,8 @@ func (a *App) resetLoadedRiq(r *riq.Riq, player *audio.Player, music *pitchPCMRe
 	a.r, a.bm = r, r.Beatmap
 	a.player = player
 	a.music = music
+	a.customSfx = decodeEmbeddedAudioPCM(r)
+	a.gameSfxPCM = map[string][]byte{}
 	a.cond = conductor.New(r.Beatmap, player)
 	a.modules = map[string]Module{}
 }
@@ -23,6 +25,8 @@ func (a *App) unloadLoadedRiq() {
 	a.r = nil
 	a.bm = nil
 	a.cond = nil
+	a.customSfx = nil
+	a.gameSfxPCM = nil
 	a.clearTimelineState()
 	a.resetRunState()
 	a.loadErr = ""

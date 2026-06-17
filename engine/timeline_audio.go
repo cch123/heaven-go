@@ -4,6 +4,8 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+	"log"
+	"strings"
 
 	"github.com/hajimehoshi/ebiten/v2/audio"
 	"github.com/hajimehoshi/ebiten/v2/audio/mp3"
@@ -36,12 +38,35 @@ func decodeMusicPCM(r *riq.Riq) ([]byte, error) {
 }
 
 func decodeMusicStream(r *riq.Riq) (io.Reader, error) {
-	br := bytes.NewReader(r.Audio)
+	return decodeAudioStream(r.Audio, r.AudioFormat, r.AudioName)
+}
+
+func decodeEmbeddedAudioPCM(r *riq.Riq) map[string][]byte {
+	out := map[string][]byte{}
+	for name, snd := range r.CustomSfx {
+		stream, err := decodeAudioStream(snd.Data, snd.Format, snd.Name)
+		if err != nil {
+			log.Printf("engine: 自定义音效 %s 解码失败: %v", snd.Name, err)
+			continue
+		}
+		pcm, err := io.ReadAll(stream)
+		if err != nil {
+			log.Printf("engine: 自定义音效 %s 读取失败: %v", snd.Name, err)
+			continue
+		}
+		out[name] = pcm
+		out[strings.ToLower(name)] = pcm
+	}
+	return out
+}
+
+func decodeAudioStream(raw []byte, format riq.AudioFormat, name string) (io.Reader, error) {
+	br := bytes.NewReader(raw)
 	var (
 		stream io.Reader
 		err    error
 	)
-	switch r.AudioFormat {
+	switch format {
 	case riq.AudioWAV:
 		stream, err = wav.DecodeWithSampleRate(SampleRate, br)
 	case riq.AudioOGG:
@@ -49,10 +74,10 @@ func decodeMusicStream(r *riq.Riq) (io.Reader, error) {
 	case riq.AudioMP3:
 		stream, err = mp3.DecodeWithSampleRate(SampleRate, br)
 	default:
-		return nil, fmt.Errorf("unsupported audio format (%s)", r.AudioName)
+		return nil, fmt.Errorf("unsupported audio format (%s)", name)
 	}
 	if err != nil {
-		return nil, fmt.Errorf("decode music: %w", err)
+		return nil, fmt.Errorf("decode audio: %w", err)
 	}
 	return stream, nil
 }
