@@ -145,14 +145,14 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   音效序列已按 C# 时序接入；提取器已导出 `Models` 下的 airboy、arch、
   wall、dog、floor controller 和所有 `.anim`，并把 Animator 曲线访问的 FBX
   内部骨架 path 合成为 scene 节点；MeshRenderer/材质/纹理槽与 sky imported
-  FBX Geometry 顶点/UV 已导出，`assets/airboarder/meshes.json` 已入库并由运行时
-  加载/绘制单 Geometry MeshRenderer；当前源树缺 sky `_MainTex` GUID 对应图片，
-  因而该材质仍回退到 `_Color`。原版主体是 MeshRenderer/材质贴图的 3D 场景，
-  当前仍暂用手写 2D billboard 渲染角色/障碍；fallback 地面滚动已按官方
-  `floor_model/move` 的 5 拍循环和提取曲线位移对齐；`camera` 事件的
-  last/next 链式插值、additive Y 旋转、pivot 参数与 X/Y/zoom 已按
-  Airboarder.cs 折叠并作用到当前 scene camera，运行时仍待补多 Geometry FBX
-  映射、缺失贴图恢复、CameraPivot 旋转/FOV 与 MeshRenderer 材质滚动的完整支持。
+  FBX Geometry 顶点/UV 已导出，`sky.mat` 里断开的 `_MainTex` GUID 已严格修复到
+  同目录官方 `purplesky.png`，`assets/airboarder/meshes.json` 与 `meshtex/`
+  已入库并由运行时加载/绘制单 Geometry MeshRenderer。原版主体是 MeshRenderer/
+  材质贴图的 3D 场景，当前仍暂用手写 2D billboard 渲染角色/障碍；fallback
+  地面滚动已按官方 `floor_model/move` 的 5 拍循环和提取曲线位移对齐；
+  `camera` 事件的 last/next 链式插值、additive Y 旋转、pivot 参数与 X/Y/zoom
+  已按 Airboarder.cs 折叠并作用到当前 scene camera，运行时仍待补多 Geometry
+  FBX 映射、CameraPivot 旋转/FOV 与 MeshRenderer 材质滚动的完整支持。
 - animalAcrobat：动物队列、障碍旋转/hold 判定、起跳/落地、背景颜色、
   Spotlight/Confetti、BGTileManager 双 tile 回收，以及 AnimalAcrobat.CameraUpdate
   的逐动物 hold/release/长颈鹿 zoom 相机流程已接入；PlayerAcrobat 的

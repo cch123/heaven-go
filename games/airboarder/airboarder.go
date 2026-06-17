@@ -1,7 +1,7 @@
 // Package airboarder ports Airboarder's event timing, input windows, sounds,
 // and script-driven colors. The current renderer combines a temporary 2D layer
-// with the extracted sky MeshRenderer while the engine grows full imported-FBX
-// material-texture and camera support for the original 3D scene; see README.
+// with the extracted textured sky MeshRenderer while the engine grows full
+// imported-FBX camera support for the original 3D scene; see README.
 package airboarder
 
 import (

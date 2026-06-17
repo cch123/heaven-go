@@ -233,6 +233,7 @@ func parseMaterialAsset(path, guid string, ref kmdata.AssetRef, shaderAssets, te
 				if tex.GUID == "" && tex.FileID == 0 {
 					continue
 				}
+				tex = repairBrokenMaterialTexture(path, mat.Name, name, tex)
 				if mat.Textures == nil {
 					mat.Textures = map[string]kmdata.TextureEnv{}
 				}
@@ -266,6 +267,26 @@ func parseMaterialAsset(path, guid string, ref kmdata.AssetRef, shaderAssets, te
 		return mat, true
 	}
 	return kmdata.Material{}, false
+}
+
+func repairBrokenMaterialTexture(materialPath, materialName, prop string, ref kmdata.AssetRef) kmdata.AssetRef {
+	if ref.Path != "" || *game != "airboarder" || materialName != "sky" || prop != "_MainTex" {
+		return ref
+	}
+	if ref.GUID != "5b82c9572d4fe7c41af997c06e051ea0" {
+		return ref
+	}
+	// HeavenStudio-master ships Airboarder's sky.mat with this stale texture
+	// GUID, but the same official Materials folder contains the matching 64x64
+	// sky texture. Keep the repair scoped to this exact serialized reference so
+	// other broken material links stay visible instead of being guessed.
+	candidate := filepath.Join(filepath.Dir(materialPath), "purplesky.png")
+	if _, err := os.Stat(candidate); err != nil {
+		return ref
+	}
+	ref.Name = "purplesky"
+	ref.Path = unityRelPath(candidate)
+	return ref
 }
 
 func copyMeshTexture(ref kmdata.AssetRef) string {

@@ -123,6 +123,37 @@ func TestParseAirboarderSceneFBXGeometry(t *testing.T) {
 	}
 }
 
+func TestRepairBrokenAirboarderSkyTexture(t *testing.T) {
+	prevGame, prevHS := *game, *hsRoot
+	t.Cleanup(func() {
+		*game = prevGame
+		*hsRoot = prevHS
+	})
+	*game = "airboarder"
+	*hsRoot = t.TempDir()
+	matDir := filepath.Join(*hsRoot, "Assets", "Bundled", "Games", "Airboarder", "Models", "Materials")
+	if err := os.MkdirAll(matDir, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(matDir, "purplesky.png"), []byte("png"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	ref := repairBrokenMaterialTexture(filepath.Join(matDir, "sky.mat"), "sky", "_MainTex", kmdata.AssetRef{
+		FileID: 2800000,
+		GUID:   "5b82c9572d4fe7c41af997c06e051ea0",
+	})
+	if ref.Name != "purplesky" || ref.Path != "Bundled/Games/Airboarder/Models/Materials/purplesky.png" {
+		t.Fatalf("repair ref = %#v", ref)
+	}
+	other := repairBrokenMaterialTexture(filepath.Join(matDir, "other.mat"), "other", "_MainTex", kmdata.AssetRef{
+		FileID: 2800000,
+		GUID:   "5b82c9572d4fe7c41af997c06e051ea0",
+	})
+	if other.Path != "" || other.Name != "" {
+		t.Fatalf("non-sky material should not be repaired: %#v", other)
+	}
+}
+
 func kmdataRef(guid, name, path string) map[string]kmdata.AssetRef {
 	return map[string]kmdata.AssetRef{guid: {GUID: guid, Name: name, Path: path}}
 }

@@ -106,8 +106,15 @@ func TestAirboarderMeshRendererAssets(t *testing.T) {
 	if mat.Name != "sky" {
 		t.Fatalf("sky material not exported: %#v", mat)
 	}
-	if tex := mat.Textures["_MainTex"].Texture; tex.GUID == "" || tex.FileID == 0 {
+	mainTex := mat.Textures["_MainTex"]
+	if tex := mainTex.Texture; tex.GUID == "" || tex.FileID == 0 || tex.Name != "purplesky" {
 		t.Fatalf("sky _MainTex texture ref not preserved: %#v", tex)
+	}
+	if mainTex.Image != "meshtex/5b82c9572d4fe7c41af997c06e051ea0.png" {
+		t.Fatalf("sky _MainTex image = %q", mainTex.Image)
+	}
+	if _, err := os.Stat(filepath.Join(root, mainTex.Image)); err != nil {
+		t.Fatalf("sky _MainTex image missing: %v", err)
 	}
 	if mat.Colors["_Color"] == ([4]float64{}) {
 		t.Fatalf("sky material color missing: %#v", mat.Colors)
