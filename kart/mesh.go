@@ -11,9 +11,8 @@ import (
 
 // Unity built-in mesh IDs are serialized as guid "0" plus a stable fileID.
 // BuiltToScaleDS currently uses Plane for the scrolling floor grid and Cube/
-// Capsule-like thin dividers. Imported FBX meshes use extracted geometry when
-// a guid has exactly one Geometry; multi-geometry submesh matching remains
-// explicit work so we do not attach the wrong mesh to a renderer.
+// Capsule-like thin dividers. Imported FBX meshes use the Unity mesh fileID to
+// select the matching FBX Geometry node when a source asset contains several.
 func builtinMeshFootprint(ref kmdata.AssetRef) (w, h float64, ok bool) {
 	if ref.GUID != "" && ref.GUID != "0" {
 		return 0, 0, false
@@ -119,9 +118,15 @@ func (s *SceneInst) meshGeometry(b *kmdata.MeshBinding) *kmdata.MeshGeometry {
 	if len(geoms) == 1 {
 		return &geoms[0]
 	}
-	// New Unity fileID generation does not expose a stable name table in .meta.
-	// Until exact submesh matching is implemented, avoid guessing when an FBX
-	// contains several Geometry nodes.
+	if b.Mesh.FileID != 0 {
+		for i := range geoms {
+			if geoms[i].FBXID == b.Mesh.FileID {
+				return &geoms[i]
+			}
+		}
+	}
+	// Avoid guessing when an imported model contains several Geometry nodes but
+	// the serialized Mesh reference cannot be matched to one of their FBX IDs.
 	return nil
 }
 

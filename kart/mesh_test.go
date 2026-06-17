@@ -107,6 +107,59 @@ func TestImportedFBXMeshRendererUsesSingleGeometry(t *testing.T) {
 	scene.Draw(dst, Translate(48, 48).Mul(Scale(4, -4)))
 }
 
+func TestImportedFBXMeshRendererMatchesMultiGeometryByFileID(t *testing.T) {
+	as := meshTestAssets(nil)
+	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{
+		FileID: 222,
+		GUID:   "mesh-guid",
+		Name:   "mesh_2_",
+	}
+	as.Meshes.Geometries = map[string][]kmdata.MeshGeometry{
+		"mesh-guid": {
+			{
+				Name:     "mesh_1_",
+				FBXID:    111,
+				Vertices: [][3]float64{{-1, -1, 0}, {1, -1, 0}, {1, 1, 0}},
+				Indices:  []int{0, 1, 2},
+			},
+			{
+				Name:     "mesh_2_",
+				FBXID:    222,
+				Vertices: [][3]float64{{-2, -2, 0}, {2, -2, 0}, {2, 2, 0}, {-2, 2, 0}},
+				Indices:  []int{0, 1, 2, 0, 2, 3},
+			},
+		},
+	}
+	scene := NewScene(as)
+	scene.Sample(0)
+	if _, _, ok := scene.meshDrawable(0); !ok {
+		t.Fatal("imported FBX mesh with matching multi-geometry fileID should be drawable")
+	}
+	if got := scene.meshGeometry(&as.Meshes.Bindings[0]); got == nil || got.FBXID != 222 || got.Name != "mesh_2_" {
+		t.Fatalf("matched geometry = %#v, want mesh_2_ with FBXID 222", got)
+	}
+}
+
+func TestImportedFBXMeshRendererRejectsUnmatchedMultiGeometry(t *testing.T) {
+	as := meshTestAssets(nil)
+	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{
+		FileID: 333,
+		GUID:   "mesh-guid",
+		Name:   "missing",
+	}
+	as.Meshes.Geometries = map[string][]kmdata.MeshGeometry{
+		"mesh-guid": {
+			{Name: "mesh_1_", FBXID: 111, Vertices: [][3]float64{{0, 0, 0}}, Indices: []int{0}},
+			{Name: "mesh_2_", FBXID: 222, Vertices: [][3]float64{{0, 0, 0}}, Indices: []int{0}},
+		},
+	}
+	scene := NewScene(as)
+	scene.Sample(0)
+	if _, _, ok := scene.meshDrawable(0); ok {
+		t.Fatal("imported FBX mesh with unmatched multi-geometry fileID should not be drawable")
+	}
+}
+
 func TestImportedFBXMeshRendererUsesTextureUVs(t *testing.T) {
 	as := meshTestAssets(nil)
 	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{GUID: "mesh-guid", Name: "scene"}
