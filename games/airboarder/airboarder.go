@@ -68,6 +68,14 @@ type cameraEvt struct {
 	x, y         float64
 	ease         int
 	additive     bool
+	pivot        int
+}
+
+type cameraState struct {
+	rotY, rotX float64
+	zoom       float64
+	x, y       float64
+	pivot      int
 }
 
 type obstacle struct {
@@ -170,6 +178,7 @@ func (m *Module) OnEvent(e *riq.Entity) {
 			rotY: e.Float("valA", 0), rotX: e.Float("RotateX", 0),
 			zoom: e.Float("valB", 1), x: e.Float("cameraX", 0), y: e.Float("cameraY", 0),
 			ease: int(e.Float("type", 0)), additive: boolDefault(e, "additive", true),
+			pivot: int(e.Float("pivot", 0)),
 		})
 	}
 }
@@ -226,9 +235,14 @@ func (m *Module) Update(_ float64, beat float64) {
 func (m *Module) Draw(screen *ebiten.Image, _ float64, beat float64) {
 	_, cloud := m.bgAt(beat)
 	floor, stripe := m.floorAt(beat)
+	camState := m.cameraStateAt(beat)
 	m.drawTemporaryFallbackBG(screen, beat)
-	m.ctx.SampleSceneZ(beat, m.cameraZoomAdd(beat))
-	m.ctx.Scene.Draw(screen, m.proj)
+	if m.ctx.Scene != nil {
+		cam := m.ctx.CameraAt(beat)
+		m.ctx.Scene.SetCamera(cam[0]+camState.x, cam[1]+camState.y, cam[2]+cameraZoomAdd(camState.zoom))
+		m.ctx.Scene.Sample(beat)
+		m.ctx.Scene.Draw(screen, m.proj)
+	}
 	m.drawTemporaryForeground(screen, beat, rgba(cloud), rgba(floor), rgba(stripe))
 }
 

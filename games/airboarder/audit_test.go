@@ -195,6 +195,44 @@ func TestAirboarderFloorFallbackUsesExtractedMoveClip(t *testing.T) {
 	}
 }
 
+func TestAirboarderCameraEventsChainLikeUnity(t *testing.T) {
+	m := &Module{cameraEvts: []cameraEvt{
+		{beat: 0, length: 4, rotY: 90, rotX: 10, zoom: 2, x: 4, y: -2, additive: false, pivot: 1},
+		{beat: 4, length: 4, rotY: 15, rotX: 20, zoom: 0.5, x: -4, y: 3, additive: true, pivot: 2},
+	}}
+	mid := m.cameraStateAt(2)
+	assertNear(t, mid.rotY, 45)
+	assertNear(t, mid.rotX, 5)
+	assertNear(t, mid.zoom, 1.5)
+	assertNear(t, mid.x, 2)
+	assertNear(t, mid.y, -1)
+	if mid.pivot != 1 {
+		t.Fatalf("mid pivot = %d, want Practice", mid.pivot)
+	}
+
+	next := m.cameraStateAt(6)
+	// Airboarder.ChangeCamera starts a new transition from the previous target,
+	// not from the currently interpolated value. Additive Y rotation is applied
+	// after wrapping that previous target with C#'s % 360 behavior.
+	assertNear(t, next.rotY, 97.5)
+	assertNear(t, next.rotX, 15)
+	assertNear(t, next.zoom, 1.25)
+	assertNear(t, next.x, 0)
+	assertNear(t, next.y, 0.5)
+	if next.pivot != 2 {
+		t.Fatalf("next pivot = %d, want Legacy", next.pivot)
+	}
+}
+
+func TestAirboarderCameraZoomAddUsesFoldedState(t *testing.T) {
+	if got := cameraZoomAdd(2); math.Abs(got+2.5) > 1e-9 {
+		t.Fatalf("zoom add for 2x = %.6f, want -2.5", got)
+	}
+	if got := cameraZoomAdd(0); got != 0 {
+		t.Fatalf("non-positive zoom should not move camera: %v", got)
+	}
+}
+
 func readJSON(t *testing.T, path string, out any) {
 	t.Helper()
 	b, err := os.ReadFile(path)
@@ -203,5 +241,12 @@ func readJSON(t *testing.T, path string, out any) {
 	}
 	if err := json.Unmarshal(b, out); err != nil {
 		t.Fatalf("decode %s: %v", path, err)
+	}
+}
+
+func assertNear(t *testing.T, got, want float64) {
+	t.Helper()
+	if math.Abs(got-want) > 1e-9 {
+		t.Fatalf("got %.9f, want %.9f", got, want)
 	}
 }

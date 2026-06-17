@@ -78,18 +78,56 @@ func easeColor(kind int, a, b [4]float64, u float64) [4]float64 {
 	}
 }
 
-func (m *Module) cameraZoomAdd(beat float64) float64 {
-	zoom := 1.0
+func (m *Module) cameraStateAt(beat float64) cameraState {
+	const defaultPivot = 0
+	var (
+		seen               bool
+		activeBeat         float64
+		activeLength       float64
+		activeEase         int
+		lastRotY, nextRotY float64
+		lastRotX, nextRotX float64
+		lastZoom, nextZoom = 1.0, 1.0
+		lastX, nextX       float64
+		lastY, nextY       float64
+		activePivot        = defaultPivot
+	)
 	for _, ev := range m.cameraEvts {
 		if ev.beat > beat {
 			break
 		}
-		u := 1.0
-		if ev.length > 0 && beat < ev.beat+ev.length {
-			u = (beat - ev.beat) / ev.length
+		seen = true
+		activeBeat, activeLength, activeEase = ev.beat, ev.length, ev.ease
+		lastRotY = math.Mod(nextRotY, 360)
+		lastRotX, nextRotX = nextRotX, ev.rotX
+		lastZoom, nextZoom = nextZoom, ev.zoom
+		lastX, nextX = nextX, ev.x
+		lastY, nextY = nextY, ev.y
+		if ev.additive {
+			nextRotY = lastRotY + ev.rotY
+		} else {
+			nextRotY = ev.rotY
 		}
-		zoom = engine.Ease(ev.ease, 1, ev.zoom, u)
+		activePivot = ev.pivot
 	}
+	if !seen {
+		return cameraState{zoom: 1, pivot: defaultPivot}
+	}
+	u := 1.0
+	if activeLength > 0 && beat < activeBeat+activeLength {
+		u = (beat - activeBeat) / activeLength
+	}
+	return cameraState{
+		rotY:  engine.Ease(activeEase, lastRotY, nextRotY, u),
+		rotX:  engine.Ease(activeEase, lastRotX, nextRotX, u),
+		zoom:  engine.Ease(activeEase, lastZoom, nextZoom, u),
+		x:     engine.Ease(activeEase, lastX, nextX, u),
+		y:     engine.Ease(activeEase, lastY, nextY, u),
+		pivot: activePivot,
+	}
+}
+
+func cameraZoomAdd(zoom float64) float64 {
 	if zoom <= 0 {
 		return 0
 	}
