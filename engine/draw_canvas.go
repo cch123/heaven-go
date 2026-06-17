@@ -20,17 +20,19 @@ func (a *App) drawGameCanvas(screen *ebiten.Image, t, beat float64) {
 	}
 
 	a.drawActiveModule(canvas, t, beat)
-	a.drawFlash(canvas, beat)
 
-	if canvas == screen {
-		return
+	if canvas != screen {
+		screen.Fill(color.RGBA{0, 0, 0, 255}) // letterbox 黑场
+		op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
+		op.GeoM.Translate(-ScreenW/2, -ScreenH/2)
+		op.GeoM.Scale(vsx, vsy)
+		op.GeoM.Translate(ScreenW/2, ScreenH/2)
+		screen.DrawImage(a.viewBuf, op)
 	}
-	screen.Fill(color.RGBA{0, 0, 0, 255}) // letterbox 黑场
-	op := &ebiten.DrawImageOptions{Filter: ebiten.FilterLinear}
-	op.GeoM.Translate(-ScreenW/2, -ScreenH/2)
-	op.GeoM.Scale(vsx, vsy)
-	op.GeoM.Translate(ScreenW/2, ScreenH/2)
-	screen.DrawImage(a.viewBuf, op)
+	// Flash is GameFlash, a UI Image in the game-view camera prefab. It sits
+	// above camera image effects, so LUT/PPE and scale-view must not recolor or
+	// resize the fade layer itself.
+	a.drawFlash(screen, beat)
 }
 
 func (a *App) drawActiveModule(canvas *ebiten.Image, t, beat float64) {
