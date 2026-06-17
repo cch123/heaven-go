@@ -14,6 +14,7 @@ type effectsRuntimeState struct {
 	fx  postFX    // ppe/* 屏幕后处理
 	flt filterFX  // vfx/filter（LUT 滤镜）
 	tbx textboxFX // vfx/display textbox
+	dcl decalFX   // vfx/display decal
 
 	viewScales []viewScaleEvt // vfx/scale view（画布缩放）
 	viewBuf    *ebiten.Image  // 缩放生效时的离屏画布

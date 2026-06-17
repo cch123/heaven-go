@@ -179,11 +179,12 @@ func (b *Beatmap) Prop(key string) string {
 
 // Riq 是一次加载的完整结果。
 type Riq struct {
-	Beatmap     *Beatmap
-	Audio       []byte
-	AudioFormat AudioFormat
-	AudioName   string // 容器内的音频文件名（诊断用）
-	CustomSfx   map[string]EmbeddedAudio
+	Beatmap       *Beatmap
+	Audio         []byte
+	AudioFormat   AudioFormat
+	AudioName     string // 容器内的音频文件名（诊断用）
+	CustomSfx     map[string]EmbeddedAudio
+	CustomSprites map[string]EmbeddedImage
 }
 
 // EmbeddedAudio 是 RIQ Resources/Sounds 下的自定义音频资源。
@@ -191,6 +192,14 @@ type EmbeddedAudio struct {
 	Name   string
 	Data   []byte
 	Format AudioFormat
+}
+
+// EmbeddedImage 是 RIQ Resources/Sprites 下的自定义贴图资源。
+// Heaven Studio 把这些资源作为 Sprite.Create(..., pivot=center) 导入，
+// vfx/display decal 等全局事件通过不带扩展名的资源名引用它们。
+type EmbeddedImage struct {
+	Name string
+	Data []byte
 }
 
 // ---------- tempo map ----------
@@ -393,7 +402,7 @@ func loadV2(files map[string][]byte, chartName string) (*Riq, error) {
 	}
 	return &Riq{
 		Beatmap: bm, Audio: audio, AudioFormat: Sniff(audio), AudioName: audioName,
-		CustomSfx: findEmbeddedSounds(files),
+		CustomSfx: findEmbeddedSounds(files), CustomSprites: findEmbeddedSprites(files),
 	}, nil
 }
 
@@ -501,7 +510,10 @@ func loadV1(files map[string][]byte) (*Riq, error) {
 	if err != nil {
 		return nil, err
 	}
-	return &Riq{Beatmap: bm, Audio: audio, AudioFormat: format, AudioName: audioName, CustomSfx: customSfx}, nil
+	return &Riq{
+		Beatmap: bm, Audio: audio, AudioFormat: format, AudioName: audioName,
+		CustomSfx: customSfx, CustomSprites: findEmbeddedSprites(files),
+	}, nil
 }
 
 func v1ChartAudio(files map[string][]byte, bm *Beatmap, customSfx map[string]EmbeddedAudio) (string, []byte, AudioFormat, error) {
@@ -557,6 +569,31 @@ func findEmbeddedSounds(files map[string][]byte) map[string]EmbeddedAudio {
 		base := path.Base(name)
 		stem := strings.TrimSuffix(base, path.Ext(base))
 		out[stem] = EmbeddedAudio{Name: name, Data: data, Format: format}
+	}
+	return out
+}
+
+func findEmbeddedSprites(files map[string][]byte) map[string]EmbeddedImage {
+	const prefix = "Resources/Sprites/"
+	names := make([]string, 0, len(files))
+	for name := range files {
+		if strings.HasPrefix(name, prefix) {
+			names = append(names, name)
+		}
+	}
+	sort.Strings(names)
+
+	out := map[string]EmbeddedImage{}
+	for _, name := range names {
+		ext := strings.ToLower(path.Ext(name))
+		switch ext {
+		case ".png", ".jpg", ".jpeg":
+		default:
+			continue
+		}
+		base := path.Base(name)
+		stem := strings.TrimSuffix(base, path.Ext(base))
+		out[stem] = EmbeddedImage{Name: name, Data: files[name]}
 	}
 	return out
 }

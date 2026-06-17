@@ -59,6 +59,8 @@ func (a *App) dispatchBeatmapEvent(e *riq.Entity) {
 		a.flt.add(e)
 	case e.Datamodel == "vfx/display textbox":
 		a.tbx.add(e)
+	case e.Datamodel == "vfx/display decal":
+		a.dcl.add(e)
 	case e.Game() == "ppe":
 		a.fx.add(e)
 	case e.Game() == "gameManager" || e.Game() == "vfx" || e.Game() == "global" || e.Game() == "advanced":

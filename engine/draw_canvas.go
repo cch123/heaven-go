@@ -37,14 +37,21 @@ func (a *App) drawActiveModule(canvas *ebiten.Image, t, beat float64) {
 	if a.active == nil {
 		return
 	}
+	cam := a.CameraAt(beat)
 	if a.fx.active() {
 		// ppe：游戏画面渲到离屏帧，经后处理链上屏（flash/HUD 不参与，
 		// 对应 HS 的编辑器叠层不过 PostProcessLayer）
-		a.active.Draw(a.fx.Target(), t, beat)
+		target := a.fx.Target()
+		a.dcl.DrawBackground(target, a.customSprites, beat, cam)
+		a.active.Draw(target, t, beat)
+		a.dcl.DrawGame(target, a.customSprites, beat, cam)
 		a.fx.Apply(canvas, a.assetsRoot, beat, t)
 	} else {
+		a.dcl.DrawBackground(canvas, a.customSprites, beat, cam)
 		a.active.Draw(canvas, t, beat)
+		a.dcl.DrawGame(canvas, a.customSprites, beat, cam)
 	}
 	a.flt.Apply(canvas, a.assetsRoot, beat)
+	a.dcl.DrawOverlay(canvas, a.customSprites, beat, cam)
 	a.tbx.Draw(canvas, a.assetsRoot, beat)
 }

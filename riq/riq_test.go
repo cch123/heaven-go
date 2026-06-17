@@ -105,12 +105,44 @@ func TestLoadV1PracticeWithEmbeddedCustomSFX(t *testing.T) {
 	}
 }
 
+func TestLoadV1EmbeddedSprites(t *testing.T) {
+	level := "../levels/D. Fan Club Dance.riq"
+	if _, err := os.Stat(level); err != nil {
+		t.Skipf("local Fan Club Dance level not present: %v", err)
+	}
+	r, err := Load(level)
+	if err != nil {
+		t.Fatalf("load: %v", err)
+	}
+	sprite, ok := r.CustomSprites["baguette"]
+	if !ok {
+		t.Fatalf("embedded sprite missing; keys=%v", keysOfImages(r.CustomSprites))
+	}
+	if sprite.Name != "Resources/Sprites/baguette.png" {
+		t.Fatalf("sprite name = %q, want Resources/Sprites/baguette.png", sprite.Name)
+	}
+	if len(sprite.Data) < 100_000 {
+		t.Fatalf("sprite data unexpectedly small: %d bytes", len(sprite.Data))
+	}
+	if _, ok := r.CustomSprites["LibraryLevelIcon"]; ok {
+		t.Fatal("library icon should not be treated as a decal sprite")
+	}
+}
+
 func firstEndOrZero(es []Entity) float64 {
 	end, _ := firstEndBeat(es)
 	return end
 }
 
 func keysOf(m map[string]EmbeddedAudio) []string {
+	out := make([]string, 0, len(m))
+	for k := range m {
+		out = append(out, k)
+	}
+	return out
+}
+
+func keysOfImages(m map[string]EmbeddedImage) []string {
 	out := make([]string, 0, len(m))
 	for k := range m {
 		out = append(out, k)
