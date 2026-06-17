@@ -58,8 +58,8 @@ func TestLUTShaderUsesSource0CoordinatesForSecondaryImage(t *testing.T) {
 	}
 }
 
-func TestFilterSlotsApplyUnityComponentOrder(t *testing.T) {
-	want := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+func TestFilterSlotsApplyHighestFirst(t *testing.T) {
+	want := []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
 	if len(filterApplyOrder) != len(want) {
 		t.Fatalf("filterApplyOrder length = %d, want %d", len(filterApplyOrder), len(want))
 	}
@@ -67,6 +67,15 @@ func TestFilterSlotsApplyUnityComponentOrder(t *testing.T) {
 		if filterApplyOrder[i] != want[i] {
 			t.Fatalf("filter slot order = %v, want %v", filterApplyOrder, want)
 		}
+	}
+}
+
+func TestLUTShaderPreservesSourceAlpha(t *testing.T) {
+	if !strings.Contains(lutKage, "srcColor := imageSrc0At(src)") {
+		t.Fatalf("LUT shader should keep the original source sample so alpha survives grading")
+	}
+	if !strings.Contains(lutKage, "srcColor.a") {
+		t.Fatalf("LUT shader should preserve source alpha instead of making transparent pixels opaque")
 	}
 }
 

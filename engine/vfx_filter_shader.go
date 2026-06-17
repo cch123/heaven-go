@@ -6,7 +6,8 @@ package main
 var Blend float
 
 func Fragment(dst vec4, src vec2, color vec4) vec4 {
-	c := imageSrc0At(src).rgb
+	srcColor := imageSrc0At(src)
+	c := srcColor.rgb
 	// 32³ LUT 条带（1024×32）：x = b 切片*32 + r*31。
 	// Unity Texture2D 的 v=0 在图像底部；Ebitengine 的 y=0 在图像顶部，
 	// 因此 LUT 的绿色轴要反向，否则 default_lut 都会把黑色采成绿色。
@@ -21,6 +22,6 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	lo := imageSrc1At(o + vec2(bLo*32.0+clamp(c.r, 0.0, 1.0)*31.0+0.5, y)).rgb
 	hi := imageSrc1At(o + vec2(min(bLo+1.0, 31.0)*32.0+clamp(c.r, 0.0, 1.0)*31.0+0.5, y)).rgb
 	graded := mix(lo, hi, fr)
-	return vec4(mix(c, graded, Blend), 1)
+	return vec4(mix(c, graded, Blend), srcColor.a)
 }
 `

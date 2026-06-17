@@ -11,7 +11,7 @@ type filterSlotState struct {
 	blend float64
 }
 
-var filterApplyOrder = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+var filterApplyOrder = []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
 
 // Apply 按 slot 持久语义叠加滤镜（dst 必须是 ScreenW×ScreenH）。
 func (f *filterFX) Apply(dst *ebiten.Image, assetsRoot string, beat float64) {
@@ -22,11 +22,9 @@ func (f *filterFX) Apply(dst *ebiten.Image, assetsRoot string, beat float64) {
 		return
 	}
 	slots := f.activeSlots(beat)
-	// VFXManager.InitAmplifies adds AmplifyColorEffect components in slot order
-	// and Unity runs those image effects in component order. The editor tooltip
-	// says higher slots apply first, but the runtime source path that shipped
-	// with Heaven Studio applies slot 1 before slot 2; Fan Club Dance depends on
-	// this because its redder pass must be bleached afterwards.
+	// Heaven Studio exposes this as a charting contract: higher slots are
+	// applied first. Fan Club Dance relies on slot 2's bleach happening before
+	// slot 1's redder pass; reversing it washes the whole chart out.
 	for _, slot := range filterApplyOrder {
 		st, ok := slots[slot]
 		if !ok || st.blend <= 0 || st.lut == "" {
@@ -41,6 +39,7 @@ func (f *filterFX) Apply(dst *ebiten.Image, assetsRoot string, beat float64) {
 		op := &ebiten.DrawRectShaderOptions{}
 		op.Images[0] = f.work
 		op.Images[1] = lut
+		op.CompositeMode = ebiten.CompositeModeCopy
 		op.Uniforms = map[string]any{"Blend": float32(st.blend)}
 		dst.DrawRectShader(fxPadW, fxPadH, f.shader, op)
 	}
