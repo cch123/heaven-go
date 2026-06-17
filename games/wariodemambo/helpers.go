@@ -97,6 +97,20 @@ func (m *Module) point(path string) [2]float64 {
 	return [2]float64{w.Tx, w.Ty}
 }
 
+func (m *Module) mamboMainMaterialExcludes() []string {
+	return []string{
+		m.warioFace,
+		m.warioBody + "/Squiggly",
+		// Unity exposes mainMat as a serialized material instance, while the
+		// extractor collapses several SpriteRenderer material references to the
+		// same asset name. Keep the face/head renderer boundaries explicit here;
+		// otherwise the MamboDoodle color/UV pass makes performer heads disappear
+		// or inherit the stage-light shimmer.
+		m.dancerLHead,
+		m.dancerRHead,
+	}
+}
+
 func (m *Module) currentBeat() float64 {
 	if m.ctx == nil {
 		return 0

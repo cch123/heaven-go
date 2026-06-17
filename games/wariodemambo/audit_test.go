@@ -130,7 +130,7 @@ func TestMamboMaterialNamesPreservedForSharedColorShader(t *testing.T) {
 	}
 }
 
-func TestMamboMainMaterialIncludesFacesAndDancerHeads(t *testing.T) {
+func TestMamboMainMaterialExcludesFaceAndDancerHeadInstanceBoundaries(t *testing.T) {
 	as := loadAssets(t)
 	byPath := map[string]kmdata.Node{}
 	for _, n := range as.Rig.Nodes {
@@ -145,6 +145,24 @@ func TestMamboMainMaterialIncludesFacesAndDancerHeads(t *testing.T) {
 	} {
 		if got := byPath[path].Mat; got != "MamboShader" {
 			t.Fatalf("%s material = %q, want MamboShader", path, got)
+		}
+	}
+
+	m := &Module{
+		warioFace:   "WarioJumper/WAAAAAAAA/Face",
+		warioBody:   "WarioJumper/WAAAAAAAA",
+		dancerLHead: "DancerL/DancerJumper/DancerL/HeadHolder",
+		dancerRHead: "DancerR/DancerJumper/DancerL/HeadHolder",
+	}
+	got := strings.Join(m.mamboMainMaterialExcludes(), "\n")
+	for _, want := range []string{
+		"WarioJumper/WAAAAAAAA/Face",
+		"WarioJumper/WAAAAAAAA/Squiggly",
+		"DancerL/DancerJumper/DancerL/HeadHolder",
+		"DancerR/DancerJumper/DancerL/HeadHolder",
+	} {
+		if !strings.Contains(got, want) {
+			t.Fatalf("main Mambo material excludes missing %q in:\n%s", want, got)
 		}
 	}
 }
