@@ -20,6 +20,7 @@ func (a *App) loadSelectedLevel() {
 		a.loadErr = fmt.Sprintf("load %s failed: %v", level.displayName(), err)
 		return
 	}
+	a.currentLevelKey = level.key
 	a.loadErr = ""
 	a.state = stateTitle
 }

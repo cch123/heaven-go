@@ -3,6 +3,11 @@ package engine
 import "github.com/hajimehoshi/ebiten/v2"
 
 func (a *App) moveMenu(delta int) {
+	if len(a.levels) == 0 {
+		a.menuSel = 0
+		a.menuScroll = 0
+		return
+	}
 	a.menuSel += delta
 	if a.menuSel < 0 {
 		a.menuSel = 0
@@ -14,6 +19,11 @@ func (a *App) moveMenu(delta int) {
 }
 
 func (a *App) keepMenuSelectionVisible() {
+	if len(a.levels) == 0 {
+		a.menuSel = 0
+		a.menuScroll = 0
+		return
+	}
 	if a.menuSel < a.menuScroll {
 		a.menuScroll = a.menuSel
 	}
@@ -30,6 +40,23 @@ func (a *App) keepMenuSelectionVisible() {
 	if a.menuScroll < 0 {
 		a.menuScroll = 0
 	}
+}
+
+func (a *App) rebuildMenuLevelsPreservingSelection() {
+	key := ""
+	if a.menuSel >= 0 && a.menuSel < len(a.levels) {
+		key = a.levels[a.menuSel].key
+	}
+	a.menuRuntimeState.rebuildMenuLevels()
+	if key != "" {
+		for i := range a.levels {
+			if a.levels[i].key == key {
+				a.menuSel = i
+				break
+			}
+		}
+	}
+	a.keepMenuSelectionVisible()
 }
 
 func (a *App) hoveredMenuLevel() (int, bool) {

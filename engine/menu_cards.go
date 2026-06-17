@@ -18,11 +18,18 @@ func (a *App) drawLevelCard(screen *ebiten.Image, level menuLevel, idx int, x, y
 		vector.DrawFilledRect(screen, float32(x), float32(y+menuCardH-4), menuCardW, 4, color.RGBA{118, 88, 148, 255}, false)
 	}
 	a.drawLevelThumbnail(screen, level, idx, x+11, y+9, 126)
+	if level.favorite {
+		vector.DrawFilledCircle(screen, float32(x+128), float32(y+24), 13, color.RGBA{255, 217, 68, 245}, false)
+		a.text(screen, "*", a.faceSmall, x+128, y+14, color.RGBA{88, 58, 96, 255}, true)
+	}
 	title := a.fitText(level.displayName(), a.faceSmall, menuCardW-20)
 	a.text(screen, title, a.faceSmall, x+10, y+menuCardH-29, color.RGBA{68, 54, 82, 255}, false)
 	meta := "RIQ"
 	if len(level.games) > 0 {
 		meta = fmt.Sprintf("%d games", len(level.games))
+	}
+	if level.rank != menuRankUnplayed || level.perfect {
+		meta = level.rank.label(level.perfect)
 	}
 	a.text(screen, meta, a.faceSmall, x+10, y+menuCardH-12, color.RGBA{120, 106, 133, 255}, false)
 }

@@ -12,8 +12,10 @@ func (a *App) updateTitle() {
 
 func (a *App) updateLevelSelect() {
 	if len(a.levels) == 0 {
+		a.handleLevelSelectCommands()
 		return
 	}
+	a.handleLevelSelectCommands()
 	a.handleLevelSelectMovement()
 	if a.selectHoveredLevel() {
 		return

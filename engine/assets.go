@@ -66,11 +66,24 @@ func loadLibraryAssets(dir string) libraryAssets {
 	// Unity's sprite atlas rects use a bottom-left origin. This is the original
 	// unplayed level border slice from levelBorders.png.
 	if assets.borderSheet != nil {
-		sheetH := assets.borderSheet.Bounds().Dy()
-		rect := image.Rect(40, sheetH-740-576, 40+576, sheetH-740)
-		if sub, ok := assets.borderSheet.SubImage(rect).(*ebiten.Image); ok {
-			assets.border = sub
-		}
+		assets.borderTryAgain = unitySpriteSubImage(assets.borderSheet, 40, 1436, 576, 576)
+		assets.borderOK = unitySpriteSubImage(assets.borderSheet, 736, 1436, 576, 576)
+		assets.borderSuperb = unitySpriteSubImage(assets.borderSheet, 1432, 1436, 576, 576)
+		assets.borderUnplayed = unitySpriteSubImage(assets.borderSheet, 40, 740, 576, 576)
+		assets.borderPerfect = unitySpriteSubImage(assets.borderSheet, 1432, 740, 576, 576)
+		assets.border = assets.borderUnplayed
 	}
 	return assets
+}
+
+func unitySpriteSubImage(sheet *ebiten.Image, x, y, w, h int) *ebiten.Image {
+	if sheet == nil {
+		return nil
+	}
+	sheetH := sheet.Bounds().Dy()
+	rect := image.Rect(x, sheetH-y-h, x+w, sheetH-y)
+	if sub, ok := sheet.SubImage(rect).(*ebiten.Image); ok {
+		return sub
+	}
+	return nil
 }

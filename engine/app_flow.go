@@ -12,6 +12,7 @@ func (a *App) enterResult() {
 	a.resetMusicFilter()
 	a.cond.Pause()
 	a.result = a.buildResultSummary()
+	a.recordCurrentLevelResult()
 	a.resultT = 0
 	a.resultEpilogue = false
 	a.resetResultAudioCues()

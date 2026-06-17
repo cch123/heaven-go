@@ -28,7 +28,7 @@ func New(assetsRoot, riqPath string) (*App, error) {
 			faceSmall: &text.GoTextFace{Source: src, Size: 15},
 		},
 		effectsRuntimeState: effectsRuntimeState{commonSounds: map[string][]byte{}},
-		menuRuntimeState:    menuRuntimeState{levels: discoverLevels("levels")},
+		menuRuntimeState:    newMenuRuntimeState(discoverLevels("levels")),
 	}
 	a.loadCommonSounds()
 	a.resultAssets = loadResultAssets(filepath.Join(assetsRoot, "common", "ratings"))
@@ -39,6 +39,7 @@ func New(assetsRoot, riqPath string) (*App, error) {
 		if err != nil {
 			return nil, err
 		}
+		a.currentLevelKey = canonicalMenuLevelKey(riqPath)
 		if err := a.loadRiq(r); err != nil {
 			return nil, err
 		}

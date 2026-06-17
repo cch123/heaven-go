@@ -47,8 +47,9 @@ func (a *App) drawLevelSelect(screen *ebiten.Image, white, dim color.RGBA) {
 	soft := color.RGBA{104, 92, 118, 255}
 	a.text(screen, "Library", a.faceBig, 58, 20, ink, false)
 	a.text(screen, "HEAVEN GO", a.faceSmall, 854, 30, color.RGBA{122, 105, 142, 255}, true)
+	a.drawLibraryToolbar(screen, ink, soft)
 
-	if len(a.levels) == 0 {
+	if len(a.allLevels) == 0 {
 		vector.DrawFilledRect(screen, 248, 178, 464, 154, color.RGBA{255, 252, 242, 230}, false)
 		vector.DrawFilledRect(screen, 248, 178, 464, 4, color.RGBA{118, 88, 148, 210}, false)
 		a.text(screen, "No .riq levels found under levels/", a.faceMid, ScreenW/2, 222, ink, true)
@@ -56,6 +57,13 @@ func (a *App) drawLevelSelect(screen *ebiten.Image, white, dim color.RGBA) {
 		if a.loadErr != "" {
 			a.text(screen, a.fitText(a.loadErr, a.faceSmall, 760), a.faceSmall, ScreenW/2, ScreenH-36, color.RGBA{255, 120, 120, 255}, true)
 		}
+		return
+	}
+	if len(a.levels) == 0 {
+		vector.DrawFilledRect(screen, 248, 178, 464, 154, color.RGBA{255, 252, 242, 230}, false)
+		vector.DrawFilledRect(screen, 248, 178, 464, 4, color.RGBA{118, 88, 148, 210}, false)
+		a.text(screen, "No matching levels", a.faceMid, ScreenW/2, 222, ink, true)
+		a.text(screen, a.fitText(a.menuQuery, a.faceMid, 400), a.faceMid, ScreenW/2, 274, soft, true)
 		return
 	}
 
@@ -78,11 +86,42 @@ func (a *App) drawLevelSelect(screen *ebiten.Image, white, dim color.RGBA) {
 		last = len(a.levels)
 	}
 	a.drawLibraryLevelInfo(screen, a.levels[a.menuSel], a.menuSel, ink, soft)
-	a.text(screen, fmt.Sprintf("%d-%d / %d", first, last, len(a.levels)), a.faceSmall, 66, ScreenH-34, soft, false)
+	totalLabel := fmt.Sprintf("%d-%d / %d", first, last, len(a.levels))
+	if len(a.levels) != len(a.allLevels) {
+		totalLabel = fmt.Sprintf("%s filtered / %d", totalLabel, len(a.allLevels))
+	}
+	a.text(screen, totalLabel, a.faceSmall, 66, ScreenH-34, soft, false)
 	a.text(screen, "Enter / Click    Arrows / WASD    Drop .riq", a.faceSmall, ScreenW/2, ScreenH-34, soft, true)
 	if a.loadErr != "" {
 		a.text(screen, a.fitText(a.loadErr, a.faceSmall, 840), a.faceSmall, ScreenW/2, ScreenH-18, color.RGBA{255, 120, 120, 255}, true)
 	}
+}
+
+func (a *App) drawLibraryToolbar(screen *ebiten.Image, ink, soft color.RGBA) {
+	x := 188.0
+	y := 24.0
+	a.drawToolbarChip(screen, x, y, "Sort "+a.menuSort.label(), ink)
+	x += 112
+	fav := "All"
+	if a.favoritesOnly {
+		fav = "Favorites"
+	}
+	a.drawToolbarChip(screen, x, y, fav, ink)
+	x += 106
+	search := "Search"
+	if a.menuQuery != "" {
+		search = a.menuQuery
+	}
+	if a.menuSearchOpen {
+		search += "_"
+	}
+	a.drawToolbarChip(screen, x, y, a.fitText(search, a.faceSmall, 180), soft)
+}
+
+func (a *App) drawToolbarChip(screen *ebiten.Image, x, y float64, label string, c color.RGBA) {
+	vector.DrawFilledRect(screen, float32(x), float32(y), 96, 28, color.RGBA{255, 252, 242, 225}, false)
+	vector.DrawFilledRect(screen, float32(x), float32(y+26), 96, 2, color.RGBA{118, 88, 148, 140}, false)
+	a.text(screen, a.fitText(label, a.faceSmall, 84), a.faceSmall, x+10, y+7, c, false)
 }
 
 func (a *App) drawLibraryBackground(screen *ebiten.Image) {

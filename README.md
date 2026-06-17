@@ -169,9 +169,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   移植；controller、模板 prefab、FullBody/limb/filler/meter/conveyer 动画已
   接入。燃料 Fill 已按 prefab 的 Unity Square、Fill 动画和 SpriteMask
   `VisibleInsideMask` 合成路径绘制。
-- 启动页 Library 选择流程已接入原版背景、unplayed 关卡边框、`.riq` 自带
-  `LibraryLevelIcon` 和关卡元数据；原版排序/搜索/收藏、已游玩评级边框与
-  勋章状态尚未接入，当前固定按 `levels/*.riq` 文件名排序。
+- 启动页 Library 选择流程已接入原版背景、`.riq` 自带 `LibraryLevelIcon`
+  和关卡元数据；按 Unity `levelBorders.png.meta` 切出 unplayed/Try Again/OK/
+  Superb/Perfect 边框，本地 library 配置会记录已游玩评级、Perfect 与收藏状态；
+  关卡列表支持标题/BPM/评级排序、搜索与收藏过滤。
 - AnimatorController 转换的 duration（交叉淡入）按立即切换处理；当前唯一非零用例
   BossCall→BossCallIdle 已逐曲线验证源末帧与目标姿态一致，视觉无差。
 - 缓动函数全表实现（engine/ease.go，HS Ease 枚举 0..43 含 Expo/Circ/Bounce/

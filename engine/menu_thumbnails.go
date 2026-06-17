@@ -17,14 +17,38 @@ func (a *App) drawLevelThumbnail(screen *ebiten.Image, level menuLevel, idx int,
 	} else {
 		a.drawFallbackLevelIcon(screen, level, idx, innerX, innerY, inner)
 	}
-	if a.libraryAssets.border != nil {
-		drawImageFit(screen, a.libraryAssets.border, x, y, size, size, 1)
+	if border := a.libraryBorderFor(level); border != nil {
+		drawImageFit(screen, border, x, y, size, size, 1)
 	} else {
 		vector.DrawFilledRect(screen, float32(x), float32(y), float32(size), 5, color.RGBA{116, 94, 128, 255}, false)
 		vector.DrawFilledRect(screen, float32(x), float32(y+size-5), float32(size), 5, color.RGBA{116, 94, 128, 255}, false)
 		vector.DrawFilledRect(screen, float32(x), float32(y), 5, float32(size), color.RGBA{116, 94, 128, 255}, false)
 		vector.DrawFilledRect(screen, float32(x+size-5), float32(y), 5, float32(size), color.RGBA{116, 94, 128, 255}, false)
 	}
+}
+
+func (a *App) libraryBorderFor(level menuLevel) *ebiten.Image {
+	if level.perfect && a.libraryAssets.borderPerfect != nil {
+		return a.libraryAssets.borderPerfect
+	}
+	switch level.rank {
+	case menuRankTryAgain:
+		if a.libraryAssets.borderTryAgain != nil {
+			return a.libraryAssets.borderTryAgain
+		}
+	case menuRankOK:
+		if a.libraryAssets.borderOK != nil {
+			return a.libraryAssets.borderOK
+		}
+	case menuRankSuperb:
+		if a.libraryAssets.borderSuperb != nil {
+			return a.libraryAssets.borderSuperb
+		}
+	}
+	if a.libraryAssets.borderUnplayed != nil {
+		return a.libraryAssets.borderUnplayed
+	}
+	return a.libraryAssets.border
 }
 
 func (a *App) drawFallbackLevelIcon(screen *ebiten.Image, level menuLevel, idx int, x, y, size float64) {

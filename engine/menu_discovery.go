@@ -24,6 +24,7 @@ func inspectMenuLevel(p string) menuLevel {
 	fileName := strings.TrimSuffix(filepath.Base(p), filepath.Ext(p))
 	level := menuLevel{
 		path:     p,
+		key:      canonicalMenuLevelKey(p),
 		fileName: fileName,
 		title:    fileName,
 		bpm:      120,

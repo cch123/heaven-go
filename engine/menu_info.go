@@ -24,6 +24,11 @@ func (a *App) drawLibraryLevelInfo(screen *ebiten.Image, level menuLevel, idx in
 	}
 	a.text(screen, a.fitText(author, a.faceSmall, 150), a.faceSmall, x+156, y+78, soft, false)
 	a.text(screen, fmt.Sprintf("%.0f BPM", level.bpm), a.faceSmall, x+156, y+104, color.RGBA{118, 88, 148, 255}, false)
+	rating := level.rank.label(level.perfect)
+	if level.favorite {
+		rating += "  *"
+	}
+	a.text(screen, a.fitText(rating, a.faceSmall, 150), a.faceSmall, x+156, y+128, color.RGBA{118, 88, 148, 255}, false)
 
 	baseY := y + 176
 	games := level.games
