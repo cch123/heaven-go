@@ -56,13 +56,16 @@ func (a *App) drawFlash(screen *ebiten.Image, beat float64) {
 		}
 		u := math.Min((beat-f.beat)/f.length, 1)
 		for i := range c {
-			c[i] = f.c0[i] + (f.c1[i]-f.c0[i])*u
+			c[i] = Ease(f.ease, f.c0[i], f.c1[i], u)
 		}
 		hit = true
 	}
 	if hit && c[3] > 0 {
+		// image/color expects straight RGBA; its RGBA method premultiplies for
+		// the renderer. Premultiplying here would apply alpha twice and make
+		// white flashes visibly gray.
 		vector.DrawFilledRect(screen, 0, 0, ScreenW, ScreenH, color.RGBA{
-			uint8(c[0] * 255 * c[3]), uint8(c[1] * 255 * c[3]), uint8(c[2] * 255 * c[3]), uint8(c[3] * 255),
+			uint8(c[0] * 255), uint8(c[1] * 255), uint8(c[2] * 255), uint8(c[3] * 255),
 		}, false)
 	}
 }

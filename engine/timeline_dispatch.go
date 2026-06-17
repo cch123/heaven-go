@@ -38,6 +38,7 @@ func (a *App) dispatchBeatmapEvent(e *riq.Entity) {
 		a.flashes = append(a.flashes, flashEvt{
 			beat: e.Beat, length: e.Length,
 			c0: colorParam(e, "colorA"), c1: colorParam(e, "colorB"),
+			ease: int(e.Float("ease", 0)),
 		})
 	case e.Datamodel == "vfx/scale view":
 		a.viewScales = append(a.viewScales, viewScaleEvt{

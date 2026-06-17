@@ -21,6 +21,7 @@ type musicFadeEvt struct {
 type flashEvt struct {
 	beat, length float64
 	c0, c1       [4]float64
+	ease         int
 }
 
 type gameSwitch struct {
