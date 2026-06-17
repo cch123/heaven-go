@@ -129,7 +129,7 @@ func TestMamboMaterialNamesPreservedForSharedColorShader(t *testing.T) {
 	}
 }
 
-func TestMamboMainMaterialExcludesFaceButKeepsDancerHeads(t *testing.T) {
+func TestMamboMainMaterialExcludesFaceAndDancerHeads(t *testing.T) {
 	m := &Module{
 		warioBody:   "WarioJumper/WAAAAAAAA",
 		warioFace:   "WarioJumper/WAAAAAAAA/Face",
@@ -143,14 +143,11 @@ func TestMamboMainMaterialExcludesFaceButKeepsDancerHeads(t *testing.T) {
 	for _, root := range []string{
 		m.warioFace,
 		m.warioBody + "/Squiggly",
+		m.dancerLHead,
+		m.dancerRHead,
 	} {
 		if !got[root] {
 			t.Fatalf("missing Mambo material exclusion for %s: %#v", root, got)
-		}
-	}
-	for _, root := range []string{m.dancerLHead, m.dancerRHead} {
-		if got[root] {
-			t.Fatalf("dancer head should keep Mambo material override: %s in %#v", root, got)
 		}
 	}
 }

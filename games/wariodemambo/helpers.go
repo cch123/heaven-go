@@ -101,6 +101,11 @@ func (m *Module) mamboHeadMaterialExcludes() []string {
 	return []string{
 		m.warioFace,
 		m.warioBody + "/Squiggly",
+		// These heads share the exported MamboShader name, but the Unity scene keeps
+		// their face/head material out of the SetColors pass. Recoloring them makes
+		// the performers blend into the red/blue stage and looks like the heads vanished.
+		m.dancerLHead,
+		m.dancerRHead,
 	}
 }
 
