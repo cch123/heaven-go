@@ -221,7 +221,7 @@ func TestFanClubFanTemplateUsesUnitySortingGroupOrder(t *testing.T) {
 	}
 }
 
-func TestFanClubFanClapEffectStaysInsideFanSortingGroup(t *testing.T) {
+func TestFanClubFanClapEffectUsesPrefabEmitterOutsideFanSortingGroup(t *testing.T) {
 	as := loadAssets(t)
 	tmpl := kart.NewTemplate(as, as.Roles["spectator"])
 	if tmpl == nil {
@@ -243,12 +243,23 @@ func TestFanClubFanClapEffectStaysInsideFanSortingGroup(t *testing.T) {
 	if len(qs) != fanClubFanParticleCount {
 		t.Fatalf("queued effect sprites = %d, want %d", len(qs), fanClubFanParticleCount)
 	}
+	emitter, ok := inst.NodeWorldAt("Effect_FanCrap", kart.Identity(), 0)
+	if !ok {
+		t.Fatal("missing Fan/Effect_FanCrap emitter")
+	}
 	for _, q := range qs {
-		if !q.HasGroup || q.GroupKey != 77 || q.GroupOrder != 2 || q.Order != 32 {
-			t.Fatalf("fan clap effect sorting metadata = %#v", q)
+		if q.HasGroup {
+			t.Fatalf("fan clap effect should not be inside root_motion SortingGroup: %#v", q)
+		}
+		if q.Order != 32 {
+			t.Fatalf("fan clap effect order = %d, want ParticleSystemRenderer order 32", q.Order)
 		}
 		if q.Sprite != fanClubEffectSprite {
 			t.Fatalf("fan clap effect sprite = %q, want %q", q.Sprite, fanClubEffectSprite)
+		}
+		dist := math.Hypot(q.World.Tx-emitter.Tx, q.World.Ty-emitter.Ty)
+		if dist <= 0.05 || dist > 0.35 {
+			t.Fatalf("fan clap effect should start as a small spread from Effect_FanCrap, dist=%v q=(%v,%v), emitter=(%v,%v)", dist, q.World.Tx, q.World.Ty, emitter.Tx, emitter.Ty)
 		}
 	}
 }
@@ -277,19 +288,19 @@ func TestFanClubFanClapKeepsHeadVisibleAndOffsetsParticles(t *testing.T) {
 	m := &Module{ctx: &engine.Ctx{Assets: as, Scene: sc}}
 	fx.queue(m, 0.45)
 
-	anchor, ok := fanClubEffectBurst{fan: f}.fanHandWorld(0.45)
+	anchor, ok := inst.NodeWorldAt("Effect_FanCrap", kart.Identity(), 0.45)
 	if !ok {
-		t.Fatal("missing sampled fan hand midpoint")
+		t.Fatal("missing sampled Effect_FanCrap emitter")
 	}
 	moved := false
 	for _, q := range sc.QueuedSpritesForTest() {
-		if math.Hypot(q.World.Tx-anchor.Tx, q.World.Ty-anchor.Ty) < 0.9 {
+		if math.Hypot(q.World.Tx-anchor.Tx, q.World.Ty-anchor.Ty) > 0.05 {
 			moved = true
 			break
 		}
 	}
 	if !moved {
-		t.Fatal("fan clap particles should stay near the animated hands")
+		t.Fatal("fan clap particles should travel away from the authored emitter instead of sitting on the monkey head")
 	}
 }
 

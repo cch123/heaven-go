@@ -99,12 +99,12 @@ func (fx *fanClubEffects) spawnFanClap(m *Module, f *fan, beat float64) {
 	}
 	fx.spawn(m, fanClubEffectBurst{
 		beat: beat, lifetime: fanClubClapLifetimeSec, kind: fanClubEffectFanClap,
-		// Fan.prefab's ClapParticle animation event plays Effect_FanCrap's
-		// ParticleSystem: burst=3, startLifetime=0.45, sortingOrder=32. A single
-		// centered sprite makes the effect sit on the monkey head, so queue a
-		// small deterministic burst from the particle root instead.
-		fan: f, relPath: "Effect_FanCrap", scale: 0.54, layer: 0, order: 32,
-		tint: [4]float64{1, 0.55, 0.08, 0.78},
+		// Fan.prefab's ClapParticle event plays the Effect_FanCrap sibling
+		// ParticleSystem. It is deliberately outside root_motion's SortingGroup;
+		// putting it in the group makes the local order=32 burst draw as a
+		// "light" stuck on top of the monkey head.
+		fan: f, relPath: "Effect_FanCrap", scale: 0.18, layer: 0, order: 32,
+		tint: [4]float64{1, 0.55, 0.08, 0.55},
 	})
 }
 
@@ -222,8 +222,12 @@ func (fx *fanClubEffects) queueFanClapBurst(m *Module, burst fanClubEffectBurst,
 		{0.44, 0.34, 0.35},
 	}
 	for _, d := range dirs {
+		// Unity's burst has randomPositionAmount, so the first rendered frame is
+		// already a small spread. Without this base separation the three sprites
+		// stack into one bright block over the spectator's head.
+		spread := 0.18 + sample.travel*0.85
 		pw := world.
-			Mul(kart.Translate(d[0]*sample.travel, d[1]*sample.travel)).
+			Mul(kart.Translate(d[0]*spread, d[1]*spread)).
 			Mul(kart.Rotate(sample.rot + d[2])).
 			Mul(kart.Scale(sample.scale, sample.scale))
 		q := kart.ExtraSprite{
@@ -233,11 +237,6 @@ func (fx *fanClubEffects) queueFanClapBurst(m *Module, burst fanClubEffectBurst,
 			Order:  burst.order,
 			Tint:   sample.tint,
 		}
-		if burst.fan != nil && burst.fan.groupKey >= 0 {
-			q.HasGroup = true
-			q.GroupKey = burst.fan.groupKey
-			q.GroupOrder = burst.fan.groupOrder
-		}
 		m.ctx.Scene.Queue(q)
 	}
 }
@@ -245,9 +244,6 @@ func (fx *fanClubEffects) queueFanClapBurst(m *Module, burst fanClubEffectBurst,
 func (burst fanClubEffectBurst) world(m *Module, beat float64) (kart.Aff, bool) {
 	if burst.fan != nil && burst.fan.inst != nil {
 		if burst.kind == fanClubEffectFanClap {
-			if w, ok := burst.fanHandWorld(beat); ok {
-				return w, true
-			}
 			return burst.fan.inst.NodeWorldAt(burst.relPath, kart.Identity(), beat)
 		}
 		return burst.fan.inst.NodeWorld(burst.relPath, kart.Identity())
