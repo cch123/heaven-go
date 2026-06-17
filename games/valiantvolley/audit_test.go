@@ -256,6 +256,15 @@ func TestValiantVolleyWhiffActionChannels(t *testing.T) {
 	}
 }
 
+func TestValiantVolleyMissImpactUsesUnitySeconds(t *testing.T) {
+	if got, want := missImpactDieBeatAtBPM(10, 120), 10.16; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("miss impact end @120bpm = %.6f, want %.6f", got, want)
+	}
+	if got, want := missImpactDieBeatAtBPM(10, 60), 10.08; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("miss impact end @60bpm = %.6f, want %.6f", got, want)
+	}
+}
+
 func nodeSet(as *kart.Assets) map[string]bool {
 	out := map[string]bool{}
 	for _, n := range as.Rig.Nodes {

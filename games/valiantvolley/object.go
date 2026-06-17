@@ -8,6 +8,8 @@ import (
 	"hsdemo/kmdata"
 )
 
+const missImpactLifeSec = 0.08
+
 type objectPlan struct {
 	start, distance float64
 	typ             int
@@ -195,7 +197,24 @@ func (o *volleyObject) miss(m *Module, beat float64) {
 		a.cantBop = false
 		a.isPreparing = false
 	}
-	o.dieBeat = beat + 0.25
+	o.dieBeat = m.missImpactDieBeat(beat)
+}
+
+func (m *Module) missImpactDieBeat(beat float64) float64 {
+	bpm := 120.0
+	if m != nil && m.ctx != nil {
+		bpm = m.ctx.BPMAt(beat)
+	}
+	return missImpactDieBeatAtBPM(beat, bpm)
+}
+
+func missImpactDieBeatAtBPM(beat, bpm float64) float64 {
+	if bpm <= 0 {
+		bpm = 120
+	}
+	// Unity detaches missImpact and destroys it after 0.08 real seconds; convert
+	// that lifetime to beat space so tempo changes do not stretch the effect.
+	return beat + missImpactLifeSec/(60/bpm)
 }
 
 func (m *Module) volleyHit(beat, state, pitch float64) {
