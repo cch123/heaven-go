@@ -33,6 +33,7 @@
    "path": "Idol_rootMotion/Idol",
    "refs": {
     "baseHead": "Idol_rootMotion/Idol/idol_head",
+    "coreMat": "NtrIdol_Idol",
     "facePoser": "Idol_rootMotion/Idol/idol_head/FacePoser",
     "idolClapEffect": "Effect_IdolCrap",
     "idolKissEffect": "Effect_IdolKiss2",
@@ -64,7 +65,8 @@
     "Orange": "dancerL_rootMotion/Orange",
     "StageAnimator": "Background",
     "spectator": "Fan",
-    "spectatorAnchor": "fan_SpawnAnchor"
+    "spectatorAnchor": "fan_SpawnAnchor",
+    "spectatorMat": "NtrIdol_Spectator"
    }
   }
  }

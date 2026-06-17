@@ -65,6 +65,19 @@ func TestFanClubBindingsTemplatesAndSounds(t *testing.T) {
 	if arisa.Path != as.Roles["Arisa"] || arisa.Refs["facePoser"] != as.Roles["Arisa"]+"/idol_head/FacePoser" {
 		t.Fatalf("arisa component refs drifted: %#v", arisa)
 	}
+	for _, path := range []string{
+		"Background/bgCol/Square",
+		"Background/bgCol/Square (1)",
+		"Background/bgFlash",
+	} {
+		n, ok := sceneNode(as, path)
+		if !ok {
+			t.Fatalf("missing Fan Club background node %s", path)
+		}
+		if n.Sprite != kart.UnitySquareSprite {
+			t.Fatalf("background node %s sprite = %q, want %q", path, n.Sprite, kart.UnitySquareSprite)
+		}
+	}
 	for _, snd := range []string{
 		"play_clap", "crap_impact", "play_jump", "landing_impact", "crowd_big_ready",
 		"jp/arisa_hai_1_jp", "jp/arisa_ka_jp", "jp/crowd_hai_jp", "jp/crowd_ne_jp",
@@ -183,6 +196,15 @@ func nodeSet(as *kart.Assets) map[string]bool {
 		out[n.Path] = true
 	}
 	return out
+}
+
+func sceneNode(as *kart.Assets, path string) (kmdata.Node, bool) {
+	for _, n := range as.Rig.Nodes {
+		if n.Path == path {
+			return n, true
+		}
+	}
+	return kmdata.Node{}, false
 }
 
 func checkAnimPaths(t *testing.T, anim *kmdata.Anim, clip, root string, nodes map[string]bool) {

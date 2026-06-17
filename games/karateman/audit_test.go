@@ -74,16 +74,18 @@ func TestKarateManLegacyRigAndStage(t *testing.T) {
 	if as.Sheet.Atlas != "atlas.png" {
 		t.Fatalf("atlas = %q, want atlas.png", as.Sheet.Atlas)
 	}
-	if got := as.Sheet.Atlases; len(got) != 9 || got[0] != "atlas.png" || got[1] != "atlas1.png" {
-		t.Fatalf("atlases = %#v, want two packed atlases plus seven background atlases", got)
+	if got := as.Sheet.Atlases; len(got) != 12 || got[0] != "atlas.png" || got[1] != "atlas1.png" {
+		t.Fatalf("atlases = %#v, want two packed atlases, three animated extra atlases, and seven background atlases", got)
 	}
-	if len(as.Sheet.Sprites) != 101 {
-		t.Fatalf("sprites = %d, want 101", len(as.Sheet.Sprites))
+	if len(as.Sheet.Sprites) != 117 {
+		t.Fatalf("sprites = %d, want 117", len(as.Sheet.Sprites))
 	}
 	for _, sprite := range []string{
 		"karateman_head_0", "karateman_arm_5", "karateman_pot", "karateman_object_shadow",
 		"karateman_word_1", "karateman_word_2", "karateman_word_3", "karateman_word_4",
 		"karateman_word_exclaim", "karateman_word_mu_en", "karateman_word_combo_en",
+		"karateman_wig_0", "karateman_wig_1", "karateman_overlays_1", "karateman_bulb_light",
+		"nori_full0", "nori_full1", "nori_full2", "nori_none0", "nori_none1", "nori_none2",
 		"bg_gradient", "radial_gradient", "karate_bg_bloody",
 		"karate_bg_sunburst_1", "karate_bg_sunburst_2",
 		"karate_bg_rings_1", "karate_bg_rings_2",

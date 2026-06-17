@@ -1,0 +1,19 @@
+{
+ "bindings": [
+  {
+   "path": "Background/Jumbotron/Render",
+   "renderer": "MeshRenderer",
+   "mesh": {
+    "fileID": 10210,
+    "guid": "0"
+   },
+   "materials": [
+    {
+     "fileID": 10754,
+     "guid": "0000000000000000f000000000000000"
+    }
+   ],
+   "enabled": true
+  }
+ ]
+}

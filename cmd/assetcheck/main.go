@@ -29,6 +29,19 @@ type report struct {
 	errs          []string
 }
 
+const (
+	unitySquareSpriteName = "__unity_square"
+	unityBuiltinGUID      = "0000000000000000f000000000000000"
+)
+
+func builtinSprite(name string) bool {
+	return name == unitySquareSpriteName
+}
+
+func builtinUnityResource(ref kmdata.AssetRef) bool {
+	return ref.GUID == "0" || ref.GUID == unityBuiltinGUID
+}
+
 func main() {
 	assetsRoot := flag.String("assets", "assets", "extracted assets root")
 	game := flag.String("game", "", "single game id to audit")
@@ -50,6 +63,11 @@ func auditGame(dir, game string) report {
 
 	var rig kmdata.Rig
 	if err := readJSON(filepath.Join(dir, "scene.json"), &rig); err != nil {
+		if os.IsNotExist(err) {
+			if legacy, ok := auditLegacyRigGame(dir, game); ok {
+				return legacy
+			}
+		}
 		r.errs = append(r.errs, fmt.Sprintf("read scene.json: %v", err))
 		return r
 	}
@@ -83,7 +101,7 @@ func auditGame(dir, game string) report {
 			r.errs = append(r.errs, fmt.Sprintf("mesh binding %q has empty mesh reference", b.Path))
 		}
 		for _, mat := range b.Materials {
-			if mat.GUID == "" || mat.GUID == "0" {
+			if mat.GUID == "" || builtinUnityResource(mat) {
 				continue
 			}
 			if _, ok := meshes.Materials[mat.GUID]; !ok {
@@ -209,6 +227,149 @@ func auditGame(dir, game string) report {
 	}
 	sort.Strings(r.errs)
 	return r
+}
+
+func auditLegacyRigGame(dir, game string) (report, bool) {
+	if _, err := os.Stat(filepath.Join(dir, "rig.json")); err != nil {
+		return report{}, false
+	}
+	r := report{game: game}
+
+	var rig kmdata.Rig
+	if err := readJSON(filepath.Join(dir, "rig.json"), &rig); err != nil {
+		r.errs = append(r.errs, fmt.Sprintf("read rig.json: %v", err))
+		return r, true
+	}
+	r.nodes = len(rig.Nodes)
+	nodes := map[string]bool{}
+	for i, n := range rig.Nodes {
+		nodes[n.Path] = true
+		if n.Parent >= i {
+			r.errs = append(r.errs, fmt.Sprintf("node %q parent index %d does not precede node %d", n.Path, n.Parent, i))
+		}
+	}
+
+	var sheet kmdata.Sheet
+	if err := readJSON(filepath.Join(dir, "sprites.json"), &sheet); err != nil {
+		r.errs = append(r.errs, fmt.Sprintf("read sprites.json: %v", err))
+	} else {
+		for _, n := range rig.Nodes {
+			if n.Sprite == "" {
+				continue
+			}
+			if builtinSprite(n.Sprite) {
+				continue
+			}
+			if _, ok := sheet.Sprites[n.Sprite]; !ok {
+				r.errs = append(r.errs, fmt.Sprintf("node %q sprite %q missing from sprites.json", n.Path, n.Sprite))
+			}
+		}
+	}
+
+	var stage kmdata.Stage
+	if err := readJSON(filepath.Join(dir, "stage.json"), &stage); err != nil {
+		r.errs = append(r.errs, fmt.Sprintf("read stage.json: %v", err))
+	} else {
+		if len(stage.HitPositions) == 0 {
+			r.errs = append(r.errs, "stage hitPositions is empty")
+		}
+		if len(stage.ItemCurves) == 0 {
+			r.errs = append(r.errs, "stage itemCurves is empty")
+		}
+	}
+
+	var anims map[string]*kmdata.Anim
+	if err := readJSON(filepath.Join(dir, "anims.json"), &anims); err != nil {
+		r.errs = append(r.errs, fmt.Sprintf("read anims.json: %v", err))
+		sort.Strings(r.errs)
+		return r, true
+	}
+	for clipName, clip := range anims {
+		if clip == nil {
+			r.errs = append(r.errs, fmt.Sprintf("animation %s is null", clipName))
+			continue
+		}
+		for _, rel := range animatedPaths(clip) {
+			r.checkedPaths++
+			if !legacyRigAnimPathOK(game, clipName, rel, nodes) {
+				r.errs = append(r.errs, fmt.Sprintf("animation %s path %q missing from legacy rig", clipName, rel))
+			}
+		}
+		for path, swaps := range clip.Sprites {
+			for _, sw := range swaps {
+				if sw.Name == "" || len(sheet.Sprites) == 0 {
+					continue
+				}
+				if builtinSprite(sw.Name) {
+					continue
+				}
+				if _, ok := sheet.Sprites[sw.Name]; !ok {
+					r.errs = append(r.errs, fmt.Sprintf("animation %s path %q swaps missing sprite %q", clipName, path, sw.Name))
+				}
+			}
+		}
+	}
+
+	var particles kmdata.ParticleData
+	if err := readOptionalJSON(filepath.Join(dir, "particles.json"), &particles); err != nil {
+		r.errs = append(r.errs, fmt.Sprintf("read particles.json: %v", err))
+	}
+	for i, ps := range particles.Systems {
+		if ps.Path == "" {
+			r.errs = append(r.errs, fmt.Sprintf("particle system %d has empty path", i))
+		}
+		if ps.Enabled && ps.Renderer.Enabled && ps.MaxParticles <= 0 {
+			r.errs = append(r.errs, fmt.Sprintf("particle system %q has enabled renderer but maxParticles=%d", ps.Path, ps.MaxParticles))
+		}
+	}
+
+	sort.Strings(r.errs)
+	return r, true
+}
+
+func legacyRigAnimPathOK(game, clip, path string, nodes map[string]bool) bool {
+	if nodes[path] {
+		return true
+	}
+	if game != "karateman" {
+		return false
+	}
+
+	switch {
+	case strings.HasPrefix(clip, "item/"), strings.HasPrefix(clip, "word/"),
+		strings.HasPrefix(clip, "bg/"), strings.HasPrefix(clip, "overlay/"):
+		return true
+	case isKarateItemClip(clip), isKarateWordClip(clip), isKarateBgClip(clip):
+		return true
+	}
+
+	// The shipped Karate Man clips retain a few stale SpriteRenderer bindings
+	// whose paths are absent from karateman.prefab itself. Unity ignores those
+	// bindings at runtime; keeping the exception scoped prevents assetcheck from
+	// turning a Unity-authored no-op into a Go-side extraction failure.
+	switch path {
+	case "Body/BoxingBody", "LeftArm/LeftArm", "RightArm/RightArm",
+		"LeftLeg/LeftLeg", "RightLeg/RightLeg":
+		return clip == "ManKick" || clip == "UpperCut" ||
+			clip == "karateman/ManKick" || clip == "karateman/UpperCut"
+	}
+	return false
+}
+
+func isKarateItemClip(clip string) bool {
+	return clip == "HitMark" || strings.HasPrefix(clip, "Item")
+}
+
+func isKarateWordClip(clip string) bool {
+	return strings.HasPrefix(clip, "Word")
+}
+
+func isKarateBgClip(clip string) bool {
+	switch clip {
+	case "BarelyFace", "FaceIdle", "HitFace", "Rings", "Serious", "SeriousHit", "Sunburst":
+		return true
+	}
+	return false
 }
 
 func resolveAnimPath(game, root, rel string, nodes map[string]bool) string {

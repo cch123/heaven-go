@@ -197,7 +197,7 @@
   }
  },
  "Blue": {
-  "default": "NoPose",
+  "default": "EyeRight",
   "states": {
    "Beat": {
     "clip": "Animations/BackDancers/Beat",
@@ -294,7 +294,7 @@
   }
  },
  "Fan": {
-  "default": "FanFaceNormal",
+  "default": "NoPose",
   "states": {
    "FanBeat": {
     "clip": "Animations/Fan/FanBeat",

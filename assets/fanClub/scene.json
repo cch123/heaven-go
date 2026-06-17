@@ -227,6 +227,7 @@
     0.4,
     64
    ],
+   "sprite": "__unity_square",
    "order": -81,
    "color": [
     1,
@@ -252,6 +253,7 @@
     0.4,
     64
    ],
+   "sprite": "__unity_square",
    "order": -81,
    "color": [
     0,
@@ -277,6 +279,7 @@
     50,
     50
    ],
+   "sprite": "__unity_square",
    "order": -79,
    "color": [
     1,

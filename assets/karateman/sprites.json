@@ -9,10 +9,29 @@
   "atlas5.png",
   "atlas6.png",
   "atlas7.png",
-  "atlas8.png"
+  "atlas8.png",
+  "atlas9.png",
+  "atlas10.png",
+  "atlas11.png"
  ],
  "ppu": 71.95853,
  "sprites": {
+  "3800": {
+   "X": 1276,
+   "Y": 314,
+   "W": 204,
+   "H": 61,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
   "bg_gradient": {
    "X": 0,
    "Y": 0,
@@ -20,7 +39,7 @@
    "H": 2048,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "atlas": 2,
+   "atlas": 5,
    "ppu": 100,
    "border": [
     0,
@@ -36,7 +55,7 @@
    "H": 960,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "atlas": 4,
+   "atlas": 7,
    "ppu": 400,
    "border": [
     0,
@@ -52,7 +71,7 @@
    "H": 3516,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "atlas": 7,
+   "atlas": 10,
    "ppu": 45,
    "border": [
     0,
@@ -68,7 +87,7 @@
    "H": 3516,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "atlas": 8,
+   "atlas": 11,
    "ppu": 45,
    "border": [
     0,
@@ -84,7 +103,7 @@
    "H": 3516,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "atlas": 5,
+   "atlas": 8,
    "ppu": 45,
    "border": [
     0,
@@ -100,7 +119,7 @@
    "H": 3516,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "atlas": 6,
+   "atlas": 9,
    "ppu": 45,
    "border": [
     0,
@@ -466,6 +485,22 @@
    "H": 280,
    "PivotX": 0.5,
    "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_bulb_light": {
+   "X": 0,
+   "Y": 0,
+   "W": 624,
+   "H": 624,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 4,
+   "ppu": 263.30402,
    "border": [
     0,
     0,
@@ -1089,6 +1124,54 @@
     0
    ]
   },
+  "karateman_overlays_0": {
+   "X": 18,
+   "Y": 29,
+   "W": 474,
+   "H": 602,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_overlays_1": {
+   "X": 532,
+   "Y": 176,
+   "W": 317,
+   "H": 442,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_overlays_2": {
+   "X": 912,
+   "Y": 132,
+   "W": 325,
+   "H": 490,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
   "karateman_pot": {
    "X": 4,
    "Y": 2693,
@@ -1264,6 +1347,36 @@
    "H": 983,
    "PivotX": 0.5,
    "PivotY": 0.5,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_wig_0": {
+   "X": 47,
+   "Y": 45,
+   "W": 166,
+   "H": 193,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "karateman_wig_1": {
+   "X": 243,
+   "Y": 42,
+   "W": 177,
+   "H": 202,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 2,
    "border": [
     0,
     0,
@@ -1447,6 +1560,150 @@
     0
    ]
   },
+  "nori_full0": {
+   "X": 1414,
+   "Y": 453,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nori_full1": {
+   "X": 1414,
+   "Y": 401,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nori_full2": {
+   "X": 1414,
+   "Y": 505,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nori_line0": {
+   "X": 1350,
+   "Y": 453,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nori_line1": {
+   "X": 1350,
+   "Y": 401,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nori_line2": {
+   "X": 1350,
+   "Y": 505,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nori_none0": {
+   "X": 1269,
+   "Y": 453,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nori_none1": {
+   "X": 1269,
+   "Y": 401,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
+  "nori_none2": {
+   "X": 1269,
+   "Y": 505,
+   "W": 60,
+   "H": 52,
+   "PivotX": 0.5,
+   "PivotY": 0.5,
+   "atlas": 3,
+   "ppu": 100,
+   "border": [
+    0,
+    0,
+    0,
+    0
+   ]
+  },
   "radial_gradient": {
    "X": 0,
    "Y": 0,
@@ -1454,7 +1711,7 @@
    "H": 2048,
    "PivotX": 0.5,
    "PivotY": 0.5,
-   "atlas": 3,
+   "atlas": 6,
    "ppu": 100,
    "border": [
     0,

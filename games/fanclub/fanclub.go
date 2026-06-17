@@ -233,7 +233,7 @@ func (m *Module) Update(_, beat float64) {
 }
 
 func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
-	screen.Fill(color.RGBA{255, 120, 255, 255})
+	screen.Fill(color.Black)
 	m.ctx.SampleScene(beat)
 	for _, f := range m.fans {
 		f.queue(m.ctx.Scene, beat)

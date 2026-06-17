@@ -189,7 +189,19 @@ func pngConfig(p string) (image.Config, error) {
 	return cfg, err
 }
 
+const (
+	unityBuiltinSpriteGUID = "48e93eef0688c4a259cb0eddcd8661f7"
+	unitySquareSpriteID    = 7482667652216324306
+	// Keep this string in sync with kart.UnitySquareSprite. The extractor cannot
+	// import kart without pulling the renderer into the asset CLI, but the JSON
+	// must still name the runtime-provided 1x1 white sprite exactly.
+	unitySquareSpriteName = "__unity_square"
+)
+
 func resolveSprite(tables map[string]*spriteTable, guid string, fileID int64) string {
+	if guid == unityBuiltinSpriteGUID && fileID == unitySquareSpriteID {
+		return unitySquareSpriteName
+	}
 	if t, ok := tables[guid]; ok {
 		return t.byID[fileID]
 	}
@@ -200,6 +212,39 @@ func resolveSprite(tables map[string]*spriteTable, guid string, fileID int64) st
 
 func exportAtlas(tables map[string]*spriteTable) *kmdata.Sheet {
 	sheet := &kmdata.Sheet{Atlas: "atlas.png", Sprites: map[string]kmdata.SpriteInfo{}}
+	addTexture := func(rel string, includeSlices bool) {
+		metaPath := gamePath("Sprites", rel+".meta")
+		raw, err := os.ReadFile(metaPath)
+		must(err)
+		m, err := uy.ParseSingle(raw)
+		must(err)
+		t := tables[uy.S(m["guid"])]
+		if t == nil {
+			log.Fatalf("sprite texture %s missing from sprite table", rel)
+		}
+		atlasIdx := len(sheet.Atlases)
+		atlasName := fmt.Sprintf("atlas%d.png", atlasIdx)
+		png, err := os.ReadFile(t.pngPath)
+		must(err)
+		must(os.WriteFile(filepath.Join(*outDir, atlasName), png, 0o644))
+		sheet.Atlases = append(sheet.Atlases, atlasName)
+		if includeSlices && len(t.sheet) > 0 {
+			for name, sp := range t.sheet {
+				sp.Atlas = atlasIdx
+				if t.ppu != sheet.PPU {
+					sp.PPU = t.ppu
+				}
+				sheet.Sprites[name] = sp
+			}
+			return
+		}
+
+		base := strings.TrimSuffix(filepath.Base(t.pngPath), ".png")
+		sheet.Sprites[base] = kmdata.SpriteInfo{
+			X: 0, Y: 0, W: t.texW, H: t.texH,
+			PivotX: 0.5, PivotY: 0.5, Atlas: atlasIdx, PPU: t.ppu,
+		}
+	}
 	for atlasIdx, spec := range []struct {
 		rel  string
 		name string
@@ -231,6 +276,20 @@ func exportAtlas(tables map[string]*spriteTable) *kmdata.Sheet {
 			sheet.Sprites[name] = sp
 		}
 	}
+	// These are animated by official KarateMan clips but are separate from the
+	// two base sheets. If they are not copied into the legacy bundle, sprite
+	// swap curves resolve to empty names and runtime animations silently lose
+	// wig, nori, overlay, and bulb-light frames.
+	for _, spec := range []struct {
+		rel           string
+		includeSlices bool
+	}{
+		{rel: "karateman_wig.png", includeSlices: true},
+		{rel: "karateman_overlays.png", includeSlices: true},
+		{rel: "karateman_bulb_light.png"},
+	} {
+		addTexture(spec.rel, spec.includeSlices)
+	}
 	for _, rel := range []string{
 		"bg_gradient.png",
 		"radial_gradient.png",
@@ -240,27 +299,7 @@ func exportAtlas(tables map[string]*spriteTable) *kmdata.Sheet {
 		"karate_bg_rings_1.png",
 		"karate_bg_rings_2.png",
 	} {
-		metaPath := gamePath("Sprites", rel+".meta")
-		raw, err := os.ReadFile(metaPath)
-		must(err)
-		m, err := uy.ParseSingle(raw)
-		must(err)
-		t := tables[uy.S(m["guid"])]
-		if t == nil {
-			log.Fatalf("background texture %s missing from sprite table", rel)
-		}
-		atlasIdx := len(sheet.Atlases)
-		atlasName := fmt.Sprintf("atlas%d.png", atlasIdx)
-		png, err := os.ReadFile(t.pngPath)
-		must(err)
-		must(os.WriteFile(filepath.Join(*outDir, atlasName), png, 0o644))
-		sheet.Atlases = append(sheet.Atlases, atlasName)
-
-		base := strings.TrimSuffix(filepath.Base(t.pngPath), ".png")
-		sheet.Sprites[base] = kmdata.SpriteInfo{
-			X: 0, Y: 0, W: t.texW, H: t.texH,
-			PivotX: 0.5, PivotY: 0.5, Atlas: atlasIdx, PPU: t.ppu,
-		}
+		addTexture(rel, false)
 	}
 	writeJSON("sprites.json", sheet)
 	fmt.Printf("atlas: %d atlases, %d sprites, ppu=%.2f\n", len(sheet.Atlases), len(sheet.Sprites), sheet.PPU)
