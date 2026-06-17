@@ -64,8 +64,8 @@ func (f *filterFX) activeSlots(beat float64) map[int]filterSlotState {
 		if e.length > 0 {
 			norm = clamp01((beat - e.beat) / e.length)
 		}
-		// Filter.cs：BlendAmount = ease(1-start, 1-end)，AmplifyColor 语义
-		// 0=全滤镜、1=无效果；本地 blend 取反相（1=全滤镜）。
+		// AmplifyColor 的 BlendCache 是 lerp(目标 LUT, default_lut, BlendAmount)。
+		// Go 端没有预混 LUT，直接混屏幕图时需要反相为“目标 LUT 强度”。
 		blend := 1 - Ease(e.ease, 1-e.start, 1-e.end, norm)
 		name := ""
 		if e.filter >= 0 && e.filter < len(filterNames) {

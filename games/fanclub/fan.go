@@ -10,6 +10,7 @@ type fan struct {
 	inst          *kart.Instance
 	x, y          float64
 	player        bool
+	groupOrder    int
 	jumpStart     float64
 	clapStartBeat float64
 	stopBeat      bool
@@ -26,7 +27,7 @@ func (m *Module) spawnFans() {
 	row := 1
 	for i := 0; i < fanCount; i++ {
 		in := m.fanTemplate.NewInstance()
-		f := &fan{inst: in, x: spawnX, y: spawnY, jumpStart: math.Inf(-1), clapStartBeat: math.Inf(-1)}
+		f := &fan{inst: in, x: spawnX, y: spawnY, groupOrder: row * 100, jumpStart: math.Inf(-1), clapStartBeat: math.Inf(-1)}
 		f.player = i == 3
 		in.Offset = [2]float64{spawnX, spawnY}
 		in.SetGroupOrder(row)
@@ -73,6 +74,7 @@ func (f *fan) clapStart(m *Module, beat float64, hit, charge bool, releaseAfter 
 	f.jumpStart = math.Inf(-1)
 	f.clapStartBeat = beat
 	f.play(m, "FanClap", beat)
+	m.effects.spawnFanClap(m, f, beat)
 	m.ctx.SoundVol("play_clap", 1)
 	m.ctx.SoundVol("crap_impact", 1)
 	if charge {

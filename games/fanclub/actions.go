@@ -41,8 +41,11 @@ func (m *Module) doIdolClaps(beat float64) {
 	}
 	sec := m.ctx.SecPerBeat(beat)
 	m.ctx.Scene.PlayState(m.arisa, "IdolCrap"+m.performanceSuffix(), beat, sec)
+	m.effects.spawnIdolClap(m, beat)
 	m.blueD.playState(m.ctx.Scene, "Crap", beat, sec)
+	m.effects.spawnDancerClap(m, &m.blueD, beat)
 	m.orangeD.playState(m.ctx.Scene, "Crap", beat, sec)
+	m.effects.spawnDancerClap(m, &m.orangeD, beat)
 }
 
 func (m *Module) doIdolResponse(beat float64) {
@@ -109,6 +112,7 @@ func (m *Module) playIdolAnimation(beat, length float64, typ, who int) {
 		state = "IdolPeaceNoSync"
 	case idolAnimClap:
 		state = "IdolCrap"
+		m.effects.spawnIdolClap(m, beat)
 	case idolAnimCall:
 		m.doIdolCall(0, false, beat)
 		m.ctx.At(beat+0.75, func() { m.doIdolCall(1, false, beat+0.75) })
@@ -124,11 +128,16 @@ func (m *Module) playIdolAnimation(beat, length float64, typ, who int) {
 		m.ctx.At(beat+length, func() {
 			m.ctx.Scene.PlayState(m.arisa, "IdolSquat1"+m.performanceSuffix(), beat+length, m.ctx.SecPerBeat(beat+length))
 		})
+		if m.performance == perfArrange {
+			m.effects.spawnIdolKiss(m, beat+length)
+		}
 	case idolAnimWink:
 		m.ctx.Scene.PlayState(m.arisa, "IdolWink0"+m.performanceSuffix(), beat, m.ctx.SecPerBeat(beat))
+		winkBeat := m.winkEffectBeat(beat + length)
 		m.ctx.At(beat+length, func() {
 			m.ctx.Scene.PlayState(m.arisa, "IdolWink1"+m.performanceSuffix(), beat+length, m.ctx.SecPerBeat(beat+length))
 		})
+		m.effects.spawnIdolWink(m, winkBeat)
 	case idolAnimDab:
 		state = "IdolDab"
 		m.ctx.Sound("arisa_dab")
@@ -189,6 +198,7 @@ func (m *Module) playOneClap(beat float64, who int) {
 		if who < len(m.fans) {
 			m.ctx.SoundAtPitchOff(beat, "crap_impact", 0.1, 1, 0)
 			m.fans[who].play(m, "FanClap", beat)
+			m.effects.spawnFanClap(m, m.fans[who], beat)
 			m.ctx.At(beat+0.1, func() { m.fans[who].free(m, beat+0.1) })
 		}
 		return
@@ -198,6 +208,7 @@ func (m *Module) playOneClap(beat float64, who int) {
 			continue
 		}
 		f.play(m, "FanClap", beat)
+		m.effects.spawnFanClap(m, f, beat)
 	}
 	m.ctx.At(beat+0.1, func() {
 		for i, f := range m.fans {
@@ -212,6 +223,7 @@ func (m *Module) playLongClap(beat float64) {
 	for i, f := range m.fans {
 		if i != 3 {
 			f.play(m, "FanClap", beat)
+			m.effects.spawnFanClap(m, f, beat)
 		}
 	}
 	m.ctx.At(beat+1, func() {
@@ -227,6 +239,7 @@ func (m *Module) playChargeClap(beat float64) {
 	for i, f := range m.fans {
 		if i != 3 {
 			f.play(m, "FanClap", beat)
+			m.effects.spawnFanClap(m, f, beat)
 		}
 	}
 	m.ctx.At(beat+0.1, func() {

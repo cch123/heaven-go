@@ -82,6 +82,7 @@ type Module struct {
 	fans    []*fan
 	blueD   dancer
 	orangeD dancer
+	effects fanClubEffects
 
 	bops        []bopEvt
 	endBeat     float64
@@ -237,6 +238,7 @@ func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
 	for _, f := range m.fans {
 		f.queue(m.ctx.Scene, beat)
 	}
+	m.effects.queue(m, beat)
 	m.ctx.Scene.Draw(screen, m.proj)
 }
 

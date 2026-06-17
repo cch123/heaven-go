@@ -11,6 +11,8 @@ const dancerAnimCount = 16
 
 type dancer struct {
 	path, root, shadow string
+	clapEffect         string
+	winkEffect         string
 	stepDistance       float64
 	startPos           float64
 	rootY              float64
@@ -24,6 +26,8 @@ type dancer struct {
 func newDancer(ctx *engine.Ctx, path, root, shadow string) dancer {
 	d := dancer{
 		path: path, root: root, shadow: shadow,
+		clapEffect:   path + "/Effect_IdolCrap",
+		winkEffect:   path + "/Effect_IdolWinkArr",
 		stepDistance: 1, startStepBeat: math.Inf(1), stepLength: 16,
 		jumpStart: math.Inf(-1),
 	}
@@ -39,6 +43,12 @@ func newDancer(ctx *engine.Ctx, path, root, shadow string) dancer {
 		}
 		if p := c.Refs["shadow"]; p != "" {
 			d.shadow = p
+		}
+		if p := c.Refs["clapEffect"]; p != "" {
+			d.clapEffect = p
+		}
+		if p := c.Refs["winkEffect"]; p != "" {
+			d.winkEffect = p
 		}
 	}
 	return d
@@ -146,6 +156,7 @@ func (d *dancer) playAnim(m *Module, beat, length float64, typ int) {
 		d.playState(m.ctx.Scene, "Peace", beat, m.ctx.SecPerBeat(beat))
 	case idolAnimClap:
 		d.playState(m.ctx.Scene, "Crap", beat, m.ctx.SecPerBeat(beat))
+		m.effects.spawnDancerClap(m, d, beat)
 	case idolAnimJump:
 		d.doJump(beat)
 	case idolAnimSquat:
@@ -153,7 +164,9 @@ func (d *dancer) playAnim(m *Module, beat, length float64, typ int) {
 		m.ctx.At(beat+length, func() { d.playState(m.ctx.Scene, "Squat1", beat+length, m.ctx.SecPerBeat(beat+length)) })
 	case idolAnimWink:
 		d.playState(m.ctx.Scene, "Wink0", beat, m.ctx.SecPerBeat(beat))
+		winkBeat := m.winkEffectBeat(beat + length)
 		m.ctx.At(beat+length, func() { d.playState(m.ctx.Scene, "Wink1", beat+length, m.ctx.SecPerBeat(beat+length)) })
+		m.effects.spawnDancerWink(m, d, winkBeat)
 	case idolAnimDab:
 		d.playState(m.ctx.Scene, "Dab", beat, m.ctx.SecPerBeat(beat))
 	}
