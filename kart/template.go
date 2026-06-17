@@ -28,7 +28,8 @@ type Template struct {
 	RootPath string
 	Nodes    []TmplNode
 	// animRoots：子树内挂 Animator 的节点（模板内下标）→ controller 名
-	animRoots map[int]string
+	animRoots    map[int]string
+	meshBindings map[int][]int // 模板内节点下标 → as.Meshes.Bindings 下标
 }
 
 // NewTemplate 按根 path 收集子树（重名 path 时按节点下标 NewTemplateIdx）。
@@ -48,7 +49,7 @@ func NewTemplate(as *Assets, rootPath string) *Template {
 
 // NewTemplateIdx 按根节点下标收集子树。
 func NewTemplateIdx(as *Assets, rootIdx int) *Template {
-	t := &Template{as: as, RootPath: as.Rig.Nodes[rootIdx].Path, animRoots: map[int]string{}}
+	t := &Template{as: as, RootPath: as.Rig.Nodes[rootIdx].Path, animRoots: map[int]string{}, meshBindings: map[int][]int{}}
 	idxMap := map[int]int{rootIdx: 0} // rig 下标 → 模板内下标
 	t.Nodes = append(t.Nodes, TmplNode{RigIdx: rootIdx, RelPath: "", Parent: -1})
 	rootPrefix := t.RootPath + "/"
@@ -71,6 +72,14 @@ func NewTemplateIdx(as *Assets, rootIdx int) *Template {
 			if as.Rig.Nodes[tn.RigIdx].Path == path {
 				t.animRoots[ti] = ctrl
 				break // path 重名时绑定首个（Unity 同语义）
+			}
+		}
+	}
+	for bi, b := range as.Meshes.Bindings {
+		for ti, tn := range t.Nodes {
+			if as.Rig.Nodes[tn.RigIdx].Path == b.Path {
+				t.meshBindings[ti] = append(t.meshBindings[ti], bi)
+				break
 			}
 		}
 	}
@@ -473,6 +482,7 @@ type instNodeState struct {
 	renderOn        bool
 	color           [4]float64
 	matColor        [4]float64
+	hasMatColor     bool
 	matAlpha        float64 // material._Alpha：材质级透明度，最终与 SpriteRenderer.color.a 相乘
 	matOpacity      float64 // material._Opacity：与 _Alpha 相乘，避免两个 shader 字段互相覆盖
 	matProgress     float64 // material._Progress：ChargingChicken ChickenCar 充能渐变
@@ -556,7 +566,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 		const groupStride = 100
 		base := in.groupOrder * groupStride
 		for ti, tn := range t.Nodes {
-			if t.as.Rig.Nodes[tn.RigIdx].Sprite != "" {
+			if t.as.Rig.Nodes[tn.RigIdx].Sprite != "" || len(t.meshBindings[ti]) > 0 {
 				states[ti].order += base
 			}
 		}
@@ -577,32 +587,59 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 		tint := st.color
 		tint[3] *= st.matAlpha * st.matOpacity
 		n := &t.as.Rig.Nodes[tn.RigIdx]
-		if !actives[ti] || !st.renderOn || st.sprite == "" {
+		if !actives[ti] || !st.renderOn {
 			continue
 		}
-		if !n.Mask && tint[3] <= 0 {
-			continue
+		if st.sprite != "" {
+			if n.Mask || tint[3] > 0 {
+				e := ExtraSprite{
+					Sprite: st.sprite, World: world[ti], Z: z,
+					Layer: n.Layer, Order: st.order,
+					FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor,
+					OutlineWidth: st.outlineWidth,
+					Mapped:       n.Mapped, Mat: n.Mat,
+					Mask: n.Mask, MaskIn: n.MaskIn,
+					Add: st.matAdd, Blend: st.matBlend,
+					Threshold: st.matThreshold, HasThreshold: st.hasMatThreshold,
+					Progress: st.matProgress, HasProgress: st.hasMatProgress,
+				}
+				if pal, ok := in.palettes[ti]; ok {
+					e.HasPalette = true
+					e.Palette = pal
+				}
+				if st.hasPalette {
+					e.HasPalette = true
+					e.Palette = st.palette
+				}
+				scene.Queue(e)
+			}
 		}
-		e := ExtraSprite{
-			Sprite: st.sprite, World: world[ti], Z: z,
-			Layer: n.Layer, Order: st.order,
-			FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor,
-			OutlineWidth: st.outlineWidth,
-			Mapped:       n.Mapped, Mat: n.Mat,
-			Mask: n.Mask, MaskIn: n.MaskIn,
-			Add: st.matAdd, Blend: st.matBlend,
-			Threshold: st.matThreshold, HasThreshold: st.hasMatThreshold,
-			Progress: st.matProgress, HasProgress: st.hasMatProgress,
+		for _, bi := range t.meshBindings[ti] {
+			if !scene.meshRenderable(bi) {
+				continue
+			}
+			b := &t.as.Meshes.Bindings[bi]
+			mt := scene.meshMaterialTint(b)
+			if st.hasMatColor {
+				mt = st.matColor
+			}
+			mt[3] *= st.matAlpha * st.matOpacity
+			if mt[3] <= 0 {
+				continue
+			}
+			order := b.Order
+			if st.order != n.Order {
+				order = st.order
+			}
+			scene.QueueMesh(ExtraMesh{
+				Binding: bi,
+				World:   world[ti],
+				Z:       z,
+				Layer:   b.Layer,
+				Order:   order,
+				Tint:    mt,
+			})
 		}
-		if pal, ok := in.palettes[ti]; ok {
-			e.HasPalette = true
-			e.Palette = pal
-		}
-		if st.hasPalette {
-			e.HasPalette = true
-			e.Palette = st.palette
-		}
-		scene.Queue(e)
 	}
 }
 
@@ -783,6 +820,7 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 					states[ti].matAdd[3] = v
 				}
 			case strings.HasPrefix(attr, "material._Color."):
+				states[ti].hasMatColor = true
 				ch := strings.TrimPrefix(attr, "material._Color.")
 				switch ch {
 				case "r":

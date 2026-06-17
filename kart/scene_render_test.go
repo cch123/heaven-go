@@ -1,6 +1,7 @@
 package kart
 
 import (
+	"math"
 	"testing"
 
 	"hsdemo/kmdata"
@@ -68,5 +69,95 @@ func TestTemplateGroupOrderSurvivesAnimatedSortingOrder(t *testing.T) {
 	}
 	if got, want := scene.queued[0].Order, 203; got != want {
 		t.Fatalf("queued order = %d, want %d", got, want)
+	}
+}
+
+func TestTemplateQueuesMeshRendererBinding(t *testing.T) {
+	as := &Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Pos: [2]float64{2, 3}, Scale: [2]float64{1, 1}},
+			{Name: "Plane", Path: "Root/Plane", Parent: 0, Pos: [2]float64{4, 5}, Scale: [2]float64{1, 1}},
+		}},
+		Sheet: kmdata.Sheet{PPU: 100, Sprites: map[string]kmdata.SpriteInfo{}},
+		Meshes: kmdata.MeshData{
+			Bindings: []kmdata.MeshBinding{{
+				Path:      "Root/Plane",
+				Renderer:  "MeshRenderer",
+				Mesh:      kmdata.AssetRef{GUID: "0", FileID: 10209},
+				Materials: []kmdata.AssetRef{{GUID: "mat"}},
+				Enabled:   true,
+				Layer:     1,
+				Order:     7,
+			}},
+			Materials: map[string]kmdata.Material{
+				"mat": {Name: "PlaneMat", GUID: "mat", Colors: map[string][4]float64{"_Color": {0.25, 0.5, 0.75, 1}}},
+			},
+		},
+		Anims:       map[string]*kmdata.Anim{},
+		Controllers: map[string]kmdata.Controller{},
+		Animators:   kmdata.Animators{},
+	}
+	scene := NewScene(as)
+	inst := NewTemplate(as, "Root").NewInstance()
+	inst.Queue(scene, 0, Identity(), 0)
+
+	if len(scene.queuedMeshes) != 1 {
+		t.Fatalf("queued meshes = %d, want 1", len(scene.queuedMeshes))
+	}
+	q := scene.queuedMeshes[0]
+	if q.Binding != 0 || q.Layer != 1 || q.Order != 7 {
+		t.Fatalf("queued mesh metadata = %#v", q)
+	}
+	if got, want := q.World.Tx, 6.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("queued mesh x = %v, want %v", got, want)
+	}
+	if got, want := q.World.Ty, 8.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("queued mesh y = %v, want %v", got, want)
+	}
+	if q.Tint != [4]float64{0.25, 0.5, 0.75, 1} {
+		t.Fatalf("queued mesh tint = %#v", q.Tint)
+	}
+}
+
+func TestTemplateMeshRendererMaterialAlphaCurvesAffectTint(t *testing.T) {
+	as := &Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}},
+			{Name: "Plane", Path: "Root/Plane", Parent: 0, Scale: [2]float64{1, 1}},
+		}},
+		Sheet: kmdata.Sheet{PPU: 100, Sprites: map[string]kmdata.SpriteInfo{}},
+		Meshes: kmdata.MeshData{
+			Bindings: []kmdata.MeshBinding{{
+				Path:      "Root/Plane",
+				Renderer:  "MeshRenderer",
+				Mesh:      kmdata.AssetRef{GUID: "0", FileID: 10209},
+				Materials: []kmdata.AssetRef{{GUID: "mat"}},
+				Enabled:   true,
+			}},
+			Materials: map[string]kmdata.Material{
+				"mat": {Name: "PlaneMat", GUID: "mat", Colors: map[string][4]float64{"_Color": {1, 1, 1, 1}}},
+			},
+		},
+		Anims: map[string]*kmdata.Anim{
+			"Fade": {
+				Duration: 1,
+				Floats: map[string]map[string][]kmdata.Key{
+					"Plane": {"material._Alpha": {{T: 0, V: 0.5}}},
+				},
+			},
+		},
+		Controllers: map[string]kmdata.Controller{},
+		Animators:   kmdata.Animators{},
+	}
+	scene := NewScene(as)
+	inst := NewTemplate(as, "Root").NewInstance()
+	inst.Play("", "Fade", 0, 1)
+	inst.Queue(scene, 0, Identity(), 0)
+
+	if len(scene.queuedMeshes) != 1 {
+		t.Fatalf("queued meshes = %d, want 1", len(scene.queuedMeshes))
+	}
+	if got, want := scene.queuedMeshes[0].Tint[3], 0.5; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("queued mesh alpha = %v, want %v", got, want)
 	}
 }

@@ -36,6 +36,23 @@ func TestBuiltToScaleDSBlockFrameMatchesUnityConstants(t *testing.T) {
 	}
 }
 
+func TestBuiltToScaleDSBlockFrameSnapsCriticalUnityFrames(t *testing.T) {
+	ev := blockEvt{beat: 72.5, length: 0.75}
+	secPerBeat := 0.5
+	targetFrame := 7.1
+	spawnTimeOffset := spawnFrameOffset / blockFramesPerSecond
+	secondsPerFrame := 1 / blockFramesPerSecond
+	secondsToHitFrame := secondsPerFrame * blockHitFrame
+	secondsToHitBeat := secPerBeat*5*ev.length + spawnTimeOffset
+	speedMult := secondsToHitFrame / secondsToHitBeat
+	secondsPastSpawn := targetFrame / (blockFramesPerSecond * speedMult)
+	beat := spawnBeat(ev) + (secondsPastSpawn-spawnTimeOffset)/secPerBeat
+
+	if got := blockAnimFrame(ev, beat, secPerBeat); got != 8 {
+		t.Fatalf("critical frame %.2f snapped to %.3f, want 8", targetFrame, got)
+	}
+}
+
 func assertRuntimeNear(t *testing.T, got, want float64) {
 	t.Helper()
 	if math.Abs(got-want) > 0.0001 {

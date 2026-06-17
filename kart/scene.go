@@ -96,7 +96,8 @@ type SceneInst struct {
 	zOver      map[int]float64    // 节点下标 → 世界 z 覆盖（kitties 斜列生成等，根节点语义）
 	spriteOver map[int]string     // 节点下标 → 切片覆盖（sr.sprite 直写，如海报换图）
 
-	queued []ExtraSprite // 本帧注入的动态绘制项
+	queued       []ExtraSprite // 本帧注入的动态 SpriteRenderer 绘制项
+	queuedMeshes []ExtraMesh   // 本帧注入的动态 MeshRenderer 绘制项
 
 	cam    [3]float64 // 相机世界位置（vfx/move camera），默认 (0,0,-10)
 	hasCam bool
@@ -683,6 +684,20 @@ type ExtraSprite struct {
 // Queue 注入一帧动态绘制项（Draw 后清空，每帧重新注入）。
 func (s *SceneInst) Queue(e ExtraSprite) { s.queued = append(s.queued, e) }
 
+// ExtraMesh 是模板实例注入的 MeshRenderer 绘制项。
+// Unity 的 Instantiate 会复制 MeshRenderer；场景里的原 prefab 往往保持 inactive，
+// 所以动态实例不能复用 scene node 的 active/render 状态，只能携带采样后的 world/tint。
+type ExtraMesh struct {
+	Binding      int
+	World        Aff
+	Z            float64
+	Layer, Order int
+	Tint         [4]float64
+}
+
+// QueueMesh 注入一帧动态 MeshRenderer 绘制项（Draw 后清空，每帧重新注入）。
+func (s *SceneInst) QueueMesh(e ExtraMesh) { s.queuedMeshes = append(s.queuedMeshes, e) }
+
 // Sample 按歌曲节拍采样所有播放器并更新世界变换。
 func (s *SceneInst) Sample(beat float64) {
 	s.stepMachines(beat)
@@ -1003,13 +1018,14 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		gIdx              int // 排序单元（SortingGroup 根或自身）
 		gLayer, gOrder    int
 		gZ                float64
-		extra             int // ≥0：s.queued 下标（动态绘制项）
-		mesh              int // ≥0：as.Meshes.Bindings 下标（MeshRenderer）
+		extra             int // ≥0：s.queued 下标（动态 SpriteRenderer 绘制项）
+		extraMesh         int // ≥0：s.queuedMeshes 下标（动态 MeshRenderer 绘制项）
+		mesh              int // ≥0：as.Meshes.Bindings 下标（scene MeshRenderer）
 	}
 	type maskItem struct {
 		idx, extra int // extra >= 0 表示 s.queued，下标否则为 scene 节点
 	}
-	items := make([]item, 0, len(s.state)+len(s.queued))
+	items := make([]item, 0, len(s.state)+len(s.queued)+len(s.queuedMeshes))
 	// 活动的 SpriteMask（本体不绘制，为 MaskIn=1 的渲染器提供可见区域）
 	var masks []maskItem
 	for i := range s.state {
@@ -1028,7 +1044,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if s.as.Rig.Nodes[i].Mask {
 			continue
 		}
-		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.worldZ[i], extra: -1, mesh: -1}
+		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.worldZ[i], extra: -1, extraMesh: -1, mesh: -1}
 		if g := s.groupOf[i]; g >= 0 {
 			sg := s.as.Rig.Nodes[g].SortGroup
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.worldZ[g]
@@ -1046,7 +1062,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if s.state[i].order != s.as.Rig.Nodes[i].Order {
 			order = s.state[i].order
 		}
-		it := item{idx: i, layer: b.Layer, order: order, z: s.worldZ[i], extra: -1, mesh: mi}
+		it := item{idx: i, layer: b.Layer, order: order, z: s.worldZ[i], extra: -1, extraMesh: -1, mesh: mi}
 		if g := s.groupOf[i]; g >= 0 {
 			sg := s.as.Rig.Nodes[g].SortGroup
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.worldZ[g]
@@ -1069,7 +1085,16 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if q.Tint != [4]float64{} && q.Tint[3] <= 0 {
 			continue
 		}
-		it := item{idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: qi, mesh: -1}
+		it := item{idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: qi, extraMesh: -1, mesh: -1}
+		it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, q.Z
+		items = append(items, it)
+	}
+	for qi := range s.queuedMeshes {
+		q := &s.queuedMeshes[qi]
+		if !s.meshRenderable(q.Binding) || q.Tint[3] <= 0 {
+			continue
+		}
+		it := item{idx: len(s.state) + len(s.queued) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: -1, extraMesh: qi, mesh: -1}
 		it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, q.Z
 		items = append(items, it)
 	}
@@ -1173,6 +1198,15 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			drawQueued(dst, q, qo, view)
 			continue
 		}
+		if it.extraMesh >= 0 {
+			q := &s.queuedMeshes[it.extraMesh]
+			view, ok := s.camView(q.Z)
+			if !ok {
+				continue
+			}
+			s.drawMeshBindingTinted(dst, q.Binding, view.Mul(q.World), proj, q.Tint)
+			continue
+		}
 		if it.mesh >= 0 {
 			i := it.idx
 			view, ok := s.camView(s.worldZ[i])
@@ -1247,4 +1281,5 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 	}
 	s.queued = s.queued[:0]
+	s.queuedMeshes = s.queuedMeshes[:0]
 }

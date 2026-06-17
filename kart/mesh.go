@@ -30,7 +30,7 @@ func builtinMeshFootprint(ref kmdata.AssetRef) (w, h float64, ok bool) {
 	}
 }
 
-func (s *SceneInst) meshTint(node int, b *kmdata.MeshBinding) [4]float64 {
+func (s *SceneInst) meshMaterialTint(b *kmdata.MeshBinding) [4]float64 {
 	tint := [4]float64{1, 1, 1, 1}
 	if len(b.Materials) > 0 {
 		if mat, ok := s.as.Meshes.Materials[b.Materials[0].GUID]; ok {
@@ -39,7 +39,11 @@ func (s *SceneInst) meshTint(node int, b *kmdata.MeshBinding) [4]float64 {
 			}
 		}
 	}
-	st := &s.state[node]
+	return tint
+}
+
+func meshStateTint(base [4]float64, st *sceneNodeState) [4]float64 {
+	tint := base
 	if st.hasMatColor {
 		tint = st.matColor
 	}
@@ -47,13 +51,28 @@ func (s *SceneInst) meshTint(node int, b *kmdata.MeshBinding) [4]float64 {
 	return tint
 }
 
+func (s *SceneInst) meshTint(node int, b *kmdata.MeshBinding) [4]float64 {
+	return meshStateTint(s.meshMaterialTint(b), &s.state[node])
+}
+
+func (s *SceneInst) meshRenderable(bindingIdx int) bool {
+	if bindingIdx < 0 || bindingIdx >= len(s.as.Meshes.Bindings) {
+		return false
+	}
+	b := &s.as.Meshes.Bindings[bindingIdx]
+	if b.Renderer != "MeshRenderer" || !b.Enabled {
+		return false
+	}
+	if _, _, ok := builtinMeshFootprint(b.Mesh); ok {
+		return true
+	}
+	return s.meshGeometry(b) != nil
+}
+
 func (s *SceneInst) meshDrawable(bindingIdx int) (nodeIdx int, tint [4]float64, ok bool) {
 	b := &s.as.Meshes.Bindings[bindingIdx]
 	i, ok := s.byPath[b.Path]
-	if !ok || b.Renderer != "MeshRenderer" || !b.Enabled || !s.actives[i] || !s.state[i].renderOn {
-		return 0, [4]float64{}, false
-	}
-	if _, _, ok := builtinMeshFootprint(b.Mesh); !ok && s.meshGeometry(b) == nil {
+	if !ok || !s.meshRenderable(bindingIdx) || !s.actives[i] || !s.state[i].renderOn {
 		return 0, [4]float64{}, false
 	}
 	tint = s.meshTint(i, b)
@@ -64,24 +83,28 @@ func (s *SceneInst) meshDrawable(bindingIdx int) (nodeIdx int, tint [4]float64, 
 }
 
 func (s *SceneInst) drawMeshBinding(dst *ebiten.Image, bindingIdx, nodeIdx int, world, proj Aff) {
+	s.drawMeshBindingTinted(dst, bindingIdx, world, proj, s.meshTint(nodeIdx, &s.as.Meshes.Bindings[bindingIdx]))
+}
+
+func (s *SceneInst) drawMeshBindingTinted(dst *ebiten.Image, bindingIdx int, world, proj Aff, tint [4]float64) {
 	b := &s.as.Meshes.Bindings[bindingIdx]
 	w, h, ok := builtinMeshFootprint(b.Mesh)
 	if ok {
 		if b.Mesh.FileID == 10207 {
-			drawSolidEllipse(dst, proj.Mul(world), w/2, h/2, s.meshTint(nodeIdx, b))
+			drawSolidEllipse(dst, proj.Mul(world), w/2, h/2, tint)
 			return
 		}
 		tex, env := s.meshTexture(b)
 		if tex != nil {
-			drawTexturedBuiltinQuad(dst, proj.Mul(world), w, h, s.meshTint(nodeIdx, b), tex, env)
+			drawTexturedBuiltinQuad(dst, proj.Mul(world), w, h, tint, tex, env)
 			return
 		}
-		drawSolidQuad(dst, proj.Mul(world), w, h, s.meshTint(nodeIdx, b))
+		drawSolidQuad(dst, proj.Mul(world), w, h, tint)
 		return
 	}
 	if g := s.meshGeometry(b); g != nil {
 		tex, env := s.meshTexture(b)
-		drawMeshGeometry(dst, proj.Mul(world), g, s.meshTint(nodeIdx, b), tex, env)
+		drawMeshGeometry(dst, proj.Mul(world), g, tint, tex, env)
 	}
 }
 

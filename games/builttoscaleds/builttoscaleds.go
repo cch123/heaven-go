@@ -80,6 +80,7 @@ type block struct {
 	sinkBeat                        float64
 	state                           blockState
 	stateBeat                       float64
+	inst                            *kart.Instance
 }
 
 type fxKind int
@@ -91,9 +92,10 @@ const (
 )
 
 type effect struct {
-	beat float64
-	kind fxKind
-	x, y float64
+	beat, endBeat float64
+	kind          fxKind
+	x, y          float64
+	inst          *kart.Instance
 }
 
 type Module struct {
@@ -107,6 +109,10 @@ type Module struct {
 
 	blocks  []*block
 	effects []effect
+
+	blocksHolder, partsHolder            string
+	movingBlocksT, flyingRodT, hitPartsT *kart.Template
+	missPartsT                           *kart.Template
 
 	objectColor  [4]float64
 	shooterColor [4]float64
@@ -132,6 +138,12 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 		return err
 	}
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
+	m.blocksHolder = ctx.Role("blocksHolder")
+	m.partsHolder = ctx.Role("partsHolder")
+	m.movingBlocksT = kart.NewTemplate(ctx.Assets, ctx.Role("movingBlocksBase"))
+	m.flyingRodT = kart.NewTemplate(ctx.Assets, ctx.Role("flyingRodBase"))
+	m.hitPartsT = kart.NewTemplate(ctx.Assets, ctx.Role("hitPartsBase"))
+	m.missPartsT = kart.NewTemplate(ctx.Assets, ctx.Role("missPartsBase"))
 	m.playSceneDefaults(0)
 	m.hideDynamicMeshPrefabs()
 	return nil
@@ -212,7 +224,7 @@ func (m *Module) OnSwitch(beat float64) {
 func (m *Module) Whiff(beat float64) {
 	m.shoot(beat)
 	m.ctx.Sound("Boing")
-	m.effects = append(m.effects, effect{beat: beat, kind: fxRod, x: shooterX(), y: laneY()})
+	m.spawnPieceEffect(beat, fxRod, m.flyingRodT, "Fly", "FlyingRod", shooterX(), laneY())
 	m.lastShotOut = true
 }
 
@@ -245,7 +257,11 @@ func (m *Module) Update(_, beat float64) {
 	if len(m.effects) > 0 {
 		alive := m.effects[:0]
 		for _, fx := range m.effects {
-			if beat-fx.beat < 2.0 {
+			endBeat := fx.endBeat
+			if endBeat <= 0 {
+				endBeat = fx.beat + 2
+			}
+			if beat < endBeat {
 				alive = append(alive, fx)
 			}
 		}
@@ -310,6 +326,9 @@ func (m *Module) spawnBlock(ev blockEvt, create float64) {
 		evt: ev, createBeat: create, windupBeat: windupBeat(ev),
 		hitBeat: hitBeat(ev), sinkBeat: hitBeat(ev) + 2*ev.length,
 	}
+	if m.movingBlocksT != nil {
+		b.inst = m.movingBlocksT.NewInstance()
+	}
 	m.blocks = append(m.blocks, b)
 	m.ctx.Scene.PlayState(m.ctx.Role("elevatorAnim"), "MakeRod", create, 1)
 	m.ctx.At(b.sinkBeat, func() {
@@ -330,7 +349,7 @@ func (m *Module) hitBlock(ev blockEvt, state float64, j engine.Judgment) {
 		b.stateBeat = beat
 		m.shoot(beat)
 		m.ctx.Sound("Crumble")
-		m.effects = append(m.effects, effect{beat: beat, kind: fxNear, x: shooterX() - 30, y: laneY()})
+		m.spawnPieceEffect(beat, fxNear, m.missPartsT, "PartsMiss", "MissParts", shooterX()-30, laneY())
 		return
 	}
 	b.state = blockHit
@@ -344,7 +363,7 @@ func (m *Module) hitBlock(ev blockEvt, state float64, j engine.Judgment) {
 		}
 		m.playPianoNow(noteLen, b.evt.notes[5])
 	}
-	m.effects = append(m.effects, effect{beat: beat, kind: fxHit, x: shooterX() - 28, y: laneY()})
+	m.spawnPieceEffect(beat, fxHit, m.hitPartsT, "PartsHit", "HitParts", shooterX()-28, laneY())
 }
 
 func (m *Module) missBlock(ev blockEvt) {
@@ -391,6 +410,42 @@ func (m *Module) schedulePiano(beat, length float64, semitone int) {
 
 func (m *Module) playPianoNow(length float64, semitone int) {
 	m.ctx.SoundLoopPitchVolUntil("Piano", semitonePitch(semitone), 0.8, pianoEndBeat(m.ctx.Beat(), length), pianoFadeSec)
+}
+
+func (m *Module) spawnPieceEffect(beat float64, kind fxKind, tmpl *kart.Template, state, ctrl string, x, y float64) {
+	fx := effect{beat: beat, kind: kind, x: x, y: y, endBeat: beat + 2}
+	if tmpl != nil {
+		fx.inst = tmpl.NewInstance()
+		fx.inst.PlayState("", state, beat, m.ctx.SecPerBeat(beat))
+		if dur := m.stateDurationBeats(ctrl, state, beat); dur > 0 {
+			fx.endBeat = beat + dur
+		}
+	}
+	m.effects = append(m.effects, fx)
+}
+
+func (m *Module) stateDurationBeats(ctrlName, stateName string, beat float64) float64 {
+	ctrl, ok := m.ctx.Assets.Controllers[ctrlName]
+	if !ok {
+		return 0
+	}
+	st, ok := ctrl.States[stateName]
+	if !ok || st.Clip == "" {
+		return 0
+	}
+	anim := m.ctx.Assets.Anims[st.Clip]
+	if anim == nil {
+		return 0
+	}
+	speed := st.Speed
+	if speed == 0 {
+		return 0
+	}
+	secPerBeat := m.ctx.SecPerBeat(beat)
+	if secPerBeat <= 0 {
+		return 0
+	}
+	return anim.Duration / (secPerBeat * speed)
 }
 
 func pianoEndBeat(beat, length float64) float64 {
@@ -468,8 +523,40 @@ func (m *Module) drawOfficialMeshScene(screen *ebiten.Image, env [4]float64, rot
 		m.ctx.Scene.SetMaterialOver(b.Path, env, [4]float64{})
 	}
 	m.ctx.SampleScene(beat)
+	m.queueOfficialDynamicMeshes(beat)
 	proj := m.proj.Mul(kart.Scale(zoom, zoom)).Mul(kart.Rotate(rot * math.Pi / 180))
 	m.ctx.Scene.Draw(screen, proj)
+}
+
+func (m *Module) queueOfficialDynamicMeshes(beat float64) {
+	sc := m.ctx.Scene
+	blocksWorld := kart.Identity()
+	if m.blocksHolder != "" {
+		if w, ok := sc.NodeWorld(m.blocksHolder); ok {
+			blocksWorld = w
+		}
+	}
+	for _, b := range m.blocks {
+		if b.inst == nil || b.state != blockMoving || beat < b.createBeat || beat >= b.sinkBeat {
+			continue
+		}
+		frame := blockAnimFrame(b.evt, beat, m.ctx.SecPerBeat(beat))
+		b.inst.PlayNormalized("", "Models/MovingBlocks/piece_LR", clamp01(frame/blockTotalFrames))
+		b.inst.Queue(sc, beat, blocksWorld, 0)
+	}
+
+	partsWorld := kart.Identity()
+	if m.partsHolder != "" {
+		if w, ok := sc.NodeWorld(m.partsHolder); ok {
+			partsWorld = w
+		}
+	}
+	for _, fx := range m.effects {
+		if fx.inst == nil || (fx.endBeat > 0 && beat >= fx.endBeat) {
+			continue
+		}
+		fx.inst.Queue(sc, beat, partsWorld, 0)
+	}
 }
 
 func (m *Module) drawConveyor(screen *ebiten.Image, env [4]float64, zoom, beat float64) {
@@ -616,7 +703,15 @@ func blockAnimFrame(ev blockEvt, beat float64, secPerBeat float64) float64 {
 	}
 	speedMult := secondsToHitFrame / secondsToHitBeat
 	secondsPastSpawn := secPerBeat*(beat-spawnBeat(ev)) + spawnTimeOffset
-	return blockFramesPerSecond * speedMult * secondsPastSpawn
+	frame := blockFramesPerSecond * speedMult * secondsPastSpawn
+	// Unity snaps these exact integer boundaries upward to avoid FBX
+	// interpolation landing between block poses at the musical hit frames.
+	switch int(math.Floor(frame)) {
+	case 7, 15, 23, 31, 39, 47:
+		return math.Ceil(frame)
+	default:
+		return frame
+	}
 }
 
 func blockPos(b *block, beat float64) (x, y float64) {
