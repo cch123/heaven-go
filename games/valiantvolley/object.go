@@ -64,8 +64,16 @@ func (m *Module) spawnVolleyObject(plan objectPlan) {
 
 func (m *Module) scheduleObjectActions(o *volleyObject) {
 	p := o.plan
-	m.ctx.At(p.start+p.distance, func() { o.autoAnt(m, 0, p.start+p.distance, 1) })
-	m.ctx.At(p.start+p.distance*2, func() { o.autoAnt(m, 1, p.start+p.distance*2, 1) })
+	m.ctx.At(p.start+p.distance, func() {
+		beat := p.start + p.distance
+		o.playAutoVolleyAnim(beat)
+		o.autoAnt(m, 0, beat, 1)
+	})
+	m.ctx.At(p.start+p.distance*2, func() {
+		beat := p.start + p.distance*2
+		o.playAutoVolleyAnim(beat)
+		o.autoAnt(m, 1, beat, 1)
+	})
 	m.scheduleObjectInput(o, p.start+p.distance*3)
 	for _, input := range p.inputs {
 		input := input
@@ -91,6 +99,40 @@ func (m *Module) scheduleObjectInput(o *volleyObject, target float64) {
 	m.ctx.ScheduleInputAction(target, action,
 		func(state float64, _ engine.Judgment) { o.hitInput(m, target, state) },
 		func() { o.miss(m, target) })
+}
+
+func (o *volleyObject) playAutoVolleyAnim(beat float64) {
+	state, timeScale := o.autoVolleyAnim(beat)
+	if state == "" || o.inst == nil || o.dead || o.missed {
+		return
+	}
+	o.inst.PlayState("", state, beat, timeScale)
+}
+
+func (o *volleyObject) autoVolleyAnim(beat float64) (string, float64) {
+	if len(o.plan.inputs) == 0 || o.isLastJuggleWorkerBeat(beat) {
+		o.currentJuggle = 0
+		return "ObjectHit", 0.5
+	}
+
+	// Unity reuses the first juggle length for the automatic second worker hit:
+	// that branch resets currentJuggle before playing ObjectJuggle. Keeping the
+	// same reset here prevents long multi-intervals from drifting animation
+	// speed before the player's return windows begin.
+	if nearly(beat, o.plan.start+o.plan.distance*2) {
+		o.currentJuggle = 0
+	}
+	length := o.currentJuggleLength()
+	if length <= 0 {
+		length = o.plan.distance
+	}
+	o.currentJuggle++
+	return "ObjectJuggle", 0.5 / length
+}
+
+func (o *volleyObject) isLastJuggleWorkerBeat(beat float64) bool {
+	return o.plan.lastJuggle != 0 &&
+		(nearly(beat, o.plan.lastJuggle) || nearly(beat, o.plan.lastJuggle+o.plan.distance))
 }
 
 func (o *volleyObject) autoAnt(m *Module, idx int, beat, pitch float64) {

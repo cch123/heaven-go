@@ -128,6 +128,23 @@ func TestValiantVolleyTimingAndMultiSpawnSemantics(t *testing.T) {
 	if multi.lastJuggle != 23 || multi.lastJuggleLength != 4 {
 		t.Fatalf("last juggle = beat %v len %v", multi.lastJuggle, multi.lastJuggleLength)
 	}
+	standaloneAuto := &volleyObject{plan: plan, currentJuggle: 3}
+	if state, scale := standaloneAuto.autoVolleyAnim(12); state != "ObjectHit" || scale != 0.5 || standaloneAuto.currentJuggle != 0 {
+		t.Fatalf("standalone auto anim = %s %.3f current %d, want ObjectHit 0.500 current 0", state, scale, standaloneAuto.currentJuggle)
+	}
+	autoPlan := multi
+	autoPlan.juggleLengths = []float64{1, 2, 4}
+	autoObj := &volleyObject{plan: autoPlan}
+	if state, scale := autoObj.autoVolleyAnim(20); state != "ObjectJuggle" || math.Abs(scale-0.5) > 1e-9 || autoObj.currentJuggle != 1 {
+		t.Fatalf("first worker auto anim = %s %.3f current %d, want ObjectJuggle 0.500 current 1", state, scale, autoObj.currentJuggle)
+	}
+	if state, scale := autoObj.autoVolleyAnim(24); state != "ObjectJuggle" || math.Abs(scale-0.5) > 1e-9 || autoObj.currentJuggle != 1 {
+		t.Fatalf("second worker auto anim = %s %.3f current %d, want reset ObjectJuggle 0.500 current 1", state, scale, autoObj.currentJuggle)
+	}
+	autoObj.currentJuggle = 2
+	if state, scale := autoObj.autoVolleyAnim(23); state != "ObjectHit" || scale != 0.5 || autoObj.currentJuggle != 0 {
+		t.Fatalf("last juggle auto anim = %s %.3f current %d, want ObjectHit 0.500 current 0", state, scale, autoObj.currentJuggle)
+	}
 	multiObj := &volleyObject{plan: multi, hitBeat: 29}
 	for _, target := range []float64{28, 29, 31} {
 		if !multiObj.expectsInputAt(target) {
