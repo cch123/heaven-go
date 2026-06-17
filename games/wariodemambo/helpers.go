@@ -4,6 +4,7 @@ import (
 	"math"
 
 	"hsdemo/engine"
+	"hsdemo/kart"
 	"hsdemo/riq"
 )
 
@@ -71,17 +72,38 @@ func (m *Module) playDefault(path string, beat float64) {
 	m.ctx.Scene.PlayDefaultState(path, beat, m.ctx.SecPerBeat(math.Max(beat, 0)))
 }
 
-func (m *Module) localPos(path string) [2]float64 {
-	for _, n := range m.ctx.Assets.Rig.Nodes {
-		if n.Path == path {
-			return n.Pos
-		}
+func (m *Module) point(path string) [2]float64 {
+	if m == nil || m.ctx == nil || m.ctx.Assets == nil {
+		return [2]float64{}
 	}
-	return [2]float64{}
+	byPath := map[string]int{}
+	for i, n := range m.ctx.Assets.Rig.Nodes {
+		byPath[n.Path] = i
+	}
+	i, ok := byPath[path]
+	if !ok {
+		return [2]float64{}
+	}
+	stack := make([]int, 0, 8)
+	for i >= 0 {
+		stack = append(stack, i)
+		i = m.ctx.Assets.Rig.Nodes[i].Parent
+	}
+	w := kart.Identity()
+	for j := len(stack) - 1; j >= 0; j-- {
+		n := m.ctx.Assets.Rig.Nodes[stack[j]]
+		w = w.Mul(kart.TRS(n.Pos[0], n.Pos[1], n.RotZ, n.Scale[0], n.Scale[1]))
+	}
+	return [2]float64{w.Tx, w.Ty}
 }
 
-func (m *Module) point(path string) [2]float64 {
-	return m.localPos(path)
+func (m *Module) mamboHeadMaterialExcludes() []string {
+	return []string{
+		m.warioFace,
+		m.warioBody + "/Squiggly",
+		m.dancerLHead,
+		m.dancerRHead,
+	}
 }
 
 func (m *Module) currentBeat() float64 {

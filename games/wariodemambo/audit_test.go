@@ -75,6 +75,26 @@ func TestBindingsComponentsTextAndSounds(t *testing.T) {
 	}
 }
 
+func TestSpotlightPointUsesPrefabWorldPosition(t *testing.T) {
+	as := &kart.Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Pos: [2]float64{2, 3}, Scale: [2]float64{1, 1}},
+			{Name: "Pivot", Path: "Root/Pivot", Parent: 0, Pos: [2]float64{1, 0}, RotZ: 0.5, Scale: [2]float64{2, 2}},
+			{Name: "Spot", Path: "Root/Pivot/Spot", Parent: 1, Pos: [2]float64{0.5, -1}, Scale: [2]float64{1, 1}},
+		}},
+	}
+	m := &Module{ctx: &engine.Ctx{Assets: as}}
+
+	got := m.point("Root/Pivot/Spot")
+	wantWorld := kart.TRS(2, 3, 0, 1, 1).
+		Mul(kart.TRS(1, 0, 0.5, 2, 2)).
+		Mul(kart.TRS(0.5, -1, 0, 1, 1))
+	want := [2]float64{wantWorld.Tx, wantWorld.Ty}
+	if got != want {
+		t.Fatalf("spotlight point = %#v, want prefab world position %#v", got, want)
+	}
+}
+
 func TestMamboMaterialNamesPreservedForSharedColorShader(t *testing.T) {
 	as := loadAssets(t)
 	mats := map[string]int{}
@@ -106,6 +126,29 @@ func TestMamboMaterialNamesPreservedForSharedColorShader(t *testing.T) {
 	}
 	if byPath["WarioJumper/WAAAAAAAA/Squiggly"].Mat == "MamboShader" {
 		t.Fatal("Squiggly overlay should not be part of the shared MamboShader recolor material")
+	}
+}
+
+func TestMamboMainMaterialExcludesFaceAndDancerHeads(t *testing.T) {
+	m := &Module{
+		warioBody:   "WarioJumper/WAAAAAAAA",
+		warioFace:   "WarioJumper/WAAAAAAAA/Face",
+		dancerLHead: "DancerL/DancerJumper/DancerL/HeadHolder",
+		dancerRHead: "DancerR/DancerJumper/DancerL/HeadHolder",
+	}
+	got := map[string]bool{}
+	for _, root := range m.mamboHeadMaterialExcludes() {
+		got[root] = true
+	}
+	for _, root := range []string{
+		m.warioFace,
+		m.warioBody + "/Squiggly",
+		m.dancerLHead,
+		m.dancerRHead,
+	} {
+		if !got[root] {
+			t.Fatalf("missing Mambo material exclusion for %s: %#v", root, got)
+		}
 	}
 }
 

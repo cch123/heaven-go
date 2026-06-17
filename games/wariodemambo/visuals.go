@@ -146,9 +146,9 @@ func (m *Module) applyColors() {
 	if m.gameRed {
 		hue = 0.5
 	}
-	for _, mat := range []string{m.mainMat, m.lightMat, m.floorLightMat} {
-		m.ctx.Scene.SetMamboMaterialFor(mat, hue, add)
-	}
+	m.ctx.Scene.SetMamboMaterialForExcept(m.mainMat, hue, add, m.mamboHeadMaterialExcludes()...)
+	m.ctx.Scene.SetMamboMaterialFor(m.lightMat, hue, add)
+	m.ctx.Scene.SetMamboMaterialFor(m.floorLightMat, hue, add)
 	alpha := 0.75
 	if !m.gameDim {
 		alpha = 1

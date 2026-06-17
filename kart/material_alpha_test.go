@@ -139,6 +139,32 @@ func TestMamboMaterialOverrideAppliesByMaterialName(t *testing.T) {
 	}
 }
 
+func TestMamboMaterialOverrideCanExcludeSubtrees(t *testing.T) {
+	as := materialAlphaAssets()
+	as.Rig.Nodes[0].Mat = "MamboShader"
+	as.Rig.Nodes = append(as.Rig.Nodes,
+		kmdata.Node{Name: "Head", Path: "Root/Head", Parent: 0, Scale: [2]float64{1, 1}, Sprite: "dummy", Color: [4]float64{1, 1, 1, 1}, Mat: "MamboShader"},
+		kmdata.Node{Name: "Face", Path: "Root/Head/Face", Parent: 1, Scale: [2]float64{1, 1}, Sprite: "dummy", Color: [4]float64{1, 1, 1, 1}, Mat: "MamboShader"},
+		kmdata.Node{Name: "Body", Path: "Root/Body", Parent: 0, Scale: [2]float64{1, 1}, Sprite: "dummy", Color: [4]float64{1, 1, 1, 1}, Mat: "MamboShader"},
+	)
+
+	scene := NewScene(as)
+	scene.SetMamboMaterialForExcept("MamboShader", 0.5, [4]float64{0.2, 0.1, 0.05, 1}, "Root/Head")
+	scene.Sample(0)
+
+	if got := scene.state[0].matHueShift; got != 0.5 || !scene.state[0].matLinearAdd {
+		t.Fatalf("root material override not applied: %#v", scene.state[0])
+	}
+	for _, idx := range []int{1, 2} {
+		if got := scene.state[idx].matHueShift; got != 0 || scene.state[idx].matLinearAdd {
+			t.Fatalf("excluded head subtree received Mambo override: idx=%d state=%#v", idx, scene.state[idx])
+		}
+	}
+	if got := scene.state[3].matHueShift; got != 0.5 || !scene.state[3].matLinearAdd {
+		t.Fatalf("sibling body material override not applied: %#v", scene.state[3])
+	}
+}
+
 func materialAlphaAssets() *Assets {
 	keys := []kmdata.Key{
 		{T: 0, V: 0.25},

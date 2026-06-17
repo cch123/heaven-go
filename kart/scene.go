@@ -91,6 +91,7 @@ type SceneInst struct {
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
 	matOver    map[int]materialState
 	matFor     map[string]materialState
+	matForSkip map[string][]string
 	texFor     map[string][2]float64
 	palOver    map[int]Palette
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
@@ -209,6 +210,7 @@ func NewScene(as *Assets) *SceneInst {
 		colorOver:  map[int][4]float64{},
 		matOver:    map[int]materialState{},
 		matFor:     map[string]materialState{},
+		matForSkip: map[string][]string{},
 		texFor:     map[string][2]float64{},
 		palOver:    map[int]Palette{},
 		posOver:    map[int][2]float64{},
@@ -573,9 +575,16 @@ func (s *SceneInst) SetMaterialOver(path string, matColor, add [4]float64) {
 
 // SetMamboMaterialFor 覆盖共享 MamboDoodle 材质的 _HueShift/_AddColor。
 // WarioDeMambo.cs 直接改 mainMat/lightMat/floorLightMat；这些是材质实例，
-// 不是单个 SpriteRenderer。按材质名覆盖能避免把灯光色误套到不使用该材质
-// 的 face/head renderer 上。
+// 不是单个 SpriteRenderer。按材质名覆盖可表达共享材质；如果导出时多个
+// Unity 材质实例折叠成同名材质，应使用 SetMamboMaterialForExcept 保留边界。
 func (s *SceneInst) SetMamboMaterialFor(mat string, hueShift float64, add [4]float64) {
+	s.SetMamboMaterialForExcept(mat, hueShift, add)
+}
+
+// SetMamboMaterialForExcept 覆盖共享 MamboDoodle 材质，并排除若干场景子树。
+// Wario de Mambo 的 prefab 里多处 renderer 导出为同一个材质名，但 Unity
+// 脚本实际操作的是序列化字段上的材质实例；排除子树用于保留这种实例边界。
+func (s *SceneInst) SetMamboMaterialForExcept(mat string, hueShift float64, add [4]float64, excludeRoots ...string) {
 	if mat == "" {
 		return
 	}
@@ -586,6 +595,20 @@ func (s *SceneInst) SetMamboMaterialFor(mat string, hueShift float64, add [4]flo
 		hueShift:  hueShift,
 		linearAdd: true,
 	}
+	if len(excludeRoots) == 0 {
+		delete(s.matForSkip, mat)
+		return
+	}
+	s.matForSkip[mat] = append([]string(nil), excludeRoots...)
+}
+
+func (s *SceneInst) materialForApplies(mat, path string) bool {
+	for _, root := range s.matForSkip[mat] {
+		if root != "" && (path == root || strings.HasPrefix(path, root+"/")) {
+			return false
+		}
+	}
+	return true
 }
 
 // SetMaterialColorFor 覆盖共享材质的 _Color。Mesh-only games such as
@@ -811,7 +834,7 @@ func (s *SceneInst) Sample(beat float64) {
 		s.state[i].sprite = sp
 	}
 	for i, n := range s.as.Rig.Nodes {
-		if v, ok := s.matFor[n.Mat]; ok {
+		if v, ok := s.matFor[n.Mat]; ok && s.materialForApplies(n.Mat, n.Path) {
 			if v.hasColor {
 				s.state[i].matColor = v.color
 				s.state[i].hasMatColor = true
