@@ -127,6 +127,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.blueD = newDancer(ctx, m.blue, m.blueRoot, m.blueShadow)
 	m.orangeD = newDancer(ctx, m.orange, m.orangeRoot, m.orangeShadow)
 	m.spawnFans()
+	m.resetFaceposers()
 	m.setPerformance(perfNormal, 0)
 	m.toSpot(true)
 	return nil
@@ -198,6 +199,7 @@ func (m *Module) OnSwitch(beat float64) {
 	m.ctx.Scene.PlayState(m.arisa, "NoPose"+m.performanceSuffix(), beat, sec)
 	m.blueD.applyActive(m.ctx.Scene)
 	m.orangeD.applyActive(m.ctx.Scene)
+	m.resetFaceposers()
 	for _, f := range m.fans {
 		f.play(m, "NoPose", beat)
 	}

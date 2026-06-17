@@ -5,11 +5,21 @@ const (
 	backupFacePrefix = "Animations/BackDancers/FacePoser/"
 )
 
-func (m *Module) setArisaFaceposer(enable, mouthOn, eyeOn bool, mouth, mouthEnd, eyeL, eyeR int, eyeX, eyeY, beat, length float64) {
-	face := m.arisa + "/idol_head/FacePoser"
-	base := m.arisa + "/idol_head"
+func (m *Module) resetFaceposers() {
+	m.setFaceposerVisible(m.arisa, false)
+	m.setFaceposerVisible(m.blue, false)
+	m.setFaceposerVisible(m.orange, false)
+}
+
+func (m *Module) setFaceposerVisible(root string, enable bool) {
+	face := root + "/idol_head/FacePoser"
+	base := root + "/idol_head"
 	m.ctx.Scene.SetActive(face, enable)
-	m.ctx.Scene.SetActive(base, !enable)
+	m.ctx.Scene.SetRenderOver(base, !enable)
+}
+
+func (m *Module) setArisaFaceposer(enable, mouthOn, eyeOn bool, mouth, mouthEnd, eyeL, eyeR int, eyeX, eyeY, beat, length float64) {
+	m.setFaceposerVisible(m.arisa, enable)
 	if eyeOn {
 		m.ctx.Scene.PlayLayer("arisaEyeTarget", m.arisa, arisaEyeTargetClip(eyeX, eyeY), beat, m.ctx.SecPerBeat(beat))
 		m.ctx.Scene.PlayLayerNormalized("arisaEyeL", m.arisa, arisaFacePrefix+"EyeLeft", eyeNorm(eyeL, 6))

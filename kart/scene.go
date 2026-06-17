@@ -84,6 +84,7 @@ type SceneInst struct {
 	// 模块驱动的持久覆盖（在 prefab 默认值之后、剪辑采样之前生效）
 	spinOver   map[int]float64    // 节点下标 → 旋转叠加（弧度，transform.Rotate 积分）
 	activeOver map[int]bool       // 节点下标 → m_IsActive 覆盖（SetActive 语义）
+	renderOver map[int]bool       // 节点下标 → SpriteRenderer.enabled 覆盖（不沿层级传播）
 	mirrorOver map[int]bool       // 节点下标 → localScale.x 取负（transform.localScale=(-1,1,1)）
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
 	matOver    map[int]materialState
@@ -195,6 +196,7 @@ func NewScene(as *Assets) *SceneInst {
 		machines:   map[string]*smachine{},
 		spinOver:   map[int]float64{},
 		activeOver: map[int]bool{},
+		renderOver: map[int]bool{},
 		mirrorOver: map[int]bool{},
 		colorOver:  map[int][4]float64{},
 		matOver:    map[int]materialState{},
@@ -528,6 +530,14 @@ func (s *SceneInst) SetActive(path string, active bool) {
 	}
 }
 
+// SetRenderOver 覆盖 SpriteRenderer.enabled。它只影响当前节点的 renderer，
+// 不影响子物体 activeInHierarchy；Fan Club 的 faceposer 就依赖这个区别。
+func (s *SceneInst) SetRenderOver(path string, on bool) {
+	if i, ok := s.byPath[path]; ok {
+		s.renderOver[i] = on
+	}
+}
+
 // SetMirrorX 覆盖节点 localScale.x 的符号（transform.localScale = (-1,1,1) 语义）。
 func (s *SceneInst) SetMirrorX(path string, mirror bool) {
 	if i, ok := s.byPath[path]; ok {
@@ -690,6 +700,9 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, v := range s.activeOver {
 		s.state[i].active = v
+	}
+	for i, v := range s.renderOver {
+		s.state[i].renderOn = v
 	}
 	for i, v := range s.colorOver {
 		s.state[i].color = v

@@ -109,6 +109,8 @@ type Instance struct {
 	palettes   map[int]Palette    // mapped material overrides per instance renderer
 	matAdd     map[int][4]float64 // material._AddColor 覆盖（screen 混合）
 	orders     map[int]int        // SpriteRenderer.sortingOrder 覆盖（sr.sortingOrder 直写）
+	groupOrder int                // SortingGroup.sortingOrder；采样后叠加，避免被动画曲线覆盖
+	hasGroup   bool
 	pos        map[int][2]float64 // Transform.localPosition 覆盖（脚本每帧写 transform）
 	rots       map[int]float64    // Transform.localEulerAngles.z 覆盖（弧度）
 	scales     map[int][2]float64 // Transform.localScale 覆盖
@@ -354,14 +356,8 @@ func (in *Instance) SetOrder(relPath string, order int) {
 // so a SortingGroup on an instance root has to be flattened into every child
 // sprite while preserving the prefab's internal renderer order.
 func (in *Instance) SetGroupOrder(order int) {
-	const groupStride = 100
-	for ti, tn := range in.T.Nodes {
-		n := &in.T.as.Rig.Nodes[tn.RigIdx]
-		if n.Sprite == "" {
-			continue
-		}
-		in.orders[ti] = order*groupStride + n.Order
-	}
+	in.groupOrder = order
+	in.hasGroup = true
 }
 
 // SetPos 覆盖子树内节点的本地坐标。Splashdown 的 NtrSynchrette.Update
@@ -550,6 +546,19 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 	for _, key := range in.layerOrder {
 		if p := in.layers[key]; p != nil {
 			in.samplePlayer(p, states, beat)
+		}
+	}
+	if in.hasGroup {
+		// SortingGroup participates in global sorting as a parent unit, while
+		// child SpriteRenderer.sortingOrder curves remain local to the group.
+		// Apply this after animation sampling so clips cannot collapse the group
+		// back to low renderer orders, which caused Fan Club lights to cover fans.
+		const groupStride = 100
+		base := in.groupOrder * groupStride
+		for ti, tn := range t.Nodes {
+			if t.as.Rig.Nodes[tn.RigIdx].Sprite != "" {
+				states[ti].order += base
+			}
 		}
 	}
 	// 合成 + 注入

@@ -173,10 +173,7 @@ func (d *dancer) playAnim(m *Module, beat, length float64, typ int) {
 }
 
 func (d *dancer) setFaceposer(m *Module, enable, mouthOn, eyeOn bool, mouth, mouthEnd, eyeL, eyeR int, beat, length float64) {
-	face := d.path + "/idol_head/FacePoser"
-	base := d.path + "/idol_head"
-	m.ctx.Scene.SetActive(face, enable)
-	m.ctx.Scene.SetActive(base, !enable)
+	m.setFaceposerVisible(d.path, enable)
 	if eyeOn {
 		m.ctx.Scene.PlayLayerNormalized(d.path+":eyeL", d.path, backupEyeClip(false), eyeNorm(eyeL, 3))
 		m.ctx.Scene.PlayLayerNormalized(d.path+":eyeR", d.path, backupEyeClip(true), eyeNorm(eyeR, 3))
