@@ -45,10 +45,32 @@ func builtinUnityResource(ref kmdata.AssetRef) bool {
 func main() {
 	assetsRoot := flag.String("assets", "assets", "extracted assets root")
 	game := flag.String("game", "", "single game id to audit")
+	all := flag.Bool("all", false, "audit every extracted game under assets root")
 	flag.Parse()
 
+	if *all {
+		reports, err := auditAll(*assetsRoot)
+		if err != nil {
+			fmt.Fprintln(os.Stderr, err)
+			os.Exit(2)
+		}
+		failures := 0
+		for _, r := range reports {
+			if len(r.errs) == 0 {
+				continue
+			}
+			failures++
+			printReport(r)
+		}
+		fmt.Printf("assetcheck: audited %d game(s), failures=%d\n", len(reports), failures)
+		if failures > 0 {
+			os.Exit(1)
+		}
+		return
+	}
+
 	if *game == "" {
-		fmt.Fprintln(os.Stderr, "assetcheck: -game is required")
+		fmt.Fprintln(os.Stderr, "assetcheck: -game is required unless -all is set")
 		os.Exit(2)
 	}
 	r := auditGame(filepath.Join(*assetsRoot, *game), *game)
@@ -56,6 +78,46 @@ func main() {
 	if len(r.errs) > 0 {
 		os.Exit(1)
 	}
+}
+
+func auditAll(root string) ([]report, error) {
+	ids, err := assetGameIDs(root)
+	if err != nil {
+		return nil, err
+	}
+	reports := make([]report, 0, len(ids))
+	for _, id := range ids {
+		reports = append(reports, auditGame(filepath.Join(root, id), id))
+	}
+	return reports, nil
+}
+
+func assetGameIDs(root string) ([]string, error) {
+	entries, err := os.ReadDir(root)
+	if err != nil {
+		return nil, fmt.Errorf("assetcheck: read assets root: %w", err)
+	}
+	var ids []string
+	for _, ent := range entries {
+		if !ent.IsDir() {
+			continue
+		}
+		dir := filepath.Join(root, ent.Name())
+		if hasAssetLayout(dir) {
+			ids = append(ids, ent.Name())
+		}
+	}
+	sort.Strings(ids)
+	return ids, nil
+}
+
+func hasAssetLayout(dir string) bool {
+	for _, name := range []string{"scene.json", "rig.json"} {
+		if _, err := os.Stat(filepath.Join(dir, name)); err == nil {
+			return true
+		}
+	}
+	return false
 }
 
 func auditGame(dir, game string) report {

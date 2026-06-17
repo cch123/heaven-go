@@ -5,6 +5,7 @@ import (
 	"path/filepath"
 	"reflect"
 	"regexp"
+	"sort"
 	"strings"
 	"testing"
 )
@@ -141,6 +142,36 @@ func TestKarateManOfficialActionsAreHandled(t *testing.T) {
 	assertOfficialActionsHandled(t, "karateman", filepath.Join("..", "..", "games", "karateman"))
 }
 
+func TestAllRegisteredOfficialActionsAreHandled(t *testing.T) {
+	const hsRoot = "/Users/xargin/Downloads/HeavenStudio-master"
+	if _, err := os.Stat(hsRoot); err != nil {
+		t.Skipf("Heaven Studio source tree not present: %v", err)
+	}
+	games, err := scanLoaders(hsRoot)
+	if err != nil {
+		t.Fatal(err)
+	}
+	regDirs := scanRegisterGameDirsForTest(t, filepath.Join("..", "..", "registry.go"))
+
+	var missing []string
+	for id, dir := range regDirs {
+		game, ok := games[id]
+		if !ok {
+			t.Fatalf("registered game %s has no Heaven Studio loader", id)
+		}
+		cases := scanGoActionCases(t, filepath.Join("..", "..", "games", dir))
+		for _, action := range game.Actions {
+			if !cases[action] && !cases[id+"/"+action] && !engineHandlesOfficialAction(action) {
+				missing = append(missing, id+"/"+action)
+			}
+		}
+	}
+	sort.Strings(missing)
+	if len(missing) != 0 {
+		t.Fatalf("missing official action handlers: %v", missing)
+	}
+}
+
 func assertOfficialActionsHandled(t *testing.T, id, dir string) {
 	t.Helper()
 	const hsRoot = "/Users/xargin/Downloads/HeavenStudio-master"
@@ -165,6 +196,31 @@ func assertOfficialActionsHandled(t *testing.T, id, dir string) {
 	if len(missing) != 0 {
 		t.Fatalf("missing %s actions: %v", id, missing)
 	}
+}
+
+func scanRegisterGameDirsForTest(t *testing.T, path string) map[string]string {
+	t.Helper()
+	raw, err := os.ReadFile(path)
+	if err != nil {
+		t.Fatal(err)
+	}
+	importRe := regexp.MustCompile(`"hsdemo/games/([^"]+)"`)
+	aliasToDir := map[string]string{}
+	for _, m := range importRe.FindAllSubmatch(raw, -1) {
+		dir := string(m[1])
+		aliasToDir[filepath.Base(dir)] = dir
+	}
+	registerRe := regexp.MustCompile(`engine\.Register\("([^"]+)",\s*([A-Za-z0-9_]+)\.New\)`)
+	out := map[string]string{}
+	for _, m := range registerRe.FindAllSubmatch(raw, -1) {
+		id, alias := string(m[1]), string(m[2])
+		dir := aliasToDir[alias]
+		if dir == "" {
+			t.Fatalf("register %s uses unknown import alias %s", id, alias)
+		}
+		out[id] = dir
+	}
+	return out
 }
 
 func scanGoActionCases(t *testing.T, dir string) map[string]bool {

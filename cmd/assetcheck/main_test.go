@@ -43,6 +43,57 @@ func TestAuditGameChecksMeshBindings(t *testing.T) {
 	}
 }
 
+func TestAssetGameIDsOnlyIncludesExtractedGameLayouts(t *testing.T) {
+	root := t.TempDir()
+	for _, dir := range []string{"common", "sceneGame", "legacyGame"} {
+		if err := os.Mkdir(filepath.Join(root, dir), 0o755); err != nil {
+			t.Fatal(err)
+		}
+	}
+	writeAssetJSON(t, filepath.Join(root, "sceneGame"), "scene.json", kmdata.Rig{})
+	writeAssetJSON(t, filepath.Join(root, "legacyGame"), "rig.json", kmdata.Rig{})
+
+	got, err := assetGameIDs(root)
+	if err != nil {
+		t.Fatal(err)
+	}
+	want := []string{"legacyGame", "sceneGame"}
+	if strings.Join(got, ",") != strings.Join(want, ",") {
+		t.Fatalf("assetGameIDs = %v, want %v", got, want)
+	}
+}
+
+func TestAuditAllAggregatesExtractedGameReports(t *testing.T) {
+	root := t.TempDir()
+	clean := filepath.Join(root, "cleanGame")
+	if err := os.Mkdir(clean, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	writeAssetJSON(t, clean, "scene.json", kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "", Parent: -1}}})
+	writeAssetJSON(t, clean, "roles.json", kmdata.Roles{})
+	writeAssetJSON(t, clean, "anims.json", map[string]*kmdata.Anim{})
+
+	broken := filepath.Join(root, "brokenGame")
+	if err := os.Mkdir(broken, 0o755); err != nil {
+		t.Fatal(err)
+	}
+	writeAssetJSON(t, broken, "scene.json", kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "", Parent: -1}}})
+
+	reports, err := auditAll(root)
+	if err != nil {
+		t.Fatal(err)
+	}
+	if len(reports) != 2 {
+		t.Fatalf("reports = %d, want 2", len(reports))
+	}
+	if reports[0].game != "brokenGame" || len(reports[0].errs) == 0 {
+		t.Fatalf("first report should be brokenGame failure, got %#v", reports[0])
+	}
+	if reports[1].game != "cleanGame" || len(reports[1].errs) != 0 {
+		t.Fatalf("second report should be cleanGame success, got %#v", reports[1])
+	}
+}
+
 func TestAuditGameAllowsBuiltinUnityMeshMaterial(t *testing.T) {
 	dir := t.TempDir()
 	writeAssetJSON(t, dir, "scene.json", kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "", Parent: -1}}})
