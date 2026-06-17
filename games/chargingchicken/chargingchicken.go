@@ -5,6 +5,7 @@ package chargingchicken
 import (
 	"image/color"
 	"math"
+	"math/rand"
 	"sort"
 	"strings"
 
@@ -69,6 +70,7 @@ type Module struct {
 
 	chickenT     *kart.Template
 	islandT      *kart.Template
+	platformT    *kart.Template
 	current      *island
 	next         *island
 	chickenGhost *kart.Instance
@@ -76,8 +78,10 @@ type Module struct {
 	charger       string
 	fakeChicken   string
 	platform      string
+	platformBase  string
 	bigLandmass   string
 	smallLandmass string
+	collapsed     string
 	stoneSplash   string
 	chickenSplash string
 	collapseOK    string
@@ -122,6 +126,7 @@ type Module struct {
 	lastT            float64
 	hasLastT         bool
 	parallaxX        float64
+	rng              *rand.Rand
 }
 
 func New() engine.Module {
@@ -134,6 +139,7 @@ func New() engine.Module {
 		drumSwitch:      -math.MaxFloat64,
 		bubbleScale:     1.038702,
 		yardsTemplate:   "<color=#FFFF00>%</color> yards to the goal.",
+		rng:             rand.New(rand.NewSource(0x4348494b)),
 	}
 }
 
@@ -176,8 +182,10 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.charger = islandComp.Refs["ChargerAnim"]
 	m.fakeChicken = islandComp.Refs["FakeChickenAnim"]
 	m.platform = islandComp.Refs["PlatformAnim"]
+	m.platformBase = islandComp.Refs["PlatformBase"]
 	m.bigLandmass = islandComp.Refs["BigLandmass"]
 	m.smallLandmass = islandComp.Refs["SmallLandmass"]
+	m.collapsed = islandComp.Refs["CollapsedLandmass"]
 	m.stoneSplash = islandComp.Refs["StoneSplashEffect"]
 	m.chickenSplash = islandComp.Refs["ChickenSplashEffect"]
 	m.collapseOK = islandComp.Refs["IslandCollapse"]
@@ -187,6 +195,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.particles = particlefx.New(as, m.proj, 1.2)
 
 	m.islandT = kart.NewTemplate(as, "Island")
+	m.platformT = kart.NewTemplate(as, m.platformBase)
 	m.current = newIsland(m, 0)
 	m.next = newIsland(m, platformDistance*1.5)
 	ctx.Scene.SetActive("Island", false)
@@ -366,21 +375,31 @@ func (m *Module) chargeUp(ev chargeEvt, lateness float64) {
 	}, func() { m.endMiss() })
 	m.ctx.At(ev.beat-2, func() {
 		m.setYardsText()
-		if m.next != nil {
-			m.next.spawnStones(journeyBeat, journeyLength, lateness < 2)
+		target := m.next
+		if lateness < 1 {
+			target = m.current
+		}
+		if target != nil {
+			target.spawnStones(journeyBeat, journeyLength, lateness < 2)
 		}
 	})
 	m.ctx.At(ev.beat-1, func() {
-		m.ctx.Scene.PlayState(m.chicken, "Prepare", ev.beat-1, 0.5)
+		if lateness >= 1 {
+			m.ctx.Scene.PlayState(m.chicken, "Prepare", ev.beat-1, 0.5)
+		}
 		m.bubbleEnd = ev.beat + length
-		m.ctx.Sound("SE_CHIKEN_BLOCK_SET")
-		m.ctx.Scene.SetActive(m.helmet, ev.helmet)
-		m.ctx.Scene.SetActive(m.fallHelmet, ev.helmet)
-		m.spawnJourney(journeyBeat, journeyLength)
+		if lateness >= 2 {
+			m.ctx.Sound("SE_CHIKEN_BLOCK_SET")
+		}
+		if lateness >= 1 {
+			m.spawnJourney(journeyBeat, journeyLength)
+		}
 	})
 	m.ctx.At(ev.beat, func() {
 		m.ctx.Scene.SetActive(m.countBubble, ev.bubble)
 		m.successKillBeat = math.MaxFloat64
+		m.ctx.Scene.SetActive(m.helmet, ev.helmet)
+		m.ctx.Scene.SetActive(m.fallHelmet, ev.helmet)
 	})
 	m.ctx.At(ev.beat+1, func() {
 		m.canBlastOff = true
@@ -469,6 +488,30 @@ func (m *Module) pumpSound(state float64) {
 	}
 }
 
+func (m *Module) playStoneFallSound(_ int) {
+	if m == nil || m.ctx == nil {
+		return
+	}
+	m.ctx.SoundPitch("SE_CHIKEN_BLOCK_FALL_PITCH150", 0.5, m.randomCentsPitch(-150, 150))
+}
+
+func (m *Module) playStoneWaterSound(_ int) {
+	if m == nil || m.ctx == nil {
+		return
+	}
+	m.ctx.SoundPitch("SE_CHIKEN_BLOCK_FALL_WATER_PITCH400", 0.5, m.randomCentsPitch(-400, 400))
+}
+
+func (m *Module) randomCentsPitch(lo, hi int) float64 {
+	if hi < lo {
+		lo, hi = hi, lo
+	}
+	if m.rng == nil {
+		m.rng = rand.New(rand.NewSource(0x4348494b))
+	}
+	return centsPitch(float64(lo + m.rng.Intn(hi-lo+1)))
+}
+
 func (m *Module) endMiss() {
 	if m.inputting {
 		m.ctx.Scene.PlayState(m.chicken, "Bomb", m.ctx.Beat(), 0.5)
@@ -479,12 +522,15 @@ func (m *Module) blastOff(ev chargeEvt, state float64, missed bool) {
 	m.inputting = false
 	m.canBlastOff = false
 	m.playerSucceeded = !missed
-	m.ctx.Sound("SE_CHIKEN_CAR_START")
+	m.ctx.SoundVol("SE_CHIKEN_CAR_START", 0.7)
 	m.ctx.Scene.PlayState(m.chicken, "Ride", m.ctx.Beat(), 0.5)
 	m.yardsEditable = false
 	_ = m.ctx.Assets.SetText(m.yardsText, "")
 	m.ctx.Scene.SetActive(m.countBubble, false)
 	m.current.idle(m.ctx.Beat())
+	m.current.positionIsland(0)
+	m.current.x = 0
+	m.next.positionIsland(state * 1.3)
 	dur := math.Max(m.journeyLength, 0.5)
 	offset := state * 1.03 * 1.3
 	m.current.beginMove(m.ctx.Beat(), m.ctx.Beat()+dur, -m.journeyLength*platformDistance*platformsPerBeat-platformDistance*1.5-offset)
@@ -509,6 +555,8 @@ func (m *Module) spawnJourney(beat, length float64) {
 
 func (m *Module) collapseUnderPlayer() {
 	m.inputting = false
+	m.current.positionIsland(0)
+	m.current.x = 0
 	m.current.collapse(m.ctx.Beat(), false)
 	m.chickenFall(false)
 }
@@ -529,13 +577,16 @@ func (m *Module) explode(beat, length float64) {
 func (m *Module) chickenFall(fellTooFar bool) {
 	if !fellTooFar {
 		m.ctx.Scene.PlayState(m.chicken, "Fall", m.ctx.Beat(), 0.3)
-		m.ctx.Sound("SE_CHIKEN_CAR_FALL")
+		m.ctx.SoundVol("SE_CHIKEN_CAR_FALL", 0.5)
+		if m.current != nil {
+			m.current.stoneSplashCheck(m.ctx.Beat(), 4)
+		}
 		m.ctx.SoundAt(m.ctx.Beat()+0.6, "SE_CHIKEN_CAR_FALL_WATER", 0.5)
 	}
 	splashBeat := m.ctx.Beat() + 0.6
 	m.ctx.At(splashBeat, func() {
-		if m.current != nil {
-			m.current.playParticle(splashBeat, m.chickenSplash)
+		if m.next != nil {
+			m.next.playChickenSplash(splashBeat)
 		}
 		m.ctx.Scene.PlayState(m.chicken, "Back", m.ctx.Beat(), 0.5)
 	})

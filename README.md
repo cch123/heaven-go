@@ -144,8 +144,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   背景与视差 appearance/车身与前景色/强制 look/explode 的 action surface 已接入，
   主 charge、release、blastoff、鼓点 loop、岛实例入场和主要动画可运行；岛屿
   Collapse/StonePlatform/ChickenSplash/GrassFall 等 ParticleSystem 已按 Unity
-  `particles.json` burst 参数接入；逐石块实例、精确落水/复位物理仍待按 Unity
-  序列化参数补齐。
+  `particles.json` burst 参数接入；StonePlatform 逐实例 Set/Fall/Splash、
+  block/car 落水音效和成功复位 offset 已按 `Island.cs` 时序接入。
 - airboarder：`bop`/`duck`/`crouch`/`jump`/`forceCharge`/`letsGo`/背景地板
   颜色/相机事件、arch/wall 判定窗口、CPU/玩家编舞、ready/yeah/miss/barely
   音效序列已按 C# 时序接入；提取器已导出 `Models` 下的 airboy、arch、

@@ -2,6 +2,7 @@ package chargingchicken
 
 import (
 	"encoding/json"
+	"math"
 	"os"
 	"path/filepath"
 	"strings"
@@ -227,6 +228,70 @@ func TestChargingChickenControllersAndSounds(t *testing.T) {
 	}
 }
 
+func TestChargingChickenStonePlatformPrefab(t *testing.T) {
+	raw := loadChargingChickenAssets(t)
+	platformBase := raw.Extra.Components["island"].Refs["PlatformBase"]
+	node := requireNode(t, raw, platformBase)
+	if !node.Inactive {
+		t.Fatalf("%s should stay inactive as the clone source prefab", platformBase)
+	}
+
+	as := &kart.Assets{
+		Rig:         raw.Rig,
+		Anims:       raw.Anims,
+		Controllers: raw.Controllers,
+		Animators:   raw.Animators,
+	}
+	tmpl := kart.NewTemplate(as, platformBase)
+	if tmpl == nil {
+		t.Fatalf("missing platform template for %s", platformBase)
+	}
+	if got := len(tmpl.Nodes); got < 3 {
+		t.Fatalf("platform template nodes = %d, want root plus holder/texture", got)
+	}
+}
+
+func TestChargingChickenStoneJourneyLayoutMatchesUnity(t *testing.T) {
+	if got := stonePlatformCount(2.5); got != 10 {
+		t.Fatalf("stonePlatformCount(2.5) = %d, want 10", got)
+	}
+	fallOffset := 0.42
+	for _, tc := range []struct {
+		number  int
+		variant int
+		wantX   float64
+	}{
+		{0, 0, -platformDistance/2 + fallOffset},
+		{1, 1, platformDistance - platformDistance/2 + fallOffset},
+		{2, 2, 2*platformDistance - platformDistance/2 + fallOffset},
+		{3, 0, 3*platformDistance - platformDistance/2 + fallOffset},
+	} {
+		if got := stonePlatformOffset(tc.number, fallOffset); math.Abs(got-tc.wantX) > 1e-9 {
+			t.Fatalf("stone %d offset = %.9f, want %.9f", tc.number, got, tc.wantX)
+		}
+		if got := stonePlatformVariant(tc.number); got != tc.variant {
+			t.Fatalf("stone %d variant = %d, want %d", tc.number, got, tc.variant)
+		}
+	}
+}
+
+func TestChargingChickenStonePitchUsesUnityCentRanges(t *testing.T) {
+	fallLo, fallHi := centsPitch(-150), centsPitch(150)
+	waterLo, waterHi := centsPitch(-400), centsPitch(400)
+	if math.Abs(fallLo-math.Pow(2, -150.0/1200.0)) > 1e-12 || math.Abs(waterHi-math.Pow(2, 400.0/1200.0)) > 1e-12 {
+		t.Fatal("centsPitch must match SoundByte.GetPitchFromCents")
+	}
+	m := New().(*Module)
+	for i := 0; i < 64; i++ {
+		if p := m.randomCentsPitch(-150, 150); p < fallLo || p > fallHi {
+			t.Fatalf("fall pitch %.6f outside Unity [-150, 150] cents range", p)
+		}
+		if p := m.randomCentsPitch(-400, 400); p < waterLo || p > waterHi {
+			t.Fatalf("water pitch %.6f outside Unity [-400, 400] cents range", p)
+		}
+	}
+}
+
 func TestChargingChickenParticleSystemsExtracted(t *testing.T) {
 	as := loadChargingChickenAssets(t)
 	if len(as.Particles.Systems) != 36 {
@@ -366,6 +431,17 @@ func requireParticleSystem(t *testing.T, as *chargingChickenAssets, path string)
 	}
 	t.Fatalf("missing ParticleSystem %s", path)
 	return kmdata.ParticleSystem{}
+}
+
+func requireNode(t *testing.T, as *chargingChickenAssets, path string) kmdata.Node {
+	t.Helper()
+	for _, n := range as.Rig.Nodes {
+		if n.Path == path {
+			return n
+		}
+	}
+	t.Fatalf("missing node %s", path)
+	return kmdata.Node{}
 }
 
 func hasString(items []string, want string) bool {
