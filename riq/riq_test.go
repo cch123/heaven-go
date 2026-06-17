@@ -50,3 +50,27 @@ func TestLoadOfficialV1(t *testing.T) {
 		}
 	}
 }
+
+func TestTrimEntitiesAfterFirstEndDropsEditorLeftovers(t *testing.T) {
+	bm := &Beatmap{Entities: []Entity{
+		{Datamodel: "gameManager/switchGame/balloonHunter", Beat: 0},
+		{Datamodel: "balloonHunter/balloonSlow", Beat: 8, Length: 3},
+		{Datamodel: "gameManager/end", Beat: 12, Length: 0.5},
+		{Datamodel: "balloonHunter/balloonFast", Beat: 16, Length: 2.5},
+		{Datamodel: "gameManager/end", Beat: 20, Length: 0.5},
+	}}
+
+	bm.trimEntitiesAfterFirstEnd()
+
+	if got, want := len(bm.Entities), 3; got != want {
+		t.Fatalf("entities after trim = %d, want %d", got, want)
+	}
+	if got := bm.Entities[len(bm.Entities)-1].Datamodel; got != "gameManager/end" {
+		t.Fatalf("last kept entity = %q, want first end marker", got)
+	}
+	for _, e := range bm.Entities {
+		if e.Beat > 12 {
+			t.Fatalf("kept post-end entity %#v", e)
+		}
+	}
+}

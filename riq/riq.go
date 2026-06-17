@@ -376,6 +376,7 @@ func loadV2(files map[string][]byte, chartName string) (*Riq, error) {
 	}
 	bm.normalizeTempos()
 	sort.SliceStable(bm.Entities, func(i, j int) bool { return bm.Entities[i].Beat < bm.Entities[j].Beat })
+	bm.trimEntitiesAfterFirstEnd()
 
 	audioName, audio, err := findV2Audio(files, bm.SongName)
 	if err != nil {
@@ -481,12 +482,47 @@ func loadV1(files map[string][]byte) (*Riq, error) {
 	}
 	bm.normalizeTempos()
 	sort.SliceStable(bm.Entities, func(i, j int) bool { return bm.Entities[i].Beat < bm.Entities[j].Beat })
+	bm.trimEntitiesAfterFirstEnd()
 
 	audio, ok := files["song.bin"]
 	if !ok {
 		return nil, fmt.Errorf("v1 riq missing song.bin")
 	}
 	return &Riq{Beatmap: bm, Audio: audio, AudioFormat: Sniff(audio), AudioName: "song.bin"}, nil
+}
+
+func (b *Beatmap) trimEntitiesAfterFirstEnd() {
+	endBeat, ok := firstEndBeat(b.Entities)
+	if !ok {
+		return
+	}
+
+	// Heaven Studio's playable timeline ends at the first gameManager/end.
+	// Some v1 community remixes keep copied/editor-only events after that
+	// marker; exposing them would let the engine schedule inputs/actions beyond
+	// the authored fade-out and result boundary.
+	kept := b.Entities[:0]
+	for _, e := range b.Entities {
+		if e.Beat <= endBeat {
+			kept = append(kept, e)
+		}
+	}
+	b.Entities = kept
+}
+
+func firstEndBeat(es []Entity) (float64, bool) {
+	var endBeat float64
+	found := false
+	for i := range es {
+		if es[i].Datamodel != "gameManager/end" {
+			continue
+		}
+		if !found || es[i].Beat < endBeat {
+			endBeat = es[i].Beat
+			found = true
+		}
+	}
+	return endBeat, found
 }
 
 // Sniff 通过 magic bytes 判定音频容器类型。
