@@ -206,14 +206,6 @@ func (m *Module) bop(beat float64) {
 	if !m.cpu2.cantBop {
 		m.playBoarder(&m.cpu2, poseBop, beat, 0.5)
 	}
-	for _, pair := range []struct {
-		role string
-		b    *boarder
-	}{{"CPU1", &m.cpu1}, {"CPU2", &m.cpu2}, {"Player", &m.player}} {
-		if p := m.ctx.Role(pair.role); p != "" && !pair.b.cantBop {
-			m.ctx.Scene.PlayStateLayer(p+":bop", p, "bop", beat, 0.5)
-		}
-	}
 }
 
 func (m *Module) playBoarder(b *boarder, pose string, beat, duration float64) {
@@ -222,6 +214,54 @@ func (m *Module) playBoarder(b *boarder, pose string, beat, duration float64) {
 	if duration > 0 && duration < 90 {
 		b.cantUntil = beat + duration
 	}
+	m.playOfficialBoarderPose(b, pose, beat, duration)
+}
+
+func (m *Module) playOfficialBoarderPose(b *boarder, pose string, beat, duration float64) {
+	if m.ctx == nil || m.ctx.Scene == nil {
+		return
+	}
+	role := m.boarderRole(b)
+	if role == "" {
+		return
+	}
+	root := m.ctx.Role(role)
+	if root == "" {
+		return
+	}
+	if pose == poseIdle {
+		m.ctx.Scene.PlayDefaultState(root, beat, m.secPerBeat(beat))
+		return
+	}
+	m.ctx.Scene.PlayState(root, pose, beat, officialBoarderTimeScale(pose, duration))
+}
+
+func (m *Module) boarderRole(b *boarder) string {
+	switch b {
+	case &m.cpu1:
+		return "CPU1"
+	case &m.cpu2:
+		return "CPU2"
+	case &m.player:
+		return "Player"
+	default:
+		return ""
+	}
+}
+
+func officialBoarderTimeScale(pose string, duration float64) float64 {
+	switch pose {
+	case poseBop:
+		return 0.5
+	case poseHit1:
+		return 1.5
+	case poseDuck, poseCharge, poseHold, poseJump, poseLetsGo, poseHit2:
+		return 1
+	}
+	if duration > 0 && duration < 90 {
+		return duration
+	}
+	return 1
 }
 
 func (m *Module) missSound(beat float64) {

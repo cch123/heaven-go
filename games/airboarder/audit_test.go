@@ -238,6 +238,31 @@ func TestAirboarderBopRegionSemantics(t *testing.T) {
 	}
 }
 
+func TestAirboarderBoarderActionsDriveOfficialAnimator(t *testing.T) {
+	root := filepath.Join("..", "..", "assets", "airboarder")
+	as, err := kart.Load(root, engine.SampleRate)
+	if err != nil {
+		t.Fatal(err)
+	}
+	scene := kart.NewScene(as)
+	m := &Module{ctx: &engine.Ctx{Assets: as, Scene: scene}}
+
+	m.playBoarder(&m.cpu1, poseDuck, 4, 1.5)
+	assertSceneCurrent(t, scene, as.Roles["CPU1"], "Animations/duck")
+	m.playBoarder(&m.cpu2, poseCharge, 5, 99)
+	assertSceneCurrent(t, scene, as.Roles["CPU2"], "Animations/charge")
+	m.playBoarder(&m.player, poseHit2, 6, 1.5)
+	assertSceneCurrent(t, scene, as.Roles["Player"], "Animations/hit2fix")
+
+	m.playBoarder(&m.player, poseBop, 8, 0.5)
+	assertSceneCurrent(t, scene, as.Roles["Player"], "Animations/bop")
+	m.clearCantFlags(8.51)
+	assertSceneCurrent(t, scene, as.Roles["Player"], "Animations/hover")
+	if poseExpired(poseIdle, 999) {
+		t.Fatal("idle pose should not expire and restart the official hover clip every frame")
+	}
+}
+
 func TestAirboarderFloorFallbackUsesExtractedMoveClip(t *testing.T) {
 	var anims map[string]*kmdata.Anim
 	readJSON(t, filepath.Join("..", "..", "assets", "airboarder", "anims.json"), &anims)
@@ -360,5 +385,12 @@ func assertColorParam(t *testing.T, scene *kart.SceneInst, mat, param string, wa
 		if math.Abs(got[i]-want[i]) > 1e-9 {
 			t.Fatalf("material %s param %s = %#v, want %#v", mat, param, got, want)
 		}
+	}
+}
+
+func assertSceneCurrent(t *testing.T, scene *kart.SceneInst, root, want string) {
+	t.Helper()
+	if got := scene.Current(root); got != want {
+		t.Fatalf("scene current for %s = %q, want %q", root, got, want)
 	}
 }

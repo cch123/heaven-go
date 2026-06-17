@@ -137,7 +137,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	// Airboarder can drop its temporary 2D role/obstacle layer.
 	for _, role := range []string{"CPU1", "CPU2", "Player", "Dog", "Tail", "Floor", "archBasic", "wallBasic"} {
 		if p := ctx.Role(role); p != "" {
-			ctx.Scene.PlayDefaultState(p, 0, ctx.SecPerBeat(0))
+			ctx.Scene.PlayDefaultState(p, 0, m.secPerBeat(0))
 		}
 	}
 	return nil
@@ -210,7 +210,7 @@ func (m *Module) OnSwitch(beat float64) {
 	m.persistSceneColors(beat)
 	for _, role := range []string{"CPU1", "CPU2", "Player", "Dog", "Tail", "Floor"} {
 		if p := m.ctx.Role(role); p != "" {
-			m.ctx.Scene.PlayDefaultState(p, beat, m.ctx.SecPerBeat(beat))
+			m.ctx.Scene.PlayDefaultState(p, beat, m.secPerBeat(beat))
 		}
 	}
 }
@@ -271,14 +271,16 @@ func (m *Module) clearCantFlags(beat float64) {
 			b.cantBop = false
 			b.cantUntil = 0
 		}
-		if poseExpired(b.pose, beat-b.poseBeat) {
-			b.pose = poseIdle
+		if b.pose != poseIdle && poseExpired(b.pose, beat-b.poseBeat) {
+			m.playBoarder(b, poseIdle, beat, 0)
 		}
 	}
 }
 
 func poseExpired(pose string, age float64) bool {
 	switch pose {
+	case poseIdle:
+		return false
 	case poseCharge, poseHold:
 		return false
 	case poseBop:
@@ -328,4 +330,11 @@ func materialRef(refs map[string]string, key, fallback string) string {
 		return v
 	}
 	return fallback
+}
+
+func (m *Module) secPerBeat(beat float64) float64 {
+	if m.ctx == nil || m.ctx.App == nil {
+		return 1
+	}
+	return m.ctx.SecPerBeat(beat)
 }

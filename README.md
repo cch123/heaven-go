@@ -160,6 +160,8 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   地面滚动已按官方 `floor_model/move` 的 5 拍循环和提取曲线位移对齐；
   `ColorUpdate` 的 `bgMaterial`/`fadeMaterial`/`cloudMaterial` `_Color`
   与 `floorMaterial` `_BlueColor`/`_RedColor` 已按官方材质名同步到 scene；
+  玩家/CPU 的 `bop`/`duck`/`charge`/`hold`/`jump`/`hit`/`letsgo` 已同步驱动
+  官方 `airboy` Animator state，并在短动作结束后回到 `hover`；
   `camera` 事件的 last/next 链式插值、additive Y 旋转、pivot 参数与 X/Y/zoom
   已按 Airboarder.cs 折叠并作用到当前 scene camera；运行时已支持多 Geometry
   imported FBX 按 fileID/FBXID 精确匹配，Airboarder 还待把 skinned 角色/障碍
