@@ -101,8 +101,6 @@ func (m *Module) mamboHeadMaterialExcludes() []string {
 	return []string{
 		m.warioFace,
 		m.warioBody + "/Squiggly",
-		m.dancerLHead,
-		m.dancerRHead,
 	}
 }
 

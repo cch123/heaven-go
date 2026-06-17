@@ -733,6 +733,11 @@ type ExtraSprite struct {
 	World        Aff // 单位空间变换（z 的透视缩放由 Draw 统一施加）
 	Z            float64
 	Layer, Order int
+	HasGroup     bool    // true 时先按 Group* 作为 Unity SortingGroup 单元排序
+	GroupKey     int     // 同一动态实例内的 renderer 必须共享 key 才会按组内 order 排
+	GroupLayer   int     // SortingGroup.sortingLayer
+	GroupOrder   int     // SortingGroup.sortingOrder；不要混入 renderer order
+	GroupZ       float64 // SortingGroup 所在深度
 	FlipX, FlipY bool
 	Tint         [4]float64 // 零值视为白色
 	MatColor     [4]float64 // material._Color for queued sprites
@@ -756,6 +761,13 @@ type ExtraSprite struct {
 // Queue 注入一帧动态绘制项（Draw 后清空，每帧重新注入）。
 func (s *SceneInst) Queue(e ExtraSprite) { s.queued = append(s.queued, e) }
 
+// QueuedSpritesForTest returns a snapshot of pending dynamic sprites for
+// cross-package audit tests. Production code should queue and draw through
+// SceneInst instead of depending on this transient per-frame buffer.
+func (s *SceneInst) QueuedSpritesForTest() []ExtraSprite {
+	return append([]ExtraSprite(nil), s.queued...)
+}
+
 // ExtraMesh 是模板实例注入的 MeshRenderer 绘制项。
 // Unity 的 Instantiate 会复制 MeshRenderer；场景里的原 prefab 往往保持 inactive，
 // 所以动态实例不能复用 scene node 的 active/render 状态，只能携带采样后的 world/tint。
@@ -764,6 +776,11 @@ type ExtraMesh struct {
 	World        Aff
 	Z            float64
 	Layer, Order int
+	HasGroup     bool
+	GroupKey     int
+	GroupLayer   int
+	GroupOrder   int
+	GroupZ       float64
 	Tint         [4]float64
 }
 
@@ -1175,7 +1192,11 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			continue
 		}
 		it := item{idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: qi, extraMesh: -1, mesh: -1}
-		it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, q.Z
+		if q.HasGroup {
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = q.GroupKey, q.GroupLayer, q.GroupOrder, q.GroupZ
+		} else {
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, q.Z
+		}
 		items = append(items, it)
 	}
 	for qi := range s.queuedMeshes {
@@ -1184,7 +1205,11 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			continue
 		}
 		it := item{idx: len(s.state) + len(s.queued) + qi, layer: q.Layer, order: q.Order, z: q.Z, extra: -1, extraMesh: qi, mesh: -1}
-		it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, q.Z
+		if q.HasGroup {
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = q.GroupKey, q.GroupLayer, q.GroupOrder, q.GroupZ
+		} else {
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, q.Z
+		}
 		items = append(items, it)
 	}
 	sort.SliceStable(items, func(a, b int) bool {

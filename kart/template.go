@@ -118,7 +118,8 @@ type Instance struct {
 	palettes   map[int]Palette    // mapped material overrides per instance renderer
 	matAdd     map[int][4]float64 // material._AddColor 覆盖（screen 混合）
 	orders     map[int]int        // SpriteRenderer.sortingOrder 覆盖（sr.sortingOrder 直写）
-	groupOrder int                // SortingGroup.sortingOrder；采样后叠加，避免被动画曲线覆盖
+	groupLayer int                // SortingGroup.sortingLayer；当前提取资源多为默认 layer 0
+	groupOrder int                // SortingGroup.sortingOrder；作为组级排序键，不混入子 renderer order
 	hasGroup   bool
 	pos        map[int][2]float64 // Transform.localPosition 覆盖（脚本每帧写 transform）
 	rots       map[int]float64    // Transform.localEulerAngles.z 覆盖（弧度）
@@ -360,10 +361,9 @@ func (in *Instance) SetOrder(relPath string, order int) {
 	}
 }
 
-// SetGroupOrder approximates a Unity SortingGroup sortingOrder for queued
-// prefab instances. SceneInst sorts queued sprites directly by renderer order,
-// so a SortingGroup on an instance root has to be flattened into every child
-// sprite while preserving the prefab's internal renderer order.
+// SetGroupOrder assigns a Unity SortingGroup sortingOrder to a queued prefab
+// instance. The group order must stay separate from child renderer order,
+// otherwise dynamic templates compare incorrectly with scene SortingGroups.
 func (in *Instance) SetGroupOrder(order int) {
 	in.groupOrder = order
 	in.hasGroup = true
@@ -502,8 +502,15 @@ type instNodeState struct {
 // Queue 采样实例并把可见节点注入 scene 的统一排序绘制。
 // baseWorld：实例外层的世界变换（滚动容器等），作用于实例根。
 // z：排序深度（透视用，通常 0）。
-func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float64) {
+func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float64) int {
 	t := in.T
+	groupKey := -1
+	if in.hasGroup {
+		// Dynamic instances do not have a scene node index. Use the first queued
+		// slot for this frame as a stable group key so all child renderers sort
+		// together before falling back to their own local renderer order.
+		groupKey = len(scene.state) + len(scene.queued) + len(scene.queuedMeshes)
+	}
 	states := make([]instNodeState, len(t.Nodes))
 	for ti, tn := range t.Nodes {
 		n := &t.as.Rig.Nodes[tn.RigIdx]
@@ -569,19 +576,6 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			in.samplePlayer(p, states, beat)
 		}
 	}
-	if in.hasGroup {
-		// SortingGroup participates in global sorting as a parent unit, while
-		// child SpriteRenderer.sortingOrder curves remain local to the group.
-		// Apply this after animation sampling so clips cannot collapse the group
-		// back to low renderer orders, which caused Fan Club lights to cover fans.
-		const groupStride = 100
-		base := in.groupOrder * groupStride
-		for ti, tn := range t.Nodes {
-			if t.as.Rig.Nodes[tn.RigIdx].Sprite != "" || len(t.meshBindings[ti]) > 0 {
-				states[ti].order += base
-			}
-		}
-	}
 	// 合成 + 注入
 	world := make([]Aff, len(t.Nodes))
 	actives := make([]bool, len(t.Nodes))
@@ -615,6 +609,13 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 					Threshold: st.matThreshold, HasThreshold: st.hasMatThreshold,
 					Progress: st.matProgress, HasProgress: st.hasMatProgress,
 				}
+				if in.hasGroup {
+					e.HasGroup = true
+					e.GroupKey = groupKey
+					e.GroupLayer = in.groupLayer
+					e.GroupOrder = in.groupOrder
+					e.GroupZ = z
+				}
 				if pal, ok := in.palettes[ti]; ok {
 					e.HasPalette = true
 					e.Palette = pal
@@ -644,15 +645,21 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 				order = st.order
 			}
 			scene.QueueMesh(ExtraMesh{
-				Binding: bi,
-				World:   world[ti],
-				Z:       z,
-				Layer:   b.Layer,
-				Order:   order,
-				Tint:    mt,
+				Binding:    bi,
+				World:      world[ti],
+				Z:          z,
+				Layer:      b.Layer,
+				Order:      order,
+				HasGroup:   in.hasGroup,
+				GroupKey:   groupKey,
+				GroupLayer: in.groupLayer,
+				GroupOrder: in.groupOrder,
+				GroupZ:     z,
+				Tint:       mt,
 			})
 		}
 	}
+	return groupKey
 }
 
 func (in *Instance) samplePlayer(p *instPlayer, states []instNodeState, beat float64) {

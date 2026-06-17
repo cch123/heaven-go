@@ -94,7 +94,7 @@ func (fx *fanClubEffects) spawnFanClap(m *Module, f *fan, beat float64) {
 	}
 	fx.spawn(m, fanClubEffectBurst{
 		beat: beat, lifetime: fanClubClapLifetimeSec, kind: fanClubEffectFanClap,
-		fan: f, relPath: "Effect_FanCrap", scale: 0.46, layer: 0, order: f.groupOrder + 34,
+		fan: f, relPath: "Effect_FanCrap", scale: 0.46, layer: 0, order: 34,
 		tint: [4]float64{1, 0.55, 0.08, 0.78},
 	})
 }
@@ -150,13 +150,19 @@ func (fx *fanClubEffects) queue(m *Module, beat float64) {
 			continue
 		}
 		world = world.Mul(kart.Rotate(sample.rot)).Mul(kart.Scale(sample.scale, sample.scale))
-		m.ctx.Scene.Queue(kart.ExtraSprite{
+		q := kart.ExtraSprite{
 			Sprite: fanClubEffectSprite,
 			World:  world,
 			Layer:  burst.layer,
 			Order:  burst.order,
 			Tint:   sample.tint,
-		})
+		}
+		if burst.fan != nil && burst.fan.groupKey >= 0 {
+			q.HasGroup = true
+			q.GroupKey = burst.fan.groupKey
+			q.GroupOrder = burst.fan.groupOrder
+		}
+		m.ctx.Scene.Queue(q)
 	}
 	fx.bursts = kept
 }

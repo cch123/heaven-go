@@ -4,6 +4,7 @@ import (
 	"strings"
 	"testing"
 
+	"hsdemo/engine"
 	"hsdemo/kart"
 	"hsdemo/kmdata"
 )
@@ -187,6 +188,63 @@ func TestFanClubLayeredFaceposerSamplingAndTimingConstants(t *testing.T) {
 	}
 	if got := fanClubSeq("crowd_big_ready"); len(got) != 1 || got[0].name != "crowd_big_ready" {
 		t.Fatalf("crowd_big_ready sequence drifted: %#v", got)
+	}
+}
+
+func TestFanClubFanTemplateUsesUnitySortingGroupOrder(t *testing.T) {
+	as := loadAssets(t)
+	tmpl := kart.NewTemplate(as, as.Roles["spectator"])
+	if tmpl == nil {
+		t.Fatal("Fan spectator template not resolved")
+	}
+	inst := tmpl.NewInstance()
+	inst.SetGroupOrder(2)
+	f := &fan{inst: inst, groupOrder: 2, groupKey: -1}
+	sc := kart.NewScene(as)
+
+	f.queue(sc, 0)
+
+	if f.groupKey < 0 {
+		t.Fatal("fan queue did not assign a dynamic group key")
+	}
+	if len(sc.QueuedSpritesForTest()) == 0 {
+		t.Fatal("fan queue produced no sprites")
+	}
+	for _, q := range sc.QueuedSpritesForTest() {
+		if !q.HasGroup || q.GroupOrder != 2 {
+			t.Fatalf("fan sprite sorting group = %#v, want group order 2", q)
+		}
+		if q.Order >= 100 {
+			t.Fatalf("fan local renderer order was flattened into global order: %#v", q)
+		}
+	}
+}
+
+func TestFanClubFanClapEffectStaysInsideFanSortingGroup(t *testing.T) {
+	as := loadAssets(t)
+	tmpl := kart.NewTemplate(as, as.Roles["spectator"])
+	if tmpl == nil {
+		t.Fatal("Fan spectator template not resolved")
+	}
+	inst := tmpl.NewInstance()
+	f := &fan{inst: inst, groupOrder: 2, groupKey: 77}
+	sc := kart.NewScene(as)
+	m := &Module{ctx: &engine.Ctx{Assets: as, Scene: sc}}
+	fx := fanClubEffects{bursts: []fanClubEffectBurst{{
+		beat: 0, secPerBeat: 0.5, lifetime: fanClubClapLifetimeSec,
+		kind: fanClubEffectFanClap, fan: f, relPath: "Effect_FanCrap",
+		scale: 0.46, order: 34, tint: [4]float64{1, 1, 1, 1},
+	}}}
+
+	fx.queue(m, 0)
+
+	qs := sc.QueuedSpritesForTest()
+	if len(qs) != 1 {
+		t.Fatalf("queued effect sprites = %d, want 1", len(qs))
+	}
+	q := qs[0]
+	if !q.HasGroup || q.GroupKey != 77 || q.GroupOrder != 2 || q.Order != 34 {
+		t.Fatalf("fan clap effect sorting metadata = %#v", q)
 	}
 }
 

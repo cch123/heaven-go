@@ -67,8 +67,12 @@ func TestTemplateGroupOrderSurvivesAnimatedSortingOrder(t *testing.T) {
 	if len(scene.queued) != 1 {
 		t.Fatalf("queued sprites = %d, want 1", len(scene.queued))
 	}
-	if got, want := scene.queued[0].Order, 203; got != want {
-		t.Fatalf("queued order = %d, want %d", got, want)
+	q := scene.queued[0]
+	if !q.HasGroup || q.GroupOrder != 2 {
+		t.Fatalf("queued group metadata = %#v, want group order 2", q)
+	}
+	if got, want := q.Order, 3; got != want {
+		t.Fatalf("queued local order = %d, want %d", got, want)
 	}
 }
 

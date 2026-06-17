@@ -11,6 +11,7 @@ type fan struct {
 	x, y          float64
 	player        bool
 	groupOrder    int
+	groupKey      int
 	jumpStart     float64
 	clapStartBeat float64
 	stopBeat      bool
@@ -27,7 +28,7 @@ func (m *Module) spawnFans() {
 	row := 1
 	for i := 0; i < fanCount; i++ {
 		in := m.fanTemplate.NewInstance()
-		f := &fan{inst: in, x: spawnX, y: spawnY, groupOrder: row * 100, jumpStart: math.Inf(-1), clapStartBeat: math.Inf(-1)}
+		f := &fan{inst: in, x: spawnX, y: spawnY, groupOrder: row, groupKey: -1, jumpStart: math.Inf(-1), clapStartBeat: math.Inf(-1)}
 		f.player = i == 3
 		in.Offset = [2]float64{spawnX, spawnY}
 		in.SetGroupOrder(row)
@@ -134,6 +135,6 @@ func (f *fan) update(m *Module, beat float64) {
 
 func (f *fan) queue(sc *kart.SceneInst, beat float64) {
 	if f != nil && f.inst != nil {
-		f.inst.Queue(sc, beat, kart.Identity(), 0)
+		f.groupKey = f.inst.Queue(sc, beat, kart.Identity(), 0)
 	}
 }
