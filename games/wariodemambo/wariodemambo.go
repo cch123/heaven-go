@@ -46,15 +46,12 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.topLight = roleOr(ctx, "topLightAnim", game.Refs["topLightAnim"])
 	m.leftLight = roleOr(ctx, "leftLightAnim", game.Refs["leftLightAnim"])
 	m.rightLight = roleOr(ctx, "rightLightAnim", game.Refs["rightLightAnim"])
+	m.mainMat = game.Refs["mainMat"]
+	m.lightMat = game.Refs["lightMat"]
+	m.floorLightMat = game.Refs["floorLightMat"]
 	m.blueAdd = colorField(game.Nums, "blueAddColor", m.blueAdd)
 	m.redAdd = colorField(game.Nums, "redAddColor", m.redAdd)
 
-	for _, n := range ctx.Assets.Rig.Nodes {
-		if !m.tintablePath(n.Path, n.Sprite != "") {
-			continue
-		}
-		m.tintPaths = append(m.tintPaths, n.Path)
-	}
 	m.onPlay(0)
 	return nil
 }

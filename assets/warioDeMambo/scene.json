@@ -180,7 +180,8 @@
    "size": [
     3.58,
     3.54
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light2",
@@ -207,7 +208,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light2 (1)",
@@ -235,7 +237,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light2 (2)",
@@ -262,7 +265,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light2 (3)",
@@ -289,7 +293,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light2 (4)",
@@ -317,7 +322,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light2 (5)",
@@ -345,7 +351,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "LightHolderL",
@@ -397,7 +404,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (1)",
@@ -424,7 +432,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (2)",
@@ -451,7 +460,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (3)",
@@ -478,7 +488,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (4)",
@@ -505,7 +516,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (5)",
@@ -532,7 +544,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (6)",
@@ -559,7 +572,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (7)",
@@ -586,7 +600,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (8)",
@@ -613,7 +628,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (9)",
@@ -640,7 +656,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (10)",
@@ -667,7 +684,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (11)",
@@ -694,7 +712,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (13)",
@@ -721,7 +740,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (14)",
@@ -748,7 +768,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (15)",
@@ -775,7 +796,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (16)",
@@ -802,7 +824,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "LightHolderR",
@@ -854,7 +877,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (1)",
@@ -881,7 +905,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (2)",
@@ -908,7 +933,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (3)",
@@ -935,7 +961,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (4)",
@@ -962,7 +989,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (5)",
@@ -989,7 +1017,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (6)",
@@ -1016,7 +1045,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (7)",
@@ -1043,7 +1073,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (8)",
@@ -1070,7 +1101,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (9)",
@@ -1097,7 +1129,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (10)",
@@ -1124,7 +1157,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (11)",
@@ -1151,7 +1185,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (13)",
@@ -1178,7 +1213,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (14)",
@@ -1205,7 +1241,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (15)",
@@ -1232,7 +1269,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "Light3 (16)",
@@ -1259,7 +1297,8 @@
    "size": [
     4.33,
     4.78
-   ]
+   ],
+   "mat": "FloorLights"
   },
   {
    "name": "TextHolder",
@@ -1440,7 +1479,8 @@
    "size": [
     2.53,
     2.81
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Torso",
@@ -1470,7 +1510,8 @@
    "sortGroup": [
     0,
     0
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "LegL",
@@ -1496,7 +1537,8 @@
    "size": [
     1.2,
     5.34
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "LegR",
@@ -1523,7 +1565,8 @@
    "size": [
     1.2,
     5.34
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "ArmL",
@@ -1549,7 +1592,8 @@
    "size": [
     1.69,
     4.51
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "ArmHolder",
@@ -1600,7 +1644,8 @@
    "size": [
     2.34,
     4.82
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "System",
@@ -1626,7 +1671,8 @@
    "size": [
     1.52,
     1.98
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "DancerR",
@@ -1756,7 +1802,8 @@
    "size": [
     2.53,
     2.81
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Torso",
@@ -1786,7 +1833,8 @@
    "sortGroup": [
     0,
     0
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "LegL",
@@ -1812,7 +1860,8 @@
    "size": [
     1.2,
     5.34
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "LegR",
@@ -1839,7 +1888,8 @@
    "size": [
     1.2,
     5.34
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "ArmL",
@@ -1865,7 +1915,8 @@
    "size": [
     1.69,
     4.51
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "ArmHolder",
@@ -1916,7 +1967,8 @@
    "size": [
     2.34,
     4.82
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "System",
@@ -1942,7 +1994,8 @@
    "size": [
     1.52,
     1.98
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "WarioJumper",
@@ -2074,7 +2127,8 @@
    "size": [
     3.99,
     2.32
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Eyes",
@@ -2100,7 +2154,8 @@
    "size": [
     2.3,
     1.21
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Mouth",
@@ -2127,7 +2182,8 @@
    "size": [
     2.5,
     1.17
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "OtherArm",
@@ -2182,7 +2238,8 @@
    "size": [
     1.52,
     1.97
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Hand",
@@ -2208,7 +2265,8 @@
    "size": [
     1.91,
     2
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Body",
@@ -2263,7 +2321,8 @@
    "size": [
     3.84,
     3.89
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Logo",
@@ -2289,7 +2348,8 @@
    "size": [
     1.14,
     0.88
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Legs",
@@ -2344,7 +2404,8 @@
    "size": [
     1.74,
     3.85
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Foot",
@@ -2372,7 +2433,8 @@
    "size": [
     1.52,
     1.97
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Foot2",
@@ -2400,7 +2462,8 @@
    "size": [
     1.52,
     1.97
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "LegL",
@@ -2427,7 +2490,8 @@
    "size": [
     1.74,
     3.85
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "HoldingArm",
@@ -2483,7 +2547,8 @@
    "size": [
     1.43,
     3.85
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Hand",
@@ -2509,7 +2574,8 @@
    "size": [
     2.52,
     1.81
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "System",
@@ -2535,7 +2601,8 @@
    "size": [
     1.52,
     1.98
-   ]
+   ],
+   "mat": "MamboShader"
   },
   {
    "name": "Spotlights",
@@ -2590,7 +2657,8 @@
    "size": [
     6.84,
     12.52
-   ]
+   ],
+   "mat": "Lights"
   },
   {
    "name": "SpotlightR",
@@ -2616,7 +2684,8 @@
    "size": [
     6.84,
     12.52
-   ]
+   ],
+   "mat": "Lights"
   },
   {
    "name": "SpotlightPoints",

@@ -629,6 +629,8 @@ type SpriteOpts struct {
 	MatColor     [4]float64 // CellAnime _Color；零值视为白色
 	Add          [4]float64 // CellAnime _AddColor（screen 混合）
 	Blend        [4]float64 // material._BlendColor（命中白闪等 overlay 混色）
+	HueShift     float64    // MamboDoodle _HueShift（HSV hue + value）
+	LinearAdd    bool       // true 时 _AddColor 按 MamboDoodle 线性加色
 	OutlineWidth float64    // TMP material._OutlineWidth（仅动态文本 sprite）
 	Stretch      [2]float64 // 非零时拉伸到该尺寸（unit，对应 SpriteRenderer sliced/tiled 的 m_Size）
 }
@@ -666,7 +668,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 		if strings.HasPrefix(name, "__text_") && o.OutlineWidth > 0 {
 			drawTextOutline(dst, img, proj.Mul(world).Mul(local), tint, o.OutlineWidth)
 		}
-		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend)
+		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd)
 		return
 	}
 
@@ -678,7 +680,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 	bl, bb, br, bt := sp.Border[0], sp.Border[1], sp.Border[2], sp.Border[3]
 	if bl+bb+br+bt == 0 { // 无 border：整体拉伸
 		local := base.Mul(Scale(tw/float64(sp.W), th/float64(sp.H)))
-		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend)
+		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd)
 		return
 	}
 	// 端帽超过目标尺寸时按比例压缩（Unity 同语义）
@@ -709,7 +711,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 			local := base.
 				Mul(Translate(txs[ix], tys[iy])).
 				Mul(Scale(dw/sw, dh/sh))
-			drawCellAnime(dst, sub, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend)
+			drawCellAnime(dst, sub, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd)
 		}
 	}
 }
@@ -723,9 +725,38 @@ var Tint vec4
 var MatColor vec4
 var Add vec4
 var Blend vec4
+var HueShift float
+var LinearAdd float
+
+func rgb2hsv(c vec3) vec3 {
+	k := vec4(0.0, -1.0/3.0, 2.0/3.0, -1.0)
+	p := mix(vec4(c.bg, k.wz), vec4(c.gb, k.xy), step(c.b, c.g))
+	q := mix(vec4(p.xyw, c.r), vec4(c.r, p.yzx), step(p.x, c.r))
+	d := q.x - min(q.w, q.y)
+	e := 1e-10
+	return vec3(abs(q.z+(q.w-q.y)/(6.0*d+e)), d/(q.x+e), q.x)
+}
+
+func hsv2rgb(c vec3) vec3 {
+	k := vec4(1.0, 2.0/3.0, 1.0/3.0, 3.0)
+	p := abs(fract(c.xxx+k.xyz)*6.0 - k.www)
+	return c.z * mix(k.xxx, clamp(p-k.xxx, 0.0, 1.0), c.y)
+}
 
 func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	tex := imageSrc0At(src)
+	if HueShift != 0 || LinearAdd > 0.5 {
+		hsv := rgb2hsv(tex.rgb)
+		hsv.x = fract(hsv.x + HueShift)
+		tex.rgb = hsv2rgb(hsv)
+		out := tex * Tint * MatColor
+		out.rgb += Add.rgb
+		out.rgb = out.rgb*(1.0-Blend.a) + Blend.rgb*Blend.a
+		out.r *= out.a
+		out.g *= out.a
+		out.b *= out.a
+		return out
+	}
 	base := tex * Tint * MatColor
 	a := base.a
 	scr := 1.0 - (1.0-Add)*(1.0-base)
@@ -783,8 +814,8 @@ func drawTextOutline(dst, img *ebiten.Image, m Aff, tint [4]float64, width float
 	}
 }
 
-func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add, blend [4]float64) {
-	if add == [4]float64{} && blend == [4]float64{} && isWhite(matColor) {
+func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add, blend [4]float64, hueShift float64, linearAdd bool) {
+	if add == [4]float64{} && blend == [4]float64{} && isWhite(matColor) && hueShift == 0 && !linearAdd {
 		drawTinted(dst, img, m, tint)
 		return
 	}
@@ -795,10 +826,12 @@ func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add, blend [4]
 		return []float32{float32(c[0]), float32(c[1]), float32(c[2]), float32(c[3])}
 	}
 	op.Uniforms = map[string]any{
-		"Tint":     v4(tint),
-		"MatColor": v4(matColor),
-		"Add":      v4(add),
-		"Blend":    v4(blend),
+		"Tint":      v4(tint),
+		"MatColor":  v4(matColor),
+		"Add":       v4(add),
+		"Blend":     v4(blend),
+		"HueShift":  float32(hueShift),
+		"LinearAdd": mapBoolFloat32(linearAdd),
 	}
 	b := img.Bounds()
 	dst.DrawRectShader(b.Dx(), b.Dy(), ensureCellAnimeShader(), op)

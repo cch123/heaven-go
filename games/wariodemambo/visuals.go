@@ -142,8 +142,12 @@ func (m *Module) applyColors() {
 			add = m.blueAdd
 		}
 	}
-	for _, path := range m.tintPaths {
-		m.ctx.Scene.SetMaterialOver(path, [4]float64{1, 1, 1, 1}, add)
+	hue := 0.0
+	if m.gameRed {
+		hue = 0.5
+	}
+	for _, mat := range []string{m.mainMat, m.lightMat, m.floorLightMat} {
+		m.ctx.Scene.SetMamboMaterialFor(mat, hue, add)
 	}
 	alpha := 0.75
 	if !m.gameDim {

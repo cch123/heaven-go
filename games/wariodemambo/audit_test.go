@@ -75,41 +75,37 @@ func TestBindingsComponentsTextAndSounds(t *testing.T) {
 	}
 }
 
-func TestTintPathsDoNotColorFaceAndHeadAnimators(t *testing.T) {
-	m := &Module{
-		spotL:       "Spotlights/SpotlightL",
-		spotR:       "Spotlights/SpotlightR",
-		commandText: "TextHolder/Command",
-		warioBody:   "WarioJumper/WAAAAAAAA",
-		warioFace:   "WarioJumper/WAAAAAAAA/Face",
-		dancerLHead: "DancerL/DancerJumper/DancerL/HeadHolder",
-		dancerRHead: "DancerR/DancerJumper/DancerL/HeadHolder",
+func TestMamboMaterialNamesPreservedForSharedColorShader(t *testing.T) {
+	as := loadAssets(t)
+	mats := map[string]int{}
+	byPath := map[string]kmdata.Node{}
+	for _, n := range as.Rig.Nodes {
+		if n.Sprite == "" {
+			continue
+		}
+		if n.Mat != "" {
+			mats[n.Mat]++
+		}
+		byPath[n.Path] = n
 	}
-	blocked := []string{
-		"WarioJumper/WAAAAAAAA/Face",
-		"WarioJumper/WAAAAAAAA/Face/Eyes",
-		"WarioJumper/WAAAAAAAA/Squiggly",
-		"DancerL/DancerJumper/DancerL/HeadHolder/Head",
-		"DancerR/DancerJumper/DancerL/HeadHolder/Head",
-		"Spotlights/SpotlightL",
-		"TextHolder/Command",
-	}
-	for _, path := range blocked {
-		if m.tintablePath(path, true) {
-			t.Fatalf("path %s should not receive Wario AddColor approximation", path)
+	for _, mat := range []string{"MamboShader", "Lights", "FloorLights"} {
+		if mats[mat] == 0 {
+			t.Fatalf("material %s should be preserved on SpriteRenderer nodes: %#v", mat, mats)
 		}
 	}
-	for _, path := range []string{
-		"WarioJumper/WAAAAAAAA/Body/Torso",
-		"DancerL/DancerJumper/DancerL/Torso",
-		"LightHolderT/Light1",
+	for path, want := range map[string]string{
+		"WarioJumper/WAAAAAAAA/Face/Eyes":              "MamboShader",
+		"DancerL/DancerJumper/DancerL/HeadHolder/Head": "MamboShader",
+		"LightHolderT/Light1":                          "FloorLights",
+		"LightHolderL/Light3":                          "FloorLights",
+		"Spotlights/SpotlightL":                        "Lights",
 	} {
-		if !m.tintablePath(path, true) {
-			t.Fatalf("path %s should still receive Wario AddColor approximation", path)
+		if got := byPath[path].Mat; got != want {
+			t.Fatalf("%s material = %q, want %q", path, got, want)
 		}
 	}
-	if m.tintablePath("WarioJumper/WAAAAAAAA", false) {
-		t.Fatal("sprite-less nodes must not be tint targets")
+	if byPath["WarioJumper/WAAAAAAAA/Squiggly"].Mat == "MamboShader" {
+		t.Fatal("Squiggly overlay should not be part of the shared MamboShader recolor material")
 	}
 }
 

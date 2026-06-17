@@ -489,6 +489,8 @@ type instNodeState struct {
 	hasMatProgress  bool
 	matAdd          [4]float64
 	matBlend        [4]float64
+	matHueShift     float64
+	matLinearAdd    bool
 	outlineWidth    float64
 	matThreshold    float64
 	hasMatThreshold bool
@@ -515,6 +517,13 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			active: !n.Inactive, renderOn: !n.Hidden,
 			color: c, matAlpha: 1, matOpacity: 1, order: n.Order,
 			palette: scene.paletteOf(n.Mat),
+		}
+		if v, ok := scene.matFor[n.Mat]; ok {
+			states[ti].matColor = v.color
+			states[ti].hasMatColor = true
+			states[ti].matAdd = v.add
+			states[ti].matHueShift = v.hueShift
+			states[ti].matLinearAdd = v.linearAdd
 		}
 	}
 	states[0].pos = in.Offset
@@ -596,6 +605,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 					Sprite: st.sprite, World: world[ti], Z: z,
 					Layer: n.Layer, Order: st.order,
 					FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor,
+					HueShift: st.matHueShift, LinearAdd: st.matLinearAdd,
 					OutlineWidth: st.outlineWidth,
 					Mapped:       n.Mapped, Mat: n.Mat,
 					Mask: n.Mask, MaskIn: n.MaskIn,
@@ -839,6 +849,8 @@ func (in *Instance) applyClip(p *instPlayer, states []instNodeState, at float64)
 			case attr == "material._Progress":
 				states[ti].matProgress = v
 				states[ti].hasMatProgress = true
+			case attr == "material._HueShift":
+				states[ti].matHueShift = v
 			case strings.HasPrefix(attr, "material._BlendColor."):
 				ch := strings.TrimPrefix(attr, "material._BlendColor.")
 				switch ch {

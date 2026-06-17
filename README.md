@@ -2,8 +2,9 @@
 
 Heaven Studio 游玩部分（play-only，无编辑器）的 Go + Ebitengine 移植。引擎层（判定/调度/切游戏/HUD）与游戏模块解耦，资产经导出管线从 Heaven Studio Unity 工程提取，支持加载任意用户 `.riq` 谱面。
 
-**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前包含 Air Rally、Basketball Girls、Blue Bear、Board Meeting、Bouncy Road、Built to Scale DS、Catchy Tune、Chameleon、Cheer Readers、Clap Trap、Coin Toss、Crop Stomp、Dog Ninja、Drumming Practice、Fireworks、Fork Lifter、Frog Princess、Glee Club、Karate Man、Kitties!、Lockstep、Marching Orders、Meat Grinder、Mr. Upbeat、Munchy Monk、Rhythm Sōmen、See-Saw、Sneaky Spirits、Spaceball、Space Dance、Tambourine、Tap Trial、Tap Troupe、The Clappy Trio、Totem Climb、Tram & Pauline、Trick on the Class、Tunnel、Wizard's Waltz。
-谱面中未移植的 minigame 显示占位画面，乐曲与其余游戏照常进行。
+**已注册可玩模块**以 `go run ./cmd/officialgames` 输出为准；当前 109 个
+Heaven Studio loader 均已有注册模块和基础提取规格。谱面中遇到非官方或未注册
+minigame 时显示占位画面，乐曲与其余游戏照常进行。
 
 ## 运行
 
@@ -121,9 +122,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载并
   可绘制 Unity 内置 mesh footprint（内置 mesh fileID、MeshRenderer 材质、
   `_MainTex` 贴图 tiling/offset、float/color 材质参数）；当前游戏模块已绘制
-  官方静态 MeshRenderer 场景与 GridPlane 材质颜色事件，但 movingBlocks/
-  flyingRod/hitParts/missParts 仍由 2D 时序层临时代替，后续需补 mesh prefab
-  实例化与完整 3D 材质/相机渲染；Piano 的 `SetLoopParams(beat+length, 0.1f)`
+  官方静态 MeshRenderer 场景、GridPlane 材质颜色事件，并通过模板实例队列驱动
+  movingBlocks/flyingRod/hitParts/missParts 官方 MeshRenderer prefab；2D 时序
+  叠层仍保留为玩法 fallback，后续需补完整 3D 相机/FOV 与材质栈后移除；
+  Piano 的 `SetLoopParams(beat+length, 0.1f)`
   持续尾音和淡出已接入。
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/
   `cmon`/`lastOne`/together riff 的事件流、JJ/Soshi 动画、循环和弦/逐弦音色、
@@ -223,9 +225,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
 - ninjaBodyguard：HitParticle 已按 prefab 中 ArrowSliceA/B 两个 ParticleSystem
   的 lifetime、simulationSpeed、startSpeed、shape arc/radius/rotation、burst、
   ForceModule 与 ParticleSystemRenderer sortingOrder/lengthScale 做运行时发射。
-- warioDeMambo：当前颜色变化仍以 `_AddColor` 近似 `MamboShader` 的
-  `_HueShift`，并显式排除 Wario 头脸与舞者 Head Animator，避免近似灯光色
-  污染头部；后续需补完整 MamboShader/HueShift 材质运行时。
+- warioDeMambo：SpriteRenderer 材质名已由提取器保留，`SetColors` 按官方
+  `mainMat`/`lightMat`/`floorLightMat` 共享材质驱动 MamboDoodle `_HueShift` 与
+  线性 `_AddColor`，不再按路径猜测染色范围；MamboDoodle 的
+  `DoodleTextureOffset` UV 抖动仍待接入运行时时间 uniform。
 - lockstep：人群渲染将原版"3 台正交相机 → RenderTexture → 平铺 quad"等价
   实现为同尺度无限棋盘格直绘（几何/相位/缩放一致）。
 - ppe 后处理（engine/postfx.go）：colorGrading/vignette/cabb/lensD/pixelQuad 与

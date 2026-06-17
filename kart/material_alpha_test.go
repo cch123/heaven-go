@@ -115,6 +115,30 @@ func TestMaterialProgressCurvesAffectSceneAndTemplatePalette(t *testing.T) {
 	}
 }
 
+func TestMamboMaterialOverrideAppliesByMaterialName(t *testing.T) {
+	as := materialAlphaAssets()
+	as.Rig.Nodes = append(as.Rig.Nodes, kmdata.Node{
+		Name:   "Other",
+		Path:   "Other",
+		Parent: -1,
+		Scale:  [2]float64{1, 1},
+		Sprite: "dummy",
+		Color:  [4]float64{1, 1, 1, 1},
+		Mat:    "OtherMaterial",
+	})
+	as.Rig.Nodes[0].Mat = "MamboShader"
+
+	scene := NewScene(as)
+	scene.SetMamboMaterialFor("MamboShader", 0.5, [4]float64{0.2, 0.1, 0.05, 1})
+	scene.Sample(0)
+	if got := scene.state[0].matHueShift; got != 0.5 || !scene.state[0].matLinearAdd {
+		t.Fatalf("Mambo material override not applied to matching node: %#v", scene.state[0])
+	}
+	if got := scene.state[1].matHueShift; got != 0 || scene.state[1].matLinearAdd {
+		t.Fatalf("Mambo material override leaked to non-matching node: %#v", scene.state[1])
+	}
+}
+
 func materialAlphaAssets() *Assets {
 	keys := []kmdata.Key{
 		{T: 0, V: 0.25},

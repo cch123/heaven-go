@@ -36,6 +36,8 @@ type sceneNodeState struct {
 	hasMatProgress  bool
 	matAdd          [4]float64
 	matBlend        [4]float64
+	matHueShift     float64
+	matLinearAdd    bool
 	outlineWidth    float64
 	matThreshold    float64
 	hasMatThreshold bool
@@ -88,6 +90,7 @@ type SceneInst struct {
 	mirrorOver map[int]bool       // 节点下标 → localScale.x 取负（transform.localScale=(-1,1,1)）
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
 	matOver    map[int]materialState
+	matFor     map[string]materialState
 	palOver    map[int]Palette
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
 	scaleOver  map[int][2]float64 // 节点下标 → localScale 覆盖（脚本瞬时 squash/pose）
@@ -112,8 +115,10 @@ type SceneInst struct {
 }
 
 type materialState struct {
-	color [4]float64
-	add   [4]float64
+	color     [4]float64
+	add       [4]float64
+	hueShift  float64
+	linearAdd bool
 }
 
 // SetCamera 设置相机世界位置（GameCamera：默认 (0,0,-10)、FOV 53.15°）。
@@ -201,6 +206,7 @@ func NewScene(as *Assets) *SceneInst {
 		mirrorOver: map[int]bool{},
 		colorOver:  map[int][4]float64{},
 		matOver:    map[int]materialState{},
+		matFor:     map[string]materialState{},
 		palOver:    map[int]Palette{},
 		posOver:    map[int][2]float64{},
 		scaleOver:  map[int][2]float64{},
@@ -562,6 +568,22 @@ func (s *SceneInst) SetMaterialOver(path string, matColor, add [4]float64) {
 	}
 }
 
+// SetMamboMaterialFor 覆盖共享 MamboDoodle 材质的 _HueShift/_AddColor。
+// WarioDeMambo.cs 直接改 mainMat/lightMat/floorLightMat；这些是材质实例，
+// 不是单个 SpriteRenderer。按材质名覆盖能避免把灯光色误套到不使用该材质
+// 的 face/head renderer 上。
+func (s *SceneInst) SetMamboMaterialFor(mat string, hueShift float64, add [4]float64) {
+	if mat == "" {
+		return
+	}
+	s.matFor[mat] = materialState{
+		color:     [4]float64{1, 1, 1, 1},
+		add:       add,
+		hueShift:  hueShift,
+		linearAdd: true,
+	}
+}
+
 // SetPosOver 覆盖节点 localPosition（伪相机 gameTrans 平移等）。
 func (s *SceneInst) SetPosOver(path string, x, y float64) {
 	if i, ok := s.byPath[path]; ok {
@@ -668,6 +690,8 @@ type ExtraSprite struct {
 	MatColor     [4]float64 // material._Color for queued sprites
 	Add          [4]float64 // material._AddColor for mapped queued sprites
 	Blend        [4]float64 // material._BlendColor for queued sprites
+	HueShift     float64    // material._HueShift for MamboDoodle queued sprites
+	LinearAdd    bool       // true when Add is MamboDoodle linear add
 	OutlineWidth float64    // TMP material._OutlineWidth for queued text sprites
 	Threshold    float64    // material._Threshold for mapped queued sprites
 	HasThreshold bool
@@ -726,6 +750,8 @@ func (s *SceneInst) Sample(beat float64) {
 		s.state[i].matColor = v.color
 		s.state[i].hasMatColor = true
 		s.state[i].matAdd = v.add
+		s.state[i].matHueShift = v.hueShift
+		s.state[i].matLinearAdd = v.linearAdd
 	}
 	for i, v := range s.posOver {
 		s.state[i].pos = v
@@ -756,6 +782,15 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, sp := range s.spriteOver {
 		s.state[i].sprite = sp
+	}
+	for i, n := range s.as.Rig.Nodes {
+		if v, ok := s.matFor[n.Mat]; ok {
+			s.state[i].matColor = v.color
+			s.state[i].hasMatColor = true
+			s.state[i].matAdd = v.add
+			s.state[i].matHueShift = v.hueShift
+			s.state[i].matLinearAdd = v.linearAdd
+		}
 	}
 	for i, sz := range s.sizeOver {
 		s.state[i].size = sz
@@ -951,6 +986,8 @@ func (s *SceneInst) applyClip(p *scenePlayer, at float64) {
 			case attr == "material._Progress":
 				s.state[i].matProgress = v
 				s.state[i].hasMatProgress = true
+			case attr == "material._HueShift":
+				s.state[i].matHueShift = v
 			case strings.HasPrefix(attr, "material._BlendColor."):
 				ch := strings.TrimPrefix(attr, "material._BlendColor.")
 				switch ch {
@@ -1181,7 +1218,12 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			if !ok {
 				continue
 			}
-			qo := SpriteOpts{FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint, MatColor: q.MatColor, Add: q.Add, Blend: q.Blend, OutlineWidth: q.OutlineWidth}
+			qo := SpriteOpts{
+				FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint,
+				MatColor: q.MatColor, Add: q.Add, Blend: q.Blend,
+				HueShift: q.HueShift, LinearAdd: q.LinearAdd,
+				OutlineWidth: q.OutlineWidth,
+			}
 			if q.MaskIn == 1 {
 				if len(masks) == 0 {
 					continue
@@ -1220,7 +1262,12 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		st := &s.state[i]
 		tint := st.color
 		tint[3] *= st.matAlpha * st.matOpacity
-		opts := SpriteOpts{FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend, OutlineWidth: st.outlineWidth}
+		opts := SpriteOpts{
+			FlipX: st.flipX, FlipY: st.flipY, Tint: tint,
+			MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend,
+			HueShift: st.matHueShift, LinearAdd: st.matLinearAdd,
+			OutlineWidth: st.outlineWidth,
+		}
 		if s.as.Rig.Nodes[i].DrawMode != 0 {
 			// sliced/tiled：m_Size 是权威尺寸——动画把它压到 0 即等于隐藏
 			//（原版光束收束就是 size.y→0），不能退化成"按原始尺寸绘制"

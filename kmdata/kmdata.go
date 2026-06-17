@@ -63,8 +63,9 @@ type Node struct {
 	// Mapped 表示渲染器使用调色板映射材质（CellAnime_MappedInvert：
 	// 贴图 RGB 通道为掩码，out = A·r + B·g + D·b，运行时换色）。
 	Mapped bool `json:"mapped,omitempty"`
-	// Mat 是映射材质的文件主名（多材质游戏按名换色，如 marchingOrders
-	// 的 Tile/Pipe/Conveyor 三组调色板）。
+	// Mat 是 SpriteRenderer 第一个材质的文件主名。Mapped renderer 用它按名
+	// 换色；普通 renderer 也保留它，供 Wario de Mambo 这类共享材质 shader
+	// 参数按 Unity material 实例名批量覆盖。
 	Mat string `json:"mat,omitempty"`
 	// Mask 表示节点挂 SpriteMask（classID 331）：本体不绘制，
 	// 激活时为 MaskIn=1 的渲染器提供可见区域（cheerReaders 海报书窗）。

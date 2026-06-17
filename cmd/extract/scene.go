@@ -1679,7 +1679,13 @@ func exportScene(spec sceneSpec, idx *prefabIndex, tables map[string]*spriteTabl
 		n.SortGroup = idx.groupByGO[gid]
 		if r := idx.rendByGO[gid]; r != nil {
 			for _, mv := range uy.L(r["m_Materials"]) {
-				if name, ok := idx.mappedMats[uy.S(uy.Get(uy.M(mv), "guid"))]; ok {
+				guid := uy.S(uy.Get(uy.M(mv), "guid"))
+				if n.Mat == "" {
+					if name, ok := idx.matNames[guid]; ok {
+						n.Mat = name
+					}
+				}
+				if name, ok := idx.mappedMats[guid]; ok {
 					n.Mapped = true
 					n.Mat = name
 				}

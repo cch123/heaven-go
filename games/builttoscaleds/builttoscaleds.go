@@ -1,9 +1,10 @@
 // Package builttoscaleds ports Built to Scale (DS/NTR) timing onto engine.App.
 //
 // The extracted DS bundle is mesh-only: it has Animator clips, sounds, and
-// MeshRenderer bindings but no SpriteRenderer atlas. The static world now uses
-// the extracted MeshRenderer scene, while dynamic block objects still use the
-// existing 2D timing layer until the mesh prefab instancing path is complete.
+// MeshRenderer bindings but no SpriteRenderer atlas. The static world and
+// dynamic block/parts prefabs now use extracted MeshRenderer data; the 2D timing
+// overlays remain as a temporary gameplay fallback until the full camera and
+// material stack is promoted to the only presentation path.
 package builttoscaleds
 
 import (

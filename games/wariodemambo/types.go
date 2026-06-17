@@ -150,7 +150,8 @@ type Module struct {
 	topLight, leftLight      string
 	rightLight               string
 
-	tintPaths            []string
+	mainMat, lightMat    string
+	floorLightMat        string
 	blueAdd, redAdd      [4]float64
 	gameRed, gameDim     bool
 	spotLPos, spotRPos   [2]float64
