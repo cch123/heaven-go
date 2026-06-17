@@ -38,6 +38,7 @@ type sceneNodeState struct {
 	matBlend        [4]float64
 	matHueShift     float64
 	matLinearAdd    bool
+	matDoodle       DoodleParams
 	outlineWidth    float64
 	matThreshold    float64
 	hasMatThreshold bool
@@ -122,6 +123,7 @@ type materialState struct {
 	add       [4]float64
 	hueShift  float64
 	linearAdd bool
+	doodle    DoodleParams
 }
 
 // SetCamera 设置相机世界位置（GameCamera：默认 (0,0,-10)、FOV 53.15°）。
@@ -581,10 +583,26 @@ func (s *SceneInst) SetMamboMaterialFor(mat string, hueShift float64, add [4]flo
 	s.SetMamboMaterialForExcept(mat, hueShift, add)
 }
 
+// SetMamboMaterialForAt is SetMamboMaterialFor with the runtime time needed by
+// MamboDoodle's DoodleTextureOffset shader function.
+func (s *SceneInst) SetMamboMaterialForAt(mat string, hueShift float64, add [4]float64, time float64) {
+	s.SetMamboMaterialForExceptAt(mat, hueShift, add, time)
+}
+
 // SetMamboMaterialForExcept 覆盖共享 MamboDoodle 材质，并排除若干场景子树。
 // Wario de Mambo 的 prefab 里多处 renderer 导出为同一个材质名，但 Unity
 // 脚本实际操作的是序列化字段上的材质实例；排除子树用于保留这种实例边界。
 func (s *SceneInst) SetMamboMaterialForExcept(mat string, hueShift float64, add [4]float64, excludeRoots ...string) {
+	s.setMamboMaterialForExcept(mat, hueShift, add, DoodleParams{}, excludeRoots...)
+}
+
+// SetMamboMaterialForExceptAt 覆盖共享 MamboDoodle 材质，同时启用从
+// materials.json 导出的 DoodleTextureOffset 参数。
+func (s *SceneInst) SetMamboMaterialForExceptAt(mat string, hueShift float64, add [4]float64, time float64, excludeRoots ...string) {
+	s.setMamboMaterialForExcept(mat, hueShift, add, s.mamboDoodleParams(mat, time), excludeRoots...)
+}
+
+func (s *SceneInst) setMamboMaterialForExcept(mat string, hueShift float64, add [4]float64, doodle DoodleParams, excludeRoots ...string) {
 	if mat == "" {
 		return
 	}
@@ -594,12 +612,41 @@ func (s *SceneInst) SetMamboMaterialForExcept(mat string, hueShift float64, add 
 		add:       add,
 		hueShift:  hueShift,
 		linearAdd: true,
+		doodle:    doodle,
 	}
 	if len(excludeRoots) == 0 {
 		delete(s.matForSkip, mat)
 		return
 	}
 	s.matForSkip[mat] = append([]string(nil), excludeRoots...)
+}
+
+func (s *SceneInst) mamboDoodleParams(mat string, time float64) DoodleParams {
+	if s == nil || s.as == nil || s.as.Materials == nil {
+		return DoodleParams{}
+	}
+	m, ok := s.as.Materials[mat]
+	if !ok {
+		return DoodleParams{}
+	}
+	max, hasMax := m.Colors["_DoodleMaxOffset"]
+	if !hasMax {
+		return DoodleParams{}
+	}
+	frameTime := m.Floats["_DoodleFrameTime"]
+	frameCount := m.Floats["_DoodleFrameCount"]
+	if frameTime <= 0 || frameCount <= 0 {
+		return DoodleParams{}
+	}
+	noise := m.Colors["_DoodleNoiseScale"]
+	return DoodleParams{
+		Enabled:    true,
+		Time:       time,
+		MaxOffset:  [2]float64{max[0], max[1]},
+		FrameTime:  frameTime,
+		FrameCount: frameCount,
+		NoiseScale: [2]float64{noise[0], noise[1]},
+	}
 }
 
 func (s *SceneInst) materialForApplies(mat, path string) bool {
@@ -745,8 +792,9 @@ type ExtraSprite struct {
 	Blend        [4]float64 // material._BlendColor for queued sprites
 	HueShift     float64    // material._HueShift for MamboDoodle queued sprites
 	LinearAdd    bool       // true when Add is MamboDoodle linear add
-	OutlineWidth float64    // TMP material._OutlineWidth for queued text sprites
-	Threshold    float64    // material._Threshold for mapped queued sprites
+	Doodle       DoodleParams
+	OutlineWidth float64 // TMP material._OutlineWidth for queued text sprites
+	Threshold    float64 // material._Threshold for mapped queued sprites
 	HasThreshold bool
 	Progress     float64 // material._Progress for mapped queued sprites
 	HasProgress  bool
@@ -819,6 +867,7 @@ func (s *SceneInst) Sample(beat float64) {
 		s.state[i].matAdd = v.add
 		s.state[i].matHueShift = v.hueShift
 		s.state[i].matLinearAdd = v.linearAdd
+		s.state[i].matDoodle = v.doodle
 	}
 	for i, v := range s.posOver {
 		s.state[i].pos = v
@@ -859,6 +908,7 @@ func (s *SceneInst) Sample(beat float64) {
 			s.state[i].matAdd = v.add
 			s.state[i].matHueShift = v.hueShift
 			s.state[i].matLinearAdd = v.linearAdd
+			s.state[i].matDoodle = v.doodle
 		}
 	}
 	for i, sz := range s.sizeOver {
@@ -1299,6 +1349,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 				FlipX: q.FlipX, FlipY: q.FlipY, Tint: q.Tint,
 				MatColor: q.MatColor, Add: q.Add, Blend: q.Blend,
 				HueShift: q.HueShift, LinearAdd: q.LinearAdd,
+				Doodle:       q.Doodle,
 				OutlineWidth: q.OutlineWidth,
 			}
 			if q.MaskIn == 1 {
@@ -1343,6 +1394,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 			FlipX: st.flipX, FlipY: st.flipY, Tint: tint,
 			MatColor: st.matColor, Add: st.matAdd, Blend: st.matBlend,
 			HueShift: st.matHueShift, LinearAdd: st.matLinearAdd,
+			Doodle:       st.matDoodle,
 			OutlineWidth: st.outlineWidth,
 		}
 		if s.as.Rig.Nodes[i].DrawMode != 0 {

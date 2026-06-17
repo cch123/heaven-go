@@ -182,6 +182,19 @@ func TestLoadReadsOptionalMeshData(t *testing.T) {
 	writeTestJSON(t, dir, "anims.json", map[string]*kmdata.Anim{})
 	writeTestJSON(t, dir, "scene.json", kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "", Parent: -1, Scale: [2]float64{1, 1}}}})
 	writeTestJSON(t, dir, "roles.json", kmdata.Roles{})
+	writeTestJSON(t, dir, "materials.json", map[string]kmdata.Material{
+		"SpriteMat": {
+			Name: "SpriteMat",
+			Floats: map[string]float64{
+				"_DoodleFrameTime":  0.25,
+				"_DoodleFrameCount": 24,
+			},
+			Colors: map[string][4]float64{
+				"_DoodleMaxOffset":  {0.003, 0.003, 0, 0},
+				"_DoodleNoiseScale": {15, 15, 0, 0},
+			},
+		},
+	})
 	writeTestJSON(t, dir, "meshes.json", kmdata.MeshData{
 		Bindings: []kmdata.MeshBinding{{
 			Path:     "Root/Plane",
@@ -221,6 +234,9 @@ func TestLoadReadsOptionalMeshData(t *testing.T) {
 	}
 	if as.MeshTex["meshtex/grid.png"] == nil {
 		t.Fatalf("mesh texture image not decoded: %#v", as.MeshTex)
+	}
+	if got := as.Materials["SpriteMat"].Colors["_DoodleNoiseScale"]; got[0] != 15 || got[1] != 15 {
+		t.Fatalf("sprite material params not loaded: %#v", as.Materials)
 	}
 }
 

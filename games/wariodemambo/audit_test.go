@@ -1,6 +1,7 @@
 package wariodemambo
 
 import (
+	"math"
 	"strings"
 	"testing"
 
@@ -148,6 +149,38 @@ func TestMamboMainMaterialExcludesFaceAndDancerHeads(t *testing.T) {
 	} {
 		if !got[root] {
 			t.Fatalf("missing Mambo material exclusion for %s: %#v", root, got)
+		}
+	}
+}
+
+func TestMamboDoodleMaterialParamsExported(t *testing.T) {
+	as := loadAssets(t)
+	wantNoise := map[string][2]float64{
+		"MamboShader": {15, 15},
+		"Lights":      {0, 0},
+		"FloorLights": {0, 0},
+	}
+	for name, noise := range wantNoise {
+		mat, ok := as.Materials[name]
+		if !ok {
+			t.Fatalf("missing sprite material %s in materials.json: %#v", name, as.Materials)
+		}
+		if mat.Shader.Name != "MamboDoodle" {
+			t.Fatalf("%s shader = %q, want MamboDoodle", name, mat.Shader.Name)
+		}
+		if got := mat.Floats["_DoodleFrameTime"]; math.Abs(got-0.25) > 1e-9 {
+			t.Fatalf("%s _DoodleFrameTime = %v, want 0.25", name, got)
+		}
+		if got := mat.Floats["_DoodleFrameCount"]; math.Abs(got-24) > 1e-9 {
+			t.Fatalf("%s _DoodleFrameCount = %v, want 24", name, got)
+		}
+		max := mat.Colors["_DoodleMaxOffset"]
+		if math.Abs(max[0]-0.003) > 1e-9 || math.Abs(max[1]-0.003) > 1e-9 {
+			t.Fatalf("%s _DoodleMaxOffset = %#v, want 0.003/0.003", name, max)
+		}
+		gotNoise := mat.Colors["_DoodleNoiseScale"]
+		if gotNoise[0] != noise[0] || gotNoise[1] != noise[1] {
+			t.Fatalf("%s _DoodleNoiseScale = %#v, want %#v", name, gotNoise, noise)
 		}
 	}
 }

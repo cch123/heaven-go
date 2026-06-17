@@ -491,6 +491,7 @@ type instNodeState struct {
 	matBlend        [4]float64
 	matHueShift     float64
 	matLinearAdd    bool
+	matDoodle       DoodleParams
 	outlineWidth    float64
 	matThreshold    float64
 	hasMatThreshold bool
@@ -533,6 +534,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			states[ti].matAdd = v.add
 			states[ti].matHueShift = v.hueShift
 			states[ti].matLinearAdd = v.linearAdd
+			states[ti].matDoodle = v.doodle
 		}
 	}
 	states[0].pos = in.Offset
@@ -602,6 +604,7 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 					Layer: n.Layer, Order: st.order,
 					FlipX: st.flipX, FlipY: st.flipY, Tint: tint, MatColor: st.matColor,
 					HueShift: st.matHueShift, LinearAdd: st.matLinearAdd,
+					Doodle:       st.matDoodle,
 					OutlineWidth: st.outlineWidth,
 					Mapped:       n.Mapped, Mat: n.Mat,
 					Mask: n.Mask, MaskIn: n.MaskIn,

@@ -58,6 +58,59 @@ func exportMeshes(spec sceneSpec, dt *docTable, idx *prefabIndex, paths map[int6
 	_ = idx // kept in signature symmetry with other scene exporters; mesh paths are resolved from paths.
 }
 
+func exportMaterials(spec sceneSpec, dt *docTable, paths map[int64]string) {
+	gameRoot := spec.gameRoot()
+	materialAssets := scanAssetIndex(gameRoot, ".mat")
+	shaderAssets := scanAssetIndex(filepath.Join(*hsRoot, "Assets"), ".shader")
+	textureAssets := scanAssetIndex(gameRoot, ".png", ".psd", ".tga", ".jpg", ".jpeg")
+
+	out := collectSpriteMaterials(collectSpriteMaterialGUIDs(dt, paths), materialAssets, shaderAssets, textureAssets)
+	if len(out) == 0 {
+		return
+	}
+	writeJSON("materials.json", out)
+	fmt.Printf("materials: %d sprite materials\n", len(out))
+}
+
+func collectSpriteMaterialGUIDs(dt *docTable, paths map[int64]string) map[string]bool {
+	out := map[string]bool{}
+	for _, d := range dt.byID {
+		if d.classID != 212 {
+			continue
+		}
+		gid := uy.I(uy.Get(d.content, "m_GameObject", "fileID"))
+		if _, ok := paths[gid]; !ok {
+			continue
+		}
+		for _, mat := range materialRefs(d.content, assetIndex{}) {
+			if mat.GUID != "" {
+				out[mat.GUID] = true
+			}
+		}
+	}
+	return out
+}
+
+func collectSpriteMaterials(wanted map[string]bool, materialAssets, shaderAssets, textureAssets assetIndex) map[string]kmdata.Material {
+	if len(wanted) == 0 {
+		return nil
+	}
+	out := map[string]kmdata.Material{}
+	for guid := range wanted {
+		ref, ok := materialAssets.refs[guid]
+		if !ok || ref.Path == "" {
+			continue
+		}
+		path := filepath.Join(*hsRoot, "Assets", filepath.FromSlash(ref.Path))
+		mat, ok := parseMaterialAsset(path, guid, ref, shaderAssets, textureAssets)
+		if !ok || mat.Name == "" {
+			continue
+		}
+		out[mat.Name] = mat
+	}
+	return out
+}
+
 func collectMeshGUIDs(bindings []kmdata.MeshBinding) map[string]bool {
 	out := map[string]bool{}
 	for _, b := range bindings {

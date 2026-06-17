@@ -1,0 +1,266 @@
+{
+ "FloorLights": {
+  "name": "FloorLights",
+  "guid": "a806588c2121ed945b9507ace30fc928",
+  "path": "Bundled/Games/WarioDeMambo/Sprites/FloorLights.mat",
+  "shader": {
+   "fileID": 4800000,
+   "guid": "24f91d7c18490074ca52169d2414147f",
+   "name": "MamboDoodle",
+   "path": "DoodleShader/GPU-Doodle/MamboDoodle.shader"
+  },
+  "floats": {
+   "PixelSnap": 0,
+   "_AlphaClip": 0,
+   "_Blend": 0,
+   "_BumpScale": 1,
+   "_Cull": 2,
+   "_Cutoff": 0.5,
+   "_DoodleFrameCount": 24,
+   "_DoodleFrameTime": 0.25,
+   "_DstBlend": 0,
+   "_EnableExternalAlpha": 0,
+   "_GlossMapScale": 1,
+   "_Glossiness": 0.5,
+   "_GlossyReflections": 1,
+   "_HueShift": 0,
+   "_Metallic": 0,
+   "_NoiseScale": 0.01,
+   "_NoiseSnap": 0.01,
+   "_OcclusionStrength": 1,
+   "_ReceiveShadows": 1,
+   "_SmoothnessTextureChannel": 0,
+   "_SpecularHighlights": 1,
+   "_SrcBlend": 1,
+   "_Surface": 0,
+   "_WorkflowMode": 1,
+   "_ZWrite": 1
+  },
+  "colors": {
+   "_AddColor": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "_Color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_DoodleMaxOffset": [
+    0.003,
+    0.003,
+    0,
+    0
+   ],
+   "_DoodleNoiseScale": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "_EmissionColor": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "_Flip": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_RendererColor": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_SpecColor": [
+    0.19999996,
+    0.19999996,
+    0.19999996,
+    1
+   ]
+  }
+ },
+ "Lights": {
+  "name": "Lights",
+  "guid": "6afc826203424844797c4f9e87472e57",
+  "path": "Bundled/Games/WarioDeMambo/Sprites/Lights.mat",
+  "shader": {
+   "fileID": 4800000,
+   "guid": "24f91d7c18490074ca52169d2414147f",
+   "name": "MamboDoodle",
+   "path": "DoodleShader/GPU-Doodle/MamboDoodle.shader"
+  },
+  "floats": {
+   "PixelSnap": 0,
+   "_AlphaClip": 0,
+   "_Blend": 0,
+   "_BumpScale": 1,
+   "_Cull": 2,
+   "_Cutoff": 0.5,
+   "_DoodleFrameCount": 24,
+   "_DoodleFrameTime": 0.25,
+   "_DstBlend": 0,
+   "_EnableExternalAlpha": 0,
+   "_GlossMapScale": 1,
+   "_Glossiness": 0.5,
+   "_GlossyReflections": 1,
+   "_HueShift": 0,
+   "_Metallic": 0,
+   "_NoiseScale": 0.01,
+   "_NoiseSnap": 0.01,
+   "_OcclusionStrength": 1,
+   "_ReceiveShadows": 1,
+   "_SmoothnessTextureChannel": 0,
+   "_SpecularHighlights": 1,
+   "_SrcBlend": 1,
+   "_Surface": 0,
+   "_WorkflowMode": 1,
+   "_ZWrite": 1
+  },
+  "colors": {
+   "_AddColor": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "_Color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_DoodleMaxOffset": [
+    0.003,
+    0.003,
+    0,
+    0
+   ],
+   "_DoodleNoiseScale": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "_EmissionColor": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "_Flip": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_RendererColor": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_SpecColor": [
+    0.19999996,
+    0.19999996,
+    0.19999996,
+    1
+   ]
+  }
+ },
+ "MamboShader": {
+  "name": "MamboShader",
+  "guid": "7e0de0945e106d24e981a8e006231a53",
+  "path": "Bundled/Games/WarioDeMambo/Sprites/MamboShader.mat",
+  "shader": {
+   "fileID": 4800000,
+   "guid": "24f91d7c18490074ca52169d2414147f",
+   "name": "MamboDoodle",
+   "path": "DoodleShader/GPU-Doodle/MamboDoodle.shader"
+  },
+  "floats": {
+   "PixelSnap": 0,
+   "_AlphaClip": 0,
+   "_Blend": 0,
+   "_BumpScale": 1,
+   "_Cull": 2,
+   "_Cutoff": 0.5,
+   "_DoodleFrameCount": 24,
+   "_DoodleFrameTime": 0.25,
+   "_DstBlend": 0,
+   "_EnableExternalAlpha": 0,
+   "_GlossMapScale": 1,
+   "_Glossiness": 0.5,
+   "_GlossyReflections": 1,
+   "_HueShift": 0,
+   "_Metallic": 0,
+   "_NoiseScale": 0.01,
+   "_NoiseSnap": 0.01,
+   "_OcclusionStrength": 1,
+   "_ReceiveShadows": 1,
+   "_SmoothnessTextureChannel": 0,
+   "_SpecularHighlights": 1,
+   "_SrcBlend": 1,
+   "_Surface": 0,
+   "_WorkflowMode": 1,
+   "_ZWrite": 1
+  },
+  "colors": {
+   "_AddColor": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "_Color": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_DoodleMaxOffset": [
+    0.003,
+    0.003,
+    0,
+    0
+   ],
+   "_DoodleNoiseScale": [
+    15,
+    15,
+    0,
+    0
+   ],
+   "_EmissionColor": [
+    0,
+    0,
+    0,
+    1
+   ],
+   "_Flip": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_RendererColor": [
+    1,
+    1,
+    1,
+    1
+   ],
+   "_SpecColor": [
+    0.19999996,
+    0.19999996,
+    0.19999996,
+    1
+   ]
+  }
+ }
+}

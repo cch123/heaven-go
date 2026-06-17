@@ -165,6 +165,42 @@ func TestMamboMaterialOverrideCanExcludeSubtrees(t *testing.T) {
 	}
 }
 
+func TestMamboMaterialOverrideAtEnablesDoodleParams(t *testing.T) {
+	as := materialAlphaAssets()
+	as.Rig.Nodes[0].Mat = "MamboShader"
+	as.Materials = map[string]kmdata.Material{
+		"MamboShader": {
+			Floats: map[string]float64{
+				"_DoodleFrameTime":  0.25,
+				"_DoodleFrameCount": 24,
+			},
+			Colors: map[string][4]float64{
+				"_DoodleMaxOffset":  {0.003, 0.004, 0, 0},
+				"_DoodleNoiseScale": {15, 12, 0, 0},
+			},
+		},
+	}
+
+	scene := NewScene(as)
+	scene.SetMamboMaterialForExceptAt("MamboShader", 0.5, [4]float64{0.2, 0.1, 0.05, 1}, 1.5)
+	scene.Sample(0)
+
+	d := scene.state[0].matDoodle
+	if !d.Enabled || d.Time != 1.5 || d.FrameTime != 0.25 || d.FrameCount != 24 {
+		t.Fatalf("doodle timing params not applied: %#v", d)
+	}
+	if d.MaxOffset != [2]float64{0.003, 0.004} || d.NoiseScale != [2]float64{15, 12} {
+		t.Fatalf("doodle vector params not applied: %#v", d)
+	}
+
+	scene = NewScene(as)
+	scene.SetMamboMaterialFor("MamboShader", 0.5, [4]float64{0.2, 0.1, 0.05, 1})
+	scene.Sample(0)
+	if scene.state[0].matDoodle.Enabled {
+		t.Fatalf("legacy Mambo material API should not enable time-dependent doodle params: %#v", scene.state[0].matDoodle)
+	}
+}
+
 func materialAlphaAssets() *Assets {
 	keys := []kmdata.Key{
 		{T: 0, V: 0.25},

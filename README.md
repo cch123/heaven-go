@@ -230,8 +230,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   ForceModule 与 ParticleSystemRenderer sortingOrder/lengthScale 做运行时发射。
 - warioDeMambo：SpriteRenderer 材质名已由提取器保留，`SetColors` 按官方
   `mainMat`/`lightMat`/`floorLightMat` 共享材质驱动 MamboDoodle `_HueShift` 与
-  线性 `_AddColor`，不再按路径猜测染色范围；MamboDoodle 的
-  `DoodleTextureOffset` UV 抖动仍待接入运行时时间 uniform。
+  线性 `_AddColor`，不再按路径猜测染色范围；SpriteRenderer `.mat` 参数已导出到
+  `materials.json`，MamboDoodle 的 `DoodleTextureOffset` UV 抖动按官方
+  `_DoodleFrameTime`/`_DoodleFrameCount`/`_DoodleMaxOffset`/`_DoodleNoiseScale`
+  和运行时时间 uniform 驱动。
 - lockstep：人群渲染将原版"3 台正交相机 → RenderTexture → 平铺 quad"等价
   实现为同尺度无限棋盘格直绘（几何/相位/缩放一致）。
 - ppe 后处理（engine/postfx.go）：colorGrading/vignette/cabb/lensD/pixelQuad 与

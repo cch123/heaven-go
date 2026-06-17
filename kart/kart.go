@@ -76,11 +76,12 @@ func (m Aff) GeoM() ebiten.GeoM {
 
 type Assets struct {
 	Sheet     kmdata.Sheet
-	Atlas     *ebiten.Image       // 单图集（legacy karateman 格式）
-	Atlases   []*ebiten.Image     // 多图集（scene 格式）
-	Rig       kmdata.Rig          // karateman: rig.json；scene 游戏: scene.json
-	Roles     kmdata.Roles        // scene 游戏: 脚本字段 → 节点 path
-	Extra     kmdata.Extra        // scene 游戏: 扩展序列化数据（可选）
+	Atlas     *ebiten.Image   // 单图集（legacy karateman 格式）
+	Atlases   []*ebiten.Image // 多图集（scene 格式）
+	Rig       kmdata.Rig      // karateman: rig.json；scene 游戏: scene.json
+	Roles     kmdata.Roles    // scene 游戏: 脚本字段 → 节点 path
+	Extra     kmdata.Extra    // scene 游戏: 扩展序列化数据（可选）
+	Materials map[string]kmdata.Material
 	Meshes    kmdata.MeshData     // scene 游戏: MeshRenderer/材质绑定（可选）
 	Particles kmdata.ParticleData // scene 游戏: ParticleSystem 参数（可选）
 	MeshTex   map[string]*ebiten.Image
@@ -127,6 +128,11 @@ func Load(dir string, audioRate int) (*Assets, error) {
 		}
 		if _, err := os.Stat(filepath.Join(dir, "extra.json")); err == nil {
 			if err := readJSON(filepath.Join(dir, "extra.json"), &a.Extra); err != nil {
+				return nil, err
+			}
+		}
+		if _, err := os.Stat(filepath.Join(dir, "materials.json")); err == nil {
+			if err := readJSON(filepath.Join(dir, "materials.json"), &a.Materials); err != nil {
 				return nil, err
 			}
 		}
@@ -631,8 +637,20 @@ type SpriteOpts struct {
 	Blend        [4]float64 // material._BlendColor（命中白闪等 overlay 混色）
 	HueShift     float64    // MamboDoodle _HueShift（HSV hue + value）
 	LinearAdd    bool       // true 时 _AddColor 按 MamboDoodle 线性加色
+	Doodle       DoodleParams
 	OutlineWidth float64    // TMP material._OutlineWidth（仅动态文本 sprite）
 	Stretch      [2]float64 // 非零时拉伸到该尺寸（unit，对应 SpriteRenderer sliced/tiled 的 m_Size）
+}
+
+// DoodleParams mirrors the GPU-Doodle/MamboDoodle material inputs used by
+// Wario de Mambo. Offsets are UV-space values; Time is Unity _Time.y seconds.
+type DoodleParams struct {
+	Enabled    bool
+	Time       float64
+	MaxOffset  [2]float64
+	FrameTime  float64
+	FrameCount float64
+	NoiseScale [2]float64
 }
 
 // DrawSpriteOpts 按选项绘制切片。Stretch 非零时按 SpriteRenderer
@@ -668,7 +686,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 		if strings.HasPrefix(name, "__text_") && o.OutlineWidth > 0 {
 			drawTextOutline(dst, img, proj.Mul(world).Mul(local), tint, o.OutlineWidth)
 		}
-		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd)
+		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd, o.Doodle)
 		return
 	}
 
@@ -680,7 +698,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 	bl, bb, br, bt := sp.Border[0], sp.Border[1], sp.Border[2], sp.Border[3]
 	if bl+bb+br+bt == 0 { // 无 border：整体拉伸
 		local := base.Mul(Scale(tw/float64(sp.W), th/float64(sp.H)))
-		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd)
+		drawCellAnime(dst, img, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd, o.Doodle)
 		return
 	}
 	// 端帽超过目标尺寸时按比例压缩（Unity 同语义）
@@ -711,7 +729,7 @@ func (a *Assets) DrawSpriteOpts(dst *ebiten.Image, name string, world, proj Aff,
 			local := base.
 				Mul(Translate(txs[ix], tys[iy])).
 				Mul(Scale(dw/sw, dh/sh))
-			drawCellAnime(dst, sub, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd)
+			drawCellAnime(dst, sub, proj.Mul(world).Mul(local), tint, matColor, o.Add, o.Blend, o.HueShift, o.LinearAdd, o.Doodle)
 		}
 	}
 }
@@ -727,6 +745,14 @@ var Add vec4
 var Blend vec4
 var HueShift float
 var LinearAdd float
+var DoodleOn float
+var DoodleTime float
+var DoodleMaxOffset vec2
+var DoodleFrameTime float
+var DoodleFrameCount float
+var DoodleNoiseScale vec2
+var SourceOrigin vec2
+var SourceSize vec2
 
 func rgb2hsv(c vec3) vec3 {
 	k := vec4(0.0, -1.0/3.0, 2.0/3.0, -1.0)
@@ -743,8 +769,36 @@ func hsv2rgb(c vec3) vec3 {
 	return c.z * mix(k.xxx, clamp(p-k.xxx, 0.0, 1.0), c.y)
 }
 
+func random(seed vec2) float {
+	return fract(sin(dot(seed, vec2(12.9898, 78.233))) * 43758.5453123)
+}
+
+func noise(seed vec2) float {
+	i := floor(seed)
+	f := fract(seed)
+	a := random(i)
+	b := random(i + vec2(1.0, 0.0))
+	c := random(i + vec2(0.0, 1.0))
+	d := random(i + vec2(1.0, 1.0))
+	u := f * f * (3.0 - 2.0*f)
+	return mix(a, b, u.x) + (c-a)*u.y*(1.0-u.x) + (d-b)*u.x*u.y
+}
+
+func doodleTextureOffset(textureCoords vec2) vec2 {
+	timeValue := mod(floor(DoodleTime/DoodleFrameTime), DoodleFrameCount) + 1.0
+	coordsPlusTime := textureCoords + vec2(timeValue)
+	return vec2(
+		(noise(coordsPlusTime*DoodleNoiseScale.x)*2.0 - 1.0) * DoodleMaxOffset.x,
+		(noise(coordsPlusTime*DoodleNoiseScale.y)*2.0 - 1.0) * DoodleMaxOffset.y)
+}
+
 func Fragment(dst vec4, src vec2, color vec4) vec4 {
-	tex := imageSrc0At(src)
+	sampleSrc := src
+	if DoodleOn > 0.5 && DoodleFrameTime > 0 && DoodleFrameCount > 0 {
+		uv := (src - SourceOrigin) / SourceSize
+		sampleSrc = src + doodleTextureOffset(uv)*SourceSize
+	}
+	tex := imageSrc0At(sampleSrc)
 	if HueShift != 0 || LinearAdd > 0.5 {
 		hsv := rgb2hsv(tex.rgb)
 		hsv.x = fract(hsv.x + HueShift)
@@ -814,8 +868,8 @@ func drawTextOutline(dst, img *ebiten.Image, m Aff, tint [4]float64, width float
 	}
 }
 
-func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add, blend [4]float64, hueShift float64, linearAdd bool) {
-	if add == [4]float64{} && blend == [4]float64{} && isWhite(matColor) && hueShift == 0 && !linearAdd {
+func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add, blend [4]float64, hueShift float64, linearAdd bool, doodle DoodleParams) {
+	if add == [4]float64{} && blend == [4]float64{} && isWhite(matColor) && hueShift == 0 && !linearAdd && !doodle.Enabled {
 		drawTinted(dst, img, m, tint)
 		return
 	}
@@ -825,15 +879,23 @@ func drawCellAnime(dst, img *ebiten.Image, m Aff, tint, matColor, add, blend [4]
 	v4 := func(c [4]float64) []float32 {
 		return []float32{float32(c[0]), float32(c[1]), float32(c[2]), float32(c[3])}
 	}
-	op.Uniforms = map[string]any{
-		"Tint":      v4(tint),
-		"MatColor":  v4(matColor),
-		"Add":       v4(add),
-		"Blend":     v4(blend),
-		"HueShift":  float32(hueShift),
-		"LinearAdd": mapBoolFloat32(linearAdd),
-	}
 	b := img.Bounds()
+	op.Uniforms = map[string]any{
+		"Tint":             v4(tint),
+		"MatColor":         v4(matColor),
+		"Add":              v4(add),
+		"Blend":            v4(blend),
+		"HueShift":         float32(hueShift),
+		"LinearAdd":        mapBoolFloat32(linearAdd),
+		"DoodleOn":         mapBoolFloat32(doodle.Enabled),
+		"DoodleTime":       float32(doodle.Time),
+		"DoodleMaxOffset":  []float32{float32(doodle.MaxOffset[0]), float32(doodle.MaxOffset[1])},
+		"DoodleFrameTime":  float32(doodle.FrameTime),
+		"DoodleFrameCount": float32(doodle.FrameCount),
+		"DoodleNoiseScale": []float32{float32(doodle.NoiseScale[0]), float32(doodle.NoiseScale[1])},
+		"SourceOrigin":     []float32{float32(b.Min.X), float32(b.Min.Y)},
+		"SourceSize":       []float32{float32(b.Dx()), float32(b.Dy())},
+	}
 	dst.DrawRectShader(b.Dx(), b.Dy(), ensureCellAnimeShader(), op)
 }
 
