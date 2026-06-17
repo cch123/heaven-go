@@ -181,6 +181,62 @@ func TestValiantVolleyTimingAndMultiSpawnSemantics(t *testing.T) {
 	}
 }
 
+func TestValiantVolleyBopRegionMatchesUnityKeepBop(t *testing.T) {
+	empty := &Module{}
+	if !empty.bopActive(0) {
+		t.Fatal("BeatIsInBopRegion returns true when no bop events exist")
+	}
+
+	m := &Module{bops: []bopEvt{
+		{beat: 4, length: 8, single: true, keep: false},
+		{beat: 8, length: 1, single: true, keep: true},
+		{beat: 12, length: 1, single: true, keep: false},
+	}}
+	for _, beat := range []float64{4, 6, 7.999} {
+		if m.bopActive(beat) {
+			t.Fatalf("single bop at beat 4 should not open auto-bop region at beat %.3f", beat)
+		}
+	}
+	for _, beat := range []float64{8, 10, 11.999} {
+		if !m.bopActive(beat) {
+			t.Fatalf("keepBop=true should keep auto-bop active at beat %.3f", beat)
+		}
+	}
+	if m.bopActive(12) {
+		t.Fatal("keepBop=false should close auto-bop region at beat 12")
+	}
+}
+
+func TestValiantVolleyPulseGateUpdatesCantBop(t *testing.T) {
+	m := &Module{
+		bops: []bopEvt{
+			{beat: 2, keep: true},
+			{beat: 6, keep: false},
+		},
+		ants: [3]*ant{
+			{cantBop: true},
+			{cantBop: true},
+			{cantBop: true, player: true},
+		},
+	}
+	if keep := m.syncBopGate(3); !keep {
+		t.Fatal("syncBopGate should report keepBop active at beat 3")
+	}
+	for i, a := range m.ants {
+		if a.cantBop {
+			t.Fatalf("ant %d cantBop stayed true inside keepBop region", i)
+		}
+	}
+	if keep := m.syncBopGate(6); keep {
+		t.Fatal("syncBopGate should report keepBop inactive at beat 6")
+	}
+	for i, a := range m.ants {
+		if !a.cantBop {
+			t.Fatalf("ant %d cantBop stayed false after keepBop closed", i)
+		}
+	}
+}
+
 func nodeSet(as *kart.Assets) map[string]bool {
 	out := map[string]bool{}
 	for _, n := range as.Rig.Nodes {

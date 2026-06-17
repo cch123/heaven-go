@@ -194,9 +194,7 @@ func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 }
 
 func (m *Module) pulse(beat float64) {
-	if !m.bopActive(beat) {
-		return
-	}
+	m.syncBopGate(beat)
 	for _, a := range m.ants {
 		if a != nil {
 			a.requestBop(m, beat)
@@ -204,21 +202,34 @@ func (m *Module) pulse(beat float64) {
 	}
 }
 
+func (m *Module) syncBopGate(beat float64) bool {
+	keepBop := m.bopActive(beat)
+	for _, a := range m.ants {
+		if a != nil {
+			a.cantBop = !keepBop
+		}
+	}
+	return keepBop
+}
+
 func (m *Module) bopActive(beat float64) bool {
+	if len(m.bops) == 0 {
+		return true
+	}
 	active := false
+	lastBeat := math.Inf(-1)
 	for _, b := range m.bops {
 		if b.beat > beat {
 			break
 		}
-		if b.keep && b.beat <= beat {
-			active = true
+		// SetupBopRegion keeps the first bop event on a beat and stores only the
+		// keepBop toggle. singleBop is handled by Bop itself, not by the auto-bop
+		// region, so interval gates must ignore the event length.
+		if nearly(b.beat, lastBeat) {
+			continue
 		}
-		if !b.keep && beat >= b.beat+b.length {
-			active = false
-		}
-		if b.single && beat >= b.beat && beat < b.beat+b.length {
-			active = true
-		}
+		active = b.keep
+		lastBeat = b.beat
 	}
 	return active
 }
