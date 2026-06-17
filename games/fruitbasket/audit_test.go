@@ -105,6 +105,29 @@ func TestFruitBasketCurveAndParticleAnchors(t *testing.T) {
 	}
 }
 
+func TestFruitBasketRightHoopMirrorsUnityYRotation(t *testing.T) {
+	as := loadAssets(t)
+	left := nodeByPath(t, as, "HoopL")
+	right := nodeByPath(t, as, "HoopR")
+
+	if left.Scale[0] <= 0 {
+		t.Fatalf("HoopL scale.x = %v, want positive unmirrored hoop", left.Scale[0])
+	}
+	// Unity serializes HoopR as a parent y=180 quaternion. The 2D runtime keeps
+	// that projection as negative scale.x on the root so children and particle
+	// anchors remain in their original prefab-local positions.
+	if right.Scale[0] >= 0 || right.Scale[1] <= 0 {
+		t.Fatalf("HoopR scale = %v, want x-mirrored root with positive y scale", right.Scale)
+	}
+	if math.Abs(math.Abs(right.Scale[0])-left.Scale[0]) > 1e-6 || math.Abs(right.Scale[1]-left.Scale[1]) > 1e-6 {
+		t.Fatalf("HoopR scale = %v, want mirrored magnitude of HoopL scale %v", right.Scale, left.Scale)
+	}
+	board := nodeByPath(t, as, "HoopR/Backboard")
+	if board.Pos[0] <= 0 {
+		t.Fatalf("HoopR/Backboard local x = %v, want prefab-local positive x with parent mirror", board.Pos[0])
+	}
+}
+
 func TestFruitBasketControllersClipsAndPaths(t *testing.T) {
 	as := loadAssets(t)
 	for ctrl, states := range map[string][]string{
@@ -215,6 +238,17 @@ func nodeSet(as *kart.Assets) map[string]bool {
 		out[n.Path] = true
 	}
 	return out
+}
+
+func nodeByPath(t *testing.T, as *kart.Assets, path string) kmdata.Node {
+	t.Helper()
+	for _, n := range as.Rig.Nodes {
+		if n.Path == path {
+			return n
+		}
+	}
+	t.Fatalf("missing node %s", path)
+	return kmdata.Node{}
 }
 
 func checkAnimPaths(t *testing.T, anim *kmdata.Anim, clip, root string, nodes map[string]bool) {
