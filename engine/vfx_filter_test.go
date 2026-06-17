@@ -49,18 +49,18 @@ func TestDefaultLUTUsesUnityTextureYAxis(t *testing.T) {
 	}
 }
 
-func TestLUTShaderUsesSourceLocalCoordinatesForLUTs(t *testing.T) {
-	if strings.Contains(lutKage, "imageSrc0Origin()") {
-		t.Fatalf("LUT lookup must not use the screen source origin; this offsets the 1024x32 strip and corrupts colors")
+func TestLUTShaderUsesSource0CoordinateSpaceForLUTs(t *testing.T) {
+	if !strings.Contains(lutKage, "o := imageSrc0Origin()") {
+		t.Fatalf("imageSrc1At/imageSrc2At use source0 coordinates; LUT strip offsets must be added to source0 origin")
 	}
 	if strings.Contains(lutKage, "imageSrc1Origin()") {
-		t.Fatalf("LUT lookup uses source-local strip coordinates; adding source1 origin corrupts colors")
+		t.Fatalf("adding source1 origin double-applies the secondary image atlas origin and corrupts colors")
 	}
 	if strings.Contains(lutKage, "imageSrc2Origin()") {
-		t.Fatalf("default LUT lookup uses source-local strip coordinates; adding source2 origin corrupts colors")
+		t.Fatalf("adding source2 origin double-applies the default LUT atlas origin and corrupts colors")
 	}
-	if !strings.Contains(lutKage, "imageSrc1At(lutLo)") || !strings.Contains(lutKage, "imageSrc2At(lutLo)") {
-		t.Fatalf("LUT shader should sample target and default LUTs with the same local strip coordinates")
+	if !strings.Contains(lutKage, "imageSrc1At(o + lutLo)") || !strings.Contains(lutKage, "imageSrc2At(o + lutLo)") {
+		t.Fatalf("LUT shader should sample target and default LUTs with source0-origin strip coordinates")
 	}
 }
 
