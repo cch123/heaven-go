@@ -163,6 +163,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   2D overlay；fallback 地面滚动已按官方 `floor_model/move` 的 5 拍循环和提取曲线位移对齐；
   `ColorUpdate` 的 `bgMaterial`/`fadeMaterial`/`cloudMaterial` `_Color`
   与 `floorMaterial` `_BlueColor`/`_RedColor` 已按官方材质名同步到 scene；
+  MeshRenderer 材质贴图解析已支持 `_MainTex` 为空时落到 `_ColorMask`/
+  `_BaseTexture`/`_Albedo` 等官方 custom shader 槽，`floorspecular`
+  可解析到 Unity `floor.png` 的 `_ColorMask` tiling；
   玩家/CPU 的 `bop`/`duck`/`charge`/`hold`/`jump`/`hit`/`letsgo` 已同步驱动
   官方 `airboy` Animator state，并在短动作结束后回到 `hover`；
   `camera` 事件的 last/next 链式插值、additive Y 旋转、pivot 参数与 X/Y/zoom

@@ -215,6 +215,31 @@ func TestImportedFBXMeshRendererUsesTextureUVs(t *testing.T) {
 	scene.Draw(dst, Translate(48, 48).Mul(Scale(4, -4)))
 }
 
+func TestMeshRendererUsesCustomShaderTextureSlotWhenMainTexIsEmpty(t *testing.T) {
+	as := meshTestAssets(nil)
+	mat := as.Meshes.Materials["mat-guid"]
+	mat.Textures = map[string]kmdata.TextureEnv{
+		"_MainTex":        {Scale: [2]float64{128, 0}},
+		"_ColorMask":      {Image: "meshtex/mask.png", Scale: [2]float64{166, 1}},
+		"_TextureSample0": {Image: "meshtex/sample.png", Scale: [2]float64{128, 1}},
+	}
+	as.Meshes.Materials["mat-guid"] = mat
+	mask := ebiten.NewImage(2, 2)
+	as.MeshTex = map[string]*ebiten.Image{
+		"meshtex/mask.png":   mask,
+		"meshtex/sample.png": ebiten.NewImage(2, 2),
+	}
+
+	scene := NewScene(as)
+	tex, env := scene.meshTexture(&as.Meshes.Bindings[0])
+	if tex != mask {
+		t.Fatal("custom shader texture slot should use _ColorMask when _MainTex has no image")
+	}
+	if env.Image != "meshtex/mask.png" || env.Scale != [2]float64{166, 1} {
+		t.Fatalf("texture env = %#v, want _ColorMask env", env)
+	}
+}
+
 func TestBuiltinMeshRendererUsesMaterialTexture(t *testing.T) {
 	as := meshTestAssets(nil)
 	mat := as.Meshes.Materials["mat-guid"]

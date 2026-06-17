@@ -168,6 +168,28 @@ func TestAirboarderMeshRendererAssets(t *testing.T) {
 	}
 }
 
+func TestAirboarderCustomShaderTextureSlotsResolve(t *testing.T) {
+	root := filepath.Join("..", "..", "assets", "airboarder")
+	as, err := kart.Load(root, engine.SampleRate)
+	if err != nil {
+		t.Fatal(err)
+	}
+	scene := kart.NewScene(as)
+	if env, ok := scene.MeshTextureEnvForTest("Environment/ArchFinePosition/Arch"); !ok || env.Image == "" {
+		t.Fatalf("arch MeshRenderer texture env = %#v ok=%v, want wall_body texture", env, ok)
+	}
+	env, ok := scene.MaterialTextureEnvForTest("floorspecular")
+	if !ok {
+		t.Fatal("floorspecular should resolve its custom shader texture slot")
+	}
+	if env.Texture.Name != "floor" || env.Image != "meshtex/f181c9819c5bc7b488b3eedee117d8e0.png" {
+		t.Fatalf("floorspecular texture env = %#v, want official floor texture", env)
+	}
+	if env.Scale != [2]float64{166, 1} {
+		t.Fatalf("floorspecular texture scale = %#v, want _ColorMask tiling from Unity material", env.Scale)
+	}
+}
+
 func airboarderMeshBinding(t *testing.T, meshes kmdata.MeshData, path string) kmdata.MeshBinding {
 	t.Helper()
 	for _, b := range meshes.Bindings {

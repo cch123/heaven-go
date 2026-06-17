@@ -160,14 +160,72 @@ func (s *SceneInst) meshTexture(b *kmdata.MeshBinding) (*ebiten.Image, kmdata.Te
 	if !ok {
 		return nil, kmdata.TextureEnv{}
 	}
-	env, ok := mat.Textures["_MainTex"]
-	if !ok || env.Image == "" || s.as.MeshTex == nil {
+	env, ok := firstMeshTextureEnv(mat.Textures)
+	if !ok || s.as.MeshTex == nil {
 		return nil, kmdata.TextureEnv{}
 	}
 	if off, ok := s.texFor[mat.Name]; ok {
 		env.Offset = off
 	}
 	return s.as.MeshTex[env.Image], env
+}
+
+func firstMeshTextureEnv(textures map[string]kmdata.TextureEnv) (kmdata.TextureEnv, bool) {
+	// Unity's Material.mainTexture normally maps to _MainTex, but custom
+	// Heaven Studio shaders often use a different named 2D slot. Airboarder's
+	// SpecularRGBAmbient floor, for example, has no _MainTex image and drives
+	// visible albedo from _ColorMask, so treating _MainTex as mandatory turns
+	// the official mesh into a flat color.
+	for _, key := range []string{
+		"_MainTex",
+		"_BaseMap",
+		"_BaseTexture",
+		"_Albedo",
+		"_ColorMask",
+		"_Diffuse",
+		"_TextureSample0",
+		"_SpecularTexture",
+	} {
+		env, ok := textures[key]
+		if ok && env.Image != "" {
+			return env, true
+		}
+	}
+	return kmdata.TextureEnv{}, false
+}
+
+// MeshTextureEnvForTest exposes the resolved texture slot for port audits.
+// Rendering code should use SceneInst.Draw; tests use this to prove custom
+// Unity shader texture slots are not silently dropped.
+func (s *SceneInst) MeshTextureEnvForTest(path string) (kmdata.TextureEnv, bool) {
+	for i := range s.as.Meshes.Bindings {
+		b := &s.as.Meshes.Bindings[i]
+		if b.Path != path {
+			continue
+		}
+		tex, env := s.meshTexture(b)
+		return env, tex != nil
+	}
+	return kmdata.TextureEnv{}, false
+}
+
+// MaterialTextureEnvForTest exposes texture slot resolution for shared
+// materials that are script-driven before every renderer has been mesh-bound.
+func (s *SceneInst) MaterialTextureEnvForTest(matName string) (kmdata.TextureEnv, bool) {
+	for _, mat := range s.as.Meshes.Materials {
+		if mat.Name != matName {
+			continue
+		}
+		env, ok := firstMeshTextureEnv(mat.Textures)
+		if !ok || s.as.MeshTex == nil || s.as.MeshTex[env.Image] == nil {
+			return kmdata.TextureEnv{}, false
+		}
+		if off, ok := s.texFor[mat.Name]; ok {
+			env.Offset = off
+		}
+		return env, true
+	}
+	return kmdata.TextureEnv{}, false
 }
 
 func drawSolidQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64) {
