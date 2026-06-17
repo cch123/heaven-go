@@ -22,6 +22,9 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	lo := imageSrc1At(o + vec2(bLo*32.0+clamp(c.r, 0.0, 1.0)*31.0+0.5, y)).rgb
 	hi := imageSrc1At(o + vec2(min(bLo+1.0, 31.0)*32.0+clamp(c.r, 0.0, 1.0)*31.0+0.5, y)).rgb
 	graded := mix(lo, hi, fr)
-	return vec4(mix(c, graded, Blend), srcColor.a)
+	defaultLo := imageSrc2At(o + vec2(bLo*32.0+clamp(c.r, 0.0, 1.0)*31.0+0.5, y)).rgb
+	defaultHi := imageSrc2At(o + vec2(min(bLo+1.0, 31.0)*32.0+clamp(c.r, 0.0, 1.0)*31.0+0.5, y)).rgb
+	defaultColor := mix(defaultLo, defaultHi, fr)
+	return vec4(mix(defaultColor, graded, Blend), srcColor.a)
 }
 `

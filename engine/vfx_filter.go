@@ -3,7 +3,8 @@
 // 10 个 slot，事件按拍序持久覆盖（Filter.cs：beat 起永久生效，直到后续事件
 // 改写同 slot）；BlendAmount = ease(1-start, 1-end)。AmplifyColor 会把目标
 // LUT 与 default_lut 预混，BlendAmount=0 是目标 LUT，BlendAmount=1 是原图。
-// 本地 shader 直接混屏幕图，因此使用 1-BlendAmount。LUT 为 1024×32 的
+// 本地 shader 采样目标 LUT 与 default_lut 后混合，因此使用 1-BlendAmount
+// 作为目标 LUT 强度。LUT 为 1024×32 的
 // 32³ 条带。
 package engine
 

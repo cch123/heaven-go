@@ -56,13 +56,16 @@ func TestLUTShaderUsesSource0CoordinatesForSecondaryImage(t *testing.T) {
 	if strings.Contains(lutKage, "imageSrc1Origin()") {
 		t.Fatalf("imageSrc1Origin double-applies the secondary image atlas origin and corrupts LUT colors")
 	}
+	if strings.Contains(lutKage, "imageSrc2Origin()") {
+		t.Fatalf("imageSrc2Origin double-applies the default LUT atlas origin and corrupts LUT colors")
+	}
 }
 
-func TestFilterSlotsApplyUnityComponentOrder(t *testing.T) {
-	// Fan Club Dance starts with slot 1 redder and slot 2 bleach. Unity applies
-	// the AmplifyColor components in creation order, so bleach must process the
-	// already-redder image instead of being overwritten by it.
-	want := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+func TestFilterSlotsApplyHighestFirst(t *testing.T) {
+	// The vfx/filter action documents this as a charting rule: higher slots are
+	// applied first. Reversing it changes the final grade whenever charts stack
+	// LUTs, which is visible in Fan Club Dance.
+	want := []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
 	if len(filterApplyOrder) != len(want) {
 		t.Fatalf("filterApplyOrder length = %d, want %d", len(filterApplyOrder), len(want))
 	}
@@ -70,6 +73,18 @@ func TestFilterSlotsApplyUnityComponentOrder(t *testing.T) {
 		if filterApplyOrder[i] != want[i] {
 			t.Fatalf("filter slot order = %v, want %v", filterApplyOrder, want)
 		}
+	}
+}
+
+func TestLUTShaderBlendsInLUTSpace(t *testing.T) {
+	if !strings.Contains(lutKage, "imageSrc2At") {
+		t.Fatalf("LUT shader should sample default_lut instead of approximating it with source color")
+	}
+	if !strings.Contains(lutKage, "defaultColor := mix(defaultLo, defaultHi, fr)") {
+		t.Fatalf("LUT shader should interpolate default_lut with the same B-slice fraction")
+	}
+	if !strings.Contains(lutKage, "mix(defaultColor, graded, Blend)") {
+		t.Fatalf("LUT shader should blend LUT outputs, matching AmplifyColor BlendCache")
 	}
 }
 
