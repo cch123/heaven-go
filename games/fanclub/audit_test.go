@@ -277,19 +277,52 @@ func TestFanClubFanClapKeepsHeadVisibleAndOffsetsParticles(t *testing.T) {
 	m := &Module{ctx: &engine.Ctx{Assets: as, Scene: sc}}
 	fx.queue(m, 0.45)
 
-	anchor, ok := inst.NodeWorldAt("Effect_FanCrap", kart.Identity(), 0.45)
+	anchor, ok := fanClubEffectBurst{fan: f}.fanHandWorld(0.45)
 	if !ok {
-		t.Fatal("missing Effect_FanCrap particle root")
+		t.Fatal("missing sampled fan hand midpoint")
 	}
 	moved := false
 	for _, q := range sc.QueuedSpritesForTest() {
-		if math.Hypot(q.World.Tx-anchor.Tx, q.World.Ty-anchor.Ty) > 0.05 {
+		if math.Hypot(q.World.Tx-anchor.Tx, q.World.Ty-anchor.Ty) < 0.9 {
 			moved = true
 			break
 		}
 	}
 	if !moved {
-		t.Fatal("fan clap particles should move away from the particle root instead of staying centered on the head")
+		t.Fatal("fan clap particles should stay near the animated hands")
+	}
+}
+
+func TestFanClubIdolClapUsesUnityParticleOrderAndHandAnchor(t *testing.T) {
+	as := loadAssets(t)
+	sc := kart.NewScene(as)
+	root := as.Roles["Arisa"]
+	sc.PlayState(root, "IdolCrap", 0, 1)
+	sc.Sample(0.05)
+	m := &Module{ctx: &engine.Ctx{Assets: as, Scene: sc}, arisa: root}
+	fx := fanClubEffects{bursts: []fanClubEffectBurst{{
+		beat: 0, secPerBeat: 0.5, lifetime: fanClubClapLifetimeSec,
+		kind: fanClubEffectClap, path: "Effect_IdolCrap",
+		scale: 0.62, order: 0, tint: [4]float64{1, 1, 1, 1},
+	}}}
+
+	fx.queue(m, 0.05)
+
+	qs := sc.QueuedSpritesForTest()
+	if len(qs) != 5 {
+		t.Fatalf("idol clap particles = %d, want 5 from Unity burst", len(qs))
+	}
+	hand, ok := fx.bursts[0].actorHandWorld(m)
+	if !ok {
+		t.Fatal("missing idol hand midpoint")
+	}
+	for _, q := range qs {
+		if q.Order != 0 {
+			t.Fatalf("idol clap particle order = %d, want Unity ParticleSystemRenderer order 0", q.Order)
+		}
+		if math.Hypot(q.World.Tx-hand.Tx, q.World.Ty-hand.Ty) > 0.25 {
+			t.Fatalf("idol clap particle at (%v,%v) is not anchored to hands (%v,%v)", q.World.Tx, q.World.Ty, hand.Tx, hand.Ty)
+		}
 	}
 }
 

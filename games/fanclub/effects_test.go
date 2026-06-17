@@ -4,8 +4,10 @@ import "testing"
 
 func TestFanClubEffectRefsResolve(t *testing.T) {
 	as := loadAssets(t)
-	if _, ok := as.Sheet.Sprites[fanClubEffectSprite]; !ok {
-		t.Fatalf("missing shared Fan Club effect sprite %q", fanClubEffectSprite)
+	for _, sprite := range []string{fanClubEffectSprite, fanClubWinkEffectSprite, fanClubKissEffectSprite} {
+		if _, ok := as.Sheet.Sprites[sprite]; !ok {
+			t.Fatalf("missing Fan Club effect sprite %q", sprite)
+		}
 	}
 	nodes := nodeSet(as)
 	for comp, refs := range map[string][]string{

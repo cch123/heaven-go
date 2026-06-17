@@ -2,12 +2,15 @@ package fanclub
 
 import (
 	"math"
+	"strings"
 
 	"hsdemo/kart"
 )
 
 const (
-	fanClubEffectSprite = "impact_effect"
+	fanClubEffectSprite     = "ntrIdol_handCrapEffect"
+	fanClubWinkEffectSprite = "idol_wink_star"
+	fanClubKissEffectSprite = "ntrIdol_heartEffect"
 
 	fanClubClapLifetimeSec = 0.45
 	fanClubWinkLifetimeSec = 0.40
@@ -74,7 +77,7 @@ func (fx *fanClubEffects) spawn(m *Module, burst fanClubEffectBurst) {
 func (fx *fanClubEffects) spawnIdolClap(m *Module, beat float64) {
 	fx.spawn(m, fanClubEffectBurst{
 		beat: beat, lifetime: fanClubClapLifetimeSec, kind: fanClubEffectClap,
-		path: "Effect_IdolCrap", scale: 0.86, layer: 0, order: 32,
+		path: "Effect_IdolCrap", scale: 0.62, layer: 0, order: 0,
 		tint: [4]float64{1, 0.43, 0.05, 0.92},
 	})
 }
@@ -85,7 +88,7 @@ func (fx *fanClubEffects) spawnDancerClap(m *Module, d *dancer, beat float64) {
 	}
 	fx.spawn(m, fanClubEffectBurst{
 		beat: beat, lifetime: fanClubClapLifetimeSec, kind: fanClubEffectClap,
-		path: d.clapEffect, scale: 0.72, layer: 0, order: 32,
+		path: d.clapEffect, scale: 0.56, layer: 0, order: 0,
 		tint: [4]float64{1, 0.46, 0.05, 0.86},
 	})
 }
@@ -100,7 +103,7 @@ func (fx *fanClubEffects) spawnFanClap(m *Module, f *fan, beat float64) {
 		// ParticleSystem: burst=3, startLifetime=0.45, sortingOrder=32. A single
 		// centered sprite makes the effect sit on the monkey head, so queue a
 		// small deterministic burst from the particle root instead.
-		fan: f, relPath: "Effect_FanCrap", scale: 0.24, layer: 0, order: 32,
+		fan: f, relPath: "Effect_FanCrap", scale: 0.54, layer: 0, order: 32,
 		tint: [4]float64{1, 0.55, 0.08, 0.78},
 	})
 }
@@ -159,9 +162,13 @@ func (fx *fanClubEffects) queue(m *Module, beat float64) {
 			fx.queueFanClapBurst(m, burst, sample, world)
 			continue
 		}
+		if burst.kind == fanClubEffectClap {
+			fx.queueClapBurst(m, burst, sample, world)
+			continue
+		}
 		world = world.Mul(kart.Rotate(sample.rot)).Mul(kart.Scale(sample.scale, sample.scale))
 		q := kart.ExtraSprite{
-			Sprite: fanClubEffectSprite,
+			Sprite: burst.sprite(),
 			World:  world,
 			Layer:  burst.layer,
 			Order:  burst.order,
@@ -175,6 +182,33 @@ func (fx *fanClubEffects) queue(m *Module, beat float64) {
 		m.ctx.Scene.Queue(q)
 	}
 	fx.bursts = kept
+}
+
+func (fx *fanClubEffects) queueClapBurst(m *Module, burst fanClubEffectBurst, sample fanClubEffectSample, world kart.Aff) {
+	// The authored Idol/BackDancer clap ParticleSystem is a 5-particle burst
+	// with renderer sortingOrder 0. Drawing one oversized order-32 sprite at the
+	// emitter origin covers the performers' faces, so this keeps the burst small
+	// and anchors it to the sampled hand midpoint.
+	dirs := [5][3]float64{
+		{-0.36, 0.04, -0.35},
+		{-0.18, 0.18, -0.12},
+		{0.00, 0.24, 0.06},
+		{0.18, 0.18, 0.18},
+		{0.36, 0.04, 0.38},
+	}
+	for _, d := range dirs {
+		pw := world.
+			Mul(kart.Translate(d[0]*sample.travel*0.75, d[1]*sample.travel*0.75)).
+			Mul(kart.Rotate(sample.rot + d[2])).
+			Mul(kart.Scale(sample.scale, sample.scale))
+		m.ctx.Scene.Queue(kart.ExtraSprite{
+			Sprite: burst.sprite(),
+			World:  pw,
+			Layer:  burst.layer,
+			Order:  burst.order,
+			Tint:   sample.tint,
+		})
+	}
 }
 
 func (fx *fanClubEffects) queueFanClapBurst(m *Module, burst fanClubEffectBurst, sample fanClubEffectSample, world kart.Aff) {
@@ -193,7 +227,7 @@ func (fx *fanClubEffects) queueFanClapBurst(m *Module, burst fanClubEffectBurst,
 			Mul(kart.Rotate(sample.rot + d[2])).
 			Mul(kart.Scale(sample.scale, sample.scale))
 		q := kart.ExtraSprite{
-			Sprite: fanClubEffectSprite,
+			Sprite: burst.sprite(),
 			World:  pw,
 			Layer:  burst.layer,
 			Order:  burst.order,
@@ -211,14 +245,74 @@ func (fx *fanClubEffects) queueFanClapBurst(m *Module, burst fanClubEffectBurst,
 func (burst fanClubEffectBurst) world(m *Module, beat float64) (kart.Aff, bool) {
 	if burst.fan != nil && burst.fan.inst != nil {
 		if burst.kind == fanClubEffectFanClap {
+			if w, ok := burst.fanHandWorld(beat); ok {
+				return w, true
+			}
 			return burst.fan.inst.NodeWorldAt(burst.relPath, kart.Identity(), beat)
 		}
 		return burst.fan.inst.NodeWorld(burst.relPath, kart.Identity())
+	}
+	if burst.kind == fanClubEffectClap {
+		if w, ok := burst.actorHandWorld(m); ok {
+			return w, true
+		}
 	}
 	if burst.path == "" || m == nil || m.ctx == nil || m.ctx.Scene == nil {
 		return kart.Identity(), false
 	}
 	return m.ctx.Scene.NodeWorld(burst.path)
+}
+
+func (burst fanClubEffectBurst) sprite() string {
+	switch burst.kind {
+	case fanClubEffectWink:
+		return fanClubWinkEffectSprite
+	case fanClubEffectKiss:
+		return fanClubKissEffectSprite
+	default:
+		return fanClubEffectSprite
+	}
+}
+
+func (burst fanClubEffectBurst) fanHandWorld(beat float64) (kart.Aff, bool) {
+	if burst.fan == nil || burst.fan.inst == nil {
+		return kart.Identity(), false
+	}
+	left, okL := burst.fan.inst.NodeWorldAt("root_motion/Body/fan_ArmL/fan_HandL", kart.Identity(), beat)
+	right, okR := burst.fan.inst.NodeWorldAt("root_motion/Body/fan_ArmR/fan_HandR", kart.Identity(), beat)
+	return midpointWorld(left, okL, right, okR)
+}
+
+func (burst fanClubEffectBurst) actorHandWorld(m *Module) (kart.Aff, bool) {
+	if m == nil || m.ctx == nil || m.ctx.Scene == nil {
+		return kart.Identity(), false
+	}
+	root := ""
+	switch {
+	case burst.path == "Effect_IdolCrap":
+		root = m.arisa
+	case strings.HasSuffix(burst.path, "/Effect_IdolCrap"):
+		root = strings.TrimSuffix(burst.path, "/Effect_IdolCrap")
+	}
+	if root == "" {
+		return kart.Identity(), false
+	}
+	left, okL := m.ctx.Scene.NodeWorld(root + "/idol_torso/idol_arm_L/idol_hand_L")
+	right, okR := m.ctx.Scene.NodeWorld(root + "/idol_torso/idol_arm_R/idol_hand_R")
+	return midpointWorld(left, okL, right, okR)
+}
+
+func midpointWorld(left kart.Aff, okL bool, right kart.Aff, okR bool) (kart.Aff, bool) {
+	switch {
+	case okL && okR:
+		return kart.Translate((left.Tx+right.Tx)/2, (left.Ty+right.Ty)/2), true
+	case okL:
+		return kart.Translate(left.Tx, left.Ty), true
+	case okR:
+		return kart.Translate(right.Tx, right.Ty), true
+	default:
+		return kart.Identity(), false
+	}
 }
 
 func (burst fanClubEffectBurst) sample(beat float64) (fanClubEffectSample, bool, bool) {
