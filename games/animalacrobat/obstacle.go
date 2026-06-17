@@ -61,7 +61,8 @@ func (m *Module) justHold(ob *acrobatObstacle, beat float64, j engine.Judgment) 
 	m.monkeyMissed = false
 	m.stopTrail(m.ctx.Time())
 	m.ctx.Scene.SetActive(m.player, false)
-	ob.inst.SetActive(ob.input.monkeyRel, true)
+	setInstActive(ob.inst, ob.input.monkeyRel, true)
+	setInstActive(ob.inst, ob.input.endShadowRel, true)
 	ob.inst.PlayState(ob.input.monkeyRel, "PlayerHang", beat, animScale)
 	m.ctx.At(beat+ob.input.holdLength/2, func() {
 		if ob.held {
@@ -92,7 +93,9 @@ func (m *Module) justRelease(ob *acrobatObstacle, releaseBeat float64, j engine.
 	if m.holding == ob {
 		m.holding = nil
 	}
-	ob.inst.SetActive(ob.input.monkeyRel, false)
+	setInstActive(ob.inst, ob.input.monkeyRel, false)
+	setInstActive(ob.inst, ob.input.gripShadowRel, false)
+	setInstActive(ob.inst, ob.input.endShadowRel, false)
 	m.ctx.Scene.SetActive(m.player, true)
 	if ob.kind == kindGiraffe {
 		m.ctx.Sound("giraffeJump")
@@ -134,6 +137,8 @@ func (m *Module) missObstacle(ob *acrobatObstacle, beat float64) {
 	if m.holding == ob {
 		m.holding = nil
 		m.ctx.Scene.SetActive(m.player, true)
+		setInstActive(ob.inst, ob.input.gripShadowRel, false)
+		setInstActive(ob.inst, ob.input.endShadowRel, false)
 	}
 	m.ctx.Sound("miss")
 	m.playPlayer("PlayerAir", beat)

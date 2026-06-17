@@ -193,3 +193,9 @@ func screenPoint(proj kart.Aff, x, y float64) (float32, float32) {
 	px, py := proj.Apply(x, y)
 	return float32(px), float32(py)
 }
+
+func setInstActive(inst *kart.Instance, rel string, active bool) {
+	if inst != nil && rel != "" {
+		inst.SetActive(rel, active)
+	}
+}

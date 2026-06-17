@@ -90,6 +90,8 @@ func (m *Module) makeInputSpec(root string, c kmdata.Component) inputSpec {
 		monkey:           ref(c.Refs, "_monkey"),
 		holdParticleRel:  relPath(root, ref(c.Refs, "_holdParticle")),
 		sweatParticleRel: relPath(root, ref(c.Refs, "_sweatParticle")),
+		gripShadowRel:    relPath(root, ref(c.Refs, "_gripShadow")),
+		endShadowRel:     relPath(root, ref(c.Refs, "_endShadow")),
 	}
 	in.monkeyRel = relPath(root, in.monkey)
 	return in
@@ -204,6 +206,9 @@ func (m *Module) newObstacle(call animalCall, x float64) *acrobatObstacle {
 	for _, root := range []string{"GiraffeRoot", "FireHoop", "WhiteMonkeysPivot", "TrunkRoot/PlayerMonkey", "GiraffeRoot/PlayerMonkey", "MonkeyPivot/PlayerMonkey", "WhiteMonkeysPivot/WhiteMonkey (3)/PlayerMonkey"} {
 		inst.PlayDefaultState(root, 0, m.ctx.SecPerBeat(0))
 	}
+	setInstActive(inst, in.monkeyRel, false)
+	setInstActive(inst, in.gripShadowRel, true)
+	setInstActive(inst, in.endShadowRel, false)
 	gx, gy := nodePos(m.ctx.Assets, spec.gripPoint)
 	ex, ey := nodePos(m.ctx.Assets, spec.endPoint)
 	return &acrobatObstacle{

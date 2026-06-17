@@ -1036,7 +1036,7 @@ func (r *RigInst) reset() {
 
 // Play 从歌曲时间 t 起播放动画。
 func (r *RigInst) Play(name string, t float64) {
-	if a, ok := r.as.Anims[name]; ok {
+	if a, ok := resolveAnimOnly(r.as, name); ok {
 		r.anim, r.start = a, t
 	}
 }
@@ -1044,7 +1044,7 @@ func (r *RigInst) Play(name string, t float64) {
 // PlayLayer 在 rootPath 子树上叠放一条独立剪辑。旧 Karate Man 的 Head.FaceXX
 // 是同一个 Animator 里的子树播放；若用 Play 会把 Jab/Beat 之类身体动作整条替换掉。
 func (r *RigInst) PlayLayer(key, rootPath, name string, t float64) {
-	a, ok := r.as.Anims[name]
+	a, ok := resolveAnimOnly(r.as, name)
 	if !ok {
 		return
 	}

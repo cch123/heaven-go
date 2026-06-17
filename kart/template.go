@@ -174,7 +174,7 @@ func (in *Instance) findNode(relPath string) (int, bool) {
 // 不能安全内联该 controller 时仍要保留剪辑曲线本身，因此提供 raw clip
 // 路径复刻 Animator.Play/DoScaledAnimation 的采样语义。
 func (in *Instance) Play(relPath, clip string, startBeat, timeScale float64) {
-	anim, ok := in.T.as.Anims[clip]
+	anim, ok := resolveAnimOnly(in.T.as, clip)
 	if !ok {
 		return
 	}
@@ -188,7 +188,7 @@ func (in *Instance) Play(relPath, clip string, startBeat, timeScale float64) {
 // PlayLayer 在实例子树上播放独立曲线层。Unity 允许同一 Animator 的
 // layer 1 命中动画叠在 layer 0 移动动画上，Cannery 的罐头需要这个语义。
 func (in *Instance) PlayLayer(key, relPath, clip string, startBeat, timeScale float64) {
-	anim, ok := in.T.as.Anims[clip]
+	anim, ok := resolveAnimOnly(in.T.as, clip)
 	if !ok {
 		return
 	}
@@ -205,7 +205,7 @@ func (in *Instance) PlayLayer(key, relPath, clip string, startBeat, timeScale fl
 // PlayNormalized 以固定归一化时间采样实例剪辑（SceneInst.PlayNormalized 的
 // prefab-instance 版本）。
 func (in *Instance) PlayNormalized(relPath, clip string, t float64) {
-	anim, ok := in.T.as.Anims[clip]
+	anim, ok := resolveAnimOnly(in.T.as, clip)
 	if !ok {
 		return
 	}
@@ -255,7 +255,7 @@ func (in *Instance) PlayState(relPath, stateName string, startBeat, timeScale fl
 		p.anim = nil
 		return
 	}
-	p.anim = in.T.as.Anims[st.Clip]
+	p.anim, _ = resolveAnimOnly(in.T.as, st.Clip)
 	p.startBeat, p.timeScale = startBeat, timeScale*st.Speed
 }
 
@@ -465,7 +465,7 @@ func (in *Instance) stepMachine(p *instPlayer, beat float64) {
 			p.anim = nil
 			return
 		}
-		p.anim = in.T.as.Anims[dst.Clip]
+		p.anim, _ = resolveAnimOnly(in.T.as, dst.Clip)
 		p.startBeat, p.timeScale = fireBeat, baseTS*dst.Speed
 	}
 }

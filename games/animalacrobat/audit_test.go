@@ -102,6 +102,9 @@ func TestAnimalAcrobatObstacleComponents(t *testing.T) {
 			if spec.holdParticleRel == "" || spec.sweatParticleRel == "" {
 				t.Errorf("%s particle refs were not converted to template-relative paths", root)
 			}
+			if spec.gripShadowRel == "" || spec.endShadowRel == "" {
+				t.Errorf("%s shadow refs were not converted to template-relative paths", root)
+			}
 		}
 	}
 }

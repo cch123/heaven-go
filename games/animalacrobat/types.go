@@ -119,6 +119,8 @@ type inputSpec struct {
 	monkeyRel        string
 	holdParticleRel  string
 	sweatParticleRel string
+	gripShadowRel    string
+	endShadowRel     string
 }
 
 type playerJump struct {

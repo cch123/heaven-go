@@ -76,6 +76,61 @@ func TestTemplateGroupOrderSurvivesAnimatedSortingOrder(t *testing.T) {
 	}
 }
 
+func TestControllerClipFallsBackFromImportedEmptyShell(t *testing.T) {
+	as := &Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}},
+			{Name: "Head", Path: "Root/Head", Parent: 0, Scale: [2]float64{1, 1}, Sprite: "head_idle"},
+		}},
+		Sheet: kmdata.Sheet{PPU: 100, Sprites: map[string]kmdata.SpriteInfo{
+			"head_idle": {W: 1, H: 1, PPU: 100},
+			"head_anim": {W: 1, H: 1, PPU: 100},
+		}},
+		Anims: map[string]*kmdata.Anim{
+			"Animations/Jump": {Duration: 1},
+			"Jump": {
+				Duration: 1,
+				Pos: map[string]kmdata.XYCurve{
+					"Head": {X: []kmdata.Key{{T: 0, V: 2}}},
+				},
+				Sprites: map[string][]kmdata.SwapKey{
+					"Head": {{T: 0, Name: "head_anim"}},
+				},
+			},
+		},
+		Controllers: map[string]kmdata.Controller{
+			"Ctrl": {Default: "Jump", States: map[string]kmdata.CtrlState{
+				"Jump": {Clip: "Animations/Jump", Speed: 1},
+			}},
+		},
+		Animators: kmdata.Animators{"Root": "Ctrl"},
+	}
+
+	scene := NewScene(as)
+	scene.PlayState("Root", "Jump", 0, 1)
+	scene.Sample(0)
+	if got, want := scene.state[1].sprite, "head_anim"; got != want {
+		t.Fatalf("scene resolved sprite = %q, want %q", got, want)
+	}
+	if got, want := scene.state[1].pos[0], 2.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("scene resolved x = %v, want %v", got, want)
+	}
+
+	scene = NewScene(as)
+	inst := NewTemplate(as, "Root").NewInstance()
+	inst.PlayState("", "Jump", 0, 1)
+	inst.Queue(scene, 0, Identity(), 0)
+	if len(scene.queued) != 1 {
+		t.Fatalf("queued sprites = %d, want 1", len(scene.queued))
+	}
+	if got, want := scene.queued[0].Sprite, "head_anim"; got != want {
+		t.Fatalf("template resolved sprite = %q, want %q", got, want)
+	}
+	if got, want := scene.queued[0].World.Tx, 2.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("template resolved x = %v, want %v", got, want)
+	}
+}
+
 func TestTemplateQueuesMeshRendererBinding(t *testing.T) {
 	as := &Assets{
 		Rig: kmdata.Rig{Nodes: []kmdata.Node{

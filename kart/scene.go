@@ -280,7 +280,7 @@ func (s *SceneInst) Play(rootPath, clip string, startBeat, timeScale float64) {
 // （Tunnel 背景 Near/Far 滚动就是这种数据形态）；常规 Play 仍按 rootPath
 // 替换旧播放器，只有确实需要并行曲线时才传入额外 key。
 func (s *SceneInst) PlayLayer(key, rootPath, clip string, startBeat, timeScale float64) {
-	anim, ok := s.as.Anims[clip]
+	anim, resolvedClip, ok := resolveAnim(s.as, clip)
 	if !ok {
 		return
 	}
@@ -292,7 +292,7 @@ func (s *SceneInst) PlayLayer(key, rootPath, clip string, startBeat, timeScale f
 		s.playerOrder = append(s.playerOrder, key)
 	}
 	s.players[key] = &scenePlayer{
-		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: clip,
+		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: resolvedClip,
 		startBeat: startBeat, timeScale: timeScale,
 	}
 }
@@ -308,7 +308,7 @@ func (s *SceneInst) Current(rootPath string) string {
 // PlayNormalized 以 DoNormalizedAnimation 语义播放：固定在归一化时间 t 采样
 // （Unity 等价 Play(name, 0, t) + speed 0，cartGuy 的推车位移用它逐帧驱动）。
 func (s *SceneInst) PlayNormalized(rootPath, clip string, t float64) {
-	anim, ok := s.as.Anims[clip]
+	anim, resolvedClip, ok := resolveAnim(s.as, clip)
 	if !ok {
 		return
 	}
@@ -317,7 +317,7 @@ func (s *SceneInst) PlayNormalized(rootPath, clip string, t float64) {
 		return
 	}
 	s.players[rootPath] = &scenePlayer{
-		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: clip,
+		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: resolvedClip,
 		normalized: true, normT: math.Max(0, math.Min(1, t)),
 	}
 }
@@ -327,7 +327,7 @@ func (s *SceneInst) PlayNormalized(rootPath, clip string, t float64) {
 // frame while the body Animator keeps running on layer 0; using a separate key
 // preserves that composition instead of replacing the base player.
 func (s *SceneInst) PlayLayerNormalized(key, rootPath, clip string, t float64) {
-	anim, ok := s.as.Anims[clip]
+	anim, resolvedClip, ok := resolveAnim(s.as, clip)
 	if !ok {
 		return
 	}
@@ -339,7 +339,7 @@ func (s *SceneInst) PlayLayerNormalized(key, rootPath, clip string, t float64) {
 		s.playerOrder = append(s.playerOrder, key)
 	}
 	s.players[key] = &scenePlayer{
-		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: clip,
+		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: resolvedClip,
 		normalized: true, normT: math.Max(0, math.Min(1, t)),
 	}
 }
@@ -354,7 +354,7 @@ func (s *SceneInst) PlayFrozen(rootPath, stateName string, normT float64) {
 	if !ok || st.Clip == "" {
 		return
 	}
-	anim, ok := s.as.Anims[st.Clip]
+	anim, resolvedClip, ok := resolveAnim(s.as, st.Clip)
 	if !ok {
 		return
 	}
@@ -364,7 +364,7 @@ func (s *SceneInst) PlayFrozen(rootPath, stateName string, normT float64) {
 	}
 	m.state, m.lastT = stateName, 0
 	s.players[rootPath] = &scenePlayer{
-		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: st.Clip,
+		rootIdx: idx, rootPath: rootPath, anim: anim, clipName: resolvedClip,
 		normalized: true, normT: normT,
 	}
 }
