@@ -1,6 +1,7 @@
 package fanclub
 
 import (
+	"math"
 	"strings"
 	"testing"
 
@@ -233,19 +234,72 @@ func TestFanClubFanClapEffectStaysInsideFanSortingGroup(t *testing.T) {
 	fx := fanClubEffects{bursts: []fanClubEffectBurst{{
 		beat: 0, secPerBeat: 0.5, lifetime: fanClubClapLifetimeSec,
 		kind: fanClubEffectFanClap, fan: f, relPath: "Effect_FanCrap",
-		scale: 0.46, order: 34, tint: [4]float64{1, 1, 1, 1},
+		scale: 0.24, order: 32, tint: [4]float64{1, 1, 1, 1},
 	}}}
 
 	fx.queue(m, 0)
 
 	qs := sc.QueuedSpritesForTest()
-	if len(qs) != 1 {
-		t.Fatalf("queued effect sprites = %d, want 1", len(qs))
+	if len(qs) != fanClubFanParticleCount {
+		t.Fatalf("queued effect sprites = %d, want %d", len(qs), fanClubFanParticleCount)
 	}
-	q := qs[0]
-	if !q.HasGroup || q.GroupKey != 77 || q.GroupOrder != 2 || q.Order != 34 {
-		t.Fatalf("fan clap effect sorting metadata = %#v", q)
+	for _, q := range qs {
+		if !q.HasGroup || q.GroupKey != 77 || q.GroupOrder != 2 || q.Order != 32 {
+			t.Fatalf("fan clap effect sorting metadata = %#v", q)
+		}
+		if q.Sprite != fanClubEffectSprite {
+			t.Fatalf("fan clap effect sprite = %q, want %q", q.Sprite, fanClubEffectSprite)
+		}
 	}
+}
+
+func TestFanClubFanClapKeepsHeadVisibleAndOffsetsParticles(t *testing.T) {
+	as := loadAssets(t)
+	tmpl := kart.NewTemplate(as, as.Roles["spectator"])
+	if tmpl == nil {
+		t.Fatal("Fan spectator template not resolved")
+	}
+	inst := tmpl.NewInstance()
+	inst.PlayState("", "FanClap", 0, 0.5)
+	sc := kart.NewScene(as)
+	inst.Queue(sc, 0, kart.Identity(), 0)
+	if !queuedSpritePrefix(sc, "fan_Face") {
+		t.Fatal("FanClap should keep the monkey head sprite visible")
+	}
+
+	f := &fan{inst: inst, groupOrder: 2, groupKey: 77}
+	fx := fanClubEffects{bursts: []fanClubEffectBurst{{
+		beat: 0, secPerBeat: 0.5, lifetime: fanClubClapLifetimeSec,
+		kind: fanClubEffectFanClap, fan: f, relPath: "Effect_FanCrap",
+		scale: 0.24, order: 32, tint: [4]float64{1, 1, 1, 1},
+	}}}
+	sc = kart.NewScene(as)
+	m := &Module{ctx: &engine.Ctx{Assets: as, Scene: sc}}
+	fx.queue(m, 0.45)
+
+	anchor, ok := inst.NodeWorldAt("Effect_FanCrap", kart.Identity(), 0.45)
+	if !ok {
+		t.Fatal("missing Effect_FanCrap particle root")
+	}
+	moved := false
+	for _, q := range sc.QueuedSpritesForTest() {
+		if math.Hypot(q.World.Tx-anchor.Tx, q.World.Ty-anchor.Ty) > 0.05 {
+			moved = true
+			break
+		}
+	}
+	if !moved {
+		t.Fatal("fan clap particles should move away from the particle root instead of staying centered on the head")
+	}
+}
+
+func queuedSpritePrefix(sc *kart.SceneInst, prefix string) bool {
+	for _, q := range sc.QueuedSpritesForTest() {
+		if strings.HasPrefix(q.Sprite, prefix) {
+			return true
+		}
+	}
+	return false
 }
 
 func nodeSet(as *kart.Assets) map[string]bool {
