@@ -58,8 +58,11 @@ func TestLUTShaderUsesSource0CoordinatesForSecondaryImage(t *testing.T) {
 	}
 }
 
-func TestFilterSlotsApplyHighestFirst(t *testing.T) {
-	want := []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
+func TestFilterSlotsApplyUnityComponentOrder(t *testing.T) {
+	// Fan Club Dance starts with slot 1 redder and slot 2 bleach. Unity applies
+	// the AmplifyColor components in creation order, so bleach must process the
+	// already-redder image instead of being overwritten by it.
+	want := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 	if len(filterApplyOrder) != len(want) {
 		t.Fatalf("filterApplyOrder length = %d, want %d", len(filterApplyOrder), len(want))
 	}

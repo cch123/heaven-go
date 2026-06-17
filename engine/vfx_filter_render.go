@@ -11,7 +11,7 @@ type filterSlotState struct {
 	blend float64
 }
 
-var filterApplyOrder = []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
+var filterApplyOrder = []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
 
 // Apply 按 slot 持久语义叠加滤镜（dst 必须是 ScreenW×ScreenH）。
 func (f *filterFX) Apply(dst *ebiten.Image, assetsRoot string, beat float64) {
@@ -22,9 +22,10 @@ func (f *filterFX) Apply(dst *ebiten.Image, assetsRoot string, beat float64) {
 		return
 	}
 	slots := f.activeSlots(beat)
-	// Heaven Studio exposes this as a charting contract: higher slots are
-	// applied first. Fan Club Dance relies on slot 2's bleach happening before
-	// slot 1's redder pass; reversing it washes the whole chart out.
+	// Filter.cs creates the ten AmplifyColorEffect components in slot order and
+	// Unity runs camera image effects in component order. The editor tooltip says
+	// higher slots apply first, but the shipped runtime path applies slot 1 first;
+	// Fan Club Dance depends on its full redder pass being bleached afterwards.
 	for _, slot := range filterApplyOrder {
 		st, ok := slots[slot]
 		if !ok || st.blend <= 0 || st.lut == "" {
