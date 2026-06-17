@@ -167,6 +167,50 @@ func TestMamboMainMaterialExcludesFaceAndDancerHeadInstanceBoundaries(t *testing
 	}
 }
 
+func TestMamboRuntimeMaterialOverridesDoNotHitFacesOrDancerHeads(t *testing.T) {
+	as := loadAssets(t)
+	scene := kart.NewScene(as)
+	m := &Module{
+		ctx:           &engine.Ctx{Assets: as, Scene: scene},
+		mainMat:       "MamboShader",
+		lightMat:      "Lights",
+		floorLightMat: "FloorLights",
+		warioFace:     "WarioJumper/WAAAAAAAA/Face",
+		warioBody:     "WarioJumper/WAAAAAAAA",
+		dancerLHead:   "DancerL/DancerJumper/DancerL/HeadHolder",
+		dancerRHead:   "DancerR/DancerJumper/DancerL/HeadHolder",
+		blueAdd:       [4]float64{0, 0.09, 0.09, 1},
+	}
+	m.applyColors()
+	scene.Sample(0)
+
+	for _, path := range []string{
+		"WarioJumper/WAAAAAAAA/Face/Schnoz",
+		"WarioJumper/WAAAAAAAA/Face/Eyes",
+		"WarioJumper/WAAAAAAAA/Face/Mouth",
+		"DancerL/DancerJumper/DancerL/HeadHolder/Head",
+		"DancerR/DancerJumper/DancerL/HeadHolder/Head",
+	} {
+		st, ok := scene.NodeMaterialStateForTest(path)
+		if !ok {
+			t.Fatalf("missing renderer %s", path)
+		}
+		if st.MatHueShift != 0 || st.MatLinearAdd || st.MatDoodle.Enabled {
+			t.Fatalf("%s received main/stage material override: %#v", path, st)
+		}
+	}
+
+	for _, path := range []string{"Spotlights/SpotlightL", "LightHolderT/Light1"} {
+		st, ok := scene.NodeMaterialStateForTest(path)
+		if !ok {
+			t.Fatalf("missing light renderer %s", path)
+		}
+		if !st.MatLinearAdd || !st.MatDoodle.Enabled {
+			t.Fatalf("%s should keep Wario light material override: %#v", path, st)
+		}
+	}
+}
+
 func TestMamboDoodleMaterialParamsExported(t *testing.T) {
 	as := loadAssets(t)
 	wantNoise := map[string][2]float64{

@@ -107,3 +107,65 @@ func TestTemplateResetSubtreeClearsRuntimeOverrides(t *testing.T) {
 		t.Fatalf("sibling active override changed: got value=%v ok=%v", got, ok)
 	}
 }
+
+func TestTemplateResetSubtreeStopsStaleAnimationPlayers(t *testing.T) {
+	as := &Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}},
+			{Name: "Actor", Path: "Root/Actor", Parent: 0, Scale: [2]float64{1, 1}},
+			{Name: "Head", Path: "Root/Actor/Head", Parent: 1, Scale: [2]float64{1, 1}, Sprite: "head"},
+			{Name: "Body", Path: "Root/Actor/Body", Parent: 1, Scale: [2]float64{1, 1}, Sprite: "body"},
+			{Name: "Other", Path: "Root/Other", Parent: 0, Scale: [2]float64{1, 1}, Sprite: "other"},
+		}},
+		Sheet: kmdata.Sheet{PPU: 100, Sprites: map[string]kmdata.SpriteInfo{
+			"head":  {W: 1, H: 1, PPU: 100},
+			"body":  {W: 1, H: 1, PPU: 100},
+			"other": {W: 1, H: 1, PPU: 100},
+		}},
+		Anims: map[string]*kmdata.Anim{
+			"HideHead": {
+				Duration: 1,
+				Floats: map[string]map[string][]kmdata.Key{
+					"Head": {"m_IsActive": {{T: 0, V: 0}}},
+				},
+			},
+			"HideOther": {
+				Duration: 1,
+				Floats: map[string]map[string][]kmdata.Key{
+					"Other": {"m_IsActive": {{T: 0, V: 0}}},
+				},
+			},
+		},
+	}
+	inst := NewTemplate(as, "Root").NewInstance()
+	inst.Play("Actor", "HideHead", 0, 1)
+	inst.Play("Other", "HideOther", 0, 1)
+
+	scene := NewScene(as)
+	inst.Queue(scene, 0, Identity(), 0)
+	if sawQueuedSprite(scene, "head") {
+		t.Fatal("setup failed: HideHead should hide the actor head")
+	}
+	if sawQueuedSprite(scene, "other") {
+		t.Fatal("setup failed: HideOther should hide the sibling")
+	}
+
+	inst.ResetSubtree("Actor")
+	scene = NewScene(as)
+	inst.Queue(scene, 0, Identity(), 0)
+	if !sawQueuedSprite(scene, "head") {
+		t.Fatal("actor head should be visible after ResetSubtree stops stale players")
+	}
+	if sawQueuedSprite(scene, "other") {
+		t.Fatal("sibling animation player should remain active outside ResetSubtree")
+	}
+}
+
+func sawQueuedSprite(scene *SceneInst, sprite string) bool {
+	for _, q := range scene.queued {
+		if q.Sprite == sprite {
+			return true
+		}
+	}
+	return false
+}

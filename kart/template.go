@@ -331,13 +331,16 @@ func (in *Instance) SetActive(relPath string, active bool) {
 
 // ResetSubtree clears per-instance overrides for a subtree so reactivated
 // prefab actors return to their authored bind pose before a new state clip runs.
+// Animation players are part of that transient state: if a previous grab/miss
+// clip disabled a child renderer, leaving the player alive would reapply the
+// stale m_IsActive curve on the next Queue call.
 func (in *Instance) ResetSubtree(relPath string) {
 	root, ok := in.findNode(relPath)
 	if !ok {
 		return
 	}
 	for ti := range in.T.Nodes {
-		if ti != root && !templateNodeIsDescendant(in.T, ti, root) {
+		if !templateNodeInSubtree(in.T, ti, root) {
 			continue
 		}
 		delete(in.actives, ti)
@@ -349,6 +352,27 @@ func (in *Instance) ResetSubtree(relPath string) {
 		delete(in.rots, ti)
 		delete(in.scales, ti)
 	}
+	for ti := range in.players {
+		if templateNodeInSubtree(in.T, ti, root) {
+			delete(in.players, ti)
+		}
+	}
+	if len(in.layers) > 0 {
+		layerOrder := in.layerOrder[:0]
+		for _, key := range in.layerOrder {
+			p := in.layers[key]
+			if p == nil || templateNodeInSubtree(in.T, p.rootTI, root) {
+				delete(in.layers, key)
+				continue
+			}
+			layerOrder = append(layerOrder, key)
+		}
+		in.layerOrder = layerOrder
+	}
+}
+
+func templateNodeInSubtree(t *Template, ti, root int) bool {
+	return ti == root || templateNodeIsDescendant(t, ti, root)
 }
 
 func templateNodeIsDescendant(t *Template, ti, root int) bool {

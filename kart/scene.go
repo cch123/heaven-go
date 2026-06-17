@@ -828,6 +828,29 @@ func (s *SceneInst) QueuedSpritesForTest() []ExtraSprite {
 	return append([]ExtraSprite(nil), s.queued...)
 }
 
+// MaterialStateForTest is the small part of sceneNodeState needed by
+// cross-package audits that verify Unity material-instance boundaries.
+type MaterialStateForTest struct {
+	MatHueShift  float64
+	MatLinearAdd bool
+	MatDoodle    DoodleParams
+}
+
+// NodeMaterialStateForTest returns the sampled material override state for a
+// scene node. Callers must Sample first, matching NodeWorld/NodeSprite.
+func (s *SceneInst) NodeMaterialStateForTest(path string) (MaterialStateForTest, bool) {
+	i, ok := s.byPath[path]
+	if !ok {
+		return MaterialStateForTest{}, false
+	}
+	st := s.state[i]
+	return MaterialStateForTest{
+		MatHueShift:  st.matHueShift,
+		MatLinearAdd: st.matLinearAdd,
+		MatDoodle:    st.matDoodle,
+	}, true
+}
+
 // ExtraMesh 是模板实例注入的 MeshRenderer 绘制项。
 // Unity 的 Instantiate 会复制 MeshRenderer；场景里的原 prefab 往往保持 inactive，
 // 所以动态实例不能复用 scene node 的 active/render 状态，只能携带采样后的 world/tint。
