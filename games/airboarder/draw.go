@@ -27,7 +27,9 @@ func (m *Module) drawTemporaryForeground(screen *ebiten.Image, beat float64, clo
 	m.drawFloor(screen, beat, floor, stripe)
 	m.drawDog(screen, beat)
 	for _, ob := range m.obstacles {
-		m.drawObstacle(screen, ob, beat)
+		if ob.inst == nil || ob.broken || ob.shake {
+			m.drawObstacle(screen, ob, beat)
+		}
 	}
 	m.drawBoarder(screen, &m.cpu1, beat, color.RGBA{R: 235, G: 70, B: 120, A: 255})
 	m.drawBoarder(screen, &m.cpu2, beat, color.RGBA{R: 80, G: 170, B: 245, A: 255})

@@ -156,16 +156,19 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   已入库；提取器已把 imported model prefab 内部 renderer override 合成为
   10 个官方 MeshRenderer/SkinnedMeshRenderer 绑定，并导出 arch/wall/airboy/
   cloud/sky 的 FBX Geometry 与材质贴图。原版主体是 MeshRenderer/材质贴图的
-  3D 场景，当前运行时仍暂用手写 2D billboard 渲染角色/障碍；fallback
-  地面滚动已按官方 `floor_model/move` 的 5 拍循环和提取曲线位移对齐；
+  3D 场景，当前运行时仍暂用手写 2D billboard 渲染角色；普通 arch/wall
+  障碍已改为官方模板实例 + MeshRenderer 绘制，并按 `GetPositionFromBeat
+  (appearBeat, 40f)` 冻结采样 `move` state；shake/break 因官方资源目前是
+  单个合并 MeshRenderer，子骨架变形尚未作用到 mesh，命中反馈仍保留临时
+  2D overlay；fallback 地面滚动已按官方 `floor_model/move` 的 5 拍循环和提取曲线位移对齐；
   `ColorUpdate` 的 `bgMaterial`/`fadeMaterial`/`cloudMaterial` `_Color`
   与 `floorMaterial` `_BlueColor`/`_RedColor` 已按官方材质名同步到 scene；
   玩家/CPU 的 `bop`/`duck`/`charge`/`hold`/`jump`/`hit`/`letsgo` 已同步驱动
   官方 `airboy` Animator state，并在短动作结束后回到 `hover`；
   `camera` 事件的 last/next 链式插值、additive Y 旋转、pivot 参数与 X/Y/zoom
   已按 Airboarder.cs 折叠并作用到当前 scene camera；运行时已支持多 Geometry
-  imported FBX 按 fileID/FBXID 精确匹配，Airboarder 还待把 skinned 角色/障碍
-  的官方 mesh 绑定替换掉临时 billboard，并补齐材质滚动的完整支持。
+  imported FBX 按 fileID/FBXID 精确匹配，Airboarder 还待把 skinned 角色
+  和 arch/wall 子骨架 hit 变形接到官方 mesh，并补齐材质滚动的完整支持。
 - animalAcrobat：动物队列、障碍旋转/hold 判定、起跳/落地、背景颜色、
   Spotlight/Confetti、BGTileManager 双 tile 回收，以及 AnimalAcrobat.CameraUpdate
   的逐动物 hold/release/长颈鹿 zoom 相机流程已接入；PlayerAcrobat 的

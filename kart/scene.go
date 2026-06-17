@@ -1061,6 +1061,13 @@ type ExtraMesh struct {
 // QueueMesh 注入一帧动态 MeshRenderer 绘制项（Draw 后清空，每帧重新注入）。
 func (s *SceneInst) QueueMesh(e ExtraMesh) { s.queuedMeshes = append(s.queuedMeshes, e) }
 
+// QueuedMeshesForTest returns pending dynamic MeshRenderer items for audits.
+// Production code should queue and draw through SceneInst rather than depending
+// on this transient per-frame buffer.
+func (s *SceneInst) QueuedMeshesForTest() []ExtraMesh {
+	return append([]ExtraMesh(nil), s.queuedMeshes...)
+}
+
 // Sample 按歌曲节拍采样所有播放器并更新世界变换。
 func (s *SceneInst) Sample(beat float64) {
 	s.stepMachines(beat)

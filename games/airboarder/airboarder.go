@@ -85,6 +85,7 @@ type obstacle struct {
 	broken     bool
 	shake      bool
 	effectBeat float64
+	inst       *kart.Instance
 }
 
 type Module struct {
@@ -111,6 +112,8 @@ type Module struct {
 	fadeMat        string
 	floorMat       string
 	cloudMat       string
+	archT          *kart.Template
+	wallT          *kart.Template
 }
 
 func New() engine.Module { return &Module{} }
@@ -130,6 +133,8 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.fadeMat = materialRef(game.Refs, "fadeMaterial", "fade")
 	m.floorMat = materialRef(game.Refs, "floorMaterial", "floorspecular")
 	m.cloudMat = materialRef(game.Refs, "cloudMaterial", "clouds")
+	m.archT = kart.NewTemplate(ctx.Assets, ctx.Role("archBasic"))
+	m.wallT = kart.NewTemplate(ctx.Assets, ctx.Role("wallBasic"))
 	m.resetBoarders(0)
 
 	// Static imported MeshRenderers are drawn by SceneInst; playing the
@@ -254,6 +259,7 @@ func (m *Module) Draw(screen *ebiten.Image, _ float64, beat float64) {
 		m.ctx.Scene.SetCamera(cam[0]+camState.x, cam[1]+camState.y, cam[2]+cameraZoomAdd(camState.zoom))
 		m.applyOfficialSceneMaterials(beat)
 		m.ctx.Scene.Sample(beat)
+		m.queueOfficialObstacles(beat)
 		m.ctx.Scene.Draw(screen, m.proj)
 	}
 	m.drawTemporaryForeground(screen, beat, rgba(cloud), rgba(floor), rgba(stripe))
@@ -298,6 +304,27 @@ func (m *Module) sampleSceneAnimations(beat float64) {
 	if p := m.ctx.Role("Dog"); p != "" {
 		m.ctx.Scene.PlayNormalized(p, "Animations/dog/run", math.Mod(u*7.5, 1))
 		m.ctx.Scene.PlayLayerNormalized(p+":wag", p, "Animations/dog/wag", math.Mod(u*2.5, 1))
+	}
+}
+
+func (m *Module) queueOfficialObstacles(beat float64) {
+	if m.ctx == nil || m.ctx.Scene == nil {
+		return
+	}
+	for _, ob := range m.obstacles {
+		if ob == nil || ob.inst == nil {
+			continue
+		}
+		u := (beat - ob.appearBeat) / 40
+		if u < -0.02 || u > 1.05 {
+			continue
+		}
+		// Arch.Update/Wall.Update drive layer 0 with
+		// DoNormalizedAnimation("move", GetPositionFromBeat(appearBeat, 40f)).
+		// Keeping this as a frozen normalized state lets layer 1 hit effects
+		// continue to overlay shake/break independently.
+		ob.inst.PlayFrozen("", "move", clamp01(u))
+		ob.inst.Queue(m.ctx.Scene, beat, kart.Identity(), 0)
 	}
 }
 

@@ -263,6 +263,51 @@ func TestAirboarderBoarderActionsDriveOfficialAnimator(t *testing.T) {
 	}
 }
 
+func TestAirboarderOfficialObstacleTemplatesQueueMeshes(t *testing.T) {
+	root := filepath.Join("..", "..", "assets", "airboarder")
+	as, err := kart.Load(root, engine.SampleRate)
+	if err != nil {
+		t.Fatal(err)
+	}
+	scene := kart.NewScene(as)
+	m := &Module{
+		ctx:   &engine.Ctx{Assets: as, Scene: scene},
+		archT: kart.NewTemplate(as, as.Roles["archBasic"]),
+		wallT: kart.NewTemplate(as, as.Roles["wallBasic"]),
+	}
+	if m.archT == nil || m.wallT == nil {
+		t.Fatalf("missing official obstacle templates: arch=%v wall=%v", m.archT != nil, m.wallT != nil)
+	}
+
+	arch := &obstacle{kind: obstacleDuck, appearBeat: 0, targetBeat: 25, inst: m.newObstacleInstance(obstacleDuck)}
+	wall := &obstacle{kind: obstacleJump, appearBeat: 0, targetBeat: 25, inst: m.newObstacleInstance(obstacleJump)}
+	m.obstacles = []*obstacle{arch, wall}
+	scene.Sample(10)
+	m.queueOfficialObstacles(10)
+
+	queued := scene.QueuedMeshesForTest()
+	if len(queued) < 2 {
+		t.Fatalf("queued official obstacle meshes = %d, want arch and wall mesh items", len(queued))
+	}
+	seen := map[string]bool{}
+	for _, q := range queued {
+		if q.Binding >= 0 && q.Binding < len(as.Meshes.Bindings) {
+			seen[as.Meshes.Bindings[q.Binding].Path] = true
+		}
+	}
+	for _, path := range []string{"Environment/ArchFinePosition/Arch", "Environment/WallFinePosition/Wall"} {
+		if !seen[path] {
+			t.Fatalf("queued mesh paths = %#v, missing %s", seen, path)
+		}
+	}
+	if got := arch.inst.CurrentState(""); got != "move" {
+		t.Fatalf("arch state = %q, want move", got)
+	}
+	if got := wall.inst.CurrentState(""); got != "move" {
+		t.Fatalf("wall state = %q, want move", got)
+	}
+}
+
 func TestAirboarderFloorFallbackUsesExtractedMoveClip(t *testing.T) {
 	var anims map[string]*kmdata.Anim
 	readJSON(t, filepath.Join("..", "..", "assets", "airboarder", "anims.json"), &anims)

@@ -1,6 +1,9 @@
 package airboarder
 
-import "hsdemo/engine"
+import (
+	"hsdemo/engine"
+	"hsdemo/kart"
+)
 
 func (m *Module) prepareJump(beat float64, readySound bool) {
 	if readySound {
@@ -10,6 +13,7 @@ func (m *Module) prepareJump(beat float64, readySound bool) {
 
 func (m *Module) requestObstacle(appearBeat, targetBeat float64, kind int) {
 	ob := &obstacle{kind: kind, appearBeat: appearBeat, targetBeat: targetBeat}
+	ob.inst = m.newObstacleInstance(kind)
 	m.obstacles = append(m.obstacles, ob)
 	switch kind {
 	case obstacleDuck:
@@ -104,6 +108,7 @@ func (m *Module) duckSuccess(ob *obstacle, beat, state float64) {
 	if barely(state) {
 		ob.shake = true
 		ob.effectBeat = beat
+		m.playObstacleEffect(ob, "shake", beat)
 		m.ctx.Sound("barely")
 		m.ctx.Sound("barelyvox")
 		return
@@ -116,6 +121,7 @@ func (m *Module) duckMiss(ob *obstacle, beat float64) {
 	m.playBoarder(&m.player, poseHit1, beat, 1.5)
 	ob.broken = true
 	ob.effectBeat = beat
+	m.playObstacleEffect(ob, "break", beat)
 	m.missSound(beat)
 	m.player.cantBop = true
 	m.player.cantUntil = beat + 1.5
@@ -127,6 +133,7 @@ func (m *Module) crouchSuccess(ob *obstacle, beat, state float64) {
 	if barely(state) {
 		ob.shake = true
 		ob.effectBeat = beat
+		m.playObstacleEffect(ob, "shake", beat)
 		m.ctx.Sound("barely")
 		m.ctx.Sound("barelyvox")
 		return
@@ -140,6 +147,7 @@ func (m *Module) crouchMiss(ob *obstacle, beat float64) {
 	m.playBoarder(&m.player, poseHit1, beat, 1.5)
 	ob.broken = true
 	ob.effectBeat = beat
+	m.playObstacleEffect(ob, "break", beat)
 	m.missSound(beat)
 	m.player.cantBop = true
 	m.player.cantUntil = beat + 1.5
@@ -150,6 +158,7 @@ func (m *Module) jumpSuccess(ob *obstacle, beat, state float64) {
 	if barely(state) {
 		ob.shake = true
 		ob.effectBeat = beat
+		m.playObstacleEffect(ob, "shake", beat)
 		m.ctx.Sound("barely")
 		m.ctx.Sound("barelyvox")
 	} else {
@@ -167,6 +176,7 @@ func (m *Module) jumpMiss(ob *obstacle, beat float64) {
 	m.playBoarder(&m.player, poseHit2, beat, 1.5)
 	ob.broken = true
 	ob.effectBeat = beat
+	m.playObstacleEffect(ob, "break", beat)
 	m.missSound(beat)
 	m.player.cantUntil = beat + 1.5
 }
@@ -280,3 +290,28 @@ func (m *Module) missSound(beat float64) {
 }
 
 func barely(state float64) bool { return state >= 1 || state <= -1 }
+
+func (m *Module) newObstacleInstance(kind int) *kart.Instance {
+	var tmpl *kart.Template
+	switch kind {
+	case obstacleJump:
+		tmpl = m.wallT
+	default:
+		tmpl = m.archT
+	}
+	if tmpl == nil {
+		return nil
+	}
+	inst := tmpl.NewInstance()
+	inst.PlayDefaultState("", 0, m.secPerBeat(0))
+	return inst
+}
+
+func (m *Module) playObstacleEffect(ob *obstacle, state string, beat float64) {
+	if ob == nil || ob.inst == nil {
+		return
+	}
+	// Arch.cs/Wall.cs play shake/break on animator layer 1 while layer 0 keeps
+	// the approach movement frozen at GetPositionFromBeat(appearBeat, 40f).
+	ob.inst.PlayStateLayer("effect", "", state, beat, 1)
+}
