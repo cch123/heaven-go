@@ -108,7 +108,11 @@ type SceneInst struct {
 	cam    [3]float64 // 相机世界位置（vfx/move camera），默认 (0,0,-10)
 	camFOV float64    // 纵向 FOV，0 表示使用 GameCamera 默认 FOV
 	camYaw float64    // 绕世界 y 轴的相机 orbit yaw（弧度），BuiltToScaleDS cameraPivot
-	hasCam bool
+	camRight,
+	camUp,
+	camForward [3]float64 // 相机 local axes in world space
+	hasCam      bool
+	hasCamBasis bool
 
 	palette  Palette            // 映射材质默认调色板（单材质游戏）
 	palettes map[string]Palette // 按材质名（Node.Mat）覆盖（多材质游戏）
@@ -150,11 +154,25 @@ func (s *SceneInst) SetCameraFOV(deg float64) {
 // such as Built to Scale DS serialize cameraPivot.rotation.y and need per-vertex
 // projection instead of a final screen-space rotation.
 func (s *SceneInst) SetCameraYaw(deg float64) {
+	s.hasCamBasis = false
 	if math.IsNaN(deg) || math.IsInf(deg, 0) {
 		s.camYaw = 0
 		return
 	}
 	s.camYaw = deg * math.Pi / 180
+}
+
+// SetCameraQuat sets a full 3D camera pose. q is a Unity-style local-to-world
+// quaternion (x,y,z,w), with local +z as camera forward. It is used by mesh
+// games whose authored CameraPos has pitch/roll as well as orbit yaw.
+func (s *SceneInst) SetCameraQuat(x, y, z float64, q [4]float64) {
+	q = normalizeQuat(q)
+	s.cam, s.hasCam = [3]float64{x, y, z}, true
+	s.camYaw = 0
+	s.camRight = quatRotateVec(q, [3]float64{1, 0, 0})
+	s.camUp = quatRotateVec(q, [3]float64{0, 1, 0})
+	s.camForward = quatRotateVec(q, [3]float64{0, 0, 1})
+	s.hasCamBasis = true
 }
 
 // SetPalette 设置映射材质（CellAnime_MappedInvert）的默认调色板（recolor 事件）。
@@ -201,6 +219,9 @@ func (s *SceneInst) paletteForNode(i int) Palette {
 
 // camView 返回节点深度 z 处的视图变换（含相机平移与透视缩放）；ok=false 表示在相机背后。
 func (s *SceneInst) camView(z float64) (Aff, bool) {
+	if s.hasCamBasis {
+		return s.camViewBasis(z)
+	}
 	if s.camYaw != 0 {
 		return s.camViewYaw(z)
 	}
@@ -244,8 +265,38 @@ func (s *SceneInst) camViewYaw(z float64) (Aff, bool) {
 	return Scale(ps, ps).Mul(Aff{A: cs, D: 1, Tx: tx, Ty: ty}), true
 }
 
+func (s *SceneInst) camViewBasis(z float64) (Aff, bool) {
+	x0, y0, _, ok := s.projectPoint(0, 0, z)
+	if !ok {
+		return Identity(), false
+	}
+	x1, y1, _, ok := s.projectPoint(1, 0, z)
+	if !ok {
+		return Identity(), false
+	}
+	x2, y2, _, ok := s.projectPoint(0, 1, z)
+	if !ok {
+		return Identity(), false
+	}
+	// A fixed-z plane under a pitched perspective camera is technically
+	// projective. SpriteRenderer paths are small billboards, so this local affine
+	// keeps them usable while MeshRenderer paths use exact per-vertex projection.
+	return Aff{A: x1 - x0, B: y1 - y0, C: x2 - x0, D: y2 - y0, Tx: x0, Ty: y0}, true
+}
+
 func (s *SceneInst) projectPoint(x, y, z float64) (float64, float64, float64, bool) {
 	focal := CameraFocalDistance(s.camFOV)
+	if s.hasCamBasis {
+		rel := [3]float64{x - s.cam[0], y - s.cam[1], z - s.cam[2]}
+		vx := dot3(rel, s.camRight)
+		vy := dot3(rel, s.camUp)
+		vz := dot3(rel, s.camForward)
+		if vz <= 0 {
+			return 0, 0, 0, false
+		}
+		ps := focal / vz
+		return vx * ps, vy * ps, ps, true
+	}
 	if s.camYaw != 0 {
 		sn, cs := math.Sin(s.camYaw), math.Cos(s.camYaw)
 		x, z = cs*x-sn*z, sn*x+cs*z
@@ -266,12 +317,39 @@ func (s *SceneInst) projectPoint(x, y, z float64) (float64, float64, float64, bo
 	return (x - s.cam[0]) * ps, (y - s.cam[1]) * ps, ps, true
 }
 
-func (s *SceneInst) cameraSortZ(x, z float64) float64 {
+func (s *SceneInst) cameraSortZ(x, y, z float64) float64 {
+	if s.hasCamBasis {
+		rel := [3]float64{x - s.cam[0], y - s.cam[1], z - s.cam[2]}
+		return dot3(rel, s.camForward)
+	}
 	if s.camYaw == 0 {
 		return z
 	}
 	sn, cs := math.Sin(s.camYaw), math.Cos(s.camYaw)
 	return sn*x + cs*z
+}
+
+func normalizeQuat(q [4]float64) [4]float64 {
+	n := math.Sqrt(q[0]*q[0] + q[1]*q[1] + q[2]*q[2] + q[3]*q[3])
+	if n <= 0 || math.IsNaN(n) || math.IsInf(n, 0) {
+		return [4]float64{0, 0, 0, 1}
+	}
+	return [4]float64{q[0] / n, q[1] / n, q[2] / n, q[3] / n}
+}
+
+func quatRotateVec(q [4]float64, v [3]float64) [3]float64 {
+	cx := q[1]*v[2] - q[2]*v[1] + q[3]*v[0]
+	cy := q[2]*v[0] - q[0]*v[2] + q[3]*v[1]
+	cz := q[0]*v[1] - q[1]*v[0] + q[3]*v[2]
+	return [3]float64{
+		v[0] + 2*(q[1]*cz-q[2]*cy),
+		v[1] + 2*(q[2]*cx-q[0]*cz),
+		v[2] + 2*(q[0]*cy-q[1]*cx),
+	}
+}
+
+func dot3(a, b [3]float64) float64 {
+	return a[0]*b[0] + a[1]*b[1] + a[2]*b[2]
 }
 
 func NewScene(as *Assets) *SceneInst {
@@ -1327,10 +1405,10 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if s.as.Rig.Nodes[i].Mask {
 			continue
 		}
-		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.cameraSortZ(s.world[i].Tx, s.worldZ[i]), extra: -1, extraMesh: -1, mesh: -1}
+		it := item{idx: i, layer: s.as.Rig.Nodes[i].Layer, order: st.order, z: s.cameraSortZ(s.world[i].Tx, s.world[i].Ty, s.worldZ[i]), extra: -1, extraMesh: -1, mesh: -1}
 		if g := s.groupOf[i]; g >= 0 {
 			sg := s.as.Rig.Nodes[g].SortGroup
-			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.cameraSortZ(s.world[g].Tx, s.worldZ[g])
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.cameraSortZ(s.world[g].Tx, s.world[g].Ty, s.worldZ[g])
 		} else {
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = i, it.layer, it.order, it.z
 		}
@@ -1345,10 +1423,10 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if s.state[i].order != s.as.Rig.Nodes[i].Order {
 			order = s.state[i].order
 		}
-		it := item{idx: i, layer: b.Layer, order: order, z: s.cameraSortZ(s.world[i].Tx, s.worldZ[i]), extra: -1, extraMesh: -1, mesh: mi}
+		it := item{idx: i, layer: b.Layer, order: order, z: s.cameraSortZ(s.world[i].Tx, s.world[i].Ty, s.worldZ[i]), extra: -1, extraMesh: -1, mesh: mi}
 		if g := s.groupOf[i]; g >= 0 {
 			sg := s.as.Rig.Nodes[g].SortGroup
-			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.cameraSortZ(s.world[g].Tx, s.worldZ[g])
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = g, sg[0], sg[1], s.cameraSortZ(s.world[g].Tx, s.world[g].Ty, s.worldZ[g])
 		} else {
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = i, it.layer, it.order, it.z
 		}
@@ -1368,9 +1446,9 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if q.Tint != [4]float64{} && q.Tint[3] <= 0 {
 			continue
 		}
-		it := item{idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: s.cameraSortZ(q.World.Tx, q.Z), extra: qi, extraMesh: -1, mesh: -1}
+		it := item{idx: len(s.state) + qi, layer: q.Layer, order: q.Order, z: s.cameraSortZ(q.World.Tx, q.World.Ty, q.Z), extra: qi, extraMesh: -1, mesh: -1}
 		if q.HasGroup {
-			it.gIdx, it.gLayer, it.gOrder, it.gZ = q.GroupKey, q.GroupLayer, q.GroupOrder, s.cameraSortZ(q.World.Tx, q.GroupZ)
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = q.GroupKey, q.GroupLayer, q.GroupOrder, s.cameraSortZ(q.World.Tx, q.World.Ty, q.GroupZ)
 		} else {
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, it.z
 		}
@@ -1381,9 +1459,9 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		if !s.meshRenderable(q.Binding) || q.Tint[3] <= 0 {
 			continue
 		}
-		it := item{idx: len(s.state) + len(s.queued) + qi, layer: q.Layer, order: q.Order, z: s.cameraSortZ(q.World.Tx, q.Z), extra: -1, extraMesh: qi, mesh: -1}
+		it := item{idx: len(s.state) + len(s.queued) + qi, layer: q.Layer, order: q.Order, z: s.cameraSortZ(q.World.Tx, q.World.Ty, q.Z), extra: -1, extraMesh: qi, mesh: -1}
 		if q.HasGroup {
-			it.gIdx, it.gLayer, it.gOrder, it.gZ = q.GroupKey, q.GroupLayer, q.GroupOrder, s.cameraSortZ(q.World.Tx, q.GroupZ)
+			it.gIdx, it.gLayer, it.gOrder, it.gZ = q.GroupKey, q.GroupLayer, q.GroupOrder, s.cameraSortZ(q.World.Tx, q.World.Ty, q.GroupZ)
 		} else {
 			it.gIdx, it.gLayer, it.gOrder, it.gZ = it.idx, q.Layer, q.Order, it.z
 		}
@@ -1497,7 +1575,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		if it.extraMesh >= 0 {
 			q := &s.queuedMeshes[it.extraMesh]
-			if s.camYaw != 0 {
+			if s.hasCamBasis || s.camYaw != 0 {
 				s.drawMeshBindingProjected(dst, q.Binding, q.World, q.Z, proj, q.Tint)
 				continue
 			}
@@ -1510,7 +1588,7 @@ func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 		}
 		if it.mesh >= 0 {
 			i := it.idx
-			if s.camYaw != 0 {
+			if s.hasCamBasis || s.camYaw != 0 {
 				s.drawMeshBindingProjected(dst, it.mesh, s.world[i], s.worldZ[i], proj, s.meshTint(i, &s.as.Meshes.Bindings[it.mesh]))
 				continue
 			}

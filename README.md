@@ -126,9 +126,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   共享材质颜色事件、Belt `_MainTex` offset 滚动，并通过模板实例队列驱动
   movingBlocks/flyingRod/hitParts/missParts 官方 MeshRenderer prefab；手写 2D
   视觉 fallback 已移除，camera 事件按 Unity 的每次 switch 重置语义折叠，
-  FOV 已接入 `SceneInst` 透视缩放；cameraPivot 的 y 轴 yaw 已接入
-  `SceneInst` 逐顶点 MeshRenderer 投影，不再用屏幕平面旋转代替；
-  后续仍需补完整 CameraPos 位置/俯仰与官方相机姿态；
+  FOV、cameraPivot 的 y 轴 yaw、CameraPos 的位置/四元数姿态已接入
+  `SceneInst` 相机 pose 与逐顶点 MeshRenderer 投影，不再用屏幕平面旋转
+  或 2D 缩放代替官方相机；
   Piano 的 `SetLoopParams(beat+length, 0.1f)`
   持续尾音和淡出已接入。
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/

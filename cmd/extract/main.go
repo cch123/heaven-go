@@ -386,6 +386,10 @@ func quatRotate(qx, qy, qz, qw float64, v [3]float64) [3]float64 {
 	}
 }
 
+func hasOutOfPlaneRotation(q [4]float64) bool {
+	return math.Abs(q[0]) > 1e-9 || math.Abs(q[1]) > 1e-9
+}
+
 // transformPoint3D 等价 Unity Transform.TransformPoint：完整三维
 // 缩放→旋转→平移沿 m_Father 链合成（曲线 Point 的父链带三维旋转，
 // 2D 仿射 + z 直加会让 z 混入 x/y 的分量丢失）。

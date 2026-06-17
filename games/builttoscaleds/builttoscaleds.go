@@ -120,6 +120,8 @@ type Module struct {
 	beltMat      string
 	beltSpeed    float64
 	cameraFOV    float64
+	cameraPivot  string
+	cameraPos    string
 	switchBeat   float64
 	firstLights  []string
 	secondLights []string
@@ -167,6 +169,8 @@ func (m *Module) loadMaterialRefs() {
 		m.beltSpeed = v
 	}
 	m.cameraFOV = game.Nums["cameraFoV"]
+	m.cameraPivot = m.ctx.Role("cameraPivot")
+	m.cameraPos = m.ctx.Role("camPos")
 	m.firstLights = append([]string(nil), game.RefArrays["firstPatternLights"]...)
 	m.secondLights = append([]string(nil), game.RefArrays["secondPatternLights"]...)
 }
@@ -516,11 +520,52 @@ func (m *Module) hideDynamicMeshPrefabs() {
 func (m *Module) drawOfficialMeshScene(screen *ebiten.Image, env [4]float64, rot, zoom, beat, songTime float64) {
 	m.applyMeshMaterials(env, beat, songTime)
 	m.ctx.Scene.SetCameraFOV(m.cameraFOV)
-	m.ctx.Scene.SetCameraYaw(rot)
+	if pos, q, ok := m.cameraPose(rot, zoom); ok {
+		m.ctx.Scene.SetCameraQuat(pos[0], pos[1], pos[2], q)
+	} else {
+		m.ctx.Scene.SetCameraYaw(rot)
+	}
 	m.ctx.SampleScene(beat)
 	m.queueOfficialDynamicMeshes(beat)
-	proj := m.proj.Mul(kart.Scale(zoom, zoom))
-	m.ctx.Scene.Draw(screen, proj)
+	m.ctx.Scene.Draw(screen, m.proj)
+}
+
+func (m *Module) cameraPose(rotDeg, zoom float64) ([3]float64, [4]float64, bool) {
+	if m.ctx == nil || m.ctx.Assets == nil || m.cameraPivot == "" || m.cameraPos == "" {
+		return [3]float64{}, [4]float64{}, false
+	}
+	pi, ok := m.ctx.Assets.NodeIndex(m.cameraPivot)
+	if !ok {
+		return [3]float64{}, [4]float64{}, false
+	}
+	ci, ok := m.ctx.Assets.NodeIndex(m.cameraPos)
+	if !ok {
+		return [3]float64{}, [4]float64{}, false
+	}
+	pivot := m.ctx.Assets.Rig.Nodes[pi]
+	cam := m.ctx.Assets.Rig.Nodes[ci]
+	if zoom <= 0 || math.IsNaN(zoom) || math.IsInf(zoom, 0) {
+		zoom = 1
+	}
+	yaw := quatFromYaw(rotDeg * math.Pi / 180)
+	local := [3]float64{cam.Pos[0] * zoom, cam.Pos[1] * zoom, cam.PosZ * zoom}
+	offset := quatRotate(yaw, local)
+	worldPos := [3]float64{
+		pivot.Pos[0] + offset[0],
+		pivot.Pos[1] + offset[1],
+		pivot.PosZ + offset[2],
+	}
+	localQ := nodeQuatOrZ(cam.Quat, cam.RotZ)
+	worldQ := quatNormalize(quatMul(yaw, localQ))
+	forward := quatRotate(worldQ, [3]float64{0, 0, 1})
+	// BuiltToScaleDS.cs sets GameCamera.AdditionalPosition to
+	// camPos.position + camPos.forward*10 every frame. Applying the same offset
+	// keeps CameraPos pitch/yaw authoritative instead of treating rot as a 2D
+	// screen-space spin.
+	worldPos[0] += forward[0] * kart.CamDist
+	worldPos[1] += forward[1] * kart.CamDist
+	worldPos[2] += forward[2] * kart.CamDist
+	return worldPos, worldQ, true
 }
 
 func (m *Module) applyMeshMaterials(env [4]float64, beat, songTime float64) {
@@ -674,6 +719,50 @@ func laneY() float64    { return 348 }
 func shooterX() float64 { return 750 }
 
 func semitonePitch(semitone int) float64 { return math.Exp2(float64(semitone) / 12) }
+
+func nodeQuatOrZ(q []float64, rotZ float64) [4]float64 {
+	if len(q) >= 4 {
+		return quatNormalize([4]float64{q[0], q[1], q[2], q[3]})
+	}
+	return quatFromZ(rotZ)
+}
+
+func quatFromYaw(rad float64) [4]float64 {
+	return [4]float64{0, math.Sin(rad / 2), 0, math.Cos(rad / 2)}
+}
+
+func quatFromZ(rad float64) [4]float64 {
+	return [4]float64{0, 0, math.Sin(rad / 2), math.Cos(rad / 2)}
+}
+
+func quatNormalize(q [4]float64) [4]float64 {
+	n := math.Sqrt(q[0]*q[0] + q[1]*q[1] + q[2]*q[2] + q[3]*q[3])
+	if n <= 0 || math.IsNaN(n) || math.IsInf(n, 0) {
+		return [4]float64{0, 0, 0, 1}
+	}
+	return [4]float64{q[0] / n, q[1] / n, q[2] / n, q[3] / n}
+}
+
+func quatMul(a, b [4]float64) [4]float64 {
+	return [4]float64{
+		a[3]*b[0] + a[0]*b[3] + a[1]*b[2] - a[2]*b[1],
+		a[3]*b[1] - a[0]*b[2] + a[1]*b[3] + a[2]*b[0],
+		a[3]*b[2] + a[0]*b[1] - a[1]*b[0] + a[2]*b[3],
+		a[3]*b[3] - a[0]*b[0] - a[1]*b[1] - a[2]*b[2],
+	}
+}
+
+func quatRotate(q [4]float64, v [3]float64) [3]float64 {
+	q = quatNormalize(q)
+	cx := q[1]*v[2] - q[2]*v[1] + q[3]*v[0]
+	cy := q[2]*v[0] - q[0]*v[2] + q[3]*v[1]
+	cz := q[0]*v[1] - q[1]*v[0] + q[3]*v[2]
+	return [3]float64{
+		v[0] + 2*(q[1]*cz-q[2]*cy),
+		v[1] + 2*(q[2]*cx-q[0]*cz),
+		v[2] + 2*(q[0]*cy-q[1]*cx),
+	}
+}
 
 func colorParam(e *riq.Entity, key string, def [4]float64) [4]float64 {
 	v, ok := e.Data[key]

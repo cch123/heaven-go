@@ -1661,21 +1661,27 @@ func exportScene(spec sceneSpec, idx *prefabIndex, tables map[string]*spriteTabl
 		if ap, ok := tf["m_AnchoredPosition"]; ok {
 			pos = [2]float64{uy.F(uy.Get(uy.M(ap), "x")), uy.F(uy.Get(uy.M(ap), "y"))}
 		}
+		q := [4]float64{
+			uy.F(uy.Get(tf, "m_LocalRotation", "x")),
+			uy.F(uy.Get(tf, "m_LocalRotation", "y")),
+			uy.F(uy.Get(tf, "m_LocalRotation", "z")),
+			uy.F(uy.Get(tf, "m_LocalRotation", "w")),
+		}
 		n := kmdata.Node{
 			Name:   idx.goName[gid],
 			Path:   path,
 			Parent: parent,
 			Pos:    pos,
 			PosZ:   uy.F(uy.Get(tf, "m_LocalPosition", "z")),
-			RotZ: quatToZ(
-				uy.F(uy.Get(tf, "m_LocalRotation", "z")),
-				uy.F(uy.Get(tf, "m_LocalRotation", "w")),
-			),
+			RotZ:   quatToZ(q[2], q[3]),
 			Scale: [2]float64{
 				uy.F(uy.Get(tf, "m_LocalScale", "x")),
 				uy.F(uy.Get(tf, "m_LocalScale", "y")),
 			},
 			Inactive: !idx.goActive[gid],
+		}
+		if hasOutOfPlaneRotation(q) {
+			n.Quat = append([]float64(nil), q[:]...)
 		}
 		n.SortGroup = idx.groupByGO[gid]
 		if r := idx.rendByGO[gid]; r != nil {
