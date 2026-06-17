@@ -192,14 +192,15 @@ type Module struct {
 	ctx  *engine.Ctx
 	proj kart.Aff
 
-	player       string
-	playerShadow string
-	shadowScale  [2]float64
-	spotlight    string
-	partyPoppers string
-	bgTileA      string
-	bgTileB      string
-	bgTiles      bgTileRuntime
+	player          string
+	playerShadow    string
+	shadowScale     [2]float64
+	shadowForcedOff bool
+	spotlight       string
+	partyPoppers    string
+	bgTileA         string
+	bgTileB         string
+	bgTiles         bgTileRuntime
 
 	playerNums map[string]float64
 	gameNums   map[string]float64

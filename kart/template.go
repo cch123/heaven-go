@@ -329,6 +329,37 @@ func (in *Instance) SetActive(relPath string, active bool) {
 	}
 }
 
+// ResetSubtree clears per-instance overrides for a subtree so reactivated
+// prefab actors return to their authored bind pose before a new state clip runs.
+func (in *Instance) ResetSubtree(relPath string) {
+	root, ok := in.findNode(relPath)
+	if !ok {
+		return
+	}
+	for ti := range in.T.Nodes {
+		if ti != root && !templateNodeIsDescendant(in.T, ti, root) {
+			continue
+		}
+		delete(in.actives, ti)
+		delete(in.sprites, ti)
+		delete(in.colors, ti)
+		delete(in.matAdd, ti)
+		delete(in.orders, ti)
+		delete(in.pos, ti)
+		delete(in.rots, ti)
+		delete(in.scales, ti)
+	}
+}
+
+func templateNodeIsDescendant(t *Template, ti, root int) bool {
+	for p := t.Nodes[ti].Parent; p >= 0; p = t.Nodes[p].Parent {
+		if p == root {
+			return true
+		}
+	}
+	return false
+}
+
 // SetColor 覆盖子树内节点的颜色（sr.color 直写，如饺子调色）。
 func (in *Instance) SetColor(relPath string, c [4]float64) {
 	for ti, tn := range in.T.Nodes {

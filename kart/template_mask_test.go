@@ -71,3 +71,39 @@ func TestTemplateNodeWorldHonorsRuntimeOverrides(t *testing.T) {
 		t.Fatalf("NodeWorld = %#v, want %#v", got, want)
 	}
 }
+
+func TestTemplateResetSubtreeClearsRuntimeOverrides(t *testing.T) {
+	as := &Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}},
+			{Name: "Actor", Path: "Root/Actor", Parent: 0, Scale: [2]float64{1, 1}},
+			{Name: "Head", Path: "Root/Actor/Head", Parent: 1, Scale: [2]float64{1, 1}, Sprite: "head"},
+			{Name: "Body", Path: "Root/Actor/Body", Parent: 1, Scale: [2]float64{1, 1}, Sprite: "body"},
+			{Name: "Other", Path: "Root/Other", Parent: 0, Scale: [2]float64{1, 1}, Sprite: "other"},
+		}},
+	}
+	inst := NewTemplate(as, "Root").NewInstance()
+	inst.SetActive("Actor", true)
+	inst.SetSprite("Actor/Head", "missing")
+	inst.SetOrder("Actor/Head", 99)
+	inst.SetPos("Actor/Body", 2, 3)
+	inst.SetActive("Other", false)
+
+	inst.ResetSubtree("Actor")
+
+	if _, ok := inst.actives[1]; ok {
+		t.Fatal("Actor active override should be cleared")
+	}
+	if _, ok := inst.sprites[2]; ok {
+		t.Fatal("Actor/Head sprite override should be cleared")
+	}
+	if _, ok := inst.orders[2]; ok {
+		t.Fatal("Actor/Head order override should be cleared")
+	}
+	if _, ok := inst.pos[3]; ok {
+		t.Fatal("Actor/Body position override should be cleared")
+	}
+	if got, ok := inst.actives[4]; !ok || got {
+		t.Fatalf("sibling active override changed: got value=%v ok=%v", got, ok)
+	}
+}

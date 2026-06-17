@@ -65,6 +65,7 @@ func (m *Module) startJumpFromObstacle(beat float64, ob *acrobatObstacle) {
 	}
 	m.jumpActive = true
 	m.ctx.Scene.SetActive(m.player, true)
+	m.forcePlayerShadowOn()
 	m.playPlayer("PlayerJump", beat)
 	if muted {
 		m.muteRelease = false
@@ -128,10 +129,7 @@ func (m *Module) playPlayer(state string, beat float64) {
 
 func (m *Module) resetPlayerVisuals() {
 	m.ctx.Scene.SetSpinOver(m.player, 0)
-	if m.playerShadow != "" {
-		m.ctx.Scene.SetActive(m.playerShadow, true)
-		m.ctx.Scene.SetScaleOver(m.playerShadow, m.shadowScale[0], m.shadowScale[1])
-	}
+	m.forcePlayerShadowOn()
 }
 
 func (m *Module) updatePlayerVisuals(beat float64) {
@@ -140,9 +138,31 @@ func (m *Module) updatePlayerVisuals(beat float64) {
 	if m.playerShadow == "" {
 		return
 	}
+	if m.shadowForcedOff {
+		m.ctx.Scene.SetActive(m.playerShadow, false)
+		return
+	}
 	sx, sy := playerShadowScaleAt(m.jump, beat, m.shadowScale[0], m.shadowScale[1], m.landingShadowBeats())
 	m.ctx.Scene.SetActive(m.playerShadow, true)
 	m.ctx.Scene.SetScaleOver(m.playerShadow, sx, sy)
+}
+
+func (m *Module) forcePlayerShadowOff() {
+	if m.playerShadow == "" {
+		return
+	}
+	m.shadowForcedOff = true
+	m.ctx.Scene.SetActive(m.playerShadow, false)
+}
+
+func (m *Module) forcePlayerShadowOn() {
+	if m.playerShadow == "" {
+		m.shadowForcedOff = false
+		return
+	}
+	m.shadowForcedOff = false
+	m.ctx.Scene.SetActive(m.playerShadow, true)
+	m.ctx.Scene.SetScaleOver(m.playerShadow, m.shadowScale[0], m.shadowScale[1])
 }
 
 func (m *Module) landingShadowBeats() float64 {
