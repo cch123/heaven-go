@@ -11,6 +11,8 @@ type filterSlotState struct {
 	blend float64
 }
 
+var filterApplyOrder = []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
+
 // Apply 按 slot 持久语义叠加滤镜（dst 必须是 ScreenW×ScreenH）。
 func (f *filterFX) Apply(dst *ebiten.Image, assetsRoot string, beat float64) {
 	if len(f.evts) == 0 {
@@ -20,7 +22,10 @@ func (f *filterFX) Apply(dst *ebiten.Image, assetsRoot string, beat float64) {
 		return
 	}
 	slots := f.activeSlots(beat)
-	for slot := 1; slot <= 10; slot++ {
+	// Heaven Studio's editor documents that higher slots are applied first.
+	// This matters when levels stack creative LUTs (e.g. Fan Club Dance's
+	// bleach pass above redder); reversing it produces a very different grade.
+	for _, slot := range filterApplyOrder {
 		st, ok := slots[slot]
 		if !ok || st.blend <= 0 || st.lut == "" {
 			continue

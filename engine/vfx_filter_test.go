@@ -6,6 +6,7 @@ import (
 	_ "image/png"
 	"math"
 	"os"
+	"strings"
 	"testing"
 )
 
@@ -44,6 +45,27 @@ func TestDefaultLUTUsesUnityTextureYAxis(t *testing.T) {
 			if math.Abs(got[i]-c[i]) > 1.0/31.0 {
 				t.Fatalf("default LUT should be identity for %v, got %v", c, got)
 			}
+		}
+	}
+}
+
+func TestLUTShaderSamplesLUTSourceOrigin(t *testing.T) {
+	if !strings.Contains(lutKage, "imageSrc1Origin()") {
+		t.Fatalf("LUT shader must sample imageSrc1 with imageSrc1Origin; using the screen origin atlas-samples the wrong colors")
+	}
+	if strings.Contains(lutKage, "o := imageSrc0Origin()") {
+		t.Fatalf("LUT shader should not reuse the screen source origin for imageSrc1 lookups")
+	}
+}
+
+func TestFilterSlotsApplyHighestFirst(t *testing.T) {
+	want := []int{10, 9, 8, 7, 6, 5, 4, 3, 2, 1}
+	if len(filterApplyOrder) != len(want) {
+		t.Fatalf("filterApplyOrder length = %d, want %d", len(filterApplyOrder), len(want))
+	}
+	for i := range want {
+		if filterApplyOrder[i] != want[i] {
+			t.Fatalf("filter slot order = %v, want %v", filterApplyOrder, want)
 		}
 	}
 }

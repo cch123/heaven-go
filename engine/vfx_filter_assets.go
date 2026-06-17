@@ -1,11 +1,11 @@
 package engine
 
 import (
+	"bytes"
 	"image"
 	"log"
 	"os"
 	"path/filepath"
-	"strings"
 
 	"github.com/hajimehoshi/ebiten/v2"
 )
@@ -42,7 +42,7 @@ func (f *filterFX) lut(assetsRoot, name string) *ebiten.Image {
 		f.luts[name] = nil
 		return nil
 	}
-	img, _, err := image.Decode(strings.NewReader(string(raw)))
+	img, _, err := image.Decode(bytes.NewReader(raw))
 	if err != nil {
 		f.luts[name] = nil
 		return nil
