@@ -797,6 +797,10 @@ func Fragment(dst vec4, src vec2, color vec4) vec4 {
 	if DoodleOn > 0.5 && DoodleFrameTime > 0 && DoodleFrameCount > 0 {
 		uv := (src - SourceOrigin) / SourceSize
 		sampleSrc = src + doodleTextureOffset(uv)*SourceSize
+		// Unity sprites are imported with atlas padding/extrusion. Our runtime
+		// draws tight subimages, so clamp the doodle offset to this sprite's source
+		// rectangle instead of leaking into a neighboring packed sprite.
+		sampleSrc = clamp(sampleSrc, SourceOrigin+vec2(0.5), SourceOrigin+SourceSize-vec2(0.5))
 	}
 	tex := imageSrc0At(sampleSrc)
 	if HueShift != 0 || LinearAdd > 0.5 {

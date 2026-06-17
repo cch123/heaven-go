@@ -130,25 +130,21 @@ func TestMamboMaterialNamesPreservedForSharedColorShader(t *testing.T) {
 	}
 }
 
-func TestMamboMainMaterialExcludesFaceAndDancerHeads(t *testing.T) {
-	m := &Module{
-		warioBody:   "WarioJumper/WAAAAAAAA",
-		warioFace:   "WarioJumper/WAAAAAAAA/Face",
-		dancerLHead: "DancerL/DancerJumper/DancerL/HeadHolder",
-		dancerRHead: "DancerR/DancerJumper/DancerL/HeadHolder",
+func TestMamboMainMaterialIncludesFacesAndDancerHeads(t *testing.T) {
+	as := loadAssets(t)
+	byPath := map[string]kmdata.Node{}
+	for _, n := range as.Rig.Nodes {
+		byPath[n.Path] = n
 	}
-	got := map[string]bool{}
-	for _, root := range m.mamboHeadMaterialExcludes() {
-		got[root] = true
-	}
-	for _, root := range []string{
-		m.warioFace,
-		m.warioBody + "/Squiggly",
-		m.dancerLHead,
-		m.dancerRHead,
+	for _, path := range []string{
+		"WarioJumper/WAAAAAAAA/Face/Schnoz",
+		"WarioJumper/WAAAAAAAA/Face/Eyes",
+		"WarioJumper/WAAAAAAAA/Face/Mouth",
+		"DancerL/DancerJumper/DancerL/HeadHolder/Head",
+		"DancerR/DancerJumper/DancerL/HeadHolder/Head",
 	} {
-		if !got[root] {
-			t.Fatalf("missing Mambo material exclusion for %s: %#v", root, got)
+		if got := byPath[path].Mat; got != "MamboShader" {
+			t.Fatalf("%s material = %q, want MamboShader", path, got)
 		}
 	}
 }

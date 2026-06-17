@@ -97,18 +97,6 @@ func (m *Module) point(path string) [2]float64 {
 	return [2]float64{w.Tx, w.Ty}
 }
 
-func (m *Module) mamboHeadMaterialExcludes() []string {
-	return []string{
-		m.warioFace,
-		m.warioBody + "/Squiggly",
-		// These heads share the exported MamboShader name, but the Unity scene keeps
-		// their face/head material out of the SetColors pass. Recoloring them makes
-		// the performers blend into the red/blue stage and looks like the heads vanished.
-		m.dancerLHead,
-		m.dancerRHead,
-	}
-}
-
 func (m *Module) currentBeat() float64 {
 	if m.ctx == nil {
 		return 0
