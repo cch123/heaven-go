@@ -114,6 +114,27 @@ func TestFlaskBreakParticleSystems(t *testing.T) {
 	}
 }
 
+func TestGirlPassCuesMatchUnityInputSemantics(t *testing.T) {
+	cues := buildGirlPassCues(12, 8, 10, 1, 0.5, []shakeEvt{
+		{beat: 8, length: 1, speed: flaskMidSlow},
+		{beat: 9, length: 1, speed: flaskMidSlow},
+	})
+	want := []girlPassCue{
+		{beat: 13.5, kind: girlCueCatch},
+		{beat: 14.5, kind: girlCueAnyDPadUp},
+		{beat: 14.5, kind: girlCueAutoplayDown},
+		{beat: 15.5, kind: girlCueRelease},
+	}
+	if len(cues) != len(want) {
+		t.Fatalf("girl pass cues = %d, want %d: %#v", len(cues), len(want), cues)
+	}
+	for i := range want {
+		if cues[i] != want[i] {
+			t.Fatalf("cue %d = %#v, want %#v", i, cues[i], want[i])
+		}
+	}
+}
+
 func particleRootUsesSprite(systems []kmdata.ParticleSystem, sprite string) bool {
 	for _, ps := range systems {
 		for _, got := range ps.TextureSheet.Sprites {

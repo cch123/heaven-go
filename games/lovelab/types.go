@@ -10,12 +10,7 @@ import (
 	"hsdemo/kart"
 )
 
-const (
-	gameID = "loveLab"
-
-	actionShake = 1
-	actionUp    = 4
-)
+const gameID = "loveLab"
 
 const (
 	flaskFast = iota

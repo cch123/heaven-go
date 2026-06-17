@@ -6,6 +6,22 @@ import (
 	"hsdemo/engine"
 )
 
+type girlPassCueKind int
+
+const (
+	girlCueCatch girlPassCueKind = iota
+	girlCueAutoplayDown
+	girlCueAnyDPadUp
+	girlCueRelease
+)
+
+const autoplayDownPostInputEpsilon = 1e-4
+
+type girlPassCue struct {
+	beat float64
+	kind girlPassCueKind
+}
+
 func (m *Module) bopping(beat float64) {
 	if m.bopRight {
 		m.play(m.labGuy, "GuyBopRight", beat)
@@ -91,37 +107,37 @@ func (m *Module) passToGirl(beat, intervalBeat, endBeat, length float64) {
 		addDelay = 0.5
 	}
 	m.releaseValid = true
-	for i, in := range inputs {
-		input := in
-		relativeBeat := input.beat - intervalBeat
-		shakeStart := beat + length + relativeBeat + addDelay
-		if i == 0 {
-			m.ctx.ScheduleInputActionCond(shakeStart, 0, m.canHitNow, func(float64, engine.Judgment) {
-				m.onCatch(shakeStart)
+	for _, cue := range buildGirlPassCues(beat, intervalBeat, endBeat, length, addDelay, inputs) {
+		cue := cue
+		switch cue.kind {
+		case girlCueCatch:
+			m.ctx.ScheduleInputActionCond(cue.beat, 0, m.canHitNow, func(float64, engine.Judgment) {
+				m.onCatch(cue.beat)
 			}, func() {
-				m.onCatchMiss(shakeStart)
+				m.onCatchMiss(cue.beat)
 			})
-		} else {
-			m.ctx.ScheduleInputActionCond(shakeStart, actionShake, m.canHitNow, func(float64, engine.Judgment) {
-				m.onDownAuto(shakeStart)
-			}, func() {
-				m.onMiss(shakeStart)
+		case girlCueAutoplayDown:
+			m.ctx.At(cue.beat+autoplayDownPostInputEpsilon, func() {
+				// HS uses ScheduleAutoplayInput for this down-shake: real players
+				// are not asked to hit a second input window, but autoplay still
+				// drives the arm and sound on the cue after same-beat up inputs.
+				if m.ctx.App.Autoplay && m.canHitNow() {
+					m.onDownAuto(cue.beat)
+				}
 			})
-		}
-		shakeEnd := beat + length + (input.beat + input.length - intervalBeat) + addDelay
-		if input.beat+input.length >= endBeat-1e-6 {
-			m.ctx.ScheduleInputReleaseCond(shakeEnd, func() bool {
+		case girlCueRelease:
+			m.ctx.ScheduleInputReleaseCond(cue.beat, func() bool {
 				return m.releaseValid && m.canHitNow()
 			}, func(float64, engine.Judgment) {
-				m.onRelease(shakeEnd)
+				m.onRelease(cue.beat)
 			}, func() {
-				m.onMiss(shakeEnd)
+				m.onMiss(cue.beat)
 			})
-		} else {
-			m.ctx.ScheduleInputActionCond(shakeEnd, actionUp, m.canHitNow, func(float64, engine.Judgment) {
-				m.onUp(shakeEnd)
+		case girlCueAnyDPadUp:
+			m.ctx.ScheduleInputAnyCond(cue.beat, m.canHitNow, func(float64, engine.Judgment) {
+				m.onUp(cue.beat)
 			}, func() {
-				m.onMiss(shakeEnd)
+				m.onMiss(cue.beat)
 			})
 		}
 	}
@@ -130,6 +146,27 @@ func (m *Module) passToGirl(beat, intervalBeat, endBeat, length float64) {
 		m.play(m.labGuyHead, "GuyFaceIdle", endBeat+1)
 		m.play(m.labGuyArm, "ArmIdle", endBeat+1)
 	})
+}
+
+func buildGirlPassCues(beat, intervalBeat, endBeat, length, addDelay float64, inputs []shakeEvt) []girlPassCue {
+	out := make([]girlPassCue, 0, len(inputs)*2)
+	for i, input := range inputs {
+		relativeBeat := input.beat - intervalBeat
+		shakeStart := beat + length + relativeBeat + addDelay
+		if i == 0 {
+			out = append(out, girlPassCue{beat: shakeStart, kind: girlCueCatch})
+		} else {
+			out = append(out, girlPassCue{beat: shakeStart, kind: girlCueAutoplayDown})
+		}
+
+		shakeEnd := beat + length + (input.beat + input.length - intervalBeat) + addDelay
+		kind := girlCueAnyDPadUp
+		if input.beat+input.length >= endBeat-1e-6 {
+			kind = girlCueRelease
+		}
+		out = append(out, girlPassCue{beat: shakeEnd, kind: kind})
+	}
+	return out
 }
 
 func (m *Module) onCatch(beat float64) {

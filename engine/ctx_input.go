@@ -18,6 +18,13 @@ func (c *Ctx) ScheduleInputAny(beat float64, onHit func(state float64, j Judgmen
 	return c.App.scheduleInput(beat, false, -1, onHit, onMiss)
 }
 
+// ScheduleInputAnyCond is the conditional form of ScheduleInputAny. Love Lab's
+// D-pad shake accepts any direction while still becoming invalid after a game
+// switch, matching HS' IA_DPadPressing hittable window.
+func (c *Ctx) ScheduleInputAnyCond(beat float64, canHit func() bool, onHit func(state float64, j Judgment), onMiss func()) *Input {
+	return c.App.scheduleInputCond(beat, false, -1, canHit, onHit, onMiss)
+}
+
 // ScheduleInputActionCond registers a non-primary press window with an
 // optional can-hit predicate. Multi-action games use this to keep their late
 // windows from leaking across a switchGame boundary.
