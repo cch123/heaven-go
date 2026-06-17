@@ -28,7 +28,10 @@ const (
 	bopOops
 )
 
-const actionFruit = 3
+const (
+	actionDirt  = 0
+	actionFruit = 3 // HS InputAction_AltPress maps to the engine's South/down-style channel.
+)
 
 type bopEvt struct {
 	beat, length float64
@@ -158,11 +161,15 @@ func (m *Module) OnSwitch(beat float64) {
 	m.lastPulse = int(math.Floor(beat)) - 1
 }
 
-func (m *Module) Whiff(beat float64) { m.WhiffAction(beat, 0) }
+func (m *Module) Whiff(beat float64) { m.WhiffAction(beat, actionDirt) }
 
-func (m *Module) WhiffAction(beat float64, _ int) {
+func (m *Module) WhiffAction(beat float64, action int) {
+	name, ok := whiffActionName(action)
+	if !ok {
+		return
+	}
 	if a := m.ants[2]; a != nil {
-		a.action(m, beat, "dirtHit", 1)
+		a.action(m, beat, name, 1)
 		m.ctx.PlayCommon("nearMiss")
 	}
 }
@@ -242,4 +249,18 @@ func liveObjects(in []*volleyObject, beat float64) []*volleyObject {
 		}
 	}
 	return out
+}
+
+func whiffActionName(action int) (string, bool) {
+	switch action {
+	case actionDirt:
+		return "dirtHit", true
+	case actionFruit:
+		return "fruitHit", true
+	default:
+		// Unity only checks BasicPress and AltPress for ValiANT Volley's empty
+		// player action. Side/up channels are unrelated engine shortcuts and
+		// must not make the player ant swing.
+		return "", false
+	}
 }

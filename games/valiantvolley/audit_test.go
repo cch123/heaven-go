@@ -237,6 +237,25 @@ func TestValiantVolleyPulseGateUpdatesCantBop(t *testing.T) {
 	}
 }
 
+func TestValiantVolleyWhiffActionChannels(t *testing.T) {
+	for _, tc := range []struct {
+		action int
+		want   string
+		ok     bool
+	}{
+		{actionDirt, "dirtHit", true},
+		{actionFruit, "fruitHit", true},
+		{1, "", false},
+		{2, "", false},
+		{4, "", false},
+	} {
+		got, ok := whiffActionName(tc.action)
+		if got != tc.want || ok != tc.ok {
+			t.Fatalf("whiffActionName(%d) = %q,%v; want %q,%v", tc.action, got, ok, tc.want, tc.ok)
+		}
+	}
+}
+
 func nodeSet(as *kart.Assets) map[string]bool {
 	out := map[string]bool{}
 	for _, n := range as.Rig.Nodes {
