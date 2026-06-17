@@ -130,7 +130,7 @@ func TestMamboMaterialNamesPreservedForSharedColorShader(t *testing.T) {
 	}
 }
 
-func TestMamboMainMaterialExcludesFaceAndDancerHeadInstanceBoundaries(t *testing.T) {
+func TestMamboMainMaterialExcludesOnlyNonMainMatInstanceBoundaries(t *testing.T) {
 	as := loadAssets(t)
 	byPath := map[string]kmdata.Node{}
 	for _, n := range as.Rig.Nodes {
@@ -149,25 +149,29 @@ func TestMamboMainMaterialExcludesFaceAndDancerHeadInstanceBoundaries(t *testing
 	}
 
 	m := &Module{
-		warioFace:   "WarioJumper/WAAAAAAAA/Face",
-		warioBody:   "WarioJumper/WAAAAAAAA",
-		dancerLHead: "DancerL/DancerJumper/DancerL/HeadHolder",
-		dancerRHead: "DancerR/DancerJumper/DancerL/HeadHolder",
+		warioFace: "WarioJumper/WAAAAAAAA/Face",
+		warioBody: "WarioJumper/WAAAAAAAA",
 	}
 	got := strings.Join(m.mamboMainMaterialExcludes(), "\n")
 	for _, want := range []string{
 		"WarioJumper/WAAAAAAAA/Face",
 		"WarioJumper/WAAAAAAAA/Squiggly",
-		"DancerL/DancerJumper/DancerL/HeadHolder",
-		"DancerR/DancerJumper/DancerL/HeadHolder",
 	} {
 		if !strings.Contains(got, want) {
 			t.Fatalf("main Mambo material excludes missing %q in:\n%s", want, got)
 		}
 	}
+	for _, forbidden := range []string{
+		"DancerL/DancerJumper/DancerL/HeadHolder",
+		"DancerR/DancerJumper/DancerL/HeadHolder",
+	} {
+		if strings.Contains(got, forbidden) {
+			t.Fatalf("dancer head %q should stay on mainMat override:\n%s", forbidden, got)
+		}
+	}
 }
 
-func TestMamboRuntimeMaterialOverridesDoNotHitFacesOrDancerHeads(t *testing.T) {
+func TestMamboRuntimeMaterialOverridesKeepDancerHeadsOnMainMat(t *testing.T) {
 	as := loadAssets(t)
 	scene := kart.NewScene(as)
 	m := &Module{
@@ -177,8 +181,6 @@ func TestMamboRuntimeMaterialOverridesDoNotHitFacesOrDancerHeads(t *testing.T) {
 		floorLightMat: "FloorLights",
 		warioFace:     "WarioJumper/WAAAAAAAA/Face",
 		warioBody:     "WarioJumper/WAAAAAAAA",
-		dancerLHead:   "DancerL/DancerJumper/DancerL/HeadHolder",
-		dancerRHead:   "DancerR/DancerJumper/DancerL/HeadHolder",
 		blueAdd:       [4]float64{0, 0.09, 0.09, 1},
 	}
 	m.applyColors()
@@ -188,8 +190,6 @@ func TestMamboRuntimeMaterialOverridesDoNotHitFacesOrDancerHeads(t *testing.T) {
 		"WarioJumper/WAAAAAAAA/Face/Schnoz",
 		"WarioJumper/WAAAAAAAA/Face/Eyes",
 		"WarioJumper/WAAAAAAAA/Face/Mouth",
-		"DancerL/DancerJumper/DancerL/HeadHolder/Head",
-		"DancerR/DancerJumper/DancerL/HeadHolder/Head",
 	} {
 		st, ok := scene.NodeMaterialStateForTest(path)
 		if !ok {
@@ -197,6 +197,19 @@ func TestMamboRuntimeMaterialOverridesDoNotHitFacesOrDancerHeads(t *testing.T) {
 		}
 		if st.MatHueShift != 0 || st.MatLinearAdd || st.MatDoodle.Enabled {
 			t.Fatalf("%s received main/stage material override: %#v", path, st)
+		}
+	}
+
+	for _, path := range []string{
+		"DancerL/DancerJumper/DancerL/HeadHolder/Head",
+		"DancerR/DancerJumper/DancerL/HeadHolder/Head",
+	} {
+		st, ok := scene.NodeMaterialStateForTest(path)
+		if !ok {
+			t.Fatalf("missing dancer head renderer %s", path)
+		}
+		if !st.MatLinearAdd || !st.MatDoodle.Enabled {
+			t.Fatalf("%s should receive main Mambo material override: %#v", path, st)
 		}
 	}
 

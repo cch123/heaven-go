@@ -276,11 +276,16 @@ func (m *Module) Update(t, beat float64) {
 	m.updateAutoBop(beat)
 	m.updateCamera(t, beat)
 	m.updateBGTiles()
-	cam := m.ctx.SampleScene(beat)
+	cam := m.ctx.CameraAt(beat)
 	m.cameraWX, m.cameraWY = cam[0]+m.cameraX, cam[1]+m.cameraY
 	camZ := cam[2] + m.cameraZ
 	m.ctx.Scene.SetCamera(m.cameraWX, m.cameraWY, camZ)
 	m.updateStickySpotlight(camZ)
+	// Animal Acrobat draws directly from the scene sampled during Update so
+	// template instances can be queued in Draw. StickyCanvas overrides must land
+	// before this sample; otherwise SpotlightMain lags behind the camera and its
+	// mask appears attached to the monkey instead of the viewport.
+	m.ctx.Scene.Sample(beat)
 }
 
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
