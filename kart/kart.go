@@ -310,6 +310,7 @@ func decodeWAVCompat(raw []byte, targetRate int) ([]byte, error) {
 	}
 	var (
 		format     uint16
+		subFormat  uint16
 		channels   uint16
 		sampleRate uint32
 		bits       uint16
@@ -331,6 +332,13 @@ func decodeWAVCompat(raw []byte, targetRate int) ([]byte, error) {
 			channels = binary.LittleEndian.Uint16(raw[start+2 : start+4])
 			sampleRate = binary.LittleEndian.Uint32(raw[start+4 : start+8])
 			bits = binary.LittleEndian.Uint16(raw[start+14 : start+16])
+			subFormat = format
+			if format == waveFormatExtensible {
+				if size < 40 {
+					return nil, fmt.Errorf("short extensible fmt chunk")
+				}
+				subFormat = extensibleWaveSubFormat(raw[start+24 : start+40])
+			}
 		case "data":
 			data = raw[start:end]
 		}
@@ -350,16 +358,16 @@ func decodeWAVCompat(raw []byte, targetRate int) ([]byte, error) {
 	if frameBytes == 0 || len(data) < frameBytes {
 		return nil, fmt.Errorf("empty wave data")
 	}
-	if !supportedWaveFormat(format, bits) {
-		return nil, fmt.Errorf("unsupported wave format=%d bits=%d", format, bits)
+	if !supportedWaveFormat(subFormat, bits) {
+		return nil, fmt.Errorf("unsupported wave format=%d subtype=%d bits=%d", format, subFormat, bits)
 	}
 	frames := len(data) / frameBytes
 	out := make([]byte, frames*4) // 16-bit little-endian stereo
 	for i := 0; i < frames; i++ {
-		left := wavSample16(data, i, 0, int(channels), bytesPerSample, format, bits)
+		left := wavSample16(data, i, 0, int(channels), bytesPerSample, subFormat, bits)
 		right := left
 		if channels > 1 {
-			right = wavSample16(data, i, 1, int(channels), bytesPerSample, format, bits)
+			right = wavSample16(data, i, 1, int(channels), bytesPerSample, subFormat, bits)
 		}
 		binary.LittleEndian.PutUint16(out[i*4:], uint16(left))
 		binary.LittleEndian.PutUint16(out[i*4+2:], uint16(right))
@@ -370,25 +378,44 @@ func decodeWAVCompat(raw []byte, targetRate int) ([]byte, error) {
 	return out, nil
 }
 
+const (
+	waveFormatPCM        = 0x0001
+	waveFormatIEEEFloat  = 0x0003
+	waveFormatExtensible = 0xfffe
+)
+
+var waveSubFormatTail = []byte{0x00, 0x00, 0x10, 0x00, 0x80, 0x00, 0x00, 0xaa, 0x00, 0x38, 0x9b, 0x71}
+
+func extensibleWaveSubFormat(guid []byte) uint16 {
+	if len(guid) != 16 || !bytes.Equal(guid[4:], waveSubFormatTail) {
+		return 0
+	}
+	// KSDATAFORMAT_SUBTYPE_* stores the WAVE_FORMAT_* tag in the first DWORD.
+	// Official assets exported through FFmpeg often use WAVE_FORMAT_EXTENSIBLE
+	// for plain PCM; mapping the subtype preserves those samples instead of
+	// forcing an asset transcode step.
+	return binary.LittleEndian.Uint16(guid[:2])
+}
+
 func supportedWaveFormat(format, bits uint16) bool {
-	return (format == 1 && (bits == 16 || bits == 24 || bits == 32)) ||
-		(format == 3 && bits == 32)
+	return (format == waveFormatPCM && (bits == 16 || bits == 24 || bits == 32)) ||
+		(format == waveFormatIEEEFloat && bits == 32)
 }
 
 func wavSample16(data []byte, frame, ch, channels, bytesPerSample int, format, bits uint16) int16 {
 	off := frame*channels*bytesPerSample + ch*bytesPerSample
 	switch {
-	case format == 1 && bits == 16:
+	case format == waveFormatPCM && bits == 16:
 		return int16(binary.LittleEndian.Uint16(data[off : off+2]))
-	case format == 1 && bits == 24:
+	case format == waveFormatPCM && bits == 24:
 		v := int32(data[off]) | int32(data[off+1])<<8 | int32(data[off+2])<<16
 		if v&0x800000 != 0 {
 			v |= ^0xffffff
 		}
 		return int16(v >> 8)
-	case format == 1 && bits == 32:
+	case format == waveFormatPCM && bits == 32:
 		return int16(int32(binary.LittleEndian.Uint32(data[off:off+4])) >> 16)
-	case format == 3 && bits == 32:
+	case format == waveFormatIEEEFloat && bits == 32:
 		f := float64(math.Float32frombits(binary.LittleEndian.Uint32(data[off : off+4])))
 		if f > 1 {
 			f = 1
