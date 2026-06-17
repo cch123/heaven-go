@@ -106,6 +106,7 @@ type Module struct {
 	switchBeat  float64
 
 	floorLoopDelta float64
+	cameraFOV      float64
 }
 
 func New() engine.Module { return &Module{} }
@@ -119,6 +120,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	}
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.floorLoopDelta = floorMoveDelta(ctx.Assets.Anims["Animations/floor/move"])
+	m.cameraFOV = ctx.Assets.Extra.Components["game"].Nums["cameraFOV"]
 	m.resetBoarders(0)
 
 	// Only the single-geometry sky MeshRenderer is drawn today; playing the
@@ -239,6 +241,7 @@ func (m *Module) Draw(screen *ebiten.Image, _ float64, beat float64) {
 	m.drawTemporaryFallbackBG(screen, beat)
 	if m.ctx.Scene != nil {
 		cam := m.ctx.CameraAt(beat)
+		m.ctx.Scene.SetCameraFOV(m.cameraFOV)
 		m.ctx.Scene.SetCamera(cam[0]+camState.x, cam[1]+camState.y, cam[2]+cameraZoomAdd(camState.zoom))
 		m.ctx.Scene.Sample(beat)
 		m.ctx.Scene.Draw(screen, m.proj)

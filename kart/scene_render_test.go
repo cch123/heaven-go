@@ -131,6 +131,42 @@ func TestControllerClipFallsBackFromImportedEmptyShell(t *testing.T) {
 	}
 }
 
+func TestSceneCameraFOVChangesPerspectiveScale(t *testing.T) {
+	as := &Assets{
+		Rig:         kmdata.Rig{Nodes: []kmdata.Node{{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}}}},
+		Anims:       map[string]*kmdata.Anim{},
+		Controllers: map[string]kmdata.Controller{},
+		Animators:   kmdata.Animators{},
+	}
+	scene := NewScene(as)
+	scene.SetCamera(0, 0, -CamDist)
+	view, ok := scene.camView(0)
+	if !ok {
+		t.Fatal("default camera should see z=0")
+	}
+	if math.Abs(view.A-1) > 1e-9 || math.Abs(view.D-1) > 1e-9 {
+		t.Fatalf("default camera scale = (%v,%v), want 1", view.A, view.D)
+	}
+
+	scene.SetCameraFOV(90)
+	view, ok = scene.camView(0)
+	if !ok {
+		t.Fatal("90-degree camera should see z=0")
+	}
+	if got, want := view.A, 0.5; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("90-degree FOV scale = %v, want %v", got, want)
+	}
+	if got, want := CameraFocalDistance(90), 5.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("90-degree focal distance = %v, want %v", got, want)
+	}
+
+	scene.SetCameraFOV(0)
+	view, _ = scene.camView(0)
+	if math.Abs(view.A-1) > 1e-9 {
+		t.Fatalf("reset FOV scale = %v, want default 1", view.A)
+	}
+}
+
 func TestTemplateQueuesMeshRendererBinding(t *testing.T) {
 	as := &Assets{
 		Rig: kmdata.Rig{Nodes: []kmdata.Node{

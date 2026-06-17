@@ -86,8 +86,9 @@ type Module struct {
 	ctx  *engine.Ctx
 	proj kart.Aff
 
-	curves   map[string]kmdata.Curve
-	ballPath string
+	curves    map[string]kmdata.Curve
+	ballPath  string
+	cameraFOV float64
 
 	serves []serveEvt
 	tosses []tossEvt
@@ -116,6 +117,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2+60).Mul(kart.Scale(130, -130))
 	m.curves = ctx.Assets.Extra.Curves
 	m.ballPath = ctx.Role("ball")
+	m.cameraFOV = ctx.Assets.Extra.Components["game"].Nums["cameraFOV"]
 	if m.ballPath == "" {
 		m.ballPath = "Game/Ball"
 	}
@@ -220,6 +222,7 @@ func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
 	} else {
 		m.syncSceneBall([3]float64{}, false)
 	}
+	m.ctx.Scene.SetCameraFOV(m.cameraFOV)
 	m.ctx.SampleScene(beat)
 	m.ctx.Scene.Draw(screen, m.proj)
 	for _, fx := range m.fxs {

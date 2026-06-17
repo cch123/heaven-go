@@ -106,6 +106,7 @@ type SceneInst struct {
 	queuedMeshes []ExtraMesh   // 本帧注入的动态 MeshRenderer 绘制项
 
 	cam    [3]float64 // 相机世界位置（vfx/move camera），默认 (0,0,-10)
+	camFOV float64    // 纵向 FOV，0 表示使用 GameCamera 默认 FOV
 	hasCam bool
 
 	palette  Palette            // 映射材质默认调色板（单材质游戏）
@@ -131,6 +132,16 @@ type materialState struct {
 // 屏幕坐标先平移 -cam.xy 再缩放（vfx/move camera 的拉近/平移）。
 func (s *SceneInst) SetCamera(x, y, z float64) {
 	s.cam, s.hasCam = [3]float64{x, y, z}, true
+}
+
+// SetCameraFOV sets the vertical camera field of view in degrees. A non-positive
+// or invalid value restores the default Heaven Studio GameCamera projection.
+func (s *SceneInst) SetCameraFOV(deg float64) {
+	if deg <= 0 || math.IsNaN(deg) || math.IsInf(deg, 0) || deg >= 179 {
+		s.camFOV = 0
+		return
+	}
+	s.camFOV = deg
 }
 
 // SetPalette 设置映射材质（CellAnime_MappedInvert）的默认调色板（recolor 事件）。
@@ -177,11 +188,12 @@ func (s *SceneInst) paletteForNode(i int) Palette {
 
 // camView 返回节点深度 z 处的视图变换（含相机平移与透视缩放）；ok=false 表示在相机背后。
 func (s *SceneInst) camView(z float64) (Aff, bool) {
+	focal := CameraFocalDistance(s.camFOV)
 	if !s.hasCam {
 		if z == 0 {
 			return Identity(), true
 		}
-		ps := CamDist / (CamDist + z)
+		ps := focal / (focal + z)
 		if ps <= 0 {
 			return Identity(), false
 		}
@@ -191,7 +203,7 @@ func (s *SceneInst) camView(z float64) (Aff, bool) {
 	if d <= 0 {
 		return Identity(), false
 	}
-	ps := CamDist / d
+	ps := focal / d
 	return Scale(ps, ps).Mul(Translate(-s.cam[0], -s.cam[1])), true
 }
 
@@ -1164,9 +1176,25 @@ func setPaletteChannel(c *[4]float64, ch string, v float64) {
 // 在 z=0 平面恰好等价于半高 5 的正交视野）。
 const CamDist = 10.0
 
+const cameraHalfHeight = 5.0
+
+// CameraFocalDistance converts a Unity vertical FOV into the focal distance used
+// by the 2D projection shim. The default FOV intentionally returns CamDist so
+// older games keep their exact projection when they do not serialize a FOV.
+func CameraFocalDistance(fovDeg float64) float64 {
+	if fovDeg <= 0 || math.IsNaN(fovDeg) || math.IsInf(fovDeg, 0) || fovDeg >= 179 {
+		return CamDist
+	}
+	tan := math.Tan(fovDeg * math.Pi / 360)
+	if tan <= 0 {
+		return CamDist
+	}
+	return cameraHalfHeight / tan
+}
+
 // Draw 按 (sortingLayer, sortingOrder, 深度, DFS) 顺序绘制（需先 Sample）。
 // sortingOrder 可能被动画驱动（m_SortingOrder 曲线），故每帧重排；
-// 节点深度 z 经透视投影缩放（s = CamDist/(CamDist+z)），复刻原版透视相机。
+// 节点深度 z 经透视投影缩放（默认 s = CamDist/(CamDist+z)），复刻原版透视相机。
 func (s *SceneInst) Draw(dst *ebiten.Image, proj Aff) {
 	type item struct {
 		idx, layer, order int

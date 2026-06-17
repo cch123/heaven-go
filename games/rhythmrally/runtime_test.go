@@ -2,10 +2,12 @@ package rhythmrally
 
 import (
 	"encoding/json"
+	"math"
 	"os"
 	"path/filepath"
 	"testing"
 
+	"hsdemo/kart"
 	"hsdemo/kmdata"
 )
 
@@ -129,5 +131,16 @@ func TestBallTrailHiddenWhileTossing(t *testing.T) {
 	}
 	if parts := m.ballTrailParticles(4.5, 0.5); len(parts) != 0 {
 		t.Fatalf("tossing should hide trail, got %#v", parts)
+	}
+}
+
+func TestRhythmSceneProjectionUsesSerializedFOV(t *testing.T) {
+	_, _, got := projectRhythmScenePoint([3]float64{0, 0, 2}, 42)
+	want := kart.CameraFocalDistance(42) / (kart.CameraFocalDistance(42) + 2)
+	if math.Abs(got-want) > 1e-9 {
+		t.Fatalf("scene projection scale = %.9f, want %.9f from camera FOV", got, want)
+	}
+	if got == kart.CamDist/(kart.CamDist+2) {
+		t.Fatalf("scene projection still uses hard-coded CamDist scale %.9f", got)
 	}
 }

@@ -123,6 +123,7 @@ type Module struct {
 	elevatorMat  string
 	beltMat      string
 	beltSpeed    float64
+	cameraFOV    float64
 	firstLights  []string
 	secondLights []string
 
@@ -168,6 +169,7 @@ func (m *Module) loadMaterialRefs() {
 	if v := game.Nums["beltSpeed"]; v != 0 {
 		m.beltSpeed = v
 	}
+	m.cameraFOV = game.Nums["cameraFoV"]
 	m.firstLights = append([]string(nil), game.RefArrays["firstPatternLights"]...)
 	m.secondLights = append([]string(nil), game.RefArrays["secondPatternLights"]...)
 }
@@ -515,6 +517,7 @@ func (m *Module) hideDynamicMeshPrefabs() {
 
 func (m *Module) drawOfficialMeshScene(screen *ebiten.Image, env [4]float64, rot, zoom, beat, songTime float64) {
 	m.applyMeshMaterials(env, beat, songTime)
+	m.ctx.Scene.SetCameraFOV(m.cameraFOV)
 	m.ctx.SampleScene(beat)
 	m.queueOfficialDynamicMeshes(beat)
 	proj := m.proj.Mul(kart.Scale(zoom, zoom)).Mul(kart.Rotate(rot * math.Pi / 180))

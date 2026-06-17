@@ -36,7 +36,7 @@ func (m *Module) drawBallTrail(screen *ebiten.Image, beat float64) {
 		return
 	}
 	for _, p := range m.ballTrailParticles(beat, m.ctx.SecPerBeat(beat)) {
-		x, y, sc := projectRhythmScenePoint(p.pos)
+		x, y, sc := projectRhythmScenePoint(p.pos, m.cameraFOV)
 		r := ballTrailSize * 130 * sc / 2
 		alpha := ballTrailAlpha(p.age)
 		if r <= 0 || alpha <= 0 {
@@ -124,8 +124,9 @@ func ballTrailAlpha(age float64) float64 {
 	return (1 - age) * 2
 }
 
-func projectRhythmScenePoint(p [3]float64) (float64, float64, float64) {
-	ps := kart.CamDist / (kart.CamDist + p[2])
+func projectRhythmScenePoint(p [3]float64, fov float64) (float64, float64, float64) {
+	focal := kart.CameraFocalDistance(fov)
+	ps := focal / (focal + p[2])
 	if ps <= 0 {
 		return 0, 0, 0
 	}

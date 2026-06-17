@@ -34,6 +34,14 @@ func TestAirboarderExtractedAssetCoverage(t *testing.T) {
 		}
 	}
 
+	var extra kmdata.Extra
+	readJSON(t, filepath.Join(root, "extra.json"), &extra)
+	game := extra.Components["game"]
+	assertNear(t, game.Nums["cameraFOV"], 27)
+	if game.Refs["cameraPos"] != "CameraPivot/CameraAngle" || game.Refs["cameraPivot"] != "CameraPivot" {
+		t.Fatalf("camera refs = pos %q pivot %q", game.Refs["cameraPos"], game.Refs["cameraPivot"])
+	}
+
 	var controllers map[string]struct {
 		Default string         `json:"default"`
 		States  map[string]any `json:"states"`
