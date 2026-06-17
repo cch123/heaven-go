@@ -996,6 +996,17 @@ func (s *SceneInst) NodeMaterialStateForTest(path string) (MaterialStateForTest,
 	}, true
 }
 
+// NodePaletteForTest returns the mapped-material palette a renderer would use.
+// It lets port audits verify Unity per-renderer material instances without
+// depending on Draw's shader path.
+func (s *SceneInst) NodePaletteForTest(path string) (Palette, bool) {
+	i, ok := s.byPath[path]
+	if !ok {
+		return Palette{}, false
+	}
+	return s.paletteForNode(i), true
+}
+
 // ExtraMesh 是模板实例注入的 MeshRenderer 绘制项。
 // Unity 的 Instantiate 会复制 MeshRenderer；场景里的原 prefab 往往保持 inactive，
 // 所以动态实例不能复用 scene node 的 active/render 状态，只能携带采样后的 world/tint。

@@ -516,7 +516,10 @@ func (m *Module) setLight(state int) {
 	pal := kart.DefaultPalette()
 	pal.Alpha = pair.inside
 	pal.Fill = pair.outside
-	m.ctx.Scene.SetPaletteFor(m.lightMat, pal)
+	// Unity instantiates lightMaterialTemplate onto lightRenderer in Awake.
+	// Keep the same per-renderer boundary here so the mapped light colors never
+	// leak to other sprites that happen to share extraction-time material data.
+	m.ctx.Scene.SetPaletteOver(m.lightPath, pal)
 }
 
 func (m *Module) updateCameo(beat float64) {

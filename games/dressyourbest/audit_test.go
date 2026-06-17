@@ -58,6 +58,46 @@ func TestBindingsComponentsAndSounds(t *testing.T) {
 	}
 }
 
+func TestLightPaletteIsRendererScoped(t *testing.T) {
+	as := &kart.Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "", Parent: -1, Scale: [2]float64{1, 1}},
+			{Name: "Light", Path: "SewingMachine/Light", Parent: 0, Scale: [2]float64{1, 1}, Mapped: true, Mat: "LightMat"},
+			{Name: "Head", Path: "Monkey/Head", Parent: 0, Scale: [2]float64{1, 1}, Mapped: true, Mat: "LightMat"},
+			{Name: "Head", Path: "Girl/HeadAndHair/Head", Parent: 0, Scale: [2]float64{1, 1}, Mapped: true, Mat: "LightMat"},
+		}},
+	}
+	scene := kart.NewScene(as)
+	m := &Module{
+		ctx:       &engine.Ctx{Scene: scene},
+		lightPath: "SewingMachine/Light",
+		lightMat:  "LightMat",
+		lightStates: []lightPair{
+			{inside: [4]float64{1, 1, 1, 1}, outside: [4]float64{1, 1, 1, 1}},
+			{inside: [4]float64{0.25, 0.5, 0.75, 1}, outside: [4]float64{0.9, 0.8, 0.7, 1}},
+		},
+	}
+	m.setLight(1)
+
+	got, ok := scene.NodePaletteForTest("SewingMachine/Light")
+	if !ok {
+		t.Fatal("missing SewingMachine/Light")
+	}
+	if got.Alpha != m.lightStates[1].inside || got.Fill != m.lightStates[1].outside {
+		t.Fatalf("light palette = %#v, want renderer-scoped state %#v", got, m.lightStates[1])
+	}
+	def := kart.DefaultPalette()
+	for _, path := range []string{"Monkey/Head", "Girl/HeadAndHair/Head"} {
+		got, ok := scene.NodePaletteForTest(path)
+		if !ok {
+			t.Fatalf("missing %s", path)
+		}
+		if got != def {
+			t.Fatalf("%s inherited light palette %#v; light material must stay renderer-scoped", path, got)
+		}
+	}
+}
+
 func TestAnimationClipsControllersAndPaths(t *testing.T) {
 	as := loadAuditAssets(t)
 	for _, clip := range []string{
