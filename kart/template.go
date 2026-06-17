@@ -745,10 +745,61 @@ func (in *Instance) samplePlayer(p *instPlayer, states []instNodeState, beat flo
 // NodeWorld 返回子树内节点（相对 path）在 baseWorld 下的世界变换。
 // It mirrors the runtime TRS overrides used by Queue so script-driven anchors
 // such as rotated grab points and ParticleSystem roots do not fall back to the
-// prefab bind pose. Animation-clip sampling is still owned by Queue; callers
-// should only use this for anchors whose transform is static except for script
-// overrides.
+// prefab bind pose. Animation-clip sampling stays opt-in through NodeWorldAt;
+// callers using static grab points should keep this bind-pose-safe version.
 func (in *Instance) NodeWorld(relPath string, baseWorld Aff) (Aff, bool) {
+	return in.nodeWorld(relPath, baseWorld, nil)
+}
+
+// NodeWorldAt returns the sampled world transform for a template node at beat.
+// Unity ParticleSystem.Instantiate reads the source transform after the active
+// Animator state has been applied; Animal Acrobat's hold/sweat particles rely
+// on that timing so their flashes stay on the hands instead of the bind-pose
+// monkey head.
+func (in *Instance) NodeWorldAt(relPath string, baseWorld Aff, beat float64) (Aff, bool) {
+	states := in.sampleNodeStates(beat)
+	return in.nodeWorld(relPath, baseWorld, states)
+}
+
+func (in *Instance) sampleNodeStates(beat float64) []instNodeState {
+	t := in.T
+	states := make([]instNodeState, len(t.Nodes))
+	for ti, tn := range t.Nodes {
+		n := &t.as.Rig.Nodes[tn.RigIdx]
+		states[ti] = instNodeState{
+			pos: n.Pos, rot: n.RotZ, scale: n.Scale,
+			active: !n.Inactive, renderOn: !n.Hidden,
+		}
+	}
+	states[0].pos = in.Offset
+	states[0].rot += in.Rot
+	states[0].scale[0] *= in.Scale[0]
+	states[0].scale[1] *= in.Scale[1]
+	states[0].active = true
+	for ti, v := range in.actives {
+		states[ti].active = v
+	}
+	for ti, p := range in.pos {
+		states[ti].pos = p
+	}
+	for ti, r := range in.rots {
+		states[ti].rot = r
+	}
+	for ti, s := range in.scales {
+		states[ti].scale = s
+	}
+	for _, p := range in.players {
+		in.samplePlayer(p, states, beat)
+	}
+	for _, key := range in.layerOrder {
+		if p := in.layers[key]; p != nil {
+			in.samplePlayer(p, states, beat)
+		}
+	}
+	return states
+}
+
+func (in *Instance) nodeWorld(relPath string, baseWorld Aff, sampled []instNodeState) (Aff, bool) {
 	t := in.T
 	target := -1
 	for ti, tn := range t.Nodes {
@@ -760,8 +811,8 @@ func (in *Instance) NodeWorld(relPath string, baseWorld Aff) (Aff, bool) {
 	if target < 0 {
 		return Identity(), false
 	}
-	// 自根向下合成（锚点父链不含剪辑驱动节点的场合；totemClimb 的
-	// JumperPoint 都是静态子节点，剪辑只动头部堆叠）
+	// 自根向下合成；sampled 非空时使用按拍采样后的 Transform 状态，
+	// 否则保持原来的脚本覆盖 + bind pose 语义。
 	aff := baseWorld
 	chain := []int{}
 	for ti := target; ti >= 0; ti = t.Nodes[ti].Parent {
@@ -771,20 +822,25 @@ func (in *Instance) NodeWorld(relPath string, baseWorld Aff) (Aff, bool) {
 		ti := chain[i]
 		n := &t.as.Rig.Nodes[t.Nodes[ti].RigIdx]
 		pos, rot, scale := n.Pos, n.RotZ, n.Scale
-		if ti == 0 {
-			pos = in.Offset
-			rot += in.Rot
-			scale[0] *= in.Scale[0]
-			scale[1] *= in.Scale[1]
-		}
-		if p, ok := in.pos[ti]; ok {
-			pos = p
-		}
-		if r, ok := in.rots[ti]; ok {
-			rot = r
-		}
-		if s, ok := in.scales[ti]; ok {
-			scale = s
+		if sampled != nil {
+			st := sampled[ti]
+			pos, rot, scale = st.pos, st.rot, st.scale
+		} else {
+			if ti == 0 {
+				pos = in.Offset
+				rot += in.Rot
+				scale[0] *= in.Scale[0]
+				scale[1] *= in.Scale[1]
+			}
+			if p, ok := in.pos[ti]; ok {
+				pos = p
+			}
+			if r, ok := in.rots[ti]; ok {
+				rot = r
+			}
+			if s, ok := in.scales[ti]; ok {
+				scale = s
+			}
 		}
 		aff = aff.Mul(TRS(pos[0], pos[1], rot, scale[0], scale[1]))
 	}

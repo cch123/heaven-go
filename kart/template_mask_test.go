@@ -72,6 +72,42 @@ func TestTemplateNodeWorldHonorsRuntimeOverrides(t *testing.T) {
 	}
 }
 
+func TestTemplateNodeWorldAtSamplesActiveAnimation(t *testing.T) {
+	as := &Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}},
+			{Name: "Actor", Path: "Root/Actor", Parent: 0, Scale: [2]float64{1, 1}},
+			{Name: "Particle", Path: "Root/Actor/Particle", Parent: 1, Pos: [2]float64{0.25, 0}, Scale: [2]float64{1, 1}},
+		}},
+		Anims: map[string]*kmdata.Anim{
+			"Grab": {
+				Duration: 1,
+				Pos: map[string]kmdata.XYCurve{
+					"Particle": {X: []kmdata.Key{{T: 0, V: 1}, {T: 1, V: 3}}},
+				},
+			},
+		},
+	}
+	inst := NewTemplate(as, "Root").NewInstance()
+	inst.Play("Actor", "Grab", 0, 1)
+
+	staticWorld, ok := inst.NodeWorld("Actor/Particle", Identity())
+	if !ok {
+		t.Fatal("missing static particle node")
+	}
+	if got, want := staticWorld.Tx, 0.25; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("static NodeWorld x = %v, want bind pose %v", got, want)
+	}
+
+	sampledWorld, ok := inst.NodeWorldAt("Actor/Particle", Identity(), 1)
+	if !ok {
+		t.Fatal("missing sampled particle node")
+	}
+	if got, want := sampledWorld.Tx, 3.0; math.Abs(got-want) > 1e-9 {
+		t.Fatalf("NodeWorldAt x = %v, want sampled animation x %v", got, want)
+	}
+}
+
 func TestTemplateResetSubtreeClearsRuntimeOverrides(t *testing.T) {
 	as := &Assets{
 		Rig: kmdata.Rig{Nodes: []kmdata.Node{

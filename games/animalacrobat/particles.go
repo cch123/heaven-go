@@ -71,12 +71,12 @@ const (
 )
 
 func (m *Module) spawnHoldParticle(ob *acrobatObstacle, beat float64) {
-	x, y := m.obstacleParticleAnchor(ob, ob.input.holdParticleRel)
+	x, y := m.obstacleParticleAnchor(ob, ob.input.holdParticleRel, beat)
 	m.spawnStarBurst(beat, m.ctx.BeatToTime(beat), x, y, acrobatParticleHold, 0x484f4c44)
 }
 
 func (m *Module) spawnSweatParticle(ob *acrobatObstacle, beat float64) {
-	x, y := m.obstacleParticleAnchor(ob, ob.input.sweatParticleRel)
+	x, y := m.obstacleParticleAnchor(ob, ob.input.sweatParticleRel, beat)
 	t := m.ctx.BeatToTime(beat)
 	m.spawnSweatBurst(beat, t, x, y)
 }
@@ -85,14 +85,14 @@ func (m *Module) spawnReleaseParticle(beat, x, y float64) {
 	m.spawnStarBurst(beat, m.ctx.BeatToTime(beat), x, y, acrobatParticleRelease, 0x52454c53)
 }
 
-func (m *Module) obstacleParticleAnchor(ob *acrobatObstacle, rel string) (float64, float64) {
+func (m *Module) obstacleParticleAnchor(ob *acrobatObstacle, rel string, beat float64) (float64, float64) {
 	if ob == nil || ob.inst == nil || rel == "" {
 		if ob == nil {
 			return 0, 0
 		}
 		return ob.x + ob.gripX, ob.gripY
 	}
-	if world, ok := ob.inst.NodeWorld(rel, kart.Identity()); ok {
+	if world, ok := ob.inst.NodeWorldAt(rel, kart.Identity(), beat); ok {
 		return world.Apply(0, 0)
 	}
 	return ob.x + ob.gripX, ob.gripY
