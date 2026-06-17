@@ -1,6 +1,6 @@
 {
  "Wall": {
-  "default": "move",
+  "default": "idle",
   "states": {
    "break": {
     "clip": "Animations/wall/break",

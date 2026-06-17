@@ -111,6 +111,12 @@
     -0.4
    ],
    "rotZ": -3.141592653589793,
+   "quat": [
+    0,
+    0.7071068,
+    -0.7071068,
+    0
+   ],
    "scale": [
     1,
     1
@@ -136,6 +142,12 @@
     0
    ],
    "rotZ": 1.6308195593650068e-13,
+   "quat": [
+    -5.765818e-14,
+    -0.7071068,
+    5.765818e-14,
+    0.7071068
+   ],
    "scale": [
     1,
     1
@@ -161,6 +173,12 @@
     0
    ],
    "rotZ": 1.6308195593650068e-13,
+   "quat": [
+    -5.765818e-14,
+    -0.7071068,
+    5.765818e-14,
+    0.7071068
+   ],
    "scale": [
     1,
     1
@@ -186,6 +204,12 @@
     -0.9800001
    ],
    "rotZ": 0,
+   "quat": [
+    0,
+    -1,
+    0,
+    0
+   ],
    "scale": [
     1,
     1
@@ -236,6 +260,12 @@
     -0.55
    ],
    "rotZ": -3.141592653589793,
+   "quat": [
+    0,
+    0.7071068,
+    -0.7071068,
+    0
+   ],
    "scale": [
     1,
     1
@@ -261,6 +291,12 @@
     0
    ],
    "rotZ": 1.6308195593650068e-13,
+   "quat": [
+    -5.765818e-14,
+    -0.7071068,
+    5.765818e-14,
+    0.7071068
+   ],
    "scale": [
     1,
     1
@@ -286,6 +322,12 @@
     0
    ],
    "rotZ": 1.6308195593650068e-13,
+   "quat": [
+    -5.765818e-14,
+    -0.7071068,
+    5.765818e-14,
+    0.7071068
+   ],
    "scale": [
     1,
     1
@@ -311,6 +353,12 @@
     -0.9800001
    ],
    "rotZ": 0,
+   "quat": [
+    0,
+    -1,
+    0,
+    0
+   ],
    "scale": [
     1,
     1
@@ -361,6 +409,12 @@
     -0.55
    ],
    "rotZ": -3.141592653589793,
+   "quat": [
+    0,
+    0.7071068,
+    -0.7071068,
+    0
+   ],
    "scale": [
     1,
     1
@@ -386,6 +440,12 @@
     0
    ],
    "rotZ": 1.6308195593650068e-13,
+   "quat": [
+    -5.765818e-14,
+    -0.7071068,
+    5.765818e-14,
+    0.7071068
+   ],
    "scale": [
     1,
     1
@@ -411,6 +471,12 @@
     0
    ],
    "rotZ": 1.6308195593650068e-13,
+   "quat": [
+    -5.765818e-14,
+    -0.7071068,
+    5.765818e-14,
+    0.7071068
+   ],
    "scale": [
     1,
     1
@@ -436,6 +502,12 @@
     -0.9800001
    ],
    "rotZ": 0,
+   "quat": [
+    0,
+    -1,
+    0,
+    0
+   ],
    "scale": [
     1,
     1
@@ -462,6 +534,12 @@
    ],
    "z": 6.76,
    "rotZ": 1.5707963267948966,
+   "quat": [
+    0.5,
+    -0.5,
+    0.5,
+    0.5
+   ],
    "scale": [
     0.3,
     0.3
@@ -512,6 +590,12 @@
     -0.93000007
    ],
    "rotZ": 0,
+   "quat": [
+    0,
+    1,
+    0,
+    0
+   ],
    "scale": [
     0.79999995,
     0.79999995
@@ -563,6 +647,12 @@
    ],
    "z": 0.7999998,
    "rotZ": -3.141592653589793,
+   "quat": [
+    0,
+    0.7071068,
+    -0.7071068,
+    0
+   ],
    "scale": [
     0.9,
     0.8999999
@@ -615,6 +705,12 @@
    ],
    "z": 0.7999998,
    "rotZ": -3.141592653589793,
+   "quat": [
+    0,
+    0.7071068,
+    -0.7071068,
+    0
+   ],
    "scale": [
     1,
     1
@@ -666,6 +762,12 @@
     -0.92
    ],
    "rotZ": 0,
+   "quat": [
+    0,
+    1,
+    0,
+    0
+   ],
    "scale": [
     -0.21153791,
     0.79999995
@@ -692,6 +794,12 @@
    ],
    "z": -26.9,
    "rotZ": -1.5707963267948966,
+   "quat": [
+    0.5,
+    0.5,
+    -0.5,
+    0.5
+   ],
    "scale": [
     4.0466557,
     116.84518
@@ -706,7 +814,8 @@
    "size": [
     8,
     6
-   ]
+   ],
+   "mat": "fade"
   },
   {
    "name": "vsn_mesh_1_",
@@ -718,6 +827,12 @@
    ],
    "z": 1.999,
    "rotZ": 0,
+   "quat": [
+    0,
+    -0.9919021,
+    0,
+    0.12700473
+   ],
    "scale": [
     209.80533,
     209.80533
@@ -744,6 +859,12 @@
    ],
    "z": -2.54,
    "rotZ": 0.4173094631639377,
+   "quat": [
+    0.5988837,
+    0.16783243,
+    0.16220455,
+    0.7660681
+   ],
    "scale": [
     1,
     1
@@ -795,6 +916,12 @@
     -0.92
    ],
    "rotZ": 0,
+   "quat": [
+    0,
+    1,
+    0,
+    0
+   ],
    "scale": [
     0.2115379,
     0.79999995
@@ -821,6 +948,12 @@
    ],
    "z": 10,
    "rotZ": 0,
+   "quat": [
+    0,
+    0.7071068,
+    0,
+    0.7071068
+   ],
    "scale": [
     62.873688,
     62.873688
@@ -847,6 +980,12 @@
    ],
    "z": -10,
    "rotZ": 0.08903771674684426,
+   "quat": [
+    0.058832005,
+    -0.53599083,
+    0.037480127,
+    0.841337
+   ],
    "scale": [
     1,
     1
@@ -888,7 +1027,8 @@
    "size": [
     1,
     1
-   ]
+   ],
+   "mat": "sky"
   },
   {
    "name": "Directional Light",
@@ -899,6 +1039,12 @@
     5
    ],
    "rotZ": -0.015396910972216645,
+   "quat": [
+    -0.042956725,
+    -0.17348297,
+    -0.0075744325,
+    0.98387045
+   ],
    "scale": [
     1,
     1
@@ -926,6 +1072,12 @@
    ],
    "z": 6.1470175,
    "rotZ": -0.020095283460304536,
+   "quat": [
+    -0.0014094673,
+    -0.009125173,
+    -0.010047045,
+    0.99990696
+   ],
    "scale": [
     1,
     1
@@ -978,6 +1130,12 @@
    ],
    "z": -4.571,
    "rotZ": 0.06270496937122003,
+   "quat": [
+    0.06433475,
+    -0.54296774,
+    0.026246682,
+    0.83687407
+   ],
    "scale": [
     1,
     1
@@ -1004,6 +1162,12 @@
    ],
    "z": -10,
    "rotZ": 0.08903771674684426,
+   "quat": [
+    0.058832005,
+    -0.53599083,
+    0.037480127,
+    0.841337
+   ],
    "scale": [
     1,
     1
@@ -1029,406 +1193,6 @@
     2.5
    ],
    "z": -20,
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "dog_model_skeleton",
-   "path": "MovingObjects/dog/dog_model_skeleton",
-   "parent": 18,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "dog_root",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root",
-   "parent": 41,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "dogPg",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/dogPg",
-   "parent": 42,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "sdwPg",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/dogPg/sdwPg",
-   "parent": 43,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "hip",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip",
-   "parent": 42,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "l_back_leg",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/l_back_leg",
-   "parent": 45,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "l_back_foot",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/l_back_leg/l_back_foot",
-   "parent": 46,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "neck",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck",
-   "parent": 45,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "l_front_leg",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/l_front_leg",
-   "parent": 48,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "l_front_foot",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/l_front_leg/l_front_foot",
-   "parent": 49,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "nose2",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/nose2",
-   "parent": 48,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "r_front_leg",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/r_front_leg",
-   "parent": 48,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "r_front_foot",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/r_front_leg/r_front_foot",
-   "parent": 52,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "r_back_leg",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/r_back_leg",
-   "parent": 45,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "r_back_foot",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/r_back_leg/r_back_foot",
-   "parent": 54,
-   "pos": [
-    0,
-    0
-   ],
-   "rotZ": 0,
-   "scale": [
-    1,
-    1
-   ],
-   "order": 0,
-   "color": [
-    0,
-    0,
-    0,
-    0
-   ],
-   "size": [
-    0,
-    0
-   ]
-  },
-  {
-   "name": "tail2",
-   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/tail2",
-   "parent": 45,
-   "pos": [
-    0,
-    0
-   ],
    "rotZ": 0,
    "scale": [
     1,
@@ -1474,7 +1238,7 @@
   {
    "name": "wall_root",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root",
-   "parent": 57,
+   "parent": 41,
    "pos": [
     0,
     0
@@ -1499,7 +1263,7 @@
   {
    "name": "block01Pg",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/block01Pg",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1524,7 +1288,7 @@
   {
    "name": "block02Pg",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/block02Pg",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1549,7 +1313,7 @@
   {
    "name": "block03Pg",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/block03Pg",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1574,7 +1338,7 @@
   {
    "name": "block04Pg",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/block04Pg",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1599,7 +1363,7 @@
   {
    "name": "block05Pg",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/block05Pg",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1624,7 +1388,7 @@
   {
    "name": "block06Pg",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/block06Pg",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1649,7 +1413,7 @@
   {
    "name": "block07Pg",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/block07Pg",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1674,7 +1438,7 @@
   {
    "name": "sdwPg",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/sdwPg",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1699,7 +1463,7 @@
   {
    "name": "sdwPg1",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/sdwPg1",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1724,7 +1488,7 @@
   {
    "name": "sdwPg15",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/sdwPg15",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1749,7 +1513,7 @@
   {
    "name": "sdwPg2",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/sdwPg2",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1774,7 +1538,7 @@
   {
    "name": "sdwPg3",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/sdwPg3",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1799,7 +1563,7 @@
   {
    "name": "sdwPg4",
    "path": "Environment/ArchFinePosition/Arch/wall_high_model_skeleton/wall_root/sdwPg4",
-   "parent": 58,
+   "parent": 42,
    "pos": [
     0,
     0
@@ -1874,7 +1638,7 @@
   {
    "name": "wall_low_root",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root",
-   "parent": 73,
+   "parent": 57,
    "pos": [
     0,
     0
@@ -1899,7 +1663,7 @@
   {
    "name": "block01Pg",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/block01Pg",
-   "parent": 74,
+   "parent": 58,
    "pos": [
     0,
     0
@@ -1924,7 +1688,7 @@
   {
    "name": "block02Pg",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/block02Pg",
-   "parent": 74,
+   "parent": 58,
    "pos": [
     0,
     0
@@ -1949,7 +1713,7 @@
   {
    "name": "block03Pg",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/block03Pg",
-   "parent": 74,
+   "parent": 58,
    "pos": [
     0,
     0
@@ -1974,7 +1738,7 @@
   {
    "name": "block04Pg",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/block04Pg",
-   "parent": 74,
+   "parent": 58,
    "pos": [
     0,
     0
@@ -1999,7 +1763,7 @@
   {
    "name": "sdwPg",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/sdwPg",
-   "parent": 74,
+   "parent": 58,
    "pos": [
     0,
     0
@@ -2024,7 +1788,7 @@
   {
    "name": "sdwPg2",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/sdwPg2",
-   "parent": 74,
+   "parent": 58,
    "pos": [
     0,
     0
@@ -2049,7 +1813,7 @@
   {
    "name": "sdwPg3",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/sdwPg3",
-   "parent": 74,
+   "parent": 58,
    "pos": [
     0,
     0
@@ -2074,7 +1838,7 @@
   {
    "name": "sdwPg4",
    "path": "Environment/WallFinePosition/Wall/wall_low_model_skeleton/wall_low_root/sdwPg4",
-   "parent": 74,
+   "parent": 58,
    "pos": [
     0,
     0
@@ -2149,7 +1913,7 @@
   {
    "name": "airboy",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy",
-   "parent": 84,
+   "parent": 68,
    "pos": [
     0,
     0
@@ -2174,7 +1938,7 @@
   {
    "name": "Skl_Root",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root",
-   "parent": 85,
+   "parent": 69,
    "pos": [
     0,
     0
@@ -2199,7 +1963,7 @@
   {
    "name": "Leg_1_L",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L",
-   "parent": 86,
+   "parent": 70,
    "pos": [
     0,
     0
@@ -2224,7 +1988,7 @@
   {
    "name": "Leg_2_L",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L/Leg_2_L",
-   "parent": 87,
+   "parent": 71,
    "pos": [
     0,
     0
@@ -2249,7 +2013,7 @@
   {
    "name": "Ankle_L",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L/Leg_2_L/Ankle_L",
-   "parent": 88,
+   "parent": 72,
    "pos": [
     0,
     0
@@ -2274,7 +2038,7 @@
   {
    "name": "Leg_1_R",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R",
-   "parent": 86,
+   "parent": 70,
    "pos": [
     0,
     0
@@ -2299,7 +2063,7 @@
   {
    "name": "Leg_2_R",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R/Leg_2_R",
-   "parent": 90,
+   "parent": 74,
    "pos": [
     0,
     0
@@ -2324,7 +2088,7 @@
   {
    "name": "Ankle_R",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R/Leg_2_R/Ankle_R",
-   "parent": 91,
+   "parent": 75,
    "pos": [
     0,
     0
@@ -2349,7 +2113,7 @@
   {
    "name": "Waist",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist",
-   "parent": 86,
+   "parent": 70,
    "pos": [
     0,
     0
@@ -2374,7 +2138,7 @@
   {
    "name": "Spine",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine",
-   "parent": 93,
+   "parent": 77,
    "pos": [
     0,
     0
@@ -2399,7 +2163,7 @@
   {
    "name": "Arm_1_L",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L",
-   "parent": 94,
+   "parent": 78,
    "pos": [
     0,
     0
@@ -2424,7 +2188,7 @@
   {
    "name": "Arm_2_L",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L/Arm_2_L",
-   "parent": 95,
+   "parent": 79,
    "pos": [
     0,
     0
@@ -2449,7 +2213,7 @@
   {
    "name": "Wrist_L",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L/Arm_2_L/Wrist_L",
-   "parent": 96,
+   "parent": 80,
    "pos": [
     0,
     0
@@ -2474,7 +2238,7 @@
   {
    "name": "Arm_1_R",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R",
-   "parent": 94,
+   "parent": 78,
    "pos": [
     0,
     0
@@ -2499,7 +2263,7 @@
   {
    "name": "Arm_2_R",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R/Arm_2_R",
-   "parent": 98,
+   "parent": 82,
    "pos": [
     0,
     0
@@ -2524,7 +2288,7 @@
   {
    "name": "Wrist_R",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R/Arm_2_R/Wrist_R",
-   "parent": 99,
+   "parent": 83,
    "pos": [
     0,
     0
@@ -2549,7 +2313,7 @@
   {
    "name": "Head",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Head",
-   "parent": 94,
+   "parent": 78,
    "pos": [
     0,
     0
@@ -2574,7 +2338,7 @@
   {
    "name": "board_model",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/board_model",
-   "parent": 85,
+   "parent": 69,
    "pos": [
     0,
     0
@@ -2599,7 +2363,7 @@
   {
    "name": "eft_fire_L",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/board_model/eft_fire_L",
-   "parent": 102,
+   "parent": 86,
    "pos": [
     0,
     0
@@ -2624,7 +2388,7 @@
   {
    "name": "eft_fire_R",
    "path": "MovingObjects/airboarders/CPU1/neo_airboy/airboy_model_skeleton/airboy/board_model/eft_fire_R",
-   "parent": 102,
+   "parent": 86,
    "pos": [
     0,
     0
@@ -2699,7 +2463,7 @@
   {
    "name": "airboy",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy",
-   "parent": 106,
+   "parent": 90,
    "pos": [
     0,
     0
@@ -2724,7 +2488,7 @@
   {
    "name": "Skl_Root",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root",
-   "parent": 107,
+   "parent": 91,
    "pos": [
     0,
     0
@@ -2749,7 +2513,7 @@
   {
    "name": "Leg_1_L",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L",
-   "parent": 108,
+   "parent": 92,
    "pos": [
     0,
     0
@@ -2774,7 +2538,7 @@
   {
    "name": "Leg_2_L",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L/Leg_2_L",
-   "parent": 109,
+   "parent": 93,
    "pos": [
     0,
     0
@@ -2799,7 +2563,7 @@
   {
    "name": "Ankle_L",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L/Leg_2_L/Ankle_L",
-   "parent": 110,
+   "parent": 94,
    "pos": [
     0,
     0
@@ -2824,7 +2588,7 @@
   {
    "name": "Leg_1_R",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R",
-   "parent": 108,
+   "parent": 92,
    "pos": [
     0,
     0
@@ -2849,7 +2613,7 @@
   {
    "name": "Leg_2_R",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R/Leg_2_R",
-   "parent": 112,
+   "parent": 96,
    "pos": [
     0,
     0
@@ -2874,7 +2638,7 @@
   {
    "name": "Ankle_R",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R/Leg_2_R/Ankle_R",
-   "parent": 113,
+   "parent": 97,
    "pos": [
     0,
     0
@@ -2899,7 +2663,7 @@
   {
    "name": "Waist",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist",
-   "parent": 108,
+   "parent": 92,
    "pos": [
     0,
     0
@@ -2924,7 +2688,7 @@
   {
    "name": "Spine",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine",
-   "parent": 115,
+   "parent": 99,
    "pos": [
     0,
     0
@@ -2949,7 +2713,7 @@
   {
    "name": "Arm_1_L",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L",
-   "parent": 116,
+   "parent": 100,
    "pos": [
     0,
     0
@@ -2974,7 +2738,7 @@
   {
    "name": "Arm_2_L",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L/Arm_2_L",
-   "parent": 117,
+   "parent": 101,
    "pos": [
     0,
     0
@@ -2999,7 +2763,7 @@
   {
    "name": "Wrist_L",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L/Arm_2_L/Wrist_L",
-   "parent": 118,
+   "parent": 102,
    "pos": [
     0,
     0
@@ -3024,7 +2788,7 @@
   {
    "name": "Arm_1_R",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R",
-   "parent": 116,
+   "parent": 100,
    "pos": [
     0,
     0
@@ -3049,7 +2813,7 @@
   {
    "name": "Arm_2_R",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R/Arm_2_R",
-   "parent": 120,
+   "parent": 104,
    "pos": [
     0,
     0
@@ -3074,7 +2838,7 @@
   {
    "name": "Wrist_R",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R/Arm_2_R/Wrist_R",
-   "parent": 121,
+   "parent": 105,
    "pos": [
     0,
     0
@@ -3099,7 +2863,7 @@
   {
    "name": "Head",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Head",
-   "parent": 116,
+   "parent": 100,
    "pos": [
     0,
     0
@@ -3124,7 +2888,7 @@
   {
    "name": "board_model",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/board_model",
-   "parent": 107,
+   "parent": 91,
    "pos": [
     0,
     0
@@ -3149,7 +2913,7 @@
   {
    "name": "eft_fire_L",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/board_model/eft_fire_L",
-   "parent": 124,
+   "parent": 108,
    "pos": [
     0,
     0
@@ -3174,7 +2938,7 @@
   {
    "name": "eft_fire_R",
    "path": "MovingObjects/airboarders/CPU2/neo_airboy/airboy_model_skeleton/airboy/board_model/eft_fire_R",
-   "parent": 124,
+   "parent": 108,
    "pos": [
     0,
     0
@@ -3249,7 +3013,7 @@
   {
    "name": "airboy",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy",
-   "parent": 128,
+   "parent": 112,
    "pos": [
     0,
     0
@@ -3274,7 +3038,7 @@
   {
    "name": "Skl_Root",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root",
-   "parent": 129,
+   "parent": 113,
    "pos": [
     0,
     0
@@ -3299,7 +3063,7 @@
   {
    "name": "Leg_1_L",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L",
-   "parent": 130,
+   "parent": 114,
    "pos": [
     0,
     0
@@ -3324,7 +3088,7 @@
   {
    "name": "Leg_2_L",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L/Leg_2_L",
-   "parent": 131,
+   "parent": 115,
    "pos": [
     0,
     0
@@ -3349,7 +3113,7 @@
   {
    "name": "Ankle_L",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_L/Leg_2_L/Ankle_L",
-   "parent": 132,
+   "parent": 116,
    "pos": [
     0,
     0
@@ -3374,7 +3138,7 @@
   {
    "name": "Leg_1_R",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R",
-   "parent": 130,
+   "parent": 114,
    "pos": [
     0,
     0
@@ -3399,7 +3163,7 @@
   {
    "name": "Leg_2_R",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R/Leg_2_R",
-   "parent": 134,
+   "parent": 118,
    "pos": [
     0,
     0
@@ -3424,7 +3188,7 @@
   {
    "name": "Ankle_R",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Leg_1_R/Leg_2_R/Ankle_R",
-   "parent": 135,
+   "parent": 119,
    "pos": [
     0,
     0
@@ -3449,7 +3213,7 @@
   {
    "name": "Waist",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist",
-   "parent": 130,
+   "parent": 114,
    "pos": [
     0,
     0
@@ -3474,7 +3238,7 @@
   {
    "name": "Spine",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine",
-   "parent": 137,
+   "parent": 121,
    "pos": [
     0,
     0
@@ -3499,7 +3263,7 @@
   {
    "name": "Arm_1_L",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L",
-   "parent": 138,
+   "parent": 122,
    "pos": [
     0,
     0
@@ -3524,7 +3288,7 @@
   {
    "name": "Arm_2_L",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L/Arm_2_L",
-   "parent": 139,
+   "parent": 123,
    "pos": [
     0,
     0
@@ -3549,7 +3313,7 @@
   {
    "name": "Wrist_L",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_L/Arm_2_L/Wrist_L",
-   "parent": 140,
+   "parent": 124,
    "pos": [
     0,
     0
@@ -3574,7 +3338,7 @@
   {
    "name": "Arm_1_R",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R",
-   "parent": 138,
+   "parent": 122,
    "pos": [
     0,
     0
@@ -3599,7 +3363,7 @@
   {
    "name": "Arm_2_R",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R/Arm_2_R",
-   "parent": 142,
+   "parent": 126,
    "pos": [
     0,
     0
@@ -3624,7 +3388,7 @@
   {
    "name": "Wrist_R",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Arm_1_R/Arm_2_R/Wrist_R",
-   "parent": 143,
+   "parent": 127,
    "pos": [
     0,
     0
@@ -3649,7 +3413,7 @@
   {
    "name": "Head",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/Skl_Root/Waist/Spine/Head",
-   "parent": 138,
+   "parent": 122,
    "pos": [
     0,
     0
@@ -3674,7 +3438,7 @@
   {
    "name": "board_model",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/board_model",
-   "parent": 129,
+   "parent": 113,
    "pos": [
     0,
     0
@@ -3699,7 +3463,7 @@
   {
    "name": "eft_fire_L",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/board_model/eft_fire_L",
-   "parent": 146,
+   "parent": 130,
    "pos": [
     0,
     0
@@ -3724,7 +3488,7 @@
   {
    "name": "eft_fire_R",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model_skeleton/airboy/board_model/eft_fire_R",
-   "parent": 146,
+   "parent": 130,
    "pos": [
     0,
     0
@@ -3750,6 +3514,406 @@
    "name": "airboy_model",
    "path": "MovingObjects/airboarders/Player/neo_airboy/airboy_model",
    "parent": 14,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dog_model_skeleton",
+   "path": "MovingObjects/dog/dog_model_skeleton",
+   "parent": 18,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dog_root",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root",
+   "parent": 134,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "dogPg",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/dogPg",
+   "parent": 135,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "sdwPg",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/dogPg/sdwPg",
+   "parent": 136,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "hip",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip",
+   "parent": 135,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "l_back_leg",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/l_back_leg",
+   "parent": 138,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "l_back_foot",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/l_back_leg/l_back_foot",
+   "parent": 139,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "neck",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck",
+   "parent": 138,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "l_front_leg",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/l_front_leg",
+   "parent": 141,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "l_front_foot",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/l_front_leg/l_front_foot",
+   "parent": 142,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "nose2",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/nose2",
+   "parent": 141,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "r_front_leg",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/r_front_leg",
+   "parent": 141,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "r_front_foot",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/neck/r_front_leg/r_front_foot",
+   "parent": 145,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "r_back_leg",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/r_back_leg",
+   "parent": 138,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "r_back_foot",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/r_back_leg/r_back_foot",
+   "parent": 147,
+   "pos": [
+    0,
+    0
+   ],
+   "rotZ": 0,
+   "scale": [
+    1,
+    1
+   ],
+   "order": 0,
+   "color": [
+    0,
+    0,
+    0,
+    0
+   ],
+   "size": [
+    0,
+    0
+   ]
+  },
+  {
+   "name": "tail2",
+   "path": "MovingObjects/dog/dog_model_skeleton/dog_root/hip/tail2",
+   "parent": 138,
    "pos": [
     0,
     0

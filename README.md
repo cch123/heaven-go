@@ -153,14 +153,15 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   内部骨架 path 合成为 scene 节点；MeshRenderer/材质/纹理槽与 sky imported
   FBX Geometry 顶点/UV 已导出，`sky.mat` 里断开的 `_MainTex` GUID 已严格修复到
   同目录官方 `purplesky.png`，`assets/airboarder/meshes.json` 与 `meshtex/`
-  已入库并由运行时加载/绘制单 Geometry MeshRenderer。原版主体是 MeshRenderer/
-  材质贴图的 3D 场景，当前仍暂用手写 2D billboard 渲染角色/障碍；fallback
+  已入库；提取器已把 imported model prefab 内部 renderer override 合成为
+  10 个官方 MeshRenderer/SkinnedMeshRenderer 绑定，并导出 arch/wall/airboy/
+  cloud/sky 的 FBX Geometry 与材质贴图。原版主体是 MeshRenderer/材质贴图的
+  3D 场景，当前运行时仍暂用手写 2D billboard 渲染角色/障碍；fallback
   地面滚动已按官方 `floor_model/move` 的 5 拍循环和提取曲线位移对齐；
   `camera` 事件的 last/next 链式插值、additive Y 旋转、pivot 参数与 X/Y/zoom
   已按 Airboarder.cs 折叠并作用到当前 scene camera；运行时已支持多 Geometry
-  imported FBX 按 fileID/FBXID 精确匹配，但提取器仍需把 imported model prefab
-  内部 renderer 的 mesh/material binding 导出，Airboarder 还待补 CameraPivot
-  旋转/FOV 与 MeshRenderer 材质滚动的完整支持。
+  imported FBX 按 fileID/FBXID 精确匹配，Airboarder 还待把这些官方
+  MeshRenderer/SkinnedMeshRenderer 绑定接入绘制，并补齐材质滚动的完整支持。
 - animalAcrobat：动物队列、障碍旋转/hold 判定、起跳/落地、背景颜色、
   Spotlight/Confetti、BGTileManager 双 tile 回收，以及 AnimalAcrobat.CameraUpdate
   的逐动物 hold/release/长颈鹿 zoom 相机流程已接入；PlayerAcrobat 的

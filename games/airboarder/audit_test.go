@@ -12,7 +12,7 @@ import (
 
 func TestAirboarderExtractedAssetCoverage(t *testing.T) {
 	root := filepath.Join("..", "..", "assets", "airboarder")
-	for _, name := range []string{"scene.json", "sprites.json", "roles.json", "extra.json", "anims.json", "controllers.json", "animators.json", "meshes.json", "atlas0.png"} {
+	for _, name := range []string{"scene.json", "sprites.json", "roles.json", "extra.json", "anims.json", "controllers.json", "animators.json", "materials.json", "meshes.json", "particles.json", "atlas0.png"} {
 		if _, err := os.Stat(filepath.Join(root, name)); err != nil {
 			t.Fatalf("missing %s: %v", name, err)
 		}
@@ -97,11 +97,35 @@ func TestAirboarderMeshRendererAssets(t *testing.T) {
 	root := filepath.Join("..", "..", "assets", "airboarder")
 	var meshes kmdata.MeshData
 	readJSON(t, filepath.Join(root, "meshes.json"), &meshes)
-	if len(meshes.Bindings) != 1 {
-		t.Fatalf("mesh bindings = %d, want 1", len(meshes.Bindings))
+	if len(meshes.Bindings) != 10 {
+		t.Fatalf("mesh bindings = %d, want 10 official model renderer bindings", len(meshes.Bindings))
 	}
-	b := meshes.Bindings[0]
-	if b.Path != "Sky/vsn_mesh_1_" || b.Renderer != "MeshRenderer" {
+	for path, want := range map[string]struct {
+		renderer string
+		mesh     string
+		material string
+	}{
+		"Environment/ArchFinePosition/Arch":           {"MeshRenderer", "wall_high", "wall_body"},
+		"Environment/WallFinePosition/Wall":           {"MeshRenderer", "wall_low", "wall_body"},
+		"MovingObjects/airboarders/CPU1/neo_airboy":   {"SkinnedMeshRenderer", "neo_airboy", "airboy_smile"},
+		"MovingObjects/airboarders/CPU2/neo_airboy":   {"SkinnedMeshRenderer", "neo_airboy", "airboy_board"},
+		"MovingObjects/airboarders/Player/neo_airboy": {"SkinnedMeshRenderer", "neo_airboy", "airboy_board"},
+		"Sky/cloud_model":                             {"MeshRenderer", "cloud_model", "clouds"},
+		"Sky/vsn_mesh_1_":                             {"MeshRenderer", "scene", "sky"},
+	} {
+		b := airboarderMeshBinding(t, meshes, path)
+		if b.Renderer != want.renderer || b.Mesh.Name != want.mesh {
+			t.Fatalf("%s binding = renderer %q mesh %#v, want %s/%s", path, b.Renderer, b.Mesh, want.renderer, want.mesh)
+		}
+		if !airboarderHasMaterial(b, want.material) {
+			t.Fatalf("%s materials = %#v, want %s", path, b.Materials, want.material)
+		}
+		if len(meshes.Geometries[b.Mesh.GUID]) == 0 {
+			t.Fatalf("%s mesh guid %s has no parsed FBX geometry", path, b.Mesh.GUID)
+		}
+	}
+	b := airboarderMeshBinding(t, meshes, "Sky/vsn_mesh_1_")
+	if b.Renderer != "MeshRenderer" {
 		t.Fatalf("sky mesh binding = %#v", b)
 	}
 	if b.Mesh.GUID == "" || b.Mesh.FileID == 0 {
@@ -140,6 +164,26 @@ func TestAirboarderMeshRendererAssets(t *testing.T) {
 	if len(geoms[0].UVs) != 52 || len(geoms[0].UVIndices) != len(geoms[0].Indices) {
 		t.Fatalf("sky uv sizes = %d uvs, %d uv indices; want 52/%d", len(geoms[0].UVs), len(geoms[0].UVIndices), len(geoms[0].Indices))
 	}
+}
+
+func airboarderMeshBinding(t *testing.T, meshes kmdata.MeshData, path string) kmdata.MeshBinding {
+	t.Helper()
+	for _, b := range meshes.Bindings {
+		if b.Path == path {
+			return b
+		}
+	}
+	t.Fatalf("missing mesh binding %s", path)
+	return kmdata.MeshBinding{}
+}
+
+func airboarderHasMaterial(b kmdata.MeshBinding, name string) bool {
+	for _, m := range b.Materials {
+		if m.Name == name {
+			return true
+		}
+	}
+	return false
 }
 
 func TestAirboarderSynthesizesImportedModelAnimPaths(t *testing.T) {

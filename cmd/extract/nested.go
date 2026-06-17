@@ -22,6 +22,8 @@ import (
 
 var nestedNextID int64 = 1 << 40 // 展开实例的 fileID 命名空间（远离普通 id）
 
+const explicitArraySizePrefix = "__heaven_go_array_size__:"
+
 type strippedDoc struct {
 	id, inst, src int64
 	classID       int
@@ -80,7 +82,7 @@ func expandPrefab(path string, prefabGUIDs map[string]string) ([]uy.Doc, error) 
 		srcGUID := uy.S(uy.Get(uy.M(docs[i].Content()["m_SourcePrefab"]), "guid"))
 		srcPath, ok := prefabGUIDs[srcGUID]
 		if !ok {
-			srcDocs, rootTF, rootOK := synthesizeModelPrefabInstance(instID, mod, strippedAll)
+			srcDocs, rootTF, rootOK := synthesizeModelPrefabInstance(instID, srcGUID, mod, strippedAll)
 			if !rootOK {
 				log.Printf("warn: 嵌套 prefab guid %s 未找到（实例 &%d 跳过）", srcGUID, instID)
 				continue
@@ -184,6 +186,7 @@ func expandPrefab(path string, prefabGUIDs map[string]string) ([]uy.Doc, error) 
 			}
 			setPropertyPath(content, pp, m["value"])
 		}
+		clearExplicitArraySizeMarkers(out)
 	}
 	// 未消费的 stripped 锚（变体链的合成 fileID 在文本中不存在——
 	// cheerReaders 的 pepSquadN 变体 RvlCharacter）：在所属实例的展开
@@ -264,7 +267,7 @@ func looksLikeRootPlacement(props map[string]bool) bool {
 // Transform plus referenced component stubs keeps script fields, Animator
 // bindings, and parent-child placement auditable until a full FBX geometry
 // importer is added.
-func synthesizeModelPrefabInstance(instID int64, mod map[string]any, stripped []strippedDoc) ([]uy.Doc, int64, bool) {
+func synthesizeModelPrefabInstance(instID int64, srcGUID string, mod map[string]any, stripped []strippedDoc) ([]uy.Doc, int64, bool) {
 	var inst []strippedDoc
 	bySrc := map[int64]strippedDoc{}
 	for _, sd := range stripped {
@@ -329,6 +332,7 @@ func synthesizeModelPrefabInstance(instID int64, mod map[string]any, stripped []
 	}
 
 	contents := map[int64]map[string]any{}
+	classes := map[int64]int{}
 	out := []uy.Doc{
 		{
 			ClassID: rootGO.classID,
@@ -353,8 +357,10 @@ func synthesizeModelPrefabInstance(instID int64, mod map[string]any, stripped []
 	}
 	if rootGOSrc != 0 {
 		contents[rootGOSrc] = out[0].Content()
+		classes[rootGOSrc] = out[0].ClassID
 	}
 	contents[rootTFSrc] = out[1].Content()
+	classes[rootTFSrc] = out[1].ClassID
 
 	for _, sd := range inst {
 		if (rootGOSrc != 0 && sd.src == rootGOSrc) || sd.src == rootTFSrc || sd.classID == 1 || sd.classID == 4 || sd.classID == 224 {
@@ -372,8 +378,10 @@ func synthesizeModelPrefabInstance(instID int64, mod map[string]any, stripped []
 			}},
 		}
 		contents[sd.src] = doc.Content()
+		classes[sd.src] = sd.classID
 		out = append(out, doc)
 	}
+	out = synthesizeModelRendererDocs(out, contents, classes, rootGO.id, srcGUID, mod)
 
 	for _, mv := range uy.L(mod["m_Modifications"]) {
 		m := uy.M(mv)
@@ -392,8 +400,134 @@ func synthesizeModelPrefabInstance(instID int64, mod map[string]any, stripped []
 		}
 		setPropertyPath(content, pp, m["value"])
 	}
+	clearExplicitArraySizeMarkers(out)
 
 	return out, rootTF.id, true
+}
+
+func synthesizeModelRendererDocs(out []uy.Doc, contents map[int64]map[string]any, classes map[int64]int, rootGO int64, srcGUID string, mod map[string]any) []uy.Doc {
+	if srcGUID == "" {
+		return out
+	}
+	for _, src := range rendererOverrideTargets(mod) {
+		if c := classes[src]; c == 23 || c == 137 {
+			ensureModelRendererMesh(contents[src], c, src, srcGUID)
+			if c == 23 {
+				out = ensureModelMeshFilter(out, rootGO, src, srcGUID)
+			}
+			continue
+		}
+		classID := modelRendererClass(mod, src)
+		rendererID := nestedNextID
+		nestedNextID++
+		content := map[string]any{
+			"m_GameObject": map[string]any{"fileID": rootGO},
+			"m_Enabled":    1,
+		}
+		ensureModelRendererMesh(content, classID, src, srcGUID)
+		out = append(out, uy.Doc{
+			ClassID: classID,
+			FileID:  rendererID,
+			Root:    map[string]any{unityClassName(classID): content},
+		})
+		contents[src] = content
+		classes[src] = classID
+		if classID == 23 {
+			out = ensureModelMeshFilter(out, rootGO, src, srcGUID)
+		}
+	}
+	return out
+}
+
+func ensureModelMeshFilter(out []uy.Doc, rootGO, meshFileID int64, guid string) []uy.Doc {
+	for i := range out {
+		if out[i].ClassID != 33 {
+			continue
+		}
+		content := out[i].Content()
+		if uy.I(uy.Get(content, "m_GameObject", "fileID")) != rootGO {
+			continue
+		}
+		if ref := uy.M(content["m_Mesh"]); ref == nil || (uy.I(ref["fileID"]) == 0 && uy.S(ref["guid"]) == "") {
+			content["m_Mesh"] = map[string]any{"fileID": meshFileID, "guid": guid}
+		}
+		return out
+	}
+	filterID := nestedNextID
+	nestedNextID++
+	filter := map[string]any{
+		"m_GameObject": map[string]any{"fileID": rootGO},
+		"m_Mesh":       map[string]any{"fileID": meshFileID, "guid": guid},
+	}
+	return append(out, uy.Doc{
+		ClassID: 33,
+		FileID:  filterID,
+		Root:    map[string]any{"MeshFilter": filter},
+	})
+}
+
+func ensureModelRendererMesh(content map[string]any, classID int, meshFileID int64, guid string) {
+	if content == nil {
+		return
+	}
+	if classID == 137 {
+		if ref := uy.M(content["m_Mesh"]); ref == nil || (uy.I(ref["fileID"]) == 0 && uy.S(ref["guid"]) == "") {
+			content["m_Mesh"] = map[string]any{"fileID": meshFileID, "guid": guid}
+		}
+	}
+}
+
+func rendererOverrideTargets(mod map[string]any) []int64 {
+	seen := map[int64]bool{}
+	var out []int64
+	for _, mv := range uy.L(mod["m_Modifications"]) {
+		m := uy.M(mv)
+		pp := uy.S(m["propertyPath"])
+		if !looksLikeRendererProperty(pp) {
+			continue
+		}
+		src := uy.I(uy.Get(uy.M(m["target"]), "fileID"))
+		if src == 0 || seen[src] {
+			continue
+		}
+		seen[src] = true
+		out = append(out, src)
+	}
+	return out
+}
+
+func looksLikeRendererProperty(path string) bool {
+	return strings.HasPrefix(path, "m_Materials.") ||
+		strings.HasPrefix(path, "m_CastShadows") ||
+		strings.HasPrefix(path, "m_ReceiveShadows") ||
+		strings.HasPrefix(path, "m_DynamicOccludee") ||
+		strings.HasPrefix(path, "m_LightProbeUsage") ||
+		strings.HasPrefix(path, "m_ReflectionProbeUsage") ||
+		strings.HasPrefix(path, "m_SortingLayer") ||
+		strings.HasPrefix(path, "m_SortingOrder") ||
+		strings.HasPrefix(path, "m_RootBone") ||
+		strings.HasPrefix(path, "m_UpdateWhenOffscreen") ||
+		strings.HasPrefix(path, "m_SkinnedMotionVectors") ||
+		strings.HasPrefix(path, "m_Bones") ||
+		strings.HasPrefix(path, "m_BlendShape")
+}
+
+func modelRendererClass(mod map[string]any, src int64) int {
+	for _, mv := range uy.L(mod["m_Modifications"]) {
+		m := uy.M(mv)
+		if uy.I(uy.Get(uy.M(m["target"]), "fileID")) != src {
+			continue
+		}
+		switch pp := uy.S(m["propertyPath"]); {
+		case strings.HasPrefix(pp, "m_RootBone"),
+			strings.HasPrefix(pp, "m_UpdateWhenOffscreen"),
+			strings.HasPrefix(pp, "m_SkinnedMotionVectors"),
+			strings.HasPrefix(pp, "m_Bones"),
+			strings.HasPrefix(pp, "m_BlendShape"):
+			return 137
+		}
+	}
+	return 23
 }
 
 func unityClassName(classID int) string {
@@ -475,6 +609,25 @@ func setPropertyPath(content map[string]any, path string, value any) {
 // treating this as a nested map drops mapped-material overrides from nested
 // prefab instances such as Moai Doo-Wop's male/female Moai prefabs.
 func setTopLevelArrayPath(content map[string]any, path string, value any) bool {
+	const sizeSuffix = ".Array.size"
+	if strings.HasSuffix(path, sizeSuffix) {
+		field := strings.TrimSuffix(path, sizeSuffix)
+		size := int(uy.I(normalizeModValue(value)))
+		if field == "" || size < 0 {
+			return false
+		}
+		arr := uy.L(content[field])
+		for len(arr) < size {
+			arr = append(arr, map[string]any{"fileID": 0})
+		}
+		if len(arr) > size {
+			arr = arr[:size]
+		}
+		content[field] = arr
+		content[explicitArraySizePrefix+field] = size
+		return true
+	}
+
 	const marker = ".Array.data["
 	i := strings.Index(path, marker)
 	if i < 0 || !strings.HasSuffix(path, "]") {
@@ -486,6 +639,9 @@ func setTopLevelArrayPath(content map[string]any, path string, value any) bool {
 	if err != nil || field == "" || idx < 0 {
 		return false
 	}
+	if size, ok := content[explicitArraySizePrefix+field]; ok && idx >= int(uy.I(size)) {
+		return true
+	}
 	arr := uy.L(content[field])
 	for len(arr) <= idx {
 		arr = append(arr, map[string]any{"fileID": 0})
@@ -493,6 +649,29 @@ func setTopLevelArrayPath(content map[string]any, path string, value any) bool {
 	arr[idx] = normalizeModValue(value)
 	content[field] = arr
 	return true
+}
+
+func clearExplicitArraySizeMarkers(docs []uy.Doc) {
+	for i := range docs {
+		clearExplicitArraySizeMarkersIn(docs[i].Content())
+	}
+}
+
+func clearExplicitArraySizeMarkersIn(v any) {
+	switch tv := v.(type) {
+	case map[string]any:
+		for k, vv := range tv {
+			if strings.HasPrefix(k, explicitArraySizePrefix) {
+				delete(tv, k)
+				continue
+			}
+			clearExplicitArraySizeMarkersIn(vv)
+		}
+	case []any:
+		for _, vv := range tv {
+			clearExplicitArraySizeMarkersIn(vv)
+		}
+	}
 }
 
 // normalizeModValue 把修改值转为数值（YAML 解析可能给 string）。
