@@ -65,6 +65,11 @@ func (s *SceneInst) drawMeshBinding(dst *ebiten.Image, bindingIdx, nodeIdx int, 
 	b := &s.as.Meshes.Bindings[bindingIdx]
 	w, h, ok := builtinMeshFootprint(b.Mesh)
 	if ok {
+		tex, env := s.meshTexture(b)
+		if tex != nil {
+			drawTexturedBuiltinQuad(dst, proj.Mul(world), w, h, s.meshTint(nodeIdx, b), tex, env)
+			return
+		}
 		drawSolidQuad(dst, proj.Mul(world), w, h, s.meshTint(nodeIdx, b))
 		return
 	}
@@ -125,6 +130,97 @@ func drawSolidQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64) {
 		}
 	}
 	dst.DrawTriangles(vs[:], []uint16{0, 1, 2, 0, 2, 3}, meshWhitePixel(), &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func drawTexturedBuiltinQuad(dst *ebiten.Image, m Aff, w, h float64, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {
+	if tint[3] <= 0 || w <= 0 || h <= 0 || tex == nil {
+		return
+	}
+	scale := env.Scale
+	if scale == [2]float64{} {
+		scale = [2]float64{1, 1}
+	}
+	// Unity repeats built-in mesh UVs when material tiling is above 1. Split the
+	// quad on tile boundaries so Ebitengine never interpolates across the wrap
+	// discontinuity from u/v=1 back to 0.
+	ux := repeatBreaks(env.Offset[0], env.Offset[0]+scale[0])
+	vy := repeatBreaks(env.Offset[1], env.Offset[1]+scale[1])
+	if len(ux) < 2 || len(vy) < 2 {
+		return
+	}
+	b := tex.Bounds()
+	tw, th := float64(b.Dx()), float64(b.Dy())
+	vs := make([]ebiten.Vertex, 0, (len(ux)-1)*(len(vy)-1)*4)
+	is := make([]uint16, 0, (len(ux)-1)*(len(vy)-1)*6)
+	for yi := 0; yi+1 < len(vy); yi++ {
+		for xi := 0; xi+1 < len(ux); xi++ {
+			if len(vs)+4 > math.MaxUint16 {
+				return
+			}
+			u0, u1 := ux[xi], ux[xi+1]
+			v0, v1 := vy[yi], vy[yi+1]
+			x0, y0 := builtinQuadLocal(w, h, u0, v0, env.Offset, scale)
+			x1, y1 := builtinQuadLocal(w, h, u1, v1, env.Offset, scale)
+			p := [4][2]float64{{x0, y0}, {x1, y0}, {x1, y1}, {x0, y1}}
+			uv := [4][2]float64{
+				{repeatCoord(u0, u0), repeatCoord(v0, v0)},
+				{repeatCoord(u1, u0), repeatCoord(v0, v0)},
+				{repeatCoord(u1, u0), repeatCoord(v1, v0)},
+				{repeatCoord(u0, u0), repeatCoord(v1, v0)},
+			}
+			base := uint16(len(vs))
+			for i := range p {
+				x, y := m.Apply(p[i][0], p[i][1])
+				vs = append(vs, ebiten.Vertex{
+					DstX:   float32(x),
+					DstY:   float32(y),
+					SrcX:   float32(uv[i][0]*tw) + float32(b.Min.X),
+					SrcY:   float32((1-uv[i][1])*th) + float32(b.Min.Y),
+					ColorR: float32(tint[0]),
+					ColorG: float32(tint[1]),
+					ColorB: float32(tint[2]),
+					ColorA: float32(tint[3]),
+				})
+			}
+			is = append(is, base, base+1, base+2, base, base+2, base+3)
+		}
+	}
+	dst.DrawTriangles(vs, is, tex, &ebiten.DrawTrianglesOptions{AntiAlias: true})
+}
+
+func repeatBreaks(a, b float64) []float64 {
+	if a == b || math.IsNaN(a) || math.IsNaN(b) || math.IsInf(a, 0) || math.IsInf(b, 0) {
+		return nil
+	}
+	if b < a {
+		a, b = b, a
+	}
+	out := []float64{a}
+	for x := math.Floor(a) + 1; x < b; x++ {
+		out = append(out, x)
+	}
+	out = append(out, b)
+	return out
+}
+
+func builtinQuadLocal(w, h, u, v float64, offset, scale [2]float64) (float64, float64) {
+	xp := 0.0
+	if scale[0] != 0 {
+		xp = (u - offset[0]) / scale[0]
+	}
+	yp := 0.0
+	if scale[1] != 0 {
+		yp = (v - offset[1]) / scale[1]
+	}
+	return -w/2 + xp*w, -h/2 + yp*h
+}
+
+func repeatCoord(v, segmentStart float64) float64 {
+	f := v - math.Floor(v)
+	if math.Abs(f) < 1e-9 && v > segmentStart {
+		return 1
+	}
+	return f
 }
 
 func drawMeshGeometry(dst *ebiten.Image, m Aff, g *kmdata.MeshGeometry, tint [4]float64, tex *ebiten.Image, env kmdata.TextureEnv) {

@@ -125,6 +125,29 @@ func TestImportedFBXMeshRendererUsesTextureUVs(t *testing.T) {
 	scene.Draw(dst, Translate(48, 48).Mul(Scale(4, -4)))
 }
 
+func TestBuiltinMeshRendererUsesMaterialTexture(t *testing.T) {
+	as := meshTestAssets(nil)
+	mat := as.Meshes.Materials["mat-guid"]
+	mat.Colors["_Color"] = [4]float64{1, 1, 1, 1}
+	mat.Textures = map[string]kmdata.TextureEnv{
+		"_MainTex": {Image: "meshtex/grid.png", Scale: [2]float64{2, 1}},
+	}
+	as.Meshes.Materials["mat-guid"] = mat
+	tex := ebiten.NewImage(2, 2)
+	as.MeshTex = map[string]*ebiten.Image{"meshtex/grid.png": tex}
+
+	scene := NewScene(as)
+	scene.Sample(0)
+	if tex, env := scene.meshTexture(&as.Meshes.Bindings[0]); tex == nil || env.Scale != [2]float64{2, 1} {
+		t.Fatalf("builtin mesh texture = %v env=%#v, want tiled material texture", tex, env)
+	}
+	if got := repeatBreaks(0, 2); len(got) != 3 || got[0] != 0 || got[1] != 1 || got[2] != 2 {
+		t.Fatalf("tiling breaks = %v, want [0 1 2]", got)
+	}
+	dst := ebiten.NewImage(32, 32)
+	scene.Draw(dst, Translate(16, 16).Mul(Scale(2, -2)))
+}
+
 func meshTestAssets(anims map[string]*kmdata.Anim) *Assets {
 	if anims == nil {
 		anims = map[string]*kmdata.Anim{}

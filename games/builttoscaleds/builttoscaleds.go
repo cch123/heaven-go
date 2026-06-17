@@ -1,11 +1,9 @@
 // Package builttoscaleds ports Built to Scale (DS/NTR) timing onto engine.App.
 //
 // The extracted DS bundle is mesh-only: it has Animator clips, sounds, and
-// MeshRenderer bindings but no SpriteRenderer atlas. kart.Scene can now draw
-// Unity built-in mesh footprints, while the full 3D camera/material pass is
-// still incomplete; until that lands this module keeps the original cue timing,
-// sounds, input windows, colors, lights, and camera controls, then renders an
-// equivalent geometric assembly line with Ebitengine primitives.
+// MeshRenderer bindings but no SpriteRenderer atlas. The static world now uses
+// the extracted MeshRenderer scene, while dynamic block objects still use the
+// existing 2D timing layer until the mesh prefab instancing path is complete.
 package builttoscaleds
 
 import (
@@ -17,6 +15,7 @@ import (
 	"github.com/hajimehoshi/ebiten/v2/vector"
 
 	"hsdemo/engine"
+	"hsdemo/kart"
 	"hsdemo/riq"
 )
 
@@ -98,7 +97,8 @@ type effect struct {
 }
 
 type Module struct {
-	ctx *engine.Ctx
+	ctx  *engine.Ctx
+	proj kart.Aff
 
 	events []blockEvt
 	colors []colorEvt
@@ -128,7 +128,13 @@ func (m *Module) ID() string { return "builtToScaleDS" }
 
 func (m *Module) Load(ctx *engine.Ctx) error {
 	m.ctx = ctx
-	return ctx.LoadAssets("builtToScaleDS")
+	if err := ctx.LoadAssets("builtToScaleDS"); err != nil {
+		return err
+	}
+	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
+	m.playSceneDefaults(0)
+	m.hideDynamicMeshPrefabs()
+	return nil
 }
 
 func (m *Module) OnEvent(e *riq.Entity) {
@@ -186,7 +192,7 @@ func (m *Module) Ready() {
 func (m *Module) OnSwitch(beat float64) {
 	m.blocks = nil
 	m.effects = nil
-	m.shooterState = "Idle"
+	m.setShooterState("Idle", beat)
 	m.lastShotOut = false
 	m.objectColor, m.shooterColor, m.envColor = defaultObjectColor, defaultShooterColor, defaultEnvColor
 	for _, ev := range m.colors {
@@ -200,6 +206,7 @@ func (m *Module) OnSwitch(beat float64) {
 			m.spawnBlock(ev, create)
 		}
 	}
+	m.playSceneDefaults(beat)
 }
 
 func (m *Module) Whiff(beat float64) {
@@ -211,7 +218,7 @@ func (m *Module) Whiff(beat float64) {
 
 func (m *Module) Update(_, beat float64) {
 	if m.shooterState == "Shoot" && beat-m.shooterBeat > 0.45 {
-		m.shooterState = "Idle"
+		m.setShooterState("Idle", beat)
 		m.lastShotOut = false
 	}
 	if m.shooterState == "Windup" {
@@ -223,13 +230,12 @@ func (m *Module) Update(_, beat float64) {
 			}
 		}
 		if !hasWindup {
-			m.shooterState = "Idle"
+			m.setShooterState("Idle", beat)
 		}
 	}
 	for _, b := range m.blocks {
 		if b.state == blockMoving && beat >= b.windupBeat && beat < b.hitBeat {
-			m.shooterState = "Windup"
-			m.shooterBeat = beat
+			m.setShooterState("Windup", beat)
 		}
 		if b.state == blockMiss && beat >= b.sinkBeat {
 			b.state = blockSunk
@@ -251,7 +257,7 @@ func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
 	rot, zoom := m.cameraAt(beat)
 	env := m.envAt(beat)
 	screen.Fill(toRGBA(env))
-	m.drawGrid(screen, env, rot, zoom, beat)
+	m.drawOfficialMeshScene(screen, env, rot, zoom, beat)
 	m.drawConveyor(screen, env, zoom, beat)
 	m.drawElevator(screen, zoom)
 	for _, b := range m.blocks {
@@ -305,6 +311,7 @@ func (m *Module) spawnBlock(ev blockEvt, create float64) {
 		hitBeat: hitBeat(ev), sinkBeat: hitBeat(ev) + 2*ev.length,
 	}
 	m.blocks = append(m.blocks, b)
+	m.ctx.Scene.PlayState(m.ctx.Role("elevatorAnim"), "MakeRod", create, 1)
 	m.ctx.At(b.sinkBeat, func() {
 		if b.state == blockMiss {
 			m.ctx.Sound("Sink")
@@ -350,8 +357,18 @@ func (m *Module) missBlock(ev blockEvt) {
 }
 
 func (m *Module) shoot(beat float64) {
-	m.shooterState = "Shoot"
+	m.setShooterState("Shoot", beat)
+}
+
+func (m *Module) setShooterState(state string, beat float64) {
+	if m.shooterState == state && state != "Shoot" {
+		return
+	}
+	m.shooterState = state
 	m.shooterBeat = beat
+	if root := m.ctx.Role("shooterAnim"); root != "" {
+		m.ctx.Scene.PlayState(root, state, beat, 1)
+	}
 }
 
 func (m *Module) findBlock(ev blockEvt) *block {
@@ -426,20 +443,33 @@ func (m *Module) lightsActive(beat float64) (bool, bool) {
 	return active, first
 }
 
-func (m *Module) drawGrid(screen *ebiten.Image, env [4]float64, rot, zoom, beat float64) {
-	c := blend(env, [4]float64{0, 0, 0, 1}, 0.22)
-	stroke := toRGBA(scaleAlpha(c, 0.7))
-	centerX := float32(engine.ScreenW / 2)
-	baseY := float32(316 * zoom)
-	tilt := float32(math.Sin(rot*math.Pi/180) * 50)
-	for i := -8; i <= 8; i++ {
-		x := centerX + float32(i)*70*float32(zoom)
-		vector.StrokeLine(screen, x, baseY-168, x+tilt, engine.ScreenH, 2, stroke, false)
+func (m *Module) playSceneDefaults(beat float64) {
+	sec := m.ctx.SecPerBeat(beat)
+	for _, role := range []string{"shooterAnim", "elevatorAnim"} {
+		if root := m.ctx.Role(role); root != "" {
+			m.ctx.Scene.PlayDefaultState(root, beat, sec)
+		}
 	}
-	for j := 0; j < 9; j++ {
-		y := baseY + float32(j)*32*float32(zoom) + float32(math.Mod(beat*18, 32))
-		vector.StrokeLine(screen, 0, y, engine.ScreenW, y, 2, stroke, false)
+}
+
+func (m *Module) hideDynamicMeshPrefabs() {
+	for _, role := range []string{"movingBlocksBase", "flyingRodBase", "hitPartsBase", "missPartsBase"} {
+		if root := m.ctx.Role(role); root != "" {
+			m.ctx.Scene.SetActive(root, false)
+		}
 	}
+}
+
+func (m *Module) drawOfficialMeshScene(screen *ebiten.Image, env [4]float64, rot, zoom, beat float64) {
+	for _, b := range m.ctx.Assets.Meshes.Bindings {
+		if len(b.Materials) == 0 || b.Materials[0].Name != "GridPlane" {
+			continue
+		}
+		m.ctx.Scene.SetMaterialOver(b.Path, env, [4]float64{})
+	}
+	m.ctx.SampleScene(beat)
+	proj := m.proj.Mul(kart.Scale(zoom, zoom)).Mul(kart.Rotate(rot * math.Pi / 180))
+	m.ctx.Scene.Draw(screen, proj)
 }
 
 func (m *Module) drawConveyor(screen *ebiten.Image, env [4]float64, zoom, beat float64) {

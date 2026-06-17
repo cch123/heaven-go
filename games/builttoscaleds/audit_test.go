@@ -146,6 +146,18 @@ func TestBuiltToScaleDSMeshRendererAssets(t *testing.T) {
 			t.Fatalf("missing material %s in mesh material table", mat)
 		}
 	}
+	grid := materialByName(t, as.Meshes, "GridPlane")
+	mainTex, ok := grid.Textures["_MainTex"]
+	if !ok {
+		t.Fatal("GridPlane missing _MainTex texture")
+	}
+	if mainTex.Image == "" {
+		t.Fatal("GridPlane _MainTex image path is empty")
+	}
+	assertNear(t, mainTex.Scale[0], 28)
+	assertNear(t, mainTex.Scale[1], 28)
+	assertNear(t, mainTex.Offset[0], 0.5)
+	assertNear(t, mainTex.Offset[1], 0)
 }
 
 func TestBuiltToScaleDSComponents(t *testing.T) {
@@ -301,6 +313,17 @@ func hasMaterialName(meshes kmdata.MeshData, name string) bool {
 		}
 	}
 	return false
+}
+
+func materialByName(t *testing.T, meshes kmdata.MeshData, name string) kmdata.Material {
+	t.Helper()
+	for _, mat := range meshes.Materials {
+		if mat.Name == name {
+			return mat
+		}
+	}
+	t.Fatalf("missing material %s", name)
+	return kmdata.Material{}
 }
 
 func assertNear(t *testing.T, got, want float64) {

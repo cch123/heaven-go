@@ -120,8 +120,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   Piano 音高、颜色/灯光/相机参数已按 C# 时序接入；官方资产是 mesh-only，
   提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载并
   可绘制 Unity 内置 mesh footprint（内置 mesh fileID、MeshRenderer 材质、
-  纹理槽、float/color 材质参数），当前游戏模块仍用 Ebitengine 几何体替代 3D
-  SkinnedMeshRenderer/材质渲染；Piano 的 `SetLoopParams(beat+length, 0.1f)`
+  `_MainTex` 贴图 tiling/offset、float/color 材质参数）；当前游戏模块已绘制
+  官方静态 MeshRenderer 场景与 GridPlane 材质颜色事件，但 movingBlocks/
+  flyingRod/hitParts/missParts 仍由 2D 时序层临时代替，后续需补 mesh prefab
+  实例化与完整 3D 材质/相机渲染；Piano 的 `SetLoopParams(beat+length, 0.1f)`
   持续尾音和淡出已接入。
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/
   `cmon`/`lastOne`/together riff 的事件流、JJ/Soshi 动画、循环和弦/逐弦音色、
