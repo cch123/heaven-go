@@ -1,10 +1,9 @@
 // Package builttoscaleds ports Built to Scale (DS/NTR) timing onto engine.App.
 //
 // The extracted DS bundle is mesh-only: it has Animator clips, sounds, and
-// MeshRenderer bindings but no SpriteRenderer atlas. The static world and
-// dynamic block/parts prefabs now use extracted MeshRenderer data; the 2D timing
-// overlays remain as a temporary gameplay fallback until the full camera and
-// material stack is promoted to the only presentation path.
+// MeshRenderer bindings but no SpriteRenderer atlas. Static world geometry,
+// dynamic block/parts prefabs, script-driven material colors, light patterns,
+// and belt texture scrolling all run through the extracted MeshRenderer data.
 package builttoscaleds
 
 import (
@@ -13,7 +12,6 @@ import (
 	"sort"
 
 	"github.com/hajimehoshi/ebiten/v2"
-	"github.com/hajimehoshi/ebiten/v2/vector"
 
 	"hsdemo/engine"
 	"hsdemo/kart"
@@ -26,6 +24,7 @@ const (
 	blockTotalFrames     = 80.0
 	spawnFrameOffset     = -3.0
 	pianoFadeSec         = 0.1
+	lightTweenSec        = 0.2
 
 	actionFlick = 0
 )
@@ -118,6 +117,14 @@ type Module struct {
 	objectColor  [4]float64
 	shooterColor [4]float64
 	envColor     [4]float64
+	objectMat    string
+	shooterMat   string
+	gridMat      string
+	elevatorMat  string
+	beltMat      string
+	beltSpeed    float64
+	firstLights  []string
+	secondLights []string
 
 	shooterState string
 	shooterBeat  float64
@@ -127,7 +134,7 @@ type Module struct {
 func New() engine.Module {
 	return &Module{
 		objectColor: defaultObjectColor, shooterColor: defaultShooterColor,
-		envColor: defaultEnvColor, shooterState: "Idle",
+		envColor: defaultEnvColor, beltSpeed: 1, shooterState: "Idle",
 	}
 }
 
@@ -138,6 +145,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	if err := ctx.LoadAssets("builtToScaleDS"); err != nil {
 		return err
 	}
+	m.loadMaterialRefs()
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.blocksHolder = ctx.Role("blocksHolder")
 	m.partsHolder = ctx.Role("partsHolder")
@@ -148,6 +156,20 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	m.playSceneDefaults(0)
 	m.hideDynamicMeshPrefabs()
 	return nil
+}
+
+func (m *Module) loadMaterialRefs() {
+	game := m.ctx.Assets.Extra.Components["game"]
+	m.objectMat = strOr(game.Refs["objectMaterial"], "Object")
+	m.shooterMat = strOr(game.Refs["shooterMaterial"], "Shooter")
+	m.gridMat = strOr(game.Refs["gridPlaneMaterial"], "GridPlane")
+	m.elevatorMat = strOr(game.Refs["elevatorMaterial"], "Grid")
+	m.beltMat = strOr(game.Refs["beltMaterial"], "Belt")
+	if v := game.Nums["beltSpeed"]; v != 0 {
+		m.beltSpeed = v
+	}
+	m.firstLights = append([]string(nil), game.RefArrays["firstPatternLights"]...)
+	m.secondLights = append([]string(nil), game.RefArrays["secondPatternLights"]...)
 }
 
 func (m *Module) OnEvent(e *riq.Entity) {
@@ -270,19 +292,11 @@ func (m *Module) Update(_, beat float64) {
 	}
 }
 
-func (m *Module) Draw(screen *ebiten.Image, _, beat float64) {
+func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {
 	rot, zoom := m.cameraAt(beat)
 	env := m.envAt(beat)
 	screen.Fill(toRGBA(env))
-	m.drawOfficialMeshScene(screen, env, rot, zoom, beat)
-	m.drawConveyor(screen, env, zoom, beat)
-	m.drawElevator(screen, zoom)
-	for _, b := range m.blocks {
-		m.drawBlock(screen, b, beat, zoom)
-	}
-	m.drawShooter(screen, zoom)
-	m.drawEffects(screen, beat, zoom)
-	m.drawLights(screen, env, beat)
+	m.drawOfficialMeshScene(screen, env, rot, zoom, beat, t)
 }
 
 func (m *Module) addBlockEvent(e *riq.Entity) {
@@ -482,23 +496,6 @@ func (m *Module) envAt(beat float64) [4]float64 {
 	return env
 }
 
-func (m *Module) lightsActive(beat float64) (bool, bool) {
-	active, first := false, true
-	for _, ev := range m.lights {
-		if beat < ev.beat {
-			break
-		}
-		if ev.auto {
-			active = true
-			first = int(math.Floor(beat-ev.beat))%2 == 0
-			continue
-		}
-		active = ev.light && beat < ev.beat+ev.length
-		first = int(math.Floor(beat-ev.beat))%2 == 0
-	}
-	return active, first
-}
-
 func (m *Module) playSceneDefaults(beat float64) {
 	sec := m.ctx.SecPerBeat(beat)
 	for _, role := range []string{"shooterAnim", "elevatorAnim"} {
@@ -516,17 +513,95 @@ func (m *Module) hideDynamicMeshPrefabs() {
 	}
 }
 
-func (m *Module) drawOfficialMeshScene(screen *ebiten.Image, env [4]float64, rot, zoom, beat float64) {
-	for _, b := range m.ctx.Assets.Meshes.Bindings {
-		if len(b.Materials) == 0 || b.Materials[0].Name != "GridPlane" {
-			continue
-		}
-		m.ctx.Scene.SetMaterialOver(b.Path, env, [4]float64{})
-	}
+func (m *Module) drawOfficialMeshScene(screen *ebiten.Image, env [4]float64, rot, zoom, beat, songTime float64) {
+	m.applyMeshMaterials(env, beat, songTime)
 	m.ctx.SampleScene(beat)
 	m.queueOfficialDynamicMeshes(beat)
 	proj := m.proj.Mul(kart.Scale(zoom, zoom)).Mul(kart.Rotate(rot * math.Pi / 180))
 	m.ctx.Scene.Draw(screen, proj)
+}
+
+func (m *Module) applyMeshMaterials(env [4]float64, beat, songTime float64) {
+	sc := m.ctx.Scene
+	sc.SetMaterialColorFor(m.objectMat, m.objectColor)
+	sc.SetMaterialColorFor(m.shooterMat, m.shooterColor)
+	sc.SetMaterialColorFor(m.beltMat, env)
+	sc.SetMaterialColorFor(m.gridMat, env)
+	sc.SetMaterialColorFor(m.elevatorMat, env)
+
+	first, second := m.lightColorsAt(beat, env)
+	for _, mat := range m.firstLights {
+		sc.SetMaterialColorFor(mat, first)
+	}
+	for _, mat := range m.secondLights {
+		sc.SetMaterialColorFor(mat, second)
+	}
+	sc.SetMaterialTextureOffsetFor(m.beltMat, beltTextureOffset(m.beltSpeed, songTime))
+}
+
+func (m *Module) lightColorsAt(beat float64, env [4]float64) ([4]float64, [4]float64) {
+	active, first, transitionBeat := m.lightPatternAt(beat)
+	targetA, targetB := lightTargets(active, first, env)
+	if m.ctx == nil || transitionBeat < 0 {
+		return targetA, targetB
+	}
+	transitionTime := m.ctx.BeatToTime(transitionBeat)
+	elapsed := m.ctx.Time() - transitionTime
+	if elapsed < 0 || elapsed >= lightTweenSec {
+		return targetA, targetB
+	}
+	prevBeat := m.ctx.TimeToBeat(transitionTime - 1e-6)
+	prevActive, prevFirst, _ := m.lightPatternAt(prevBeat)
+	prevA, prevB := lightTargets(prevActive, prevFirst, m.envAt(prevBeat))
+	u := clamp01(elapsed / lightTweenSec)
+	return lerpColor(prevA, targetA, u), lerpColor(prevB, targetB, u)
+}
+
+func (m *Module) lightPatternAt(beat float64) (active, first bool, transitionBeat float64) {
+	active, first, transitionBeat = false, true, -1
+	for _, ev := range m.lights {
+		if beat < ev.beat {
+			break
+		}
+		if ev.auto {
+			n := math.Floor(math.Max(0, beat-ev.beat))
+			active = true
+			first = int(n)%2 == 0
+			transitionBeat = ev.beat + n
+			continue
+		}
+		if ev.light && beat < ev.beat+ev.length {
+			n := math.Floor(math.Max(0, beat-ev.beat))
+			active = true
+			first = int(n)%2 == 0
+			transitionBeat = ev.beat + n
+			continue
+		}
+		active, first = false, true
+		if ev.light && ev.length > 0 && beat >= ev.beat+ev.length {
+			transitionBeat = ev.beat + ev.length
+		} else {
+			transitionBeat = ev.beat
+		}
+	}
+	return active, first, transitionBeat
+}
+
+func lightTargets(active, first bool, env [4]float64) ([4]float64, [4]float64) {
+	a, b := env, env
+	if !active {
+		return a, b
+	}
+	if first {
+		a = [4]float64{1, 1, 1, 1}
+	} else {
+		b = [4]float64{1, 1, 1, 1}
+	}
+	return a, b
+}
+
+func beltTextureOffset(speed, songTime float64) [2]float64 {
+	return [2]float64{0, math.Mod(-speed*songTime, 1)}
 }
 
 func (m *Module) queueOfficialDynamicMeshes(beat float64) {
@@ -557,128 +632,6 @@ func (m *Module) queueOfficialDynamicMeshes(beat float64) {
 			continue
 		}
 		fx.inst.Queue(sc, beat, partsWorld, 0)
-	}
-}
-
-func (m *Module) drawConveyor(screen *ebiten.Image, env [4]float64, zoom, beat float64) {
-	y := float32(laneY() * zoom)
-	h := float32(82 * zoom)
-	belt := toRGBA(blend(env, [4]float64{0.05, 0.12, 0.05, 1}, 0.48))
-	vector.DrawFilledRect(screen, 0, y-h/2, engine.ScreenW, h, belt, false)
-	vector.StrokeLine(screen, 0, y-h/2, engine.ScreenW, y-h/2, 5, color.RGBA{255, 255, 255, 120}, false)
-	vector.StrokeLine(screen, 0, y+h/2, engine.ScreenW, y+h/2, 5, color.RGBA{0, 0, 0, 95}, false)
-	for x := -80 + math.Mod(beat*96, 80); x < engine.ScreenW+80; x += 80 {
-		vector.StrokeLine(screen, float32(x), y-h/2, float32(x+36), y+h/2, 3, color.RGBA{255, 255, 255, 80}, false)
-	}
-}
-
-func (m *Module) drawElevator(screen *ebiten.Image, zoom float64) {
-	x, y := float32(154*zoom), float32(laneY()*zoom)
-	vector.DrawFilledRect(screen, x-42, y-116, 84, 116, color.RGBA{45, 90, 45, 255}, false)
-	vector.StrokeRect(screen, x-42, y-116, 84, 116, 4, color.RGBA{235, 255, 235, 180}, false)
-	vector.DrawFilledRect(screen, x-28, y-76, 56, 56, toRGBA(m.objectColor), false)
-}
-
-func (m *Module) drawShooter(screen *ebiten.Image, zoom float64) {
-	x, y := float32(shooterX()*zoom), float32(laneY()*zoom)
-	col := toRGBA(m.shooterColor)
-	if m.shooterState == "Windup" {
-		x += 20 * float32(math.Sin(m.ctx.Beat()*math.Pi*4))
-	}
-	if m.shooterState == "Shoot" {
-		x -= 34
-	}
-	vector.DrawFilledRect(screen, x-42, y-50, 74, 100, col, false)
-	vector.DrawFilledCircle(screen, x-52, y, 28, col, false)
-	vector.StrokeLine(screen, x-88, y, x-24, y, 12, color.RGBA{250, 250, 250, 210}, false)
-}
-
-func (m *Module) drawBlock(screen *ebiten.Image, b *block, beat, zoom float64) {
-	if beat < b.createBeat || b.state == blockSunk {
-		return
-	}
-	x, y := blockPos(b, beat)
-	x *= zoom
-	y *= zoom
-	switch b.state {
-	case blockHit:
-		if beat-b.stateBeat > 0.45 {
-			return
-		}
-		x += (beat - b.stateBeat) * 250
-	case blockNear:
-		if beat-b.stateBeat > 1.2 {
-			return
-		}
-		y += (beat - b.stateBeat) * 170
-	case blockMiss:
-		if beat >= b.sinkBeat {
-			return
-		}
-		if beat > b.hitBeat {
-			y += (beat - b.hitBeat) / (b.sinkBeat - b.hitBeat) * 140
-		}
-	}
-	drawWidget(screen, float32(x), float32(y), float32(zoom), toRGBA(m.objectColor))
-}
-
-func (m *Module) drawEffects(screen *ebiten.Image, beat, zoom float64) {
-	for _, fx := range m.effects {
-		u := beat - fx.beat
-		x, y := float32(fx.x*zoom), float32(fx.y*zoom)
-		switch fx.kind {
-		case fxHit:
-			for i := 0; i < 8; i++ {
-				a := float64(i) * math.Pi / 4
-				r := float32(18 + u*76)
-				vector.StrokeLine(screen, x, y, x+float32(math.Cos(a))*r, y+float32(math.Sin(a))*r, 4, color.RGBA{255, 255, 255, uint8(220 * (1 - clamp01(u/0.8)))}, false)
-			}
-		case fxNear:
-			alpha := uint8(210 * (1 - clamp01(u/1.2)))
-			vector.StrokeCircle(screen, x, y+float32(u*80), float32(35+u*80), 7, color.RGBA{255, 225, 210, alpha}, false)
-		case fxRod:
-			alpha := uint8(210 * (1 - clamp01(u/1.0)))
-			vector.StrokeLine(screen, x-float32(u*300), y-34, x+80-float32(u*300), y-34, 10, color.RGBA{255, 255, 255, alpha}, false)
-		}
-	}
-}
-
-func (m *Module) drawLights(screen *ebiten.Image, env [4]float64, beat float64) {
-	active, first := m.lightsActive(beat)
-	if !active {
-		return
-	}
-	c := toRGBA(blend(env, [4]float64{1, 1, 1, 1}, 0.75))
-	c.A = 120
-	offset := 0
-	if !first {
-		offset = 1
-	}
-	for i := 0; i < 5; i++ {
-		if i%2 != offset {
-			continue
-		}
-		x := float32(140 + i*170)
-		vector.DrawFilledCircle(screen, x, 86, 34, c, false)
-	}
-}
-
-func drawWidget(screen *ebiten.Image, x, y, scale float32, col color.RGBA) {
-	w, h := float32(24)*scale, float32(24)*scale
-	for i := 0; i < 6; i++ {
-		px := x + float32(i-3)*w*0.86
-		py := y
-		if i%2 == 1 {
-			py -= h * 0.68
-		}
-		shade := col
-		if i%2 == 1 {
-			shade.R = uint8(float64(shade.R) * 0.82)
-			shade.G = uint8(float64(shade.G) * 0.82)
-			shade.B = uint8(float64(shade.B) * 0.82)
-		}
-		vector.DrawFilledRect(screen, px-w/2, py-h/2, w, h, shade, false)
-		vector.StrokeRect(screen, px-w/2, py-h/2, w, h, 2, color.RGBA{0, 0, 0, 120}, false)
 	}
 }
 
@@ -713,13 +666,6 @@ func blockAnimFrame(ev blockEvt, beat float64, secPerBeat float64) float64 {
 	default:
 		return frame
 	}
-}
-
-func blockPos(b *block, beat float64) (x, y float64) {
-	u := clamp01((beat - b.createBeat) / (b.hitBeat - b.createBeat))
-	x = 154 + (shooterX()-196-154)*u
-	y = laneY() - math.Sin(u*math.Pi)*48
-	return
 }
 
 func laneY() float64    { return 348 }
@@ -767,16 +713,18 @@ func num(v any, def float64) float64 {
 	return def
 }
 
+func strOr(v, def string) string {
+	if v != "" {
+		return v
+	}
+	return def
+}
+
 func toRGBA(c [4]float64) color.RGBA {
 	return color.RGBA{uint8(clamp01(c[0]) * 255), uint8(clamp01(c[1]) * 255), uint8(clamp01(c[2]) * 255), uint8(clamp01(c[3]) * 255)}
 }
 
-func scaleAlpha(c [4]float64, alpha float64) [4]float64 {
-	c[3] *= alpha
-	return c
-}
-
-func blend(a, b [4]float64, t float64) [4]float64 {
+func lerpColor(a, b [4]float64, t float64) [4]float64 {
 	t = clamp01(t)
 	return [4]float64{
 		a[0] + (b[0]-a[0])*t,

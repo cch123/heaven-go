@@ -53,6 +53,39 @@ func TestBuiltToScaleDSBlockFrameSnapsCriticalUnityFrames(t *testing.T) {
 	}
 }
 
+func TestBuiltToScaleDSLightPatternMatchesUnityAlternation(t *testing.T) {
+	m := &Module{lights: []lightEvt{{beat: 8, auto: true}}}
+	active, first, transition := m.lightPatternAt(8.25)
+	if !active || !first || transition != 8 {
+		t.Fatalf("auto light at 8.25 = active=%v first=%v transition=%v", active, first, transition)
+	}
+	active, first, transition = m.lightPatternAt(9.1)
+	if !active || first || transition != 9 {
+		t.Fatalf("auto light at 9.1 = active=%v first=%v transition=%v", active, first, transition)
+	}
+}
+
+func TestBuiltToScaleDSManualLightsResetAfterLength(t *testing.T) {
+	m := &Module{lights: []lightEvt{{beat: 4, length: 2, light: true}}}
+	active, first, transition := m.lightPatternAt(5.2)
+	if !active || first || transition != 5 {
+		t.Fatalf("manual light inside event = active=%v first=%v transition=%v", active, first, transition)
+	}
+	active, first, transition = m.lightPatternAt(6.1)
+	if active || !first || transition != 6 {
+		t.Fatalf("manual light after end = active=%v first=%v transition=%v", active, first, transition)
+	}
+}
+
+func TestBuiltToScaleDSLightTargetsAndBeltOffset(t *testing.T) {
+	env := [4]float64{0.1, 0.4, 0.2, 1}
+	first, second := lightTargets(true, false, env)
+	if first != env || second != [4]float64{1, 1, 1, 1} {
+		t.Fatalf("second light target = first %#v second %#v", first, second)
+	}
+	assertRuntimeNear(t, beltTextureOffset(4.33, 0.5)[1], math.Mod(-4.33*0.5, 1))
+}
+
 func assertRuntimeNear(t *testing.T, got, want float64) {
 	t.Helper()
 	if math.Abs(got-want) > 0.0001 {

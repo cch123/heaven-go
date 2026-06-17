@@ -37,6 +37,9 @@ func (s *SceneInst) meshMaterialTint(b *kmdata.MeshBinding) [4]float64 {
 			if c, ok := mat.Colors["_Color"]; ok {
 				tint = c
 			}
+			if st, ok := s.matFor[mat.Name]; ok && st.hasColor {
+				tint = st.color
+			}
 		}
 	}
 	return tint
@@ -133,6 +136,9 @@ func (s *SceneInst) meshTexture(b *kmdata.MeshBinding) (*ebiten.Image, kmdata.Te
 	env, ok := mat.Textures["_MainTex"]
 	if !ok || env.Image == "" || s.as.MeshTex == nil {
 		return nil, kmdata.TextureEnv{}
+	}
+	if off, ok := s.texFor[mat.Name]; ok {
+		env.Offset = off
 	}
 	return s.as.MeshTex[env.Image], env
 }

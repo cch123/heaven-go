@@ -57,6 +57,18 @@ func TestMeshRendererMaterialOpacityCurvesAffectTint(t *testing.T) {
 	}
 }
 
+func TestMeshRendererSharedMaterialColorOverride(t *testing.T) {
+	as := meshTestAssets(nil)
+	scene := NewScene(as)
+	scene.SetMaterialColorFor("GridPlane", [4]float64{0.2, 0.7, 0.4, 0.5})
+	scene.Sample(0)
+
+	tint := scene.meshTint(0, &as.Meshes.Bindings[0])
+	if tint != [4]float64{0.2, 0.7, 0.4, 0.5} {
+		t.Fatalf("mesh material override tint = %#v, want shared material color", tint)
+	}
+}
+
 func TestImportedFBXMeshRendererNeedsGeometryData(t *testing.T) {
 	as := meshTestAssets(nil)
 	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{
@@ -146,6 +158,22 @@ func TestBuiltinMeshRendererUsesMaterialTexture(t *testing.T) {
 	}
 	dst := ebiten.NewImage(32, 32)
 	scene.Draw(dst, Translate(16, 16).Mul(Scale(2, -2)))
+}
+
+func TestMeshRendererSharedTextureOffsetOverride(t *testing.T) {
+	as := meshTestAssets(nil)
+	mat := as.Meshes.Materials["mat-guid"]
+	mat.Textures = map[string]kmdata.TextureEnv{
+		"_MainTex": {Image: "meshtex/grid.png", Scale: [2]float64{1, 1}, Offset: [2]float64{0.25, 0.5}},
+	}
+	as.Meshes.Materials["mat-guid"] = mat
+	as.MeshTex = map[string]*ebiten.Image{"meshtex/grid.png": ebiten.NewImage(2, 2)}
+
+	scene := NewScene(as)
+	scene.SetMaterialTextureOffsetFor("GridPlane", [2]float64{0, -0.75})
+	if _, env := scene.meshTexture(&as.Meshes.Bindings[0]); env.Offset != [2]float64{0, -0.75} {
+		t.Fatalf("texture offset = %#v, want runtime material offset", env.Offset)
+	}
 }
 
 func TestSceneDrawsBuiltinSphereMeshRendererBinding(t *testing.T) {

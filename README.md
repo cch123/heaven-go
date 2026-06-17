@@ -122,9 +122,10 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   提取器已导出、`assets/builtToScaleDS/meshes.json` 已入库且运行时已加载并
   可绘制 Unity 内置 mesh footprint（内置 mesh fileID、MeshRenderer 材质、
   `_MainTex` 贴图 tiling/offset、float/color 材质参数）；当前游戏模块已绘制
-  官方静态 MeshRenderer 场景、GridPlane 材质颜色事件，并通过模板实例队列驱动
-  movingBlocks/flyingRod/hitParts/missParts 官方 MeshRenderer prefab；2D 时序
-  叠层仍保留为玩法 fallback，后续需补完整 3D 相机/FOV 与材质栈后移除；
+  官方静态 MeshRenderer 场景、GridPlane/Object/Shooter/Belt/Elevator/Lights
+  共享材质颜色事件、Belt `_MainTex` offset 滚动，并通过模板实例队列驱动
+  movingBlocks/flyingRod/hitParts/missParts 官方 MeshRenderer prefab；手写 2D
+  视觉 fallback 已移除，后续仍需补完整 3D 相机/FOV 投影；
   Piano 的 `SetLoopParams(beat+length, 0.1f)`
   持续尾音和淡出已接入。
 - rockers：`intervalStart`/`riff`/`passTurn`/`prepare`/`unPrepare`/`count`/

@@ -91,6 +91,7 @@ type SceneInst struct {
 	colorOver  map[int][4]float64 // 节点下标 → SpriteRenderer.color 覆盖
 	matOver    map[int]materialState
 	matFor     map[string]materialState
+	texFor     map[string][2]float64
 	palOver    map[int]Palette
 	posOver    map[int][2]float64 // 节点下标 → localPosition 覆盖（伪相机平移等）
 	scaleOver  map[int][2]float64 // 节点下标 → localScale 覆盖（脚本瞬时 squash/pose）
@@ -116,6 +117,7 @@ type SceneInst struct {
 
 type materialState struct {
 	color     [4]float64
+	hasColor  bool
 	add       [4]float64
 	hueShift  float64
 	linearAdd bool
@@ -207,6 +209,7 @@ func NewScene(as *Assets) *SceneInst {
 		colorOver:  map[int][4]float64{},
 		matOver:    map[int]materialState{},
 		matFor:     map[string]materialState{},
+		texFor:     map[string][2]float64{},
 		palOver:    map[int]Palette{},
 		posOver:    map[int][2]float64{},
 		scaleOver:  map[int][2]float64{},
@@ -564,7 +567,7 @@ func (s *SceneInst) SetColorOver(path string, c [4]float64) {
 // 是材质色而非 renderer 色，二者需要分开避免误染同节点其它动画属性。
 func (s *SceneInst) SetMaterialOver(path string, matColor, add [4]float64) {
 	if i, ok := s.byPath[path]; ok {
-		s.matOver[i] = materialState{color: matColor, add: add}
+		s.matOver[i] = materialState{color: matColor, hasColor: true, add: add}
 	}
 }
 
@@ -578,10 +581,32 @@ func (s *SceneInst) SetMamboMaterialFor(mat string, hueShift float64, add [4]flo
 	}
 	s.matFor[mat] = materialState{
 		color:     [4]float64{1, 1, 1, 1},
+		hasColor:  true,
 		add:       add,
 		hueShift:  hueShift,
 		linearAdd: true,
 	}
+}
+
+// SetMaterialColorFor 覆盖共享材质的 _Color。Mesh-only games such as
+// Built to Scale DS recolor material instances directly rather than individual
+// renderers, so the runtime must key this by Unity material name.
+func (s *SceneInst) SetMaterialColorFor(mat string, color [4]float64) {
+	if mat == "" {
+		return
+	}
+	st := s.matFor[mat]
+	st.color = color
+	st.hasColor = true
+	s.matFor[mat] = st
+}
+
+// SetMaterialTextureOffsetFor 覆盖共享材质的 _MainTex offset。
+func (s *SceneInst) SetMaterialTextureOffsetFor(mat string, offset [2]float64) {
+	if mat == "" {
+		return
+	}
+	s.texFor[mat] = offset
 }
 
 // SetPosOver 覆盖节点 localPosition（伪相机 gameTrans 平移等）。
@@ -747,8 +772,10 @@ func (s *SceneInst) Sample(beat float64) {
 		s.state[i].color = v
 	}
 	for i, v := range s.matOver {
-		s.state[i].matColor = v.color
-		s.state[i].hasMatColor = true
+		if v.hasColor {
+			s.state[i].matColor = v.color
+			s.state[i].hasMatColor = true
+		}
 		s.state[i].matAdd = v.add
 		s.state[i].matHueShift = v.hueShift
 		s.state[i].matLinearAdd = v.linearAdd
@@ -785,8 +812,10 @@ func (s *SceneInst) Sample(beat float64) {
 	}
 	for i, n := range s.as.Rig.Nodes {
 		if v, ok := s.matFor[n.Mat]; ok {
-			s.state[i].matColor = v.color
-			s.state[i].hasMatColor = true
+			if v.hasColor {
+				s.state[i].matColor = v.color
+				s.state[i].hasMatColor = true
+			}
 			s.state[i].matAdd = v.add
 			s.state[i].matHueShift = v.hueShift
 			s.state[i].matLinearAdd = v.linearAdd

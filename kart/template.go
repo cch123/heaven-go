@@ -519,8 +519,10 @@ func (in *Instance) Queue(scene *SceneInst, beat float64, baseWorld Aff, z float
 			palette: scene.paletteOf(n.Mat),
 		}
 		if v, ok := scene.matFor[n.Mat]; ok {
-			states[ti].matColor = v.color
-			states[ti].hasMatColor = true
+			if v.hasColor {
+				states[ti].matColor = v.color
+				states[ti].hasMatColor = true
+			}
 			states[ti].matAdd = v.add
 			states[ti].matHueShift = v.hueShift
 			states[ti].matLinearAdd = v.linearAdd
