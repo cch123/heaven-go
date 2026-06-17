@@ -48,8 +48,9 @@ func (m *Module) drawClouds(screen *ebiten.Image, beat float64, c color.RGBA) {
 func (m *Module) drawFloor(screen *ebiten.Image, beat float64, floor, stripe color.RGBA) {
 	y := float32(engine.ScreenH - 215)
 	vector.DrawFilledRect(screen, 0, y, engine.ScreenW, 215, floor, true)
-	off := math.Mod(beat*62, 128)
-	for x := -160.0 - off; x < engine.ScreenW+180; x += 128 {
+	const stripeSpacing = 128
+	off := m.floorStripeOffset(beat, stripeSpacing)
+	for x := -160.0 - off; x < engine.ScreenW+180; x += stripeSpacing {
 		vector.StrokeLine(screen, float32(x), float32(engine.ScreenH), float32(x+180), y, 18, stripe, true)
 		vector.StrokeLine(screen, float32(x+40), float32(engine.ScreenH), float32(x+220), y, 5, stripe, true)
 	}

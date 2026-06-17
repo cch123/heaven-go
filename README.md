@@ -148,9 +148,9 @@ engine 路径（rhythmSomen / trickClass / meatGrinder / totemClimb / airRally �
   FBX Geometry 顶点/UV 已导出，`assets/airboarder/meshes.json` 已入库并由运行时
   加载/绘制单 Geometry MeshRenderer；当前源树缺 sky `_MainTex` GUID 对应图片，
   因而该材质仍回退到 `_Color`。原版主体是 MeshRenderer/材质贴图的 3D 场景，
-  当前仍暂用手写 2D billboard 渲染角色/障碍；运行时仍待补多 Geometry
-  FBX 映射、缺失贴图恢复、CameraPivot/FOV 与
-  ScrollingFloor 材质滚动的完整运行时支持。
+  当前仍暂用手写 2D billboard 渲染角色/障碍；fallback 地面滚动已按官方
+  `floor_model/move` 的 5 拍循环和提取曲线位移对齐，运行时仍待补多 Geometry
+  FBX 映射、缺失贴图恢复、CameraPivot/FOV 与 MeshRenderer 材质滚动的完整支持。
 - animalAcrobat：动物队列、障碍旋转/hold 判定、起跳/落地、背景颜色、
   Spotlight/Confetti、BGTileManager 双 tile 回收，以及 AnimalAcrobat.CameraUpdate
   的逐动物 hold/release/长颈鹿 zoom 相机流程已接入；PlayerAcrobat 的

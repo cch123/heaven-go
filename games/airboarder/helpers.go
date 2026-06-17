@@ -5,6 +5,7 @@ import (
 	"math"
 
 	"hsdemo/engine"
+	"hsdemo/kmdata"
 	"hsdemo/riq"
 )
 
@@ -95,6 +96,35 @@ func (m *Module) cameraZoomAdd(beat float64) float64 {
 	// The original camera scales the CameraPivot. Until the 3D camera path is
 	// represented directly, convert zoom into a conservative local Z offset.
 	return (1/zoom - 1) * 5
+}
+
+func floorMoveDelta(anim *kmdata.Anim) float64 {
+	if anim == nil {
+		return 0
+	}
+	keys := anim.Pos[""].X
+	if len(keys) < 2 {
+		return 0
+	}
+	return keys[len(keys)-1].V - keys[0].V
+}
+
+func (m *Module) floorStripeOffset(beat, spacing float64) float64 {
+	if spacing <= 0 {
+		return 0
+	}
+	if m.floorLoopDelta == 0 {
+		return math.Mod(beat*62, spacing)
+	}
+	// Airboarder.Update drives Floor.Play("moving", 0,
+	// GetPositionFromBeat(startBeat, 5f)) every frame. The visible fallback
+	// floor must use that same 5-beat cycle instead of an arbitrary beat speed,
+	// otherwise it visibly drifts against the extracted floor controller.
+	phase := math.Mod(beat/5, 1)
+	if phase < 0 {
+		phase += 1
+	}
+	return math.Mod(phase*m.floorLoopDelta*54, spacing)
 }
 
 func rgba(c [4]float64) color.RGBA {

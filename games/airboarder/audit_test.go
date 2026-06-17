@@ -2,6 +2,7 @@ package airboarder
 
 import (
 	"encoding/json"
+	"math"
 	"os"
 	"path/filepath"
 	"testing"
@@ -173,6 +174,24 @@ func TestAirboarderBopRegionSemantics(t *testing.T) {
 	m := &Module{bops: []bopEvt{{beat: 4, auto: true}, {beat: 8, auto: false}}}
 	if m.autoBopAt(3.99) || !m.autoBopAt(4) || m.autoBopAt(7.99) != true || m.autoBopAt(8) {
 		t.Fatalf("auto bop did not match SetupBopRegion semantics")
+	}
+}
+
+func TestAirboarderFloorFallbackUsesExtractedMoveClip(t *testing.T) {
+	var anims map[string]*kmdata.Anim
+	readJSON(t, filepath.Join("..", "..", "assets", "airboarder", "anims.json"), &anims)
+	delta := floorMoveDelta(anims["Animations/floor/move"])
+	if math.Abs(delta-23.138) > 1e-3 {
+		t.Fatalf("floor move delta = %.6f, want extracted clip displacement 23.138", delta)
+	}
+	m := &Module{floorLoopDelta: delta}
+	const spacing = 128
+	want := math.Mod(0.5*delta*54, spacing)
+	if got := m.floorStripeOffset(2.5, spacing); math.Abs(got-want) > 1e-9 {
+		t.Fatalf("mid-cycle floor stripe offset = %.6f, want %.6f from floor move clip", got, want)
+	}
+	if got0, got5 := m.floorStripeOffset(0, spacing), m.floorStripeOffset(5, spacing); math.Abs(got0-got5) > 1e-9 {
+		t.Fatalf("floor stripe cycle should loop every 5 beats: beat0=%.6f beat5=%.6f", got0, got5)
 	}
 }
 

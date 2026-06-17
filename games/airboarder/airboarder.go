@@ -96,6 +96,8 @@ type Module struct {
 	wantsCrouch bool
 	lastPulse   int
 	switchBeat  float64
+
+	floorLoopDelta float64
 }
 
 func New() engine.Module { return &Module{} }
@@ -108,6 +110,7 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 		return err
 	}
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
+	m.floorLoopDelta = floorMoveDelta(ctx.Assets.Anims["Animations/floor/move"])
 	m.resetBoarders(0)
 
 	// Only the single-geometry sky MeshRenderer is drawn today; playing the
