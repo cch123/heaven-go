@@ -58,10 +58,6 @@ type cameraEvt struct {
 	rot, zoom    float64
 	ease         int
 	additive     bool
-	startRot     float64
-	startZoom    float64
-	endRot       float64
-	endZoom      float64
 }
 
 type blockState int
@@ -124,6 +120,7 @@ type Module struct {
 	beltMat      string
 	beltSpeed    float64
 	cameraFOV    float64
+	switchBeat   float64
 	firstLights  []string
 	secondLights []string
 
@@ -211,22 +208,10 @@ func (m *Module) Ready() {
 	sort.Slice(m.colors, func(i, j int) bool { return m.colors[i].beat < m.colors[j].beat })
 	sort.Slice(m.lights, func(i, j int) bool { return m.lights[i].beat < m.lights[j].beat })
 	sort.Slice(m.cams, func(i, j int) bool { return m.cams[i].beat < m.cams[j].beat })
-
-	rot, zoom := 0.0, 1.0
-	for i := range m.cams {
-		ev := &m.cams[i]
-		ev.startRot, ev.startZoom = rot, zoom
-		if ev.additive {
-			ev.endRot = rot + ev.rot
-		} else {
-			ev.endRot = ev.rot
-		}
-		ev.endZoom = ev.zoom
-		rot, zoom = ev.endRot, ev.endZoom
-	}
 }
 
 func (m *Module) OnSwitch(beat float64) {
+	m.switchBeat = beat
 	m.blocks = nil
 	m.effects = nil
 	m.setShooterState("Idle", beat)
@@ -470,17 +455,30 @@ func pianoEndBeat(beat, length float64) float64 {
 }
 
 func (m *Module) cameraAt(beat float64) (rot, zoom float64) {
+	return m.cameraAtFrom(beat, m.switchBeat)
+}
+
+func (m *Module) cameraAtFrom(beat, switchBeat float64) (rot, zoom float64) {
 	rot, zoom = 0, 1
 	for _, ev := range m.cams {
+		if ev.beat < switchBeat {
+			continue
+		}
 		if beat < ev.beat {
 			break
 		}
+		startRot, startZoom := rot, zoom
+		endRot := ev.rot
+		if ev.additive {
+			endRot = startRot + ev.rot
+		}
+		endZoom := ev.zoom
 		u := 1.0
 		if ev.length > 0 && beat < ev.beat+ev.length {
 			u = (beat - ev.beat) / ev.length
 		}
-		rot = engine.Ease(ev.ease, ev.startRot, ev.endRot, u)
-		zoom = engine.Ease(ev.ease, ev.startZoom, ev.endZoom, u)
+		rot = engine.Ease(ev.ease, startRot, endRot, u)
+		zoom = engine.Ease(ev.ease, startZoom, endZoom, u)
 	}
 	if zoom <= 0 {
 		zoom = 1

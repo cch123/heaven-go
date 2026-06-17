@@ -210,6 +210,37 @@ func TestBuiltToScaleDSComponents(t *testing.T) {
 	}
 }
 
+func TestBuiltToScaleDSCameraEventsResetAtSwitchBeat(t *testing.T) {
+	m := &Module{cams: []cameraEvt{
+		{beat: 4, length: 0, rot: 90, zoom: 2, additive: true},
+		{beat: 12, length: 4, rot: 45, zoom: 1.5, additive: true},
+	}}
+	m.Ready()
+
+	rot, zoom := m.cameraAtFrom(14, 10)
+	if math.Abs(rot-22.5) > 1e-9 || math.Abs(zoom-1.25) > 1e-9 {
+		t.Fatalf("camera inherited pre-switch event: rot=%v zoom=%v, want 22.5 1.25", rot, zoom)
+	}
+
+	rot, zoom = m.cameraAtFrom(14, 0)
+	if math.Abs(rot-112.5) > 1e-9 || math.Abs(zoom-1.75) > 1e-9 {
+		t.Fatalf("camera chain without switch reset = %v %v, want 112.5 1.75", rot, zoom)
+	}
+}
+
+func TestBuiltToScaleDSCameraAbsoluteEventStartsFromPostSwitchState(t *testing.T) {
+	m := &Module{cams: []cameraEvt{
+		{beat: 8, length: 0, rot: 30, zoom: 1.2, additive: true},
+		{beat: 10, length: 2, rot: -15, zoom: 0.8, additive: false},
+	}}
+	m.Ready()
+
+	rot, zoom := m.cameraAtFrom(11, 8)
+	if math.Abs(rot-7.5) > 1e-9 || math.Abs(zoom-1.0) > 1e-9 {
+		t.Fatalf("absolute camera event interpolation = %v %v, want 7.5 1.0", rot, zoom)
+	}
+}
+
 func TestBuiltToScaleDSControllersAndImportedClips(t *testing.T) {
 	as := loadBuiltToScaleDSAssets(t)
 	wantStates := map[string]map[string]string{
