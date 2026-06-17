@@ -7,6 +7,8 @@ import (
 	"path/filepath"
 	"testing"
 
+	"hsdemo/engine"
+	"hsdemo/kart"
 	"hsdemo/kmdata"
 )
 
@@ -254,6 +256,44 @@ func TestAirboarderFloorFallbackUsesExtractedMoveClip(t *testing.T) {
 	}
 }
 
+func TestAirboarderOfficialSceneMaterialsFollowUnityColorUpdate(t *testing.T) {
+	root := filepath.Join("..", "..", "assets", "airboarder")
+	as, err := kart.Load(root, engine.SampleRate)
+	if err != nil {
+		t.Fatal(err)
+	}
+	scene := kart.NewScene(as)
+	m := &Module{
+		ctx: &engine.Ctx{Assets: as, Scene: scene},
+		bgEvents: []colorEvt{{
+			beat: 2, length: 2,
+			a0: [4]float64{0.1, 0.2, 0.3, 1}, a1: [4]float64{0.5, 0.6, 0.7, 1},
+			b0: [4]float64{0.8, 0.7, 0.6, 1}, b1: [4]float64{0.2, 0.3, 0.4, 1},
+		}},
+		floorEvts: []colorEvt{{
+			beat: 2, length: 2,
+			a0: [4]float64{1, 0.9, 0.8, 1}, a1: [4]float64{0.2, 0.3, 0.4, 1},
+			b0: [4]float64{0.7, 0.1, 0.6, 1}, b1: [4]float64{0.1, 0.5, 0.9, 1},
+		}},
+	}
+	game := as.Extra.Components["game"]
+	m.bgMat = materialRef(game.Refs, "bgMaterial", "sky")
+	m.fadeMat = materialRef(game.Refs, "fadeMaterial", "fade")
+	m.floorMat = materialRef(game.Refs, "floorMaterial", "floorspecular")
+	m.cloudMat = materialRef(game.Refs, "cloudMaterial", "clouds")
+
+	m.applyOfficialSceneMaterials(3)
+	wantSky := [4]float64{0.3, 0.4, 0.5, 1}
+	wantCloud := [4]float64{0.5, 0.5, 0.5, 1}
+	wantFloor := [4]float64{0.6, 0.6, 0.6, 1}
+	wantStripe := [4]float64{0.4, 0.3, 0.75, 1}
+	assertColorParam(t, scene, m.bgMat, "_Color", wantSky)
+	assertColorParam(t, scene, m.fadeMat, "_Color", wantSky)
+	assertColorParam(t, scene, m.cloudMat, "_Color", wantCloud)
+	assertColorParam(t, scene, m.floorMat, "_BlueColor", wantFloor)
+	assertColorParam(t, scene, m.floorMat, "_RedColor", wantStripe)
+}
+
 func TestAirboarderCameraEventsChainLikeUnity(t *testing.T) {
 	m := &Module{cameraEvts: []cameraEvt{
 		{beat: 0, length: 4, rotY: 90, rotX: 10, zoom: 2, x: 4, y: -2, additive: false, pivot: 1},
@@ -307,5 +347,18 @@ func assertNear(t *testing.T, got, want float64) {
 	t.Helper()
 	if math.Abs(got-want) > 1e-9 {
 		t.Fatalf("got %.9f, want %.9f", got, want)
+	}
+}
+
+func assertColorParam(t *testing.T, scene *kart.SceneInst, mat, param string, want [4]float64) {
+	t.Helper()
+	got, ok := scene.MaterialColorParamForTest(mat, param)
+	if !ok {
+		t.Fatalf("material %s param %s missing", mat, param)
+	}
+	for i := range got {
+		if math.Abs(got[i]-want[i]) > 1e-9 {
+			t.Fatalf("material %s param %s = %#v, want %#v", mat, param, got, want)
+		}
 	}
 }

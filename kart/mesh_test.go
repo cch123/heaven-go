@@ -69,6 +69,31 @@ func TestMeshRendererSharedMaterialColorOverride(t *testing.T) {
 	}
 }
 
+func TestMeshRendererSharedNamedMaterialColorParams(t *testing.T) {
+	as := meshTestAssets(nil)
+	scene := NewScene(as)
+	scene.Sample(0)
+	baseTint := scene.meshTint(0, &as.Meshes.Bindings[0])
+
+	blue := [4]float64{0.1, 0.2, 0.9, 1}
+	red := [4]float64{0.8, 0.1, 0.2, 1}
+	scene.SetMaterialColorParamFor("GridPlane", "_BlueColor", blue)
+	scene.SetMaterialColorParamFor("GridPlane", "_RedColor", red)
+	scene.Sample(0)
+
+	if got, ok := scene.MaterialColorParamForTest("GridPlane", "_BlueColor"); !ok || got != blue {
+		t.Fatalf("_BlueColor = %#v ok=%v, want %#v", got, ok, blue)
+	}
+	if got, ok := scene.MaterialColorParamForTest("GridPlane", "_RedColor"); !ok || got != red {
+		t.Fatalf("_RedColor = %#v ok=%v, want %#v", got, ok, red)
+	}
+	// Non-_Color shader parameters must not collapse into the mesh-wide tint.
+	tint := scene.meshTint(0, &as.Meshes.Bindings[0])
+	if tint != baseTint {
+		t.Fatalf("mesh tint changed after named params: %#v, want %#v", tint, baseTint)
+	}
+}
+
 func TestImportedFBXMeshRendererNeedsGeometryData(t *testing.T) {
 	as := meshTestAssets(nil)
 	as.Meshes.Bindings[0].Mesh = kmdata.AssetRef{

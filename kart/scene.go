@@ -126,6 +126,7 @@ type SceneInst struct {
 type materialState struct {
 	color     [4]float64
 	hasColor  bool
+	colors    map[string][4]float64
 	add       [4]float64
 	hueShift  float64
 	linearAdd bool
@@ -819,13 +820,47 @@ func (s *SceneInst) materialForApplies(mat, path string) bool {
 // Built to Scale DS recolor material instances directly rather than individual
 // renderers, so the runtime must key this by Unity material name.
 func (s *SceneInst) SetMaterialColorFor(mat string, color [4]float64) {
+	s.SetMaterialColorParamFor(mat, "_Color", color)
+}
+
+// SetMaterialColorParamFor 覆盖共享材质上的命名颜色参数。多数 mesh 只使用
+// _Color 作为整体 tint；Airboarder floor 等自定义 shader 会额外写
+// _BlueColor/_RedColor，先保留 Unity 的参数边界，避免把 shader 色槽折叠成
+// 一个近似 tint。
+func (s *SceneInst) SetMaterialColorParamFor(mat, param string, color [4]float64) {
 	if mat == "" {
 		return
 	}
+	if param == "" {
+		param = "_Color"
+	}
 	st := s.matFor[mat]
-	st.color = color
-	st.hasColor = true
+	if st.colors == nil {
+		st.colors = map[string][4]float64{}
+	}
+	st.colors[param] = color
+	if param == "_Color" {
+		st.color = color
+		st.hasColor = true
+	}
 	s.matFor[mat] = st
+}
+
+// MaterialColorParamForTest exposes shared material color slots for audits that
+// compare script-driven Unity material properties against the native runtime.
+func (s *SceneInst) MaterialColorParamForTest(mat, param string) ([4]float64, bool) {
+	if param == "" {
+		param = "_Color"
+	}
+	st, ok := s.matFor[mat]
+	if !ok {
+		return [4]float64{}, false
+	}
+	if param == "_Color" && st.hasColor {
+		return st.color, true
+	}
+	c, ok := st.colors[param]
+	return c, ok
 }
 
 // SetMaterialTextureOffsetFor 覆盖共享材质的 _MainTex offset。

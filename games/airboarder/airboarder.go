@@ -1,7 +1,7 @@
 // Package airboarder ports Airboarder's event timing, input windows, sounds,
 // and script-driven colors. The current renderer combines a temporary 2D layer
-// with the extracted textured sky MeshRenderer while the engine grows full
-// imported-FBX camera support for the original 3D scene; see README.
+// with extracted textured MeshRenderers while the engine grows full
+// imported-FBX/skinned support for the original 3D scene; see README.
 package airboarder
 
 import (
@@ -107,6 +107,10 @@ type Module struct {
 
 	floorLoopDelta float64
 	cameraFOV      float64
+	bgMat          string
+	fadeMat        string
+	floorMat       string
+	cloudMat       string
 }
 
 func New() engine.Module { return &Module{} }
@@ -120,12 +124,17 @@ func (m *Module) Load(ctx *engine.Ctx) error {
 	}
 	m.proj = kart.Translate(engine.ScreenW/2, engine.ScreenH/2).Mul(kart.Scale(54, -54))
 	m.floorLoopDelta = floorMoveDelta(ctx.Assets.Anims["Animations/floor/move"])
-	m.cameraFOV = ctx.Assets.Extra.Components["game"].Nums["cameraFOV"]
+	game := ctx.Assets.Extra.Components["game"]
+	m.cameraFOV = game.Nums["cameraFOV"]
+	m.bgMat = materialRef(game.Refs, "bgMaterial", "sky")
+	m.fadeMat = materialRef(game.Refs, "fadeMaterial", "fade")
+	m.floorMat = materialRef(game.Refs, "floorMaterial", "floorspecular")
+	m.cloudMat = materialRef(game.Refs, "cloudMaterial", "clouds")
 	m.resetBoarders(0)
 
-	// Only the single-geometry sky MeshRenderer is drawn today; playing the
-	// controller roots still keeps the remaining extracted 3D data exercised
-	// until multi-geometry FBX and skinned rendering land.
+	// Static imported MeshRenderers are drawn by SceneInst; playing the
+	// controller roots keeps the skinned/model animation data exercised until
+	// Airboarder can drop its temporary 2D role/obstacle layer.
 	for _, role := range []string{"CPU1", "CPU2", "Player", "Dog", "Tail", "Floor", "archBasic", "wallBasic"} {
 		if p := ctx.Role(role); p != "" {
 			ctx.Scene.PlayDefaultState(p, 0, ctx.SecPerBeat(0))
@@ -243,6 +252,7 @@ func (m *Module) Draw(screen *ebiten.Image, _ float64, beat float64) {
 		cam := m.ctx.CameraAt(beat)
 		m.ctx.Scene.SetCameraFOV(m.cameraFOV)
 		m.ctx.Scene.SetCamera(cam[0]+camState.x, cam[1]+camState.y, cam[2]+cameraZoomAdd(camState.zoom))
+		m.applyOfficialSceneMaterials(beat)
 		m.ctx.Scene.Sample(beat)
 		m.ctx.Scene.Draw(screen, m.proj)
 	}
@@ -289,8 +299,33 @@ func (m *Module) sampleSceneAnimations(beat float64) {
 	}
 }
 
-func (m *Module) persistSceneColors(_ float64) {
-	// The authoritative color state is sampled in drawTemporary2D. This hook
-	// mirrors Airboarder.PersistColor's switch-time responsibility and leaves a
-	// single place to wire MeshRenderer material colors once supported.
+func (m *Module) persistSceneColors(beat float64) {
+	m.applyOfficialSceneMaterials(beat)
+}
+
+func (m *Module) applyOfficialSceneMaterials(beat float64) {
+	if m.ctx == nil || m.ctx.Scene == nil {
+		return
+	}
+	sky, cloud := m.bgAt(beat)
+	floor, stripe := m.floorAt(beat)
+	sc := m.ctx.Scene
+	// Airboarder.ColorUpdate writes these serialized Material fields every
+	// Update. The mesh renderer path must share the same colors as the 2D
+	// fallback or official sky/cloud/fade meshes drift from the Unity original.
+	sc.SetMaterialColorFor(m.bgMat, sky)
+	sc.SetMaterialColorFor(m.fadeMat, sky)
+	sc.SetMaterialColorFor(m.cloudMat, cloud)
+	sc.SetMaterialColorParamFor(m.floorMat, "_BlueColor", floor)
+	sc.SetMaterialColorParamFor(m.floorMat, "_RedColor", stripe)
+}
+
+func materialRef(refs map[string]string, key, fallback string) string {
+	if refs == nil {
+		return fallback
+	}
+	if v := refs[key]; v != "" {
+		return v
+	}
+	return fallback
 }
