@@ -102,9 +102,12 @@ func (m *Module) mamboMainMaterialExcludes() []string {
 		m.warioFace,
 		m.warioBody + "/Squiggly",
 		// Unity exposes mainMat as a serialized material instance, while the
-		// extractor collapses Wario's face renderers into the same material name.
-		// Keep Wario's face boundary explicit so the stage-light shimmer does not
-		// crawl over his head; dancer heads stay on mainMat in the prefab.
+		// extractor collapses several SpriteRenderer material references to the
+		// same asset name. Keep the face/head renderer boundaries explicit here;
+		// otherwise the MamboDoodle color/UV pass makes performer heads disappear
+		// or inherit the stage-light shimmer.
+		m.dancerLHead,
+		m.dancerRHead,
 	}
 }
 

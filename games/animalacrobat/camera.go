@@ -4,6 +4,7 @@ import (
 	"math"
 
 	"hsdemo/engine"
+	"hsdemo/kart"
 )
 
 type cameraTarget struct {
@@ -41,6 +42,17 @@ func (m *Module) updateCamera(t, beat float64) {
 	m.cameraX = lerp(m.cameraX, target.x, alpha)
 	m.cameraY = lerp(m.cameraY, target.y, alpha)
 	m.cameraZ = lerp(m.cameraZ, target.z, alpha)
+}
+
+func (m *Module) updateStickySpotlight(camZ float64) {
+	if m.ctx == nil || m.ctx.Scene == nil || m.spotlight == "" {
+		return
+	}
+	// SpotlightMain has Heaven Studio's StickyCanvas component. Unity moves it
+	// to GameCamera.position + camera.forward*10 in LateUpdate, so it must cancel
+	// camera x/y and keep a constant depth during AnimalAcrobat.CameraUpdate zooms.
+	m.ctx.Scene.SetPosOver(m.spotlight, m.cameraWX, m.cameraWY)
+	m.ctx.Scene.SetZOver(m.spotlight, camZ+kart.CamDist)
 }
 
 func (m *Module) cameraTargetAt(beat float64) (cameraTarget, bool) {

@@ -987,6 +987,15 @@ func (s *SceneInst) NodeWorld(path string) (Aff, bool) {
 	return Identity(), false
 }
 
+// NodeZForTest returns the sampled world z for a node. It is intentionally only
+// useful to cross-package audits that verify camera/sticky-depth semantics.
+func (s *SceneInst) NodeZForTest(path string) (float64, bool) {
+	if i, ok := s.byPath[path]; ok {
+		return s.worldZ[i], true
+	}
+	return 0, false
+}
+
 func (s *SceneInst) node(p *scenePlayer, curvePath string) (int, bool) {
 	full := p.rootPath
 	if curvePath != "" {

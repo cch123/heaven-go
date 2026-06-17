@@ -175,7 +175,7 @@ func TestTemplateResetSubtreeStopsStaleAnimationPlayers(t *testing.T) {
 	}
 	inst := NewTemplate(as, "Root").NewInstance()
 	inst.Play("Actor", "HideHead", 0, 1)
-	inst.Play("Other", "HideOther", 0, 1)
+	inst.Play("", "HideOther", 0, 1)
 
 	scene := NewScene(as)
 	inst.Queue(scene, 0, Identity(), 0)

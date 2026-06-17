@@ -278,7 +278,9 @@ func (m *Module) Update(t, beat float64) {
 	m.updateBGTiles()
 	cam := m.ctx.SampleScene(beat)
 	m.cameraWX, m.cameraWY = cam[0]+m.cameraX, cam[1]+m.cameraY
-	m.ctx.Scene.SetCamera(m.cameraWX, m.cameraWY, cam[2]+m.cameraZ)
+	camZ := cam[2] + m.cameraZ
+	m.ctx.Scene.SetCamera(m.cameraWX, m.cameraWY, camZ)
+	m.updateStickySpotlight(camZ)
 }
 
 func (m *Module) Draw(screen *ebiten.Image, t, beat float64) {

@@ -130,7 +130,7 @@ func TestMamboMaterialNamesPreservedForSharedColorShader(t *testing.T) {
 	}
 }
 
-func TestMamboMainMaterialExcludesFaceButKeepsDancerHeads(t *testing.T) {
+func TestMamboMainMaterialExcludesFaceAndDancerHeadInstanceBoundaries(t *testing.T) {
 	as := loadAssets(t)
 	byPath := map[string]kmdata.Node{}
 	for _, n := range as.Rig.Nodes {
@@ -149,13 +149,17 @@ func TestMamboMainMaterialExcludesFaceButKeepsDancerHeads(t *testing.T) {
 	}
 
 	m := &Module{
-		warioFace: "WarioJumper/WAAAAAAAA/Face",
-		warioBody: "WarioJumper/WAAAAAAAA",
+		warioFace:   "WarioJumper/WAAAAAAAA/Face",
+		warioBody:   "WarioJumper/WAAAAAAAA",
+		dancerLHead: "DancerL/DancerJumper/DancerL/HeadHolder",
+		dancerRHead: "DancerR/DancerJumper/DancerL/HeadHolder",
 	}
 	got := strings.Join(m.mamboMainMaterialExcludes(), "\n")
 	for _, want := range []string{
 		"WarioJumper/WAAAAAAAA/Face",
 		"WarioJumper/WAAAAAAAA/Squiggly",
+		"DancerL/DancerJumper/DancerL/HeadHolder",
+		"DancerR/DancerJumper/DancerL/HeadHolder",
 	} {
 		if !strings.Contains(got, want) {
 			t.Fatalf("main Mambo material excludes missing %q in:\n%s", want, got)
@@ -163,7 +167,7 @@ func TestMamboMainMaterialExcludesFaceButKeepsDancerHeads(t *testing.T) {
 	}
 }
 
-func TestMamboRuntimeMaterialOverridesSkipWarioFaceButKeepDancerHeads(t *testing.T) {
+func TestMamboRuntimeMaterialOverridesDoNotHitFacesOrDancerHeads(t *testing.T) {
 	as := loadAssets(t)
 	scene := kart.NewScene(as)
 	m := &Module{
@@ -184,6 +188,8 @@ func TestMamboRuntimeMaterialOverridesSkipWarioFaceButKeepDancerHeads(t *testing
 		"WarioJumper/WAAAAAAAA/Face/Schnoz",
 		"WarioJumper/WAAAAAAAA/Face/Eyes",
 		"WarioJumper/WAAAAAAAA/Face/Mouth",
+		"DancerL/DancerJumper/DancerL/HeadHolder/Head",
+		"DancerR/DancerJumper/DancerL/HeadHolder/Head",
 	} {
 		st, ok := scene.NodeMaterialStateForTest(path)
 		if !ok {
@@ -191,19 +197,6 @@ func TestMamboRuntimeMaterialOverridesSkipWarioFaceButKeepDancerHeads(t *testing
 		}
 		if st.MatHueShift != 0 || st.MatLinearAdd || st.MatDoodle.Enabled {
 			t.Fatalf("%s received main/stage material override: %#v", path, st)
-		}
-	}
-
-	for _, path := range []string{
-		"DancerL/DancerJumper/DancerL/HeadHolder/Head",
-		"DancerR/DancerJumper/DancerL/HeadHolder/Head",
-	} {
-		st, ok := scene.NodeMaterialStateForTest(path)
-		if !ok {
-			t.Fatalf("missing dancer head renderer %s", path)
-		}
-		if !st.MatLinearAdd || !st.MatDoodle.Enabled {
-			t.Fatalf("%s should keep main Mambo material override: %#v", path, st)
 		}
 	}
 

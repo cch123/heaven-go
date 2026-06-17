@@ -4,6 +4,7 @@ import (
 	"math"
 	"testing"
 
+	"hsdemo/engine"
 	"hsdemo/kart"
 	"hsdemo/kmdata"
 )
@@ -159,6 +160,43 @@ func TestAnimalAcrobatActionParticleSystems(t *testing.T) {
 	}
 	if delayed != acrobatSweatBurstCount {
 		t.Fatalf("delayed sweat particles = %d, want %d", delayed, acrobatSweatBurstCount)
+	}
+}
+
+func TestAnimalAcrobatSpotlightMainSticksToCamera(t *testing.T) {
+	as := &kart.Assets{
+		Rig: kmdata.Rig{Nodes: []kmdata.Node{
+			{Name: "Root", Path: "Root", Parent: -1, Scale: [2]float64{1, 1}},
+			{Name: "SpotlightMain", Path: "SpotlightMain", Parent: 0, Scale: [2]float64{118.22089, 73.93137}},
+			{Name: "Spotlight2", Path: "SpotlightMain/Spotlight2", Parent: 1, Scale: [2]float64{1, 1}},
+		}},
+	}
+	scene := kart.NewScene(as)
+	m := &Module{
+		ctx:       &engine.Ctx{Scene: scene},
+		spotlight: "SpotlightMain",
+		cameraWX:  3.25,
+		cameraWY:  -1.5,
+	}
+
+	const camZ = -4.2
+	m.updateStickySpotlight(camZ)
+	scene.SetCamera(m.cameraWX, m.cameraWY, camZ)
+	scene.Sample(0)
+
+	world, ok := scene.NodeWorld("SpotlightMain")
+	if !ok {
+		t.Fatal("missing SpotlightMain")
+	}
+	if math.Abs(world.Tx-m.cameraWX) > 1e-9 || math.Abs(world.Ty-m.cameraWY) > 1e-9 {
+		t.Fatalf("SpotlightMain world pos = (%v,%v), want camera (%v,%v)", world.Tx, world.Ty, m.cameraWX, m.cameraWY)
+	}
+	z, ok := scene.NodeZForTest("SpotlightMain")
+	if !ok {
+		t.Fatal("missing SpotlightMain z")
+	}
+	if want := camZ + kart.CamDist; math.Abs(z-want) > 1e-9 {
+		t.Fatalf("SpotlightMain z = %v, want camera-forward sticky depth %v", z, want)
 	}
 }
 
